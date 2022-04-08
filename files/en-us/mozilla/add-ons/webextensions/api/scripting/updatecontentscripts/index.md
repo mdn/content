@@ -1,6 +1,6 @@
 ---
-title: scripting.getRegisteredContentScripts()
-slug: Mozilla/Add-ons/WebExtensions/API/scripting/getRegisteredContentScripts
+title: scripting.updateContentScripts()
+slug: Mozilla/Add-ons/WebExtensions/API/scripting/updateContentScripts
 tags:
   - API
   - Add-ons
@@ -9,51 +9,58 @@ tags:
   - Non-standard
   - Reference
   - WebExtensions
-  - getRegisteredContentScripts
+  - updateContentScripts
   - scripting
-browser-compat: webextensions.api.scripting.getRegisteredContentScripts
+browser-compat: webextensions.api.scripting.updateContentScripts
 ---
 {{AddonSidebar()}}
 
-Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} that match a filter.
+Updates registered content scripts. If there are errors during script parsing and file validation, or if the IDs specified do not exist, no scripts are updated.
 
 > **Note:** This method is available in Manifest V3 or higher.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-## Syntax
+### Syntax
 
 ```js
-let removing = browser.scripting.getRegisteredContentScripts(
-  filter,          // object
+let removing = browser.scripting.updateContentScripts(
+  scripts,         // object
   callback         // function
 )
 ```
 
 ### Parameters
 
+- `scripts`
 
-- `filter`
-  - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter for the registered script details to return.
+  - : An object with these properties:  
+
+    - `script`
+      - : {{WebExtAPIRef("scripting.RegisteredContentScript")}}. Details of a script to update.
+    - `persistAcrossSessions`{{optional_inline}}
+      - : `boolean`. Whether the  content script persists into future sessions. Not supported.
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the request.
 
 ### Return value
 
-Returns an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}.
+Return an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}.
 
 Returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) when the callback parameter is not specified. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
-This example returns the registered scripts with the ID `a-script`:
+This example updates a script file called `script.js`:
 
 ```js
-const scriptFilter = {
-  id: "a-script"
+const aScript = {
+  id: "a-script",
+  js: ["script.js"],
+  matches: ["<all_urls>"],
   };
 
-await browser.scripting.registerContentScripts([aScript]);
+await browser.scripting.updateContentScripts([aScript]);
 ```
 
 {{WebExtExamples}}
@@ -62,7 +69,7 @@ await browser.scripting.registerContentScripts([aScript]);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting/#method-getRegisteredContentScripts) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting/#method-updateContentScripts) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

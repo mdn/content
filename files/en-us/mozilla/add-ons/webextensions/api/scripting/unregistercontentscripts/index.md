@@ -1,6 +1,6 @@
 ---
-title: scripting.getRegisteredContentScripts()
-slug: Mozilla/Add-ons/WebExtensions/API/scripting/getRegisteredContentScripts
+title: scripting.unregisterContentScripts()
+slug: Mozilla/Add-ons/WebExtensions/API/scripting/unregisterContentScripts
 tags:
   - API
   - Add-ons
@@ -9,13 +9,13 @@ tags:
   - Non-standard
   - Reference
   - WebExtensions
-  - getRegisteredContentScripts
-  - scripting
-browser-compat: webextensions.api.scripting.getRegisteredContentScripts
+  - unregisterContentScripts
+  - tabs
+browser-compat: webextensions.api.scripting.unregisterContentScripts
 ---
 {{AddonSidebar()}}
 
-Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} that match a filter.
+Unregisters one or more content scripts.
 
 > **Note:** This method is available in Manifest V3 or higher.
 
@@ -24,36 +24,33 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-let removing = browser.scripting.getRegisteredContentScripts(
-  filter,          // object
+let removing = browser.scripting.unregisterContentScripts(
+  scripts,         // object
   callback         // function
 )
 ```
 
 ### Parameters
 
-
-- `filter`
-  - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter for the registered script details to return.
+- `scripts`{{optional_inline}} 
+  - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter to identify the dynamic content scripts to unregistered. If not specified, all dynamic content scripts are unregistered.
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the request.
 
 ### Return value
 
-Returns an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}.
-
-Returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) when the callback parameter is not specified. If any error occurs, the promise is rejected with an error message.
+Returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) when the callback parameter is not specified. The Promise is fulfilled with no arguments when all the scripts are unregistered. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
-This example returns the registered scripts with the ID `a-script`:
+This example unregisters a script the ID `a-script`:
 
 ```js
 const scriptFilter = {
   id: "a-script"
   };
 
-await browser.scripting.registerContentScripts([aScript]);
+await browser.scripting.unregisterContentScripts([scriptFilter]);
 ```
 
 {{WebExtExamples}}
@@ -62,7 +59,7 @@ await browser.scripting.registerContentScripts([aScript]);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting/#method-getRegisteredContentScripts) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting#method-unregisterContentScripts) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

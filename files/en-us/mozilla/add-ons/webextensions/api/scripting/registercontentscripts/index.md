@@ -1,6 +1,6 @@
 ---
-title: scripting.getRegisteredContentScripts()
-slug: Mozilla/Add-ons/WebExtensions/API/scripting/getRegisteredContentScripts
+title: scripting.registerContentScripts()
+slug: Mozilla/Add-ons/WebExtensions/API/scripting/registerContentScripts
 tags:
   - API
   - Add-ons
@@ -9,13 +9,13 @@ tags:
   - Non-standard
   - Reference
   - WebExtensions
-  - getRegisteredContentScripts
+  - registerContentScripts
   - scripting
-browser-compat: webextensions.api.scripting.getRegisteredContentScripts
+browser-compat: webextensions.api.scripting.registerContentScripts
 ---
 {{AddonSidebar()}}
 
-Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} that match a filter.
+Registers one or more content scripts. If there are errors during script parsing and file validation, or if the IDs specified exist, no scripts are registered.
 
 > **Note:** This method is available in Manifest V3 or higher.
 
@@ -24,17 +24,16 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-let removing = browser.scripting.getRegisteredContentScripts(
-  filter,          // object
+let removing = browser.scripting.registerContentScripts(
+  scripts,         // object
   callback         // function
 )
 ```
 
 ### Parameters
 
-
-- `filter`
-  - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter for the registered script details to return.
+- `scripts`
+  - : {{WebExtAPIRef("scripting.RegisteredContentScript")}}. A list of scripts to register. 
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the request.
 
@@ -46,11 +45,13 @@ Returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promis
 
 ## Examples
 
-This example returns the registered scripts with the ID `a-script`:
+This example registers a script file called `script.js`:
 
 ```js
-const scriptFilter = {
-  id: "a-script"
+const aScript = {
+  id: "a-script",
+  js: ["script.js"],
+  matches: ["<all_urls>"],
   };
 
 await browser.scripting.registerContentScripts([aScript]);
@@ -62,7 +63,7 @@ await browser.scripting.registerContentScripts([aScript]);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting/#method-getRegisteredContentScripts) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting#method-registerContentScripts) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
