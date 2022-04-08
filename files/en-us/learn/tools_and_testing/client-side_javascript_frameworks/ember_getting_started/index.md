@@ -86,7 +86,7 @@ As you work through this series of tutorials, you'll notice Ember's opinions —
 
 ## How does Ember relate to vanilla JavaScript?
 
-Ember is built on JavaScript technologies and is a thin layer on top of traditional [object-oriented programming](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS), while still allowing developers to utilize [functional programming techniques](https://opensource.com/article/17/6/functional-javascript).
+Ember is built on JavaScript technologies and is a thin layer on top of traditional [object-oriented programming](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming), while still allowing developers to utilize [functional programming techniques](https://opensource.com/article/17/6/functional-javascript).
 
 Ember makes use of two main syntaxes:
 
