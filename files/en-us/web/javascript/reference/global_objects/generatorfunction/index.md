@@ -29,7 +29,7 @@ code, because such functions are parsed with the rest of the code.
 All arguments passed to the function are treated as the names of the identifiers of the
 parameters in the function to be created, in the order in which they are passed.
 
-> **Note:** {{jsxref("Statements/function*", "generator function")}}
+> **Note:** {{jsxref("Statements/function*", "generator functions", "", "1")}}
 > created with a constructor do not create closures to
 > their creation contexts; they are always created in the global scope.
 >
