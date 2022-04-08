@@ -58,11 +58,13 @@ const lastnameSpan = container.children.lastname;
 // Returns the span element with the id "degree"
 const degreeSpan = container.children.namedItem('degree');
 
-console.log( titleSpan.textContent,
-             firstnameSpan.textContent,
-             lastnameSpan.textContent,
-             degreeSpan.textContent );
+const output = document.createElement('div');
+output.textContent = `Result: ${titleSpan.textContent} ${firstnameSpan.textContent} ${lastnameSpan.textContent} ${degreeSpan.textContent}`;
+
+document.body.insertAdjacentElement('afterend', output);
 ```
+
+{{EmbedLiveSample("Example")}}
 
 ## Specification
 
