@@ -61,7 +61,7 @@ const degreeSpan = container.children.namedItem('degree');
 const output = document.createElement('div');
 output.textContent = `Result: ${titleSpan.textContent} ${firstnameSpan.textContent} ${lastnameSpan.textContent} ${degreeSpan.textContent}`;
 
-document.body.insertAdjacentElement('afterend', output);
+container.insertAdjacentElement('afterend', output);
 ```
 
 {{EmbedLiveSample("Example")}}
