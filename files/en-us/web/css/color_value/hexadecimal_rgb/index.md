@@ -27,7 +27,7 @@ The **hexadecimal color syntax** is a notation allowing to describe a [sRGB](/en
   - : The _green_ component of the color, in case-insensitive hexadecimal number betwen `0` and `ff` (255)). If there is only one number, it is duplicated: `c` means `cc`.
 - `B` or `BB`
   - : The _blue_ component of the color, in case-insensitive hexadecimal number betwen `0` and `ff` (255)). If there is only one number, it is duplicated: `9` means `99`.
-`A` or `AA` {{optional_inline}}
+- `A` or `AA` {{optional_inline}}
   - : The _alpha_ component of the color, indicating its transparency, in case-insensitive hexadecimal number betwen `0` and `ff` (255)). If there is only one number, it is duplicated: `e` means `ee`. `0` represents a fully transparent color, and `ff`a fully opaque one.
 
 > **Note:** The syntax is case-insensitive `#00ff00` is the same as `#00FF00`.
