@@ -69,7 +69,7 @@ These days, there are easier mechanisms available for storing client-side data, 
 
 The "easier" features we mentioned above are as follows:
 
-- The [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides a for storing and retrieving smaller, data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data, like the user's name, whether they are logged in, what color to use for the background of the screen, etc.
+- The [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides a mechanism for storing and retrieving smaller, data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data, like the user's name, whether they are logged in, what color to use for the background of the screen, etc.
 - The [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides the browser with a complete database system for storing complex data. This can be used for things from complete sets of customer records to even complex data types like audio or video files.
 
 You'll learn more about these APIs below.
