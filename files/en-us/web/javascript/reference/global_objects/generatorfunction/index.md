@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.GeneratorFunction
 ---
 {{JSRef}}
 
-In JavaScript, every generator function is actually a `GeneratorFunction` object. There is no global object with the name`GeneratorFunction`, but you can create a `GeneratorFunction()` constructor using the following code:
+In JavaScript, every generator function is actually a `GeneratorFunction` object. There is no global object with the name `GeneratorFunction`, but you can create a `GeneratorFunction()` constructor using the following code:
 
 ```js
 const GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor;
@@ -20,7 +20,7 @@ const GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor;
 
 ## Description
 
-{{jsxref("Statements/function*", "generator function")}} objects created with a
+{{jsxref("Statements/function*", "Generator function", "", "1")}} objects created with a
 constructor are parsed when the function is created. That
 is less efficient than declaring a generator function with a
 {{jsxref("Statements/function*", "function* expression")}} and calling it within your
@@ -40,7 +40,7 @@ parameters in the function to be created, in the order in which they are passed.
 > This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for
 > a generator function expression.
 
-Invoking a generator-function constructor as a function (without using
+Invoking a generator function constructor as a function (without using
 the `new` operator) has the same effect as invoking it as a constructor.
 
 ## Examples
