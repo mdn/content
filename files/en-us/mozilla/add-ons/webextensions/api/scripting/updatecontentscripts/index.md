@@ -38,8 +38,8 @@ let removing = browser.scripting.updateContentScripts(
 
     - `script`
       - : {{WebExtAPIRef("scripting.RegisteredContentScript")}}. Details of a script to update.
-    - `persistAcrossSessions`{{optional_inline}}
-      - : `boolean`. Whether the  content script persists into future sessions. Not supported.
+    - `persistAcrossSessions`
+      - : `boolean`. Whether the content script persists into future sessions. 
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the request.
 
