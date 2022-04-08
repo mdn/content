@@ -405,7 +405,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("X-Requested-With")}}
   - : TBD
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/reference/robots_meta_tag#xrobotstag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="...">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="...">`.
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : Used by Internet Explorer to signal which document mode to use.
 
