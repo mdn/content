@@ -73,6 +73,7 @@ Models are usually defined in an application's **models.py** file. They are impl
 
 ```python
 from django.db import models
+from django.urls import reverse
 
 class MyModelName(models.Model):
     """A typical class defining a model, derived from the Model class."""
