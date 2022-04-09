@@ -22,7 +22,7 @@ For most standard uses, you'll probably want to use {{domxref("PositionSensorVRD
 ## Syntax
 
 ```js
-var myPositionstate = PositionSensorVRDevice.getImmediateState();
+var myPositionState = PositionSensorVRDevice.getImmediateState();
 ```
 
 ### Parameters

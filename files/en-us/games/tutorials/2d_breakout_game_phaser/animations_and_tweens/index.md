@@ -75,7 +75,7 @@ The animation is played every time the ball hits the paddle. You can add the `an
 
 Whereas animations play external sprites sequentially, tweens smoothly animate properties of an object in the gameworld, such as width or opacity.
 
-Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your `ballhitBrick()` function, find your `brick.kill();` line, and replace it with the following:
+Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your `ballHitBrick()` function, find your `brick.kill();` line, and replace it with the following:
 
 ```js
 var killTween = game.add.tween(brick.scale);

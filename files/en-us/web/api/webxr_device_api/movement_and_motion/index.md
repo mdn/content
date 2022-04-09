@@ -112,7 +112,7 @@ const RADIANS_PER_DEGREE = Math.PI / 180.0;
 
 The first two—`viewerStartPosition` and `viewerStartOrientation`—indicate where the viewer will be placed relative to the center of the space, and the direction in which they'll initially be looking. `cubeOrientation` will store the current orientation of the cube, while `cubeMatrix` and `mouseMatrix` are storage for matrices used during the rendering of the scene. `inverseOrientation` is a quaternion which will be used to represent the rotation to apply to the reference space for the object in the frame being rendered.
 
-`RADIANS_PER_DEGREEE` is the value to multiply an angle in degrees by to convert the angle into radians.
+`RADIANS_PER_DEGREE` is the value to multiply an angle in degrees by to convert the angle into radians.
 
 The last four variables declared are storage for references to the {{HTMLElement("div")}} elements into which we'll output the matrices when we want to show them to the user.
 
