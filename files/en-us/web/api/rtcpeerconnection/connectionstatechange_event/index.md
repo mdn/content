@@ -39,7 +39,7 @@ For an {{domxref("RTCPeerConnection")}}, `pc`, this example sets up a handler fo
 
 ```js
 pc.onconnectionstatechange = ev => {
-  switch(pc.connectionState) {
+  switch(pc.target.connectionState) {
     case "new":
     case "checking":
       setOnlineStatus("Connecting...");
@@ -67,7 +67,7 @@ You can also create a handler for `connectionstatechange` by using {{domxref("Ev
 
 ```js
 pc.addEventListener("connectionstatechange", ev => {
-  switch(pc.connectionState) {
+  switch(pc.target.connectionState) {
     /* ... */
   }
 }, false);
