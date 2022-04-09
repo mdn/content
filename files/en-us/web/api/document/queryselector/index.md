@@ -138,4 +138,5 @@ not the `main` class.
   DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
+- 
 - {{domxref("Element.querySelectorAll()")}}
