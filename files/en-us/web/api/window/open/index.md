@@ -377,7 +377,7 @@ recommendable usability and accessibility guidelines:
 #### Never use `<a href="#" onclick="window.open(...);">`
 
 Such pseudo-link also breaks accessibility of links. **Always use a real URL for
-the href attribute value** so that if JavasSript support is disabled or
+the href attribute value** so that if JavasScript support is disabled or
 inexistent or if the user agent does not support opening of secondary window (like
 MS-Web TV, text browsers, etc), then such user agents will still be able to load the
 referenced resource according to its default mode of opening/handling a referenced

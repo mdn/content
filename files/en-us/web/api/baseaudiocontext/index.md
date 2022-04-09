@@ -45,7 +45,7 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 - {{domxref("BaseAudioContext.createAnalyser()")}}
-  - : Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualisations.
+  - : Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualizations.
 - {{domxref("BaseAudioContext.createBiquadFilter()")}}
   - : Creates a {{domxref("BiquadFilterNode")}}, which represents a second order filter configurable as several different common filter types: high-pass, low-pass, band-pass, etc
 - {{domxref("BaseAudioContext.createBuffer()")}}

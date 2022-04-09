@@ -835,7 +835,7 @@ To get started, see for example:
 - [Travis CI for complete beginners](https://docs.travis-ci.com/user/for-beginners)
 - [Building a Node.js project](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/) (with Travis)
 - [Using LambdaTest with Travis CI](https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/)
-- [Using LambdTest with CircleCI](https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/)
+- [Using LambdaTest with CircleCI](https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/)
 - [Using LambdaTest with Jenkins](https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/)
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 

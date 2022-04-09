@@ -73,7 +73,7 @@ These might be:
 - Articles covering techniques that were later shown to be bad practice and superseded by better techniques.
 - Articles containing information that were later replaced by other, better quality articles.
 - Articles containing content that is inappropriate for MDN.
-- Translations that are old, out-of-date, and difficult to fix, meaning that the English version is preferrable and starting a new translation would be an easier option.
+- Translations that are old, out-of-date, and difficult to fix, meaning that the English version is preferable and starting a new translation would be an easier option.
 
 #### When should a page be deleted?
 
