@@ -28,7 +28,6 @@ One of the followings:
 - `'denied'`
 - `'prompt'`
 
-
 ## Examples
 
 ```js

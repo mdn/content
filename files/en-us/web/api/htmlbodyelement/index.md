@@ -38,7 +38,7 @@ _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")
 
 ## Event handlers
 
-The {{domxref("HTMLElement")}} events are inherited. 
+The {{domxref("HTMLElement")}} events are inherited.
 
 The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `HTMLBodyElement`.
 

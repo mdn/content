@@ -22,6 +22,7 @@ of the current window.
 A list of frame objects. It is similar to an
   array in that it has a `length` property and its items can be accessed
   using the `[i]` notation.
+
 - `frameList === window` evaluates to true.
 - Each item in the window\.frames pseudo-array represents the {{domxref("Window")}}
   object corresponding to the given {{HTMLElement("frame")}}'s or

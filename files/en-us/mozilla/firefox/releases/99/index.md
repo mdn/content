@@ -41,13 +41,11 @@ No notable changes.
   This API is on the path for removal because it exposes a significant amount of user information that might be used for fingerprinting.
   ({{bug(1720353)}}).
 
-
 ### WebDriver conformance (Marionette)
 
 - Fixed a bug where the Shift key was not handled properly when part of a key sequence of the `WebDriver:ElementSendKeys` command ({{bug(1757636)}}).
 
 ## Changes for add-on developers
-
 
 ## Older versions
 
