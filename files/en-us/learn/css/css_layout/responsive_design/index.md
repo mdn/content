@@ -58,7 +58,7 @@ The fixed-width site risked a horizontal scrollbar on screens smaller than the s
 
 > **Note:** See this simple fixed-width layout: [example](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Again, observe the result as you change the browser window size.
 
-> **Note:** The screenshots above are taken using the [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) in Firefox DevTools.
+> **Note:** The screenshots above are taken using the [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) in Firefox DevTools.
 
 As the mobile web started to become a reality with the first feature phones, companies who wished to embrace mobile would generally create a special mobile version of their site, with a different URL (often something like _m.example.com_, or _example.mobi_). This meant that two separate versions of the site had to be developed and kept up-to-date.
 
