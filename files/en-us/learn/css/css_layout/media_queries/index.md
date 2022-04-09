@@ -94,7 +94,7 @@ These features are used to create layouts that respond to different screen sizes
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/width.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/width.html).
+[Open this example](https://mdn.github.io/css-examples/learn/media-queries/width.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/width.html).
 
 The `width` (and `height`) media features can be used as ranges, and therefore be prefixed with `min-` or `max-` to indicate that the given value is a minimum, or a maximum. For example, to make the color blue if the viewport is narrower than 600 pixels, use `max-width`:
 
@@ -106,7 +106,7 @@ The `width` (and `height`) media features can be used as ranges, and therefore b
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/max-width.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/max-width.html).
+[Open this example](https://mdn.github.io/css-examples/learn/media-queries/max-width.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/max-width.html).
 
 In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see `width` or `height` used alone.
 
@@ -124,7 +124,7 @@ One well-supported media feature is `orientation`, which allows us to test for p
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/orientation.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/orientation.html).
+[Open this example](https://mdn.github.io/css-examples/learn/media-queries/orientation.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/orientation.html).
 
 A standard desktop view has a landscape orientation, and a design that works well in this orientation may not work as well when viewed on a phone or tablet in portrait mode. Testing for orientation can help you to create a layout which is optimized for devices in portrait mode.
 
@@ -140,7 +140,7 @@ As part of the Level 4 specification, the `hover` media feature was introduced. 
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/hover.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/hover.html).
+[Open this example](https://mdn.github.io/css-examples/learn/media-queries/hover.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/hover.html).
 
 If we know the user cannot hover, we could display some interactive features by default. For users who can hover, we might choose to make them available when a link is hovered over.
 
@@ -164,7 +164,7 @@ To combine media features you can use `and` in much the same way as we have used
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/and.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/and.html).
+[Open this example](https://mdn.github.io/css-examples/learn/media-queries/and.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/and.html).
 
 ### "or" logic in media queries
 
@@ -178,7 +178,7 @@ If you have a set of queries, any of which could match, then you can comma separ
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/or.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/or.html).
+[Open this example](https://mdn.github.io/css-examples/learn/media-queries/or.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/or.html).
 
 ### "not" logic in media queries
 
@@ -192,7 +192,7 @@ You can negate an entire media query by using the `not` operator. This reverses 
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/not.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/not.html).
+[Open this example](https://mdn.github.io/css-examples/learn/media-queries/not.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/not.html).
 
 ## How to choose breakpoints
 
@@ -316,9 +316,9 @@ We've made no layout changes, however the source of the document is ordered in a
 
 This simple layout also works well on mobile. If we view the layout in Responsive Design Mode in DevTools we can see that it works pretty well as a straightforward mobile view of the site.
 
-[Open step 1](https://mdn.github.io/css-examples/learn/media-queries/step1.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html).
+[Open step 1](https://mdn.github.io/css-examples/learn/media-queries/step1.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step1.html).
 
-**If you want to follow on and implement this example as we go, make a local copy of [step1.html](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html) on your computer.**
+**If you want to follow on and implement this example as we go, make a local copy of [step1.html](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step1.html) on your computer.**
 
 From this point, start to drag the Responsive Design Mode view wider until you can see that the line lengths are becoming quite long, and we have space for the navigation to display in a horizontal line. This is where we'll add our first media query. We'll use ems, as this will mean that if the user has increased their text size, the breakpoint will happen at a similar line-length but wider viewport, than someone with a smaller text size.
 
@@ -344,7 +344,7 @@ From this point, start to drag the Responsive Design Mode view wider until you c
 
 This CSS gives us a two-column layout inside the article, of the article content and related information in the aside element. We have also used flexbox to put the navigation into a row.
 
-[Open step 2](https://mdn.github.io/css-examples/learn/media-queries/step2.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step2.html).
+[Open step 2](https://mdn.github.io/css-examples/learn/media-queries/step2.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step2.html).
 
 Lets continue to expand the width until we feel there is enough room for the sidebar to also form a new column. Inside a media query we'll make the main element into a two column grid. We then need to remove the {{cssxref("margin-bottom")}} on the article in order that the two sidebars align with each other, and we'll add a {{cssxref("border")}} to the top of the footer. Typically these small tweaks are the kind of thing you will do to make the design look good at each breakpoint.
 
@@ -369,7 +369,7 @@ Lets continue to expand the width until we feel there is enough room for the sid
 }
 ```
 
-[Open step 3](https://mdn.github.io/css-examples/learn/media-queries/step3.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/step3.html).
+[Open step 3](https://mdn.github.io/css-examples/learn/media-queries/step3.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step3.html).
 
 If you look at the final example at different widths you can see how the design responds and works as a single column, two columns, or three columns, depending on the available width. This is a very simple example of a mobile first responsive design.
 
@@ -436,7 +436,7 @@ This could be achieved using the following:
 }
 ```
 
-[Open the grid layout example](https://mdn.github.io/css-examples/learn/media-queries/grid.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/grid.html).
+[Open the grid layout example](https://mdn.github.io/css-examples/learn/media-queries/grid.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/grid.html).
 
 With the example open in your browser, make the screen wider and narrower to see the number of column tracks change. The nice thing about this method is that grid is not looking at the viewport width, but the width it has available for this component. It might seem strange to wrap up a section about media queries with a suggestion that you might not need one at all! However, in practice you will find that good use of modern layout methods, enhanced with media queries, will give the best results.
 

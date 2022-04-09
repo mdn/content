@@ -215,7 +215,7 @@ Next, you should include a "Values" section — this contains a description list
 
 The last section, "Formal syntax", is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
 
-The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/master/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/master/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
+The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/main/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
 
 You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data).
 
@@ -225,7 +225,7 @@ The "Syntax" section of selector reference pages is much simpler than that of pr
 
 This block is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
 
-The only complication arises from making sure the data you need is present. The [selectors.json](https://github.com/mdn/data/blob/master/css/selectors.json) file needs to contain an entry for the selector you are documenting.
+The only complication arises from making sure the data you need is present. The [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) file needs to contain an entry for the selector you are documenting.
 
 You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data).
 

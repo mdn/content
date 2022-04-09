@@ -26,7 +26,7 @@ You have been provided with some raw HTML, basic CSS, and images — now you nee
 
 ### Basic Setup
 
-You can download the HTML, CSS, and a set of six images [here](https://github.com/mdn/learning-area/tree/master/css/css-layout/fundamental-layout-comprehension).
+You can download the HTML, CSS, and a set of six images [here](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension).
 
 Save the HTML document and stylesheet into a directory on your computer, and add the images into a folder named `images`. Opening the `index.html` file in a browser should give you a page with basic styling but no layout, which should look something like the image seen below.
 

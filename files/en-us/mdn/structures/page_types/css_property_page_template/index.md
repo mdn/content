@@ -74,8 +74,8 @@ browser-compat: css.properties.NameOfTheProperty
 > **Formal definition and Formal syntax sections**
 >
 > The content of the _Formal definition_ and _Formal syntax_ sections is generated in place of `\{{CSSInfo}}` and `\{{CSSSyntax}}` macro, respectively.
-> For these to populate you must ensure an appropriate entry has been filled in for the property in our [properties.json](https://github.com/mdn/data/blob/master/css/properties.json) data file.
-> See [properties.md](https://github.com/mdn/data/blob/master/css/properties.md) for more information.
+> For these to populate you must ensure an appropriate entry has been filled in for the property in our [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) data file.
+> See [properties.md](https://github.com/mdn/data/blob/main/css/properties.md) for more information.
 >
 > _Remember to remove this whole explanatory note before publishing_
 

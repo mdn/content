@@ -89,7 +89,7 @@ Note that this parameter style is very picky — it must adhere to [JSON syntax]
 
 ### Template syntax
 
-Each KumaScript template is a file under [the macros directory](https://github.com/mdn/yari/tree/master/kumascript/macros) of the yari/kumascript repository on GitHub. You create and edit these files as you would the files of any open-source project on GitHub.
+Each KumaScript template is a file under [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the yari/kumascript repository on GitHub. You create and edit these files as you would the files of any open-source project on GitHub.
 
 KumaScript templates are processed by an [embedded JavaScript template engine](https://ejs.co) with a few simple rules:
 
@@ -197,7 +197,7 @@ KumaScript offers some built-in methods and APIs for KumaScript macros. Macros c
 
 #### Built-in methods
 
-This manually-maintained documentation is likely to fall out of date with the code. With that in mind, [you can always check out the latest state of built-in APIs in the KumaScript source](https://github.com/mdn/yari/tree/master/kumascript/src/api). But here is a selection of useful methods exposed to templates:
+This manually-maintained documentation is likely to fall out of date with the code. With that in mind, [you can always check out the latest state of built-in APIs in the KumaScript source](https://github.com/mdn/yari/tree/main/kumascript/src/api). But here is a selection of useful methods exposed to templates:
 
 - `md5(string)`
   - : Returns an MD5 hex digest of the given string.

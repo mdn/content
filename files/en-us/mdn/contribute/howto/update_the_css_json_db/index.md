@@ -8,7 +8,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-Several characteristics of a CSS property, like its syntax or if it can be animated, are mentioned in multiple pages on MDN and are therefore stored in an ad-hoc "database". This database actually consists of several JSON files containing CSS related information, which are [stored on GitHub](https://github.com/mdn/data/tree/master/css). This article describes how to update this structure.
+Several characteristics of a CSS property, like its syntax or if it can be animated, are mentioned in multiple pages on MDN and are therefore stored in an ad-hoc "database". This database actually consists of several JSON files containing CSS related information, which are [stored on GitHub](https://github.com/mdn/data/tree/main/css). This article describes how to update this structure.
 
 ## Prerequisite resources
 
@@ -60,9 +60,9 @@ Note that in some cases the property index table might be more briefly and with 
 
 ### Store the information in the JSONs
 
-The information from the specifications is stored in a specific way in the JSON DB. CSS properties are stored within [properties.json](https://github.com/mdn/data/blob/master/css/properties.json). All the JSON keys below are obligatory.
+The information from the specifications is stored in a specific way in the JSON DB. CSS properties are stored within [properties.json](https://github.com/mdn/data/blob/main/css/properties.json). All the JSON keys below are obligatory.
 
-Translated information is stored as key string mapping to a translation in [l10n/css.json](https://github.com/mdn/data/blob/master/l10n/css.json) with language + country codes (according to [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) as keys.
+Translated information is stored as key string mapping to a translation in [l10n/css.json](https://github.com/mdn/data/blob/main/l10n/css.json) with language + country codes (according to [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) as keys.
 
 You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blob/master/macros/cssxref.ejs) and [\\{{SVGElement}}](https://github.com/mozilla/kumascript/blob/master/macros/SVGElement.ejs) within translations to refer to other parts of MDN.
 
@@ -271,7 +271,7 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
   </tbody>
 </table>
 
-It may happen that the syntax contains references to specific values. Such values normally define their own syntaxes. Those syntaxes should be stored [syntaxes.json](https://github.com/mdn/data/blob/master/css/syntaxes.json) with their name as key. E.g. the {{cssxref("font-family")}} property has a syntax of `[ <family-name> | <generic-family> ]#`. The syntaxes for the values `<family-name>` and `<generic-family>` are stored like this:
+It may happen that the syntax contains references to specific values. Such values normally define their own syntaxes. Those syntaxes should be stored [syntaxes.json](https://github.com/mdn/data/blob/main/css/syntaxes.json) with their name as key. E.g. the {{cssxref("font-family")}} property has a syntax of `[ <family-name> | <generic-family> ]#`. The syntaxes for the values `<family-name>` and `<generic-family>` are stored like this:
 
 ```js
 {
