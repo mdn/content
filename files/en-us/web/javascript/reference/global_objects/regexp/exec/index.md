@@ -147,14 +147,14 @@ The following table shows the state of `re` after running this script:
       <td><code>lastIndex</code></td>
       <td>
         <p>The index at which to start the next match.</p>
-        <p>If <code>g</code> is absent, this will always be <code>0</code>.</p>
+        <p>If [`g`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is absent, this will always be <code>0</code>.</p>
       </td>
       <td><code>25</code></td>
     </tr>
     <tr>
       <td><code>dotAll</code></td>
       <td>
-        Indicates if the <code>s</code> flag was used to let
+        Indicates if the [`s`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) flag was used to let
         <code>.</code> match newlines.
       </td>
       <td><code>false</code></td>
@@ -162,7 +162,7 @@ The following table shows the state of `re` after running this script:
     <tr>
       <td><code>hasIndices</code></td>
       <td>
-        Indicates if the <code>d</code> flag was used to generate an
+        Indicates if the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) flag was used to generate an
         <code>indices</code> property in the returned value containing start and
         end indices of the substring matches.
       </td>
@@ -170,18 +170,18 @@ The following table shows the state of `re` after running this script:
     </tr>
     <tr>
       <td><code>ignoreCase</code></td>
-      <td>Indicates if the <code>i</code> flag was used to ignore case.</td>
+      <td>Indicates if the [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) flag was used to ignore case.</td>
       <td><code>true</code></td>
     </tr>
     <tr>
       <td><code>global</code></td>
-      <td>Indicates if the <code>g</code> flag was used for a global match.</td>
+      <td>Indicates if the [`g`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) flag was used for a global match.</td>
       <td><code>true</code></td>
     </tr>
     <tr>
       <td><code>multiline</code></td>
       <td>
-        Indicates if the <code>m</code> flag was used to search across multiple
+        Indicates if the [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) flag was used to search across multiple
         lines.
       </td>
       <td><code>false</code></td>
@@ -194,7 +194,7 @@ The following table shows the state of `re` after running this script:
     <tr>
       <td><code>sticky</code></td>
       <td>
-        Indicates if the <code>y</code> flag was used to match only from the
+        Indicates if the [`y`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) flag was used to match only from the
         index indicated by the <code>lastIndex</code> property.
       </td>
       <td><code>false</code></td>
@@ -202,7 +202,7 @@ The following table shows the state of `re` after running this script:
     <tr>
       <td><code>unicode</code></td>
       <td>
-        Indicates if the <code>u</code> flag was used to treat the pattern as a
+        Indicates if the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) flag was used to treat the pattern as a
         sequence of Unicode code points.
       </td>
       <td><code>false</code></td>
@@ -251,7 +251,7 @@ Found ab. Next match starts at 9
 > It will create an infinite loop if there is a match, due to the
 > {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration.
 >
-> Also, be sure that the global flag ("`g`") is set, or it will also cause
+> Also, be sure that the global flag ("[`g`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)") is set, or it will also cause
 > an infinite loop.
 >
 > In addition, when matching zero-length characters (e.g. `/^/gm`),
