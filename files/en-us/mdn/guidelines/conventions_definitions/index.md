@@ -20,7 +20,7 @@ This article defines some conventions and definitions that are commonly used on 
 
 - Deprecated
   - : On MDN, the term **deprecated** is used to mark an API or technology that is no longer recommended, but is still implemented and may still work.
-    More recently, we've updated it to the definition used in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information), which is that "the feature is no longer recommended. It might be removed in the future or might only be kept for compatibility purposes. Avoid using this functionality."
+    More recently, we've updated it to the definition used in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md), which is that "the feature is no longer recommended. It might be removed in the future or might only be kept for compatibility purposes. Avoid using this functionality."
 - Obsolete
   - : On MDN, the term **obsolete** was used to mark an API or technology that is not only no longer recommended, but also no longer implemented in browsers.
     This was, however, confusing — it is similar to **deprecated**, and the distinction is not very helpful (you still shouldn't use it in a production site).
@@ -37,7 +37,7 @@ One or both of these will be true:
 - Its defining spec is likely to change significantly, in backwards-incompatible ways (i.e. it may break existing code that relies on the feature).
 
 If one or both of these definitions is true, then you should think carefully before you start using that technology in any kind of production project (i.e. not just a demo or experiment).
-See also the definition of experimental in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information).
+See also the definition of experimental in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md).
 
 Conversely, an item is no longer experimental when:
 

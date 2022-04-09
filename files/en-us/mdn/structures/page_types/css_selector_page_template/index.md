@@ -74,8 +74,8 @@ browser-compat: css.selectors.NameOfTheSelector
 > **Syntax section (`\{{CSSSyntax}}`)**
 >
 > The content of the Syntax section is generated using the `\{{CSSSyntax}}` macro.
-> For these to populate you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/master/css/selectors.json) data file.
-> See [selectors.md](https://github.com/mdn/data/blob/master/css/selectors.md) for more information.
+> For these to populate you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) data file.
+> See [selectors.md](https://github.com/mdn/data/blob/main/css/selectors.md) for more information.
 >
 > _Remember to remove this whole explanatory note before publishing_
 

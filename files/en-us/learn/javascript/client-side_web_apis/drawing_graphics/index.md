@@ -482,7 +482,7 @@ There are a few JavaScript functions that will allow you to run functions repeat
 
 The browser works out complex details such as making the animation run at a consistent speed, and not wasting resources animating things that can't be seen.
 
-To see how it works, let's quickly look again at our Bouncing Balls example ([see it live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html), and also see [the source code](https://github.com/mdn/learning-area/tree/master/javascript/oojs/bouncing-balls)). The code for the loop that keeps everything moving looks like this:
+To see how it works, let's quickly look again at our Bouncing Balls example ([see it live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html), and also see [the source code](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)). The code for the loop that keeps everything moving looks like this:
 
 ```js
 function loop() {
@@ -788,9 +788,9 @@ Let's have another quick look at what the finished product should look like:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-You can [find the finished code on GitHub](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-cube).
+You can [find the finished code on GitHub](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube).
 
-> **Note:** In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
+> **Note:** In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
 
 ## Summary
 

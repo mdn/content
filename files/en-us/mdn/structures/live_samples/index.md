@@ -37,8 +37,8 @@ The live sample system has lots of options available, and we'll try to break thi
 
 There are two macros that you can use to display live samples:
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs) embeds a live sample into a page
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/master/kumascript/macros/LiveSampleLink.ejs) creates a link that opens the live sample in a new page
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) embeds a live sample into a page
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) creates a link that opens the live sample in a new page
 
 In many cases, you may be able to add the `EmbedLiveSample` or `LiveSampleLink` macro to pages with little or no additional work! As long as the sample can be identified by a heading's ID or is in a block with an ID you can use, adding the macro should do the job.
 
