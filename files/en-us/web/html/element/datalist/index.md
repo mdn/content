@@ -139,7 +139,7 @@ The recommended values in the {{HTMLElement("input/range", "range")}} type will 
 </datalist>
 ```
 
-{{EmbedLiveSample("Range_type", 600, 40)}}
+{{EmbedLiveSample("Range_type", 600, 70)}}
 
 ### Color type
 
@@ -155,7 +155,7 @@ The {{HTMLElement("input/color", "color")}} type can show predefined colors in a
 </datalist>
 ```
 
-{{EmbedLiveSample("Color_type", 600, 40)}}
+{{EmbedLiveSample("Color_type", 600, 70)}}
 
 ### Password type
 
