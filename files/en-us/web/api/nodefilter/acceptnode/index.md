@@ -78,7 +78,7 @@ tailoring the `acceptNode()` method to its needs, and using it with some
 ## Syntax
 
 ```js
-result = nodeFilter.acceptNode(node)
+nodeFilter.acceptNode(node)
 ```
 
 ### Parameters
@@ -106,8 +106,7 @@ var nodeIterator = document.createNodeIterator(
         return NodeFilter.FILTER_ACCEPT;
       }
     }
-  },
-  false
+  }
 );
 
 // Show the content of every non-empty text node that is a child of root

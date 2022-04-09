@@ -17,7 +17,9 @@ newly created {{domxref("TreeWalker")}} object.
 ## Syntax
 
 ```js
-document.createTreeWalker(root[, whatToShow[, filter[, expandEntityReferences]]]);
+document.createTreeWalker(root);
+document.createTreeWalker(root, whatToShow);
+document.createTreeWalker(root, whatToShow, filter);
 ```
 
 ### Parameters
@@ -53,9 +55,6 @@ document.createTreeWalker(root[, whatToShow[, filter[, expandEntityReferences]]]
   - : A {{domxref("NodeFilter")}}, that is an object with a method
     `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine
     whether or not to accept a node that has passed the `whatToShow` check.
-- `expandEntityReferences` {{optional_inline}} {{deprecated_inline}}
-  - : A boolean flag indicating if when discarding an
-    entity reference its whole sub-tree must be discarded at the same time.
 
 ### Return value
 
@@ -74,8 +73,7 @@ array.
 var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-  false
+  { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 
 var nodeList = [];
