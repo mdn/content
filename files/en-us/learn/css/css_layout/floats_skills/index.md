@@ -29,7 +29,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float1-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float1-download.html) to work in your own editor or in an online editor.
 
 ## Float two
 
@@ -43,7 +43,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float2-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float2-download.html) to work in your own editor or in an online editor.
 
 ## Float three
 
@@ -57,7 +57,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float3-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

@@ -181,7 +181,7 @@ In the example below, you can see two boxes. Both have a class of `.box`, which 
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1100)}}
 
-> **Note:** You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
+> **Note:** You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
 
 ### Use browser DevTools to view the box model
 

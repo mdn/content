@@ -50,13 +50,13 @@ These two approaches tended to result in a website that looked its best on the s
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
-> **Note:** See this simple liquid layout: [example](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). When viewing the example, drag your browser window in and out to see how this looks at different sizes.
+> **Note:** See this simple liquid layout: [example](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/liquid-width.html). When viewing the example, drag your browser window in and out to see how this looks at different sizes.
 
 The fixed-width site risked a horizontal scrollbar on screens smaller than the site width (as seen below), and lots of white space at the edges of the design on larger screens.
 
 ![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
-> **Note:** See this simple fixed-width layout: [example](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Again, observe the result as you change the browser window size.
+> **Note:** See this simple fixed-width layout: [example](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/fixed-width.html). Again, observe the result as you change the browser window size.
 
 > **Note:** The screenshots above are taken using the [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) in Firefox DevTools.
 
@@ -132,7 +132,7 @@ On wider screens they move to two columns:
 
 ![A desktop view of a layout with two columns.](mdn-rwd-desktop.png)
 
-> **Note:** You can find the [live example](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) and [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) for this example on GitHub.
+> **Note:** You can find the [live example](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) and [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/float-based-rwd.html) for this example on GitHub.
 
 ## Modern layout technologies
 
@@ -172,7 +172,7 @@ In the example below the flex items will each take an equal amount of space in t
 }
 ```
 
-> **Note:** As an example, we have rebuilt the simple responsive layout above, this time using flexbox. You can see how we no longer need to use strange percentage values to calculate the size of the columns: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
+> **Note:** As an example, we have rebuilt the simple responsive layout above, this time using flexbox. You can see how we no longer need to use strange percentage values to calculate the size of the columns: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
 
 ### CSS grid
 
@@ -185,7 +185,7 @@ In CSS Grid Layout the `fr` unit allows the distribution of available space acro
 }
 ```
 
-> **Note:** The grid layout version is even simpler as we can define the columns on the .wrapper: [example](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
+> **Note:** The grid layout version is even simpler as we can define the columns on the .wrapper: [example](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html).
 
 ## Responsive images
 
@@ -237,7 +237,7 @@ On desktop, however, we see the larger heading size:
 
 ![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
 
-> **Note:** See this example in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
+> **Note:** See this example in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-rwd.html).
 
 As this approach to typography shows, you do not need to restrict media queries to only changing the layout of the page. They can be used to tweak any element to make it more usable or attractive at alternate screen sizes.
 
@@ -263,7 +263,7 @@ h1 {
 
 This means that we only need to specify the font size for the heading once, rather than set it up for mobile and redefine it in the media queries. The font then gradually increases as you increase the size of the viewport.
 
-> **Note:** See an example of this in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
+> **Note:** See an example of this in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html).
 
 ## The viewport meta tag
 

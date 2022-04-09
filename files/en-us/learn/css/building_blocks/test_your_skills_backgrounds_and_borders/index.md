@@ -33,7 +33,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/backgrounds/backgrounds1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds1-download.html) to work in your own editor or in an online editor.
 
 ## Backgrounds and Borders 2
 
@@ -53,7 +53,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/backgrounds/backgrounds2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds2-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

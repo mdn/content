@@ -63,11 +63,11 @@ Optionally, you might want to show a static image of the code's resulting output
 
 ## Traditional live samples
 
-Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
+Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
 
 ## GitHub live samples
 
-GitHub live samples are inserted into the page using the [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedGHLiveSample.ejs) macro. An \\{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the **mdn** GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.
+GitHub live samples are inserted into the page using the [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) macro. An \\{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the **mdn** GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.
 
 These work in a very similar way to Traditional live samples, but they are a lot simpler:
 
@@ -109,6 +109,6 @@ If you find a page that doesn't have an associated interactive example, you are 
 
 ### Interactive example demo
 
-The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedInteractiveExample.ejs) macro is used to embed finished examples into MDN pages. For example, the macro call \\{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:
+The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedInteractiveExample.ejs) macro is used to embed finished examples into MDN pages. For example, the macro call \\{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}Try adjusting the code to see what happens, and playing with the controls.

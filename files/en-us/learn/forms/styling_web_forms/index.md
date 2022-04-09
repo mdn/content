@@ -370,7 +370,7 @@ And voila! Your form should now look like this:
 
 ![](updated-form-screenshot.jpg)
 
-> **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
+> **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
 ## Test your skills!
 

@@ -25,7 +25,7 @@ In the example below see if you can match the image above.
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/cascade/cascade-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascade-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

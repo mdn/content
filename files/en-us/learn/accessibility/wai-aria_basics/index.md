@@ -124,7 +124,7 @@ See our section on [testing screenreaders](/en-US/docs/Learn/Tools_and_testing/C
 
 ### Signposts/Landmarks
 
-WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screenreaders so that their users can find common page elements. Let's look at an example — our [website-no-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)) has the following structure:
+WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screenreaders so that their users can find common page elements. Let's look at an example — our [website-no-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)) has the following structure:
 
 ```html
 <header>
@@ -160,7 +160,7 @@ If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and th
 
 However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (`<input type="search">`). In addition, some older browsers (most notably IE8) don't recognize the semantics of the HTML5 elements.
 
-Let's improve it by the use of some ARIA features. First, we'll add some [`role`](/en-US/docs/Web/accessibility/ARIA/roles) attributes to our HTML structure. You can try taking a copy of our original files (see [index.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) and [style.css](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), or navigating to our [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), which has a structure like this:
+Let's improve it by the use of some ARIA features. First, we'll add some [`role`](/en-US/docs/Web/accessibility/ARIA/roles) attributes to our HTML structure. You can try taking a copy of our original files (see [index.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) and [style.css](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), or navigating to our [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), which has a structure like this:
 
 ```html
 <header>

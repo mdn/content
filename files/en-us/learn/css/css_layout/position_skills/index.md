@@ -28,7 +28,7 @@ As an extra challenge, can you change the target to display underneath the text?
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position1-download.html) to work in your own editor or in an online editor.
 
 ## Position Two
 
@@ -42,7 +42,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position2-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

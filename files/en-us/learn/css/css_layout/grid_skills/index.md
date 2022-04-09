@@ -27,7 +27,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid1-download.html) to work in your own editor or in an online editor.
 
 ## Grid Layout Two
 
@@ -45,7 +45,7 @@ Additional questions:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid2-download.html) to work in your own editor or in an online editor.
 
 ## Grid Layout Three
 
@@ -59,7 +59,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid3-download.html) to work in your own editor or in an online editor.
 
 ## Grid and Flex Layout 4
 
@@ -73,7 +73,7 @@ Try updating the code below to create your example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid4-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 
