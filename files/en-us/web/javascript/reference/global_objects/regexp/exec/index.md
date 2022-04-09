@@ -214,7 +214,7 @@ The following table shows the state of `re` after running this script:
 
 ### Finding successive matches
 
-If your regular expression uses the "`g`" flag, you can use the
+If your regular expression uses the ["`g`"](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) flag, you can use the
 `exec()` method multiple times to find successive matches in the same string.
 When you do so, the search starts at the substring of `str`
 specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}}
