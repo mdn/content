@@ -77,7 +77,7 @@ The state of ARIA technology has always depended on the community. If you notice
   <tr>
    <td>Opera</td>
    <td><a href="https://bugs.opera.com/wizard/">File Opera bugs</a></td>
-   <td><span>Use [ARIA] in the summary field</span></td>
+   <td>Use [ARIA] in the summary field</td>
   </tr>
  </tbody>
 </table>
