@@ -97,7 +97,7 @@ In a traditional data-driven website, a web application waits for HTTP requests 
 
 Django web applications typically group the code that handles each of these steps into separate files:
 
-![Django - files for views, model, urls, template](basic-django.png)
+![Django - files for views, model, URLs, template](basic-django.png)
 
 - **URLs:** While it is possible to process requests from every single URL via a single function, it is much more maintainable to write a separate view function to handle each resource. A URL mapper is used to redirect HTTP requests to the appropriate view based on the request URL. The URL mapper can also match particular patterns of strings or digits that appear in a URL and pass these to a view function as data.
 - **View:** A view is a request handler function, which receives HTTP requests and returns HTTP responses. Views access the data needed to satisfy requests via _models_, and delegate the formatting of the response to *templates*.

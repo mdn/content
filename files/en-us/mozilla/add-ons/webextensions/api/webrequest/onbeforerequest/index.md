@@ -274,7 +274,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Another example, that redirects all images to a data url:
+Another example, that redirects all images to a data URL:
 
 ```js
 let pattern = "https://mdn.mozillademos.org/*";

@@ -133,7 +133,7 @@ async function removeStoredImages(storedImages) {
 
 Note the use of [`URL.revokeObjectURL()`](/en-US/docs/Web/API/URL/revokeObjectURL) to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension's background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension's page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.
 
-Once the blob URL has been revoked, any attempt to load it will result in an error. For example, if the blob url was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob URLs from generated HTML elements when the blob URL is revoked.
+Once the blob URL has been revoked, any attempt to load it will result in an error. For example, if the blob URL was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob URLs from generated HTML elements when the blob URL is revoked.
 
 Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
 API References:  [idb-file-storage library](https://rpl.github.io/idb-file-storage/)

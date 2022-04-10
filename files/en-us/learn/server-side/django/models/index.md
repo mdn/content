@@ -87,7 +87,7 @@ class MyModelName(models.Model):
 
     # Methods
     def get_absolute_url(self):
-        """Returns the url to access a particular instance of MyModelName."""
+        """Returns the URL to access a particular instance of MyModelName."""
         return reverse('model-detail-view', args=[str(self.id)])
 
     def __str__(self):
@@ -204,11 +204,11 @@ Another common method to include in Django models is `get_absolute_url()`, which
 
 ```python
 def get_absolute_url(self):
-    """Returns the url to access a particular instance of the model."""
+    """Returns the URL to access a particular instance of the model."""
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **Note:** Assuming you will use URLs like `/myapplication/mymodelname/2` to display individual records for your model (where "2" is the `id` for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The `reverse()` function above is able to "reverse" your url mapper (in the above case named _'model-detail-view'_) in order to create a URL of the right format.
+> **Note:** Assuming you will use URLs like `/myapplication/mymodelname/2` to display individual records for your model (where "2" is the `id` for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The `reverse()` function above is able to "reverse" your URL mapper (in the above case named _'model-detail-view'_) in order to create a URL of the right format.
 >
 > Of course to make this work you still have to write the URL mapping, view, and template!
 
@@ -333,7 +333,7 @@ class Book(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        """Returns the url to access a detail record for this book."""
+        """Returns the URL to access a detail record for this book."""
         return reverse('book-detail', args=[str(self.id)])
 ```
 
@@ -416,7 +416,7 @@ class Author(models.Model):
         ordering = ['last_name', 'first_name']
 
     def get_absolute_url(self):
-        """Returns the url to access a particular author instance."""
+        """Returns the URL to access a particular author instance."""
         return reverse('author-detail', args=[str(self.id)])
 
     def __str__(self):
