@@ -57,6 +57,8 @@ This article provides information about the changes in Firefox 100 that will aff
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("scripting.updateContentScripts()")}} added to the {{WebExtAPIRef("scripting")}} API ({{bug(1736585)}}). This API is not available for use until the implementation of manifest V3.
+
 #### Removals
 
 ### Other
