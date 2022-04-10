@@ -103,7 +103,7 @@ The interactive examples are intended to be used at the top of MDN reference pag
 - The UI is more performance-intensive than other code examples; you shouldn't put more than one on each MDN article you apply them to.
 - They are not intended for large code examples — the UI supports a range of fixed sizes, which only really work for short (say, 10–15 line) examples.
 
-If you want to submit an example, you can find out how at the [interactive examples repo Contribution guide](https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md).
+If you want to submit an example, you can find out how at the [interactive examples repo Contribution guide](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md).
 
 If you find a page that doesn't have an associated interactive example, you are welcome to contribute one!
 

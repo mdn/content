@@ -60,7 +60,7 @@ myArrayBuffer.copyFromChannel(destination, channelNumber, startInChannel);
       of samples that already exist in the source buffer; that is, it's greater than its
       current {{domxref("AudioBuffer.length", "length")}}.
 
-## Example
+## Examples
 
 This example creates a new audio buffer, then copies the samples from another channel
 into it.

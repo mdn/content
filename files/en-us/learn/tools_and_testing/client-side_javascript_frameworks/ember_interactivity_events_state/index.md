@@ -233,7 +233,7 @@ this.todos.add(text);
 
 If we try this out in the todo app in our browser (`npm start`, go to `localhost:4200`), it will look like nothing happens after hitting the <kbd>Enter</kbd> key (although the fact that the app builds without any errors is a good sign). Using the [Ember Inspector](https://guides.emberjs.com/release/ember-inspector/installation/) however, we can see that our todo was added:
 
-![The app being shown in the ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet](todos-in-ember-inspector.gif)
+![The app being shown in the Ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet](todos-in-ember-inspector.gif)
 
 ## Displaying our todos
 

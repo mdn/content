@@ -36,7 +36,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events1-download.html) to work in your own editor or in an online editor.
 
 ## Events 2
 
@@ -52,7 +52,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events2-download.html) to work in your own editor or in an online editor.
 
 ## Events 3
 
@@ -66,7 +66,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

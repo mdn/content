@@ -31,7 +31,7 @@ None.
 
 {{jsxref("undefined")}}
 
-## Example
+## Examples
 
 In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to play backwards, causing her to get smaller. It is done by setting `aliceChange`'s {{ domxref("Animation.playbackRate") }} to `-1` like so:
 

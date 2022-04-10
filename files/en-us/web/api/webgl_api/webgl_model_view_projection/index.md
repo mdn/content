@@ -43,7 +43,7 @@ For this section we will put our data into the clip space coordinate system dire
 
 This example will create a custom `WebGLBox` object that will draw a 2D box on the screen.
 
-> **Note:** The code for each WebGLBox example is available in this [GitHub repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
+> **Note:** The code for each WebGLBox example is available in this [GitHub repo](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
 
 #### WebGLBox constructor
 

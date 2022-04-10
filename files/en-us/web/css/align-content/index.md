@@ -211,8 +211,6 @@ select {
 
     <option value="start">start</option>
     <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
 
     <option value="baseline">baseline</option>
     <option value="first baseline">first baseline</option>
