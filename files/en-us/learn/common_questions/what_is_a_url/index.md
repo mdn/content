@@ -55,7 +55,7 @@ Any of those URLs can be typed into your browser's address bar to tell it to loa
 
 A URL is composed of different parts, some mandatory and others optional. The most important parts are highlighted on the URL below (details are provided in the following sections):
 
-![full  url](mdn-url-all.png)
+![full URL](mdn-url-all.png)
 
 > **Note:** You might think of a URL like a regular postal mail address: the _scheme_ represents the postal service you want to use, the _domain name_ is the city or town, and the _port_ is like the zip code; the _path_ represents the building where your mail should be delivered; the _parameters_ represent extra information such as the number of the apartment in the building; and, finally, the _anchor_ represents the actual person to whom you've addressed your mail.
 

@@ -425,7 +425,7 @@ To start working with our project, we'll run the Parcel server on the command li
     ✨  Built in 129ms.
     ```
 
-    Parcel also installs the dependencies that we will use in our code, including react, react-dom, react-async-hook, date-fns, and format-number. This first run will therefore be longer than a typical run of Parcel.
+    Parcel also installs the dependencies that we will use in our code, including React, react-dom, react-async-hook, date-fns, and format-number. This first run will therefore be longer than a typical run of Parcel.
 
     > **Note:** if you run Parcel on this project and are faced with an error that reads `Error: ENOENT: no such file or directory`, stop the process using <kbd>Ctrl</kbd> + <kbd>C</kbd> and then try re-running it.
 

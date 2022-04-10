@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 65 that will affe
 
 - The [Flexbox inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) is now enabled by default.
 - Support has been added to the [JavaScript Debugger](/en-US/docs/Tools/Debugger) for XHR Breakpoints ({{bug(821610)}}).
-- Right-click on an item in the accessibility tree from the Accessibility viewer to [print it as json](/en-US/docs/Tools/Accessibility_inspector#print_accessibility_tree_to_json) to the JSON viewer.
+- Right-click on an item in the accessibility tree from the Accessibility viewer to [print it as JSON](/en-US/docs/Tools/Accessibility_inspector#print_accessibility_tree_to_json) to the JSON viewer.
 - The [color contrast](/en-US/docs/Tools/Accessibility_inspector#color_contrast) display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.
 - The Headers tab of the [Network Monitor](/en-US/docs/Tools/Network_Monitor) now displays the Referrer Policy for the selected request ({{bug(1496742)}}).
 - When displaying stack traces (e.g. in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.

@@ -27,7 +27,7 @@ We're now ready to add the code that displays our first complete page — a home
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        Learn to create simple url maps and views (where no data is encoded in the URL), get data from models, and create templates.
+        Learn to create simple URL maps and views (where no data is encoded in the URL), get data from models, and create templates.
       </td>
     </tr>
   </tbody>
@@ -61,7 +61,7 @@ The URLs that we'll need for our pages are:
 
 The first three URLs will return the index page, books list, and authors list. These URLs do not encode any additional information, and the queries that fetch data from the database will always be the same. However, the results that the queries return will depend on the contents of the database.
 
-By contrast the final two URLs will display detailed information about a specific book or author. These URLs encode the identity of the item to display (represented by `<id>` above). The URL mapper will extract the encoded information and pass it to the view, and the view will dynamically determine what information to get from the database. By encoding the information in the URL we will use a single set of a url mapping, a view, and a template to handle all books (or authors).
+By contrast the final two URLs will display detailed information about a specific book or author. These URLs encode the identity of the item to display (represented by `<id>` above). The URL mapper will extract the encoded information and pass it to the view, and the view will dynamically determine what information to get from the database. By encoding the information in the URL we will use a single set of a URL mapping, a view, and a template to handle all books (or authors).
 
 > **Note:** With Django, you can construct your URLs however you require — you can encode information in the body of the URL as shown above, or include `GET` parameters in the URL, for example `/book/?id=6`. Whichever approach you use, the URLs should be kept clean, logical, and readable, as [recommended by the W3C](https://www.w3.org/Provider/Style/URI).
 > The Django documentation recommends encoding information in the body of the URL to achieve better URL design.
@@ -109,7 +109,7 @@ For example, we can use the name parameter to link to our home page from any oth
 <a href="{% url 'index' %}">Home</a>.
 ```
 
-> **Note:** We can hard code the link as in `<a href="/catalog/">Home</a>`), but if we change the pattern for our home page, for example, to `/catalog/index`) the templates will no longer link correctly. Using a reversed url mapping is more robust.
+> **Note:** We can hard code the link as in `<a href="/catalog/">Home</a>`), but if we change the pattern for our home page, for example, to `/catalog/index`) the templates will no longer link correctly. Using a reversed URL mapping is more robust.
 
 ### View (function-based)
 
@@ -387,7 +387,7 @@ Here are a couple of tasks to test your familiarity with model queries, views, a
 
 ## Summary
 
-We just created the home page for our site — an HTML page that displays a number of records from the database and links to other yet-to-be-created pages. Along the way we learned fundamental information about url mappers, views, querying the database with models, passing information to a template from a view, and creating and extending templates.
+We just created the home page for our site — an HTML page that displays a number of records from the database and links to other yet-to-be-created pages. Along the way we learned fundamental information about URL mappers, views, querying the database with models, passing information to a template from a view, and creating and extending templates.
 
 In the next article we'll build upon this knowledge to create the remaining four pages of our website.
 

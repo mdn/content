@@ -264,7 +264,7 @@ For example, consider the following Django (Python) code that maps two URL patte
 # file: best/urls.py
 #
 
-from django.conf.urls import url
+from django.conf.urls import URL
 
 from . import views
 

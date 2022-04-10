@@ -195,7 +195,7 @@ In addition you should write some basic tests to verify:
 - All models have the expected object name (e.g. `__str__()` returns the expected value).
 - Models have the expected URL for individual Blog and Comment records (e.g. `get_absolute_url()` returns the expected URL).
 - The BlogListView (all-blog page) is accessible at the expected location (e.g. /blog/blogs)
-- The BlogListView (all-blog page) is accessible at the expected named url (e.g. 'blogs')
+- The BlogListView (all-blog page) is accessible at the expected named URL (e.g. 'blogs')
 - The BlogListView (all-blog page) uses the expected template (e.g. the default)
 - The BlogListView paginates records by 5 (at least on the first page)
 

@@ -131,7 +131,7 @@ However, if you try to click the "Clear Completed" button now, it won't appear t
 
 The above is fine, but we have another small issue to contend with. The "todos left" indicator always says "x todos left", even when there is only one todo left, which is bad grammar!
 
-To fix this, we need to update this part of the template to include some conditional rendering. In ember, you can conditionally render parts of the template using [conditional content](https://guides.emberjs.com/v3.18.0/components/conditional-content/); a simple block example looks something like this:
+To fix this, we need to update this part of the template to include some conditional rendering. In Ember, you can conditionally render parts of the template using [conditional content](https://guides.emberjs.com/v3.18.0/components/conditional-content/); a simple block example looks something like this:
 
 ```js
 \{{#if this.thingIsTrue}}
@@ -181,7 +181,7 @@ Then go back over to `footer.hbs` and update the previous template section we ed
 
 Now save and test, and you'll see the correct pluralization used when you only have one todo item present!
 
-Note that this is the block form of `if` in ember; you could also use the inline form:
+Note that this is the block form of `if` in Ember; you could also use the inline form:
 
 ```js
 \{{if this.todos.todoCountIsOne "todo" "todos"}}

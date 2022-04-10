@@ -486,7 +486,7 @@ Let's write an example:
          .withCapabilities(capabilities)
          .build();
 
-    // navigate to a url, search for a text and get title of page
+    // navigate to a URL, search for a text and get title of page
     driver.get('https://www.google.com/ncr').then(function() {
         driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function() {
              driver.getTitle().then(function(title) {

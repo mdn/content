@@ -234,7 +234,7 @@ INFO  Starting development server...
 
 If you navigate to the "local" address in a new browser tab (this should be something like `http://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
 
-![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
+![default Vue app render, with Vue logo, welcome message, and some documentation links](vue-default-app.png)
 
 ## Making a couple of changes
 
