@@ -25,7 +25,7 @@ for {{domxref("btoa", "btoa()")}}.
 ## Syntax
 
 ```js
-var decodedData = atob(encodedData);
+atob(encodedData);
 ```
 
 ### Parameters
@@ -43,7 +43,7 @@ An ASCII string containing decoded data from `encodedData`.
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if `encodedData` is not valid base64.
 
-## Example
+## Examples
 
 ```js
 const encodedData = btoa('Hello, world'); // encode a string

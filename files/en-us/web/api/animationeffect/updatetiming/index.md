@@ -26,7 +26,7 @@ animation.updateTiming(timing);
 - `timing`
   - : An object containing the timing properties to update.
 
-### Return Value
+### Return value
 
 None.
 
