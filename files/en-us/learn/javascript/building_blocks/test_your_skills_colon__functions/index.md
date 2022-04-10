@@ -34,7 +34,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions1-download.html) to work in your own editor or in an online editor.
 
 ## Functions 2
 
@@ -54,7 +54,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions2-download.html) to work in your own editor or in an online editor.
 
 ## Functions 3
 
@@ -70,7 +70,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions3-download.html) to work in your own editor or in an online editor.
 
 ## Functions 4
 
@@ -82,7 +82,7 @@ We'd like you to change this into an arrow function. See how compact you can mak
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions4-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions4-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

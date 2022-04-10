@@ -25,7 +25,7 @@ A {{domxref("VRFieldOfView")}} object.
 
 ## Examples
 
-The following example is taken from the Mozilla VR Team's [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) code — to be precise, the [VREffect.js file](https://github.com/MozVR/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js#L28-L29). Early on in the code the {{domxref("HMDVRDevice.getEyeParameters")}} method is used to access information about each eye — {{domxref("VREyeParameters.offset")}} and {{domxref("VREyeParameters.recommendedFieldOfView")}} — which are used for rendering calculations later on.
+The following example is taken from the Mozilla VR Team's [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) code — to be precise, the [VREffect.js file](https://github.com/MozillaReality/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js). Early on in the code the {{domxref("HMDVRDevice.getEyeParameters")}} method is used to access information about each eye — {{domxref("VREyeParameters.offset")}} and {{domxref("VREyeParameters.recommendedFieldOfView")}} — which are used for rendering calculations later on.
 
 ```js
 if ( vrHMD.getEyeParameters !== undefined ) {

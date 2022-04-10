@@ -64,7 +64,7 @@ The information from the specifications is stored in a specific way in the JSON 
 
 Translated information is stored as key string mapping to a translation in [l10n/css.json](https://github.com/mdn/data/blob/main/l10n/css.json) with language + country codes (according to [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) as keys.
 
-You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blob/master/macros/cssxref.ejs) and [\\{{SVGElement}}](https://github.com/mozilla/kumascript/blob/master/macros/SVGElement.ejs) within translations to refer to other parts of MDN.
+You can use the macros [\\{{cssxref}}](https://github.com/mdn/yari/blob/main/kumascript/macros/cssxref.ejs) and [\\{{SVGElement}}](https://github.com/mdn/yari/blob/main/kumascript/macros/SVGElement.ejs) within translations to refer to other parts of MDN.
 
 <table class="standard-table">
   <tbody>
