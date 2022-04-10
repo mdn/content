@@ -185,7 +185,6 @@ The easiest way to identify the compatibility of a feature is to look for when t
 
 1. For a given interface named `InterfaceName`, go to [DXR](https://dxr.mozilla.org/mozilla-central/source/) and type <kbd>file:<em>InterfaceName</em>.webidl</kbd> in the search box at the top of the page and pressing <kbd>Enter</kbd>. You will probably have to then click on the name of the file in a list of files (usually only a one-file-long list).
 2. If the interface isn't found, then search for it by looking for the main interface in the API. For example, a large number of the interfaces, types, and so on for [WebRTC](/en-US/docs/Web/API/WebRTC_API) are located in the file `RTCPeerConnection.webidl` in the Firefox source code, so if you don't find a WebRTC interface by its name, look in that file instead.
-3. Failing that, try looking for <kbd>file:<em>interfacename</em>.idl</kbd> to see if perhaps the interface is one which is still using the older Mozilla [XPIDL](/en-US/docs/Archive/Mozilla/XPIDL) syntax to describe it. This should not happen very often, if at all.
 
 Once in the WebIDL file, click the "Blame" link under "VCS Links" in the Navigation box near the top-right corner of the DXR page.
 
