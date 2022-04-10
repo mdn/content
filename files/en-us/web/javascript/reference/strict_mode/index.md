@@ -56,7 +56,7 @@ function notStrict() {
 }
 ```
 
-In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), starting
+In strict mode, starting
 with ES2015, functions inside blocks are scoped to that block. Prior to ES2015,
 block-level functions were forbidden in strict mode.
 
