@@ -35,13 +35,13 @@ of a semi-colon.
 ### Missing a variable name
 
 ```js example-bad
-var = "foo";
+const = "foo";
 ```
 
 Coming up with a descriptive variable name is challenging for most developers. It gets easier over time.
 
 ```js example-good
-var description = "foo";
+const description = "foo";
 ```
 
 ### Reserved keywords can't be variable names
@@ -50,7 +50,7 @@ There are a few variable names that are [reserved keywords](/en-US/docs/Web/Java
 You can't use these. Sorry :(
 
 ```js example-bad
-var debugger = "whoop";
+const debugger = "whoop";
 // SyntaxError: missing variable name
 ```
 
@@ -60,11 +60,11 @@ Pay special attention to commas when declaring multiple variables. Is there an e
 comma? Did you accidentally add commas instead of semicolons?
 
 ```js example-bad
-var x, y = "foo",
-var x, = "foo"
+const x, y = "foo",
+const x, = "foo"
 
-var first = document.getElementById('one'),
-var second = document.getElementById('two'),
+const first = document.getElementById('one'),
+const second = document.getElementById('two'),
 
 // SyntaxError: missing variable name
 ```
@@ -72,11 +72,11 @@ var second = document.getElementById('two'),
 The fixed version:
 
 ```js example-good
-var x, y = "foo";
-var x = "foo";
+const x, y = "foo";
+const x = "foo";
 
-var first = document.getElementById('one');
-var second = document.getElementById('two');
+const first = document.getElementById('one');
+const second = document.getElementById('two');
 ```
 
 ### Arrays
@@ -85,14 +85,14 @@ var second = document.getElementById('two');
 won't work:
 
 ```js example-bad
-var arr = 1,2,3,4,5;
+const arr = 1,2,3,4,5;
 // SyntaxError: missing variable name
 ```
 
 This would be correct:
 
 ```js example-good
-var arr = [1,2,3,4,5];
+const arr = [1,2,3,4,5];
 ```
 
 ## See also
