@@ -27,7 +27,7 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 - {{cssxref("scroll-padding-inline-start")}}
 - {{cssxref("scroll-padding-inline-end")}}
 - {{cssxref("scroll-padding-block")}}
-- {{cssxref("scroll-padding-block-start")}}
+- [scroll-padding-block-start](/en-US/docs/Web/CSS/scroll-padding-block-start)
 - {{cssxref("scroll-padding-block-end")}}
 
 ### CSS Properties on Children
