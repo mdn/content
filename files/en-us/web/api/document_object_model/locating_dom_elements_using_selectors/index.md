@@ -27,7 +27,7 @@ The selector methods accept [selectors](/en-US/docs/Web/CSS/CSS_Selectors) to de
 
 To protect the user's privacy, some [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are not supported or behave differently. For example {{cssxref(":visited")}} will return no matches and {{cssxref(":link")}} is treated as {{cssxref(":any-link")}}.
 
-Only elements can be selected, so [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are not supported.
+Only elements can be selected, so [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are not supported.
 
 ## Examples
 
