@@ -28,7 +28,7 @@ channel of the `AudioBuffer` to a specified
 ## Syntax
 
 ```js
-audioBuffer.copyFromChannel(destination, channelNumber, startInChannel);
+copyFromChannel(destination, channelNumber, startInChannel);
 ```
 
 ### Parameters

@@ -23,7 +23,7 @@ JavaScript.
 ## Syntax
 
 ```js
-audioContext.createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels);
+createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels);
 ```
 
 ### Parameters
