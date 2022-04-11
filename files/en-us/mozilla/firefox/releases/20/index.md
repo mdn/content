@@ -65,10 +65,10 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ## Changes for add-on and Mozilla developers
 
 - [ECMAScript for XML (E4X)](/en-US/docs/E4X) is now fully disabled for all chrome and content scripts. It was previously disabled for content in Firefox 17 and has been removed entirely for Firefox 21. Use DOMParser/DOMSerializer or a non-native JXON algorithm instead.
-- The {{interface("nsIDOMParserJS")}} interface no longer exists {{bug('816410')}}. See {{interface("nsIDOMParser")}} for alternatives.
-- Content Preferences: The {{Interface("nsIContentPrefService")}} interface is now deprecated and the asynchronous {{Interface("nsIContentPrefService2")}} storage API has been implemented.
-- The {{interface("nsIProfile")}} and {{interface("nsIProfileChangeStatus")}} interfaces have been removed, along with other code supporting the pre-Firefox profile management system. You probably weren't using these interfaces, but if you were, you should stop doing so. This prevents defunct parts of the profile management system from vetoing the shutdown process.
-- The {{interface("nsIEventSource")}} interface no longer exists {{bug('819639')}}.
+- The `nsIDOMParserJS` interface no longer exists {{bug('816410')}}. See `nsIDOMParser` for alternatives.
+- Content Preferences: The `nsIContentPrefService` interface is now deprecated and the asynchronous `nsIContentPrefService2` storage API has been implemented.
+- The `nsIProfile` and `nsIProfileChangeStatus` interfaces have been removed, along with other code supporting the pre-Firefox profile management system. You probably weren't using these interfaces, but if you were, you should stop doing so. This prevents defunct parts of the profile management system from vetoing the shutdown process.
+- The `nsIEventSource` interface no longer exists {{bug('819639')}}.
 
 ## See also
 

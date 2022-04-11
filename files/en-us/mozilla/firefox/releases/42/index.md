@@ -135,7 +135,7 @@ _No change._
 
 #### nsIContentPolicy
 
-- The `TYPE_EMBED` constant has been added to [`nsIContentPolicy`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy) to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, `TYPE_OBJECT` was used for these cases ({{bug(1148030)}}).
+- The `TYPE_EMBED` constant has been added to `nsIContentPolicy` to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, `TYPE_OBJECT` was used for these cases ({{bug(1148030)}}).
 - Similarly, the `TYPE_SUBDOCUMENT` constants has been split into `TYPE_FRAME` and `TYPE_IFRAME` ({{bug(1148044)}}).
 
 ### XUL

@@ -22,7 +22,7 @@ Returns a `boxObject` (x, y, width, height) for a specified element.
 boxObject = document.getBoxObjectFor(element);
 ```
 
-- _boxObject_ is an {{interface("nsIBoxObject")}}.
+- _boxObject_ is an `nsIBoxObject`.
 - _element_ is a {{domxref("element","DOMElement")}}.
 
 ## Example
@@ -41,7 +41,7 @@ alert (
 
 ## Notes
 
-Specified in [nsIXULDocument.idl](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl)
+Specified in nsIXULDocument.idl
 
 ## Browser compatibility
 

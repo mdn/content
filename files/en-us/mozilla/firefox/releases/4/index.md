@@ -249,7 +249,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - Media `buffered` attribute support
   - : The `buffered` attribute on {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements is now supported, letting you determine which ranges of a media file have been buffered. The {{domxref("TimeRanges")}} DOM interface has been implemented to support this.
 - Media `preload` attribute
-  - : The `preload` attribute from the HTML5 specification has been implemented, replacing the previously-implemented (and no longer supported) `autobuffer` attribute. This affects the {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements, as well as the {{interface("nsIDOMHTMLMediaElement")}} interface.
+  - : The `preload` attribute from the HTML5 specification has been implemented, replacing the previously-implemented (and no longer supported) `autobuffer` attribute. This affects the {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements, as well as the `nsIDOMHTMLMediaElement` interface.
 - SVG text positioning improvements
   - : You can now specify lists for the values of the `x`, `y`, `dx`, and `dy` properties on SVG {{SVGElement("text")}} and {{SVGElement("tspan")}} elements. This lets you control the positioning of each character in a string individually.
 
@@ -447,29 +447,29 @@ In addition to the specific changes referenced below, it's important to note tha
 
 ### Places
 
-- Places query results may now be observed by multiple observers, and queries may be executed asynchronously. This means there have been some changes to the {{interface("nsINavHistoryResult")}}, {{interface("nsINavHistoryQueryOptions")}}, and {{interface("nsINavHistoryContainerResultNode")}} interfaces. More significantly, the {{interface("nsINavHistoryResultViewer")}} interface has been renamed to {{interface("nsINavHistoryResultObserver")}}.
+- Places query results may now be observed by multiple observers, and queries may be executed asynchronously. This means there have been some changes to the `nsINavHistoryResult`, `nsINavHistoryQueryOptions`, and `nsINavHistoryContainerResultNode` interfaces. More significantly, the `nsINavHistoryResultViewer` interface has been renamed to `nsINavHistoryResultObserver`.
 - Some [new notifications](/en-US/docs/Observer_Notifications#Places) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
 - The array size output parameter on several Places methods is now optional.
 - Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](/en-US/docs/Displaying_Places_information_using_views#Menu_view) for details.
 
 ### Interface changes
 
-- The {{interface("nsIDocShell")}} and {{interface("nsIWebBrowser")}} interfaces now have a new `isActive` attribute, which is used to allow optimization of code paths for documents that aren't currently visible.
-- The {{interface("nsIMemory")}} method {{ifmethod("nsIMemory","isLowMemory")}} has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) to watch for low memory situations instead.
+- The `nsIDocShell` and `nsIWebBrowser` interfaces now have a new `isActive` attribute, which is used to allow optimization of code paths for documents that aren't currently visible.
+- The `nsIMemory` method {{ifmethod("nsIMemory","isLowMemory")}} has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) to watch for low memory situations instead.
 - The API for handling redirects on HTTP channels has changed to let them be processed asynchronously. Any code that implements redirect handling using {{ifmethod("nsIChannelEventSink", "onChannelRedirect")}} needs to be updated to use {{ifmethod("nsIChannelEventSink", "asyncOnChannelRedirect")}} instead. This accepts a callback handler that must be called when a redirect is successfully completed.
 - The {{ifmethod("nsINavHistoryResultObserver", "batching")}} method has been added, providing a way to group Places operations into batches, reducing the number of update notifications delivered, which can improve performance when observers are performing relatively involved tasks (such as refreshing views).
-- The long-obsolete `nsIPref` interface has finally been removed. If you haven't already switched to {{interface("nsIPrefService")}}, now is the time.
-- The {{interface("nsISessionStore")}} and {{interface("nsISessionStartup")}} interfaces received changes to support on-demand session restore. See the {{ifmethod("nsISessionStore", "restoreLastSession")}} method.
-- The {{interface("nsIPrincipal")}} methods {{ifmethod("nsIPrincipal", "subsumes")}} and {{ifmethod("nsIPrincipal", "checkMayLoad")}}, as well as its `origin`, `csp`, and `URI` attributes, are now available from script; previously they were only available from native code.
-- The {{interface("nsIPrompt")}} interface now supports tab-modal alerts; see [Using tab-modal prompts](/en-US/docs/Using_tab-modal_prompts) for details.
+- The long-obsolete `nsIPref` interface has finally been removed. If you haven't already switched to `nsIPrefService`, now is the time.
+- The `nsISessionStore` and `nsISessionStartup` interfaces received changes to support on-demand session restore. See the {{ifmethod("nsISessionStore", "restoreLastSession")}} method.
+- The `nsIPrincipal` methods {{ifmethod("nsIPrincipal", "subsumes")}} and {{ifmethod("nsIPrincipal", "checkMayLoad")}}, as well as its `origin`, `csp`, and `URI` attributes, are now available from script; previously they were only available from native code.
+- The `nsIPrompt` interface now supports tab-modal alerts; see [Using tab-modal prompts](/en-US/docs/Using_tab-modal_prompts) for details.
 - The {{ifmethod("nsIEffectiveTLDService", "getPublicSuffixFromHost")}} method now correctly rejects host name starting with a period (".").
 - The {{ifmethod("mozIJSSubScriptLoader", "loadSubScript")}} method now has an optional argument allowing you to specify the character set of the script; if one is not provided, ASCII is assumed (as was always assumed previously).
 - The `nsIAccessProxy` interface has been removed. It was an implementation detail that has outlived its usefulness.
-- The {{interface("nsIContentView")}} and {{interface("nsIContentViewManager")}} interfaces have been added for Firefox Mobile. It represents a scrollable content view whose contents are actually drawn by a separate process.
-- The {{interface("nsIDiskCacheStreamInternal")}} interface has been added.
-- The {{interface("nsIExternalURLHandlerService")}} interface has been added.
-- The {{interface("nsISyncJPAKE")}} interface has been added. See {{bug("601645")}}.
-- The {{interface("nsIINIParserWriter")}} interface was added in Gecko 1.9.2.4 to support writing to INI files.
+- The `nsIContentView` and `nsIContentViewManager` interfaces have been added for Firefox Mobile. It represents a scrollable content view whose contents are actually drawn by a separate process.
+- The `nsIDiskCacheStreamInternal` interface has been added.
+- The `nsIExternalURLHandlerService` interface has been added.
+- The `nsISyncJPAKE` interface has been added. See {{bug("601645")}}.
+- The `nsIINIParserWriter` interface was added in Gecko 1.9.2.4 to support writing to INI files.
 
 ### Memory management
 
@@ -498,7 +498,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - Default plugin removed
   - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See {{bug("533891")}}.
 - Extension Manager replaced by Addon Manager
-  - : {{interface("nsIExtensionManager")}} has been replaced by [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
+  - : `nsIExtensionManager` has been replaced by [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
 - Child HWNDs no longer used
   - : Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an [NPAPI](/en-US/docs/NPAPI) plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.
 - Gesture changes

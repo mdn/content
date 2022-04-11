@@ -43,8 +43,8 @@ void initMouseScrollEvent(
 
 ## Attributes
 
-| Attribute                       | Type   | Description                 |
-| ------------------------------- | ------ | --------------------------- |
+| Attribute                 | Type   | Description                 |
+| ------------------------- | ------ | --------------------------- |
 | `axis` {{ReadOnlyInline}} | `long` | Indicates scroll direction. |
 
 ## Constants
@@ -59,7 +59,7 @@ void initMouseScrollEvent(
 ## Methods
 
 - `initMouseScrollEvent()`
-  - : See [nsIDOMMouseScrollEvent::initMouseScrollEvent()](/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29).
+  - : See `nsIDOMMouseScrollEvent::initMouseScrollEvent()`.
 
 ## Browser compatibility
 

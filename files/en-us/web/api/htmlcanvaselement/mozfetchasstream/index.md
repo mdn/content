@@ -25,7 +25,7 @@ void canvas.mozFetchAsStream(callback, type);
 ### Parameters
 
 - `callback`
-  - : An {{interface("nsIInputStreamCallback")}}.
+  - : An `nsIInputStreamCallback`.
 - `type` {{optional_inline}}
   - : A {{domxref("DOMString")}} indicating the image format. The default type is
     `image/png`.
