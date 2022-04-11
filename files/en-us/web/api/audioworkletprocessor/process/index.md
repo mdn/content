@@ -43,7 +43,7 @@ invoked to do so.
 ## Syntax
 
 ```js
-audioWorkletProcessor.process(inputs, outputs, parameters);
+process(inputs, outputs, parameters);
 ```
 
 ### Parameters

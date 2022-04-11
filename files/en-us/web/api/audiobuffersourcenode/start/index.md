@@ -22,9 +22,9 @@ to begin playback immediately.
 ## Syntax
 
 ```js
-audioBufferSourceNode.start(when);
-audioBufferSourceNode.start(when, offset);
-audioBufferSourceNode.start(when, offset, duration);
+start(when);
+start(when, offset);
+start(when, offset, duration);
 ```
 
 ### Parameters

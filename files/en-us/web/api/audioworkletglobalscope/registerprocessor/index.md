@@ -20,7 +20,7 @@ from {{domxref("AudioWorkletProcessor")}} interface under a specified _name_.
 ## Syntax
 
 ```js
-audioWorkletGlobalScope.registerProcessor(name, processorCtor);
+registerProcessor(name, processorCtor);
 ```
 
 ### Parameters

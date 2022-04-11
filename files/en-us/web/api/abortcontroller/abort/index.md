@@ -19,8 +19,8 @@ This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), the consumpti
 ## Syntax
 
 ```js
-abortController.abort();
-abortController.abort(reason);
+abort();
+abort(reason);
 ```
 
 ### Parameters

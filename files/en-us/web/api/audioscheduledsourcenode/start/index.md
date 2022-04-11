@@ -26,8 +26,8 @@ immediately.
 ## Syntax
 
 ```js
-audioScheduledSourceNode.start();
-audioScheduledSourceNode.start(when);
+start();
+start(when);
 ```
 
 ### Parameters

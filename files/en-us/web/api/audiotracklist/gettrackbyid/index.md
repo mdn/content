@@ -28,7 +28,7 @@ you know its ID string.
 ## Syntax
 
 ```js
-audioTrackList.getTrackById(id);
+getTrackById(id);
 ```
 
 ### Parameters

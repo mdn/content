@@ -20,7 +20,7 @@ The `setValueAtTime()` method of the
 ## Syntax
 
 ```js
-audioParam.setValueAtTime(value, startTime);
+setValueAtTime(value, startTime);
 ```
 
 ### Parameters

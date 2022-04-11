@@ -18,11 +18,7 @@ The **`disconnect()`** method of the {{ domxref("AudioNode") }} interface lets y
 ## Syntax
 
 ```js
-audioNode.disconnect();
-audioNode.disconnect(output);
-audioNode.disconnect(destination);
-audioNode.disconnect(destination, output);
-audioNode.disconnect(destination, output, input);
+disconnect();
 ```
 
 ### Return value

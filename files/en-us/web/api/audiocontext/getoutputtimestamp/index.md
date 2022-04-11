@@ -34,7 +34,7 @@ The two values are as follows:
 ## Syntax
 
 ```js
-audioContext.getOutputTimestamp();
+getOutputTimestamp();
 ```
 
 ### Parameters

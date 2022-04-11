@@ -19,8 +19,8 @@ The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface 
 ## Syntax
 
 ```js
-backgroundFetchManager.fetch(id, requests);
-backgroundFetchManager.fetch(id, requests, options);
+fetch(id, requests);
+fetch(id, requests, options);
 ```
 
 ### Parameters

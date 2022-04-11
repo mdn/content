@@ -29,8 +29,8 @@ stopped, this method has no effect.
 ## Syntax
 
 ```js
-audioScheduledSourceNode.stop();
-audioScheduledSourceNode.stop(when);
+stop();
+stop(when);
 ```
 
 ### Parameters

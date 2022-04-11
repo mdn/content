@@ -23,8 +23,9 @@ change the value of that parameter over time.
 ## Syntax
 
 ```js
-audioNode.connect(destination, outputIndex);
-audioNode.connect(destination, outputIndex, inputIndex);
+connect(destination);
+connect(destination, outputIndex);
+connect(destination, outputIndex, inputIndex);
 ```
 
 ### Parameters

@@ -16,7 +16,7 @@ The **`allocationSize()`** method of the {{domxref("AudioData")}} interface retu
 ## Syntax
 
 ```js
-audioData.allocationSize(options);
+allocationSize(options);
 ```
 
 ### Parameters
