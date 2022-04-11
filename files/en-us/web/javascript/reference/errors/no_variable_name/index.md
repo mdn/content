@@ -38,8 +38,7 @@ When declaring multiple variables at the same time, make sure that the previous 
 const = "foo";
 ```
 
-Coming up with a descriptive variable name is challenging for most developers.
-It gets easier over time.
+It is easy to forget to assign a name for your variable!
 
 ```js example-good
 const description = "foo";
