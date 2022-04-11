@@ -98,6 +98,6 @@ const arr = [1,2,3,4,5];
 
 ## See also
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
 - {{jsxref("Statements/var", "var")}}
 - [Variable declarations in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
