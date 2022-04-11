@@ -20,8 +20,7 @@ This function does not automatically release all `AudioContext`-created objects,
 ## Syntax
 
 ```js
-audioContext.close().then(function() { /* ... */ });
-await audioContext.close();
+close();
 ```
 
 ### Return value

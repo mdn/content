@@ -18,7 +18,7 @@ Interface cancels all scheduled future changes to the `AudioParam`.
 ## Syntax
 
 ```js
-var AudioParam = AudioParam.cancelScheduledValues(startTime)
+cancelScheduledValues(startTime);
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ var AudioParam = AudioParam.cancelScheduledValues(startTime)
   - : A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
     was first created after which all scheduled changes will be cancelled.
 
-### Returns
+### Return value
 
 A reference to this `AudioParam` object. In some older implementations this
 method returns {{jsxref('undefined')}}.

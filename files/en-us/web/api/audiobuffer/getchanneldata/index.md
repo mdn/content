@@ -16,8 +16,7 @@ The **`getChannelData()`** method of the {{ domxref("AudioBuffer") }} Interface 
 ## Syntax
 
 ```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var nowBuffering = myArrayBuffer.getChannelData(channel);
+getChannelData(channel);
 ```
 
 ### Parameters
@@ -29,7 +28,7 @@ var nowBuffering = myArrayBuffer.getChannelData(channel);
 
 A {{jsxref("Float32Array")}}.
 
-## Example
+## Examples
 
 In the following example we create a two second buffer, fill it with white noise, and then play it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain what is going on. You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples).
 

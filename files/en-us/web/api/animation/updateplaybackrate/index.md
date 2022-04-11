@@ -37,7 +37,7 @@ animation's {{domxref("Animation.ready", "ready")}} promise is resolved.
 ## Syntax
 
 ```js
-Animation.updatePlaybackRate(2);
+updatePlaybackRate(playbackRate);
 ```
 
 ### Parameters

@@ -16,14 +16,14 @@ The **`close()`** method of the {{domxref("AudioEncoder")}} interface ends all p
 ## Syntax
 
 ```js
-AudioEncoder.close()
+close();
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 {{jsxref('undefined')}}.
 

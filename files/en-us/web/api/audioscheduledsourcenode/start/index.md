@@ -26,8 +26,8 @@ immediately.
 ## Syntax
 
 ```js
-start()
-start(when)
+start();
+start(when);
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ start(when)
 - `RangeError`
   - : The value specified for `when` is negative.
 
-## Example
+## Examples
 
 This example demonstrates how to create an {{domxref("OscillatorNode")}} which is
 scheduled to start playing in 2 seconds and stop playing 1 second after that. The times
