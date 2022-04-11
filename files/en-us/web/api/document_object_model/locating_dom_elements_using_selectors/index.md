@@ -25,7 +25,7 @@ You may find examples and details by reading the documentation for the {{domxref
 
 The selector methods accept [selectors](/en-US/docs/Web/CSS/CSS_Selectors) to determine what element or elements should be returned. This includes [selector lists](/en-US/docs/Web/CSS/Selector_list) so you can group multiple selectors in a single query.
 
-To protect the user's privacy, some [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are not supported or behave differently. For example {{cssxref(":visited")}} will return no matches and {{cssxref(":link")}} is treated as {{cssxref(":any-link")}}.
+To protect the user's privacy, some [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are not supported or behave differently. For example {{cssxref(":visited")}} will return no matches and {{cssxref(":link")}} is treated as {{cssxref(":any-link")}}.
 
 Only elements can be selected, so [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are not supported.
 
