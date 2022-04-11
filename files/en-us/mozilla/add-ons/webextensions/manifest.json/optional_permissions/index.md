@@ -73,6 +73,7 @@ You can include any of the following here, but not in all browsers: check the co
 - `notifications`
 - `pageCapture`
 - `privacy`
+- `scripting` (Manifest V3 or hidher)
 - `tabHide`
 - `tabs`
 - `topSites`

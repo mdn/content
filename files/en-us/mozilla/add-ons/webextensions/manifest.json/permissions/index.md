@@ -111,6 +111,7 @@ The following keywords are currently available:
 - `pkcs11`
 - `privacy`
 - `proxy`
+- `scripting` (Manifest V3 or hidher)
 - `search`
 - `sessions`
 - `storage`
