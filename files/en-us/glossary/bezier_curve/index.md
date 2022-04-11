@@ -1,6 +1,6 @@
 ---
 title: Bézier curve
-slug: /Glossary/Bezier_curve
+slug: Glossary/Bezier_curve
 tags:
   - Bézier curve
   - Glossary
