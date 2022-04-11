@@ -9,7 +9,8 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "missing variable name" is a common error experienced by developers. It mostly occurs due to a typo or a forgotten variable name.
+The JavaScript exception "missing variable name" is a common error.
+It is usually caused by omitting a variable name or a typographic error.
 
 ## Message
 
@@ -27,8 +28,7 @@ SyntaxError: Unexpected token = (Chrome)
 A variable is missing a name. The cause is most likely a typo or a forgotten variable name.
 Make sure that you've provided the name of the variable before the `=` sign.
 
-When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead
-of a semi-colon.
+When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead of a semi-colon.
 
 ## Examples
 
@@ -38,7 +38,8 @@ of a semi-colon.
 const = "foo";
 ```
 
-Coming up with a descriptive variable name is challenging for most developers. It gets easier over time.
+Coming up with a descriptive variable name is challenging for most developers.
+It gets easier over time.
 
 ```js example-good
 const description = "foo";
@@ -56,8 +57,9 @@ const debugger = "whoop";
 
 ### Declaring multiple variables
 
-Pay special attention to commas when declaring multiple variables. Is there an excess
-comma? Did you accidentally add commas instead of semicolons?
+Pay special attention to commas when declaring multiple variables.
+Is there an excess comma, or did you use commas instead of semicolons?
+Did you remember to assign values for all your `const` variables?
 
 ```js example-bad
 let x, y = "foo",
@@ -81,8 +83,8 @@ const second = document.getElementById('two');
 
 ### Arrays
 
-{{jsxref("Array")}} literals in JavaScript need square brackets around the values. This
-won't work:
+{{jsxref("Array")}} literals in JavaScript need square brackets around the values.
+This won't work:
 
 ```js example-bad
 const arr = 1,2,3,4,5;
