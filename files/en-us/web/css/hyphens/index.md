@@ -35,6 +35,7 @@ hyphens: auto;
 hyphens: inherit;
 hyphens: initial;
 hyphens: revert;
+hyphens: revert-layer;
 hyphens: unset;
 ```
 

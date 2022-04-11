@@ -34,6 +34,7 @@ column-rule-style: outset;
 column-rule-style: inherit;
 column-rule-style: initial;
 column-rule-style: revert;
+column-rule-style: revert-layer;
 column-rule-style: unset;
 ```
 

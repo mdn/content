@@ -87,7 +87,7 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 
 The `<title>` element contents are also used in other ways. For example, if you try bookmarking the page (_Bookmarks > Bookmark This Page_ or the star icon in the URL bar in Firefox), you will see the `<title>` contents filled in as the suggested bookmark name.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
+![A webpage being bookmarked in Firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
 
 The `<title>` contents are also used in search results, as you'll see below.
 

@@ -44,6 +44,7 @@ list-style-type: none;
 list-style-type: inherit;
 list-style-type: initial;
 list-style-type: revert;
+list-style-type: revert-layer;
 list-style-type: unset;
 ```
 

@@ -19,16 +19,12 @@ This property takes scrolling of the page into account, and returns a value rela
 the whole of the document, unless the event occurs inside a positioned element, where
 the returned value is relative to the top left of the positioned element.
 
-## Syntax
+## Value
 
-```js
-var ypos = event.layerY;
-```
-
-- `ypos` is an integer value in pixels for the y-coordinate of the mouse
+An integer value in pixels for the y-coordinate of the mouse
   pointer, when the mouse event fired.
 
-## Example
+## Examples
 
 ```html
 <html>

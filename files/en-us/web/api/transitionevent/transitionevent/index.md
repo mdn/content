@@ -20,9 +20,9 @@ The **`TransitionEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
-transitionEvent = new TransitionEvent(type, {propertyName: aPropertyName,
-                                             elapsedTime  : aFloat,
-                                             pseudoElement: aPseudoElementName});
+new TransitionEvent(type, {propertyName : aPropertyName,
+                           elapsedTime  : aFloat,
+                           pseudoElement: aPseudoElementName});
 ```
 
 ### Arguments

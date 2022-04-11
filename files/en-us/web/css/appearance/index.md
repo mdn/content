@@ -57,6 +57,7 @@ appearance: progress-bar;
 appearance: inherit;
 appearance: initial;
 appearance: revert;
+appearance: revert-layer;
 appearance: unset;
 ```
 

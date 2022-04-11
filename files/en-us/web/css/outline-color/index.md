@@ -37,6 +37,7 @@ outline-color: invert;
 outline-color: inherit;
 outline-color: initial;
 outline-color: revert;
+outline-color: revert-layer;
 outline-color: unset;
 ```
 

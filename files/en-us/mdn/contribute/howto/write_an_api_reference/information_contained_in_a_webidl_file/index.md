@@ -108,7 +108,7 @@ See the following two pages that document `HTMLHyperlinkElementUtils.hash` accor
 - [`HTMLAnchorElement.hash`](/en-US/docs/Web/API/HTMLAnchorElement/hash)
 - [`HTMLAreaElement.hash`](/en-US/docs/Web/API/HTMLAreaElement/hash)
 
-For compat data, consult the [data guideline for mixins in BCD](https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md#mixins).
+For compat data, consult the [data guideline for mixins in BCD](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md).
 
 ### Old mixin syntax
 

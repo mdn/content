@@ -25,7 +25,7 @@ A common navigation pattern is to have one element pushed away from the others. 
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/split-navigation--download.html)
 
 ## Choices made
 

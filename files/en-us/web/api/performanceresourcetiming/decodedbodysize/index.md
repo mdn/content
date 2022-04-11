@@ -18,18 +18,12 @@ content-codings.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.decodedBodySize;
-```
-
-### Return value
+## Value
 
 The size (in octets) received from the fetch (HTTP or cache) of the message body, after
 removing any applied content-codings.
 
-## Example
+## Examples
 
 The following example, the value of the size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.

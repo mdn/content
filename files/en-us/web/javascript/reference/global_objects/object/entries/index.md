@@ -18,7 +18,7 @@ with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a
 `for...in` loop enumerates properties in the prototype
 chain as well.
 
-The order of the array returned by **`Object.entries()`** is
+The order of the array returned by `Object.entries()` is
 the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. If
 there is a need for different ordering, then
 the array should be sorted first, like
@@ -130,8 +130,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Iterating through an `Object`
 
-Using [Array
-Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
+Using [Array Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
 
 ```js
 const obj = { foo: 'bar', baz: 42 };
@@ -149,8 +148,7 @@ Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); 
 ## See also
 
 - [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

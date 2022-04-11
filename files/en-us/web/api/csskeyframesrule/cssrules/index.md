@@ -18,7 +18,7 @@ The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} inte
 
 A {{domxref('CSSRuleList')}}.
 
-## Example
+## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. The `cssRules` property returns a {{domxref("CSSRuleList")}} containing two rules.

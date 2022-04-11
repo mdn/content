@@ -16,7 +16,7 @@ and untrusted {{domxref("PointerEvent")}} object instance.
 ## Syntax
 
 ```js
- event = new PointerEvent(type, PointerEventInit);
+new PointerEvent(type, PointerEventInit);
 ```
 
 ### Arguments
@@ -53,7 +53,7 @@ and untrusted {{domxref("PointerEvent")}} object instance.
     > accepts fields from the {{domxref("MouseEvent.MouseEvent","MouseEvent")}},
     > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event", "EventInit")}} dictionaries.
 
-## Example
+## Examples
 
 ```js
 var moveEvent = new PointerEvent("pointermove");

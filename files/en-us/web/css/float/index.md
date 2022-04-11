@@ -52,6 +52,7 @@ float: inline-end;
 float: inherit;
 float: initial;
 float: revert;
+float: revert-layer;
 float: unset;
 ```
 

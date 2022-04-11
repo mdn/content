@@ -49,7 +49,7 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 - {{domxref("MediaRecorder.start()")}}
   - : Begins recording media; this method can optionally be passed a `timeslice` argument with a value in milliseconds. If this is specified, the media will be captured in separate chunks of that duration, rather than the default behavior of recording the media in a single large chunk.
 - {{domxref("MediaRecorder.stop()")}}
-  - : Stops recording, at which point a {{event("dataavailable")}} event containing the final `Blob` of saved data is fired. No more recording occurs.
+  - : Stops recording, at which point a {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event containing the final `Blob` of saved data is fired. No more recording occurs.
 
 ## Static methods
 
@@ -163,7 +163,7 @@ if (navigator.mediaDevices) {
 ## See also
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
 - [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia")}}

@@ -15,17 +15,11 @@ The **`className`** property of the
 {{domxref("Element")}} interface gets and sets the value of the [`class` attribute](/en-US/docs/Web/HTML/Global_attributes/class)
 of the specified element.
 
-## Syntax
+## Value
 
-```js
-var cName = elementNodeReference.className;
-elementNodeReference.className = cName;
-```
+A string variable representing the class or space-separated classes of the current element.
 
-- `cName` is a string variable representing the class or space-separated
-  classes of the current element.
-
-## Example
+## Examples
 
 ```js
 let el = document.getElementById('item');

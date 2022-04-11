@@ -52,17 +52,18 @@ There are five basic forms for the `Date()` constructor:
     - `value`
       - : An integer value representing the number of milliseconds since January 1, 1970,
         00:00:00 UTC (the ECMAScript epoch, equivalent to the UNIX epoch), with leap
-        seconds ignored. Keep in mind that most [UNIX
-        Timestamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
+        seconds ignored. Keep in mind that most
+        [UNIX Timestamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
 
 3. Timestamp string
 
     - `dateString`
 
       - : A string value representing a date, specified in a format recognized by the
-        {{jsxref("Date.parse()")}} method. (These formats are [IETF-compliant RFC 2822
-        timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14), and also strings in a [version
-        of ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
+        {{jsxref("Date.parse()")}} method. (These formats are
+        [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14),
+        and also strings in a
+        [version of ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
 
         > **Note:** Parsing of date strings with the `Date`
         > constructor (and `Date.parse()`, which works the same way) is

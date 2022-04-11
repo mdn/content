@@ -45,7 +45,7 @@ new MessageEvent(type, init)
       appropriate, e.g. in channel messaging or when sending a message to a shared
       worker). This defaults to an empty array (`[]`) if not specified.
 
-## Example
+## Examples
 
 ```js
 var myMessage = new MessageEvent('message', {

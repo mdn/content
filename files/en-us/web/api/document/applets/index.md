@@ -24,7 +24,7 @@ interface returns a list of the applets within a document.
 
 An {{domxref("HTMLCollection")}}.
 
-## Example
+## Examples
 
 ```js
 // When you know the second applet is the one you want

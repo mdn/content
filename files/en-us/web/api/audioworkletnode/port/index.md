@@ -21,13 +21,7 @@ associated {{domxref("AudioWorkletProcessor")}}.
 > available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the
 > processor.
 
-## Syntax
-
-```js
-audioWorkletNodeInstance.port;
-```
-
-### Value
+## Value
 
 The {{domxref("MessagePort")}} object that is connecting the
 `AudioWorkletNode` and its associated `AudioWorkletProcessor`.

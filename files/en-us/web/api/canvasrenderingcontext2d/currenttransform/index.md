@@ -19,15 +19,9 @@ property of the Canvas 2D API returns or sets a {{domxref("DOMMatrix")}} (curren
 specification) or {{domxref("SVGMatrix")}} {{deprecated_inline}} (old specification)
 object for the current transformation matrix.
 
-## Syntax
+## Value
 
-```js
-ctx.currentTransform [= value];
-```
-
-- `value`
-  - : A {{domxref("DOMMatrix")}} or {{domxref("SVGMatrix")}} {{deprecated_inline}} object
-    to use as the current transformation matrix.
+A {{domxref("DOMMatrix")}} or {{domxref("SVGMatrix")}} {{deprecated_inline}} object to use as the current transformation matrix.
 
 ## Examples
 

@@ -15,12 +15,6 @@ tags:
 
 Provides the mime type of the file.
 
-## Syntax
-
-```js
-var type = instanceOfFileHandle.type
-```
-
 ## Value
 
 A string.

@@ -18,7 +18,7 @@ The **`MouseEvent()`** constructor creates a new
 ## Syntax
 
 ```js
- event = new MouseEvent(typeArg, mouseEventInit);
+new MouseEvent(typeArg, mouseEventInit);
 ```
 
 ### Values

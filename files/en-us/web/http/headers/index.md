@@ -376,7 +376,7 @@ _Learn more about CORS [here](CORS)._
   - : Contains the date and time at which the message was originated.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
-- {{HTTPHeader("Large-Allocation")}}
+- {{HTTPHeader("Large-Allocation")}} {{deprecated_inline}}
   - : Tells the browser that the page being loaded is going to want to perform a large allocation.
 - {{HTTPHeader("Link")}}
   - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
@@ -405,7 +405,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("X-Requested-With")}}
   - : TBD
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/reference/robots_meta_tag#xrobotstag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="...">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="...">`.
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : Used by Internet Explorer to signal which document mode to use.
 

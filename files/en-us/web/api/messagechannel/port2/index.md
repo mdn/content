@@ -20,18 +20,12 @@ initially sent to.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-channel.port2;
-```
-
-### Value
+## Value
 
 A {{domxref("MessagePort")}} object representing the second port of the channel, the
 port attached to the context at the other end of the channel.
 
-## Example
+## Examples
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the
@@ -61,7 +55,7 @@ function handleMessage(e) {
 ```
 
 For a full working example, see our [channel
-messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live
+messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live
 too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications

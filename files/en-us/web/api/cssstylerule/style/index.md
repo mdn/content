@@ -26,7 +26,7 @@ A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 - owner node
   - : Null.
 
-## Example
+## Examples
 
 The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0].style` therefore returns a {{domxref("CSSStyleDeclaration")}} object representing the declarations defined for `h1`.

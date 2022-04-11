@@ -67,7 +67,7 @@ A new {{domxref("PannerNode")}} object instance.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the `coneOuterGain` property has been given a value outside the accepted range (0–1).
 
-## Example
+## Examples
 
 ```js
 var ctx = new AudioContext();

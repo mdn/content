@@ -26,7 +26,7 @@ The number of drag data items in the list, or 0 if the list is empty or disabled
 drag item list is considered to be disabled if the item list's
 {{domxref("DataTransfer")}} object is not associated with a drag data store.
 
-## Example
+## Examples
 
 This example shows the use of the `length` property.
 

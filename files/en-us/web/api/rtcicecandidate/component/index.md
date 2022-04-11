@@ -51,7 +51,7 @@ component ID. A value of `"1"` indicates RTP, which is recorded in the
 `"2"`, the a-line would be describing an RTCP candidate, and
 `component` would be `"rtcp"`.
 
-## Example
+## Examples
 
 This code snippet examines a candidate's component type and dispatches the candidate to
 different handlers depending on the value.

@@ -9,7 +9,9 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "function statement requires a name" occurs when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) in the code that requires a name.
+The JavaScript exception "function statement requires a name" occurs
+when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+in the code that requires a name.
 
 ## Message
 

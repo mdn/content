@@ -18,13 +18,7 @@ The **`sync`** property of the
 {{domxref("SyncManager")}} interface, which manages background synchronization
 processes.
 
-## Syntax
-
-```js
-var syncManager = serviceWorkerRegistration.sync;
-```
-
-### Value
+## Value
 
 A {{domxref("SyncManager")}} object.
 

@@ -27,7 +27,7 @@ It varies depending on the platform and the available hardware.
 
 A double representing the output latency in seconds.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

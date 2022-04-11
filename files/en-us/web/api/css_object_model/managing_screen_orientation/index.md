@@ -143,7 +143,7 @@ The Screen Orientation API is made to prevent or handle such a change.
 
 ### Listening orientation change
 
-The {{event("orientationchange")}} event is triggered each time the device change the orientation of the screen and the orientation itself can be read with the {{domxref("Screen.orientation")}} property.
+The {{domxref("Window.orientationchange_event", "orientationchange")}} event is triggered each time the device change the orientation of the screen and the orientation itself can be read with the {{domxref("Screen.orientation")}} property.
 
 ```js
 screen.addEventListener("orientationchange", function () {
@@ -161,9 +161,9 @@ The {{domxref("Screen.lockOrientation()")}} accepts a string (or series of strin
 screen.lockOrientation('landscape');
 ```
 
-> **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{event("orientationchange")}} event because both applications will keep the orientation they had.
+> **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event because both applications will keep the orientation they had.
 >
-> However, locking the orientation can fire an {{event("orientationchange")}} event if the orientation had to be changed to satisfy the lock requirements.
+> However, locking the orientation can fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event if the orientation had to be changed to satisfy the lock requirements.
 
 ## Firefox OS and Android: Orientation lock using the manifest
 

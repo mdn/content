@@ -33,7 +33,7 @@ firstImage = imageCollection.item(0);
 firstImage = imageCollection[0];
 ```
 
-## Example
+## Examples
 
 This example looks through the list of images and finds one whose name is
 `"banner.gif"`.

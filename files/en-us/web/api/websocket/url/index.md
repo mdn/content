@@ -14,12 +14,6 @@ browser-compat: api.WebSocket.url
 The **`WebSocket.url`** read-only property returns the absolute
 URL of the {{domxref("WebSocket")}} as resolved by the constructor.
 
-## Syntax
-
-```js
-var url = aWebSocket.url;
-```
-
 ## Value
 
 A [`DOMString`](/en-US/docs/Web/API/DOMString).

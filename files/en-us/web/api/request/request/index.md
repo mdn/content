@@ -102,7 +102,7 @@ new Request(input, init)
   </tbody>
 </table>
 
-## Example
+## Examples
 
 In our [Fetch
 Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we

@@ -24,7 +24,7 @@ To make the game look more juicy and alive we can use animations and tweens. Thi
 
 In Phaser, animations, involve taking a spritesheet from an external source and displaying the sprites sequentially. As an example, we will make the ball wobble when it hits something.
 
-First of all, [grab the spritesheet from Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png) and save it in your `/img` directory.
+First of all, [grab the spritesheet from GitHub](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png) and save it in your `/img` directory.
 
 Next, we will load the spritesheet — put the following line at the bottom of your `preload()` function:
 
@@ -75,7 +75,7 @@ The animation is played every time the ball hits the paddle. You can add the `an
 
 Whereas animations play external sprites sequentially, tweens smoothly animate properties of an object in the gameworld, such as width or opacity.
 
-Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your `ballhitBrick()` function, find your `brick.kill();` line, and replace it with the following:
+Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your `ballHitBrick()` function, find your `brick.kill();` line, and replace it with the following:
 
 ```js
 var killTween = game.add.tween(brick.scale);

@@ -27,13 +27,7 @@ should be captured as part of the video track included in the
 {{domxref("MediaStream")}} returned by {{domxref("MediaDevices.getDisplayMedia",
     "getDisplayMedia()")}}.
 
-## Syntax
-
-```js
-cursorSetting = mediaTrackSettings.cursor;
-```
-
-### Value
+## Value
 
 The value of `cursor` comes from the `CursorCaptureConstraint`
 enumerated string type, and may have one of the following values:

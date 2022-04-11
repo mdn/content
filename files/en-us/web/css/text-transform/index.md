@@ -44,6 +44,7 @@ text-transform: full-size-kana;
 text-transform: inherit;
 text-transform: initial;
 text-transform: revert;
+text-transform: revert-layer;
 text-transform: unset;
 ```
 

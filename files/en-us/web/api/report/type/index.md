@@ -17,13 +17,7 @@ The **`type`** read-only property of the {{domxref("Report")}}
 interface returns the type of report generated, e.g. `deprecation` or
 `intervention`.
 
-## Syntax
-
-```js
-let reportType = reportInstance.type
-```
-
-### Returns
+## Value
 
 A string representing the type of the report. Currently the available types are
 `deprecation`, `intervention`, and `crash`.

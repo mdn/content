@@ -36,8 +36,8 @@ or simple quotes (` " `) vs non-standard quotation marks (` " `).
 ### Mismatched characters
 
 Some characters look similar, but will cause the parser to fail interpreting your code.
-Famous examples of this are quotes, the minus or semicolon ([greek
-questionmark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
+Famous examples of this are quotes, the minus or semicolon
+([greek questionmark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
 
 ```js example-bad
 "This looks like a string";  // SyntaxError: illegal character
@@ -86,8 +86,7 @@ var foo = 'bar';​
 ```
 
 When inspecting this code in an editor like Vim, you can see that there is actually a
-[zero-width space (ZWSP)
-(U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
+[zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
 
 ```js
 var foo = 'bar';<200b>

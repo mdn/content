@@ -6,7 +6,9 @@ tags:
   - DOM
   - NeedsBeginnerUpdate
 ---
-The Selectors API provides methods that make it quick and easy to retrieve {{domxref("Element")}} nodes from the DOM by matching against a set of {{cssxref("CSS_Selectors", "selectors")}}. This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.
+{{DefaultAPISidebar("DOM")}}
+
+The Selectors API provides methods that make it quick and easy to retrieve {{domxref("Element")}} nodes from the DOM by matching against a set of [selectors](/en-US/docs/Web/CSS/CSS_Selectors). This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.
 
 ## The NodeSelector interface
 

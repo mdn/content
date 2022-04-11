@@ -22,18 +22,12 @@ iterated past its end, or its transaction is not active.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var source = cursor.source;
-```
-
-### Value
+## Value
 
 The {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is
 iterating over.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
@@ -47,7 +41,7 @@ IDBObjectStore {autoIncrement: false, transaction: IDBTransaction, indexNames: D
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
 you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor
-example](https://github.com/mdn/indexeddb-examples/blob/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
+example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
 
 ```js
 function displayData() {

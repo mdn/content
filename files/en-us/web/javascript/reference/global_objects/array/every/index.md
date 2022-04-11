@@ -41,13 +41,15 @@ every(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : A function to test for each element, taking three arguments:
+  - : A function to test for each element.
+  
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index` {{Optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array` {{Optional_inline}}
+    - `array`
       - : The array `every` was called upon.
 
 - `thisArg` {{Optional_inline}}
@@ -82,8 +84,8 @@ If a `thisArg` parameter is provided to `every`, it
 will be used as callback's `this` value. Otherwise, the value
 `undefined` will be used as its `this` value. The
 `this` value ultimately observable by `callback` is
-determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `every` does not mutate the array on which it is called.
 
@@ -96,8 +98,8 @@ the time `every` visits them. Elements that are deleted are not visited.
 
 `every` acts like the "for all" quantifier in mathematics. In particular,
 for an empty array, it returns `true`. (It is [vacuously true](https://en.wikipedia.org/wiki/Vacuous_truth) that all
-elements of the [empty
-set](https://en.wikipedia.org/wiki/Empty_set#Properties) satisfy any given condition.)
+elements of the [empty set](https://en.wikipedia.org/wiki/Empty_set#Properties)
+satisfy any given condition.)
 
 ## Examples
 
@@ -126,8 +128,7 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 
 ### Using arrow functions
 
-[Arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
 [12, 5, 8, 130, 44].every(x => x >= 10);   // false

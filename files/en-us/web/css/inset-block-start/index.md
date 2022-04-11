@@ -28,6 +28,7 @@ inset-block-start: auto;
 inset-block-start: inherit;
 inset-block-start: initial;
 inset-block-start: revert;
+inset-block-start: revert-layer;
 inset-block-start: unset;
 ```
 

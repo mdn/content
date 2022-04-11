@@ -20,7 +20,7 @@ constantly outputs samples whose values are always the same.
 ## Syntax
 
 ```js
-var constantSourceNode = new ConstantSourceNode(context, options);
+new ConstantSourceNode(context, options);
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ var constantSourceNode = new ConstantSourceNode(context, options);
       \-1.0 to 1.0, but the value can be anywhere in the range from
       `-Infinity` to `+Infinity`.
 
-## Example
+## Examples
 
 In this example, an audio context is created, then a `ConstantSourceNode` is
 established with its `offset` initialized to 0.5.

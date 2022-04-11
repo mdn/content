@@ -72,7 +72,7 @@ const asyncIterable = {
 
 ### Iterating over async generators
 
-Since the return values of async generators conform to the async iterable protocol,
+Since the return values of async generator functions conform to the async iterable protocol,
 they can be looped using `for await...of`.
 
 ```js

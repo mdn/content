@@ -23,7 +23,7 @@ JavaScript.
 ## Syntax
 
 ```js
-var jsNode = audioCtx.createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels);
+audioCtx.createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels);
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ var jsNode = audioCtx.createJavaScriptNode(bufferSize, numInputChannels, numOutp
 - `numOutputChannels`
   - : The number of output channels in the audio stream.
 
-## Example
+## Examples
 
 The following script illustrates the use of `createJavaScriptNode()`:
 

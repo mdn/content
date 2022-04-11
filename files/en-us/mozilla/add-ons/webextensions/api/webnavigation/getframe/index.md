@@ -15,7 +15,7 @@ browser-compat: webextensions.api.webNavigation.getFrame
 ---
 {{AddonSidebar()}}
 
-Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
+Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -47,7 +47,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `errorOccurred`
   - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
 - `url`
-  - : `string`. The URL currently associated with this frame, if the frame identified by `frameId` existed at one point in the tab identified by `tabId`. The fact that an URL is associated with a given `frameId` does not imply that the corresponding frame still exists.
+  - : `string`. The URL currently associated with this frame, if the frame identified by `frameId` existed at one point in the tab identified by `tabId`. The fact that a URL is associated with a given `frameId` does not imply that the corresponding frame still exists.
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
 

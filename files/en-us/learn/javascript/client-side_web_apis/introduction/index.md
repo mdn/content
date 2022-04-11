@@ -191,7 +191,7 @@ Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioC
 const gainNode = audioCtx.createGain();
 
 volumeSlider.addEventListener('input', () => {
-  gainNode.gain.value = this.value;
+  gainNode.gain.value = volumeSlider.value;
 });
 ```
 

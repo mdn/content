@@ -17,14 +17,7 @@ property reflects the HTML {{htmlattrxref("referrerpolicy","img")}} attribute of
 {{HTMLElement("img")}} element defining which referrer is sent when fetching the
 resource.
 
-## Syntax
-
-```js
-refStr = imgElt.referrerPolicy;
-imgElt.referrerPolicy = refStr;
-```
-
-### Values
+## Value
 
 A {{domxref("DOMString")}}; one of the following:
 

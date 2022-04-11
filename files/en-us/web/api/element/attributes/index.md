@@ -19,13 +19,11 @@ methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To
 specific, `attributes` is a key/value pair of strings that represents any
 information regarding that attribute.
 
-## Syntax
+## Value
 
-```js
-var attr = element.attributes;
-```
+A {{domxref("NamedNodeMap")}} object.
 
-## Example
+## Examples
 
 ### Basic examples
 

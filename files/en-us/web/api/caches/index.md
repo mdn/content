@@ -19,17 +19,11 @@ The global **`caches`** read-only property returns the
 enables functionality such as storing assets for offline use, and generating custom
 responses to requests.
 
-## Syntax
-
-```js
-var myCacheStorage = self.caches; // or just caches
-```
-
-### Value
+## Value
 
 A {{domxref("CacheStorage")}} object.
 
-## Example
+## Examples
 
 The following example shows how you'd use a cache in a [service worker](/en-US/docs/Web/API/Service_Worker_API) context to store
 assets offline.

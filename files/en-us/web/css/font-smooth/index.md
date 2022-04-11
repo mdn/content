@@ -28,6 +28,7 @@ font-smooth: 2em;
 font-smooth: inherit;
 font-smooth: initial;
 font-smooth: revert;
+font-smooth: revert-layer;
 font-smooth: unset;
 ```
 

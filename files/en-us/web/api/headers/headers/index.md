@@ -28,7 +28,7 @@ new Headers(init);
     `Headers` object. In the last case, the new `Headers` object
     copies its data from the existing `Headers` object.
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 

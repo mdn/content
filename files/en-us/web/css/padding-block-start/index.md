@@ -31,6 +31,7 @@ padding-block-start: 5%;        /* A padding relative to the block container's w
 padding-block-start: inherit;
 padding-block-start: initial;
 padding-block-start: revert;
+padding-block-start: revert-layer;
 padding-block-start: unset;
 ```
 

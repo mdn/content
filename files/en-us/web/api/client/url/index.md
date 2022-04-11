@@ -20,7 +20,7 @@ interface returns the URL of the current service worker client.
 
 A {{domxref("USVString")}}.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('notificationclick', function(event) {

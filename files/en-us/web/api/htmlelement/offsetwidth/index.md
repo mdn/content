@@ -24,20 +24,14 @@ If the element is hidden (for example, by setting `style.display` on the
 element or one of its ancestors to `"none"`), then `0` is
 returned.
 
-## Syntax
+## Value
 
-```js
-var intElemOffsetWidth = element.offsetWidth;
-```
-
-`intElemOffsetWidth` is a variable storing an integer corresponding to the
-`offsetWidth` pixel value of the element. The `offsetWidth`
-property is a read-only.
+An integer corresponding to the `offsetWidth` pixel value of the element. The `offsetWidth` property is a read-only.
 
 > **Note:** This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
-## Example
+## Examples
 
 ![](dimensions-offset.png)
 

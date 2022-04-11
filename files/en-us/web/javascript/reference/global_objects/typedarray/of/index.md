@@ -12,8 +12,8 @@ browser-compat: javascript.builtins.TypedArray.of
 ---
 {{JSRef}}
 
-The **`TypedArray.of()`** method creates a new [typed
-array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) from a variable number of arguments. This method is nearly the same as
+The **`TypedArray.of()`** method creates a new
+[typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) from a variable number of arguments. This method is nearly the same as
 {{jsxref("Array.of()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-of.html","shorter")}}

@@ -31,6 +31,7 @@ scroll-padding-right: 10%;
 scroll-padding-right: inherit;
 scroll-padding-right: initial;
 scroll-padding-right: revert;
+scroll-padding-right: revert-layer;
 scroll-padding-right: unset;
 ```
 

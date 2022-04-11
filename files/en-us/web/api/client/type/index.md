@@ -23,7 +23,7 @@ A string, representing the client type. The value can be one of
 - `"worker"`
 - `"sharedworker"`
 
-## Example
+## Examples
 
 ```js
 // service worker client (e.g. a document)

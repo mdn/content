@@ -113,7 +113,7 @@ const list = document.getElementById("list");
 list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
 ```
 
-Please note that using `innerHTML` to append html elements (e.g. `el.innerHTML += "<a href='...'>link</a>"`) will result in the removal of any previously set event listeners.
+Please note that using `innerHTML` to append HTML elements (e.g. `el.innerHTML += "<a href='...'>link</a>"`) will result in the removal of any previously set event listeners.
 That is, after you append any HTML element that way you won't be able to listen to the previously set event listeners.
 
 ### Security considerations
@@ -155,7 +155,7 @@ For that reason, it is recommended that instead of `innerHTML` you use:
 > the extension to [addons.mozilla.org](https://addons.mozilla.org/), it may be rejected in the review process.
 > Please see [Safely inserting external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for alternative methods.
 
-## Example
+## Examples
 
 This example uses `innerHTML` to create a mechanism for logging messages into a box on a web page.
 

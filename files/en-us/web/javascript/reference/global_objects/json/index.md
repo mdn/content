@@ -12,10 +12,9 @@ browser-compat: javascript.builtins.JSON
 {{JSRef}}
 
 The **`JSON`** object contains methods
-for parsing [JavaScript Object
-Notation](https://json.org/) ({{glossary("JSON")}}) and converting values to JSON. It can't be
-called or constructed, and aside from its two method properties, it has no interesting
-functionality of its own.
+for parsing [JavaScript Object Notation](https://json.org/) ({{glossary("JSON")}}) and converting values to JSON.
+It can't be called or constructed, and aside from its two method properties,
+it has no interesting functionality of its own.
 
 ## Description
 
@@ -32,8 +31,9 @@ JavaScript is _not_ JSON.
   - : Leading zeros are prohibited. A decimal point must be followed by at least one
     digit. `NaN` and `Infinity` are unsupported.
 - **Any JSON text is a valid JavaScript expression...**
-  - : ...But only in JavaScript engines that have implemented the [proposal to make all JSON text
-    valid ECMA-262](https://github.com/tc39/proposal-json-superset). In engines that haven't implemented the proposal, U+2028 LINE
+  - : ...But only in JavaScript engines that have implemented
+    the [proposal to make all JSON text valid ECMA-262](https://github.com/tc39/proposal-json-superset).
+    In engines that haven't implemented the proposal, U+2028 LINE
     SEPARATOR and U+2029 PARAGRAPH SEPARATOR are allowed in string literals and property
     keys in JSON; but their use in these features in JavaScript string literals is a
     {{jsxref("SyntaxError")}}.

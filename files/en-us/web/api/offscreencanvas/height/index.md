@@ -15,12 +15,7 @@ browser-compat: api.OffscreenCanvas.height
 The **`height`** property returns and sets the height of an
 {{domxref("OffscreenCanvas")}} object.
 
-## Syntax
-
-```js
-var pxl = offscreen.height;
-offscreen.height = pxl;
-```
+## Value
 
 ## Examples
 

@@ -24,7 +24,7 @@ We want you to update it use appropriate semantic HTML. You don't need to worry 
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/html/html-a11y1.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/html/html-a11y1.html", '100%', 1100)}}
 
 > **Callout:**
 >
@@ -71,7 +71,7 @@ In our final HTML accessibility task, you are given a simple image gallery, whic
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/html/html-a11y4.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/html/html-a11y4.html", '100%', 1100)}}
 
 > **Callout:**
 >

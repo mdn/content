@@ -21,7 +21,8 @@ individual {{CSSXref('transform')}} property in CSS.
 ## Syntax
 
 ```js
-new CSSTranslate(x,y[,z]);
+new CSSTranslate(x, y);
+new CSSTranslate(x, y, z);
 ```
 
 ### Parameters

@@ -14,17 +14,11 @@ browser-compat: api.File.name
 Returns the name of the file represented by a {{domxref("File")}} object. For security
 reasons, the path is excluded from this property.
 
-## Syntax
-
-```js
-var name = file.name;
-```
-
 ## Value
 
 A string, containing the name of the file without path, such as "My Resume.rtf".
 
-## Example
+## Examples
 
 ```html
 <input type="file" multiple onchange="processSelectedFiles(this)">

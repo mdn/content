@@ -31,6 +31,7 @@ overflow-wrap: anywhere;
 overflow-wrap: inherit;
 overflow-wrap: initial;
 overflow-wrap: revert;
+overflow-wrap: revert-layer;
 overflow-wrap: unset;
 ```
 

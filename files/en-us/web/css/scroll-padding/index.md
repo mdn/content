@@ -40,6 +40,7 @@ scroll-padding: 10%;
 scroll-padding: inherit;
 scroll-padding: initial;
 scroll-padding: revert;
+scroll-padding: revert-layer;
 scroll-padding: unset;
 ```
 

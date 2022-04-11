@@ -30,13 +30,7 @@ You can learn more about ICE roles in
 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Choosing a candidate
   pair")}}.
 
-## Syntax
-
-```js
-iceRole = RTCIceTransport.role;
-```
-
-### Value
+## Value
 
 A string specifying whether the {{domxref("RTCIceTransport")}}
 represents the controlling agent or the controlled agent. The value must be one of the following:

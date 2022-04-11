@@ -44,7 +44,7 @@ The following additions to the {{domxref('Service Worker API')}} are specified i
 
 - {{domxref("ServiceWorkerRegistration.periodicSync")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.
-- {{domxref("ServiceWorkerGlobalScope.onperiodicsync")}}
+- {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "onperiodicsync")}}
   - : An event handler fired whenever a {{Event("periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.
 
 ## Examples

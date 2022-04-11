@@ -18,17 +18,11 @@ this point of contact with the touch surface. This value remains consistent for 
 event involving this finger's (or stylus's) movement on the surface until it is lifted
 off the surface.
 
-## Syntax
-
-```js
-touchItem.identifier;
-```
-
-### Return value
+## Value
 
 A `long` that represents the unique ID of the {{ domxref("Touch") }} object.
 
-## Example
+## Examples
 
 ```js
 someElement.addEventListener('touchmove', function(e) {

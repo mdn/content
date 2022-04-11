@@ -18,17 +18,11 @@ The **`blockedURI`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}}
 representing the URI of the resource that was blocked because it violates a policy.
 
-## Syntax
-
-```js
-let blockedURI = violationEventInstance.blockedURI;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} representing the URI of the blocked resource.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

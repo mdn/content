@@ -40,6 +40,7 @@ line-height: 34%;
 line-height: inherit;
 line-height: initial;
 line-height: revert;
+line-height: revert-layer;
 line-height: unset;
 ```
 

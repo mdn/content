@@ -23,13 +23,7 @@ The **`lastPacketReceivedTimestamp`**
 property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the time
 at which the most recently received packet arrived from this source.
 
-## Syntax
-
-```js
-var lastPacketTimestamp = rtcInboundRtpStreamStats.lastPacketReceivedTimestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most
 recently received packet arrived on this RTP stream.

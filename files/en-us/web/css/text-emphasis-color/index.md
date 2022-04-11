@@ -32,6 +32,7 @@ text-emphasis-color: transparent;
 text-emphasis-color: inherit;
 text-emphasis-color: initial;
 text-emphasis-color: revert;
+text-emphasis-color: revert-layer;
 text-emphasis-color: unset;
 ```
 
@@ -58,9 +59,7 @@ text-emphasis-color: unset;
 
 ```css
 em {
-  -webkit-text-emphasis-color: green;
   text-emphasis-color: green;
-  -webkit-text-emphasis-style: "*";
   text-emphasis-style: "*";
 }
 ```

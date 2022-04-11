@@ -20,7 +20,7 @@ If no hit region is affected, `null` is returned.
 
 A {{domxref("DOMString")}} representing the id of the hit region.
 
-## Example
+## Examples
 
 Example of using the `event.region` combined with `CanvasRenderingContext2D.addHitRegion()` method.
 

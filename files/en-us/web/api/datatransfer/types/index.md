@@ -20,20 +20,14 @@ The formats are Unicode strings giving the type or format of the data, generally
 by a MIME type. Some values that are not MIME types are special-cased for legacy reasons
 (for example "`text`").
 
-## Syntax
-
-```js
-dataTransfer.types;
-```
-
-### Return value
+## Value
 
 An array of the data formats used in the drag operation. Each format is
 {{domxref("DOMString","string")}}. If the drag operation included no data, this list
 will be empty. If any files are included in the drag operation, then one of the types
 will be the string `Files`.
 
-## Example
+## Examples
 
 This example shows the use of the `types` and
 {{domxref("DataTransfer.items","items")}} properties.

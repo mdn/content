@@ -230,7 +230,7 @@ An `unsigned short` representing the type of the value. Possible values are:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 var cs = window.getComputedStyle(document.body);

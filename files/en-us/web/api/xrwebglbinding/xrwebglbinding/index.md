@@ -45,7 +45,7 @@ A newly-created {{domxref("XRWebGLBinding")}}.
     - The specified `session` is immersive but the `context` is
       not WebXR compatible.
 
-## Example
+## Examples
 
 ```js
 const canvasElement = document.querySelector(".output-canvas");

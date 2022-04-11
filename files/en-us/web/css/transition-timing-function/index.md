@@ -52,6 +52,7 @@ transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 transition-timing-function: inherit;
 transition-timing-function: initial;
 transition-timing-function: revert;
+transition-timing-function: revert-layer;
 transition-timing-function: unset;
 ```
 

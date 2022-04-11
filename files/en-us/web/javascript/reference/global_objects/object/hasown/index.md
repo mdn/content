@@ -10,7 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
 If the property is inherited, or does not exist, the method returns `false`.
@@ -102,7 +102,7 @@ for (let name of Object.keys(example)) {
 }
 ```
 
-But if you need to use `for..in`, you can use `Object.hasOwn()` to skip the inherited properties:
+But if you need to use `for...in`, you can use `Object.hasOwn()` to skip the inherited properties:
 
 ```js
 let example = { foo: true, bar: true };

@@ -32,7 +32,7 @@ requestHitTestSource(options)
 - `options`
   - : An object containing configuration options, specifically:
     - `space`: The {{domxref("XRSpace")}} that will be tracked by the hit test source.
-    - `entityTypes`: {{optional_inline}} An {{jsxref("Array")}} specifying the types of entities to be used for hit test source creation. If no no entity type is specified, the array defaults to a single element with the `plane` type. Possible types:
+    - `entityTypes`: {{optional_inline}} An {{jsxref("Array")}} specifying the types of entities to be used for hit test source creation. If no entity type is specified, the array defaults to a single element with the `plane` type. Possible types:
       - `point`: Compute hit test results based on characteristic points detected.
       - `plane`: Compute hit test results based on real-world planes detected.
       - `mesh`: Compute hit test results based on meshes detected.

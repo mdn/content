@@ -21,11 +21,9 @@ the {{domxref("MediaDeviceInfo.deviceId")}} values returned from
 {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or
 `id-communications`.
 
-## Syntax
+## Value
 
-```js
-var sinkId = HTMLMediaElement.sinkId
-```
+A string.
 
 ## Specifications
 

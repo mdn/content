@@ -14,13 +14,7 @@ browser-compat: api.Request.cache
 
 The **`cache`** read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching).
 
-## Syntax
-
-```js
-var currentCacheMode = request.cache;
-```
-
-### Value
+## Value
 
 A `RequestCache` value. The available values are:
 
@@ -49,7 +43,7 @@ A `RequestCache` value. The available values are:
 
   The `"only-if-cached"` mode can only be used if the request's [`mode`](/en-US/docs/Web/API/Request/mode) is `"same-origin"`. Cached redirects will be followed if the request's `redirect` property is `"follow"` and the redirects do not violate the `"same-origin"` mode.
 
-## Example
+## Examples
 
 ```js
 // Download a resource with cache busting, to bypass the cache

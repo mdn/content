@@ -101,7 +101,7 @@ console.log(eval('3 + 5'))
 
 ### Multi-line input in the Web Console
 
-The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the [multi-line line input mode](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode).
+The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the [multi-line input mode](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode).
 
 ### Hello world
 

@@ -278,8 +278,8 @@ JSON.stringify([ obj ]);
 ### Issue with JSON.stringify() when serializing circular references
 
 Note that since the [JSON format](https://www.json.org/) doesn't support
-object references (although an [IETF draft
-exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an
+object references (although an [IETF draft exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)),
+a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an
 object with circular references.
 
 ```js example-bad
@@ -383,8 +383,8 @@ console.log(restoredSession);
 
 ### Well-formed JSON.stringify()
 
-Engines implementing the [well-formed
-JSON.stringify specification](https://github.com/tc39/proposal-well-formed-stringify) will stringify lone surrogates, any code point from
+Engines implementing the [well-formed JSON.stringify specification](https://github.com/tc39/proposal-well-formed-stringify)
+will stringify lone surrogates, any code point from
 U+D800 to U+DFFF, using Unicode escape sequences rather than literally. Before this
 change `JSON.stringify` would output lone surrogates if the input contained
 any lone surrogates; such strings could not be encoded in valid UTF-8 or UTF-16:

@@ -16,19 +16,11 @@ operation's data (as a {{domxref("DataTransfer")}} object).
 
 This property is {{readonlyInline}}.
 
-## Syntax
+## Value
 
-```js
-let data = dragEvent.dataTransfer;
-```
+A {{domxref("DataTransfer")}} object which contains the {{domxref("DragEvent","drag event's data")}}.
 
-### Return value
-
-- `data`
-  - : A {{domxref("DataTransfer")}} object which contains the
-    {{domxref("DragEvent","drag event's data")}}.
-
-## Example
+## Examples
 
 This example illustrates accessing the drag and drop data within the
 {{event("dragend")}} event handler.

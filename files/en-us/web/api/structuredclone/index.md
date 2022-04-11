@@ -78,7 +78,7 @@ for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 
-const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] }).
+const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
 console.log(uInt8Array.byteLength);  // 0
 ```
 

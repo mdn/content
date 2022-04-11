@@ -26,7 +26,7 @@ button is not.
 
 A boolean value.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {

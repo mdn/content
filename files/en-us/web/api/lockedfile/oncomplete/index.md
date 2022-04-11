@@ -15,13 +15,9 @@ tags:
 
 Specifies an event listener to receive {{event("complete")}} events. These events occur each time a read or write operation is successful.
 
-## Syntax
+## Value
 
-```js
-instanceOfLockedFile.oncomplete = funcRef;
-```
-
-Where `funcRef` is a function to be called when the {{event("complete")}} event occurs.
+A function to be called when the {{event("complete")}} event occurs.
 
 ## Specifications
 

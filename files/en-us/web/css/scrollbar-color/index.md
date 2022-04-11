@@ -34,6 +34,7 @@ The first applies to the thumb of the scrollbar, the second to the track. */
 scrollbar-color: inherit;
 scrollbar-color: initial;
 scrollbar-color: revert;
+scrollbar-color: revert-layer;
 scrollbar-color: unset;
 ```
 

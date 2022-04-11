@@ -77,7 +77,7 @@ If `outputChannelCount` isn't specified, and `numberOfInputs` and `numberOfOutpu
 
 Otherwise, if `outputChannelCount` is provided *and* if the values of `numberOfInputs` and `numberOfOutputs` are both 1, the audio worklet node's channel count is set to the value of `outputChannelCount`. Otherwise, the channel count of each channel in the set of output channels is set to match the corresponding value in the `outputChannelCount` array.
 
-## Example
+## Examples
 
 _For a complete example demonstrating user-defined audio processing, see the
 {{domxref("AudioWorkletNode")}} page._

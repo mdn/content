@@ -23,7 +23,7 @@ In this guide, we'll examine how to add a data channel to a peer connection, whi
 
 The underlying data transport used by the {{domxref("RTCDataChannel")}} can be created in one of two ways:
 
-- Let WebRTC create the transport and announce it to the remote peer for you (by causing it to receive a {{event("datachannel")}} event). This is the easy way, and works for a wide variety of use cases, but may not be flexible enough for your needs.
+- Let WebRTC create the transport and announce it to the remote peer for you (by causing it to receive a {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} event). This is the easy way, and works for a wide variety of use cases, but may not be flexible enough for your needs.
 - Write your own code to negotiate the data transport and write your own code to signal to the other peer that it needs to connect to the new channel.
 
 Let's look at each of these cases, starting with the first, which is the most common.

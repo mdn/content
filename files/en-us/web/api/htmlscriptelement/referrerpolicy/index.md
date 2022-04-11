@@ -16,14 +16,7 @@ The **`referrerPolicy`** property of the
 {{htmlattrxref("referrerpolicy","script")}} of the {{HTMLElement("script")}} element and
 fetches made by that script, defining which referrer is sent when fetching the resource.
 
-## Syntax
-
-```js
-refStr = scriptElem.referrerPolicy;
-scriptElem.referrerPolicy = refStr;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}; one of the following:
 

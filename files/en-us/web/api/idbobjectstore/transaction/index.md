@@ -20,17 +20,11 @@ object store belongs.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myTransaction = objectStore.transaction;
-```
-
-### Value
+## Value
 
 An {{domxref("IDBTransaction")}} object.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been

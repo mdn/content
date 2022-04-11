@@ -18,7 +18,8 @@ Creates a new {{domxref('CSSVariableReferenceValue')}}.
 ## Syntax
 
 ```js
-new CSSVariableReferenceValue(variable[, fallback]])
+new CSSVariableReferenceValue(variable)
+new CSSVariableReferenceValue(variable, fallback)
 ```
 
 ### Parameters

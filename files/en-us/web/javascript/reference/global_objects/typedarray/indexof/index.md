@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.TypedArray.indexOf
 The **`indexOf()`** method returns the first index at which a
 given element can be found in the typed array, or -1 if it is not present. This method
 has the same algorithm as {{jsxref("Array.prototype.indexOf()")}}. _TypedArray_
-is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-indexof.html")}}
 
@@ -47,8 +47,9 @@ The first index of the element in the array; `-1` if not found.
 ## Description
 
 `indexOf` compares `searchElement` to elements of the
-typed array using [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (the same method used by the ===, or triple-equals, operator).
+typed array using
+[strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)
+(the same method used by the ===, or triple-equals, operator).
 
 ## Examples
 

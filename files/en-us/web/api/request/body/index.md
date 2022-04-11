@@ -18,13 +18,7 @@ that have been added to the request. Note that a request using the
 `GET` or `HEAD` method cannot have a body
 and `null` is return in these cases.
 
-## Syntax
-
-```js
-request.body
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}} or {{jsxref("null")}}.
 

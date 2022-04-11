@@ -12,7 +12,11 @@ browser-compat: api.StyleSheet.media
 
 The **`media`** property of the {{domxref("StyleSheet")}} interface specifies the intended destination media for style information. It is a read-only, array-like `MediaList` object and can be removed with `deleteMedium()` and added with `appendMedium()`.
 
-## Example
+## Value
+
+A read-only array-like `MediaList` object.
+
+## Examples
 
 ```html
 <!doctype html>

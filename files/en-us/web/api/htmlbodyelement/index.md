@@ -38,38 +38,48 @@ _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")
 
 ## Event handlers
 
-_No specific event handlers; inherits event handlers from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
+The {{domxref("HTMLElement")}} events are inherited. 
 
-- {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("afterprint")}} event is raised.
-- {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("beforeprint")}} event is raised.
-- {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("beforeunload")}} event is raised.
-- {{domxref("WindowEventHandlers.onhashchange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("hashchange")}} event is raised.
-- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("languagechange")}} event is raised.
-- {{domxref("WindowEventHandlers.onoffline")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("offline")}} event is raised.
-- {{domxref("WindowEventHandlers.ononline")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("online")}} event is raised.
-- {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pagehide")}} event is raised.
-- {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pageshow")}} event is raised.
-- {{domxref("WindowEventHandlers.onpopstate")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("popstate")}} event is raised.
-- {{domxref("WindowEventHandlers.onrejectionhandled")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code executed when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.
-- {{domxref("GlobalEventHandlers.onresize")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("resize")}} event is raised.
-- {{domxref("WindowEventHandlers.onstorage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("storage")}} event is raised.
-- {{domxref("WindowEventHandlers.onunhandledrejection")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code executed when the {{event("unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.
-- {{domxref("WindowEventHandlers.onunload")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("unload")}} event is raised.
+The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `HTMLBodyElement`.
+
+> **Note:** Using `addEventListener()` on `HTMLBodyElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
+
+- {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
+  - : Fired after the associated document has started printing or the print preview has been closed.
+- {{domxref("window.beforeprint_event", "HTMLBodyElement.onbeforeprint")}}
+  - : Fired when the associated document is about to be printed or previewed for printing.
+- {{domxref("window.beforeunload_event", "HTMLBodyElement.onbeforeunload")}}
+  - : Fired when the window, the document and its resources are about to be unloaded.
+- {{domxref("window.gamepadconnected_event", "HTMLBodyElement.ongamepadconnected")}}
+  - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
+- {{domxref("window.gamepaddisconnected_event", "HTMLBodyElement.ongamepaddisconnected")}}
+  - : Fired when the browser detects that a gamepad has been disconnected.
+- {{domxref("window.hashchange_event", "HTMLBodyElement.onhashchange")}}
+  - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
+- {{domxref("window.languagechange_event", "HTMLBodyElement.onlanguagechange")}}
+  - : Fired when the user's preferred language changes.
+- {{domxref("window.message_event", "HTMLBodyElement.onmessage")}}
+  - : Fired when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
+- {{domxref("window.messageerror_event", "HTMLBodyElement.onmessageerror")}}
+  - : Fired when the window receives a message that can't be deserialized.
+- {{domxref("window.offline_event", "HTMLBodyElement.onoffline")}}
+  - : Fired when the browser has lost access to the network and the value of {{domxref("Navigator.onLine")}} switches to `false`.
+- {{domxref("window.online_event", "HTMLBodyElement.ononline")}}
+  - : Fired when the browser has gained access to the network and the value of {{domxref("Navigator.onLine")}} switches to `true`.
+- {{domxref("window.pagehide_event", "HTMLBodyElement.onpagehide")}}
+  - : Fired when the browser hides the current page in the process of presenting a different page from the session's history.
+- {{domxref("window.pageshow_event", "HTMLBodyElement.onpageshow")}}
+  - : Fired when the browser displays the window's document due to navigation.
+- {{domxref("window.popstate_event", "HTMLBodyElement.onpopstate")}}
+  - : Fired when the active history entry changes while the user navigates the session history.
+- {{domxref("window.rejectionhandled_event", "HTMLBodyElement.onrejectionhandled")}}
+  - : Fired whenever a JavaScript {{jsxref("Promise")}} is rejected and the rejection has been handled.
+- {{domxref("window.storage_event", "HTMLBodyElement.onstorage")}}
+  - : Fired when a storage area (`localStorage`) has been modified in the context of another document.
+- {{domxref("window.unhandledrejection_event", "HTMLBodyElement.onunhandledrejection")}}
+  - : Fired whenever a {{jsxref("Promise")}} is rejected but the rejection was not handled.
+- {{domxref("window.unload_event", "HTMLBodyElement.onunload")}}
+  - : Fired when the document is being unloaded.
 
 ## Specifications
 

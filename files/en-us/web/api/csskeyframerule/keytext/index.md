@@ -23,7 +23,7 @@ A {{domxref('CSSOMString')}}.
 - {{jsxref("SyntaxError")}}
   - : Thrown if `keyText` is updated with an invalid keyframe selector, in which case `keyText` remains untouched.
 
-## Example
+## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual {{domxref("CSSKeyFrame")}} objects for each keyframe.

@@ -18,18 +18,11 @@ A boolean value indicating whether the <kbd>control</kbd> (Control) key is enabl
 
 This property is {{readonlyInline}}.
 
-## Syntax
+## Value
 
-```js
-var ctrlEnabled = touchEvent.ctrlKey;
-```
+A boolean value that is `true` if the <kbd>control</kbd> key is enabled for this event; and `false` if the <kbd>control</kbd> is not enabled.
 
-### Return value
-
-- `ctrlEnabled`
-  - : `true` if the <kbd>control</kbd> key is enabled for this event; and `false` if the <kbd>control</kbd> is not enabled.
-
-## Example
+## Examples
 
 The [TouchEvent.altKey example](/en-US/docs/Web/API/TouchEvent/altKey#example) includes an example of this property's usage.
 

@@ -16,14 +16,7 @@ The
 property of the Canvas 2D API provides filter effects such as blurring and grayscaling.
 It is similar to the CSS {{cssxref("filter")}} property and accepts the same values.
 
-## Syntax
-
-```js
-ctx.filter = "<filter-function1> [<filter-function2>] [<filter-functionN>]";
-ctx.filter = "none";
-```
-
-### Values
+## Value
 
 The `filter` property accepts a value of `"none"` or one or more
 of the following filter functions in a {{domxref("DOMString")}}.

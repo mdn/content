@@ -55,7 +55,7 @@ to inject themselves into an ICE exchange.
 
 The `usernameFragment` and password both change every time an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) occurs.
 
-## Example
+## Examples
 
 Although the WebRTC infrastructure will filter out obsolete candidates for you after an
 ICE restart, you can do it yourself if you're trying to absolutely minimize the number

@@ -25,7 +25,7 @@ SyncManager.getTags().then(function(tags[]) { /* ... */ })
 
 ### Returns
 
-A {{jsxref("Promise")}} that resolves to an array of {{jsxref("DOMString")}}s
+A {{jsxref("Promise")}} that resolves to an array of strings
 containing developer-defined identifiers for `SyncManager` registrations.
 
 ### Parameters

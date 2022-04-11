@@ -18,13 +18,7 @@ example, "`mark`". This property is read only.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var type = entry.entryType;
-```
-
-### Return value
+## Value
 
 The return value depends on the subtype of the `PerformanceEntry` object and
 affects the value of the {{domxref('PerformanceEntry.name')}} property as shown by the
@@ -101,7 +95,7 @@ table below.
   </tbody>
 </table>
 
-## Example
+## Examples
 
 The following example shows the use of the `entryType` property.
 

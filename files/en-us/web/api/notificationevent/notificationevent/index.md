@@ -31,7 +31,7 @@ new NotificationEvent(type, NotificationEventInit);
     the notification the event is dispatched on. In later drafts of the specification,
     this parameter is not optional.
 
-## Example
+## Examples
 
 ```js
 var n = new Notification('Hello');

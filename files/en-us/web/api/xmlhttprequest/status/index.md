@@ -18,7 +18,11 @@ The read-only **`XMLHttpRequest.status`** property returns the numerical HTTP [s
 
 Before the request completes, the value of `status` is 0. Browsers also report a status of 0 in case of `XMLHttpRequest` errors.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ```js
 var xhr = new XMLHttpRequest();

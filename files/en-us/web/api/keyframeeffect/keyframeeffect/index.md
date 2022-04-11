@@ -5,14 +5,13 @@ tags:
   - API
   - Animation
   - Constructor
-  - Experimental
   - KeyframeEffect
   - Reference
   - waapi
   - web animations api
 browser-compat: api.KeyframeEffect.KeyframeEffect
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations API") }}
 
 The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new `{{domxref("KeyframeEffect")}}` object instance, and also allows you to clone an existing keyframe effect object instance.
 
@@ -82,7 +81,9 @@ The single argument constructor (see above) creates a clone of an existing  {{do
 In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `KeyframeEffect` constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
 
 ```js
-var rabbitDownKeyframes = new KeyframeEffect(
+const whiteRabbit = document.getElementById('rabbit');
+
+const rabbitDownKeyframes = new KeyframeEffect(
     whiteRabbit, // element to animate
     [
       { transform: 'translateY(0%)' }, // keyframe
@@ -90,6 +91,11 @@ var rabbitDownKeyframes = new KeyframeEffect(
     ],
     { duration: 3000, fill: 'forwards' } // keyframe options
   );
+  
+const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+  
+// Play rabbit animation
+rabbitDownAnimation.play();
 ```
 
 ## Specifications

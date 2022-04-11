@@ -74,8 +74,8 @@ var f = function(x) { return x; };
 
 - [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - [About functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [_Frankenstein_ by Mary
-  Wollstonecraft Shelley, full e-text](https://www.gutenberg.org/ebooks/84) ("Cursed (although I curse myself) be the
+- [_Frankenstein_ by Mary Wollstonecraft Shelley, full e-text](https://www.gutenberg.org/ebooks/84)
+  ("Cursed (although I curse myself) be the
   hands that formed you! You have made me wretched beyond expression. You have left me
   no power to consider whether I am just to you or not. Begone! Relieve me from the
   sight of your detested form.")

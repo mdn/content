@@ -20,13 +20,7 @@ there is an unsuccessful transaction.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myError = transaction.error;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
 property returns a {{domxref("DOMException")}} because `DOMError` has been
@@ -39,7 +33,7 @@ This property is `null` if the transaction is not finished, is finished and
 successfully committed, or was aborted with the {{domxref("IDBTransaction.abort")}}
 method.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event

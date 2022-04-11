@@ -47,6 +47,7 @@ padding: 5px 1em 0 2em;
 padding: inherit;
 padding: initial;
 padding: revert;
+padding: revert-layer;
 padding: unset;
 ```
 

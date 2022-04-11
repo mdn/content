@@ -26,11 +26,9 @@ been replaced with {{JSxRef("Promise")}}-based
 > {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} method, which returns a
 > battery {{JSxRef("Promise")}}.
 
-## Syntax
+## Value
 
-```js
-var battery = navigator.battery;
-```
+A {{DOMxRef("BatteryManager")}}.
 
 ## Browser compatibility
 

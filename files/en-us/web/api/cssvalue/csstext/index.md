@@ -27,7 +27,7 @@ interface represents the current computed CSS property value.
 
 A {{domxref("DOMString")}} representing the current CSS property value.
 
-## Example
+## Examples
 
 ```js
 var styleDeclaration = document.styleSheets[0].cssRules[0].style;

@@ -17,13 +17,9 @@ The **`UIEvent.view`** read-only property returns the
 {{domxref("WindowProxy")}} object from which the event was generated. In browsers, this
 is the {{ domxref("Window") }} object the event happened in.
 
-## Syntax
+## Value
 
-```js
-var view = event.view;
-```
-
-- `view` is a reference to an `AbstractView` object.
+A reference to an `AbstractView` object.
 
 ## Specifications
 

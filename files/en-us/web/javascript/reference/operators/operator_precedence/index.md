@@ -278,7 +278,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       </td>
       <td>left-to-right</td>
       <td>
-        <code>… ( <var>… </var>)</code>
+        <code>… ( … )</code>
       </td>
     </tr>
     <tr>

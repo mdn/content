@@ -97,7 +97,7 @@ the value of a parameter:
 Thus, the `value` of a parameter is maintained to accurately reflect the
 state of the parameter over time.
 
-## Example
+## Examples
 
 This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.
 

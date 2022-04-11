@@ -25,11 +25,9 @@ This property is not available in workers.
 > specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
 
-## Syntax
+## Value
 
-```js
-timingInfo = performance.timing;
-```
+A {{domxref("PerformanceTiming")}} object.
 
 ## Specifications
 

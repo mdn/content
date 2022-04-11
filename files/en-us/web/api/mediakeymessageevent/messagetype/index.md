@@ -18,11 +18,14 @@ type of message. It may be one of `license-request`,
 `license-renewal`, `license-release`, or
 `individualization-request`.
 
-## Syntax
+## Value
 
-```js
-var messageType = mediaKeyMessageEvent.messageType;
-```
+One of the followings:
+
+- `license-request`
+- `license-renewal`
+- `license-release`
+- `individualization-request`
 
 ## Specifications
 

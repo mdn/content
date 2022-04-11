@@ -21,7 +21,7 @@ a value of 0 for this attribute.
 
 An integer ≥ 0.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

@@ -20,17 +20,11 @@ path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of the curre
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myKeyPath = myIndex.keyPath;
-```
-
-### Value
+## Value
 
 Any data type that can be used as a key path.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on
@@ -45,7 +39,7 @@ as `lName`.
 Finally, we iterate through each record, and insert the data into an HTML table. For a
 complete working example, see our [IndexedDB-examples
 demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex).)
+example live](https://mdn.github.io/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {

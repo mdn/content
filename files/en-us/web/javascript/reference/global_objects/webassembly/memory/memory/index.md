@@ -73,8 +73,7 @@ var memory = new WebAssembly.Memory({initial:10, maximum:100});
 
 The second way to get a `WebAssembly.Memory` object is to have it exported
 by a WebAssembly module. The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)
-on GitHub, and [view it
-live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm byte code using the
+on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm byte code using the
 {{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory
 created in the line above. It then stores some values in that memory, then exports a
 function and uses it to sum some values.
@@ -93,9 +92,9 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 
 ### Creating a shared memory
 
-By default, WebAssembly memories are unshared. You can create a [shared
-memory](/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories) by passing `shared: true` in the constructor's initialization
-object:
+By default, WebAssembly memories are unshared.
+You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories)
+by passing `shared: true` in the constructor's initialization object:
 
 ```js
 let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
@@ -116,5 +115,4 @@ This memory's `buffer` property will return a
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

@@ -28,6 +28,7 @@ position: sticky;
 position: inherit;
 position: initial;
 position: revert;
+position: revert-layer;
 position: unset;
 ```
 

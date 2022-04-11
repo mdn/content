@@ -31,6 +31,7 @@ forced-color-adjust: none;
 forced-color-adjust: inherit;
 forced-color-adjust: initial;
 forced-color-adjust: revert;
+forced-color-adjust: revert-layer;
 forced-color-adjust: unset;
 ```
 

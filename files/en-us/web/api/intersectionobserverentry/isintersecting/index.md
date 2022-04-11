@@ -29,7 +29,7 @@ A Boolean value which indicates whether the
 a state of intersection (`true`) or out of a state of intersection
 (`false`).
 
-## Example
+## Examples
 
 In this simple example, an intersection callback is used to update a counter of how
 many targeted elements are currently intersecting with the

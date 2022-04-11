@@ -26,7 +26,7 @@ A {{domxref("DOMHighResTimeStamp")}} which indicates the time at which the
 intersection change described by the `IntersectionObserverEntry`. The time is
 specified in milliseconds since the creation of the containing document.
 
-## Example
+## Examples
 
 See [Timing
 element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility) for a complete example which

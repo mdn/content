@@ -24,6 +24,7 @@ scroll-margin-block-end: 1em;
 scroll-margin-block-end: inherit;
 scroll-margin-block-end: initial;
 scroll-margin-block-end: revert;
+scroll-margin-block-end: revert-layer;
 scroll-margin-block-end: unset;
 ```
 

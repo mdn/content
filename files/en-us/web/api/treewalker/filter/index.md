@@ -18,13 +18,11 @@ When creating the `TreeWalker`, the filter object is passed in as the third
 parameter, and its method {{domxref("NodeFilter.acceptNode()")}} is called on every
 single node to determine whether or not to accept it.
 
-## Syntax
+## Value
 
-```js
-nodeFilter = treeWalker.filter;
-```
+A {{domxref("NodeFilter")}} object.
 
-## Example
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

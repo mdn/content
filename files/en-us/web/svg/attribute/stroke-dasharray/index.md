@@ -64,7 +64,7 @@ html,body,svg { height:100% }
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><code>none</code> | <var>&#x3C;dasharray></var></td>
+      <td><code>none</code> | <code>&#x3C;dasharray></code></td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

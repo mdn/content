@@ -50,4 +50,4 @@ console.dir(object);
 - [MSDN: Using
   the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
 - [Chrome
-  Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
+  Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)

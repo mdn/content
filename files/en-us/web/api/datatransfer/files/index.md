@@ -17,18 +17,12 @@ includes no files, the list is empty.
 
 This feature can be used to drag files from a user's _desktop_ to the browser.
 
-## Syntax
-
-```js
-dataTransfer.files;
-```
-
-### Return value
+## Value
 
 A {{domxref("FileList","list")}} of the files in a drag operation, one list item for
 each file in the operation. If the drag operation had no files, the list is empty.
 
-## Example
+## Examples
 
 There are two live examples of this interface:
 

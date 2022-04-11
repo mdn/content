@@ -41,6 +41,7 @@ overflow: hidden visible;
 overflow: inherit;
 overflow: initial;
 overflow: revert;
+overflow: revert-layer;
 overflow: unset;
 ```
 

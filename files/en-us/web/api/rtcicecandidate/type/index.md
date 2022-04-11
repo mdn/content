@@ -41,7 +41,7 @@ If `type` is `null`, that information was missing from the
 {{domxref("RTCPeerConnection.addIceCandidate()")}} to throw an
 `OperationError` exception.
 
-## Example
+## Examples
 
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to
 present a modified user interface for host candidates (those where the

@@ -18,13 +18,7 @@ read or write operation with it. Typically, a {{domxref("LockedFile")}} object b
 inactive when the {{domxref("LockedFile.abort()")}} method is called or if an error
 occurs.
 
-## Syntax
-
-```js
-var state = instanceOfLockedFile.active
-```
-
-### Value
+## Value
 
 A boolean value.
 

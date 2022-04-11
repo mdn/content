@@ -21,7 +21,7 @@ containing a credential's federated identity provider.
 
 A {{domxref("USVString")}} containing a credential's federated identity provider.
 
-## Example
+## Examples
 
 ```js
 // TBD

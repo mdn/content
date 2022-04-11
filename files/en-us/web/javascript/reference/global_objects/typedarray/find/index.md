@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.TypedArray.find
 
 The **`find()`** method returns a value of an element in the
 typed array, if it satisfies the provided testing function. Otherwise
-{{jsxref("undefined")}} is returned. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+{{jsxref("undefined")}} is returned. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 See also the {{jsxref("TypedArray.findIndex", "findIndex()")}} method, which returns
 the **index** of a found element in the typed array instead of its value.
@@ -47,7 +47,9 @@ find(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking three arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the typed array.

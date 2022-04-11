@@ -38,7 +38,7 @@ aren't text input elements are not typically focusable by default.
 The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or
 `null` if there is no focused element.
 
-## Example
+## Examples
 
 ### HTML
 

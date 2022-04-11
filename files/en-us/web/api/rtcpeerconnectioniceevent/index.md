@@ -15,7 +15,7 @@ browser-compat: api.RTCPeerConnectionIceEvent
 
 The **`RTCPeerConnectionIceEvent`** interface represents events that occur in relation to {{Glossary("ICE")}} candidates with the target, usually an {{domxref("RTCPeerConnection")}}.
 
-Only one event is of this type: {{event("icecandidate")}}.
+Only one event is of this type: {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}.
 
 {{InheritanceDiagram}}
 

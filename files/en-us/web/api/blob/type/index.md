@@ -18,7 +18,7 @@ The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("
 A {{domxref("DOMString")}} containing the file's MIME type, or an empty string if the
 type could not be determined.
 
-## Example
+## Examples
 
 This example asks the user to select a number of files, then checks each file to make
 sure it's one of a given set of image file types.

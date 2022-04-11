@@ -16,7 +16,7 @@ This aim of this task is to get you working with responsive web design with a pr
 
 ## Your task
 
-[Download the starting point](https://github.com/mdn/css-examples/blob/master/learn/tasks/rwd/rwd-download.html). Open this in your browser and you will find a wireframed site which will load in a mobile device in a readable manner. You can drag your window smaller or use the responsive design view in Firefox DevTools to view this as if on a phone.
+[Download the starting point](https://github.com/mdn/css-examples/blob/main/learn/tasks/rwd/rwd-download.html). Open this in your browser and you will find a wireframed site which will load in a mobile device in a readable manner. You can drag your window smaller or use the responsive design view in Firefox DevTools to view this as if on a phone.
 
 Your task is to create a desktop version of this layout which displays when there is enough screen width to accommodate it. You can see the layout you are aiming for in the screenshot below.
 

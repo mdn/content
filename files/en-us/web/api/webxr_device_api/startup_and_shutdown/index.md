@@ -28,7 +28,7 @@ Assuming you're already familiar with 3D graphics in general and WebGL in partic
 
 ## Accessing the WebXR API
 
-Your app's access to the WebXR API begins with the {{domxref("XRSystem")}} object. This object represents the overall WebXR device suite available to you through the hardware and drivers available on the user's equipment. There is a global `XRSystem` object available for use by your document through the the {{domxref("Navigator")}} property {{domxref("Navigator.xr", "xr")}}, which returns the `XRSystem` object if suitable XR hardware is available for your use given the hardware available and your document's environment.
+Your app's access to the WebXR API begins with the {{domxref("XRSystem")}} object. This object represents the overall WebXR device suite available to you through the hardware and drivers available on the user's equipment. There is a global `XRSystem` object available for use by your document through the {{domxref("Navigator")}} property {{domxref("Navigator.xr", "xr")}}, which returns the `XRSystem` object if suitable XR hardware is available for your use given the hardware available and your document's environment.
 
 Thus the simplest code that fetches the `XRSystem` object is:
 
@@ -79,7 +79,7 @@ Other improvements include updating the emulator to rename the `XR` interface to
 
 ### Context requirements
 
-A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using an URL such as `http://localhost/...`), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.
+A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using a URL such as `http://localhost/...`), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.
 
 If the document wasn't loaded securely, you won't get very far. The {{domxref("navigator.xr")}} property doesn't even exist if the document wasn't loaded securely. This may also be the case if there is no compatible XR hardware available. Either way, you need to be prepared for the lack of an `xr` property and either gracefully handle the error or provide some form of fallback.
 

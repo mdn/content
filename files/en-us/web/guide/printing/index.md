@@ -31,7 +31,7 @@ Add the following to your {{HTMLElement("head")}} tag.
 
 Some browsers (including Firefox 6 and later and Internet Explorer) send `beforeprint` and `afterprint` events to let content determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).
 
-> **Note:** You can also use [`window.onbeforeprint`](/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint) and [`window.onafterprint`](/en-US/docs/Web/API/WindowEventHandlers/onafterprint) to assign handlers for these events, but using {{domxref("EventTarget.addEventListener()")}} is preferred.
+> **Note:** You can also use `window.onbeforeprint` and `window.onafterprint` to assign handlers for these events, but using {{domxref("EventTarget.addEventListener()")}} is preferred.
 
 ## Examples
 
@@ -116,7 +116,7 @@ function printPage (sURL) {
 ## See also
 
 - [`window.print`](/en-US/docs/Web/API/Window/print)
-- [`window.onbeforeprint`](/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint)
-- [`window.onafterprint`](/en-US/docs/Web/API/WindowEventHandlers/onafterprint)
+- {{ domxref("window.beforeprint_event", "beforeprint") }} event
+- {{ domxref("window.afterprint_event", "afterprint") }} event
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - {{cssxref("@media")}}

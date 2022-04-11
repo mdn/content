@@ -23,7 +23,7 @@ This value can be one of `"hidden"`, `"visible"`, or
 
 A {{domxref("DOMString")}} (See {{domxref("Document.visibilityState")}} for values).
 
-## Example
+## Examples
 
 ```js
 event.waitUntil(clients.matchAll({

@@ -27,13 +27,11 @@ then **`clientTop`** is also zero.
 > **Note:** This property will round the value to an integer. If you
 > need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var top = element.clientTop;
-```
+A number.
 
-## Example
+## Examples
 
 In the following example, the client area has a white background and a 24px black `border-top`. The `clientTop` value is the distance from where the margin (yellow) area ends and the padding and content areas (white) begin: that is, 24px.
 

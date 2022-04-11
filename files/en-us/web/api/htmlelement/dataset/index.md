@@ -90,13 +90,7 @@ For example, a `data-abc-def` attribute corresponds to
 - To remove an attribute, you can use the [`delete`
   operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`
 
-## Syntax
-
-```js
-const dataAttrMap = element.dataset
-```
-
-### Value
+## Value
 
 A {{domxref("DOMStringMap")}}.
 

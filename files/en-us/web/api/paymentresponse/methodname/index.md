@@ -32,7 +32,7 @@ payment processor to handle payments. See
 {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
   validation")}} for more information.
 
-## Example
+## Examples
 
 The following example extracts the method name from the {{domxref('PaymentResponse')}}
 object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a

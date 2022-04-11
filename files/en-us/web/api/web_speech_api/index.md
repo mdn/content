@@ -39,7 +39,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 - {{domxref("SpeechRecognitionError")}} {{deprecated_inline}}
   - : Represents error messages from the recognition service.
 - {{domxref("SpeechRecognitionEvent")}}
-  - : The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
+  - : The event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 - {{domxref("SpeechGrammar")}}
   - : The words or patterns of words that we want the recognition service to recognize.
 - {{domxref("SpeechGrammarList")}}

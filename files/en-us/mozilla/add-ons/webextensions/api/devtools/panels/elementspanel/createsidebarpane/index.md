@@ -18,7 +18,7 @@ browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPan
 
 Adds a new pane to the sidebar in the HTML/CSS inspector.
 
-The HTML/CSS inspector, called the [Page Inspector](/en-US/docs/Tools/Page_Inspector) in Firefox and the [Elements panel](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) in Chrome, displays the page DOM in the main part of its window, and has a sidebar that displays various other aspects of the page HTML/CSS in a tabbed interface. For example, in Firefox, the sidebar can display the CSS rules for the selected element, or its fonts, or its box model.
+The HTML/CSS inspector, called the [Page Inspector](/en-US/docs/Tools/Page_Inspector) in Firefox and the [Elements panel](https://developer.chrome.com/docs/devtools/css/) in Chrome, displays the page DOM in the main part of its window, and has a sidebar that displays various other aspects of the page HTML/CSS in a tabbed interface. For example, in Firefox, the sidebar can display the CSS rules for the selected element, or its fonts, or its box model.
 
 The `createSidebarPane()` function adds a new pane to the sidebar. For example, the screenshot below shows a new pane titled "My pane", that displays a JSON object:
 

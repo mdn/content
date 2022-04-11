@@ -27,13 +27,7 @@ currently is operating.
 This differs from the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}},
 which only indicates whether or not ICE gathering is currently underway.
 
-## Syntax
-
-```js
-iceState = iceTransport.state;
-```
-
-### Value
+## Value
 
 A string whose value is one of the following:
 

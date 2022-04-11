@@ -16,14 +16,7 @@ The **`mediaText`** property of the {{domxref("MediaList")}}
 interface is a {{Glossary("stringifier")}} that returns a {{domxref("DOMString")}} representing the
 `MediaList` as text, and also allows you to set a new `MediaList`.
 
-## Syntax
-
-```js
-mediaListInstance.mediaText;
-mediaListInstance.mediaText = string;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the media queries of a stylesheet. Each one is
 separated by a comma, for example

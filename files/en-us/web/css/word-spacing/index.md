@@ -33,6 +33,7 @@ word-spacing: 200%;
 word-spacing: inherit;
 word-spacing: initial;
 word-spacing: revert;
+word-spacing: revert-layer;
 word-spacing: unset;
 ```
 

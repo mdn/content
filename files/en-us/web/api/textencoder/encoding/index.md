@@ -18,11 +18,9 @@ specific encoder.
 
 It can only have the following value `utf-8`.
 
-## Syntax
+## Value
 
-```js
-b = encoder.encoding;
-```
+A string.
 
 ## Specifications
 

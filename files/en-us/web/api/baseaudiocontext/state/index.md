@@ -17,13 +17,7 @@ browser-compat: api.BaseAudioContext.state
 The `state` read-only property of the {{ domxref("BaseAudioContext") }}
 interface returns the current state of the `AudioContext`.
 
-## Syntax
-
-```js
-baseAudioContext.state;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}. Possible values are:
 

@@ -43,7 +43,7 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength);  // 0
 ```
 
-> **Note:** [Typed arrays](en-US/docs/Web/JavaScript/Typed_arrays) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are serializable, but not transferable.
+> **Note:** [Typed arrays](en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are serializable, but not transferable.
 > However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
 > We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer array.
 
@@ -90,7 +90,7 @@ The items that can be _transferred_ are:
 
 ## See also
 
-- [Transferable Objects: Lightning Fast!](https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast)
+- [Transferable Objects: Lightning Fast!](https://developer.chrome.com/blog/transferable-objects-lightning-fast/)
 - [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Transferable objects in the HTML specification](https://html.spec.whatwg.org/multipage/structured-data.html#transferable-objects)
 - {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}

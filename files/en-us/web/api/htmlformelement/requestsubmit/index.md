@@ -48,7 +48,7 @@ None.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` isn't a member of the form on
     which `requestSubmit()` was called. The submitter must be either a
-    descendant of the form element or must have an {{htmlattrxref("form", "input")}}
+    descendant of the form element or must have a {{htmlattrxref("form", "input")}}
     attribute referring to the form.
 
 ## Usage notes

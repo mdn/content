@@ -26,6 +26,7 @@ mask-mode: alpha, match-source;
 mask-mode: inherit;
 mask-mode: initial;
 mask-mode: revert;
+mask-mode: revert-layer;
 mask-mode: unset;
 ```
 

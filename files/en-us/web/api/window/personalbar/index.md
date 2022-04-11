@@ -16,13 +16,11 @@ browser-compat: api.Window.personalbar
 Returns the `personalbar` object, whose visibility can be toggled in the
 window.
 
-## Syntax
+## Value
 
-```js
-objRef =window.personalbar
-```
+A `personalbar` object.
 
-## Example
+## Examples
 
 {{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}
 

@@ -27,6 +27,7 @@ text-size-adjust: 80%;
 text-size-adjust: inherit;
 text-size-adjust: initial;
 text-size-adjust: revert;
+text-size-adjust: revert-layer;
 text-size-adjust: unset;
 ```
 

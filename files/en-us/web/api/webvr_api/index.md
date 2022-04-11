@@ -45,7 +45,7 @@ In addition, WebVR 1.1 adds a number of events on the {{DOMxRef("Window")}} obje
 
 The WebVR API, which was never ratified as a web standard, has been deprecated in favor of the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API), which is well on track toward finishing the standardization process. As such, you should try to update existing code to use the newer API instead. Generally the transition should be fairly painless.
 
-Additionally, on some devices and/or browsers, WebVR requires that the page be loaded using a secure context, over an HTTPS connection. If the page is not fully secure, the WebVR methods and functions will not be available. You can easily test for this by checking to see if the  {{domxref("Navigator")}} method {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} is `NULL`:
+Additionally, on some devices and/or browsers, WebVR requires that the page be loaded using a secure context, over an HTTPS connection. If the page is not fully secure, the WebVR methods and functions will not be available. You can easily test for this by checking to see if the {{domxref("Navigator")}} method {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} is `NULL`:
 
 ```js
 if (!navigator.getVRDisplays) {
@@ -142,7 +142,7 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 - [vr.mozilla.org](https://vr.mozilla.org) — The main Mozilla landing pad for WebVR, with demos, utilities, and other information.
 - [A-Frame](https://aframe.io/) — Open source web framework for building VR experiences.
 - [webvr.info](https://webvr.info) — Up-to-date information about WebVR, browser setup, and community.
-- [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.
+- [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.
 - [Web VR polyfill](https://github.com/googlevr/webvr-polyfill/) — JavaScript implementation of WebVR.
 - [Supermedium](https://www.supermedium.com) — A pure WebVR browser to easily access the best WebVR content.
 - [WebVR Directory](https://webvr.directory/) — List of quality WebVR sites.

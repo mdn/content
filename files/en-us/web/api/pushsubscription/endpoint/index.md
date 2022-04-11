@@ -24,17 +24,11 @@ used to send a push message to the particular service worker instance that subsc
 the push service. For this reason, it is a good idea to keep your endpoint a secret, so
 others do not hijack it and abuse the push functionality.
 
-## Syntax
-
-```js
-var myEnd = pushSubscription.endpoint;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.ready.then(function(reg) {

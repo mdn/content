@@ -32,6 +32,7 @@ animation-duration: 10s, 35s, 230ms;
 animation-duration: inherit;
 animation-duration: initial;
 animation-duration: revert;
+animation-duration: revert-layer;
 animation-duration: unset;
 ```
 

@@ -30,9 +30,9 @@ The **`Intl.PluralRules`** object enables plural-sensitive formatting and plural
 - {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
 - {{jsxref("Intl/PluralRules/select", "Intl.PluralRules.prototype.select()")}}
-  - : Returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
+  - : Returns a string indicating which plural rule to use for locale-aware formatting.
 - {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}}
-  - : This method receives two values and returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
+  - : This method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
 
 ## Examples
 
@@ -54,8 +54,6 @@ new Intl.PluralRules('ar-EG').select(6);
 new Intl.PluralRules('ar-EG').select(18);
 // → 'many'
 ```
-
-### Using locales
 
 ## Specifications
 

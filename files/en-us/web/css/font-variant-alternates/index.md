@@ -28,9 +28,10 @@ font-variant-alternates: annotation(user-defined-ident);
 font-variant-alternates: swash(ident1) annotation(ident2);
 
 /* Global values */
-font-variant-alternates: initial;
 font-variant-alternates: inherit;
+font-variant-alternates: initial;
 font-variant-alternates: revert;
+font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 

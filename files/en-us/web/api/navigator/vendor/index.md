@@ -12,13 +12,7 @@ browser-compat: api.Navigator.vendor
 
 The value of the {{DomXref("Navigator")}} **`vendor`** property is always either "`Google Inc.`", "`Apple Computer, Inc.`", or (in Firefox) the empty string.
 
-## Syntax
-
-```js
-venString = navigator.vendor
-```
-
-### Value
+## Value
 
 - Either "`Google Inc.`", "`Apple Computer, Inc.`", or (in Firefox) the empty string.
 

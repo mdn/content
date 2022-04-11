@@ -18,7 +18,7 @@ The **MediaStream Recording API**, sometimes referred to as the _Media Recording
 
 ## Basic concepts
 
-The MediaStream Recording API is comprised of a single major interface, {{domxref("MediaRecorder")}}, which does all the work of taking the data from a {{domxref("MediaStream")}} and delivering it to you for processing. The data is delivered by a series of {{event("dataavailable")}} events, already in the format you specify when creating the `MediaRecorder`. You can then process the data further or write it to file as desired.
+The MediaStream Recording API is comprised of a single major interface, {{domxref("MediaRecorder")}}, which does all the work of taking the data from a {{domxref("MediaStream")}} and delivering it to you for processing. The data is delivered by a series of {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} events, already in the format you specify when creating the `MediaRecorder`. You can then process the data further or write it to file as desired.
 
 ### Overview of the recording process
 
@@ -26,9 +26,9 @@ The process of recording a stream is simple:
 
 1. Set up a {{domxref("MediaStream")}} or {{domxref("HTMLMediaElement")}} (in the form of an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element) to serve as the source of the media data.
 2. Create a {{domxref("MediaRecorder")}} object, specifying the source stream and any desired options (such as the container's MIME type or the desired bit rates of its tracks).
-3. Set {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} to an event handler for the {{event("dataavailable")}} event; this will be called whenever data is available for you.
+3. Set {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} to an event handler for the {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event; this will be called whenever data is available for you.
 4. Once the source media is playing and you've reached the point where you're ready to record video, call {{domxref("MediaRecorder.start()")}} to begin recording.
-5. Your {{event("dataavailable")}} event handler gets called every time there's data ready for you to do with as you will; the event has a `data` attribute whose value is a {{domxref("Blob")}} that contains the media data. You can force a `dataavailable` event to occur, thereby delivering the latest sound to you so you can filter it, save it, or whatever.
+5. Your {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event handler gets called every time there's data ready for you to do with as you will; the event has a `data` attribute whose value is a {{domxref("Blob")}} that contains the media data. You can force a `dataavailable` event to occur, thereby delivering the latest sound to you so you can filter it, save it, or whatever.
 6. Recording stops automatically when the source media stops playing.
 7. You can stop recording at any time by calling {{domxref("MediaRecorder.stop()")}}.
 

@@ -19,7 +19,7 @@ The **`anchors`** read-only property of the
 
 An {{domxref("HTMLCollection")}}.
 
-## Example
+## Examples
 
 ```js
 if (document.anchors.length >= 5) {

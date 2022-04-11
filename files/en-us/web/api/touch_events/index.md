@@ -271,7 +271,7 @@ function log(msg) {
 
 You can test this example on mobile devices by touching the box below.
 
-{{EmbedLiveSample('Example','100%', 880)}}
+{{EmbedLiveSample('Example','100%', 900)}}
 
 > **Note:** More generally, the example will work on platforms that provide touch events.
 > You can test this on desktop platforms that can simulate such events:

@@ -22,13 +22,7 @@ in more detail.
 > **Note:** This `SpeechRecognitionError` interface was renamed to
 > {{domxref("SpeechRecognitionErrorEvent")}} in the Web Speech API specification.
 
-## Syntax
-
-```js
-var myErrorMsg = event.message;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing more details about the error that was raised.
 Note that the spec does not define the exact wording of these messages — this is up to

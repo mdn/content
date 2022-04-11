@@ -18,9 +18,9 @@ The **`AnimationEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
-animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
-                                           elapsedTime  : aFloat,
-                                           pseudoElement: aPseudoElementName});
+new AnimationEvent(type, {animationName: aPropertyName,
+                          elapsedTime  : aFloat,
+                          pseudoElement: aPseudoElementName});
 ```
 
 ### Parameters

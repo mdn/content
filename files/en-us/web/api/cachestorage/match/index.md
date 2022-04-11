@@ -16,7 +16,7 @@ browser-compat: api.CacheStorage.match
 {{APIRef("Service Workers API")}}
 
 The **`match()`** method of the
-{{domxref("CacheStorage")}} interface checks if a given {{domxref("Request")}} or url
+{{domxref("CacheStorage")}} interface checks if a given {{domxref("Request")}} or URL
 string is a key for a stored {{domxref("Response")}}. This method returns a
 {{jsxref("Promise")}} for a {{domxref("Response")}}, or a {{jsxref("Promise")}} which
 resolves to `undefined` if no match is found.
@@ -51,7 +51,7 @@ caches.match(request, options).then(function(response) {
     operation. The available options are:
 
     - `ignoreSearch`: A boolean value that specifies whether the
-      matching process should ignore the query string in the url. For example, if set
+      matching process should ignore the query string in the URL. For example, if set
       to `true`, the `?value=bar` part of
       `http://foo.com/?value=bar` would be ignored when performing a match.
       It defaults to `false`.

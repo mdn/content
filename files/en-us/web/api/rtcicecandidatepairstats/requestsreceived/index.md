@@ -23,13 +23,7 @@ The {{domxref("RTCIceCandidatePairStats")}} dictionary's
 {{Glossary("STUN")}} connectivity check requests that have been received so far on the
 connection described by this pairing of candidates.
 
-## Syntax
-
-```js
-requestsReceived = rtcIceCandidatePairStats.requestsReceived;
-```
-
-### Value
+## Value
 
 An integer value which specifies the number of STUN connectivity and/or consent
 requests that have been received to date on the connection described by this pair of

@@ -154,4 +154,4 @@ The following are not supported:
 
 The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub, contains several examples of extensions that use devtools panels:
 
-- [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) use devtools panels:
+- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/master/devtools-panels) use devtools panels:

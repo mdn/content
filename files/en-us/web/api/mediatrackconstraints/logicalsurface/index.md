@@ -39,15 +39,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.logicalSurface")}} as ret
 a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { logicalSurface: constraint };
-
-constraintsObject.logicalSurface = constraint;
-```
-
-### Value
+## Value
 
 A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) which is `true` if logical surfaces should
 be permitted among the selections available to the user.

@@ -277,6 +277,6 @@ The output in the console looks something like this:
 
 ### Other implementations
 
-- [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api)
+- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
 - [Microsoft Edge DevTools](https://docs.microsoft.com/microsoft-edge/devtools-guide/console/console-api)
 - [Safari Web Inspector](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

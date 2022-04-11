@@ -25,7 +25,7 @@ ctx.measureText(text);
 ### Parameters
 
 - `text`
-  - : The text {{jsxref("String")}} to measure.
+  - : The text string to measure.
 
 ### Return value
 

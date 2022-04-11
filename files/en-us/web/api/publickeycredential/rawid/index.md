@@ -22,13 +22,7 @@ encoded](/en-US/docs/Glossary/Base64) version of this identifier.
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
-
-```js
-rawId = publicKeyCredential.rawId
-```
-
-### Value
+## Value
 
 A {{jsxref("ArrayBuffer")}} containing the identifier of the credentials. This
 identifier is expected to be globally unique and is appointed for the current

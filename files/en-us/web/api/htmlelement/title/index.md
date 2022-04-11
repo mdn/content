@@ -15,14 +15,11 @@ The **`HTMLElement.title`** property
 represents the title of the element: the text usually displayed in a 'tooltip' popup
 when the mouse is over the node.
 
-## Syntax
+## Value
 
-```js
-var str = element.title;
-element.title = str;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 const link = document.createElement('a');

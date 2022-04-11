@@ -24,9 +24,10 @@ font-language-override: "ENG";  /* Use English glyphs */
 font-language-override: "TRK";  /* Use Turkish glyphs */
 
 /* Global values */
-font-language-override: initial;
 font-language-override: inherit;
+font-language-override: initial;
 font-language-override: revert;
+font-language-override: revert-layer;
 font-language-override: unset;
 ```
 

@@ -20,13 +20,7 @@ request.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myError = request.error;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
 property returns a {{domxref("DOMException")}} because `DOMError` has been
@@ -92,7 +86,7 @@ problems when the request is being made. For example, if the request failed and 
 result is not available, the `InvalidStateError` exception
 is thrown.
 
-## Example
+## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available as

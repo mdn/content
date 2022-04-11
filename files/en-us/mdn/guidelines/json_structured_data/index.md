@@ -83,7 +83,7 @@ This file should be updated in the same PR where changes affecting the sidebar h
 
 To test your changes, check that the sidebar in the files in your PR displays all entries correctly.
 
-The `GroupData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/GroupData.json) on Github.
+The `GroupData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/GroupData.json) on GitHub.
 
 ## InterfaceData: recording interface inheritance
 
@@ -114,7 +114,7 @@ The same PR adding a new interface that inherits from another one must update th
 
 To test your changes, check that the sidebars of each interface you edited in your PR display inheritance correctly.
 
-The `InterfaceData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/InterfaceData.json) on Github.
+The `InterfaceData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/InterfaceData.json) on GitHub.
 
 ## SpecData: Specification information
 
@@ -122,4 +122,4 @@ The `InterfaceData.json` file is located [here](https://github.com/mdn/content/t
 
 The `\{{SpecName}}` and `\{{Spec2}}` macros that we are removing use the `SpecData.json` file. We do not accept any further contributions to the `SpecData.json` file; instead, either try to insert a specification table, using the `\{{Specifications}}` macro, or try to hardcode the (good) link to the specification. Note that most of the time, mentioning or linking to a specification outside the _Specifications_ section is a sign of something not appropriately documented on MDN.
 
-The `SpecData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/SpecData.json) on Github.
+The `SpecData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/SpecData.json) on GitHub.

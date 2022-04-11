@@ -4,7 +4,7 @@ slug: Web/API/ScreenOrientation/unlock
 tags:
   - API
   - Orientation
-  - Property
+  - Method
   - Reference
   - Screen Orientation API
   - ScreenOrientation

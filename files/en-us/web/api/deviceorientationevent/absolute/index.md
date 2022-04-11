@@ -18,17 +18,10 @@ in reference to the Earth's coordinate frame) or using some arbitrary frame dete
 by the device. See [Orientation and motion data
 explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained) for details.
 
-## Syntax
+## Value
 
-```js
-var absolute = instanceOfDeviceOrientationEvent.absolute;
-```
-
-On return, _`absolute`_ is `true` if the orientation data
-in `instanceOfDeviceOrientationEvent` is provided as the difference between
-the Earth's coordinate frame and the device's coordinate frame, or `false` if
-the orientation data is being provided in reference to some arbitrary, device-determined
-coordinate frame.
+- `true` if the orientation data in `instanceOfDeviceOrientationEvent` is provided as the difference between the Earth's coordinate frame and the device's coordinate frame
+- `false` if the orientation data is being provided in reference to some arbitrary, device-determined coordinate frame.
 
 ## Specifications
 
@@ -45,4 +38,4 @@ coordinate frame.
 - [Orientation and motion data
   explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
-- {{ event("deviceorientation") }}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}

@@ -12,7 +12,7 @@ browser-compat: api.CloseEvent.code
 
 The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns a [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) indicating the reason the server gave for closing the connection.
 
-### Value
+## Value
 
 An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) in the range `1000`-`4999`, indicating the reason the server gave for closing the connection.
 
@@ -184,7 +184,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
   </tbody>
 </table>
 
-## Example
+## Examples
 
 The following example prints the value of `code` to the console.
 

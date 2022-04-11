@@ -61,7 +61,7 @@ new FontFace(family, source, descriptors);
     - `weight`
       - : With an allowable value for {{cssxref("@font-face/font-weight")}}.
 
-## Example
+## Examples
 
 ```js
 async function loadFonts() {

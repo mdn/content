@@ -54,7 +54,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCDataChannel")}}
   - : Represents a bi-directional data channel between two peers of a connection.
 - {{DOMxRef("RTCDataChannelEvent")}}
-  - : Represents events that occur while attaching a {{DOMxRef("RTCDataChannel")}} to a {{DOMxRef("RTCPeerConnection")}}. The only event sent with this interface is {{event("datachannel")}}.
+  - : Represents events that occur while attaching a {{DOMxRef("RTCDataChannel")}} to a {{DOMxRef("RTCPeerConnection")}}. The only event sent with this interface is {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}.
 - {{DOMxRef("RTCSessionDescription")}}
   - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description {{DOMxRef("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
 - {{DOMxRef("RTCStatsReport")}}
@@ -64,7 +64,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCIceTransport")}}
   - : Represents information about an {{Glossary("ICE")}} transport.
 - {{DOMxRef("RTCPeerConnectionIceEvent")}}
-  - : Represents events that occur in relation to ICE candidates with the target, usually an {{DOMxRef("RTCPeerConnection")}}. Only one event is of this type: {{event("icecandidate")}}.
+  - : Represents events that occur in relation to ICE candidates with the target, usually an {{DOMxRef("RTCPeerConnection")}}. Only one event is of this type: {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}.
 - {{DOMxRef("RTCRtpSender")}}
   - : Manages the encoding and transmission of data for a {{DOMxRef("MediaStreamTrack")}} on an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCRtpReceiver")}}

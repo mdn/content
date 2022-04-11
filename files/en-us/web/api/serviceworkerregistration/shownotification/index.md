@@ -43,7 +43,7 @@ serviceWorkerRegistration.showNotification(title, [options]);
       - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
 
       Appropriate responses are built using `event.action` within the
-      {{event("notificationclick")}} event.
+      {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `badge`: a {{domxref("USVString")}} containing the URL of an image
       to represent the notification when there is not enough space to display the
@@ -117,7 +117,7 @@ function showNotification() {
 ```
 
 To invoke the above function at an appropriate time, you could use the
-{{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} event handler.
+{{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} event handler.
 
 You can also retrieve details of the {{domxref("Notification")}}s that have been fired
 from the current service worker using

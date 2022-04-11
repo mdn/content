@@ -43,9 +43,9 @@ Generators are functions that can be exited and later re-entered. Their context
 
 Generators in JavaScript -- especially when combined with Promises -- are a very
 powerful tool for asynchronous programming as they mitigate -- if not entirely eliminate
-\-- the problems with callbacks, such as [Callback
-Hell](http://callbackhell.com/) and [Inversion
-of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/). However, an even simpler solution to these problems can be achieved
+\-- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and
+[Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
+However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
 
 Calling a generator function does not execute its body immediately; an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)
@@ -260,8 +260,7 @@ for(let power of powers(2)){
 
 - {{jsxref("Operators/function*", "function*")}} expression
 - {{jsxref("GeneratorFunction")}} object
-- [Iteration
-  protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object
@@ -270,10 +269,7 @@ for(let power of powers(2)){
 - {{jsxref("Functions", "Functions and function scope", "", 1)}}
 - Other web resources:
 
-  - [Regenerator](https://facebook.github.io/regenerator/) an ES2015
-    generator compiler to ES5
-  - [Forbes Lindesay: Promises
-    and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Regenerator](https://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
+  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](https://github.com/mozilla/task.js)
-  - [Iterating
-    generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)
+  - [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)

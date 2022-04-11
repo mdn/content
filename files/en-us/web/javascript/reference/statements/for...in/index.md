@@ -9,8 +9,10 @@ browser-compat: javascript.statements.for_in
 ---
 {{jsSidebar("Statements")}}
 
-The **`for...in` statement** iterates over all [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object that are keyed by strings (ignoring ones keyed by [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)),
+The **`for...in` statement** iterates over all
+[enumerable properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+of an object that are keyed by strings
+(ignoring ones keyed by [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)),
 including inherited enumerable properties.
 
 {{EmbedInteractiveExample("pages/js/statement-forin.html")}}
@@ -167,9 +169,7 @@ for (var i = 0 in obj) {
 // 3
 ```
 
-This nonstandard behavior is now ignored in version 40 and later, and will present a
-{{jsxref("SyntaxError")}} ("[for-in
-loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)") error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) ([bug 748550](https://bugzilla.mozilla.org/show_bug.cgi?id=748550) and [bug 1164741](https://bugzilla.mozilla.org/show_bug.cgi?id=1164741)).
+This nonstandard behavior is now ignored in version 40 and later, and will present a {{jsxref("SyntaxError")}} ("[for-in loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)") error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) ([bug 748550](https://bugzilla.mozilla.org/show_bug.cgi?id=748550) and [bug 1164741](https://bugzilla.mozilla.org/show_bug.cgi?id=1164741)).
 
 Other engines such as v8 (Chrome), Chakra (IE/Edge), and JSC (WebKit/Safari) are
 investigating whether to remove the nonstandard behavior as well.
@@ -179,10 +179,8 @@ investigating whether to remove the nonstandard behavior as well.
 - {{jsxref("Statements/for...of", "for...of")}} – a similar statement that iterates
   over the property _values_
 - {{jsxref("Statements/for", "for")}}
-- [Iterators and
-  Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Iterators and Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Array.prototype.forEach()")}}

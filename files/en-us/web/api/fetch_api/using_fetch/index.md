@@ -453,4 +453,4 @@ if (window.fetch) {
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch examples on Github](https://github.com/mdn/fetch-examples/)
+- [Fetch examples on GitHub](https://github.com/mdn/fetch-examples/)

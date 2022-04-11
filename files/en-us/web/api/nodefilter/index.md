@@ -97,8 +97,7 @@ const nodeIterator = document.createNodeIterator(
         return NodeFilter.FILTER_ACCEPT
       }
     }
-  },
-  false
+  }
 );
 
 // Show the content of every non-empty text node that is a child of root

@@ -59,7 +59,7 @@ setConfiguration(configuration)
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the `configuration.iceServers` contains no URLs or if one of the values in the list is invalid.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if `configuration.iceServers` contains an URL with a scheme that is not supported.
+  - : Thrown if `configuration.iceServers` contains a URL with a scheme that is not supported.
 
 ## Example
 

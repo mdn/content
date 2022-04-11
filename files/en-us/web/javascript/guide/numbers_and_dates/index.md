@@ -50,9 +50,9 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+const FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+const FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
+const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 ```
 
 ### Octal numbers
@@ -60,14 +60,14 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 Octal number syntax uses a leading zero. If the digits after the `0` are outside the range 0 through 7, the number will be interpreted as a decimal number.
 
 ```js
-var n = 0755; // 493
-var m = 0644; // 420
+const n = 0755; // 493
+const m = 0644; // 420
 ```
 
 Strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: `0644 === 420` and `"\045" === "%"`. In ECMAScript 2015, octal numbers are supported if they are prefixed with `0o`, e.g.:
 
 ```js
-var a = 0o10; // ES2015: 8
+const a = 0o10; // ES2015: 8
 ```
 
 ### Hexadecimal numbers
@@ -93,11 +93,11 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 The built-in {{jsxref("Number")}} object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows:
 
 ```js
-var biggestNum = Number.MAX_VALUE;
-var smallestNum = Number.MIN_VALUE;
-var infiniteNum = Number.POSITIVE_INFINITY;
-var negInfiniteNum = Number.NEGATIVE_INFINITY;
-var notANum = Number.NaN;
+const biggestNum = Number.MAX_VALUE;
+const smallestNum = Number.MIN_VALUE;
+const infiniteNum = Number.POSITIVE_INFINITY;
+const negInfiniteNum = Number.NEGATIVE_INFINITY;
+const notANum = Number.NaN;
 ```
 
 You always refer to a property of the predefined `Number` object as shown above, and not as a property of a `Number` object you create yourself.
@@ -286,7 +286,7 @@ The `Date` object range is -100,000,000 days to 100,000,000 days relative to 01 
 To create a `Date` object:
 
 ```js
-var dateObjectName = new Date([parameters]);
+const dateObjectName = new Date([parameters]);
 ```
 
 where `dateObjectName` is the name of the `Date` object being created; it can be a new object or a property of an existing object.
@@ -296,9 +296,9 @@ Calling `Date` without the `new` keyword returns a string representing the curre
 The `parameters` in the preceding syntax can be any of the following:
 
 - Nothing: creates today's date and time. For example, `today = new Date();`.
-- A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `var Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
-- A set of integer values for year, month, and day. For example, `var Xmas95 = new Date(1995, 11, 25)`.
-- A set of integer values for year, month, day, hour, minute, and seconds. For example, `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+- A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `let Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
+- A set of integer values for year, month, and day. For example, `let Xmas95 = new Date(1995, 11, 25)`.
+- A set of integer values for year, month, day, hour, minute, and seconds. For example, `let Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
 
 ### Methods of the Date object
 
@@ -321,7 +321,7 @@ With the "get" and "set" methods you can get and set seconds, minutes, hours, da
 For example, suppose you define the following date:
 
 ```js
-var Xmas95 = new Date('December 25, 1995');
+const Xmas95 = new Date('December 25, 1995');
 ```
 
 Then `Xmas95.getMonth()` returns 11, and `Xmas95.getFullYear()` returns 1995.
@@ -331,12 +331,12 @@ The `getTime` and `setTime` methods are useful for comparing dates. The `getTime
 For example, the following code displays the number of days left in the current year:
 
 ```js
-var today = new Date();
-var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
+const today = new Date();
+const endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
 endYear.setFullYear(today.getFullYear()); // Set year to this year
-var msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
-var daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
-var daysLeft = Math.round(daysLeft); //returns days left in the year
+const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
+let daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
+daysLeft = Math.round(daysLeft); //returns days left in the year
 ```
 
 This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.
@@ -344,7 +344,7 @@ This example creates a `Date` object named `today` that contains today's date. I
 The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `IPOdate` object:
 
 ```js
-var IPOdate = new Date();
+const IPOdate = new Date();
 IPOdate.setTime(Date.parse('Aug 9, 1995'));
 ```
 
@@ -354,11 +354,11 @@ In the following example, the function `JSClock()` returns the time in the forma
 
 ```js
 function JSClock() {
-  var time = new Date();
-  var hour = time.getHours();
-  var minute = time.getMinutes();
-  var second = time.getSeconds();
-  var temp = '' + ((hour > 12) ? hour - 12 : hour);
+  const time = new Date();
+  const hour = time.getHours();
+  const minute = time.getMinutes();
+  const second = time.getSeconds();
+  let temp = '' + ((hour > 12) ? hour - 12 : hour);
   if (hour == 0)
     temp = '12';
   temp += ((minute < 10) ? ':0' : ':') + minute;

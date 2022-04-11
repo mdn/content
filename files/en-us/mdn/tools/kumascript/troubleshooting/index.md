@@ -34,7 +34,7 @@ Check for:
 Check for:
 
 - Misspelling of macro names or renamed macros.
-  - : You can look at the list of active macros in the [Yari repo](https://github.com/mdn/yari/tree/master/kumascript/macros).
+  - : You can look at the list of active macros in the [Yari repo](https://github.com/mdn/yari/tree/main/kumascript/macros).
 
 ## TemplateExecutionError
 

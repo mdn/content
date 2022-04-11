@@ -21,7 +21,7 @@ credential's type. Valid values are `password`, `federated` and
 
 A {{domxref("DOMString")}} contains a credential's given name.
 
-## Example
+## Examples
 
 ```js
 // TBD

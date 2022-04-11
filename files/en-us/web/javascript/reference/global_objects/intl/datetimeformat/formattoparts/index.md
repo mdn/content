@@ -75,8 +75,8 @@ Possible types are the following:
     "`2019`".
 - second
   - : The string used for the second, for example "`07`" or "`42`".
-- timeZoneName
-  - : The string used for the name of the time zone, for example "`UTC`".
+- timeZone
+  - : The string used for the name of the time zone, for example "`UTC`". Default is the timezone of the current environment.
 - weekday
   - : The string used for the weekday, for example "`M`",
     "`Monday`", or "`Montag`".
@@ -140,8 +140,10 @@ formatter.formatToParts(date);
 ```
 
 Now the information is available separately and it can be formatted and concatenated
-again in a customized way. For example by using {{jsxref("Array.prototype.map()")}}, [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
+again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
+[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
+[template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
 and {{jsxref("Array.prototype.join()")}}.
 
 ```js
@@ -166,8 +168,8 @@ console.log(dateString);
 ### Named Years and Mixed calendars
 
 In some cases, calendars use named years. Chinese and Tibetan calendars, for example,
-use a 60-year [sexagenary
-cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle) of named years. These years are disambiguated by relationship to
+use a 60-year [sexagenary cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle) of named years.
+These years are disambiguated by relationship to
 corresponding years on the Gregorian calendar. When this is the case, the result of
 `formatToParts()` will contain an entry for `relatedYear` when a
 year would normally be present, containing the 4-digit Gregorian year, instead of an

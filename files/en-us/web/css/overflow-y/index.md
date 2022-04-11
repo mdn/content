@@ -29,6 +29,7 @@ overflow-y: auto;
 overflow-y: inherit;
 overflow-y: initial;
 overflow-y: revert;
+overflow-y: revert-layer;
 overflow-y: unset;
 ```
 

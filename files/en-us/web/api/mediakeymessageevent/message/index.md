@@ -17,11 +17,9 @@ The **`MediaKeyMessageEvent.message`** read-only property
 returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module.
 Messages vary by key system.
 
-## Syntax
+## Value
 
-```js
-var messageType = mediaKeyMessageEvent.messageType;
-```
+An {{jsxref("ArrayBuffer")}}.
 
 ## Specifications
 

@@ -72,6 +72,7 @@ transform-origin: bottom right 2cm;
 transform-origin: inherit;
 transform-origin: initial;
 transform-origin: revert;
+transform-origin: revert-layer;
 transform-origin: unset;
 ```
 

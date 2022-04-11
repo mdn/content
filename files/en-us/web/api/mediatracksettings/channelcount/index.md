@@ -36,7 +36,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 An integer value indicating the number of audio channels on the track. A value of 1
 indicates monaural sound, 2 means stereo, and so forth.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

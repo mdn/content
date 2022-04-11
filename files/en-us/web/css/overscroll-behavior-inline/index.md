@@ -27,6 +27,7 @@ overscroll-behavior-inline: none;
 overscroll-behavior-inline: inherit;
 overscroll-behavior-inline: initial;
 overscroll-behavior-inline: revert;
+overscroll-behavior-inline: revert-layer;
 overscroll-behavior-inline: unset;
 ```
 
@@ -123,4 +124,4 @@ p {
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#demo)

@@ -19,13 +19,7 @@ browser-compat: api.HTMLMediaElement.seekable
 
 The **`seekable`** read-only property of {{domxref("HTMLMediaElement")}} objects returns a new static [normalized `TimeRanges` object](/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects) that represents the ranges of the media resource, if any, that the user agent is able to seek to at the time `seekable` property is accessed.
 
-## Syntax
-
-```js
-var seekable = audioOrVideo.seekable;
-```
-
-### Value
+## Value
 
 A new static [normalized TimeRanges object](/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects) that represents the ranges of the media resource, if any, that the user agent is able to seek to at the time `seekable` property is accessed.
 

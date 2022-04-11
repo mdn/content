@@ -33,7 +33,7 @@ _No inherited static methods_.
 - {{DOMxRef("CSS.registerProperty()")}}
   - : Registers {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
 - {{DOMxRef("CSS.supports()")}}
-  - : Returns a {{JSxRef("Boolean")}} indicating if the pair _property-value_, or the condition, given in parameter is supported.
+  - : Returns a boolean value indicating if the pair _property-value_, or the condition, given in parameter is supported.
 - {{DOMxRef("CSS.escape()")}}
   - : Can be used to escape a string mostly for use as part of a CSS selector.
 - {{DOMxRef("CSS.factory_functions", 'CSS factory functions')}}

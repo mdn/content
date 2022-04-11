@@ -224,7 +224,7 @@ Your finished table should look something like the following:
 
 {{ EmbedLiveSample('Active_learning_Adding_table_structure', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** You can also find it on Github as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> **Note:** You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## Nesting Tables
 

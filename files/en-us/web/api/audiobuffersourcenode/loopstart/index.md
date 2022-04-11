@@ -27,7 +27,7 @@ A floating-point number indicating the offset, in seconds, into the audio buffer
 which each loop should begin during playback. This value is only used when the
 {{domxref("AudioBufferSourceNode.loop", "loop")}} parameter is `true`.
 
-## Example
+## Examples
 
 In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
 decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons

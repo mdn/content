@@ -26,12 +26,6 @@ the gravity force, in contrast to
 > {{DOMxRef("DeviceMotionEvent")}}. In this situation, you'll need to use
 > {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} instead.
 
-## Syntax
-
-```js
-var acceleration = deviceMotionEvent.acceleration;
-```
-
 ## Value
 
 The `acceleration` property is an object providing information about

@@ -46,6 +46,7 @@ flex-basis: content;
 flex-basis: inherit;
 flex-basis: initial;
 flex-basis: revert;
+flex-basis: revert-layer;
 flex-basis: unset;
 ```
 

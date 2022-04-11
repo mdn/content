@@ -37,7 +37,7 @@ For example, if the primary language used in the track is United States English,
 value would be `"en-US"`. For Brazilian Portuguese, the value would be
 `"pt-BR"`.
 
-## Example
+## Examples
 
 This example locates all of a media element's primary language and translated audio
 tracks and returns a list of objects containing each of those tracks'

@@ -56,11 +56,9 @@ security reasons, like when tabbing in or out of a page.
 
 {{domxref("MouseEvent.relatedTarget")}} is a similar property for mouse events.
 
-## Syntax
+## Value
 
-```js
-secondTarget = focusEvent.relatedTarget
-```
+An instance of {{domxref("EventTarget")}}.
 
 ## Specifications
 

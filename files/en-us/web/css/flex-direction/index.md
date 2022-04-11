@@ -36,6 +36,7 @@ flex-direction: column-reverse;
 flex-direction: inherit;
 flex-direction: initial;
 flex-direction: revert;
+flex-direction: revert-layer;
 flex-direction: unset;
 ```
 

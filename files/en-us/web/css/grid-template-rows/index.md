@@ -45,6 +45,7 @@ grid-template-rows: [linename1 linename2] 100px
 grid-template-rows: inherit;
 grid-template-rows: initial;
 grid-template-rows: revert;
+grid-template-rows: revert-layer;
 grid-template-rows: unset;
 ```
 

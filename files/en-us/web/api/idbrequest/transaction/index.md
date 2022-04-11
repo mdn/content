@@ -31,17 +31,11 @@ indexes, or abort the upgrade. Following the upgrade, the
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myTransaction = request.transaction;
-```
-
-### Value
+## Value
 
 An {{domxref("IDBTransaction")}}.
 
-## Example
+## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available

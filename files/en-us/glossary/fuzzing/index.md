@@ -14,4 +14,4 @@ tags:
 - [Jesse's blog posts about fuzzing](https://www.squarefree.com/categories/fuzzing/)
 - [Wikipedia: Fuzz testing](https://en.wikipedia.org/wiki/Fuzz_testing)
 - [fuzzdb](https://github.com/fuzzdb-project/fuzzdb)
-- [jsfuzz - coverage guided javascript fuzzer](https://github.com/fuzzitdev/jsfuzz)
+- [jsfuzz - coverage guided JavaScript fuzzer](https://github.com/fuzzitdev/jsfuzz)

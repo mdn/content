@@ -296,11 +296,9 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 - {{JSxRef("Statements/export", "export")}}
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
-- Limin Zhu, Brian Terlson and Microsoft Edge Team: [Previewing
-  ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
-- Hacks blog post by Jason Orendorff: [ES6 in Depth:
-  Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
-- Hacks blog post by Lin Clark: [ES modules:
-  A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
+- Limin Zhu, Brian Terlson and Microsoft Edge Team:
+  [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
+- Hacks blog post by Jason Orendorff: [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
+- Hacks blog post by Lin Clark: [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
 - Axel Rauschmayer's book: ["Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
 - The Modern JavaScript Tutorial(javascript.info): [Export and Import](https://javascript.info/import-export)

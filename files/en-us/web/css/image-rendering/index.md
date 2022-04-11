@@ -30,6 +30,7 @@ image-rendering: pixelated;
 image-rendering: inherit;
 image-rendering: initial;
 image-rendering: revert;
+image-rendering: revert-layer;
 image-rendering: unset;
 ```
 

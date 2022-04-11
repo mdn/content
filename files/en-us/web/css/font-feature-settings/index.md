@@ -31,6 +31,7 @@ font-feature-settings: "smcp", "swsh" 2;
 font-feature-settings: inherit;
 font-feature-settings: initial;
 font-feature-settings: revert;
+font-feature-settings: revert-layer;
 font-feature-settings: unset;
 ```
 

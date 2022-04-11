@@ -34,6 +34,7 @@ transition-delay: 2s, 4ms;
 transition-delay: inherit;
 transition-delay: initial;
 transition-delay: revert;
+transition-delay: revert-layer;
 transition-delay: unset;
 ```
 

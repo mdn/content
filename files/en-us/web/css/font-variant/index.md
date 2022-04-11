@@ -37,6 +37,7 @@ font-variant: common-ligatures small-caps;
 font-variant: inherit;
 font-variant: initial;
 font-variant: revert;
+font-variant: revert-layer;
 font-variant: unset;
 ```
 

@@ -15,18 +15,12 @@ The **`HTMLOutputElement.labels`** read-only property returns a
 {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("output")}} element.
 
-## Syntax
-
-```js
-var labelElements = output.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<output>` element.
 
-## Example
+## Examples
 
 ### HTML
 

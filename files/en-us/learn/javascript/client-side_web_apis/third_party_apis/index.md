@@ -393,7 +393,7 @@ This example is interesting because it shows two related third-party APIs being 
 
 ![](youtube-example.png)
 
-We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
+We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
 
 To get it running, you'll need to:
 

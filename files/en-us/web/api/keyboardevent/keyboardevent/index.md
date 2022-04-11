@@ -17,7 +17,7 @@ The **`KeyboardEvent()`** constructor creates a new
 ## Syntax
 
 ```js
- event = new KeyboardEvent(typeArg, KeyboardEventInit);
+new KeyboardEvent(typeArg, KeyboardEventInit);
 ```
 
 ### Values
@@ -41,8 +41,7 @@ The **`KeyboardEvent()`** constructor creates a new
     - `"altKey"`, optional boolean value, defaulting to `false`,
       that sets the value of {{domxref("KeyboardEvent.altKey")}}.
     - `"metaKey"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.metaKey")}}.<
-      /li>
+      that sets the value of {{domxref("KeyboardEvent.metaKey")}}.
     - `"repeat"`, optional boolean value, defaulting to `false`,
       that sets the value of {{domxref("KeyboardEvent.repeat")}}.
     - `"isComposing"`, optional boolean value, defaulting to `false`,

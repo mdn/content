@@ -100,9 +100,9 @@ setTimeout(() => {
 
 ## Description
 
-As the `then` and {{jsxref("Promise.prototype.catch()")}} methods return
-promises, they [can be
-chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining) — an operation called _composition_.
+As the `then` and {{jsxref("Promise.prototype.catch()")}} methods return promises,
+they [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining)
+— an operation called _composition_.
 
 ## Examples
 

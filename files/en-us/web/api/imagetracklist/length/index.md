@@ -13,7 +13,7 @@ browser-compat: api.ImageTrackList.length
 
 The **`length`** property of the {{domxref("ImageTrackList")}} interface returns the length of the `ImageTrackList`.
 
-### Value
+## Value
 
 An integer.
 
