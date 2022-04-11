@@ -1,4 +1,10 @@
 {
+  "/Glossary/Bezier_curve": {
+    "modified": "2019-06-30T19:32:06.402Z",
+    "contributors": [
+      "Sebastianz"
+    ]
+  },
   "/Web/API/BaseAudioContext/statechange_event": {
     "modified": "2020-10-23T15:49:13.972Z",
     "contributors": [
@@ -1481,12 +1487,6 @@
       "Andrew_Pfeiffer",
       "klez",
       "teoli"
-    ]
-  },
-  "Glossary/Bézier_curve": {
-    "modified": "2019-06-30T19:32:06.402Z",
-    "contributors": [
-      "Sebastianz"
     ]
   },
   "Glossary/CDN": {
