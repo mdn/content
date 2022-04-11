@@ -13,7 +13,7 @@ browser-compat: webextensions.api.scripting
 ---
 {{AddonSidebar}}
 
-Insert JavaScript and CSS into tabs.
+Inserts JavaScript and CSS into tabs.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
