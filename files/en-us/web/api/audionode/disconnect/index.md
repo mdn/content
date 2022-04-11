@@ -18,15 +18,11 @@ The **`disconnect()`** method of the {{ domxref("AudioNode") }} interface lets y
 ## Syntax
 
 ```js
-AudioNode.disconnect();
-
-AudioNode.disconnect(output);
-
-AudioNode.disconnect(destination);
-
-AudioNode.disconnect(destination, output);
-
-AudioNode.disconnect(destination, output, input);
+audioNode.disconnect();
+audioNode.disconnect(output);
+audioNode.disconnect(destination);
+audioNode.disconnect(destination, output);
+audioNode.disconnect(destination, output, input);
 ```
 
 ### Return value
@@ -51,7 +47,7 @@ There are several versions of the `disconnect()` method, which accept different 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the node on which `disconnect()` is called isn't connected to the specified `destination` node.
 
-## Example
+## Examples
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;

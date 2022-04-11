@@ -28,8 +28,8 @@ This could, for example, be passed to a fetch method in order to run its abort l
 ## Syntax
 
 ```js
-abort()
-abort(reason)
+abortSignal.abort();
+abortSignal.abort(reason);
 ```
 
 ### Parameters
