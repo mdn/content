@@ -15,7 +15,9 @@ browser-compat: webextensions.api.scripting.executeScript
 ---
 {{AddonSidebar()}}
 
-Injects a script into a target context. The script is run at `document_idle`. If the script evaluates to a promise, the browser waits for the promise to settle and return the resulting value.
+Injects a script into a target context. The script is run at `document_idle`.
+
+> **Note:** This method is available in Manifest V3 or higher.
 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
@@ -33,21 +35,21 @@ let executing = browser.scripting.executeScript(
 ### Parameters
 
 - `injection`
-  - : {{WebExtAPIRef("scripting.ScriptInjection")}}. Details of a script injection.
+  - : {{WebExtAPIRef("scripting.ScriptInjection")}}. Details of a script to inject.
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the request.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will resolve to an array of objects. The array's values represent the result of the script in every injected frame.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with {{WebExtAPIRef("scripting.InjectionResult")}}. The array's values represent the result of the script in every injected frame.
 
-The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any `console.log()` output) if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console). For example, consider a script like this:
+The result of the script is the last evaluated statement, which is similar the results that would be seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
 
 ```js
 let foo='my result'; foo;
 ```
 
-Here the results array containr the string "`my result`" as an element.
+Here the results array contains the string "`my result`" as an element.
 
 The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 
@@ -55,7 +57,7 @@ If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
-This example executes a one-line code snippet in the currently active tab:
+This example executes a one-line code snippet in the active tab:
 
 ```js
 function onExecuted(result) {
@@ -74,7 +76,7 @@ const executing = browser.tabs.executeScript({
 executing.then(onExecuted, onError);
 ```
 
-This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the currently active tab. The script is executed in subframes as well as the main document:
+This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the active tab. The script is executed in subframes and the main document:
 
 ```js
 function onExecuted(result) {
@@ -92,7 +94,7 @@ const executing = browser.tabs.executeScript({
 executing.then(onExecuted, onError);
 ```
 
-This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the tab with an ID of `2`:
+This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the tab with the ID of `2`:
 
 ```js
 function onExecuted(result) {
@@ -116,7 +118,7 @@ executing.then(onExecuted, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting#method-executeScript) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
