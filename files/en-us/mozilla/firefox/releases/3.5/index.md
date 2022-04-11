@@ -164,8 +164,8 @@ tags:
 - SVG filters now work for `foreignObject`.
 - The `GetSVGDocument()` method has been added to [`object`](/en-US/docs/Web/HTML/Element/object) and [`iframe`](/en-US/docs/Web/HTML/Element/iframe) elements for compatibility.
 - Implicit setting of properties in object and array initializers no longer execute setters in JavaScript. See the blog post [Object and array initializers should not invoke setters when evaluated](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) for details.
-- The `gDownloadLastDir.path` variable has been renamed to `gDownloadLastDir.file` since it refers to an {{ interface("nsIFile") }}, not a path.
-- The `gDownloadLastDirPath` variable has been renamed to `gDownloadLastDirFile` since it refers to an {{ interface("nsIFile") }}, not a path.
+- The `gDownloadLastDir.path` variable has been renamed to `gDownloadLastDir.file` since it refers to an `nsIFile`, not a path.
+- The `gDownloadLastDirPath` variable has been renamed to `gDownloadLastDirFile` since it refers to an `nsIFile`, not a path.
 - Starting in Firefox 3.5, you can no longer use `data:` bindings in chrome packages that get `XPCNativeWrapper` automation.
 
 ### For XUL and add-on developers
@@ -189,12 +189,12 @@ If you're an extension developer, you should start by reading [Updating extensio
 - In order to support dragging and dropping tabs between windows, the [`browser`](/en-US/docs/XUL/browser) widget now has a [`swapDocShells()`](/en-US/XUL/Method/SwapDocShells) method.
 - Added the [`level`](/en-US/docs/XUL/Attribute/panel.level) attribute to the [`panel`](/en-US/docs/XUL/panel) element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.
 - XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and`scrollWidth`properties.
-- [`keyset`](/en-US/docs/XUL/keyset)s now include a `disabled` attribute.
+- [`keyset`](/en-US/docs/XUL/keyset)s now include a `disabled` attribute. 
 - In addition, `keyset`s can now be removed using the node's [`removeChild()`](/en-US/docs/Web/API/Node/removeChild) method.
 - [`mozIStorageStatement`](/en-US/docs/mozIStorageStatement) had the `initialize()` method removed; consumers should use the [`createStatement()`](</en-US/docs/mozIStorageConnection#createStatement()>) method instead to get a new statement object.
 - The [Storage](/en-US/docs/Storage) API now offers support for asynchronous requests.
-- The [`nsICookie2`](/en-US/docs/XPCOM_Interface_Reference/nsICookie2) interface now exposes the time at which cookies were created in its new `creationTime` attribute.
-- Added a flag to [`nsIProtocolHandler`](/en-US/docs/nsIProtocolHandler) (`URI_IS_LOCAL_RESOURCE`) that is checked during chrome registration to make sure a protocol is allowed to be registered.
+- The `nsICookie2` interface now exposes the time at which cookies were created in its new `creationTime` attribute.
+- Added a flag to `nsIProtocolHandler` (`URI_IS_LOCAL_RESOURCE`) that is checked during chrome registration to make sure a protocol is allowed to be registered.
 - Firefox now looks for plugins in `/usr/lib/mozilla/plugins` on Linux, as well as the previously supported locations.
 - The plugin API has been updated to include support for private browsing mode; you may now use [`NPN_GetValue()`](/en-US/docs/NPN_GetValue) to query the state of private browsing mode using the variable `NPNVprivateModeBool`.
 

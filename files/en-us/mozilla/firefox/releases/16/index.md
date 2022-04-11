@@ -82,7 +82,7 @@ _No change_
 
 ### Interface changes
 
-{{interface("nsIPrivateDOMEvent")}} has been merged into {{interface("nsIDOMEvent")}}. ({{bug("761613")}})
+`nsIPrivateDOMEvent` has been merged into `nsIDOMEvent`. ({{bug("761613")}})
 
 #### New interfaces
 

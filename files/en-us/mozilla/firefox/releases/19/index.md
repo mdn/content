@@ -46,16 +46,16 @@ Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.phil
 
 ## Changes for add-on and Mozilla developers
 
-> **Note:** A key change in Firefox 19 is that [`nsresult`](/en-US/docs/XPCOM_API_Reference/nsresult) is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.
+> **Note:** A key change in Firefox 19 is that `nsresult` is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.
 
 - `getBrowserSelection()` now returns the selected text in a text input field. As a result, `gContextMenu.isTextSelected` will be `true` when the user selects text in a text input field that is not a password field. ({{bug("565717")}})
 - [Dict.jsm](/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) now takes a JSON String. [`Dict.toJSON()`](</en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON()>) was added, and it returns a JSON String. ({{bug("727967")}})
 
 ### Interface changes
 
-- {{interface("nsIImgLoadingContent")}}
+- `nsIImgLoadingContent`
   - : The parameter (aObserver) of `addObserver()` method changes from {{interface("imgIDecoderObserver")}} to {{interface("imgINotificationObserver")}}. The `notify()` method of {{interface("imgINotificationObserver")}} is not scriptable, so you need to use `createScriptedObserver()` from {{interface("imgITools")}}.
-- {{interface("nsIChannel")}}
+- `nsIChannel`
   - : The property `contentLength` changed from `long` to `int64_t`.
 
 ## See also

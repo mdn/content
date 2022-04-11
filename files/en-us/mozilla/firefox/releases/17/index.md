@@ -78,15 +78,15 @@ The Gecko part of the user agent string changed. The build date (which hadn't be
 
 ### Interface changes
 
-- {{interface("nsIInputStream")}}
+- `nsIInputStream`
   - : The `available()` method returns 64-bit length instead of 32-bit ({{bug("215450")}}).
-- {{interface("nsIDOMWindowUtils")}}
+- `nsIDOMWindowUtils`
   - : The `sendMouseScrollEvent()` method has been replaced with `sendWheelEvent()` ({{bug("719320")}}).
-- {{interface("nsIFilePicker")}}
+- `nsIFilePicker`
   - : The `open()` method, to open the file dialog asynchronously, has been added and the `show()` method has been deprecated ({{bug("731307")}}).
-- {{interface("nsIScriptSecurityManager")}}
+- `nsIScriptSecurityManager`
   - : The `checkLoadURIStr()` and `checkLoadURI()` methods have been removed ({{bug("327244")}}).
-- {{interface("nsIRefreshURI")}}
+- `nsIRefreshURI`
   - : The `setupRefreshURIFromHeader()` method has a added `principal` parameter ({{bug("327244")}}).
 
 #### New interfaces

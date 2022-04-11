@@ -138,39 +138,39 @@ For an overview of the changes you may need to make in order to make your add-on
 ### Using the DOM from chrome
 
 - [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
-  - : Although you've always been able to use the DOM File API from chrome code, the {{ domxref("File") }} constructor now supports specifying a local pathname string when used from chrome. In addition, you can also specify the file to access using the DOM File API using an {{ interface("nsIFile") }} object.
+  - : Although you've always been able to use the DOM File API from chrome code, the {{ domxref("File") }} constructor now supports specifying a local pathname string when used from chrome. In addition, you can also specify the file to access using the DOM File API using an `nsIFile` object.
 
 ### Interface changes
 
-- {{ interface("nsINavHistoryQueryOptions") }} now supports sorting in frequency order using the new `SORT_BY_FREQUENCY_ASCENDING` and `SORT_BY_FREQUENCY_DESCENDING` constants.
-- {{ interface("nsIFilePicker") }} has a new {{ ifattribute("nsIFilePicker", "addToRecentDocs") }} attribute, which lets you indicate that the selected file should be added to the user's "recent documents" list if there is one. This attribute has no effect when in private browsing mode.
-- {{ interface("nsINavBookmarkObserver") }} methods with item ID parameters now require a GUID as well.
+- `nsINavHistoryQueryOptions` now supports sorting in frequency order using the new `SORT_BY_FREQUENCY_ASCENDING` and `SORT_BY_FREQUENCY_DESCENDING` constants.
+- `nsIFilePicker` has a new {{ ifattribute("nsIFilePicker", "addToRecentDocs") }} attribute, which lets you indicate that the selected file should be added to the user's "recent documents" list if there is one. This attribute has no effect when in private browsing mode.
+- `nsINavBookmarkObserver` methods with item ID parameters now require a GUID as well.
 - {{ ifmethod("nsIPrefBranch", "clearUserPref") }} no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it does nothing.
-- The {{ interface("nsIMemoryReporter") }} interface now provides support for indicating the kind of memory being described (mapped, heap, or other).
-- The {{ interface("nsISHEntry") }} `stateData` attribute now returns a {{ interface("nsIStructuredCloneContainer") }}.
-- {{ interface("nsIURI") }} has a new {{ ifattribute("nsIURI", "ref") }} attribute, which returns the reference portion (the part after the "#") of the URI. It also has new methods {{ ifmethod("nsIURI", "cloneIgnoringRef") }} which clones the {{ interface("nsIURI") }} without the ref member and {{ ifmethod("nsIURI", "equalsExceptRef") }} which compares to another {{ interface("nsIURI") }} ignoring the ref member.
+- The `nsIMemoryReporter` interface now provides support for indicating the kind of memory being described (mapped, heap, or other).
+- The `nsISHEntry` `stateData` attribute now returns a `nsIStructuredCloneContainer`.
+- `nsIURI` has a new {{ ifattribute("nsIURI", "ref") }} attribute, which returns the reference portion (the part after the "#") of the URI. It also has new methods {{ ifmethod("nsIURI", "cloneIgnoringRef") }} which clones the `nsIURI` without the ref member and {{ ifmethod("nsIURI", "equalsExceptRef") }} which compares to another `nsIURI` ignoring the ref member.
 
 #### New interfaces
 
 - {{ interface("mozIAsyncFavicons") }}
   - : A new service that lets you access the favicon service asynchronously.
-- {{ interface("nsIEventSource") }}
+- `nsIEventSource`
   - : _Details forthcoming._
-- {{ interface("nsIGSettingsCollection") }}
+- `nsIGSettingsCollection`
   - : _Details forthcoming._
-- {{ interface("nsIGSettingsService") }}
+- `nsIGSettingsService`
   - : _Details forthcoming._
-- {{ interface("nsIHttpUpgradeListener") }}
+- `nsIHttpUpgradeListener`
   - : The callback interface for handling HTTP upgrade requests via the {{ ifmethod("nsIHttpChannelInternal", "HTTPUpgrade") }} method.
-- {{ interface("nsIStructuredCloneContainer") }}
+- `nsIStructuredCloneContainer`
   - : A container for objects that have been serialized using the [structured clone algorithm](/en-US/docs/HTML/Structured_clones).
-- {{ interface("nsITelemetry") }}
+- `nsITelemetry`
   - : Implements telemetry support to allow recording of telemetry data to be used to present histograms for performance tracking purposes. See {{ bug("649502") }} and {{ bug("585196") }}.
-- {{ interface("nsITimedChannel") }}
+- `nsITimedChannel`
   - : See {{ bug("576006") }}.
-- {{ interface("nsIWebSocketListener") }}
+- `nsIWebSocketListener`
   - : See {{ bug("640003") }}.
-- {{ interface("nsIWebSocketProtocol") }}
+- `nsIWebSocketProtocol`
   - : See {{ bug("640003") }}.
 
 #### Removed interfaces
@@ -187,7 +187,7 @@ The following interfaces were implementation details that are no longer needed:
 - `nsIPlugin` (see {{ bug("637253") }})
 - `nsIPluginInstance` (see {{ bug("637253") }})
 - `nsIHTMLEditRules` (see {{ bug(633750) }})
-- {{ interface("nsIXSLTProcessorObsolete") }} (see {{ bug("649534") }})
+- `nsIXSLTProcessorObsolete` (see {{ bug("649534") }})
 
 ### Other changes
 
