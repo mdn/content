@@ -60,7 +60,7 @@ Pay special attention to commas when declaring multiple variables. Is there an e
 comma? Did you accidentally add commas instead of semicolons?
 
 ```js example-bad
-const x, y = "foo",
+let x, y = "foo",
 const x, = "foo"
 
 const first = document.getElementById('one'),
@@ -72,7 +72,7 @@ const second = document.getElementById('two'),
 The fixed version:
 
 ```js example-good
-const x, y = "foo";
+let x, y = "foo";
 const x = "foo";
 
 const first = document.getElementById('one');
