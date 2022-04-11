@@ -69,6 +69,6 @@ SineWave.prototype.pause = function() {
 ## See also
 
 - [Generating
-  Tones with the Web Audio API](http://0xfe.blogspot.com/2011/08/generating-tones-with-web-audio-api.html)
+  Tones with the Web Audio API](https://0xfe.blogspot.com/2011/08/generating-tones-with-web-audio-api.html)
 - [Exploring
-  the HTML5 Web Audio: visualizing sound](http://www.smartjava.org/content/exploring-html5-web-audio-visualizing-sound)
+  the HTML5 Web Audio: visualizing sound](https://www.smartjava.org/content/exploring-html5-web-audio-visualizing-sound)
