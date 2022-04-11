@@ -21,15 +21,13 @@ In your development process you'll undoubtedly be required to run some command i
       <th scope="row">Prerequisites:</th>
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand what the terminal/command line is, what basic commands you
-        should learn, and how to install new command line tools.
+        To understand what the terminal/command line is, what basic commands you should learn, and how to install new command line tools.
       </td>
     </tr>
   </tbody>
@@ -329,7 +327,7 @@ Install npm on your system now, by going to the URL above and downloading and ru
 ![the node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
 Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/).
-Prettier is an opinionated code formatter that has "few options".
+Prettier is an opinionated code formatter that only has a "few options".
 Fewer options tends to mean simpler.
 Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
 
@@ -356,21 +354,20 @@ There's pros and cons each way — and this list of pros and cons for globally i
     <tr>
       <td>Only install once</td>
       <td>
-        Other developers in your team won't have access to these tools, for
-        example if you are sharing the codebase over a tool like git.
+        Other developers in your team won't have access to these tools, for example if you are sharing the codebase over a tool like git.
       </td>
     </tr>
     <tr>
       <td>Uses less disk space</td>
       <td>
-        Related to the previous point, it makes project code harder to replicate
-        (if you install your tools locally, they can be set up as dependencies
-        and installed with <code>npm install</code>).
+        Related to the previous point, it makes project code harder to replicate (if you install your tools locally, they can be set up as dependencies and installed with <code>npm install</code>).
       </td>
     </tr>
     <tr>
       <td>Always the same version</td>
-      <td></td>
+      <td>
+        Global installation can fail with "permission denied" errors, particularly on Linux which is protective about process and user access to the file system.
+        Resolving these errors usually requires Linux expertise, or granting more permission than you might want to the global process (for example, using <code>sudo</code>).</td>
     </tr>
     <tr>
       <td>Feels like any other unix command</td>
@@ -379,13 +376,14 @@ There's pros and cons each way — and this list of pros and cons for globally i
   </tbody>
 </table>
 
-Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits. However, for now we'll err on the side of simplicity and install globally to keep things simple. We'll look more at local installs and why they're good in the next article.
+Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits.
+Here we'll install locally, but feel free to install globally once you understand the relative risks.
+
 
 ### Installing Prettier
 
-For this article we will install Prettier as a global command line utility.
-
 Prettier is an opinionated code formatting tool for front end developers, focusing around JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON and more.
+
 Prettier can:
 
 - Save the cognitive overhead of getting the style consistent manually across all your code files; Prettier can do this for you automatically.
@@ -393,18 +391,20 @@ Prettier can:
 - Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
 - Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
 
+For this article we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html)
+
 Once you've installed node, open up the terminal and run the following command to install Prettier:
 
 ```bash
-npm install --global prettier
+npm install prettier
 ```
 
-Once the command has finished running, the Prettier tool is now available in your terminal, at any location in your file system.
-
-Running the command without any arguments, as with many other commands, will offer up usage and help information. Try this now:
+You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner) tool.
+Running the command without any arguments, as with many other commands, will offer up usage and help information.
+Try this now:
 
 ```bash
-prettier
+npx prettier
 ```
 
 Your output should look something like this:
@@ -418,7 +418,13 @@ Stdin is read if it is piped to Prettier and no files are given.
 …
 ```
 
-It's always worth at the very least skimming over the usage information, even if it is long. It'll help you to understand better how the tool is intended to be used.
+It's always worth at the very least skimming over the usage information, even if it is long.
+It'll help you to understand better how the tool is intended to be used.
+
+> **Note:** If you have not first installed prettier locally, then running `npx prettier` will download and run the latest version of prettier all in one go _just for that command_.
+> While that might sound great, new versions of prettier may slightly modify the output.
+> You want to install locally so that you are fixing the version of prettier that you are using for formatting until you are ready to change it.
+
 
 ### Playing with Prettier
 
@@ -438,10 +444,10 @@ printMe(myObj)
 We can run prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
 
 ```bash
-prettier --check index.js
+npx prettier --check index.js
 ```
 
-You should get on output along the lines of
+You should get on output along the lines of:
 
 ```bash
 Checking formatting...
@@ -454,7 +460,7 @@ So there's some code styles that can be fixed. No problem. Adding the `--write` 
 Now try running this version of the command:
 
 ```bash
-prettier --write index.js
+npx prettier --write index.js
 ```
 
 You'll get an output like this
