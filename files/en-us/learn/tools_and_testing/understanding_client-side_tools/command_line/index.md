@@ -396,21 +396,7 @@ For this article we will install Prettier locally, as suggested in the [Prettier
 Once you've installed node, open up the terminal and run the following command to install Prettier:
 
 ```bash
-npm install --save-dev --save-exact prettier
-```
-
-Then create an empty `.prettierrc.json` config file to let editors and other tools know you are using Prettier:
-
-```bash
-echo {}> .prettierrc.json
-```
-
-You can optionally create a file named `.prettierignore` to specify files and directories that you definitely don't want to format.
-This should be created in the same folder and has exactly the same format as `.gitignore`.
-For example, if you don't want to format HTML files, the file might contain this line:
-
-```
-*.html
+npm install prettier
 ```
 
 You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner) tool.
