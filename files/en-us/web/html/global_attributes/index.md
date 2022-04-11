@@ -24,9 +24,9 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## List of global attributes
 
-- [{{HTMLAttrDef("accesskey")}}](/en-US/docs/Web/HTML/Global_attributes/accesskey)
+- <a id="attr-accesskey"></a>[`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey)
   - : Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
-- [{{HTMLAttrDef("autocapitalize")}}](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
+- <a id="attr-autocapitalize"></a>[`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
 
   - : Controls whether and how text input is automatically capitalized as it is entered/edited by the user. It can have the following values:
 
