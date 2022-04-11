@@ -339,9 +339,9 @@ Before we dive into installing Prettier, there's a question to answer — "where
 
 With `npm` we have the choice of installing tools globally — so we can access them anywhere — or locally to the current project directory.
 
-There's pros and cons each way — and this list of pros and cons for globally installing is far from exhaustive:
+There are pros and cons each way — and this list of pros and cons for globally installing is far from exhaustive:
 
-<table class="standard-table no-markdown">
+<table class="standard-table no-markdown" style="table-layout:fixed;" >
   <thead>
     <tr>
       <th scope="col">Pros of installing globally</th>
@@ -449,7 +449,7 @@ index.js
 Code style issues found in the above file(s). Forgot to run Prettier?
 ```
 
-So there's some code styles that can be fixed. No problem. Adding the `--write` option to the prettier command will fix those up, leaving us to focus on actually writing useful code.
+So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the prettier command will fix those up, leaving us to focus on actually writing useful code.
 
 Now try running this version of the command:
 
