@@ -20,7 +20,7 @@ The **`ArrayBuffer()`** constructor is used to create
 ## Syntax
 
 ```js
-new ArrayBuffer(length);
+new ArrayBuffer(length)
 ```
 
 ### Parameters
