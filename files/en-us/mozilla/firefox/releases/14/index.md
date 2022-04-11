@@ -68,10 +68,10 @@ _No change._
 
 ### Interfaces
 
-- The {{interface("nsILocalFile")}} interface has been merged into {{interface("nsIFile")}} ([bug 682360](https://bugzilla.mozilla.org/show_bug.cgi?id=682360)).
-- The methods in {{interface("nsIPlacesImportExportService")}} for importing bookmarks have all been removed in favor of the [`BookmarkHTMLUtils.jsm`](/en-US/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm) JavaScript code module.
-- The {{interface("nsIDOMGeoPositionAddress")}} interface has been removed.
-- The `getItemGUID`, `setItemGUID` and `getItemIdForGUID` methods have been removed from {{interface("nsINavBookmarksService")}} ({{bug("715355")}}).
+- The `nsILocalFile` interface has been merged into `nsIFile` ([bug 682360](https://bugzilla.mozilla.org/show_bug.cgi?id=682360)).
+- The methods in `nsIPlacesImportExportService` for importing bookmarks have all been removed in favor of the [`BookmarkHTMLUtils.jsm`](/en-US/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm) JavaScript code module.
+- The `nsIDOMGeoPositionAddress` interface has been removed.
+- The `getItemGUID`, `setItemGUID` and `getItemIdForGUID` methods have been removed from `nsINavBookmarksService` ({{bug("715355")}}).
 
 ### Spellchecking
 

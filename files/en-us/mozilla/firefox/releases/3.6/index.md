@@ -79,13 +79,13 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 
 - The `getBoxObjectFor()` method has been **removed**, as it was non-standard and exposed even more non-standard stuff to the web. See {{bug(340571)}}. Also affects [MooTools](https://mootools.net/) which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.
 - The new [`mozInnerScreenX`](/en-US/docs/Web/API/Window/mozInnerScreenX) and [`mozInnerScreenY`](/en-US/docs/Web/API/Window/mozInnerScreenY) properties on DOM windows have been added; these return the screen coordinates of the top-left corner of the window's viewport.
-- The new `mozScreenPixelsPerCSSPixel` attribute on the {{interface("nsIDOMWindowUtils")}} interface, accessible only to chrome, provides a conversion factor between CSS pixels and screen pixels; this value can vary based on the zoom level of the content.
+- The new `mozScreenPixelsPerCSSPixel` attribute on the `nsIDOMWindowUtils` interface, accessible only to chrome, provides a conversion factor between CSS pixels and screen pixels; this value can vary based on the zoom level of the content.
 - When the page's URI's document fragment identifier (the part after the "#" (hash) character) changes, a new `hashchange` event is sent to the page. See [window.onhashchange](/en-US/docs/Web/API/WindowEventHandlers/onhashchange) for more information. {{bug(385434)}}
 - The attribute [`document.readyState`](/en-US/docs/Web/API/Document/readyState) is now supported. {{bug(347174)}}
 - Support for HTML5's [`element.classList`](/en-US/docs/Web/API/Element/classList) to allow easier handling of the class attribute. {{bug(501257)}}
 - `localName` and `namespaceURI` in HTML documents now behave like they do in XHTML documents: `localName` returns in lower case and `namespaceURI` for HTML elements is `"http://www.w3.org/1999/xhtml"`.
 - [`element.getElementsByTagNameNS`](/en-US/docs/Web/API/Element/getElementsByTagNameNS) no longer lowercases its argument, so upper-case ASCII letters in the argument make matches against HTML elements fail. The same is true for [`document.getElementsByTagNameNS`](/en-US/docs/Web/API/Document/getElementsByTagNameNS).
-- Support has been added for addresses in geolocation via the {{interface("nsIDOMGeoPositionAddress")}} interface and a new field added to {{interface("nsIDOMGeoPosition")}}.
+- Support has been added for addresses in geolocation via the `nsIDOMGeoPositionAddress` interface and a new field added to `nsIDOMGeoPosition`.
 - The {{domxref("window.getComputedStyle")}} function now returns quotes within `url()` values.
 
 ### XPath
@@ -108,8 +108,8 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ### Places
 
-- Places queries can now use the `redirectsMode` attribute on the {{interface("nsINavHistoryQueryOptions")}} interface to specify whether or not to include redirected pages in results.
-- Added the new {{ifmethod("nsIFaviconService", "expireAllFavicons")}} method to the {{interface("nsIFaviconService")}} interface.
+- Places queries can now use the `redirectsMode` attribute on the `nsINavHistoryQueryOptions` interface to specify whether or not to include redirected pages in results.
+- Added the new {{ifmethod("nsIFaviconService", "expireAllFavicons")}} method to the `nsIFaviconService` interface.
 
 ### Storage
 
@@ -124,7 +124,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ### Preferences
 
-- The {{interface("nsIContentPrefService")}} interface has two new methods: {{ifmethod("nsIContentPrefService", "getPrefsByName")}} and {{ifmethod("nsIContentPrefService", "removePrefsByName")}}.
+- The `nsIContentPrefService` interface has two new methods: {{ifmethod("nsIContentPrefService", "getPrefsByName")}} and {{ifmethod("nsIContentPrefService", "removePrefsByName")}}.
 
 ### Themes
 
@@ -140,13 +140,13 @@ See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/U
 - Added support for hiding the menu bar automatically. See {{bug(477256)}}.
 - Added support for the `container-live-role` attribute to objects. See {{bug(391829)}}.
 - The `tabs-closebutton` binding has been removed. See {{bug(500971)}}.
-- Added support to {{interface("nsISound")}} for playing sounds based on events that have occurred. See {{bug(502799)}}.
-- The syntax for the {{interface("nsITreeView")}} methods {{ifmethod("nsITreeView", "canDrop")}} and {{ifmethod("nsITreeView", "drop")}} has changed to support the new drag & drop API introduced in Gecko 1.9. See {{bug(455590)}}.
+- Added support to `nsISound` for playing sounds based on events that have occurred. See {{bug(502799)}}.
+- The syntax for the `nsITreeView` methods {{ifmethod("nsITreeView", "canDrop")}} and {{ifmethod("nsITreeView", "drop")}} has changed to support the new drag & drop API introduced in Gecko 1.9. See {{bug(455590)}}.
 - Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see {{bug(76053)}}. This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the `window` element and it has a default button, it needs to call {{ifmethod("nsIDOMChromeWindow", "notifyDefaultButtonLoaded")}} during the window's `onload` event handler.
-- The {{interface("nsILocalFileMac")}} interface has had two methods removed: `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
+- The `nsILocalFileMac` interface has had two methods removed: `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
 - The new [`NetUtils.jsm`](/en-US/docs/JavaScript_code_modules/NetUtil.jsm) code module provides an easy-to-use method for asynchronously copying data from an input stream to an output stream.
 - The new [`openLocationLastURL.jsm`](/en-US/docs/JavaScript_code_modules/openLocationLastURL.jsm) code module makes it easy to read and change the value of the "Open Location" dialog box's remembered URL while properly taking private browsing mode into account.
-- On Windows, the {{interface("nsIScreen")}} interface now reports 24 bit per pixel color depths when the graphics driver claims 32 bits, since 24 more accurately represents the actual number of color pixels in use.
+- On Windows, the `nsIScreen` interface now reports 24 bit per pixel color depths when the graphics driver claims 32 bits, since 24 more accurately represents the actual number of color pixels in use.
 - Menu bars can now be hidden on Windows, using the new [`autohide`](/en-US/docs/Mozilla/Tech/XUL/Attribute/autohide) attribute on the [`<xul:toolbar>`](/en-US/docs/Mozilla/Tech/XUL/toolbar) XUL element.
 - The [`loadOneTab`](/en-US/docs/Mozilla/Tech/XUL/Method/loadOneTab) and [`addTab`](/en-US/docs/Mozilla/Tech/XUL/Method/addTab) methods now accept a new `relatedToCurrent` parameter and, in addition, allow the parameters to be specified by name, since nearly all of the parameters are optional.
 - The "[hidden](/en-US/docs/Install_Manifests#hidden)" property is no longer supported in install manifests; it's no longer possible to prevent the user from seeing add-ons in the add-on manager window.
@@ -189,7 +189,7 @@ The following interfaces have been removed entirely because they were unused, un
 The following interfaces have been relocated from their previous IDL files into new ones:
 
 - `nsIDOMNSCSS2Properties` is now located in its own IDL file (`dom/interfaces/css/nsIDOMCSS2Properties.idl`).
-- {{interface("nsIUpdateTimerManager")}} is now located in its own IDL file.
+- `nsIUpdateTimerManager` is now located in its own IDL file.
 
 A large number of interfaces have been moved. See [Interfaces moved in Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/Interfaces_moved) for a complete list.
 
@@ -197,11 +197,11 @@ A large number of interfaces have been moved. See [Interfaces moved in Firefox 3
 
 The following assorted changes have been made:
 
-- The `nsIPlugin` interface now inherits from {{interface("nsISupports")}} instead of {{interface("nsIFactory")}}.
-- The `nsIPluginHost` interface now inherits from {{interface("nsISupports")}} instead of {{interface("nsIFactory")}}.
-- The `nsIFrame` interface now inherits from `nsQueryFrame` instead of {{interface("nsISupports")}}.
-- The {{interface("nsIDeviceContext")}} method `getPaletteInfo()` has been removed, as it was never implemented.
-- The {{interface("nsIScriptContext")}} method `reportPendingException()` has been removed, since it was no longer being used.
+- The `nsIPlugin` interface now inherits from `nsISupports` instead of `nsIFactory`.
+- The `nsIPluginHost` interface now inherits from `nsISupports` instead of `nsIFactory`.
+- The `nsIFrame` interface now inherits from `nsQueryFrame` instead of `nsISupports`.
+- The `nsIDeviceContext` method `getPaletteInfo()` has been removed, as it was never implemented.
+- The `nsIScriptContext` method `reportPendingException()` has been removed, since it was no longer being used.
 
 ### Changes in accessibility code
 
