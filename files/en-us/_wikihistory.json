@@ -1336,6 +1336,12 @@
       "ethertank"
     ]
   },
+  "Glossary/Bezier_curve": {
+    "modified": "2019-06-30T19:32:06.402Z",
+    "contributors": [
+      "Sebastianz"
+    ]
+  },
   "Glossary/BiDi": {
     "modified": "2019-03-23T22:57:31.283Z",
     "contributors": [
@@ -1481,12 +1487,6 @@
       "Andrew_Pfeiffer",
       "klez",
       "teoli"
-    ]
-  },
-  "Glossary/Bézier_curve": {
-    "modified": "2019-06-30T19:32:06.402Z",
-    "contributors": [
-      "Sebastianz"
     ]
   },
   "Glossary/CDN": {
