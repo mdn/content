@@ -16,7 +16,7 @@ The **`canonicalUUID()`**  method of the {{domxref("BluetoothUUID")}} interface 
 ## Syntax
 
 ```js
-BluetoothUUID.canonicalUUID(alias);
+canonicalUUID(alias);
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ BluetoothUUID.canonicalUUID(alias);
 - `alias`
   - : A {{domxref("DOMString","string")}} containing a 16- or 32- bit UUID alias.
 
-### Returns
+### Return value
 
 A 128-bit UUID.
 

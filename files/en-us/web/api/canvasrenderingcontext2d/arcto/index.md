@@ -26,7 +26,7 @@ This method is commonly used for making rounded corners.
 ## Syntax
 
 ```js
-void ctx.arcTo(x1, y1, x2, y2, radius);
+arcTo(x1, y1, x2, y2, radius);
 ```
 
 ### Parameters
@@ -208,7 +208,7 @@ const control    = document.getElementById('radius');
 
 const mouse = { x: 0, y: 0 };
 
-let   r  = 100; // Radius
+let r  = 100; // Radius
 const p0 = { x: 0, y: 50 };
 
 const p1 = { x: 100, y: 100 };

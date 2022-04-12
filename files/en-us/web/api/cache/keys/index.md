@@ -25,9 +25,9 @@ The requests are returned in the same order that they were inserted.
 ## Syntax
 
 ```js
-cache.keys(request, {options}).then(function(keys) {
-  // do something with your array of requests
-});
+keys();
+keys(request);
+keys(request, options);
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ cache.keys(request, {options}).then(function(keys) {
     - `ignoreVary`: A boolean value that, when set to
       `true,` tells the matching operation not to perform `VARY`
       header matching.  In other words, if the URL matches you will get a match
-      regardless of  whether the {{domxref("Response")}} object has a `VARY`
+      regardless of whether the {{domxref("Response")}} object has a `VARY`
       header. It defaults to `false`.
     - `cacheName`: A {{domxref("DOMString")}} that represents a specific
       cache to search within. Note that this option is ignored by

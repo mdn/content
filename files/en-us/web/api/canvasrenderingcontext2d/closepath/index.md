@@ -24,7 +24,7 @@ the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} or
 ## Syntax
 
 ```js
-void ctx.closePath();
+closePath();
 ```
 
 ## Examples
