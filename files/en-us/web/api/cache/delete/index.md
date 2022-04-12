@@ -25,7 +25,8 @@ to `false`.
 ## Syntax
 
 ```js
-delete(request, {options});
+delete(request);
+delete(request, options);
 ```
 
 ### Parameters
