@@ -141,7 +141,7 @@ This logs `'Twas the night before Christmas...'`.
 
 Global replace can only be done with a regular expression. In the following example,
 the regular expression includes the
-[global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2)
+[global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)
 which permits `replace()` to replace each
 occurrence of `'apples'` in the string with `'oranges'`.
 
