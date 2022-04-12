@@ -21,7 +21,7 @@ The **`index`** read-only property of the
 
 ## Value
 
-A ContentIndex {{jsxref('Object')}}
+A {{domxref('ContentIndex')}} object.
 
 ## Examples
 
