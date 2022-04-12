@@ -1574,7 +1574,6 @@
 /en-US/docs/DOM/NodeFilter	/en-US/docs/Web/API/NodeFilter
 /en-US/docs/DOM/NodeIterator	/en-US/docs/Web/API/NodeIterator
 /en-US/docs/DOM/NodeIterator.detach	/en-US/docs/Web/API/NodeIterator/detach
-/en-US/docs/DOM/NodeIterator.expandEntityReferences	/en-US/docs/Web/API/NodeIterator/expandEntityReferences
 /en-US/docs/DOM/NodeIterator.filter	/en-US/docs/Web/API/NodeIterator/filter
 /en-US/docs/DOM/NodeIterator.nextNode	/en-US/docs/Web/API/NodeIterator/nextNode
 /en-US/docs/DOM/NodeIterator.pointerBeforeReferenceNode	/en-US/docs/Web/API/NodeIterator/pointerBeforeReferenceNode
@@ -2908,7 +2907,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/NodeFilter	/en-US/docs/Web/API/NodeFilter
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator	/en-US/docs/Web/API/NodeIterator
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.detach	/en-US/docs/Web/API/NodeIterator/detach
-/en-US/docs/Document_Object_Model_(DOM)/NodeIterator.expandEntityReferences	/en-US/docs/Web/API/NodeIterator/expandEntityReferences
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.filter	/en-US/docs/Web/API/NodeIterator/filter
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.nextNode	/en-US/docs/Web/API/NodeIterator/nextNode
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.pointerBeforeReferenceNode	/en-US/docs/Web/API/NodeIterator/pointerBeforeReferenceNode
@@ -8821,7 +8819,6 @@
 /en-US/docs/Web/API/Node/rootNode	/en-US/docs/Web/API/Node/getRootNode
 /en-US/docs/Web/API/NodeFilter.acceptNode	/en-US/docs/Web/API/NodeFilter/acceptNode
 /en-US/docs/Web/API/NodeIterator.detach	/en-US/docs/Web/API/NodeIterator/detach
-/en-US/docs/Web/API/NodeIterator.expandEntityReferences	/en-US/docs/Web/API/NodeIterator/expandEntityReferences
 /en-US/docs/Web/API/NodeIterator.filter	/en-US/docs/Web/API/NodeIterator/filter
 /en-US/docs/Web/API/NodeIterator.nextNode	/en-US/docs/Web/API/NodeIterator/nextNode
 /en-US/docs/Web/API/NodeIterator.pointerBeforeReferenceNode	/en-US/docs/Web/API/NodeIterator/pointerBeforeReferenceNode
@@ -9453,7 +9450,6 @@
 /en-US/docs/Web/API/TransitionEvent.pseudoElement	/en-US/docs/Web/API/TransitionEvent/pseudoElement
 /en-US/docs/Web/API/TransitionEvent/animationName	/en-US/docs/Web/API/TransitionEvent/propertyName
 /en-US/docs/Web/API/TreeWalker.currentNode	/en-US/docs/Web/API/TreeWalker/currentNode
-/en-US/docs/Web/API/TreeWalker.expandEntityReferences	/en-US/docs/Web/API/TreeWalker/expandEntityReferences
 /en-US/docs/Web/API/TreeWalker.firstChild	/en-US/docs/Web/API/TreeWalker/firstChild
 /en-US/docs/Web/API/TreeWalker.lastChild	/en-US/docs/Web/API/TreeWalker/lastChild
 /en-US/docs/Web/API/TreeWalker.nextNode	/en-US/docs/Web/API/TreeWalker/nextNode
