@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.15.tgz#79ea28eecbf4e32a9e7ffdbfe8ea68de539b022f"
   integrity sha512-OZx2PxHtJDc9NOHGR3T0ZtX1WYl5qH/xmiH3sKSmcd3o+vPMG1kVUYbZrMxH3fVKpkkkrQpwETCIDRXcMXAWTw==
 
-"@mdn/yari@0.10.16":
-  version "0.10.16"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.10.16.tgz#3a0d9cc161bfa115164a0c1c95e8751a7bd14716"
-  integrity sha512-UxOPnETBmpVOiSmyHLF6SAI6fFWtTkl4LjmjuRAgtygteyEtFNirNrBo/QUPHRH7PUv7tRnzD4S8f4IifsiLDA==
+"@mdn/yari@0.10.18":
+  version "0.10.18"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.10.18.tgz#79ab1c06797f2893d0b688c8b791fe69ec6ca4b5"
+  integrity sha512-XY3B/T/gS8x3PMUXseXPkCWC1MnJgLwqUWYDps5JyY967ErlYPv+8uuI26fEGLbPd3qjPAj3n06o8ZXqtoEsPg==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -78,7 +78,7 @@
     "@mdn/browser-compat-data" "4.1.15"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
-    browser-specs "^3.6.0"
+    browser-specs "^3.6.1"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.10.0"
@@ -114,7 +114,7 @@
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
     loglevel "^1.8.0"
-    lru-cache "^7.8.0"
+    lru-cache "^7.8.1"
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
@@ -593,10 +593,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.6.0.tgz#a72279f5497d93e5bffe2e2e8889d12ea2014618"
-  integrity sha512-ix97gDB6qt7U/QNTJZh0nuqsPSVeHr0VYn5I+dqk/VAr3b3aAg0ski5m68mIcJAYc5/xZI32TPKsdq7wDk+Hfw==
+browser-specs@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.6.1.tgz#37c1762e6ef067b516c51da8e7472a3694518bef"
+  integrity sha512-RKvTUsnuM1P3uznI+LGsivh3sy6t+g2TVtMBEHe4Wz2bLRXk3dPH0KUuIIOg30yfh65D9yEQAV8Orl0OTJKCaQ==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -2974,7 +2974,7 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^7.8.0:
+lru-cache@^7.8.1:
   version "7.8.1"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.8.1.tgz#68ee3f4807a57d2ba185b7fd90827d5c21ce82bb"
   integrity sha512-E1v547OCgJvbvevfjgK9sNKIVXO96NnsTsFPBlg4ZxjhsJSODoH9lk8Bm0OxvHNm6Vm5Yqkl/1fErDxhYL8Skg==
