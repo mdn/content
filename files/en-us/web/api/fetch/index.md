@@ -395,7 +395,7 @@ fetch("https://mozilla.org/contact-us", {
 // ...... the rest follow example of fetch for x-www-form-urlencoded
 ```
 
-For uploading files example, you can look into [Using Fetch for uploading multiple files](en-US/docs/Web/API/Fetch_API/Using_Fetch#uploading_multiple_files). There are also several example for fetch request on that section. 
+For uploading files example, you can look into [Using Fetch for uploading multiple files](/en-US/docs/Web/API/Fetch_API/Using_Fetch#uploading_multiple_files). There are also several example for fetch request on that section. 
 
 ## Specifications
 
@@ -411,4 +411,4 @@ For uploading files example, you can look into [Using Fetch for uploading multip
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
-- [Using Fetch API](en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
