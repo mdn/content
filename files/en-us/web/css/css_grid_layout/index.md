@@ -157,7 +157,7 @@ The example below shows a three-column track grid with new rows created at a min
 - [Examples from Jen Simmons](https://labs.jensimmons.com/)
 - [Grid by Example - a collection of usage examples and video tutorials](https://gridbyexample.com/)
 - [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid)
 - [Grid Garden](https://cssgridgarden.com) - A game for learning CSS grid
 

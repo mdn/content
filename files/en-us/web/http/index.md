@@ -57,8 +57,8 @@ Browse through detailed HTTP reference documentation.
 
 Helpful tools and resources for understanding and debugging HTTP.
 
-- [Firefox Developer Tools](/en-US/docs/Tools)
-  - : [Network monitor](/en-US/docs/Tools/Network_Monitor)
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 - [Mozilla Observatory](https://observatory.mozilla.org/)
   - : A project designed to help developers, system administrators, and security professionals configure their sites safely and securely.
 - [RedBot](https://redbot.org/)
