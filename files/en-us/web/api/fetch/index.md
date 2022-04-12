@@ -338,6 +338,64 @@ const myInit = {
 
 const myRequest = new Request('flowers.jpg', myInit);
 ```
+ 
+### Example Request with Body using fetch
+In some cases, we not only need to fetch the data, but we also need to send a data to the endpoint/server, and then we expect some result from it, either in JSON, HTML, or Text. Fetch support sending body for method POST, PUT or even DELETE(but some case end point API for DELETE doesn't read body). The data that we send can be in many type of body from JSON, urlencoded, etc, you can look to [Body](/en-US/docs/Web/API/Fetch_API/Using_Fetch#body) docs.
+
+#### Example fetch Request for FormData or application/x-www-form-urlencoded
+Example, we have a end point API/Form/Script that accept [application/x-www-form-urlencoded](/en-US/docs/Web/HTTP/Methods/POST#example), for contact us, that require us to submit 3 parameter, name, e-email, and message, we can create the body using [URLSearchParams](/en-US/docs/Web/API/URLSearchParams#examples) to follow [application/x-www-form-urlencoded](/en-US/docs/Web/HTTP/Methods/POST#example) by passing it into the body options on fetch parameter, as example :
+
+```js
+// this is just example url
+fetch("https://mozilla.org/contact-us", {
+    method: "POST", // we chane the method to post
+    body: new URLSearchParams({ // and this is the body 
+        name: "foo",
+        email: "bar@relay.firefox.com",
+        message: "Hello to MDN folks. I'm learning fetch for request"
+    }),
+    headers: { // This is so the server know that we send x-www-form-urlencoded, but not required sometimes as nowdays server/API endpoint are smart enough 
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+})
+// after that we need to process the result from Readable Stream to text, as we expect the result as text/plain or text/html
+.then((response) => response.text())
+// So we can show it into our HTML, take example we have div#thank-you
+.then((text) => {
+    // This only works if you has <div id='thank-you'></div>
+    // if not will result error
+    document.getElementById("thank-you").innerHTML = text;
+})
+// Upon receiving error from API (not after success receiving data), we can catch the error, and show to user and log into console
+// fetch only throw an error for NETWORKS ERROR but not for HTTP errors such as 4xx or 5xx responses
+.catch((error) => {
+    alert("Oops, something error");
+    console.log(error);
+});
+```
+
+How do we check if our data sent to server correctly? Well we can add check on response, for more, look to [Checking that fetch was successful](/en-US/docs/Web/API/Fetch_API/Using_Fetch#checking_that_the_fetch_was_successful)
+
+#### Example fetch Request for JSON or application/json and Uploading files
+For JSON, we only need to change the body to JSON and headers options to set content type to JSON, eg :
+
+```js
+// this is just example url
+fetch("https://mozilla.org/contact-us", {
+    method: "POST", // we chane the method to post
+    body: JSON.stringify({ // and this is the body as JSON
+        name: "foo",
+        email: "bar@relay.firefox.com",
+        message: "Hello to MDN folks. I'm learning fetch for request"
+    }),
+    headers: { // This is so the server know that we send application/json, but not required sometimes as nowdays server/API endpoint are smart enough 
+        "Content-Type": "application/json; charset=utf-8"
+    }
+})
+// ...... the rest follow example of fetch for x-www-form-urlencoded
+```
+
+For uploading files example, you can look into [Using Fetch for uploading multiple files](en-US/docs/Web/API/Fetch_API/Using_Fetch#uploading_multiple_files). There are also several example for fetch request on that section. 
 
 ## Specifications
 
@@ -353,3 +411,4 @@ const myRequest = new Request('flowers.jpg', myInit);
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
+- [Using Fetch API](en-US/docs/Web/API/Fetch_API/Using_Fetch)
