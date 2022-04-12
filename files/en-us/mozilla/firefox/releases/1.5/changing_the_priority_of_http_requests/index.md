@@ -11,8 +11,6 @@ tags:
 > The best way to request resources over HTTP is to use [`fetch()`](/en-US/docs/Web/API/fetch), which allows you to specify the priority in [`Request.priority`](/en-US/docs/Web/API/Request/priority).
 > You can also set the HTTP priority on [`HTMLLinkElement`](/en-US/docs/Web/API/HTMLLinkElement/fetchpriority), [`HTMLIFrameElement`](/en-US/docs/Web/API/HTMLIFrameElement/fetchpriority), and [`HTMLImageElement`](/en-US/docs/Web/API/HTMLImageElement/fetchpriority) elements (and associated tags) using the `fetchpriority` attribute.
 
-
-
 ### Introduction
 
 In [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5), an API was added to support changing the priority of [HTTP](/en-US/docs/Web/HTTP) requests. Prior to this, there was no way to directly indicate that a request was of a different priority. The API is defined in `nsISupportsPriority`, but is defined in very generic terms so that any object can implement this interface to enable the concept of priority. This article deals specifically with using that interface to change the priority of HTTP requests.

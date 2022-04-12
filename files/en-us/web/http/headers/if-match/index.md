@@ -56,7 +56,6 @@ If-Match: <etag_value>, <etag_value>, …
 - `*`
   - : The asterisk is a special value representing any resource.
     Note that this must match as `false` if the origin server does not have a current representation for the target resource.
-    
 
 ## Examples
 
