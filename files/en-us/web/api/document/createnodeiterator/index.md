@@ -48,15 +48,25 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                              |
 
 - `filter` {{ optional_inline() }}
-  - : An object implementing the {{ domxref("NodeFilter") }} interface. Its
-    `acceptNode()` method will be called for each node in the subtree based at
-    root which is accepted as included by the whatToShow flag to determine whether or not
-    to include it in the list of iterable nodes (a simple callback function may also be
-    used instead). The method should return one of `NodeFilter.FILTER_ACCEPT`,
-    `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the
-    [Example](#example).
+  - : A callback function or an object with an `acceptNode()` method. The function or method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes. The method should return one of `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the [Example](#example).
 
-## Example
+## Examples
+
+```js
+const nodeIterator = document.createNodeIterator(
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    (node) => node.nodeName.toLowerCase() === 'p' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+);
+const pars = [];
+let currentNode;
+
+while (currentNode = nodeIterator.nextNode()) {
+  pars.push(currentNode);
+}
+```
+
+The same, but using an object with an `acceptNode()` method:
 
 ```js
 const nodeIterator = document.createNodeIterator(
