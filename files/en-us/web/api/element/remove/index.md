@@ -10,8 +10,7 @@ browser-compat: api.Element.remove
 ---
 {{APIRef("DOM")}}
 
-The **`Element.remove()`** method removes the element from the
-tree it belongs to.
+The **`Element.remove()`** method removes the element from the DOM.
 
 ## Syntax
 
