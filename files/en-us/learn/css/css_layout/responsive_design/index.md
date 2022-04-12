@@ -41,18 +41,19 @@ In the early days of web design, pages were built to target a particular screen 
 
 ## Historic website layouts
 
-At one point in history you had two options when designing a website:
+HTML is fundamentally responsive. If you create a web page containing text and resize the browser window, or display the page on a device with a smaller screen, then the browser will automatically reflow the text to fit the window.
 
-- You could create a _liquid_ site, which would stretch to fill the browser window
-- or a _fixed width_ site, which would be a fixed size in pixels.
+This is called a _liquid_ layout.
 
-These two approaches tended to result in a website that looked its best on the screen of the person designing the site! The liquid site resulted in a squashed design on smaller screens (as seen below) and unreadably long line lengths on larger ones.
+The problem with this layout, though, is that the site would look squashed on smaller screens (as seen below) and have unreadably long line lengths on larger ones.
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
 > **Note:** See this simple liquid layout: [example](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/liquid-width.html). When viewing the example, drag your browser window in and out to see how this looks at different sizes.
 
-The fixed-width site risked a horizontal scrollbar on screens smaller than the site width (as seen below), and lots of white space at the edges of the design on larger screens.
+The alternative is to create a _fixed width_ layout, which sets elements to a fixed size in pixels.
+
+The problem with this approach is that you will get a horizontal scrollbar on screens smaller than the site width (as seen below), and lots of white space at the edges of the design on larger screens.
 
 ![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
