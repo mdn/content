@@ -128,7 +128,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Toggles Reader mode for the specified tab.
 - {{WebExtAPIRef("tabs.update()")}}
   - : Navigate the tab to a new URL, or modify other properties of the tab.
-- {{WebExtAPIRef("tabs.warmup")}}
+- {{WebExtAPIRef("tabs.warmup()")}}
   - : Prepare the tab to make a potential following switch faster.
 
 ## Events
