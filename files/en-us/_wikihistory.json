@@ -60914,20 +60914,6 @@
       "Jürgen Jeka"
     ]
   },
-  "Web/API/NodeIterator/expandEntityReferences": {
-    "modified": "2020-10-15T21:14:44.441Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "abbycar",
-      "fscholz",
-      "afreen",
-      "Khodaidad_Basharmand",
-      "teoli",
-      "Sheppy",
-      "Jürgen Jeka"
-    ]
-  },
   "Web/API/NodeIterator/filter": {
     "modified": "2020-10-15T21:08:18.718Z",
     "contributors": [
@@ -76042,17 +76028,6 @@
   "Web/API/TreeWalker/currentNode": {
     "modified": "2020-10-15T21:24:46.020Z",
     "contributors": [
-      "fscholz",
-      "erikadoyle",
-      "teoli",
-      "afreen",
-      "Prachi_Dighe"
-    ]
-  },
-  "Web/API/TreeWalker/expandEntityReferences": {
-    "modified": "2020-10-15T21:24:20.427Z",
-    "contributors": [
-      "sideshowbarker",
       "fscholz",
       "erikadoyle",
       "teoli",
