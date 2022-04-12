@@ -81,11 +81,11 @@ Some browsers may resort to a text-only input element that validates that the re
 
 A {{domxref("DOMString")}} representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}}.
 
-You can set a default value for the input by including a date and time inside the {{htmlattrxref("value", "input")}} attribute, like so:
+You can set a default value for the input by including a date and time inside the {{htmlattrxref("defaultValue", "input")}} attribute, like so:
 
 ```html
 <label for="party">Enter a date and time for your party booking:</label>
-<input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+<input id="party" type="datetime-local" name="partydate" defaultValue="2017-06-01T08:30">
 ```
 
 {{ EmbedLiveSample('Value', 600, 60) }}
@@ -181,7 +181,7 @@ One thing the `datetime-local` input type doesn't provide is a way to set the ti
 For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden) input type. For example:
 
 ```html
-<input type="hidden" id="timezone" name="timezone" value="-08:00">
+<input type="hidden" id="timezone" name="timezone" defaultValue="-08:00">
 ```
 
 On the other hand, if you were required to allow the user to enter a time zone along with a date/time input, you could have a {{htmlelement("select")}} element to enable the user to set the right time zone by choosing a particular location from among a set of locations:
