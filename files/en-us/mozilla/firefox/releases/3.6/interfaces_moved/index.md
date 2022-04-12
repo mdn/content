@@ -42,7 +42,7 @@ The following interfaces moved from `dom/public/idl/core/` to `dom/interfaces/co
 | `nsIDOM3Node`        | `nsIDOM3Text`                 |
 | `nsIDOM3TypeInfo`    | `nsIDOMAttr`                  |
 | `nsIDOMCDATASection` | `nsIDOMCharacterData`         |
-| `nsIDOMComment`      | `xnsIDOMDOMConfigurationxx`   |
+| `nsIDOMComment`      | `nsIDOMDOMConfiguration`   |
 | `nsIDOMDOMError`     | `nsIDOMDOMErrorHandler`       |
 | `nsIDOMDOMException` | `nsIDOMDOMImplementation`     |
 | `nsIDOMDOMLocator`   | `nsIDOMDOMStringList`         |
