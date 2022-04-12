@@ -43,7 +43,7 @@ if ('index' in registration) {
 }
 ```
 
-From the {{domxref('ServiceWorker','service worker')}}:
+From the [service worker](/ja/docs/Web/API/ServiceWorker):
 
 ```js
 // service worker script
