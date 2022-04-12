@@ -12,7 +12,7 @@ tags:
   - periodicSync
 browser-compat: api.ServiceWorkerRegistration.periodicSync
 ---
-{{DefaultAPISidebar("Service Worker API")}}
+{{APIRef("Service Workers API")}}
 
 The **`periodicSync`** read-only property of
 the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
