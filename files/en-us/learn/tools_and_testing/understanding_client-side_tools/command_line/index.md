@@ -337,7 +337,7 @@ Before we dive into installing Prettier, there's a question to answer — "where
 
 With `npm` we have the choice of installing tools globally — so we can access them anywhere — or locally to the current project directory.
 
-There are pros and cons each way — and following lists of pros and cons for globally installing are far from exhaustive.
+There are pros and cons each way — and the following lists of pros and cons for globally installing are far from exhaustive.
 
 **Pros of installing globally:**
 
