@@ -21,7 +21,7 @@ creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 ## Syntax
 
 ```js
-var scriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
+createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
 ```
 
 ### Parameters
@@ -54,11 +54,11 @@ var scriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputCh
 > **Note:** It is invalid for both `numberOfInputChannels` and
 > `numberOfOutputChannels` to be zero.
 
-### Returns
+### Return value
 
 A {{domxref("ScriptProcessorNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of a `ScriptProcessorNode` to take a
 track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit

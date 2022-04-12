@@ -22,7 +22,7 @@ an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTDescriptor.writeValue(array[]).then(function() { /* ... */ })
+writeValue(array);
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ BluetoothRemoteGATTDescriptor.writeValue(array[]).then(function() { /* ... */ })
 - array
   - : Sets the value with the bytes contained in the array.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}}.
 

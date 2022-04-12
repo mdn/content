@@ -25,9 +25,8 @@ to `false`.
 ## Syntax
 
 ```js
-cache.delete(request, {options}).then(function(found) {
-  // your cache entry has been deleted if found
-});
+delete(request);
+delete(request, options);
 ```
 
 ### Parameters
@@ -52,7 +51,7 @@ cache.delete(request, {options}).then(function(found) {
     - `ignoreVary`: A boolean value that, when set to
       `true,` tells the matching operation not to perform `VARY`
       header matching.  In other words, if the URL matches you will get a match
-      regardless of  whether the {{domxref("Response")}} object has a `VARY`
+      regardless of whether the {{domxref("Response")}} object has a `VARY`
       header. It defaults to `false`.
     - `cacheName`: A {{domxref("DOMString")}} that represents a specific
       cache to search within. Note that this option is ignored by
