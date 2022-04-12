@@ -337,44 +337,21 @@ Before we dive into installing Prettier, there's a question to answer — "where
 
 With `npm` we have the choice of installing tools globally — so we can access them anywhere — or locally to the current project directory.
 
-There's pros and cons each way — and this list of pros and cons for globally installing is far from exhaustive:
+There are pros and cons each way — and the following lists of pros and cons for globally installing are far from exhaustive.
 
-<table class="standard-table no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Pros of installing globally</th>
-      <th scope="col">Cons of installing globally</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Accessible anywhere in your terminal</td>
-      <td>May not be compatible with your project's codebase</td>
-    </tr>
-    <tr>
-      <td>Only install once</td>
-      <td>
-        Other developers in your team won't have access to these tools, for example if you are sharing the codebase over a tool like git.
-      </td>
-    </tr>
-    <tr>
-      <td>Uses less disk space</td>
-      <td>
-        Related to the previous point, it makes project code harder to replicate (if you install your tools locally, they can be set up as dependencies and installed with <code>npm install</code>).
-      </td>
-    </tr>
-    <tr>
-      <td>Always the same version</td>
-      <td>
-        Global installation can fail with "permission denied" errors, particularly on Linux which is protective about process and user access to the file system.
-        Resolving these errors usually requires Linux expertise, or granting more permission than you might want to the global process (for example, using <code>sudo</code>).</td>
-    </tr>
-    <tr>
-      <td>Feels like any other unix command</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+**Pros of installing globally:**
+
+- Accessible anywhere in your terminal
+- Only install once
+- Uses less disk space
+- Always the same version
+- Feels like any other unix command
+
+**Cons of installing globally:**
+
+- May not be compatible with your project's codebase
+- Other developers in your team won't have access to these tools, for example if you are sharing the codebase over a tool like git.
+- Related to the previous point, it makes project code harder to replicate (if you install your tools locally, they can be set up as dependencies and installed with <code>npm install</code>).
 
 Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits.
 Here we'll install locally, but feel free to install globally once you understand the relative risks.
@@ -455,7 +432,7 @@ index.js
 Code style issues found in the above file(s). Forgot to run Prettier?
 ```
 
-So there's some code styles that can be fixed. No problem. Adding the `--write` option to the prettier command will fix those up, leaving us to focus on actually writing useful code.
+So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the prettier command will fix those up, leaving us to focus on actually writing useful code.
 
 Now try running this version of the command:
 
