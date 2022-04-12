@@ -41229,27 +41229,6 @@
       "JesseW"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2020-10-15T21:13:05.919Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "David263",
-      "connorshea",
-      "Sheppy",
-      "TimothyGu",
-      "Makyen",
-      "teoli",
-      "iamanupmenon"
-    ]
-  },
-  "Web/API/EventListener/handleEvent": {
-    "modified": "2020-10-15T21:59:25.141Z",
-    "contributors": [
-      "connorshea",
-      "Sheppy",
-      "TimothyGu"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2020-10-15T21:09:31.940Z",
     "contributors": [
