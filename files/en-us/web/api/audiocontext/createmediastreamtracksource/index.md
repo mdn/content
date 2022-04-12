@@ -33,7 +33,7 @@ first, lexicographically (alphabetically).
 ## Syntax
 
 ```js
-audioContext.createMediaStreamTrackSource(track);
+createMediaStreamTrackSource(track);
 ```
 
 ### Parameters

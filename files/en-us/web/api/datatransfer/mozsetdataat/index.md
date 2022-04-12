@@ -30,7 +30,7 @@ and the least specific format added last. If data of the given format already ex
 is replaced in the same position as the old data.
 
 The data should be either a {{domxref("DOMString","string")}}, a boolean value
-or number type (which will be converted into a string) or an {{ interface("nsISupports") }}.
+or number type (which will be converted into a string) or an `nsISupports`.
 
 > **Note:** This method is Firefox-specific.
 
@@ -46,7 +46,7 @@ void dataTransfer.mozSetDataAt([type], data, index);
   - : A {{domxref("DOMString","string")}} representing the type of the drag data to add to
     the {{domxref("DataTransfer","drag data object")}}.
 - _data_
-  - : A {{ interface("nsIVariant") }} representing the data to add to the
+  - : A `nsIVariant` representing the data to add to the
     {{domxref("DataTransfer","drag data object")}}.
 - _index_
   - : A `unsigned long` representing the index of the data to add.

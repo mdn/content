@@ -88,7 +88,7 @@ Highlights:
 - The non-standard {{domxref("DOMRequest")}} interface has now a {{domxref("DOMRequest.then()", "then()")}} method ({{bug(839838)}}).
 - The CSSOM View scroll behavior controlling methods, {{domxref("Element.scroll()")}}, {{domxref("Element.scrollTo()")}}, {{domxref("Element.scrollBy()")}}, and {{domxref("Element.scrollIntoView()")}}, have been implemented or extended ({{bug(1045754)}} and {{bug(1087559)}}).
 - Assigning to {{domxref("Element.innerHTML")}} on an {{domxref("SVGElement")}} now create elements in the SVG namespace ({{bug(886390)}}).
-- The [`nsIWebBrowserPersist.saveURI()`](</en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowserPersist#saveURI()>) method now requires 8 arguments, in an order incompatible with previous releases.
+- The `nsIWebBrowserPersist.saveURI()`>) method now requires 8 arguments, in an order incompatible with previous releases.
 - Support for Media Source Extensions (MSE) is activated by default in non-build releases (Nightly and Developer Edition only) ({{bug(1000686)}}). It keeps being preffed off on Beta and Release version.
 
 ### MathML
@@ -141,7 +141,7 @@ _No change._
 
 #### nsIContentPolicy
 
-New constants have been added to {{interface("nsIContentPolicy")}} to allow Gecko internals and add-on code to better differentiate different types of requests. These are:
+New constants have been added to `nsIContentPolicy` to allow Gecko internals and add-on code to better differentiate different types of requests. These are:
 
 - `TYPE_FETCH`
   - : Indicates a content load request initiated by the {{domxref("fetch()")}} method.

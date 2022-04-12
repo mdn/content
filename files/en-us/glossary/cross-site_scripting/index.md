@@ -1,5 +1,5 @@
 ---
-title: Cross-site scripting
+title: Cross-site scripting (XSS)
 slug: Glossary/Cross-site_scripting
 tags:
   - Cross Site Scripting

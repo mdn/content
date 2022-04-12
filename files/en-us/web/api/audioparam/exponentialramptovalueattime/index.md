@@ -26,7 +26,7 @@ _previous_ event, follows an exponential ramp to the new value given in the
 ## Syntax
 
 ```js
-var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime)
+exponentialRampToValueAtTime(value, endTime);
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime)
   - : A double representing the exact time (in seconds) after the ramping starts that the
     changing of the value will stop.
 
-### Returns
+### Return value
 
 A reference to this `AudioParam` object. In some browsers older
 implementations of this interface return {{jsxref('undefined')}}.

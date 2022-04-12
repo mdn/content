@@ -20,7 +20,7 @@ The **`Animation.reverse()`** method of the {{ domxref("Animation") }} Interface
 ## Syntax
 
 ```js
-animation.reverse();
+reverse();
 ```
 
 ### Parameters

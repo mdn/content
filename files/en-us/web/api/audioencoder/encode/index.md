@@ -16,7 +16,7 @@ The **`encode()`** method of the {{domxref("AudioEncoder")}} interface enqueues 
 ## Syntax
 
 ```js
-AudioEncoder.encode(data);
+encode(data);
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ AudioEncoder.encode(data);
 - `data`
   - : An {{domxref("AudioData")}} object.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 

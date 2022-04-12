@@ -91,7 +91,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ### XPCOM
 
-- [`nsISupports` proxies](/en-US/docs/nsISupports_proxies) are no longer supported. You should be using runnables instead; see [Making cross-thread calls using runnables](/en-US/docs/XPCOM/Making_cross-thread_calls_using_runnables).
+- `nsISupports` proxies are no longer supported. You should be using runnables instead.
 - Firefox 11 changed the behavior of [`Components.utils.getWeakReference()`](/en-US/docs/Components.utils.getWeakReference) to throw an exception when the object reference is null; the previous behavior of silently failing has been restored.
 
 ### XPConnect
@@ -100,15 +100,15 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ### Interface changes
 
-- The `nsIScreen_MOZILLA_2_0_BRANCH` interface has been merged into {{interface("nsIScreen")}}. The APIs defined in that interface (for controlling minimum screen brightness) had not previously been documented, but now they are.
-- The {{interface("nsIScriptError2")}} interface has been merged into {{interface("nsIScriptError")}}.
+- The `nsIScreen_MOZILLA_2_0_BRANCH` interface has been merged into `nsIScreen`. The APIs defined in that interface (for controlling minimum screen brightness) had not previously been documented, but now they are.
+- The `nsIScriptError2` interface has been merged into `nsIScriptError`.
 - {{ifmethod("nsIDownloadManager", "addDownload")}} is now handled asynchronously rather than synchronously.
 - The {{ifmethod("imgIContainerObserver", "frameChanged")}} method now receives as its first parameter an {{interface("imgIRequest")}} object identifying the corresponding request.
 - The {{ifmethod("nsIDOMWindowUtils", "sendTouchEvent")}} method has been added to allow synthesizing touch events.
 - You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.
 - The new {{ifattribute("nsIMemoryMultiReporter", "explicitNonHeap")}} attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" **and** are of the kind `KIND_NONHEAP`.
 - The {{ifattribute("nsIDOMWindowUtils", "paintingSuppressed")}} attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.
-- The `nsIDocCharset` and `nsIDocumentCharsetInfo` interfaces have been merged into {{interface("nsIDocShell")}}. As part of this work, the old `forcedDetector` attribute has been removed; it never did anything.
+- The `nsIDocCharset` and `nsIDocumentCharsetInfo` interfaces have been merged into `nsIDocShell`. As part of this work, the old `forcedDetector` attribute has been removed; it never did anything.
 
 ### SpiderMonkey
 

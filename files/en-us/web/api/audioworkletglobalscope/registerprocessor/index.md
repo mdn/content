@@ -1,5 +1,5 @@
 ---
-title: AudioWorkletGlobalScope.registerProcessor
+title: AudioWorkletGlobalScope.registerProcessor()
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
 tags:
   - API
@@ -20,7 +20,7 @@ from {{domxref("AudioWorkletProcessor")}} interface under a specified _name_.
 ## Syntax
 
 ```js
-AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
+registerProcessor(name, processorCtor);
 ```
 
 ### Parameters

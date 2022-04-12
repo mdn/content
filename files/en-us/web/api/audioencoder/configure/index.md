@@ -16,7 +16,7 @@ The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueu
 ## Syntax
 
 ```js
-AudioEncoder.configure(config)
+configure(config);
 ```
 
 ### Parameters
@@ -32,7 +32,7 @@ AudioEncoder.configure(config)
     - `bitrate`{{Optional_Inline}}
       - : An integer representing the bitrate.
 
-### Return Value
+### Return value
 
 None.
 

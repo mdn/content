@@ -226,13 +226,13 @@ There are a set of built-in APIs that are automatically loaded and made availabl
 
 These are used to share common variables and methods between templates:
 
-- `kuma.*` - [Kuma](https://github.com/mdn/kumascript/blob/master/src/api/kuma.js)
-- `MDN.*` - [MDN:Common](https://github.com/mdn/kumascript/blob/master/src/api/mdn.js)
-- `page.*` - [DekiScript:Page](https://github.com/mdn/kumascript/blob/master/src/api/page.js)
-- `string.*` - [DekiScript:String](https://github.com/mdn/kumascript/blob/master/src/api/string.js)
-- `uri.*` - [DekiScript:Uri](https://github.com/mdn/kumascript/blob/master/src/api/uri.js)
-- `web.*` - [DekiScript:Web](https://github.com/mdn/kumascript/blob/master/src/api/web.js)
-- `wiki.*` - [DekiScript:Wiki](https://github.com/mdn/kumascript/blob/master/src/api/wiki.js)
+- `kuma.*` - [Kuma](https://github.com/mdn/yari/blob/main/kumascript/src/api/kuma.js)
+- `MDN.*` - [MDN:Common](https://github.com/mdn/yari/blob/main/kumascript/src/api/mdn.js)
+- `page.*` - [DekiScript:Page](https://github.com/mdn/yari/blob/main/kumascript/src/api/page.js)
+- `string.*` - [DekiScript:String](https://github.com/mdn/yari/blob/main/kumascript/src/api/string.js)
+- `uri.*` - [DekiScript:Uri](https://github.com/mdn/yari/blob/main/kumascript/src/api/uri.js)
+- `web.*` - [DekiScript:Web](https://github.com/mdn/yari/blob/main/kumascript/src/api/web.js)
+- `wiki.*` - [DekiScript:Wiki](https://github.com/mdn/yari/blob/main/kumascript/src/api/wiki.js)
 
 Other available APIs include:
 

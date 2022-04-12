@@ -34,7 +34,7 @@ mozTypesAt(index);
 
 ### Return value
 
-- {{interface("nsIVariant")}}
+- `nsIVariant`
   - : A list of data formats (which are {{domxref("DOMString","strings")}}). If the index
     is not in the range from 0 to the number of items minus one, an empty string list is
     returned.

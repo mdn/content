@@ -20,7 +20,7 @@ envelopes.
 ## Syntax
 
 ```js
-var paramRef = param.setTargetAtTime(target, startTime, timeConstant);
+setTargetAtTime(target, startTime, timeConstant);
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ var paramRef = param.setTargetAtTime(target, startTime, timeConstant);
   - : The time-constant value, given in seconds, of an exponential approach to the target
     value. The larger this value is, the slower the transition will be.
 
-### Returns
+### Return value
 
 A reference to this `AudioParam` object. Some older browser implementations
 of this interface return {{jsxref('undefined')}}.

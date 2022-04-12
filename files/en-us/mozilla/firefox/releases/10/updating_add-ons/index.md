@@ -46,17 +46,17 @@ The most significant change is that everywhere that previously used the [`PRBool
 
 The following interfaces have been removed:
 
-- {{ interface("nsIDOMNSHTMLFrameElement") }}
-  - : This interface has been merged into the {{ interface("nsIDOMHTMLFrameElement") }} interface.
-- {{ interface("nsIDOMNSHTMLElement") }}
-  - : This interface has been merged into {{ interface("nsIDOMHTMLElement") }}.
-- {{ interface("nsIDocumentViewer") }}
-  - : This interface has been merged into {{ interface("nsIContentViewer") }}
+- `nsIDOMNSHTMLFrameElement`
+  - : This interface has been merged into the `nsIDOMHTMLFrameElement` interface.
+- `nsIDOMNSHTMLElement`
+  - : This interface has been merged into `nsIDOMHTMLElement`.
+- `nsIDocumentViewer`
+  - : This interface has been merged into `nsIContentViewer`
 
 ### Other interface changes
 
-- `nsNavHistory` no longer implements the {{ interface("nsICharsetResolver") }} interface. **Note that {{ interface("nsICharsetResolver") }} is no longer used and is being removed in Gecko 11.0 {{ geckoRelease("11.0") }}**.
-- The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to let restartless add-ons add dictionaries to the spell checker. See [Using an external spell checker](/en-US/Using_an_External_Spell-checker) for details (note this article has not yet been updated, but will be soon).
+- `nsNavHistory` no longer implements the `nsICharsetResolver` interface. **Note that `nsICharsetResolver` is no longer used and is being removed in Gecko 11.0 {{ geckoRelease("11.0") }}**.
+- The {{ interface("mozISpellCheckingEngine") }} and `nsIEditorSpellCheck` interfaces have been updated to let restartless add-ons add dictionaries to the spell checker. See [Using an external spell checker](/en-US/Using_an_External_Spell-checker) for details (note this article has not yet been updated, but will be soon).
 - The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed, as it hasn't been supported for some time.
 - Several [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) internal interfaces have changed to support revised APIs. This shouldn't affect you but is worth noting on the off chance you were doing something unusual.
 

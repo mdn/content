@@ -191,7 +191,7 @@ New APIs:
 
 ### Interfaces
 
-- `nsIDroppedLinkHandler.dropLinks` method and [nsIDroppedLinkItem](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDroppedLinkItem) interface have been added to handle dropping multiple items ({{bug(92737)}}).
+- `nsIDroppedLinkHandler.dropLinks` method and `nsIDroppedLinkItem` interface have been added to handle dropping multiple items ({{bug(92737)}}).
 
 ### XUL
 
