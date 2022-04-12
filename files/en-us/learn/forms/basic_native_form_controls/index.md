@@ -58,7 +58,7 @@ All basic text controls share some common behaviors:
 - They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
 - They can benefit from spell checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute), if the browser supports it.
 
-> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#attr-type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
+> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
 ### Single line text fields
 
@@ -110,7 +110,7 @@ Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLEl
 
 Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable item: the check box and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute to indicate whether the widget is checked by default or not.
 
-It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#attr-name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
+It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
 > **Note:** You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
@@ -118,13 +118,13 @@ For maximum usability/accessibility, you are advised to surround each list of re
 
 ### Check box
 
-A check box is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Element/input#attr-type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
+A check box is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked>
 ```
 
-Related checkbox items should use the same {{htmlattrxref("name","input")}} attribute. Including the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
+Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute. Including the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
 
 ```html
 <fieldset>
@@ -348,14 +348,14 @@ Many of the elements used to define form controls have some of their own specifi
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-name">name</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#name">name</a></code>
       </td>
       <td></td>
       <td>The name of the element; this is submitted with the form data.</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#value">value</a></code>
       </td>
       <td></td>
       <td>The element's initial value.</td>
