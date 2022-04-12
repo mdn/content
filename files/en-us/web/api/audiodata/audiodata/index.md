@@ -31,7 +31,7 @@ new AudioData(init);
         - "u8-planar"
         - "s16-planar"
         - "s32-planar"
-        - "f32-planer"
+        - "f32-planar"
     - `sampleRate`
       - : A decimal containing the sample rate in Hz.
     - `numberOfFrames`
