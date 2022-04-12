@@ -40,7 +40,7 @@ happens.
 ## Syntax
 
 ```js
-var seekCompletePromise = HTMLMediaElement.seekToNextFrame();
+let seekCompletePromise = HTMLMediaElement.seekToNextFrame();
 
 HTMLMediaElement.seekToNextFrame();
 ```
