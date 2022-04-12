@@ -43,7 +43,7 @@ if ('periodicSync' in registration) {
 }
 ```
 
-From the {{domxref('Service Worker API','service worker')}}:
+From the [service worker](/en-US/docs/Web/API/Service_Worker_API):
 
 ```js
 // service worker script
