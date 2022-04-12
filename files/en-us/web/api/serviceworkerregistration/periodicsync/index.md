@@ -21,7 +21,7 @@ run at specific intervals.
 
 ## Value
 
-A PeriodicSyncManager {{jsxref('Object')}}.
+A {{domxref('PeriodicSyncManager')}} object.
 
 ## Examples
 
