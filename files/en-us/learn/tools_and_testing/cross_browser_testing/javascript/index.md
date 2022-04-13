@@ -181,7 +181,7 @@ To summarize, anytime something is not working and a value does not appear to be
 
 #### Using the JavaScript debugger
 
-Unfortunately, we still have the same error — the problem has not gone away. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](/en-US/docs/Tools/Debugger) as it is called in Firefox.
+Unfortunately, we still have the same error — the problem has not gone away. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) as it is called in Firefox.
 
 > **Note:** Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
 
@@ -212,7 +212,7 @@ We can find out some very useful information in here.
 
 We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/en-US/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/en-US/docs/Learn/JavaScript/Objects/JSON#converting_between_objects_and_text) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
 
-> **Note:** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](/en-US/docs/Tools/Debugger) page.
+> **Note:** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) page.
 
 ### Performance issues
 

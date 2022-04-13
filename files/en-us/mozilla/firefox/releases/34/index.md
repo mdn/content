@@ -15,9 +15,9 @@ Firefox 34 was released on December 1st, 2014. This article lists key changes th
 
 Highlights:
 
-- [Storage Inspector: a new tool enabling you to view data stored by web pages](/en-US/docs/Tools/Storage_Inspector)
-- [Performance tool: revamped Profiler UI and frame rate timeline](/en-US/docs/Tools/Performance)
-- [Frame switching: point the developer tools at a specific iframe in the page](/en-US/docs/Tools/Working_with_iframes)
+- [Storage Inspector: a new tool enabling you to view data stored by web pages](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
+- [Performance tool: revamped Profiler UI and frame rate timeline](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
+- [Frame switching: point the developer tools at a specific iframe in the page](https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html)
 - [console.table support](/en-US/docs/Web/API/console/table)
 - [jQuery events are visible in the Page Inspector](/en-US/docs/Tools/Page_Inspector#examining_event_listeners)
 

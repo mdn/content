@@ -33,7 +33,7 @@ ARIA annotation roles and objects are currently exposed in:
 - Firefox from version 75 onwards, on Windows and Linux (on macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.)
 - Chrome from version 81 onwards, currently behind the `#enable-accessibility-expose-aria-annotations` flag (go to `chrome://flags` to enable this.)
 
-Unfortunately, you won't be able to use any of these yet, as screenreader support is currently not there. For the moment, you can see the annotations data being exposed with tools like [Firefox Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector). The annotations should just work once screenreader support is added.
+Unfortunately, you won't be able to use any of these yet, as screenreader support is currently not there. For the moment, you can see the annotations data being exposed with tools like [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html). The annotations should just work once screenreader support is added.
 
 ## Associating annotated elements with their details
 

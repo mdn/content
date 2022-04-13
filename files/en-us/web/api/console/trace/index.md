@@ -18,7 +18,7 @@ browser-compat: api.console.trace
 {{APIRef("Console API")}}
 
 The **`console.trace()`** method outputs a stack trace to the
-[Web console](/en-US/docs/Tools/Web_Console).
+[Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 {{AvailableInWorkers}}
 

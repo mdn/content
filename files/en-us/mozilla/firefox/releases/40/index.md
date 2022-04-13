@@ -17,7 +17,7 @@ Highlights:
 
 - [Improvements to the Animations view](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_40)
 - [Get help from MDN for CSS property syntax](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#get_help_for_css_properties)
-- [Edit filters in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters)
+- [Edit filters in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html)
 - [Web Console now shows messages from workers](/en-US/docs/Tools/Web_Console#console_api_messages)
 - [Filter requests by URL in the Network Monitor](/en-US/docs/Tools/Network_Monitor#filtering_by_url)
 - [Many new context menu options in the Network Monitor](/en-US/docs/Tools/Network_Monitor#context_menu)
@@ -26,13 +26,13 @@ Highlights:
 
 More:
 
-- [Break at debugger; statements in unnamed eval sources](/en-US/docs/Tools/Debugger/How_to/Debug_eval_sources)
+- [Break at debugger; statements in unnamed eval sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html)
 - [Copy URL/Open in New Tab context menu items for Debugger source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane)
 - [console.dirxml support in the Web Console](/en-US/docs/Tools/Web_Console#log_messages)
 - [Style Editor: "Open Link In New Tab" item added to stylesheet list](/en-US/docs/Tools/Style_Editor#the_style_sheet_pane)
 - [Inspector selector search now includes class/id results even without css prefix](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#searching)
 - [Tooltips in box-model view saying which CSS rule caused the value](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#the_box_model_view)
-- [Switch between color unit format in the Inspector using Shift+click](/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors)
+- [Switch between color unit format in the Inspector using Shift+click](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/inspect_and_select_colors/index.html)
 - [Implement "Scroll Into View" menu item for the Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
 - [Linkify url/id/resource attributes in the Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
 - [IP address tooltip in the Network Monitor](/en-US/docs/Tools/Network_Monitor#network_request_fields)

@@ -14,7 +14,7 @@ tags:
 
 Highlights:
 
-- [Eyedropper tool to select colors in web pages](/en-US/docs/Tools/Eyedropper)
+- [Eyedropper tool to select colors in web pages](https://firefox-source-docs.mozilla.org/devtools-user/eyedropper/index.html)
 - [full stack traces for console error messages](/en-US/docs/Tools/Web_Console#error_messages)
 - [editable Box Model View](/en-US/docs/Tools/Page_Inspector#box_model_view)
 - [%c formatting to style console messages](/en-US/docs/Tools/Web_Console#styling_messages)

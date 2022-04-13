@@ -324,7 +324,7 @@ For an overview of the changes implemented in JavaScript 1.8.5, see [New in Java
 
 ### Developer tools
 
-- [Using the Web Console](/en-US/docs/Tools/Web_Console)
+- [Using the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
   - : The Web Console tool is a useful debugging aid for web developers and extension developers alike.
 
 > **Note:**The Error Console is disabled by default starting in {{Gecko("2.0")}}. You can re-enable it by changing the `devtools.errorconsole.enabled` preference to `true` and restarting the browser.

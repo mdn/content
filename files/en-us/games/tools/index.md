@@ -24,5 +24,5 @@ On this page you can find links to our game development tools articles, which ev
   - : How does this differ from normal web app debugging? What specialist tools are available? A lot of this is going to be covered by Will in [tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), but here we should provide a kind of practical toolchain tutorial for debugging games, with links to Will's stuff:
 
     - Basic tools overview
-    - [Shader editor](/en-US/docs/Tools/Shader_Editor)
+    - [Shader editor](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Performance tools (still in production, estimated early 2014)

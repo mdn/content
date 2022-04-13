@@ -26,12 +26,12 @@ This article provides information about the changes in Firefox 76 that will affe
 
 - In the network request list, you can now double-click a column divider to resize the column to the left of it to fit its contents ({{bug(1615102)}}).
 - The network request _Copy > [Copy as cURL](/en-US/docs/Tools/Network_Monitor/request_list#copy_as_curl)_ context menu option has a new option available, `--globoff`, which suppresses cURL's globbing (wildcard matching) feature if the copied URL includes square bracket characters ({{bug(1549773)}}).
-- The _Messages_ tab of the details pane for [web socket requests](/en-US/docs/Tools/Network_Monitor/Inspecting_web_sockets) has a new filter — _Control_ — for showing control frames, and the filters are now grouped together into a selection lst ({{bug(1566780)}}).
+- The _Messages_ tab of the details pane for [web socket requests](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_web_sockets/index.html) has a new filter — _Control_ — for showing control frames, and the filters are now grouped together into a selection lst ({{bug(1566780)}}).
 
 #### Web console
 
 - In [multi-line mode](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode), code snippets longer than five lines are abbreviated to five lines, preceded by a disclosure triangle (or "twistie"), and followed by an ellipsis (…). You can click anywhere in this area to show the code, and click again in that area to collapse it ({{bug(1578212)}}).
-- DOM element references outputted into the console now have a "Reveal in inspector" context menu option, which shows the element in the HTML pane of the [Page inspector](/en-US/docs/Tools/Page_Inspector) ({{bug(1612276)}}).
+- DOM element references outputted into the console now have a "Reveal in inspector" context menu option, which shows the element in the HTML pane of the [Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) ({{bug(1612276)}}).
 
 #### Remote debugging
 

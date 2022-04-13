@@ -38,7 +38,7 @@ tags:
 
 - [The Web Console now understands source maps.](/en-US/docs/Tools/Web_Console/Console_messages#source_maps)
 - [The Storage Inspector now lets you delete individual items from IndexedDB object stores.](/en-US/docs/Tools/Storage_Inspector#indexeddb)
-- [The Memory tool is enabled by default.](/en-US/docs/Tools/Memory)
+- [The Memory tool is enabled by default.](https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html)
 - [The Box model view is moved into the Computed view.](/en-US/docs/Tools/Page_Inspector/UI_Tour#computed_view)
 - [The Web Console now displays stack traces for XHR or Fetch() network requests.](/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details)
 

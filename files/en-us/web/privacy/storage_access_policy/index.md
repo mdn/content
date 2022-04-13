@@ -129,7 +129,7 @@ We encourage site owners to test their sites, particularly those that rely on th
 
 ### Developer Tools notifications
 
-The [Network Monitor](/en-US/docs/Tools/Network_Monitor) in Firefox Developer Tools now includes an indicator for all resource requests that have been classified as tracking resources. This indicator is shown as a shield icon in the domain column. In the sample image below, `trackertest.org` is classified as a tracking resource, while the request to example.com is not.
+The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) in Firefox Developer Tools now includes an indicator for all resource requests that have been classified as tracking resources. This indicator is shown as a shield icon in the domain column. In the sample image below, `trackertest.org` is classified as a tracking resource, while the request to example.com is not.
 
 ![network requests in Firefox devtools indicating which ones are tracking resources with a small shield icon](screen_shot_2018-09-21_at_10.34.22_am.png)
 

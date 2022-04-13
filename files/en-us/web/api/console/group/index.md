@@ -13,7 +13,7 @@ browser-compat: api.console.group
 {{APIRef("Console API")}}
 
 The **`console.group()`** method creates a new inline group in the [Web
-console](/en-US/docs/Tools/Web_Console) log, causing any subsequent console messages to be indented by an additional level,
+console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) log, causing any subsequent console messages to be indented by an additional level,
 until {{domxref("console.groupEnd()")}} is called.
 
 {{AvailableInWorkers}}

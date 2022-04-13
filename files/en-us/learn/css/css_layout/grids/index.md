@@ -600,7 +600,7 @@ aside {
 
 {{ EmbedLiveSample('Grid frameworks in CSS Grid', '100%', 600) }}
 
-If you use the [Firefox Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) to overlay the grid lines on your design, you can see how our 12-column grid works.
+If you use the [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) to overlay the grid lines on your design, you can see how our 12-column grid works.
 
 ![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 
@@ -615,7 +615,7 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 ## See also
 
 - [CSS Grid guides](/en-US/docs/Web/CSS/CSS_Grid_Layout#guides)
-- [CSS Grid Inspector: Examine grid layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [CSS Grid Inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 

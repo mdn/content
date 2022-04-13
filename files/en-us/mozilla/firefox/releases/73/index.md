@@ -48,7 +48,7 @@ _No changes._
 
 #### DOM
 
-- The {{domxref("Window.innerWidth", "innerWidth")}} and {{domxref("Window.innerHeight", "innerHeight")}} properties on {{domxref("Window")}} objects have been updated to return the width and height of the layout viewport in all situations, rather than sometimes being based on the visual viewport. In particular, previously when using [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode), these returned the visual viewport dimensions, causing the behavior to vary from what was expected ({{bug(1514429)}}).
+- The {{domxref("Window.innerWidth", "innerWidth")}} and {{domxref("Window.innerHeight", "innerHeight")}} properties on {{domxref("Window")}} objects have been updated to return the width and height of the layout viewport in all situations, rather than sometimes being based on the visual viewport. In particular, previously when using [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), these returned the visual viewport dimensions, causing the behavior to vary from what was expected ({{bug(1514429)}}).
 
 #### WebVR
 

@@ -412,7 +412,7 @@ As an added bonus, in most browsers associating a label with a form input means 
 
 > **Note:** You can see some good and bad form examples in [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) and [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
 
-You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the [Firefox Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector), in the following video:
+You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), in the following video:
 
 {{EmbedYouTube("YhlAVlfH0rQ")}}
 

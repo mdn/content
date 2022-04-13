@@ -25,7 +25,7 @@ tags:
   - Accessibility labels have been added to unlabeled controls ({{bug(1242715)}}).
   - Added proper tree view semantics and keyboard navigation to the Inspector's markup view ({{bug(1242694)}}).
 
-- The [Network Monitor](/en-US/docs/Tools/Network_Monitor) now shows a Cause column, which provides an indication of what caused each particular network request ({{bug(1134073)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now shows a Cause column, which provides an indication of what caused each particular network request ({{bug(1134073)}}).
 - In the _about:debugging_ Add-ons page, the Reload button is only enabled for temporary add-ons. It will be disabled for all other add-ons ({{bug(1273184)}}).
 - In the _about:debugging_ Workers page, a warning message will be displayed in the Service Workers section if [service workers are incompatible](/en-US/docs/Tools/about:debugging#service_workers_not_compatible) with the current browser configuration ({{bug(1266415)}}).
 - _about:debugging_ now has a [new Tabs page](/en-US/docs/Tools/about:debugging#tabs) available, which provides a complete list of all the debuggable tabs open in the current Firefox instance ({{bug(1266128)}}).
