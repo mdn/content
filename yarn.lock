@@ -62,20 +62,20 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.1.15":
-  version "4.1.15"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.15.tgz#79ea28eecbf4e32a9e7ffdbfe8ea68de539b022f"
-  integrity sha512-OZx2PxHtJDc9NOHGR3T0ZtX1WYl5qH/xmiH3sKSmcd3o+vPMG1kVUYbZrMxH3fVKpkkkrQpwETCIDRXcMXAWTw==
+"@mdn/browser-compat-data@4.1.16":
+  version "4.1.16"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.16.tgz#10c53a148d1985704cb9c507f4d4f5923c6c4307"
+  integrity sha512-bqXpkAfQgSD1jUNnn+kKtaHDDMPFz2kij4C71euV4fBv+YCmzkB8TKIoSuUHEdjkE0s55WoQ2OZk/ullmbiUOA==
 
-"@mdn/yari@0.10.18":
-  version "0.10.18"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.10.18.tgz#79ab1c06797f2893d0b688c8b791fe69ec6ca4b5"
-  integrity sha512-XY3B/T/gS8x3PMUXseXPkCWC1MnJgLwqUWYDps5JyY967ErlYPv+8uuI26fEGLbPd3qjPAj3n06o8ZXqtoEsPg==
+"@mdn/yari@0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.11.0.tgz#2fd2f7c6b59dd01a36663dbe428b110c730699dc"
+  integrity sha512-VhpCwn5kpeASR2YZczzc4FHVG+xCfDzAM2VtwjO+2+U95lQ1hgZTzA/tIn7OqlfuWaMEMtmy4queFrNR5qlzkw==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.1.15"
+    "@mdn/browser-compat-data" "4.1.16"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
     browser-specs "^3.6.1"
@@ -83,7 +83,7 @@
     cheerio "1.0.0-rc.10"
     cli-progress "^3.10.0"
     compression "1.7.4"
-    cookie "0.4.1"
+    cookie "0.5.0"
     cookie-parser "1.4.6"
     cssesc "^3.0.0"
     dayjs "1.11.0"
@@ -1006,6 +1006,11 @@ cookie@0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.2.tgz#0e41f24de5ecf317947c82fc789e06a884824432"
   integrity sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==
+
+cookie@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
+  integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
 core-util-is@~1.0.0:
   version "1.0.2"
