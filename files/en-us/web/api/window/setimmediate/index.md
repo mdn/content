@@ -58,7 +58,7 @@ The feature can be emulated in a few different ways:
   spec](https://html.spec.whatwg.org/multipage/webappapis.html#timers), it does not make for a suitable polyfill for the natural immediacy of
   `setImmediate`.
 
-All of these techniques are incorporated into a [robust setImmediate polyfill](https://github.com/NobleJS/setImmediate).
+All of these techniques are incorporated into a [robust setImmediate polyfill](https://github.com/YuzuJS/setImmediate).
 
 ## Specifications
 

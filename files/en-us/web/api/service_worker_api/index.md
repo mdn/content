@@ -77,7 +77,7 @@ Service workers are also intended to be used for such things as:
 
 In the future, service workers will be able to do a number of other useful things for the web platform that will bring it closer towards native app viability. Interestingly, other specifications can and will start to make use of the service worker context, for example:
 
-- [Background synchronization](https://github.com/slightlyoff/BackgroundSync): Start up a service worker even when no users are at the site, so caches can be updated, etc.
+- [Background synchronization](https://github.com/WICG/background-sync): Start up a service worker even when no users are at the site, so caches can be updated, etc.
 - [Reacting to push messages](/en-US/docs/Web/API/Push_API): Start up a service worker to send users a message to tell them new content is available.
 - Reacting to a particular time & date.
 - Entering a geo-fence.
@@ -131,7 +131,7 @@ In the future, service workers will be able to do a number of other useful thing
 
 ## See also
 
-- [ServiceWorker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

@@ -19,7 +19,7 @@ tags:
 
 This article explores how to take data within a [WebGL](/en-US/docs/Web/API/WebGL_API) project, and project it into the proper spaces to display it on the screen. It assumes a knowledge of basic matrix math using translation, scale, and rotation matrices. It explains the three core matrices that are typically used when composing a 3D scene: the model, view and projection matrices.
 
-> **Note:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
+> **Note:** This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under the `MDN` global object.
 
 ## The model, view, and projection matrices
 
@@ -120,7 +120,7 @@ WebGLBox.prototype.draw = function(settings) {
 }
 ```
 
-The shaders are the bits of code written in GLSL that take our data points and ultimately render them to the screen. For convenience, these shaders are stored in a {{htmlelement("script")}} element that is brought into the program through the custom function `MDN.createWebGLProgramFromIds()`. This function is part of a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) written for these tutorials and is not explained in depth here. This function handles the basics of taking some GLSL source code and compiling it into a WebGL program. The function takes three parameters — the context to render the program in, the ID of the {{htmlelement("script")}} element containing the vertex shader, and the ID of the {{htmlelement("script")}} element containing the fragment shader. The vertex shader positions the vertices, and the fragment shader colors each pixel.
+The shaders are the bits of code written in GLSL that take our data points and ultimately render them to the screen. For convenience, these shaders are stored in a {{htmlelement("script")}} element that is brought into the program through the custom function `MDN.createWebGLProgramFromIds()`. This function is part of a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) written for these tutorials and is not explained in depth here. This function handles the basics of taking some GLSL source code and compiling it into a WebGL program. The function takes three parameters — the context to render the program in, the ID of the {{htmlelement("script")}} element containing the vertex shader, and the ID of the {{htmlelement("script")}} element containing the fragment shader. The vertex shader positions the vertices, and the fragment shader colors each pixel.
 
 First take a look at the vertex shader that will move the vertices on the screen:
 
@@ -343,7 +343,7 @@ Finally a single model matrix is computed and set. This matrix represents the tr
 
 In this case, for every frame of the animation a series of scale, rotation, and translation matrices move the data into the desired spot in clip space. The cube is the size of clip space (-1,-1,-1) to (1,1,1) so it will need to be shrunk down in order to not fill the entirety of clip space. This matrix is sent directly to the shader, having been multiplied in JavaScript beforehand.
 
-The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/TatumCreative/mdn-webgl) shared code. The new function looks like this:
+The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/gregtatum/mdn-webgl) shared code. The new function looks like this:
 
 ```js
 CubeDemo.prototype.computeModelMatrix = function(now) {

@@ -58,7 +58,7 @@ tags:
       <td><strong>Language</strong></td>
       <td>
         <a href="/en-US/docs/Web/JavaScript">JavaScript</a> (or C/C++ using
-        <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> to
+        <a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten</a> to
         compile to JavaScript)
       </td>
     </tr>
