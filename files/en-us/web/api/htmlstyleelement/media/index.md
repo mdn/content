@@ -15,19 +15,11 @@ browser-compat: api.HTMLStyleElement.media
 The **`HTMLStyleElement.media`** property specifies the
 intended destination medium for style information.
 
-## Syntax
+## Value
 
-```js
-medium = style.media
-style.media = medium
-```
+A string describing a single medium or a comma-separated list.
 
-### Parameters
-
-- `medium` is a string describing a single medium or a comma-separated
-  list.
-
-## Example
+## Examples
 
 ```html
 <!doctype html>

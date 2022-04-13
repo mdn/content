@@ -207,7 +207,7 @@ Once the main thread is done painting the page, you would think we would be "all
 
 In our example, maybe the image loaded quickly, but perhaps the `anotherscript.js` file was 2MB and our user's network connection was slow.  In this case the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:
 
-![The main thread is occupied by the downloading, parsing and execution of a  javascript file - over a fast connection](visa_network.png)
+![The main thread is occupied by the downloading, parsing and execution of a  JavaScript file - over a fast connection](visa_network.png)
 
 In this example, the DOM content load process took over 1.5 seconds, and the main thread was fully occupied that entire time, unresponsive to click events or screen taps.
 

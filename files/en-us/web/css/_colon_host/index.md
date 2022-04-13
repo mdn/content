@@ -78,5 +78,5 @@ The `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` rule styles all i
 ## See also
 
 - [Web components](/en-US/docs/Web/Web_Components)
-- {{cssxref(":host", ":host()")}}
+- {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}

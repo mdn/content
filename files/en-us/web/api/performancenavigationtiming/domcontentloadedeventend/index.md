@@ -15,19 +15,13 @@ The **`domContentLoadedEventEnd`** read-only property returns a
 time immediately after the current document's [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
 event completes.
 
-## Syntax
-
-```js
-perfEntry.domContentLoadedEventEnd;
-```
-
-### Return Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
 the time immediately after the current document's [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
 event completes.
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

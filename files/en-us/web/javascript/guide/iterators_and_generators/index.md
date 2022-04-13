@@ -43,7 +43,7 @@ function makeRangeIterator(start = 0, end = Infinity, step = 1) {
     let iterationCount = 0;
 
     const rangeIterator = {
-       next: function() {
+       next() {
            let result;
            if (nextIndex < end) {
                result = { value: nextIndex, done: false }

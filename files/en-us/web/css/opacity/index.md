@@ -25,6 +25,7 @@ opacity: 90%
 opacity: inherit;
 opacity: initial;
 opacity: revert;
+opacity: revert-layer;
 opacity: unset;
 ```
 

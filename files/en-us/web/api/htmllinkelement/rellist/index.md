@@ -22,13 +22,11 @@ The property itself is read-only, meaning you can substitute the
 {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
 changed.
 
-## Syntax
+## Value
 
-```js
-var relstr = linkElt.relList;
-```
+A live {{domxref("DOMTokenList")}}.
 
-## Example
+## Examples
 
 ```js
 var links = document.getElementsByTagName("link");

@@ -49,6 +49,7 @@ align-self: unsafe center;
 align-self: inherit;
 align-self: initial;
 align-self: revert;
+align-self: revert-layer;
 align-self: unset;
 ```
 

@@ -19,7 +19,7 @@ the samples to the specified channel of the `AudioBuffer`, from the source array
 ## Syntax
 
 ```js
-myArrayBuffer.copyToChannel(source, channelNumber, startInChannel);
+copyToChannel(source, channelNumber, startInChannel);
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ myArrayBuffer.copyToChannel(source, channelNumber, startInChannel);
   - : An optional offset to copy the data to. If _startInChannel_ is greater than
     {{domxref("AudioBuffer.length")}}, an `INDEX_SIZE_ERR` will be thrown.
 
-## Example
+## Examples
 
 ```js
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);

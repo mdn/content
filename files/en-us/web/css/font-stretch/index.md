@@ -38,6 +38,7 @@ font-stretch: 200%;
 font-stretch: inherit;
 font-stretch: initial;
 font-stretch: revert;
+font-stretch: revert-layer;
 font-stretch: unset;
 ```
 

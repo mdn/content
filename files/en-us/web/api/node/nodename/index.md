@@ -40,7 +40,7 @@ A string. Values for the different types of nodes are:
 This example displays the node names of several nodes
 
 ```html
-This is some html:
+This is some HTML:
 <div id="d1">Hello world</div>
 <!-- Example of comment -->
 Text <span>Text</span>

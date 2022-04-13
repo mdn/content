@@ -38,7 +38,7 @@ nsIVariant dataTransfer.mozGetDataAt([type], index);
 
 ### Return value
 
-- {{interface("nsIVariant")}}
+- `nsIVariant`
   - : The data item requested. If the specified item does not exist, `null` is
     returned.
 

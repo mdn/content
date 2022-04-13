@@ -16,18 +16,12 @@ The **`HTMLInputElement.labels`** read-only property returns a
 {{HTMLElement("input")}} element, if the element is not hidden. If the element has the
 type `hidden`, the property returns `null`.
 
-## Syntax
-
-```js
-var labelElements = input.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<input>` element.
 
-## Example
+## Examples
 
 ### HTML
 

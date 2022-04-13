@@ -11,7 +11,7 @@ tags:
   - queueMicrotask
   - runtime
 ---
-{{APIRef("HTML DOM")}}{{Draft("This page is very much a work in progress; it contains technical details that may be useful while considering using—and while using—microtasks, but it is not absolutely necessary for most people to know. Additionally, there may be errors here as this draft is just that rough. ~~Sheppy")}}
+{{APIRef("HTML DOM")}}
 
 When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand. That's what this section covers
 

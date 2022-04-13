@@ -54,6 +54,7 @@ display: list-item;
 display: inherit;
 display: initial;
 display: revert;
+display: revert-layer;
 display: unset;
 ```
 

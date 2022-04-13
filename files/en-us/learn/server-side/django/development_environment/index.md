@@ -25,7 +25,7 @@ Now that you know what Django is for, we'll show you how to set up and test a Dj
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To have a development environment for Django (3.*) running on your computer.
+        To have a development environment for Django (4.*) running on your computer.
       </td>
     </tr>
   </tbody>
@@ -58,13 +58,15 @@ Each of these options requires a slightly different configuration and setup. The
 
 #### What operating systems are supported?
 
-Django web applications can be run on almost any machine that can run the Python 3 programming language: Windows, macOS, Linux/Unix, Solaris, to name just a few. Almost any computer should have the necessary performance to run Django during development.
+Django web applications can be run on almost any machine that can run the Python 3 programming language: Windows, macOS, Linux/Unix, Solaris, to name just a few.
+Almost any computer should have the necessary performance to run Django during development.
 
 In this article, we'll provide instructions for Windows, macOS, and Linux/Unix.
 
 #### What version of Python should be used?
 
-You can use any Python version supported by your target Django release. For Django 3.1.2 the allowed versions are Python 3.6 to 3.8 (see [FAQ:Installation](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django)).
+You can use any Python version supported by your target Django release.
+For Django 4.0.2 the allowed versions are Python 3.8 to 3.10 (see [FAQ:Installation](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django)).
 
 The Django project _recommends_ (and "officially supports") using the newest available supported Python release.
 
@@ -80,7 +82,7 @@ This article shows how to install Django from PyPi, in order to get the latest s
 
 #### Which database?
 
-Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/3.1/ref/databases/) that are better to avoid).
+Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/4.0/ref/databases/) that are better to avoid).
 
 For this article (and most of this module) we will be using the _SQLite_ database, which stores its data in a file. SQLite is intended for use as a lightweight database and can't support a high level of concurrency. It is, however, an excellent choice for applications that are primarily read-only.
 
@@ -123,6 +125,10 @@ You can install _pip3_ in the bash terminal using:
 sudo apt install python3-pip
 ```
 
+> **Note:** Python 3.8 is the oldest version [supported by Django 4.0](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django).
+> While Django recommend you update to the latest version, you don't _need_ to use the latest version for this tutorial.
+> If you want to update Python, then there are instructions on the Internet.
+
 ### macOS
 
 macOS "El Capitan" and other more recent versions do not include Python 3. You can confirm this by running the following commands in the zsh or bash terminal:
@@ -137,8 +143,8 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 1. Download the required installer:
 
     1. Go to <https://www.python.org/downloads/macos/>
-    2. Download the most recent [supported version](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 3.1.2.
-       (at time of writing this is Python 3.8.12).
+    2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
+       (at time of writing this is Python 3.10.2).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -146,7 +152,7 @@ You can now confirm successful installation by checking for the _Python 3_ versi
 
 ```bash
 python3 -V
- Python 3.8.12
+ Python 3.10.2
 ```
 
 You can similarly check that _pip3_ is installed by listing the available packages:
@@ -162,8 +168,8 @@ Windows doesn't include Python by default, but you can easily install it (along 
 1. Download the required installer:
 
     1. Go to <https://www.python.org/downloads/windows/>
-    2. Download the most recent [supported version](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 3.1.2.
-       (at time of writing this is Python 3.8.12).
+    2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
+       (at time of writing this is Python 3.10.2).
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
 
@@ -171,7 +177,7 @@ You can then verify that Python 3 was installed by entering the following text i
 
 ```bash
 py -3 -V
- Python 3.8.12
+ Python 3.10.2
 ```
 
 The Windows installer incorporates _pip3_ (the Python package manager) by default.
@@ -330,7 +336,7 @@ There are just a few other useful commands that you should know (there are more 
 Once you've created a virtual environment, and called `workon` to enter it, you can use *pip3* to install Django.
 
 ```bash
-pip3 install django~=3.1
+pip3 install django~=4.0
 ```
 
 You can test that Django is installed by running the following command (this just tests that Python can find the Django module):
@@ -338,11 +344,11 @@ You can test that Django is installed by running the following command (this jus
 ```bash
 # Linux/macOS
 python3 -m django --version
- 3.1.2
+ 4.0.2
 
 # Windows
 py -3 -m django --version
- 3.1.2
+ 4.0.2
 ```
 
 > **Note:** If the above Windows command does not show a django module present, try:
@@ -382,17 +388,18 @@ System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-October 27, 2020 - 03:00:01
-Django version 3.1.2, using settings 'mytestsite.settings'
+March 01, 2022 - 01:19:16
+Django version 4.0.2, using settings 'mytestsite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **Note:** The above command shows the Linux/macOS command. You can ignore the warnings about  "18 unapplied migration(s)" at this point!
+> **Note:** The above command shows the Linux/macOS command.
+> You can ignore the warnings about  "18 unapplied migration(s)" at this point!
 
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 
-![The home page of the skeleton Django app.](django_skeleton_app_homepage_-_django_3.1.png)
+![The home page of the skeleton Django app](django_skeleton_app_homepage_django_4_0.png)
 
 ## Summary
 
@@ -402,9 +409,9 @@ In the testing section you also briefly saw how we can create a new Django websi
 
 ## See also
 
-- [Quick Install Guide](https://docs.djangoproject.com/en/3.1/intro/install/) (Django docs)
-- [How to install Django — Complete guide](https://docs.djangoproject.com/en/3.1/topics/install/) (Django docs) - includes information on how to remove Django
-- [How to install Django on Windows](https://docs.djangoproject.com/en/3.1/howto/windows/) (Django docs)
+- [Quick Install Guide](https://docs.djangoproject.com/en/4.0/intro/install/) (Django docs)
+- [How to install Django — Complete guide](https://docs.djangoproject.com/en/4.0/topics/install/) (Django docs) — also covers how to remove Django
+- [How to install Django on Windows](https://docs.djangoproject.com/en/4.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 

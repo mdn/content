@@ -60,7 +60,7 @@ You can also use the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attr
 
 On some devices — notably touch devices with dynamic keyboards like smart phones — a different virtual keypad might be presented that is more suitable for entering email addresses, including the `@` key. See the Firefox for Android keyboard screenshot below for an example:
 
-![firefox for android email keyboard, with the at sign displayed by default.](fx-android-email-type-keyboard.jpg)
+![Firefox for android email keyboard, with the at sign displayed by default.](fx-android-email-type-keyboard.jpg)
 
 > **Note:** You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) also).
 
@@ -104,7 +104,7 @@ When accessed via a touch device with a dynamic keyboard, most devices will disp
 
 The following Firefox for Android keyboard screenshot provides an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-tel-type-keyboard.jpg)
+![Firefox for android email keyboard, with ampersand displayed by default.](fx-android-tel-type-keyboard.jpg)
 
 Due to the wide variety of phone number formats around the world, this type of field does not enforce any constraints on the value entered by a user (this means it may include letters, etc.).
 
@@ -122,7 +122,7 @@ It adds special validation constraints to the field. The browser will report an 
 
 See below for an example (taken on Firefox for Android):
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
+![Firefox for android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
 
 > **Note:** Just because the URL is well-formed doesn't necessarily mean that it refers to a location that actually exists!
 
@@ -132,7 +132,7 @@ Controls for entering numbers can be created with an {{HTMLElement("input")}} {{
 
 The following screenshot (from Firefox for Android) provides an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
+![Firefox for android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
 With the `number` input type, you can constrain the minimum and maximum values allowed by setting the {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} attributes.
 
@@ -260,7 +260,7 @@ A `color` control can be created using the {{HTMLElement("input")}} element with
 
 When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
+![Firefox for android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
 
 And here is a live example for you to try out:
 

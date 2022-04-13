@@ -24,9 +24,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.has(cacheName).then(function(boolean) {
-  // true: your cache exists!
-});
+has(cacheName);
 ```
 
 ### Parameters

@@ -32,6 +32,7 @@ text-underline-position: right under;
 text-underline-position: inherit;
 text-underline-position: initial;
 text-underline-position: revert;
+text-underline-position: revert-layer;
 text-underline-position: unset;
 ```
 

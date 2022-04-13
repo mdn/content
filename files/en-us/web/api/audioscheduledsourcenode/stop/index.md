@@ -29,8 +29,8 @@ stopped, this method has no effect.
 ## Syntax
 
 ```js
-stop()
-stop(when)
+stop();
+stop(when);
 ```
 
 ### Parameters
@@ -54,7 +54,7 @@ stop(when)
 - `RangeError`
   - : The value specified for `when` is negative.
 
-## Example
+## Examples
 
 This example demonstrates starting an oscillator node, scheduled to begin playing at
 once and to stop playing in one second. The stop time is determined by taking the audio

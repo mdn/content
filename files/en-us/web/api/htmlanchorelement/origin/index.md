@@ -27,14 +27,9 @@ That is:
   `blob:`. E.g `"blob:https://mozilla.org"` will have
   `"https://mozilla.org".`
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.origin;
-
-// No setter; read-only property
-```
+A string.
 
 ## Examples
 

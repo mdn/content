@@ -13,11 +13,9 @@ browser-compat: api.WorkerLocation.port
 
 The **`port`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.port", "port")}} part of the worker's location.
 
-## Syntax
+## Value
 
-```js
-string = location.port;
-```
+A string.
 
 ## Examples
 

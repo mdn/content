@@ -34,6 +34,7 @@ counter-set: none;
 counter-set: inherit;
 counter-set: initial;
 counter-set: revert;
+counter-set: revert-layer;
 counter-set: unset;
 ```
 

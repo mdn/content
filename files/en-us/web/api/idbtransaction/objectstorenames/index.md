@@ -18,13 +18,7 @@ The **`objectStoreNames`** read-only property of the
 {{domxref("IDBTransaction")}} interface returns a {{domxref("DOMStringList")}} of names
 of {{domxref("IDBObjectStore")}} objects.
 
-## Syntax
-
-```js
-var myDatabase = transactionObj.objectStoreNames;
-```
-
-### Returns
+## Value
 
 A {{domxref("DOMStringList")}} of names of {{domxref("IDBObjectStore")}} objects.
 

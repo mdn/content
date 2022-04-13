@@ -51,7 +51,7 @@ type record with an NDEF message as payload can be useful for encapsulating
 related data.
 
 This example shows how to read an external record for social posts, which
-contains an an {{domxref("NDEFMessage")}}, containing a text record and a record
+contains an {{domxref("NDEFMessage")}}, containing a text record and a record
 with the local type "act" (action), with a definition borrowed from smart
 poster, but used in local application context.
 

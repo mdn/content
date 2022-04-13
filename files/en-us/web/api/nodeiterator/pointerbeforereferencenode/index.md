@@ -17,20 +17,17 @@ property returns a boolean flag that indicates whether the
 after (if this value is `false`) the anchor node indicated by the
 {{domxref("NodeIterator.referenceNode")}} property.
 
-## Syntax
+## Value
 
-```js
-flag = nodeIterator.pointerBeforeReferenceNode;
-```
+A boolean.
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 flag = nodeIterator.pointerBeforeReferenceNode;
 ```

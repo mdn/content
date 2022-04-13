@@ -32,6 +32,7 @@ scroll-padding-bottom: 10%;
 scroll-padding-bottom: inherit;
 scroll-padding-bottom: initial;
 scroll-padding-bottom: revert;
+scroll-padding-bottom: revert-layer;
 scroll-padding-bottom: unset;
 ```
 

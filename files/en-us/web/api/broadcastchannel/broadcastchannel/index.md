@@ -30,7 +30,7 @@ new BroadcastChannel(channelName);
     single channel with this name for all {{glossary("browsing context", "browsing
     contexts")}} with the same {{glossary("origin")}}.
 
-## Example
+## Examples
 
 ```js
 // create a new channel listening to the "internal_notification" channel.

@@ -22,7 +22,11 @@ You can register listeners for these events in a few familiar ways:
 - By setting the `.ononline` or `.onoffline` properties on `document` or `document.body` to a JavaScript `Function` object. (**Note:** using `window.ononline` or `window.onoffline` will not work for compatibility reasons.)
 - By specifying `ononline="..."` or `onoffline="..."` attributes on the `<body>` tag in the HTML markup.
 
-## Example
+## Value
+
+A boolean.
+
+## Examples
 
 There's [a simple test case](https://bugzilla.mozilla.org/attachment.cgi?id=220609) that you can run to verify that the events are working.
 

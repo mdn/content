@@ -95,7 +95,7 @@ To make this easier, CSS has recently developed a set of mapped properties. Thes
 
 The property mapped to `width` when in a horizontal writing mode is called {{cssxref("inline-size")}} — it refers to the size in the inline dimension. The property for `height` is named {{cssxref("block-size")}} and is the size in the block dimension. You can see how this works in the example below where we have replaced `width` with `inline-size`.
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 950)}}
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1000)}}
 
 ### Logical margin, border, and padding properties
 
@@ -111,7 +111,7 @@ You can see a comparison between physical and logical properties below.
 
 **You can also see that the {{htmlelement("h2")}} has a black `border-bottom`. Can you work out how to make that bottom border always go below the text in both writing modes?**
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1300)}}
 
 There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
 
@@ -123,7 +123,7 @@ For example, you can float an image left to cause text to wrap round the image. 
 
 **Change the writing mode on this example to `vertical-rl` to see what happens to the image. Change `inline-start` to `inline-end` to change the float.**
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 850)}}
+{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1000)}}
 
 Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.
 

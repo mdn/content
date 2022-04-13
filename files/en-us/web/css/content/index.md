@@ -52,6 +52,7 @@ content: open-quote counter(chapter_counter);
 content: inherit;
 content: initial;
 content: revert;
+content: revert-layer;
 content: unset;
 ```
 

@@ -21,10 +21,10 @@ bluetooth device for a specified {{domxref("BluetoothServiceUUID")}}.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTServer.getPrimaryService(bluetoothServiceUUID).then(function(bluetoothGATTService) { /* ... */ })
+getPrimaryService(bluetoothServiceUUID);
 ```
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTService")}} object.
 

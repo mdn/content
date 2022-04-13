@@ -12,8 +12,8 @@ on:
 
 jobs:
   block:
-    # This make sure it only runs on our origin repo
-    # and make an exception for Dependabot.
+    # This makes sure it only runs on our origin repo
+    # and makes an exception for Dependabot.
     if: github.repository_owner == 'mdn' && github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -25,6 +25,6 @@ jobs:
           # can'd do that :(
           # See https://github.community/t/how-do-you-figure-out-if-a-pr-is-from-a-work-in-pull-request-target-workflows/170001
 
-          echo "If you're an admin, you have you use your admin privileges to override."
+          echo "If you're an admin, you have to use your admin privileges to override."
           echo "If you're not an admin, please ping someone for a review."
           exit 1

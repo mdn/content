@@ -20,7 +20,7 @@ The `setValueAtTime()` method of the
 ## Syntax
 
 ```js
-var AudioParam = AudioParam.setValueAtTime(value, startTime)
+setValueAtTime(value, startTime);
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ var AudioParam = AudioParam.setValueAtTime(value, startTime)
     was first created that the change in value will happen. A {{jsxref("TypeError")}} is
     thrown if this value is negative.
 
-### Returns
+### Return value
 
 A reference to this `AudioParam` object. In some browsers older
 implementations of this interface return {{jsxref('undefined')}}.

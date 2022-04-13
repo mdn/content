@@ -32,6 +32,7 @@ text-emphasis-color: transparent;
 text-emphasis-color: inherit;
 text-emphasis-color: initial;
 text-emphasis-color: revert;
+text-emphasis-color: revert-layer;
 text-emphasis-color: unset;
 ```
 

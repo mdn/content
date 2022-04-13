@@ -38,6 +38,7 @@ background-image:
 background-image: inherit;
 background-image: initial;
 background-image: revert;
+background-image: revert-layer;
 background-image: unset;
 ```
 

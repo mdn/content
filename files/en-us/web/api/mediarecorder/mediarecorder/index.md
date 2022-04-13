@@ -70,7 +70,7 @@ new MediaRecorder(stream, options)
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the specified MIME type is not supported by the user agent.
 
-## Example
+## Examples
 
 This example shows how to create a media recorder for a specified stream, whose audio
 bit rate is set to 128 Kbit/sec and whose video bit rate is set to 2.5 Mbit/sec. The

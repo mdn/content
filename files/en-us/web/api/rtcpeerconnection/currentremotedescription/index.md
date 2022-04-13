@@ -37,18 +37,12 @@ the change isn't necessarily instantaneous, see
 > `remoteDescription` may specify a description which the connection is
 > currently in the process of switching over to.
 
-## Syntax
-
-```js
-sessionDescription = RTCPeerConnection.currentRemoteDescription;
-```
-
-### Return value
+## Value
 
 The current description of the remote end of the connection, if one has been set. If
 none has been successfully set, this value is `null`.
 
-## Example
+## Examples
 
 This example looks at the `currentRemoteDescription` and displays an alert
 containing the {{domxref("RTCSessionDescription")}} object's `type` and

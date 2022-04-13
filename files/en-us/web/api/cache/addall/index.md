@@ -29,9 +29,7 @@ retrieval become keys to the stored response operations.
 ## Syntax
 
 ```js
-cache.addAll(requests[]).then(function() {
-  // requests have been added to the cache
-});
+addAll(requests);
 ```
 
 ### Parameters

@@ -16,7 +16,7 @@ The **`copyTo()`** method of the {{domxref("AudioData")}} interface copies a pla
 ## Syntax
 
 ```js
-AudioData.copyTo(destination, options)
+copyTo(destination, options);
 ```
 
 ### Parameters
@@ -32,7 +32,7 @@ AudioData.copyTo(destination, options)
     - `frameCount`{{optional_inline}}
       - : An integer giving the number of frames to copy. If omitted then all frames in the plane will be copied, beginning with the frame specified in `frameOffset`.
 
-### Return Value
+### Return value
 
 Undefined.
 

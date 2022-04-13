@@ -40,6 +40,7 @@ mask-clip: view-box, fill-box, border-box;
 mask-clip: inherit;
 mask-clip: initial;
 mask-clip: revert;
+mask-clip: revert-layer;
 mask-clip: unset;
 ```
 

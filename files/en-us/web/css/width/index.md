@@ -40,6 +40,7 @@ width: auto;
 width: inherit;
 width: initial;
 width: revert;
+width: revert-layer;
 width: unset;
 ```
 

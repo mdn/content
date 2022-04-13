@@ -28,7 +28,7 @@ characters such as ASCII values 0 through 31.
 ## Syntax
 
 ```js
-var encodedData = btoa(stringToEncode);
+btoa(stringToEncode);
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ An ASCII string containing the Base64 representation of
   - : The string contained a character that did not fit in a single byte. See "Unicode
     strings" below for more detail.
 
-## Example
+## Examples
 
 ```js
 const encodedData = btoa('Hello, world'); // encode a string

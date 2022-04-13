@@ -26,9 +26,10 @@ background-blend-mode: normal;
 background-blend-mode: darken, luminosity;
 
 /* Global values */
-background-blend-mode: initial;
 background-blend-mode: inherit;
+background-blend-mode: initial;
 background-blend-mode: revert;
+background-blend-mode: revert-layer;
 background-blend-mode: unset;
 ```
 

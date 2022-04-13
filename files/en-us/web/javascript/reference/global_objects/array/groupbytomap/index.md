@@ -63,7 +63,6 @@ groupByToMap(function(element, index, array) { /* ... */ }, thisArg)
      The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
      Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
-
 ### Return value
 
 A {{jsxref("Map")}} object with keys for each group, each assigned to an array containing the elements of the associated group.

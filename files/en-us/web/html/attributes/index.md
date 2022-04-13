@@ -1054,7 +1054,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         {{ HTMLElement("dialog") }}
       </td>
       <td>
-        Indicates whether the the contents are currently visible (in the case of
+        Indicates whether the contents are currently visible (in the case of
         a <code>&#x3C;details></code> element) or whether the dialog is active
         and can be interacted with (in the case of a
         <code>&#x3C;dialog></code> element).
@@ -1179,6 +1179,13 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         Indicates whether the list should be displayed in a descending order
         instead of a ascending.
       </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+      </td>
+      <td><a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a></td>
+      <td>Defines an explicit role for an element for use by assistive technologies.</td>
     </tr>
     <tr>
       <td>

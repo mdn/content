@@ -29,6 +29,7 @@ word-break: break-word; /* deprecated */
 word-break: inherit;
 word-break: initial;
 word-break: revert;
+word-break: revert-layer;
 word-break: unset;
 ```
 

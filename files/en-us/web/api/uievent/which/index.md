@@ -37,7 +37,7 @@ In this case, the values are read from right to left.
 
 > **Note:** Consider {{domxref("MouseEvent.button")}} for new code.
 
-## Example
+## Examples
 
 ```html
 <html>

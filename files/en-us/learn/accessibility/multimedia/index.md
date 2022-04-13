@@ -246,7 +246,7 @@ This gives you a basic idea of how to add custom player functionality to video/a
 - [Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
 - [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
 
-We've also created an advanced example to show how you could create an object-oriented system that finds every video and audio player on the page (no matter how many there are) and adds our custom controls to it. See [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) (also [see the source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS)).
+We've also created an advanced example to show how you could create an object-oriented system that finds every video and audio player on the page (no matter how many there are) and adds our custom controls to it. See [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) (also [see the source code](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/custom-controls-OOJS)).
 
 ## Audio transcripts
 
@@ -266,7 +266,7 @@ It is not OK to publish an audio resource but promise to publish the transcript 
 
 If you use an automated service, then you'll probably have to use the user interface that the tool provides. For example, take a look at our [Wait, ARIA Roles Have Categories?](https://www.youtube.com/watch?v=mwF-PpJOjMs) video and choose the three-dot menu (. . .) _> Show Transcript_. You'll see the transcript come up in a separate panel.
 
-If you are creating your own user interface to present your audio and associated transcript, you can do it however you like, but it might make sense to include it in a showable/hideable panel; see our [audio-transcript-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) example (also see the [source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui)).
+If you are creating your own user interface to present your audio and associated transcript, you can do it however you like, but it might make sense to include it in a showable/hideable panel; see our [audio-transcript-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) example (also see the [source code](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/audio-transcript-ui)).
 
 ### Audio descriptions
 

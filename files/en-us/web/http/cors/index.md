@@ -72,6 +72,9 @@ Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (please note the additional requirements below)
+  - {{HTTPHeader("Range")}} (only with a [simple range header value](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
+
+> **Note:** Firefox has not implemented `Range` as a safelisted request-header yet. See [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981).
 
 - The only type/subtype combinations allowed for the {{Glossary("MIME type","media type")}} specified in the {{HTTPHeader("Content-Type")}} header are:
 
@@ -105,7 +108,7 @@ This operation performs a simple exchange between the client and the server, usi
 
 ![](simple-req.png)
 
-Let's look at what the browser will send to the server in this case, and let's see how the server responds:
+Let's look at what the browser will send to the server in this case:
 
 ```
 GET /resources/public-data/ HTTP/1.1
@@ -119,6 +122,8 @@ Origin: https://foo.example
 ```
 
 The request header of note is {{HTTPHeader("Origin")}}, which shows that the invocation is coming from `https://foo.example`.
+
+Now let's see how the server responds:
 
 ```
 HTTP/1.1 200 OK

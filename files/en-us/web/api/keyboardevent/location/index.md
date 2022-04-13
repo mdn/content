@@ -133,13 +133,11 @@ Possible values are:
   </tbody>
 </table>
 
-## Syntax
+## Value
 
-```js
-var location = event.location;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 function keyEvent(event) {

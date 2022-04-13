@@ -53,6 +53,7 @@ border-color: red yellow green blue;
 border-color: inherit;
 border-color: initial;
 border-color: revert;
+border-color: revert-layer;
 border-color: unset;
 ```
 

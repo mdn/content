@@ -28,6 +28,7 @@ border-start-end-radius: 1em 2em;
 border-start-end-radius: inherit;
 border-start-end-radius: initial;
 border-start-end-radius: revert;
+border-start-end-radius: revert-layer;
 border-start-end-radius: unset;
 ```
 

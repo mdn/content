@@ -26,7 +26,7 @@ gathered by the local device during the current {{Glossary("ICE")}} agent
 session.
 
 The local candidates are placed in this list by the ICE agent prior to being delivered
-to the local client's code in an {{event("icecandidate")}} event so that the client can
+to the local client's code in an {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event so that the client can
 forward the candidates to the remote peer.
 
 ## Syntax

@@ -28,7 +28,8 @@ text-orientation: use-glyph-orientation;
 /* Global values */
 text-orientation: inherit;
 text-orientation: initial;
-text-orientation: initial;
+text-orientation: revert;
+text-orientation: revert-layer;
 text-orientation: unset;
 ```
 

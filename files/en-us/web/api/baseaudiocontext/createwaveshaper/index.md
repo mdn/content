@@ -24,14 +24,14 @@ distortion. It is used to apply distortion effects to your audio.
 ## Syntax
 
 ```js
-baseAudioCtx.createWaveShaper();
+createWaveShaper();
 ```
 
-### Returns
+### Return value
 
 A {{domxref("WaveShaperNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create a wave shaper
 node. For applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) [demo](https://mdn.github.io/voice-change-o-matic/) ([see

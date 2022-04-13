@@ -48,6 +48,7 @@ background-size: 6px, auto, contain;
 background-size: inherit;
 background-size: initial;
 background-size: revert;
+background-size: revert-layer;
 background-size: unset;
 ```
 

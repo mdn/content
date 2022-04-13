@@ -93,16 +93,16 @@ For a guide to updating your add-on for Firefox 5, please see [Updating add-ons 
 
 #### NetUtil.jsm
 
-- The [`asyncFetch()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#asyncFetch()>) method now supports specifying the input source as an {{ interface("nsIInputStream") }}.
+- The [`asyncFetch()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#asyncFetch()>) method now supports specifying the input source as an `nsIInputStream`.
 
 ### Interface changes
 
-- The {{ interface("nsIHttpChannelInternal") }} interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.
+- The `nsIHttpChannelInternal` interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.
 - The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement)).
-- The `nsIAppStartup2` and {{ interface("nsIAppStartup_MOZILLA_2_0") }} interfaces have been merged into the {{ interface("nsIAppStartup") }} interface.
-- The `nsIDocShell_MOZILLA_2_0_BRANCH` interface has been merged into the {{ interface("nsIDocShell") }} interface.
-- The `nsIFocusManager_MOZILLA_2_0_BRANCH` interface has been merged into the {{ interface("nsIFocusManager") }} interface.
-- The `nsIHTMLEditor_MOZILLA_2_0_BRANCH` interface has been merged into the {{ interface("nsIHTMLEditor") }} interface.
+- The `nsIAppStartup2` and `nsIAppStartup_MOZILLA_2_0` interfaces have been merged into the `nsIAppStartup` interface.
+- The `nsIDocShell_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIDocShell` interface.
+- The `nsIFocusManager_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIFocusManager` interface.
+- The `nsIHTMLEditor_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIHTMLEditor` interface.
 
 #### New interfaces
 

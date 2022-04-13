@@ -20,10 +20,10 @@ the script execution environment to disconnect from `this.device`.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTServer.disconnect()
+disconnect();
 ```
 
-### Returns
+### Return value
 
 None.
 

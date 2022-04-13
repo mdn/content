@@ -41,8 +41,7 @@ new KeyboardEvent(typeArg, KeyboardEventInit);
     - `"altKey"`, optional boolean value, defaulting to `false`,
       that sets the value of {{domxref("KeyboardEvent.altKey")}}.
     - `"metaKey"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.metaKey")}}.<
-      /li>
+      that sets the value of {{domxref("KeyboardEvent.metaKey")}}.
     - `"repeat"`, optional boolean value, defaulting to `false`,
       that sets the value of {{domxref("KeyboardEvent.repeat")}}.
     - `"isComposing"`, optional boolean value, defaulting to `false`,

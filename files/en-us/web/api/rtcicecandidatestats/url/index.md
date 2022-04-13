@@ -31,7 +31,7 @@ property is _only_ available for local candidates.
 
 A {{domxref("DOMString")}} specifying the URL of the ICE server from which the
 candidate described by the `RTCIceCandidateStats` was obtained. This is the
-same URL that would be received in the {{event("icecandidate")}} event's
+same URL that would be received in the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event's
 {{domxref("RTCPeerConnectionIceEvent.url", "url")}} property.
 
 > **Note:** This property does not exist for remote candidates.

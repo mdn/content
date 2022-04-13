@@ -112,7 +112,7 @@ Browsers based on Mozilla 1.2 (or later) as well as browsers based on Mozilla 1.
 
 ### Privacy implications
 
-Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the google results page will prefetch `www.amazon.com`, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see [Disabling third party cookies](https://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies).)
+Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the Google results page will prefetch `www.amazon.com`, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see [Disabling third party cookies](https://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies).)
 
 ### What about...?
 

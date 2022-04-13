@@ -27,7 +27,7 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 - Support for {{domxref("CSSSupportsRule")}} interface defined in [CSS3 Conditional Rules specification](https://dev.w3.org/csswg/css3-conditional/) has been landed ({{bug("649740")}})
 - Support for {{domxref("WheelEvent")}} object and `wheel` event have been landed ({{bug("719320")}}).
 - Support DOM Meta key on Linux again ({{bug("751749")}}).
-- On {{domxref("HTMLMediaElement")}}, a new method, `mozGetMetadata`, that returns a javascript object whose properties represent metadata from the playing media resource as {key: value} pairs ({{bug("763010")}}).
+- On {{domxref("HTMLMediaElement")}}, a new method, `mozGetMetadata`, that returns a JavaScript object whose properties represent metadata from the playing media resource as {key: value} pairs ({{bug("763010")}}).
 - Support for {{domxref("Range.intersectsNode")}} has been added again; it has been removed in Gecko 1.9 ({{bug("579638")}}.
 - {{domxref("Range.compareBoundaryPoints()")}} now throws a {{domxref("DOMException")}} with the `NOT_SUPPORTED_ERR` value when the comparison method is invalid ({{bug("714279")}}) .
 - {{domxref("Event.initEvent()")}} has been adapted to the spec: it doesn't throw anymore if called after the dispatch of the event, it is only a no-op ({{bug(768310)}}).
@@ -78,15 +78,15 @@ The Gecko part of the user agent string changed. The build date (which hadn't be
 
 ### Interface changes
 
-- {{interface("nsIInputStream")}}
+- `nsIInputStream`
   - : The `available()` method returns 64-bit length instead of 32-bit ({{bug("215450")}}).
-- {{interface("nsIDOMWindowUtils")}}
+- `nsIDOMWindowUtils`
   - : The `sendMouseScrollEvent()` method has been replaced with `sendWheelEvent()` ({{bug("719320")}}).
-- {{interface("nsIFilePicker")}}
+- `nsIFilePicker`
   - : The `open()` method, to open the file dialog asynchronously, has been added and the `show()` method has been deprecated ({{bug("731307")}}).
-- {{interface("nsIScriptSecurityManager")}}
+- `nsIScriptSecurityManager`
   - : The `checkLoadURIStr()` and `checkLoadURI()` methods have been removed ({{bug("327244")}}).
-- {{interface("nsIRefreshURI")}}
+- `nsIRefreshURI`
   - : The `setupRefreshURIFromHeader()` method has a added `principal` parameter ({{bug("327244")}}).
 
 #### New interfaces

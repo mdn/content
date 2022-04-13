@@ -55,6 +55,7 @@ justify-self: unsafe center;
 justify-self: inherit;
 justify-self: initial;
 justify-self: revert;
+justify-self: revert-layer;
 justify-self: unset;
 ```
 

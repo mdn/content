@@ -84,7 +84,7 @@ What is important is that you ensure you've chosen the best registry for you. Ma
 
 Let's run through an example to get you started with using a package manager and registry to install a command line utility.
 
-[Parcel](https://parceljs.org/) is a(nother) tool that developers commonly use in their development process. Parcel is clever in that it can watch the contents of our code for calls to dependencies and automatically installs any dependencies it sees that our code needs. It can also automatically build our code.
+[Parcel](https://parceljs.org/) is another tool that developers commonly use in their development process. Parcel is clever in that it can watch the contents of our code for calls to dependencies and automatically installs any dependencies it sees that our code needs. It can also automatically build our code.
 
 In our previous chapter we installed Prettier as a global tool. Here however, let's use npm to install Parcel as a local tool, as best practices dictate. We'll install it as part of an experimental app.
 

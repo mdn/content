@@ -1,5 +1,5 @@
 ---
-title: Intl.PluralRules.select()
+title: Intl.PluralRules.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 tags:
   - Internationalization
@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 ---
 {{JSRef}}
 
-The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
+The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
 
 ## Syntax
 

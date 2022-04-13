@@ -332,7 +332,7 @@ There are five types of positioning you should know about:
 
 - **Static positioning** is the default that every element gets. It just means "put the element into its normal position in the document layout flow — nothing special to see here".
 - **Relative positioning** allows you to modify an element's position on the page, moving it relative to its position in normal flow, as well as making it overlap other elements on the page.
-- **Absolute positioning** moves an element completely out of the page's normal layout flow, like it's sitting on its own separate layer. From there, you can fix it to a position relative to the edges of the `<html>` element (or its nearest positioned ancestor element). This is useful for creating complex layout effects, such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.
+- **Absolute positioning** moves an element completely out of the page's normal layout flow, like it's sitting on its own separate layer. From there, you can fix it to a position relative to the edges of its closest positioned ancestor (which becomes `<html>` if no other ancestors are positioned). This is useful for creating complex layout effects, such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.
 - **Fixed positioning** is very similar to absolute positioning except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.
 - **Sticky positioning** is a newer positioning method that makes an element act like `position: static` until it hits a defined offset from the viewport, at which point it acts like `position: fixed`.
 
@@ -636,7 +636,7 @@ form p {
 
 This gives us the following result:
 
-{{ EmbedLiveSample('Table_layout', '100%', '170') }}
+{{ EmbedLiveSample('Table_layout', '100%', '200') }}
 
 You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
 
@@ -686,7 +686,7 @@ body { max-width: 800px; margin: 0 auto; }
 }
 ```
 
-{{ EmbedLiveSample('Multi-column_layout', '100%', 200) }}
+{{ EmbedLiveSample('Multi-column_layout', '100%', 250) }}
 
 ## Summary
 

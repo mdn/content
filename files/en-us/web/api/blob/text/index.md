@@ -23,7 +23,7 @@ text();
 
 ### Return value
 
-A promise that resolves with a {{domxref("USVString")}} which contains the blob's data
+A promise that resolves with a string which contains the blob's data
 as a text string. The data is _always_ presumed to be in UTF-8 format.
 
 ## Usage notes

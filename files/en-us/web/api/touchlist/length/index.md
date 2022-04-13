@@ -17,18 +17,11 @@ browser-compat: api.TouchList.length
 The **`length`** read-only property indicates the number of
 items (touch points) in a given {{domxref("TouchList")}}.
 
-## Syntax
+## Value
 
-```js
-var numTouches = touchList.length;
-```
+The number of touch points in `touchList`.
 
-### Return value
-
-- `numTouches`
-  - : The number of touch points in `touchList`.
-
-## Example
+## Examples
 
 This code example illustrates the use of the {{domxref("TouchList")}} interface's
 {{domxref("TouchList.item()","item")}} method and the

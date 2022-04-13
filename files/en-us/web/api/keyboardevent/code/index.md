@@ -25,7 +25,7 @@ For example, the `code` returned is "`KeyQ`" for the <kbd>Q</kbd> key on a QWERT
 
 To determine what character corresponds with the key event, use the {{domxref("KeyboardEvent.key")}} property instead.
 
-## Code values
+## Value
 
 The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: code values](/en-US/docs/Web/API/KeyboardEvent/code/code_values) page.
 

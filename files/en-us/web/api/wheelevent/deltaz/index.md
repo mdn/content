@@ -17,13 +17,11 @@ The **`WheelEvent.deltaZ`** read-only property is a
 `double` representing the scroll amount along the z-axis, in the
 {{domxref("WheelEvent.deltaMode")}} unit.
 
-## Syntax
+## Value
 
-```js
-var dZ = event.deltaZ;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaZ": 4, "deltaMode": 0});

@@ -14,7 +14,7 @@ browser-compat: api.WindowEventHandlers.onbeforeunload
 
 The **`onbeforeunload`** property of the
 {{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("beforeunload")}} events. These events fire when a window is about to
+processing {{domxref("Window.beforeunload_event", "beforeunload")}} events. These events fire when a window is about to
 {{event("unload")}} its resources. At this point, the document is still visible and the
 event is still cancelable.
 
@@ -28,18 +28,15 @@ event is still cancelable.
 > [`Navigator.sendBeacon()`](/en-US/docs/Web/API/Navigator/sendBeacon)
 > page for more details and best practices.
 
-## Syntax
-
-```js
-window.addEventListener("beforeunload", function(event) { /* ... */ });
-window.onbeforeunload = function(event) { /* ... */ };
-```
-
 Typically, it is better to use {{domxref("EventTarget.addEventListener",
-  "window.addEventListener()")}} and the {{event("beforeunload")}} event, instead of
+  "window.addEventListener()")}} and the {{domxref("Window.beforeunload_event", "beforeunload")}} event, instead of
 `onbeforeunload`.
 
-## Example
+## Value
+
+An [event handler](/en-US/docs/Web/Events/Event_handlers).
+
+## Examples
 
 This example prompts the user before unloading.
 

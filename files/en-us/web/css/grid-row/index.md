@@ -51,6 +51,7 @@ grid-row: 5 somegridarea span / 2 span;
 grid-row: inherit;
 grid-row: initial;
 grid-row: revert;
+grid-row: revert-layer;
 grid-row: unset;
 ```
 

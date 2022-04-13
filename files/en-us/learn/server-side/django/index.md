@@ -31,7 +31,7 @@ A general knowledge of programming concepts and [Python](/en-US/docs/Glossary/Py
 - [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
   - : The first article in our practical tutorial series explains what you'll learn, and provides an overview of the "local library" — an example website we'll be working through and evolving in subsequent articles.
 - [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-  - : This article shows how you can create a "skeleton" website project, which you can then go on to populate with site-specific settings, urls, models, views, and templates.
+  - : This article shows how you can create a "skeleton" website project, which you can then go on to populate with site-specific settings, URLs, models, views, and templates.
 - [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
   - : This article shows how to define models for the *LocalLibrary* website — models represent the data structures we want to store our app's data in, and also allow Django to store data in a database for us (and modify it later on). It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.
 - [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)

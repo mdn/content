@@ -46,6 +46,7 @@ cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), ... , url(cursor_n.cur) 5 5, p
 cursor: inherit;
 cursor: initial;
 cursor: revert;
+cursor: revert-layer;
 cursor: unset;
 ```
 

@@ -34,7 +34,7 @@ Each gamepad has a unique ID associated with it, which is available on the event
 
 ## Disconnecting a gamepad
 
-When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{ event("gamepaddisconnected") }}:
+When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
 
 ```js
 window.addEventListener("gamepaddisconnected", function(e) {

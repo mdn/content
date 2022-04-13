@@ -36,7 +36,7 @@ Cookies are mainly used for three purposes:
 
 Cookies were once used for general client-side storage. While this made sense when they were the only way to store data on the client, modern storage APIs are now recommended. Cookies are sent with every request, so they can worsen performance (especially for mobile data connections). Modern APIs for client storage are the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) (`localStorage` and `sessionStorage`) and [IndexedDB](/en-US/docs/Web/API/IndexedDB_API).
 
-> **Note:** To see stored cookies (and other storage that a web page can use), you can enable the [Storage Inspector](/en-US/docs/Tools/Storage_Inspector) in Developer Tools and select Cookies from the storage tree.
+> **Note:** To see stored cookies (and other storage that a web page can use), you can enable the [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) in Developer Tools and select Cookies from the storage tree.
 
 ## Creating cookies
 
@@ -253,7 +253,7 @@ There are some techniques designed to recreate cookies after they're deleted. Th
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
 - [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
-- [Inspecting cookies using the Storage Inspector](/en-US/docs/Tools/Storage_Inspector)
+- [Inspecting cookies using the Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie specification: RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 - [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
 - [Cookies, the GDPR, and the ePrivacy Directive](https://gdpr.eu/cookies/)

@@ -27,6 +27,7 @@ flex-grow: 0.6;
 flex-grow: inherit;
 flex-grow: initial;
 flex-grow: revert;
+flex-grow: revert-layer;
 flex-grow: unset;
 ```
 

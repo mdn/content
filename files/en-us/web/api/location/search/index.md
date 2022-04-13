@@ -1,5 +1,5 @@
 ---
-title: 'Location: search'
+title: location.search
 slug: Web/API/Location/search
 tags:
   - API

@@ -21,10 +21,10 @@ there is no longer an active notification on it.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.stopNotifications().then(function(BluetoothRemoteGATTCharacteristic) { /* ... */ })
+stopNotifications();
 ```
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}}.
 

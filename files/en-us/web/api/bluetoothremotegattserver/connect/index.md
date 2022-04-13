@@ -21,11 +21,10 @@ script execution environment to connect to `this.device`.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTServer.connect()
-  .then(function(bluetoothRemoteGATTServer) { /* ... */ })
+connect();
 ```
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
 

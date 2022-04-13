@@ -186,7 +186,7 @@ async function foo() {
 }
 ```
 
-It builds on promises, e.g. `doSomething()` is the same function as before. You can read more about the syntax [here](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions).
+It builds on promises, e.g. `doSomething()` is the same function as before. You can read more about the syntax [here](https://developers.google.com/web/fundamentals/primers/async-functions).
 
 Promises solve a fundamental flaw with the callback pyramid of doom, by catching all errors, even thrown exceptions and programming errors. This is essential for functional composition of asynchronous operations.
 

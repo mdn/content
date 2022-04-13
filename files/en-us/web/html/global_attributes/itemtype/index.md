@@ -213,7 +213,7 @@ Google and other major search engines support the [schema.org](http://schema.org
   </tbody>
 </table>
 
-> **Note:** A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/). Try it on the HTML shown above
+> **Note:** A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/advanced/structured-data). Try it on the HTML shown above
 
 ## Specifications
 

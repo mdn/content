@@ -214,6 +214,15 @@ console.log(browserType);  // "vanilla"
 
 Also note that we now have to declare `browserType` using `let`, not `const`, because we are reassigning it.
 
+Be aware that `replace()` in this form only changes the first occurrence of the substring. If you want to change all occurrences, you can use {{jsxref("String.prototype.replaceAll()", "replaceAll()")}}:
+
+```js
+let quote = 'To be or not to be';
+quote = quote.replaceAll('be','code');
+
+console.log(quote);  // "To code or not to code"
+```
+
 ## Active learning examples
 
 In this section we'll get you to try your hand at writing some string manipulation code. In each exercise below, we have an array of strings, and a loop that processes each value in the array and displays it in a bulleted list. You don't need to understand arrays or loops right now — these will be explained in future articles. All you need to do in each case is write the code that will output the strings in the format that we want them in.
@@ -547,7 +556,7 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Fixing_capitalization', '100%', 550) }}
+{{ EmbedLiveSample('Fixing_capitalization', '100%', 570) }}
 
 ### Making new strings from old parts
 

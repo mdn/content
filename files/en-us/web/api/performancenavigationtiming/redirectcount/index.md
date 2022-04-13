@@ -16,18 +16,12 @@ since the last non-redirect navigation under the current browsing context.
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-perfEntry.redirectCount;
-```
-
-### Return Value
+## Value
 
 A number representing the number of redirects since the last non-redirect navigation
 under the current browsing context.
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

@@ -251,7 +251,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ### Filters
 
-- {{experimental_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
+- {{domxref("CanvasRenderingContext2D.filter")}} {{experimental_inline}}
   - : Applies a CSS or SVG filter to the canvas, e.g., to change its brightness or blurriness.
 
 ## Non-standard APIs

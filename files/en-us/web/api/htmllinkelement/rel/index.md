@@ -21,14 +21,11 @@ The most common use of this attribute is to specify a link to an external style 
 the property is set to `stylesheet`, and the {{htmlattrxref("href", "link")}}
 attribute is set to the URL of an external style sheet to format the page.
 
-## Syntax
+## Value
 
-```js
-var relstr = linkElt.rel;
-linkElt.rel = relstr;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 var links = document.getElementsByTagName('link');

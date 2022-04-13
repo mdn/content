@@ -1,5 +1,5 @@
 ---
-title: 'Location: hash'
+title: location.hash
 slug: Web/API/Location/hash
 tags:
   - API

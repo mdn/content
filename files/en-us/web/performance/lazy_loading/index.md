@@ -47,7 +47,7 @@ By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Cr
 
 ```html
 <link href="style.css"    rel="stylesheet" media="all">
-<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="portrait.css" rel="stylesheet" media="(orientation:portrait)">
 <link href="print.css"    rel="stylesheet" media="print">
 ```
 
@@ -98,6 +98,6 @@ When browser compatibility is crucial, there are a few options:
 
 ## See also
 
-- [Render blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
+- [Render blocking CSS](https://web.dev/critical-rendering-path-render-blocking-css/)
 - [Optimizing loading and rendering](https://web.dev/fast/#optimize-webfonts)
 - [Lazy loading images and video](https://web.dev/fast/#lazy-load-images-and-video)

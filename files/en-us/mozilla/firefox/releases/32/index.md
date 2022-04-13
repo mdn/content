@@ -45,7 +45,7 @@ Highlights:
 
 ### Interfaces/APIs/DOM
 
-- The {{domxref("NavigatorLanguage.languages", "navigator.languages")}} property and {{event("languagechange")}} event have been implemented ({{Bug(889335)}}).
+- The {{domxref("NavigatorLanguage.languages", "navigator.languages")}} property and {{domxref("Window.languagechange_event", "languagechange")}} event have been implemented ({{Bug(889335)}}).
 - The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ({{bug(1014581)}}).
 - The {{domxref("KeyboardEvent.getModifierState()")}} and {{domxref("MouseEvent.getModifierState()")}} methods have been extended to support the `Accel` virtual modifier ({{Bug(1009388)}}).
 - The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ({{Bug(865649)}}).
@@ -120,7 +120,7 @@ A [`getDataDirectory()`](</en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon#getda
 
 ### XPCOM
 
-- The {{interface("nsIUDPSocket")}} interface now provides multicast support through the addition of the new {{ifattribute("nsIUDPSocket", "multicastLoopback")}}, {{ifattribute("nsIUDPSocket", "multicastInterface")}}, and {{ifattribute("nsIUDPSocket", "multicastInterfaceAddr")}} attributes, as well as the {{ifmethod("nsIUDPSocket", "joinMulticast")}} and {{ifmethod("nsIUDPSocket", "leaveMulticast")}} methods.
+- The `nsIUDPSocket` interface now provides multicast support through the addition of the new {{ifattribute("nsIUDPSocket", "multicastLoopback")}}, {{ifattribute("nsIUDPSocket", "multicastInterface")}}, and {{ifattribute("nsIUDPSocket", "multicastInterfaceAddr")}} attributes, as well as the {{ifmethod("nsIUDPSocket", "joinMulticast")}} and {{ifmethod("nsIUDPSocket", "leaveMulticast")}} methods.
 
 ### Older versions
 

@@ -26,13 +26,11 @@ consider using the various methods available to set the start and end positions 
 `Range`, such as {{domxref("Range.setStart()")}} and
 {{domxref("Range.setEnd()")}}.
 
-## Syntax
+## Value
 
-```js
-rangeAncestor = range.commonAncestorContainer;
-```
+A {{domxref("Node")}} object.
 
-## Example
+## Examples
 
 In this example, we create an event listener to handle {{Event("pointerup")}} events on
 a list. The listener gets the common ancestors of each piece of selected text, and

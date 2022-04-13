@@ -72,7 +72,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.prefix")}} {{readOnlyInline}}
   - : A {{DOMxRef("DOMString")}} representing the namespace prefix of the element, or `null` if no prefix is specified.
 - {{DOMxRef("Element.previousElementSibling")}} {{readOnlyInline}}
-  - : Is a {{DOMxRef("Element")}}, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
+  - : An {{DOMxRef("Element")}}, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
 - {{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}
   - : Returns a number representing the scroll view height of an element.
 - {{DOMxRef("Element.scrollLeft")}}

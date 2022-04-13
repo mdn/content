@@ -23,7 +23,7 @@ made using other methods.
 ## Syntax
 
 ```js
-var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime)
+cancelAndHoldAtTime(cancelTime);
 ```
 
 ### Parameters

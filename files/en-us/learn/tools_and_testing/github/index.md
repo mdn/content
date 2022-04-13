@@ -69,7 +69,7 @@ Note that the links below take you to resources on external sites. Eventually, w
 
 - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 - [Git command list](https://git-scm.com/docs)
-- [Mastering markdown](https://guides.github.com/features/mastering-markdown/) (the text format you write in on PR, issue comments, and `.md` files).
+- [Mastering markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (the text format you write in on PR, issue comments, and `.md` files).
 - [Getting Started with GitHub Pages](https://guides.github.com/features/pages/) (how to publish demos and websites on GitHub).
 - [Learn Git branching](https://learngitbranching.js.org/)
 - [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (a very useful compendium of ways to achieve specific things in Git, including how to correct things when you went wrong).

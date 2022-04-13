@@ -40,6 +40,7 @@ transition-property: all, -moz-specific, sliding;
 transition-property: inherit;
 transition-property: initial;
 transition-property: revert;
+transition-property: revert-layer;
 transition-property: unset;
 ```
 

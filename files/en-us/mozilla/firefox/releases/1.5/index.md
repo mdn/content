@@ -64,8 +64,8 @@ Some of the new features in Firefox 1.5:
 
 #### Networking-related changes
 
-- Certificate prompts can now be overridden on a per-channel basis. This works by setting an interface requestor as an [nsIChannel](/en-US/docs/nsIChannel)'s notificationCallbacks and giving out an interface for [nsIBadCertListener](/en-US/docs/NsIBadCertListener).
-- nsIWebBrowserPersist's listeners can now implement [nsIInterfaceRequestor](/en-US/docs/XPCOM_Interface_Reference/nsIInterfaceRequestor)::GetInterface and will get an opportunity to provide all interfaces that channels might ask for, including [nsIProgressEventSink](/en-US/docs/NsIProgressEventSink) (not too useful, redundant with [nsIWebProgressListener](/en-US/docs/nsIWebProgressListener)). Useful interfaces here include [nsIChannelEventSink](/en-US/docs/NsIChannelEventSink) and [nsIBadCertListener](/en-US/docs/NsIBadCertListener).
+- Certificate prompts can now be overridden on a per-channel basis. This works by setting an interface requestor as an `nsIChannel`'s notificationCallbacks and giving out an interface for `nsIBadCertListener`.
+- nsIWebBrowserPersist's listeners can now implement `nsIInterfaceRequestor::GetInterface` and will get an opportunity to provide all interfaces that channels might ask for, including `nsIProgressEventSink` (not too useful, redundant with `nsIWebProgressListener`). Useful interfaces here include `nsIChannelEventSink` and `nsIBadCertListener`.
 - Extensions or other necko consumers, including XMLHttpRequest, can set a Cookie header explicitly, and necko will not replace it. Stored cookies will be merged with the explicitly set header, in a way that the explicit header will override the stored cookies.
 
 ## New End user Features

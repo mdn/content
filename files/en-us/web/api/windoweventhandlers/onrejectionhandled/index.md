@@ -21,14 +21,11 @@ The **`onrejectionhandled`** property of the
 processing {{event("rejectionhandled")}} events. These events are raised when
 {{jsxref("Promise")}}s are rejected.
 
-## Syntax
+## Value
 
-```js
-window.addEventListener("rejectionhandled", function(event) { /* ... */ });
-window.onrejectionhandled = function(event) { ...};
-```
+An [event handler](/en-US/docs/Web/Events/Event_handlers).
 
-## Example
+## Examples
 
 ```js
 window.onrejectionhandled = function(e) {

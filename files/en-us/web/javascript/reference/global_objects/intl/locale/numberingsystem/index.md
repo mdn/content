@@ -140,4 +140,4 @@ console.log(locale.numberingSystem); // Prints "latn"
 ## See also
 
 - {{jsxref("Intl/Locale", "Intl.Locale")}}
-- [Details on the standard Unicode numeral systems](https://github.com/unicode-org/cldr/blob/master/common/supplemental/numberingSystems.xml)
+- [Details on the standard Unicode numeral systems](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)

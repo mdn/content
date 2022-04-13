@@ -21,13 +21,11 @@ element and the current document.
 The property itself is read-only, meaning you can't substitute the
 {{domxref("DOMTokenList")}} with another one, but its contents can still be changed.
 
-## Syntax
+## Value
 
-```js
-var relstr = anchorElt.relList;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 var anchors = document.getElementsByTagName("a");

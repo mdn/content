@@ -13,13 +13,11 @@ browser-compat: api.TreeWalker.root
 The **`TreeWalker.root`** read-only property returns the node
 that is the root of what the TreeWalker traverses.
 
-## Syntax
+## Value
 
-```js
-root = TreeWalker.root;
-```
+A {{domxref("Node")}} object.
 
-## Example
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

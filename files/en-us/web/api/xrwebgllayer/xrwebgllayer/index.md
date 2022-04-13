@@ -79,7 +79,7 @@ are used to tailor the rendering system's configuration.
   - : Thrown if the resources (including memory buffers) needed for the layer to operate could not
     be allocated.
 
-## Example
+## Examples
 
 In this example, a new {{domxref("XRWebGLLayer")}} is created for a WebXR session,
 `xrSession`.

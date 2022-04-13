@@ -32,11 +32,11 @@ browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/so
 
 ## Interface changes
 
-- The {{ interface("nsIURL") }} interface has been changed a bit. The {{ ifattribute("nsIURL", "param") }} attribute was removed, and the {{ ifmethod("nsIURLParser", "parsePath") }} method has two fewer arguments than it did previously.
-- Two methods have been removed from {{ interface("nsIBrowserHistory") }}: `registerOpenPage()` and `unregisterOpenPage()`. These methods had been deprecated.
+- The `nsIURL` interface has been changed a bit. The {{ ifattribute("nsIURL", "param") }} attribute was removed, and the {{ ifmethod("nsIURLParser", "parsePath") }} method has two fewer arguments than it did previously.
+- Two methods have been removed from `nsIBrowserHistory`: `registerOpenPage()` and `unregisterOpenPage()`. These methods had been deprecated.
 - The {{ ifmethod("nsIEditorSpellCheck", "saveDefaultDictionary") }} method has been removed as part of supporting per-site spell check settings. Also, {{ ifmethod("nsIEditorSpellCheck", "updateCurrentDictionary") }} no longer takes a parameter.
-- The {{ interface("nsIGlobalHistory3") }} interface has been removed. Its functionality was of limited (if any) use to add-ons, so this shouldn't affect anyone.
-- Several specialized channels' properties attributes have been merged into the base {{ interface("nsIChannel") }} interface. This shouldn't affect compatibility at all, since those interfaces inherit from `nsIChannel` anyway.
+- The `nsIGlobalHistory3` interface has been removed. Its functionality was of limited (if any) use to add-ons, so this shouldn't affect anyone.
+- Several specialized channels' properties attributes have been merged into the base `nsIChannel` interface. This shouldn't affect compatibility at all, since those interfaces inherit from `nsIChannel` anyway.
 
 ## Preference changes
 
@@ -55,7 +55,7 @@ The `geo.wifi.*` preferences no longer have default values, although they're hon
 
 These changes are notable in that they may affect binary XPCOM components. These will need rebuilding anyway, since that's required for every major release of Firefox, but could introduce compile-time errors, so they're worth noting in particular.
 
-- The {{ interface("nsIDOMHTMLDocument") }} interface now has a new `scripts` attribute, which implements the {{ domxref("Document.scripts") }} attribute.
+- The `nsIDOMHTMLDocument` interface now has a new `scripts` attribute, which implements the {{ domxref("Document.scripts") }} attribute.
 - The {{ ifmethod("nsIJumpListShortcut", "iconImageUri") }} method has been added, to make it possible to establish favicons on jump list URI entries on Windows.
 
 ## Theme changes

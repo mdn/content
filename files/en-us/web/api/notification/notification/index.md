@@ -68,13 +68,13 @@ new Notification(title, options);
       - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
 
       Appropriate responses are built using `event.action` within the
-      {{event("notificationclick")}} event.
+      {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `silent`: A boolean value specifying whether the
       notification is silent (no sounds or vibrations issued), regardless of the device
       settings. The default is `false`, which means it won't be silent.
 
-## Example
+## Examples
 
 In our
 [`Emogotchi demo`](https://chrisdavidmills.github.io/emogotchi/)

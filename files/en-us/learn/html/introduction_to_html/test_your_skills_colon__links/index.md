@@ -48,7 +48,7 @@ In this task we want you to fill in the four links so that they link to the appr
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links2.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links2.html", '100%', 800)}}
 
 > **Callout:**
 >

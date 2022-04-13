@@ -21,12 +21,9 @@ sub-tree (`true`).
 By default it contains the value of the {{htmlattrxref("scoped", "style")}} content
 attribute.
 
-## Syntax
+## Value
 
-```js
-value = style.scoped;
-style.scoped = true;
-```
+A boolean value.
 
 ## Browser compatibility
 

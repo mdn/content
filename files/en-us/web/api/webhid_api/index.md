@@ -58,7 +58,7 @@ navigator.hid.addEventListener('disconnect', (event) => {
     console.dir(event)
 });
 // For example, when my connected keyboard gets disconnected, the log in the console will show:
-// HID disconnected: USB USB Keyboard
+// HID disconnected: USB Keyboard
 // {
 //    bubbles: false
 //    cancelBubble: false
@@ -66,7 +66,7 @@ navigator.hid.addEventListener('disconnect', (event) => {
 //    composed: false
 //    currentTarget: HID {onconnect: null, ondisconnect: null}
 //    defaultPrevented: false
-//    device: HIDDevice {oninputreport: null, opened: false, vendorId: 6700, productId: 11555, productName: "USB USB Keyboard", …}
+//    device: HIDDevice {oninputreport: null, opened: false, vendorId: 6700, productId: 11555, productName: "USB Keyboard", …}
 //    eventPhase: 0
 //    isTrusted: true
 //    path: []

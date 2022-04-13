@@ -28,6 +28,7 @@ image-resolution: 300dpi snap;
 image-resolution: inherit;
 image-resolution: initial;
 image-resolution: revert;
+image-resolution: revert-layer;
 image-resolution: unset;
 ```
 

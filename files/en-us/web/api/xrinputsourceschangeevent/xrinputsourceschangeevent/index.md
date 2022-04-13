@@ -58,7 +58,7 @@ the input parameters provided.
 - {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}}
   - : Delivered to the {{domxref("XRSession")}} when the set of input devices available to it changes.
 
-## Example
+## Examples
 
 The following snippet of code creates a new `XRInputSourcesChangeEvent`
 object indicating that a single new input source, described by an

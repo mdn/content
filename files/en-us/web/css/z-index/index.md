@@ -36,6 +36,7 @@ z-index: -1; /* Negative values to lower the priority */
 z-index: inherit;
 z-index: initial;
 z-index: revert;
+z-index: revert-layer;
 z-index: unset;
 ```
 

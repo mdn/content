@@ -44,6 +44,7 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: revert;
+backdrop-filter: revert-layer;
 backdrop-filter: unset;
 ```
 

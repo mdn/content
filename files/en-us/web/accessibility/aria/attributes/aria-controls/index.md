@@ -13,7 +13,7 @@ The global `aria-controls` property identifies the element (or elements) whose c
 
 ## Description
 
-When an interactive or input control, be it a checkbox, radio button, tab panel, icon, toggles, or other, has an impact on another element in a document or application, the `aria-control` attributes should be included to indicate which element or elements the user interface widget controls. The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, regardless of what type of interaction initiates the impacted behavior.
+When an interactive or input control, be it a checkbox, radio button, tab panel, icon, toggles, or other, has an impact on another element in a document or application, the `aria-controls` attribute should be included to indicate which element or elements the user interface widget controls. The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, regardless of what type of interaction initiates the impacted behavior.
 
 A [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/Combobox_role) element has `aria-controls` set to a value that refers to the element that serves as the popup. The `aria-controls` only needs to be set when the popup is visible, but it is valid and easier to program to reference an element that is not visible.
 

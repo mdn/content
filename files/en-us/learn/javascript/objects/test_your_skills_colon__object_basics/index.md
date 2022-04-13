@@ -32,7 +32,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/object-basics/object-basics1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/object-basics/object-basics1-download.html) to work in your own editor or in an online editor.
 
 ## Object basics 2
 
@@ -59,7 +59,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/object-basics/object-basics2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/object-basics/object-basics2-download.html) to work in your own editor or in an online editor.
 
 ## Object basics 3
 
@@ -75,7 +75,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/object-basics/object-basics3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/object-basics/object-basics3-download.html) to work in your own editor or in an online editor.
 
 ## Object basics 4
 
@@ -89,7 +89,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/object-basics/object-basics4-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/object-basics/object-basics4-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

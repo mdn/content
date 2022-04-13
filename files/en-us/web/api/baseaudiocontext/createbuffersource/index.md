@@ -28,14 +28,14 @@ track.
 ## Syntax
 
 ```js
-var source = baseAudioContext.createBufferSource();
+createBufferSource();
 ```
 
-### Returns
+### Return value
 
 An {{domxref("AudioBufferSourceNode")}}.
 
-## Example
+## Examples
 
 In this example, we create a two second buffer, fill it with white noise, and then play
 it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain

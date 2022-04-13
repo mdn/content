@@ -43,6 +43,7 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 caret-color: inherit;
 caret-color: initial;
 caret-color: revert;
+caret-color: revert-layer;
 caret-color: unset;
 ```
 

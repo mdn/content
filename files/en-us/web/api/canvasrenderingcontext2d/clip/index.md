@@ -32,8 +32,10 @@ drawn.
 ## Syntax
 
 ```js
-void ctx.clip([fillRule]);
-void ctx.clip(path [, fillRule]);
+clip();
+clip(path);
+clip(fillRule);
+clip(path, fillRule);
 ```
 
 ### Parameters

@@ -31,6 +31,7 @@ page-break-before: verso;
 page-break-before: inherit;
 page-break-before: initial;
 page-break-before: revert;
+page-break-before: revert-layer;
 page-break-before: unset;
 ```
 

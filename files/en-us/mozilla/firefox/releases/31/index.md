@@ -62,7 +62,7 @@ New ECMAScript 2015 features implemented:
 - The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
 - Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.
 - The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ({{bug(960426)}}).
-- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{event("unload")}} or {{event("beforeunload")}} handler.
+- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{event("unload")}} or {{domxref("Window.beforeunload_event", "beforeunload")}} handler.
 
 ### MathML
 
@@ -92,7 +92,7 @@ _No change._
   }
   ```
 
-- [`nsIDOMWindowUtils.sendQueryContentEvent()`](</en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()>) and [`nsIDOMWindowUtils.sendSelectionSetEvent()`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29) have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
+- `nsIDOMWindowUtils.sendQueryContentEvent()`>) and `nsIDOMWindowUtils.sendSelectionSetEvent()` have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
 
 ### Add-on SDK
 

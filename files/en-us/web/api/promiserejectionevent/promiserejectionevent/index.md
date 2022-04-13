@@ -23,7 +23,7 @@ fail and whose failures go unnoticed. It also becomes easier to write a global h
 for errors.
 
 There are two types of `PromiseRejectionEvent`:
-{{event("unhandledrejection")}} is sent by the JavaScript runtime when a promise is
+{{domxref("Window.unhandledrejection_event", "unhandledrejection")}} is sent by the JavaScript runtime when a promise is
 rejected but the rejection goes unhandled. A {{event("rejectionhandled")}} event is
 emitted if a promise is rejected but the rejection is caught by a rejection handler..
 
@@ -62,7 +62,7 @@ A new `PromiseRejectionEvent` configured as specified by the parameters.
 
 ## Examples
 
-This example creates a new {{event("unhandledrejection")}} event for the promise
+This example creates a new {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event for the promise
 `myPromise` with the reason being the string "My house is on fire". The
 `reason` could just as easily be a number, or even an object with detailed
 information including the home address, how serious the fire is, and the phone number of

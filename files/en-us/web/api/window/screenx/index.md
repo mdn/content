@@ -21,13 +21,7 @@ the left side of the screen.
 > browsers in more recent times — {{domxref("Window.screenLeft")}}. This was originally
 > supported only in IE but was introduced everywhere due to popularity.
 
-## Syntax
-
-```js
-leftWindowPos = window.screenX
-```
-
-### Returns
+## Value
 
 A number equal to the number of CSS pixels from the left edge of the browser viewport
 to the  left edge of the screen.

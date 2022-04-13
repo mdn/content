@@ -43,6 +43,8 @@ border: medium dashed green;
 /* Global values */
 border: inherit;
 border: initial;
+border: revert;
+border: revert-layer;
 border: unset;
 ```
 

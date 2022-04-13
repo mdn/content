@@ -94,7 +94,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
 - {{domxref("Window.messageManager")}} {{non-standard_inline}}
   - : Returns the [message manager](/en-US/docs/The_message_manager) object for this window.
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{non-standard_inline}}
-  - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in {{interface("nsIDOMWindowUtils")}} for a conversion factor to adapt to screen pixels if needed.
+  - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
 - {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
 - {{domxref("Window.name")}}
@@ -172,7 +172,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
 - {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
   - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.dialogArguments")}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.
+  - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
 - {{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}
@@ -318,10 +318,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
-- {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Called when the print dialog box is closed. See {{event("afterprint")}} event.
-- {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Called when the print dialog box is opened. See {{event("beforeprint")}} event.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
@@ -351,7 +347,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{event("languagechange")}} events on the window.
+  - : An event handler property for {{domxref("Window.languagechange_event", "languagechange")}} events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
@@ -365,9 +361,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Called when ANY mouse button is released
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Called when network connection is lost. See {{event("offline")}} event.
+  - : Called when network connection is lost. See {{domxref("Window.offline_event", "offline")}} event.
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Called when network connection is established. See {{event("online")}} event.
+  - : Called when network connection is established. See {{domxref("Window.online_event", "online")}} event.
 - {{domxref("WindowEventHandlers.onpagehide")}}
   - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
 - {{domxref("WindowEventHandlers.onpageshow")}}
@@ -387,7 +383,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onstorage")}}
-  - : Called when there is a change in session storage or local storage. See {{event("storage")}} event
+  - : Called when there is a change in session storage or local storage. See {{domxref("Window.storage_event", "storage")}} event
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
@@ -407,9 +403,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} property.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
   - : Fired when the orientation of the device has changed.
-- {{domxref("Window/devicemotion_event", "devicemotion")}}
+- {{domxref("Window.devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
-- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
 - {{domxref("Window/resize_event", "resize")}}
   - : Fired when the window has been resized.
@@ -531,10 +527,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/afterprint_event", "afterprint")}}
   - : Fired after the associated document has started printing or the print preview has been closed.
-    Also available via the {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}} property.
 - {{domxref("Window/beforeprint_event", "beforeprint")}}
   - : Fired when the associated document is about to be printed or previewed for printing.
-    Also available via the {{domxref("WindowEventHandlers/onbeforeprint", "onbeforeprint")}} property.
 
 ### Promise rejection events
 

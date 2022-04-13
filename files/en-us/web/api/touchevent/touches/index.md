@@ -23,21 +23,12 @@ target element was at {{event("touchstart")}} time.
 You can think of it as how many separate fingers are able to be identified as touching
 the screen.
 
-## Syntax
+## Value
 
-```js
-var touches = touchEvent.touches;
-```
-
-### Return value
-
-- `touches`
-  - : A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for
-    touch points that are still in contact with the touch surface, regardless of whether
-    or not they've changed or what their target element was at `touchstart`
+A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for  touch points that are still in contact with the touch surface, regardless of whether or not they've changed or what their target element was at `touchstart`
     time.
 
-## Example
+## Examples
 
 This example illustrates the {{domxref("TouchEvent")}} object's
 {{domxref("TouchEvent.touches")}} property. The {{domxref("TouchEvent.touches")}}

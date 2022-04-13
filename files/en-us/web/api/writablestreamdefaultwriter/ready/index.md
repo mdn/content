@@ -34,7 +34,7 @@ A {{jsxref("Promise")}}.
 The following example shows two uses of the `ready` property. The first uses
 `ready` to ensure that the `WritableStream` is done writing and
 thus able to receive data before sending a binary chunk. The second also checks whether
-the the `WritableStream` is done writing, but this time because the writing
+the `WritableStream` is done writing, but this time because the writing
 must be finished before the writer can be closed.
 
 ```js

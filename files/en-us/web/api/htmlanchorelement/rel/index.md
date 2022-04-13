@@ -17,14 +17,11 @@ space-separated list of [link types](/en-US/docs/Web/HTML/Link_types)
 indicating the relationship between the resource represented by the {{HTMLElement("a")}}
 element and the current document.
 
-## Syntax
+## Value
 
-```js
-var relstr = anchorElt.rel;
-anchorElt.rel = relstr;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 var anchors = document.getElementsByTagName("a");

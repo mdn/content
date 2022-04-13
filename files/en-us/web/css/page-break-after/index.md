@@ -29,6 +29,7 @@ page-break-after: verso;
 page-break-after: inherit;
 page-break-after: initial;
 page-break-after: revert;
+page-break-after: revert-layer;
 page-break-after: unset;
 ```
 

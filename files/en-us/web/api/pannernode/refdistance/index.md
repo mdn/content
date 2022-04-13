@@ -66,7 +66,7 @@ scheduleTestTone(7, context.currentTime + NOTE_LENGTH * 2);
 
 After running this code, the resulting waveforms should look something like this:
 
-![A waveform visualisation of three oscillator tones produced in Web Audio. Each oscillator moves away from the listener at the same speed, but with different refDistances affecting the resulting volume decay.](screen_shot_2018-10-11_at_23.14.32.png)
+![A waveform visualization of three oscillator tones produced in Web Audio. Each oscillator moves away from the listener at the same speed, but with different refDistances affecting the resulting volume decay.](screen_shot_2018-10-11_at_23.14.32.png)
 
 ## Specifications
 

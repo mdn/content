@@ -54,6 +54,7 @@ text-emphasis: filled sesame #555;
 text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: revert;
+text-emphasis: revert-layer;
 text-emphasis: unset;
 ```
 

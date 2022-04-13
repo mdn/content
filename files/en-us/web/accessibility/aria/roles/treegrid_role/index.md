@@ -19,21 +19,21 @@ The `treegrid` role identifies an element as being grid whose rows can be expand
 A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive.  A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles.  Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. Like a `tree`, parent nodes in a `treegrid` are expandable and collapsible.
 The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) elements, optionally with [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) elements grouping the rows. Each row, in turn, contains one or more cells. Each cell is either a DOM descendant of or owned by a row element and is either a [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) element, with the `gridcell` role being used for all cells that do not contain column or row header information.
 
-A `row` that can be expanded or collapsed to show or hide a set of child rows is a **parent row**. Each parent row has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state set on either the row element or on a cell contained in the row. 
+A `row` that can be expanded or collapsed to show or hide a set of child rows is a **parent row**. Each parent row has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state set on either the row element or on a cell contained in the row.
 
-The `aria-expanded` state is set to `true` when the child rows are displayed and set to `false` when the child rows are not hidden. Elements that do not control display of child rows should not have the `aria-expanded` attribute because the presence of the attribute indicates to assistive technologies that the element with the attribute is a parent. 
+The `aria-expanded` state is set to `true` when the child rows are displayed and set to `false` when the child rows are not hidden. Elements that do not control display of child rows should not have the `aria-expanded` attribute because the presence of the attribute indicates to assistive technologies that the element with the attribute is a parent.
 
-When your grid UI calls for rows supporting `aria-expanded` or if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), use `treegrid` and not `grid`. 
+When your grid UI calls for rows supporting `aria-expanded` or if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), use `treegrid` and not `grid`.
 
-Each `row` or `gridcell` in a row should be keyboard focusable, and keyboard focus for all these tree grid descendants must be managed.  The exception to this rule is column header cells which aren't required to be focusable if they do not provide functionality such as sort or filter. Every row and cell should either contain a focusable element or be focusable itself, regardless of whether individual cell content is editable or interactive. 
+Each `row` or `gridcell` in a row should be keyboard focusable, and keyboard focus for all these tree grid descendants must be managed.  The exception to this rule is column header cells which aren't required to be focusable if they do not provide functionality such as sort or filter. Every row and cell should either contain a focusable element or be focusable itself, regardless of whether individual cell content is editable or interactive.
 
 ### Single and multi-select treegrids
 
-If the `treegrid` allows the user to choose just one item for an action, then it is known as a **single-select** treegrid. In single-select treegrids, the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). 
+If the `treegrid` allows the user to choose just one item for an action, then it is known as a **single-select** treegrid. In single-select treegrids, the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
 
 If the treegrid supports selection of more than one row or cell, it is a **multi-select** treegrid. In the multi-select treegrid, the selected state is independent of the focus. The visual design and assistive technologies must distinguish between items that are selected and the item that has focus.  
 
-For multi-select treegrids, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) on the element with the `treegrid` role.  All selected rows or cells have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) set to true. All rows and cells that are selectable but not currently selected have `aria-selected` set to `false`. Don't include the `aria-selected` attribute on rows and cells that are not individually selectable as the presence of the attribute indicates to assistive technologies that the row or cell is selectable. 
+For multi-select treegrids, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) on the element with the `treegrid` role.  All selected rows or cells have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) set to true. All rows and cells that are selectable but not currently selected have `aria-selected` set to `false`. Don't include the `aria-selected` attribute on rows and cells that are not individually selectable as the presence of the attribute indicates to assistive technologies that the row or cell is selectable.
 
 ### Orphan rows
 
@@ -55,11 +55,11 @@ If the `treegrid` is disabled, make that disabled state visually apparent, progr
 
 ### Treegrid sorting
 
-If the treegrid provides sort functions, the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute is included on relevant header cell elements, not on the grid itself. 
+If the treegrid provides sort functions, the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute is included on relevant header cell elements, not on the grid itself.
 
 ### Treegrid menus
 
-If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role/) that opens when right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) on the the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. The ability for both keyboard and pointer device users to open and set focus in the menu must be added with JavaScript.
+If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) that opens when right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) on the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. The ability for both keyboard and pointer device users to open and set focus in the menu must be added with JavaScript.
 
 ### Read-only treegrids
 
@@ -72,15 +72,15 @@ Like all ARIA attributes, adding `aria-readonly` only informs assistive technolo
 - [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role
   - : A row of cells within a tabular structure, optionally within a `rowgroup`. Contains one or more rows of grid cells, column headers, or row headers.
 - [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) role
-  - : A group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure. 
+  - : A group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure.
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) role
-  - : Intended to mimic the functionality of the HTML {{HTMLElement('td')}} element, is is found in `grid` and `treegrid` roles and must be the direct child of a `row`.
+  - : Intended to mimic the functionality of the HTML {{HTMLElement('td')}} element, is found in `grid` and `treegrid` roles and must be the direct child of a `row`.
 - [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
   - : A cell in a row containing header information for a column, similar to the native {{HTMLElement('th')}} element with column scope
 - [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) role
   - : A cell containing header information for a `row` within a tabular structure.
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-  - : For expandable items, the value is `true` or `false`. Also indicates that the item is expandable, so should not be present if the item cannot be expanded. 
+  - : For expandable items, the value is `true` or `false`. Also indicates that the item is expandable, so should not be present if the item cannot be expanded.
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
   - : Identifies a contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
@@ -92,7 +92,7 @@ Like all ARIA attributes, adding `aria-readonly` only informs assistive technolo
 
 Being able to move focus among rows and cells of the grid with a keyboard must be implemented in order to create an accessible treegrid. Moving focus into the grid may result in the first cell or the first row being focused. Whether focus goes to the next adjacent cell or the row depends on its content requirements, with some treegrids not providing focus to rows.
 
-The following keyboard interactions need to be supported when an element in the grid has received focus, e.g., after a user has moved focus to the grid with Tab. 
+The following keyboard interactions need to be supported when an element in the grid has received focus, e.g., after a user has moved focus to the grid with Tab.
 
 - <kbd>Enter</kbd>
   - : If cell-only focus is enabled and focus is on the first cell with the `aria-expanded` property, opens or closes the child rows. Otherwise, performs the default action for the cell.
@@ -115,7 +115,6 @@ The following keyboard interactions need to be supported when an element in the 
 - <kbd>End</kbd> <kbd>Control + End</kbd></td><td>
   - : If focus is on a row, moves focus to the last row. If focus is in the last row, focus does not move. If focus is on a cell, moves focus to the last cell in the row. If focus is in the last cell of the row, focus does not move. If not all rows are present in the DOM, this can be used to focus on the last row present in the DOM, or on the last row available if the entire database were present in the DOM.
 
-
 If a treegrid supports selection of cells, rows, or columns, the following keys are commonly used for these functions.
 
 - <kbd>Control + Space</kbd>
@@ -133,11 +132,9 @@ If a treegrid supports selection of cells, rows, or columns, the following keys 
 - <kbd>Shift + Up Arrow</kbd>
   - : If focus is on a row, extends selection to all the cells in the previous row. If focus is on a cell, extends selection one cell up.
 
-
 If navigation functions can dynamically add more rows or columns to the DOM, key events that move focus to the beginning or end of the grid, such as <kbd>control + End</kbd>, may move focus to the last row in the DOM rather than the last available row in the back-end data.
 
 While navigation keys, such as arrow keys, are moving focus from cell to cell, they are not available to do something like operate a combobox or move an editing caret inside of a cell. If this functionality is needed, see [Editing and Navigating Inside a Cell](https://www.w3.org/TR/wai-aria-practices-1.1/#gridNav_inside).
-
 
 <!--
 ### Required JavaScript features

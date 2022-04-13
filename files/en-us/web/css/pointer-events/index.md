@@ -35,6 +35,7 @@ pointer-events: all;            /* SVG only */
 pointer-events: inherit;
 pointer-events: initial;
 pointer-events: revert;
+pointer-events: revert-layer;
 pointer-events: unset;
 ```
 

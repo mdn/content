@@ -24,7 +24,7 @@ applied to any subsequent drawing.
 ## Syntax
 
 ```js
-CanvasPattern ctx.createPattern(image, repetition);
+createPattern(image, repetition);
 ```
 
 ### Parameters

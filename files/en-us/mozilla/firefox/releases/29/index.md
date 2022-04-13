@@ -15,7 +15,7 @@ Firefox 29 was released on April 29, 2014. This article lists key changes that a
 
 Major changes include:
 
-- Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.
+- Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their URL, etc.
 - Added the [console API](/en-US/docs/Web/API/Console_API) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
 - The [Network Monitor](/en-US/docs/Tools/Network_Monitor) tool now shows performance statistics using pie charts ({{bug(846601)}}).
 - On the [Inspector](/en-US/docs/Tools/Page_Inspector), preview tooltips of CSS transforms are now available ({{bug(726427)}}).

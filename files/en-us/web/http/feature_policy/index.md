@@ -118,7 +118,7 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 ## Examples
 
 - [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- See [Feature Policy Demos](http://feature-policy-demos.appspot.com/) for example usage of many policies.
+- See [Feature Policy Demos](https://feature-policy-demos.appspot.com/) for example usage of many policies.
 
 ## Specifications
 
@@ -135,7 +135,7 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 - [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
-- [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
+- [Introduction to Feature Policy](https://developer.chrome.com/blog/feature-policy/)
 - [Feature policies on www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

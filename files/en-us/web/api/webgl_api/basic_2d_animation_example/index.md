@@ -308,7 +308,7 @@ The uniform named `uScalingFactor` is set to the `currentScale` value previously
 
 `uGlobalColor` is set using {{domxref("WebGLRenderingContext/uniform", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).
 
-Now that that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
+Now that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
 
 With the index of the vertex position attribute now available in `aVertexPosition`, we call `enableVertexAttribArray()` to enable the position attribute so it can be used by the shader program (in particular, by the vertex shader).
 

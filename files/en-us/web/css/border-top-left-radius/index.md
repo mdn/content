@@ -40,6 +40,7 @@ border-top-left-radius: inherit;
 border-top-left-radius: inherit;
 border-top-left-radius: initial;
 border-top-left-radius: revert;
+border-top-left-radius: revert-layer;
 border-top-left-radius: unset;
 ```
 

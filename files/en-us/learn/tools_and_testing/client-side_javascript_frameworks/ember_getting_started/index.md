@@ -86,7 +86,7 @@ As you work through this series of tutorials, you'll notice Ember's opinions —
 
 ## How does Ember relate to vanilla JavaScript?
 
-Ember is built on JavaScript technologies and is a thin layer on top of traditional [object-oriented programming](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS), while still allowing developers to utilize [functional programming techniques](https://opensource.com/article/17/6/functional-javascript).
+Ember is built on JavaScript technologies and is a thin layer on top of traditional [object-oriented programming](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming), while still allowing developers to utilize [functional programming techniques](https://opensource.com/article/17/6/functional-javascript).
 
 Ember makes use of two main syntaxes:
 
@@ -104,7 +104,7 @@ Everything else in Ember is _just_ JavaScript. In particular, JavaScript classes
 Here is a demonstration the impact Ember has on the JavaScript that is in typical projects:
 [Gavin Demonstrates how < 20% of the JS written is specific to Ember](https://twitter.com/gavinjoyce/status/1174726713101705216).
 
-![a set of code files with the ember-specific javascript highlighted, showing that only 20% of the Ember code is Ember-specific](20percent-js-specific-ember.png)
+![a set of code files with the ember-specific JavaScript highlighted, showing that only 20% of the Ember code is Ember-specific](20percent-js-specific-ember.png)
 
 ## Getting started
 
@@ -231,7 +231,7 @@ The development server launches at `http://localhost:4200`, which you can visit 
 
 If everything is working correctly, you should see a page like this:
 
-![The default start page when you create a new ember app, with a cartoon mascot, saying congratulations](ember-start-page.png)
+![The default start page when you create a new Ember app, with a cartoon mascot, saying congratulations](ember-start-page.png)
 
 > **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/install-win10), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
 

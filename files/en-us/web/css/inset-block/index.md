@@ -29,6 +29,7 @@ inset-block: auto;
 inset-block: inherit;
 inset-block: initial;
 inset-block: revert;
+inset-block: revert-layer;
 inset-block: unset;
 ```
 

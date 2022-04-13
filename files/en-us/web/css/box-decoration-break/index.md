@@ -33,9 +33,10 @@ box-decoration-break: slice;
 box-decoration-break: clone;
 
 /* Global values */
-box-decoration-break: initial;
 box-decoration-break: inherit;
+box-decoration-break: initial;
 box-decoration-break: revert;
+box-decoration-break: revert-layer;
 box-decoration-break: unset;
 ```
 

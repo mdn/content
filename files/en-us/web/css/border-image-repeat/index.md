@@ -31,6 +31,7 @@ border-image-repeat: round stretch;
 border-image-repeat: inherit;
 border-image-repeat: initial;
 border-image-repeat: revert;
+border-image-repeat: revert-layer;
 border-image-repeat: unset;
 ```
 

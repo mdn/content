@@ -45,12 +45,12 @@ If `module` is not a {{jsxref("WebAssembly.Module")}} object instance, a
 A wasm module is comprised of a sequence of **sections**. Most of these
 sections are fully specified and validated by the wasm spec, but modules can also
 contain **custom sections** that are ignored and skipped over during
-validation. (Read [High level structure](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#high-level-structure)
+validation. (Read [High level structure](https://github.com/WebAssembly/design/blob/main/BinaryEncoding.md#high-level-structure)
 for information on section structures, and how normal sections
 ("known sections") and custom sections are distinguished.)
 
 This provides developers with a way to include custom data inside wasm modules for other purposes,
-for example the [name custom section](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#name-section),
+for example the [name custom section](https://github.com/WebAssembly/design/blob/main/BinaryEncoding.md#name-section),
 which allows developers to provide names for all the functions and
 locals in the module (like "symbols" in a native build).
 

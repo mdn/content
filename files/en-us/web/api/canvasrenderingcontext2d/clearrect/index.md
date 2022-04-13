@@ -25,11 +25,11 @@ transparent black.
 ## Syntax
 
 ```js
-void ctx.clearRect(x, y, width, height);
+clearRect(x, y, width, height);
 ```
 
 The `clearRect()` method sets the pixels in a rectangular area to
-transparent black (`rgba(0,0,0,0)`). The rectangle's corner is at
+transparent black (`rgba(0,0,0,0)`). The rectangle's top-left corner is at
 `(x, y)`, and its size is specified by `width` and
 `height`.
 

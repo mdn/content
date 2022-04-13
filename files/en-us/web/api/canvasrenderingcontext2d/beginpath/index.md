@@ -22,7 +22,7 @@ this method when you want to create a new path.
 ## Syntax
 
 ```js
-void ctx.beginPath();
+beginPath();
 ```
 
 ## Examples

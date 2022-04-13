@@ -31,8 +31,8 @@ You can avoid this by setting the preference `extensions.autoDisableScopes` to 1
 
 As part of our ongoing effort to streamline Gecko's internals, a few interfaces have been merged together:
 
-- {{ interface("nsIDOMWindowInternal") }} has been merged into {{ interface("nsIDOMWindow") }}. The `nsIDOMWindowInternal` interface still exists, but is empty, and will be removed entirely in Firefox 9. You should update any code that relies on the existence of `nsIDOMWindowInternal` to look for `nsIDOMWindow` instead.
-- All of the sub-interfaces of {{ interface("nsISelection") }} have been merged into the base `nsISelection` interface. If by some chance you were previously looking for {{ interface("nsISelection2") }} or {{ interface("nsISelection3") }}, you should update your code.
+- `nsIDOMWindowInternal` has been merged into `nsIDOMWindow`. The `nsIDOMWindowInternal` interface still exists, but is empty, and will be removed entirely in Firefox 9. You should update any code that relies on the existence of `nsIDOMWindowInternal` to look for `nsIDOMWindow` instead.
+- All of the sub-interfaces of `nsISelection` have been merged into the base `nsISelection` interface. If by some chance you were previously looking for `nsISelection2` or `nsISelection3`, you should update your code.
 
 ## Date handling improved
 

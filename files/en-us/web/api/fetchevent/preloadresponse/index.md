@@ -27,7 +27,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} or otherwise 
 
 ## Examples
 
-This code snippet is from [Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution).
+This code snippet is from [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/).
 
 The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler listens for the `fetch` event.
 When fired, the handler calls {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} to pass a promise back to the controlled page.
@@ -66,7 +66,7 @@ addEventListener("fetch", (event) => {
 
 ## See also
 
-- [Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution)
+- [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

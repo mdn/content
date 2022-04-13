@@ -19,7 +19,8 @@ The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface 
 ## Syntax
 
 ```js
-let backgroundFetchRegistration = BackgroundFetchManager.fetch(id, requests [,options]);
+fetch(id, requests);
+fetch(id, requests, options);
 ```
 
 ### Parameters

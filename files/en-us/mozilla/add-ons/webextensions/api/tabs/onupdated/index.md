@@ -19,7 +19,7 @@ When the user navigates to a new URL in a tab, this will typically generate seve
 
 This event will also be fired for changes to a tab's properties that don't involve navigation, like pinning and unpinning (which updates the `pinned` property) and muting or unmuting (which updates the `audible` and `mutedInfo` properties).
 
-You can filter this event, making it only fire for tabs whose urls match specific [patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), or for changes to specific properties, or for changes to a specific tab or window, or any combinations of these restrictions.
+You can filter this event, making it only fire for tabs whose URLs match specific [patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), or for changes to specific properties, or for changes to a specific tab or window, or any combinations of these restrictions.
 
 ## Syntax
 
