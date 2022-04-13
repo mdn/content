@@ -47,9 +47,7 @@ fetch(url).then(function(response) {
 ## Syntax
 
 ```js
-cache.put(request, response).then(function() {
-  // request/response pair has been added to the cache
-});
+put(request, response);
 ```
 
 ### Parameters

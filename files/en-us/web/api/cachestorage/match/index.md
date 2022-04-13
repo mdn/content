@@ -35,9 +35,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.match(request, options).then(function(response) {
-  // Do something with the response
-});
+match(request, options);
 ```
 
 ### Parameters

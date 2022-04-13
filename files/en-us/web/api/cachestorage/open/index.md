@@ -29,9 +29,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.open(cacheName).then(function(cache) {
-  // Do something with your cache
-});
+open(cacheName);
 ```
 
 ### Parameters

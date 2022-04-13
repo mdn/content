@@ -19,7 +19,7 @@ method of the Canvas 2D API begins a new sub-path at the point specified by the 
 ## Syntax
 
 ```js
-void ctx.moveTo(x, y);
+moveTo(x, y);
 ```
 
 ### Parameters

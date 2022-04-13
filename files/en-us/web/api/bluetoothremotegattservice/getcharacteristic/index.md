@@ -22,10 +22,10 @@ returns a {{jsxref("Promise")}} to an instance of
 ## Syntax
 
 ```js
-bluetoothGATTServiceInstance.getCharacteristic(characteristic).then(function(BluetoothGATTCharacteristic) { /* ... */ } )
+getCharacteristic(characteristic);
 ```
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} to an instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}
 

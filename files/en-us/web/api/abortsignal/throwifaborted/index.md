@@ -22,7 +22,7 @@ This method can also be used to abort operations at particular points in code, r
 ## Syntax
 
 ```js
-throwIfAborted()
+throwIfAborted();
 ```
 
 ### Return value
