@@ -45,6 +45,7 @@ export { variable1 as name1, variable2 as name2, …, nameN };
 
 // Exporting destructured assignments with renaming
 export const { name1, name2: bar } = o;
+export const [ name1, name2 ] = array;
 
 // Default exports
 export default expression;
