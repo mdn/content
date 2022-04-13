@@ -14,7 +14,7 @@ This article provides information about the changes in Firefox 61 that will affe
 
 ### Developer tools
 
-- The new-look Console UI has been enabled by default for the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) & [Browser Toolbox](/en-US/docs/Tools/Browser_Toolbox) ({{bug(1362023)}}/{{bug(1347127)}}). The old UI has been removed.
+- The new-look Console UI has been enabled by default for the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) & [Browser Toolbox](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html) ({{bug(1362023)}}/{{bug(1347127)}}). The old UI has been removed.
 - In the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html), clicking _Open in New Tab_ in a `POST` request's context menu correctly resends the request with the expected `POST` parameters ({{bug(1407515)}}).
 - [CSS variables now autocomplete](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#css_variable_autocompletion) with color swatches, allowing you to see exactly what color value is stored in each variable ({{bug(1451211)}}).
 

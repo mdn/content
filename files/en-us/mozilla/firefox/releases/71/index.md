@@ -27,7 +27,7 @@ This article provides information about the changes in Firefox 71 that will affe
 - The new debugger [paused overlay](/en-US/docs/Tools/Debugger/How_to/Step_through_code#pause_on_breakpoints_overlay) can now be disabled using the `devtools.debugger.features.overlay` pref ({{bug(1579768)}}).
 - We've got new [keyboard shortcuts](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html) for opening the debugger: `Ctrl` + `Shift` + `Z` on Linux/Windows and `Cmd` + `Opt` + `Z` on macOS ({{bug(1583042)}}).
 - Pausing on a [DOM Mutation Breakpoints](https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html) now mentions the DOM node that has the breakpoint and, if available, the child node that was added/removed ({{bug(1576145)}}).
-- Locations in [pretty printed sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/pretty-print_a_minified_file/index.html) are now correct after pretty-printing and when jumping to the source from the Inspector's [events listener tooltip](/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners) ({{bug(1500222)}}).
+- Locations in [pretty printed sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/pretty-print_a_minified_file/index.html) are now correct after pretty-printing and when jumping to the source from the Inspector's [events listener tooltip](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_event_listeners/index.html) ({{bug(1500222)}}).
 
 [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html):
 

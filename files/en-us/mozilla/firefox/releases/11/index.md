@@ -84,7 +84,7 @@ _No change._
 
 ### Developer tools
 
-- The [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) now offers a [3D view](/en-US/docs/Tools/3D_View) if your system supports [WebGL](/en-US/docs/Web/API/WebGL_API).
+- The [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) now offers a [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) if your system supports [WebGL](/en-US/docs/Web/API/WebGL_API).
 - The new [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) provides a free-form way to edit and compose CSS style sheets in real-time.
 - The [View Source feature](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) now uses the new HTML5 parser instead of the old HTML parser.
 

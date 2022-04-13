@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 #### Debugger updates
 
-- In the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) you can now set breakpoints for [DOM Mutation](/en-US/docs/Tools/Debugger/Break_on_DOM_mutation), so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ({{bug(1576219)}}).
+- In the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) you can now set breakpoints for [DOM Mutation](https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html), so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ({{bug(1576219)}}).
 - The Debugger now shows an overlay on the page when it is paused, with basic stepping buttons to let you step and continue ({{bug(1574646)}}).
 - The Debugger now shows sources that already got discarded by the engine (usually scripts that execute once during page load), so you can properly set breakpoints to debug when they execute next ({{bug(1572280)}}).
 - The Debugger's [scopes panel](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with), or [`if`/`else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) ({{bug(1448166)}})
