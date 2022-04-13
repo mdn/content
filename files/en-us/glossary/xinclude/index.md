@@ -11,5 +11,5 @@ The XInclude mechanism is not supported natively by any major browsers.
 
 ## See also
 
-[XInclude standard](/en-US/docs/Glossary/XInclude)
-[XPath](/en-US/docs/Web/XPath)
+- [XInclude standard](/en-US/docs/Glossary/XInclude)
+- [`XPath`](/en-US/docs/Web/XPath)
