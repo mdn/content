@@ -1294,7 +1294,7 @@
 /en-US/docs/DOM/Event/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/DOM/Event/UIEvent/KeyEvent	/en-US/docs/Web/API/KeyboardEvent
 /en-US/docs/DOM/Event/UIEvent/MouseEvent	/en-US/docs/Web/API/MouseEvent
-/en-US/docs/DOM/EventListener	/en-US/docs/Web/API/EventListener
+/en-US/docs/DOM/EventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM/EventTarget	/en-US/docs/Web/API/EventTarget
 /en-US/docs/DOM/EventTarget.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM/EventTarget.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
@@ -7974,6 +7974,8 @@
 /en-US/docs/Web/API/Event/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/Event/scoped	/en-US/docs/Web/API/Event/composed
 /en-US/docs/Web/API/EventHandler	/en-US/docs/Web/Events/Event_handlers
+/en-US/docs/Web/API/EventListener	/en-US/docs/Web/API/EventTarget/addEventListener
+/en-US/docs/Web/API/EventListener/handleEvent	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventSource/onerror	/en-US/docs/Web/API/EventSource/error_event
 /en-US/docs/Web/API/EventSource/onmessage	/en-US/docs/Web/API/EventSource/message_event
 /en-US/docs/Web/API/EventSource/onopen	/en-US/docs/Web/API/EventSource/open_event
