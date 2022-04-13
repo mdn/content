@@ -87,7 +87,7 @@ Of course, the above message is really unhelpful! In a real example you'd want t
 
 Let's start by creating our own canvas that we draw future experiments on to.
 
-1. First make a local copy of the [0_canvas_start](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) directory. It contains three files:
+1. First make a local copy of the [0_canvas_start](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) directory. It contains three files:
     - "index.html"
     - "script.js"
     - "style.css"
@@ -152,7 +152,7 @@ Drawing shapes tends to be done using the rectangle shape primitive, or by traci
 
 Let's start with some simple rectangles.
 
-1. First of all, take a copy of your newly coded canvas template (or make a local copy of the [1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) directory if you didn't follow the above steps).
+1. First of all, take a copy of your newly coded canvas template (or make a local copy of the [1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) directory if you didn't follow the above steps).
 2. Next, add the following lines to the bottom of your JavaScript:
 
     ```js
@@ -201,13 +201,13 @@ Now you should see that your white outline has become much thicker! That's it fo
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
 
-> **Note:** The finished code is available on GitHub as [2_canvas_rectangles](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/).
+> **Note:** The finished code is available on GitHub as [2_canvas_rectangles](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles).
 
 ### Drawing paths
 
 If you want to draw anything more complex than a rectangle, you need to draw a path. Basically, this involves writing code to specify exactly what path the pen should move along on your canvas to trace the shape you want to draw. Canvas includes functions for drawing straight lines, circles, Bézier curves, and more.
 
-Let's start the section off by making a fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)), in which to draw the new example.
+Let's start the section off by making a fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)), in which to draw the new example.
 
 We'll be using some common methods and properties across all of the below sections:
 
@@ -311,13 +311,13 @@ That's it for now; your final example should look like this:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
 
-> **Note:** The finished code is available on GitHub as [3_canvas_paths](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/).
+> **Note:** The finished code is available on GitHub as [3_canvas_paths](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths).
 
 > **Note:** To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
 
 ### Text
 
-Canvas also has features for drawing text. Let's explore these briefly. Start by making another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template/)) in which to draw the new example.
+Canvas also has features for drawing text. Let's explore these briefly. Start by making another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) in which to draw the new example.
 
 Text is drawn using two methods:
 
@@ -345,7 +345,7 @@ Here we draw two lines of text, one outline and the other stroke. The final exam
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
 
-> **Note:** The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text/).
+> **Note:** The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text).
 
 Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -353,7 +353,7 @@ Have a play and see what you can come up with! You can find more information on 
 
 It is possible to render external images onto your canvas. These can be simple images, frames from videos, or the content of other canvases. For the moment we'll just look at the case of using some simple images on our canvas.
 
-1. As before, make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template/)) in which to draw the new example.
+1. As before, make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) in which to draw the new example.
 
     Images are drawn onto canvas using the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method. The simplest version takes three parameters — a reference to the image you want to render, and the X and Y coordinates of the image's top left corner.
 
@@ -390,7 +390,7 @@ The final example should look like so:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [5_canvas_images](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images/).
+> **Note:** The finished code is available on GitHub as [5_canvas_images](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images).
 
 ## Loops and animations
 
@@ -402,7 +402,7 @@ Playing with loops in canvas is rather fun — you can run canvas commands insid
 
 Let's build a simple example.
 
-1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
+1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
 2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
 
     ```js
@@ -470,7 +470,7 @@ At this point, we'd like to encourage you to play with the example and make it y
 - Play with the `length` and `moveOffset` values.
 - Introduce some random numbers using that `rand()` function we included above but didn't use.
 
-> **Note:** The finished code is available on GitHub as [6_canvas_for_loop](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop/).
+> **Note:** The finished code is available on GitHub as [6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop).
 
 ### Animations
 
@@ -521,7 +521,7 @@ In general, the process of doing a canvas animation involves the following steps
 
 Now let's create our own simple animation — we'll get a character from a certain rather awesome retro computer game to walk across the screen.
 
-1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
+1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
 2. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
 
     ```js
@@ -619,13 +619,13 @@ That's it! The final example should look like so:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
+> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
 
 ### A simple drawing application
 
 As a final animation example, we'd like to show you a very simple drawing application, to illustrate how the animation loop can be combined with user input (like mouse movement, in this case). We won't get you to walk through and build this one; we'll just explore the most interesting parts of the code.
 
-The example can be found on GitHub as [8_canvas_drawing_app](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app), and you can play with it live below:
+The example can be found on GitHub as [8_canvas_drawing_app](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app), and you can play with it live below:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app/index.html", '100%', 600)}}
 

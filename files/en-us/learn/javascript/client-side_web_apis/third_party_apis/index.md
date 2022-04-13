@@ -189,7 +189,7 @@ Most APIs require you to use some kind of developer key, for reasons of security
 
 1. Let's request a key for the Article Search API — create a new app, selecting this as the API you want to use (fill in a name and description, toggle the switch under the "Article Search API" to the on position, and then click "Create").
 2. Get the API key from the resulting page.
-3. Now, to start the example off, make a copy of all the files in the [nytimes/start](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/start) directory. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes/start_ directory. Initially the `script.js` file contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
+3. Now, to start the example off, make a copy of all the files in the [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) directory. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes/start_ directory. Initially the `script.js` file contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 

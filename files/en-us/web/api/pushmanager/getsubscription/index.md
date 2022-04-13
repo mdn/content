@@ -32,7 +32,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} objec
 
 ## Example
 
-This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (No live demo is available.)
+This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). (No live demo is available.)
 
 ```js
 // We need the service worker registration to check for a subscription
