@@ -393,7 +393,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("Service-Worker-Allowed")}}
   - : Used to remove the [path restriction](https://w3c.github.io/ServiceWorker/#path-restriction) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
-  - : Links generated code to a [source map](/en-US/docs/Tools/Debugger/How_to/Use_a_source_map).
+  - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
 - {{HTTPHeader("Upgrade")}}
   - : The relevant RFC document for the [Upgrade header field is RFC 7230, section 6.7](https://datatracker.ietf.org/doc/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field [please see section 6.1 of the aforementioned RFC](https://datatracker.ietf.org/doc/html/rfc7230#section-6.1).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}

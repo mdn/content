@@ -12,7 +12,7 @@ browser-compat: api.console
 {{APIRef("Console API")}}
 
 The **`console`** object provides access to the browser's
-debugging console (e.g. the [Web console](/en-US/docs/Tools/Web_Console) in Firefox).
+debugging console (e.g. the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox).
 The specifics of how it works varies from browser to browser, but there is a _de facto_
 set of features that are typically provided.
 
@@ -61,9 +61,9 @@ gives a few [Usage](#usage) examples.
 - {{domxref("console.log()")}}
   - : For general output of logging information. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
 - {{domxref("console.profile()")}} {{Non-standard_inline}}
-  - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](/en-US/docs/Tools/Performance)). You can specify an optional name for the profile.
+  - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)). You can specify an optional name for the profile.
 - {{domxref("console.profileEnd()")}} {{Non-standard_inline}}
-  - : Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the [Firefox performance tool](/en-US/docs/Tools/Performance)).
+  - : Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
 - {{domxref("console.table()")}}
   - : Displays tabular data as a table.
 - {{domxref("console.time()")}}
@@ -73,7 +73,7 @@ gives a few [Usage](#usage) examples.
 - {{domxref("console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/devtools/docs/timeline) or [Waterfall](/en-US/docs/Tools/Performance/Waterfall) tool.
+  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/devtools/docs/timeline) or [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) tool.
 - {{domxref("console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console.warn()")}}
@@ -271,9 +271,9 @@ The output in the console looks something like this:
 
 ## See also
 
-- [Firefox Developer Tools](/en-US/docs/Tools)
-- [Web console](/en-US/docs/Tools/Web_Console) — how the Web console in Firefox handles console API calls
-- [Remote Debugging](/en-US/docs/Tools/Remote_Debugging) — how to see console output when the debugging target is a mobile device
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web console in Firefox handles console API calls
+- [Remote Debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device
 
 ### Other implementations
 
