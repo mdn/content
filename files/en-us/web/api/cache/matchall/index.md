@@ -21,9 +21,7 @@ responses in the {{domxref("Cache")}} object.
 ## Syntax
 
 ```js
-cache.matchAll(request, options).then(function(response) {
-  // do something with the response array
-});
+matchAll(request, options);
 ```
 
 ### Parameters

@@ -24,20 +24,10 @@ The two vectors must be separated by an angle of 90° — in linear analysis ter
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.setOrientation(0,0,-1,0,1,0);
+setOrientation(x, y, z, xUp, yUp, zUp);
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
-## Example
-
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
-
-## Parameters
+### Parameters
 
 - x
   - : The x value of the front vector of the listener.
@@ -51,6 +41,14 @@ See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/cre
   - : The y value of the up vector of the listener.
 - zUp
   - : The z value of the up vector of the listener.
+
+### Return value
+
+{{jsxref('undefined')}}.
+
+## Examples
+
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
 ## Browser compatibility
 

@@ -17,10 +17,10 @@ The **`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** method s
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse(value).then(function() { /* ... */ })
+writeValueWithoutResponse(value);
 ```
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}}.
 

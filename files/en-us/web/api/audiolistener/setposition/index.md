@@ -22,20 +22,10 @@ The default value of the position vector is `(0,` `0,` `0)`.
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.setPosition(1,1,1);
+setPosition(x, y, z);
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
-## Example
-
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
-
-## Parameters
+### Parameters
 
 - x
   - : The x position of the listener in 3D space.
@@ -43,6 +33,14 @@ See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/cre
   - : The y position of the listener in 3D space.
 - z
   - : The z position of the listener in 3D space.
+
+### Return value
+
+{{jsxref('undefined')}}.
+
+## Examples
+
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
 ## Specifications
 
