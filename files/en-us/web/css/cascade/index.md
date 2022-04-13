@@ -57,16 +57,16 @@ The cascading algorithm determines how to find the value to apply for each prope
    
 The cascade is in ascending order, which means that transitions have precedence over `!important` values, whether those are declared in user, author, or user-agent styles; even taking precendence over an inline {{htmlattrxref('style')}} (discussed below). All `!important` styles have precendence animations. Animations have precendence over non-important values declared in author-, user-, and user-agent-defined style sheets:
 
-    |     | Origin      | Importance   |
-    | --- | ----------- | ------------ |
-    | 1   | user-agent  | normal       |
-    | 2   | user        | normal       |
-    | 3   | author      | normal       |
-    | 4   | animations  |              |
-    | 5   | author      | `!important` |
-    | 6   | user        | `!important` |
-    | 7   | user-agent  | `!important` |
-    | 8   | transitions |              |
+|     | Origin      | Importance   |
+| --- | ----------- | ------------ |
+| 1   | user-agent  | normal       |
+| 2   | user        | normal       |
+| 3   | author      | normal       |
+| 4   | animations  |              |
+| 5   | author      | `!important` |
+| 6   | user        | `!important` |
+| 7   | user-agent  | `!important` |
+| 8   | transitions |              |
 
   > *Note:* Property values set in a keyframe {{cssxref('animation')}} are more important than all styles except `!important` styles, and property values being altered in a transition take precendence over all other values set, no matter how specific or important. There are no `!important` animations as property values that include `!important` in a {{cssxref('@keyframes')}} definition are ignored.
 
@@ -78,18 +78,18 @@ The cascade algorithm is applied before the specificity algorithm, meaning if `:
 
 The table in Cascade order provided a precedence order overview. That table summarizes author styles in two lines: "author - normal" and "author - !important". The precendence for author styles is:
 
-    |     | Author style      | Importance   |
-    | --- | ----------- | ------------ |
-    | 1   | first declared layer  | normal       |
-    | 2   | last declared layer        | normal       |
-    | 3   | unlayered styles       | normal       |
-    | 4   | inline `style`        | normal       |
-    | 5   | animations  |              |
-    | 6   | unlayered styles      | `!important` |
-    | 7   | last declared layer     | `!important` |
-    | 8   | first declared layer     | `!important` |
-    | 9   | inline `style`      | `!important` |
-    | 10   | transitions |              |
+|     | Author style      | Importance   |
+| --- | ----------- | ------------ |
+| 1   | first declared layer  | normal       |
+| 2   | last declared layer        | normal       |
+| 3   | unlayered styles       | normal       |
+| 4   | inline `style`        | normal       |
+| 5   | animations  |              |
+| 6   | unlayered styles      | `!important` |
+| 7   | last declared layer     | `!important` |
+| 8   | first declared layer     | `!important` |
+| 9   | inline `style`      | `!important` |
+| 10   | transitions |              |
 
 Of the author styles, the styles with the lowest precendence are non important styles contained in layers, with the styles associated with the earlier declared layers having lower precedence than layers declared later, which have lower precendence than non-layered styles (styles declared outside of any layer). Inline styles, declared with the `style` attribute, take precendence over any non-important author styles, layered or not. 
 
@@ -128,22 +128,22 @@ The paragraph will be blue, as the !important in the earliest declared layer tak
 The table in Cascading order could have more accurately been represented by the following table: 
 
 
-    |     | Origin      | Importance   |
-    | --- | ----------- | ------------ |
-    | 1   | user-agent  | normal       |
-    | 2   | user        | normal       |
-    | 3   | author - first declared layer     | normal       |
-    |     | author - last declared layer      |       |
-    |     | author - unlayered styles      |       |
-    |     | inline `style`     |       |
-    | 4   | animations  |              |
-    | 5   | author - unlayered styles      | `!important` |
-    |     | author - last declared layer     |       |
-    |     | author - first declared layer      |       |
-    |     | inline `style`     |       |
-    | 6   | user        | `!important` |
-    | 7   | user-agent  | `!important` |
-    | 8   | transitions |              |
+|     | Origin      | Importance   |
+| --- | ----------- | ------------ |
+| 1   | user-agent  | normal       |
+| 2   | user        | normal       |
+| 3   | author - first declared layer     | normal       |
+|     | author - last declared layer      |       |
+|     | author - unlayered styles      |       |
+|     | inline `style`     |       |
+| 4   | animations  |              |
+| 5   | author - unlayered styles      | `!important` |
+|     | author - last declared layer     |       |
+|     | author - first declared layer      |       |
+|     | inline `style`     |       |
+| 6   | user        | `!important` |
+| 7   | user-agent  | `!important` |
+| 8   | transitions |              |
 
 ## Resetting styles
 
