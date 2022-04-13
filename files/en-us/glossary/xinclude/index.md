@@ -9,7 +9,7 @@ XInclude is a W3C Recommendation defining inclusion tags that enable documents t
 
 The XInclude mechanism is not supported natively by any major browsers.
 
-See also
+## See also
 
 [XInclude standard](/en-US/docs/Glossary/XInclude)
 [XPath](/en-US/docs/Web/XPath)
