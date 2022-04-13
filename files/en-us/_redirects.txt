@@ -1571,7 +1571,7 @@
 /en-US/docs/DOM/Node.removeChild	/en-US/docs/Web/API/Node/removeChild
 /en-US/docs/DOM/Node.replaceChild	/en-US/docs/Web/API/Node/replaceChild
 /en-US/docs/DOM/Node.textContent	/en-US/docs/Web/API/Node/textContent
-/en-US/docs/DOM/NodeFilter	/en-US/docs/Web/API/NodeFilter
+/en-US/docs/DOM/NodeFilter	/en-US/docs/Web/API/Document/createNodeIterator
 /en-US/docs/DOM/NodeIterator	/en-US/docs/Web/API/NodeIterator
 /en-US/docs/DOM/NodeIterator.detach	/en-US/docs/Web/API/NodeIterator/detach
 /en-US/docs/DOM/NodeIterator.filter	/en-US/docs/Web/API/NodeIterator/filter
@@ -2904,7 +2904,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/Node.removeChild	/en-US/docs/Web/API/Node/removeChild
 /en-US/docs/Document_Object_Model_(DOM)/Node.replaceChild	/en-US/docs/Web/API/Node/replaceChild
 /en-US/docs/Document_Object_Model_(DOM)/Node.textContent	/en-US/docs/Web/API/Node/textContent
-/en-US/docs/Document_Object_Model_(DOM)/NodeFilter	/en-US/docs/Web/API/NodeFilter
+/en-US/docs/Document_Object_Model_(DOM)/NodeFilter	/en-US/docs/Web/API/Document/createNodeIterator
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator	/en-US/docs/Web/API/NodeIterator
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.detach	/en-US/docs/Web/API/NodeIterator/detach
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.filter	/en-US/docs/Web/API/NodeIterator/filter
@@ -8819,7 +8819,9 @@
 /en-US/docs/Web/API/Node/outerText	/en-US/docs/Web/API/HTMLElement/outerText
 /en-US/docs/Web/API/Node/prefix	/en-US/docs/Web/API/Element/prefix
 /en-US/docs/Web/API/Node/rootNode	/en-US/docs/Web/API/Node/getRootNode
-/en-US/docs/Web/API/NodeFilter.acceptNode	/en-US/docs/Web/API/NodeFilter/acceptNode
+/en-US/docs/Web/API/NodeFilter	/en-US/docs/Web/API/Document/createNodeIterator
+/en-US/docs/Web/API/NodeFilter.acceptNode	/en-US/docs/Web/API/Document/createNodeIterator
+/en-US/docs/Web/API/NodeFilter/acceptNode	/en-US/docs/Web/API/Document/createNodeIterator
 /en-US/docs/Web/API/NodeIterator.detach	/en-US/docs/Web/API/NodeIterator/detach
 /en-US/docs/Web/API/NodeIterator.filter	/en-US/docs/Web/API/NodeIterator/filter
 /en-US/docs/Web/API/NodeIterator.nextNode	/en-US/docs/Web/API/NodeIterator/nextNode

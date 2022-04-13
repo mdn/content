@@ -60829,39 +60829,6 @@
       "Fguisset"
     ]
   },
-  "Web/API/NodeFilter": {
-    "modified": "2020-10-15T21:11:18.491Z",
-    "contributors": [
-      "lionel-rowe",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "jpmedley",
-      "krosylight",
-      "JonMarkPerry",
-      "abbycar",
-      "a0preetham",
-      "fscholz",
-      "kollishivagangadhar",
-      "kennethcachia",
-      "Jesse",
-      "teoli",
-      "Sheppy",
-      "Brettz9",
-      "RobG"
-    ]
-  },
-  "Web/API/NodeFilter/acceptNode": {
-    "modified": "2020-10-15T21:24:48.176Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "abbycar",
-      "fscholz",
-      "sayanchowdhury",
-      "teoli",
-      "Khodaidad_Basharmand"
-    ]
-  },
   "Web/API/NodeIterator": {
     "modified": "2020-10-15T21:14:44.038Z",
     "contributors": [
