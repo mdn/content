@@ -62,8 +62,6 @@ This article provides information about the changes in Firefox 99 that will affe
 
 ## Changes for add-on developers
 
-- {{WebExtAPIRef("scripting.registerContentScripts()")}} ({{bug(1736582)}}), {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} ({{bug(1736581)}}), and {{WebExtAPIRef("scripting.unregisterContentScripts()")}} ({{bug(1736584)}}) added to the {{WebExtAPIRef("scripting")}} API. This API is not available for use until the implementation of manifest V3.
-
 #### Removals
 
 ### Other
