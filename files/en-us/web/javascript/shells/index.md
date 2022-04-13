@@ -16,6 +16,7 @@ A JavaScript shell allows you to quickly test snippets of [JavaScript](/en-US/do
 The following JavaScript shells are stand-alone environments, like Perl or Python.
 
 - [Node.js](https://nodejs.org/) - Node.js is a platform for easily building fast, scalable network applications.
+- [Nacre](https://nacre.sh) - Nacre is an intuitive shell built on top of Node.js designed for those who prefer to work with objects over text.
 - [GraalJS](https://www.graalvm.org/) - A high performance implementation of the JavaScript programming language. Built on the GraalVM by Oracle Labs.
 - [ShellJS](https://github.com/shelljs/shelljs) - Portable Unix shell commands for Node.js
 
