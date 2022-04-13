@@ -70,7 +70,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 - You can now hide nodes in the [3D view](/en-US/docs/Tools/3D_View) by pressing the "x" key after selecting them.
 - The [source editor](/en-US/docs/Tools/Keyboard_shortcuts#source_editor) has a several new editing features and keyboard shortcuts; see [Using the Source Editor](/en-US/docs/Tools/Keyboard_shortcuts#source_editor) for details
 
-Mozilla has been working on integrating its own Web developer tools that complement the popular [Firebug](https://getfirebug.com/) add-on. You can get more information about these tools as well as see a list of resources external to Firefox that will help you with your Web development. The entire list is located at [Web developer tools](/en-US/docs/Tools).
+Mozilla has been working on integrating its own Web developer tools that complement the popular [Firebug](https://getfirebug.com/) add-on. You can get more information about these tools as well as see a list of resources external to Firefox that will help you with your Web development. The entire list is located at [Web developer tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
 
 ### Miscellaneous changes
 

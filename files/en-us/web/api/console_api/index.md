@@ -54,6 +54,6 @@ See the [console](/en-US/docs/Web/API/console#usage) reference page for more exa
 
 ## See also
 
-- [Tools](/en-US/docs/Tools)
+- [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Web Console](/en-US/docs/Tools/Web_Console) — how the Web Console in Firefox handles console API calls
 - [Remote debugging](/en-US/docs/Tools/Remote_Debugging) — how to see console output when the debugging target is a mobile device

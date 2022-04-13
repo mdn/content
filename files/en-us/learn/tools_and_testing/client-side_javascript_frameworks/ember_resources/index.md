@@ -73,7 +73,7 @@ For _framework-specific_ things, there is the [ember-inspector add-on](https://g
 - Render Performance
 
 For general JavaScript debugging, check out our [guides on JavaScript Debugging](/en-US/docs/Tools/Debugger)
-as well as interacting with the [browser's other debugging tools](/en-US/docs/Tools). In any default Ember
+as well as interacting with the [browser's other debugging tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html). In any default Ember
 project, there will be two main JavaScript files, `vendor.js` and `{app-name}.js`. Both of
 these files are generated with sourcemaps, so when you open the `vendor.js` or `{app-name}.js` to search for relevant code, when a debugger is placed, the sourcemap will be loaded and the breakpoint will be placed in the pre-transpiled code for easier correlation to your project code.
 
