@@ -136,7 +136,7 @@ The following screenshot (from Firefox for Android) provides an example:
 
 With the `number` input type, you can constrain the minimum and maximum values allowed by setting the {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} attributes.
 
-You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer. To allow float numbers, specify [`step="any"`](/en-US/docs/Web/HTML/Attributes/step). If omitted, the `step` value defaults to `1`, meaning only whole numbers are valid.
+You can also use the `step` attribute to set the increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer. To allow float numbers, specify [`step="any"`](/en-US/docs/Web/HTML/Attributes/step). If omitted, the `step` value defaults to `1`, meaning only whole numbers are valid.
 
 Let's look at some examples. The first one below creates a number control whose value is restricted to any value between `1` and `10`, and whose increase and decrease buttons change its value by `2`.
 
@@ -162,7 +162,7 @@ Usage-wise, sliders are less accurate than text fields. Therefore, they are used
 
 A slider is created using the {{HTMLElement("input")}} with its {{htmlattrxref("type","input")}} attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
 
-It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/en-US/docs/Web/HTML/Attributes/min), [`max`](/en-US/docs/Web/HTML/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum and increment values, respectively.
+It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/en-US/docs/Web/HTML/Attributes/min), [`max`](/en-US/docs/Web/HTML/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum and stepping values, respectively.
 
 Let's look at the code behind the above example, so you can see how its done. First of all, the basic HTML:
 
@@ -176,7 +176,7 @@ This example creates a slider whose value may range between `50000` and `500000`
 
 One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element to contain the current value. You could display an input value or the output of a calculation inside any element, but `<output>` is special — like `<label>` — and it can take a `for` attribute that allows you to associate it with the element or elements that the output value came from.
 
-To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:
+To actually display the current value, and update it as it changed, you must use JavaScript, and this is relatively easy to do:
 
 ```js
 const price = document.querySelector('#price');
@@ -195,7 +195,7 @@ Here we store references to the `range` input and the `output` in two variables.
 
 ## Date and time pickers
 
-Gathering date and time values has traditionally been a nightmare for web developers. For good user experience, it is important to provide a calendar selection UI, enabling users to select dates without necessitating context switching to a native calendar application or potentially entering them in differing formats that are hard to parse. The last minute of the previous millennium can be expressed in the following different ways, for example: 1999/12/31, 23:59 or 12/31/99T11:59PM.
+Gathering date and time values has traditionally been a nightmare for web developers. For good user experience, it is important to provide a calendar selection UI, enabling users to select dates without necessitating context switching to a native calendar application or potentially entering them in varying formats that are hard to parse. The last minute of the previous millennium can be expressed in the following different ways, for example: 1999/12/31, 23:59 or 12/31/99T11:59PM.
 
 HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
 
