@@ -128,22 +128,27 @@ The paragraph will be blue, as the !important in the earliest declared layer tak
 The table in Cascading order could have more accurately been represented by the following table: 
 
 
-|     | Origin      | Importance   |
-| --- | ----------- | ------------ |
-| 1   | user-agent  | normal       |
-| 2   | user        | normal       |
-| 3   | author - first declared layer     | normal       |
-|     | author - last declared layer      |       |
-|     | author - unlayered styles      |       |
-|     | inline `style`     |       |
-| 4   | animations  |              |
-| 5   | author - unlayered styles      | `!important` |
-|     | author - last declared layer     |       |
-|     | author - first declared layer      |       |
-|     | inline `style`     |       |
-| 6   | user        | `!important` |
-| 7   | user-agent  | `!important` |
-| 8   | transitions |              |
+<table>
+  <thead>
+  <tr><th>Precedence</th><th>Style Origin</th><th>Importance</th></tr>
+  </thead>
+  <tbody>
+<tr><td> 1   </td><td> user-agent  </td><td> normal       </td></tr>
+<tr><td> 2   </td><td> user        </td><td> normal       </td></tr>
+<tr><td rowspan="4"> 3 </td><td> author - first declared layer     </td><td rowspan="4"> normal</td></tr>
+<tr><td> author - last declared layer</td></tr>
+<tr><td> author - unlayered styles</td></tr>
+<tr><td> inline `style`</td></tr>
+<tr><td> 4   </td><td> animations  </td><td>              </td></tr>
+<tr><td rowspan="4"> 5   </td><td> author - unlayered styles      </td><td rowspan="4"> `!important` </td></tr>
+<tr><td> author - last declared layer</td></tr>
+<tr><td> author - first declared layer</td></tr>
+<tr><td> inline `style`</td></tr>
+<tr><td> 6   </td><td> user        </td><td> `!important` </td></tr>
+<tr><td> 7   </td><td> user-agent  </td><td> `!important` </td></tr>
+<tr><td> 8   </td><td> transitions </td><td></td></tr>
+</tbody>
+</table>
 
 ## Resetting styles
 
