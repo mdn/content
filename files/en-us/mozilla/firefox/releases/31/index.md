@@ -15,7 +15,7 @@ tags:
 Highlights:
 
 - [Eyedropper tool to select colors in web pages](https://firefox-source-docs.mozilla.org/devtools-user/eyedropper/index.html)
-- [full stack traces for console error messages](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#error-messages)
+- [full stack traces for console error messages](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
 - [editable Box Model View](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#box-model-view)
 - [%c formatting to style console messages](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#styling-messages)
 - ["copy as cURL" command in Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#copy-as-curl)
