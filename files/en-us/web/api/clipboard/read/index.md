@@ -36,7 +36,7 @@ permission.
 ## Syntax
 
 ```js
-var promise = navigator.clipboard.read();
+read();
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ A {{jsxref("Promise")}} that resolves with a sequence of {{domxref("ClipboardIte
 containing the clipboard's contents. The promise is rejected if permission to access the
 clipboard is not granted.
 
-## Example
+## Examples
 
 After using {{domxref("Permissions.query", "navigator.permissions.query()")}} to find
 out if we have (or if the user will be prompted to allow) `"clipboard-read"`

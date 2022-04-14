@@ -21,10 +21,11 @@ until {{domxref("console.groupEnd()")}} is called.
 ## Syntax
 
 ```js
-console.group([label]);
+group();
+group(label);
 ```
 
-## Parameters
+### Parameters
 
 - `label`
   - : Label for the group. Optional. (Chrome 59 tested) Does not work with

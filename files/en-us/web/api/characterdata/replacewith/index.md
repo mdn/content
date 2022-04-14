@@ -20,7 +20,7 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 ## Syntax
 
 ```js
-replaceWith(... nodes)
+replaceWith(nodes);
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ replaceWith(... nodes)
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Thrown when the node cannot be inserted at the specified point in the hierarchy.
 
-## Example
+## Examples
 
 ```html
 <p id="myText">Some text</p>

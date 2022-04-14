@@ -19,8 +19,10 @@ The **`console.error()`** method outputs an error message to the Web console.
 ## Syntax
 
 ```js
-console.error(obj1 [, obj2, ..., objN]);
-console.error(msg [, subst1, ..., substN]);
+error(obj1);
+error(obj1, /* ..., */ objN);
+error(msg);
+error(msg, subst1, /* ..., */ substN]);
 ```
 
 ### Parameters

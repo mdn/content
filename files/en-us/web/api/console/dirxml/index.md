@@ -20,10 +20,10 @@ that let you see the contents of child nodes.
 ## Syntax
 
 ```js
-console.dirxml(object);
+dirxml(object);
 ```
 
-## Parameters
+### Parameters
 
 - `object`
   - : A JavaScript object whose properties should be output.

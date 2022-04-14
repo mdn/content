@@ -17,7 +17,7 @@ by calling {{domxref("setTimeout()")}}.
 ## Syntax
 
 ```js
-clearTimeout(timeoutID)
+clearTimeout(timeoutID);
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ means you can technically use `clearTimeout()` and
 {{domxref("clearInterval", "clearInterval()")}}
 interchangeably. However, for clarity, you should avoid doing so.
 
-## Example
+## Examples
 
 Run the script below in the context of a web page and click on the page once. You'll
 see a message popping up in a second. If you click the page multiple times in

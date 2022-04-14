@@ -37,10 +37,10 @@ only that profile if you have multiple profiles being recorded.
 ## Syntax
 
 ```js
-console.profileEnd(profileName);
+profileEnd(profileName);
 ```
 
-## Parameters
+### Parameters
 
 - `profileName`
   - : The name to give the profile. This parameter is optional.

@@ -16,8 +16,8 @@ The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie
 ## Syntax
 
 ```js
-var promise = cookieStore.set(name,value);
-var promise = cookieStore.set(options);
+set(name,value);
+set(options);
 ```
 
 ### Parameters
@@ -25,7 +25,7 @@ var promise = cookieStore.set(options);
 This method requires one of the following:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of the cookie.
+  - : A string with the name of the cookie.
 - `value`
   - : A {{domxref("USVString")}} with the value of the cookie.
 - options

@@ -25,10 +25,10 @@ See [Timers](/en-US/docs/Web/API/console#timers) in the
 ## Syntax
 
 ```js
-console.time(label);
+time(label);
 ```
 
-## Parameters
+### Parameters
 
 - `label`
   - : The name to give the new timer. This will identify the timer; use the same name when

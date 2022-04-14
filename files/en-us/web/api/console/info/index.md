@@ -20,11 +20,13 @@ next to these items in the Web console's log.
 ## Syntax
 
 ```js
-console.info(obj1 [, obj2, ..., objN]);
-console.info(msg [, subst1, ..., substN]);
+info(obj1);
+info(obj1, /* ..., */ objN);
+info(msg);
+info(msg, subst1, /* ..., */ substN]);
 ```
 
-## Parameters
+### Parameters
 
 - `obj1` ... `objN`
   - : A list of JavaScript objects to output. The string representations of each of these

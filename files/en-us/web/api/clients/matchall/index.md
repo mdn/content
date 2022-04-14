@@ -23,9 +23,7 @@ service worker.
 ## Syntax
 
 ```js
-self.clients.matchAll(options).then(function(clients) {
-  // do something with your clients list
-});
+matchAll(options);
 ```
 
 ### Parameters

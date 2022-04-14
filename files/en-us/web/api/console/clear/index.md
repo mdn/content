@@ -18,7 +18,7 @@ environment allows it.
 ## Syntax
 
 ```js
-console.clear();
+clear();
 ```
 
 ## Specifications

@@ -28,7 +28,7 @@ See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
 ## Syntax
 
 ```js
-console.trace( [...any, ...data ]);
+trace( [...any, ...data ]);
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ console.trace( [...any, ...data ]);
     assembled and formatted the same way they would be if passed to the
     {{domxref("console.log()")}} method.
 
-## Example
+## Examples
 
 ```js
 function foo() {

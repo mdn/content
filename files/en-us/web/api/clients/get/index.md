@@ -20,9 +20,7 @@ The **`get()`** method of the
 ## Syntax
 
 ```js
-self.clients.get(id).then(function(client) {
-  // do something with your returned client
-});
+get(id);
 ```
 
 ### Parameters
