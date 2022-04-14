@@ -39,7 +39,7 @@ There are three kinds of "variable" or data storage available in GLSL, each of w
         vec4( 1.0, 0.0, 0.0, 1.0 ),  // red
         vec4( 1.0, 1.0, 0.0, 1.0 ),  // yellow
         vec4( 0.0, 1.0, 0.0, 1.0 ),  // green
-        vec4( 0.0, 0.0, 0.0, 1.0 ),  // black
+        vec4( 1.0, 1.0, 1.0, 1.0 ),  // white
         vec4( 1.0, 0.0, 0.0, 1.0 ),  // red
         vec4( 1.0, 1.0, 0.0, 1.0 ),  // yellow
         vec4( 0.0, 1.0, 0.0, 1.0 ),  // green
