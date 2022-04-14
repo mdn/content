@@ -59,7 +59,7 @@ The `overflow` property is specified as one or two keywords chosen from the list
 - `auto`
   - : Depends on the {{Glossary("user agent")}}. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block formatting context. Desktop browsers provide scrollbars if content overflows.
 - `overlay` {{deprecated_inline}}
-  - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space. Not fully supported by all browsers; for example, Safari will recognize `overlay` but will treat it the same as `auto`.
+  - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space.
 
 #### Mozilla extensions
 
