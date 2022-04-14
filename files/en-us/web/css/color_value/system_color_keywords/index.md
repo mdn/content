@@ -97,7 +97,7 @@ The following keywords were defined in earlier versions of the CSS Color Module.
 - `WindowText` {{deprecated_inline}}
   - : Text in windows. Should be used with the `Window` background color.
 
-## Firefox non-standard System Color Extensions
+## Firefox non-standard system color extensions
 
 Firefox also support some non-standard extensions to the system color keyword set. 
 
