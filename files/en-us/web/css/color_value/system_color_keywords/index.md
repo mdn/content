@@ -152,4 +152,4 @@ Firefox also supports some non-standard extensions to the system color keyword s
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value) the data type these keywords belong to.
+- [`<color>`](/en-US/docs/Web/CSS/color_value) data type these keywords belong to.
