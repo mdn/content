@@ -100,7 +100,7 @@ var ctx = canvas.getContext('2d', { alpha: false });
 
 ### Scaling for high resolution displays
 
-You may find that canvas items appear blury on higher resolution displays. While many solutions may exist, a simple first step is to scale the canvas size up and down simultaneously, using the canvas' attributes, styling, and its context's scale.
+You may find that canvas items appear blurry on higher-resolution displays. While many solutions may exist, a simple first step is to scale the canvas size up and down simultaneously, using the its attributes, styling, and its context's scale.
 
 ```js
 // Get the DPR and size of the canvas
