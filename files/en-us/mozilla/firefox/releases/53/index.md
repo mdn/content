@@ -15,7 +15,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 ### Developer Tools
 
 - Avoid scrolling latency on highlighters given by APZ ({{bug(1312103)}}).
-- Added option to [copy the full CSS path](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#copy_css_path) of an element ({{bug(1323700)}}).
+- Added option to [copy the full CSS path](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#copy-css-path) of an element ({{bug(1323700)}}).
 - Devtools support for css-color-4 ({{bug(1310681)}}).
 - Markup view: add a visual hint between opening and closing tags of a collapsed node ({{bug(1323193)}}).
 

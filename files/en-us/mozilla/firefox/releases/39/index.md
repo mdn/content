@@ -16,12 +16,12 @@ Firefox 39 was released on July 2, 2015. This article lists key changes that are
 Highlights:
 - _WebIDE_ now supports debugging Firefox OS devices over Wi-Fi
 - _WebIDE_ now supports Cordova projects
-- [Animations view: rewind, fast-forward, and jump to a specific time](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_39)
-- [The cubic Bézier curve editor now includes 31 presets](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_39)
-- [Drag and drop elements in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#drag_and_drop)
-- [Web console command history is now persisted across sessions](/en-US/docs/Tools/Web_Console#command_history)
-- [$\_ console command to print the last result evaluated](/en-US/docs/Tools/Web_Console#helper_commands)
-- [Better box model highlighting for inline elements](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#firefox_39)
+- [Animations view: rewind, fast-forward, and jump to a specific time](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-39)
+- [The cubic Bézier curve editor now includes 31 presets](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-39)
+- [Drag and drop elements in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#drag-and-drop)
+- [Web console command history is now persisted across sessions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#command-history)
+- [$\_ console command to print the last result evaluated](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#helper-commands)
+- [Better box model highlighting for inline elements](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html#firefox-39)
 
 [All devtools bugs fixed between Firefox 38 and Firefox 39](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&query_based_on=devtools_resolved_week&chfieldto=2015-03-31&chfield=resolution&query_format=advanced&chfieldfrom=2015-02-22&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&known_name=devtools_resolved_week&list_id=12157026).
 

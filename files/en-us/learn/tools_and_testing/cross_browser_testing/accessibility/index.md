@@ -128,7 +128,7 @@ You can try this out using our [native-keyboard-accessibility.html](https://mdn.
 
 ![](button-focused-unfocused.png)
 
-> **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order).
+> **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
 You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input (other form elements have different controls, for example the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys).
 

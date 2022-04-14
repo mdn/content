@@ -750,7 +750,7 @@ In addition to dedicated and shared web workers, there are other types of worker
 
 Most browsers support debugging of worker threads in their JavaScript debuggers in _exactly the same way_ as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.
 
-The screenshot below shows this on Firefox. The _sources list_ shows `worker.js` running in a separate worker thread. When selected this file is opened in the [source pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source_pane), just like code running in the main thread.
+The screenshot below shows this on Firefox. The _sources list_ shows `worker.js` running in a separate worker thread. When selected this file is opened in the [source pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source-pane), just like code running in the main thread.
 
 ![](worker-source.png)
 

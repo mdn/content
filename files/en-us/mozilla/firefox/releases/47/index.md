@@ -14,7 +14,7 @@ tags:
 ### Developer Tools
 
 - [User-agent spoofing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
-- [Retaining paths panel](/en-US/docs/Tools/Memory/Dominators_view#retaining_paths_panel) in memory tool
+- [Retaining paths panel](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining-paths-panel) in memory tool
 - [Service workers](/en-US/docs/Web/API/ServiceWorker) and [Push API](/en-US/docs/Web/API/Push_API) debugging
 
   - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) dashboard for workers
@@ -25,7 +25,7 @@ tags:
 - [Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) now detects incomplete input and switches multi-line mode
 - Updated breakpoint style in [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
 - Prevent panels from hiding automatically using the [Browser Toolbox](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html), to aid browser and add-on debugging
-- [Font inspector](/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view) has been disabled by default
+- [Font inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#fonts-view) has been disabled by default
 - [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) has been removed
 - Developer tools theme refresh
 - Disable the Font Panel ({{bug(1247723)}}).

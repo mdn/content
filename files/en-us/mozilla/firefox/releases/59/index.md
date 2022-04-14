@@ -14,10 +14,10 @@ This article provides information about the changes in Firefox 59 that will affe
 
 ### Developer tools
 
-- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) Response tab now shows a [preview of the rendered HTML](/en-US/docs/Tools/Network_Monitor#html_preview) — if the response is HTML ({{bug(1353319)}}).
-- Cookie information shown in the Storage Inspector (see [Cookies](/en-US/docs/Tools/Storage_Inspector#cookies)) now includes a _sameSite_ column showing what the same-site status of each cookie is ({{bug(1298370)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) Response tab now shows a [preview of the rendered HTML](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#html-preview) — if the response is HTML ({{bug(1353319)}}).
+- Cookie information shown in the Storage Inspector (see [Cookies](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#cookies)) now includes a _sameSite_ column showing what the same-site status of each cookie is ({{bug(1298370)}}).
 - The [Rulers](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) tool now includes a readout showing the current dimensions of the viewport ({{bug(1402633)}}).
-- In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), you can now set the screen dimensions using the cursor keys ({{bug(1421663)}}). See the [Setting screen size](/en-US/docs/Tools/Responsive_Design_Mode#setting_screen_size) section for more details.
+- In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), you can now set the screen dimensions using the cursor keys ({{bug(1421663)}}). See the [Setting screen size](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#setting-screen-size) section for more details.
 - The _Raw headers_ display in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) _Headers_ tab now includes the response's status code ({{bug(1419401)}}).
 
 ### HTML

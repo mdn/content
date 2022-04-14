@@ -14,12 +14,12 @@ tags:
 
 Highlights:
 
-- [Server logging in the Web Console](/en-US/docs/Tools/Web_Console/Console_messages#server)
-- [Quickly find the rule that overrode a CSS declaration](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations)
-- ["Use in Console" context menu item in Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
-- ["Strict" option for filtering in the Rules view](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#strict_search)
-- [Network entries in the Console now link to the Network Monitor](/en-US/docs/Tools/Web_Console/Console_messages#network)
-- [Markup view shows indicators for pseudo-classes locked for elements](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#setting_hover_active_focus)
+- [Server logging in the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#server)
+- [Quickly find the rule that overrode a CSS declaration](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#overridden-declarations)
+- ["Use in Console" context menu item in Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element-popup-menu)
+- ["Strict" option for filtering in the Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#strict-search)
+- [Network entries in the Console now link to the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#network)
+- [Markup view shows indicators for pseudo-classes locked for elements](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#setting-hover-active-focus)
 - New sidebar UI for WebIDE
 
 [All devtools bugs fixed between Firefox 42 and Firefox 43](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-09-19&query_format=advanced&chfield=resolution&chfieldfrom=2015-08-10&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678).

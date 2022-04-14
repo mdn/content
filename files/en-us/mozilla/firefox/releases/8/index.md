@@ -84,7 +84,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### Developer tools
 
-- The [`console`](/en-US/docs/Tools/Web_Console#the_console_object) object has a new `dir()` method, which displays an interactive list of the properties on a specified object.
+- The [`console`](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#the-console-object) object has a new `dir()` method, which displays an interactive list of the properties on a specified object.
 
 ## Changes for Mozilla and add-on developers
 

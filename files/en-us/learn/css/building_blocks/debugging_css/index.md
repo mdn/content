@@ -54,11 +54,11 @@ In this lesson we will look at some useful features of the Firefox DevTools for 
 
 ## The DOM versus view source
 
-Something that can trip up newcomers to DevTools is the difference between what you see when you [view the source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) of a webpage, or look at the HTML file you put on the server, and what you can see in the [HTML Pane](/en-US/docs/Tools/Page_Inspector/UI_Tour#html_pane) of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.
+Something that can trip up newcomers to DevTools is the difference between what you see when you [view the source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) of a webpage, or look at the HTML file you put on the server, and what you can see in the [HTML Pane](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#html-pane) of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.
 
 In the rendered DOM the browser may have normalized the HTML, for example by correcting some badly-written HTML for you. If you incorrectly closed an element, for instance by opening an `<h2>` but closing with an `</h3>`, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open `<h2>` with an `</h2>`. The DOM will also show any changes made by JavaScript.
 
-View Source, in comparison, is the HTML source code as stored on the server. The [HTML tree](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#html_tree) in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.
+View Source, in comparison, is the HTML source code as stored on the server. The [HTML tree](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html-tree) in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.
 
 ## Inspecting the applied CSS
 
@@ -66,7 +66,7 @@ Select an element on your page, either by right/ctrl-clicking on it and selectin
 
 ![The example page for this tutorial with DevTools open.](inspecting1.png)
 
-If you look at the [Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view) to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class `box1` and also the CSS that is being inherited by the box from its ancestors, in this case from `<body>`. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.
+If you look at the [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view) to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class `box1` and also the CSS that is being inherited by the box from its ancestors, in this case from `<body>`. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.
 
 Also useful is the ability to expand out shorthand properties. In our example the `margin` shorthand is used.
 
@@ -102,7 +102,7 @@ You can add properties using the DevTools. Perhaps you have realized that you do
 
 In previous lessons we have discussed [the Box Model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), and the fact that we have an alternate box model that changes how the size of elements are calculated based on the size you give them, plus the padding and borders. DevTools can really help you to understand how the size of an element is being calculated.
 
-The [Layout view](/en-US/docs/Tools/Page_Inspector/UI_Tour#layout_view) shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.
+The [Layout view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout-view) shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.
 
 In this panel, one of the detailed properties is the `box-sizing` property, which controls what box model the element uses.
 

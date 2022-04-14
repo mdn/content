@@ -75,8 +75,8 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 #### Style panel improvements
 
-- Clicking the heading for any rule in the [style panel](/en-US/docs/Tools/Page_Inspector#css_pane) now opens the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) at the corresponding CSS.
-- Right-clicking on a rule in the [style panel](/en-US/docs/Tools/Page_Inspector#css_pane) now offers an option to copy the rule to the clipboard.
+- Clicking the heading for any rule in the [style panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#css-pane) now opens the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) at the corresponding CSS.
+- Right-clicking on a rule in the [style panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#css-pane) now offers an option to copy the rule to the clipboard.
 - Entering an unknown property name, or an illegal property value, displays a warning icon next to that property.
 
 #### Scratchpad improvements
