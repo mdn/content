@@ -1,6 +1,6 @@
 ---
 title: System color keywords
-slug: Web/CSS/color_value/System_color_keywords
+slug: Web/CSS/color_value/system_color_keywords
 tags:
   - Reference
   - color
