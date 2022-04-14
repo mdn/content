@@ -35,7 +35,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 #### Remote debugging
 
-- Because of differences in DevTools versions, it is not possible to debug releases of Firefox for Android that are based on version 68, from desktop Firefox versions 69 or later. When attempting to do this, the Firefox desktop browser will now show a message informing the user of this problem, and offering possible next steps ({{bug(1625906)}}). See [Connection to Firefox for Android 68](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html#connection-to-firefox-for-android-68) for more information.
+- Because of differences in DevTools versions, it is not possible to debug releases of Firefox for Android that are based on version 68, from desktop Firefox versions 69 or later. When attempting to do this, the Firefox desktop browser will now show a message informing the user of this problem, and offering possible next steps ({{bug(1625906)}}). See [Connection to Firefox for Android 68](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connection-to-firefox-for-android-68) for more information.
 
 ### HTML
 

@@ -19,7 +19,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 #### Debugger
 
-- You can now change the URL accessed by the remote device from the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html#connecting-to-a-remote-device) panel. ({{bug("1617237")}})
+- You can now change the URL accessed by the remote device from the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device) panel. ({{bug("1617237")}})
 - The **Disable JavaScript** menu item in the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html) now only affects the current tab, and is reset when the Developer Tools are closed. ({{bug("1640318")}})
 - [Logpoints](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html) can map variable names in source-mapped code back to their original names, if you enable **Maps** in the [Scopes pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#scopes). ({{bug("1536857")}})
 

@@ -35,7 +35,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 - The Messages tab of the Network Monitor has been merged with the [Responses tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab). ({{bug(1636421)}})
 - The Accessibility Inspector is automatically turned on when you access its tab; you no longer need to explicitly enable it. ({{bug(1602075)}})
 - In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling-responsive-design-mode), when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ({{bug(1621781)}})
-- When [remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html#connecting-to-a-remote-device), the URL bar now has **Back** and **Forward** buttons to help with navigation on the remote browser. ({{bug(1639425)}})
+- When [remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device), the URL bar now has **Back** and **Forward** buttons to help with navigation on the remote browser. ({{bug(1639425)}})
 
 ### HTML
 

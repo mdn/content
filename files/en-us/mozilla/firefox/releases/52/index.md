@@ -17,7 +17,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - [Completely revamped Responsive Design Mode, including UA selection and network throttling.](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
 - [The Animation Inspector now displays timing functions.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
 - [The Page Inspector now includes a CSS grid inspector.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [about:debugging now shows service worker state.](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html#service-worker-state)
+- [about:debugging now shows service worker state.](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#service-worker-state)
 - [The Page Inspector includes an easy way to highlight the selected element.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#element-rule)
 - [The Page Inspector displays whitespace-only text nodes.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#whitespace-only-text-nodes)
 
