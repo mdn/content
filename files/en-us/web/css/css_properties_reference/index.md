@@ -42,10 +42,10 @@ The following is a basic list of the most common CSS properties with the equival
 | [border-top-width](/en-US/docs/Web/CSS/border-top-width)                     | borderTopWidth          |
 | [border-width](/en-US/docs/Web/CSS/border-width)                             | borderWidth             |
 | [border-radius](/en-US/docs/Web/CSS/border-radius)                           | borderRadius            |
+| [border-bottom-left-radius](/en-US/docs/Web/CSS/border-bottom-left-radius)   | borderBottomLeftRadius  |
+| [border-bottom-right-radius](/en-US/docs/Web/CSS/border-bottom-right-radius) | borderBottomRightRadius |
 | [border-top-left-radius](/en-US/docs/Web/CSS/border-top-left-radius)         | borderTopLeftRadius     |
 | [border-top-right-radius](/en-US/docs/Web/CSS/border-top-right-radius)       | borderTopRightRadius    |
-| [border-bottom-right-radius](/en-US/docs/Web/CSS/border-bottom-right-radius) | borderBottomRightRadius |
-| [border-bottom-left-radius](/en-US/docs/Web/CSS/border-bottom-left-radius)   | borderBottomLeftRadius  |
 | [clear](/en-US/docs/Web/CSS/clear)                                           | clear                   |
 | [clip](/en-US/docs/Web/CSS/clip)                                             | clip                    |
 | [color](/en-US/docs/Web/CSS/color)                                           | color                   |
