@@ -1,6 +1,6 @@
 ---
 title: Applying color to HTML elements using CSS
-slug: Web/HTML/Applying_color
+slug: Web/CSS/CSS_Colors/Applying_color
 tags:
   - Beginner
   - CSS
@@ -12,8 +12,7 @@ tags:
   - Styling HTML
   - color
 ---
-
-{{HTMLRef}}
+{{CSSRef}}
 
 This article is a primer introducing each of the ways CSS color can be used in HTML.
 
