@@ -34,7 +34,7 @@ This article provides information about the changes in Firefox 72 that will affe
 
 #### Removals
 
-- The [Scratchpad](https://firefox-source-docs.mozilla.org/devtools-user/scratchpad/index.html) feature has been removed ({{bug(1519103)}}).
+- The _Scratchpad_ feature has been removed ({{bug(1519103)}}).
 
 ### HTML
 
