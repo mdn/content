@@ -13,7 +13,7 @@ tags:
 Highlights:
 
 - [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
-- [Code completion and inline documentation in Scratchpad](https://firefox-source-docs.mozilla.org/devtools-user/scratchpad/index.html#code-completion-and-inline-documentation)
+- _Code completion and inline documentation in Scratchpad]_
 - [User agent styles in the Inspector's Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules-view)
 - [Element picker button has moved](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards-2)
 - [Node dimensions added to the Inspector's infobar](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards)
