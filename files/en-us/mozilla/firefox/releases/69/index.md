@@ -41,7 +41,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Remote debugging
 
-- For our mobile web developers, we have migrated remote debugging from the old WebIDE into a re-designed [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html), making the experience of debugging [GeckoView](https://hacks.mozilla.org/2019/06/geckoview-in-2019/) on remote devices via USB much better ({{bug(1462208)}}).
+- For our mobile web developers, we have migrated remote debugging from the old WebIDE into a re-designed [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html), making the experience of debugging [GeckoView](https://hacks.mozilla.org/2019/06/geckoview-in-2019/) on remote devices via USB much better ({{bug(1462208)}}).
 
 #### General
 

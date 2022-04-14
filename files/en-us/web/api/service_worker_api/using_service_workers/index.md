@@ -507,7 +507,7 @@ Chrome has `chrome://inspect/#service-workers`, which shows current service work
 
 Firefox has also started to implement some useful tools related to service workers:
 
-- You can navigate to [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html) to see what SWs are registered and update/remove them.
+- You can navigate to [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) to see what SWs are registered and update/remove them.
 - When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
 - The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).
 

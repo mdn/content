@@ -17,7 +17,7 @@ tags:
 - [Retaining paths panel](/en-US/docs/Tools/Memory/Dominators_view#retaining_paths_panel) in memory tool
 - [Service workers](/en-US/docs/Web/API/ServiceWorker) and [Push API](/en-US/docs/Web/API/Push_API) debugging
 
-  - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html) dashboard for workers
+  - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) dashboard for workers
   - Cached requests are now shown in [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
   - Support for [cache storage](/en-US/docs/Web/API/Cache) in [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 

@@ -143,7 +143,7 @@ As you will recall from the lesson on [cascade and inheritance](/en-US/docs/Lear
 
 ## Find out more about the Firefox DevTools
 
-There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main [DevTools section](https://firefox-source-docs.mozilla.org/devtools-user/index.html), and for more detail on the things we have briefly covered in this lesson see [The How To Guides](/en-US/docs/Tools/Page_Inspector#how_to).
+There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main [DevTools section](https://firefox-source-docs.mozilla.org/devtools-user/index.html), and for more detail on the things we have briefly covered in this lesson see [The How To Guides](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#how-to).
 
 ## Debugging problems in CSS
 

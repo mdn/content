@@ -44,12 +44,12 @@ This article provides information about the changes in Firefox 68 that will affe
 #### Other
 
 - The [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) now includes a new _Check for issues_ feature, which will include a number of audit tools to highlight accessibility problems on your web pages. The first available check is _contrast_, for highlighting color contrast problems.
-- The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
+- The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
 - [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List..._) is now more intuitive and simpler to use ({{bug(1487857)}}).
 
 #### Removals
 
-- The "Enable add-on debugging" checkbox has been removed from the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about:debugging/index.html) page ({{bug(1544813)}}).
+- The "Enable add-on debugging" checkbox has been removed from the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page ({{bug(1544813)}}).
 
 ### HTML
 
