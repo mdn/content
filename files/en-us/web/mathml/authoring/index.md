@@ -317,7 +317,7 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
   - This might be a bit more difficult to set up, since you need some admin right on your server.
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) and [Mathoid](https://github.com/gwicke/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
+[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) and [Mathoid](https://github.com/wikimedia/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
 
 ## Graphical Interface
 

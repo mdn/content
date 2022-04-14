@@ -88,7 +88,7 @@ fc-cache -sf
 
 You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
-> **Note:** There is an [enhancement request](https://github.com/googlei18n/noto-fonts/issues/330) opened on the Noto bug tracker to improve math support.
+> **Note:** There is an [enhancement request](https://github.com/googlefonts/noto-fonts/issues/330) opened on the Noto bug tracker to improve math support.
 
 ### Firefox OS
 
@@ -119,13 +119,13 @@ You can actually render MathML using any font with a MATH table and related Open
 - [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
 - [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math) (under development)
 - [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math)
-- [Libertinus Math](https://github.com/khaledhosny/libertinus)
+- [Libertinus Math](https://github.com/alerque/libertinus)
 - [STIX Math](https://github.com/stipub/stixfonts)
 - [TeX Gyre Bonum Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Bonum_Math)
 - [TeX Gyre Pagella Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Pagella_Math)
 - [TeX Gyre Schola Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Schola_Math)
 - [TeX Gyre Termes Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Termes_Math)
-- [XITS Math](https://github.com/khaledhosny/xits-math/releases)
+- [XITS Math](https://github.com/aliftype/xits/releases)
 - [Fira Math](https://github.com/firamath/firamath) (sans-serif typeface, under development)
 - [GFS Neohellenic Math](https://greekfontsociety-gfs.gr/typefaces/Math) (sans-serif typeface)
 
@@ -133,4 +133,4 @@ You can actually render MathML using any font with a MATH table and related Open
 
 Starting with Gecko 31.0 (Firefox 31.0 / Thunderbird 31.0 / SeaMonkey 2.28), it is now easy to set up the CSS style (and optional WOFF fonts) to use on your Web site.
 See the [Authoring MathML page](/en-US/docs/Web/MathML/Authoring#mathematical_fonts) for details.
-You can use [FontTools](https://github.com/behdad/fonttools) to edit the MATH table and create your own mathematical fonts.
+You can use [FontTools](https://github.com/fonttools/fonttools) to edit the MATH table and create your own mathematical fonts.

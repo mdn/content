@@ -56,7 +56,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
   - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) ({{bug(1361876)}})
   - [Named capture groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) ({{bug(1362154)}})
 
-- Due to a [WebIDL spec change](https://github.com/heycam/webidl/pull/357) in mid-2020, we've [added a `Symbol.toStringTag` property to all DOM prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#tostringtag_available_on_all_dom_prototype_objects) ({{bug(1277799)}}).
+- Due to a [WebIDL spec change](https://github.com/whatwg/webidl/pull/357) in mid-2020, we've [added a `Symbol.toStringTag` property to all DOM prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#tostringtag_available_on_all_dom_prototype_objects) ({{bug(1277799)}}).
 - The garbage collection of {{jsxref("WeakMap")}} objects has been improved. `WeakMaps` are now marked incrementally ({{bug(1167452)}}).
 
 ### APIs

@@ -262,4 +262,4 @@ df.formatToParts(date)
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
-- [A polyfill of `Intl.DateTimeFormat.prototype.formatToParts` in the proposal repository](https://github.com/zbraniecki/proposal-intl-formatToParts)
+- [A polyfill of `Intl.DateTimeFormat.prototype.formatToParts` in the proposal repository](https://github.com/tc39/proposal-intl-formatToParts)

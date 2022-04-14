@@ -94,7 +94,7 @@ The data can be retrieved and then shown as a notification to the user immediate
 
 ### Push example
 
-Push needs the server part to work, so we're not able to include it in the js13kPWA example hosted on GitHub Pages, as it offers hosting of static files only. It is all explained in the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) — see the [Push Payload Demo](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload).
+Push needs the server part to work, so we're not able to include it in the js13kPWA example hosted on GitHub Pages, as it offers hosting of static files only. It is all explained in the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) — see the [Push Payload Demo](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload).
 
 This demo consists of three files:
 
@@ -266,7 +266,7 @@ self.addEventListener('push', function(event) {
 
 All it does is add a listener for the {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} event, create the payload variable consisting of the text taken from the data (or create a string to use if data is empty), and then wait until the notification is shown to the user.
 
-Feel free to explore the rest of the examples in the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) if you want to know how they are handled.
+Feel free to explore the rest of the examples in the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) if you want to know how they are handled.
 There's a big collection of working examples showing general use, but also web push, caching strategies, performance, working offline, and more.
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
