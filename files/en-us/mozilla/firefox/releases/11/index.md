@@ -99,7 +99,7 @@ _No change._
 #### New JavaScript code modules
 
 - [`source-editor.jsm`](/en-US/docs/JavaScript_code_modules/source-editor.jsm)
-  - : Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by [Scratchpad](https://firefox-source-docs.mozilla.org/devtools-user/scratchpad/index.html) and other developer tools integrated into Firefox.
+  - : Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by _Scratchpad_ and other developer tools integrated into Firefox.
 
 ### Interface changes
 
