@@ -324,7 +324,7 @@ When this operation completes, you should be able to go back to the page on GitH
 
 > **Note:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
 >
-> The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular past version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. [Learning Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) is well worth the effort, but is beyond the scope of this topic.
+> The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular past version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources) is well worth the effort, but is beyond the scope of this topic.
 >
 > The _easiest_ way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!
 
