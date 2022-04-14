@@ -3,11 +3,9 @@ title: '::file-selector-button'
 slug: Web/CSS/::file-selector-button
 tags:
   - CSS
-  - Non-standard
   - Pseudo-element
   - Reference
   - Selector
-  - WebKit
 browser-compat: css.selectors.file-selector-button
 ---
 {{CSSRef}}
