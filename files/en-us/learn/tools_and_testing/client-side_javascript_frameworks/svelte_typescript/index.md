@@ -78,7 +78,7 @@ Remember to run `npm install && npm run dev` to start your app in development mo
 
 ### REPL
 
-Unfortunately, [TypeScript support is not yet available in the REPL](https://github.com/sveltejs/svelte-repl/issues/130).
+Unfortunately, [TypeScript support is not yet available in the REPL](https://github.com/sveltejs/sites/issues/156).
 
 ## TypeScript: optional static typing for JavaScript
 
