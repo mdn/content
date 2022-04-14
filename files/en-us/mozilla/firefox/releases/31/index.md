@@ -16,13 +16,13 @@ Highlights:
 
 - [Eyedropper tool to select colors in web pages](https://firefox-source-docs.mozilla.org/devtools-user/eyedropper/index.html)
 - [full stack traces for console error messages](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
-- [editable Box Model View](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#box-model-view)
-- [%c formatting to style console messages](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#styling-messages)
+- [editable Box Model View](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)
+- [%c formatting to style console messages](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
 - ["copy as cURL" command in Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#copy-as-curl)
 - [Sublime Text keybindings in the source editor](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor)
 - [Option to make Network Monitor logs persistent](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network-request-list)
 - [JavaScript warnings on by default in the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#javascript-errors-and-warnings)
-- [Alt+click to expand all descendants of a node](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#html-pane-2)
+- [Alt+click to expand all descendants of a node](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#page-inspector-ui-tour-html-pane)
 
 [All devtools bugs fixed between Firefox 30 and Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-04-28&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-17&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox&list_id=10022921).
 
