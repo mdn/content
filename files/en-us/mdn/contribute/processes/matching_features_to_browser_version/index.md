@@ -94,20 +94,15 @@ The Chromium source code repository maintains a set of tags, one for each releas
 
 ## Edge
 
-_If you have insights into locating release versions for changes to Edge, please consider helping us write this section..._
+Edge is based on Chromium and Microsoft has replaced older versions of the previously EdgeHTML-based browser with the new Chromium-based browser.
 
-### Useful resources
+### Matching Chrome versions
 
-- [Microsoft Edge web platform features status and roadmap](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/)
-- [Microsoft Edge issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
+Edge continuously fetches *upstream* changes from the Chromium project and its version numbering strategy is the same as Chrome's. Although it can take a few days (or weeks) for a feature that appears in Chrome to also appear in Edge, the feature will ship in both browsers under the same version number.
 
-### EdgeHTML
+Indeed, after Edge 18, when Edge adopted Chromium, the version number jumped to 79, to match the Chromium version number.
 
-Before Edge switched to Chromium, it used an engine developed by Microsoft called EdgeHTML. These resources will help you identify when features were added or removed in EdgeHTML-based versions of Edge—that is, Edge version 18 and earlier.
-
-### Blink (Chromium)
-
-After Edge 18, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 79, to match the Chromium version number. While most features will be the same between all Chromium browsers at the same version number, there may be some exceptions. Here are some resources to help you identify those:
+There may be some exceptions and you should test the feature you are documenting in both browsers. While most features will be the same between all Chromium browsers at the same version number, Edge has its own *downstream* codebase and may alter, remove, or disable certain Chromium features.
 
 ## Firefox
 
