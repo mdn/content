@@ -507,8 +507,8 @@ Chrome has `chrome://inspect/#service-workers`, which shows current service work
 
 Firefox has also started to implement some useful tools related to service workers:
 
-- You can navigate to [`about:debugging`](/en-US/docs/Tools/about:debugging) to see what SWs are registered and update/remove them.
-- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](/en-US/docs/Tools/Settings).
+- You can navigate to [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) to see what SWs are registered and update/remove them.
+- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
 - The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).
 
 > **Note:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)

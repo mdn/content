@@ -230,7 +230,7 @@ Now, instead of just eating the page right away, the content script listens for 
 
 Since [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) is an asynchronous function, and to ensure we send message only after listener has been added in `page-eater.js`, we use `onExecuted()` which will be called after `page-eater.js` executed.
 
-> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](/en-US/docs/Tools/Browser_Console) to view `console.log` in background script.
+> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to view `console.log` in background script.
 >
 > Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)  which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
 

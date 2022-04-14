@@ -18,7 +18,7 @@ Highlights:
 - [Bypass audio nodes in Web Audio Editor](/en-US/docs/Tools/Web_Audio_Editor#bypassing_nodes)
 - ["copy" command in Web Console](/en-US/docs/Tools/Web_Console#helper_commands)
 - [Highlight and filter XmlHttpRequests in Web Console](/en-US/docs/Tools/Web_Console#xhr)
-- [See optimized-out variables in the Debugger](/en-US/docs/Tools/Debugger/How_to/Set_Watch_Expressions)
+- [See optimized-out variables in the Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html)
 - [See security warnings in the Network Monitor](/en-US/docs/Tools/Network_Monitor#security)
 - [See transferred sizes in the Network Monitor](/en-US/docs/Tools/Network_Monitor#network_request_fields)
 - [Play/pause all animations in the page](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#animations_view)

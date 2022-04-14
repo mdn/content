@@ -34,7 +34,7 @@ We tend to most commonly use video when describing some kind of instruction sequ
 It is especially useful when trying to describe processes that cross over multiple applications or windows, and include GUI interactions that might not be simple to describe: _"now click on the button near the top-left that looks a bit like a duck"_.
 
 In such cases it is often more effective to just **show** what you mean.
-We most commonly use videos when explaining features of the [Firefox DevTools](/en-US/docs/Tools).
+We most commonly use videos when explaining features of the [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
 
 ## What should MDN videos look like?
 
@@ -135,7 +135,7 @@ Make sure the mouse pointer doesn't obscure any icons or text that are important
 
 Remember to pause for a second or two at the end, to show the result of the flow.
 
-> **Note:** If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the [Rulers Tool](/en-US/docs/Tools/Rulers) to make sure the viewport is at the right aspect ratio for the recording.
+> **Note:** If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) to make sure the viewport is at the right aspect ratio for the recording.
 
 ### Post-production
 
@@ -170,7 +170,7 @@ This is used by inserting the following in your page at the position you want th
 ```
 
 The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL.
-For example, the video embedded in our [Page inspector 3-pane mode](/en-US/docs/Tools/Page_Inspector/3-pane_mode) article is available at https\://www\.youtube.com/watch?v=ELS2OOUvxIw, so the required macro call looks like this:
+For example, the video embedded in our [Page inspector 3-pane mode](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/3-pane_mode/index.html) article is available at https\://www\.youtube.com/watch?v=ELS2OOUvxIw, so the required macro call looks like this:
 
 ```
 \{{EmbedYouTube("ELS2OOUvxIw")}}

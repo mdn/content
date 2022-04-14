@@ -48,13 +48,13 @@ Sometimes when writing CSS you will encounter an issue where your CSS doesn't se
 
 The article [What are browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) is an up-to-date guide explaining how to access the tools in various browsers and platforms. While you may choose to mostly develop in a particular browser, and therefore will become most familiar with the tools included in that browser, it is worth knowing how to access them in other browsers. This will help if you are seeing different rendering between multiple browsers.
 
-You will also find that browsers have chosen to focus on different areas when creating their DevTools. For example, in Firefox there are some excellent tools for working visually with CSS Layout, allowing you to inspect and edit [Grid Layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), [Flexbox](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts), and [Shapes](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes). However, all of the different browsers have similar fundamental tools, e.g., for inspecting the properties and values applied to elements on your page, and making changes to them from the editor.
+You will also find that browsers have chosen to focus on different areas when creating their DevTools. For example, in Firefox there are some excellent tools for working visually with CSS Layout, allowing you to inspect and edit [Grid Layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html), and [Shapes](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html). However, all of the different browsers have similar fundamental tools, e.g., for inspecting the properties and values applied to elements on your page, and making changes to them from the editor.
 
 In this lesson we will look at some useful features of the Firefox DevTools for working with CSS. In order to do so I'll be using [an example file](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html). Load this up in a new tab if you want to follow along, and open up your DevTools as described in the article linked above.
 
 ## The DOM versus view source
 
-Something that can trip up newcomers to DevTools is the difference between what you see when you [view the source](/en-US/docs/Tools/View_source) of a webpage, or look at the HTML file you put on the server, and what you can see in the [HTML Pane](/en-US/docs/Tools/Page_Inspector/UI_Tour#html_pane) of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.
+Something that can trip up newcomers to DevTools is the difference between what you see when you [view the source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) of a webpage, or look at the HTML file you put on the server, and what you can see in the [HTML Pane](/en-US/docs/Tools/Page_Inspector/UI_Tour#html_pane) of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.
 
 In the rendered DOM the browser may have normalized the HTML, for example by correcting some badly-written HTML for you. If you incorrectly closed an element, for instance by opening an `<h2>` but closing with an `</h3>`, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open `<h2>` with an `</h2>`. The DOM will also show any changes made by JavaScript.
 
@@ -96,7 +96,7 @@ You can add properties using the DevTools. Perhaps you have realized that you do
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **Note:** There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
+> **Note:** There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
 
 ## Understanding the box model
 
@@ -112,7 +112,7 @@ The element with a class of `box2` is using `border-box`, so here the padding an
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **Note:** Find out more in [Examining and Inspecting the Box Model](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model).
+> **Note:** Find out more in [Examining and Inspecting the Box Model](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
 
 ## Solving specificity issues
 
@@ -143,7 +143,7 @@ As you will recall from the lesson on [cascade and inheritance](/en-US/docs/Lear
 
 ## Find out more about the Firefox DevTools
 
-There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main [DevTools section](/en-US/docs/Tools), and for more detail on the things we have briefly covered in this lesson see [The How To Guides](/en-US/docs/Tools/Page_Inspector#how_to).
+There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main [DevTools section](https://firefox-source-docs.mozilla.org/devtools-user/index.html), and for more detail on the things we have briefly covered in this lesson see [The How To Guides](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#how-to).
 
 ## Debugging problems in CSS
 

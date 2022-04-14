@@ -12,7 +12,7 @@ tags:
 
 Highlights:
 
-- [Web Audio Editor](/en-US/docs/Tools/Web_Audio_Editor)
+- [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
 - [Code completion and inline documentation in Scratchpad](/en-US/docs/Tools/Scratchpad#Code_completion_and_inline_documentation)
 - [User agent styles in the Inspector's Rules view](/en-US/docs/Tools/Page_Inspector#rules_view)
 - [Element picker button has moved](/en-US/docs/Tools/Page_Inspector#firefox_32_onwards_2)

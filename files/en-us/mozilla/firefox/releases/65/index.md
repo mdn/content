@@ -15,11 +15,11 @@ This article provides information about the changes in Firefox 65 that will affe
 
 ### Developer tools
 
-- The [Flexbox inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) is now enabled by default.
-- Support has been added to the [JavaScript Debugger](/en-US/docs/Tools/Debugger) for XHR Breakpoints ({{bug(821610)}}).
+- The [Flexbox inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) is now enabled by default.
+- Support has been added to the [JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) for XHR Breakpoints ({{bug(821610)}}).
 - Right-click on an item in the accessibility tree from the Accessibility viewer to [print it as JSON](/en-US/docs/Tools/Accessibility_inspector#print_accessibility_tree_to_json) to the JSON viewer.
 - The [color contrast](/en-US/docs/Tools/Accessibility_inspector#color_contrast) display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.
-- The Headers tab of the [Network Monitor](/en-US/docs/Tools/Network_Monitor) now displays the Referrer Policy for the selected request ({{bug(1496742)}}).
+- The Headers tab of the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now displays the Referrer Policy for the selected request ({{bug(1496742)}}).
 - When displaying stack traces (e.g. in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.
 - In the same fashion as native terminals, you can now use reverse search to find entries in your JavaScript console history (`F9` on Windows/Linux or `Ctrl` + `R` on macOS, then type a search term, followed by `Ctrl` + `R`/`Ctrl` + `S` to toggle through results).
 - The JavaScript console's `$0` shortcut (references the currently inspected element on the page) now has autocomplete available, so for example you could type `$0.te` to get autocomplete suggestions for properties like `$0.textContent`.

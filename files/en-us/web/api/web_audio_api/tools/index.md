@@ -26,7 +26,7 @@ _Add information for developers using Microsoft Edge._
 
 ## Firefox
 
-Firefox offers a native [Web Audio Editor](/en-US/docs/Tools/Web_Audio_Editor).
+Firefox offers a native [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html).
 
 ## Safari
 

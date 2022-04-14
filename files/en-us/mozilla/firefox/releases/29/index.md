@@ -17,11 +17,11 @@ Major changes include:
 
 - Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their URL, etc.
 - Added the [console API](/en-US/docs/Web/API/Console_API) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
-- The [Network Monitor](/en-US/docs/Tools/Network_Monitor) tool now shows performance statistics using pie charts ({{bug(846601)}}).
-- On the [Inspector](/en-US/docs/Tools/Page_Inspector), preview tooltips of CSS transforms are now available ({{bug(726427)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool now shows performance statistics using pie charts ({{bug(846601)}}).
+- On the [Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), preview tooltips of CSS transforms are now available ({{bug(726427)}}).
 - DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.
-- A CSS source map is now supported by the [Style Editor](/en-US/docs/Tools/Style_Editor) ({{bug(926014)}}).
-- Autocompletion of CSS properties and values has been added to the [Style Editor](/en-US/docs/Tools/Style_Editor) ({{bug(717369)}}).
+- A CSS source map is now supported by the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ({{bug(926014)}}).
+- Autocompletion of CSS properties and values has been added to the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ({{bug(717369)}}).
 
 _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/) for details and other smaller changes._
 

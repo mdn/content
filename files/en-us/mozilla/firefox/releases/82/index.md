@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 82 that will affe
 
 ### Developer tools
 
-- You can now [inspect server-sent events](/en-US/docs/Tools/Network_Monitor/Inspecting_server-sent_events) using the [Network Monitor](/en-US/docs/Tools/Network_Monitor) ({{bug(1640857)}}).
+- You can now [inspect server-sent events](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_server-sent_events/index.html) using the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ({{bug(1640857)}}).
 - The Network Monitor's _Message_ panel has now been merged with the _Response_ panel — messages (e.g. from WebSockets or server-sent events) can now be viewed right below the responses list ({{bug(1636421)}}).
 
 ### HTML

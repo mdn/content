@@ -15,7 +15,7 @@ Firefox 36 was released on February 24th, 2015. This article lists key changes t
 Highlights:
 
 - [eval sources now appear in the Debugger](/en-US/docs/Tools/Debugger#debug_eval_sources)
-- [Simpler process for connecting to Firefox for Android](/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE)
+- [Simpler process for connecting to Firefox for Android](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/debugging_firefox_for_android_with_webide/index.html)
 - Box Model Highlighter works on remote targets
 - ["Invert the call tree" option in the Profiler](/en-US/docs/Tools/Performance#inverting_the_call_tree)
 - [Inspect DOM promises in the console](/en-US/docs/Tools/Web_Console#type-specific_rich_output)

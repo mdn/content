@@ -20,18 +20,18 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 #### Debugger
 
 - You can now change the URL accessed by the remote device from the [about:debugging](/en-US/docs/Tools/about:debugging#connecting_to_a_remote_device) panel. ({{bug("1617237")}})
-- The **Disable JavaScript** menu item in the [Debugger](/en-US/docs/Tools/Debugger/UI_Tour) now only affects the current tab, and is reset when the Developer Tools are closed. ({{bug("1640318")}})
-- [Logpoints](/en-US/docs/Tools/Debugger/Set_a_logpoint) can map variable names in source-mapped code back to their original names, if you enable **Maps** in the [Scopes pane](/en-US/docs/Tools/Debugger/UI_Tour#scopes). ({{bug("1536857")}})
+- The **Disable JavaScript** menu item in the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html) now only affects the current tab, and is reset when the Developer Tools are closed. ({{bug("1640318")}})
+- [Logpoints](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html) can map variable names in source-mapped code back to their original names, if you enable **Maps** in the [Scopes pane](/en-US/docs/Tools/Debugger/UI_Tour#scopes). ({{bug("1536857")}})
 
 #### Network Monitor
 
 - In the [Network Monitor](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns), you can now resize the columns of the request list by dragging the column borders anywhere in the table. ({{bug("1618409")}})
-- The [request details panel](/en-US/docs/Tools/Network_Monitor/request_details) in the Network Monitor has some UX improvements. ({{bug("1631302")}}, {{bug("1631295")}})
-- If a request was blocked, the [request list](/en-US/docs/Tools/Network_Monitor/request_list) now shows the reason, such as an add-on, CSP, CORS, or Enhanced Tracking Protection. ({{bug("1555057")}}, {{bug("1445637")}}, {{bug("1556451")}})
+- The [request details panel](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) in the Network Monitor has some UX improvements. ({{bug("1631302")}}, {{bug("1631295")}})
+- If a request was blocked, the [request list](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html) now shows the reason, such as an add-on, CSP, CORS, or Enhanced Tracking Protection. ({{bug("1555057")}}, {{bug("1445637")}}, {{bug("1556451")}})
 
 #### Other tools
 
-- The [Accessibility](/en-US/docs/Tools/Accessibility_inspector) inspector is out of beta. You can use it to check for various accessibility issues on your site. ({{bug("1602075")}})
+- The [Accessibility](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) inspector is out of beta. You can use it to check for various accessibility issues on your site. ({{bug("1602075")}})
 - Uncaught promise errors now provide all details in the Console, including their name and stack. ({{bug("1636590")}})
 
 ### CSS

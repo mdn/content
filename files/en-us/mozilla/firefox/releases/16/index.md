@@ -70,7 +70,7 @@ _No change_
 
 ### Developer tools
 
-- There's now a handy developer toolbar you can access by going to Tools > Web Developer > Developer Toolbar, or by pressing Ctrl-Shift-V (Cmd-Opt-V on Mac OS X). This toolbar offers a command line interface as well as buttons for quickly accessing useful tools. The graphical command line interface ([GCLI](/en-US/docs/Tools/GCLI)) is easy to expand and additional commands are expected in the future. Type "help" to get a list of supported commands.
+- There's now a handy developer toolbar you can access by going to Tools > Web Developer > Developer Toolbar, or by pressing Ctrl-Shift-V (Cmd-Opt-V on Mac OS X). This toolbar offers a command line interface as well as buttons for quickly accessing useful tools. The graphical command line interface _GCLI_ is easy to expand and additional commands are expected in the future. Type "help" to get a list of supported commands.
 - The Web Console now displays an error count so you can quickly see how much work you have ahead of you.
 - The Scratchpad now offers a list of recently opened files.
 

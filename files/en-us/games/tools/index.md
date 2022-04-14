@@ -21,8 +21,8 @@ On this page you can find links to our game development tools articles, which ev
   - : Shumway is a renderer for Adobe Flash built entirely in JavaScript, WebGL, etc., bridging the gap between Flash and web standards. This article shows how to make use of Shumway, and how to contribute fixes and bugs to the project.
 - Toolchain for developing and debugging games
 
-  - : How does this differ from normal web app debugging? What specialist tools are available? A lot of this is going to be covered by Will in [tools](/en-US/docs/Tools), but here we should provide a kind of practical toolchain tutorial for debugging games, with links to Will's stuff:
+  - : How does this differ from normal web app debugging? What specialist tools are available? A lot of this is going to be covered by Will in [tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), but here we should provide a kind of practical toolchain tutorial for debugging games, with links to Will's stuff:
 
     - Basic tools overview
-    - [Shader editor](/en-US/docs/Tools/Shader_Editor)
+    - [Shader editor](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Performance tools (still in production, estimated early 2014)

@@ -34,7 +34,7 @@ This article provides information about the changes in Firefox 68 that will affe
 #### Page inspector
 
 - A button has been added to the [rules panel](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#examine_css_rules) of the Page inspector that allows you to toggle the display of any print media queries ({{bug(1534984)}}).
-- The [fonts panel](/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts) now includes a slider to modify `letter-spacing` ({{bug(1536237)}}).
+- The [fonts panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) now includes a slider to modify `letter-spacing` ({{bug(1536237)}}).
 - A warning icon appears next to unsupported CSS properties or rules that have invalid values, to help you understand why certain styles are not being applied ({{bug(1306054)}}).
 
 #### Storage inspector
@@ -43,13 +43,13 @@ This article provides information about the changes in Firefox 68 that will affe
 
 #### Other
 
-- The [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) now includes a new _Check for issues_ feature, which will include a number of audit tools to highlight accessibility problems on your web pages. The first available check is _contrast_, for highlighting color contrast problems.
-- The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](/en-US/docs/Tools/about:debugging) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
-- [Responsive design mode](/en-US/docs/Tools/Responsive_Design_Mode) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List..._) is now more intuitive and simpler to use ({{bug(1487857)}}).
+- The [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) now includes a new _Check for issues_ feature, which will include a number of audit tools to highlight accessibility problems on your web pages. The first available check is _contrast_, for highlighting color contrast problems.
+- The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
+- [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List..._) is now more intuitive and simpler to use ({{bug(1487857)}}).
 
 #### Removals
 
-- The "Enable add-on debugging" checkbox has been removed from the [about:debugging](/en-US/docs/Tools/about:debugging) page ({{bug(1544813)}}).
+- The "Enable add-on debugging" checkbox has been removed from the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page ({{bug(1544813)}}).
 
 ### HTML
 

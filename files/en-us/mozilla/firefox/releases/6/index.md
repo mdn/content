@@ -112,7 +112,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 - Support for microsummaries has been removed; these were never widely used, were not very discoverable, and continuing to support them was making improvements to the Places (bookmark and history) architecture difficult.
 - WebGL now supports the [`OES_texture_float`](http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt) extension.
-- The new [Scratchpad](/en-US/docs/Tools/Scratchpad) tool provides a handy place to experiment with JavaScript code.
+- The new _Scratchpad_ tool provides a handy place to experiment with JavaScript code.
 - The `console.trace()` method has been added to the [Console API](/en-US/docs/Web/API/Console_API) (see {{ bug('585956') }}).
 
 ## Changes for Mozilla and add-on developers

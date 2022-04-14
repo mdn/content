@@ -19,10 +19,10 @@ Highlights:
 - [Take a screenshot of a DOM node](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
 - [Copy as HAR/save as HAR](/en-US/docs/Tools/Network_Monitor#copysave_all_as_har)
 - ["Add Rule" button in the Rules view](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#add_rules)
-- [View source in a tab](/en-US/docs/Tools/View_source) (Disabled by default)
+- [View source in a tab](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) (Disabled by default)
 - [More options to copy CSS rules](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#copy_rules)
-- [Copy image as data: URI in the Rules view](/en-US/docs/Tools/Page_Inspector/How_to/View_background_images)
-- [Added command to GCLI to display CSP info](/en-US/docs/Tools/GCLI/Display_security_information)
+- [Copy image as data: URI in the Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/view_background_images/index.html)
+- Added command to _GCLI_ to display CSP info
 
 [All devtools bugs fixed between Firefox 40 and Firefox 41](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-06-29&query_format=advanced&chfield=resolution&chfieldfrom=2015-05-11&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12283503): note that many of these bugs, especially those relating to the performance tools, were uplifted to Firefox 40.
 
