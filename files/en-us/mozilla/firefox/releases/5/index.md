@@ -77,7 +77,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ### Developer tools
 
-- The [Web Console's `Console` object](/en-US/docs/Tools/Web_Console#the_console_object) now has a `debug()` method, which is an alias for its `log()` method; this improves compatibility with certain existing sites.
+- The [Web Console's `Console` object](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#the-console-object) now has a `debug()` method, which is an alias for its `log()` method; this improves compatibility with certain existing sites.
 
 ## Changes for Mozilla and add-on developers
 

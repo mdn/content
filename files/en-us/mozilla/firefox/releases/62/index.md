@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 62 that will affe
 - You now have four options for the location of the Developer Tools. In addition to the default location on the bottom of the window, you can choose to locate the tools on either the left or right sides of the main window or in a separate window ({{bug(1192642)}}).
 - A close button has been added to the [split console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/split_console/index.html) toolbar.
 - If the option to "Select an iframe as the currently targeted document" is checked, the icon will appear in the toolbar while the Settings tab is displayed, even if the current page doesn't include any iframes ({{bug(1456069)}}).
-- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s [Cookies tab](/en-US/docs/Tools/Network_Monitor#cookies) now shows the cookie `samesite` attribute ({{bug(1452715)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s [Cookies tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#cookies) now shows the cookie `samesite` attribute ({{bug(1452715)}}).
 - [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) now works inside container tabs ({{bug(1306975)}}).
 - When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/CORS/Errors) ({{bug(1475391)}}).
 - Create a screenshot of the current page (with an optional filename) from the Console tab ({{bug(1464461)}}) using the following command:

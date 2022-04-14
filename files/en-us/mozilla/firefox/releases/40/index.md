@@ -15,27 +15,27 @@ tags:
 
 Highlights:
 
-- [Improvements to the Animations view](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_40)
-- [Get help from MDN for CSS property syntax](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#get_help_for_css_properties)
+- [Improvements to the Animations view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-40)
+- [Get help from MDN for CSS property syntax](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#get-help-for-css-properties)
 - [Edit filters in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html)
-- [Web Console now shows messages from workers](/en-US/docs/Tools/Web_Console#console_api_messages)
-- [Filter requests by URL in the Network Monitor](/en-US/docs/Tools/Network_Monitor#filtering_by_url)
-- [Many new context menu options in the Network Monitor](/en-US/docs/Tools/Network_Monitor#context_menu)
-- [Show when network resources are fetched from the browser cache](/en-US/docs/Tools/Network_Monitor#network_request_fields)
-- [Filter rules in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#filtering_rules)
+- [Web Console now shows messages from workers](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#console-api-messages)
+- [Filter requests by URL in the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#filtering-by-url)
+- [Many new context menu options in the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#context-menu)
+- [Show when network resources are fetched from the browser cache](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network-request-fields)
+- [Filter rules in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#filtering-rules)
 
 More:
 
 - [Break at debugger; statements in unnamed eval sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html)
-- [Copy URL/Open in New Tab context menu items for Debugger source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane)
-- [console.dirxml support in the Web Console](/en-US/docs/Tools/Web_Console#log_messages)
-- [Style Editor: "Open Link In New Tab" item added to stylesheet list](/en-US/docs/Tools/Style_Editor#the_style_sheet_pane)
-- [Inspector selector search now includes class/id results even without css prefix](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#searching)
-- [Tooltips in box-model view saying which CSS rule caused the value](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#the_box_model_view)
+- [Copy URL/Open in New Tab context menu items for Debugger source list pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source-list-pane)
+- [console.dirxml support in the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#log-messages)
+- [Style Editor: "Open Link In New Tab" item added to stylesheet list](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html#the-style-sheet-pane)
+- [Inspector selector search now includes class/id results even without css prefix](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#searching)
+- [Tooltips in box-model view saying which CSS rule caused the value](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html#the-box-model-view)
 - [Switch between color unit format in the Inspector using Shift+click](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/inspect_and_select_colors/index.html)
-- [Implement "Scroll Into View" menu item for the Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
-- [Linkify url/id/resource attributes in the Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
-- [IP address tooltip in the Network Monitor](/en-US/docs/Tools/Network_Monitor#network_request_fields)
+- [Implement "Scroll Into View" menu item for the Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element-popup-menu)
+- [Linkify url/id/resource attributes in the Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element-popup-menu)
+- [IP address tooltip in the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network-request-fields)
 
 Everything: [all devtools bugs fixed between Firefox 39 and Firefox 40](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-05-11&query_format=advanced&chfield=resolution&chfieldfrom=2015-03-31&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12283503).
 

@@ -15,13 +15,13 @@ Firefox 38 was released on May 12th, 2015. This article lists key changes that a
 
 Highlights:
 
-- [Bypass audio nodes in Web Audio Editor](/en-US/docs/Tools/Web_Audio_Editor#bypassing_nodes)
-- ["copy" command in Web Console](/en-US/docs/Tools/Web_Console#helper_commands)
-- [Highlight and filter XmlHttpRequests in Web Console](/en-US/docs/Tools/Web_Console#xhr)
+- [Bypass audio nodes in Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html#bypassing-nodes)
+- ["copy" command in Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#helper-commands)
+- [Highlight and filter XmlHttpRequests in Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#xhr)
 - [See optimized-out variables in the Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html)
-- [See security warnings in the Network Monitor](/en-US/docs/Tools/Network_Monitor#security)
-- [See transferred sizes in the Network Monitor](/en-US/docs/Tools/Network_Monitor#network_request_fields)
-- [Play/pause all animations in the page](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#animations_view)
+- [See security warnings in the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#security)
+- [See transferred sizes in the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network-request-fields)
+- [Play/pause all animations in the page](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#animations-view)
 
 [All devtools bugs fixed between Firefox 37 and Firefox 38](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-02-23&query_format=advanced&chfield=resolution&chfieldfrom=2015-01-12&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12076303).
 

@@ -15,8 +15,8 @@ tags:
 
 - JavaScript errors logged into the console [now provide a \[Learn more\] link](https://hacks.mozilla.org/2016/06/helping-web-developers-with-javascript-errors/) for additional debugging help ({{bug(1179876)}}).
 - CSS autocomplete: show more suggestions in autocomplete popup ({{bug("1260419")}}).
-- The Animation Inspector now [exposes animation performance information](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#further_information_about_animation_compositing) in DevTools ({{bug("1254408")}}).
-- The [Inspector's context menu](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_context_menu) has been reorganized to be cleaner and easier to use ({{bug("1211613")}}).
+- The Animation Inspector now [exposes animation performance information](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#further-information-about-animation-compositing) in DevTools ({{bug("1254408")}}).
+- The [Inspector's context menu](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element-popup-context-menu) has been reorganized to be cleaner and easier to use ({{bug("1211613")}}).
 - The Inspector now supports `#RRGGBBAA` and `#RGBA` syntax for color values ({{bug("1271191")}}).
 - The developer tools no longer display self-closing tags (such as {{HTMLElement("br")}} and {{HTMLElement("img")}} as if they have a closing tag on HTML pages; the behavior is unchanged for XHTML pages ({{bug("820926")}}).
 - Accessibility improvements!
@@ -27,10 +27,10 @@ tags:
 
 - The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now shows a Cause column, which provides an indication of what caused each particular network request ({{bug(1134073)}}).
 - In the _about:debugging_ Add-ons page, the Reload button is only enabled for temporary add-ons. It will be disabled for all other add-ons ({{bug(1273184)}}).
-- In the _about:debugging_ Workers page, a warning message will be displayed in the Service Workers section if [service workers are incompatible](/en-US/docs/Tools/about:debugging#service_workers_not_compatible) with the current browser configuration ({{bug(1266415)}}).
-- _about:debugging_ now has a [new Tabs page](/en-US/docs/Tools/about:debugging#tabs) available, which provides a complete list of all the debuggable tabs open in the current Firefox instance ({{bug(1266128)}}).
-- The _Disable Cache_ option in the [Toolbox Advanced settings](/en-US/docs/Tools/Settings#advanced_settings) has been renamed to Disable HTTP Cache, to make it clearer that this affects the HTTP cache, and not [Service Workers](/en-US/docs/Web/API/Service_Worker_API)/the [Cache API](/en-US/docs/Web/API/Cache) (bug(1253018)).
-- The [Storage Inspector now allows IndexedDB databases to be deleted](/en-US/docs/Tools/Storage_Inspector#indexeddb) via their own context menus ({{bug("1205123")}}), and will display warning messages if the IndexedDB cannot be deleted for some reason (if there are still active connections, for example) ({{bug(1268460)}}).
+- In the _about:debugging_ Workers page, a warning message will be displayed in the Service Workers section if [service workers are incompatible](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#service-workers-not-compatible) with the current browser configuration ({{bug(1266415)}}).
+- _about:debugging_ now has a [new Tabs page](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#tabs) available, which provides a complete list of all the debuggable tabs open in the current Firefox instance ({{bug(1266128)}}).
+- The _Disable Cache_ option in the [Toolbox Advanced settings](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html#advanced-settings) has been renamed to Disable HTTP Cache, to make it clearer that this affects the HTTP cache, and not [Service Workers](/en-US/docs/Web/API/Service_Worker_API)/the [Cache API](/en-US/docs/Web/API/Cache) (bug(1253018)).
+- The [Storage Inspector now allows IndexedDB databases to be deleted](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#indexeddb) via their own context menus ({{bug("1205123")}}), and will display warning messages if the IndexedDB cannot be deleted for some reason (if there are still active connections, for example) ({{bug(1268460)}}).
 
 ### HTML
 

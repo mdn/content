@@ -13,11 +13,11 @@ tags:
 Highlights:
 
 - [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
-- [Code completion and inline documentation in Scratchpad](/en-US/docs/Tools/Scratchpad#Code_completion_and_inline_documentation)
-- [User agent styles in the Inspector's Rules view](/en-US/docs/Tools/Page_Inspector#rules_view)
-- [Element picker button has moved](/en-US/docs/Tools/Page_Inspector#firefox_32_onwards_2)
-- [Node dimensions added to the Inspector's infobar](/en-US/docs/Tools/Page_Inspector#firefox_32_onwards)
-- [Full page screenshot button added](/en-US/docs/Tools/Tools_Toolbox#extra_tools)
+- _Code completion and inline documentation in Scratchpad]_
+- [User agent styles in the Inspector's Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules-view)
+- [Element picker button has moved](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards-2)
+- [Node dimensions added to the Inspector's infobar](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards)
+- [Full page screenshot button added](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra-tools)
 - HiDPI images added to the tools
 - Nodes that have `display:none` are shown differently in the Inspector
 

@@ -16,11 +16,11 @@ tags:
 
 Highlights:
 
-- [Take a screenshot of a DOM node](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
-- [Copy as HAR/save as HAR](/en-US/docs/Tools/Network_Monitor#copysave_all_as_har)
-- ["Add Rule" button in the Rules view](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#add_rules)
+- [Take a screenshot of a DOM node](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element-popup-menu)
+- [Copy as HAR/save as HAR](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#copysave-all-as-har)
+- ["Add Rule" button in the Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#add-rules)
 - [View source in a tab](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) (Disabled by default)
-- [More options to copy CSS rules](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#copy_rules)
+- [More options to copy CSS rules](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#copy-rules)
 - [Copy image as data: URI in the Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/view_background_images/index.html)
 - Added command to _GCLI_ to display CSP info
 

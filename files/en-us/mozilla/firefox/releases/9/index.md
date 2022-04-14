@@ -80,8 +80,8 @@ _No change._
 
 ### Developer tools
 
-- The web console now supports basic [string substitutions](/en-US/docs/Tools/Web_Console#string_substitutions) in its logging methods.
-- You can now [create visually nested blocks of output](/en-US/docs/Tools/Web_Console#using_groups_in_the_console) in the web console, to help make it easier to read.
+- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
+- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
 
 ## Changes for Mozilla and add-on developers
 

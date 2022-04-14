@@ -49,7 +49,7 @@ Videos for MDN should be:
 
 To explain something more complex, you can use a blend of short videos and screenshots, interspersed with text.
 The text can help reinforce the points made in the video, and the user can rely on the text or the video as they choose.
-See [Working with the Animation Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#animation_inspector) for a good example.
+See [Working with the Animation Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#animation-inspector) for a good example.
 
 In addition, you should consider the following tips:
 

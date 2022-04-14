@@ -17,29 +17,29 @@ This article provides information about the changes in Firefox 68 that will affe
 
 #### Browser/web console
 
-- The Web console now shows [more information about CSS warnings](/en-US/docs/Tools/Web_Console/Console_messages#css), including a node list of the DOM elements that used the rule ({{bug(1093953)}}).
+- The Web console now shows [more information about CSS warnings](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#css), including a node list of the DOM elements that used the rule ({{bug(1093953)}}).
 - You can now filter content in the Web console using regular expressions ({{bug(1441079)}}).
 - The Browser console now allows you to show or hide messages from the content process by setting or clearing the checkbox labeled _Show Content Messages_ ({{bug(1260877)}}).
 
 #### JavaScript debugger
 
-- You can now [Search](/en-US/docs/Tools/Debugger/How_to/Search#searching_in_all_files) in all files in the current project from the debugger by pressing `Shift` + `Ctrl` + `F` (Windows or Linux) or `Shift` + `Cmd` + `F` (macOS) ({{bug(1320325)}}).
+- You can now [Search](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/search/index.html#searching-in-all-files) in all files in the current project from the debugger by pressing `Shift` + `Ctrl` + `F` (Windows or Linux) or `Shift` + `Cmd` + `F` (macOS) ({{bug(1320325)}}).
 
 #### Network monitor
 
-- The Network monitor [request list](/en-US/docs/Tools/Network_Monitor/request_list#filtering_requests) now allows you to block a specific URL ({{bug(1151368)}}).
-- You can now resend a network request without editing the method, URL, parameters, and headers, using the [Resend](/en-US/docs/Tools/Network_Monitor/request_list#context_menu) command on the context menu ({{bug(1422014)}}).
-- The context menu of the Network monitor [Headers](/en-US/docs/Tools/Network_Monitor/request_details#headers) tab now allows you to copy all or some of the header information to the clipboard in JSON format ({{bug(1442249)}}).
+- The Network monitor [request list](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#filtering-requests) now allows you to block a specific URL ({{bug(1151368)}}).
+- You can now resend a network request without editing the method, URL, parameters, and headers, using the [Resend](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#context-menu) command on the context menu ({{bug(1422014)}}).
+- The context menu of the Network monitor [Headers](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#headers) tab now allows you to copy all or some of the header information to the clipboard in JSON format ({{bug(1442249)}}).
 
 #### Page inspector
 
-- A button has been added to the [rules panel](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#examine_css_rules) of the Page inspector that allows you to toggle the display of any print media queries ({{bug(1534984)}}).
+- A button has been added to the [rules panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#examine-css-rules) of the Page inspector that allows you to toggle the display of any print media queries ({{bug(1534984)}}).
 - The [fonts panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) now includes a slider to modify `letter-spacing` ({{bug(1536237)}}).
 - A warning icon appears next to unsupported CSS properties or rules that have invalid values, to help you understand why certain styles are not being applied ({{bug(1306054)}}).
 
 #### Storage inspector
 
-- You can now [delete local and session storage](/en-US/docs/Tools/Storage_Inspector#local_storage_session_storage) entries by selecting the item in the storage inspector and pressing the backspace key ({{bug(1522893)}}).
+- You can now [delete local and session storage](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#local-storage-session-storage) entries by selecting the item in the storage inspector and pressing the backspace key ({{bug(1522893)}}).
 
 #### Other
 

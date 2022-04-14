@@ -35,9 +35,9 @@ This article provides information about the changes in Firefox 67 that will affe
 
 - [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) enhancements:
 
-  - The [Header](/en-US/docs/Tools/Network_Monitor/request_details#headers) panel of the Network monitor will now display a notification for resources belonging to a known tracker ({{bug(1485416)}}).
-  - In the Network monitor [request columns](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns), you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ({{bug(1454962)}}).
-  - You can change the [width of the columns](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns) in the Network Monitor to suit your workflow ({{bug(1358414)}}).
+  - The [Header](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#headers) panel of the Network monitor will now display a notification for resources belonging to a known tracker ({{bug(1485416)}}).
+  - In the Network monitor [request columns](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns), you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ({{bug(1454962)}}).
+  - You can change the [width of the columns](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) in the Network Monitor to suit your workflow ({{bug(1358414)}}).
 
 #### Removals
 

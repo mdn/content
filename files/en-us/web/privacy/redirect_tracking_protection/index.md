@@ -69,7 +69,7 @@ Redirect tracking protection can be enabled or disabled by flipping the `privacy
 
 Different log levels can be set via the `privacy.purge_trackers.logging.level` pref.
 
-For debugging purposes, it's easiest to trigger storage clearing by triggering the service directly via the [Browser Console command line](/en-US/docs/Tools/Browser_Console#browser_console_command_line). Note that this is different from the normal [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) you might use to debug a website, and requires the `devtools.chrome.enabled` pref to be set to `true` to use it interactively. Once you've enabled the Browser Console you can trigger storage clearing by running the following command:
+For debugging purposes, it's easiest to trigger storage clearing by triggering the service directly via the [Browser Console command line](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html#browser-console-command-line). Note that this is different from the normal [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) you might use to debug a website, and requires the `devtools.chrome.enabled` pref to be set to `true` to use it interactively. Once you've enabled the Browser Console you can trigger storage clearing by running the following command:
 
 ```js
 await Components.classes["@mozilla.org/purge-tracker-service;1"].getService(Components.interfaces.nsIPurgeTrackerService).purgeTrackingCookieJars()

@@ -29,9 +29,9 @@ This article provides information about the changes in Firefox 70 that will affe
 
 #### Other updates
 
-- An icon will be displayed next to inactive CSS properties in the [Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view) of the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), which you can hover over to get information on why it is inactive ({{bug(1306054)}}).
-- In the [CSS Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view), the [color picker](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/inspect_and_select_colors/index.html) on foreground colors now tells you whether its contrast with the background color meets accessibility conformance criteria ({{bug(1478156)}}).
-- The [Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)'s [Check for issues](/en-US/docs/Tools/Accessibility_inspector#check_for_accessibility_issues) dropdown now includes keyboard accessibility checks ({{bug(1564968)}}).
+- An icon will be displayed next to inactive CSS properties in the [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view) of the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), which you can hover over to get information on why it is inactive ({{bug(1306054)}}).
+- In the [CSS Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view), the [color picker](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/inspect_and_select_colors/index.html) on foreground colors now tells you whether its contrast with the background color meets accessibility conformance criteria ({{bug(1478156)}}).
+- The [Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)'s [Check for issues](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#check-for-accessibility-issues) dropdown now includes keyboard accessibility checks ({{bug(1564968)}}).
 
 ### HTML
 

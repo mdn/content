@@ -14,12 +14,12 @@ Firefox 36 was released on February 24th, 2015. This article lists key changes t
 
 Highlights:
 
-- [eval sources now appear in the Debugger](/en-US/docs/Tools/Debugger#debug_eval_sources)
+- [eval sources now appear in the Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html#debug-eval-sources)
 - [Simpler process for connecting to Firefox for Android](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/debugging_firefox_for_android_with_webide/index.html)
 - Box Model Highlighter works on remote targets
-- ["Invert the call tree" option in the Profiler](/en-US/docs/Tools/Performance#inverting_the_call_tree)
-- [Inspect DOM promises in the console](/en-US/docs/Tools/Web_Console#type-specific_rich_output)
-- [Extra "Paste" commands in the Inspector](/en-US/docs/Tools/Page_Inspector#element_popup_menu_2)
+- ["Invert the call tree" option in the Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html#inverting-the-call-tree)
+- [Inspect DOM promises in the console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#type-specific-rich-output)
+- [Extra "Paste" commands in the Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element-popup-menu-2)
 
 [All devtools bugs fixed between Firefox 35 and Firefox 36](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-11-28&chfield=resolution&query_format=advanced&chfieldfrom=2014-10-13&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=11736454).
 
