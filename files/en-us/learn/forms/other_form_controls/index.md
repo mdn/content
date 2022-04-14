@@ -81,7 +81,7 @@ The ability to resize a `<textarea>` is controlled with the CSS `resize` propert
 - `horizontal`: Allows resizing only horizontally.
 - `vertical`: Allows resizing only vertically.
 - `none`: Allows no resizing.
-- `block` and `inline`: Experimental values that allow resizing in the `block` or `inline` direction only (this varies depending on the directionality of your text; read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) if you want to find out more.)
+- `block` and `inline`: Experimental values that allow resizing in the `block` or `inline` direction only, either horizontally or vertically (this varies depending on the directionality of your text; read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) if you want to find out more.)
 
 Play with the interactive example at the top of the {{cssxref("resize")}} reference page for a demonstration of how these work.
 
@@ -233,7 +233,7 @@ The following screenshot shows the datalist fallback as rendered in Safari 6:
 
 ![Screenshot of the datalist element fallback with Safari on Mac OS](datalist-safari.png)
 
-If you use this fallback, ensure the data for both the `<input>` and the `<select>` are collected server-side.
+If you use this fallback, ensure the data for both the `<input>` and the `<select>` are collected in server-side.
 
 #### Less obvious datalist uses
 
@@ -243,7 +243,7 @@ For example, in browsers that support `{{htmlelement("datalist")}}` on `range` i
 
 And browsers that support {{htmlelement('datalist')}}s and [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) should display a customized palette of colors as the default, while still making the full color palette available.
 
-In this case, different browsers behave differently from case to case, so consider such uses as progressive enhancement, and ensure they degrade gracefully.
+In this case, different browsers behave differently from case to case, so consider such uses as progressive enhancement, and ensure they fallback gracefully.
 
 ## Other form features
 
@@ -267,7 +267,7 @@ A progress bar represents a value that changes over time up to a maximum value s
 
 This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.
 
-The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support the element and for screen readers to vocalize it.
+The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support this element and for screen readers to vocalize it.
 
 #### Meter
 
@@ -299,7 +299,7 @@ Such a bar is created using a {{HTMLElement("meter")}} element. This is for impl
 
 {{EmbedLiveSample("Meter", 120, 120)}}
 
-The content inside the {{HTMLElement("meter")}} element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it.
+The content inside the {{HTMLElement("meter")}} element is a fallback for browsers that don't support this element and for assistive technologies to vocalize it.
 
 Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is fairly good — there is no support in Internet Explorer, but other browsers support it well.
 
