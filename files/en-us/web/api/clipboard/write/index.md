@@ -79,7 +79,7 @@ Next, we create a new {{domxref("ClipboardItem")}} object into which the blob wi
 The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content. Then `write()` is called, specifying both a fulfillment function
 and an error function.
 
-## Examplesof copying canvas contents to the clipboard
+### Example of copying canvas contents to the clipboard
 
 ```js
 function copyCanvasContentsToClipboard(canvas, onDone, onError) {
