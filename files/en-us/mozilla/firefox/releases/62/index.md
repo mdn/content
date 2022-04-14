@@ -33,7 +33,7 @@ This article provides information about the changes in Firefox 62 that will affe
 
 #### Removals
 
-- The [Developer Toolbar/GCLI](https://firefox-source-docs.mozilla.org/devtools-user/gcli/index.html) (accessed with `Shift` + `F2`), **has been removed** from Firefox ({{bug(1461970)}}). Both the Developer Toolbar UI and the GCLI upstream library have become unmaintained, some of its features are broken (some ever since e10s), it is blocking the `unsafeSetInnerHTML` work, usage numbers are very low, alternatives exist for the most used commands.
+- The _Developer Toolbar/GCLI_ (accessed with `Shift` + `F2`), **has been removed** from Firefox ({{bug(1461970)}}). Both the Developer Toolbar UI and the GCLI upstream library have become unmaintained, some of its features are broken (some ever since e10s), it is blocking the `unsafeSetInnerHTML` work, usage numbers are very low, alternatives exist for the most used commands.
 
 ### HTML
 
