@@ -23,11 +23,13 @@ console.
 ## Syntax
 
 ```js
-console.warn(obj1 [, obj2, ..., objN]);
-console.warn(msg [, subst1, ..., substN]);
+warn(obj1);
+warn(obj1, /* ..., */ objN);
+warn(msg);
+warn(msg, subst1, /* ..., */ substN]);
 ```
 
-## Parameters
+### Parameters
 
 - `obj1` ... `objN`
   - : A list of JavaScript objects to output. The string representations of each of these

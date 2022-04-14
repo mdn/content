@@ -28,10 +28,10 @@ To stop recording call {{domxref("console.profileEnd()")}}.
 ## Syntax
 
 ```js
-console.profile(profileName);
+profile(profileName);
 ```
 
-## Parameters
+### Parameters
 
 - `profileName`
   - : The name to give the profile. Optional.

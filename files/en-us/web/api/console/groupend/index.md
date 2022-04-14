@@ -21,10 +21,10 @@ console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxr
 ## Syntax
 
 ```js
-console.groupEnd();
+groupEnd();
 ```
 
-## Parameters
+### Parameters
 
 None.
 

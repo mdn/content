@@ -26,10 +26,10 @@ be shown alongside the marker.
 ## Syntax
 
 ```js
-console.timeStamp(label);
+timeStamp(label);
 ```
 
-## Parameters
+### Parameters
 
 - `label`
   - : Label for the timestamp. Optional.

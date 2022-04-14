@@ -26,7 +26,7 @@ and gaps which describe the pattern.
 ## Syntax
 
 ```js
-ctx.setLineDash(segments);
+setLineDash(segments);
 ```
 
 ### Parameters

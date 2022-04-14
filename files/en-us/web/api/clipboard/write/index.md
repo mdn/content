@@ -26,14 +26,14 @@ The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/
 automatically to pages when they are in the active tab.
 
 > **Note:** Browser support for the asynchronous clipboard APIs is still
-> in the process of being implemented. Be sure to check the  [compatibility table](#browser_compatibility) as well as
+> in the process of being implemented. Be sure to check the [compatibility table](#browser_compatibility) as well as
 > {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more
 > information.
 
 ## Syntax
 
 ```js
-var promise = navigator.clipboard.write(data)
+write(data);
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ A {{jsxref("Promise")}} which is resolved when the data has been written to the
 clipboard. The promise is rejected if the clipboard is unable to complete the clipboard
 access.
 
-## Example
+## Examples
 
 This example function replaces the current contents of the clipboard with a specified
 string.

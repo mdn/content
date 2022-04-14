@@ -28,7 +28,7 @@ Once dispatched, it doesn't do anything anymore.
 ## Syntax
 
 ```js
-event.initMouseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason);
+initMouseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason);
 ```
 
 ### Parameters

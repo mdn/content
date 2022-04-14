@@ -22,7 +22,7 @@ method of the {{domxref("CompositionEvent")}} interface initializes the attribut
 ## Syntax
 
 ```js
- compositionEventInstance.initCompositionEvent(typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg)
+initCompositionEvent(typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg);
 ```
 
 ### Parameters

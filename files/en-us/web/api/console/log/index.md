@@ -25,8 +25,10 @@ or more JavaScript objects.
 ## Syntax
 
 ```js
-console.log(obj1 [, obj2, ..., objN]);
-console.log(msg [, subst1, ..., substN]);
+log(obj1);
+log(obj1, /* ..., */ objN);
+log(msg);
+log(msg, subst1, /* ..., */ substN]);
 ```
 
 ### Parameters

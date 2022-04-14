@@ -16,14 +16,14 @@ The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a 
 ## Syntax
 
 ```js
-var list = cookieStore.getAll(name);
-var list = cookieStore.getAll(options);
+getAll(name);
+getAll(options);
 ```
 
 ### Parameters
 
 - `name`{{Optional_Inline}}
-  - : A {{domxref("USVString")}} with the name of a cookie.
+  - : A string with the name of a cookie.
 - `options`{{Optional_Inline}}
 
   - : An object containing:

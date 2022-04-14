@@ -16,8 +16,8 @@ The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a 
 ## Syntax
 
 ```js
-var promise = cookieStore.delete(name);
-var promise = cookieStore.delete(options);
+delete(name);
+delete(options);
 ```
 
 ### Parameters
@@ -25,7 +25,7 @@ var promise = cookieStore.delete(options);
 This method requires one of the following:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of a cookie.
+  - : A string with the name of a cookie.
 - options
 
   - : An object containing:

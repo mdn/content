@@ -27,8 +27,10 @@ level might correspond to the \`Debug\` or \`Verbose\` log level.
 ## Syntax
 
 ```js
-console.debug(obj1 [, obj2, ..., objN]);
-console.debug(msg [, subst1, ..., substN]);
+debug(obj1);
+debug(obj1, /* ..., */ objN);
+debug(msg);
+debug(msg, subst1, /* ..., */ substN]);
 ```
 
 ### Parameters

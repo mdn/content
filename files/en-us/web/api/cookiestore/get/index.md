@@ -16,8 +16,8 @@ The **`get()`** method of the {{domxref("CookieStore")}} interface returns a sin
 ## Syntax
 
 ```js
-var cookie = CookieStore.get(name);
-var cookie = CookieStore.get(options);
+get(name);
+get(options);
 ```
 
 ### Parameters
@@ -25,7 +25,7 @@ var cookie = CookieStore.get(options);
 This method requires one of the following:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of a cookie.
+  - : A string with the name of a cookie.
 - options
 
   - : An object containing:
