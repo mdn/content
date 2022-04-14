@@ -1,6 +1,6 @@
 ---
-title: CSS Color
-slug: Web/CSS/CSS_Color
+title: CSS Colors
+slug: Web/CSS/CSS_Colors
 tags:
   - CSS
   - CSS Colors
@@ -16,6 +16,7 @@ spec-urls: https://drafts.csswg.org/css-color/
 {{CSSRef}}
 
 **CSS Color** is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
+
 Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.
 
 ## Reference
@@ -32,7 +33,7 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 
 ## Guides
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
   - : A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.
 
 ## Tools
@@ -43,20 +44,6 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-### `color` property
-
-{{Compat("css.properties.color")}}
-
-### `print-color-adjust` property
-
-{{Compat("css.properties.print-color-adjust")}}
-
-### `opacity` property
-
-{{Compat("css.properties.opacity")}}
 
 ## See also
 

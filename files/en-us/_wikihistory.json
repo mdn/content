@@ -94682,7 +94682,7 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2020-12-02T11:04:05.642Z",
     "contributors": [
       "peterbe",
@@ -94690,6 +94690,21 @@
       "fscholz",
       "Sheppy",
       "mfluehr"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2020-11-22T16:26:10.967Z",
+    "contributors": [
+      "Isaaac-Jr",
+      "the-lyu",
+      "UnorthodoxThing",
+      "irenesmith",
+      "alattalatta",
+      "fazl",
+      "Sheppy",
+      "alexaguiarx",
+      "joseph-kaainoa",
+      "chrisdavidmills"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -111398,21 +111413,6 @@
       "netfuzzer0xff",
       "Don.Dominic.mathew",
       "omercier67"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2020-11-22T16:26:10.967Z",
-    "contributors": [
-      "Isaaac-Jr",
-      "the-lyu",
-      "UnorthodoxThing",
-      "irenesmith",
-      "alattalatta",
-      "fazl",
-      "Sheppy",
-      "alexaguiarx",
-      "joseph-kaainoa",
-      "chrisdavidmills"
     ]
   },
   "Web/HTML/Attributes": {

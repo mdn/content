@@ -10861,7 +10861,7 @@
 /en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
-/en-US/docs/Web/CSS/CSS_Colors	/en-US/docs/Web/CSS/CSS_Color
+/en-US/docs/Web/CSS/CSS_Color	/en-US/docs/Web/CSS/CSS_Colors
 /en-US/docs/Web/CSS/CSS_Compositing_and_Blending	/en-US/docs/Web/CSS/Compositing_and_Blending
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
@@ -11550,6 +11550,7 @@
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/Web/Guide/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
+/en-US/docs/Web/HTML/Applying_color	/en-US/docs/Web/CSS/CSS_Colors/Applying_color
 /en-US/docs/Web/HTML/CORS_settings_attributes	/en-US/docs/Web/HTML/Attributes/crossorigin
 /en-US/docs/Web/HTML/Canvas	/en-US/docs/Web/API/Canvas_API
 /en-US/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
