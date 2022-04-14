@@ -81,7 +81,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 #### Scratchpad improvements
 
-- The [Scratchpad](https://firefox-source-docs.mozilla.org/devtools-user/scratchpad/index.html) now has an option in the Help menu to take you to the MDN documentation about Scratchpad.
+- The _Scratchpad_ now has an option in the Help menu to take you to the MDN documentation about Scratchpad.
 
 ## Changes for Mozilla and add-on developers
 
