@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.16.tgz#10c53a148d1985704cb9c507f4d4f5923c6c4307"
   integrity sha512-bqXpkAfQgSD1jUNnn+kKtaHDDMPFz2kij4C71euV4fBv+YCmzkB8TKIoSuUHEdjkE0s55WoQ2OZk/ullmbiUOA==
 
-"@mdn/yari@0.11.2":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.11.2.tgz#ea28cdec0f541adc906095fe0d67b2eec2b74d83"
-  integrity sha512-DDLTTvSBLJx8OvaBIwBOSWCAJuqKq6TiPxsCIA8vkVJBA5xxbDRe3mCoKx0jOqOK12++Kh1Rb25ijZCQbrkD3g==
+"@mdn/yari@0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.11.4.tgz#6e012577bf5baf98e08413fd5b402541cd48a749"
+  integrity sha512-MslC63kTrL/JfCY64SXvbwJ5bge8zHgICr94rbGNsCKPvoD28bWkBO/7eWfYllX7CcvxRB6IvfVLlmpV0yPnGw==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -86,7 +86,7 @@
     cookie "0.5.0"
     cookie-parser "1.4.6"
     cssesc "^3.0.0"
-    dayjs "1.11.0"
+    dayjs "1.11.1"
     dotenv "14.3.0"
     ejs "3.1.6"
     express "4.17.3"
@@ -100,7 +100,7 @@
     hast-util-is-element "^1.1.0"
     hast-util-to-html "^7.1.3"
     hast-util-to-text "^2.0.1"
-    html-react-parser "^1.4.10"
+    html-react-parser "^1.4.11"
     http-proxy-middleware "2.0.4"
     image-size "1.0.1"
     image-type "4.1.0"
@@ -1127,10 +1127,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-dayjs@1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.0.tgz#009bf7ef2e2ea2d5db2e6583d2d39a4b5061e805"
-  integrity sha512-JLC809s6Y948/FuCZPm5IX8rRhQwOiyMb2TfVVQEixG7P8Lm/gt5S7yoQZmC8x1UehI9Pb7sksEt4xx14m+7Ug==
+dayjs@1.11.1:
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.1.tgz#90b33a3dda3417258d48ad2771b415def6545eb0"
+  integrity sha512-ER7EjqVAMkRRsxNCC5YqJ9d9VQYuWdGt7aiH2qA5R5wt8ZmWaP2dLUSIK6y/kVzLMlmh1Tvu5xUf4M/wdGJ5KA==
 
 debug@2.6.9:
   version "2.6.9"
@@ -2260,21 +2260,21 @@ html-comment-regex@^1.1.2:
   resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.2.tgz#97d4688aeb5c81886a364faa0cad1dda14d433a7"
   integrity sha512-P+M65QY2JQ5Y0G9KKdlDpo0zK+/OHptU5AaBwUfAIDJZk1MYf32Frm84EcOytfJE0t5JvkAnKlmjsXDnWzCJmQ==
 
-html-dom-parser@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-1.1.1.tgz#8fa32874bbfde0208a4e57b2342558d1cc8581d8"
-  integrity sha512-ddijSO0GluZEdlLNmiAjFI+CkAgzUgf8n3vpitQhvlsniPMbCSWtu+QYmioaVmEN0stytm9C38p6SsTDthv0cA==
+html-dom-parser@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-1.2.0.tgz#8f689b835982ffbf245eda99730e92b8462c111e"
+  integrity sha512-2HIpFMvvffsXHFUFjso0M9LqM+1Lm22BF+Df2ba+7QHJXjk63pWChEnI6YG27eaWqUdfnh5/Vy+OXrNTtepRsg==
   dependencies:
     domhandler "4.3.1"
     htmlparser2 "7.2.0"
 
-html-react-parser@^1.4.10:
-  version "1.4.10"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-1.4.10.tgz#36862197876ccb9a32736f462555ba561350b715"
-  integrity sha512-GiG7mEwI0enY7hz0F0Zx1B4D0MCQWx2xH0KdVNV9fjqOXwwnPYM79meJ2dsIJf9QR4qQTTPEdSq7wlJfq/i6Tw==
+html-react-parser@^1.4.11:
+  version "1.4.11"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-1.4.11.tgz#9b2a959d11c651b178f06ee03dd92972ef2b8a77"
+  integrity sha512-NDSz8MS89I286N7FzNScBtCRBs6MU7w72k+jWk4dBqcTgTrCQHHrIUlryJB9U5MJuKhq5/CFGz0JPPYS6OnjZw==
   dependencies:
     domhandler "4.3.1"
-    html-dom-parser "1.1.1"
+    html-dom-parser "1.2.0"
     react-property "2.0.0"
     style-to-js "1.1.0"
 
