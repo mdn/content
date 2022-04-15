@@ -57,7 +57,7 @@ The original pseudo-classes available to us (as of [CSS 2.1](https://www.w3.org/
 
   key is being pressed down in the case of a keyboard activation).
 
-These basic pseudo-classes should be familiar to you now. More recently, the [CSS Selector Level 3](https://www.w3.org/TR/css3-selectors/) and [CSS Basic UI Level 3](https://dev.w3.org/csswg/css3-ui/#pseudo-classes) added more pseudo-classes related to HTML forms that provide several other useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
+These basic pseudo-classes should be familiar to you by now. More recently, the [CSS Selector Level 3](https://www.w3.org/TR/css3-selectors/) and [CSS Basic UI Level 3](https://dev.w3.org/csswg/css3-ui/#pseudo-classes) added more pseudo-classes related to HTML forms that provide several other useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
 - {{cssxref(':required')}} and {{cssxref(':optional')}}: Targets required or optional form controls.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
@@ -72,7 +72,7 @@ There are many others too, but the ones listed above are the most obviously usef
 
 One of the most basic concepts with regards to client-side form validation is whether a form input is required (it has to be filled in before the form can be submitted) or optional.
 
-{{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a `required` attribute available which, when set, means that you have to fill in that control before the form will successfully submit. For example:
+{{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a `required` attribute available which, when set, means that you have to fill in that control before the form can successfully submit. For example:
 
 ```html
 <form>
@@ -163,7 +163,7 @@ First of all, we'll add a paragraph to the top of the form to say what you are l
 <p>Required fields are labelled with "required".</p>
 ```
 
-Screenreader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
+Screenreader users will hear "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
 
 Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
 
@@ -206,7 +206,7 @@ input:required + span::after {
 }
 ```
 
-We set the `<span>` to `position: relative` so that we can set the generated content to `position: absolute` and position it relative to the `<span>` rather than the \<body> (The generated content acts as though it is a child node of the element it is generated on, for the purposes of positioning).
+We set the `<span>` to `position: relative` so that we can set the generated content to `position: absolute` and position it relative to the `<span>` rather than the \<body> (The generated content acts as though it is a child node of the element it is generated on, for the purpose of positioning).
 
 Then we give the generated content the content "required", which is what we wanted our label to say, and style and position it as we want. The result is seen below.
 
@@ -330,7 +330,7 @@ This is a similar story to what we had before in the `:required` example, except
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-It is possible for the number input to be both required and out-of-range at the same time, so what happens then? Because the `:out-of-range` rule appears later in the source code than the `:required` rule, the [cascade rules](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#understanding_the_cascade) come into play, and the out of range message is shown.
+It is possible for the number input to be both `:required` and `:out-of-range` at the same time, so what happens then? Because the `:out-of-range` rule appears later in the source code than the `:required` rule, the [cascade rules](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#understanding_the_cascade) come into play, and the out of range message is shown.
 
 This works quite nicely — when the page first loads, "Required" is shown, along with a red cross and border. When you've typed in a valid age (i.e. in the range of 12-120), the input turns valid. If however, you then change the age entry to one that is out of range, the "Outside allowable value range" message then pops up in place of "Required".
 
@@ -437,7 +437,7 @@ You can see the example in action below (also [see it live here](https://mdn.git
 
 ### Read-only and read-write
 
-In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. Read-only inputs have their values submitted to the server, but the user can't edit them, whereas read-write means they can be edited — their default state.
+In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. `:read-only` inputs have their values submitted to the server, but the user can't edit them, whereas read-write means they can be edited — their default state.
 
 An input is set to read-only using the `readonly` attribute. As an example, imagine a confirmation page where the developer has sent the details filled in on previous pages over to this page, with the aim of getting the user to check them all in one place, add any final data that is needed, and then confirm the order by submitting. At this point, all the final form data can be sent to the server in one go.
 
@@ -480,7 +480,7 @@ Firefox only supported these pseudo-classes with a prefix up to version 78; at w
 
 As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "radio buttons")}} and {{HTMLElement("input/checkbox", "checkboxes")}} can be checked or unchecked. But there are a couple of other states to consider too:
 
-- {{cssxref(":default")}}: Matches radios/checkboxes that are checked by default, on page load (i.e. by setting the `checked` attribute on them) These match the {{cssxref(":default")}} pseudo-class, even if the user unchecks them.
+- {{cssxref(":default")}}: Matches radios/checkboxes that are checked by default, on page load (i.e. by setting the `checked` attribute on them) These matches the {{cssxref(":default")}} pseudo-class, even if the user unchecks them.
 - {{cssxref(":indeterminate")}}: When radios/checkboxes are neither checked nor unchecked, they are considered _indeterminate_ and will match the {{cssxref(":indeterminate")}} pseudo-class. More on what this means below.
 
 ### :checked
