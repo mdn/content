@@ -36,7 +36,7 @@ The example below shows the source code for a typical Syntax section (for a Java
 
 A few rules to follow in terms of markup within the syntax block:
 
-- Do **not** terminate a line with `;`.
+- Do **not** terminate a line with semicolon `;`. Syntax sections are not meant to show runnable code. So, it makes no sense to show semicolons.
 - Do **not** use \<code> within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.
 - Only specify the function and arguments. Example showing "corrected" examples below
 
