@@ -45,7 +45,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a sequence of {{domxref("ClipboardItem")}} objects
+A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem")}} objects
 containing the clipboard's contents. The promise is rejected if permission to access the
 clipboard is not granted.
 
