@@ -19,7 +19,7 @@ The **`CSSImportRule`** interface represents an {{cssxref("@import")}} {{cssxref
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSImportRule.href")}}{{readonlyinline}}
-  - : Returns the url specified by the {{cssxref("@import")}} rule.
+  - : Returns the URL specified by the {{cssxref("@import")}} rule.
 - {{domxref("CSSImportRule.media")}}
   - : Returns the value of the `media` attribute of the associated stylesheet.
 - {{domxref("CSSImportRule.styleSheet")}}{{readonlyinline}}

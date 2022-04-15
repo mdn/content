@@ -1285,7 +1285,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       <td>{{domxref('validityState.typeMismatch')}}</td>
       <td>
         Occurs when the value is not of the correct type, for example a email
-        does not contain an <code>@</code> or a url doesn't contain a protocol.
+        does not contain an <code>@</code> or a URL doesn't contain a protocol.
       </td>
     </tr>
   </tbody>

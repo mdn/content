@@ -62,7 +62,7 @@ attr(data-something, "default");
         Relative URL are resolved relatively to the original document, not relatively to the style sheet.
         Leading and trailing spaces are stripped.
 
-        Default value: the url `about:invalid` that points to a non-existent document with a generic error condition.
+        Default value: the URL `about:invalid` that points to a non-existent document with a generic error condition.
 
     - `integer` {{Experimental_Inline}}
 

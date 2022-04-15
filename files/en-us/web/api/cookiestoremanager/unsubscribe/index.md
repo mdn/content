@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when the subs
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the url passed in `subscriptions` does not match the service worker registration's {{domxref("ServiceWorkerRegistration.scope","scope")}}.
+  - : Thrown if the URL passed in `subscriptions` does not match the service worker registration's {{domxref("ServiceWorkerRegistration.scope","scope")}}.
 
 ## Examples
 

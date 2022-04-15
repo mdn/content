@@ -140,7 +140,7 @@ tags:
 #### Others
 
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} return empty headers in case the preference `network.http.keep_empty_response_headers_as_empty_string` is set to `true` ({{bug(669259)}}).
-- The Firefox OS-only [Data Store API](/en-US/docs/Archive/Firefox_OS/API/Data_Store_API) has been removed ({{bug(1261009)}}).
+- The Firefox OS-only Data Store API has been removed ({{bug(1261009)}}).
 - The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) event handlers `Document.onfullscreenchange` and `Document.onfullscreenerror` have been removed from {{domxref("Element")}} as they were never fired there; the prefixed versions of these event handlers have been kept there for compatibility purposes, however ({{bug(1270386)}}). Note that this is not yet activated by default, but is behind the `full-screen-api.unprefix.enabled` preference ({{bug(1268749)}}).
 - The obsolete `Document.mozFullScreen` property has been unprefixed to {{domxref("Document.fullscreen")}} {{bug(1269157)}}. Note that this is not yet activated by default by behind the `full-screen-api.unprefix.enabled` preference ({{bug(1268749)}}).
 - The read-only properties {{domxref("Document/fullscreenElement", "Document.fullscreenElement")}} and {{domxref("Document.fullscreenEnabled")}} no longer throw an exception if an attempt is made to change their values; instead, the new value is silently ignored and the setter function is a no-op ({{bug(1269798)}}).

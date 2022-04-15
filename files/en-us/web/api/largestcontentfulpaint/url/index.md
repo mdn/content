@@ -11,7 +11,7 @@ browser-compat: api.LargestContentfulPaint.url
 ---
 {{DefaultAPISidebar("Largest Contentful Paint API")}}
 
-The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request url of the element, if the element is an image.
+The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request URL of the element, if the element is an image.
 
 ## Value
 

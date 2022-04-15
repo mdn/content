@@ -48,7 +48,7 @@ var promise = import("module-name");
 - `defaultExport`
   - : Name that will refer to the default export from the module.
 - `module-name`
-  - : The module to import from. This is often a relative or absolute url to the
+  - : The module to import from. This is often a relative or absolute URL to the
     `.js` file containing the module. Certain bundlers may permit or require
     the use of the extension; check your environment. Only single quoted and double
     quoted Strings are allowed.
