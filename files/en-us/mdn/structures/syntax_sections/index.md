@@ -284,3 +284,8 @@ SVG element syntax sections are non-existent — just like HTML element syntax s
 ### SVG attributes
 
 SVG attribute reference pages also do not include syntax sections.
+
+## See also
+
+- [Markdown in MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)
+
