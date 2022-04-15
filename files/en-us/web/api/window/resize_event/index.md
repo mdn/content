@@ -39,7 +39,7 @@ The **`resize`** event fires when the document view (window) has been resized.
 
 In some earlier browsers it was possible to register `resize` event handlers on any HTML element. It is still possible to set `onresize` attributes or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element. However, `resize` events are only fired on the {{domxref("Window", "window")}} object (i.e. returned by {{domxref("document.defaultView")}}). Only handlers registered on the `window` object will receive `resize` events.
 
-There is a proposal to allow all elements to be notified of resize changes. See [Resize Observer](https://wicg.github.io/ResizeObserver/) to read the draft document, and [GitHub issues](https://github.com/WICG/ResizeObserver/issues) to read the on-going discussions.
+There is a proposal to allow all elements to be notified of resize changes. See [Resize Observer](https://wicg.github.io/ResizeObserver/) to read the draft document, and [GitHub issues](https://github.com/WICG/resize-observer/issues) to read the on-going discussions.
 
 If the resize event is triggered too many times for your application, see [Optimizing window.onresize](https://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
 
