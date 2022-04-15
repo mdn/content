@@ -171,7 +171,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-We could start by responding with the resource whose url matches that of the network request, in each case:
+We could start by responding with the resource whose URL matches that of the network request, in each case:
 
 ```js
 self.addEventListener('fetch', (event) => {
@@ -265,7 +265,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-If the request url is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
+If the request URL is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
 
 Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
 

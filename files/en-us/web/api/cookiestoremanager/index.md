@@ -12,7 +12,7 @@ browser-compat: api.CookieStoreManager
 
 The **`CookieStoreManager`** interface of the {{domxref('Cookie Store')}} API allows service workers to subscribe to events for cookie changes. By using the {{domxref("CookieStoreManager.subscribe()","subscribe()")}} method a particular service worker registration can indicate that it is interested in change events.
 
-A `CookieStoreManager` has an associated {{domxref("ServiceWorkerRegistration")}}. Each service worker registration has a cookie change subscription list, which is a list of cookie change subscriptions each containing a name and url. The methods in this interface allow the service worker to add and remove subscriptions from this list, and to get a list of all subscriptions.
+A `CookieStoreManager` has an associated {{domxref("ServiceWorkerRegistration")}}. Each service worker registration has a cookie change subscription list, which is a list of cookie change subscriptions each containing a name and URL. The methods in this interface allow the service worker to add and remove subscriptions from this list, and to get a list of all subscriptions.
 
 To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies")}}.
 
