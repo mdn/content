@@ -56,9 +56,9 @@ Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) proper
 
 In the previous article we said that historically, styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.
 
-The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. Unfortunately, the behavior of this property's original implementations was very different across browsers, making it not very usable. Newer implementations are more consistent in behavior; interestingly enough, both Chromium-based browsers (Chrome, Opera, Edge), Safari, and Firefox all support the `-webkit-`  prefixed version (`-webkit-appearance`). Firefox settled on this because web developers mostly seemed to be using the `-webkit-` prefixed version, so it was better for compatibility.
+The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. Unfortunately, the behavior of this property's original implementations was very different across browsers, making it not very usable. Newer implementations are more consistent in behavior; interestingly enough, Chromium-based browsers (Chrome, Opera, Edge), Safari, and Firefox all support the `-webkit-`  prefixed version (`-webkit-appearance`). Firefox settled on this because web developers mostly seemed to be using the `-webkit-` prefixed version, so it was better for compatibility.
 
-If you look at the reference page you'll see a lot of different possible values listed for `-webkit-appearance`, however by far the most helpful value, and probably the only one you'll use, is `none`. This stops any control you apply it to from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.
+If you look at the reference page you'll see a lot of different possible values listed for `-webkit-appearance`, however by far the most helpful value, and probably the only one you'll use, is `none`. This stops any control you apply to it from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.
 
 For example, let's take the following controls:
 
@@ -259,7 +259,7 @@ If you view these checkboxes in a browser that doesn't support {{cssxref("appear
 
 Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly  style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.
+The problem is that these elements have a very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.
 
 If you are prepared to live with some differences in look and feel, you can get away with some simple styling to make sizing consistent, uniform styling of things like background-colors, and usage of appearance to get rid of some system-level styling.
 
@@ -363,7 +363,7 @@ In modern browsers, selects and datalists are generally not too bad to style pro
 
 We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist control is `<input type="text">` anyway, so we knew this wouldn't be a problem.
 
-Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend `appearance: none` to get rid of the icon altogether:
+Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend `appearance: none;` to get rid of the icon altogether:
 
 ```css
 select {
@@ -493,7 +493,7 @@ You can see the result of the above CSS styling in the below live example (see a
 
 ### Meters and progress bars
 
-[`<meter>`](/en-US/docs/Web/HTML/Element/meter) and [`<progress>`](/en-US/docs/Web/HTML/Element/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to a desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
+[`<meter>`](/en-US/docs/Web/HTML/Element/meter) and [`<progress>`](/en-US/docs/Web/HTML/Element/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to a desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none;` on them makes things worse, not better.
 
 It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
