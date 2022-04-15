@@ -64,7 +64,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
     <tr>
       <td><code>img</code>, <code>audio</code>, <code>video</code></td>
       <td>
-        When resource is placed in {{HTMLElement("canvas")}}, element is marked as "[tainted](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)".
+        When resource is placed in {{HTMLElement("canvas")}}, element is marked as "[tainted](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)".
       </td>
     </tr>
     <tr>
