@@ -22,27 +22,29 @@ Below the heading is a code block showing the feature's exact syntax, styled usi
 
 The example below shows the source code for a typical Syntax section (for a JavaScript function):
 
-```html
-  <h2 id="Syntax">Syntax</h2>
+````
+  ## Syntax
 
-  <pre class="brush: js">slice();
-  slice(start);
-  slice(start, end);
-  </pre>
-```
+  ```js
+    slice()
+    slice(start)
+    slice(start, end)
+  ```
+````
 
 ### General style rules
 
 A few rules to follow in terms of markup within the syntax block:
 
+- Do **not** terminate a line with `;`.
 - Do **not** use \<code> within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.
 - Only specify the function and arguments. Example showing "corrected" examples below
 
   ```js
-  querySelector(selector);
+  querySelector(selector)
   //responseStr = element.querySelector(selector);
 
-  new IntersectionObserver(callback, options);
+  new IntersectionObserver(callback, options)
   // var observer = new IntersectionObserver(callback, options);
   ```
 
@@ -53,13 +55,13 @@ A few rules to follow in terms of markup within the syntax block:
 Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):
 
 ```js
-new IntersectionObserver(callback, options);
+new IntersectionObserver(callback, options)
 ```
 
 or this (from {{DOMxRef("Document.hasStorageAccess")}}):
 
 ```js
-hasStorageAccess();
+hasStorageAccess()
 ```
 
 ##### Multiple lines/Optional parameters
@@ -69,30 +71,30 @@ Methods that can be used in many different ways should be expanded out into mult
 Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:
 
 ```js
-slice();
-slice(begin);
-slice(begin, end);
+slice()
+slice(begin)
+slice(begin, end)
 ```
 
 Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:
 
 ```js
-drawImage(image, dx, dy);
-drawImage(image, dx, dy, dWidth, dHeight);
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+drawImage(image, dx, dy)
+drawImage(image, dx, dy, dWidth, dHeight)
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```
 
 Similarly for the {{jsxref("Date")}} constructor:
 
 ```js
-new Date();
-new Date(value);
-new Date(dateString);
-new Date(year, monthIndex);
-new Date(year, monthIndex, day);
-new Date(year, monthIndex, day, hours);
-new Date(year, monthIndex, day, hours, minutes);
-new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
+new Date()
+new Date(value)
+new Date(dateString)
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 ```
 
 ##### Formal syntax
@@ -120,7 +122,7 @@ caches.match(request, options).then(function(response) {
 But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:
 
 ```js
-match(request, options);
+match(request, options)
 ```
 
 ##### Callback syntax blocks
