@@ -16,7 +16,7 @@ The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} int
 ## Syntax
 
 ```js
-let promise = registration.cookies.getSubscriptions();
+getSubscriptions();
 ```
 
 ### Return value
@@ -24,9 +24,9 @@ let promise = registration.cookies.getSubscriptions();
 A {{jsxref("promise")}} that resolves with a list of objects, each containing:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of a cookie.
+  - : A string with the name of a cookie.
 - `url`
-  - : A {{domxref("USVString")}} with the URL of the scope used to subscribe to the cookie(s).
+  - : A string with the url of the scope used to subscribe to the cookie(s).
 
 ## Examples
 

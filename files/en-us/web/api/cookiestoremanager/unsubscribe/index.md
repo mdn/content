@@ -16,7 +16,7 @@ The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interfac
 ## Syntax
 
 ```js
-let promise = registration.cookies.unsubscribe(subscriptions);
+unsubscribe(subscriptions);
 ```
 
 ### Parameters
@@ -26,9 +26,9 @@ let promise = registration.cookies.unsubscribe(subscriptions);
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `url`
-      - : A {{domxref("USVString")}} with the URL of the scope used to subscribe to this cookie.
+      - : A string with the url of the scope used to subscribe to this cookie.
 
 ### Return value
 

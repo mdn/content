@@ -21,8 +21,10 @@ different image sources, and returns a {{jsxref("Promise")}} which resolves to a
 ## Syntax
 
 ```js
-const imageBitmapPromise = createImageBitmap(image[, options]);
-const imageBitmapPromise = createImageBitmap(image, sx, sy, sw, sh[, options]);
+createImageBitmap(image);
+createImageBitmap(image, options);
+createImageBitmap(image, sx, sy, sw, sh);
+createImageBitmap(image, sx, sy, sw, sh, options);
 ```
 
 ### Parameters
@@ -71,7 +73,7 @@ const imageBitmapPromise = createImageBitmap(image, sx, sy, sw, sh[, options]);
 A {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}} object
 containing bitmap data from the given rectangle.
 
-## Example
+## Examples
 
 ### Creating sprites from a sprite sheet
 

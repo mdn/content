@@ -16,7 +16,7 @@ The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface 
 ## Syntax
 
 ```js
-let promise = registration.cookies.subscribe(subscriptions);
+subscribe(subscriptions);
 ```
 
 ### Parameters
@@ -26,9 +26,9 @@ let promise = registration.cookies.subscribe(subscriptions);
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `url`
-      - : A {{domxref("USVString")}} with the URL of a cookie scope. This may be narrower than the scope of the service worker registration.
+      - : A string with the url of a cookie scope. This may be narrower than the scope of the service worker registration.
 
 ### Return value
 
