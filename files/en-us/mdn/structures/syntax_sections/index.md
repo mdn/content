@@ -29,7 +29,7 @@ The example below shows the Markdown code for a typical Syntax section (for a Ja
 slice()
 slice(start)
 slice(start, end)
-  ```
+```
 ````
 
 ### General style rules
