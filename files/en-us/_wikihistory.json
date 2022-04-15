@@ -148316,17 +148316,6 @@
       "sebmozilla"
     ]
   },
-  "Web/SVG/Element/animateColor": {
-    "modified": "2020-10-15T21:13:09.283Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "trevorh",
-      "birtles"
-    ]
-  },
   "Web/SVG/Element/animateMotion": {
     "modified": "2020-11-12T07:10:31.812Z",
     "contributors": [
