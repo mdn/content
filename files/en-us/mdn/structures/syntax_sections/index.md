@@ -23,12 +23,12 @@ Below the heading is a code block showing the feature's exact syntax, styled usi
 The example below shows the source code for a typical Syntax section (for a JavaScript function):
 
 ````
-  ## Syntax
+## Syntax
 
-  ```js
-    slice()
-    slice(start)
-    slice(start, end)
+```js
+slice()
+slice(start)
+slice(start, end)
   ```
 ````
 
