@@ -33,7 +33,7 @@ This method requires one of the following:
     - `name`
       - : A {{domxref("USVString")}} with the name of a cookie.
     - `url`{{Optional_Inline}}
-      - : A {{domxref("USVString")}} with the url of a cookie.
+      - : A {{domxref("USVString")}} with the URL of a cookie.
     - `path`{{Optional_Inline}}
       - : A {{domxref("USVString")}} containing a path.
 

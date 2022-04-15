@@ -37,9 +37,7 @@ anything that can be represented by JSON — an object, an array, a string, a nu
 
 ## Example
 
-In our [fetch
-json example](https://github.com/mdn/fetch-examples/tree/master/fetch-json) (run [fetch
-json live](https://mdn.github.io/fetch-examples/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
+In our [fetch JSON example](https://github.com/mdn/fetch-examples/tree/master/fetch-json) (run [fetch JSON live](https://mdn.github.io/fetch-examples/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
   "Request()")}} constructor, then use it to fetch a `.json` file. When the
 fetch is successful, we read and parse the data using `json()`, then read
 values out of the resulting objects as you'd expect and insert them into list items to

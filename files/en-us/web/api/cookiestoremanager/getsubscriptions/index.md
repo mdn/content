@@ -26,11 +26,11 @@ A {{jsxref("promise")}} that resolves with a list of objects, each containing:
 - `name`
   - : A {{domxref("USVString")}} with the name of a cookie.
 - `url`
-  - : A {{domxref("USVString")}} with the url of the scope used to subscribe to the cookie(s).
+  - : A {{domxref("USVString")}} with the URL of the scope used to subscribe to the cookie(s).
 
 ## Examples
 
-If the {{domxref("ServiceWorkerRegistration")}} represented by `registration` has subscribed to any cookie change events `subscriptions` will resolve to a list of objects containing the name and url of those cookies.
+If the {{domxref("ServiceWorkerRegistration")}} represented by `registration` has subscribed to any cookie change events `subscriptions` will resolve to a list of objects containing the name and URL of those cookies.
 
 ```js
 const subscriptions = await registration.cookies.getSubscriptions();
