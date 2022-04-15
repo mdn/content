@@ -17,10 +17,10 @@ The syntax section of an MDN reference page contains a syntax box defining the e
 ## API reference syntax
 
 Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
-The section starts with a heading (typically {{HTMLElement("H2")}}) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
-Below the heading is a code block showing the feature's exact syntax, styled using the `brush: [markup-language]` class.
+The section starts with a heading (typically level two heading `##`) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
+Below the heading is a code block showing the feature's exact syntax, demarcated using code fence `` ``` [markup-language] `` class.
 
-The example below shows the source code for a typical Syntax section (for a JavaScript function):
+The example below shows the Markdown code for a typical Syntax section (for a JavaScript function):
 
 ````
 ## Syntax
@@ -201,7 +201,7 @@ JavaScript built-in object reference pages follow the same basic rules as API re
 
 CSS property reference pages include a "Syntax" section, which used to be found at the top of the page but is increasingly commonly found below a section containing a block of code showing typical usage of the feature, plus a live example to illustrate what the feature does (see {{CSSxRef("animation")}} for example).
 
-> **Note:** We do this because CSS formal syntax is complex, not used by many of the MDN readership, and offputting for beginners. Real syntax and examples are more useful to the majority of people.
+> **Note:** We do this because CSS formal syntax is complex, not used by many of the MDN readership, and off-putting for beginners. Real syntax and examples are more useful to the majority of people.
 
 Inside the syntax section you'll find the following contents.
 
