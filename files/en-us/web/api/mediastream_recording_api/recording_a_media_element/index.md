@@ -236,7 +236,13 @@ startButton.addEventListener("click", function() {
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
         recordedBlob.type + " media.");
   })
-  .catch(log);
+  .catch((error) => {
+    if (error.name === "NotFoundError") {
+      log("Camera or microphone not found. Can’t record.");
+    } else {
+      log(error);
+    }
+  });
 }, false);
 ```
 
