@@ -24,7 +24,7 @@ To update or check the content of the CSS JSON DB, you will need to gather infor
     It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. If you have the implementation bug on Bugzilla, the engineer who implemented the feature is a good contact: asking him in the bug, with a needinfo flag is a good way of having an answer about a specific question. Other good places to find knowledgeable people are:
 
     - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://lists.mozilla.org/listinfo/dev-platform) list, or the W3C list [www-style](https://lists.w3.org/Archives/Public/www-style/).
+    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) list, or the W3C list [www-style](https://lists.w3.org/Archives/Public/www-style/).
     - The spec itself. For example, the [CSS Animations spec](https://drafts.csswg.org/css-animations/) lists the authors and their contact details at the top.
 
 ## Update the CSS information database
