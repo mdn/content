@@ -18,7 +18,7 @@ The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} i
 ## Syntax
 
 ```js
-getTiming();
+getTiming()
 ```
 
 ### Return value

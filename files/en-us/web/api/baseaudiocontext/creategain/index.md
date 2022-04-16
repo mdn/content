@@ -27,7 +27,7 @@ overall gain (or volume) of the audio graph.
 ## Syntax
 
 ```js
-createGain();
+createGain()
 ```
 
 ### Return value

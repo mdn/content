@@ -16,7 +16,7 @@ The **`configure()`** method of the {{domxref("AudioDecoder")}} interface enqueu
 ## Syntax
 
 ```js
-configure(config);
+configure(config)
 ```
 
 ### Parameters

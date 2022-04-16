@@ -167,11 +167,11 @@ When, for example, you have a long list of elements (let's say tweets), don't mo
 
 ## General application performance analysis
 
-Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, [Firefox's Network Monitor](/en-US/docs/Tools/Network_Monitor) will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.
+Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, [Firefox's Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.
 
 ![The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph.](network-monitor.jpg)
 
-If your page contains JavaScript code that is taking a long time to run, the [JavaScript profiler](/en-US/docs/Tools/Performance) will pinpoint the slowest lines of code:
+If your page contains JavaScript code that is taking a long time to run, the [JavaScript profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) will pinpoint the slowest lines of code:
 
 ![The Firefox JavaScript profiler showing a completed profile 1.](javascript-profiler.png)
 
@@ -179,7 +179,7 @@ The [Built-in Gecko Profiler](/en-US/docs/Performance/Profiling_with_the_Built-i
 
 ![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
-> **Note:** You can use these tools with the Android browser by running Firefox and enabling [remote debugging](/en-US/docs/Tools/Remote_Debugging).
+> **Note:** You can use these tools with the Android browser by running Firefox and enabling [remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html).
 
 In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](http://www.slideshare.net/firt/mobile-web-high-performance) talk.
 

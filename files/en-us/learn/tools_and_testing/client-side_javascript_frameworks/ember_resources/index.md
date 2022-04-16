@@ -72,8 +72,8 @@ For _framework-specific_ things, there is the [ember-inspector add-on](https://g
 - Deprecation Information
 - Render Performance
 
-For general JavaScript debugging, check out our [guides on JavaScript Debugging](/en-US/docs/Tools/Debugger)
-as well as interacting with the [browser's other debugging tools](/en-US/docs/Tools). In any default Ember
+For general JavaScript debugging, check out our [guides on JavaScript Debugging](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+as well as interacting with the [browser's other debugging tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html). In any default Ember
 project, there will be two main JavaScript files, `vendor.js` and `{app-name}.js`. Both of
 these files are generated with sourcemaps, so when you open the `vendor.js` or `{app-name}.js` to search for relevant code, when a debugger is placed, the sourcemap will be loaded and the breakpoint will be placed in the pre-transpiled code for easier correlation to your project code.
 
@@ -152,7 +152,7 @@ Which would then be called in the template like so:
 
 Due to the conciseness of using `mut`, it may be desireable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.
 
-There have been a couple of new ideas put together into the form of addons that use the public apis, [`ember-set-helper`](https://github.com/pzuraq/ember-set-helper) and [`ember-box`](https://github.com/pzuraq/ember-box). Both of these try to solve the problems of `mut`
+There have been a couple of new ideas put together into the form of addons that use the public APIs, [`ember-set-helper`](https://github.com/pzuraq/ember-set-helper) and [`ember-box`](https://github.com/pzuraq/ember-box). Both of these try to solve the problems of `mut`
 by introducing more obvious / "less magic" concepts, avoiding build-time transforms and
 implicit Glimmer VM behavior.
 

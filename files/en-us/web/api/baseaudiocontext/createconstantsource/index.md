@@ -27,7 +27,7 @@ value.
 ## Syntax
 
 ```js
-createConstantSource();
+createConstantSource()
 ```
 
 ### Parameters

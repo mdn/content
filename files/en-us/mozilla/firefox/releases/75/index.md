@@ -17,8 +17,8 @@ This article provides information about the changes in Firefox 75 that will affe
 
 ### Developer tools
 
-- It is now possible to resize the rectangle of the [Measuring Tool](/en-US/docs/Tools/Measure_a_portion_of_the_page) ({{bug(1152321)}}).
-- In the [inspector](/en-US/docs/Tools/Page_Inspector), you can now use [XPath](/en-US/docs/Web/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ({{bug(963933)}}).
+- It is now possible to resize the rectangle of the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) ({{bug(1152321)}}).
+- In the [inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you can now use [XPath](/en-US/docs/Web/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ({{bug(963933)}}).
 - You can now filter [WebSocket](/en-US/docs/Web/API/WebSockets_API) messages using [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), in addition to plain text search, by writing the regular expression in slashes ({{bug(1593837)}}).
 
 ### HTML

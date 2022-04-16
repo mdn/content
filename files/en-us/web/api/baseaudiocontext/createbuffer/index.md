@@ -37,7 +37,7 @@ reference page.
 ## Syntax
 
 ```js
-createBuffer(numOfChannels, length, sampleRate);
+createBuffer(numOfChannels, length, sampleRate)
 ```
 
 ### Parameters

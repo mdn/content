@@ -44,7 +44,7 @@ const buttonEl = document.querySelector('button');
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();
 
-// values returns an iterable list of the css values
+// values returns an iterable list of the CSS values
 const vals = allComputedStyles.values();
 console.log(vals.next().value); // returns a CSSStyleValue
 ```

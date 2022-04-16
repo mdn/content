@@ -19,7 +19,7 @@ Evaluates an expression in the context of the inspected page, and displays the r
 
 The expression's execution context is the same as that for [`inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval).
 
-JSON objects and DOM nodes are displayed as an expandable tree, as in the [JSON viewer](/en-US/docs/Tools/JSON_viewer) in Firefox. You can optionally specify a `rootTitle` string: this will be displayed as the title of the tree's root.
+JSON objects and DOM nodes are displayed as an expandable tree, as in the [JSON viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) in Firefox. You can optionally specify a `rootTitle` string: this will be displayed as the title of the tree's root.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

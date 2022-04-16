@@ -22,7 +22,7 @@ The default value of the position vector is `(0,` `0,` `0)`.
 ## Syntax
 
 ```js
-setPosition(x, y, z);
+setPosition(x, y, z)
 ```
 
 ### Parameters

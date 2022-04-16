@@ -127,7 +127,7 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 
 ## See also
 
-- [Security Blog](https://blog.mozilla.com/security/)
+- [Security Blog](https://blog.mozilla.org/security/)
 - [@mozsec on Twitter](https://twitter.com/mozsec)
 
 {{QuickLinksWithSubpages}}

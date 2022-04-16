@@ -18,10 +18,10 @@ the blob on which it's called.
 ## Syntax
 
 ```js
-slice();
-slice(start);
-slice(start, end);
-slice(start, end, contentType);
+slice()
+slice(start)
+slice(start, end)
+slice(start, end, contentType)
 ```
 
 ### Parameters

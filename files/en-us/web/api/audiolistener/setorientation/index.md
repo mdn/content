@@ -24,7 +24,7 @@ The two vectors must be separated by an angle of 90° — in linear analysis ter
 ## Syntax
 
 ```js
-setOrientation(x, y, z, xUp, yUp, zUp);
+setOrientation(x, y, z, xUp, yUp, zUp)
 ```
 
 ### Parameters

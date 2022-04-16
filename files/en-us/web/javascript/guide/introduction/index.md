@@ -85,7 +85,7 @@ The _Web Console_ tool built into Firefox is useful for experimenting with JavaS
 
 ### Single-line input in the Web Console
 
-The [Web Console](/en-US/docs/Tools/Web_Console) shows you information about the currently loaded Web page, and also includes a JavaScript interpreter that you can use to execute JavaScript expressions in the current page.
+The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) shows you information about the currently loaded Web page, and also includes a JavaScript interpreter that you can use to execute JavaScript expressions in the current page.
 
 To open the Web Console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on Windows and Linux or <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd> on Mac), open the **Tools** menu in Firefox, and select "**Developer ▶ Web Console**".
 
@@ -101,7 +101,7 @@ console.log(eval('3 + 5'))
 
 ### Multi-line input in the Web Console
 
-The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the [multi-line input mode](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode).
+The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the [multi-line input mode](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode).
 
 ### Hello world
 

@@ -168,7 +168,7 @@ GitHub allows you to publish websites via [GitHub pages](https://pages.github.co
 
 We've covered the basics of using this in the [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website) article from our [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) guide, so we aren't going to repeat it all here.
 
-However, it is worth knowing that you can also host a website on GitHub, but use a custom domain with it. See [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) for a detailed guide.
+However, it is worth knowing that you can also host a website on GitHub, but use a custom domain with it. See [Using a custom domain with GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for a detailed guide.
 
 ## Other methods to upload files
 

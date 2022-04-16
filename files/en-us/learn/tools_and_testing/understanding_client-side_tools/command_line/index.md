@@ -67,7 +67,7 @@ The next images show the command prompts available in Windows — there's a good
 
 And below, you can see the macOS terminal application.
 
-![A basic vanilla mac terminal](mac-terminal.png)
+![A basic vanilla macOS terminal](mac-terminal.png)
 
 ### How do you access the terminal?
 
@@ -95,7 +95,7 @@ However, the best option for Windows in the modern day is the Windows Subsystem 
 
 This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl).
 
-![a screenshot of the windows subsystem for linux documentation](wsl.png)
+![a screenshot of the Windows subsystem for Linux documentation](wsl.png)
 
 In terms of what option to choose on Windows, we'd strongly recommend trying to install the WSL. You could stick with the default command prompt (`cmd`), and many tools will work OK, but you'll find everything easier if you have better parity with Unix tools.
 
@@ -199,7 +199,7 @@ In the case of `ls`, the `-l` (_dash ell_) option gives you a listing with one f
 
 Below is a screenshot with a "vanilla" macOS terminal at the top, and a customized terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
 
-![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
+![A vanilla macOS terminal and a more colorful custom macOS terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
 > **Note:** To find out exactly what options each command has available, you can look at its [man page](https://en.wikipedia.org/wiki/Man_page). This is done by typing the `man` command, followed by the name of the command you want to look up, for example `man ls`. This will open up the man page in the terminal's default text file viewer (for example, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it's there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer's quit command ("q" in `less`; you may have to search on the web to find it if it isn't obvious).
 
@@ -324,7 +324,7 @@ This is slowly expanding — you can expect to see more package providers as tim
 
 Install npm on your system now, by going to the URL above and downloading and running a Node.js installer appropriate to your operating system. If prompted, make sure to include npm as part of the installation.
 
-![the node.js installer on windows, showing the option to include npm](npm-install-option.png)
+![the Node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
 Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/).
 Prettier is an opinionated code formatter that only has a "few options".

@@ -24,7 +24,7 @@ distortion. It is used to apply distortion effects to your audio.
 ## Syntax
 
 ```js
-createWaveShaper();
+createWaveShaper()
 ```
 
 ### Return value

@@ -15,7 +15,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 ### Developer Tools
 
 - Added filtering of network requests by column values and other properties ({{bug(1041895)}}, {{bug(1354508)}}, {{bug(1354507)}}) and by using regular expressions ({{bug(1354495)}}).
-- Made it possible to show and hide columns within the [Network Monitor](/en-US/docs/Tools/Network_Monitor) ({{bug(862855)}}).
+- Made it possible to show and hide columns within the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ({{bug(862855)}}).
 - Added remote IP ({{bug(1344523)}}), protocol ({{bug(1345489)}}), scheme ({{bug(1356867)}}), cookies and set cookies columns ({{bug(1356869)}}) to Network Monitor.
 - The {{HTTPHeader("SourceMap")}} HTTP header is now supported (prior versions supported the deprecated `X-SourceMap` header, see {{bug(1346936)}}).
 
@@ -113,7 +113,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 #### Encrypted Media Extensions API
 
-- Firefox currently allows Encrypted Media Extensions to be used in insecure contexts, despite this not being allowed in the specification. This will be changed in the near future, and starting in Firefox 55, deprecation warnings are output to the [web console](/en-US/docs/Tools/Web_Console) when this is done. ({{bug(1361000)}}).
+- Firefox currently allows Encrypted Media Extensions to be used in insecure contexts, despite this not being allowed in the specification. This will be changed in the near future, and starting in Firefox 55, deprecation warnings are output to the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) when this is done. ({{bug(1361000)}}).
 - Firefox currently doesn't require that at least one {{domxref("MediaKeySystemCapabilities")}} object be included in the `suggestedConfigurations` parameter passed into {{domxref("Navigator.requestMediaKeySystemAccess()")}}, which the specification does mandate. Starting in Firefox 55, a warning is output to the web console when any audio or video configuration is specified without specifying supported codecs. Soon, failure to include a valid configuration for one or more of audio and video will throw an exception {{bug(1368683)}}).
 
 #### WebGL

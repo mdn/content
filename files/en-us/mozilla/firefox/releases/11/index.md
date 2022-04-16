@@ -84,9 +84,9 @@ _No change._
 
 ### Developer tools
 
-- The [Page Inspector](/en-US/docs/Tools/Page_Inspector) now offers a [3D view](/en-US/docs/Tools/3D_View) if your system supports [WebGL](/en-US/docs/Web/API/WebGL_API).
-- The new [Style Editor](/en-US/docs/Tools/Style_Editor) provides a free-form way to edit and compose CSS style sheets in real-time.
-- The [View Source feature](/en-US/docs/Tools/View_source) now uses the new HTML5 parser instead of the old HTML parser.
+- The [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) now offers a [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) if your system supports [WebGL](/en-US/docs/Web/API/WebGL_API).
+- The new [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) provides a free-form way to edit and compose CSS style sheets in real-time.
+- The [View Source feature](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) now uses the new HTML5 parser instead of the old HTML parser.
 
 ## Changes for Mozilla and add-on developers
 
@@ -99,7 +99,7 @@ _No change._
 #### New JavaScript code modules
 
 - [`source-editor.jsm`](/en-US/docs/JavaScript_code_modules/source-editor.jsm)
-  - : Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by [Scratchpad](/en-US/docs/Tools/Scratchpad) and other developer tools integrated into Firefox.
+  - : Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by _Scratchpad_ and other developer tools integrated into Firefox.
 
 ### Interface changes
 

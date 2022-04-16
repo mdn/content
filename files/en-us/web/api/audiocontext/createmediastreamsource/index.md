@@ -30,7 +30,7 @@ For more details about media stream audio source nodes, check out the {{
 ## Syntax
 
 ```js
-createMediaStreamSource(stream);
+createMediaStreamSource(stream)
 ```
 
 ### Parameters

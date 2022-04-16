@@ -24,7 +24,7 @@ which combines channels from multiple audio streams into a single audio stream.
 ## Syntax
 
 ```js
-createChannelMerger(numberOfInputs);
+createChannelMerger(numberOfInputs)
 ```
 
 ### Parameters

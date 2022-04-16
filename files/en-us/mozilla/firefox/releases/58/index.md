@@ -14,10 +14,10 @@ This article provides information about the changes in Firefox 58 that will affe
 
 ### Developer Tools
 
-- The [Shape Path Editor](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) has been enabled by default for shapes generated via {{cssxref("clip-path")}} ({{bug(1405339)}}).
-- The [Network Monitor](/en-US/docs/Tools/Network_Monitor) now has a button to [pause/play recording of network traffic](/en-US/docs/Tools/Network_Monitor#pausing_and_resume_network_traffic_recording) ({{bug(1005755)}}).
-- In the [Network Monitor](/en-US/docs/Tools/Network_Monitor) the "Flash" filter button is no longer available, and Flash requests are included in the "Others" filter ({{bug(1413540)}}).
-- The code for the old Responsive Design Mode (enabled by default pre-Firefox 52) has now been removed from the Devtools ({{bug(1305777)}}). See [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) for information on the new tools.
+- The [Shape Path Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) has been enabled by default for shapes generated via {{cssxref("clip-path")}} ({{bug(1405339)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now has a button to [pause/play recording of network traffic](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#pausing-and-resume-network-traffic-recording) ({{bug(1005755)}}).
+- In the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) the "Flash" filter button is no longer available, and Flash requests are included in the "Others" filter ({{bug(1413540)}}).
+- The code for the old Responsive Design Mode (enabled by default pre-Firefox 52) has now been removed from the Devtools ({{bug(1305777)}}). See [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) for information on the new tools.
 - The option to view MDN docs from the CSS pane of the page inspector has been removed ({{bug(1382171)}}) (was disabled since 55, {{bug(1352801)}}).
 
 ### HTML

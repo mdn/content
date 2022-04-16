@@ -23,7 +23,7 @@ called on an {{domxref("OfflineAudioContext")}}.
 ## Syntax
 
 ```js
-resume();
+resume()
 ```
 
 ### Parameters

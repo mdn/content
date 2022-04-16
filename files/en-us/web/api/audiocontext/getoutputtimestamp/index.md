@@ -34,7 +34,7 @@ The two values are as follows:
 ## Syntax
 
 ```js
-getOutputTimestamp();
+getOutputTimestamp()
 ```
 
 ### Parameters

@@ -21,7 +21,7 @@ creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 ## Syntax
 
 ```js
-createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
+createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 
 ### Parameters

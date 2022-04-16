@@ -200,7 +200,7 @@ function dragstart_handler(ev) {
 ```
 
 - For a list of common data types used in drag-and-drop (such as text, HTML, links, and files), see [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
-- For more information about drag data, see [Drag Data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata).
+- For more information about drag data, see [Drag Data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_data).
 
 ### Define the drag image
 
@@ -272,7 +272,7 @@ Note that each handler calls {{domxref("Event.preventDefault","preventDefault()"
 
 For more information, see:
 
-- [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)
+- [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets)
 
 ### Handle the drop _effect_
 
@@ -307,7 +307,7 @@ function drop_handler(ev) {
 
 For more information, see:
 
-- [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop)
+- [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#performing_a_drop)
 
 ### Drag end
 

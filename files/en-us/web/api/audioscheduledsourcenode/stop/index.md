@@ -29,8 +29,8 @@ stopped, this method has no effect.
 ## Syntax
 
 ```js
-stop();
-stop(when);
+stop()
+stop(when)
 ```
 
 ### Parameters

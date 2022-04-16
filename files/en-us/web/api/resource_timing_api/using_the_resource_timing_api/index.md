@@ -207,7 +207,7 @@ When {{Glossary("CORS")}} is in effect, many of the timing properties' values ar
 
 ## See also
 
-- [Firefox Performance Tool](/en-US/docs/Tools/Performance)
+- [Firefox Performance Tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
 - [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
 - [Resource Timing practical tips](https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
 - [Measuring network performance with Resource Timing API](https://developers.googleblog.com/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11

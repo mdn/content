@@ -22,8 +22,8 @@ that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 ## Syntax
 
 ```js
-createPeriodicWave(real, imag);
-createPeriodicWave(real, imag, constraints);
+createPeriodicWave(real, imag)
+createPeriodicWave(real, imag, constraints)
 ```
 
 ### Return value

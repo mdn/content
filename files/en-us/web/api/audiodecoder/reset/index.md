@@ -16,7 +16,7 @@ The **`reset()`** method of the {{domxref("AudioDecoder")}} interface resets all
 ## Syntax
 
 ```js
-reset();
+reset()
 ```
 
 ### Parameters

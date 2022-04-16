@@ -76,7 +76,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### console API
 
-- Message logged with `console.log` while the [web console](/en-US/docs/Tools/Web_Console) isn't open are still logged, although they aren't displayed when the web console is opened.
+- Message logged with `console.log` while the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) isn't open are still logged, although they aren't displayed when the web console is opened.
 
 ### Web timing
 

@@ -27,7 +27,7 @@ can be used to expose audio time and frequency data and create data visualizatio
 ## Syntax
 
 ```js
-createAnalyser();
+createAnalyser()
 ```
 
 ### Return value
