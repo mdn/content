@@ -165,7 +165,7 @@ If you find a bug that corresponds to the feature you need compatibility informa
 
 #### Finding the version from the source tree
 
-If you don't find the information you need in [Bugzilla](https://bugzilla.mozilla.org/), you can get it by tracking it down in the Firefox source tree. For the purposes of this explanation, we'll be using the [Mozilla DXR](https://dxr.mozilla.org/mozilla-central/source/) tool and the [Mozilla source tree](https://hg.mozilla.org/mozilla-central/) browsable on the web to locate the information.
+If you don't find the information you need in [Bugzilla](https://bugzilla.mozilla.org/), you can get it by tracking it down in the Firefox source tree. For the purposes of this explanation, we'll be using the [Mozilla DXR](https://searchfox.org/mozilla-central/source/) tool and the [Mozilla source tree](https://hg.mozilla.org/mozilla-central/) browsable on the web to locate the information.
 
 ##### For web API features
 
@@ -178,7 +178,7 @@ A web API feature change corresponds to adding, removing, or altering the signat
 
 The easiest way to identify the compatibility of a feature is to look for when the feature was added to or altered to match the compatibility point you're looking for within the [WebIDL](/en-US/docs/Glossary/WebIDL) file that describes the corresponding interface. There are a few ways you can locate this file, depending on how the API is implemented and how old it is. From most to least likely to work, here they are:
 
-1. For a given interface named `InterfaceName`, go to [DXR](https://dxr.mozilla.org/mozilla-central/source/) and type <kbd>file:<em>InterfaceName</em>.webidl</kbd> in the search box at the top of the page and pressing <kbd>Enter</kbd>. You will probably have to then click on the name of the file in a list of files (usually only a one-file-long list).
+1. For a given interface named `InterfaceName`, go to [DXR](https://searchfox.org/mozilla-central/source/) and type <kbd>file:<em>InterfaceName</em>.webidl</kbd> in the search box at the top of the page and pressing <kbd>Enter</kbd>. You will probably have to then click on the name of the file in a list of files (usually only a one-file-long list).
 2. If the interface isn't found, then search for it by looking for the main interface in the API. For example, a large number of the interfaces, types, and so on for [WebRTC](/en-US/docs/Web/API/WebRTC_API) are located in the file `RTCPeerConnection.webidl` in the Firefox source code, so if you don't find a WebRTC interface by its name, look in that file instead.
 
 Once in the WebIDL file, click the "Blame" link under "VCS Links" in the Navigation box near the top-right corner of the DXR page.
@@ -244,7 +244,7 @@ Once you've found a representative line of code, the goal is to identify the Fir
 
 CSS changes can be a little bit tricker to nail down. The Firefox repositories don't track history of any files that record the availability of given properties, for example.
 
-To determine when support for a given **value** for a property was added, try opening the file [`nsCSSProps.cpp`](https://dxr.mozilla.org/mozilla-central/source/layout/style/nsCSSProps.cpp) and looking through the tables of property values found there. These tables are all of type `KTableEntry`; each entry in the tables maps a CSS keyword to a value used to represent it internally. For instance, to determine when Firefox added support for the CSS Scroll Snap type value `proximity`, look through `nsCSSProps.cpp` until you find in the table `nsCSSProps::kScrollSnapTypeKTable`:
+To determine when support for a given **value** for a property was added, try opening the file [`nsCSSProps.cpp`](https://searchfox.org/mozilla-central/source/layout/style/nsCSSProps.cpp) and looking through the tables of property values found there. These tables are all of type `KTableEntry`; each entry in the tables maps a CSS keyword to a value used to represent it internally. For instance, to determine when Firefox added support for the CSS Scroll Snap type value `proximity`, look through `nsCSSProps.cpp` until you find in the table `nsCSSProps::kScrollSnapTypeKTable`:
 
 ```cpp
 const KTableEntry nsCSSProps::kScrollSnapTypeKTable[] = {
