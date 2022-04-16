@@ -7,6 +7,7 @@ tags:
   - Reference
   - Request header
   - header
+browser-compat: http.headers.Forwarded
 ---
 {{HTTPSidebar}}
 
