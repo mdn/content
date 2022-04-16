@@ -23,7 +23,7 @@ made using other methods.
 ## Syntax
 
 ```js
-cancelAndHoldAtTime(cancelTime);
+cancelAndHoldAtTime(cancelTime)
 ```
 
 ### Parameters

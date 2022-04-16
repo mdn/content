@@ -16,7 +16,7 @@ The **`clone()`** method of the {{domxref("AudioData")}} interface creates a new
 ## Syntax
 
 ```js
-clone();
+clone()
 ```
 
 ### Parameters

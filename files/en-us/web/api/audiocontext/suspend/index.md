@@ -20,7 +20,7 @@ This method will cause an `INVALID_STATE_ERR` exception to be thrown if called o
 ## Syntax
 
 ```js
-suspend();
+suspend()
 ```
 
 ### Return value

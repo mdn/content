@@ -24,7 +24,7 @@ waveform. It basically generates a constant tone.
 ## Syntax
 
 ```js
-createOscillator();
+createOscillator()
 ```
 
 ### Return value

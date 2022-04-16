@@ -19,7 +19,7 @@ The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface
 ## Syntax
 
 ```js
-getIds();
+getIds()
 ```
 
 ### Parameters

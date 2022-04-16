@@ -21,7 +21,7 @@ For more details about media stream destination nodes, check out the {{domxref("
 ## Syntax
 
 ```js
-createMediaStreamDestination();
+createMediaStreamDestination()
 ```
 
 ### Return value

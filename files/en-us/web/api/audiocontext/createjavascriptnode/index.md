@@ -20,7 +20,7 @@ The `AudioContext.createJavaScriptNode()` method creates a {{domxref("JavaScript
 ## Syntax
 
 ```js
-createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels);
+createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels)
 ```
 
 ### Parameters

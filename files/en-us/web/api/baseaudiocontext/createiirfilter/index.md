@@ -28,7 +28,7 @@ of filter.
 ## Syntax
 
 ```js
-createIIRFilter(feedforward, feedback);
+createIIRFilter(feedforward, feedback)
 ```
 
 ### Parameters

@@ -28,7 +28,7 @@ values, which are scaled to fit into the given interval starting at
 ## Syntax
 
 ```js
-setValueCurveAtTime(values, startTime, duration);
+setValueCurveAtTime(values, startTime, duration)
 ```
 
 ### Parameters

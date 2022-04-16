@@ -19,7 +19,7 @@ For more details about media element audio source nodes, check out the {{ domxre
 ## Syntax
 
 ```js
-createMediaElementSource(myMediaElement);
+createMediaElementSource(myMediaElement)
 ```
 
 ### Parameters
