@@ -7,7 +7,6 @@ tags:
   - Reference
   - Request header
   - header
-browser-compat: http.headers.Forwarded
 ---
 {{HTTPSidebar}}
 
@@ -99,10 +98,6 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
