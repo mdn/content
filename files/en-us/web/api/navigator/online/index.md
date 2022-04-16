@@ -17,7 +17,7 @@ Returns the online status of the browser. The property returns a boolean value, 
 sends updates whenever the browser's ability to connect to the network changes. The
 update occurs when the user follows links or when a script requests a remote page. For
 example, the property should return `false` when users click links soon after
-they lose Internet connection.
+they lose internet connection.
 
 Browsers implement this property differently.
 
@@ -25,7 +25,7 @@ In Chrome and Safari, if the browser is not able to connect to a local area netw
 (LAN) or a router, it is offline; all other conditions return `true`. So
 while you can assume that the browser is offline when it returns a `false`
 value, you cannot assume that a true value necessarily means that the browser can access
-the Internet. You could be getting false positives, such as in cases where the computer
+the internet. You could be getting false positives, such as in cases where the computer
 is running a virtualization software that has virtual ethernet adapters that are always
 "connected." Therefore, if you really want to determine the online status of the
 browser, you should develop additional means for checking.

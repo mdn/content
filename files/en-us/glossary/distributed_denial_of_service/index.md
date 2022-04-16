@@ -25,7 +25,7 @@ The United States Computer Emergency Readiness Team (US-CERT) defines symptoms o
 - Unavailability of a particular website
 - Inability to access any website
 - Dramatic increase in the number of spam emails received—(this type of DoS attack is considered an email bomb)
-- Disconnection of a wireless or wired Internet connection
+- Disconnection of a wireless or wired internet connection
 - Longterm denial of access to the Web or any Internet services
 
 ## See also
