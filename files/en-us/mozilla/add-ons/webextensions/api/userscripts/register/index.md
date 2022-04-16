@@ -59,7 +59,7 @@ await registeredUserScript.unregister();
     - `runAt` {{Optional_Inline}}
       - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
 
-Unlike content script options, the userScriptOptions object does not have a css property. Use {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} to dynamically register and unregister stylesheets.
+Unlike content script options, the userScriptOptions object does not have a CSS property. Use {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} to dynamically register and unregister stylesheets.
 
 ### Return value
 

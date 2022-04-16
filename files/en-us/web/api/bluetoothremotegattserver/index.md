@@ -37,10 +37,10 @@ Server on a remote device.
   - : Causes the script execution environment to disconnect from `this.device`.
 - {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}}
   - : Returns a promise to the primary {{DOMxRef("BluetoothRemoteGATTService")}} offered by the
-    bluetooth device for a specified `BluetoothServiceUUID`.
+    Bluetooth device for a specified `BluetoothServiceUUID`.
 - {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}}
   - : Returns a promise to a list of primary {{DOMxRef("BluetoothRemoteGATTService")}} objects
-    offered by the bluetooth device for a specified `BluetoothServiceUUID`.
+    offered by the Bluetooth device for a specified `BluetoothServiceUUID`.
 
 ## Specifications
 

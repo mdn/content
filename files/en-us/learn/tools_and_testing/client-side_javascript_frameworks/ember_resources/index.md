@@ -152,7 +152,7 @@ Which would then be called in the template like so:
 
 Due to the conciseness of using `mut`, it may be desireable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.
 
-There have been a couple of new ideas put together into the form of addons that use the public apis, [`ember-set-helper`](https://github.com/pzuraq/ember-set-helper) and [`ember-box`](https://github.com/pzuraq/ember-box). Both of these try to solve the problems of `mut`
+There have been a couple of new ideas put together into the form of addons that use the public APIs, [`ember-set-helper`](https://github.com/pzuraq/ember-set-helper) and [`ember-box`](https://github.com/pzuraq/ember-box). Both of these try to solve the problems of `mut`
 by introducing more obvious / "less magic" concepts, avoiding build-time transforms and
 implicit Glimmer VM behavior.
 
