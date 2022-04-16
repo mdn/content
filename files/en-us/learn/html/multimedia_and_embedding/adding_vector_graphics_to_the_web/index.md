@@ -336,6 +336,7 @@ In the last article of this module we will explore responsive images in detail, 
 - [Quick tips for responsive SVGs](https://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
+- [SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
