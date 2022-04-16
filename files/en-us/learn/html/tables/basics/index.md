@@ -540,14 +540,18 @@ Recreate the table by following the steps below.
 
 See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
 
+## Test your skills!
+
+You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module — see [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data). We'd advise going through the next article in the series first and not just skipping to it though!
+
 ## Summary
 
-That just about wraps up the basics of HTML Tables. In the next article we will look at some slightly more advanced table features, and start to think how accessible they are for visually impaired people.
+That just about wraps up the basics of HTML tables. In the next article, we'll look at some slightly more [advanced table features](/en-US/docs/Learn/HTML/Tables/Advanced), and start to think how accessible they are for visually impaired people.
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 ## In this module
 
-- **HTML table basics**
+- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

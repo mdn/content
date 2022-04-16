@@ -236,7 +236,7 @@ For this active learning, we're expecting you to be brave and go it alone ... mo
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page).
+You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module — see [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page).
 
 ## Summary
 
@@ -245,7 +245,7 @@ That's a wrap for responsive images — we hope you enjoyed playing with these n
 - **Art direction**: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in for a mobile layout. You can solve this problem using the {{htmlelement("picture")}} element.
 - **Resolution switching**: The problem whereby you want to serve smaller image files to narrow-screen devices, as they don't need huge images like desktop displays do — and to serve different resolution images to high density/low density screens. You can solve this problem using [vector graphics](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (SVG images) and the {{htmlattrxref("srcset", "img")}} with {{htmlattrxref("sizes", "img")}} attributes.
 
-This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module! The only thing to do now before moving on is to try our multimedia assessment, and see how you get on. Have fun!
+This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module! The only thing to do now before moving on is to try our [multimedia assessment](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page), and see how you get on. Have fun!
 
 ## See also
 
@@ -263,4 +263,5 @@ This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Lea
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
 - [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 - [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

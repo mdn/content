@@ -379,7 +379,7 @@ window.addEventListener("load", drawOutput);
 
 ## Summary
 
-Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll move on to link styling techniques.
+Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article, we'll move on to [link styling techniques](/en-US/docs/Learn/CSS/Styling_text/Styling_links).
 
 ## See also
 
@@ -394,7 +394,7 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 ## In this module
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- **Styling lists**
+- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
 - [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
