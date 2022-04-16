@@ -22,9 +22,9 @@ to begin playback immediately.
 ## Syntax
 
 ```js
-start(when);
-start(when, offset);
-start(when, offset, duration);
+start(when)
+start(when, offset)
+start(when, offset, duration)
 ```
 
 ### Parameters

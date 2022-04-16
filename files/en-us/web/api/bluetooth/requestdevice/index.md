@@ -20,8 +20,8 @@ UI, this method returns the first device matching the criteria.
 ## Syntax
 
 ```js
-requestDevice();
-requestDevice(options);
+requestDevice()
+requestDevice(options)
 ```
 
 ### Return value

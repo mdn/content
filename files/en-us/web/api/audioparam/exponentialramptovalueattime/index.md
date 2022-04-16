@@ -26,7 +26,7 @@ _previous_ event, follows an exponential ramp to the new value given in the
 ## Syntax
 
 ```js
-exponentialRampToValueAtTime(value, endTime);
+exponentialRampToValueAtTime(value, endTime)
 ```
 
 ### Parameters

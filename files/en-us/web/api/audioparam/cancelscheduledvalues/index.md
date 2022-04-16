@@ -18,7 +18,7 @@ Interface cancels all scheduled future changes to the `AudioParam`.
 ## Syntax
 
 ```js
-cancelScheduledValues(startTime);
+cancelScheduledValues(startTime)
 ```
 
 ### Parameters

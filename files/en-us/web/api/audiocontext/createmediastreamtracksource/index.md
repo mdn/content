@@ -33,7 +33,7 @@ first, lexicographically (alphabetically).
 ## Syntax
 
 ```js
-createMediaStreamTrackSource(track);
+createMediaStreamTrackSource(track)
 ```
 
 ### Parameters

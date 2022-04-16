@@ -25,7 +25,7 @@ Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more in
 ## Syntax
 
 ```js
-createConvolver();
+createConvolver()
 ```
 
 ### Return value

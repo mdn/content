@@ -16,7 +16,7 @@ The **`flush()`** method of the {{domxref("AudioDecoder")}} interface returns a 
 ## Syntax
 
 ```js
-flush();
+flush()
 ```
 
 ### Parameters

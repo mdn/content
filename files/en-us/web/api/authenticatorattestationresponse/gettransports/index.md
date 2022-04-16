@@ -30,7 +30,7 @@ not removable from the device).
 ## Syntax
 
 ```js
-getTransports();
+getTransports()
 ```
 
 ### Parameters

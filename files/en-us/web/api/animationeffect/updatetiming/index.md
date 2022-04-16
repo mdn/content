@@ -18,7 +18,7 @@ The `updateTiming()` method of the {{domxref("AnimationEffect")}} interface upda
 ## Syntax
 
 ```js
-updateTiming(timing);
+updateTiming(timing)
 ```
 
 ### Parameters

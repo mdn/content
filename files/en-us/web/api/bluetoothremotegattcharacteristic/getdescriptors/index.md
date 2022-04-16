@@ -21,7 +21,7 @@ returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
 ## Syntax
 
 ```js
-getDescriptors(bluetoothDescriptorUUID);
+getDescriptors(bluetoothDescriptorUUID)
 ```
 
 ### Return value

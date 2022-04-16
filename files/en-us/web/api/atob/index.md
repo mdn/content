@@ -25,7 +25,7 @@ for {{domxref("btoa", "btoa()")}}.
 ## Syntax
 
 ```js
-atob(encodedData);
+atob(encodedData)
 ```
 
 ### Parameters

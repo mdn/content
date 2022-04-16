@@ -29,7 +29,7 @@ audio.
 ## Syntax
 
 ```js
-createPanner();
+createPanner()
 ```
 
 ### Return value

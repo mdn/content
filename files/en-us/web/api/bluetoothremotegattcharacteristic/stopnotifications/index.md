@@ -21,7 +21,7 @@ there is no longer an active notification on it.
 ## Syntax
 
 ```js
-stopNotifications();
+stopNotifications()
 ```
 
 ### Return value

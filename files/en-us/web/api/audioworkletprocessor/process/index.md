@@ -43,7 +43,7 @@ invoked to do so.
 ## Syntax
 
 ```js
-process(inputs, outputs, parameters);
+process(inputs, outputs, parameters)
 ```
 
 ### Parameters

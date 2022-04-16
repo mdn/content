@@ -21,7 +21,7 @@ there is an active notification on it.
 ## Syntax
 
 ```js
-startNotifications();
+startNotifications()
 ```
 
 ### Return value

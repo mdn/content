@@ -16,7 +16,7 @@ The **`close()`** method of the {{domxref("AudioDecoder")}} interface ends all p
 ## Syntax
 
 ```js
-close();
+close()
 ```
 
 ### Parameters

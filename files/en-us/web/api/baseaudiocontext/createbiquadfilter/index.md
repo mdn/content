@@ -24,7 +24,7 @@ filter configurable as several different common filter types.
 ## Syntax
 
 ```js
-createBiquadFilter();
+createBiquadFilter()
 ```
 
 ### Return value

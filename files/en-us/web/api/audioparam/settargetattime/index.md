@@ -20,7 +20,7 @@ envelopes.
 ## Syntax
 
 ```js
-setTargetAtTime(target, startTime, timeConstant);
+setTargetAtTime(target, startTime, timeConstant)
 ```
 
 ### Parameters

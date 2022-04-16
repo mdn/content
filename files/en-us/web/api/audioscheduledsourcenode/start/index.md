@@ -26,8 +26,8 @@ immediately.
 ## Syntax
 
 ```js
-start();
-start(when);
+start()
+start(when)
 ```
 
 ### Parameters

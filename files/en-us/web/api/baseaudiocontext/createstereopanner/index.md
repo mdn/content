@@ -25,7 +25,7 @@ It positions an incoming audio stream in a stereo image using a [low-cost pannin
 ## Syntax
 
 ```js
-createStereoPanner();
+createStereoPanner()
 ```
 
 ### Return value

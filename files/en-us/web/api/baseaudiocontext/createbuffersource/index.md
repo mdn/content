@@ -28,7 +28,7 @@ track.
 ## Syntax
 
 ```js
-createBufferSource();
+createBufferSource()
 ```
 
 ### Return value

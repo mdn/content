@@ -21,7 +21,7 @@ The **`BluetoothRemoteGATTCharacteristic.writeValue()`** method sets a {{domxref
 ## Syntax
 
 ```js
-writeValue(value);
+writeValue(value)
 ```
 
 ### Return value
