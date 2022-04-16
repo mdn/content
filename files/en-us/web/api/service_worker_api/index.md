@@ -95,7 +95,7 @@ In the future, service workers will be able to do a number of other useful thing
 - {{DOMxRef("ExtendableEvent")}} {{Experimental_Inline}}
   - : Extends the lifetime of the `install` and `activate` events dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}}, as part of the service worker lifecycle. This ensures that any functional events (like {{DOMxRef("FetchEvent")}}) are not dispatched to the {{DOMxRef("ServiceWorker")}}, until it upgrades database schemas, and deletes outdated cache entries, etc.
 - {{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}
-  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
+  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 - {{DOMxRef("FetchEvent")}} {{Experimental_Inline}}
   - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
 - {{DOMxRef("InstallEvent")}} {{Experimental_Inline}}
