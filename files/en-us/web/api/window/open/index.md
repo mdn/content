@@ -350,7 +350,7 @@ recommendable usability and accessibility guidelines:
 
 - "javascript:" pseudo-links become dysfunctional when JavaScript support is disabled
   or inexistent. Several corporations allow their employees to surf on the web but under
-  strict security policies: no JavaScript enabled, no Java, no activeX, no Flash. For
+  strict security policies: no JavaScript enabled, no Java, no ActiveX, no Flash. For
   various reasons (security, public access, text browsers, etc..), about 5% to 10% of
   users on the web surf with JavaScript disabled.
 - "javascript:" links will interfere with advanced features in tab-capable browsers:

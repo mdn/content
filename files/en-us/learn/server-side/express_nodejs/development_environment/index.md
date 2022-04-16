@@ -51,7 +51,7 @@ There are other peripheral tools that are part of a typical development environm
 
 ### What operating systems are supported?
 
-_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the nodejs [Downloads](https://nodejs.org/en/download/) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
+_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the Node.js [Downloads](https://nodejs.org/en/download/) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
 
 In this article we provide setup instructions for Windows, macOS, and Ubuntu Linux.
 

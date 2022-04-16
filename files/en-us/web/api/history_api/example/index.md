@@ -167,7 +167,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 **include/after_content.php**:
 
 ```php
-<p>This is the footer. It is shared between all ajax pages.</p>
+<p>This is the footer. It is shared between all Ajax pages.</p>
 ```
 
 **include/before_content.php**:

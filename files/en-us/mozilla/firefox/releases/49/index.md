@@ -189,7 +189,7 @@ This marks the next step in the journey toward a plugin-free future. HTML is ver
 
 ## Compatibility
 
-In order to improve compatibility with existing content, Firefox now accepts some webkit prefixed properties and attributes.
+In order to improve compatibility with existing content, Firefox now accepts some WebKit prefixed properties and attributes.
 
 - The following properties now also work prefixed with `-webkit`:
 
