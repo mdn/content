@@ -47,7 +47,7 @@ fetch(url).then(function(response) {
 ## Syntax
 
 ```js
-put(request, response);
+put(request, response)
 ```
 
 ### Parameters

@@ -22,7 +22,7 @@ the quadratic Bézier curve.
 ## Syntax
 
 ```js
-quadraticCurveTo(cpx, cpy, x, y);
+quadraticCurveTo(cpx, cpy, x, y)
 ```
 
 ### Parameters

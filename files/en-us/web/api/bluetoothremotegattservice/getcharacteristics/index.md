@@ -21,7 +21,7 @@ instances for a given universally unique identifier (UUID).
 ## Syntax
 
 ```js
-getCharacteristics(characteristics);
+getCharacteristics(characteristics)
 ```
 
 ### Return value

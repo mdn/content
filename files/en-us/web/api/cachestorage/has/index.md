@@ -24,13 +24,13 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-has(cacheName);
+has(cacheName)
 ```
 
 ### Parameters
 
 - `cacheName`
-  - : A {{domxref("DOMString")}} representing the name of the {{domxref("Cache")}} object
+  - : A string representing the name of the {{domxref("Cache")}} object
     you are looking for in the {{domxref("CacheStorage")}}.
 
 ### Return value

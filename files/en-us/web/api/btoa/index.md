@@ -28,7 +28,7 @@ characters such as ASCII values 0 through 31.
 ## Syntax
 
 ```js
-btoa(stringToEncode);
+btoa(stringToEncode)
 ```
 
 ### Parameters

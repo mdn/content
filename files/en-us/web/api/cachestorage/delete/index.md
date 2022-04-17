@@ -26,7 +26,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-delete(cacheName);
+delete(cacheName)
 ```
 
 ### Parameters

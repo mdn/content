@@ -34,7 +34,7 @@ For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put
 ## Syntax
 
 ```js
-add(request);
+add(request)
 ```
 
 ### Parameters

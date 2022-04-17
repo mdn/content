@@ -20,7 +20,7 @@ the script execution environment to disconnect from `this.device`.
 ## Syntax
 
 ```js
-disconnect();
+disconnect()
 ```
 
 ### Return value

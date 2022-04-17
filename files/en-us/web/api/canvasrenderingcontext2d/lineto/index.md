@@ -24,7 +24,7 @@ anything. To draw the path onto a canvas, you can use the
 ## Syntax
 
 ```js
-lineTo(x, y);
+lineTo(x, y)
 ```
 
 ### Parameters

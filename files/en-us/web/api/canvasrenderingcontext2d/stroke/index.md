@@ -25,8 +25,8 @@ means that path intersections will still get filled.
 ## Syntax
 
 ```js
-stroke();
-stroke(path);
+stroke()
+stroke(path)
 ```
 
 ### Parameters

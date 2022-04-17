@@ -24,8 +24,8 @@ method. This lets you scale, rotate, translate (move), and skew the context.
 ## Syntax
 
 ```js
-setTransform(a, b, c, d, e, f);
-setTransform(matrix);
+setTransform(a, b, c, d, e, f)
+setTransform(matrix)
 ```
 
 The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>

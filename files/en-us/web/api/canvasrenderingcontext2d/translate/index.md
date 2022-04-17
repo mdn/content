@@ -18,7 +18,7 @@ method of the Canvas 2D API adds a translation transformation to the current mat
 ## Syntax
 
 ```js
-translate(x, y);
+translate(x, y)
 ```
 
 The `translate()` method adds a translation transformation to the current

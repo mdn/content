@@ -21,7 +21,7 @@ Bluetooth device for a specified `BluetoothServiceUUID`.
 ## Syntax
 
 ```js
-getPrimaryServices(bluetoothServiceUUID);
+getPrimaryServices(bluetoothServiceUUID)
 ```
 
 ### Return value

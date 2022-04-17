@@ -26,7 +26,7 @@ This method is commonly used for making rounded corners.
 ## Syntax
 
 ```js
-arcTo(x1, y1, x2, y2, radius);
+arcTo(x1, y1, x2, y2, radius)
 ```
 
 ### Parameters

@@ -36,7 +36,7 @@ permission.
 ## Syntax
 
 ```js
-read();
+read()
 ```
 
 ### Parameters

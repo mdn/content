@@ -21,7 +21,7 @@ script execution environment to connect to `this.device`.
 ## Syntax
 
 ```js
-connect();
+connect()
 ```
 
 ### Return value

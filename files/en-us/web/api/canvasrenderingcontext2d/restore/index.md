@@ -23,7 +23,7 @@ state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{d
 ## Syntax
 
 ```js
-restore();
+restore()
 ```
 
 ## Examples

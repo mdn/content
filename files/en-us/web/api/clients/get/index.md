@@ -20,13 +20,13 @@ The **`get()`** method of the
 ## Syntax
 
 ```js
-get(id);
+get(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} representing the id of the client you want to get.
+  - : A string representing the id of the client you want to get.
 
 ### Return value
 

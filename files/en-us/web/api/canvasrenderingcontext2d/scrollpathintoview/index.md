@@ -20,8 +20,8 @@ to {{domxref("Element.scrollIntoView()")}}.
 ## Syntax
 
 ```js
-scrollPathIntoView();
-scrollPathIntoView(path);
+scrollPathIntoView()
+scrollPathIntoView(path)
 ```
 
 ### Parameters

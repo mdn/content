@@ -22,8 +22,8 @@ The **`console.countReset()`** method resets counter used with
 ## Syntax
 
 ```js
-countReset();
-countReset(label);
+countReset()
+countReset(label)
 ```
 
 ### Parameters

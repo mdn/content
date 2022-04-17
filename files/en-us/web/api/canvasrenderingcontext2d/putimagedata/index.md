@@ -25,8 +25,8 @@ manipulation of canvas contents in the article [Pixel manipulation with canvas](
 ## Syntax
 
 ```js
-putImageData(imageData, dx, dy);
-putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+putImageData(imageData, dx, dy)
+putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 ```
 
 ### Parameters

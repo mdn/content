@@ -26,7 +26,7 @@ only from within the chrome process.
 ## Syntax
 
 ```js
-drawWidgetAsOnScreen(window);
+drawWidgetAsOnScreen(window)
 ```
 
 ### Parameters

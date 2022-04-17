@@ -21,7 +21,7 @@ responses in the {{domxref("Cache")}} object.
 ## Syntax
 
 ```js
-matchAll(request, options);
+matchAll(request, options)
 ```
 
 ### Parameters

@@ -27,7 +27,7 @@ anything.  To draw the rectangle onto a canvas, you can use the
 ## Syntax
 
 ```js
-rect(x, y, width, height);
+rect(x, y, width, height)
 ```
 
 The `rect()` method creates a rectangular path whose starting point is at

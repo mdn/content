@@ -25,7 +25,7 @@ transparent black.
 ## Syntax
 
 ```js
-clearRect(x, y, width, height);
+clearRect(x, y, width, height)
 ```
 
 The `clearRect()` method sets the pixels in a rectangular area to

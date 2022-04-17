@@ -21,7 +21,7 @@ Bluetooth device for a specified {{domxref("BluetoothServiceUUID")}}.
 ## Syntax
 
 ```js
-getPrimaryService(bluetoothServiceUUID);
+getPrimaryService(bluetoothServiceUUID)
 ```
 
 ### Return value

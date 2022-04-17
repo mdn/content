@@ -30,7 +30,7 @@ Chrome for Windows.
 ## Syntax
 
 ```js
-openWindow(url);
+openWindow(url)
 ```
 
 ### Parameters

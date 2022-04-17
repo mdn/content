@@ -28,7 +28,7 @@ Once dispatched, it doesn't do anything anymore.
 ## Syntax
 
 ```js
-initMouseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason);
+initMouseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason)
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ initMouseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason);
 - `reasonCode`
   - : the reason of the close.
 - `reason`
-  - : a {{domxref("DOMString")}} describing the reason of the close in shuman-readable
+  - : a string describing the reason of the close in shuman-readable
     way.
 
 ## Specifications

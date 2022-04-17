@@ -24,8 +24,8 @@ message is received in the "`message`" event on
 ## Syntax
 
 ```js
-postMessage(message);
-postMessage(message, transferables);
+postMessage(message)
+postMessage(message, transferables)
 ```
 
 ### Parameters

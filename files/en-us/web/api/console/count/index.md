@@ -21,8 +21,8 @@ this particular call to `count()` has been called.
 ## Syntax
 
 ```js
-count();
-count(label);
+count()
+count(label)
 ```
 
 ### Parameters
