@@ -33,7 +33,7 @@ let removing = browser.scripting.unregisterContentScripts(
 ### Parameters
 
 - `scripts`{{optional_inline}} 
-  - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter to identify the dynamic content scripts to unregistered. If not specified, all dynamic content scripts are unregistered.
+  - : `array` of {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter to identify the dynamic content scripts to unregistered. If not specified, all dynamic content scripts are unregistered.
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the request.
 

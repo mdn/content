@@ -71,7 +71,7 @@ browser.browserAction.onClicked.addListener(() => {
 This example inserts CSS loaded from a file packaged with the extension. The CSS is inserted into the tab whose ID is 2:
 
 ```js
-browser.browserAction.onClicked.addListener(() => {
+browser.action.onClicked.addListener(tab => {
 
   function onError(error) {
     console.log(`Error: ${error}`);

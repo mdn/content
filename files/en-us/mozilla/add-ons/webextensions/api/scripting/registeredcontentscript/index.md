@@ -32,7 +32,7 @@ Values of this type are objects. They contain these properties:
 - `matches`{{optional_inline}}
   - : `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
 - `runAt`{{optional_inline}}
-  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The preferred and default value is `<document_idle`.
+  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`.
 - `persistAcrossSessions`{{optional_inline}}
   - : `boolean`. Specifies if this content script persists into future sessions. Defaults to `false`. This is NOT supported.
 - `css`{{optional_inline}}

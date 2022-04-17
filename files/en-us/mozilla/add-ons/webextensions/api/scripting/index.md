@@ -41,17 +41,17 @@ Alternatively, you can get these permissions temporarily, only for the active ta
 - {{WebExtAPIRef("scripting.executeScript()")}}
   - : Injects JavaScript code into a page.
 - {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}}
-  - : Gets a list of continents scripts registered in a page.
+  - : Gets a list of registered content scripts.
 - {{WebExtAPIRef("scripting.insertCSS()")}}
   - : Injects CSS into a page.
 - {{WebExtAPIRef("scripting.registerContentScripts()")}}
-  - : Registers akonting script in a page.
+  - : Registers a content script for future page loads.
 - {{WebExtAPIRef("scripting.removeCSS()")}}
-  - : Removes from a page CSS which was previously injected by calling {{WebExtAPIRef("tabs.insertCSS()")}}.
+  - : Removes CSS which was previously injected into a page by a {{WebExtAPIRef("scripting.insertCSS()")}} call.
 - {{WebExtAPIRef("scripting.updateContentScripts()")}}
-  - : update the content of a content script registration in a page.
+  - : Updates a content script registration.
 - {{WebExtAPIRef("scripting.unregisterContentScripts()")}}
-  - : Removes the registration of a content script from a page.
+  - : Removes the registration of a content script.
   
 ## Browser compatibility
 

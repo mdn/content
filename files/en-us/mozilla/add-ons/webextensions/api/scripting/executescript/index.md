@@ -15,7 +15,7 @@ browser-compat: webextensions.api.scripting.executeScript
 ---
 {{AddonSidebar()}}
 
-Injects a script into a target context. The script is run at `document_idle`.
+Injects a script into a target context. The script is run at `document_idle` by default.
 
 > **Note:** This method is available in Manifest V3 or higher.
 
@@ -43,7 +43,7 @@ let executing = browser.scripting.executeScript(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with {{WebExtAPIRef("scripting.InjectionResult")}}. The array's values represent the result of the script in every injected frame.
 
-The result of the script is the last evaluated statement, which is similar the results that would be seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
+The result of the script is the last evaluated statement, which is similar to the results that would be seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
 
 ```js
 let foo='my result'; foo;
@@ -88,7 +88,7 @@ function onError(error) {
 }
 
 const executing = browser.tabs.executeScript({
-  file: "/content-script.js",
+  files: ["content-script.js"],
   allFrames: true
 });
 executing.then(onExecuted, onError);

@@ -33,7 +33,7 @@ let removing = browser.scripting.registerContentScripts(
 ### Parameters
 
 - `scripts`
-  - : {{WebExtAPIRef("scripting.RegisteredContentScript")}}. A list of scripts to register. 
+  - : `array` of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. A list of scripts to register. 
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the request.
 
@@ -52,7 +52,7 @@ const aScript = {
   id: "a-script",
   js: ["script.js"],
   matches: ["<all_urls>"],
-  };
+};
 
 await browser.scripting.registerContentScripts([aScript]);
 ```
