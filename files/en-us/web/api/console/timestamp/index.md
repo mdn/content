@@ -26,7 +26,7 @@ be shown alongside the marker.
 ## Syntax
 
 ```js
-timeStamp(label);
+timeStamp(label)
 ```
 
 ### Parameters

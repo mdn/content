@@ -17,8 +17,8 @@ The **`insertRule()`** method of the
 ## Syntax
 
 ```js
-insertRule(rule);
-insertRule(rule, index);
+insertRule(rule)
+insertRule(rule, index)
 ```
 
 ### Parameters

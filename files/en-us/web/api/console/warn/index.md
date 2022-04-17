@@ -23,10 +23,10 @@ console.
 ## Syntax
 
 ```js
-warn(obj1);
-warn(obj1, /* ..., */ objN);
-warn(msg);
-warn(msg, subst1, /* ..., */ substN]);
+warn(obj1)
+warn(obj1, /* ..., */ objN)
+warn(msg)
+warn(msg, subst1, /* ..., */ substN])
 ```
 
 ### Parameters

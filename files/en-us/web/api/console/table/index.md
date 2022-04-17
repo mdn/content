@@ -132,8 +132,8 @@ You can sort the table by a particular column by clicking on that column's label
 ## Syntax
 
 ```js
-table(data);
-table(data, columns);
+table(data)
+table(data, columns)
 ```
 
 ### Parameters

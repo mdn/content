@@ -21,10 +21,10 @@ different image sources, and returns a {{jsxref("Promise")}} which resolves to a
 ## Syntax
 
 ```js
-createImageBitmap(image);
-createImageBitmap(image, options);
-createImageBitmap(image, sx, sy, sw, sh);
-createImageBitmap(image, sx, sy, sw, sh, options);
+createImageBitmap(image)
+createImageBitmap(image, options)
+createImageBitmap(image, sx, sy, sw, sh)
+createImageBitmap(image, sx, sy, sw, sh, options)
 ```
 
 ### Parameters

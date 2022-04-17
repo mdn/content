@@ -29,7 +29,7 @@ stylesheet. You should avoid using this method, and should instead use the more 
 ## Syntax
 
 ```js
-addRule(selector, styleBlock, index);
+addRule(selector, styleBlock, index)
 ```
 
 ### Parameters

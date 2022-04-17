@@ -23,7 +23,7 @@ dragged).
 ## Syntax
 
 ```js
-void dataTransfer.addElement(el);
+addElement(el)
 ```
 
 ### Arguments
@@ -35,7 +35,7 @@ void dataTransfer.addElement(el);
 
 None.
 
-## Example
+## Examples
 
 This example shows the use of the `addElement()` method
 

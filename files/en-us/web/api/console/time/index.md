@@ -25,7 +25,7 @@ See [Timers](/en-US/docs/Web/API/console#timers) in the
 ## Syntax
 
 ```js
-time(label);
+time(label)
 ```
 
 ### Parameters

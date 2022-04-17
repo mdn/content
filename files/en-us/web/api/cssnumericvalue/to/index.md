@@ -21,7 +21,7 @@ another.
 ## Syntax
 
 ```js
-to(unit);
+to(unit)
 ```
 
 ### Parameters

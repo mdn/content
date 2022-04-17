@@ -31,7 +31,8 @@ entirely, shifting the remaining items down and changing their indices.
 ## Syntax
 
 ```js
-void dataTransfer.mozClearDataAt([type], index);
+mozClearDataAt(index)
+mozClearDataAt(type, index)
 ```
 
 ### Arguments
@@ -46,7 +47,7 @@ void dataTransfer.mozClearDataAt([type], index);
 
 None.
 
-## Example
+## Examples
 
 This example shows the use of the `mozClearDataAt()` method in a
 {{event("dragend")}} event handler.

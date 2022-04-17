@@ -21,7 +21,7 @@ for each index in the array.
 ## Syntax
 
 ```js
-CSSTransformValue.keys();
+keys()
 ```
 
 ### Parameters

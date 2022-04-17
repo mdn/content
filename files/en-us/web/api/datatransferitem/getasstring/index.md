@@ -22,7 +22,7 @@ given callback with the drag data item's string data as the argument if the item
 ## Syntax
 
 ```js
-dataTransferItem.getAsString(callback);
+getAsString(callback)
 ```
 
 ### Parameters
@@ -39,12 +39,12 @@ dataTransferItem.getAsString(callback);
 
 The callback parameter is a callback function which accepts one parameter:
 
-- {{domxref("DOMString")}}
+- string
   - : The drag data item's string data.
 
 The callback return value is `undefined`.
 
-## Example
+## Examples
 
 This example shows the use of the `getAsString()` method as an _inline
 function_ in a {{event("drop")}} event handler.

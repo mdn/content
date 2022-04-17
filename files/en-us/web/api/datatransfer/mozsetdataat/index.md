@@ -37,7 +37,8 @@ or number type (which will be converted into a string) or an `nsISupports`.
 ## Syntax
 
 ```js
-void dataTransfer.mozSetDataAt([type], data, index);
+mozSetDataAt(data, index)
+mozSetDataAt(type, data, index)
 ```
 
 ### Arguments
@@ -55,7 +56,7 @@ void dataTransfer.mozSetDataAt([type], data, index);
 
 None.
 
-## Example
+## Examples
 
 This example shows the use of the `mozSetDataAt()` method in a
 {{event("dragstart")}} handler.

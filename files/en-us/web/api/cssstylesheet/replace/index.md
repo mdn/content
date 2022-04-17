@@ -18,7 +18,7 @@ The `replace()` and {{domxref("CSSStyleSheet.replaceSync()")}} methods can only 
 ## Syntax
 
 ```js
-replace(text);
+replace(text)
 ```
 
 ### Parameters

@@ -30,12 +30,12 @@ This method must be called in the {{event("dragstart")}} event handler.
 ## Syntax
 
 ```js
-void dataTransfer.setDragImage(img | element, xOffset, yOffset);
+setDragImage(imgElement, xOffset, yOffset)
 ```
 
 ### Arguments
 
-- _img |_ element
+- _imgElement
 
   - : An image {{domxref("Element")}} element to use for the drag feedback image.
 
@@ -55,7 +55,7 @@ void dataTransfer.setDragImage(img | element, xOffset, yOffset);
 
 None.
 
-## Example
+## Examples
 
 This example shows how to use the `setDragImage()` method. Note the example
 refers to an image file named `example.gif`. If that file is present, it will

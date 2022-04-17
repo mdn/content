@@ -16,7 +16,7 @@ The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface 
 ## Syntax
 
 ```js
-subscribe(subscriptions);
+subscribe(subscriptions)
 ```
 
 ### Parameters

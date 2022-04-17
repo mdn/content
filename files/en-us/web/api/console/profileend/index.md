@@ -37,7 +37,7 @@ only that profile if you have multiple profiles being recorded.
 ## Syntax
 
 ```js
-profileEnd(profileName);
+profileEnd(profileName)
 ```
 
 ### Parameters

@@ -35,8 +35,8 @@ example: if options.password exists, then the
 ## Syntax
 
 ```js
-get();
-get(options);
+get()
+get(options)
 ```
 
 ### Parameters

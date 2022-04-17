@@ -22,7 +22,7 @@ each index in the CSSTransformValue object.
 ## Syntax
 
 ```js
-CSSTransformValue.values();
+values()
 ```
 
 ### Parameters

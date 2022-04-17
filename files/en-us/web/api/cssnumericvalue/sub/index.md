@@ -21,7 +21,7 @@ The **`sub()`** method of the
 ## Syntax
 
 ```js
-sub(number);
+sub(number)
 ```
 
 ### Parameters

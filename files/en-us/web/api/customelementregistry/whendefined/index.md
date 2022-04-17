@@ -20,7 +20,7 @@ resolves when the named element is defined.
 ## Syntax
 
 ```js
-customElements.whenDefined(name): Promise<CustomElementConstructor>;
+whenDefined(name)
 ```
 
 ### Parameters

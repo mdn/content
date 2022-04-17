@@ -21,7 +21,7 @@ value as a {{domxref('CSSStyleValue')}} object.
 ## Syntax
 
 ```js
-CSSStyleValue.parse(property, cssText)
+parse(property, cssText)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ CSSStyleValue.parse(property, cssText)
 
 A `CSSStyleValue` object containing the first supplied value.
 
-## Example
+## Examples
 
 The code below parses a set of declarations for the `transform` property.
 The second code block shows the structure of the returned object as it would be rendered
