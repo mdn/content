@@ -62,8 +62,8 @@ If a box has an outer display type of `inline`, then:
 
 - The box will not break onto a new line.
 - The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
-- Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
-- Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+- Vertical margins, paddings, and borders will apply but will not cause other inline boxes to move away from the box.
+- Horizontal margins, paddings, and borders will apply and will cause other inline boxes to move away from the box.
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
@@ -283,7 +283,7 @@ We can control the padding on all sides of an element using the {{cssxref("paddi
 
 All of the above applies fully to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but they do not change the relationship of other content to our inline box and so the padding and border overlaps other words in the paragraph. Horizontal padding, margins, and borders are respected and will cause other content to move away from the box.
+In the example below, we have a `<span>` inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The horizontal margin, padding, and border are respected but they do not change the relationship of other content to our inline box and so the padding and border overlaps other words in the paragraph. Horizontal margins, paddings, and borders are respected and will cause other content to move away from the box horizontally.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 700)}}
 
