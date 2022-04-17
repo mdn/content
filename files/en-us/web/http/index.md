@@ -31,7 +31,7 @@ Learn how to use HTTP with guides and tutorials.
     The server can then determine which resources to send, based on the information that the client chooses to provide.
 - [Evolution of HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : A brief description of the changes between the early versions of HTTP, to the modern HTTP/2, the emergent HTTP/3 and beyond.
-- [Mozilla web security guidelines](https://wiki.mozilla.org/Security/Guidelines/Web_Security)
+- [Mozilla web security guidelines](https://infosec.mozilla.org/guidelines/web_security)
   - : A collection of tips to help operational teams with creating secure web applications.
 - [HTTP Messages](/en-US/docs/Web/HTTP/Messages)
   - : Describes the type and structure of the different kind of messages of HTTP/1.x and HTTP/2.

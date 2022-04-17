@@ -54,5 +54,5 @@ You can now have [preference options inline](/en-US/docs/Extensions/Inline_Optio
 ## See also
 
 - [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7)
-- [Add-ons Blog: Firefox 7 add-on compatibility](http://blog.mozilla.com/addons/2011/07/19/firefox-7-compat-looking-to-8/)
+- [Add-ons Blog: Firefox 7 add-on compatibility](https://blog.mozilla.org/addons/2011/07/19/firefox-7-compat-looking-to-8/)
 - [XPCOM changes in Gecko 2.0](/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0)

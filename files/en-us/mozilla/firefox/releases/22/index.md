@@ -67,7 +67,7 @@ tags:
 
 ## See also
 
-- [Firefox 22 Beta Release Notes](https://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
+- [Firefox 22 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/22.0beta/releasenotes/)
 - [Add-on Compatibility for Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
 
 ### Versions

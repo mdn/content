@@ -28,7 +28,7 @@ In addition, mutation events should be avoided because they have **performance i
 
 ### Performance
 
-Adding DOM mutation listeners to a document [profoundly degrades the performance](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1) of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.
+Adding DOM mutation listeners to a document [profoundly degrades the performance](https://groups.google.com/d/topic/mozilla.dev.platform/L0Lx11u5Bvs?pli=1) of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.
 
 The performance effect is [limited to the documents that have the mutation event listeners](https://groups.google.com/forum/#!topic/mozilla.dev.platform/UH2VqFQRTDA).
 

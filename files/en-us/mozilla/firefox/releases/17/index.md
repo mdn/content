@@ -99,7 +99,7 @@ _None removed._
 
 ## See also
 
-- [Firefox 17 Release Notes](https://www.mozilla.org/en-US/firefox/17.0/releasenotes/)
+- [Firefox 17 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/17.0/releasenotes/)
 - [Aurora 17 is out, bringing better security and support for new standards](https://hacks.mozilla.org/2012/08/aurora-17-is-out/) (Mozilla Hacks)
 - [Add-on Compatibility for Firefox 17](https://blog.mozilla.org/addons/2012/11/08/compatibility-for-firefox-17/) (Add-ons Blog)
 

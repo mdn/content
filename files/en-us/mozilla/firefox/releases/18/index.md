@@ -84,7 +84,7 @@ The following interfaces have been removed.
 
 ## See also
 
-- [Firefox 18 Beta Release Notes](https://www.mozilla.org/en-US/firefox/18.0beta/releasenotes/)
+- [Firefox 18 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/18.0beta/releasenotes/)
 - [Aurora 18: HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
 - [Add-on Compatibility for Firefox 18](https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/) (Add-ons Blog)
 
