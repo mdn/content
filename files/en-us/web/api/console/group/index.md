@@ -21,8 +21,8 @@ until {{domxref("console.groupEnd()")}} is called.
 ## Syntax
 
 ```js
-group();
-group(label);
+group()
+group(label)
 ```
 
 ### Parameters

@@ -25,8 +25,8 @@ to `false`.
 ## Syntax
 
 ```js
-delete(request);
-delete(request, options);
+delete(request)
+delete(request, options)
 ```
 
 ### Parameters
@@ -53,7 +53,7 @@ delete(request, options);
       header matching.  In other words, if the URL matches you will get a match
       regardless of whether the {{domxref("Response")}} object has a `VARY`
       header. It defaults to `false`.
-    - `cacheName`: A {{domxref("DOMString")}} that represents a specific
+    - `cacheName`: A string that represents a specific
       cache to search within. Note that this option is ignored by
       `Cache.delete()`.
 

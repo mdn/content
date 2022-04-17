@@ -24,7 +24,7 @@ it is available and supported. Otherwise it throws an error.
 ## Syntax
 
 ```js
-readValue();
+readValue()
 ```
 
 ### Return value

@@ -25,7 +25,7 @@ drawn at twice the normal size.
 ## Syntax
 
 ```js
-scale(x, y);
+scale(x, y)
 ```
 
 ### Parameters

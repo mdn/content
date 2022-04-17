@@ -25,9 +25,9 @@ The requests are returned in the same order that they were inserted.
 ## Syntax
 
 ```js
-keys();
-keys(request);
-keys(request, options);
+keys()
+keys(request)
+keys(request, options)
 ```
 
 ### Parameters
@@ -54,7 +54,7 @@ keys(request, options);
       header matching.  In other words, if the URL matches you will get a match
       regardless of whether the {{domxref("Response")}} object has a `VARY`
       header. It defaults to `false`.
-    - `cacheName`: A {{domxref("DOMString")}} that represents a specific
+    - `cacheName`: A string that represents a specific
       cache to search within. Note that this option is ignored by
       `Cache.keys()`.
 

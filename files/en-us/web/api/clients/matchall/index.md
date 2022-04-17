@@ -23,7 +23,7 @@ service worker.
 ## Syntax
 
 ```js
-matchAll(options);
+matchAll(options)
 ```
 
 ### Parameters

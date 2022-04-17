@@ -18,8 +18,8 @@ method of the Canvas 2D API adds an elliptical arc to the current sub-path.
 ## Syntax
 
 ```js
-ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle);
-ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise);
+ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle)
+ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise)
 ```
 
 The `ellipse()` method creates an elliptical arc centered at

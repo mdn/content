@@ -38,7 +38,7 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 ## Syntax
 
 ```js
-getImageData(sx, sy, sw, sh);
+getImageData(sx, sy, sw, sh)
 ```
 
 ### Parameters

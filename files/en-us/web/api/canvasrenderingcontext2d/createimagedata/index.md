@@ -18,8 +18,8 @@ specified dimensions. All of the pixels in the new object are transparent black.
 ## Syntax
 
 ```js
-createImageData(width, height);
-createImageData(imagedata);
+createImageData(width, height)
+createImageData(imagedata)
 ```
 
 ### Parameters

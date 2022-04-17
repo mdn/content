@@ -30,8 +30,8 @@ from the parent process.
 ## Syntax
 
 ```js
-drawWindow(window, x, y, w, h, bgColor);
-drawWindow(window, x, y, w, h, bgColor, flags);
+drawWindow(window, x, y, w, h, bgColor)
+drawWindow(window, x, y, w, h, bgColor, flags)
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ drawWindow(window, x, y, w, h, bgColor, flags);
   - : The height of the window.
 - `bgColor`
 
-  - : A {{domxref("DOMString")}} that specifies the color the canvas is filled with before
+  - : A string that specifies the color the canvas is filled with before
     the window is rendered into it. This color may be transparent/translucent. It is given
     as a CSS color string (for example, `rgb()` or `rgba()`).
     Notes:

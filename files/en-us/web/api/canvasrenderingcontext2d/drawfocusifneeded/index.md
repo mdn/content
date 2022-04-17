@@ -20,8 +20,8 @@ specified element is focused.
 ## Syntax
 
 ```js
-drawFocusIfNeeded(element);
-drawFocusIfNeeded(path, element);
+drawFocusIfNeeded(element)
+drawFocusIfNeeded(path, element)
 ```
 
 ### Parameters

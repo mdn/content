@@ -20,7 +20,7 @@ pattern's transformation matrix and invokes it on the pattern.
 ## Syntax
 
 ```js
-setTransform(matrix);
+setTransform(matrix)
 ```
 
 ### Parameters

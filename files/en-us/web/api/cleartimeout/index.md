@@ -17,7 +17,7 @@ by calling {{domxref("setTimeout()")}}.
 ## Syntax
 
 ```js
-clearTimeout(timeoutID);
+clearTimeout(timeoutID)
 ```
 
 ### Parameters

@@ -20,7 +20,7 @@ method adds a new color stop, defined by an `offset` and a
 ## Syntax
 
 ```js
-addColorStop(offset, color);
+addColorStop(offset, color)
 ```
 
 ### Parameters

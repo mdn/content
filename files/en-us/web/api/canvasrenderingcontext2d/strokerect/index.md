@@ -25,7 +25,7 @@ on it.
 ## Syntax
 
 ```js
-strokeRect(x, y, width, height);
+strokeRect(x, y, width, height)
 ```
 
 The `strokeRect()` method draws a stroked rectangle whose starting point is

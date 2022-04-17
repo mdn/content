@@ -20,7 +20,7 @@ that let you see the contents of child nodes.
 ## Syntax
 
 ```js
-dirxml(object);
+dirxml(object)
 ```
 
 ### Parameters

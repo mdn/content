@@ -16,7 +16,7 @@ The **`canonicalUUID()`**  method of the {{domxref("BluetoothUUID")}} interface 
 ## Syntax
 
 ```js
-canonicalUUID(alias);
+canonicalUUID(alias)
 ```
 
 ### Parameters

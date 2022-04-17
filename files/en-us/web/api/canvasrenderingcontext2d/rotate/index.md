@@ -18,7 +18,7 @@ method of the Canvas 2D API adds a rotation to the transformation matrix.
 ## Syntax
 
 ```js
-rotate(angle);
+rotate(angle)
 ```
 
 ![](canvas_grid_rotate.png)

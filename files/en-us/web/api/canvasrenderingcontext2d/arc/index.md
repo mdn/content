@@ -19,8 +19,8 @@ method of the [Canvas 2D API
 ## Syntax
 
 ```js
-arc(x, y, radius, startAngle, endAngle);
-arc(x, y, radius, startAngle, endAngle, counterclockwise);
+arc(x, y, radius, startAngle, endAngle)
+arc(x, y, radius, startAngle, endAngle, counterclockwise)
 ```
 
 The `arc()` method creates a circular arc centered at `(x, y)`

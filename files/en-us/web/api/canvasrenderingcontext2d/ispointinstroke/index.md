@@ -19,8 +19,8 @@ area contained by the stroking of a path.
 ## Syntax
 
 ```js
-isPointInStroke(x, y);
-isPointInStroke(path, x, y);
+isPointInStroke(x, y)
+isPointInStroke(path, x, y)
 ```
 
 ### Parameters

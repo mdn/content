@@ -18,7 +18,7 @@ was previously established by a call to {{domxref("setInterval", "setInterval()"
 ## Syntax
 
 ```js
-clearInterval(intervalID);
+clearInterval(intervalID)
 ```
 
 ### Parameters

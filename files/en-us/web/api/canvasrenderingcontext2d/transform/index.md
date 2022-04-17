@@ -25,7 +25,7 @@ described by the arguments of this method. This lets you scale, rotate, translat
 ## Syntax
 
 ```js
-transform(a, b, c, d, e, f);
+transform(a, b, c, d, e, f)
 ```
 
 The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>

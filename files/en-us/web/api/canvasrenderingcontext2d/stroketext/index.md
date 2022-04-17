@@ -36,8 +36,8 @@ on it.
 ## Syntax
 
 ```js
-strokeText(text, x, y);
-strokeText(text, x, y, maxWidth);
+strokeText(text, x, y)
+strokeText(text, x, y, maxWidth)
 ```
 
 ### Parameters

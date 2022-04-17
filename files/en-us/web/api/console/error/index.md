@@ -19,10 +19,10 @@ The **`console.error()`** method outputs an error message to the Web console.
 ## Syntax
 
 ```js
-error(obj1);
-error(obj1, /* ..., */ objN);
-error(msg);
-error(msg, subst1, /* ..., */ substN]);
+error(obj1)
+error(obj1, /* ..., */ objN)
+error(msg)
+error(msg, subst1, /* ..., */ substN])
 ```
 
 ### Parameters

@@ -21,10 +21,10 @@ the console if the assertion is false. If the assertion is true, nothing happens
 ## Syntax
 
 ```js
-console.assert(assertion, obj1);
-console.assert(assertion, obj1, obj2, /* ... ,*/ objN);
-console.assert(assertion, msg);
-console.assert(assertion, msg, subst1, /* ... ,*/ substN);
+console.assert(assertion, obj1)
+console.assert(assertion, obj1, obj2, /* ... ,*/ objN)
+console.assert(assertion, msg)
+console.assert(assertion, msg, subst1, /* ... ,*/ substN)
 ```
 
 ### Parameters

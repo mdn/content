@@ -32,10 +32,10 @@ drawn.
 ## Syntax
 
 ```js
-clip();
-clip(path);
-clip(fillRule);
-clip(path, fillRule);
+clip()
+clip(path)
+clip(fillRule)
+clip(path, fillRule)
 ```
 
 ### Parameters

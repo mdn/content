@@ -17,7 +17,7 @@ The **`BluetoothRemoteGATTCharacteristic.writeValueWithResponse()`** method sets
 ## Syntax
 
 ```js
-writeValueWithResponse(value);
+writeValueWithResponse(value)
 ```
 
 ### Return value

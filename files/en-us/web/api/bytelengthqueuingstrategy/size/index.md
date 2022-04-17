@@ -20,7 +20,7 @@ The **`size()`** method of the
 ## Syntax
 
 ```js
-size(chunk);
+size(chunk)
 ```
 
 ### Parameters

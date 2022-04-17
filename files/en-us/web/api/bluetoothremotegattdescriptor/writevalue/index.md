@@ -22,7 +22,7 @@ an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
 ## Syntax
 
 ```js
-writeValue(array);
+writeValue(array)
 ```
 
 ### Parameters

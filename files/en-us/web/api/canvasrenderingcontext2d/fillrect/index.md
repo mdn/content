@@ -24,7 +24,7 @@ on it.
 ## Syntax
 
 ```js
-fillRect(x, y, width, height);
+fillRect(x, y, width, height)
 ```
 
 The `fillRect()` method draws a filled rectangle whose starting point is at

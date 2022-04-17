@@ -29,7 +29,7 @@ properties of the object.
 ## Syntax
 
 ```js
-dir(object);
+dir(object)
 ```
 
 ### Parameters

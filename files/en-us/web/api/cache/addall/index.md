@@ -29,7 +29,7 @@ retrieval become keys to the stored response operations.
 ## Syntax
 
 ```js
-addAll(requests);
+addAll(requests)
 ```
 
 ### Parameters

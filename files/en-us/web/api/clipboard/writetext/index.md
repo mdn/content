@@ -29,13 +29,13 @@ automatically to pages when they are in the active tab.
 ## Syntax
 
 ```js
-writeText(newClipText);
+writeText(newClipText)
 ```
 
 ### Parameters
 
 - `newClipText`
-  - : The {{domxref("DOMString")}} to be written to the clipboard.
+  - : The string to be written to the clipboard.
 
 ### Return value
 

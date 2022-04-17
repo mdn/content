@@ -29,8 +29,8 @@ examples.
 ## Syntax
 
 ```js
-groupCollapsed();
-groupCollapsed(label);
+groupCollapsed()
+groupCollapsed(label)
 ```
 
 ### Parameters

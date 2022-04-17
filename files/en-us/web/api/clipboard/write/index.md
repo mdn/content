@@ -33,7 +33,7 @@ automatically to pages when they are in the active tab.
 ## Syntax
 
 ```js
-write(data);
+write(data)
 ```
 
 ### Parameters

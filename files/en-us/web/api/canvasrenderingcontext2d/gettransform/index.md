@@ -19,7 +19,7 @@ the context.
 ## Syntax
 
 ```js
-getTransform();
+getTransform()
 ```
 
 ### Parameters

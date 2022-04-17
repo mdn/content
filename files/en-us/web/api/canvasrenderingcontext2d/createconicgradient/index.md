@@ -22,7 +22,7 @@ This method returns a conic {{domxref("CanvasGradient")}}. To be applied to a sh
 ## Syntax
 
 ```js
-createConicGradient(startAngle, x, y);
+createConicGradient(startAngle, x, y)
 ```
 
 ### Parameters

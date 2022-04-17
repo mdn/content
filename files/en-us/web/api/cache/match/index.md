@@ -24,7 +24,7 @@ to {{jsxref("undefined")}}.
 ## Syntax
 
 ```js
-match(request, options);
+match(request, options)
 ```
 
 ### Parameters

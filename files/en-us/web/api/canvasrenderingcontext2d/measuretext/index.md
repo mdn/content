@@ -19,7 +19,7 @@ measured text (such as its width, for example).
 ## Syntax
 
 ```js
-measureText(text);
+measureText(text)
 ```
 
 ### Parameters
