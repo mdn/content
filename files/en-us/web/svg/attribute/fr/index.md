@@ -14,7 +14,7 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("radialGradient")}}
 
-## Example
+## Example #1
 
 ```css hidden
 html, body, svg {
@@ -42,7 +42,7 @@ html, body, svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "480", "200")}}
+{{EmbedLiveSample("Example #1", "480", "200")}}
 
 ## Usage notes
 
@@ -63,10 +63,10 @@ html, body, svg {
   </tbody>
 </table>
 
-## Example
+## Example #2
 
 ```html
-<svg viewBox="0 0 120 120" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 120 120" width="165" height="165" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5"
         fx="0.35" fy="0.35" fr="5%">
@@ -86,7 +86,7 @@ html, body, svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Example #2", "200", "200")}}
 
 ## Specifications
 
