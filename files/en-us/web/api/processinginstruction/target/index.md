@@ -18,7 +18,7 @@ For example:
 <?xml version="1.0"?>
 ```
 
-is a processing instruction whose `target`is `xml`.
+is a processing instruction whose `target` is `xml`.
 
 ## Value
 
