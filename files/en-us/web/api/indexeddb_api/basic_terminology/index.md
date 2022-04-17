@@ -41,7 +41,7 @@ If you have assumptions from working with other types of databases, you might ge
 
   The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in [http://www.example.com/app/](https://www.example.com/app/) can retrieve data from [http://www.example.com/dir/](https://www.example.com/dir/), because they have the same origin, it cannot retrieve data from [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (different port) or <https://www.example.com/dir/> (different protocol), because they have different origins.
 
-  > **Note:** Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (see {{bug("1147821")}}.)
+  > **Note:** Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see {{bug("1147821")}}.)
 
 ### Limitations
 

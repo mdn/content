@@ -112,4 +112,4 @@ The `-install-global-extension` and `-install-global-theme` command line options
 
 ## See also
 
-- [Making Your Add-on Compatible with Firefox 4](https://blog.mozilla.com/addons/2010/11/11/making-add-on-compatible-firefox-4/) (blog post)
+- [Making Your Add-on Compatible with Firefox 4](https://blog.mozilla.org/addons/2010/11/11/making-add-on-compatible-firefox-4/) (blog post)

@@ -44,7 +44,7 @@ We could also be doing more development involving this approach very soon! In fa
 - Every page on the site should look great at a wide variety of resolutions, being built with responsive design in mind.
 - Future plans include exploring serving images based on user-agent.
 
-So far there is not much to see for mobile, since things are still in the formative stages of development, but you can always watch the new mozilla.org grow up [on GitHub](https://github.com/mozilla/bedrock). Subscribe to the [Mozilla Webdev](http://blog.mozilla.com/webdev/) blog for updates about our progress.
+So far there is not much to see for mobile, since things are still in the formative stages of development, but you can always watch the new mozilla.org grow up [on GitHub](https://github.com/mozilla/bedrock). Subscribe to the [Mozilla Webdev](https://blog.mozilla.org/webdev/) blog for updates about our progress.
 
 ## Summary
 
@@ -60,4 +60,4 @@ See the following articles for background and other approaches to developing for
 
 ## Original document information
 
-This article was originally published on 27 June 2011, on the Mozilla Webdev blog as "[Approaches to Mobile Web Development Part 4 – A Hybrid Approach](http://blog.mozilla.com/webdev/2011/06/27/approaches-to-mobile-web-development-part-4-%E2%80%93-a-hybrid-approach/)", by Jason Grlicky.
+This article was originally published on 27 June 2011, on the Mozilla Webdev blog as "[Approaches to Mobile Web Development Part 4 – A Hybrid Approach](https://blog.mozilla.org/webdev/2011/06/27/approaches-to-mobile-web-development-part-4-%E2%80%93-a-hybrid-approach/)", by Jason Grlicky.

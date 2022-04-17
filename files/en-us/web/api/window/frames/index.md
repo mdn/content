@@ -30,7 +30,7 @@ A list of frame objects. It is similar to an
   `window.frames[0]` is the same thing as
   `document.getElementsByTagName("iframe")[0].contentWindow`).
 - For more details about the returned value, refer to this [thread
-  on mozilla.dev.platform](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&ie=UTF-8&oe=utf-8&q=window.frames&pli=1).
+  on mozilla.dev.platform](https://groups.google.com/d/topic/mozilla.dev.platform/VijG80aFnU8?hl=en&pli=1).
 
 ## Examples
 

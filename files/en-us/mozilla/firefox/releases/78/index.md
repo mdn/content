@@ -67,7 +67,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 #### Service workers
 
-- [Extended Support Releases (ESR)](https://www.mozilla.org/en-US/firefox/organizations/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ({{bug(1547023)}}).
+- [Extended Support Releases (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ({{bug(1547023)}}).
 
 ### WebAssembly
 

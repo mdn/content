@@ -110,7 +110,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ## See also
 
-- [Firefox 21 Release Notes](https://www.mozilla.org/en-US/firefox/21.0/releasenotes/)
+- [Firefox 21 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/21.0/releasenotes/)
 - [Add-on Compatibility for Firefox 21](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
 
 ### Older versions

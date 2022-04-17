@@ -14,7 +14,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-[Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-US/firefox/3.5/releasenotes/) (_released June 30, 2009)_ introduces a number of new features, as well as additional and improved support for a wide variety of web standards.  This article offers an extensive list, with links to articles covering the major improvements.
+[Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/3.5/releasenotes/) (_released June 30, 2009)_ introduces a number of new features, as well as additional and improved support for a wide variety of web standards.  This article offers an extensive list, with links to articles covering the major improvements.
 
 ## New developer features in Firefox 3.5
 
@@ -189,7 +189,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 - In order to support dragging and dropping tabs between windows, the [`browser`](/en-US/docs/XUL/browser) widget now has a [`swapDocShells()`](/en-US/XUL/Method/SwapDocShells) method.
 - Added the [`level`](/en-US/docs/XUL/Attribute/panel.level) attribute to the [`panel`](/en-US/docs/XUL/panel) element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.
 - XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and`scrollWidth`properties.
-- [`keyset`](/en-US/docs/XUL/keyset)s now include a `disabled` attribute. 
+- [`keyset`](/en-US/docs/XUL/keyset)s now include a `disabled` attribute.
 - In addition, `keyset`s can now be removed using the node's [`removeChild()`](/en-US/docs/Web/API/Node/removeChild) method.
 - [`mozIStorageStatement`](/en-US/docs/mozIStorageStatement) had the `initialize()` method removed; consumers should use the [`createStatement()`](</en-US/docs/mozIStorageConnection#createStatement()>) method instead to get a new statement object.
 - The [Storage](/en-US/docs/Storage) API now offers support for asynchronous requests.
