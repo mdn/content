@@ -45,7 +45,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/button", "button")}}</td>
       <td>
         A push button with no default behavior displaying the value of the
-        <a href="#attr-value">value</a> attribute, empty by default.
+        <a href="#attr-value"><code>value</code></a> attribute, empty by default.
       </td>
       <td id="examplebutton">
         <pre class="brush: html hidden">
@@ -125,8 +125,8 @@ The available types are as follows:
       <td>{{HTMLElement("input/file", "file")}}</td>
       <td>
         A control that lets the user select a file. Use the
-        [accept](#attr-accept) attribute to define the
-        types of files that the control can select.
+        <a href="#attr-accept"><code>accept</code></a> attribute
+        to define the types of files that the control can select.
       </td>
       <td id="examplefile">
         <pre class="brush: html hidden">
@@ -152,9 +152,9 @@ The available types are as follows:
       <td>{{HTMLElement("input/image", "image")}}</td>
       <td>
         A graphical <code>submit</code> button. Displays an image defined by the
-        <code>src</code> attribute. The [alt](#attr-alt)
-        attribute displays if the image [src](#attr-src) is
-        missing.
+        <a href="#attr-src"><code>src</code></a> attribute. The
+        <a href="#attr-alt"><code>alt</code></a> attribute displays if the image
+        <code>src</code> is missing.
       </td>
       <td id="exampleimage">
         <pre class="brush: html hidden">
@@ -204,7 +204,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/radio", "radio")}}</td>
       <td>
         A radio button, allowing a single value to be selected out of multiple
-        choices with the same [name](#attr-name) value.
+        choices with the same <a href="#attr-name"><code>name</code></a> value.
       </td>
       <td id="exampleradio">
         <pre class="brush: html hidden">
@@ -218,9 +218,9 @@ The available types are as follows:
       <td>
         A control for entering a number whose exact value is not important.
         Displays as a range widget defaulting to the middle value. Used in
-        conjunction [min](#attr-min) and
-        [max](#attr-max) to define the range of acceptable
-        values.
+        conjunction <a href="#attr-min"><code>min</code></a> and
+        <a href="#attr-max"><code>max</code></a> to define the range of
+        acceptable values.
       </td>
       <td id="examplerange">
         <pre class="brush: html hidden">
