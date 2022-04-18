@@ -16,14 +16,14 @@ The **`entries()`** method of the {{domxref("FontFaceSet")}} interface returns a
 ## Syntax
 
 ```js
-FontFaceSet.entries()
+entries()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A new iterator object that contains an array of `[value, value]` for each element in the `CustomStateSet`, in insertion order.
 

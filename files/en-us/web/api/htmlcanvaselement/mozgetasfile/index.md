@@ -23,16 +23,17 @@ The non-standard, Firefox-specific the {{domxref("HTMLCanvasElement")}} method
 ## Syntax
 
 ```js
-canvas.mozGetAsFile(name, type);
+mozGetAsFile(name)
+mozGetAsFile(name, type)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString")}} indicating the file name to give the file representing
+  - : A string indicating the file name to give the file representing
     the image file in memory.
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} which specifies the image file format to use when
+  - : A string which specifies the image file format to use when
     creating the new image file. The default type is `image/png`. For other
     options, see our [Image file type
     and format guide](/en-US/docs/Web/Media/Formats/Image_types).

@@ -16,7 +16,7 @@ The **`add()`** method of the {{domxref("FontFaceSet")}} interface adds a new fo
 ## Syntax
 
 ```js
-FontFaceSet.add(font)
+add(font)
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ FontFaceSet.add(font)
 - `font`
   - : A {{domxref("FontFace")}} to be added to the set.
 
-### Return Value
+### Return value
 
 A new {{domxref("FontFaceSet")}}.
 

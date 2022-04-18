@@ -22,7 +22,7 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 ## Syntax
 
 ```js
-history.forward()
+forward()
 ```
 
 ## Examples

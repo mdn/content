@@ -19,10 +19,10 @@ that includes a text field.
 ## Syntax
 
 ```js
-element.select();
+select()
 ```
 
-## Example
+## Examples
 
 Click the button in this example to select all the text in the
 `<input>` element.

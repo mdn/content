@@ -21,8 +21,8 @@ to some user action.
 ## Syntax
 
 ```js
-history.replaceState(stateObj, unused)
-history.replaceState(stateObj, unused, url)
+replaceState(stateObj, unused)
+replaceState(stateObj, unused, url)
 ```
 
 ### Parameters

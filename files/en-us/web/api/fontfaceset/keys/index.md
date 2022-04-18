@@ -16,10 +16,10 @@ The **`keys()`** method of the {{domxref("FontFaceSet")}} interface is an alias 
 ## Syntax
 
 ```js
-FontFaceSet.keys()
+keys()
 ```
 
-### Return Value
+### Return value
 
 A new iterator object containing the values for each element in the given `FontFaceSet`, in insertion order.
 

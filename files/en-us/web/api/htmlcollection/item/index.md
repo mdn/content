@@ -1,5 +1,5 @@
 ---
-title: HTMLCollection.item
+title: HTMLCollection.item()
 slug: Web/API/HTMLCollection/item
 tags:
   - API
@@ -23,7 +23,7 @@ returns the node located at the specified offset into the collection.
 ## Syntax
 
 ```js
-var element = HTMLCollection.item(index)
+item(index)
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ The `item()` method returns a numbered element from an
 `HTMLCollection` as an array and to index it using array notation. See the
 [example](#example) below.
 
-## Example
+## Examples
 
 ```js
 var c = document.images;  // This is an HTMLCollection

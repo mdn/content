@@ -33,7 +33,7 @@ a delay while the image loads.
 ## Syntax
 
 ```js
-var promise = HTMLImageElement.decode();
+decode()
 ```
 
 ### Parameters

@@ -32,17 +32,17 @@ browser will be able to play media of a given MIME type.
 ## Syntax
 
 ```js
-canPlayResponse = audioOrVideo.canPlayType(mediaType);
+canPlayType(mediaType)
 ```
 
 ### Parameters
 
 - `mediaType`
-  - : A {{domxref("DOMString")}} containing the MIME type of the media.
+  - : A string containing the MIME type of the media.
 
 ### Return value
 
-A {{domxref("DOMString")}} indicating how likely it is that the media can be played.
+A string indicating how likely it is that the media can be played.
 The string will be one of the following values:
 
 - `probably`
@@ -54,7 +54,7 @@ The string will be one of the following values:
 - `""` (empty string)
   - : Media of the given type definitely can't be played on the current device.
 
-## Example
+## Examples
 
 ```js
 var obj = document.createElement('video');
