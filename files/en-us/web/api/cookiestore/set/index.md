@@ -16,7 +16,7 @@ The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie
 ## Syntax
 
 ```js
-set(name,value)
+set(name, value)
 set(options)
 ```
 
