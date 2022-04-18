@@ -28,7 +28,7 @@ Modification to the corresponding style property can be achieved using the
 ## Syntax
 
 ```js
-getRGBColorValue();
+getRGBColorValue()
 ```
 
 ### Return value

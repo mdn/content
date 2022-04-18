@@ -23,7 +23,7 @@ equality to be tested quickly.
 ## Syntax
 
 ```js
-equals(number);
+equals(number)
 ```
 
 ### Parameters

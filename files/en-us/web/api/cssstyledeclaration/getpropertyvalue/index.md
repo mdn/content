@@ -16,7 +16,7 @@ The **CSSStyleDeclaration.getPropertyValue()** method interface returns a
 ## Syntax
 
 ```js
-getPropertyValue(property);
+getPropertyValue(property)
 ```
 
 ### Parameters

@@ -21,7 +21,7 @@ members are value and the units.
 ## Syntax
 
 ```js
-parse(cssText);
+parse(cssText)
 ```
 
 ### Parameters

@@ -17,7 +17,7 @@ The **`findRule()`** method of the {{domxref("CSSKeyframeRule")}} interface find
 ## Syntax
 
 ```js
-findRule(select);
+findRule(select)
 ```
 
 ### Parameters

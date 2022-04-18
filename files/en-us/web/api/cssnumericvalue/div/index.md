@@ -21,7 +21,7 @@ supplied value.
 ## Syntax
 
 ```js
-div(number);
+div(number)
 ```
 
 ### Parameters

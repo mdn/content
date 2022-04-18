@@ -28,7 +28,7 @@ will be unchanged and a {{domxref("DOMException")}} will be raised.
 ## Syntax
 
 ```js
-setFloatValue(unitType, floatValue);
+setFloatValue(unitType, floatValue)
 ```
 
 ### Parameters

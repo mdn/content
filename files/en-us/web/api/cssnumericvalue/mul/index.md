@@ -21,7 +21,7 @@ the supplied value.
 ## Syntax
 
 ```js
-mul(number);
+mul(number)
 ```
 
 ### Parameters

@@ -20,7 +20,7 @@ use as part of a CSS selector.
 ## Syntax
 
 ```js
-escape(str);
+escape(str)
 ```
 
 ### Parameters

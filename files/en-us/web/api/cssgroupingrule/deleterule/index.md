@@ -18,7 +18,7 @@ rules.
 ## Syntax
 
 ```js
-deleteRule(index);
+deleteRule(index)
 ```
 
 ### Parameters

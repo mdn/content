@@ -27,7 +27,7 @@ object.
 ## Syntax
 
 ```js
-deleteRule(index);
+deleteRule(index)
 ```
 
 ### Parameters

@@ -28,7 +28,7 @@ value will be unchanged and a {{domxref("DOMException")}} will be raised.
 ## Syntax
 
 ```js
-setStringValue(stringType, stringValue);
+setStringValue(stringType, stringValue)
 ```
 
 ### Parameters

@@ -21,7 +21,7 @@ The **`toSum()`** method of the
 ## Syntax
 
 ```js
-toSum(units);
+toSum(units)
 ```
 
 ### Parameters

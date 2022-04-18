@@ -23,7 +23,7 @@ The **`store()`** method of the
 ## Syntax
 
 ```js
-store(Credential);
+store(Credentials)
 ```
 
 ### Parameters

@@ -25,10 +25,11 @@ range from zero to the number of items minus one.
 ## Syntax
 
 ```js
-nsIVariant dataTransfer.mozGetDataAt([type], index);
+mozGetDataAt(index)
+mozGetDataAt(type, index)
 ```
 
-### Arguments
+### Parameters
 
 - _type_
   - : A {{domxref("DOMString","string")}} representing the type of the drag data to
@@ -42,7 +43,7 @@ nsIVariant dataTransfer.mozGetDataAt([type], index);
   - : The data item requested. If the specified item does not exist, `null` is
     returned.
 
-## Example
+## Examples
 
 This example shows the use of the `mozGetDataAt()` method in a
 {{event("drop")}} event handler.

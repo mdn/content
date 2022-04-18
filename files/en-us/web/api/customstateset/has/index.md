@@ -16,7 +16,7 @@ The **`has()`** method of the {{domxref("CustomStateSet")}} interface returns a 
 ## Syntax
 
 ```js
-CustomStateSet.has(value)
+has(value)
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ CustomStateSet.has(value)
 - `value`
   - : The value to test for in the `CustomStateSet` object.
 
-### Return Value
+### Return value
 
 A {{jsxref("Boolean")}}, `true` if `value` exists in the `CustomStateSet`.
 

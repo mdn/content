@@ -21,7 +21,7 @@ arguments; the empty string is returned if the index is out of range and a
 ## Syntax
 
 ```js
-item(index);
+item(index)
 ```
 
 ### Parameters

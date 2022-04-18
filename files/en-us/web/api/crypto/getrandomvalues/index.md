@@ -31,7 +31,7 @@ Implementations are required to use a seed with enough entropy, like a system-le
 ## Syntax
 
 ```js
-getRandomValues(typedArray);
+getRandomValues(typedArray)
 ```
 
 ### Parameters

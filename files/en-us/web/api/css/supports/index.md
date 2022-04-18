@@ -18,8 +18,8 @@ indicating if the browser supports a given CSS feature, or not.
 ## Syntax
 
 ```js
-supports(propertyName, value);
-supports(supportCondition);
+supports(propertyName, value)
+supports(supportCondition)
 ```
 
 ### Parameters

@@ -27,7 +27,7 @@ shorthand property.
 ## Syntax
 
 ```js
-getPropertyCSSValue(property);
+getPropertyCSSValue(property)
 ```
 
 ### Parameters

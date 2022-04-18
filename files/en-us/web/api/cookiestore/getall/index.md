@@ -16,8 +16,8 @@ The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a 
 ## Syntax
 
 ```js
-getAll(name);
-getAll(options);
+getAll(name)
+getAll(options)
 ```
 
 ### Parameters
@@ -29,9 +29,9 @@ getAll(options);
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `url`
-      - : A {{domxref("USVString")}} with the URL of a cookie.
+      - : A string with the URL of a cookie.
 
 > **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 

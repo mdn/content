@@ -23,8 +23,8 @@ resolves with a new {{domxref("Credential")}} instance based on the provided opt
 ## Syntax
 
 ```js
-create();
-create(options);
+create()
+create(options)
 ```
 
 ### Parameters
