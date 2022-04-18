@@ -28,7 +28,6 @@ record — without having to explicitly look up the record's key.
 
 ```js
 delete(Key)
-delete(Key)
 ```
 
 ### Parameters
