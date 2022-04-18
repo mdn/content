@@ -24,6 +24,7 @@ advances to the immediate next position, based on its direction.
 ## Syntax
 
 ```js
+continue()
 continue(key)
 ```
 

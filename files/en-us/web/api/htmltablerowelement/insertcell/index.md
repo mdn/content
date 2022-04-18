@@ -27,6 +27,7 @@ reference to the cell.
 ## Syntax
 
 ```js
+insertCell()
 insertCell(index)
 ```
 

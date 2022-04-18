@@ -16,6 +16,7 @@ The **`decode()`** method of the {{domxref("ImageDecoder")}} interface enqueues 
 ## Syntax
 
 ```js
+decode()
 decode(options)
 ```
 

@@ -19,6 +19,7 @@ file.
 ## Syntax
 
 ```js
+getMetaData()
 getMetaData(param)
 ```
 

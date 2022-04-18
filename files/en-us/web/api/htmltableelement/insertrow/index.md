@@ -33,6 +33,7 @@ let row = specific_tbody.insertRow(index)
 ## Syntax
 
 ```js
+insertRow()
 insertRow(index)
 ```
 

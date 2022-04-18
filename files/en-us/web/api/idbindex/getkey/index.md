@@ -27,6 +27,7 @@ Note that this doesn't return the whole record as {{domxref("IDBIndex.get")}} do
 ## Syntax
 
 ```js
+getKey()
 getKey(key)
 ```
 

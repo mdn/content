@@ -28,6 +28,7 @@ with.
 ## Syntax
 
 ```js
+get()
 get(key)
 ```
 
