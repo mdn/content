@@ -148883,22 +148883,6 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Element/hatch": {
-    "modified": "2020-10-15T21:49:38.318Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "Sebastianz"
-    ]
-  },
-  "Web/SVG/Element/hatchpath": {
-    "modified": "2020-10-15T21:49:37.835Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
   "Web/SVG/Element/hkern": {
     "modified": "2020-10-15T21:11:23.391Z",
     "contributors": [
