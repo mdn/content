@@ -33,7 +33,6 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### C–I
 
-- {{CSSxRef("-moz-context-properties")}}
 - {{CSSxRef("-moz-float-edge")}}
 - {{CSSxRef("-moz-force-broken-image-icon")}}
 - {{CSSxRef("-moz-image-region")}}

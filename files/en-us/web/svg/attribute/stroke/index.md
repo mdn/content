@@ -113,5 +113,3 @@ html,body,svg { height:100% }
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** For information on using the `context-stroke` (and `context-fill`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.
