@@ -56,7 +56,7 @@ getContext(contextType, contextAttributes)
     > implementations under certain [conformance
     > rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
-- `contextAttributes`
+- `contextAttributes` {{optional_inline}}
 
   - : You can use several context attributes when creating your rendering context, for
     example:
