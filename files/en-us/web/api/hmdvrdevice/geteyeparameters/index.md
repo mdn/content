@@ -22,7 +22,7 @@ This includes field of view information, and more.
 ## Syntax
 
 ```js
-getEyeParameters('left')
+getEyeParameters(whichEye)
 ```
 
 ### Parameters

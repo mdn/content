@@ -23,6 +23,7 @@ The non-standard, Firefox-specific the {{domxref("HTMLCanvasElement")}} method
 ## Syntax
 
 ```js
+mozGetAsFile(name)
 mozGetAsFile(name, type)
 ```
 

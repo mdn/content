@@ -22,6 +22,7 @@ the element which will receive keyboard and similar events by default.
 ## Syntax
 
 ```js
+focus()
 focus(options)
 ```
 

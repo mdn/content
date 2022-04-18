@@ -19,6 +19,7 @@ canvas as image data. However, this non-standard and internal method has been re
 ## Syntax
 
 ```js
+mozFetchAsStream(callback)
 mozFetchAsStream(callback, type)
 ```
 

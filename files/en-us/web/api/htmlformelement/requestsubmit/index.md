@@ -22,6 +22,7 @@ that the form be submitted using a specific submit button.
 ## Syntax
 
 ```js
+requestSubmit()
 requestSubmit(submitter)
 ```
 

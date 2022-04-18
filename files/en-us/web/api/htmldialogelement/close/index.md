@@ -22,6 +22,7 @@ argument, updating the `returnValue` of the dialog.
 ## Syntax
 
 ```js
+close()
 close(returnValue)
 ```
 
