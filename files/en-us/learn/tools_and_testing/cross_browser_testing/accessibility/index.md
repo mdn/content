@@ -65,7 +65,7 @@ That said, this article will cover cross browser and testing issues surrounding 
 
 > **Note:** Like many things in web development, accessibility isn't about 100% success or not; 100% accessibility is pretty much impossible to achieve for all content, especially as sites get more complex. Instead, it is more about making a reasonable effort to make as much of your content accessible to as many people as possible via defensive coding and sticking to best practices.
 
-## Common accessibility issues tim
+## Common accessibility issues
 
 In this section we'll detail some of the main issues that arise around web accessibility, connected with specific technologies, along with best practices to follow, and some quick tests you can do to see if your sites are going in the right direction.
 
