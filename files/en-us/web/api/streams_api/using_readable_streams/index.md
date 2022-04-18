@@ -103,9 +103,12 @@ fetch('./tortoise.png')
       }
     })
   })
+  // Create a new response out of the stream
   .then(stream => new Response(stream))
+  // Create an object URL for the response
   .then(response => response.blob())
   .then(blob => URL.createObjectURL(blob))
+  // Update image
   .then(url => console.log(image.src = url))
   .catch(err => console.error(err));
 ```
@@ -189,23 +192,29 @@ The first object can contain up to five members, only the first of which is requ
 Looking at our simple example code again, you can see that our `ReadableStream()` constructor only includes a single method — `start()`, which serves to read all the data out of our fetch stream.
 
 ```js
-return new ReadableStream({
-  start(controller) {
-    return pump();
-    function pump() {
-      return reader.read().then(({ done, value }) => {
-        // When no more data needs to be consumed, close the stream
-        if (done) {
-          controller.close();
-          return;
-        }
-        // Enqueue the next data chunk into our target stream
-        controller.enqueue(value);
+// Fetch the original image
+fetch('./tortoise.png')
+  // Retrieve its body as ReadableStream
+  .then(response => {
+    const reader = response.body.getReader();
+    return new ReadableStream({
+      start(controller) {
         return pump();
-      });
-    }
-  }
-})
+        function pump() {
+          return reader.read().then(({ done, value }) => {
+            // When no more data needs to be consumed, close the stream
+            if (done) {
+              controller.close();
+              return;
+            }
+            // Enqueue the next data chunk into our target stream
+            controller.enqueue(value);
+            return pump();
+          });
+        }
+      }
+    })
+  });
 ```
 
 ### ReadableStream controllers
