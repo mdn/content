@@ -29,6 +29,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 
   - {{cssxref("transform")}}
   - {{cssxref("filter")}}
+  - {{cssxref("backdrop-filter")}}
   - {{cssxref("perspective")}}
   - {{cssxref("clip-path")}}
   - {{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}
