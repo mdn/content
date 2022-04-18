@@ -31,7 +31,7 @@ Several major runtime optimizations such as TraceMonkey (Firefox 3.5), JägerMon
 
 Besides the above implementations, there are other popular JavaScript engines such as:-
 
-- Google's [V8](https://v8.dev/), which is used in the Google Chrome browser and recent versions of Opera browser. This is also the engine used by [Node.js](http://nodejs.org).
+- Google's [V8](https://v8.dev/), which is used in the Google Chrome browser and recent versions of Opera browser. This is also the engine used by [Node.js](https://nodejs.org).
 - The [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) used in some WebKit browsers such as Apple Safari.
 - [Carakan](https://my.opera.com/ODIN/blog/carakan-faq) in old versions of Opera.
 - The [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) engine used in Internet Explorer (although the language it implements is formally called "JScript" in order to avoid trademark issues).
