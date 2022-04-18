@@ -17,7 +17,7 @@ The **`EyeDropper.prototype.open()`** method starts the eyedropper mode, returni
 
 ```js
 open()
-open( signal: abortControllersignal )
+open( options )
 ```
 
 ### Parameters
