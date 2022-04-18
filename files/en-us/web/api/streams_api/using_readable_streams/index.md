@@ -80,28 +80,39 @@ Also note that the previous example can be reduced by one step, as `response.bod
 Now you've got your reader attached, you can read data chunks out of the stream using the {{domxref("ReadableStreamDefaultReader.read()")}} method. This reads one chunk out of the stream, which you can then do anything you like with. For example, our Simple stream pump example goes on to enqueue each chunk in a new, custom `ReadableStream` (we will find more about this in the next section), then create a new {{domxref("Response")}} out of it, consume it as a {{domxref("Blob")}}, create an object URL out of that blob using {{domxref("URL.createObjectURL()")}}, and then display it on screen in an {{htmlelement("img")}} element, effectively creating a copy of the image we originally fetched.
 
 ```js
-return new ReadableStream({
-  start(controller) {
-    return pump();
-    function pump() {
-      return reader.read().then(({ done, value }) => {
-        // When no more data needs to be consumed, close the stream
+fetch('./tortoise.png')
+// Retrieve its body as ReadableStream
+.then(response => response.body)
+.then(rs => {
+  const reader = rs.getReader();
+  return new ReadableStream({
+    async start(controller) {
+      while (true) {
+        const { done, value } = await reader.read();
+
+        // When no more data needs to be consumed, break the reading
         if (done) {
-          controller.close();
-          return;
+          break;
         }
+
         // Enqueue the next data chunk into our target stream
         controller.enqueue(value);
-        return pump();
-      });
+      }
+
+      // Close the stream
+      controller.close();
+      reader.releaseLock();
     }
-  }
+  })
 })
-  .then(stream => new Response(stream))
-  .then(response => response.blob())
-  .then(blob => URL.createObjectURL(blob))
-  .then(url => console.log(image.src = url))
-  .catch(err => console.error(err));
+// Create a new response out of the stream
+.then(rs => new Response(rs))
+// Create an object URL for the response
+.then(response => response.blob())
+.then(blob => URL.createObjectURL(blob))
+// Update image
+.then(url => image.src = url)
+.catch(console.error);
 ```
 
 Let's look in detail at how `read()` is used. In the `pump()` function seen above we first invoke `read()`, which returns a promise containing a results object — this has the results of our read in it, in the form `{ done, value }`:
