@@ -82,7 +82,7 @@ sprite to the canvas. A sprite sheet is an image containing multiple smaller ima
 each of which you want to be able to render separately.
 
 ```js
-var canvas = document.getElementById('myCanvas'),
+const canvas = document.getElementById('myCanvas'),
 ctx = canvas.getContext('2d'),
 image = new Image();
 
