@@ -110,7 +110,7 @@ For the tech folks, let's dig into the APIs the Web brings to the table that cat
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
   - : A powerful data storage API for maintaining user data on their own computer or device. A great way to save game state and other information locally so it doesn't have to be downloaded every time it's needed. Also useful to help make your game playable even when the user isn't connected to the Web (such as when they're stuck on an airplane for hours on end).
 - [JavaScript](/en-US/docs/Web/JavaScript)
-  - : JavaScript, the programming language used on the Web, is blazing fast in modern browsers and getting faster all the time. Use its power to write the code for your game, or look at using technologies like [Emscripten](https://github.com/kripken/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/) to easily port your existing games.
+  - : JavaScript, the programming language used on the Web, is blazing fast in modern browsers and getting faster all the time. Use its power to write the code for your game, or look at using technologies like [Emscripten](https://github.com/emscripten-core/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/) to easily port your existing games.
 - [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
   - : The Pointer Lock API lets you lock the mouse or other pointing device within your game's interface so that instead of absolute cursor positioning you receive coordinate deltas that give you more precise measurements of what the user is doing, and prevent the user from accidentally sending their input somewhere else, thereby missing important action.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)

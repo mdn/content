@@ -65,7 +65,7 @@ That said, this article will cover cross browser and testing issues surrounding 
 
 > **Note:** Like many things in web development, accessibility isn't about 100% success or not; 100% accessibility is pretty much impossible to achieve for all content, especially as sites get more complex. Instead, it is more about making a reasonable effort to make as much of your content accessible to as many people as possible via defensive coding and sticking to best practices.
 
-## Common accessibility issues
+## Common accessibility issues tim
 
 In this section we'll detail some of the main issues that arise around web accessibility, connected with specific technologies, along with best practices to follow, and some quick tests you can do to see if your sites are going in the right direction.
 
@@ -298,8 +298,8 @@ Let's look at an example, using Wave.
 
 [Deque's aXe tool](https://www.deque.com/products/axe/) goes a bit further than the auditing tools we mentioned above. Like the others, it checks pages and returns accessibility errors. Its most immediately useful form is probably the browser extensions:
 
-- [aXe for Chrome](https://bitly.com/aXe-Chrome)
-- [aXe for Firefox](https://bit.ly/aXe-Firefox)
+- [aXe for Chrome](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- [aXe for Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 
 These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) example. We got the following results:
 
