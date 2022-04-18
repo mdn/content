@@ -120,10 +120,6 @@ Events have three functions:
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example listens for the context menu to be shown over a link, then updates the `openLabelledId` menu item with the link's hostname:
@@ -147,3 +143,7 @@ browser.menus.onShown.addListener(info => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
