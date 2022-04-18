@@ -18,7 +18,7 @@ of the media, if the media is already in a paused state this method will have no
 ## Syntax
 
 ```js
-HTMLMediaElement.pause()
+pause()
 ```
 
 ### Parameters

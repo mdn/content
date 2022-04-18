@@ -21,7 +21,7 @@ the directory.
 ## Syntax
 
 ```js
-directoryReader = FileSystemDirectoryEntry.createReader();
+createReader()
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ None.
 A {{domxref("FileSystemDirectoryReader")}} object which can be used to read the
 directory's entries.
 
-## Example
+## Examples
 
 This example creates a method called `readDirectory()`, which fetches all of
 the entries in the specified {{domxref("FileSystemDirectoryEntry")}} and returns them in

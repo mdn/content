@@ -41,14 +41,14 @@ settle.
 ## Syntax
 
 ```js
-extendableEvent.waitUntil(promise);
+waitUntil(promise)
 ```
 
 ### Parameters
 
 A {{jsxref("Promise")}}.
 
-## Example
+## Examples
 
 Using `waitUntil()` within a service worker's `install` event:
 

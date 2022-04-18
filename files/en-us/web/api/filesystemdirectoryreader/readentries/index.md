@@ -23,8 +23,8 @@ Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which rep
 ## Syntax
 
 ```js
-readEntries(successCallback);
-readEntries(successCallback, errorCallback);
+readEntries(successCallback)
+readEntries(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ readEntries(successCallback, errorCallback);
 
 {{jsxref("undefined")}}
 
-## Example
+## Examples
 
 See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#example) for example code that uses this method.
 

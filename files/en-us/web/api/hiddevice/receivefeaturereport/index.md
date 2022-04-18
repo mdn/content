@@ -18,7 +18,7 @@ The `reportId` for each of the report formats that this device supports can be r
 ## Syntax
 
 ```js
-HIDDevice.receiveFeatureReport(reportId);
+receiveFeatureReport(reportId)
 ```
 
 ### Parameters

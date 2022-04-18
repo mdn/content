@@ -23,7 +23,7 @@ an array of the names of the files that were selected by the user on an HTML
 ## Syntax
 
 ```js
-inputElement.mozGetFileNameArray(aLength, aFileNames);
+mozGetFileNameArray(aLength, aFileNames)
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ inputElement.mozGetFileNameArray(aLength, aFileNames);
 - `aFileNames`
   - : Is an array into which the file names are placed.
 
-## Example
+## Examples
 
 ```js
 var numFiles = 0;

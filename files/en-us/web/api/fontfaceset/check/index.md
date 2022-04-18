@@ -18,11 +18,11 @@ fonts in the given font list have been loaded and are available.
 ## Syntax
 
 ```js
-aFontFaceSet.check(font);
-aFontFaceSet.check(font, text);
+check(font)
+check(font, text)
 ```
 
-### Returns
+### Return value
 
 A {{jsxref("Boolean")}} value that is `true` if the font list is available.
 

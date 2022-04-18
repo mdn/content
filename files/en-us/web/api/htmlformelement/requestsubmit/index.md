@@ -22,7 +22,7 @@ that the form be submitted using a specific submit button.
 ## Syntax
 
 ```js
-htmlFormElement.requestSubmit(submitter);
+requestSubmit(submitter)
 ```
 
 ### Parameters

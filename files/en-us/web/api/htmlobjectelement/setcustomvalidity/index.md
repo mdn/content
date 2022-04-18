@@ -1,5 +1,5 @@
 ---
-title: HTMLObjectElement.setCustomValidity
+title: HTMLObjectElement.setCustomValidity()
 slug: Web/API/HTMLObjectElement/setCustomValidity
 tags:
   - API
@@ -20,7 +20,7 @@ element.
 ## Syntax
 
 ```js
-HTMLObjectElement.setCustomValidity(message);
+setCustomValidity(message)
 ```
 
 ### Parameters

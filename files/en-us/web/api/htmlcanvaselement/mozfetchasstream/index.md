@@ -19,7 +19,7 @@ canvas as image data. However, this non-standard and internal method has been re
 ## Syntax
 
 ```js
-void canvas.mozFetchAsStream(callback, type);
+mozFetchAsStream(callback, type)
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ void canvas.mozFetchAsStream(callback, type);
 - `callback`
   - : An `nsIInputStreamCallback`.
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} indicating the image format. The default type is
+  - : A string indicating the image format. The default type is
     `image/png`.
 
 ### Return value

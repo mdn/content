@@ -20,7 +20,7 @@ element, and then returns `false`.
 ## Syntax
 
 ```js
-var result = selectElt.checkValidity();
+checkValidity()
 ```
 
 ## Specifications

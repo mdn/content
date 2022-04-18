@@ -28,7 +28,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 ## Syntax
 
 ```js
-myHeaders.append(name, value);
+append(name, value)
 ```
 
 ### Parameters
@@ -38,11 +38,11 @@ myHeaders.append(name, value);
 - `value`
   - : The value of the HTTP header you want to add.
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 

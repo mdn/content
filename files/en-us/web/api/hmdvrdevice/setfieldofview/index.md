@@ -20,7 +20,7 @@ The **`setFieldOfView()`** method of the {{domxref("HMDVRDevice")}} interface ca
 ## Syntax
 
 ```js
-HMDVRDevice.setFieldOfView(leftFOV,rightFOV,zNear,zFar);
+setFieldOfView(leftFOV, rightFOV, zNear, zFar)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ HMDVRDevice.setFieldOfView(leftFOV,rightFOV,zNear,zFar);
 - `zFar {{optional_inline}}`
   - : The distance from the eyes of the farthest point of the view. The furthest away things can be and still be in the view. If not specified, the default is used — `10000.0`.
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 

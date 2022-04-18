@@ -40,7 +40,7 @@ happens.
 ## Syntax
 
 ```js
-seekToNextFrame();
+seekToNextFrame()
 ```
 
 ### Return value
