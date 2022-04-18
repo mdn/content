@@ -30,9 +30,7 @@ getMetaData(param)
     `true` means the metadata is expected and where `false` means it
     is not expected. Note that if the key is `undefined`, it is considered as
     if it were `true`. The following metadata are supported:
-
-<!---->
-
+    
 - `size` : will provide the size of the file
 - `lastModified` : will provide the date when the file was last modified
 
