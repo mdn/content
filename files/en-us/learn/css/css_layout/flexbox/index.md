@@ -355,6 +355,11 @@ We've covered a lot in this article, but can you remember the most important inf
 
 That concludes our tour of the basics of Flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: CSS Grids.
 
+## See also
+
+- [CSS-Tricks Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — an article explaining everything about Flexbox in a visually appealing way
+- [Flexbox Froggy](https://flexboxfroggy.com/) — an educational game to learn and better understand the basics of Flexbox
+
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 ## In this module

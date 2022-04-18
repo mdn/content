@@ -616,6 +616,8 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 
 - [CSS Grid guides](/en-US/docs/Web/CSS/CSS_Grid_Layout#guides)
 - [CSS Grid Inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [CSS-Tricks Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) — an article explaining everything about Grid in a visually appealing way
+- [Grid Garden](https://cssgridgarden.com/) — an educational game to learn and better understand the basics of Grid
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
