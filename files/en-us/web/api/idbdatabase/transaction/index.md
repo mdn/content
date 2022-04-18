@@ -23,9 +23,9 @@ object store.
 ## Syntax
 
 ```js
-IDBDatabase.transaction(storeNames);
-IDBDatabase.transaction(storeNames, mode);
-IDBDatabase.transaction(storeNames, mode, options);
+transaction(storeNames)
+transaction(storeNames, mode)
+transaction(storeNames, mode, options)
 ```
 
 ### Parameters
@@ -115,7 +115,7 @@ An {{domxref("IDBTransaction")}} object.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the function was called with an empty list of store names.
 
-## Example
+## Examples
 
 In this example we open a database connection, then use transaction() to open a
 transaction on the database. For a complete example, see our

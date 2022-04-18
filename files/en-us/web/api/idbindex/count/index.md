@@ -23,8 +23,8 @@ returns the number of records within a key range.
 ## Syntax
 
 ```js
-var request = myIndex.count();
-var request = myIndex.count(key);
+count()
+count(key)
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on

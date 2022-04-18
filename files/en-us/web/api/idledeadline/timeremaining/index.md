@@ -27,7 +27,7 @@ should return control to the user agent's event loop.
 ## Syntax
 
 ```js
-timeRemaining = IdleDeadline.timeRemaining();
+timeRemaining()
 ```
 
 ### Return value
@@ -39,7 +39,7 @@ idle period. The value is ideally accurate to within about 5 microseconds.
 If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
   "didTimeout")}} property is true, this method returns zero.
 
-## Example
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
 in the article [Cooperative Scheduling

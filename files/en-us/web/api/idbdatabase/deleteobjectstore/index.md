@@ -26,7 +26,7 @@ transaction.
 ## Syntax
 
 ```js
-dbInstance.deleteObjectStore(name);
+deleteObjectStore(name)
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ dbInstance.deleteObjectStore(name);
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown when trying to delete an object store that does not exist.
 
-## Example
+## Examples
 
 ```js
 var dbName = "sampleDB";

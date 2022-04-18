@@ -12,13 +12,13 @@ browser-compat: api.Location.toString
 {{ApiRef("Location")}}
 
 The **`toString()`** {{Glossary("stringifier")}} method of the
-{{domxref("Location")}} interface returns a {{domxref("USVString")}} containing the
+{{domxref("Location")}} interface returns a string containing the
 whole URL. It is a read-only version of {{domxref("Location.href")}}.
 
 ## Syntax
 
 ```js
-string = object.toString();
+toString()
 ```
 
 ## Examples

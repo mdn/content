@@ -24,7 +24,7 @@ configuration settings.
 ## Syntax
 
 ```js
-const settingsPromise = imageCapture.getPhotoSettings()
+getPhotoSettings()
 ```
 
 ### Return value
@@ -41,7 +41,7 @@ containing the following properties:
 - `redEyeReduction`: A boolean indicating whether the red-eye reduction
   should be used if it is available.
 
-## Example
+## Examples
 
 The following example, extracted from [Chrome's
 Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from

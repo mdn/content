@@ -25,8 +25,8 @@ of records in the store.
 ## Syntax
 
 ```js
-var request = ObjectStore.count();
-var request = ObjectStore.count(query);
+count()
+count(query)
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the specified key or key range is invalid.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then count
 the number of records in the store using `count()` — when the success handler

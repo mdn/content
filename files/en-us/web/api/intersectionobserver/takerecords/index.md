@@ -28,7 +28,7 @@ call to the observer's callback.
 ## Syntax
 
 ```js
-intersectionObserverEntries = intersectionObserver.takeRecords();
+takeRecords()
 ```
 
 ### Parameters

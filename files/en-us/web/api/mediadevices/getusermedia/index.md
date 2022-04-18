@@ -74,7 +74,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 ## Syntax
 
 ```js
-var promise = navigator.mediaDevices.getUserMedia(constraints);
+getUserMedia(constraints)
 ```
 
 ### Parameters

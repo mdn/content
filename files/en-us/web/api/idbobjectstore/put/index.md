@@ -31,8 +31,8 @@ record will be updated, instead of a new record being inserted.
 ## Syntax
 
 ```js
-let request = objectStore.put(item);
-let request = objectStore.put(item, key);
+put(item)
+put(item, key)
 ```
 
 ### Parameters
@@ -70,7 +70,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
 
-## Parameters
+### Parameters
 
 - value
   - : The value to be stored.
@@ -79,7 +79,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
     object store has a key generator (e.g. autoincrement) the key of the object must be
     passed in to update the object.
 
-## Example
+## Examples
 
 The following example requests a given record title; when that request is successful
 the `onsuccess` function gets the associated record from the

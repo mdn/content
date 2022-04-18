@@ -23,8 +23,8 @@ that resolves with a {{domxref("Blob")}} containing the data.
 ## Syntax
 
 ```js
-const blobPromise = imageCaptureObj.takePhoto()
-const blobPromise = imageCaptureObj.takePhoto(photoSettings)
+takePhoto()
+takePhoto(photoSettings)
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ const blobPromise = imageCaptureObj.takePhoto(photoSettings)
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}}.
 
-## Example
+## Examples
 
 This example is extracted from this [Simple
 Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by

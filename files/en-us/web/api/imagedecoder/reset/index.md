@@ -16,14 +16,14 @@ The **`reset()`** method of the {{domxref("ImageDecoder")}} interface resets all
 ## Syntax
 
 ```js
-ImageDecoder.reset()
+reset()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 

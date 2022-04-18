@@ -18,9 +18,9 @@ setting them as the `result` of the request object.
 ## Syntax
 
 ```js
-var allKeysRequest = IDBIndex.getAllKeys();
-var allKeysRequest = IDBIndex.getAllKeys(query);
-var allKeysRequest = IDBIndex.getAllKeys(query, count);
+getAllKeys()
+getAllKeys(query)
+getAllKeys(query, count)
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
 not between `0` and `2^32 - 1` included.
 
-## Example
+## Examples
 
 ```js
 var myIndex = objectStore.index('index');

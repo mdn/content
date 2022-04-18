@@ -21,7 +21,7 @@ element.
 ## Syntax
 
 ```js
-IntersectionObserver.unobserve(target);
+unobserve(target)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ IntersectionObserver.unobserve(target);
 
 `undefined`.
 
-## Example
+## Examples
 
 This snippet shows an observer being created, an element being observed, and then being
 unobserved.

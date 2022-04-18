@@ -22,7 +22,7 @@ The write operation is performed at the end of the file, regardless of the
 ## Syntax
 
 ```js
-var request = instanceOfLockedFile.append(data);
+append(data)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ var request = instanceOfLockedFile.append(data);
   - : The data to write into the file. It can be a string or an
     {{jsxref("ArrayBuffer")}}.
 
-### Return
+### Return value
 
 A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
 

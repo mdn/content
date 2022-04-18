@@ -20,10 +20,10 @@ nothing.
 ## Syntax
 
 ```js
-HTMLTableElement.deleteCaption()
+deleteCaption()
 ```
 
-## Example
+## Examples
 
 This example uses JavaScript to delete a table's caption.
 

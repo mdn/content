@@ -22,7 +22,7 @@ information.
 ## Syntax
 
 ```js
-location.reload();
+reload()
 ```
 
 ## location.reload() has no parameter
