@@ -23,7 +23,7 @@ range.
 ## Syntax
 
 ```js
-var isIncluded = myKeyRange.includes(key)
+includes(key)
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ This method may raise a {{domxref("DOMException")}} of the following type:
 | ------------------------------------------- | ------------------------------------- |
 | [`DataError`](/en-US/docs/Web/API/DOMError) | The supplied key was not a valid key. |
 
-## Example
+## Examples
 
 ```js
 var keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);

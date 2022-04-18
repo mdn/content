@@ -29,7 +29,7 @@ this way must have been created with the
 ## Syntax
 
 ```js
-event.initKeyEvent (type, bubbles, cancelable, viewArg,
+initKeyEvent (type, bubbles, cancelable, viewArg,
                     ctrlKeyArg, altKeyArg, shiftKeyArg, metaKeyArg,
                     keyCodeArg, charCodeArg)
 ```
@@ -37,7 +37,7 @@ event.initKeyEvent (type, bubbles, cancelable, viewArg,
 ### Parameters
 
 - _`type`_
-  - : Is a {{domxref("DOMString")}} representing the type of event.
+  - : Is a string representing the type of event.
 - _`bubbles`_
   - : Is a boolean value indicating whether the event should bubble up through the
     event chain or not (see [bubbles](/en-US/docs/Web/API/Event/bubbles)).
@@ -89,7 +89,7 @@ event.initKeyEvent (type, bubbles, cancelable, viewArg,
   - : Is a `unsigned long` representing the Unicode character associated with
     the depressed key otherwise `0`.
 
-## Example
+## Examples
 
 ```js
 var event = document.createEvent('KeyboardEvent'); // create a key event

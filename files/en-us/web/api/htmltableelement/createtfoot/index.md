@@ -25,14 +25,14 @@ method creates it, and then returns it.
 ## Syntax
 
 ```js
-table.createTFoot();
+createTFoot()
 ```
 
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}
 
-## Example
+## Examples
 
 ```js
 let myfoot = mytable.createTFoot();

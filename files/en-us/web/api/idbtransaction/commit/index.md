@@ -23,7 +23,7 @@ If it is called on a transaction that is not active, it throws an {{exception("I
 ## Syntax
 
 ```js
-transaction.commit();
+commit()
 ```
 
 ### Parameters

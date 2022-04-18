@@ -24,7 +24,7 @@ The reading operation starts at the position given by the
 ## Syntax
 
 ```js
-var request = instanceOfLockedFile.readAsArrayBuffer(size);
+readAsArrayBuffer(size)
 ```
 
 ### Parameters
@@ -32,7 +32,7 @@ var request = instanceOfLockedFile.readAsArrayBuffer(size);
 - `size`
   - : A number representing the number of bytes to read in the file.
 
-### Return
+### Return value
 
 A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
 In case of success, the request's `result` is an {{jsxref("ArrayBuffer")}}

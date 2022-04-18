@@ -27,7 +27,7 @@ transaction object, a different {{domxref("IDBObjectStore")}} instance is return
 ## Syntax
 
 ```js
-IDBTransaction.objectStore(name);
+objectStore(name)
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ An {{domxref("IDBObjectStore")}} object for accessing an object store.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the request was made on a source object that has been deleted or removed, or if the transaction has finished.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event

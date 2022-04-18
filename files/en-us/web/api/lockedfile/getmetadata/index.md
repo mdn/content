@@ -19,7 +19,7 @@ file.
 ## Syntax
 
 ```js
-var request = instanceOfLockedFile.getMetadata(param);
+getMetaData(param)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ var request = instanceOfLockedFile.getMetadata(param);
 - `size` : will provide the size of the file
 - `lastModified` : will provide the date when the file was last modified
 
-### Return
+### Return value
 
 A {{domxref("FileRequest")}} object. In case of success, the request's
 `result` is an object with the metadata requested through the param object.

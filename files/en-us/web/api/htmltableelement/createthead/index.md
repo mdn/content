@@ -25,14 +25,14 @@ method creates it, and then returns it.
 ## Syntax
 
 ```js
-table.createTHead();
+createTHead()
 ```
 
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}
 
-## Example
+## Examples
 
 ```js
 let myhead = mytable.createTHead();

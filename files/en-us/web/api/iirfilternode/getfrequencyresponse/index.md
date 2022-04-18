@@ -26,7 +26,7 @@ must be the same size as the array of input frequency values
 ## Syntax
 
 ```js
-IIRFilterNode.getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput);
+getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
 ### Parameters

@@ -35,7 +35,7 @@ Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 ## Syntax
 
 ```js
-var promise = navigator.mediaDevices.getDisplayMedia(constraints);
+getDisplayMedia(constraints)
 ```
 
 ### Parameters
@@ -106,7 +106,7 @@ details measures browsers are required to take in order to fully support
   windows that contain browsers, and to keep a close eye on what other content might be
   getting captured and shown to other users.
 
-## Example
+## Examples
 
 In the example below, a `startCapture()` method is created which initiates
 screen capture given a set of options specified by the `displayMediaOptions`

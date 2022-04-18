@@ -23,8 +23,8 @@ By default, it includes the lower endpoint value and is closed.
 ## Syntax
 
 ```js
-var myIDBKeyRange = IDBKeyRange.lowerBound(lower);
-var myIDBKeyRange = IDBKeyRange.lowerBound(lower, open);
+lowerBound(lower)
+lowerBound(lower, open)
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ This method may raise a {{domxref("DOMException")}} of the following type:
 | ----------- | ----------------------------------------------- |
 | `DataError` | The value parameter passed was not a valid key. |
 
-## Example
+## Examples
 
 The following example illustrates how you'd use a lower bound key range. Here we
 declare `keyRangeValue = IDBKeyRange.lowerBound("F", false);` — a range that

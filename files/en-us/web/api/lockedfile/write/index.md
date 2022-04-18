@@ -21,7 +21,7 @@ that position by the number of written bytes.
 ## Syntax
 
 ```js
-var request = instanceOfLockedFile.write(data);
+write(data)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ var request = instanceOfLockedFile.write(data);
   - : The data to write into the file. It can be a string or an
     {{jsxref("ArrayBuffer")}}.
 
-### Return
+### Return value
 
 A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
 

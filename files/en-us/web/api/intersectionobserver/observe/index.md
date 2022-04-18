@@ -31,7 +31,7 @@ be processed by a single call to the callback.
 ## Syntax
 
 ```js
-IntersectionObserver.observe(targetElement);
+observe(targetElement)
 ```
 
 ### Parameters

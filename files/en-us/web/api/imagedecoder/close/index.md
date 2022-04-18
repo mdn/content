@@ -16,14 +16,14 @@ The **`close()`** method of the {{domxref("ImageDecoder")}} interface ends all p
 ## Syntax
 
 ```js
-ImageDecoder.close()
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 {{jsxref('undefined')}}.
 

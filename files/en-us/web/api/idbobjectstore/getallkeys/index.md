@@ -32,9 +32,9 @@ method provides a cursor if the record exists, and no cursor if it does not.
 ## Syntax
 
 ```js
-var request = objectStore.getAllKeys();
-var request = objectStore.getAllKeys(query);
-var request = objectStore.getAllKeys(query, count);
+getAllKeys()
+getAllKeys(query)
+getAllKeys(query, count)
 ```
 
 ### Parameters

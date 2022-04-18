@@ -16,7 +16,7 @@ The **`getCapabilities()`** method of the {{domxref("InputDeviceInfo")}} interfa
 ## Syntax
 
 ```js
-InputDeviceInfo.getCapabilities();
+getCapabilities()
 ```
 
 ### Parameters
