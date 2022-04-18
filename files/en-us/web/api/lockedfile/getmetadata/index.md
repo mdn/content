@@ -34,9 +34,9 @@ getMetaData(param)
 The following metadata are supported:
     
 - `size`
-  - : The size of the file
+  - : The size of the file.
 - `lastModified`
-  - : The date when the file was last modified
+  - : The date when the file was last modified.
 
 ### Return value
 
