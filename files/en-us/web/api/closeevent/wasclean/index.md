@@ -14,7 +14,7 @@ The **`wasClean`** read-only property of the {{domxref("CloseEvent")}} interface
 
 ## Value
 
-A {{jsxref("Boolean")}}. True if the connection closed cleanly, false otherwise.
+A boolean value. True if the connection closed cleanly, false otherwise.
 
 ## Examples
 
