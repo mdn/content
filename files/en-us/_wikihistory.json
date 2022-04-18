@@ -90296,23 +90296,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/-moz-context-properties": {
-    "modified": "2020-10-15T21:54:13.148Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "wbamberg",
-      "ddbeck",
-      "chrisdavidmills",
-      "teoli",
-      "ExE-Boss",
-      "fscholz",
-      "mfluehr",
-      "robinwhittleton",
-      "Jonathan_Watt",
-      "sfoster"
-    ]
-  },
   "Web/CSS/-moz-float-edge": {
     "modified": "2020-10-15T21:15:25.650Z",
     "contributors": [
