@@ -298,8 +298,8 @@ Let's look at an example, using Wave.
 
 [Deque's aXe tool](https://www.deque.com/products/axe/) goes a bit further than the auditing tools we mentioned above. Like the others, it checks pages and returns accessibility errors. Its most immediately useful form is probably the browser extensions:
 
-- [aXe for Chrome](https://bitly.com/aXe-Chrome)
-- [aXe for Firefox](https://bit.ly/aXe-Firefox)
+- [aXe for Chrome](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- [aXe for Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 
 These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) example. We got the following results:
 

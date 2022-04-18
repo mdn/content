@@ -19,4 +19,4 @@ Make sure your extension follows [the regular web page accessibility principles]
 
 ## I'm interested in helping promote the fine accessibility features that Firefox provides, what can I do?
 
-Join the [Firefox Accessibility Advocates](http://accessfirefox.com/)
+Join the [Firefox Accessibility Advocates](http://www.accessfirefox.com/)
