@@ -178,36 +178,36 @@ This can be seen in the below example (thanks to [CSS Tricks](https://css-tricks
 So in this case the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
 
 ```js
-  var overall = document.querySelector('input[id="EnchTbl"]');
-  var ingredients = document.querySelectorAll('ul input');
+const overall = document.querySelector('#enchantment');
+const ingredients = document.querySelectorAll('ul input');
 
-  overall.addEventListener('click', function(e) {
-    e.preventDefault();
-  });
+overall.addEventListener('click', (e) => {
+  e.preventDefault();
+});
 
-  for(var i = 0; i < ingredients.length; i++) {
-    ingredients[i].addEventListener('click', updateDisplay);
-  }
+for(const ingredient of ingredients) {
+  ingredient.addEventListener('click', updateDisplay);
+}
 
-  function updateDisplay() {
-    var checkedCount = 0;
-    for(var i = 0; i < ingredients.length; i++) {
-      if(ingredients[i].checked) {
-        checkedCount++;
-      }
-    }
-
-    if(checkedCount === 0) {
-      overall.checked = false;
-      overall.indeterminate = false;
-    } else if(checkedCount === ingredients.length) {
-      overall.checked = true;
-      overall.indeterminate = false;
-    } else {
-      overall.checked = false;
-      overall.indeterminate = true;
+function updateDisplay() {
+  let checkedCount = 0;
+  for(const ingredient of ingredients) {
+    if(ingredient.checked) {
+      checkedCount++;
     }
   }
+
+  if(checkedCount === 0) {
+    overall.checked = false;
+    overall.indeterminate = false;
+  } else if(checkedCount === ingredients.length) {
+    overall.checked = true;
+    overall.indeterminate = false;
+  } else {
+    overall.checked = false;
+    overall.indeterminate = true;
+  }
+}
 ```
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
@@ -291,8 +291,8 @@ legend {
 ### JavaScript
 
 ```js
-var otherCheckbox = document.querySelector('input[value="other"]');
-var otherText = document.querySelector('input[id="otherValue"]');
+const otherCheckbox = document.querySelector('#other');
+const otherText = document.querySelector('#otherValue');
 otherText.style.visibility = 'hidden';
 
 otherCheckbox.addEventListener('change', () => {
