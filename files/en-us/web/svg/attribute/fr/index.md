@@ -24,7 +24,7 @@ html, body, svg {
 
 ### Changing the value of `fr`
 
-The following example presents two circles, the first one has `fr` set to `5%` while the other circle has `fr` equal to `25%`.
+The following example presents two circles: the first one has `fr` set to `5%` while the other circle has `fr` set to `25%`.
 
 ```html
 <svg viewBox="0 0 480 200" width="420" height="160" xmlns="http://www.w3.org/2000/svg">
