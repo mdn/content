@@ -28,7 +28,7 @@ Example data types are `text/plain` and `text/uri-list`.
 setData(format, data)
 ```
 
-### Arguments
+### Parameters
 
 - _format_
   - : A string representing the type of the drag data to add to the

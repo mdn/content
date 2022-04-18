@@ -26,7 +26,7 @@ dragged).
 addElement(el)
 ```
 
-### Arguments
+### Parameters
 
 - _el_
   - : The {{domxref("Element")}} to set as the drag source.

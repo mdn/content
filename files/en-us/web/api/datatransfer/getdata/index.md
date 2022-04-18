@@ -24,7 +24,7 @@ Example data types are `text/plain` and `text/uri-list`.
 getData(format)
 ```
 
-### Arguments
+### Parameters
 
 - `format`
   - : A string representing the type of data to retrieve.

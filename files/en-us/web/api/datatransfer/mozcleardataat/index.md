@@ -35,7 +35,7 @@ mozClearDataAt(index)
 mozClearDataAt(type, index)
 ```
 
-### Arguments
+### Parameters
 
 - _type_
   - : A {{domxref("DOMString","string")}} representing the type of the drag data to remove

@@ -26,7 +26,7 @@ in the range from 0 to the number of items minus one, an empty string list is re
 mozTypesAt(index)
 ```
 
-### Arguments
+### Parameters
 
 - _index_
   - : A `unsigned long` that is the index of the data for which to retrieve the
