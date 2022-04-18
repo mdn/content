@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.16.tgz#10c53a148d1985704cb9c507f4d4f5923c6c4307"
   integrity sha512-bqXpkAfQgSD1jUNnn+kKtaHDDMPFz2kij4C71euV4fBv+YCmzkB8TKIoSuUHEdjkE0s55WoQ2OZk/ullmbiUOA==
 
-"@mdn/yari@0.11.4":
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.11.4.tgz#6e012577bf5baf98e08413fd5b402541cd48a749"
-  integrity sha512-MslC63kTrL/JfCY64SXvbwJ5bge8zHgICr94rbGNsCKPvoD28bWkBO/7eWfYllX7CcvxRB6IvfVLlmpV0yPnGw==
+"@mdn/yari@0.11.5":
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.11.5.tgz#b2279e47e328ab670fd3e61bf9b64ce25d172664"
+  integrity sha512-aC8QQVRd0KRI38KPyr1sTDAoWdCdCRO312k1vwZb/z1USWL3zS0Njo//d0mJxNM+dBULhHO/NdIUfAsghPVDYA==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -86,7 +86,7 @@
     cookie "0.5.0"
     cookie-parser "1.4.6"
     cssesc "^3.0.0"
-    dayjs "1.11.1"
+    dayjs "1.11.0"
     dotenv "14.3.0"
     ejs "3.1.6"
     express "4.17.3"
@@ -100,7 +100,7 @@
     hast-util-is-element "^1.1.0"
     hast-util-to-html "^7.1.3"
     hast-util-to-text "^2.0.1"
-    html-react-parser "^1.4.11"
+    html-react-parser "^1.4.10"
     http-proxy-middleware "2.0.4"
     image-size "1.0.1"
     image-type "4.1.0"
@@ -1127,10 +1127,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-dayjs@1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.1.tgz#90b33a3dda3417258d48ad2771b415def6545eb0"
-  integrity sha512-ER7EjqVAMkRRsxNCC5YqJ9d9VQYuWdGt7aiH2qA5R5wt8ZmWaP2dLUSIK6y/kVzLMlmh1Tvu5xUf4M/wdGJ5KA==
+dayjs@1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.0.tgz#009bf7ef2e2ea2d5db2e6583d2d39a4b5061e805"
+  integrity sha512-JLC809s6Y948/FuCZPm5IX8rRhQwOiyMb2TfVVQEixG7P8Lm/gt5S7yoQZmC8x1UehI9Pb7sksEt4xx14m+7Ug==
 
 debug@2.6.9:
   version "2.6.9"
@@ -2268,7 +2268,7 @@ html-dom-parser@1.2.0:
     domhandler "4.3.1"
     htmlparser2 "7.2.0"
 
-html-react-parser@^1.4.11:
+html-react-parser@^1.4.10:
   version "1.4.11"
   resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-1.4.11.tgz#9b2a959d11c651b178f06ee03dd92972ef2b8a77"
   integrity sha512-NDSz8MS89I286N7FzNScBtCRBs6MU7w72k+jWk4dBqcTgTrCQHHrIUlryJB9U5MJuKhq5/CFGz0JPPYS6OnjZw==
