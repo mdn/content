@@ -106,7 +106,7 @@ function display_size_data(){
 
   var list = performance.getEntriesByType("resource");
   if (list === undefined) {
-    console.log("= Display Size Data: performance.getEntriesByType() is  NOT supported");
+    console.log("= Display Size Data: performance.getEntriesByType() is NOT supported");
     return;
   }
 

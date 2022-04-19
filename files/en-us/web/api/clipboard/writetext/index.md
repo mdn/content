@@ -69,4 +69,4 @@ navigator.clipboard.writeText("<empty clipboard>").then(function() {
 - [Async Clipboard API demo on
   Glitch](https://async-clipboard-api.glitch.me/)
 - [Image support for Async
-  Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+  Clipboard article](https://web.dev/async-clipboard/)

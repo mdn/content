@@ -132,6 +132,6 @@ Access to Screen Wake Lock API is controlled by [Feature Policy](/en-US/docs/Web
 
 ## See also
 
-- [An introductory article on the Screen Wake Lock API](https://web.dev/wakelock/)
+- [An introductory article on the Screen Wake Lock API](https://web.dev/wake-lock/)
 - [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}

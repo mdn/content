@@ -64,4 +64,4 @@ This snippet fetches the text from the clipboard and appends it to the first ele
 ## See also
 
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
