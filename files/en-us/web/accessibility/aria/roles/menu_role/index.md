@@ -11,15 +11,15 @@ tags:
   - composite widget role
 ---
 
-The `menu` role is a type of widget that offers a list of choices to the user.
+The `menu` role is a type of composite widget that offers a list of choices to the user.
 
 ## Description
 
-A `menu` is often a group of common actions or functions that the user can invoke. The `menu` role is appropriate when a list of menu items is presented in a manner similar to a menu on a desktop application. Submenus, also known as pop-up menus, also have the role `menu`.
+A `menu` is often represents a grouping of common actions or functions that the user can invoke. The `menu` role is appropriate when a list of menu items is presented in a manner similar to a menu on a desktop application. Submenus, also known as pop-up menus, also have the role `menu`.
 
-A `menu` widget is usually opened, or made visible, by activating a menu button, choosing an item in a menu that opens a sub menu, or by invoking a command, such as <kbd>Shift + F10</kbd> in Windows which opens a context specific menu. 
+A `menu` widget is usually opened, or made visible, by activating a menu button, choosing an item in a menu that opens a submenu, or by invoking a command, such as <kbd>Shift + F10</kbd> in Windows which opens a context specific menu. 
 
-When a user activates a choice in a menu, the menu usually closes. If the menu choice action opens a submenu, the menu remains open as the submenu is opened. 
+When a user activates a choice in a menu, the menu usually closes. If the menu choice action invokes a submenu, the menu will remain open and the submenu is displayed. 
 
 When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements. 
 
@@ -27,7 +27,7 @@ Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuite
 
 Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role, and separated by elements with role [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role). Neither `group` nor `separator` receive focus or are interactive. 
 
-If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menubutton or parent menubar item (or the context action that opened the menu). 
+If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menu button or parent menubar item (or the context action that opened the menu). 
 
 Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. Include `aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
 
@@ -44,7 +44,7 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 
   
 - {{HTMLAttrXref('tabindex')}} attribute
-  - : The `menu` container has tabindex set to -1 or 0 and each item in the menu has tabindex set to -1.
+  - : The `menu` container has `tabindex` set to `-1` or `0` and each item in the menu has `tabindex` set to `-1`.
 -  [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 
    - : Set to the ID of the focused item, if there is one.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 
@@ -59,7 +59,7 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - <kbd>Space</kdb> / <kbd>Enter</kdb>	
   - : If the item is a parent menu item, opens submenu and moves focus to first item in the submenu. Otherwise, activates the menu item, which loads new content and places focus on the heading that titles the content.
 - <kbd>Escape</kbd>	
-  - : When in a submenu, closes the submenu and moves focus to parent menubar item.
+  - : When in a submenu, closes the submenu and moves focus to parent menu or menubar item.
 - <kbd>Right Arrow</kdb>	
   - : Moves focus to the next item in the menubar. If focus is on the last item, moves focus to the first item. If in a submenu, if focus is on an item that does not have a submenu, closes the submenu and moves focus to next item in the menubar. Otherwise,opens submenu of newly focused menubar item, keeping focus on that parent menubar item.
 - <kbd>Left Arrow	</kdb>	
@@ -84,7 +84,7 @@ Below are two example menu implementations.
 ```html
 <div>
   <button id="menubutton" aria-haspopup="true" aria-controls="menu">
-    <img src="hamburger.svg" alt="Menu: Page Sections">
+    <img src="hamburger.svg" alt="Page Sections">
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
