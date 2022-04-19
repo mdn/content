@@ -35,7 +35,7 @@ The attribute node that was removed.
 - `NotFoundError` {{DOMxRef("DOMException")}}
   - : Thrown when the element's attribute list does not contain the attribute node.
 
-## Example
+## Examples
 
 ```js
 // Given: <div id="top" align="center" />

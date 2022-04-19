@@ -53,7 +53,7 @@ elementFromPoint(x, y)
 
 The topmost {{domxref("Element")}} object located at the specified coordinates.
 
-## Example
+## Examples
 
 This example creates two buttons which let you set the current color of the paragraph
 element located under the coordinates `(2, 2)`.

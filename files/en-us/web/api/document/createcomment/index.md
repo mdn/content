@@ -16,7 +16,7 @@ it.
 ## Syntax
 
 ```js
-CommentNode = document.createComment(data);
+createComment(data)
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ CommentNode = document.createComment(data);
 - _data_
   - : A string containing the data to be added to the Comment.
 
-## Example
+## Examples
 
 ```js
 var docu = new DOMParser().parseFromString('<xml></xml>',  'application/xml');

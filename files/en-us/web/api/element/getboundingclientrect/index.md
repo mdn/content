@@ -33,10 +33,10 @@ position relative to the [viewport](/en-US/docs/Glossary/Viewport).
 ## Syntax
 
 ```js
-domRect = element.getBoundingClientRect();
+getBoundingClientRect()
 ```
 
-### Value
+### Return value
 
 The returned value is a {{domxref("DOMRect")}} object which is the smallest rectangle
 which contains the entire element, including its padding and border-width. The

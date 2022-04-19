@@ -20,20 +20,20 @@ into the document via methods like {{domxref("Node.insertBefore()")}} or
 ## Syntax
 
 ```js
-var doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId);
+createDocumentType(qualifiedNameStr, publicId, systemId)
 ```
 
 ### Parameters
 
 - `qualifiedNameStr`
-  - : Is a {{domxref("DOMString")}} containing the qualified name, like
+  - : Is a string containing the qualified name, like
     `svg:svg`.
 - `publicId`
-  - : Is a {{domxref("DOMString")}} containing the `PUBLIC` identifier.
+  - : Is a string containing the `PUBLIC` identifier.
 - `systemId`
-  - : Is a {{domxref("DOMString")}} containing the `SYSTEM` identifiers.
+  - : Is a string containing the `SYSTEM` identifiers.
 
-## Example
+## Examples
 
 ```js
 var dt = document.implementation.createDocumentType('svg:svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd');

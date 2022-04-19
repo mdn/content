@@ -15,7 +15,7 @@ Returns the `Attr` node for the attribute with the given namespace and name.
 ## Syntax
 
 ```js
-attributeNode = element.getAttributeNodeNS(namespace, nodeName)
+getAttributeNodeNS(namespace, nodeName)
 ```
 
 - `attributeNode` is the node for specified attribute.

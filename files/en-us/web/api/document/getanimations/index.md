@@ -26,7 +26,7 @@ target elements are descendants of the document. This array includes [CSS Animat
 ## Syntax
 
 ```js
-getAnimations();
+getAnimations()
 ```
 
 ### Parameters

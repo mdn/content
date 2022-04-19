@@ -17,9 +17,9 @@ newly created {{domxref("TreeWalker")}} object.
 ## Syntax
 
 ```js
-document.createTreeWalker(root);
-document.createTreeWalker(root, whatToShow);
-document.createTreeWalker(root, whatToShow, filter);
+createTreeWalker(root)
+createTreeWalker(root, whatToShow)
+createTreeWalker(root, whatToShow, filter)
 ```
 
 ### Parameters
@@ -60,7 +60,7 @@ document.createTreeWalker(root, whatToShow, filter);
 
 A new {{domxref("TreeWalker")}} object.
 
-## Example
+## Examples
 
 The following example goes through all nodes in the body,
 filters out any non nodes that aren't elements (with the \`NodeFilter.SHOW_ELEMENT\` value),

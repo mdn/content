@@ -17,13 +17,7 @@ expression and other given parameters.
 ## Syntax
 
 ```js
-var xpathResult = document.evaluate(
-  xpathExpression,
-  contextNode,
-  namespaceResolver,
-  resultType,
-  result
-);
+evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 ```
 
 - `xpathExpression` is a string representing the XPath to be evaluated.
@@ -44,7 +38,7 @@ var xpathResult = document.evaluate(
   results. `null` is the most common and will create a new
   `XPathResult`
 
-## Example
+## Examples
 
 ```js
 var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);

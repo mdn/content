@@ -20,14 +20,14 @@ relative to the element it is invoked upon.
 ## Syntax
 
 ```js
-targetElement.insertAdjacentElement(position, element);
+insertAdjacentElement(position, element)
 ```
 
 ### Parameters
 
 - `position`
 
-  - : A {{domxref("DOMString")}} representing the position relative to the
+  - : A string representing the position relative to the
     `targetElement`; must match (case-insensitively) one of the following
     strings:
 
@@ -70,7 +70,7 @@ The element that was inserted, or `null`, if the insertion failed.
 > `afterend` positions work only if the node is in a tree and has an element
 > parent.
 
-## Example
+## Examples
 
 ```js
 beforeBtn.addEventListener('click', function() {

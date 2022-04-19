@@ -19,7 +19,7 @@ The **`Document.write()`** method writes a string of text to a document stream o
 ## Syntax
 
 ```js
-document.write(markup);
+write(markup)
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ document.write(markup);
 - _markup_
   - : A string containing the text to be written to the document.
 
-### Example
+## Examples
 
 ```html
 <html>

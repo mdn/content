@@ -25,17 +25,17 @@ To get the current value of an attribute, use {{domxref("Element.getAttribute",
 ## Syntax
 
 ```js
-Element.setAttribute(name, value);
+setAttribute(name, value)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString")}} specifying the name of the attribute whose value is to be
+  - : A string specifying the name of the attribute whose value is to be
     set. The attribute name is automatically converted to all lower-case when
     `setAttribute()` is called on an HTML element in an HTML document.
 - `value`
-  - : A {{domxref("DOMString")}} containing the value to assign to the attribute. Any
+  - : A string containing the value to assign to the attribute. Any
     non-string value specified is converted automatically into a string.
 
 Boolean attributes are considered to be `true` if they're present on the
@@ -58,7 +58,7 @@ value to the string `"null"`. If you wish to remove an attribute, call
   - : The specified attribute `name` contains one or more characters which are
     not valid in attribute names.
 
-## Example
+## Examples
 
 In the following example, `setAttribute()` is used to set attributes on a
 {{HTMLElement("button")}}.

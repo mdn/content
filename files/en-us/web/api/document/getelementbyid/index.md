@@ -22,7 +22,7 @@ If you need to get access to an element which doesn't have an ID, you can use {{
 ## Syntax
 
 ```js
-var element = document.getElementById(id);
+getElementById(id)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ var element = document.getElementById(id);
 
 An {{domxref("Element")}} object describing the DOM element object matching the specified ID, or `null` if no matching element was found in the document.
 
-## Example
+## Examples
 
 ### HTML
 

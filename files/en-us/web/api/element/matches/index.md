@@ -21,7 +21,7 @@ the selector.
 ## Syntax
 
 ```js
-var result = element.matches(selectorString);
+matches(selectorString)
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ var result = element.matches(selectorString);
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the specified selector string is invalid.
 
-## Example
+## Examples
 
 ```html
 <ul id="birds">

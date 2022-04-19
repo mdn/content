@@ -19,7 +19,7 @@ The new node usually will be inserted into an XML document in order to accomplis
 ## Syntax
 
 ```js
-piNode = document.createProcessingInstruction(target, data)
+createProcessingInstruction(target, data)
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ piNode = document.createProcessingInstruction(target, data)
     - The [`target`](#target) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
     - The _closing processing instruction sequence_ (`?>`) is part of the [`data`](#data) value.
 
-## Example
+## Examples
 
 ```js
 var doc = new DOMParser().parseFromString('<foo />', 'application/xml');

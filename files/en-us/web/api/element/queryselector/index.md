@@ -27,7 +27,7 @@ invoked that matches the specified group of selectors.
 ## Syntax
 
 ```js
-element = baseElement.querySelector(selectors);
+querySelector(selectors)
 ```
 
 ### Parameters
