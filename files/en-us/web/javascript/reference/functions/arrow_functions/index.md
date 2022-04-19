@@ -443,7 +443,7 @@ An arrow function cannot contain a line break between its parameters and its arr
 ```js
 var func = (a, b, c)
   => 1;
-// SyntaxError: expected expression, got '=>'
+// SyntaxError: Unexpected token '=>'
 ```
 
 However, this can be amended by putting the line break after the arrow or using
