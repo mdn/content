@@ -723,7 +723,7 @@ clearButton.addEventListener('click', clearOutput);
 ### Fixing the problem with stopPropagation()
 
 As we saw in the video example, this can be a very annoying behavior, but there is a way to prevent it!
-The standard [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when invoked on a handler's event object, makes it so that first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
+The standard [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when invoked on a handler's event object, makes it so that the first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
 
 So we can fix our current problem by changing the second handler function in the previous code block to this:
 
