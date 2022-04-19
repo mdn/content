@@ -17,6 +17,10 @@ The **`border-end-end-radius`** [CSS](/en-US/docs/Web/CSS) property defines a lo
 
 {{EmbedInteractiveExample("pages/css/border-end-end-radius.html")}}
 
+This property affects the corner between the block-end and the inline-end sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-bottom-right-radius")}} property.
+
+## Syntax
+
 ```css
 /* <length> values */
 /* With one value the corner will be a circle */
@@ -33,10 +37,6 @@ border-end-end-radius: revert;
 border-end-end-radius: revert-layer;
 border-end-end-radius: unset;
 ```
-
-This property affects the corner between the block-end and the inline-end sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-bottom-right-radius")}} property.
-
-## Syntax
 
 ### Values
 

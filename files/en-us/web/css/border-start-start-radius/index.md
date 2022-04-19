@@ -17,6 +17,10 @@ The **`border-start-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines 
 
 {{EmbedInteractiveExample("pages/css/border-start-start-radius.html")}}
 
+This property affects the corner between the block-start and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-top-left-radius")}} property.
+
+## Syntax
+
 ```css
 /* <length> values */
 /* With one value the corner will be a circle */
@@ -33,10 +37,6 @@ border-start-start-radius: revert;
 border-start-start-radius: revert-layer;
 border-start-start-radius: unset;
 ```
-
-This property affects the corner between the block-start and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-top-left-radius")}} property.
-
-## Syntax
 
 ### Values
 
