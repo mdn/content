@@ -42,9 +42,9 @@ const channel = new MessageChannel();
 const para = document.querySelector('p');
 
 const ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const otherWindow = ifr.contentWindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+const ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
   otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
