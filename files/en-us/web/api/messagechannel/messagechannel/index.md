@@ -41,7 +41,7 @@ IFrame (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it
 const channel = new MessageChannel();
 const para = document.querySelector('p');
 
- ifr = document.querySelector('iframe');
+const ifr = document.querySelector('iframe');
 var otherWindow = ifr.contentWindow;
 
 const ifr.addEventListener("load", iframeLoaded, false);
