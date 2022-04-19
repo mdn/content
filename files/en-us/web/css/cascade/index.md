@@ -41,7 +41,7 @@ Some browsers let users modify the user-agent stylesheet. Although some constrai
 
 ### Author stylesheets
 
-**Author stylesheets** are the most common type of style sheet. These are style sheets that define styles as part of the design of a given web page or site. The author of the page defines the styles, and the layer in which each resides, for the document using one or more stylesheets, which define the look and feel of the website — its theme.
+**Author stylesheets** are the most common type of style sheet. These are style sheets that define styles as part of the design of a given web page or site. The author of the page defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the {{htmlattrxref('style')}} attribute. These author styles define the look and feel of the website — its theme.
 
 ### User stylesheets
 
@@ -51,32 +51,33 @@ The user (or reader) of the web site can choose to override styles in many brows
 
 The cascading algorithm determines how to find the value to apply for each property for each document element.
 
-1. It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
+**1.** It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
   
-2. Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. 
-   
-The cascade is in ascending order, which means that transitions have precedence over `!important` values, whether those are declared in user, author, or user-agent styles; even taking precendence over an inline {{htmlattrxref('style')}} (discussed below). All `!important` styles have precendence animations. Animations have precendence over non-important values declared in author-, user-, and user-agent-defined style sheets:
+**2.** Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade order is as follows:
 
 |     | Origin      | Importance   |
-| --- | ----------- | ------------ |
-| 1   | user-agent  | normal       |
+| - | ----------- | ------------ |
+| 1   | user-agent (browser) | normal       |
 | 2   | user        | normal       |
-| 3   | author      | normal       |
-| 4   | animations  |              |
-| 5   | author      | `!important` |
+| 3   | author (developer)    | normal       |
+| 4   | CSS @keyframe animations  |             |
+| 5   | author (developer)     | `!important` |
 | 6   | user        | `!important` |
-| 7   | user-agent  | `!important` |
-| 8   | transitions |              |
+| 7   | user-agent (browser) | `!important` |
+| 8   | CSS transitions |              |
 
-  > *Note:* Property values set in a keyframe {{cssxref('animation')}} are more important than all styles except `!important` styles, and property values being altered in a transition take precendence over all other values set, no matter how specific or important. There are no `!important` animations as property values that include `!important` in a {{cssxref('@keyframes')}} definition are ignored.
 
-3. In case of equality, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other. 
- 
+The cascade is in ascending order, which means that transitions have precedence over `!important` values, whether those are declared in user, author, or user-agent styles. All `!important` styles have precendence over animations, which, in-turn, have precendence over all non-important styles.
+
+> *Note:* Property values set by animation {{cssxref('@keyframes')}}are more important than all normal styles (those with no `!important` set). Property values being set in a {{cssxref('transition')}}  take precendence over all other values set,even those marked as `!important`. 
+
+**3.** In case of equality, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other. 
+
 The cascade algorithm is applied before the specificity algorithm, meaning if `:root p { color: red;}` is declared in the user stylesheet (line 2) and a less specific `p {color: blue;}` is in the author stylesheet (line 3), the paragraphs will be blue.
 
-## Author cascade order
+## Author styles cascade order
 
-The table in Cascade order provided a precedence order overview. That table summarizes author styles in two lines: "author - normal" and "author - !important". The precendence for author styles is:
+The [table in Cascade order](#Cascading_order) provided a precedence order overview. The table summarized author styles in two lines: "author - normal" and "author - !important". The precendence for author styles is more nuanced:
 
 |     | Author style      | Importance   |
 | --- | ----------- | ------------ |
@@ -91,7 +92,7 @@ The table in Cascade order provided a precedence order overview. That table summ
 | 9   | inline `style`      | `!important` |
 | 10   | transitions |              |
 
-Of the author styles, the styles with the lowest precendence are non important styles contained in layers, with the styles associated with the earlier declared layers having lower precedence than layers declared later, which have lower precendence than non-layered styles (styles declared outside of any layer). Inline styles, declared with the `style` attribute, take precendence over any non-important author styles, layered or not. 
+Inline styles, declared with the `style` attribute, take precendence over any non-important author styles. Of the author styles, the styles with the lowest precendence are non important styles contained in layers, with the styles associated with the earlier declared layers having lower precedence than layers declared later, which have lower precendence than non-layered styles (styles declared outside of any layer).  layered or not. 
 
 Animations take precedence over all unimportant author styles. All !important styles take precedence over animations, with the precendence order of non-inline !important styles being inverted. !important styes declared outside of any cascade layer have lower precendence than those declared as part of a layer. !important values that come in early layers have precedence over !important styles declared in subsequent cascade layers. Inline !important styles, however, still take precendence over any author layered or unlayered styles, !important or not. Styles that are transitioning take precendence over all !important styles, no matter who or how they are declared.
 
@@ -161,6 +162,8 @@ After your content has finished altering styles, it may find itself in a situati
 [CSS animations](/en-US/docs/Web/CSS/CSS_Animations), using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single {{cssxref("@keyframes")}}, and never mixes multiple ones together.
 
 When several keyframes are appropriate, it chooses the latest defined in the most important document, but never combined all together.
+
+> **Note:** There are no `!important` animations as property declarations in a {{cssxref('@keyframes')}} block that contain `!important` as part of the value are ignored.
 
 ## Example
 
