@@ -20,14 +20,14 @@ The **`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** method s
 writeValueWithoutResponse(value)
 ```
 
-### Return value
-
-A {{jsxref("Promise")}}.
-
 ### Parameters
 
 - value
   - : An {{jsxref("ArrayBuffer")}}.
+
+### Return value
+
+A {{jsxref("Promise")}}.
 
 ## Specifications
 
