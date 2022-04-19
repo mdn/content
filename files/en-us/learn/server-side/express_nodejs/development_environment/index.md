@@ -192,9 +192,9 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file
+3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
 
-4. ```bash
+   ```bash
     npm install express
     ```
 
@@ -217,7 +217,7 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-5. To use the Express library you call the `require()` function in your index.js file to include it in your application.
+4. To use the Express library you call the `require()` function in your **index.js** file to include it in your application.
     Create this file now, in the root of the "myapp" application directory, and give it the following contents:
 
     ```js
@@ -240,14 +240,14 @@ The following steps show how you can use NPM to download a package, save it into
 
     > **Note:** The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
 
-6. You can start the server by calling node with the script in your command prompt:
+5. You can start the server by calling node with the script in your command prompt:
 
     ```bash
     >node index.js
     Example app listening on port 3000
     ```
 
-7. Navigate to the URL `http://127.0.0.1:3000/`.
+6. Navigate to the URL `http://127.0.0.1:3000/`.
     If everything is working, the browser should display the string "Hello World!".
 
 ### Development dependencies
