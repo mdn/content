@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "MDN Web Docs for Contributors"
+title = "Contributor's Handbook"
 
 enableRobotsTXT = true
 
@@ -48,8 +48,8 @@ anchor = "smart"
 
 [languages]
 [languages.en]
-title = "MDN Web Docs for Contributors"
-description = "Documentation for documenters"
+title = "Contributor's Handbook"
+description = "Guidelines for contributions to MDN"
 languageName ="English"
 weight = 1
 
