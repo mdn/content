@@ -25,16 +25,12 @@ Alternatively, you can get these permissions temporarily, only for the active ta
 
 - {{WebExtAPIRef("scripting.ContentScriptFilter")}}
   - : Specifies the IDs of scripts to retrieve with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} or to unregister with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}.
-- {{WebExtAPIRef("scripting.CSSInjection")}}
-  - : Details of CSS to inject.
 - {{WebExtAPIRef("scripting.InjectionResult")}}
   - : Details of the result of CSS or script injection.
 - {{WebExtAPIRef("scripting.InjectionTarget")}}
   - : Details of an injection target for CSS.
 - {{WebExtAPIRef("scripting.RegisteredContentScript")}}
   - : Details of a script to be registered or that is registered.
-- {{WebExtAPIRef("scripting.ScriptInjection")}}
-  - : Details of an injection target for a script.
     
 ## Functions
 

@@ -27,14 +27,24 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let executing = browser.scripting.executeScript(
-  injection             // object
+  details             // object
 )
 ```
 
 ### Parameters
 
-- `injection`
-  - : {{WebExtAPIRef("scripting.ScriptInjection")}}. Details of a script to inject.
+- `details`
+
+  - : An object describing the script to inject.  It contains the following properties:
+
+    - `args`
+      - : `any`. An array of arguments to carry into the function. This is only valid if the `func` parameter is specified. The arguments must be JSON-serializable.
+    - `files`
+      - : `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
+    - `func`
+      - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context ase lost. Exactly one of `files` and `func` must be specified.
+    - `target`
+      - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.   
 
 ### Return value
 
