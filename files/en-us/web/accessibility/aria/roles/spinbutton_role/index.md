@@ -24,7 +24,7 @@ Spinbuttons often have three components, including a text field that displays th
 
 In addition to including the {{htmlattrxref('tabindex')}} attribute to enable spinbutton focus, keyboard and pointer device support must be implemented. Directional keys such as the arrow keys must be supported for keyboard users. Changing the value when increment and decrement buttons are clicked must be supported for pointing devices. See [keyboard interactions](#Keyboard_interactions) below.
 
-> **Note:** It is recommended to use a native [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) (or the date and time input types for dates and time) element rather than the `spinbutton` role. User agents provide a stylized widget for the number, date, and time input elements which include buttons to increment and decrement the values, limiting the range of values if minimum and maximum values are set, and incrementing by specific values if the `step` attribute is included. All of these implicitly have `role="spinbutton"` semantics. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
+> **Note:** It is recommended to use [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) element, or other input types for dates and time that also implicitly have the `role="spinbutton"` semantic, rather than the `spinbutton` role. User agents provide stylized widget for the these input elements which provide default increment, decrement, and native range limiting functionality. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript, and CSS.
 
 ### The `spinbutton` role compared with other range options
 
@@ -52,9 +52,7 @@ For `spinbutton`, unless using semantic HTML elements like [`<input type="number
 
 The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the spinbutton. The optional minimum, maximum, and current values should be numeric. When the values these numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a spinbutton for t-shirt sizes, the `aria-valuetext` attribute should shift from `XX-Small` through `XX-Large` as the `aria-valuenow` increases.
 
-The `aria-valuetext` value must be updated as the value or `aria-valuenow` is updated. While there is no equivalent HTML attribute for `<input type="range">`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. ARIA attributes are supported on semantic HTML elements.
-
-When `aria-valuetext` is an important feature for a spinbutton, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}} elements instead. The `<select>` doesn't provide for a  every option's value is more accessible to all users, not just users of assistive technology.
+The `aria-valuetext` value must be updated as the value or `aria-valuenow` is updated. ARIA attributes are supported on semantic HTML elements. While there is no equivalent HTML attribute for `<input>`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. When `aria-valuetext` is an important feature for a spinbutton, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}} elements instead. 
 
 An accessible name is **required**. If the `spinbutton` role is applied to an HTML {{HTMLElement('input')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
@@ -162,6 +160,8 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
   - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
   - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - Working examples:
+  - [Date picker spin button example](https://www.w3.org/TR/wai-aria-practices/examples/spinbutton/datepicker-spinbuttons.html)
+  - [Toolbar example: font-size picker](https://www.w3.org/TR/wai-aria-practices/examples/toolbar/toolbar.html)
   
 <section id="Quick_links">
 
