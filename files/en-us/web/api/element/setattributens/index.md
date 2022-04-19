@@ -20,6 +20,8 @@ with the given namespace and name.
 setAttributeNS(namespace, name, value)
 ```
 
+### Parameters
+
 - `namespace` is a string specifying the namespace of the attribute.
 - `name` is a string identifying the attribute by its qualified name;
   that is, a namespace prefix followed by a colon followed by a local name.
