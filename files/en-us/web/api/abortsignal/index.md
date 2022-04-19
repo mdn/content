@@ -89,11 +89,12 @@ You can find a [full working example on GitHub](https://github.com/mdn/dom-examp
 
 ### Aborting a fetch operation with a timeout
 
-If you _only_ need to abort the operation on timeout (and not also on a user-triggered signal) then you can use the static {{domxref("AbortSignal.timeout()")}} method.
+If you need to abort the operation on timeout then you can use the static {{domxref("AbortSignal.timeout()")}} method.
 This returns an `AbortSignal` that will automatically timeout after a certain number of milliseconds.
 
-The pseudo-code below shows how you would either succeed in downloading a file, or handle a timeout error after 5 seconds.
-Note that when using this signal, the `fetch()` promise rejects with a "`TimeoutError`" `DOMException`.
+The code snippet below shows how you would either succeed in downloading a file, or handle a timeout error after 5 seconds.
+Note that when there is a timeout the `fetch()` promise rejects with a "`TimeoutError`" `DOMException`.
+This allows code to differentiate between timeouts (for which user notification is probably required), and user aborts.
 
 ```js
 try {
@@ -102,7 +103,9 @@ try {
   // ...
 } catch (e) {
     if (e.name === "TimeoutError") {
-      // Notify the user it took more than 5 seconds to get the result!
+      // Notify the user it took more than 5 seconds to get the result.
+    } else if (e.name === "AbortError") {
+      // fetch aborted by user action (browser stop button, closing tab, etc.)
     } else {
       // A network error, or some other problem.
       console.log(`Type: ${e.name}, Message: ${e.message}`)
@@ -113,12 +116,10 @@ try {
 
 ### Aborting a fetch with timeout or explicit abort
 
-You can't use the approach in the previous section to abort a download using either a user action or a timeout, because `fetch()` isn't designed to combine multiple signals.
+`fetch()` isn't designed to combine multiple signals, so you can't abort a download "directly" due to either of {{domxref("AbortController.abort()")}} being called or an `AbortSignal` timeout (though as in the preceding example, a timeout signal will abort if triggered by _inbuilt_ browser mechanisms like a stop button).
 
-If you need to trigger abort in this case, then the usual approach is to trigger {{domxref("AbortController.abort()")}} from both a user control and from a timeout timer.
-Note that unlike when using {{domxref("AbortSignal.timeout()")}} you will not be able to differentiate the cause of the abort; the reason is always `AbortError`.
-
-The code snippet shows the basic operation:
+To trigger on multiple signals they must be daisy chained.
+The code snippet below shows how you might call {{domxref("AbortController.abort()")}} in the handler for a separate timer.
 
 ```js
 try {
@@ -141,6 +142,7 @@ catch (e) {
 }
 ```
 
+> **Note:** Unlike when using {{domxref("AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
 ## Specifications
 

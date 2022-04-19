@@ -13,14 +13,13 @@ browser-compat: api.AbortSignal.timout
 
 The static **`AbortSignal.timeout()`** method returns an {{domxref("AbortSignal")}} that will automatically abort after a specified time.
 
+The signal aborts with a `TimeoutError` {{domxref("DOMException")}} on timeout, or with `AbortError` {{domxref("DOMException")}} due to pressing a browser stop button (or some other inbuilt "stop" operation).
+This allow UIs to differentiate timeout errors, which typically require user notification, from user-triggered aborts that do not.
+
 The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache ("[bfcache](https://web.dev/bfcache/)").
 
-The signal aborts with a reason of `TimeoutError` {{domxref("DOMException")}}. 
-This allow UIs to differentiate these from user-triggered aborts which that have the abort reason `AbortError`, and which unlike timeouts typically don't require user notification.
-
-> **Note:** This method can only be used for use cases where the associated operation either succeeds or aborts with a timeout.
-> At time of writing there is no way to combine it with other signals, such that the operation can be aborted by _either_ a command or a timeout.
-
+> **Note:** At time of writing there is no way to combine multiple signals.
+> This means you that you can't directly abort a download using either a timeout signal or by calling {{domxref("AbortController.abort()")}}.
 
 ## Syntax
 
@@ -36,12 +35,13 @@ AbortSignal.timeout(time)
 ### Return value
 
 An {{domxref("AbortSignal")}}.
-The signal will abort with its {{domxref("AbortSignal.reason")}} property set to a `TimeoutError` {{domxref("DOMException")}}.
+
+The signal will abort with its {{domxref("AbortSignal.reason")}} property set to a `TimeoutError` {{domxref("DOMException")}} on timeout, or an `AbortError` {{domxref("DOMException")}} if the operation was user-triggered.
 
 ## Examples
 
 A simple example showing a fetch operation that will timeout if unsuccessful after 5 seconds, is shown below.
-Note that this may also fail if the method is not supported or for some other reason.
+Note that this may also fail if the method is not supported, if a browser "stop" button is pressed, or for some other reason.
 
 ```js
 url = "https://path_to_large_file.mp4";
@@ -53,8 +53,10 @@ try {
 } catch (e) {
     if (e.name === "TimeoutError") {
       // It took more than 5 seconds to get the result!
+    } else if (e.name === "AbortError") {
+      // fetch aborted by user action (browser stop button, closing tab, etc.)
     } else if (e.name === "TypeError") {
-      // AbortSignal.timeout() method is not support 
+      // AbortSignal.timeout() method is not supported
     } else {
       // A network error, or some other problem.
       console.log(`Type: ${e.name}, Message: ${e.message}`)
