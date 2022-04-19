@@ -25,8 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let removing = browser.scripting.unregisterContentScripts(
-  scripts,         // object
-  callback         // function
+  scripts         // object
 )
 ```
 
@@ -34,12 +33,10 @@ let removing = browser.scripting.unregisterContentScripts(
 
 - `scripts`{{optional_inline}} 
   - : `array` of {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter to identify the dynamic content scripts to unregistered. If not specified, all dynamic content scripts are unregistered.
-- `callback`{{optional_inline}} 
-  - : `function`. Invoked upon completion of the request.
 
 ### Return value
 
-Returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) when the callback parameter is not specified. The Promise is fulfilled with no arguments when all the scripts are unregistered. If any error occurs, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the scripts are unregistered. If any error occurs, the promise fulfills with an error message.
 
 ## Examples
 

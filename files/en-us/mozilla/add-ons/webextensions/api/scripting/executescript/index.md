@@ -27,8 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let executing = browser.scripting.executeScript(
-  injection,             // object
-  callback               // function
+  injection             // object
 )
 ```
 
@@ -36,12 +35,10 @@ let executing = browser.scripting.executeScript(
 
 - `injection`
   - : {{WebExtAPIRef("scripting.ScriptInjection")}}. Details of a script to inject.
-- `callback`{{optional_inline}} 
-  - : `function`. Invoked upon completion of the request.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with {{WebExtAPIRef("scripting.InjectionResult")}}. The array's values represent the result of the script in every injected frame.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.InjectionResult")}}. The array's values represent the result of the script in every injected frame. If any error occurs, the promise fulfills with an error message.
 
 The result of the script is the last evaluated statement, which is similar to the results that would be seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
 
@@ -52,8 +49,6 @@ let foo='my result'; foo;
 Here the results array contains the string "`my result`" as an element.
 
 The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
-
-If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 

@@ -33,8 +33,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let inserting = browser.scripting.insertCSS(
-  injection,     // object
-  callback       // function
+  injection     // object
 )
 ```
 
@@ -42,12 +41,10 @@ let inserting = browser.scripting.insertCSS(
 
 - `injection`
   - : {{WebExtAPIRef("scripting.CSSInjection")}} The CSS to inject.  
-- `callback`{{optional_inline}} 
-  - : `function`. Invoked upon completion of the injection.
 
 ### Return value
 
-Returns a Promise when the callback parameter is not specified. The [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is fulfilled with no arguments when all the CSS is inserted. If any error occurs, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the CSS is inserted. If any error occurs, the promise fulfills with an error message.
 
 ## Examples
 

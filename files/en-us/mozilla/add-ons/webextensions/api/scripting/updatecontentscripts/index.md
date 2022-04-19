@@ -25,8 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let removing = browser.scripting.updateContentScripts(
-  scripts,         // object
-  callback         // function
+  scripts         // object
 )
 ```
 
@@ -40,14 +39,10 @@ let removing = browser.scripting.updateContentScripts(
       - : {{WebExtAPIRef("scripting.RegisteredContentScript")}}. Details of a script to update.
     - `persistAcrossSessions`
       - : `boolean`. Whether the content script persists into future sessions. 
-- `callback`{{optional_inline}} 
-  - : `function`. Invoked upon completion of the request.
 
 ### Return value
 
-Return an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}.
-
-Returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) when the callback parameter is not specified. If any error occurs, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If any error occurs, the promise fulfills with an error message.
 
 ## Examples
 

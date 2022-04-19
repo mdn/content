@@ -25,8 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let removing = browser.scripting.removeCSS(
-  injection,       // object
-  callback         // function
+  injection       // object
 )
 ```
 
@@ -34,12 +33,10 @@ let removing = browser.scripting.removeCSS(
 
 - `injection`
   - : {{WebExtAPIRef("scripting.CSSInjection")}}. An object describing the CSS styles to remove. The `css`, `files`, and `origin` properties must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}. Attempts to remove non-existent stylesheets are ignored. 
-- `callback`{{optional_inline}} 
-  - : `function`. Invoked upon completion of the removal.
 
 ### Return value
 
-Returns a Promise when the callback parameter is not specified. The [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments when all the CSS is removed. If any error occurs, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the CSS is removed. If any error occurs, the promise fulfills with an error message.
 
 ## Examples
 

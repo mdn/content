@@ -25,8 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let removing = browser.scripting.getRegisteredContentScripts(
-  filter,          // object
-  callback         // function
+  filter          // object
 )
 ```
 
@@ -35,14 +34,10 @@ let removing = browser.scripting.getRegisteredContentScripts(
 
 - `filter`
   - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter for the registered script details to return.
-- `callback`{{optional_inline}} 
-  - : `function`. Invoked upon completion of the request.
 
 ### Return value
 
-Returns an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}.
-
-Returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) when the callback parameter is not specified. If any error occurs, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If any error occurs, the promise fulfills with an error message.
 
 ## Examples
 
