@@ -23,6 +23,8 @@ Values of this type are objects. They contain these properties:
 
 - `allFrames`{{optional_inline}}
   - : `boolean`. If specified `true`, the script is inject into all frames, even if the frame is not the top-most frame in the tab. Each frame is checked independently for URL requirements; it does not inject into child frames if the URL requirements are not met. Defaults to `false`, meaning that only the top frame is matched.
+- `css`{{optional_inline}}
+  - : {{WebExtAPIRef("manifest.ExtensionURL")}}. The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array.
 - `excludeMatches`{{optional_inline}}
   - : `string`. Array of pages that this content script is excluded from but would otherwise be injected into.
 - `id`
@@ -31,12 +33,10 @@ Values of this type are objects. They contain these properties:
   - : {{WebExtAPIRef("manifest.ExtensionURL")}}. Array of the JavaScript files to be injected into matching pages. Scrips are injected in the order they appear in this array.
 - `matches`{{optional_inline}}
   - : `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
-- `runAt`{{optional_inline}}
-  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`.
 - `persistAcrossSessions`{{optional_inline}}
   - : `boolean`. Specifies if this content script persists into future sessions. Defaults to `false`. This is NOT supported.
-- `css`{{optional_inline}}
-  - : {{WebExtAPIRef("manifest.ExtensionURL")}}. The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array.
+- `runAt`{{optional_inline}}
+  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`.
 
 ## Browser compatibility
 
