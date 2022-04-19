@@ -243,7 +243,7 @@ Other available APIs include:
 - `kuma.url`
   - : See also: [node.js `url` module](https://nodejs.org/api/url.html).
 - `kuma.fetchFeed(url)`
-  - : Fetch an RSS feed and parse it into a JS object. See also: [`InsertFeedLinkList`](https://github.com/mdn/kumascript/blob/master/macros/InsertFeedLinkList.ejs)
+  - : Fetch an RSS feed and parse it into a JS object.
 
 #### Creating modules
 
