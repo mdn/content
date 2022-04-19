@@ -276,7 +276,7 @@ You can test this example on mobile devices by touching the box below.
 > **Note:** More generally, the example will work on platforms that provide touch events.
 > You can test this on desktop platforms that can simulate such events:
 >
-> - On Firefox enable "touch simulation" in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#toggling_responsive_design_mode) (you may need to reload the page).
+> - On Firefox enable "touch simulation" in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#toggling-responsive-design-mode) (you may need to reload the page).
 > - On Chrome use [Device mode](https://developer.chrome.com/docs/devtools/device-mode/) and set the [Device type](https://developer.chrome.com/docs/devtools/device-mode/#type) to one that sends touch events.
 
 ## Additional tips

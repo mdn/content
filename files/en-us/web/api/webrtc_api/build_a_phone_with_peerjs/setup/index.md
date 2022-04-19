@@ -39,6 +39,6 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
 
     If your file has \`"main": "index.js"\`, you'll want to change it so that it says \`"main": "server.js"\` instead so that it's pointing to the correct file.
 
-4. To finish the setup, you'll want to copy the following [HTML](https://gist.github.com/578d692e4700dfe2c9d239c80bbdbabc) and [CSS](https://gist.github.com/b4498288b86ddce995603546a64abb29) files into the root of your project folder. You can name both files 'index', so the HTML file will be 'index.html' and the CSS file will be 'index.css'. You won't need to modify these much in the articles that follow.
+4. To finish the setup, you'll want to copy the following [HTML](https://gist.github.com/lolaodelola/578d692e4700dfe2c9d239c80bbdbabc) and [CSS](https://gist.github.com/lolaodelola/b4498288b86ddce995603546a64abb29) files into the root of your project folder. You can name both files 'index', so the HTML file will be 'index.html' and the CSS file will be 'index.css'. You won't need to modify these much in the articles that follow.
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server")}}

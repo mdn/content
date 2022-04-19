@@ -18,7 +18,7 @@ binary data contained in an {{jsxref("ArrayBuffer")}}.
 ## Syntax
 
 ```js
-arrayBuffer();
+arrayBuffer()
 ```
 
 ### Return value

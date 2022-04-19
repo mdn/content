@@ -20,7 +20,7 @@ for visibility changes.
 ## Syntax
 
 ```js
-intersectionObserver.disconnect();
+disconnect()
 ```
 
 ### Parameters

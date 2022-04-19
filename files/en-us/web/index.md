@@ -55,7 +55,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 
 ## Developer tools documentation
 
-- [Firefox Developer Tools](/en-US/docs/Tools)
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : Documentation for the set of web-developer tools built into Firefox.
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
   - : Documentation for the set of web-developer tools built into Chrome.

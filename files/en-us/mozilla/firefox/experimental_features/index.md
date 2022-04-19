@@ -1923,7 +1923,7 @@ The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/S
 
 ### CSS browser compatibility tooltips
 
-The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#browser_compat_warnings).
+The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#browser-compat-warnings).
 
 <table>
   <thead>

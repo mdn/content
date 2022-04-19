@@ -112,7 +112,7 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 
 ### Filtering invalid entries from JSON
 
-The following example uses `filter()` to create a filtered json of all elements with non-zero, numeric `id`.
+The following example uses `filter()` to create a filtered JSON of all elements with non-zero, numeric `id`.
 
 ```js
 let arr = [

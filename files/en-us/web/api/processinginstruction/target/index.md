@@ -18,11 +18,11 @@ For example:
 <?xml version="1.0"?>
 ```
 
-is a processing instruction whose `target`is `xml`.
+is a processing instruction whose `target` is `xml`.
 
 ## Value
 
-A {{jsxref("String")}} containing the name of the application.
+A string containing the name of the application.
 
 ## Example
 

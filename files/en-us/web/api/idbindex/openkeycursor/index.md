@@ -33,9 +33,9 @@ If the key range is not specified or is null, then the range includes all the ke
 ## Syntax
 
 ```js
-var request = myIndex.openKeyCursor();
-var request = myIndex.openKeyCursor(range);
-var request = myIndex.openKeyCursor(range, direction);
+openKeyCursor()
+openKeyCursor(range)
+openKeyCursor(range, direction)
 ```
 
 ### Parameters
@@ -66,7 +66,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a key cursor on

@@ -92,8 +92,8 @@ Browse the complete [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
 
 Helpful tools for writing and debugging your **JavaScript** code.
 
-- [Firefox Developer Tools](/en-US/docs/Tools)
-  - : [Web Console](/en-US/docs/Tools/Web_Console), [JavaScript Profiler](/en-US/docs/Tools/Performance), [Debugger](/en-US/docs/Tools/Debugger), and more.
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), and more.
 - [JavaScript Shells](/en-US/docs/Web/JavaScript/Shells)
   - : A JavaScript shell allows you to quickly test snippets of JavaScript code.
 - [Learn JavaScript](https://learnjavascript.online/)

@@ -58,7 +58,7 @@ tags:
       <td><strong>Language</strong></td>
       <td>
         <a href="/en-US/docs/Web/JavaScript">JavaScript</a> (or C/C++ using
-        <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> to
+        <a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten</a> to
         compile to JavaScript)
       </td>
     </tr>
@@ -99,7 +99,7 @@ tags:
   - : Store user data on their own computer or device.
 - [JavaScript](/en-US/docs/Web/JavaScript)
   - : Fast web programming language to write the code for your game.
-    To easily port your existing games [Emscripten](https://github.com/kripken/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/)
+    To easily port your existing games [Emscripten](https://github.com/emscripten-core/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/)
 - [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
   - : Lock the mouse or other pointing device within your game's interface.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)

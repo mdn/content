@@ -73,6 +73,7 @@ Models are usually defined in an application's **models.py** file. They are impl
 
 ```python
 from django.db import models
+from django.urls import reverse
 
 class MyModelName(models.Model):
     """A typical class defining a model, derived from the Model class."""
@@ -133,12 +134,11 @@ The following common arguments can be used when declaring many/most of the diffe
 
   > **Note:** Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#bigautofield).
   > You can see this in the local library **catalog/apps.py** file:
+  >
   > ```py
   > class CatalogConfig(AppConfig):
   >   default_auto_field = 'django.db.models.BigAutoField'
   > ```
-
-
 
 There are many other options — you can view the [full list of field options here](https://docs.djangoproject.com/en/4.0/ref/models/fields/#field-options).
 

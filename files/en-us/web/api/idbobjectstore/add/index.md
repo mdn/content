@@ -32,8 +32,8 @@ object. For updating existing records, you should use the
 ## Syntax
 
 ```js
-var request = objectStore.add(value);
-var request = objectStore.add(value, key);
+add(value)
+add(value, key)
 ```
 
 ### Parameters
@@ -43,7 +43,7 @@ var request = objectStore.add(value, key);
 - key {{optional_inline}}
   - : The key to use to identify the record. If unspecified, it results to null.
 
-### Returns
+### Return value
 
 An {{domxref("IDBRequest")}} object on which
 subsequent events related to this operation are fired.
@@ -72,7 +72,7 @@ one of the following types:
         violated (due to an already existing record with the same primary key
         value).
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. Note also the functions attached

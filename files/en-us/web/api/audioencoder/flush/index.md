@@ -16,14 +16,14 @@ The **`flush()`** method of the {{domxref("AudioEncoder")}} interface returns a 
 ## Syntax
 
 ```js
-AudioEncoder.flush()
+flush()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}} that resolves with undefined.
 

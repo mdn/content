@@ -26,7 +26,7 @@ value doesn't contain a string value, a {{domxref("DOMException")}} is raised.
 ## Syntax
 
 ```js
-var stringValue = cssPrimitiveValue.getStringValue();
+getStringValue()
 ```
 
 ### Return value
@@ -39,7 +39,7 @@ A `string` value.
 | -------------- | ---------------------------------------------------------------------------------- |
 | `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a string value. |
 
-## Example
+## Examples
 
 ```js
 var cs = window.getComputedStyle(document.body);

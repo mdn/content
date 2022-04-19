@@ -1182,6 +1182,13 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+      </td>
+      <td><a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a></td>
+      <td>Defines an explicit role for an element for use by assistive technologies.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Element/textarea#attr-rows">rows</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>

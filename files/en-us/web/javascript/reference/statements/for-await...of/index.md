@@ -113,7 +113,7 @@ async function* streamAsyncIterable(stream) {
   }
 }
 
-// Fetches data from url and calculates response size using the async generator.
+// Fetches data from URL and calculates response size using the async generator.
 async function getResponseSize(url) {
   const response = await fetch(url);
   // Will hold the size of the response, in bytes.

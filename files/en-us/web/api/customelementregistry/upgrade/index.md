@@ -21,7 +21,7 @@ document.
 ## Syntax
 
 ```js
-customElements.upgrade(root);
+upgrade(root)
 ```
 
 ### Parameters

@@ -144,7 +144,7 @@ And that's it! At this point, if a supporting browser with a viewport width of 4
 
 > **Note:** When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in `document.querySelector('html').clientWidth`). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's `about:debugging` page to inspect the page loaded on the mobile using the desktop developer tools.
 >
-> To see which images were loaded, you can use Firefox DevTools's [Network Monitor](/en-US/docs/Tools/Network_Monitor) tab.
+> To see which images were loaded, you can use Firefox DevTools's [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tab.
 
 Older browsers that don't support these features will just ignore them. Instead, those browsers will go ahead and load the image referenced in the {{htmlattrxref("src", "img")}} attribute as normal.
 

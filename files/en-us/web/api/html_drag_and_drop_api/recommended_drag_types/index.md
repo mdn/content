@@ -84,7 +84,7 @@ dt.setData("text/plain", "Hello there, stranger");
 
 ## Dragging Files
 
-A local file is dragged using the `application/x-moz-file` type with a data value that is an [nsIFile](/en-US/docs/XPCOM_Interface_Reference/nsIFile) object. Non-privileged web pages cannot retrieve or modify data of this type.
+A local file is dragged using the `application/x-moz-file` type with a data value that is an `nsIFile` object. Non-privileged web pages cannot retrieve or modify data of this type.
 
 Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.
 
@@ -139,7 +139,7 @@ Direct image dragging is not common. In fact, Mozilla does not support direct im
 
 As with links, the data for the `text/plain` type should also contain the URL. However, a `data:` URL is not usually useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 
-In chrome or other privileged code, you may also use the `image/jpeg`, `image/png` or `image/gif` types, depending on the type of image. The data should be an object which implements the [nsIInputStream](/en-US/docs/XPCOM_Interface_Reference/nsIInputStream) interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.
+In chrome or other privileged code, you may also use the `image/jpeg`, `image/png` or `image/gif` types, depending on the type of image. The data should be an object which implements the `nsIInputStream` interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.
 
 You should also include the `application/x-moz-file` type if the image is located on disk. In fact, this a common way in which image files are dragged.
 

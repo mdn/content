@@ -23,7 +23,7 @@ equality to be tested quickly.
 ## Syntax
 
 ```js
-var boolean = CSSNumericValue.equals(number);
+equals(number)
 ```
 
 ### Parameters

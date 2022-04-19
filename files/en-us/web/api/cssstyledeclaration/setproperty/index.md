@@ -17,7 +17,7 @@ a new value for a property on a CSS style declaration object.
 ## Syntax
 
 ```js
-style.setProperty(propertyName, value, priority);
+setProperty(propertyName, value, priority)
 ```
 
 ### Parameters

@@ -94,7 +94,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
 - {{domxref("Window.messageManager")}} {{non-standard_inline}}
   - : Returns the [message manager](/en-US/docs/The_message_manager) object for this window.
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{non-standard_inline}}
-  - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in {{interface("nsIDOMWindowUtils")}} for a conversion factor to adapt to screen pixels if needed.
+  - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
 - {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
 - {{domxref("Window.name")}}
@@ -172,7 +172,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
 - {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
   - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.dialogArguments")}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.
+  - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
 - {{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}

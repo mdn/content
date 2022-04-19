@@ -26,9 +26,9 @@ use `getAll()`.
 ## Syntax
 
 ```js
-var getAllKeysRequest = IDBIndex.getAll();
-var getAllKeysRequest = IDBIndex.getAll(query);
-var getAllKeysRequest = IDBIndex.getAll(query, count);
+getAll()
+getAll(query)
+getAll(query, count)
 ```
 
 ### Parameters
@@ -59,7 +59,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
 not between `0` and `2^32> - 1` included.
 
-## Example
+## Examples
 
 ```js
 var myIndex = objectStore.index('index');

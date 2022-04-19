@@ -24,9 +24,9 @@ is, the bounds include the endpoint values). By default, the bounds are closed.
 ## Syntax
 
 ```js
-var myIDBKeyRange = IDBKeyRange.bound(lower, upper);
-var myIDBKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen);
-var myIDBKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);
+bound(lower, upper)
+bound(lower, upper, lowerOpen)
+bound(lower, upper, lowerOpen, upperOpen)
 ```
 
 ### Parameters
@@ -75,7 +75,7 @@ the following type:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 The following example illustrates how you'd use a bound key range. Here we declare
 a `keyRangeValue = IDBKeyRange.bound("A", "F");` — a range between values of
@@ -83,7 +83,7 @@ a `keyRangeValue = IDBKeyRange.bound("A", "F");` — a range between values of
 store, and open a Cursor with {{domxref("IDBObjectStore.openCursor")}},
 declaring `keyRangeValue` as its optional key range value. This means that
 the cursor will only retrieve records with keys inside that range. This range includes
-the values "A" and "F", as we haven't declared that they should be open  bounds. If we
+the values "A" and "F", as we haven't declared that they should be open bounds. If we
 used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
 include `"A"` and `"F"`, only the values between them.
 

@@ -21,7 +21,7 @@ supplied value.
 ## Syntax
 
 ```js
-var cssNumericValue = CSSNumericValue.div(number);
+div(number)
 ```
 
 ### Parameters

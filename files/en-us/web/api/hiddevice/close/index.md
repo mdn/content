@@ -16,7 +16,7 @@ The **`close()`** method of the {{domxref("HIDDevice")}} interface closes the co
 ## Syntax
 
 ```js
-HIDDevice.close();
+close()
 ```
 
 ### Parameters

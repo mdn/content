@@ -310,7 +310,7 @@ function openRequestedSinglePopup(url) {
     window, the browser in the main window will verify that the secondary window has the
     same domain name.
 
-    More reading on the cross-domain script security restriction: [http://www.mozilla.org/projects/secu...me-origin.html](https://www.mozilla.org/projects/security/components/same-origin.html)
+    More reading on the cross-domain script security restriction: [http://www.mozilla.org/projects/secu...me-origin.html](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
 
 ## Usability issues
 
@@ -350,7 +350,7 @@ recommendable usability and accessibility guidelines:
 
 - "javascript:" pseudo-links become dysfunctional when JavaScript support is disabled
   or inexistent. Several corporations allow their employees to surf on the web but under
-  strict security policies: no JavaScript enabled, no java, no activeX, no Flash. For
+  strict security policies: no JavaScript enabled, no Java, no ActiveX, no Flash. For
   various reasons (security, public access, text browsers, etc..), about 5% to 10% of
   users on the web surf with JavaScript disabled.
 - "javascript:" links will interfere with advanced features in tab-capable browsers:

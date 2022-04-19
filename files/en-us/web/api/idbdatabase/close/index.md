@@ -26,10 +26,10 @@ operation is pending.
 ## Syntax
 
 ```js
-IDBDatabase.close();
+close()
 ```
 
-## Example
+## Examples
 
 ```js
 // Let us open our database

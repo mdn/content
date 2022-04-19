@@ -11,13 +11,13 @@ browser-compat: api.HTMLAreaElement.toString
 {{ApiRef("URL API")}}
 
 The **`HTMLAreaElement.toString()`** {{Glossary("stringifier")}}
-method returns a {{domxref("USVString")}} containing the whole URL. It is a read-only
+method returns a string containing the whole URL. It is a read-only
 version of {{domxref("HTMLAreaElement.href")}}.
 
 ## Syntax
 
 ```js
-area.toString();
+toString()
 ```
 
 ## Examples

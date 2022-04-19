@@ -90,7 +90,7 @@ Here are some important things to bear in mind about web fonts:
 
 > **Note:** Web fonts as a technology have been supported in Internet Explorer since version 4!
 
-You can use the [Firefox Font Editor](/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not. This video provides a nice walkthrough:
+You can use the [Firefox Font Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not. This video provides a nice walkthrough:
 
 {{EmbedYouTube("UazfLa1O94M")}}
 

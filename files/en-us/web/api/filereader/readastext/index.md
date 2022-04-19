@@ -31,7 +31,7 @@ readAsText(blob, encoding)
 - `encoding` {{optional_inline}}
   - : A string specifying the encoding to use for the returned data. By default, UTF-8 is assumed if this parameter is not specified.
 
-## Example
+## Examples
 
 ### HTML
 

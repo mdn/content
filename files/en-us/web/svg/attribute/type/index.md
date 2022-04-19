@@ -88,7 +88,7 @@ You can use this attribute with the following SVG elements:
         <a
           href="https://www.w3.org/TR/SVG11/filters.html#feColorMatrixTypeAttribute"
           rel="external"
-          ><span>SVG 1.1 (2nd Edition)</span></a
+          >SVG 1.1 (2nd Edition)</a
         >
       </td>
     </tr>
@@ -120,7 +120,7 @@ You can use this attribute with the following SVG elements:
         <a
           href="https://www.w3.org/TR/SVG11/filters.html#feComponentTransferTypeAttribute"
           rel="external"
-          ><span>SVG 1.1 (2nd Edition)</span></a
+          >SVG 1.1 (2nd Edition)</a
         >
       </td>
     </tr>
@@ -151,7 +151,7 @@ You can use this attribute with the following SVG elements:
         <a
           href="https://www.w3.org/TR/SVG11/filters.html#feTurbulenceTypeAttribute"
           rel="external"
-          ><span>SVG 1.1 (2nd Edition)</span></a
+          >SVG 1.1 (2nd Edition)</a
         >
       </td>
     </tr>
@@ -180,7 +180,7 @@ You can use this attribute with the following SVG elements:
         <a
           href="https://www.w3.org/TR/SVG11/script.html#ScriptElementTypeAttribute"
           rel="external"
-          ><span>SVG 1.1 (2nd Edition) : script</span></a
+          >SVG 1.1 (2nd Edition) : script</a
         ><br /><a
           href="https://www.w3.org/TR/SVG11/styling.html#StyleElementTypeAttribute"
           rel="external"

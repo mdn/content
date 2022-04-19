@@ -79,7 +79,7 @@ The fields needed for A2HS are as follows:
 - `display`: Specifies how the app should be displayed. To make it feel like a distinct app (and not just a web page), you should choose a value such as `fullscreen` (no UI is shown at all) or `standalone` (very similar, but system-level UI elements such as the status bar might be visible).
 - `icons`: Specifies icons for the browser to use when representing the app in different places (such as on the task switcher, or more important, the Home screen). We've included only one in our demo.
 - `name`/`short_name`: These fields provide an app name to be displayed when representing the app in different places. `name` provides the full app name, and `short_name` provides a shortened name to be used when there is insufficient space to display the full name. You are advised to provide both if your app's name is particularly long.
-- `start_url`: Provides a path to the asset that should be loaded when the added-to-Home screen app is launched. Note that this has to be a relative URL pointing to the site index, relative to the url of the manifest. Also, be aware that Chrome requires this before it will display the install banner, whereas Firefox doesn't require it for showing the home-with-a-plus icon.
+- `start_url`: Provides a path to the asset that should be loaded when the added-to-Home screen app is launched. Note that this has to be a relative URL pointing to the site index, relative to the URL of the manifest. Also, be aware that Chrome requires this before it will display the install banner, whereas Firefox doesn't require it for showing the home-with-a-plus icon.
 
 The manifest for our sample app looks like this:
 

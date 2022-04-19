@@ -30,7 +30,7 @@ This interface is restricted to the same origin, but you can use the {{HTTPHeade
 
 ## Example
 
-Given a server that sends the {{HTTPHeader("Server-Timing")}} header, for example a node.js server like this:
+Given a server that sends the {{HTTPHeader("Server-Timing")}} header, for example a Node.js server like this:
 
 ```js
 const http = require('http');

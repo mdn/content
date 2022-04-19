@@ -23,7 +23,7 @@ for each index in the array.
 ## Syntax
 
 ```js
-CSSUnparsedValue.keys()
+keys()
 ```
 
 ### Parameters

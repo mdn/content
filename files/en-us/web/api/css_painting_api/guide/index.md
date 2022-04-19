@@ -485,7 +485,7 @@ registerPaint('hollowHighlights', class {
     // ctx   -> drawing context
     // size  -> size of the box being painted
     // props -> list of custom properties available to the element
-    // args  -> list of arguments set when calling the paint() function in the css
+    // args  -> list of arguments set when calling the paint() function in the CSS
 
     // where to start the highlight & dimensions
     const x = 0;

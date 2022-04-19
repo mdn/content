@@ -23,12 +23,13 @@ resolves with a new {{domxref("Credential")}} instance based on the provided opt
 ## Syntax
 
 ```js
-var promise = CredentialsContainer.create([options])
+create()
+create(options)
 ```
 
 ### Parameters
 
-- options
+- options {{optional_inline}}
 
   - : An object of type {{domxref("CredentialCreationOptions")}} that contains options for
     the requested new `Credentials` object. It must include one of the options
@@ -38,22 +39,22 @@ var promise = CredentialsContainer.create([options])
       {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object.
       TBD
 
-      - `id`: (required) {{domxref("USVString")}} Inherited from
+      - `id`: (required) string Inherited from
         {{domxref("CredentialData")}}.
-      - `name`: {{domxref("USVString")}} {{optional_inline}} TBD
-      - `iconURL`: {{domxref("USVString")}} {{optional_inline}} TBD
-      - `password`: (required) {{domxref("USVString")}} TBD
+      - `name`: string {{optional_inline}} TBD
+      - `iconURL`: string {{optional_inline}} TBD
+      - `password`: (required) string TBD
 
     - `federated`: {{optional_inline}} An
       {{domxref("FederatedCredentialInit")}} object. Contains requirements for
       creating/obtaining federated credentials. The available options are:
 
-      - `id`: (required) {{domxref("USVString")}} Inherited from
+      - `id`: (required) string Inherited from
         {{domxref("CredentialData")}}.
-      - `name`: {{domxref("USVString")}} {{optional_inline}} TBD
-      - `iconURL`: {{domxref("USVString")}} {{optional_inline}} TBD
-      - `provider`: (required) {{domxref("USVString")}} TBD
-      - `protocol`: {{domxref("USVString")}} {{optional_inline}} TBD
+      - `name`: string {{optional_inline}} TBD
+      - `iconURL`: string {{optional_inline}} TBD
+      - `provider`: (required) string TBD
+      - `protocol`: string {{optional_inline}} TBD
 
     - `publicKey`: {{optional_inline}}
       an object that describes the options for creating a [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credential containing the following properties:
@@ -67,7 +68,7 @@ var promise = CredentialsContainer.create([options])
       - `attestation` {{optional_inline}}: A {{jsxref("String")}} which indicates how the attestation (for the authenticator's origin) should be transported.
       - `extensions` {{optional_inline}}: An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance, such
 as {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}},

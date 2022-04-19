@@ -23,7 +23,7 @@ its position forward.
 ## Syntax
 
 ```js
-cursor.advance(count);
+advance(count)
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the cursor is currently being iterated or has iterated past its end.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through the records in the object store. Here we use

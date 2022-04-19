@@ -27,7 +27,7 @@ object.
 ## Syntax
 
 ```js
-cssStyleSheet.deleteRule(index)
+deleteRule(index)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ cssStyleSheet.deleteRule(index)
 
 `undefined`
 
-## Example
+## Examples
 
 This example removes the first rule from the stylesheet `myStyles`.
 

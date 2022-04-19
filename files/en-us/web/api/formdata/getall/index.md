@@ -19,19 +19,19 @@ The **`getAll()`** method of the {{domxref("FormData")}} interface returns all t
 ## Syntax
 
 ```js
-formData.getAll(name);
+getAll(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("USVString")}} representing the name of the key you want to retrieve.
+  - : A string representing the name of the key you want to retrieve.
 
-### Returns
+### Return value
 
 An array of {{domxref("FormDataEntryValue")}}s whose key matches the value passed in the `name` parameter. If the key doesn't exist, the method returns an empty list.
 
-## Example
+## Examples
 
 The following line creates an empty `FormData` object:
 

@@ -41,4 +41,4 @@ The following approaches aim to achieve each of these goals by different means.
 
 ## Original document information
 
-Originally published on 4 May, 2011 on the Mozilla Webdev blog as "[Approaches to Mobile Web Development Part 1 - What is Mobile Friendliness?](http://blog.mozilla.com/webdev/2011/05/04/approaches-to-mobile-web-development-part-1-what-is-mobile-friendliness/)", by Jason Grlicky.
+Originally published on 4 May, 2011 on the Mozilla Webdev blog as "[Approaches to Mobile Web Development Part 1 - What is Mobile Friendliness?](https://blog.mozilla.org/webdev/2011/05/04/approaches-to-mobile-web-development-part-1-what-is-mobile-friendliness/)", by Jason Grlicky.

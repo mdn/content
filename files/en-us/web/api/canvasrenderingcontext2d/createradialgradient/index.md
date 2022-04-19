@@ -29,7 +29,7 @@ properties.
 ## Syntax
 
 ```js
-CanvasGradient ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+createRadialGradient(x0, y0, r0, x1, y1, r1)
 ```
 
 The `createRadialGradient()` method is specified by six parameters, three

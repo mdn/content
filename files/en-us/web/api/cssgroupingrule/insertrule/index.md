@@ -17,14 +17,14 @@ The **`insertRule()`** method of the
 ## Syntax
 
 ```js
-cssGroupingRule.insertRule(rule);
-cssGroupingRule.insertRule(rule, index);
+insertRule(rule)
+insertRule(rule, index)
 ```
 
 ### Parameters
 
 - rule
-  - : A {{domxref("CSSOMString")}}
+  - : A string
 - index{{optional_inline}}
   - : An optional index at which to insert the rule; defaults to 0.
 

@@ -50,8 +50,8 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### Virtual Reality
 
-- The Polar Sea ([source code](https://github.com/MozVR/polarsea))
-- [Sechelt fly-through](https://mixedreality.mozilla.org/sechelt/) ([source code](https://github.com/mozvr/sechelt))
+- The Polar Sea ([source code](https://github.com/MozillaReality/polarsea))
+- [Sechelt fly-through](https://mixedreality.mozilla.org/sechelt/) ([source code](https://github.com/MozillaReality/sechelt))
 
 ## CSS
 
@@ -63,7 +63,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### Transformations
 
-- [Impress.js](https://impress.github.io/impress.js) ([source code](https://github.com/impress/impress.js))
+- [Impress.js](https://impress.js.org/) ([source code](https://github.com/impress/impress.js))
 - [Flickr Polaroid Stack](https://ohiodave.com/tests/css2d/flickr.html)
 
 ## Games
@@ -87,7 +87,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### File API
 
-- [Slide My Text - presentation from plain text files](https://palerdot.github.io/slide-my-text/)
+- [Slide My Text - presentation from plain text files](https://palerdot.in/slide-my-text/)
 
 ### Web Workers
 

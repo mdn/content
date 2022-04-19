@@ -22,7 +22,7 @@ supplied values.
 ## Syntax
 
 ```js
-CSSStyleValue.parseAll(property, value)
+parseAll(property, value)
 ```
 
 ### Parameters

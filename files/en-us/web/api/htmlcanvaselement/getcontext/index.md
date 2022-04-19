@@ -24,15 +24,15 @@ different drawing context object on a given canvas element.
 ## Syntax
 
 ```js
-var ctx = canvas.getContext(contextType);
-var ctx = canvas.getContext(contextType, contextAttributes);
+getContext(contextType)
+getContext(contextType, contextAttributes)
 ```
 
 ### Parameters
 
 - `contextType`
 
-  - : Is a {{domxref("DOMString")}} containing the context identifier defining the drawing
+  - : Is a string containing the context identifier defining the drawing
     context associated to the canvas. Possible values are:
 
     - `"2d"`, leading to the creation of a
@@ -56,7 +56,7 @@ var ctx = canvas.getContext(contextType, contextAttributes);
     > implementations under certain [conformance
     > rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
-- `contextAttributes`
+- `contextAttributes` {{optional_inline}}
 
   - : You can use several context attributes when creating your rendering context, for
     example:

@@ -18,10 +18,10 @@ The **`HTMLTableElement.deleteTHead()`** removes the
 ## Syntax
 
 ```js
-HTMLTableElement.deleteTHead();
+deleteTHead()
 ```
 
-## Example
+## Examples
 
 This example uses JavaScript to delete a table's header.
 

@@ -112,7 +112,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 ### Developer tools
 
 - The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
-- The new [Page Inspector](/en-US/docs/Tools/Page_Inspector) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
+- The new [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
 
 ## Changes for Mozilla and add-on developers
 
@@ -135,10 +135,10 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### Interface changes
 
-- The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. **XXX need to [update docs](/en-US/Using_an_External_Spell-checker) on how to actually do this.**
+- The {{ interface("mozISpellCheckingEngine") }} and `nsIEditorSpellCheck` interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. **XXX need to [update docs](/en-US/Using_an_External_Spell-checker) on how to actually do this.**
 - The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed.
-- The `nsIDocumentViewer` interface has been merged into {{ interface("nsIContentViewer") }}.
-- The {{ interface("nsIURIFixup") }} interface has a new flag, `FIXUP_FLAG_USE_UTF8`, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.
+- The `nsIDocumentViewer` interface has been merged into `nsIContentViewer`.
+- The `nsIURIFixup` interface has a new flag, `FIXUP_FLAG_USE_UTF8`, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.
 
 ### Plug-in changes
 

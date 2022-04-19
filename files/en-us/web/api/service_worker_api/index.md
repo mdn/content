@@ -77,7 +77,7 @@ Service workers are also intended to be used for such things as:
 
 In the future, service workers will be able to do a number of other useful things for the web platform that will bring it closer towards native app viability. Interestingly, other specifications can and will start to make use of the service worker context, for example:
 
-- [Background synchronization](https://github.com/slightlyoff/BackgroundSync): Start up a service worker even when no users are at the site, so caches can be updated, etc.
+- [Background synchronization](https://github.com/WICG/background-sync): Start up a service worker even when no users are at the site, so caches can be updated, etc.
 - [Reacting to push messages](/en-US/docs/Web/API/Push_API): Start up a service worker to send users a message to tell them new content is available.
 - Reacting to a particular time & date.
 - Entering a geo-fence.
@@ -95,7 +95,7 @@ In the future, service workers will be able to do a number of other useful thing
 - {{DOMxRef("ExtendableEvent")}} {{Experimental_Inline}}
   - : Extends the lifetime of the `install` and `activate` events dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}}, as part of the service worker lifecycle. This ensures that any functional events (like {{DOMxRef("FetchEvent")}}) are not dispatched to the {{DOMxRef("ServiceWorker")}}, until it upgrades database schemas, and deletes outdated cache entries, etc.
 - {{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}
-  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
+  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 - {{DOMxRef("FetchEvent")}} {{Experimental_Inline}}
   - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
 - {{DOMxRef("InstallEvent")}} {{Experimental_Inline}}
@@ -131,7 +131,7 @@ In the future, service workers will be able to do a number of other useful thing
 
 ## See also
 
-- [ServiceWorker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

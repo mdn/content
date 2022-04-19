@@ -48,8 +48,7 @@ The available types are as follows:
       </td>
       <td id="examplebutton">
         <pre class="brush: html hidden">
-&#x3C;input  type="button" name="button" value="Button" /></pre
-        >
+&#x3C;input  type="button" name="button" value="Button" /></pre>
         {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -58,21 +57,18 @@ The available types are as follows:
       <td>A check box allowing single values to be selected/deselected.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
-&#x3C;input  type="checkbox" name="checkbox"/></pre
-        >
+&#x3C;input  type="checkbox" name="checkbox"/></pre>
         {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/color", "color")}}</td>
       <td>
-        A control for specifying a color; opening a color picker when active in
-        supporting browsers.
+        A control for specifying a color; opening a color picker when active in supporting browsers.
       </td>
       <td id="examplecolor">
         <pre class="brush: html hidden">
-&#x3C;input  type="color" name="color"/></pre
-        >
+&#x3C;input  type="color" name="color"/></pre>
         {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -85,8 +81,7 @@ The available types are as follows:
       </td>
       <td id="exampledate">
         <pre class="brush: html hidden">
-&#x3C;input  type="date" name="date"/></pre
-        >
+&#x3C;input  type="date" name="date"/></pre>
         {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -96,13 +91,11 @@ The available types are as follows:
       </td>
       <td>
         A control for entering a date and time, with no time zone. Opens a date
-        picker or numeric wheels for date- and time-components when active in
-        supporting browsers.
+        picker or numeric wheels for date- and time-components when active in supporting browsers.
       </td>
       <td id="exampledtl">
         <pre class="brush: html hidden">
-&#x3C;input  type="datetime-local" name="datetime-local"/></pre
-        >
+&#x3C;input  type="datetime-local" name="datetime-local"/></pre>
         {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -152,8 +145,7 @@ The available types are as follows:
       </td>
       <td id="exampleimage">
         <pre class="brush: html hidden">
-&#x3C;input type="image" name="image" src="" alt="image input"/></pre
-        >
+&#x3C;input type="image" name="image" src="" alt="image input"/></pre>
         {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -162,8 +154,7 @@ The available types are as follows:
       <td>A control for entering a month and year, with no time zone.</td>
       <td id="examplemonth">
         <pre class="brush: html hidden">
-&#x3C;input type="month" name="month"/></pre
-        >
+&#x3C;input type="month" name="month"/></pre>
         {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -176,8 +167,7 @@ The available types are as follows:
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden">
-&#x3C;input  type="number" name="number"/></pre
-        >
+&#x3C;input  type="number" name="number"/></pre>
         {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -189,8 +179,7 @@ The available types are as follows:
       </td>
       <td id="examplepassword">
         <pre class="brush: html hidden">
-&#x3C;input  type="password" name="password"/></pre
-        >
+&#x3C;input  type="password" name="password"/></pre>
         {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -215,16 +204,14 @@ The available types are as follows:
       </td>
       <td id="examplerange">
         <pre class="brush: html hidden">
-&#x3C;input type="range" name="range" min="0" max="25"/></pre
-        >
+&#x3C;input type="range" name="range" min="0" max="25"/></pre>
         {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/reset", "reset")}}</td>
       <td>
-        A button that resets the contents of the form to default values. Not
-        recommended.
+        A button that resets the contents of the form to default values. Not recommended.
       </td>
       <td id="examplereset">
         <pre class="brush: html hidden">
@@ -243,8 +230,7 @@ The available types are as follows:
       </td>
       <td id="examplesearch">
         <pre class="brush: html hidden">
-&#x3C;input  type="search" name="search"/></pre
-        >
+&#x3C;input  type="search" name="search"/></pre>
         {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -253,8 +239,7 @@ The available types are as follows:
       <td>A button that submits the form.</td>
       <td id="examplesubmit">
         <pre class="brush: html hidden">
-&#x3C;input type="submit" name="submit"/></pre
-        >
+&#x3C;input type="submit" name="submit"/></pre>
         {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -266,8 +251,7 @@ The available types are as follows:
       </td>
       <td id="exampletel">
         <pre class="brush: html hidden">
-&#x3C;input  type="tel" name="tel"/></pre
-        >
+&#x3C;input  type="tel" name="tel"/></pre>
         {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -289,8 +273,7 @@ The available types are as follows:
       <td>A control for entering a time value with no time zone.</td>
       <td id="exampletime">
         <pre class="brush: html hidden">
-&#x3C;input  type="time" name="time"/></pre
-        >
+&#x3C;input  type="time" name="time"/></pre>
         {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -311,13 +294,11 @@ The available types are as follows:
     <tr>
       <td>{{HTMLElement("input/week", "week")}}</td>
       <td>
-        A control for entering a date consisting of a week-year number and a
-        week number with no time zone.
+        A control for entering a date consisting of a week-year number and a week number with no time zone.
       </td>
       <td id="exampleweek">
         <pre class="brush: html hidden">
-&#x3C;input type="week" name="week"/></pre
-        >
+&#x3C;input type="week" name="week"/></pre>
         {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -327,13 +308,11 @@ The available types are as follows:
     <tr>
       <td>{{HTMLElement("input/datetime", "datetime")}}</td>
       <td>
-        {{deprecated_inline}} A control for entering a date and time
-        (hour, minute, second, and fraction of a second) based on UTC time zone.
+        {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
       </td>
       <td id="exampledatetime">
         <pre class="brush: html hidden">
-&#x3C;input type="datetime" name="datetime"/></pre
-        >
+&#x3C;input type="datetime" name="datetime"/></pre>
         {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}
       </td>
     </tr>

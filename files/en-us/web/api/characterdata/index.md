@@ -33,14 +33,14 @@ _This interface also inherits methods from its parents, {{domxref("Node")}} and 
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the
     `CharacterData`'s parent, just after the `CharacterData` object.
 - {{domxref("CharacterData.appendData()")}}
-  - : Appends the given string to the `CharacterData.data` string; when this method returns, `data` contains the concatenated {{domxref("DOMString")}}.
+  - : Appends the given string to the `CharacterData.data` string; when this method returns, `data` contains the concatenated string.
 - {{domxref("CharacterData.before()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the
     `CharacterData`'s parent, just before the `CharacterData` object.
 - {{domxref("CharacterData.deleteData()")}}
   - : Removes the specified amount of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened string.
 - {{domxref("CharacterData.insertData()")}}
-  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
+  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified string.
 - {{domxref("CharacterData.remove()")}}
   - : Removes the object from its parent children list.
 - {{domxref("CharacterData.replaceData()")}}
@@ -48,7 +48,7 @@ _This interface also inherits methods from its parents, {{domxref("Node")}} and 
 - {{DOMxRef("CharacterData.replaceWith()")}}
   - : Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
 - {{domxref("CharacterData.substringData()")}}
-  - : Returns a {{jsxref("String")}} containing the part of `CharacterData.data` of the specified length and starting at the specified offset.
+  - : Returns a string containing the part of `CharacterData.data` of the specified length and starting at the specified offset.
 
 ## Specifications
 

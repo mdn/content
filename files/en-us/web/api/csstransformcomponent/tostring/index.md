@@ -19,7 +19,7 @@ The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interfac
 ## Syntax
 
 ```js
-var transformString = CSSTransformComponent.toString();
+toString()
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ None
 
 ### Return value
 
-A {{domxref("DOMString")}} in the form of a CSS {{cssxref("transform-function","Transforms function")}}.
+A string in the form of a CSS {{cssxref("transform-function","Transforms function")}}.
 
 This will use the value of `is2D` to return either a 2D or 3D transform. For example if the component represents {{domxref("CSSRotate")}} and `is2D` is false then the string returned will be in the form of the CSS transformation [`rotate3D()`](</en-US/docs/Web/CSS/transform-function/rotate3d()>) function. If true the string returned will be in the form of the 2-dimensional [`rotate3D()`](</en-US/docs/Web/CSS/transform-function/rotate()>) function.
 

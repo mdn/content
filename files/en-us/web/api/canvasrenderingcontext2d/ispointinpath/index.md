@@ -19,8 +19,10 @@ the current path.
 ## Syntax
 
 ```js
-ctx.isPointInPath(x, y [, fillRule]);
-ctx.isPointInPath(path, x, y [, fillRule]);
+isPointInPath(x, y)
+isPointInPath(x, y, fillRule)
+isPointInPath(path, x, y)
+isPointInPath(path, x, y, fillRule)
 ```
 
 ### Parameters

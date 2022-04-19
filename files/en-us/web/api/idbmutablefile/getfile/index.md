@@ -19,10 +19,10 @@ file in the form of a {{domxref("File")}} object.
 ## Syntax
 
 ```js
-var request = instanceOfFileHandle.getFile();
+getFile()
 ```
 
-### Return
+### Return value
 
 A {{domxref("DOMRequest")}} object. In case of success, the request's
 `result` is a {{domxref("File")}} object.

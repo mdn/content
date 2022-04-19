@@ -25,14 +25,14 @@ it, and then returns it.
 ## Syntax
 
 ```js
-HTMLTableElement = table.createCaption();
+createCaption()
 ```
 
 ### Return value
 
 {{domxref("HTMLTableCaptionElement")}}
 
-## Example
+## Examples
 
 This example uses JavaScript to add a caption to a table that initially lacks one.
 

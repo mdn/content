@@ -25,7 +25,7 @@ at the index corresponding to the parameter and regardless of the value of
 ## Syntax
 
 ```js
-var request = instanceOfLockedFile.truncate(start);
+truncate(start)
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ var request = instanceOfLockedFile.truncate(start);
 - `start` {{optional_inline}}
   - : A number representing the index where to start the operation.
 
-### Return
+### Return value
 
 A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
 

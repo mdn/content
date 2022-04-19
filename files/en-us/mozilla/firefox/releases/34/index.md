@@ -15,11 +15,11 @@ Firefox 34 was released on December 1st, 2014. This article lists key changes th
 
 Highlights:
 
-- [Storage Inspector: a new tool enabling you to view data stored by web pages](/en-US/docs/Tools/Storage_Inspector)
-- [Performance tool: revamped Profiler UI and frame rate timeline](/en-US/docs/Tools/Performance)
-- [Frame switching: point the developer tools at a specific iframe in the page](/en-US/docs/Tools/Working_with_iframes)
+- [Storage Inspector: a new tool enabling you to view data stored by web pages](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
+- [Performance tool: revamped Profiler UI and frame rate timeline](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
+- [Frame switching: point the developer tools at a specific iframe in the page](https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html)
 - [console.table support](/en-US/docs/Web/API/console/table)
-- [jQuery events are visible in the Page Inspector](/en-US/docs/Tools/Page_Inspector#examining_event_listeners)
+- [jQuery events are visible in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_event_listeners/index.html)
 
 [All devtools bugs fixed between Firefox 33 and Firefox 34](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-09-02&chfield=resolution&query_format=advanced&chfieldfrom=2014-07-21&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
 

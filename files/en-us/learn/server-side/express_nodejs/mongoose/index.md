@@ -405,8 +405,9 @@ Each story can have a single author.
 The `ref` property tells the schema which model can be assigned to this field.
 
 ```js
-var mongoose = require('mongoose')
-  , Schema = mongoose.Schema
+var mongoose = require('mongoose');
+
+var Schema = mongoose.Schema;
 
 var authorSchema = Schema({
   name    : String,

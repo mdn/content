@@ -31,7 +31,7 @@ you can read data from the clipboard.
 ## Syntax
 
 ```js
-var promise = navigator.clipboard.readText()
+readText()
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("DOMString")}} containing the
+A {{jsxref("Promise")}} that resolves with a string containing the
 textual contents of the clipboard. Returns an empty string if the clipboard is empty,
 does not contain text, or does not include a textual representation among the
 {{domxref("DataTransfer")}} objects representing the clipboard's contents.
@@ -49,7 +49,7 @@ To read non-text contents from the clipboard, use the {{domxref("Clipboard.read"
   "read()")}} method instead. You can write text to the clipboard using
 {{domxref("Clipboard.writeText", "writeText()")}}.
 
-## Example
+## Examples
 
 This example retrieves the textual contents of the clipboard and inserts the returned
 text into an element's contents.

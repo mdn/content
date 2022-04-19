@@ -27,14 +27,14 @@ value.
 ## Syntax
 
 ```js
-var constantSourceNode = AudioContext.createConstantSource()
+createConstantSource()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref('ConstantSourceNode')}} instance.
 

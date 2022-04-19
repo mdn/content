@@ -19,7 +19,7 @@ key, or `undefined` if there is none.
 ## Syntax
 
 ```js
-var value = mediaKeyStatusMap.get(key);
+get(key)
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ var value = mediaKeyStatusMap.get(key);
 - key
   - : The key whose value you want returned.
 
-### Returns
+### Return value
 
 The value associated with the given key, or `undefined`.
 

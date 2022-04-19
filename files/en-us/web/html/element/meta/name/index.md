@@ -29,7 +29,7 @@ The HTML specification defines the following set of standard metadata names:
 - `description`: a short and accurate summary of the content of the page. Several browsers, like Firefox and Opera, use this as the default description of bookmarked pages.
 - `generator`: the identifier of the software that generated the page.
 - `keywords`: words relevant to the page's content separated by commas.
-- `referrer`: controls the HTTP {{httpheader("Referer")}} header for to requests sent from the document:
+- `referrer`: controls the HTTP {{httpheader("Referer")}} header of requests sent from the document:
 
   <table class="standard-table">
     <caption>

@@ -22,7 +22,7 @@ scrolling.
 This API cannot be used by Web content. It is synchronous, and as such can't capture
 cross-origin (out of process) iframes with Fission.  If you're using it from an
 extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}} to capture the
-tab's image as a [data: url](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) and then render the captured image onto canvas using
+tab's image as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) and then render the captured image onto canvas using
 {{domxref("CanvasRenderingContext2D.drawImage")}}. If you're writing chrome code,
 you probably want [WindowGlobalParent.drawSnapshot](https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98)
 from the parent process.
@@ -30,7 +30,8 @@ from the parent process.
 ## Syntax
 
 ```js
-void ctx.drawWindow(window, x, y, w, h, bgColor [, flags]);
+drawWindow(window, x, y, w, h, bgColor)
+drawWindow(window, x, y, w, h, bgColor, flags)
 ```
 
 ### Parameters
@@ -47,7 +48,7 @@ void ctx.drawWindow(window, x, y, w, h, bgColor [, flags]);
   - : The height of the window.
 - `bgColor`
 
-  - : A {{domxref("DOMString")}} that specifies the color the canvas is filled with before
+  - : A string that specifies the color the canvas is filled with before
     the window is rendered into it. This color may be transparent/translucent. It is given
     as a CSS color string (for example, `rgb()` or `rgba()`).
     Notes:
@@ -72,7 +73,7 @@ void ctx.drawWindow(window, x, y, w, h, bgColor [, flags]);
     | `DRAWWINDOW_USE_WIDGET_LAYERS`   | `0x08` | Use the widget layer manager if available. This means hardware acceleration may be used, but it might actually be slower or lower quality than normal. It will, however, more accurately reflect the pixels rendered to the screen. |
     | `DRAWWINDOW_ASYNC_DECODE_IMAGES` | `0x10` | Do not synchronously decode images - draw what we have.                                                                                                                                                                             |
 
-## Example
+## Examples
 
 This method draws a snapshot of the contents of a DOM `window` into the
 canvas. For example,

@@ -22,20 +22,20 @@ object. If you expect multiple values and want all of them, use the
 ## Syntax
 
 ```js
-formData.get(name);
+get(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("USVString")}} representing the name of the key you want to retrieve.
+  - : A string representing the name of the key you want to retrieve.
 
 ### Return value
 
 A {{domxref("FormDataEntryValue")}} containing the value. If the key doesn't exist, the
 method returns null.
 
-## Example
+## Examples
 
 The following line creates an empty `FormData` object:
 

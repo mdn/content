@@ -35,9 +35,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.match(request, options).then(function(response) {
-  // Do something with the response
-});
+match(request, options)
 ```
 
 ### Parameters
@@ -64,7 +62,7 @@ caches.match(request, options).then(function(response) {
       header matching. In other words, if the URL matches you will get a match
       regardless of whether the {{domxref("Response")}} object has a `VARY`
       header or not. It defaults to `false`.
-    - `cacheName`: A {{domxref("DOMString")}} that represents a specific
+    - `cacheName`: A string that represents a specific
       cache to search within.
 
 ### Return value

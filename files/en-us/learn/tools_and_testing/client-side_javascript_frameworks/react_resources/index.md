@@ -69,7 +69,7 @@ React DevTools is available in a number of forms:
 
 - A [Chrome browser extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 - A [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
-- A Chromium Edge browser extension (available soon).
+- A [Microsoft Edge browser extension](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil).
 - A [stand-alone application you can install with NPM or Yarn](https://www.npmjs.com/package/react-devtools).
 
 Try installing one of these, then using it to inspect the app you've just built!

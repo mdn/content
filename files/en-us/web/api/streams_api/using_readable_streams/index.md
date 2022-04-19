@@ -80,29 +80,37 @@ Also note that the previous example can be reduced by one step, as `response.bod
 Now you've got your reader attached, you can read data chunks out of the stream using the {{domxref("ReadableStreamDefaultReader.read()")}} method. This reads one chunk out of the stream, which you can then do anything you like with. For example, our Simple stream pump example goes on to enqueue each chunk in a new, custom `ReadableStream` (we will find more about this in the next section), then create a new {{domxref("Response")}} out of it, consume it as a {{domxref("Blob")}}, create an object URL out of that blob using {{domxref("URL.createObjectURL()")}}, and then display it on screen in an {{htmlelement("img")}} element, effectively creating a copy of the image we originally fetched.
 
 ```js
-  return new ReadableStream({
-    start(controller) {
-      return pump();
-      function pump() {
-        return reader.read().then(({ done, value }) => {
-          // When no more data needs to be consumed, close the stream
-          if (done) {
+// Fetch the original image
+fetch('./tortoise.png')
+  // Retrieve its body as ReadableStream
+  .then(response => {
+    const reader = response.body.getReader();
+    return new ReadableStream({
+      start(controller) {
+        return pump();
+        function pump() {
+          return reader.read().then(({ done, value }) => {
+            // When no more data needs to be consumed, close the stream
+            if (done) {
               controller.close();
               return;
-          }
-          // Enqueue the next data chunk into our target stream
-          controller.enqueue(value);
-          return pump();
-        });
+            }
+            // Enqueue the next data chunk into our target stream
+            controller.enqueue(value);
+            return pump();
+          });
+        }
       }
-    }
+    })
   })
-})
-.then(stream => new Response(stream))
-.then(response => response.blob())
-.then(blob => URL.createObjectURL(blob))
-.then(url => console.log(image.src = url))
-.catch(err => console.error(err));
+  // Create a new response out of the stream
+  .then(stream => new Response(stream))
+  // Create an object URL for the response
+  .then(response => response.blob())
+  .then(blob => URL.createObjectURL(blob))
+  // Update image
+  .then(url => console.log(image.src = url))
+  .catch(err => console.error(err));
 ```
 
 Let's look in detail at how `read()` is used. In the `pump()` function seen above we first invoke `read()`, which returns a promise containing a results object — this has the results of our read in it, in the form `{ done, value }`:
@@ -184,24 +192,29 @@ The first object can contain up to five members, only the first of which is requ
 Looking at our simple example code again, you can see that our `ReadableStream()` constructor only includes a single method — `start()`, which serves to read all the data out of our fetch stream.
 
 ```js
-  return new ReadableStream({
-    start(controller) {
-      return pump();
-      function pump() {
-        return reader.read().then(({ done, value }) => {
-          // When no more data needs to be consumed, close the stream
-          if (done) {
-            controller.close();
-            return;
-          }
-          // Enqueue the next data chunk into our target stream
-          controller.enqueue(value);
-          return pump();
-        });
+// Fetch the original image
+fetch('./tortoise.png')
+  // Retrieve its body as ReadableStream
+  .then(response => {
+    const reader = response.body.getReader();
+    return new ReadableStream({
+      start(controller) {
+        return pump();
+        function pump() {
+          return reader.read().then(({ done, value }) => {
+            // When no more data needs to be consumed, close the stream
+            if (done) {
+              controller.close();
+              return;
+            }
+            // Enqueue the next data chunk into our target stream
+            controller.enqueue(value);
+            return pump();
+          });
+        }
       }
-    }
-  })
-})
+    })
+  });
 ```
 
 ### ReadableStream controllers
