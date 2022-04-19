@@ -7,7 +7,7 @@ tags:
   - Method
   - Reference
   - timeout
-browser-compat: api.AbortSignal.timout
+browser-compat: api.AbortSignal.timeout
 ---
 {{APIRef("DOM")}}
 
