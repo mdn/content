@@ -38,13 +38,13 @@ IFrame (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it
 {{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const para = document.querySelector('p');
 
-var ifr = document.querySelector('iframe');
+ ifr = document.querySelector('iframe');
 var otherWindow = ifr.contentWindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+const ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
   otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
