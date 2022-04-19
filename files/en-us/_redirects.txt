@@ -10629,6 +10629,7 @@
 /en-US/docs/Web/CSS/-moz-border-image-slice	/en-US/docs/Web/CSS/border-image-slice
 /en-US/docs/Web/CSS/-moz-border-image-source	/en-US/docs/Web/CSS/border-image-source
 /en-US/docs/Web/CSS/-moz-border-image-width	/en-US/docs/Web/CSS/border-image-width
+/en-US/docs/Web/CSS/-moz-border-left-colors	/en-US/docs/Web/CSS/Mozilla_Extensions#b
 /en-US/docs/Web/CSS/-moz-border-radius	/en-US/docs/Web/CSS/border-radius
 /en-US/docs/Web/CSS/-moz-border-radius-bottomleft	/en-US/docs/Web/CSS/border-bottom-left-radius
 /en-US/docs/Web/CSS/-moz-border-radius-bottomright	/en-US/docs/Web/CSS/border-bottom-right-radius
