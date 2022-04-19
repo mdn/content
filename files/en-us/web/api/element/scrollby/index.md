@@ -18,8 +18,8 @@ interface scrolls an element by the given amount.
 ## Syntax
 
 ```js
-element.scrollBy(x-coord, y-coord);
-element.scrollBy(options)
+scrollBy(x-coord, y-coord)
+scrollBy(options)
 ```
 
 ### Parameters

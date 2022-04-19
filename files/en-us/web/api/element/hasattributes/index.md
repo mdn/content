@@ -18,13 +18,12 @@ attributes or not.
 ## Syntax
 
 ```js
-var result = element.hasAttributes();
+hasAttributes()
 ```
 
 ### Return value
 
-- `result`
-  - : holds the return value `true` or `false`.
+A boolean.
 
 ## Examples
 

@@ -17,7 +17,7 @@ with the given namespace and name.
 ## Syntax
 
 ```js
-element.setAttributeNS(namespace, name, value)
+setAttributeNS(namespace, name, value)
 ```
 
 - `namespace` is a string specifying the namespace of the attribute.
@@ -25,7 +25,7 @@ element.setAttributeNS(namespace, name, value)
   that is, a namespace prefix followed by a colon followed by a local name.
 - `value` is the desired string value of the new attribute.
 
-## Example
+## Examples
 
 ```js
 let d = document.getElementById('d1');

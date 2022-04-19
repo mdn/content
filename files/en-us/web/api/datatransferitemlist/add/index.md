@@ -23,8 +23,8 @@ given type. If the item is successfully added to the list, the newly-created
 ## Syntax
 
 ```js
-DataTransferItem = DataTransferItemList.add(data, type);
-DataTransferItem = DataTransferItemList.add(file);
+add(data, type)
+add(file)
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ has no data store), `null` is returned.
     item whose {{domxref("DataTransferItem.kind","kind")}} is `"Plain Unicode string"` and
     whose type is equal to the specified type parameter.
 
-## Example
+## Examples
 
 This example shows the use of the `add()` method.
 

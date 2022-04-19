@@ -17,7 +17,7 @@ The **`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** method s
 ## Syntax
 
 ```js
-writeValueWithoutResponse(value);
+writeValueWithoutResponse(value)
 ```
 
 ### Return value

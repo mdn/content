@@ -22,7 +22,7 @@ be changed.
 ## Syntax
 
 ```js
-DataTransferItemList.remove(index);
+remove(index)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ DataTransferItemList.remove(index);
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the drag data store is not in read/write mode and so the item cannot be removed.
 
-## Example
+## Examples
 
 This example shows the use of the `remove()` method.
 

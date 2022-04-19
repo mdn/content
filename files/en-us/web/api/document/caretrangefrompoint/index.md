@@ -21,7 +21,7 @@ fragment under the specified coordinates.
 ## Syntax
 
 ```js
-var range = document.caretRangeFromPoint(float x, float y);
+caretRangeFromPoint(x, y)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ var range = document.caretRangeFromPoint(float x, float y);
 - _y_
   - : A vertical position within the current viewport.
 
-### Returns
+### Return value
 
 One of the following:
 
@@ -39,7 +39,7 @@ One of the following:
 - `Null`, if _x_ or _y_ are negative, outside viewport,
   or there is no text entry node.
 
-## Example
+## Examples
 
 Click anywhere in the **Demo** paragraph below to insert a line break at the point where you click. The code for it is below the demo.
 

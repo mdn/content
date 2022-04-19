@@ -21,7 +21,7 @@ enabled).
 ## Syntax
 
 ```js
-document.enableStyleSheetsForSet(name);
+enableStyleSheetsForSet(name)
 ```
 
 ### Parameters
@@ -43,7 +43,7 @@ document.enableStyleSheetsForSet(name);
 - This method never affects the values of {{domxref("document.lastStyleSheetSet")}} or
   {{domxref("document.preferredStyleSheetSet")}}.
 
-## Example
+## Examples
 
 ```js
 document.enableStyleSheetsForSet("Some style sheet set name");

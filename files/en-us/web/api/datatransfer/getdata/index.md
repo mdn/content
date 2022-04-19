@@ -31,7 +31,10 @@ getData(format)
 
 ### Return value
 
-A string representing the drag data for the specified `format`. If the drag operation has no data or the operation has no data for the specified `format`, this method returns an empty string.
+- string
+  - : A string representing the drag data for the specified
+    `format`. If the drag operation has no data or the operation has no
+    data for the specified `format`, this method returns an empty string.
 
 ### Caveats
 

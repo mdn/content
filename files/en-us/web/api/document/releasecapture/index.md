@@ -17,13 +17,13 @@ element is done by calling {{domxref("element.setCapture()")}}.
 ## Syntax
 
 ```js
-document.releaseCapture();
+releaseCapture()
 ```
 
 Once mouse capture is released, mouse events will no longer all be directed to the
 element on which capture is enabled.
 
-## Example
+## Examples
 
 See the [example](/en-US/docs/Web/API/Element/setCapture#example) for
 {{domxref("element.setCapture()")}}.

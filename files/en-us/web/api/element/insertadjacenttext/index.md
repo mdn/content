@@ -18,7 +18,7 @@ The **`insertAdjacentText()`** method of the {{domxref("Element")}} interface, g
 ## Syntax
 
 ```js
-element.insertAdjacentText(where, data);
+insertAdjacentText(where, data)
 ```
 
 ### Parameters
@@ -65,7 +65,7 @@ Void.
 > `afterend` positions work only if the node is in a tree and has an element
 > parent.
 
-## Example
+## Examples
 
 ```js
 beforeBtn.addEventListener('click', function() {

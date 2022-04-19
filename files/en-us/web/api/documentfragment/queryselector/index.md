@@ -24,13 +24,13 @@ a `SYNTAX_ERR` value is raised.
 ## Syntax
 
 ```js
-element = documentfragment.querySelector(selectors);
+querySelector(selectors)
 ```
 
 ### Parameters
 
 - _selectors_
-  - : Is a {{domxref("DOMString")}} containing one or more CSS selectors separated by
+  - : Is a string containing one or more CSS selectors separated by
     commas.
 
 ## Examples

@@ -36,7 +36,8 @@ detached from the original document, then the document receives these events ins
 ## Syntax
 
 ```js
-var promise = element.requestFullscreen(options);
+requestFullScreen()
+requestFullScreen(options)
 ```
 
 ### Parameters
@@ -44,7 +45,7 @@ var promise = element.requestFullscreen(options);
 - `options` {{optional_inline}}
   - : An object that controls the behavior of the transition to fullscreen mode. See below for available options.
 
-### Options
+#### Options
 
 - `navigationUI`
 
