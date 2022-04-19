@@ -116,7 +116,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/file", "file")}}</td>
       <td>
         A control that lets the user select a file.
-        Use the <a href="#accept"><code>acce[t</code></a> attribute to define the types of files that the control can select.
+        Use the <a href="#accept"><code>accept</code></a> attribute to define the types of files that the control can select.
       </td>
       <td id="examplefile">
         <pre class="brush: html hidden">
