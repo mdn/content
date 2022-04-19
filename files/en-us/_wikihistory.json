@@ -66373,13 +66373,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceCandidateStats/networkType": {
-    "modified": "2020-10-15T22:15:51.020Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceCandidateStats/port": {
     "modified": "2020-10-15T22:15:52.213Z",
     "contributors": [
