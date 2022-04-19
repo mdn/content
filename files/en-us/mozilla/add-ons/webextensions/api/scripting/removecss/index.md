@@ -25,18 +25,28 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let removing = browser.scripting.removeCSS(
-  injection       // object
+  details       // object
 )
 ```
 
 ### Parameters
 
-- `injection`
-  - : {{WebExtAPIRef("scripting.CSSInjection")}}. An object describing the CSS styles to remove. The `css`, `files`, and `origin` properties must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}. Attempts to remove non-existent stylesheets are ignored. 
+- `details`
+
+  - : An object describing the CSS to remove and where to remove it from. It contains the following properties:
+
+    - `css`{{optional_inline}} 
+      - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified and must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
+    - `files`{{optional_inline}}
+      - : `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified and must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
+   - `origin`{{optional_inline}} 
+      - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. Must match the origin of the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
+   - `target` 
+      - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to remove the CSS from. 
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the CSS is removed. If any error occurs, the promise fulfills with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the CSS is removed. If any error occurs, the promise fulfills with an error message. Attempts to remove non-existent stylesheets are ignored.
 
 ## Examples
 

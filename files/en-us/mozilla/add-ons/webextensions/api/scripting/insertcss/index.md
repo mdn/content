@@ -33,14 +33,24 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js
 let inserting = browser.scripting.insertCSS(
-  injection     // object
+  details     // object
 )
 ```
 
 ### Parameters
 
-- `injection`
-  - : {{WebExtAPIRef("scripting.CSSInjection")}} The CSS to inject.  
+- `details`
+
+  - : An object describing the CSS to insert and where to insert it. It contains the following properties:
+
+    - `css`{{optional_inline}} 
+      - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified. 
+    - `files`{{optional_inline}}
+      - : `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified. 
+   - `origin`{{optional_inline}} 
+      - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. 
+   - `target` 
+      - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the CSS into. 
 
 ### Return value
 
