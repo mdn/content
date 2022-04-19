@@ -32,7 +32,7 @@ getElementsByTagName(name)
 
 ### Return value
 
-A live {{domxref("HTMLCollection")}} (but see the note below) of found elements in the order they appear in the tree.
+A live {{domxref("HTMLCollection")}} of found elements in the order they appear in the tree.
 
 > **Note:** [The
 > latest W3C specification](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) says returned value is an

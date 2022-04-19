@@ -19,7 +19,7 @@ and returns it.
 createCDATASection(data)
 ```
 
-### Paramee
+### Parameters
 
 - _data_ 
   - : A string containing the data to be added to the CDATA Section.

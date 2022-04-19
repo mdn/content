@@ -28,7 +28,7 @@ getElementsByName(name)
 
 ### Return value
 
-A live {{domxref("NodeList")}} Collection, meaning it automatically updates as new elements with the same `name` are added to/removed from the document.
+A live {{domxref("NodeList")}} collection, meaning it automatically updates as new elements with the same `name` are added to, or removed from, the document.
 
 
 ## Examples

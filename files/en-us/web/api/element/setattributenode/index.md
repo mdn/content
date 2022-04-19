@@ -25,6 +25,7 @@ setAttributeNode(attribute)
 - `attribute` is the `Attr` node to set on the element.
 - 
 ### Return value
+
 The replaced attribute node, if any, returned by this function.
 
 ## Examples
