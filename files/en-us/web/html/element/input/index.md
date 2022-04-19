@@ -23,7 +23,7 @@ The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interac
 
 ## \<input> types
 
-How an `<input>` works varies considerably depending on the value of its <a href="#type"><code>type</code></a> attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is `text`.
+How an `<input>` works varies considerably depending on the value of its [`type`](#type) attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is `text`.
 
 The available types are as follows:
 
