@@ -878,7 +878,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-list">list</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#list">list</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>Identifies a list of pre-defined options to suggest to the user.</td>
