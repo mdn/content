@@ -47,9 +47,9 @@ let inserting = browser.scripting.insertCSS(
       - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified. 
     - `files`{{optional_inline}}
       - : `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified. 
-   - `origin`{{optional_inline}} 
+    - `origin`{{optional_inline}} 
       - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. 
-   - `target` 
+    - `target` 
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the CSS into. 
 
 ### Return value

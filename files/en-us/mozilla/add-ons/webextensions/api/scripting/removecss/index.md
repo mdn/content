@@ -39,9 +39,9 @@ let removing = browser.scripting.removeCSS(
       - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified and must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
     - `files`{{optional_inline}}
       - : `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified and must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
-   - `origin`{{optional_inline}} 
+    - `origin`{{optional_inline}} 
       - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. Must match the origin of the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
-   - `target` 
+    - `target` 
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to remove the CSS from. 
 
 ### Return value
