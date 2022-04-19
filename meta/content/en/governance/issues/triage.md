@@ -13,7 +13,7 @@ We triage new issues filed in the mdn/content repository. The purpose of triage 
 
 ## Triage meeting schedule and participants
 
-We hold triage once a week. Triage meetings alternate timezones, between Europe/Asia-friendly and Europe/North America friendly.
+We hold triage once a week. Triage meetings alternate timezones, between Europe/Asia-friendly and Europe/North America-friendly.
 
 The meeting lasts 30 minutes.
 
