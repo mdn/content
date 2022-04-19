@@ -172,11 +172,11 @@ You should end up with a demo page with some nice fonts implemented on them. Bec
 
 ## Using an online font service
 
-Online font services generally store and serve fonts for you so you don't have to worry about writing the `@font-face` code. Instead, you generally just need to insert a simple line or two of code into your site to make everything work. Examples include [Adobe Fonts](https://fonts.adobe.com/) and [Cloud.typography](https://www.typography.com/cloud/welcome/). Most of these services are subscription-based, with the notable exception of [Google Fonts](https://www.google.com/fonts), a useful free service, especially for rapid testing work and writing demos.
+Online font services generally store and serve fonts for you so you don't have to worry about writing the `@font-face` code. Instead, you generally just need to insert a simple line or two of code into your site to make everything work. Examples include [Adobe Fonts](https://fonts.adobe.com/) and [Cloud.typography](https://www.typography.com/cloud/welcome/). Most of these services are subscription-based, with the notable exception of [Google Fonts](https://fonts.google.com/), a useful free service, especially for rapid testing work and writing demos.
 
 Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google fonts so you can get the idea. Again, use copies of `web-font-start.html` and `web-font-start.css` as your starting point.
 
-1. Go to [Google Fonts](https://www.google.com/fonts).
+1. Go to [Google Fonts](https://fonts.google.com/).
 2. Search for your favorite fonts or use the filters at the top of the page to display the kinds of fonts you want to choose and select a couple of fonts that you like.
 3. To select a font family, click on the font preview and press the ⊕ button alongside the font.
 4. When you've chosen the font families, press the *View your selected families* button in the top right corner of the page.

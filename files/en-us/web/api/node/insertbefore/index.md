@@ -42,7 +42,7 @@ insertBefore(newNode, referenceNode);
     node's child nodes.
     > **Note:** `referenceNode` is **not** an optional parameter.
     > You must explicitly pass a {{domxref("Node")}} or `null`.
-    > Failing to provide it or passing invalid values may [behave](https://code.google.com/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in different browser versions.
+    > Failing to provide it or passing invalid values may [behave](https://bugs.chromium.org/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in different browser versions.
 
 ### Return value
 

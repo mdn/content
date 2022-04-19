@@ -53,7 +53,7 @@ These may vary substantially depending on the specifics of the service, and a gi
 - `https://apple.com/apple-pay`
   - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. Currently, Apple Pay is only supported by Safari.
 - `https://google.com/pay`
-  - : Payments are processed by [Google Pay](https://pay.google.com/). This is currently supported only by Chrome and Chromium-based browsers.
+  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home). This is currently supported only by Chrome and Chromium-based browsers.
 
 ## Functions of a payment handler
 

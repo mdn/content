@@ -144,7 +144,7 @@ It is often a good idea to test on prerelease versions of browsers; see the foll
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 - [Edge Insider Preview](https://insider.windows.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
-- [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
+- [Chrome Canary](https://www.google.com/chrome/canary/)
 - [Opera Developer](https://www.opera.com/computer/beta)
 
 This is especially prevalent if you are using very new technologies in your site, and you want to test against the latest implementations, or if you are coming across a bug in the latest release version of a browser, and you want to see if the browser's developers have fixed the bug in a newer version.

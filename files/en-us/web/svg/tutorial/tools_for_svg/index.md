@@ -57,7 +57,7 @@ A newer JavaScript abstraction layer from the same author of Raphael JS. Snap.sv
 
 ## Google Docs
 
-URL: [www.google.com/google-d-s/drawings/](http://www.google.com/google-d-s/drawings/)
+URL: [www.google.com/google-d-s/drawings/](https://docs.google.com/drawings)
 
 Drawings from Google Docs can be exported as SVG.
 
