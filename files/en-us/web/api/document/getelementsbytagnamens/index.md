@@ -24,6 +24,8 @@ getElementsByTagNameNS(namespace, name)
 
 ### Parameters
 
+- _namespace_ is the namespace URI of elements to look for (see
+  {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
 - _name_ is either the local name of elements to look for or the special
   value `*`, which matches all elements (see {{domxref("Element.localName",
     "element.localName")}}).
@@ -32,8 +34,6 @@ getElementsByTagNameNS(namespace, name)
 
 A live {{DOMxRef("NodeList")}} (but see the note below) of
   found elements in the order they appear in the tree.
-- _namespace_ is the namespace URI of elements to look for (see
-  {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
 
 > **Note:** While the W3C specification says returned value is a `NodeList`, this method returns a {{DOMxRef("HTMLCollection")}} both in Gecko and Internet Explorer.
 > Opera returns a `NodeList`, but with a `namedItem` method implemented, which makes it similar to a `HTMLCollection`. As of January 2012, only in WebKit browsers is the returned value a pure `NodeList`.
