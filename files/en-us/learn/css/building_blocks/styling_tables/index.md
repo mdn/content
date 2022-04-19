@@ -153,7 +153,7 @@ At this point, our table already looks a lot better:
 
 Now we'll get our text sorted out a bit.
 
-First of all, we've found a font on [Google Fonts](https://www.google.com/fonts) that is suitable for a table about punk bands. You can go there and find a different one if you like; you'll just have to replace our provided {{htmlelement("link")}} element and custom {{cssxref("font-family")}} declaration with the ones Google Fonts gives you.
+First of all, we've found a font on [Google Fonts](https://fonts.google.com/) that is suitable for a table about punk bands. You can go there and find a different one if you like; you'll just have to replace our provided {{htmlelement("link")}} element and custom {{cssxref("font-family")}} declaration with the ones Google Fonts gives you.
 
 First, add the following {{htmlelement("link")}} element into your HTML head, just above your existing `<link>` element:
 

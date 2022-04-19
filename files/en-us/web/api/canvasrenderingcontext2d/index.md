@@ -258,7 +258,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ### Blink and WebKit
 
-Most of these APIs are [deprecated and were removed shortly after Chrome 36](https://code.google.com/p/chromium/issues/detail?id=363198).
+Most of these APIs are [deprecated and were removed shortly after Chrome 36](https://bugs.chromium.org/p/chromium/issues/detail?id=363198).
 
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.clearShadow()`
   - : Removes all shadow settings like {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}}.

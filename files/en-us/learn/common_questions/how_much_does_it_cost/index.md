@@ -80,7 +80,7 @@ Because FTP is inherently insecure, you should make sure to use SFTP — the sec
 
 ## Browsers
 
-You either already have a browser or can get one for free. If necessary, download Firefox [here](https://www.mozilla.org/en-US/firefox/all/) or Google Chrome [here](https://www.google.com/chrome/browser/).
+You either already have a browser or can get one for free. If necessary, download Firefox [here](https://www.mozilla.org/en-US/firefox/all/) or Google Chrome [here](https://www.google.com/chrome/).
 
 ## Web access
 

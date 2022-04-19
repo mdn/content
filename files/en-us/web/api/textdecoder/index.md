@@ -83,5 +83,5 @@ _The `TextDecoder` interface doesn't inherit any method_.
 ## See also
 
 - The {{DOMxRef("TextEncoder")}} interface describing the inverse operation.
-- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
+- A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it.
 - [Node.js supports global export from v11.0.0](https://nodejs.org/api/util.html#util_class_util_textdecoder)
