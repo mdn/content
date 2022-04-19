@@ -348,40 +348,40 @@ This section provides a table listing all the attributes with a brief descriptio
 
 Attributes for the `<input`> element include [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and:
 
-| Attribute | Type or Types | Description |
-|-----------|---------------|-------------|
-| [`accept`](#accept) | file | Hint for expected file type in file upload controls |
-| [`alt`](#alt) | image | alt attribute for the image type. Required for accessibility |
-| [`autocomplete`](#autocomplete) | all | Hint for form autofill feature |
-| [`autofocus`](#autofocus) | all | Automatically focus the form control when the page is loaded |
-| [`capture`](#capture) | file | Media capture input method in file upload controls |
-| [`checked`](#checked) | radio, checkbox | Whether the command or control is checked |
-| [`dirname`](#dirname) | text, search | Name of form field to use for sending the element's directionality in form submission |
-| [`disabled`](#disabled) | all | Whether the form control is disabled |
-| [`form`](#form) | all | Associates the control with a form element |
-| [`formaction`](#formaction) | image, submit | URL to use for form submission |
-| [`formenctype`](#formenctype) | image, submit | Form data set encoding type to use for form submission |
-| [`formmethod`](#formmethod) | image, submit | HTTP method to use for form submission |
-| [`formnovalidate`](#formnovalidate) | image, submit | Bypass form control validation for form submission |
-| [`formtarget`](#formtarget) | image, submit | Browsing context for form submission |
-| [`height`](#height) | image | Same as height attribute for {{htmlelement('img')}}; vertical dimension |
-| [`list`](#list) | almost all | Value of the id attribute of the {{htmlelement('datalist')}} of autocomplete options |
-| [`max`](#max) | numeric types | Maximum value |
-| [`maxlength`](#maxlength) | password, search, tel, text, url | Maximum length (number of characters) of `value` |
-| [`min`](#min) | numeric types | Minimum value |
-| [`minlength`](#minlength) | password, search, tel, text, url | Minimum length (number of characters) of `value` |
-| [`multiple`](#multiple) | email, file | Boolean. Whether to allow multiple values |
-| [`name`](#name) | all | Name of the form control. Submitted with the form as part of a name/value pair |
-| [`pattern`](#pattern) | password, text, tel | Pattern the `value` must match to be valid |
-| [`placeholder`](#placeholder) | password, search, tel, text, url | Text that appears in the form control when it has no value set |
-| [`readonly`](#readonly) | almost all | Boolean. The value is not editable |
-| [`required`](#required) | almost all | Boolean. A value is required or must be check for the form to be submittable |
-| [`size`](#size) | email, password, tel, text, url | Size of the control |
-| [`src`](#src) | image | Same as `src` attribute for {{htmlelement('img')}}; address of image resource |
-| [`step`](#step) | numeric types | Incremental values that are valid |
-| [`type`](#type) | all | Type of form control |
-| [`value`](#value) | all | The initial value of the control |
-| [`width`](#width) | image | Same as `width` attribute for {{htmlelement('img')}} |
+| Attribute                           | Type or Types                    | Description                                                                           |
+| ----------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
+| [`accept`](#accept)                 | file                             | Hint for expected file type in file upload controls                                   |
+| [`alt`](#alt)                       | image                            | alt attribute for the image type. Required for accessibility                          |
+| [`autocomplete`](#autocomplete)     | all                              | Hint for form autofill feature                                                        |
+| [`autofocus`](#autofocus)           | all                              | Automatically focus the form control when the page is loaded                          |
+| [`capture`](#capture)               | file                             | Media capture input method in file upload controls                                    |
+| [`checked`](#checked)               | radio, checkbox                  | Whether the command or control is checked                                             |
+| [`dirname`](#dirname)               | text, search                     | Name of form field to use for sending the element's directionality in form submission |
+| [`disabled`](#disabled)             | all                              | Whether the form control is disabled                                                  |
+| [`form`](#form)                     | all                              | Associates the control with a form element                                            |
+| [`formaction`](#formaction)         | image, submit                    | URL to use for form submission                                                        |
+| [`formenctype`](#formenctype)       | image, submit                    | Form data set encoding type to use for form submission                                |
+| [`formmethod`](#formmethod)         | image, submit                    | HTTP method to use for form submission                                                |
+| [`formnovalidate`](#formnovalidate) | image, submit                    | Bypass form control validation for form submission                                    |
+| [`formtarget`](#formtarget)         | image, submit                    | Browsing context for form submission                                                  |
+| [`height`](#height)                 | image                            | Same as height attribute for {{htmlelement('img')}}; vertical dimension               |
+| [`list`](#list)                     | almost all                       | Value of the id attribute of the {{htmlelement('datalist')}} of autocomplete options  |
+| [`max`](#max)                       | numeric types                    | Maximum value                                                                         |
+| [`maxlength`](#maxlength)           | password, search, tel, text, url | Maximum length (number of characters) of `value`                                      |
+| [`min`](#min)                       | numeric types                    | Minimum value                                                                         |
+| [`minlength`](#minlength)           | password, search, tel, text, url | Minimum length (number of characters) of `value`                                      |
+| [`multiple`](#multiple)             | email, file                      | Boolean. Whether to allow multiple values                                             |
+| [`name`](#name)                     | all                              | Name of the form control. Submitted with the form as part of a name/value pair        |
+| [`pattern`](#pattern)               | password, text, tel              | Pattern the `value` must match to be valid                                            |
+| [`placeholder`](#placeholder)       | password, search, tel, text, url | Text that appears in the form control when it has no value set                        |
+| [`readonly`](#readonly)             | almost all                       | Boolean. The value is not editable                                                    |
+| [`required`](#required)             | almost all                       | Boolean. A value is required or must be check for the form to be submittable          |
+| [`size`](#size)                     | email, password, tel, text, url  | Size of the control                                                                   |
+| [`src`](#src)                       | image                            | Same as `src` attribute for {{htmlelement('img')}}; address of image resource         |
+| [`step`](#step)                     | numeric types                    | Incremental values that are valid                                                     |
+| [`type`](#type)                     | all                              | Type of form control                                                                  |
+| [`value`](#value)                   | all                              | The initial value of the control                                                      |
+| [`width`](#width)                   | image                            | Same as `width` attribute for {{htmlelement('img')}}                                  
 
 
 A few additional non-standard attributes are listed following the descriptions of the standard attributes.
