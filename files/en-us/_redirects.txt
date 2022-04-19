@@ -11111,7 +11111,7 @@
 /en-US/docs/Web/CSS/transform-function/scaleZ()	/en-US/docs/Web/CSS/transform-function/scaleZ
 /en-US/docs/Web/CSS/transform-function/skew()	/en-US/docs/Web/CSS/transform-function/skew
 /en-US/docs/Web/CSS/transform-function/skewX()	/en-US/docs/Web/CSS/transform-function/skewX
-/en-US/docs/Web/CSS/transform-function/skewY()	/en-US/docs/Web/CSS/transform-function/skewX
+/en-US/docs/Web/CSS/transform-function/skewY()	/en-US/docs/Web/CSS/transform-function/skewY
 /en-US/docs/Web/CSS/transform-function/translate()	/en-US/docs/Web/CSS/transform-function/translate
 /en-US/docs/Web/CSS/transform-function/translate3d()	/en-US/docs/Web/CSS/transform-function/translate3d
 /en-US/docs/Web/CSS/transform-function/translateX()	/en-US/docs/Web/CSS/transform-function/translateX
