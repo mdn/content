@@ -199,7 +199,7 @@ As you become more experienced with CSS, you will find that you get faster at fi
 
 So there we have it, an introduction to debugging CSS, which should give you some useful skills to count on when you start to debug CSS and other types of code later on in your career.
 
-In the last article of this module, we'll take a look at how to [organize your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing) — a very beneficial skill in the world of CSS.
+In the last article of this module, we'll take a look at how to [organize your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing).
 
 ## In this module
 
