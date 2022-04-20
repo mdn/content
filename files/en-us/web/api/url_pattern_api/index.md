@@ -92,40 +92,71 @@ console.log(pattern.test('https://example.com/books/')); // false
 
 ### Regex matchers limitations
 
-Some regex patterns do not work as you may expect. Starts with `^`, 
-ends with `$`, lookaheads, and lookbehineds will never match.
+Some regex patterns do not work as you may expect: 
+- Starts with `^` will only match if used at the start of the protocol portion of the URLPattern and is redundant if used. 
+  ```js
+  // with `^` in pathname
+  const pattern = new URLPattern({ pathname: '(^b)' });
+  console.log(pattern.test('https://example.com/ba')); // false
+  console.log(pattern.test('https://example.com/xa')); // false
 
-```js
-// starts with `^`
-const pattern = new URLPattern('(^b)', 'https://example.com');
-console.log(pattern.test('https://example.com/ba')); // false
-console.log(pattern.test('https://example.com/xa')); // false
+  // with `^` in protocol
+  const pattern = new URLPattern({ protocol: '(^https?)' });
+  console.log(pattern.test('https://example.com/index.html')); // true
+  console.log(pattern.test('xhttps://example.com/index.html')); // false
 
-// ends with `$`
-const pattern = new URLPattern('(b$)', 'https://example.com');
-console.log(pattern.test('https://example.com/ab')); // false
-console.log(pattern.test('https://example.com/ax')); // false
+  // without `^` in protocol
+  const pattern = new URLPattern({ protocol: '(https?)' });
+  console.log(pattern.test('https://example.com/index.html')); // true
+  console.log(pattern.test('xhttps://example.com/index.html')); // false
+  ```
+- Ends with `$` will only match if used at the end of the hash portion of the URLPattern and is redundant if used.
+  ```js
+  // with `$` in pathname
+  const pattern = new URLPattern({ pathname: '(path$)' });
+  console.log(pattern.test('https://example.com/path')); // false
+  console.log(pattern.test('https://example.com/other')); // false
 
-// lookahead
-const pattern = new URLPattern('(a(?=b))', 'https://example.com');
-console.log(pattern.test('https://example.com/ab')); // false
-console.log(pattern.test('https://example.com/ax')); // false
+  // with `$` in protocol
+  const pattern = new URLPattern({ hash: '(hash$)' });
+  console.log(pattern.test('https://example.com/#hash')); // true
+  console.log(pattern.test('xhttps://example.com/#otherhash')); // false
 
-// negative-lookahead
-const pattern = new URLPattern('/(a(?!b))', 'https://example.com');
-console.log(pattern.test('https://example.com/ab')); // false
-console.log(pattern.test('https://example.com/ax')); // false
+  // without `$` in protocol
+  const pattern = new URLPattern({ hash: '(hash)' });
+  console.log(pattern.test('https://example.com/#hash')); // true
+  console.log(pattern.test('xhttps://example.com/#otherhash')); // false
+  ```
+- Lookaheads, and lookbehineds will never match any portion of the URLPattern.
+  ```js
+  // lookahead
+  const pattern = new URLPattern({ pathname: '(a(?=b))' });
+  console.log(pattern.test('https://example.com/ab')); // false
+  console.log(pattern.test('https://example.com/ax')); // false
 
-// lookbehind
-const pattern = new URLPattern('((?<=b)a)', 'https://example.com');
-console.log(pattern.test('https://example.com/ba')); // false
-console.log(pattern.test('https://example.com/xa')); // false
+  // negative-lookahead
+  const pattern = new URLPattern({ pathname: '(a(?!b))' });
+  console.log(pattern.test('https://example.com/ab')); // false
+  console.log(pattern.test('https://example.com/ax')); // false
 
-// negative-lookbehind
-const pattern = new URLPattern('((?<!b)a)', 'https://example.com');
-console.log(pattern.test('https://example.com/ba')); // false
-console.log(pattern.test('https://example.com/xa')); // false
-```
+  // lookbehind
+  const pattern = new URLPattern({ pathname: '((?<=b)a)' });
+  console.log(pattern.test('https://example.com/ba')); // false
+  console.log(pattern.test('https://example.com/xa')); // false
+
+  // negative-lookbehind
+  const pattern = new URLPattern({ pathname: '((?<!b)a)' });
+  console.log(pattern.test('https://example.com/ba')); // false
+  console.log(pattern.test('https://example.com/xa')); // false
+  ```
+- Parentheses need to be escaped in range expressions within URLPattern even though they don't in RegExp.
+  ```js
+  const pattern = new URLPattern({ pathname: '[()]' }); // throws
+  const pattern = new URLPattern({ pathname: '[\\(\\)]' }); // ok
+
+  const regex = new RegExp('[()]'); // ok
+  const regex = new RegExp('[\\(\\)]'); // ok
+  ```
 
 ### Unnamed and named groups
 
