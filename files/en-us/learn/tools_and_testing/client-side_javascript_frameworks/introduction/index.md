@@ -63,7 +63,7 @@ Angular is a component-based framework which uses declarative HTML templates. At
 
 ### Vue
 
-Evan You first released [Vue](https://vuejs.org/) in 2014, after working on and learning from the original [AngularJS](https://angularjs.org/) project. Vue is the youngest of the big four, but has enjoyed a recent uptick in popularity.
+After working on and learning from the original [AngularJS](https://angularjs.org/) project, Evan You released [Vue](https://vuejs.org/) in 2014. Vue is the youngest of the big four, but has enjoyed a recent uptick in popularity.
 
 Vue, like [AngularJS](https://angularjs.org/), extends HTML with some of its own code. Apart from that, it mainly relies on modern, standard JavaScript.
 
@@ -71,7 +71,7 @@ Vue, like [AngularJS](https://angularjs.org/), extends HTML with some of its own
 
 ### React
 
-Facebook released [React](https://reactjs.org/) in 2013. By this point, it had already been using React to solve many of its problems internally. React itself is _not_ technically a framework; it's a library for rendering UI components. React is used in combination with _other_ libraries to make applications — React and [React Native](https://reactnative.dev/) enable developers to make mobile applications; React and [ReactDOM](https://reactjs.org/docs/react-dom.html) enable them to make web applications, etc.
+Facebook released [React](https://reactjs.org/) in 2013. By this point, it had already been using React to solve many of its problems internally. Technically, React itself is _not_ a framework; it's a library for rendering UI components. React is used in combination with _other_ libraries to make applications — React and [React Native](https://reactnative.dev/) enable developers to make mobile applications; React and [ReactDOM](https://reactjs.org/docs/react-dom.html) enable them to make web applications, etc.
 
 Because React and ReactDOM are so often used together, React is colloquially understood as a JavaScript framework. As you read through this module, we will be working with that colloquial understanding.
 
@@ -85,7 +85,7 @@ We've discussed the environment that inspired the creation of frameworks, but no
 
 Consider a common kind of application: A to-do list creator, which we'll look at implementing using a variety of frameworks in future chapters. This application should allow users to do things like render a list of tasks, add a new task, and delete a task; and it must do this while reliably tracking and updating the data underlying the application. In software development, this underlying data is known as state.
 
-Each of our goals is theoretically simple in isolation. We can iterate over the data to render it; we can add to an object to make a new task; we can use an identifier to find, edit, or delete a task. When we remember that the application has to let the user to do _all_ of these things through the browser, however, some cracks start to show. **The real problem is this: every time we change our application's state, we need to update the UI to match.**
+Each of our goals is theoretically simple in isolation. We can iterate over the data to render it; we can add to an object to make a new task; we can use an identifier to find, edit, or delete a task. When we remember that the application has to let the user do _all_ of these things through the browser, some cracks start to show. **The real problem is this: every time we change our application's state, we need to update the UI to match.**
 
 We can examine the difficulty of this problem by looking at just _one_ feature of our todo list app: rendering a list of tasks.
 
@@ -122,7 +122,7 @@ function buildTodoItemEl(id, name) {
 
 Here, we use the [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) method to make our `<li>`, and several more lines of code to create the properties and children it needs.
 
-The tenth line of this snippet references another build function: `buildDeleteButtonEl()`. It follows a similar pattern to the one we used to build a list item element:
+The tenth line of previous snippet references another build function: `buildDeleteButtonEl()`. It follows a similar pattern to the one we used to build a list item element:
 
 ```js
 function buildDeleteButtonEl(id) {
@@ -153,11 +153,11 @@ function renderTodoList() {
 }
 ```
 
-We've now got well over thirty lines of code dedicated _just_ to the UI – _just_ to the step of rendering something in the DOM – and at no point do we add classes that we could use later to style our list-items!
+We've now got well over thirty lines of code dedicated _just_ to the UI – _just_ to render something in the DOM – and at no point do we add classes that we could use later to style our list-items!
 
 Working directly with the DOM, as in this example, requires understanding many things about how the DOM works: how to make elements; how to change their properties; how to put elements inside of each other; how to get them on the page. None of this code actually handles user interactions, or addresses adding or deleting a task. If we add those features, we have to remember to update our UI in the right time and in the right way.
 
-JavaScript frameworks were created to make this kind of work a little easier — they exist to provide a better _developer experience_. They don't bring brand-new powers to JavaScript; they give you easier access to JavaScript's powers so you can build for today's web.
+JavaScript frameworks were created to make this kind of work a lot easier — they exist to provide a better _developer experience_. They don't bring brand-new powers to JavaScript; they give you easier access to JavaScript's powers so you can build for today's web.
 
 If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/dengeist/pen/XWbPNmw), which also allows users to add and delete new tasks.
 
@@ -187,13 +187,13 @@ The vanilla JavaScript approach to building out new DOM elements in repetition w
 
 That's it. This snippet reduces approximately thirty-two lines of code down to six lines. If the curly braces and `v-` attributes here are unfamiliar to you, that's okay; you'll learn about Vue-specific syntax later on in the module. The thing to take away here is that this code looks like the UI it represents, whereas the vanilla JavaScript code does not.
 
-Thanks to Vue, we didn't have to write our own functions for building the UI; the framework will handle that for us in an optimized, efficient way. Our only role here was to describe to Vue what each item should look like. Developers who are familiar with Vue can join our project and quickly work out what is going on. Vue is not alone in this: using a framework improves team as well as individual efficiency.
+Thanks to Vue, we didn't have to write our own functions for building the UI; the framework will handle that for us in an optimized, efficient way. Our only role here was to describe to Vue what each item should look like. Developers who are familiar with Vue can quickly work out what is going on when they join our project. Vue is not alone in this: using a framework improves team as well as individual efficiency.
 
 It's possible to do things _similar_ to this in vanilla JavaScript. [Template literal strings](/en-US/docs/Web/JavaScript/Reference/Template_literals) make it easy to write strings of HTML that represent what the final element would look like. That might be a useful idea for something as simple as our to-do list application, but it's not maintainable for large applications that manage thousands of records of data, and could render just as many unique elements in a user interface.
 
 ## Other things frameworks give us
 
-Let's look at some of the other advantages conferred upon us by frameworks. As we've alluded to before, the advantages of frameworks are achievable in vanilla JavaScript, but using a framework takes away all of the cognitive load of having to solve these problems yourself.
+Let's look at some of the other advantages offered by frameworks. As we've alluded to before, the advantages of frameworks are achievable in vanilla JavaScript, but using a framework takes away all of the cognitive load of having to solve these problems yourself.
 
 ### Tooling
 
@@ -225,7 +225,7 @@ Just like vanilla JavaScript, frameworks take time to learn and have their quirk
 
 ### Overengineering
 
-If your web development project is a personal portfolio with a few pages, and those pages have little or no interactive capability, a framework (and all of its JavaScript) may not be necessary at all. That said, frameworks are not a monolith, and some of them are better-suited to small projects than others. In an article for Smashing Magazine, Sarah Drasner writes about how [Vue can replace jQuery](https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/) as a tool for making small portions of a webpage interactive.
+If your web development project is a personal portfolio with a few pages, and those pages have little or no interactive capability, a framework (and all of its JavaScript) may not be necessary at all. That said, frameworks are not monolithic, and some of them are better-suited to small projects than others. In an article for Smashing Magazine, Sarah Drasner writes about how [Vue can replace jQuery](https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/) as a tool for making small portions of a webpage interactive.
 
 ### Larger code base and abstraction
 
@@ -308,7 +308,7 @@ Popular examples include [Wordpress](https://wordpress.com/), [Joomla](https://w
 
 **Server-side rendering** (**SSR**) is an application architecture in which it is the *server*'s job to render a single-page application. This is the opposite of _client-side rendering_, which is the most common and most straightforward way to build a JavaScript application. Server-side rendering is easier on the client's device, because you're only sending a rendered HTML file to them, but it can be difficult to set up compared to a client-side-rendered application.
 
-All of the frameworks covered in this module support server-side rendering as well as client-side rendering. Check out [Next.js](https://nextjs.org/) for React, [Nuxt.js](https://nuxtjs.org/) for Vue (yes it is confusing, and no, these projects are not related!), [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) for Ember, and [Angular Universal](https://angular.io/guide/universal) for Angular.
+All of the frameworks covered in this module support server-side rendering as well as client-side rendering. Check out [Next.js](https://nextjs.org/) for React, [Nuxt.js](https://nuxtjs.org/) for Vue (yes, it is confusing, and no, these projects are not related!), [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) for Ember, and [Angular Universal](https://angular.io/guide/universal) for Angular.
 
 > **Note:** Some SSR solutions are written and maintained by the community, whereas some are "official" solutions provided by the framework's maintainer.
 
@@ -318,7 +318,7 @@ Static site generators are programs that dynamically generate all the webpages o
 
 Static sites can have as few or as many unique pages as you want. Just as frameworks empower you to quickly write client-side JavaScript applications, static site generators allow you a way to quickly create HTML files you would otherwise have written individually. Like frameworks, static site generators allow developers to write components that define common pieces of your web pages, and to compose those components together to create a final page. In the context of static site generators, these components are called **templates**. Web pages built by static site generators can even be home to framework applications: if you want one specific page of your statically-generated website to boot up a React application when your user visits it for example, you can do that.
 
-Static site generators have been around for quite a long time, but they have seen a bit of a revival in the recent history of the web. A handful of powerful options are now available, such as [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/), [Eleventy](https://www.11ty.dev/), and [Gatsby](https://www.gatsbyjs.org/).
+Static site generators have been around for quite a long time, and they have seen a bit of a revival in the recent history of the web. A handful of powerful options are now available, such as [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/), [Eleventy](https://www.11ty.dev/), and [Gatsby](https://www.gatsbyjs.org/).
 
 If you'd like to learn more about static site generators on the whole, check out Tatiana Mac's [Beginner's guide to Eleventy](https://tatianamac.com/posts/beginner-eleventy-tutorial-parti/). In the first article of the series, she explains what a static site generator is, and how it relates to other means of publishing web content.
 
@@ -332,7 +332,7 @@ Our next article goes down to a lower level, looking at the specific kinds of fe
 
 ## In this module
 
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- **Introduction to client-side frameworks**
 - [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
