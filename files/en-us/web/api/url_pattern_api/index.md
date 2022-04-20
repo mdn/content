@@ -90,6 +90,43 @@ console.log(pattern.test('https://example.com/books/abc')); // false
 console.log(pattern.test('https://example.com/books/')); // false
 ```
 
+### Regex matchers limitations
+
+Some regex patterns do not work as you may expect. Starts with `^`, 
+ends with `$`, Lookaheads, and lookbehineds will never match.
+
+```js
+// starts with `^`
+const pattern = new URLPattern('(^a)', 'https://example.com');
+console.log(pattern.test('https://example.com/ab')); // false
+console.log(pattern.test('https://example.com/ax')); // false
+
+// ends with `$`
+const pattern = new URLPattern('(b$)', 'https://example.com');
+console.log(pattern.test('https://example.com/ab')); // false
+console.log(pattern.test('https://example.com/ax')); // false
+
+// lookahead
+const pattern = new URLPattern('(a(?=b))', 'https://example.com');
+console.log(pattern.test('https://example.com/ab')); // false
+console.log(pattern.test('https://example.com/ax')); // false
+
+// negative-lookahead
+const pattern = new URLPattern('/(a(?!b))', 'https://example.com');
+console.log(pattern.test('https://example.com/ab')); // false
+console.log(pattern.test('https://example.com/ax')); // false
+
+// lookbehind
+const pattern = new URLPattern('((?<=b)a)', 'https://example.com');
+console.log(pattern.test('https://example.com/ba')); // false
+console.log(pattern.test('https://example.com/xa')); // false
+
+// negative-lookbehind
+const pattern = new URLPattern('((?<!b)a)', 'https://example.com');
+console.log(pattern.test('https://example.com/ba')); // false
+console.log(pattern.test('https://example.com/xa')); // false
+```
+
 ### Unnamed and named groups
 
 Groups can either be named or unnamed. Named groups are specified by prefixing
