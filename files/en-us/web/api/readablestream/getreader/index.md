@@ -18,13 +18,13 @@ While the stream is locked, no other reader can be acquired until this one is re
 ## Syntax
 
 ```js
-readableStream.getReader()
-readableStream.getReader({mode})
+getReader()
+getReader(mode)
 ```
 
 ### Parameters
 
-- `{mode}` {{optional_inline}}
+- `mode` {{optional_inline}}
 
   - : An object containing a property `mode`, specifying the type of reader to create.
     Values can be:

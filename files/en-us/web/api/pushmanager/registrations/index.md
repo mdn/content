@@ -19,10 +19,10 @@ existing push endpoint registrations.
 ## Syntax
 
 ```js
-var request = navigator.push.registrations();
+registrations()
 ```
 
-### Return
+### Return value
 
 A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
 
@@ -38,7 +38,7 @@ Those objects are anonymous JavaScript objects with the following properties:
 - `version`
   - : The current version that the push endpoint is at.
 
-## Example
+## Examples
 
 ```js
 var req = navigator.push.registrations();

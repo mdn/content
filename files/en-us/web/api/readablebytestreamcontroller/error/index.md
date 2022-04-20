@@ -20,7 +20,7 @@ with the associated stream to error.
 ## Syntax
 
 ```js
-readableByteStreamController.error(e);
+error(e)
 ```
 
 ### Parameters

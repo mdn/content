@@ -18,7 +18,7 @@ for the `referenceNode`.
 ## Syntax
 
 ```js
-range.setStartAfter(referenceNode);
+setStartAfter(referenceNode)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ range.setStartAfter(referenceNode);
 - _referenceNode_
   - : The {{domxref("Node")}} to start the {{domxref("Range")}} after.
 
-## Example
+## Examples
 
 ```js
 var range = document.createRange();

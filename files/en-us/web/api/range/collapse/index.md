@@ -20,7 +20,8 @@ see the {{domxref("Range.collapsed")}} property.
 ## Syntax
 
 ```js
-range.collapse(toStart);
+collapse()
+collapse(toStart)
 ```
 
 ### Parameters
@@ -30,7 +31,7 @@ range.collapse(toStart);
     to its start, `false` to its end. If omitted, it defaults to
     `false` {{experimental_inline}}.
 
-## Example
+## Examples
 
 ```js
 var range = document.createRange();

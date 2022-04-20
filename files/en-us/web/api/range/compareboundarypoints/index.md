@@ -17,15 +17,8 @@ boundary points of the {{domxref("Range")}} with those of another range.
 ## Syntax
 
 ```js
-compare = range.compareBoundaryPoints(how, sourceRange);
+compareBoundaryPoints(how, sourceRange)
 ```
-
-### Return value
-
-- `compare`
-  - : A number, `-1`, `0`, or `1`, indicating whether the
-    corresponding boundary-point of the {{domxref("Range")}} is respectively before, equal
-    to, or after the corresponding boundary-point of _sourceRange_.
 
 ### Parameters
 
@@ -45,12 +38,18 @@ compare = range.compareBoundaryPoints(how, sourceRange);
 - `sourceRange`
   - : A {{domxref("Range")}} to compare boundary points with the range.
 
+### Return value
+
+A number, `-1`, `0`, or `1`, indicating whether the
+    corresponding boundary-point of the {{domxref("Range")}} is respectively before, equal
+    to, or after the corresponding boundary-point of _sourceRange_.
+
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the value of the `how` parameter is invalid.
 
-## Example
+## Examples
 
 ```js
 var range, sourceRange, compare;

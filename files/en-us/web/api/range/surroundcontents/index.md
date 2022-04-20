@@ -27,7 +27,7 @@ instead the operation will fail.
 ## Syntax
 
 ```js
-range.surroundContents(newParent);
+surroundContents(newParent)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ range.surroundContents(newParent);
 - `newParent`
   - : A {{ domxref("Node") }} with which to surround the contents.
 
-## Example
+## Examples
 
 ### HTML
 

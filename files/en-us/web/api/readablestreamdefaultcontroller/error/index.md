@@ -22,7 +22,7 @@ with the associated stream to error.
 ## Syntax
 
 ```js
-readableStreamDefaultController.error(e);
+error(e)
 ```
 
 ### Parameters
