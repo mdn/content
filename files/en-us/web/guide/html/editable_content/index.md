@@ -234,5 +234,4 @@ img.intLink { border: 0; }
 
 - {{domxref("HTMLElement.contentEditable")}}
 - The {{htmlattrxref("contenteditable")}} global attribute
-- [Midas](/en-US/docs/Mozilla/Projects/Midas) (the scriptable text editor component)
 - {{cssxref("caret-color")}}, which lets you set the color of the text insertion caret
