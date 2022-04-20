@@ -313,7 +313,7 @@ It is definitely worth testing with a screenreader to get used to how severely v
 
 - Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) and [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
 - Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows, and Mac OS X), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS), [ChromeVox](http://www.chromevox.com/) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (Mac OS X and iOS), [ChromeVox](http://www.chromevox.com/) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 Generally, screen readers are separate apps that run on the host operating system and can read not only web pages, but text in other apps as well. This is not always the case (ChromeVox is a browser extension), but usually. Screenreaders tend to act in slightly different ways and have different controls, so you'll have to consult the documentation for your chosen screen reader to get all of the details — saying that, they all work in basically the same sort of way.
 

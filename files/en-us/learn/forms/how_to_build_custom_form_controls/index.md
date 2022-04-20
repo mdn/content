@@ -609,7 +609,7 @@ function updateValue(select, index) {
   // In our example, that native control is a sibling of the custom control
   var nativeWidget = select.previousElementSibling;
 
-  // We also need  to get the value placeholder of our custom control
+  // We also need to get the value placeholder of our custom control
   var value = select.querySelector('.value');
 
   // And we need the whole list of options
@@ -753,7 +753,7 @@ function updateValue(select, index) {
 
 It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
 
-Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
+Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)):
 
 | Live example                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -783,7 +783,7 @@ We can start with a completely semantic, accessible, unordered list of {{htmlele
 </fieldset>
 ```
 
-We'll  do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:
+We'll do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:
 
 ```css
 .styledSelect {
