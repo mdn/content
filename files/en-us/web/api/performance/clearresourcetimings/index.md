@@ -25,10 +25,6 @@ to zero. To set the size of the browser's performance data buffer, use the
 clearResourceTimings()
 ```
 
-### Parameters
-
-- void
-
 ### Return value
 
 none

@@ -32,7 +32,7 @@ getModifierState(keyArg)
 
 ### Return value
 
-A boolean value
+A boolean value.
 
 ## Specifications
 

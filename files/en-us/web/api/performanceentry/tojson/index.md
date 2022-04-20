@@ -21,11 +21,6 @@ a JSON representation of the {{domxref("PerformanceEntry","performance entry")}}
 toJSON()
 ```
 
-### Parameters
-
-- None
-  - :
-
 ### Return value
 
 A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} object.
