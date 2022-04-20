@@ -197,7 +197,7 @@ You've reached the end of this article, but can you remember the most important 
 
 This lesson has highlighted some of the differences you will encounter when working with images, media, and other unusual elements in CSS.
 
-In the next article, we'll look over a few tips you'll find useful when you have to [style HTML tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
+In the next article, we'll learn how to [style HTML tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
