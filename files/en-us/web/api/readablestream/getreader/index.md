@@ -24,7 +24,7 @@ getReader(mode)
 
 ### Parameters
 
-- `{mode}` {{optional_inline}}
+- `mode` {{optional_inline}}
 
   - : An object containing a property `mode`, specifying the type of reader to create.
     Values can be:
