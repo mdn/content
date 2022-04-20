@@ -170,7 +170,7 @@ Next, include a "Return value" subsection, which explains what the return value 
 
 If there is no return value, use the following text:
 
-> None, that is an \{{jsxref("undefined")}} object.
+> None, that is an \{\{jsxref("undefined")}} object will be returned when trying to access it.
 
 #### Exceptions section
 
