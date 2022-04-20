@@ -12814,6 +12814,17 @@
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 /en-US/docs/var	/en-US/docs/Web/CSS/var
 /en-US/docs/video	/es/docs/Web/HTML/Elemento/video
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_alertdialog_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_article_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/article_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_group_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/group_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_link_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/link_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_log_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/log_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_presentation_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_progressbar_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_radio_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_slider_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_status_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/status_role
+/en-US/docs/web/accessibility/aria/aria_techniques/using_the_toolbar_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
 /en-US/docs/width	/en-US/docs/Web/CSS/width
 /en-US/docs/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/window.clearInterval	/en-US/docs/Web/API/clearInterval
