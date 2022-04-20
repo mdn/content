@@ -20,6 +20,8 @@ The {{domxref("Document")}} method **`querySelector()`**
 returns the first {{domxref("Element")}} within the document that matches the specified
 selector, or group of selectors. If no matches are found, `null` is returned.
 
+{{EmbedInteractiveExample("pages/webapi-tabbed/document-queryselector.html")}}
+
 > **Note:** The matching is done using depth-first pre-order traversal of
 > the document's nodes starting with the first element in the document's markup and
 > iterating through sequential nodes by order of the number of child nodes.
