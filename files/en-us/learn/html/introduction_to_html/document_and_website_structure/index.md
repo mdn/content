@@ -284,7 +284,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-At this point, you should have a better idea about how to structure a web page/site. In the last article of this module, we'll study how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
+At this point, you should have a better idea about how to structure a web page/site. In the last article of this module, we'll learn how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
 
 ## See also
 
