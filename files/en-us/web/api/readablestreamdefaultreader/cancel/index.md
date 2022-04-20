@@ -28,7 +28,8 @@ still and not completely get rid of the stream, you'd use
 ## Syntax
 
 ```js
-var promise = readableStreamDefaultReader.cancel(reason);
+cancel()
+cancel(reason)
 ```
 
 ### Parameters

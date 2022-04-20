@@ -1,5 +1,5 @@
 ---
-title: RTCPeerConnection.generateCertificate() static function
+title: RTCPeerConnection.generateCertificate()
 slug: Web/API/RTCPeerConnection/generateCertificate
 tags:
   - API
@@ -23,7 +23,7 @@ that resolves with the new {{domxref("RTCCertificate")}} once it's generated.
 ## Syntax
 
 ```js
-let certPromise = RTCPeerConnection.generateCertificate(keygenAlgorithm)
+generateCertificate(keygenAlgorithm) // static function
 ```
 
 ### Parameters

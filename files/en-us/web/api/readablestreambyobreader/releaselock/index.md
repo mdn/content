@@ -27,7 +27,7 @@ has not finished. This will result in a `TypeError` being thrown.
 ## Syntax
 
 ```js
-readableStreamBYOBReader.releaseLock();
+releaseLock()
 ```
 
 ### Parameters

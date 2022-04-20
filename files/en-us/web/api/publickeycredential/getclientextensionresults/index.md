@@ -34,7 +34,7 @@ respectively given by {{domxref("PublicKeyCredentialCreationOptions.extensions")
 ## Syntax
 
 ```js
-mapArrayBuffer = publicKeyCredential.getClientExtensionResults()
+getClientExtensionResults()
 ```
 
 ### Parameters

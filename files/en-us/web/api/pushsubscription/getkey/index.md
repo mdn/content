@@ -22,14 +22,14 @@ be sent to a server and used in encrypting push message data.
 ## Syntax
 
 ```js
-const key = subscription.getKey(name);
+getKey(name)
 ```
 
 ### Parameters
 
 - name
 
-  - : A {{domxref("DOMString")}} representing the encryption method used to generate a
+  - : A string representing the encryption method used to generate a
     client key.  The value can be:
 
     - `p256dh`: An [Elliptic
@@ -39,11 +39,11 @@ const key = subscription.getKey(name);
     - `auth`: An authentication secret, as described in [Message
       Encryption for Web Push](https://datatracker.ietf.org/doc/html/draft-ietf-webpush-encryption-08).
 
-### Returns
+### Return value
 
 An {{jsxref("ArrayBuffer")}}.
 
-## Example
+## Examples
 
 ```js
 reg.pushManager.getSubscription()

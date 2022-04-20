@@ -23,10 +23,10 @@ details on the returned value.
 ## Syntax
 
 ```js
-boundingRect = range.getBoundingClientRect()
+getBoundingClientRect()
 ```
 
-## Example
+## Examples
 
 ### HTML
 

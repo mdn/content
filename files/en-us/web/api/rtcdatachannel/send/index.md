@@ -35,13 +35,13 @@ the connection is closing or closed.
 ## Syntax
 
 ```js
-RTCDataChannel.send(data);
+send(data)
 ```
 
 ### Parameters
 
 - `data`
-  - : The data to transmit across the connection. This may be a {{domxref("USVString")}},
+  - : The data to transmit across the connection. This may be a string,
     a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, or an
     {{domxref("ArrayBufferView")}}.
 
@@ -69,7 +69,7 @@ RTCDataChannel.send(data);
     {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding
     message size limits")}}.
 
-## Example
+## Examples
 
 In this example, a routine called `sendMessage()` is created; it accepts an
 object as input and sends to the remote peer, over the {{domxref("RTCDataChannel")}}, a

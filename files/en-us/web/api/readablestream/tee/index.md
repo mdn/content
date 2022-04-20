@@ -29,7 +29,7 @@ will generally lock it for the duration, preventing other readers from locking i
 ## Syntax
 
 ```js
-readableStream.tee()
+tee()
 ```
 
 ### Parameters

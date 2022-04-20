@@ -20,7 +20,8 @@ The **`observe()`** method of the
 ## Syntax
 
 ```js
-resizeObserver.observe(target, options);
+observe(target)
+observe(target, options)
 ```
 
 ### Parameters

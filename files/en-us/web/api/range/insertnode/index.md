@@ -23,7 +23,7 @@ inserted instead.
 ## Syntax
 
 ```js
-range.insertNode(newNode);
+insertNode(newNode)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ range.insertNode(newNode);
 - _newNode_
   - : The {{domxref("Node")}} to insert at the start of the `range`.
 
-## Example
+## Examples
 
 ```js
 range = document.createRange();

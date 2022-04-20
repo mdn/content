@@ -24,7 +24,7 @@ in the last ten seconds.
 ## Syntax
 
 ```js
-var rtcRtpContributingSources = rtcRtpReceiver.getContributingSources()
+getContributingSources()
 ```
 
 ### Parameters

@@ -24,7 +24,7 @@ rid of the stream and discard any enqueued chunks, you'd use
 ## Syntax
 
 ```js
-readableStreamDefaultController.close();
+close()
 ```
 
 ### Parameters

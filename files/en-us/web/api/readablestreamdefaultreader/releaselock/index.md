@@ -26,7 +26,7 @@ method has not finished. This will result in a `TypeError` being thrown.
 ## Syntax
 
 ```js
-readableStreamDefaultReader.releaseLock();
+releaseLock()
 ```
 
 ### Parameters

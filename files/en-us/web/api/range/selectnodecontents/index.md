@@ -22,7 +22,7 @@ node.
 ## Syntax
 
 ```js
-range.selectNodeContents(referenceNode);
+selectNodeContents(referenceNode)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ range.selectNodeContents(referenceNode);
   - : The {{ domxref("Node") }} whose contents will be selected within a {{
     domxref("Range") }}.
 
-## Example
+## Examples
 
 ```js
 range = document.createRange();

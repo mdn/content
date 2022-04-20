@@ -18,8 +18,8 @@ While the stream is locked, no other reader can be acquired until this one is re
 ## Syntax
 
 ```js
-readableStream.getReader()
-readableStream.getReader({mode})
+getReader()
+getReader(mode)
 ```
 
 ### Parameters
