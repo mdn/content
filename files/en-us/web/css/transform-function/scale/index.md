@@ -15,7 +15,7 @@ The **`scale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at
 different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](scale.png)
+{{EmbedInteractiveExample("pages/css/function-scale.html")}}
 
 This scaling transformation is characterized by a two-dimensional vector. Its coordinates define how much scaling is
 done in each direction. If both coordinates are equal, the scaling is uniform (_isotropic_) and the aspect
