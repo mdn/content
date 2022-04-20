@@ -148,7 +148,7 @@ which is useful to access a property of an object which may be `null` or `undefi
 ```js
 let foo = { someFooProp: "hi" };
 
-console.log(foo.someFooProp?.toUpperCase() ?? "not available"); // "HI"
+console.log(foo.someFooProp?.toUpperCase() ?? "not available"); // "hi"
 console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not available"
 ```
 
