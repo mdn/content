@@ -22,7 +22,7 @@ The Console API provides functionality to allow developers to perform debugging 
 The Console API started as a largely proprietary API, with different browsers implementing it, albeit it in inconsistent ways. [The Console API spec](https://console.spec.whatwg.org/) was created to define consistent behavior, and all modern browsers eventually settled on implementing this behavior — although some implementations still have their own additional proprietary functions. Find out about these at:
 
 - [Google Chrome DevTools implementation](https://developer.chrome.com/docs/devtools/console/api/)
-- [Safari DevTools implementation](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
+- [Safari DevTools implementation](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
 
 Usage is very simple — the {{domxref("console")}} object — available via {{domxref("window.console")}}, or {{domxref("WorkerGlobalScope.console")}} in workers; accessible using just `console` — contains many methods that you can call to perform rudimentary debugging tasks, generally focused around logging various values to the browser's [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
