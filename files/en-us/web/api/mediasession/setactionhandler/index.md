@@ -22,13 +22,13 @@ These actions let a web app receive notifications when the user engages a device
 ## Syntax
 
 ```js
-navigator.mediaSession.setActionHandler(type, callback)
+setActionHandler(type, callback)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} representing an action type to listen for. It will be one
+  - : A string representing an action type to listen for. It will be one
     of the following:
     - `nexttrack`
       - : Advances playback to the next track.
@@ -57,7 +57,7 @@ navigator.mediaSession.setActionHandler(type, callback)
 - `callback`
   - : A function to call when the specified action type is invoked. The callback should not return a value. The callback receives a dictionary containing the following properties:
     - `action`
-      - : A {{domxref("DOMString")}} representing the action type. This property allows a single callback to handle multiple action types.
+      - : A string representing the action type. This property allows a single callback to handle multiple action types.
     - `fastSeek` {{optional_inline}}
       - : A [`seekto`](#seekto) action may *optionally* include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
         A "fast" seek is a seek being performed in a rapid sequence, such as when fast-forwarding or reversing through the media, rapidly skipping through it.

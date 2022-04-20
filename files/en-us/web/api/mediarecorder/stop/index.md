@@ -31,7 +31,7 @@ following steps:
 ## Syntax
 
 ```js
-MediaRecorder.stop()
+stop()
 ```
 
 ### Errors
@@ -40,7 +40,7 @@ An `InvalidState` error is raised if the `stop()` method is
 called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
 is "inactive" — it makes no sense to stop media capture if it is already stopped.
 
-## Example
+## Examples
 
 ```js
 ...

@@ -25,10 +25,10 @@ throw.
 ## Syntax
 
 ```js
-node = nodeIterator.previousNode();
+previousNode()
 ```
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(

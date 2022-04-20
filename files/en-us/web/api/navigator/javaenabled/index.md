@@ -15,10 +15,10 @@ This method always returns false.
 ## Syntax
 
 ```js
-result = window.navigator.javaEnabled()
+javaEnabled()
 ```
 
-## Example
+## Examples
 
 ```js
 if (window.navigator.javaEnabled()) {

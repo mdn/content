@@ -22,10 +22,10 @@ iterates, releasing any resources used by the set and setting the iterator's sta
 ## Syntax
 
 ```js
-nodeIterator.detach();
+detach()
 ```
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(

@@ -1,5 +1,5 @@
 ---
-title: MediaRecorder.isTypeSupported
+title: MediaRecorder.isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported
 tags:
   - API
@@ -24,7 +24,7 @@ should be able to successfully record.
 ## Syntax
 
 ```js
-var canRecord = MediaRecorder.isTypeSupported(mimeType)
+isTypeSupported(mimeType)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ fail if there are insufficient resources to support the recording and encoding p
 If the value is `false`, the user agent is incapable of recording the
 specified format.
 
-## Example
+## Examples
 
 ```js
 var types = ["video/webm",

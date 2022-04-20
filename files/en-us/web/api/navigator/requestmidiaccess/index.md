@@ -23,8 +23,8 @@ If permission is granted then the {{jsxref('Promise')}} resolves and a [`MIDIAcc
 ## Syntax
 
 ```js
-navigator.requestMIDIAccess();
-navigator.requestMIDIAccess(MIDIOptions);
+requestMIDIAccess()
+requestMIDIAccess(MIDIOptions)
 ```
 
 ### Parameters

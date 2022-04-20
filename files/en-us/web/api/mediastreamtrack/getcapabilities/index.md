@@ -27,14 +27,12 @@ and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on 
 ## Syntax
 
 ```js
-const capabilities = track.getCapabilities()
+getCapabilities()
 ```
 
 ### Return value
 
-A {{domxref('MediaTrackCapabilities')}} object which specifies the value or range of
-values which are supported for each of the user agent's supported constrainable
-properties.
+A {{domxref('MediaTrackCapabilities')}} object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties.
 
 ## Specifications
 

@@ -21,10 +21,10 @@ method) at explicit points in time.
 ## Syntax
 
 ```js
-entries = window.performance.getEntriesByType(type);
+getEntriesByType(type)
 ```
 
-### Arguments
+### Parameters
 
 - type
   - : The type of entry to retrieve such as "`mark`". The valid entry types are
@@ -32,13 +32,12 @@ entries = window.performance.getEntriesByType(type);
 
 ### Return value
 
-- entries
-  - : A list of {{domxref("PerformanceEntry")}} objects that have the specified
+A list of {{domxref("PerformanceEntry")}} objects that have the specified
     `type`. The items will be in chronological order based on the entries'
     {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the
     specified `type`, or no argument is provided, an empty list is returned.
 
-## Example
+## Examples
 
 ```js
 function usePerformanceEntryMethods() {

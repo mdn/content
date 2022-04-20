@@ -23,7 +23,7 @@ to {{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}}.
 ## Syntax
 
 ```js
-mediaSource.clearLiveSeekableRange()
+clearLiveSeekableRange()
 ```
 
 ### Parameters

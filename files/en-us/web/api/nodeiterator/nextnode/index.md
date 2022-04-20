@@ -25,10 +25,10 @@ throw.
 ## Syntax
 
 ```js
-node = nodeIterator.nextNode();
+nextNode()
 ```
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(
