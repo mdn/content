@@ -15,7 +15,7 @@ browser-compat: webextensions.api.scripting.registerContentScripts
 ---
 {{AddonSidebar()}}
 
-Registers one or more content scripts. If there are errors during script parsing and file validation, or if the IDs specified exist, no scripts are registered.
+Registers one or more content scripts. 
 
 > **Note:** This method is available in Manifest V3 or higher.
 
@@ -36,7 +36,8 @@ let removing = browser.scripting.registerContentScripts(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If any error occurs, the promise fulfills with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If there are errors during script parsing and file validation, or if the IDs specified exist, no scripts are registered and the promise fulfills with an error message.
+
 
 ## Examples
 

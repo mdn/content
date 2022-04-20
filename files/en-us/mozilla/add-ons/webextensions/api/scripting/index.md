@@ -13,7 +13,9 @@ browser-compat: webextensions.api.scripting
 ---
 {{AddonSidebar}}
 
-Inserts JavaScript and CSS into tabs.
+Inserts JavaScript and CSS into tabs. The methods offer two approaches to inserting content:
+- {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}} that provide for one-off executions in the document loaded in a tab.
+- {{WebExtAPIRef("scripting.registerContentScripts()")}} that registers scripts that are loaded later using {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} and {{WebExtAPIRef("scripting.unregisterContentScripts()")}}.
 
 > **Note:** This API is available in Manifest V3 or higher.
 

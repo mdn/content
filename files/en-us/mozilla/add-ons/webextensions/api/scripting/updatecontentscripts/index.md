@@ -38,7 +38,7 @@ let removing = browser.scripting.updateContentScripts(
     - `persistAcrossSessions`
       - : `boolean`. Whether the content script persists into future sessions. 
     - `script`
-      - : {{WebExtAPIRef("scripting.RegisteredContentScript")}}. Details of a script to update.
+      - : `array` of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. Details of a script to update.
 
 ### Return value
 
@@ -46,7 +46,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-This example updates a script file called `script.js`:
+This example updates a script file called `a-script.js`:
 
 ```js
 const aScript = {
