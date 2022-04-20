@@ -29,8 +29,8 @@ can contain:
 - Named groups (`/books/:id`) which extract a part of the matched URL.
 - Non-capturing groups (`/books{/old}?`) which make parts of a pattern optional
   or be matched multiple times.
-- {{jsxref("RegExp")}} groups (`/books/(^\d)`) which make arbitrarily complex
-  regex matches.
+- {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex
+  regex matches with a few [limitations](#regex_matchers_limitations).
 
 You can find details about the syntax in the [pattern syntax](#pattern_syntax)
 section below.
