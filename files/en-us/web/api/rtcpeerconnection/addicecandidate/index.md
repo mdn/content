@@ -34,7 +34,7 @@ This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs
 ```js
 addIceCandidate(candidate)
 addIceCandidate(candidate, successCallback)
-addIceCandidate(candidate, successCallback, failureCallback)
+addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 ```
 
 ### Parameters

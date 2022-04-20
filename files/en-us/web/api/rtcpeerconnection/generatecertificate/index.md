@@ -1,5 +1,5 @@
 ---
-title: RTCPeerConnection.generateCertificate()
+title: RTCPeerConnection.generateCertificate() static function
 slug: Web/API/RTCPeerConnection/generateCertificate
 tags:
   - API

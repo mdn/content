@@ -1,5 +1,5 @@
 ---
-title: RTCRtpReceiver.getCapabilities()
+title: RTCRtpReceiver.getCapabilities() static function
 slug: Web/API/RTCRtpReceiver/getCapabilities
 tags:
   - API
