@@ -13,8 +13,6 @@ browser-compat: css.properties.animation-iteration-count
 
 The **`animation-iteration-count`** [CSS](/en-US/docs/Web/CSS) property sets the number of times an animation sequence should be played before stopping.
 
-If multiple values are specified, each time the animation is played the next value in the list is used, cycling back to the first value after the last one is used.
-
 {{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
 
 It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
