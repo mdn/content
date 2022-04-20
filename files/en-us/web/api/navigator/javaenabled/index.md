@@ -18,6 +18,10 @@ This method always returns false.
 javaEnabled()
 ```
 
+### Return value
+
+The boolean value `false`.
+
 ## Examples
 
 ```js
