@@ -151,8 +151,8 @@ Some regex patterns do not work as you may expect:
   ```
 - Parentheses need to be escaped in range expressions within URLPattern even though they don't in RegExp.
   ```js
-  const pattern = new URLPattern({ pathname: '[()]' }); // throws
-  const pattern = new URLPattern({ pathname: '[\\(\\)]' }); // ok
+  const pattern = new URLPattern({ pathname: '([()])' }); // throws
+  const pattern = new URLPattern({ pathname: '([\\(\\)])' }); // ok
 
   const regex = new RegExp('[()]'); // ok
   const regex = new RegExp('[\\(\\)]'); // ok
