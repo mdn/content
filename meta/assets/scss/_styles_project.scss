@@ -1,0 +1,18 @@
+/*
+
+Nothing defined here. The Hugo project that uses this theme can override Bootstrap by adding a file to:
+
+assets/scss/_styles_project.scss
+
+*/
+
+// bold styles for topper level nav
+.td-sidebar-nav__section-title a {
+	color: $black;
+	font-weight: 700;
+	
+}
+
+.td-sidebar-nav .td-sidebar-link__page {
+	color: $gray-500;
+}
