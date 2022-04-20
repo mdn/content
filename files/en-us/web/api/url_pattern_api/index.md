@@ -93,13 +93,13 @@ console.log(pattern.test('https://example.com/books/')); // false
 ### Regex matchers limitations
 
 Some regex patterns do not work as you may expect. Starts with `^`, 
-ends with `$`, Lookaheads, and lookbehineds will never match.
+ends with `$`, lookaheads, and lookbehineds will never match.
 
 ```js
 // starts with `^`
-const pattern = new URLPattern('(^a)', 'https://example.com');
-console.log(pattern.test('https://example.com/ab')); // false
-console.log(pattern.test('https://example.com/ax')); // false
+const pattern = new URLPattern('(^b)', 'https://example.com');
+console.log(pattern.test('https://example.com/ba')); // false
+console.log(pattern.test('https://example.com/xa')); // false
 
 // ends with `$`
 const pattern = new URLPattern('(b$)', 'https://example.com');
