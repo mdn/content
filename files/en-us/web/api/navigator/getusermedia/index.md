@@ -36,7 +36,7 @@ executed.
 ## Syntax
 
 ```js
-navigator.getUserMedia(constraints, successCallback, errorCallback);
+getUserMedia(constraints, successCallback, errorCallback)
 ```
 
 ### Parameters

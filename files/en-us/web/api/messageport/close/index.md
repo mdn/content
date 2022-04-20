@@ -21,10 +21,10 @@ messages to that port.
 ## Syntax
 
 ```js
-port.close()
+close()
 ```
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 
@@ -32,7 +32,7 @@ port.close()
 
 None.
 
-## Example
+## Examples
 
 In the following code block, you can see a `handleMessage` handler function,
 run when a message is sent back to this document using

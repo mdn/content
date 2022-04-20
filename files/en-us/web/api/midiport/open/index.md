@@ -20,8 +20,7 @@ If the port is already open when this method is called, then the promise will re
 ## Syntax
 
 ```js
-var output = midiAccess.outputs.get(portID);
-output.open(); // opens the port
+open()
 ```
 
 ### Parameters

@@ -31,7 +31,7 @@ it _cannot_ access media of the specified format.
 ## Syntax
 
 ```js
-var isItSupported = MediaSource.isTypeSupported(mimeType);
+isTypeSupported(mimeType)
 ```
 
 ### Parameters
@@ -54,7 +54,7 @@ case, "no or probably") when determining if a media type can be used. This is be
 media files are complex, intricate constructs with far too many subtle variations to be
 absolutely certain of anything until you actually use the contents of the media.
 
-## Example
+## Examples
 
 The following snippet is from an example written by Nick Desaulniers ([view the full demo
 live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download

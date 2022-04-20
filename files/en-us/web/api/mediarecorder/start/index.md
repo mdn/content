@@ -52,7 +52,8 @@ data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "da
 ## Syntax
 
 ```js
-mediaRecorder.start(timeslice)
+start()
+start(timeslice)
 ```
 
 ### Parameters
@@ -94,7 +95,7 @@ handler to respond to these errors.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if something else went wrong during the recording process.
 
-## Example
+## Examples
 
 ```js
 ...

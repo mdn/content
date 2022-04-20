@@ -30,7 +30,7 @@ and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on 
 ## Syntax
 
 ```js
-const constraints = track.getConstraints()
+getConstraints()
 ```
 
 ### Return value
@@ -47,7 +47,7 @@ properties specifically set by the site or app are included.
 > the currently active settings for all constrainable properties, you should instead
 > call {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}.
 
-## Example
+## Examples
 
 This example obtains the current constraints for a track, sets the
 {{domxref("MediaTrackConstraints.facingMode", "facingMode")}}, and applies the updated

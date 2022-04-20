@@ -18,7 +18,7 @@ The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface is a _
 ## Syntax
 
 ```js
-NavigatorUAData.toJSON();
+toJSON()
 ```
 
 ### Parameters

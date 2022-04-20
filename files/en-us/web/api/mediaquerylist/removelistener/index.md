@@ -25,7 +25,7 @@ available in the browsers you need to support.
 ## Syntax
 
 ```js
-MediaQueryList.removeListener(func)
+removeListener(func)
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ MediaQueryList.removeListener(func)
 
 Void.
 
-## Example
+## Examples
 
 ```js
 var paragraph = document.querySelector('p');

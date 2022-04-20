@@ -22,14 +22,15 @@ The **`endOfStream()`** method of the
 ## Syntax
 
 ```js
-mediaSource.endOfStream(endOfStreamError);
+endOfStream()
+endOfStream(endOfStreamError)
 ```
 
 ### Parameters
 
 - endOfStreamError {{optional_inline}}
 
-  - : A {{domxref("DOMString")}} representing an error to throw when the end of the stream
+  - : A string representing an error to throw when the end of the stream
     is reached. The possible values are:
 
     - `network`: Terminates playback and signals that a network error has
@@ -55,7 +56,7 @@ mediaSource.endOfStream(endOfStreamError);
   - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is
       `true`.)
 
-## Example
+## Examples
 
 The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
 live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download

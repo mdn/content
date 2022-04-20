@@ -104,7 +104,7 @@ Otherwise, the scheme must be one of the following:
 
 <!-- This must match: https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme -->
 
-## Example
+## Examples
 
 If your site is `burgers.example.com`, you can register a protocol handler for it to handle `web+burger:` links, like so:
 

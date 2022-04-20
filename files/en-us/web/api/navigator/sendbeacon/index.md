@@ -26,8 +26,8 @@ legacy techniques for sending analytics, such as the use of
 ## Syntax
 
 ```js
-navigator.sendBeacon(url);
-navigator.sendBeacon(url, data);
+sendBeacon(url)
+sendBeacon(url, data)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ navigator.sendBeacon(url, data);
   - : The URL that will receive the _data_. Can be relative or absolute.
 - `data` {{Optional_inline}}
   - : A {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}},
-    {{domxref("DOMString")}}, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}}
+    string, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}}
     object containing the data to send.
 
 ### Return values
