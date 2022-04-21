@@ -30,10 +30,6 @@ addFromURI(src)
 addFromURI(src, weight)
 ```
 
-### Return value
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 - src
@@ -44,6 +40,10 @@ addFromURI(src, weight)
     or the likelihood that it will be recognized by the speech recognition service. The
     value can be between `0.0` and `1.0`; If not specified, the
     default used is `1.0`.
+
+### Return value
+
+{{jsxref('undefined')}}.
 
 ## Examples
 
