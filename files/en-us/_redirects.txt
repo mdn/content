@@ -2202,7 +2202,7 @@
 /en-US/docs/DOM/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/DOM/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/DOM/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/DOM/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+/en-US/docs/DOM/window.onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/DOM/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/DOM/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
 /en-US/docs/DOM/window.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
@@ -2635,7 +2635,7 @@
 /en-US/docs/DOM:window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/DOM:window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/DOM:window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/DOM:window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+/en-US/docs/DOM:window.onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/DOM:window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/DOM:window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
 /en-US/docs/DOM:window.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
@@ -3361,7 +3361,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/Document_Object_Model_(DOM)/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+/en-US/docs/Document_Object_Model_(DOM)/window.onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Document_Object_Model_(DOM)/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
 /en-US/docs/Document_Object_Model_(DOM)/window.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
@@ -8147,7 +8147,7 @@
 /en-US/docs/Web/API/HTMLBodyElement/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/Web/API/HTMLBodyElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/HTMLBodyElement/onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
-/en-US/docs/Web/API/HTMLBodyElement/onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+/en-US/docs/Web/API/HTMLBodyElement/onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/HTMLBodyElement/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
 /en-US/docs/Web/API/HTMLButtonElement/click	/en-US/docs/Web/API/HTMLElement/click
 /en-US/docs/Web/API/HTMLCanvasElement.getContext	/en-US/docs/Web/API/HTMLCanvasElement/getContext
@@ -8234,7 +8234,7 @@
 /en-US/docs/Web/API/HTMLFrameSetElement/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/Web/API/HTMLFrameSetElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
-/en-US/docs/Web/API/HTMLFrameSetElement/onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+/en-US/docs/Web/API/HTMLFrameSetElement/onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
 /en-US/docs/Web/API/HTMLHTMLElement.version	/en-US/docs/Web/API/HTMLHtmlElement/version
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash	/en-US/docs/Web/API/HTMLAnchorElement/hash
@@ -9734,7 +9734,7 @@
 /en-US/docs/Web/API/Window/onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Web/API/Window/onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Web/API/Window/onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/Web/API/Window/onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+/en-US/docs/Web/API/Window/onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/Window/onrejectionhandled	/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled
 /en-US/docs/Web/API/Window/onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Web/API/Window/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
@@ -9777,6 +9777,7 @@
 /en-US/docs/Web/API/WindowEventHandlers/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/WindowEventHandlers/onmessage	/en-US/docs/Web/API/Window/message_event
 /en-US/docs/Web/API/WindowEventHandlers/onmessageerror	/en-US/docs/Web/API/Window/messageerror_event
+/en-US/docs/Web/API/WindowEventHandlers/onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/WindowEventHandlers/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowEventHandlers/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowLocalStorage	/en-US/docs/Web/API/Window/localStorage
@@ -10369,7 +10370,7 @@
 /en-US/docs/Web/API/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Web/API/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Web/API/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/Web/API/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+/en-US/docs/Web/API/window.onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Web/API/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
 /en-US/docs/Web/API/window.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
@@ -12345,7 +12346,7 @@
 /en-US/docs/WindowEventHandlers.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/WindowEventHandlers.onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/WindowEventHandlers.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+/en-US/docs/WindowEventHandlers.onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/WindowEventHandlers.onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
 /en-US/docs/Writing_Forward_Compatible_Websites	/en-US/docs/Web/Guide/Writing_forward-compatible_websites
 /en-US/docs/XHTML	/en-US/docs/Glossary/XHTML
