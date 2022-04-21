@@ -23,7 +23,7 @@ well).
 ## Syntax
 
 ```js
-StylePropertyMapReadOnly.entries()
+entries()
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ None.
 An array of the given `StylePropertyMapReadOnly` object's own enumerable
 property `[key, value]` pairs.
 
-## Example
+## Examples
 
 Here shows an example of using `StylePropertyMapReadOnly.entries()` method
 on an elements computed styles.

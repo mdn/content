@@ -16,7 +16,7 @@ The **`setOrientToAngle()`** method of the {{domxref("SVGMarkerElement")}} inter
 ## Syntax
 
 ```js
-setOrientToAngle(angle);
+setOrientToAngle(angle)
 ```
 
 ### Parameters

@@ -13,7 +13,7 @@ browser-compat: api.TextEncoder.encodeInto
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
 The **`TextEncoder.prototype.encodeInto()`** method takes a
-{{domxref("USVString")}} to encode and a destination {{jsxref("Uint8Array")}} to put
+string to encode and a destination {{jsxref("Uint8Array")}} to put
 resulting UTF-8 encoded text into, and returns a dictionary object indicating the
 progress of the encoding. This is potentially more performant than the older
 `encode()` method especially when the target buffer is a view into a Wasm
@@ -22,13 +22,13 @@ heap.
 ## Syntax
 
 ```js
-b1 = encoder.encodeInto(string, uint8Array);
+encodeInto(string, uint8Array)
 ```
 
 ### Parameters
 
 - `string`
-  - : Is a {{DOMxRef("USVString")}} containing the text to encode.
+  - : Is a string containing the text to encode.
 - `uint8Array`
   - : Is a {{jsxref("Uint8Array")}} object instance to place the resulting UTF-8
     encoded text into.

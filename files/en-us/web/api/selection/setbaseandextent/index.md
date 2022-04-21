@@ -18,7 +18,7 @@ parts of two specified DOM nodes, and any content located between them.
 ## Syntax
 
 ```js
-sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 > might follow. For example, <kbd>Shift</kbd> + <kbd>➡︎</kbd> would cause the selection
 > to narrow from the beginning rather than grow at the end.
 
-### Return Value
+### Return value
 
 None.
 

@@ -26,17 +26,17 @@ specified by URI.
 ## Syntax
 
 ```js
-speechGrammarListInstance.addFromURI(src,weight);
+addFromURI(src,weight)
 ```
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 
 ### Parameters
 
 - src
-  - : A {{domxref("DOMString")}} representing the URI of the grammar to be added.
+  - : A string representing the URI of the grammar to be added.
 - weight {{optional_inline}}
   - : A float representing the weight of the grammar relative to other grammars present in
     the {{domxref("SpeechGrammarList")}}. The weight means the importance of this grammar,

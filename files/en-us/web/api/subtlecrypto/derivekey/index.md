@@ -26,13 +26,7 @@ different characteristics and are appropriate in quite different situations. See
 ## Syntax
 
 ```js
-const result = crypto.subtle.deriveKey(
-    algorithm,
-    baseKey,
-    derivedKeyAlgorithm,
-    extractable,
-    keyUsages
-);
+deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 ```
 
 ### Parameters
@@ -64,7 +58,7 @@ const result = crypto.subtle.deriveKey(
     object.
 
 - `extractable` is a boolean value indicating whether it
-  will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
+  will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
   {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`  is an {{jsxref("Array")}} indicating what can be
   done with the derived key. Note that the key usages must be allowed by the algorithm
@@ -89,7 +83,7 @@ const result = crypto.subtle.deriveKey(
 
 ### Return value
 
-- `result` is a {{jsxref("Promise")}} that fulfills with a
+A {{jsxref("Promise")}} that fulfills with a
   {{domxref("CryptoKey")}}.
 
 ### Exceptions

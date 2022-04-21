@@ -22,13 +22,7 @@ formats](#supported_formats) for details.
 ## Syntax
 
 ```js
-const result = crypto.subtle.importKey(
-    format,
-    keyData,
-    algorithm,
-    extractable,
-    keyUsages
-);
+importKey(format, keyData, algorithm, extractable, keyUsages)
 ```
 
 ### Parameters
@@ -91,7 +85,7 @@ const result = crypto.subtle.importKey(
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
 
 ### Exceptions

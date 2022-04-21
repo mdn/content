@@ -16,7 +16,8 @@ The **`setSignals()`** method of the {{domxref("SerialPort")}} interface sets co
 ## Syntax
 
 ```js
-var promise = SerialPort.setSignals(options);
+setSignals()
+setSignals(options)
 ```
 
 ### Parameters

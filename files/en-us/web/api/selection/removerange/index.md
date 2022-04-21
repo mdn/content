@@ -17,7 +17,7 @@ selection.
 ## Syntax
 
 ```js
-sel.removeRange(range)
+removeRange(range)
 ```
 
 ### Parameters

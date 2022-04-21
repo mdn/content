@@ -24,7 +24,7 @@ recognition service from listening to incoming audio, and doesn't attempt to ret
 abort()
 ```
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 

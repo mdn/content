@@ -34,15 +34,7 @@ of encrypt + export.
 ## Syntax
 
 ```js
-const result = crypto.subtle.unwrapKey(
-    format,
-    wrappedKey,
-    unwrappingKey,
-    unwrapAlgo,
-    unwrappedKeyAlgo,
-    extractable,
-    keyUsages
-);
+unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extractable, keyUsages)
 ```
 
 ### Parameters
@@ -118,7 +110,7 @@ const result = crypto.subtle.unwrapKey(
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   that fulfills with the unwrapped key as a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey)
   object.
 

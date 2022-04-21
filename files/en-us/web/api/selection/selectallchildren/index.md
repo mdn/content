@@ -17,7 +17,7 @@ children of the specified node to the selection. Previous selection is lost.
 ## Syntax
 
 ```js
-sel.selectAllChildren(parentNode)
+selectAllChildren(parentNode)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ sel.selectAllChildren(parentNode)
   - : All children of `parentNode` will be selected. `parentNode`
     itself is not part of the selection.
 
-## Example
+## Examples
 
 ### HTML
 
