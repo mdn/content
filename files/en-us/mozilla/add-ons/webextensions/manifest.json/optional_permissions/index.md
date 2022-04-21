@@ -21,11 +21,14 @@ browser-compat: webextensions.manifest.optional_permissions
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
 "optional_permissions": [
-  "*://developer.mozilla.org/*",
   "webRequest"
 ]</pre
         >
@@ -47,6 +50,8 @@ The key can contain two kinds of permissions: host permissions and API permissio
 ## Host permissions
 
 These are the same as the host permissions you can specify in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) key.
+
+> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
 
 ## API permissions
 
@@ -96,7 +101,7 @@ Of this set, the following permissions are granted silently, without a user prom
  "optional_permissions": ["*://developer.mozilla.org/*"]
 ```
 
-Enable the extension to ask for privileged access to pages under developer.mozilla.org.
+In manifest V2 only, enable the extension to ask for privileged access to pages under developer.mozilla.org.
 
 ```json
   "optional_permissions": ["tabs"]
@@ -108,7 +113,7 @@ Enable the extension to ask for access to the privileged pieces of the `tabs` AP
   "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]
 ```
 
-Enable the extension to ask for both of the above permissions.
+In manifest V2 only, enable the extension to ask for both of the above permissions.
 
 ## Browser compatibility
 

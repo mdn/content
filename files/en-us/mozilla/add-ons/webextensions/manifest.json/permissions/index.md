@@ -23,11 +23,14 @@ browser-compat: webextensions.manifest.permissions
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json;">
 "permissions": [
-  "*://developer.mozilla.org/*",
   "webRequest"
 ]</pre
         >
@@ -44,11 +47,13 @@ For information on how to test and preview permission requests, see [Test permis
 
 The key can contain three kinds of permissions:
 
-- host permissions
+- host permissions (manifest V2 only, host permissions are specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for manifest V3 or higher.)
 - API permissions
 - the `activeTab` permission
 
 ## Host permissions
+
+> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
@@ -183,7 +188,7 @@ The `unlimitedStorage` permission:
  "permissions": ["*://developer.mozilla.org/*"]
 ```
 
-Request privileged access to pages under `developer.mozilla.org`.
+In manifest V2 only, request privileged access to pages under `developer.mozilla.org`.
 
 ```json
   "permissions": ["tabs"]
@@ -195,7 +200,7 @@ Request access to the privileged pieces of the `tabs` API.
   "permissions": ["*://developer.mozilla.org/*", "tabs"]
 ```
 
-Request both of the above permissions.
+In manifest V2 only, request both of the above permissions.
 
 ## Browser compatibility
 
