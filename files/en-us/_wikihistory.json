@@ -71924,19 +71924,6 @@
       "Jonnyq"
     ]
   },
-  "Web/API/Selection/selectionLanguageChange": {
-    "modified": "2019-03-24T00:11:08.047Z",
-    "contributors": [
-      "Nickolay",
-      "fscholz",
-      "teoli",
-      "SphinxKnight",
-      "kscarfone",
-      "namolmes",
-      "Sheppy",
-      "trevorh"
-    ]
-  },
   "Web/API/Selection/setBaseAndExtent": {
     "modified": "2020-10-15T21:52:25.472Z",
     "contributors": [
