@@ -405,4 +405,4 @@ For more information, please see: [Working with the History API](/en-US/docs/Web
 ## See also
 
 - {{ domxref("window.history") }}
-- {{ domxref("WindowEventHandlers.onpopstate") }}
+- {{domxref("Window/popstate_event", "popstate")}} event

@@ -336,8 +336,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : Called after the window receives or regains focus. See {{event("focus")}} events.
-- {{domxref("WindowEventHandlers.onhashchange")}}
-  - : An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.oninput")}}
   - : Called when the value of an \<input> element changes
 - {{domxref("GlobalEventHandlers.onkeydown")}}
@@ -368,8 +366,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
 - {{domxref("WindowEventHandlers.onpageshow")}}
   - : Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.
-- {{domxref("WindowEventHandlers.onpopstate")}}
-  - : Called when a back button is pressed.
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : Called when a form is reset
 - {{domxref("GlobalEventHandlers.onresize")}}
@@ -484,16 +480,14 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/hashchange_event", "hashchange")}}
   - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
-    Also available via the {{domxref("WindowEventHandlers/onhashchange", "onhashchange")}} property.
 - {{domxref("Window/pagehide_event", "pagehide")}}
   - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
     Also available through the [`onpagehide`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpagehide) event handler property.
 - {{domxref("Window/pageshow_event", "pageshow")}}
   - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
     Also available using the [`onpageshow`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpageshow) event handler property.
-- `{{domxref("Window/popstate_event", "popstate")}}`
+- {{domxref("Window/popstate_event", "popstate")}}
   - : Fired when the active history entry changes.
-    Also available using the {{domxref("WindowEventHandlers/onpopstate", "onpopstate")}} event handler property.
 
 ### Load & unload events
 
