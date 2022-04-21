@@ -12,7 +12,7 @@ tags:
 
 The **`sqrt`** instructions, short for *square root*, are used to get the square root of a number.
 
-{{EmbedInteractiveExample("pages/wat/sqrt.html")}}
+{{EmbedInteractiveExample("pages/wat/sqrt.html", "tabbed-standard")}}
 
 ## Syntax
 
