@@ -15,7 +15,7 @@ browser-compat: api.GamepadPose.angularAcceleration
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-The **`angularAcceleration`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the angular acceleration vector of the {{domxref("Gamepad")}}, in meters per second.
+The **`angularAcceleration`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the angular acceleration vector of the {{domxref("Gamepad")}}, in meters per second per second.
 
 In other words, the current acceleration of the sensor's rotation around the `x`, `y`, and `z` axes.
 
