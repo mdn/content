@@ -16,7 +16,7 @@ The **`insertItemBefore()`** method of the {{domxref("SVGPointList")}} interface
 ## Syntax
 
 ```js
-insertItemBefore(obj,index)
+insertItemBefore(obj, index)
 ```
 
 ### Parameters

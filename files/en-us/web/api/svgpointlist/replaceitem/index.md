@@ -16,7 +16,7 @@ The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface repl
 ## Syntax
 
 ```js
-replaceItem(obj,index)
+replaceItem(obj, index)
 ```
 
 ### Parameters

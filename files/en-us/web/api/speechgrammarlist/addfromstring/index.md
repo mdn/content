@@ -23,7 +23,8 @@ the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 ## Syntax
 
 ```js
-addFromString(string,weight)
+addFromString(string)
+addFromString(string, weight)
 ```
 
 ### Return value

@@ -26,7 +26,8 @@ specified by URI.
 ## Syntax
 
 ```js
-addFromURI(src,weight)
+addFromURI(src)
+addFromURI(src, weight)
 ```
 
 ### Return value
