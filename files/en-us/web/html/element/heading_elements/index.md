@@ -146,7 +146,7 @@ Here is the result of this code:
 
 ### Navigation
 
-A common navigation technique for users of screen reading software is jumping from heading to heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
+A common navigation technique for users of screen reading software is jumping from heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
 
 #### Don't
 

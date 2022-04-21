@@ -49,7 +49,7 @@ See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface and implements properties from the `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
 
-Note that properties which are objects (e.g.,. for overriding the prototype of built-in elements) are listed in a separate section below.
+Note that properties which are objects (e.g., for overriding the prototype of built-in elements) are listed in a separate section below.
 
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{readOnlyInline}}
   - : An alias for {{domxref("Window.navigator")}}.
