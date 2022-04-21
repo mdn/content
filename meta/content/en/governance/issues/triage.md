@@ -17,26 +17,24 @@ We hold triage once a week. Triage meetings alternate timezones, between Europe/
 
 The meeting lasts 30 minutes.
 
-All mdn/content maintainers (that is, all people with merge access to mdn/content) are invited. We need 4 people to have a quorum for triage.
+All mdn/content maintainers (that is, all people with merge access to mdn/content) are invited. We need 2 people to have a quorum for triage.
 
 One person is responsible for running the meeting: this includes getting the list of issues to triage and updating issues (adding labels, writing comments).
 
 ## Meeting schedule
 
-The person running the meeting has a list of open issues that don't have a `triaged` label set.
+The person running the meeting has a list of open issues that have the `needs-triage` label set.
 
 For each issue, we ask:
 
 - is this an issue we want to keep open? If not, close it now with a comment.
 - is this issue in the correct repo? If not, transfer it now with a comment.
 - otherwise:
-    - do we need more information from the reporter? If so, ask, add the `needs-info` label, and move on.
+    - do we need more information from the reporter? If so, ask, add the `needs-info` label, and move on. Issues that have had `needs-info` set for a month without a response may be closed.
     - is it a bug or a feature request?
     - what does a fix look like? If we can quickly decide and write that up as a comment in the issue. If we can't, don't (so we don't spend 30 minutes discussing one issue - maybe schedule it for the editorial meeting instead?)
     - is it a good first issue? If so, add the `good-first-issue` label.
     - do we need more/expert opinion? If so, tag an expert in the issue.
-- add the `triaged` label
+- remove the `needs-triage` label
 
 This process does not prioritize issues or assign issues to people.
-
-At the end of 30 minutes we stop.
