@@ -39,7 +39,7 @@ Listen for the user executing commands that you have registered using the [`comm
 
 > **Note:**
 >
-> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/extensions/commands) API.
+> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
