@@ -29,7 +29,7 @@ None.
 
 A {{domxref("WebGLProgram")}} object that is a combination of two compiled
 {{domxref("WebGLShader")}}s consisting of a vertex shader and a fragment shader (both
-written in GLSL). These are then linked into a usable program..
+written in GLSL). These are then linked into a usable program.
 
 ## Examples
 

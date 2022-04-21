@@ -226,7 +226,7 @@ The `create` and `update` functions are framework-specific, while others will be
 
 - `initLevels` initializes the level data.
 - `showLevel` prints the level data on the screen.
-- `updateCounter` updates the time spent playing each level and records the total time spent playing the game..
+- `updateCounter` updates the time spent playing each level and records the total time spent playing the game.
 - `managePause` pauses and resumes the game.
 - `manageAudio` turns the audio on and off.
 - `wallCollision` is executed when the ball hits the walls or other objects.
