@@ -79,7 +79,7 @@ setTimeout(() => {
 }, "1000")
 ```
 
-But in many cases, the implicit type coercion can lead to unexpected and surprising results. For example, when the following code runs, the string `"1 second"` effectively gets coerced into the number `0` — and so, the code executes immediately, with no zero delay.
+But in many cases, the implicit type coercion can lead to unexpected and surprising results. For example, when the following code runs, the string `"1 second"` ultimately gets coerced into the number `0` — and so, the code executes immediately, with zero delay.
 
 ```js example-bad
 setTimeout(() => {
