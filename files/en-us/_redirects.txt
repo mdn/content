@@ -1693,7 +1693,6 @@
 /en-US/docs/DOM/Selection/removeAllRanges	/en-US/docs/Web/API/Selection/removeAllRanges
 /en-US/docs/DOM/Selection/removeRange	/en-US/docs/Web/API/Selection/removeRange
 /en-US/docs/DOM/Selection/selectAllChildren	/en-US/docs/Web/API/Selection/selectAllChildren
-/en-US/docs/DOM/Selection/selectionLanguageChange	/en-US/docs/Web/API/Selection/selectionLanguageChange
 /en-US/docs/DOM/Selection/toString	/en-US/docs/Web/API/Selection/toString
 /en-US/docs/DOM/SharedWorker	/en-US/docs/Web/API/SharedWorker
 /en-US/docs/DOM/Storage	/en-US/docs/Web/API/Web_Storage_API
@@ -9264,7 +9263,6 @@
 /en-US/docs/Web/API/Selection.removeAllRanges	/en-US/docs/Web/API/Selection/removeAllRanges
 /en-US/docs/Web/API/Selection.removeRange	/en-US/docs/Web/API/Selection/removeRange
 /en-US/docs/Web/API/Selection.selectAllChildren	/en-US/docs/Web/API/Selection/selectAllChildren
-/en-US/docs/Web/API/Selection.selectionLanguageChange	/en-US/docs/Web/API/Selection/selectionLanguageChange
 /en-US/docs/Web/API/Selection.toString	/en-US/docs/Web/API/Selection/toString
 /en-US/docs/Web/API/Selection/empty	/en-US/docs/Web/API/Selection/removeAllRanges
 /en-US/docs/Web/API/Selection/setPosition	/en-US/docs/Web/API/Selection/collapse
