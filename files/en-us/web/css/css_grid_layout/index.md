@@ -117,7 +117,7 @@ The example below shows a three-column track grid with new rows created at a min
 
 - {{CSSxRef("repeat", "repeat()")}}
 - {{CSSxRef("minmax", "minmax()")}}
-- {{CSSxRef("fit-content", "fit-content()")}}
+- {{CSSxRef("fit-content_function", "fit-content()")}}
 
 ### CSS data types
 
