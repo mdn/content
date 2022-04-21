@@ -129,7 +129,7 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 ### Interface changes
 
 - `nsISocketTransport` now offers a new connection flag: `DISABLE_IPV6`; this causes a socket to only attempt to connect to IPv4 addresses, ignoring any available IPv6 addresses. In addition, `nsIDNSService` now offers a new resolve flag: `RESOLVE_DISABLE_IPV6`; this causes domain name resolution to only consider IPv4 hosts, ignoring any available IPv6 addresses. These changes are used to implement the ["happy eyeballs" strategy](https://datatracker.ietf.org/doc/html/draft-wing-http-new-tech-00) for improving response time when attempting to connect on hosts that support both IPv4 and IPv6 (especially those that have broken IPv6 connectivity).
-- {{ interface("inIDOMUtils") }} has two new methods, {{ ifmethod("inIDOMUtils","getChildrenForNode") }} which returns a list of child nodes of a node and {{ ifmethod("inIDOMUtils","getUsedFontFaces") }} which returns a list of font faces used in a range.
+- `inIDOMUtils` has two new methods, {{ ifmethod("inIDOMUtils","getChildrenForNode") }} which returns a list of child nodes of a node and {{ ifmethod("inIDOMUtils","getUsedFontFaces") }} which returns a list of font faces used in a range.
 - The `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIMarkupDocumentViewer` interface.
 - The `nsIDOMWindow2` interface has been merged into the `nsIDOMWindow` interface.
 - The `nsIDOMWindow_2_0_BRANCH` interface has been merged into the `nsIDOMWindowInternal` interface.
@@ -169,7 +169,7 @@ The following interfaces were removed as part of the removal of the ActiveX embe
 - `DITestScriptHelper`
 - `DWebBrowserEvents`
 - `DWebBrowserEvents2`
-- {{ interface("IDispatch") }}
+- `IDispatch`
 - `IMozControlBridge`
 - `IMozPluginHostCtrl`
 - `IWebBrowser`

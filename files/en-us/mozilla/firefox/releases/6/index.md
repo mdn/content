@@ -152,7 +152,7 @@ For an overview of the changes you may need to make in order to make your add-on
 
 #### New interfaces
 
-- {{ interface("mozIAsyncFavicons") }}
+- `mozIAsyncFavicons`
   - : A new service that lets you access the favicon service asynchronously.
 - `nsIEventSource`
   - : _Details forthcoming._

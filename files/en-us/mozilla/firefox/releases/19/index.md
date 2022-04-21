@@ -54,7 +54,7 @@ Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.phil
 ### Interface changes
 
 - `nsIImgLoadingContent`
-  - : The parameter (aObserver) of `addObserver()` method changes from {{interface("imgIDecoderObserver")}} to {{interface("imgINotificationObserver")}}. The `notify()` method of {{interface("imgINotificationObserver")}} is not scriptable, so you need to use `createScriptedObserver()` from {{interface("imgITools")}}.
+  - : The parameter (aObserver) of `addObserver()` method changes from `imgIDecoderObserver` to `imgINotificationObserver`. The `notify()` method of `imgINotificationObserver` is not scriptable, so you need to use `createScriptedObserver()` from `imgITools`.
 - `nsIChannel`
   - : The property `contentLength` changed from `long` to `int64_t`.
 
