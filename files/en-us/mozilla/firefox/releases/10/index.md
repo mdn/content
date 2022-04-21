@@ -135,7 +135,7 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### Interface changes
 
-- The {{ interface("mozISpellCheckingEngine") }} and `nsIEditorSpellCheck` interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. **XXX need to [update docs](/en-US/Using_an_External_Spell-checker) on how to actually do this.**
+- The `mozISpellCheckingEngine` and `nsIEditorSpellCheck` interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. **XXX need to [update docs](/en-US/Using_an_External_Spell-checker) on how to actually do this.**
 - The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed.
 - The `nsIDocumentViewer` interface has been merged into `nsIContentViewer`.
 - The `nsIURIFixup` interface has a new flag, `FIXUP_FLAG_USE_UTF8`, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.
