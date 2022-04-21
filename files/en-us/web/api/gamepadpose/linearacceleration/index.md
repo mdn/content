@@ -15,7 +15,7 @@ browser-compat: api.GamepadPose.linearAcceleration
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-The **`linearAcceleration`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the linear acceleration vector of the {{domxref("Gamepad")}}, in meters per second per second.
+The **`linearAcceleration`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the linear acceleration vector of the {{domxref("Gamepad")}}, in meters per second.
 
 In other words, the current acceleration of the sensor, along the `x`, `y`, and `z` axes.
 

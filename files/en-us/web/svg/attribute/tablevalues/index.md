@@ -7,7 +7,7 @@ tags:
 ---
 {{SVGRef}}
 
-The **`tableValues`** attribute defines a list of numbers defining a lookup table of values for a for a color component transfer function.
+The **`tableValues`** attribute defines a list of numbers defining a lookup table of values for a color component transfer function.
 
 You can use this attribute with the following SVG elements:
 

@@ -88,7 +88,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ## Changes for Mozilla and add-on developers
 
-See [Updating add-ons for Firefox 8](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_8) for a guide to changes you're likely to have to make to make your add-ons compatible with Firefox 8.
+See [Updating add-ons for Firefox 8](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_8) for a guide to changes you're likely to have to make your add-ons compatible with Firefox 8.
 
 > **Note:** Firefox 8 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 

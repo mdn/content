@@ -27,13 +27,13 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 - {{domxref("VRPose.linearVelocity")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the linear velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
 - {{domxref("VRPose.linearAcceleration")}} {{deprecated_inline}}{{readonlyInline}}
-  - : Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
+  - : Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
 - {{domxref("VRPose.orientation")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the orientation of the sensor at the current {{domxref("VRPose.timestamp")}}, as a quarternion value.
 - {{domxref("VRPose.angularVelocity")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.
 - {{domxref("VRPose.angularAcceleration")}} {{deprecated_inline}}{{readonlyInline}}
-  - : Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
+  - : Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
 
 ### Obsolete properties
 

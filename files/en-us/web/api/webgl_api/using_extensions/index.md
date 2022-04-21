@@ -25,7 +25,7 @@ var ext = (
 );
 ```
 
-Note that, vendor prefix have been discouraged more and more and thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.
+Note that, vendor prefix have been discouraged thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.
 
 The feature flags are:
 
