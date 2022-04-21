@@ -10,7 +10,7 @@ tags:
 
 Extensions, or add-ons, can modify and enhance the capability of a browser. Extensions for Firefox are built using the WebExtensions API cross-browser technology.
 
-The technology for extensions in Firefox is, to a large extent, compatible with the [extension API](https://developer.chrome.com/extensions) supported by Chromium-based browsers (such as Google Chrome, Microsoft Edge, Opera, Vivaldi). In most cases, extensions written for Chromium-based browsers run in Firefox with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+The technology for extensions in Firefox is, to a large extent, compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Chromium-based browsers (such as Google Chrome, Microsoft Edge, Opera, Vivaldi). In most cases, extensions written for Chromium-based browsers run in Firefox with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
 
 ## Key resources
 
