@@ -12,15 +12,15 @@ browser-compat: api.TextDecoder.decode
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
 The **`TextDecoder.prototype.decode()`** method returns a
-{{DOMxRef("DOMString")}} containing the text, given in parameters, decoded with the
+string containing the text, given in parameters, decoded with the
 specific method for that `TextDecoder` object.
 
 ## Syntax
 
 ```js
-b1 = decoder.decode(buffer, options);
-b2 = decoder.decode(buffer);
-b3 = decoder.decode();
+decode()
+decode(buffer)
+decode(buffer, options)
 ```
 
 ### Parameters
@@ -39,7 +39,11 @@ b3 = decoder.decode();
         subsequent calls to decode(). Set to true if processing the data in chunks, and
         false for the final chunk or if the data is not chunked. It defaults to false.
 
-## Example
+### Return value
+
+A string.
+
+## Examples
 
 This example encodes and decodes the euro symbol, €.
 

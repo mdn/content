@@ -20,7 +20,7 @@ property.
 ## Syntax
 
 ```js
-StylePropertyMap.delete(property)
+delete(property)
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ StylePropertyMap.delete(property)
 
 {{jsxref('undefined')}}
 
-## Example
+## Examples
 
 The following example removes the {{cssxref('background-image')}} property from the
 element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).

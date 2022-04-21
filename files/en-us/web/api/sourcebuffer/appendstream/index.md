@@ -23,7 +23,7 @@ The **`appendStream()`** method of the
 ## Syntax
 
 ```js
-sourceBuffer.appendStream(stream, maxSize);
+appendStream(stream, maxSize)
 ```
 
 ### Parameters
@@ -43,7 +43,7 @@ sourceBuffer.appendStream(stream, maxSize);
 
 None.
 
-## Example
+## Examples
 
 TBD.
 

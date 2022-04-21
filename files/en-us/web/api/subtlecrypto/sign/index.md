@@ -25,7 +25,7 @@ signature.
 ## Syntax
 
 ```js
-const signature = crypto.subtle.sign(algorithm, key, data);
+sign(algorithm, key, data)
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ const signature = crypto.subtle.sign(algorithm, key, data);
 
 ### Return value
 
-- `signature` is a {{jsxref("Promise")}} that fulfills with an
+A {{jsxref("Promise")}} that fulfills with an
   {{jsxref("ArrayBuffer")}} containing the signature.
 
 ### Exceptions
@@ -117,7 +117,7 @@ according to the [FIPS
 
 The digest algorithm to use is specified in the
 [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object
-that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
+that you pass into {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
 [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object
 that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
 

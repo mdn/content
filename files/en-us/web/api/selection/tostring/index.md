@@ -17,7 +17,7 @@ currently being represented by the selection object, i.e. the currently selected
 ## Syntax
 
 ```js
-sel.toString()
+toString()
 ```
 
 ### Return value

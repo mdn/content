@@ -17,7 +17,7 @@ The **`Selection.addRange()`** method adds a
 ## Syntax
 
 ```js
-selection.addRange(range);
+addRange(range)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ selection.addRange(range);
   - : A {{ domxref("Range") }} object that will be added to the {{ domxref("Selection")
     }}.
 
-## Example
+## Examples
 
 > **Note:** Currently only Firefox supports multiple selection ranges, other browsers will not
 > add new ranges to the selection if it already contains one.

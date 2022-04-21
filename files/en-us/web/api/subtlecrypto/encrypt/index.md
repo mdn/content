@@ -23,7 +23,7 @@ known as "ciphertext").
 ## Syntax
 
 ```js
-const result = crypto.subtle.encrypt(algorithm, key, data);
+encrypt(algorithm, key, data)
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ const result = crypto.subtle.encrypt(algorithm, key, data);
 
 ### Return value
 
-- `result` is a {{jsxref("Promise")}} that fulfills with an
+A {{jsxref("Promise")}} that fulfills with an
   {{jsxref("ArrayBuffer")}} containing the "ciphertext".
 
 ### Exceptions

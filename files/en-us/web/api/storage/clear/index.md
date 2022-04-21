@@ -17,7 +17,7 @@ interface clears all keys stored in a given `Storage` object.
 ## Syntax
 
 ```js
-storage.clear();
+clear()
 ```
 
 ### Return value

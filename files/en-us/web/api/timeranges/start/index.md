@@ -18,12 +18,16 @@ Returns the time offset at which a specified time range begins.
 ## Syntax
 
 ```js
-startTime = TimeRanges.start(index)
+start(index)
 ```
 
 ### Parameters
 
 - `index` is the range number to return the starting time for.
+
+### Return value
+
+A number.
 
 ### Exceptions
 
@@ -31,7 +35,7 @@ startTime = TimeRanges.start(index)
   - : A `DOMException` thrown if the specified index doesn't correspond to an
     existing range.
 
-## Example
+## Examples
 
 Given a video element with the ID "myVideo":
 

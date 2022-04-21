@@ -26,7 +26,7 @@ interface removes media segments within a specific time range from the
 ## Syntax
 
 ```js
-sourceBuffer.remove(start, end);
+remove(start, end)
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ sourceBuffer.remove(start, end);
         to `true`, or this `SourceBuffer` has been removed
         from {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 TBD.
 

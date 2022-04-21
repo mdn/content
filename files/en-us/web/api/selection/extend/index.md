@@ -18,7 +18,8 @@ will be from the anchor to the new focus, regardless of direction.
 ## Syntax
 
 ```js
-sel.extend(node, offset)
+extend(node)
+extend(node, offset)
 ```
 
 ### Parameters

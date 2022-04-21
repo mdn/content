@@ -20,7 +20,7 @@ object for the first value of the specified property.
 ## Syntax
 
 ```js
-var declarationBlock = StylePropertyMapReadOnly.get(property)
+get(property)
 ```
 
 ### Parameters

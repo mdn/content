@@ -31,7 +31,7 @@ This method does nothing if the transceiver is already stopped.
 ## Syntax
 
 ```js
-RTCRtpTransceiver.stop()
+stop()
 ```
 
 ### Parameters

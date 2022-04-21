@@ -25,7 +25,7 @@ The **`appendBuffer()`** method of the
 ## Syntax
 
 ```js
-sourceBuffer.appendBuffer(source);
+appendBuffer(source)
 ```
 
 ### Parameters
@@ -43,7 +43,7 @@ sourceBuffer.appendBuffer(source);
 
 None.
 
-## Example
+## Examples
 
 TBD.
 

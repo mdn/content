@@ -24,7 +24,7 @@ digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the dige
 ## Syntax
 
 ```js
-const digest = crypto.subtle.digest(algorithm, data);
+digest(algorithm, data)
 ```
 
 ### Parameters
@@ -42,8 +42,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ### Return value
 
-- `digest`
-  - : {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containing the digest.
+A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containing the digest.
 
 ## Supported algorithms
 

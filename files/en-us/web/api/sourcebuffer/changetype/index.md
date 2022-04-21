@@ -30,13 +30,13 @@ constraints change.
 ## Syntax
 
 ```js
-sourceBuffer.changeType(type);
+changeType(type)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} specifying the MIME type that future buffers will conform
+  - : A string specifying the MIME type that future buffers will conform
     to.
 
 ### Return value

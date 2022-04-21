@@ -20,7 +20,7 @@ The **`stop`** method of the
 ## Syntax
 
 ```js
-Sensor.stop()
+stop()
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ None.
 
 {{jsxref('undefined')}}
 
-## Example
+## Examples
 
 ```js
 // TBD
