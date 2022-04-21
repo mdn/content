@@ -4,7 +4,6 @@ slug: Web/CSS/:has
 tags:
   - ':has'
   - CSS
-  - Experimental
   - Pseudo-class
   - Reference
   - Selector
