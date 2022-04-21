@@ -344,8 +344,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
-- {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{domxref("Window.languagechange_event", "languagechange")}} events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
@@ -390,7 +388,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.
 - {{domxref("Window/languagechange_event", "languagechange")}}
   - : Fired at the global scope object when the user's preferred language changes.
-    Also available via the {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} property.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
   - : Fired when the orientation of the device has changed.
 - {{domxref("Window.devicemotion_event", "devicemotion")}}

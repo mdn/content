@@ -3,7 +3,6 @@ title: 'Window: languagechange event'
 slug: Web/API/Window/languagechange_event
 tags:
   - Event
-  - Experimental
   - HTML DOM
   - Reference
   - Window
@@ -13,28 +12,26 @@ browser-compat: api.Window.languagechange_event
 
 The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('languagechange', event => { });
+onlanguagechange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onlanguagechange` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Examples
 
@@ -46,7 +43,7 @@ window.addEventListener('languagechange', function() {
 });
 ```
 
-Or use the [`onlanguagechange`](/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange) event handler property:
+Or use the `onlanguagechange` event handler property:
 
 ```js
 window.onlanguagechange = function(event) {
@@ -67,4 +64,3 @@ window.onlanguagechange = function(event) {
 - {{domxref("navigator.language")}}
 - {{domxref("navigator.languages")}}
 - {{domxref("navigator")}}
-- {{domxref("WindowEventHandlers.onlanguagechange")}}

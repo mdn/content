@@ -8145,7 +8145,7 @@
 /en-US/docs/Web/API/HTMLBodyElement/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/HTMLBodyElement/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/Web/API/HTMLBodyElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Web/API/HTMLBodyElement/onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
+/en-US/docs/Web/API/HTMLBodyElement/onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
 /en-US/docs/Web/API/HTMLBodyElement/onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/HTMLBodyElement/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
 /en-US/docs/Web/API/HTMLButtonElement/click	/en-US/docs/Web/API/HTMLElement/click
@@ -8232,7 +8232,7 @@
 /en-US/docs/Web/API/HTMLFrameSetElement/onafterprint	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Web/API/HTMLFrameSetElement/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/Web/API/HTMLFrameSetElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Web/API/HTMLFrameSetElement/onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
+/en-US/docs/Web/API/HTMLFrameSetElement/onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
 /en-US/docs/Web/API/HTMLHTMLElement.version	/en-US/docs/Web/API/HTMLHtmlElement/version
@@ -9680,7 +9680,7 @@
 /en-US/docs/Web/API/Window.devicePixelRatio	/en-US/docs/Web/API/Window/devicePixelRatio
 /en-US/docs/Web/API/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/Window.localStorage	/en-US/docs/Web/API/Window/localStorage
-/en-US/docs/Web/API/Window.onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
+/en-US/docs/Web/API/Window.onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
 /en-US/docs/Web/API/Window.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/Window/StaticRange	/en-US/docs/Web/API/StaticRange
 /en-US/docs/Web/API/Window/URL	/en-US/docs/Web/API/URL
@@ -9725,7 +9725,7 @@
 /en-US/docs/Web/API/Window/onkeydown	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
 /en-US/docs/Web/API/Window/onkeypress	/en-US/docs/Web/API/GlobalEventHandlers/onkeypress
 /en-US/docs/Web/API/Window/onkeyup	/en-US/docs/Web/API/GlobalEventHandlers/onkeyup
-/en-US/docs/Web/API/Window/onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
+/en-US/docs/Web/API/Window/onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
 /en-US/docs/Web/API/Window/onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
 /en-US/docs/Web/API/Window/onmousedown	/en-US/docs/Web/API/GlobalEventHandlers/onmousedown
 /en-US/docs/Web/API/Window/onmousemove	/en-US/docs/Web/API/GlobalEventHandlers/onmousemove
@@ -9768,11 +9768,12 @@
 /en-US/docs/Web/API/WindowEventHandlers.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/API/WindowEventHandlers.onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/Web/API/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Web/API/WindowEventHandlers.onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
+/en-US/docs/Web/API/WindowEventHandlers.onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
 /en-US/docs/Web/API/WindowEventHandlers.onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
 /en-US/docs/Web/API/WindowEventHandlers/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/WindowEventHandlers/onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/API/WindowEventHandlers/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
+/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
 /en-US/docs/Web/API/WindowEventHandlers/onmessage	/en-US/docs/Web/API/Window/message_event
 /en-US/docs/Web/API/WindowEventHandlers/onmessageerror	/en-US/docs/Web/API/Window/messageerror_event
 /en-US/docs/Web/API/WindowEventHandlers/onpopstate	/en-US/docs/Web/API/Window/popstate_event

@@ -85330,19 +85330,6 @@
       "Robg1"
     ]
   },
-  "Web/API/WindowEventHandlers/onlanguagechange": {
-    "modified": "2020-10-15T21:29:30.939Z",
-    "contributors": [
-      "Wind1808",
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "bathos",
-      "foxstorm",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/WindowEventHandlers/onrejectionhandled": {
     "modified": "2020-10-15T21:38:13.769Z",
     "contributors": [
