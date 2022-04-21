@@ -972,7 +972,7 @@ Labels are needed to associate assistive text with an `<input>`. The {{HTMLEleme
 
 The semantic pairing of `<input>` and `<label>` elements is useful for assistive technologies such as screen readers. By pairing them using the `<label>`'s [`for`](/en-US/docs/Web/HTML/Element/label#for) attribute, you bond the label to the input in a way that lets screen readers describe inputs to users more precisely.
 
-It does not suffice to have plain text adjacent to the `<input>` element,. Rather, usability and accessibility requires the inclusion of either implicit or explicit {{HTMLElement("label")}}:
+It does not suffice to have plain text adjacent to the `<input>` element. Rather, usability and accessibility requires the inclusion of either implicit or explicit {{HTMLElement("label")}}:
 
 ```html
 <!-- inaccessible -->
