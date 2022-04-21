@@ -364,10 +364,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when network connection is lost. See {{domxref("Window.offline_event", "offline")}} event.
 - {{domxref("WindowEventHandlers.ononline")}}
   - : Called when network connection is established. See {{domxref("Window.online_event", "online")}} event.
-- {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
-- {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.
 - {{domxref("WindowEventHandlers.onpopstate")}}
   - : Called when a back button is pressed.
 - {{domxref("GlobalEventHandlers.onreset")}}
@@ -487,10 +483,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("WindowEventHandlers/onhashchange", "onhashchange")}} property.
 - {{domxref("Window/pagehide_event", "pagehide")}}
   - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
-    Also available through the [`onpagehide`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpagehide) event handler property.
 - {{domxref("Window/pageshow_event", "pageshow")}}
   - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
-    Also available using the [`onpageshow`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpageshow) event handler property.
 - `{{domxref("Window/popstate_event", "popstate")}}`
   - : Fired when the active history entry changes.
     Also available using the {{domxref("WindowEventHandlers/onpopstate", "onpopstate")}} event handler property.
