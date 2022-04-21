@@ -22,8 +22,6 @@ _The events properties, of the form `onXYZ`, are defined on the {{domxref("Windo
 
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.beforeunload_event", "beforeunload")}} event is raised.
-- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.languagechange_event", "languagechange")}} event is raised.
 - {{domxref("WindowEventHandlers.onoffline")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.offline_event", "offline")}} event is raised.
 - {{domxref("WindowEventHandlers.ononline")}}
