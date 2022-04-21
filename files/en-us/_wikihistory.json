@@ -85356,32 +85356,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2020-10-15T21:07:13.307Z",
-    "contributors": [
-      "mfuji09",
-      "irenesmith",
-      "chrisdavidmills",
-      "mfluehr",
-      "fscholz",
-      "david_ross",
-      "greggawatt",
-      "jsx",
-      "Oliver_Schafeld",
-      "kscarfone",
-      "andrewpmckenzie",
-      "teoli",
-      "libreGeekingKid",
-      "ethertank",
-      "Sheppy",
-      "fusionchess",
-      "jlebar",
-      "ziyunfei",
-      "Husky",
-      "feross",
-      "Rik"
-    ]
-  },
   "Web/API/WindowEventHandlers/onrejectionhandled": {
     "modified": "2020-10-15T21:38:13.769Z",
     "contributors": [
