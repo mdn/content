@@ -85354,17 +85354,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/WindowEventHandlers/onstorage": {
-    "modified": "2020-10-15T21:41:16.206Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "erikadoyle",
-      "teoli"
-    ]
-  },
   "Web/API/WindowEventHandlers/onunhandledrejection": {
     "modified": "2020-10-15T21:38:15.201Z",
     "contributors": [

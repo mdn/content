@@ -378,8 +378,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called after text in an input field is selected
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised.
-- {{domxref("WindowEventHandlers.onstorage")}}
-  - : Called when there is a change in session storage or local storage. See {{domxref("Window.storage_event", "storage")}} event
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
@@ -408,7 +406,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("GlobalEventHandlers/onresize", "onresize")}} property.
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
-    Also available via the {{domxref("WindowEventHandlers/onstorage", "onstorage")}} property.
 - {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} {{deprecated_inline}}
   - : Fired when a compatible VR device has been connected to the computer.
 - {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} {{deprecated_inline}}

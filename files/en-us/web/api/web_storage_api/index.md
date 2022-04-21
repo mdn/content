@@ -42,7 +42,7 @@ These mechanisms are available via the {{domxref("Window.sessionStorage")}} and 
 - {{domxref("Storage")}}
   - : Allows you to set, retrieve and remove data for a specific domain and storage type (session or local).
 - {{domxref("Window")}}
-  - : The Web Storage API extends the {{domxref("Window")}} object with two new properties — {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} — which provide access to the current domain's session and local {{domxref("Storage")}} objects respectively, and a {{domxref("WindowEventHandlers.onstorage")}} event handler that fires when a storage area changes (e.g. a new item is stored.)
+  - : The Web Storage API extends the {{domxref("Window")}} object with two new properties — {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} — which provide access to the current domain's session and local {{domxref("Storage")}} objects respectively, and a {{domxref("Window/storage_event", "storage")}} event handler that fires when a storage area changes (e.g. a new item is stored.)
 - {{domxref("StorageEvent")}}
   - : The `storage` event is fired on a document's `Window` object when a storage area changes.
 

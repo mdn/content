@@ -9737,7 +9737,7 @@
 /en-US/docs/Web/API/Window/onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Web/API/Window/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
 /en-US/docs/Web/API/Window/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
-/en-US/docs/Web/API/Window/onstorage	/en-US/docs/Web/API/WindowEventHandlers/onstorage
+/en-US/docs/Web/API/Window/onstorage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Web/API/Window/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
 /en-US/docs/Web/API/Window/onunhandledrejection	/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection
 /en-US/docs/Web/API/Window/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
@@ -9776,6 +9776,7 @@
 /en-US/docs/Web/API/WindowEventHandlers/onmessage	/en-US/docs/Web/API/Window/message_event
 /en-US/docs/Web/API/WindowEventHandlers/onmessageerror	/en-US/docs/Web/API/Window/messageerror_event
 /en-US/docs/Web/API/WindowEventHandlers/onpopstate	/en-US/docs/Web/API/Window/popstate_event
+/en-US/docs/Web/API/WindowEventHandlers/onstorage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Web/API/WindowEventHandlers/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowEventHandlers/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowLocalStorage	/en-US/docs/Web/API/Window/localStorage

@@ -34,8 +34,6 @@ _The events properties, of the form `onXYZ`, are defined on the {{domxref("Windo
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pageshow")}} event is raised.
 - {{domxref("WindowEventHandlers.onrejectionhandled")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.
-- {{domxref("WindowEventHandlers.onstorage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.storage_event", "storage")}} event is raised.
 - {{domxref("WindowEventHandlers.onunhandledrejection")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.
 - {{domxref("WindowEventHandlers.onunload")}}
