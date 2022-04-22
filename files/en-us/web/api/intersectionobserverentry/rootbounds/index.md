@@ -3,7 +3,6 @@ title: IntersectionObserverEntry.rootBounds
 slug: Web/API/IntersectionObserverEntry/rootBounds
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -12,7 +11,7 @@ tags:
   - rootBounds
 browser-compat: api.IntersectionObserverEntry.rootBounds
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
 read-only **`rootBounds`** property is a
