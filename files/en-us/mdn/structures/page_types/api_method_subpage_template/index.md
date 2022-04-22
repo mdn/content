@@ -111,7 +111,7 @@ If the method doesn't return anything, just put "{{jsxref('undefined')}}.".
 - Exception2
   - : etc.
 
-Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects and regular JavaScript exceptions, like {{jsxref("TypeError")}} and {{jsxref("RangeError")}}. A web developer needs to know which object is thrown, and for exceptions that are `DOMException` objects, he also needs to know its `name`. Here is an example where a method can raise a `DOMException` with a name of `IndexSizeError`, a `DOMException` with a name of `SyntaxError` and a JavaScript exception of type `TypeError`:
+Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects and regular JavaScript exceptions, like {{jsxref("TypeError")}} and {{jsxref("RangeError")}}. A web developer needs to know which object is thrown, and for exceptions that are `DOMException` objects, he also needs to know their `name`. Here is an example where a method can raise a `DOMException` with a name of `IndexSizeError`, a `DOMException` with a name of `SyntaxError` and a JavaScript exception of type `TypeError`:
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown …
