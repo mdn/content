@@ -67,51 +67,37 @@ The `currentColor` keyword represents the value of an element's {{Cssxref("color
 
 If `currentColor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
 
-#### currentColor example
-
 ```html
-<div style="color:blue; border: 1px dashed currentColor;">
+<div style="color: blue; border: 1px dashed currentColor;">
   The color of this text is blue.
-  <div style="background:currentColor; height:9px;"></div>
+  <div style="background: currentColor; height:9px;"></div>
   This block is surrounded by a blue border.
 </div>
 ```
 
-{{EmbedLiveSample('currentColor_example', 600, 80)}}
+{{EmbedLiveSample('currentColor_keyword', 600, 80)}}
 
-### RGB colors
+### RGB color model
 
 The RGB color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-#### Syntax
-
 RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
-> **Note:** As of CSS Colors Level 4, `rgba()` is an alias for `rgb()`. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.
-
-- Hexadecimal notation: `#RRGGBB[AA]`
-  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`.
-- Hexadecimal notation: `#RGB[A]`
-  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
-- Functional notation: `rgb[a](R, G, B[, A])`
+- [Hexadecimal notation](/en-US/docs/Web/CSS/color_value/hexadecimal_rgb): `#RGB[A]` or`#RRGGBB[AA]`
+  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
-- Functional notation: `rgb[a](R G B[ / A])`
-  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
-### HSL colors
+### HSL color model
 
 The HSL color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
 
 Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
 However, using HSL to create color variations can produce surprising results, as it is not [perceptually uniform](https://en.wikipedia.org/wiki/Color_difference#Tolerance). For example, both `hsl(240 100% 50%)` and `hsl(60 100% 50%)` have the same lightness, even though the former is much darker than the latter.
 
-#### Syntax
-
 HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
-> **Note:** As of CSS Colors Level 4, `hsla()` is an alias for `hsl()`. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.
-
-- Functional notation: `hsl[a](H, S, L[, A])`
+- [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) or [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla): `hsl[a](H, S, L[, A])` or `hsl[a](H S L[ / A])`
 
   - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
@@ -119,10 +105,7 @@ HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
-- Functional notation: `hsl[a](H S L[ / A])`
-  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
-
-### HWB colors
+### HWB color model
 
 Similar to HSL color model, the HWB color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, whiteness and blackness components.
 
@@ -130,13 +113,11 @@ As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in th
 
 > **Note:** There is **no** separate `hwba()` function as there is with HSL, the alpha value is an optional parameter, if it is not specified an alpha value of 1 (or 100%) is used. To specify this value a forward slash (`/`) must follow the blackness value before the alpha value is specified.
 
-#### Syntax
-
 HWB colors are expressed through the functional `hwb()` notation.
 
 > **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions.
 
-- Functional notation: `hwb(H W B[ / A])`
+- [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
 
   - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
@@ -158,7 +139,7 @@ CSS Color 4 introduced Lab colors.
 Lab colors are specified via the {{cssxref("color_value/lab","lab()")}} functional notation.
 They are not limited to a specific color space, and can represent the entire spectrum of human vision.
 
-### LCH colors
+### LCH color model
 
 CSS Color 4 introduced LCH colors.
 LCH colors are specified via the {{cssxref("color_value/lch","lch()")}} functional notation.
