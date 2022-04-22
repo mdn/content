@@ -3,7 +3,6 @@ title: IntersectionObserverEntry.boundingClientRect
 slug: Web/API/IntersectionObserverEntry/boundingClientRect
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -12,7 +11,7 @@ tags:
   - boundingClientRect
 browser-compat: api.IntersectionObserverEntry.boundingClientRect
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's read-only
 **`boundingClientRect`** property returns a

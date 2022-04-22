@@ -3,7 +3,6 @@ title: IntersectionObserverEntry.isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
