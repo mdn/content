@@ -20,7 +20,7 @@ The **`append()`** method of the
 ## Syntax
 
 ```js
-append(property,value)
+append(property, value)
 ```
 
 ### Parameters
