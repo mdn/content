@@ -3,13 +3,12 @@ title: Permissions.query()
 slug: Web/API/Permissions/query
 tags:
   - API
-  - Experimental
   - Method
   - Permissions
   - Reference
 browser-compat: api.Permissions.query
 ---
-{{APIRef("Permissions API")}}{{SeeCompatTable}}
+{{APIRef("Permissions API")}}
 
 The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
 
