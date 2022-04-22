@@ -17,7 +17,7 @@ We hold triage once a week. Triage meetings alternate timezones, between Europe/
 
 The meeting lasts 30 minutes.
 
-All mdn/content maintainers (that is, all people with merge access to mdn/content) are invited. We need 2 people to have a quorum for triage.
+All mdn/content maintainers (that is, all people with merge access to mdn/content) are invited.
 
 One person is responsible for running the meeting: this includes getting the list of issues to triage and updating issues (adding labels, writing comments).
 
