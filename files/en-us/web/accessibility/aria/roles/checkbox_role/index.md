@@ -39,13 +39,13 @@ There are some types of user interface components that, when represented in a pl
 For example, consider the following `checkbox` element, which contains a heading.
 
 ```html
-<div role="checkbox"><h6>Name of my checkbox</h6></li>
+<div role="checkbox"><h6>Name of my checkbox</h6></div>
 ```
 
 Because descendants of `checkbox` are presentational, the following code is equivalent:
 
 ```html
-<div role="checkbox"><h6 role="presentation">Name of my checkbox</h6></li>
+<div role="checkbox"><h6 role="presentation">Name of my checkbox</h6></div>
 ```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
