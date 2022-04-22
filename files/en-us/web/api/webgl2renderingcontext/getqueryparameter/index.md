@@ -18,7 +18,7 @@ information of a {{domxref("WebGLQuery")}} object.
 ## Syntax
 
 ```js
-any gl.getQueryParameter(query, pname);
+getQueryParameter(query, pname)
 ```
 
 ### Parameters

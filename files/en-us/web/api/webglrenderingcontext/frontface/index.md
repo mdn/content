@@ -17,7 +17,7 @@ front- or back-facing by setting a winding orientation.
 ## Syntax
 
 ```js
-void gl.frontFace(mode);
+frontFace(mode)
 ```
 
 ### Parameters

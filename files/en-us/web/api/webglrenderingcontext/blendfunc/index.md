@@ -17,7 +17,7 @@ blending pixel arithmetic.
 ## Syntax
 
 ```js
-void gl.blendFunc(sfactor, dfactor);
+blendFunc(sfactor, dfactor)
 ```
 
 ### Parameters

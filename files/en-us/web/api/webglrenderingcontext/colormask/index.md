@@ -17,7 +17,7 @@ enable or to disable when drawing or rendering to a {{domxref("WebGLFramebuffer"
 ## Syntax
 
 ```js
-void gl.colorMask(red, green, blue, alpha);
+colorMask(red, green, blue, alpha)
 ```
 
 ### Parameters

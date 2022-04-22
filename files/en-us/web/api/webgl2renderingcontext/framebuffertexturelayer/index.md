@@ -21,7 +21,7 @@ but only a given single layer of the texture level is attached to the attachment
 ## Syntax
 
 ```js
-void gl.framebufferTextureLayer(target, attachment, texture, level, layer);
+framebufferTextureLayer(target, attachment, texture, level, layer)
 ```
 
 ### Parameters

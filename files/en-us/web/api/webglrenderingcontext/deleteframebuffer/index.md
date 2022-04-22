@@ -19,7 +19,7 @@ has already been deleted.
 ## Syntax
 
 ```js
-void gl.deleteFramebuffer(framebuffer);
+deleteFramebuffer(framebuffer)
 ```
 
 ### Parameters

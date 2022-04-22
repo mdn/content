@@ -20,7 +20,7 @@ samples to be used.
 ## Syntax
 
 ```js
-void gl.renderbufferStorageMultisample(target, samples, internalFormat, width, height);
+renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 ```
 
 ### Parameters

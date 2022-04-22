@@ -19,7 +19,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
 ## Syntax
 
 ```js
-void gl.bindRenderbuffer(target, renderbuffer);
+bindRenderbuffer(target, renderbuffer)
 ```
 
 ### Parameters

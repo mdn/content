@@ -21,7 +21,7 @@ source for pixels for subsequent calls to
 ## Syntax
 
 ```js
-void gl.readBuffer(src);
+readBuffer(src)
 ```
 
 ### Parameters

@@ -19,7 +19,7 @@ been deleted.
 ## Syntax
 
 ```js
-void gl.deleteProgram(program);
+deleteProgram(program)
 ```
 
 ### Parameters

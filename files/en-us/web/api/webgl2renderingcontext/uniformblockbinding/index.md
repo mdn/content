@@ -18,7 +18,7 @@ for active uniform blocks.
 ## Syntax
 
 ```js
-void gl.uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
+uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding)
 ```
 
 ### Parameters

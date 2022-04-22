@@ -21,13 +21,17 @@ method **`createShader()`** of the [WebGL API](/en-US/docs/Web/API/WebGL_API) cr
 ## Syntax
 
 ```js
-WebGLShader gl.createShader(type);
+createShader(type)
 ```
 
 ### Parameters
 
 - `type`
   - : Either `gl.VERTEX_SHADER` or `gl.FRAGMENT_SHADER`
+
+### Return value
+
+None.
 
 ## Examples
 

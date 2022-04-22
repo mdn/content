@@ -20,8 +20,12 @@ context is not directly fixed to a specific canvas.
 ## Syntax
 
 ```js
-void WebGLRenderingContext.commit()
+commit()
 ```
+
+### Return value
+
+`undefined`.
 
 ## Examples
 

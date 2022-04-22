@@ -18,7 +18,7 @@ The **`WebGLRenderingContext.bindFramebuffer()`** method of the
 ## Syntax
 
 ```js
-void gl.bindFramebuffer(target, framebuffer);
+bindFramebuffer(target, framebuffer)
 ```
 
 ### Parameters

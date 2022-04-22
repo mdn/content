@@ -19,7 +19,7 @@ The **`WebGLRenderingContext.copyTexImage2D()`** method of the
 ## Syntax
 
 ```js
-void gl.copyTexImage2D(target, level, internalformat, x, y, width, height, border);
+copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 ```
 
 ### Parameters

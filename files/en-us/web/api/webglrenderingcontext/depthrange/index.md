@@ -17,7 +17,7 @@ from normalized device coordinates to window or viewport coordinates.
 ## Syntax
 
 ```js
-void gl.depthRange(zNear, zFar);
+depthRange(zNear, zFar)
 ```
 
 ### Parameters

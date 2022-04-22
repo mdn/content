@@ -21,7 +21,7 @@ The blend equation determines how a new pixel is combined with a pixel already i
 ## Syntax
 
 ```js
-void gl.blendEquation(mode);
+blendEquation(mode)
 ```
 
 ### Parameters

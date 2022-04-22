@@ -21,7 +21,7 @@ between 0 and 1.
 ## Syntax
 
 ```js
-void gl.clearDepth(depth);
+clearDepth(depth)
 ```
 
 ### Parameters

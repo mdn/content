@@ -18,7 +18,7 @@ vertex attribute array off at a given index position.
 ## Syntax
 
 ```js
-void gl.disableVertexAttribArray(index);
+disableVertexAttribArray(index)
 ```
 
 ### Parameters

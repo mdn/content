@@ -17,15 +17,10 @@ texture image.
 ## Syntax
 
 ```js
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, GLintptr offset);
-
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLCanvasElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLImageElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLVideoElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ImageBitmap source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ImageData source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ArrayBufferView? srcData);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ArrayBufferView srcData, srcOffset);
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, offset)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, source)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData, srcOffset)
 ```
 
 ### Parameters
@@ -119,13 +114,16 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
 
   - : One of the following objects can be used as a pixel source for the texture:
 
-    - {{domxref("ArrayBufferView")}},
     - {{domxref("ImageBitmap")}},
     - {{domxref("ImageData")}},
     - {{domxref("HTMLImageElement")}},
     - {{domxref("HTMLCanvasElement")}},
     - {{domxref("HTMLVideoElement")}}.
 
+- `srcData`
+
+- :{{domxref("ArrayBufferView")}}
+- 
 - offset
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
     store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the

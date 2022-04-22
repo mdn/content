@@ -17,7 +17,7 @@ causing all commands to be executed as quickly as possible.
 ## Syntax
 
 ```js
-void gl.flush();
+flush()
 ```
 
 ### Parameters

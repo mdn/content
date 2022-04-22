@@ -18,7 +18,7 @@ three-dimensional texture or two-dimensional array texture.
 ## Syntax
 
 ```js
-void gl.texStorage3D(target, levels, internalformat, width, height, depth);
+texStorage3D(target, levels, internalformat, width, height, depth)
 ```
 
 ### Parameters
