@@ -103,8 +103,8 @@ _No change._
 
 ### Interface changes
 
-- The {{interface("mozIAsyncHistory")}} interface has a new method {{ifmethod("mozIAsyncHistory","isURIVisited")}} to check if a URI has been visited.
-- A new interface {{interface("mozIVisitStatusCallback")}} has been added to provide callback handling functionality for {{ifmethod("mozIAsyncHistory","isURIVisited")}}.
+- The `mozIAsyncHistory` interface has a new method {{ifmethod("mozIAsyncHistory","isURIVisited")}} to check if a URI has been visited.
+- A new interface `mozIVisitStatusCallback` has been added to provide callback handling functionality for {{ifmethod("mozIAsyncHistory","isURIVisited")}}.
 - The `nsIMacDockSupport` interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
 - In the `nsINavHistoryResultObserver` interface, you now need to implement {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} instead of the obsolete `containerOpened()` and `containerClosed()` methods.
 

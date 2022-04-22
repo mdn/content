@@ -26,7 +26,7 @@ The ARIA attributes providing these new abilities are as follows:
 - `role="suggestion"` — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see `role="insertion"` and `role="deletion"` above).
 - `role="comment"` — semantically denotes a comment/reaction to some content on the page, or to a previous comment.
 
-To provide a semantic association between the document content being annotated and the annotation, an `aria-details` attribute can be set on the annotated content that contains the ID of the annotated element. aria-details has been updated so that it can support multiple IDs — this makes sense, for example you can easily envisage having multiple comments relating to the same bit of text.
+To provide a semantic association between the document content being annotated and the annotation, an `aria-details` attribute can be set on the annotated content that contains the ID of the annotated element. `aria-details` has been updated so that it can support multiple IDs — this makes sense, for example you can easily envisage having multiple comments relating to the same bit of text.
 
 ARIA annotation roles and objects are currently exposed in:
 
@@ -41,9 +41,9 @@ There are a number of different ways in which you can associate UI features with
 
 - `aria-label=""` can be set on an element to provide a brief descriptive label when it isn't appropriate to have the label actually appearing in the UI, for example a [search input](/en-US/docs/Web/HTML/Element/input/search) in a horizontal nav bar.
 - `aria-labelledby=""` can be set on an element and given a value the same as the ID of an element that contains a label for the element. This is useful when the element's label is available in the UI, but for some reason a conventional {{HTMLElement('label')}} won't work.
-- `aria-description=""` works the same as `aria-label=""`, but is used when you want to give an element a more detailed description, rather than a short label.
-- `aria-describedby=""` works the same as `aria-labelledby=""`, but is used when you want to associate the element with a more detailed description, rather than a short label.
-- `aria-details=""` works in the same way as `aria-describedby=""`, except that it denotes more complex sets of details, rather than simple text descriptions. You can learn more about this in the next section.
+- `aria-description=""` is similar to `aria-label=""` in that it accepts a string of text, but is used when you want to give an element a description, in addition to its short label.
+- `aria-describedby=""` is analogous to  `aria-labelledby=""` in that it accepts an ID reference, but is used when you want to associate the element with a more detailed description, in addition to its short label.
+- `aria-details=""` references a more complex sets of details, distinct from simple text descriptions. You can learn more about this in the next section.
 
 ### aria-details versus aria-describedby
 
@@ -69,11 +69,15 @@ We have already alluded to the difference between these two above — `aria-desc
 </div>
 
 <div aria-details="detail-id">
-  <!-- Some kind of UI feature that needs an accessible description  -->
+  <!-- Some kind of UI feature where additional details might be useful  -->
 </div>
 ```
 
-This difference really becomes apparent when you get to how the content is actually interpreted in the accessibility layer, and read out by screenreaders. Content marked up with `aria-describedby` is flattened into a simple string, whereas `aria-details` content is not — so use `aria-details` if you want to preserve more complex semantics that go beyond a simple text string.
+This difference becomes apparent when you get to how the content is interpreted in the accessibility layer and presented by screenreaders, both in interaction guidance and through the [accessible name and description computation](https://www.w3.org/TR/accname/).
+
+Content associated via `aria-describedby` becomes part of the accessible description and is flattened into a simple string (lists, links, etc. are not exposed). Generally it is announced after the accessible name. ARIA 1.3 also identifies [which roles _disallow_ its use](https://w3c.github.io/aria/#namefromprohibited) (such as `generic`, which maps to `<div>`).
+
+Content associated via `aria-details` is _not_ factored into the accessible description computation. A screen reader would ideally make the user aware the content is available and then let the user navigate directly to that content. As such, it can contain rich content. The role of the referenced element (eg: `comment`, `definition`) may affect how a screen reader exposes or references the content. `aria-details` has no restrictions on which roles may use it.
 
 ## A basic description
 
@@ -92,7 +96,7 @@ Simple descriptions basically just involve usage of `aria-description` on an ele
 </section>
 ```
 
-If the descriptive text does appear in the UI, you can link the description to the widget using `aria-describedby`, like so:
+If the descriptive text does appear in the UI (it should for this example), you can link the description to the widget using `aria-describedby`, like so:
 
 ```html
 <p id="fruit-desc">Choose your favorite fruit — the fruit with the highest number of votes will be added to the lunch options next week.</p>

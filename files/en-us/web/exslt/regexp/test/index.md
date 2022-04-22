@@ -19,7 +19,7 @@ regexp:test(testString, regExpString[, flagsString])
 ### Parameters
 
 - `testString`
-  - : The string to test..
+  - : The string to test.
 - `regExpString`
   - : The JavaScript style regular expression to evaluate.
 - `flagsString`{{Optional_Inline}}

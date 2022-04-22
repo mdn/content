@@ -49,7 +49,7 @@ See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface and implements properties from the `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
 
-Note that properties which are objects (e.g.,. for overriding the prototype of built-in elements) are listed in a separate section below.
+Note that properties which are objects (e.g., for overriding the prototype of built-in elements) are listed in a separate section below.
 
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{readOnlyInline}}
   - : An alias for {{domxref("Window.navigator")}}.
@@ -336,8 +336,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : Called after the window receives or regains focus. See {{event("focus")}} events.
-- {{domxref("WindowEventHandlers.onhashchange")}}
-  - : An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.oninput")}}
   - : Called when the value of an \<input> element changes
 - {{domxref("GlobalEventHandlers.onkeydown")}}
@@ -346,8 +344,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
-- {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{domxref("Window.languagechange_event", "languagechange")}} events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
@@ -364,12 +360,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when network connection is lost. See {{domxref("Window.offline_event", "offline")}} event.
 - {{domxref("WindowEventHandlers.ononline")}}
   - : Called when network connection is established. See {{domxref("Window.online_event", "online")}} event.
-- {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
-- {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.
-- {{domxref("WindowEventHandlers.onpopstate")}}
-  - : Called when a back button is pressed.
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : Called when a form is reset
 - {{domxref("GlobalEventHandlers.onresize")}}
@@ -382,8 +372,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called after text in an input field is selected
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised.
-- {{domxref("WindowEventHandlers.onstorage")}}
-  - : Called when there is a change in session storage or local storage. See {{domxref("Window.storage_event", "storage")}} event
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
@@ -400,7 +388,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.
 - {{domxref("Window/languagechange_event", "languagechange")}}
   - : Fired at the global scope object when the user's preferred language changes.
-    Also available via the {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} property.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
   - : Fired when the orientation of the device has changed.
 - {{domxref("Window.devicemotion_event", "devicemotion")}}
@@ -412,7 +399,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("GlobalEventHandlers/onresize", "onresize")}} property.
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
-    Also available via the {{domxref("WindowEventHandlers/onstorage", "onstorage")}} property.
 - {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} {{deprecated_inline}}
   - : Fired when a compatible VR device has been connected to the computer.
 - {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} {{deprecated_inline}}
@@ -484,16 +470,12 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/hashchange_event", "hashchange")}}
   - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
-    Also available via the {{domxref("WindowEventHandlers/onhashchange", "onhashchange")}} property.
 - {{domxref("Window/pagehide_event", "pagehide")}}
   - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
-    Also available through the [`onpagehide`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpagehide) event handler property.
 - {{domxref("Window/pageshow_event", "pageshow")}}
   - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
-    Also available using the [`onpageshow`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpageshow) event handler property.
-- `{{domxref("Window/popstate_event", "popstate")}}`
+- {{domxref("Window/popstate_event", "popstate")}}
   - : Fired when the active history entry changes.
-    Also available using the {{domxref("WindowEventHandlers/onpopstate", "onpopstate")}} event handler property.
 
 ### Load & unload events
 

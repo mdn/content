@@ -429,8 +429,8 @@ Remote XUL is no longer supported; this affects XUL documents being served throu
 
 #### Miscellaneous storage API changes
 
-- The {{interface("mozIStorageBindingParamsArray")}} interface now has a length attribute that indicates the number of {{interface("mozIStorageBindingParams")}} objects in the array.
-- The {{ifmethod("mozIStorageStatement", "bindParameters")}} now returns an error if the specified {{interface("mozIStorageBindingParamsArray")}} is empty.
+- The `mozIStorageBindingParamsArray` interface now has a length attribute that indicates the number of `mozIStorageBindingParams` objects in the array.
+- The {{ifmethod("mozIStorageStatement", "bindParameters")}} now returns an error if the specified `mozIStorageBindingParamsArray` is empty.
 - Added the {{ifmethod("mozIStorageConnection", "clone")}} method, which lets you clone an existing database connection.
 - Added the {{ifmethod("mozIStorageConnection", "asyncClose")}} method, which lets you close a database connection asynchronously; you specify a callback to be notified when the close operation is complete.
 - Added the {{ifmethod("mozIStorageConnection", "setGrowthIncrement")}} method, which lets you specify the amount by which a database file is grown at a time, in order to help SQLite reduce fragmentation.

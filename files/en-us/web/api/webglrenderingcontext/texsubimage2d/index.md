@@ -66,7 +66,7 @@ void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, ty
     by height-wide rectangular subregion of the texture array.
 - `yoffset`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the lower left texel y coordinate of a width-wide
-    by height-wide rectangular subregion of the texture array..
+    by height-wide rectangular subregion of the texture array.
 - `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture in texels.
 - `height`

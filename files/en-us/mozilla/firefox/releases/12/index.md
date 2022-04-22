@@ -103,7 +103,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 - The `nsIScreen_MOZILLA_2_0_BRANCH` interface has been merged into `nsIScreen`. The APIs defined in that interface (for controlling minimum screen brightness) had not previously been documented, but now they are.
 - The `nsIScriptError2` interface has been merged into `nsIScriptError`.
 - {{ifmethod("nsIDownloadManager", "addDownload")}} is now handled asynchronously rather than synchronously.
-- The {{ifmethod("imgIContainerObserver", "frameChanged")}} method now receives as its first parameter an {{interface("imgIRequest")}} object identifying the corresponding request.
+- The {{ifmethod("imgIContainerObserver", "frameChanged")}} method now receives as its first parameter an `imgIRequest` object identifying the corresponding request.
 - The {{ifmethod("nsIDOMWindowUtils", "sendTouchEvent")}} method has been added to allow synthesizing touch events.
 - You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.
 - The new {{ifattribute("nsIMemoryMultiReporter", "explicitNonHeap")}} attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" **and** are of the kind `KIND_NONHEAP`.

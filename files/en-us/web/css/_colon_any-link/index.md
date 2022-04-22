@@ -4,7 +4,6 @@ slug: Web/CSS/:any-link
 tags:
   - ':any-link'
   - CSS
-  - Experimental
   - Layout
   - Links
   - Pseudo-class

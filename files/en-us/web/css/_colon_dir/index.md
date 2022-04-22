@@ -4,7 +4,6 @@ slug: Web/CSS/:dir
 tags:
   - BiDi
   - CSS
-  - Experimental
   - Pseudo-class
   - Reference
   - Selector

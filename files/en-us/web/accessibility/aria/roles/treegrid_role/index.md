@@ -97,7 +97,7 @@ The following keyboard interactions need to be supported when an element in the 
 - <kbd>Enter</kbd>
   - : If cell-only focus is enabled and focus is on the first cell with the `aria-expanded` property, opens or closes the child rows. Otherwise, performs the default action for the cell.
 - <kbd>Tab</kbd>
-  - : If the row containing focus contains focusable elements such as an {{HTMLElement('input')}}, {{HTMLElement('button')}} or {{HTMLElement('a')}}, ,moves the focus to the next input in the row. If focus is on the last focusable element in the row, moves focus out of the treegrid widget to the next focusable element.
+  - : If the row containing focus contains focusable elements such as an {{HTMLElement('input')}}, {{HTMLElement('button')}} or {{HTMLElement('a')}}, moves the focus to the next input in the row. If focus is on the last focusable element in the row, moves focus out of the treegrid widget to the next focusable element.
 - <kbd>Right Arrow</kbd>
   - : If focus is on a collapsed row, expand the row. If focus is on an expanded row or is on a row that does not have child rows, moves focus to the first cell in the row. If focus is on the right-most cell in a row, focus does not move. If focus is on any other cell, moves focus one cell to the right.
 - <kbd>Left Arrow</kbd>

@@ -13,7 +13,7 @@ The **`local.tee`** instruction sets the value of a local variable and loads the
 
 The instruction is named after the T-splitter used in plumbing.
 
-{{EmbedInteractiveExample("pages/wat/local_tee.html")}}
+{{EmbedInteractiveExample("pages/wat/local_tee.html", "tabbed-taller")}}
 
 ## Syntax
 

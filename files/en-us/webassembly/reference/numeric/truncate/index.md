@@ -14,7 +14,7 @@ The **`trunc`** instructions, short for *truncate*, are used for getting the val
 
 **`trunc`** differs from **`floor`** when used on negative numbers, **`floor`** will round down in those cases while **`trunc`** will round up.
 
-{{EmbedInteractiveExample("pages/wat/trunc.html")}}
+{{EmbedInteractiveExample("pages/wat/trunc.html", "tabbed-standard")}}
 
 ## Syntax
 

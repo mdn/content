@@ -389,7 +389,6 @@ _Literals_ represent values in JavaScript. These are fixed values—not variable
 
 - [Array literals](#array_literals)
 - [Boolean literals](#boolean_literals)
-- [Floating-point literals](#floating-point_literals)
 - [Numeric literals](#numeric_literals)
 - [Object literals](#object_literals)
 - [RegExp literals](#regexp_literals)

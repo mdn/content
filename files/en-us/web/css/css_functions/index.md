@@ -93,7 +93,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{cssxref("abs", "abs()")}} {{Experimental_Inline}}
   - : Takes a calculation and returns the absolute value.
 - {{cssxref("acos", "acos()")}} {{Experimental_Inline}}
-  - : An inverse trigonometric function the angle returned must be normalized to the range \[0deg, 180deg];.
+  - : An inverse trigonometric function the angle returned must be normalized to the range \[0deg, 180deg].
 - {{cssxref("asin", "asin()")}} {{Experimental_Inline}}
   - : An inverse trigonometric function the angle returned must be normalized to the range \[-90deg, 90deg].
 - {{cssxref("atan", "atan()")}} {{Experimental_Inline}}

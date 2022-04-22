@@ -11,7 +11,7 @@ tags:
 
 The **`local.set`** instruction sets the values of a local variable.
 
-{{EmbedInteractiveExample("pages/wat/local.html")}}
+{{EmbedInteractiveExample("pages/wat/local.html", "tabbed-taller")}}
 
 ## Syntax
 

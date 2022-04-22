@@ -17,26 +17,33 @@ The **`pagehide`** event is sent to a {{domxref("Window")}} when the browser hid
 
 For example, when the user clicks the browser's Back button, the current page receives a `pagehide` event before the previous page is shown.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PageTransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("Window.onpagehide", "onpagehide")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('pagehide', event => { });
+onpagehide = event => { };
+```
+
+## Event type
+
+A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PageTransitionEvent")}}
+
+## Event properties
+
+- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+  - : Indicates if the document is loading from a cache.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onpagehide` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Usage notes
 
