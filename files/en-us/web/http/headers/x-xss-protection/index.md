@@ -111,6 +111,6 @@ Not part of any specifications or drafts.
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [Controlling the XSS Filter – Microsoft](https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/)
+- [Controlling the XSS Filter – Microsoft](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/controlling-the-xss-filter)
 - [Understanding XSS Auditor – Virtue Security](https://www.virtuesecurity.com/blog/understanding-xss-auditor/)
 - [The misunderstood X-XSS-Protection – blog.innerht.ml](https://blog.innerht.ml/the-misunderstood-x-xss-protection/)

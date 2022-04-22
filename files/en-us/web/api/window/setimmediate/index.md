@@ -75,4 +75,4 @@ specification is no longer being worked on.
 - [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
 - {{DOMxRef("Window.clearImmediate()")}}
 - [Microsoft
-  `setImmediate` API Demo](http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html)
+  `setImmediate` API Demo](https://redirect.microsoft/testdrive/Performance/setImmediateSorting/Default.html)

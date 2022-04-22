@@ -51,6 +51,6 @@ details.
 ## See also
 
 - [MSDN: Using the F12 Tools
-  Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
+  Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
 - [Chrome
   Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/console/api/#error)
