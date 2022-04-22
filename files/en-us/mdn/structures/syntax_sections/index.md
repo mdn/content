@@ -162,7 +162,7 @@ Next, include a "Parameters" subsection, which explains what each parameter shou
 
 The name of each parameter in the list should be contained in a {{HTMLElement("code")}} block.
 
-> **Note:** If the feature does not take any parameters, you don't need to include a "Parameters" section, but you can if you wish include it with content of "None".
+> **Note:** Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
 
 #### Return value section
 
