@@ -153,7 +153,7 @@ Several Bézier curves can be stringed together to create extended, smooth shape
  s dx2 dy2, dx dy
 ```
 
-`S` produces the same type of curve as earlier—but if it follows another `S` command or a `C` command, the first control point is assumed to be a reflection of the one used previously. If the `S` command doesn't follow another `S` or `C` command, then the current position of the cursor is used as the first control point. In this case the result is the same as what the `Q` command would have produced with the same parameters.
+`S` produces the same type of curve as earlier—but if it follows another `S` command or a `C` command, the first control point is assumed to be a reflection of the one used previously. If the `S` command doesn't follow another `S` or `C` command, then the current position of the cursor is used as the first control point. The result is not the same as what the `Q` command would have produced with the same parameters, but is similar.
 
 An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.
 
