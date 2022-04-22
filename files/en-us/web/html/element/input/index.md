@@ -630,12 +630,13 @@ The following non-standard attributes are also available on some browsers. As a 
       </td>
     </tr>
     <tr>
-      <td><a href="#mozactionhint"><code>mozactionhint</code></a></td>
+      <td><code>mozactionhint</code></td>
       <td>
-        A string indicating the type of action that will be taken when the user
+        <p>A string indicating the type of action that will be taken when the user
         presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the
         field; this is used to determine an appropriate label for that key on a
-        virtual keyboard. <strong>Firefox for Android only</strong>.
+        virtual keyboard.</p>
+        <p><strong>Deprecated: use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
       </td>
     </tr>
     <tr>
@@ -678,14 +679,6 @@ The following non-standard attributes are also available on some browsers. As a 
     If `incremental` is not specified, the {{domxref("HTMLInputElement/search_event", "search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
 
     The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
-
-- `mozactionhint` {{non-standard_inline}}
-
-  - : A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.
-
-    > **Note:** This [has been standardized](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) as the global attribute [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint), but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.
-
-    Permitted values are: `go`, `done`, `next`, `search`, and `send`. The browser decides, using this hint, what label to put on the enter key.
 
 - `orient` {{non-standard_inline}}
   - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
@@ -839,7 +832,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>{{Cssxref(":required")}}</td>
       <td>
         <code>&#x3C;input></code>, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the <a href="#required"><code>required</code></a> attribute set on it.
-        Only matches elements that can be required. 
+        Only matches elements that can be required.
         The attribute included on a non-requirable element will not make for a match.
       </td>
     </tr>
