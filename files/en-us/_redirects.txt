@@ -1848,7 +1848,7 @@
 /en-US/docs/DOM/document.mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
 /en-US/docs/DOM/document.namespaceURI	/en-US/docs/Web/API/Element/namespaceURI
 /en-US/docs/DOM/document.nodePrincipal	/en-US/docs/Web/API/Node
-/en-US/docs/DOM/document.ononline	/en-US/docs/Web/API/Document/ononline
+/en-US/docs/DOM/document.ononline	/en-US/docs/Web/API/Window/online_event
 /en-US/docs/DOM/document.onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /en-US/docs/DOM/document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/DOM/document.plugins	/en-US/docs/Web/API/Document/plugins
@@ -7838,6 +7838,8 @@
 /en-US/docs/Web/API/Document/onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Web/API/Document/onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Web/API/Document/onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
+/en-US/docs/Web/API/Document/onoffline	/en-US/docs/Web/API/Window/offline_event
+/en-US/docs/Web/API/Document/ononline	/en-US/docs/Web/API/Window/online_event
 /en-US/docs/Web/API/Document/onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Web/API/Document/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
 /en-US/docs/Web/API/Document/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
@@ -10009,8 +10011,8 @@
 /en-US/docs/Web/API/document.mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
 /en-US/docs/Web/API/document.namespaceURI	/en-US/docs/Web/API/Element/namespaceURI
 /en-US/docs/Web/API/document.nodePrincipal	/en-US/docs/Web/API/Node
-/en-US/docs/Web/API/document.onoffline	/en-US/docs/Web/API/Document/onoffline
-/en-US/docs/Web/API/document.ononline	/en-US/docs/Web/API/Document/ononline
+/en-US/docs/Web/API/document.onoffline	/en-US/docs/Web/API/Window/offline_event
+/en-US/docs/Web/API/document.ononline	/en-US/docs/Web/API/Window/online_event
 /en-US/docs/Web/API/document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/Web/API/document.origin	/en-US/docs/Web/API/Document/origin
 /en-US/docs/Web/API/document.plugins	/en-US/docs/Web/API/Document/plugins

@@ -356,10 +356,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the pointer enters the window
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Called when ANY mouse button is released
-- {{domxref("WindowEventHandlers.onoffline")}}
-  - : Called when network connection is lost. See {{domxref("Window.offline_event", "offline")}} event.
-- {{domxref("WindowEventHandlers.ononline")}}
-  - : Called when network connection is established. See {{domxref("Window.online_event", "online")}} event.
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : Called when a form is reset
 - {{domxref("GlobalEventHandlers.onresize")}}
@@ -445,10 +441,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/offline_event", "offline")}}
   - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
-    Also available via the {{domxref("WindowEventHandlers.onoffline", "onoffline")}} property.
-- {{domxref("Window/online_event", "online ")}}
+- {{domxref("Window/online_event", "online")}}
   - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
-    Also available via the {{domxref("WindowEventHandlers.ononline", "ononline")}} property.
 
 ### Focus events
 
