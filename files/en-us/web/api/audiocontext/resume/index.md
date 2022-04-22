@@ -23,7 +23,7 @@ called on an {{domxref("OfflineAudioContext")}}.
 ## Syntax
 
 ```js
-completePromise = audioContext.resume();
+resume()
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ None.
 A {{jsxref("Promise")}} that resolves when the context has resumed. The promise is
 rejected if the context has already been closed.
 
-## Example
+## Examples
 
 The following snippet is taken from our [AudioContext
 states demo](https://github.com/mdn/webaudio-examples/tree/master/audiocontext-states) ([see it running

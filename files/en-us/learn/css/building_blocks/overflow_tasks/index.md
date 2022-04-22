@@ -21,11 +21,11 @@ The content is overflowing the box because it has a fixed height. Keep the heigh
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-scroll.html", '100%', 800)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-scroll.html", '100%', 1000)}}
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/overflow/overflow-scroll-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/overflow/overflow-scroll-download.html) to work in your own editor or in an online editor.
 
 ## Task Two
 
@@ -35,11 +35,11 @@ In this task an image is in the box, it is bigger than the dimensions of the box
 
 Try updating the live code below to recreate the example as displayed in the image:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-hidden.html", '100%', 1100)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-hidden.html", '100%', 1200)}}
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/overflow/overflow-hidden-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/overflow/overflow-hidden-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

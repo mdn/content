@@ -31,7 +31,7 @@ conic-gradient(from 45deg, blue, red);
    center of the conic gradient is at the top left corner */
 conic-gradient(from 90deg at 0 0, blue, red);
 
-/* Colorwheel */
+/* Color wheel */
 background: conic-gradient(
     hsl(360, 100%, 50%),
     hsl(315, 100%, 50%),

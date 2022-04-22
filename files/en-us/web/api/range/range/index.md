@@ -23,7 +23,7 @@ object.
 new Range();
 ```
 
-## Example
+## Examples
 
 In this example we create a new range with the `Range()` constructor, and
 set its beginning and end positions using the {{domxref("Range.setStartBefore()")}} and

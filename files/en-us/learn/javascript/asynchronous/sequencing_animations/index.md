@@ -48,7 +48,7 @@ We want to update this page so we apply an animation to all three images, one af
 
 The animation is already defined in "main.js": it just rotates the image and shrinks it until it disappears.
 
-To give you more of an idea of how we want the page to work, [have a look at the finished example](https://mdn.github.io/learning-area/javascript/asynchronous/sequencing-animations/finished). Note that the animations only run once: to see them run again, reload the page.
+To give you more of an idea of how we want the page to work, [have a look at the finished example](https://mdn.github.io/learning-area/javascript/asynchronous/sequencing-animations/finished/). Note that the animations only run once: to see them run again, reload the page.
 
 ## Steps to complete
 

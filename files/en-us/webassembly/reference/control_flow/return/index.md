@@ -12,7 +12,7 @@ tags:
 
 **`return`** returns from a function. If there's a value left on the stack, it returns that value; otherwise it returns nothing/void.
 
-{{EmbedInteractiveExample("pages/wat/return.html")}}
+{{EmbedInteractiveExample("pages/wat/return.html", "tabbed-taller")}}
 
 ## Syntax
 

@@ -434,7 +434,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white) to the extreme (gaussian blurs and hue rotation).
 
-You can play with this effect using, for example, the Firefox developer tools' [style editor](/en-US/docs/Tools/Style_Editor); see [Edit CSS filters](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters) for details on how to do so.
+You can play with this effect using, for example, the Firefox developer tools' [style editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html); see [Edit CSS filters](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html) for details on how to do so.
 
 ## Using specific devices
 

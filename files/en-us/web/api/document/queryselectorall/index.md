@@ -25,13 +25,13 @@ document's elements that match the specified group of selectors.
 ## Syntax
 
 ```js
-elementList = parentNode.querySelectorAll(selectors);
+querySelectorAll(selectors)
 ```
 
 ### Parameters
 
 - `selectors`
-  - : A {{domxref("DOMString")}} containing one or more selectors to match against. This
+  - : A string containing one or more selectors to match against. This
     string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
     string; if it's not, a `SyntaxError` exception is thrown. See [Locating
     DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to

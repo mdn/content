@@ -13,9 +13,7 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 ## Free/demo games
 
-- [Beloola](http://www.beloola.com)
-  - : WebVR platform to connect passionate people. Experience both available on 2D screens and on VR HMDs (_Settings / Switch to VR mode_).
-- [Tanx](https://playcanv.as/p/aP0oxhUr)
+- [Tanx](https://tanx.io/)
   - : A multiplayer tank battle game, created with [PlayCanvas](https://playcanvas.com/).
 - [Hyper Vanguard Force](https://robertsspaceindustries.com/comm-link/transmission/14704-Hyper-Vanguard-Force)
   - : A neat vertically scrolling space shooter.
@@ -27,10 +25,8 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : A shipwreck 'n survive game. Explore the island and defeat the monsters.
 - [HexGL](https://hexgl.bkcore.com/)
   - : A fast-paced, futuristic racing game.
-- [Dead Trigger 2](https://beta.unity3d.com/jonas/DT2/)
-  - : Classic zombie splatter action, made with [Unity3D](https://unity3d.com/).
 - [Angry Bots](https://beta.unity3d.com/jonas/AngryBots/)
-  - : A futuristic Aliens-esque isometric 3rd person shooter demo, made with [Unity3D](https://unity3d.com/).
+  - : A futuristic Aliens-esque isometric 3rd person shooter demo, made with [Unity](https://unity.com/).
 - [Nutmeg](http://sandbox.photonstorm.com/html5/nutmeg/)
   - : Cute retro scrolling platforming action.
 - [Back to Candyland](http://www.zibbo.com/game/match-3-games-top/back-to-candyland-episode-1)
@@ -68,8 +64,6 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 ## Commercial games
 
-- [Oort Online](http://oortonline.com/)
-  - : A MMO exploration, building, and battle game (currently in development.)
 - [A Wizard's Lizard](http://www.wizardslizard.com/)
   - : Top down Zelda-esque exploration/RPG.
 - [QbQbQb](http://qbqbqb.rezoner.net/)
@@ -82,7 +76,7 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : 8-bit graphic retro adventure game.
 - [RPG MO](https://data.mo.ee/index2.html)
   - : Isometric MMORPG with similarities to RuneScape Classic and Ultima.
-- [Katan.io](https://katan.io/)
+- [colonist.io](https://colonist.io/)
   - : HTML5 and canvas implementation of Settlers of Catan.
 - [Pyramid Solitaire Ancient Egypt](https://www.solitaireparadise.com/games_list/pyramid_solitaire_ancient_egypt.html)
   - : Pyramid solitaire app ported to WebAssembly with Emscripten
@@ -91,23 +85,23 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 - [WaveGL](https://greweb.me/wavegl/)
   - : WebGL visualizer for sound sources.
-- [Canvas Airport Simulation](https://codepen.io/jackrugile/pen/CdKGx/)
+- [Canvas Airport Simulation](https://codepen.io/jackrugile/pen/oNgrYm)
   - : Animated map showing planes taking off and landing at airports, along with flight path patterns.
 - [Animation Physics](https://alteredqualia.com/xg/examples/animation_physics_terrain.html)
   - : 3D rendering of terrain and cars, using [ammo.js](https://github.com/kripken/ammo.js) for the physics calculations.
 - [Volumetric Particle Flow](https://david.li/flow/)
   - : Physics simulation of flowing liquid.
-- [Explosion and chain reaction](https://codepen.io/artzub/pen/gszpJ/)
+- [Explosion and chain reaction](https://codepen.io/artzub/pen/KKBjeN)
   - : Exploding particles that set off other explosions.
-- [Canvas generated planet](https://codepen.io/AshKyd/pen/sylFw)
+- [Canvas generated planet](https://codepen.io/AshKyd/pen/MWqbrN)
   - : A planet with orbiting asteroid belt.
-- [Digital Fireworks](https://codepen.io/zadvorsky/pen/FAmuL)
+- [Digital Fireworks](https://codepen.io/zadvorsky/pen/zYXgxQ)
   - : Animated firework effects rendered on canvas.
 - [Autumn](http://oos.moxiecode.com/js_webgl/autumn/)
   - : Falling autumn leaves, with light source shining through. Created using [Three.js](https://github.com/mrdoob/three.js).
-- [Fire walk with me](http://inear.se/fireshader/)
+- [Fire walk with me](https://inear.se/fireshader/)
   - : Billowing fire cloud effect.
-- [Rainbow Firestorm](https://codepen.io/jackrugile/pen/AokpF)
+- [Rainbow Firestorm](https://codepen.io/jackrugile/pen/ExryNq)
   - : Rainbow-colored particles, falling like rain, bouncing around on a terrain of orbs.
 - [Crowd Simulation](http://visualiser.fr/babylon/crowd/)
   - : Simulation of a bustling crowd of people all trying to reach their opposite positions.

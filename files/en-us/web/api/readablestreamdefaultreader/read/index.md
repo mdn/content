@@ -19,7 +19,7 @@ to the next chunk in the stream's internal queue.
 ## Syntax
 
 ```js
-var promise = readableStreamDefaultReader.read();
+read()
 ```
 
 ### Parameters

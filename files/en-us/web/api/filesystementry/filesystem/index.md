@@ -22,7 +22,7 @@ resides.
 ## Value
 
 A {{domxref("FileSystem")}} representing the file system on which the file or directory
-described by the `FileSystemEntry` is located..
+described by the `FileSystemEntry` is located.
 
 ## Examples
 

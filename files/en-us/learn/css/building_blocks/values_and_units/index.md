@@ -227,7 +227,7 @@ The third box uses `em` units. These are relative to the font size. I've set a f
 
 After following the instructions above, try playing with the values in other ways, to see what you get.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/length.html", '100%', 820)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/length.html", '100%', 900)}}
 
 #### ems and rems
 
@@ -243,7 +243,7 @@ To start with, we set 16px as the font size on the `<html>` element.
 
 However, if you change the `<html>` `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1100)}}
 
 ### Percentages
 
@@ -255,11 +255,11 @@ The difference is that the second set of two boxes is inside a wrapper that is 4
 
 **Try changing the width of the wrapper or the percentage value to see how this works.**
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 1000)}}
 
 The next example has font sizes set in percentages. Each `<li>` has a `font-size` of 80%; therefore, the nested list items become progressively smaller as they inherit their sizing from their parent.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 800)}}
 
 Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
 
@@ -269,7 +269,7 @@ Some value types accept numbers, without any unit added to them. An example of a
 
 **In the below example, try changing the value of `opacity` to various decimal values between `0` and `1` and see how the box and its contents become more or less opaque.**
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 600)}}
 
 > **Note:** When you use a number in CSS as a value it should not be surrounded in quotes.
 
@@ -287,7 +287,7 @@ Quite often in examples here in the learn section or elsewhere on MDN you will s
 
 **Try playing with different color values in the live examples below, to get more of an idea how they work.**
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-keywords.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-keywords.html", '100%', 800)}}
 
 ### Hexadecimal RGB values
 
@@ -295,7 +295,7 @@ The next type of color value you are likely to encounter is hexadecimal codes. E
 
 These values are a bit more complex and less easy to understand, but they are a lot more versatile than keywords — you can use hex values to represent any color you want to use in your color scheme.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 800)}}
 
 **Again, try changing the values to see how the colors vary.**
 
@@ -305,7 +305,7 @@ The third scheme we'll talk about here is RGB. An RGB value is a function — `r
 
 Let's rewrite our last example to use RGB colors:
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 800)}}
 
 You can also use RGBA colors — these work in exactly the same way as RGB colors, and so you can use any RGB values. However, there is a fourth value that represents the alpha channel of the color, which controls opacity. If you set this value to `0` it will make the color fully transparent, whereas `1` will make it fully opaque. Values in between give you different levels of transparency.
 
@@ -313,11 +313,11 @@ You can also use RGBA colors — these work in exactly the same way as RGB color
 
 In the example below, we have added a background image to the containing block of our colored boxes. We have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 770)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 900)}}
 
 **In this example, try changing the alpha channel values to see how it affects the color output.**
 
-> **Note:** As of CSS Colors Level 4, `rgba()` is an alias for `rgb()` and `hsla()` is an alias for `hsl()` (see below).In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way. So for example both `rgba()` and `rgb()` accept colors with and without alpha channel values. Try changing the above example's `rgba()` functions to `rgb()` and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.
+> **Note:** As of CSS Colors Level 4, `rgba()` is an alias for `rgb()` and `hsla()` is an alias for `hsl()` (see below). In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way. So for example both `rgba()` and `rgb()` accept colors with and without alpha channel values. Try changing the above example's `rgba()` functions to `rgb()` and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.
 
 ### HSL and HSLA values
 
@@ -329,11 +329,11 @@ Slightly less well-supported than RGB is the HSL color model (not supported on o
 
 We can update the RGB example to use HSL colors like this:
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 800)}}
 
 Just as RGB has RGBA, HSL has an HSLA equivalent, which gives you the same ability to specify the alpha channel. I've demonstrated this below by changing my RGBA example to use HSLA colors.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 900)}}
 
 You can use any of these color values in your projects. It is likely that for most projects you will decide on a color palette and then use those colors — and your chosen method of specifying color — throughout the whole project. You can mix and match color models, however for consistency it is usually best if your entire project uses the same one!
 
@@ -343,7 +343,7 @@ The [`<image>`](/en-US/docs/Web/CSS/image) value type is used wherever an image 
 
 In the example below, we have demonstrated an image and a gradient in use as a value for the CSS `background-image` property.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 900)}}
 
 > **Note:** there are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
 
@@ -355,7 +355,7 @@ A typical position value consists of two values — the first sets the position 
 
 In the following example we have positioned a background image 40px from the top and to the right of the container using a keyword.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 800)}}
 
 **Play around with these values to see how you can push the image around.**
 
@@ -365,7 +365,7 @@ Throughout the examples above, we've seen places where keywords are used as a va
 
 There are places where you use strings in CSS. For example [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 600)}}
 
 ## Functions
 
@@ -375,7 +375,7 @@ A value that behaves more like something you might find in a traditional program
 
 For example, below we are using `calc()` to make the box `20% + 100px` wide. The 20% is calculated from the width of the parent container `.wrapper` and so will change if that width changes. We can't do this calculation beforehand because we don't know what 20% of the parent will be, so we use `calc()` to tell the browser to do it for us.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 450)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 500)}}
 
 ## Test your skills!
 

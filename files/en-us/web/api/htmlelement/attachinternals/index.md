@@ -16,7 +16,7 @@ The **`HTMLElement.attachInternals()`** method returns a {{domxref("ElementInter
 ## Syntax
 
 ```js
-var internals = element.attachInternals();
+attachInternals()
 ```
 
 ### Parameters

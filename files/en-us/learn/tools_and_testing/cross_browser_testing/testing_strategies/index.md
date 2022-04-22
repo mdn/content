@@ -98,7 +98,7 @@ IE8 is listed as being significant too, but it is older and no longer capable. O
 
 ### Using analytics
 
-A much more accurate source of data, if you can get it, comes from an analytics app like [Google Analytics](https://www.google.com/analytics/). This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.
+A much more accurate source of data, if you can get it, comes from an analytics app like [Google Analytics](https://marketingplatform.google.com/about/analytics/). This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.
 
 But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.
 
@@ -106,8 +106,8 @@ You may also consider using open source and privacy focussed analytics platforms
 
 #### Setting up Google analytics
 
-1. First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://www.google.com/analytics/).
-2. Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
+1. First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://marketingplatform.google.com/about/analytics/).
+2. Choose the [Google Analytics](https://analytics.google.com/analytics/web//) (web) option, and click the _Sign Up_ button.
 3. Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
 4. Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
 5. The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could place the snippets below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
@@ -124,7 +124,7 @@ By default, you should see the reporting tab, like so:
 ![](analytics-reporting.png)
 
 There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all.
-[Getting started with Analytics](https://support.google.com/analytics/answer/1008015) provides some useful guidance on reporting (and more) for beginners.
+[Getting started with Analytics](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1) provides some useful guidance on reporting (and more) for beginners.
 
 You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. For example, you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left hand menu.
 
@@ -208,18 +208,18 @@ We will cover each of the other options below.
 
 Emulators are basically programs that run inside your computer and emulate a device or particular device conditions of some kind, allowing you to do some of your testing more conveniently than having to find a particular combination of hardware/software to test.
 
-An emulator might be as simple as testing a device condition. For example, if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode). Safari has a similar mode too, which can be enabled by going to _Safari > Preferences_, and checking _Show Develop menu_, then choosing _Develop > Enter Responsive Design Mode_. Chrome also has something similar: Device mode (see [Simulate Mobile Devices with Device Mode](https://developer.chrome.com/docs/devtools/device-mode/)).
+An emulator might be as simple as testing a device condition. For example, if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html). Safari has a similar mode too, which can be enabled by going to _Safari > Preferences_, and checking _Show Develop menu_, then choosing _Develop > Enter Responsive Design Mode_. Chrome also has something similar: Device mode (see [Simulate Mobile Devices with Device Mode](https://developer.chrome.com/docs/devtools/device-mode/)).
 
 More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:
 
 - The official [Android Studio IDE](https://developer.android.com/studio/) for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust [emulator](https://developer.android.com/studio/run/emulator.html). If you want something a bit more lightweight, [Andy](https://www.andyroid.net/) is a reasonable option that runs on both Windows and Mac.
-- Apple provides an app called [Simulator](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html) that runs on top of the [XCode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
+- Apple provides an app called [Simulator](https://help.apple.com/simulator/mac/current/) that runs on top of the [XCode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
 
 You can often find simulators for other mobile device environments too, for example:
 
 - [Blackberry](https://developer.blackberry.com/develop/simulator/) (emulator available for Windows, Mac OSX and Linux).
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
-- There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://msdn.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
+- There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 
 > **Note:** Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
 
@@ -293,14 +293,14 @@ Generally you'll get your users to look at the page or view containing the new f
 
 When running tests, it can also be a good idea to:
 
-- Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) and [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), for example).
+- Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles) and [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), for example).
 - Use browser's private mode functionality when running tests, where available (e.g. [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) in Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) in Chrome) so things like cookies and temp files are not saved.
 
 These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.
 
 > **Note:** Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
 
-> **Note:** Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jsocol/django-waffle).
+> **Note:** Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/django-waffle/django-waffle).
 
 ## Summary
 

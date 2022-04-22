@@ -21,7 +21,7 @@ members are value and the units.
 ## Syntax
 
 ```js
-var cssNumericValue = CSSNumericValue.parse(cssText);
+parse(cssText)
 ```
 
 ### Parameters

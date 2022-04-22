@@ -20,7 +20,7 @@ associated stream.
 ## Syntax
 
 ```js
-readableByteStreamController.enqueue(chunk);
+enqueue(chunk)
 ```
 
 ### Parameters

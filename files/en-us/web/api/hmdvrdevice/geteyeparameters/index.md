@@ -22,21 +22,21 @@ This includes field of view information, and more.
 ## Syntax
 
 ```js
-var myLeftEye = HMDVRDevice.getEyeParameters('left');
+getEyeParameters(whichEye)
 ```
 
 ### Parameters
 
 - `whichEye`
-  - : A {{domxref("DOMString")}} representing the eye you want to return information about. The value can be `left` or `right`.
+  - : A string representing the eye you want to return information about. The value can be `left` or `right`.
 
-### Returns
+### Return value
 
 A {{domxref("VREyeParameters")}} object.
 
 ## Examples
 
-The following example is taken from the Mozilla VR Team's [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) code — to be precise, the [VREffect.js file](https://github.com/MozVR/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js#L28-L29). Early on in the code the `getEyeParameters()` method is used to access information about each eye, which is then used for rendering calculations later on.
+The following example is taken from the Mozilla VR Team's [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) code — to be precise, the [VREffect.js file](https://github.com/MozillaReality/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js). Early on in the code the `getEyeParameters()` method is used to access information about each eye, which is then used for rendering calculations later on.
 
 ```js
 if ( vrHMD.getEyeParameters !== undefined ) {

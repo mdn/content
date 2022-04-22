@@ -63,7 +63,7 @@ In the example below, we have used various color values to add a background colo
 
 **Play around with these, using any available [\<color>](/en-US/docs/Web/CSS/color_value) value.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}
 
 ### Background images
 
@@ -71,7 +71,7 @@ The {{cssxref("background-image")}} property enables the display of an image in 
 
 This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box, so we only see a small corner of it, whereas the small image is tiled to fill the box.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 700)}}
 
 **If you specify a background color in addition to a background image then the image displays on top of the color. Try adding a `background-color` property to the example above to see that in action.**
 
@@ -169,7 +169,7 @@ You can read more about the different types of gradients and things you can do w
 
 Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 700)}}
 
 ### Multiple background images
 
@@ -201,7 +201,7 @@ Another option we have available for backgrounds is specifying how they scroll w
 - `fixed`: causes an element's background to be fixed to the viewport so that it doesn't scroll when the page or element content is scrolled. It will always remain in the same position on the screen.
 - `local`: fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.
 
-The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values — have a look at [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (also [see the source code](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) here).
+The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values — have a look at [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (also [see the source code](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds) here).
 
 ### Using the background shorthand property
 
@@ -216,7 +216,7 @@ There are a few rules that need to be followed when writing background image sho
 
 Take a look at the MDN page for {{cssxref("background")}} to see all of the considerations.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 900)}}
 
 ### Accessibility considerations with backgrounds
 

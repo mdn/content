@@ -47,7 +47,7 @@ new VTTCue(startTime, endTime, text);
 A new {{domxref("VTTCue")}} object representing a cue which will be presented during
 the time span given.
 
-## Example
+## Examples
 
 ```js
 // Create a cue that is shown from 2 to 3 seconds and uses the given text.

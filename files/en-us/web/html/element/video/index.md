@@ -309,7 +309,7 @@ There are no special considerations for styling `<video>`; a common strategy is 
 
 ### Detecting track addition and removal
 
-You can detect when tracks are added to and removed from a `<video>` element using the {{event("addtrack")}} and {{event("removetrack")}} events. However, these events aren't sent directly to the `<video>` element itself. Instead, they're sent to the track list object within the `<video>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
+You can detect when tracks are added to and removed from a `<video>` element using the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events. However, these events aren't sent directly to the `<video>` element itself. Instead, they're sent to the track list object within the `<video>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks. You can add a listener for `addtrack` to this object to be alerted when new audio tracks are added to the element.
@@ -334,7 +334,7 @@ elem.audioTracks.onremovetrack = function(event) {
 
 This code watches for audio tracks to be added to and removed from the element, and calls a hypothetical function on a track editor to register and remove the track from the editor's list of available tracks.
 
-You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{event("addtrack")}} and {{event("removetrack")}} events.
+You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{event("removetrack")}} events.
 
 ## Examples
 

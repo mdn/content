@@ -25,7 +25,7 @@ In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.set
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: `Search the firefox codebase
+  description: `Search the Firefox codebase
     (e.g. "hello world" | "path:omnibox.js onInputChanged")`
 });
 ```
@@ -53,7 +53,7 @@ The extension can then listen for the user clicking one of the suggestions, usin
 browser.omnibox.onInputEntered.addListener((text, disposition) => {
   let url = text;
   if (!text.startsWith(SOURCE_URL)) {
-    // Update the url if the user clicks on the default suggestion.
+    // Update the URL if the user clicks on the default suggestion.
     url = `${SEARCH_URL}?q=${text}`;
   }
   switch (disposition) {

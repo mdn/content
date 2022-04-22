@@ -498,7 +498,7 @@ Firefox defines some non-standard methods:
 Microsoft defines some non-standard properties:
 
 - {{DOMxRef("Document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](https://msdn.microsoft.com/library/ms533752%28v=VS.85%29.aspx).
+  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](https://developer.mozilla.org/en-US/docs/Web/API/Document).
 
 ## Specifications
 

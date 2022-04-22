@@ -29,7 +29,7 @@ In our first looping task we want you start by creating a simple loop that goes 
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops1-download.html) to work in your own editor or in an online editor.
 
 ## Loops 2
 
@@ -47,7 +47,7 @@ You should use a type of loop that you've not used in the previous task.
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops2-download.html) to work in your own editor or in an online editor.
 
 ## Loops 3
 
@@ -63,7 +63,7 @@ You should use a type of loop that you've not used in the previous two tasks.
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

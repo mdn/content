@@ -78,5 +78,5 @@ To test your browser's support for these interfaces, run the [`perf-api-support`
 - [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
 - [CanIUse data](https://caniuse.com/#search=resource-timing)
 - [Resource Timing practical tips](https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
-- [Measuring network performance with Resource Timing API](https://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
+- [Measuring network performance with Resource Timing API](https://developers.googleblog.com/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
 - [A Primer for Web Performance Timing APIs](https://siusin.github.io/perf-timing-primer/); Xiaoqian Wu; W3C Editor's Draft

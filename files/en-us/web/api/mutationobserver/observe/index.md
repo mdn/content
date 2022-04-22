@@ -30,7 +30,7 @@ To stop the `MutationObserver` (so that none of its callbacks will be triggered 
 ## Syntax
 
 ```js
-mutationObserver.observe(target, options)
+observe(target, options)
 ```
 
 ### Parameters

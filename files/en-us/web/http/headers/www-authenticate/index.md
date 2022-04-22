@@ -112,7 +112,7 @@ Generally you will need to check the relevant specifications for these (keys for
     Minimally should include the host name, but might indicate the users or group that have access.
 - **`domain`** {{optional_inline}}
   - : A quoted, space-separated list of URI prefixes that define all the locations where the authentication information may be used.
-    If this key is not is not specified then the authentication information may be used anywhere on the web root.
+    If this key is not specified then the authentication information may be used anywhere on the web root.
 - **`nonce`**
   - : A server-specified quoted string that the server can use to control the lifetime in which particular credentials will be considered valid.
     This must be uniquely generated each time a 401 response is made, and may be regenerated more often (for example, allowing a digest to be used only once).

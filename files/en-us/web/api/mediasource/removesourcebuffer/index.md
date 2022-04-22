@@ -24,7 +24,7 @@ object.
 ## Syntax
 
 ```js
-mediaSource.removeSourceBuffer(sourceBuffer);
+removeSourceBuffer(sourceBuffer)
 ```
 
 ### Parameters

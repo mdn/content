@@ -23,7 +23,7 @@ incorrectly sometimes be changed to a {{HTTPMethod("GET")}} method.
 > **Note:** Some Web applications may use the
 > `308 Permanent Redirect` in a non-standard way and for other purposes. For
 > example, Google Drive uses a `308 Resume Incomplete` response to indicate
-> to the client when an incomplete upload stalled. (See [Perform a resumable download](https://developers.google.com/drive/v3/web/manage-uploads#resumable) on Google Drive documentation.)
+> to the client when an incomplete upload stalled. (See [Perform a resumable download](https://developers.google.com/drive/api/guides/manage-uploads) on Google Drive documentation.)
 
 ## Status
 

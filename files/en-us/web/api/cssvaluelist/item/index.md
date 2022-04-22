@@ -30,7 +30,7 @@ this method returns `null`.
 ## Syntax
 
 ```js
-var cssValue = cssValueList.item(index);
+item(index)
 ```
 
 ### Parameters

@@ -43,7 +43,7 @@ In this example, we wish to permit images from a foreign origin to be retrieved 
 
 The first thing we need is a server that's configured to host images with the {{HTTPHeader("Access-Control-Allow-Origin")}} header configured to permit cross-origin access to image files.
 
-Let's assume we're serving our site using [Apache](https://httpd.apache.org/). Consider the HTML5 Boilerplate [Apache server configuration file for CORS images](https://github.com/h5bp/server-configs-apache/blob/master/h5bp/cross-origin/images.conf), shown below:
+Let's assume we're serving our site using [Apache](https://httpd.apache.org/). Consider the HTML5 Boilerplate [Apache server configuration file for CORS images](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf), shown below:
 
 ```xml
 <IfModule mod_setenvif.c>

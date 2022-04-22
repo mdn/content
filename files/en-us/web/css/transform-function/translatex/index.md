@@ -14,7 +14,7 @@ browser-compat: css.types.transform-function.translateX
 The **`translateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element horizontally on the 2D plane. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](transform-functions-translatex_2.png)
+{{EmbedInteractiveExample("pages/css/function-translateX.html")}}
 
 > **Note:** `translateX(tx)` is equivalent to
 > `translate(tx, 0)` or

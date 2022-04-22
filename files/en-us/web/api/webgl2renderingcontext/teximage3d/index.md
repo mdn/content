@@ -57,7 +57,7 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
     - `gl.R8`
     - `gl.R16F`
-    - `gl.`R32F
+    - `gl.R32F`
     - `gl.R8UI`
     - `gl.RG8`
     - `gl.RG16F`

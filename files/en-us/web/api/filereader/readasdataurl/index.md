@@ -26,7 +26,7 @@ file's data as a base64 encoded string.
 ## Syntax
 
 ```js
-instanceOfFileReader.readAsDataURL(blob);
+readAsDataURL(blob)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ instanceOfFileReader.readAsDataURL(blob);
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-## Example
+## Examples
 
 ### HTML
 

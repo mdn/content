@@ -23,16 +23,16 @@ See {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()
 getModifierState(keyArg)
 ```
 
-### Returns
-
-A boolean value
-
 ### Parameters
 
 - _`keyArg`_
   - : A modifier key value.
     The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"`{{deprecated_inline}}.
     This is case-sensitive.
+
+### Return value
+
+A boolean value.
 
 ## Specifications
 

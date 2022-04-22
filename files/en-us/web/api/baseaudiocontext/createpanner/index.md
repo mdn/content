@@ -29,14 +29,14 @@ audio.
 ## Syntax
 
 ```js
-createPanner();
+createPanner()
 ```
 
-### Returns
+### Return value
 
 A {{domxref("PannerNode")}}.
 
-## Example
+## Examples
 
 In the following example, you can see an example of how the `createPanner()`
 method, {{domxref("AudioListener")}}  and {{domxref("PannerNode")}} would be used to

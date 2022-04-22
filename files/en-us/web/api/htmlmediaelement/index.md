@@ -35,8 +35,6 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
   - : Returns a {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the `buffered` property is accessed.
-- {{domxref("HTMLMediaElement.controller")}}
-  - : Is a {{domxref("MediaController")}} object that represents the media controller assigned to the element, or `null` if none is assigned.
 - {{domxref("HTMLMediaElement.controls")}}
   - : Is a {{jsxref('Boolean')}} that reflects the {{htmlattrxref("controls", "video")}} HTML attribute, indicating whether user interface items for controlling the resource should be displayed.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
@@ -107,6 +105,8 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 
 These properties are obsolete and should not be used, even if a browser still supports them.
 
+- {{domxref("HTMLMediaElement.controller")}} {{deprecated_inline}}
+  - : Is a {{domxref("MediaController")}} object that represents the media controller assigned to the element, or `null` if none is assigned.
 - {{domxref("HTMLMediaElement.mediaGroup")}} {{deprecated_inline}}
   - : A {{domxref("DOMString")}} that reflects the {{ htmlattrxref("mediagroup", "video")}} HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}

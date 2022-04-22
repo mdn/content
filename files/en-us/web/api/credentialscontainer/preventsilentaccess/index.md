@@ -31,14 +31,14 @@ compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) s
 ## Syntax
 
 ```js
-var Promise = CredentialsContainer.preventSilentAccess()
+preventSilentAccess()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An empty {{jsxref("Promise")}}.
 

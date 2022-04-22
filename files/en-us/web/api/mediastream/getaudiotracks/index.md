@@ -27,7 +27,7 @@ is `audio`.
 ## Syntax
 
 ```js
-var mediaStreamTracks = mediaStream.getAudioTracks()
+getAudioTracks()
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ Early versions of this API included a special `AudioStreamTrack` interface
 which was used as the type for each entry in the list of audio streams; however, this
 has since been merged into the main {{domxref("MediaStreamTrack")}} interface.
 
-## Example
+## Examples
 
 This example gets a webcam's audio and video in a stream using
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, attaches the stream to a

@@ -128,7 +128,7 @@ You can try this out using our [native-keyboard-accessibility.html](https://mdn.
 
 ![](button-focused-unfocused.png)
 
-> **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order).
+> **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
 You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input (other form elements have different controls, for example the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys).
 
@@ -298,8 +298,8 @@ Let's look at an example, using Wave.
 
 [Deque's aXe tool](https://www.deque.com/products/axe/) goes a bit further than the auditing tools we mentioned above. Like the others, it checks pages and returns accessibility errors. Its most immediately useful form is probably the browser extensions:
 
-- [aXe for Chrome](https://bitly.com/aXe-Chrome)
-- [aXe for Firefox](https://bit.ly/aXe-Firefox)
+- [aXe for Chrome](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- [aXe for Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 
 These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) example. We got the following results:
 
@@ -313,7 +313,7 @@ It is definitely worth testing with a screenreader to get used to how severely v
 
 - Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) and [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
 - Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows, and Mac OS X), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS), [ChromeVox](http://www.chromevox.com/) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (Mac OS X and iOS), [ChromeVox](http://www.chromevox.com/) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 Generally, screen readers are separate apps that run on the host operating system and can read not only web pages, but text in other apps as well. This is not always the case (ChromeVox is a browser extension), but usually. Screenreaders tend to act in slightly different ways and have different controls, so you'll have to consult the documentation for your chosen screen reader to get all of the details — saying that, they all work in basically the same sort of way.
 

@@ -16,7 +16,7 @@ The **`removeCue()`** method of the {{domxref("TextTrack")}} interface removes a
 ## Syntax
 
 ```js
-TextTrack.removeCue(cue);
+removeCue(cue)
 ```
 
 ### Parameters

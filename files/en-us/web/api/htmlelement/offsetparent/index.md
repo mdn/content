@@ -23,7 +23,7 @@ ancestor `td`, `th`, `table` will be returned, or the
 > - The element or its parent element has the `display` property set to
 >   `none`.
 > - The element has the `position` property set to `fixed`
->   (firefox returns `<body>`).
+>   (Firefox returns `<body>`).
 > - The element is `<body>` or `<html>`.
 
 `offsetParent` is useful because

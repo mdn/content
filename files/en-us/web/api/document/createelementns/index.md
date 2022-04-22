@@ -18,8 +18,8 @@ To create an element without specifying a namespace URI, use the
 ## Syntax
 
 ```js
-document.createElementNS(namespaceURI, qualifiedName);
-document.createElementNS(namespaceURI, qualifiedName, options);
+createElementNS(namespaceURI, qualifiedName)
+createElementNS(namespaceURI, qualifiedName, options)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ document.createElementNS(namespaceURI, qualifiedName, options);
   - : An optional `ElementCreationOptions` object containing a single property named `is`, whose value is the tag name for a custom element previously defined using `customElements.define()`.
     For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/),
     some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
-    See [Extending native HTML elements](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml) for more information on how to use this parameter.
+    See [Extending native HTML elements](https://developers.google.com/web/fundamentals/web-components) for more information on how to use this parameter.
 
     The new element will be given an `is` attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.
 
@@ -57,7 +57,7 @@ The new {{DOMxRef("Element")}}.
 - [XBL](/en-US/docs/Mozilla/Tech/XBL) {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : `http://www.mozilla.org/xbl`
 
-## Example
+## Examples
 
 This creates a new \<div> element in the {{Glossary("XHTML")}} namespace and
 appends it to the vbox element. Although this is not an extremely useful [XUL](/en-US/docs/Mozilla/Tech/XUL) document, it does demonstrate the use of

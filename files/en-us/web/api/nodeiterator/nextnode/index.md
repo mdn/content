@@ -25,17 +25,16 @@ throw.
 ## Syntax
 
 ```js
-node = nodeIterator.nextNode();
+nextNode()
 ```
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false // this optional argument is not used any more
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 ```

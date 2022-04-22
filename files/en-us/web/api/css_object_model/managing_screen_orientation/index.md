@@ -135,7 +135,7 @@ And here's the result
 
 ## Locking the screen orientation
 
-> **Warning:** This API is experimental and currently available on [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) and [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) with a `moz` prefix, and for Internet Explorer on Windows 8.1 and above  with a `ms` prefix.
+> **Warning:** This API is experimental and currently available on [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) and [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) with a `moz` prefix, and for Internet Explorer on Windows 8.1 and above with a `ms` prefix.
 
 Some devices (mainly mobile devices) can dynamically change the orientation of the screen based on their own orientation, ensuring that the user will always be able to read what's on the screen. While this behavior is perfectly suited for text content, there is some content that can be negatively affected by such a change. For example, games based on the orientation of the device could be messed up by such a change of the orientation.
 
@@ -180,4 +180,4 @@ For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) speci
 - {{domxref("Screen.unlockOrientation()")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
-- [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)
+- [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)

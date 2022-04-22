@@ -91,14 +91,6 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
     > **Note:** Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value.
     > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
-- {{htmlattrdef("indeterminate")}}
-
-  - : If the `indeterminate` attribute is present on the {{HTMLElement("input")}} element defining a checkbox, the checkbox's value is neither `true` nor `false`, but is instead **indeterminate**, meaning that its state cannot be determined or stated in pure binary terms. This may happen, for instance, if the state of the checkbox depends on multiple other checkboxes, and those checkboxes have different values.
-
-    Essentially, then, the `indeterminate` attribute adds a third possible state to the checkbox: "I don't know." In this state, the browser may draw the checkbox in grey or with a different mark inside the checkbox. For instance, browsers on macOS may draw the checkbox with a hyphen "-" inside to indicate an unexpected state.
-
-    > **Note:** No browser currently supports `indeterminate` as an attribute. It must be set via JavaScript. See [Indeterminate state checkboxes](#indeterminate_state_checkboxes) for details.
-
 - {{htmlattrdef("value")}}
 
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
@@ -178,36 +170,36 @@ This can be seen in the below example (thanks to [CSS Tricks](https://css-tricks
 So in this case the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
 
 ```js
-  var overall = document.querySelector('input[id="EnchTbl"]');
-  var ingredients = document.querySelectorAll('ul input');
+const overall = document.querySelector('#enchantment');
+const ingredients = document.querySelectorAll('ul input');
 
-  overall.addEventListener('click', function(e) {
-    e.preventDefault();
-  });
+overall.addEventListener('click', (e) => {
+  e.preventDefault();
+});
 
-  for(var i = 0; i < ingredients.length; i++) {
-    ingredients[i].addEventListener('click', updateDisplay);
-  }
+for(const ingredient of ingredients) {
+  ingredient.addEventListener('click', updateDisplay);
+}
 
-  function updateDisplay() {
-    var checkedCount = 0;
-    for(var i = 0; i < ingredients.length; i++) {
-      if(ingredients[i].checked) {
-        checkedCount++;
-      }
-    }
-
-    if(checkedCount === 0) {
-      overall.checked = false;
-      overall.indeterminate = false;
-    } else if(checkedCount === ingredients.length) {
-      overall.checked = true;
-      overall.indeterminate = false;
-    } else {
-      overall.checked = false;
-      overall.indeterminate = true;
+function updateDisplay() {
+  let checkedCount = 0;
+  for(const ingredient of ingredients) {
+    if(ingredient.checked) {
+      checkedCount++;
     }
   }
+
+  if(checkedCount === 0) {
+    overall.checked = false;
+    overall.indeterminate = false;
+  } else if(checkedCount === ingredients.length) {
+    overall.checked = true;
+    overall.indeterminate = false;
+  } else {
+    overall.checked = false;
+    overall.indeterminate = true;
+  }
+}
 ```
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
@@ -291,8 +283,8 @@ legend {
 ### JavaScript
 
 ```js
-var otherCheckbox = document.querySelector('input[value="other"]');
-var otherText = document.querySelector('input[id="otherValue"]');
+const otherCheckbox = document.querySelector('#other');
+const otherText = document.querySelector('#otherValue');
 otherText.style.visibility = 'hidden';
 
 otherCheckbox.addEventListener('change', () => {

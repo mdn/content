@@ -19,7 +19,7 @@ A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` s
 
 ## Provisioning managed storage
 
-The procedure for provisioning managed storage is different for different browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/extensions/manifest/storage) article.
+The procedure for provisioning managed storage is different for different browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/mv3/manifest/storage/) article.
 
 For Firefox, you need to create a JSON manifest file in a specific format, in a specific location. For the details of manifest syntax and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 

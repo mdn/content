@@ -16,7 +16,7 @@ The **`watchAvailability()`** method of the {{domxref("RemotePlayback")}} interf
 ## Syntax
 
 ```js
-RemotePlayback.watchAvailability(RemotePlaybackAvailabilityCallback);
+watchAvailability(RemotePlaybackAvailabilityCallback)
 ```
 
 ### Parameters

@@ -146,7 +146,7 @@ new Intl.NumberFormat(locales, options)
       - : The unit to use in `unit` formatting, Possible values are core
         unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements).
         A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)
-        of units from the [full list](https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml)
+        of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml)
         was selected for use in ECMAScript. Pairs of simple units can
         be concatenated with "`-per-`" to make a compound unit. There
         is no default value; if the `style` is "`unit`", the
@@ -204,13 +204,13 @@ new Intl.NumberFormat(locales, options)
         > const nf = new Intl.NumberFormat("en-US", {
         >   style: "currency",
         >   currency: "USD",
-        >   maximumFractionDigits: 2, 
+        >   maximumFractionDigits: 2,
         >   roundingIncrement: 5
         > });
         >
         > console.log(nf.format(11.29));  // > output: "$11.30"
         > console.log(nf.format(11.25));  // > output: "$11.25"
-        > console.log(nf.format(11.22));  // > output: "$11.20"  
+        > console.log(nf.format(11.22));  // > output: "$11.20"
         > ```
         >
         > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.

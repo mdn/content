@@ -33,7 +33,7 @@ connection.
 ## Syntax
 
 ```js
-var promise = rtcRtpSender.setParameters(parameters)
+setParameters(parameters)
 ```
 
 ### Parameters

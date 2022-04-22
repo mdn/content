@@ -21,7 +21,7 @@ in `StylePropertyMapReadOnly`
 ## Syntax
 
 ```js
-StylePropertyMapReadOnly.keys()
+keys()
 ```
 
 ### Parameters
@@ -32,7 +32,7 @@ None.
 
 A new {{jsxref("Array")}}.
 
-## Example
+## Examples
 
 In this example we use the `keys()` method to be able to access the
 properties within our {{domxref('Element.computedStyleMap()')}}.

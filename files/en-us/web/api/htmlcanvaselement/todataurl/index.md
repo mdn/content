@@ -24,13 +24,15 @@ The created image data will have a resolution of 96dpi for file formats that sup
 ## Syntax
 
 ```js
-canvas.toDataURL(type, encoderOptions);
+toDataURL()
+toDataURL(type)
+toDataURL(type, encoderOptions)
 ```
 
 ### Parameters
 
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} indicating the image format.
+  - : A string indicating the image format.
     The default type is `image/png`; this image format will be also used if the specified type is not supported.
 - `encoderOptions` {{optional_inline}}
   - : A {{jsxref("Number")}} between `0` and `1` indicating the image quality to be used when creating images using file formats that support lossy compression (such as `image/jpeg` or `image/webp`).
@@ -38,7 +40,7 @@ canvas.toDataURL(type, encoderOptions);
 
 ### Return value
 
-A {{domxref("DOMString")}} containing the requested [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+A string containing the requested [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
 If the height or width of the canvas is `0` or larger than the [maximum canvas size](/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size), the string `"data:,"` is returned.
 

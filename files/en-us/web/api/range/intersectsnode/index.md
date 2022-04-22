@@ -18,7 +18,7 @@ indicating whether the given {{domxref("Node")}} intersects the {{domxref("Range
 ## Syntax
 
 ```js
-bool = range.intersectsNode( referenceNode )
+intersectsNode( referenceNode )
 ```
 
 ### Parameters
@@ -26,7 +26,11 @@ bool = range.intersectsNode( referenceNode )
 - _referenceNode_
   - : The {{domxref("Node")}} to compare with the {{domxref("Range")}}.
 
-## Example
+### Return value
+
+A boolean.
+
+## Examples
 
 ```js
 var range = document.createRange();

@@ -20,7 +20,7 @@ If the user chooses to instead disconnect from the device, the {{domxref("Remote
 ## Syntax
 
 ```js
-RemotePlayback.prompt();
+prompt()
 ```
 
 ### Parameters

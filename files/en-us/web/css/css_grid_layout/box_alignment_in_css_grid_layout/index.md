@@ -643,7 +643,7 @@ In this next example, I have given item 1 a left margin of `auto`. You can see h
 
 {{ EmbedLiveSample('Alignment_and_auto_margins', '500', '550') }}
 
-You can see how the item is aligned by using the [Firefox Grid Highlighter](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts):
+You can see how the item is aligned by using the [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html):
 
 ![Image showing auto-margins using the Grid Highlighter.](7_auto_margins.png)
 

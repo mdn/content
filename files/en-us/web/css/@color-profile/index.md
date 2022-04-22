@@ -44,7 +44,7 @@ The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) {{cssxref("at-rule")}} defin
 
 ## Examples
 
-This example is from the specification and demonstrates using offset printing to ISO 12647-2:2004 using the CGATS/SWOP TR005 2007 characterisation data on grade 5 paper with an ink limit of 300% Total Area Coverage, and medium gray component replacement (GCR).
+This example is from the specification and demonstrates using offset printing to ISO 12647-2:2004 using the CGATS/SWOP TR005 2007 characterization data on grade 5 paper with an ink limit of 300% Total Area Coverage, and medium gray component replacement (GCR).
 
 The `src` descriptor specifies the URL to retrieve the color-profile information from.
 

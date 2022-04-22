@@ -43,7 +43,7 @@ An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARI
 
 It is a structural equivalent to the {{HTMLElement('th')}} element with a scope of `row`, `<th scope="row">`. Using the native {{HTMLElement('th')}} HTML element is strongly encouraged.
 
-To create an ARIA row header, add `role="rowheader"` to the element. That row header must be nested within a `row`, which, in turn, is nested within a `rowgroup`, or directly within a `grid`, `table` or `treegrid`,.
+To create an ARIA row header, add `role="rowheader"` to the element. That row header must be nested within a `row`, which, in turn, is nested within a `rowgroup`, or directly within a `grid`, `table` or `treegrid`.
 
 > **Note:** Using the native [table elements](/en-US/docs/Learn/HTML/Tables/Basics) whenever possible, is strongly encouraged.
 

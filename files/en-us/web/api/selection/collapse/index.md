@@ -18,7 +18,8 @@ editable, the caret will blink there.
 ## Syntax
 
 ```js
-sel.collapse(node, offset);
+collapse(node)
+collapse(node, offset)
 ```
 
 ### Parameters

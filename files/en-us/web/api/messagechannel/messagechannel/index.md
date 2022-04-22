@@ -27,7 +27,7 @@ new MessageChannel();
 
 A newly created {{domxref("MessageChannel")}} object.
 
-## Example
+## Examples
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the

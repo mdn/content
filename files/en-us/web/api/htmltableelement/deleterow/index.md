@@ -18,7 +18,7 @@ specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("table")}}.
 ## Syntax
 
 ```js
-HTMLTableElement.deleteRow(index)
+deleteRow(index)
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ the number of available rows, or if it is negative and not equal to the special 
 `-1`, representing the last row of the table, the exception
 `INDEX_SIZE_ERR` is thrown.
 
-## Example
+## Examples
 
 This example uses JavaScript to delete a table's second row.
 

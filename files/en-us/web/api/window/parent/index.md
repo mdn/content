@@ -24,8 +24,7 @@ window.
 
 ## Value
 
-A `Window` or {{htmlelement("iframe")}} object. 
- 
+A `Window` or {{htmlelement("iframe")}} object.
 
 ## Examples
 

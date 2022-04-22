@@ -71,7 +71,7 @@ class CheckerboardPainter {
 registerPaint('checkerboard', CheckerboardPainter);
 ```
 
-The first step in using a paintworket is defining the paint worklet using the
+The first step in using a paintworklet is defining the paint worklet using the
 `registerPaint()` function, as done above. To use it, you register it with
 the `CSS.paintWorklet.addModule()` method:
 

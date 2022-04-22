@@ -30,13 +30,13 @@ string.
 ## Syntax
 
 ```js
-var theTrack = TextTrackList.getTrackById(id);
+getTrackById(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+  - : A string indicating the ID of the track to locate within the track
     list.
 
 ### Return value

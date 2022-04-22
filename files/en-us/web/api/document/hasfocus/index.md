@@ -23,7 +23,7 @@ active element in a document has focus.
 ## Syntax
 
 ```js
-var focused = document.hasFocus();
+hasFocus()
 ```
 
 ### Return value
@@ -31,7 +31,7 @@ var focused = document.hasFocus();
 `false` if the active element in the document has no focus;
 `true` if the active element in the document has focus.
 
-## Example
+## Examples
 
 This example checks whether the document has focus every 300 milliseconds. To test the
 functionality of `hasFocus()`, click on the button to open a new window, and

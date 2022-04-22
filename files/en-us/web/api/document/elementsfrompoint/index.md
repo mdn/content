@@ -21,7 +21,7 @@ It operates in a similar way to the {{domxref("Document.elementFromPoint",
 ## Syntax
 
 ```js
-elementsFromPoint(x, y);
+elementsFromPoint(x, y)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ elementsFromPoint(x, y);
 
 An array of {{domxref('element')}} objects.
 
-## Example
+## Examples
 
 ### HTML
 

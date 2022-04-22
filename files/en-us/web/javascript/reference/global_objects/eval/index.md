@@ -105,7 +105,7 @@ lead to possible attacks in ways to which the similar
 `eval()` is also slower than the alternatives, since it has to invoke the
 JavaScript interpreter, while many other constructs are optimized by modern JS engines.
 
-Additionally, modern javascript interpreters convert javascript to machine code. This
+Additionally, modern JavaScript interpreters convert JavaScript to machine code. This
 means that any concept of variable naming gets obliterated. Thus, any use of
 `eval()` will force the browser to do long expensive variable name lookups to
 figure out where the variable exists in the machine code and set its value.

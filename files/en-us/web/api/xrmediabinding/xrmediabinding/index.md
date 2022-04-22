@@ -36,7 +36,7 @@ A newly-created {{domxref("XRMediaBinding")}}.
     - The {{domxref("XRSession")}} specified by `session` has already been stopped.
     - The specified `session` is not immersive.
 
-## Example
+## Examples
 
 ### Creating a new `XRMediaBinding`
 

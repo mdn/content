@@ -636,7 +636,7 @@ form p {
 
 This gives us the following result:
 
-{{ EmbedLiveSample('Table_layout', '100%', '170') }}
+{{ EmbedLiveSample('Table_layout', '100%', '200') }}
 
 You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
 
@@ -686,7 +686,7 @@ body { max-width: 800px; margin: 0 auto; }
 }
 ```
 
-{{ EmbedLiveSample('Multi-column_layout', '100%', 200) }}
+{{ EmbedLiveSample('Multi-column_layout', '100%', 250) }}
 
 ## Summary
 

@@ -22,10 +22,10 @@ events.
 ## Syntax
 
 ```js
-performanceObserver.disconnect();
+disconnect()
 ```
 
-## Example
+## Examples
 
 ```js
 var observer = new PerformanceObserver(function(list, obj) {

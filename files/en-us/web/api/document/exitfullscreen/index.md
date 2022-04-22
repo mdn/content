@@ -26,7 +26,7 @@ reverses the effects of a previous call to {{domxref("Element.requestFullscreen(
 ## Syntax
 
 ```js
-exitPromise = document.exitFullscreen();
+exitFullscreen()
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ A {{jsxref("Promise")}} which is resolved once the {{Glossary("user agent")}} ha
 finished exiting fullscreen mode. If an error occurs while attempting to exit
 fullscreen mode, the `catch()` handler for the promise is called.
 
-## Example
+## Examples
 
 This example causes the current document to toggle in and out of a fullscreen
 presentation whenever the mouse button is clicked within it.

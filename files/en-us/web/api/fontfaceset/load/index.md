@@ -18,11 +18,11 @@ given in parameters to be loaded.
 ## Syntax
 
 ```js
-aFontFaceSet.load(font);
-aFontFaceSet.load(font, text);
+load(font)
+load(font, text)
 ```
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} of an {{jsxref("Array")}} of {{jsxref("FontFace")}} loaded. The
 promise is fulfilled when all the fonts are loaded; it is rejected if one of the fonts

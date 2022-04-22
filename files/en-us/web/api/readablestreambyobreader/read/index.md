@@ -19,7 +19,7 @@ The **`read()`** method of the
 ## Syntax
 
 ```js
-var promise = readableStreamBYOBReader.read(view);
+read(view)
 ```
 
 ### Parameters

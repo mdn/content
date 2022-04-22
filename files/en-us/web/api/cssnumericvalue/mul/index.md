@@ -21,7 +21,7 @@ the supplied value.
 ## Syntax
 
 ```js
-var cssMathProduct = CSSNumericValue.mul(number);
+mul(number)
 ```
 
 ### Parameters

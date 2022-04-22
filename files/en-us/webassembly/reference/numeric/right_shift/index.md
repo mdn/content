@@ -12,7 +12,7 @@ tags:
 
 The **`shr`** instructions, short for *shift-right*, are used for performing a bitwise right-shift, similar to the **`>>>`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/shr.html")}}
+{{EmbedInteractiveExample("pages/wat/shr.html", "tabbed-taller")}}
 
 ## Syntax
 

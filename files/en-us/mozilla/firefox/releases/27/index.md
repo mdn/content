@@ -87,7 +87,7 @@ _No change._
 
 ## See also
 
-- [List of changes](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) in [Marionette](https://firefox-source-docs.mozilla.org/testing/marionette/marionette/index.html) for Firefox 27.
+- [List of changes](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) in [Marionette](https://firefox-source-docs.mozilla.org/testing/marionette/index.html) for Firefox 27.
 
 ### Older versions
 

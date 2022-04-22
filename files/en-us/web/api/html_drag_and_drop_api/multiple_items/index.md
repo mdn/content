@@ -90,7 +90,7 @@ var types = event.dataTransfer.mozTypesAt(1);
 
 ## Dragging Non-String Data
 
-The additional methods described above are also not restricted to string data; you can specify any type of data. For example, files are dragged using the [application/x-moz-file](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#file) type stored as [nsIFile](/en-US/docs/XPCOM_Interface_Reference/nsIFile) objects. As the {{domxref("DataTransfer.setData","setData()")}} method only supports strings, it cannot be used to specify files for dragging in this manner. Instead the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method must be used.
+The additional methods described above are also not restricted to string data; you can specify any type of data. For example, files are dragged using the [application/x-moz-file](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#file) type stored as `nsIFile` objects. As the {{domxref("DataTransfer.setData","setData()")}} method only supports strings, it cannot be used to specify files for dragging in this manner. Instead the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method must be used.
 
 ```js
 dt.mozSetDataAt("application/x-moz-file", file, 0);

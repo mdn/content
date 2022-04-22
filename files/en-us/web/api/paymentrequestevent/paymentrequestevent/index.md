@@ -15,7 +15,7 @@ browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 The **`PaymentRequestEvent`** constructor creates a new
 {{domxref("PaymentRequestEvent")}} object which is a constructor for a
 {{domxref("PaymentRequestEvent")}} which is the object passed to a payment handler when
-a {{domxref("PaymentRequest")}} is made..
+a {{domxref("PaymentRequest")}} is made.
 
 ## Syntax
 

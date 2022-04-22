@@ -46,7 +46,7 @@ new MediaStreamAudioDestinationNode(context, options);
 
 A new {{domxref("MediaStreamAudioDestinationNode")}} object instance.
 
-## Example
+## Examples
 
 ```js
 var ac = new AudioContext();

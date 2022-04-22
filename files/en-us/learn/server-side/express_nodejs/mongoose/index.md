@@ -405,8 +405,9 @@ Each story can have a single author.
 The `ref` property tells the schema which model can be assigned to this field.
 
 ```js
-var mongoose = require('mongoose')
-  , Schema = mongoose.Schema
+var mongoose = require('mongoose');
+
+var Schema = mongoose.Schema;
 
 var authorSchema = Schema({
   name    : String,
@@ -590,7 +591,7 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `var app = express();`). Replace the database url string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
+Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `var app = express();`). Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
 
 ```js
 //Set up mongoose connection

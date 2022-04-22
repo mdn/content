@@ -65,7 +65,7 @@ People with visual impairments include people with blindness, low-level vision, 
 
 - Paid commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/screenreader) (Windows).
 - Free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://www.chromevox.com/) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/mac/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works. See our [cross-browser testing screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) for more details on using them. The below video also provides a brief example of what the experience is like.
 

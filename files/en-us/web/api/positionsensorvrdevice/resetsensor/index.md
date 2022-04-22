@@ -21,14 +21,14 @@ The **`resetSensor()`** method of the {{domxref("VRDisplay")}} interface _can be
 ## Syntax
 
 ```js
-PositionSensorVRDevice.resetSensor();
+resetSensor()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 

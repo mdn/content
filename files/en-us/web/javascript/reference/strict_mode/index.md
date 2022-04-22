@@ -51,6 +51,8 @@ function strict() {
 function notStrict() { return "I'm not strict."; }
 ```
 
+In strict mode, starting with ES2015, functions inside blocks are scoped to that block. Prior to ES2015, block-level functions were forbidden in strict mode.
+
 ### Strict mode for modules
 
 ECMAScript 2015 introduced [JavaScript modules](/en-US/docs/Web/JavaScript/Reference/Statements/export) and therefore a 3rd way to enter strict mode. The entire contents of JavaScript modules are automatically in strict mode, with no statement needed to initiate it.

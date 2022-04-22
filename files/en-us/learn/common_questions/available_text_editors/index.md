@@ -484,7 +484,7 @@ When you install a new text editor, your OS will probably continue to open text 
 
 - Windows
 
-  - [Windows 8](https://windows.microsoft.com/en-us/windows-8/choose-programs-windows-uses-default)
+  - [Windows 8](https://support.microsoft.com/en-us/windows?ui=en-US&rs=en-US&ad=US)
   - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
   - [older systems](https://pcsupport.about.com/od/fixtheproblem/f/chdefprogram.htm)
 

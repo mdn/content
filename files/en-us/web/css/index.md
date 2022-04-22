@@ -85,7 +85,7 @@ The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring tog
 ## Tools for CSS development
 
 - You can use the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check if your CSS is valid. This is an invaluable debugging tool.
-- [Firefox Developer Tools](/en-US/docs/Tools) lets you view and edit a page's live CSS via the [Inspector](/en-US/docs/Tools/Page_Inspector) and [Style Editor](/en-US/docs/Tools/Style_Editor) tools.
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) lets you view and edit a page's live CSS via the [Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) and [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) tools.
 - The [Web Developer extension](https://addons.mozilla.org/en-US/firefox/addon/web-developer/) for Firefox lets you track and edit live CSS on watched sites.
 
 ## Meta bugs

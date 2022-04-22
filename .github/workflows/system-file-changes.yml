@@ -22,7 +22,7 @@ jobs:
         run: |
           # It would be nice if we could disable this workflow if the PR
           # was made from a branch within the origin repo. But it seems you
-          # can'd do that :(
+          # can't do that :(
           # See https://github.community/t/how-do-you-figure-out-if-a-pr-is-from-a-work-in-pull-request-target-workflows/170001
 
           echo "If you're an admin, you have to use your admin privileges to override."

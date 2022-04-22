@@ -121,7 +121,7 @@ You could also give each side different {{cssxref("flex-grow")}} factors, for ex
 
 ### Flipping the media object
 
-To switch the display of the media object so that the image is on the right and the content is on the left we can use the `flex-direction` property set to `row-reverse`. The media object now displays the other way around. I have achieved this in the live example by adding a class of `flipped` alongside the existing `.media` class. This means you can see how the display changes by removing that class from the html.
+To switch the display of the media object so that the image is on the right and the content is on the left we can use the `flex-direction` property set to `row-reverse`. The media object now displays the other way around. I have achieved this in the live example by adding a class of `flipped` alongside the existing `.media` class. This means you can see how the display changes by removing that class from the HTML.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/media-flipped.html", '100%', 650)}}
 

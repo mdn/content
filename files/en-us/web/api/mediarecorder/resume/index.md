@@ -31,7 +31,7 @@ the following steps:
 ## Syntax
 
 ```js
-MediaRecorder.resume()
+resume()
 ```
 
 ### Errors
@@ -42,7 +42,7 @@ is "inactive" — the recording cannot be resumed if it is not already paused; i
 {{domxref("MediaRecorder.state")}} is already "recording", `resume()` has no
 effect.
 
-## Example
+## Examples
 
 ```js
 ...

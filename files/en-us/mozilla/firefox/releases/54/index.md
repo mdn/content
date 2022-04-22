@@ -35,7 +35,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 - `\b` and `\B` in {{jsxref("RegExp")}} with the `"u"` (Unicode) and `"i"` (case insensitive) flags now treat U+017F (LATIN SMALL LETTER LONG S) and U+212A (KELVIN SIGN) as word characters ({{bug(1338373)}}).
 - The {{jsxref("DataView")}} constructor now throws a {{jsxref("RangeError")}} if the `byteOffset` parameter is out of {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) ({{bug(1317382)}}).
 - The {{jsxref("Date.UTC()")}} method has been updated to conform to ECMAScript 2017 when fewer than two arguments are provided ({{bug(1050755)}}).
-- The {{jsxref("Function.prototype.toString()")}} method has been updated to match the latest [proposed specification](https://tc39.github.io/Function-prototype-toString-revision/) ({{bug(1317400)}}).
+- The {{jsxref("Function.prototype.toString()")}} method has been updated to match the latest [proposed specification](https://tc39.es/Function-prototype-toString-revision/) ({{bug(1317400)}}).
 
 ### DOM & HTML DOM
 

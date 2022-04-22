@@ -16,7 +16,8 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
-This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding a session-based visit-counter to the home page. This is a relatively simple example, but it does show how you can use the session framework to provide persistent behavior for anonymous users in your own sites.
+This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding a session-based visit-counter to the home page.
+This is a relatively simple example, but it does show how you can use the session framework to provide persistent behavior for anonymous users in your own sites.
 
 <table>
   <tbody>
@@ -40,7 +41,8 @@ This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tu
 
 The [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website we created in the previous tutorials allows users to browse books and authors in the catalog. While the content is dynamically generated from the database, every user will essentially have access to the same pages and types of information when they use the site.
 
-In a "real" library you may wish to provide individual users with a customized experience, based on their previous use of the site, preferences, etc. For example, you could hide warning messages that the user has previously acknowledged next time they visit the site, or store and respect their preferences (e.g. the number of search results that they want to be displayed on each page).
+In a "real" library you may wish to provide individual users with a customized experience, based on their previous use of the site, preferences, etc.
+For example, you could hide warning messages that the user has previously acknowledged next time they visit the site, or store and respect their preferences (such as, the number of search results that they want to be displayed on each page).
 
 The session framework lets you implement this sort of behavior, allowing you to store and retrieve arbitrary data on a per-site-visitor basis.
 
@@ -72,7 +74,8 @@ MIDDLEWARE = [
 
 ## Using sessions
 
-You can access the `session` attribute in the view from the `request` parameter (an `HttpRequest` passed in as the first argument to the view). This session attribute represents the specific connection to the current user (or to be more precise, the connection to the current _browser_, as identified by the session id in the browser's cookie for this site).
+You can access the `session` attribute within a view from the `request` parameter (an `HttpRequest` passed in as the first argument to the view).
+This session attribute represents the specific connection to the current user (or to be more precise, the connection to the current _browser_, as identified by the session id in the browser's cookie for this site).
 
 The `session` attribute is a dictionary-like object that you can read and write as many times as you like in your view, modifying it as wished. You can do all the normal dictionary operations, including clearing all data, testing if a key is present, looping through data, etc. Most of the time though, you'll just use the standard "dictionary" API to get and set values.
 
@@ -94,7 +97,7 @@ request.session['my_car'] = 'mini'
 del request.session['my_car']
 ```
 
-The API also offers a number of other methods that are mostly used to manage the associated session cookie. For example, there are methods to test that cookies are supported in the client browser, to set and check cookie expiry dates, and to clear expired sessions from the data store. You can find out about the full API in [How to use sessions](https://docs.djangoproject.com/en/3.1/topics/http/sessions/) (Django docs).
+The API also offers a number of other methods that are mostly used to manage the associated session cookie. For example, there are methods to test that cookies are supported in the client browser, to set and check cookie expiry dates, and to clear expired sessions from the data store. You can find out about the full API in [How to use sessions](https://docs.djangoproject.com/en/4.0/topics/http/sessions/) (Django docs).
 
 ## Saving session data
 
@@ -147,7 +150,7 @@ def index(request):
 
 Here we first get the value of the `'num_visits'` session key, setting the value to 0 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The `num_visits` variable is then passed to the template in our context variable.
 
-> **Note:** We might also test whether cookies are even supported in the browser here (see [How to use sessions](https://docs.djangoproject.com/en/3.1/topics/http/sessions/) for examples) or design our UI so that it doesn't matter whether or not cookies are supported.
+> **Note:** We might also test whether cookies are even supported in the browser here (see [How to use sessions](https://docs.djangoproject.com/en/4.0/topics/http/sessions/) for examples) or design our UI so that it doesn't matter whether or not cookies are supported.
 
 Add the line shown at the bottom of the following block to your main HTML template (**/locallibrary/catalog/templates/index.html**) at the bottom of the "Dynamic content" section to display the `num_visits` context variable.
 
@@ -165,7 +168,7 @@ Add the line shown at the bottom of the following block to your main HTML templa
 <p>You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.</p>
 ```
 
-Note that we use the Django built-in template tag [pluralize](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#pluralize) to add an "s" when the page has been visited multiple time**s**.
+Note that we use the Django built-in template tag [pluralize](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#pluralize) to add an "s" when the page has been visited multiple time**s**.
 
 Save your changes and restart the test server. Every time you refresh the page, the number should update.
 
@@ -177,7 +180,7 @@ In our next articles we'll explain the authentication and authorization (permiss
 
 ## See also
 
-- [How to use sessions](https://docs.djangoproject.com/en/3.1/topics/http/sessions/) (Django docs)
+- [How to use sessions](https://docs.djangoproject.com/en/4.0/topics/http/sessions/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
 

@@ -10,7 +10,7 @@ tags:
   - cascade
 browser-compat: css.at-rules.layer
 ---
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) declares a _cascade layer_. Rules within a cascade layer cascade together, giving more control over the cascade to web developers.
 

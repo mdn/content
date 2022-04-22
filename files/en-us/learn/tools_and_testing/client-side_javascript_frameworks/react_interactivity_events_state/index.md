@@ -140,7 +140,7 @@ For one thing, props come from the parent of a component. Our `<Form />` will no
 
 React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
 
-To use a React hook, we need to import it from the react module. In `Form.js`, change your very first line so that it reads like this:
+To use a React hook, we need to import it from the React module. In `Form.js`, change your very first line so that it reads like this:
 
 ```js
 import React, { useState } from "react";

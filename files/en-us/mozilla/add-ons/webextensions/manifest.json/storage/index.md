@@ -64,4 +64,4 @@ The `storage` key is an object that has the following required property:
 
 > **Note:**
 >
-> This page includes details from the Chrome developer website page [Manifest for storage areas](https://developer.chrome.com/apps/manifest/storage) included here under the Creative Commons Attribution 3.0 United States License.
+> This page includes details from the Chrome developer website page [Manifest for storage areas](https://developer.chrome.com/docs/extensions/mv2/manifest/storage/) included here under the Creative Commons Attribution 3.0 United States License.

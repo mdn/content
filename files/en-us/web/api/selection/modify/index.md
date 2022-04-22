@@ -20,7 +20,7 @@ current selection or cursor position, using simple textual commands.
 ## Syntax
 
 ```js
-sel.modify(alter, direction, granularity)
+modify(alter, direction, granularity)
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ sel.modify(alter, direction, granularity)
 > behavior. This makes the behavior more consistent, as well as making it work the same
 > way WebKit used to work, but unfortunately they have recently changed their behavior.
 
-## Example
+## Examples
 
 This example demonstrates the various `granularity` options for modifying a
 selection. Click somewhere inside the example (optionally selecting some text), and then

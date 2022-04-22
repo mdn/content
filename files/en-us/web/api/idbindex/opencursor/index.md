@@ -29,9 +29,9 @@ If the key range is not specified or is null, then the range includes all the re
 ## Syntax
 
 ```js
-var request = myIndex.openCursor();
-var request = myIndex.openCursor(range);
-var request = myIndex.openCursor(range, direction);
+openCursor()
+openCursor(range)
+openCursor(range, direction)
 ```
 
 ### Parameters
@@ -62,7 +62,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on
@@ -73,7 +73,7 @@ except that the returned records are sorted based on the index, not the primary 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
 complete working example, see our [IndexedDB-examples
 demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex).)
+example live](https://mdn.github.io/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {

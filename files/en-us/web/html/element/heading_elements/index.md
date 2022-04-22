@@ -92,7 +92,7 @@ These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_
 Using more than one `<h1>` is allowed by the HTML specification, but is not considered a best practice. Using only one `<h1>` is beneficial for screenreader users.
 
 The HTML specification includes the concept of an _outline_ formed by the use of {{htmlelement("section")}} elements.
-If this were implemented it would enable the use of multiple `<h1>` elements, giving user agents—including screen readers—a way to understand that an \<h1> nested inside a defined section is a subheading. This functionality has never been implemented; therefore it is important to use your headings to describe the outline of your document.
+If this were implemented it would enable the use of multiple `<h1>` elements, giving user agents—including screen readers—a way to understand that an `<h1>` nested inside a defined section is a subheading. This functionality has never been implemented; therefore it is important to use your headings to describe the outline of your document.
 
 The following articles give more information about the status of outlines:
 
@@ -146,7 +146,7 @@ Here is the result of this code:
 
 ### Navigation
 
-A common navigation technique for users of screen reading software is jumping from heading to heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
+A common navigation technique for users of screen reading software is jumping from heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
 
 #### Don't
 

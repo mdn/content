@@ -39,7 +39,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/json/json1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/json/json1-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

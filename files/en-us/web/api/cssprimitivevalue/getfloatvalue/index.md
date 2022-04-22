@@ -27,7 +27,7 @@ specified unit, a {{domxref("DOMException")}} is raised.
 ## Syntax
 
 ```js
-var floatValue = cssPrimitiveValue.getFloatValue(unit);
+getFloatValue(unit)
 ```
 
 ### Parameters
@@ -83,7 +83,7 @@ A `float` value in the specified unit.
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 var cs = window.getComputedStyle(document.body);

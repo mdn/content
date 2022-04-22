@@ -43,6 +43,9 @@ This article provides information about the changes in Firefox 100 that will aff
 
 #### DOM
 
+- Code can now use the static method [`AbortSignal.timeout()`](/en-US/docs/Web/API/AbortSignal/timeout).
+  This returns an {{domxref("AbortSignal")}} that can be used to automatically abort an operation with `TimeoutError` after a specified time ({{bug(1753309)}}).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals

@@ -25,7 +25,7 @@ of media.
 ## Syntax
 
 ```js
-mediaCapabilities.encodingInfo(mediaEncodingConfiguration)
+encodingInfo(mediaEncodingConfiguration)
 ```
 
 ### Parameters
@@ -54,7 +54,7 @@ audio, the `contentType` is not a valid codec MIME type, or any other error
 in the media configuration passed to the method, including omitting any of the [media encoding configuration](/en-US/docs/Web/API/MediaEncodingConfiguration)
 elements.
 
-## Example
+## Examples
 
 ```js
 //Create media configuration to be tested

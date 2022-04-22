@@ -1,0 +1,28 @@
+name: JSON lint
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '*.json'
+      - .github/workflows/json-lint.yml
+
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.1.0
+        with:
+          node-version: "12"
+          cache: yarn
+
+      - name: Lint markdown files
+        run: |
+          npm install --no-save eslint eslint-plugin-json
+          npx eslint . --ext .json

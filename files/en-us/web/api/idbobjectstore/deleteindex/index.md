@@ -27,7 +27,7 @@ mode callback. Note that this method synchronously modifies the
 ## Syntax
 
 ```js
-objectStore.deleteIndex(indexName);
+deleteIndex(indexName)
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ None.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if there is no index with the given name (case-sensitive) in the database.
 
-## Example
+## Examples
 
 In the following example you can see
 the {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler being used to update the

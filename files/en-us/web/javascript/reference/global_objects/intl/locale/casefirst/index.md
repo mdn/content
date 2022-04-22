@@ -61,4 +61,4 @@ console.log(locale.caseFirst); // Prints "lower"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [Unicode case first collation spec](https://github.com/unicode-org/cldr/blob/master/common/bcp47/collation.xml#L49)
+- [Unicode case first collation spec](https://github.com/unicode-org/cldr/blob/main/common/bcp47/collation.xml#L49)

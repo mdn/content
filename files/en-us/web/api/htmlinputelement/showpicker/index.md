@@ -34,10 +34,10 @@ can also be prepopulated with items from a {{htmlelement("datalist")}} element o
 ## Syntax
 
 ```js
-element.showPicker();
+showPicker()
 ```
 
-## Example
+## Examples
 
 Click the button in this example to show a color picker.
 

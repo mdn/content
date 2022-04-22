@@ -30,7 +30,7 @@ The structure roles with HTML equivalents are listed below:
 | ---------- | ------------   |
 | **`associationlist`** <br> Contains only `associationlistitemkey` children and their sibling `associationlistitemvalue`. | {{HTMLElement('dl')}} |
 | **`associationlistitemkey`** <br/> Must be contained in an `associationlist`. | {{HTMLElement('dt')}} |
-| **`associationlistitemvalue`** <br/> Always a sibling following an `associationlistitem`. | {{HTMLElement('dd')}} |
+| **`associationlistitemvalue`** <br/> Always a sibling following an `associationlistitemkey`. | {{HTMLElement('dd')}} |
 | **`blockquote`** <br/> A section of content that is quoted from another source.| {{HTMLElement('blockquote')}} |
 | **`caption`** <br>Visible content that names, and may also describe, a `figure`, `table`, `grid`, or `treegrid`.<br/> Only found in those 4 roles. A caption's `id` is generally referenced by a `figure`, `grid`, `table`, or `treegrid`'s `aria-labelledby` attribute.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`.   | {{HTMLElement('caption')}} <br/> {{HTMLElement('figcaption')}} |
 | **`code`** <br/> A section representing a fragment of computer code. <br/> Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('code')}} |

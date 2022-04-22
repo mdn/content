@@ -20,7 +20,7 @@ The **`MediaCapabilities.decodingInfo()`** method, part of the [Media Capabiliti
 ## Syntax
 
 ```js
-mediaCapabilities.decodingInfo(MediaDecodingConfiguration)
+decodingInfo(MediaDecodingConfiguration)
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ Browsers will report a supported media configuration as `smooth` and `powerEffic
 
 A `TypeError` is raised if the `MediaConfiguration` passed to the `decodingInfo()` method is invalid, either because the type is not video or audio, the `contentType` is not a valid codec MIME type, the media decoding configuration is not a valid value for the [media decoding type](/en-US/docs/Web/API/MediaDecodingType), or any other error in the media configuration passed to the method, including omitting values required in the [media decoding configuration](/en-US/docs/Web/API/MediaDecodingConfiguration).
 
-## Example
+## Examples
 
 ```js
 //Create media configuration to be tested

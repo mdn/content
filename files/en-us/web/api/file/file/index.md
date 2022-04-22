@@ -40,7 +40,7 @@ new File(bits, name, options);
       between the Unix time epoch and when the file was last modified. Defaults to a
       value of {{jsxref("Date.now()")}}.
 
-## Example
+## Examples
 
 ```js
 var file = new File(["foo"], "foo.txt", {

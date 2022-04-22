@@ -17,14 +17,14 @@ present and adding it if it is not present) on the given element.
 ## Syntax
 
 ```js
-toggleAttribute(name);
-toggleAttribute(name, force);
+toggleAttribute(name)
+toggleAttribute(name, force)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString")}} specifying the name of the attribute to be toggled. The
+  - : A string specifying the name of the attribute to be toggled. The
     attribute name is automatically converted to all lower-case when
     `toggleAttribute()` is called on an HTML element in an HTML document.
 - `force` {{optional_inline}}
@@ -44,7 +44,7 @@ present, and `false` otherwise.
   - : The specified attribute `name` contains one or more characters which
     are not valid in attribute names.
 
-## Example
+## Examples
 
 In the following example, `toggleAttribute()` is used to toggle the
 `disabled` attribute of an {{HTMLElement("input")}}.

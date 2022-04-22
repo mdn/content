@@ -25,14 +25,14 @@ an animation event created using the deprecated {{domxref("Document.createEvent(
 ## Syntax
 
 ```js
-Progress.initProgressEvent(typeArg, canBubbleArg, cancelableArg, lengthComputable, loaded, total);
+initProgressEvent(typeArg, canBubbleArg, cancelableArg, lengthComputable, loaded, total)
 ```
 
 ### Parameters
 
 - _typeArg_
 
-  - : Is a {{domxref("DOMString")}} identifying the specific type of animation event that
+  - : Is a string identifying the specific type of animation event that
     occurred. The following values are allowed:
 
     | Value       | Meaning                                          |

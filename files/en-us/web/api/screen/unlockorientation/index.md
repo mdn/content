@@ -24,7 +24,7 @@ method should be used instead.
 ## Syntax
 
 ```js
-var unlocked = window.screen.unlockOrientation();
+unlockOrientation()
 ```
 
 ### Return value
@@ -32,7 +32,7 @@ var unlocked = window.screen.unlockOrientation();
 Returns `true` if the orientation was successfully unlocked or
 `false` if the orientation couldn't be unlocked.
 
-## Example
+## Examples
 
 ```js
 var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);

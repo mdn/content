@@ -21,10 +21,10 @@ recognition service from listening to incoming audio, and attempts to return a
 ## Syntax
 
 ```js
-stop();
+stop()
 ```
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 

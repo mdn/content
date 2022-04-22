@@ -20,7 +20,7 @@ pointer capture for the pointer identified by the given pointer ID.
 ## Syntax
 
 ```js
-targetElement.hasPointerCapture(pointerId);
+hasPointerCapture(pointerId)
 ```
 
 ### Parameters

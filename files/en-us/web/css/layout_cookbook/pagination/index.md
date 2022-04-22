@@ -27,7 +27,7 @@ Typically, the pagination component will be centered horizontally underneath the
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/pagination--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/pagination--download.html)
 
 ## Choices made
 

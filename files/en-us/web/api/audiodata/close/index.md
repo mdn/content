@@ -16,14 +16,14 @@ The **`close()`** method of the {{domxref("AudioData")}} interface clears all st
 ## Syntax
 
 ```js
-AudioData.close()
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 Undefined.
 

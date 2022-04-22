@@ -39,6 +39,6 @@ A {{DOMxRef("BatteryManager")}}.
 - {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}}
 - [Battery Status API](/en-US/docs/Web/API/Battery_Status_API)
 - [Blog
-  post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+  post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
 - [David Walsh on the
   JavaScript Battery API](http://davidwalsh.name/battery-api)

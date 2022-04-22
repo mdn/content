@@ -31,7 +31,7 @@ In browsers that don't support `month` inputs, the control degrades gracefully t
 For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
 Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.
 
-![Month control on chrome browser](month-control-chrome.png)
+![Month control on Chrome browser](month-control-chrome.png)
 
 The Microsoft Edge `month` control looks like this:
 

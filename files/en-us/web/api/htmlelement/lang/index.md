@@ -32,7 +32,7 @@ A string.
 
 ```js
 // this snippet compares the base language and
-// redirects to another url based on language
+// redirects to another URL based on language
 if (document.documentElement.lang === "en") {
   window.location.href = "Some_document.html.en";
 } else if (document.documentElement.lang === "ru") {

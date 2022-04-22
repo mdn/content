@@ -55,7 +55,7 @@ You can [read more about component stylesheets in the create-react-app docs](htt
 
 ## React DevTools
 
-We used `console.log()` to check on the state and props of our application in this tutorial, and you'll also have seen some of the useful warnings and error message that react gives you both in the CLI and your browser's JavaScript console. But there's more we can do here.
+We used `console.log()` to check on the state and props of our application in this tutorial, and you'll also have seen some of the useful warnings and error message that React gives you both in the CLI and your browser's JavaScript console. But there's more we can do here.
 
 The React DevTools utility allows you to inspect the internals of your React application directly in the browser.  It adds a new panel to your browser's developer tools, and with it you can inspect the state and props of various components, and even edit state and props to make immediate changes to your application.
 
@@ -69,7 +69,7 @@ React DevTools is available in a number of forms:
 
 - A [Chrome browser extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 - A [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
-- A Chromium Edge browser extension (available soon).
+- A [Microsoft Edge browser extension](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil).
 - A [stand-alone application you can install with NPM or Yarn](https://www.npmjs.com/package/react-devtools).
 
 Try installing one of these, then using it to inspect the app you've just built!

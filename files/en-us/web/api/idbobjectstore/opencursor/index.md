@@ -27,9 +27,9 @@ To determine if the add operation has completed successfully, listen for the res
 ## Syntax
 
 ```js
-var request = ObjectStore.openCursor();
-var request = ObjectStore.openCursor(query);
-var request = ObjectStore.openCursor(query, direction);
+openCursor()
+openCursor(query)
+openCursor(query, direction)
 ```
 
 ### Parameters
@@ -59,7 +59,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the specified key or key range is invalid.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store:

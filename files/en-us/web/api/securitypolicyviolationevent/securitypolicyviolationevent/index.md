@@ -84,7 +84,7 @@ new SecurityPolicyViolationEvent(type, init);
 
 A `SecurityPolicyViolationEvent` object instance.
 
-## Example
+## Examples
 
 ```js
 let SPVEvt = new SecurityPolicyViolationEvent('foo', {

@@ -16,7 +16,7 @@ The **`clear()`** method of the {{domxref("MIDIOutput")}} interface clears the q
 ## Syntax
 
 ```js
-MIDIOutput.clear();
+clear()
 ```
 
 ### Parameters

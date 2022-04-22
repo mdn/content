@@ -41,7 +41,7 @@ effect.
 ## Syntax
 
 ```js
-aPromise = rtcPeerConnection.setRemoteDescription(sessionDescription);
+setRemoteDescription(sessionDescription)
 ```
 
 ### Parameters
@@ -198,7 +198,7 @@ When using the deprecated callback-based version of
   - : The {{domxref("RTCSessionDescription")}} specified by the
     `sessionDescription` parameter is invalid.
 
-## Example
+## Examples
 
 Here we see a function which handles an offer received from the remote peer. This code
 is derived from the example and tutorial in the article [Signaling and

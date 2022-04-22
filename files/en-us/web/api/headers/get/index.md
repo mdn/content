@@ -25,7 +25,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 ## Syntax
 
 ```js
-myHeaders.get(name);
+get(name)
 ```
 
 ### Parameters
@@ -35,12 +35,12 @@ myHeaders.get(name);
     `Headers` object. If the given name is not the name of an HTTP header, this
     method throws a {{jsxref("TypeError")}}. The name is case-insensitive.
 
-### Returns
+### Return value
 
 A {{jsxref("String")}} sequence representing the values of the retrieved header or
 `null` if this header is not set.
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 

@@ -28,7 +28,7 @@ Modification to the corresponding style property can be achieved using the
 ## Syntax
 
 ```js
-var rgbColorValue = cssPrimitiveValue.getRGBColorValue();
+getRGBColorValue()
 ```
 
 ### Return value
@@ -41,7 +41,7 @@ An {{domxref("RGBColor")}} object representing the color value.
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `DOMException` | An `INVALID_ACCESS_ERR` is raised if the attached property can't return an RGB color value (i.e. this is not `CSS_RGBCOLOR`). |
 
-## Example
+## Examples
 
 ```js
 var cs = window.getComputedStyle(document.body);

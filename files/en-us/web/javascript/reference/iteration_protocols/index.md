@@ -295,9 +295,9 @@ function idMaker() {
 
 const it = idMaker();
 
-console.log(it.next().value); // '0'
-console.log(it.next().value); // '1'
-console.log(it.next().value); // '2'
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
+console.log(it.next().value); // 2
 // ...
 ```
 
@@ -326,9 +326,9 @@ function* idMaker() {
 
 const it = idMaker()
 
-console.log(it.next().value); // '0'
-console.log(it.next().value); // '1'
-console.log(it.next().value); // '2'
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
+console.log(it.next().value); // 2
 // ...
 ```
 
@@ -361,7 +361,7 @@ class SimpleClass {
 const simple = new SimpleClass([1,2,3,4,5]);
 
 for (const val of simple) {
-  console.log(val); // '1' '2' '3' '4' '5'
+  console.log(val); // 1 2 3 4 5
 }
 ```
 

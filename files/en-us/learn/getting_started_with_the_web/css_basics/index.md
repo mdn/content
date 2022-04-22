@@ -36,7 +36,7 @@ To make the code work, we still need to apply this CSS (above) to your HTML docu
 
 2. Save `index.html` and load it in your browser. You should see something like this:
 
-![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)If your paragraph text is red, congratulations! Your CSS is working.
+![A Mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)If your paragraph text is red, congratulations! Your CSS is working.
 
 ### Anatomy of a CSS ruleset
 
@@ -188,7 +188,7 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 
 Adjust the `px` values as you like. Your work-in-progress should look similar to this:
 
-![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
+![a Mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
 
 ## CSS: all about boxes
 
@@ -293,7 +293,7 @@ The {{htmlelement("body")}} is a **block** element, meaning it takes up space on
 
 If you followed all the instructions in this article, you should have a page that looks similar to this one:
 
-![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
+![a Mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 (You can [view our version here](https://mdn.github.io/beginner-html-site-styled/).) If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 

@@ -23,7 +23,8 @@ The **`cancel()`** method of the
 ## Syntax
 
 ```js
-var promise = readableStreamBYOBReader.cancel(reason);
+cancel()
+cancel(reason)
 ```
 
 ### Parameters

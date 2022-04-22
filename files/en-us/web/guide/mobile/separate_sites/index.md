@@ -41,4 +41,4 @@ See the following articles for background and other approaches to developing for
 
 ## Original document information
 
-This article was originally published on 13 May 2011, on the Mozilla Webdev blog as "[Approaches to Mobile Web Development Part 2 – Separate Sites](http://blog.mozilla.com/webdev/2011/05/13/approaches-to-mobile-web-development-part-2-separate-sites/)", by Jason Grlicky.
+This article was originally published on 13 May 2011, on the Mozilla Webdev blog as "[Approaches to Mobile Web Development Part 2 – Separate Sites](https://blog.mozilla.org/webdev/2011/05/13/approaches-to-mobile-web-development-part-2-separate-sites/)", by Jason Grlicky.

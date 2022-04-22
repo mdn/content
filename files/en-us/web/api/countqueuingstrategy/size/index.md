@@ -20,7 +20,7 @@ total queue size is a count of the number of chunks in the queue.
 ## Syntax
 
 ```js
-var size = countQueuingStrategy.size();
+size()
 ```
 
 ### Parameters

@@ -54,7 +54,7 @@ void gl.texStorage2D(target, levels, internalformat, width, height);
     - `gl.RGB32F`
     - `gl.RGB8UI`
     - `gl.RGBA8`
-    - `gl.SRGB8_APLHA8`
+    - `gl.SRGB8_ALPHA8`
     - `gl.RGB5_A1`
     - `gl.RGBA4`
     - `gl.RGBA16F`

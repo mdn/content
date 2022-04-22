@@ -21,14 +21,14 @@ contained in this object. The both the key and value of each pairs are
 ## Syntax
 
 ```js
-headers.entries();
+entries()
 ```
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test Headers object

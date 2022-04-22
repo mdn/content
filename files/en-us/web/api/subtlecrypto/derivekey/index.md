@@ -26,13 +26,7 @@ different characteristics and are appropriate in quite different situations. See
 ## Syntax
 
 ```js
-const result = crypto.subtle.deriveKey(
-    algorithm,
-    baseKey,
-    derivedKeyAlgorithm,
-    extractable,
-    keyUsages
-);
+deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 ```
 
 ### Parameters
@@ -64,7 +58,7 @@ const result = crypto.subtle.deriveKey(
     object.
 
 - `extractable` is a boolean value indicating whether it
-  will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
+  will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
   {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`  is an {{jsxref("Array")}} indicating what can be
   done with the derived key. Note that the key usages must be allowed by the algorithm
@@ -89,7 +83,7 @@ const result = crypto.subtle.deriveKey(
 
 ### Return value
 
-- `result` is a {{jsxref("Promise")}} that fulfills with a
+A {{jsxref("Promise")}} that fulfills with a
   {{domxref("CryptoKey")}}.
 
 ### Exceptions
@@ -116,7 +110,7 @@ characteristics and are appropriate in different situations.
 
 ECDH (Elliptic Curve Diffie-Hellman) is a _key-agreement algorithm_. It enables
 two people who each have an ECDH public/private key pair to generate a shared secret:
-that is, a secret that they — and noone else — share. They can then use this shared
+that is, a secret that they — and no one else — share. They can then use this shared
 secret as a symmetric key to secure their communication, or can use the secret as an
 input to derive such a key (for example, using the HKDF algorithm).
 

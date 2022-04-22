@@ -19,13 +19,13 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ## Syntax
 
 ```js
-HTMLMediaElement.msInsertAudioEffect(activatableClassId: {{DOMxRef("DOMString")}}, effectRequired: {{JSxRef("Boolean", "boolean")}}, config);
+msInsertAudioEffect(activatableClassId, effectRequired, config)
 ```
 
 ### Parameters
 
 - activatableClassId
-  - : A {{DOMxRef("DOMString")}} defining the audio effects class.
+  - : A string defining the audio effects class.
 - effectRequired
   - : A {{JSxRef("Boolean")}} which if set to _true_ requires an audio effect to be
     defined.

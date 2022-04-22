@@ -115,7 +115,7 @@ p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // still "P";
 ```
 
-The returned value will contain html escaped attributes:
+The returned value will contain HTML escaped attributes:
 
 ```js
 var anc = document.createElement("a");

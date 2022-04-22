@@ -18,10 +18,10 @@ The **`HTMLTableElement.deleteTFoot()`** method removes the
 ## Syntax
 
 ```js
-HTMLTableElement.deleteTFoot();
+deleteTFoot()
 ```
 
-## Example
+## Examples
 
 This example uses JavaScript to delete a table's footer.
 

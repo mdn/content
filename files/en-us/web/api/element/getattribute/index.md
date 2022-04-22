@@ -21,7 +21,7 @@ either be `null` or `""` (the empty string); see [Non-existing attributes](#non-
 ## Syntax
 
 ```js
-let attribute = element.getAttribute(attributeName);
+getAttribute(attributeName)
 ```
 
 where
@@ -34,7 +34,7 @@ where
 ## Examples
 
 ```js
-<!-- example div in an html DOC -->
+<!-- example div in an HTML DOC -->
 <div id="div1">Hi Champ!</div>
 
 // in a console

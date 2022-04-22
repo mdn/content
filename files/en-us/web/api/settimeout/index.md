@@ -40,9 +40,12 @@ var timeoutID = setTimeout(code[, delay]);
 - `delay` {{optional_inline}}
   - : The time, in milliseconds that the timer should wait before
     the specified function or code is executed. If this parameter is omitted, a value of 0
-    is used, meaning execute "immediately", or more accurately, the next event cycle. Note
-    that in either case, the actual delay may be longer than intended; see
-    [Reasons for delays longer than specified](#reasons_for_delays_longer_than_specified) below.
+    is used, meaning execute "immediately", or more accurately, the next event cycle.
+
+    Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](#reasons_for_delays_longer_than_specified) below.
+
+    Also note that if the value isn’t a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
+
 - `arg1, ..., argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by
     `function`.
@@ -65,6 +68,32 @@ Timeouts are cancelled using
 
 To call a function repeatedly (e.g., every _N_ milliseconds), consider using
 {{domxref("setInterval()")}}.
+
+### Non-number delay values are silently coerced into numbers
+
+If `setTimeout()` is called with [_delay_](#delay) value that’s not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
+
+```js example-bad
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, "1000")
+```
+
+But in many cases, the implicit type coercion can lead to unexpected and surprising results. For example, when the following code runs, the string `"1 second"` ultimately gets coerced into the number `0` — and so, the code executes immediately, with zero delay.
+
+```js example-bad
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, "1 second")
+```
+
+Therefore, don’t use strings for the _delay_ value but instead always use numbers:
+
+```js example-good
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, 1000)
+```
 
 ### Working with asynchronous functions
 
@@ -341,7 +370,7 @@ timeout by pressing on the second button.
 #### HTML
 
 ```html
-<button onclick="delayedMessage();">Show an message after two seconds</button>
+<button onclick="delayedMessage();">Show a message after two seconds</button>
 <button onclick="clearMessage();">Cancel message before it happens</button>
 
 <div id="output"></div>

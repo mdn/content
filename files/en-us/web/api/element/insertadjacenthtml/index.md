@@ -19,7 +19,7 @@ the resulting nodes into the DOM tree at a specified position.
 ## Syntax
 
 ```js
-element.insertAdjacentHTML(position, text);
+insertAdjacentHTML(position, text)
 ```
 
 ### Parameters

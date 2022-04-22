@@ -18,12 +18,16 @@ Returns the time offset at which a specified time range ends.
 ## Syntax
 
 ```js
-endTime = TimeRanges.end(index)
+end(index)
 ```
 
 ### Parameters
 
 - `index` is the range number to return the ending time for.
+
+### Return value
+
+A number.
 
 ### Exceptions
 
@@ -31,7 +35,7 @@ endTime = TimeRanges.end(index)
   - : A `DOMException` thrown if the specified index doesn't correspond to an
     existing range.
 
-## Example
+## Examples
 
 Given a video element with the ID "myVideo":
 

@@ -13,4 +13,4 @@ With modern browsers supporting [XSLT](/en-US/docs/Web/API/XSLTProcessor), devel
 
 XSLT allows the author to directly manipulate the structure of a document. For example, it permits the rearranging and sorting of elements; it also provides more fine-grained control of the resulting document's structure.
 
-As of [Mozilla 1.2](https://mozilla.org/releases/), Gecko enables JavaScript to create XSLT processors. This article covers XSLT/JavaScript bindings in Gecko. They are not available in Netscape 7.0x however are available in Netscape 7.1.
+As of [Mozilla 1.2](https://www.mozilla.org/en-US/firefox/), Gecko enables JavaScript to create XSLT processors. This article covers XSLT/JavaScript bindings in Gecko. They are not available in Netscape 7.0x however are available in Netscape 7.1.

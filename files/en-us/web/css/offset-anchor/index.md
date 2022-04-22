@@ -13,7 +13,7 @@ browser-compat: css.properties.offset-anchor
 ---
 {{CSSRef}}
 
-The **`offset-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the point inside the box of an element travelling along an {{cssxref("offset-path")}} that is actually moving along the path.
+The **`offset-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the point inside the box of an element traveling along an {{cssxref("offset-path")}} that is actually moving along the path.
 
 {{EmbedInteractiveExample("pages/css/offset-anchor.html")}}
 

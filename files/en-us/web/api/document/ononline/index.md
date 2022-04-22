@@ -28,7 +28,7 @@ A boolean.
 
 ## Examples
 
-There's [a simple test case](https://bugzilla.mozilla.org/attachment.cgi?id=220609) that you can run to verify that the events are working.
+There's [a simple test case](https://bug336359.bmoattachments.org/attachment.cgi?id=220609) that you can run to verify that the events are working.
 
 ## References
 

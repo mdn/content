@@ -171,7 +171,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-We could start by responding with the resource whose url matches that of the network request, in each case:
+We could start by responding with the resource whose URL matches that of the network request, in each case:
 
 ```js
 self.addEventListener('fetch', (event) => {
@@ -265,7 +265,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-If the request url is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
+If the request URL is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
 
 Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
 
@@ -507,8 +507,8 @@ Chrome has `chrome://inspect/#service-workers`, which shows current service work
 
 Firefox has also started to implement some useful tools related to service workers:
 
-- You can navigate to [`about:debugging`](/en-US/docs/Tools/about:debugging) to see what SWs are registered and update/remove them.
-- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](/en-US/docs/Tools/Settings).
+- You can navigate to [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) to see what SWs are registered and update/remove them.
+- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
 - The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).
 
 > **Note:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
@@ -516,7 +516,7 @@ Firefox has also started to implement some useful tools related to service worke
 ## See also
 
 - [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
-- [The Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

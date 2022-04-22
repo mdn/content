@@ -210,7 +210,7 @@ Links are very important — they are what makes the web a web! To add a link, w
     <a href="">Mozilla Manifesto</a>
     ```
 
-4. Fill in the value of this attribute with the web address that you want the link to link to:
+4. Fill in the value of this attribute with the web address that you want the link to:
 
     ```html
     <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
@@ -226,7 +226,7 @@ Add a link to your page now, if you haven't already done so.
 
 If you have followed all the instructions in this article, you should end up with a page that looks like the one below (you can also [view it here](https://mdn.github.io/beginner-html-site/)):
 
-![A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text](finished-test-page-small.png)
+![A web page screenshot showing a Firefox logo, a heading saying Mozilla is cool, and two paragraphs of filler text](finished-test-page-small.png)
 
 If you get stuck, you can always compare your work with our [finished example code](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) on GitHub.
 

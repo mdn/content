@@ -22,7 +22,7 @@ the content outside it is rendered inert.
 ## Syntax
 
 ```js
-dialogInstance.showModal();
+showModal()
 ```
 
 ### Parameters

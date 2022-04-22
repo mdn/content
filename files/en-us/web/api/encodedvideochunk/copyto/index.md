@@ -16,7 +16,7 @@ The **`copyTo()`** method of the {{domxref("EncodedVideoChunk")}} interface copi
 ## Syntax
 
 ```js
-EncodedVideoChunk.copyTo(destination)
+copyTo(destination)
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ EncodedVideoChunk.copyTo(destination)
 - `destination`
   - : A {{domxref("BufferSource")}} that the data can be copied to.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 

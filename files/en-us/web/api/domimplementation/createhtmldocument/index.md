@@ -19,15 +19,16 @@ new HTML {{ domxref("Document") }}.
 ## Syntax
 
 ```js
-const newDoc = document.implementation.createHTMLDocument(title)
+createHTMLDocument()
+createHTMLDocument(title)
 ```
 
 ### Parameters
 
 - `title`  {{optional_inline}} (except in IE)
-  - : A {{domxref("DOMString")}} containing the title to give the new HTML document.
+  - : A string containing the title to give the new HTML document.
 
-## Example
+## Examples
 
 This example creates a new HTML document and inserts it into an {{
   HTMLElement("iframe") }} in the current document.

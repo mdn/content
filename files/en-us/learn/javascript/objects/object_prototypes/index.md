@@ -137,7 +137,7 @@ myDate.getYear = function() {
   console.log('something else!')
 };
 
-console.log(myDate.getYear()); // 'something else!'
+myDate.getYear(); // 'something else!'
 ```
 
 This should be predictable, given the description of the prototype chain. When we call `getYear()` the browser first looks in `myDate` for a property with that name, and only checks the prototype if `myDate` does not define it. So when we add `getYear()` to `myDate`, then the version in `myDate` is called.

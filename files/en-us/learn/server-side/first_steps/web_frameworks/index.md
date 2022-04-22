@@ -251,7 +251,7 @@ A lot of high profile companies use Express, including: Uber, Accenture, IBM, et
 
 ### Deno (JavaScript)
 
-[Deno](https://deno.land/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](/en-US/docs/Mozilla/Rust).
+[Deno](https://deno.land/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](https://www.rust-lang.org/).
 
 Deno is powered by [Tokio](https://tokio.rs/) — a Rust-based asynchronous runtime which lets it serve web pages faster. It also has internal support for [WebAssembly](/en-US/docs/WebAssembly), which enables the compilation of binary code for use on the client-side. Deno aims to fill in some of the loop-holes in [Node.js](/en-US/docs/Learn/Server-side/Node_server_without_framework) by providing a mechanism that naturally maintains better security.
 
