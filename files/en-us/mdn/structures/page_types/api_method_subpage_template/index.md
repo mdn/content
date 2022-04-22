@@ -111,7 +111,19 @@ If the method doesn't return anything, just put "{{jsxref('undefined')}}.".
 - Exception2
   - : etc.
 
-## Examples
+Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects and regular JavaScript exceptions, like {{jsxref("TypeError")}} and {{jsxref("RangeError")}}. A web developer needs to know:
+
+ - which object is thrown
+ - for exceptions that are `DOMException` objects, the `name` of the exception.
+ 
+Here is an example where a method can raise a `DOMException` with a name of `IndexSizeError`, a `DOMException` with a name of `SyntaxError` and a JavaScript exception of type `TypeError`:
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown …
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown …
+- {{jsxref("TypeError")}}
+  - : Thrown …  
 
 Fill in a simple example that nicely shows a typical usage of the method, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
 
