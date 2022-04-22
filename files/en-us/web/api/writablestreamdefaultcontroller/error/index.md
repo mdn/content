@@ -4,14 +4,13 @@ slug: Web/API/WritableStreamDefaultController/error
 tags:
   - API
   - Error
-  - Experimental
   - Method
   - Reference
   - Streams
   - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController.error
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 The **`error()`** method of the
 {{domxref("WritableStreamDefaultController")}} interface causes any future interactions
