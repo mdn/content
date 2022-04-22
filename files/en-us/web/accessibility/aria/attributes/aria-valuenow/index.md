@@ -130,7 +130,7 @@ Inherited into roles:
 ## See Also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
-- [`<input type="range>` element `value` attribute](en-US/docs/Web/HTML/Element/input/range#value) attribute
+- [`<input type="range>` element `value` attribute](en-US/docs/Web/HTML/Element/input/range#value)
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin).
