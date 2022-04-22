@@ -47,7 +47,7 @@ See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
 
 ## Properties
 
-_This interface inherits properties from the {{domxref("EventTarget")}} interface and implements properties from the `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
 Note that properties which are objects (e.g., for overriding the prototype of built-in elements) are listed in a separate section below.
 
@@ -307,7 +307,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 
 These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.
 
-_This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}._
+_This interface inherits event handlers from the {{domxref("EventTarget")}} interface._
 
 - {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
   - : An event handler property for user proximity events (see {{domxref("UserProximityEvent")}}).

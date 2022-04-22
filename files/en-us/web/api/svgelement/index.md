@@ -44,7 +44,7 @@ _This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAn
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("WindowEventHandlers")}}.
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}}.
 
 - [`abort`](/en-US/docs/Web/API/SVGElement/abort_event)
   - : Fired when page loading is stopped before an SVG element has been allowed to load completely.

@@ -18,7 +18,7 @@ The **`HTMLFrameSetElement`** interface provides special properties (beyond thos
 
 ## Properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFrameSetElement.cols")}} {{deprecated_inline}}
   - : Is a {{domxref("DOMString")}} structured as a comma-separated list specifying the width of each column inside a frameset.
@@ -27,7 +27,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domx
 
 ## Methods
 
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Event handlers
 

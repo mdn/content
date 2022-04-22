@@ -671,8 +671,7 @@
         "PromiseRejectionEvent",
         "RadioNodeList",
         "ValidityState",
-        "Window",
-        "WindowEventHandlers"
+        "Window"
       ],
       "methods": [],
       "properties": [],
