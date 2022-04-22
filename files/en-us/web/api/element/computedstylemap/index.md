@@ -23,7 +23,7 @@ an alternative to {{domxref("CSSStyleDeclaration")}}.
 ## Syntax
 
 ```js
-var stylePropertyMapReadOnly = element.computedStyleMap()
+computedStyleMap()
 ```
 
 ### Parameters

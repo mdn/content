@@ -20,7 +20,7 @@ collecting reports in its report queue.
 ## Syntax
 
 ```js
-reportingObserverInstance.observe()
+observe()
 ```
 
 ## Examples

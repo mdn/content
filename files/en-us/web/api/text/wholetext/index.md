@@ -19,7 +19,7 @@ This allows specifying any text node and obtaining all adjacent text as a single
 
 ## Value
 
-A {{jsxref("String")}} with the concatenated text.
+A string with the concatenated text.
 
 ## Example
 

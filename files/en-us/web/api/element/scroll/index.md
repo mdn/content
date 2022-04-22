@@ -18,8 +18,8 @@ element.
 ## Syntax
 
 ```js
-element.scroll(x-coord, y-coord)
-element.scroll(options)
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### Parameters

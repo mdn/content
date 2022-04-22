@@ -21,7 +21,7 @@ The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's s
 
 ## CSS Scrollbar Selectors
 
-You can use the following pseudo-elements to customize various parts of the scrollbar for webkit browsers:
+You can use the following pseudo-elements to customize various parts of the scrollbar for WebKit browsers:
 
 - `::-webkit-scrollbar` — the entire scrollbar.
 - `::-webkit-scrollbar-button` — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).

@@ -94,20 +94,15 @@ The Chromium source code repository maintains a set of tags, one for each releas
 
 ## Edge
 
-_If you have insights into locating release versions for changes to Edge, please consider helping us write this section..._
+Edge is based on Chromium and Microsoft has replaced older versions of the previously EdgeHTML-based browser with the new Chromium-based browser.
 
-### Useful resources
+### Matching Chrome versions
 
-- [Microsoft Edge web platform features status and roadmap](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/)
-- [Microsoft Edge issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
+Edge continuously fetches *upstream* changes from the Chromium project and its version numbering strategy is the same as Chrome's. Although it can take a few days (or weeks) for a feature that appears in Chrome to also appear in Edge, the feature will ship in both browsers under the same version number.
 
-### EdgeHTML
+Indeed, after Edge 18, when Edge adopted Chromium, the version number jumped to 79, to match the Chromium version number.
 
-Before Edge switched to Chromium, it used an engine developed by Microsoft called EdgeHTML. These resources will help you identify when features were added or removed in EdgeHTML-based versions of Edge—that is, Edge version 18 and earlier.
-
-### Blink (Chromium)
-
-After Edge 18, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 79, to match the Chromium version number. While most features will be the same between all Chromium browsers at the same version number, there may be some exceptions. Here are some resources to help you identify those:
+There may be some exceptions and you should test the feature you are documenting in both browsers. While most features will be the same between all Chromium browsers at the same version number, Edge has its own *downstream* codebase and may alter, remove, or disable certain Chromium features.
 
 ## Firefox
 
@@ -170,7 +165,7 @@ If you find a bug that corresponds to the feature you need compatibility informa
 
 #### Finding the version from the source tree
 
-If you don't find the information you need in [Bugzilla](https://bugzilla.mozilla.org/), you can get it by tracking it down in the Firefox source tree. For the purposes of this explanation, we'll be using the [Mozilla DXR](https://dxr.mozilla.org/mozilla-central/source/) tool and the [Mozilla source tree](https://hg.mozilla.org/mozilla-central/) browsable on the web to locate the information.
+If you don't find the information you need in [Bugzilla](https://bugzilla.mozilla.org/), you can get it by tracking it down in the Firefox source tree. For the purposes of this explanation, we'll be using the [Mozilla DXR](https://searchfox.org/mozilla-central/source/) tool and the [Mozilla source tree](https://hg.mozilla.org/mozilla-central/) browsable on the web to locate the information.
 
 ##### For web API features
 
@@ -183,9 +178,8 @@ A web API feature change corresponds to adding, removing, or altering the signat
 
 The easiest way to identify the compatibility of a feature is to look for when the feature was added to or altered to match the compatibility point you're looking for within the [WebIDL](/en-US/docs/Glossary/WebIDL) file that describes the corresponding interface. There are a few ways you can locate this file, depending on how the API is implemented and how old it is. From most to least likely to work, here they are:
 
-1. For a given interface named `InterfaceName`, go to [DXR](https://dxr.mozilla.org/mozilla-central/source/) and type <kbd>file:<em>InterfaceName</em>.webidl</kbd> in the search box at the top of the page and pressing <kbd>Enter</kbd>. You will probably have to then click on the name of the file in a list of files (usually only a one-file-long list).
+1. For a given interface named `InterfaceName`, go to [DXR](https://searchfox.org/mozilla-central/source/) and type <kbd>file:<em>InterfaceName</em>.webidl</kbd> in the search box at the top of the page and pressing <kbd>Enter</kbd>. You will probably have to then click on the name of the file in a list of files (usually only a one-file-long list).
 2. If the interface isn't found, then search for it by looking for the main interface in the API. For example, a large number of the interfaces, types, and so on for [WebRTC](/en-US/docs/Web/API/WebRTC_API) are located in the file `RTCPeerConnection.webidl` in the Firefox source code, so if you don't find a WebRTC interface by its name, look in that file instead.
-3. Failing that, try looking for <kbd>file:<em>interfacename</em>.idl</kbd> to see if perhaps the interface is one which is still using the older Mozilla [XPIDL](/en-US/docs/Archive/Mozilla/XPIDL) syntax to describe it. This should not happen very often, if at all.
 
 Once in the WebIDL file, click the "Blame" link under "VCS Links" in the Navigation box near the top-right corner of the DXR page.
 
@@ -250,7 +244,7 @@ Once you've found a representative line of code, the goal is to identify the Fir
 
 CSS changes can be a little bit tricker to nail down. The Firefox repositories don't track history of any files that record the availability of given properties, for example.
 
-To determine when support for a given **value** for a property was added, try opening the file [`nsCSSProps.cpp`](https://dxr.mozilla.org/mozilla-central/source/layout/style/nsCSSProps.cpp) and looking through the tables of property values found there. These tables are all of type `KTableEntry`; each entry in the tables maps a CSS keyword to a value used to represent it internally. For instance, to determine when Firefox added support for the CSS Scroll Snap type value `proximity`, look through `nsCSSProps.cpp` until you find in the table `nsCSSProps::kScrollSnapTypeKTable`:
+To determine when support for a given **value** for a property was added, try opening the file [`nsCSSProps.cpp`](https://searchfox.org/mozilla-central/source/layout/style/nsCSSProps.cpp) and looking through the tables of property values found there. These tables are all of type `KTableEntry`; each entry in the tables maps a CSS keyword to a value used to represent it internally. For instance, to determine when Firefox added support for the CSS Scroll Snap type value `proximity`, look through `nsCSSProps.cpp` until you find in the table `nsCSSProps::kScrollSnapTypeKTable`:
 
 ```cpp
 const KTableEntry nsCSSProps::kScrollSnapTypeKTable[] = {
@@ -322,7 +316,7 @@ Before Opera switched to Chromium, it used an engine developed by Opera called P
 
 ### Blink (Chromium)
 
-After Opera 12.10, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 15. The Blink engine version became Opera's version plus 13 -- that is, Opera 15 used Blink 28 (15+13=28) -- until Opera Desktop 69 and Opera Android 43. The browser files within the browser-compat-data project contain a mapping of Opera versions to Chromium/Blink versions; see [browsers/opera.json](https://github.com/mdn/browser-compat-data/blob/master/browsers/opera.json) and [browsers/opera_android.json](https://github.com/mdn/browser-compat-data/blob/master/browsers/opera_android.json).
+After Opera 12.10, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 15. The Blink engine version became Opera's version plus 13 -- that is, Opera 15 used Blink 28 (15+13=28) -- until Opera Desktop 69 and Opera Android 43. The browser files within the browser-compat-data project contain a mapping of Opera versions to Chromium/Blink versions; see [browsers/opera.json](https://github.com/mdn/browser-compat-data/blob/main/browsers/opera.json) and [browsers/opera_android.json](https://github.com/mdn/browser-compat-data/blob/main/browsers/opera_android.json).
 
 While most features will be the same between all Chromium browsers, there may be some exceptions. Here are some resources to help you identify those:
 

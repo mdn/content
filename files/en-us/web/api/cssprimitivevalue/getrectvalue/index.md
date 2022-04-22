@@ -28,7 +28,7 @@ Modification to the corresponding style property can be achieved using the
 ## Syntax
 
 ```js
-var rectValue = cssPrimitiveValue.getRectValue();
+getRectValue()
 ```
 
 ### Return value
@@ -41,7 +41,7 @@ A {{domxref("Rect")}} object representing the rect value.
 | -------------- | --------------------------------------------------------------------------------------------------------------- |
 | `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a Rect value. (i.e. this is not `CSS_RECT`). |
 
-## Example
+## Examples
 
 ```js
 var cs = window.getComputedStyle(document.getElementById("clippedDiv"));

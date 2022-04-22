@@ -272,7 +272,7 @@ To see this in action, let's lay out some separate tracks:
 </section>
 ```
 
-All of these tracks are the same tempo and are designed to be synchronized with each other, so we need to make sure they are loaded and available to the api _before_ we are able to play them. We can do this with JavaScript's [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) functionality.
+All of these tracks are the same tempo and are designed to be synchronized with each other, so we need to make sure they are loaded and available to the API _before_ we are able to play them. We can do this with JavaScript's [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) functionality.
 
 Once they are available to play, we need to make sure they start at the correct point that other tracks might be playing at, so they sync up.
 

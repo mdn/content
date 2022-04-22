@@ -26,7 +26,7 @@ Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alpha
 ## Syntax
 
 ```js
-var aBoolean = KeyboardLayoutMap.has(key)
+has(key)
 ```
 
 ### Parameters

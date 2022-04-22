@@ -32,7 +32,7 @@ forward the candidates to the remote peer.
 ## Syntax
 
 ```js
-localCandidates = RTCIceTransport.getLocalCandidates();
+getLocalCandidates()
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ session.
 You can't correlate these local candidates with matching remote candidates. To find the
 best match found so far, call {{domxref("RTCIceTransport.getSelectedCandidatePair()")}}.
 
-## Example
+## Examples
 
 This simple example gets the local candidate list from the
 {{domxref("RTCIceTransport")}} for the first {{domxref("RTCRtpSender")}} on the

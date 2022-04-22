@@ -78,7 +78,7 @@ new Notification(title, options);
 
 In our
 [`Emogotchi demo`](https://chrisdavidmills.github.io/emogotchi/)
-([see source code](https://github.com/mdn/emogotchi)), we run a
+([see source code](https://github.com/chrisdavidmills/emogotchi)), we run a
 `spawnNotification()` function when we want to trigger a notification. The
 function is passed parameters to specify the body, icon, and title we want, and then it
 creates the necessary `options` object and triggers the notification by using

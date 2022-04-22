@@ -364,7 +364,5 @@ var thisitemEl = thislevel.iterateNext();
 
 ## Original Document Information
 
-- Based Upon Original Document [Mozilla XPath Tutorial](https://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html)
-- Original Source Author: James Graham.
+- Based upon an original document by James Graham.
 - Other Contributors: James Thompson.
-- Last Updated Date: 2006-3-25.

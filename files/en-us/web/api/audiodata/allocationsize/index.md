@@ -16,7 +16,7 @@ The **`allocationSize()`** method of the {{domxref("AudioData")}} interface retu
 ## Syntax
 
 ```js
-AudioData.allocationSize(options)
+allocationSize(options)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ AudioData.allocationSize(options)
     - `frameCount`{{optional_inline}}
       - : An integer giving the number of frames to return the size of. If omitted then all frames in the plane will be used, beginning with the frame specified in `frameOffset`.
 
-### Return Value
+### Return value
 
 An integer containing the number of bytes needed to hold the samples described by `options`.
 

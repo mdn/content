@@ -45,7 +45,7 @@ The File and Directory Entries API is an alternative to other storage APIs such 
 
 - The File and Directory Entries API offers client-side storage for use cases that are not addressed by databases. If you want to have large mutable chunks of data, the File and Directory Entries API is a much more efficient storage solution than a database.
 - While Firefox supports blob storage for IndexedDB, Chrome currently does not (Chrome is still implementing support for blob storage in IndexedDB). If you are targeting Chrome for your app and you want to store blobs, the File and Directory Entries API and App Cache are your only choices. However, AppCache storage isn't locally mutable, and doesn't allow for fine-grained client-side management.
-- In Chrome, you can use the File and Directory Entries API with the [Quota Management API](https://code.google.com/chrome/whitepapers/storage.html), which lets you ask for more storage and manage your storage quota.
+- In Chrome, you can use the File and Directory Entries API with the [Quota Management API](https://developer.chrome.com/docs/apps/offline_storage/), which lets you ask for more storage and manage your storage quota.
 
 ### Sample use cases
 
@@ -103,7 +103,7 @@ Use temporary storage for caching and persistent storage for data that you want 
 
 To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
 
-How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](https://code.google.com/chrome/whitepapers/storage.html).
+How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/).
 
 ### The File and Directory Entries API has asynchronous and synchronous versions
 

@@ -28,7 +28,7 @@ of filter.
 ## Syntax
 
 ```js
-var iirFilter = AudioContext.createIIRFilter(feedforward, feedback);
+createIIRFilter(feedforward, feedback)
 ```
 
 ### Parameters

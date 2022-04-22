@@ -11,7 +11,7 @@ tags:
 
 The **`global`** instruction declares a new global variable.
 
-{{EmbedInteractiveExample("pages/wat/global.html")}}
+{{EmbedInteractiveExample("pages/wat/global.html", "tabbed-taller")}}
 
 ## Syntax
 

@@ -37,7 +37,7 @@ runs the following steps:
 ## Syntax
 
 ```js
-MediaRecorder.requestData()
+requestData()
 ```
 
 ### Errors
@@ -47,7 +47,7 @@ is called while the `MediaRecorder` object's
 {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if
 recording is not occurring.
 
-## Example
+## Examples
 
 ```js
 ...

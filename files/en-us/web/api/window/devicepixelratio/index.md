@@ -73,7 +73,7 @@ var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blu
 canvas.width = Math.floor(size * scale);
 canvas.height = Math.floor(size * scale);
 
-// Normalize coordinate system to use css pixels.
+// Normalize coordinate system to use CSS pixels.
 ctx.scale(scale, scale);
 
 ctx.fillStyle = "#bada55";

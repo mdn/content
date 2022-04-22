@@ -24,7 +24,7 @@ interface locks the screen into a specified orientation.
 ## Syntax
 
 ```js
-lockAllowed = window.screen.lockOrientation(orientation);
+lockOrientation(orientation)
 ```
 
 ### Parameters

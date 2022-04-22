@@ -89,7 +89,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - {{htmlattrdef("author")}}
   - : Indicates the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `author` keyword creates a hyperlink. With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or `mailto:`) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document. For {{htmlelement('link')}}, it represents the author of the entire document.
 - {{htmlattrdef("bookmark")}}
-  - : Relevant as the `rel` attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements, the bookmark provides a permalink for ancestor section, which is the nearest ancestor {{htmlelement('article')}} or {{htmlelement('section')}}, if there is at least one, otherwise, the nearest heading sibling or ancestor descendant, to the next..
+  - : Relevant as the `rel` attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements, the bookmark provides a permalink for ancestor section, which is the nearest ancestor {{htmlelement('article')}} or {{htmlelement('section')}}, if there is at least one, otherwise, the nearest heading sibling or ancestor descendant, to the next.
 - {{htmlattrdef("canonical")}}
   - : Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which is useful for search engines.
 - {{htmlattrdef("dns-prefetch")}}

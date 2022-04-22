@@ -22,7 +22,7 @@ The **`close()`** method of the
 ## Syntax
 
 ```js
-readableByteStreamController.close();
+close()
 ```
 
 ### Parameters

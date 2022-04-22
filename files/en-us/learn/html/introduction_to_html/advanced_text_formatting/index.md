@@ -672,6 +672,7 @@ HTML also provides the {{htmlelement("time")}} element for marking up times and 
 
 Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:
 
+<!-- markdownlint-disable MD033 -->
 - 20 January 2016
 - 20th January 2016
 - Jan 20 2016
@@ -681,6 +682,8 @@ Why is this useful? Well, there are many different ways that humans write down d
 - <span lang="fr">20e Janvier 2016</span>
 - <span lang="ja">2016 年 1 月 20 日</span>
 - And so on
+
+<!-- markdownlint-enable MD033 -->
 
 But these different forms cannot be easily recognized by computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The {{htmlelement("time")}} element allows you to attach an unambiguous, machine-readable time/date for this purpose.
 

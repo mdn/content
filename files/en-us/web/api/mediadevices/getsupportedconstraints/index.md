@@ -24,7 +24,7 @@ specify one of the constrainable properties the {{Glossary("user agent")}} under
 ## Syntax
 
 ```js
-var supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+getSupportedConstraints()
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ listing the constraints supported by the user agent. Because only constraints su
 by the user agent are included in the list, each of these Boolean properties has the
 value `true`.
 
-## Example
+## Examples
 
 This example outputs a list of the constraints supported by your browser.
 

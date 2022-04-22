@@ -220,8 +220,8 @@ After testing this sample, note that the words hello and world are together: hel
 You can create new HTML elements or any other element you want with `createElement`. For example, if you want to create a new `<p>` element as a child of the `<body>` element, you can use the `myBody` in the previous example and append a new element node. To create a node call `document.createElement("tagname")`. For example:
 
 ```js
-myNewPTAGnode = document.createElement("p");
-myBody.appendChild(myNewPTAGnode);
+myNewPTagNode = document.createElement("p");
+myBody.appendChild(myNewPTagNode);
 ```
 
 ![](sample2c.jpg)
@@ -234,10 +234,10 @@ Nodes can be removed. The following code removes text node `myTextNode` (contain
 myP.removeChild(myTextNode);
 ```
 
-Text node `myTextNode` (containing the word "world") still exists. The following code attaches `myTextNode` to the recently created `<p>` element, `myNewPTAGnode`.
+Text node `myTextNode` (containing the word "world") still exists. The following code attaches `myTextNode` to the recently created `<p>` element, `myNewPTagNode`.
 
 ```js
-myNewPTAGnode.appendChild(myTextNode);
+myNewPTagNode.appendChild(myTextNode);
 ```
 
 The final state for the modified object tree looks like this:

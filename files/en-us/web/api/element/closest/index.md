@@ -21,12 +21,12 @@ element exists, it returns `null`.
 ## Syntax
 
 ```js
-var closestElement = targetElement.closest(selectors);
+closest(selectors)
 ```
 
 ### Parameters
 
-- `selectors` is a {{domxref("DOMString")}} containing a
+- `selectors` is a string containing a
   selector list.
   ex: `p:hover, .toto + q`
 
@@ -40,7 +40,7 @@ var closestElement = targetElement.closest(selectors);
 - {{exception("SyntaxError")}} is thrown if the `selectors` is
   not a valid selector list string.
 
-## Example
+## Examples
 
 ### HTML
 

@@ -20,7 +20,7 @@ document from its default orientation.
 ## Syntax
 
 ```js
-screen.orientation.unlock()
+unlock()
 ```
 
 ### Parameters

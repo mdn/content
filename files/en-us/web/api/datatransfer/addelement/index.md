@@ -23,10 +23,10 @@ dragged).
 ## Syntax
 
 ```js
-void dataTransfer.addElement(el);
+addElement(el)
 ```
 
-### Arguments
+### Parameters
 
 - _el_
   - : The {{domxref("Element")}} to set as the drag source.
@@ -35,7 +35,7 @@ void dataTransfer.addElement(el);
 
 None.
 
-## Example
+## Examples
 
 This example shows the use of the `addElement()` method
 

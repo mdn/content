@@ -64,7 +64,7 @@ function rangeCompareNode(range, node) {
 ## Syntax
 
 ```js
-returnValue = range.compareNode( referenceNode );
+compareNode(referenceNode)
 ```
 
 ### Parameters
@@ -72,7 +72,11 @@ returnValue = range.compareNode( referenceNode );
 - _referenceNode_
   - : The {{DOMxRef("Node")}} to compare with the `Range`.
 
-## Example
+### Return value
+
+A constant indicating the position of the {{DOMxRef("Node")}}.
+
+## Examples
 
 ```js
 range = document.createRange();

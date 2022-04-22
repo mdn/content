@@ -37,11 +37,7 @@ algorithms](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms) for
 ## Syntax
 
 ```js
-const result = crypto.subtle.deriveBits(
-    algorithm,
-    baseKey,
-    length
-);
+deriveBits(algorithm, baseKey, length)
 ```
 
 ### Parameters
@@ -69,7 +65,7 @@ const result = crypto.subtle.deriveBits(
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   that fulfills with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
   containing the derived bits.
 

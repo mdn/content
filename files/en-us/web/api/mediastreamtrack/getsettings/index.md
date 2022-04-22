@@ -23,10 +23,10 @@ and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on 
 ## Syntax
 
 ```js
-const settings = track.getSettings()
+getSettings()
 ```
 
-### Returns
+### Return value
 
 A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
 track's constrainable properties.

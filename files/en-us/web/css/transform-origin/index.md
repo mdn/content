@@ -316,6 +316,10 @@ transform-origin: 100% -30%;
 
 {{EmbedLiveSample('A_demonstration_of_various_transform_values', '', 1350) }}
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

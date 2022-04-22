@@ -18,13 +18,15 @@ This proprietary method is specific to Internet Explorer, and Microsoft Edge ver
 ## Syntax
 
 ```js
-navigator.msLaunchUri(uri, successCallback, noHandlerCallback);
+msLaunchUri(uri)
+msLaunchUri(uri, successCallback)
+msLaunchUri(uri, successCallback, noHandlerCallback)
 ```
 
 ### Parameters
 
 - `uri`
-  - : A {{domxref("DOMString")}} specifying the URL containing including the protocol of the document or resource to be displayed.
+  - : A string specifying the URL containing including the protocol of the document or resource to be displayed.
 - `successCallback`{{Optional_Inline}}
   - : A function matching the signature of {{DOMxRef("MSLaunchUriCallback")}} to be executed if the protocol handler is present.
 - `noHandlerCallback`{{Optional_Inline}}

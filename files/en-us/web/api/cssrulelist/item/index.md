@@ -16,7 +16,7 @@ The **`item()`** method of the {{domxref("CSSRuleList")}} interface returns the 
 ## Syntax
 
 ```js
-CSSRuleList.item(index);
+item(index)
 ```
 
 ### Parameters

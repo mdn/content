@@ -40,4 +40,4 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 
 ## See also
 
-- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it
+- A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it

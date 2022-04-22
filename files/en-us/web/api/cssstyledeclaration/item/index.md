@@ -21,7 +21,7 @@ arguments; the empty string is returned if the index is out of range and a
 ## Syntax
 
 ```js
-var propertyName = style.item(index);
+item(index)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ JavaScript has a special simpler syntax for obtaining an item from a NodeList by
 var propertyName = style[index];
 ```
 
-## Example
+## Examples
 
 ```js
 var style = document.getElementById('div1').style;

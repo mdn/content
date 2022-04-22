@@ -22,7 +22,7 @@ To understand common patterns, it helps to read browser documentation. If you ar
 ### Browser vendor documentation
 
 - Mozilla: You're in the right place, just browse MDN
-- Microsoft: [Internet Explorer Standards Support Documentation](https://msdn.microsoft.com/library/ff410218%28v=vs.85%29.aspx)
+- Microsoft: [Internet Explorer Standards Support Documentation](https://docs.microsoft.com/en-us/openspecs/ie_standards/ms-iestandlp/8aea05e3-8c1e-4a9a-9614-31f71e679457)
 - WebKit: Because there are several different editions of this engine, things are a little trickier.
 
   - [The WebKit blog](https://www.webkit.org/blog/) and [Planet WebKit](https://planet.webkit.org/) aggregate the best articles by WebKit core developers.

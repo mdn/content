@@ -34,9 +34,9 @@ You can get a complete list of the removed interfaces in the [Removed interfaces
 
 A few interfaces have methods that have been changed:
 
-- {{ interface("nsINavHistoryObserver") }} and {{ interface("nsINavBookmarkObserver") }}
+- `nsINavHistoryObserver` and `nsINavBookmarkObserver`
   - : These have been changed to support Firefox Sync better by adding a new GUID parameter to several of their methods. JavaScript-based code shouldn't require any changes, since this is just the addition of a new, optional, parameter. However, binary components will need to be updated to take the new parameter into account.
-- {{ interface("nsIDOMFile") }}
+- `nsIDOMFile`
   - : A number of non-standard methods have been removed from this interface. This affects the {{ domxref("File") }} object's {{ domxref("File.getDataAsUrl()") }} and {{ domxref("File.getAsBinary()") }} methods. However, this functionality can now be found in the standard {{ domxref("FileReader") }} object.
 
 ## Other changes of note
@@ -54,5 +54,5 @@ You can now have [preference options inline](/en-US/docs/Extensions/Inline_Optio
 ## See also
 
 - [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7)
-- [Add-ons Blog: Firefox 7 add-on compatibility](http://blog.mozilla.com/addons/2011/07/19/firefox-7-compat-looking-to-8/)
+- [Add-ons Blog: Firefox 7 add-on compatibility](https://blog.mozilla.org/addons/2011/07/19/firefox-7-compat-looking-to-8/)
 - [XPCOM changes in Gecko 2.0](/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0)

@@ -23,9 +23,9 @@ visible to the user.
 ## Syntax
 
 ```js
-element.scrollIntoView();
-element.scrollIntoView(alignToTop); // Boolean parameter
-element.scrollIntoView(scrollIntoViewOptions); // Object parameter
+scrollIntoView()
+scrollIntoView(alignToTop)
+scrollIntoView(scrollIntoViewOptions)
 ```
 
 ### Parameters
@@ -59,7 +59,7 @@ element.scrollIntoView(scrollIntoViewOptions); // Object parameter
         One of `start`, `center`, `end`, or
         `nearest`. Defaults to `nearest`.
 
-## Example
+## Examples
 
 ```js
 var element = document.getElementById("box");

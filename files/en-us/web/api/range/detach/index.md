@@ -17,10 +17,10 @@ resources. The method has been kept for compatibility.
 ## Syntax
 
 ```js
-range.detach();
+detach()
 ```
 
-## Example
+## Examples
 
 ```js
 var range = document.createRange();

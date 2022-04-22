@@ -50,6 +50,12 @@ For {{SVGElement('line')}}, `x2` defines the x coordinate of the ending point of
             >&#x3C;percentage></a
           ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -95,6 +101,12 @@ For {{SVGElement('linearGradient')}}, `x2` defines the x coordinate of the endin
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
           ></strong
         >
       </td>

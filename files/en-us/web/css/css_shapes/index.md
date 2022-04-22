@@ -40,7 +40,7 @@ The example below shows an image that has been floated left, and the `shape-outs
 - [Shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values)
 - [Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
 - [Shapes from Images](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
-- [Edit Shape Paths in CSS — Firefox Developer Tools](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)
+- [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
 
 ## External Resources
 

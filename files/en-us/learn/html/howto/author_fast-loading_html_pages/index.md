@@ -117,7 +117,7 @@ SVG produced by most drawing applications often contains unnecessary metadata wh
 
 ### Minify and compress your images
 
-Large images cause your page to take more time to load. Consider compressing your images before adding them to your page, using compression features built into image-manipulation tools such as Photoshop, or using a specialized tool such as [Compress Jpeg](https://compressjpeg.com/) or [Tiny PNG](https://tinypng.com),.
+Large images cause your page to take more time to load. Consider compressing your images before adding them to your page, using compression features built into image-manipulation tools such as Photoshop, or using a specialized tool such as [Compress Jpeg](https://compressjpeg.com/) or [Tiny PNG](https://tinypng.com).
 
 ### Specify sizes for images and tables
 
@@ -190,4 +190,3 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 - Book: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
 - The excellent and very complete [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
 - Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed)
-- [Paint Flashing Tool](/en-US/docs/Tools/Paint_Flashing_Tool)

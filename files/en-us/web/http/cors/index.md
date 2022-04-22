@@ -108,7 +108,7 @@ This operation performs a simple exchange between the client and the server, usi
 
 ![](simple-req.png)
 
-Let's look at what the browser will send to the server in this case, and let's see how the server responds:
+Let's look at what the browser will send to the server in this case:
 
 ```
 GET /resources/public-data/ HTTP/1.1
@@ -122,6 +122,8 @@ Origin: https://foo.example
 ```
 
 The request header of note is {{HTTPHeader("Origin")}}, which shows that the invocation is coming from `https://foo.example`.
+
+Now let's see how the server responds:
 
 ```
 HTTP/1.1 200 OK

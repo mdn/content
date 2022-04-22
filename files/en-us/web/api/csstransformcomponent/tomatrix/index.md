@@ -25,7 +25,7 @@ All transform functions can be represented mathematically as a 4x4 transformatio
 ## Syntax
 
 ```js
-var matrix = CSSTransformComponent.toMatrix();
+toMatrix()
 ```
 
 ### Parameters

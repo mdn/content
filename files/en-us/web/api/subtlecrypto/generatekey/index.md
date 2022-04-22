@@ -19,7 +19,7 @@ or key pair (for public-key algorithms).
 ## Syntax
 
 ```js
-const result = crypto.subtle.generateKey(algorithm, extractable, keyUsages);
+generateKey(algorithm, extractable, keyUsages)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ const result = crypto.subtle.generateKey(algorithm, extractable, keyUsages);
     object.
 
 - `extractable` is a boolean value indicating whether it
-  will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
+  will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
   {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`  is an {{jsxref("Array")}} indicating what can be
   done with the newly generated key. Possible values for array elements are:
@@ -65,7 +65,7 @@ const result = crypto.subtle.generateKey(algorithm, extractable, keyUsages);
 
 ### Return value
 
-- `result` is a {{jsxref("Promise")}} that fulfills with a
+A {{jsxref("Promise")}} that fulfills with a
   {{domxref("CryptoKey")}} (for symmetric algorithms) or a {{domxref("CryptoKeyPair")}}
   (for public-key algorithms).
 

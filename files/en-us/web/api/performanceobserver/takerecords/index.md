@@ -21,7 +21,7 @@ observer, emptying it out.
 ## Syntax
 
 ```js
-var performanceEntryList = performanceObserver.takeRecords();
+takeRecords()
 ```
 
 ### Parameters
@@ -32,7 +32,7 @@ None.
 
 A list of {{domxref("PerformanceEntry")}} objects.
 
-## Example
+## Examples
 
 ```js
 var observer = new PerformanceObserver(function(list, obj) {

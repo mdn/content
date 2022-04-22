@@ -38,7 +38,7 @@ moves off the element (such as by scrolling or panning).
 ## Syntax
 
 ```js
-targetElement.setPointerCapture(pointerId);
+setPointerCapture(pointerId)
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ This method returns {{jsxref("undefined")}}.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if `pointerId` does not match any active pointer.
 
-## Example
+## Examples
 
 This example sets pointer capture on a {{HtmlElement("div")}} when you press down on
 it. This lets you slide the element horizontally, even when you pointer moves outside of

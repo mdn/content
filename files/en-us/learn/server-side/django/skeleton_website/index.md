@@ -153,7 +153,7 @@ In addition we now have:
 - A _migrations_ folder, used to store "migrations" — files that allow you to automatically update your database as you modify your models.
 - **\_\_init\_\_.py** — an empty file created here so that Django/Python will recognize the folder as a [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) and allow you to use its objects within other parts of the project.
 
-> **Note:** Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your url mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).
+> **Note:** Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your URL mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).
 
 ## Registering the catalog application
 
@@ -283,7 +283,7 @@ Django does not serve static files like CSS, JavaScript, and images by default, 
 Add the following final block to the bottom of the file now:
 
 ```python
-# Use static() to add url mapping to serve static files during development (only)
+# Use static() to add URL mapping to serve static files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -377,7 +377,7 @@ As you saw previously, a URL-mapping for the Admin site has already been added i
 
 ## Summary
 
-You have now created a complete skeleton website project, which you can go on to populate with urls, models, views, and templates.
+You have now created a complete skeleton website project, which you can go on to populate with URLs, models, views, and templates.
 
 Now that the skeleton for the [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) is complete and running, it's time to start writing the code that makes this website do what it is supposed to do.
 

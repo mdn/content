@@ -19,8 +19,8 @@ Piping a stream will generally [lock](/en-US/docs/Web/API/ReadableStream/locked)
 ## Syntax
 
 ```js
-readableStream.pipeTo(destination)
-readableStream.pipeTo(destination, options)
+pipeTo(destination)
+pipeTo(destination, options)
 ```
 
 ### Parameters

@@ -128,7 +128,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Toggles Reader mode for the specified tab.
 - {{WebExtAPIRef("tabs.update()")}}
   - : Navigate the tab to a new URL, or modify other properties of the tab.
-- {{WebExtAPIRef("tabs.warmup")}}
+- {{WebExtAPIRef("tabs.warmup()")}}
   - : Prepare the tab to make a potential following switch faster.
 
 ## Events
@@ -166,7 +166,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

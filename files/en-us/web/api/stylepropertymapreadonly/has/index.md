@@ -21,7 +21,7 @@ property is in the `StylePropertyMapReadOnly` object.
 ## Syntax
 
 ```js
-var boolean = StylePropertyMapReadOnly.has(property)
+has(property)
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ var boolean = StylePropertyMapReadOnly.has(property)
 
 A boolean value.
 
-## Example
+## Examples
 
 Here we use the `has()` method to see if the padding-top property is present
 within the button elements style attribute.

@@ -297,7 +297,7 @@ They also ensure correct linking to detailed documentation.
   - : Use "Inline Code" style to put attribute names in `code font`.
     Additionally, put them in **`bold face`** when the attribute is mentioned in association with an explanation of what it does, or the first time it is used in the article.
 - Attribute definitions
-  - : Use the [`htmlattrdef`](https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrdef.ejs)  macro (e.g., `\{{htmlattrdef("type")}})` for the definition term, so that it can be linked to from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`) to reference attribute definitions.
+  - : Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., `\{{htmlattrdef("type")}})` for the definition term, so that it can be linked to from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`) to reference attribute definitions.
 - Attribute values
   - : Use the "Inline Code" style to apply `<code>` to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample.
     **For example:** "When the `type` attribute of an `<input>` element is set to `email` or `tel` ..."

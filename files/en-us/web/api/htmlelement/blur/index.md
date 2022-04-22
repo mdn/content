@@ -17,7 +17,7 @@ removes keyboard focus from the current element.
 ## Syntax
 
 ```js
-element.blur();
+blur()
 ```
 
 ## Examples

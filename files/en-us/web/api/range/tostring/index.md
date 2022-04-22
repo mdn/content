@@ -21,10 +21,14 @@ ineffective.
 ## Syntax
 
 ```js
-text = range.toString();
+toString()
 ```
 
-## Example
+### Return value
+
+A string.
+
+## Examples
 
 ### HTML
 

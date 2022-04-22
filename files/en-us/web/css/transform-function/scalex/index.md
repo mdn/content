@@ -14,7 +14,7 @@ browser-compat: css.types.transform-function.scaleX
 The **`scaleX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element along the
 x-axis (horizontally). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](scalex.png)
+{{EmbedInteractiveExample("pages/css/function-scaleX.html")}}
 
 It modifies the abscissa of each element point by a constant factor, except when the scale factor is 1, in which case
 the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.

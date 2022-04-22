@@ -30,7 +30,7 @@ The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `e
 ## Syntax
 
 ```js
-document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 
 ### Return value
@@ -46,13 +46,13 @@ disabled.
 ### Parameters
 
 - `aCommandName`
-  - : A {{domxref("DOMString")}} specifying the name of the command to execute. See
+  - : A string specifying the name of the command to execute. See
     [Commands](#commands) for a list of possible commands.
 - `aShowDefaultUI`
   - : A boolean value indicating whether the default user interface should be
     shown. This is not implemented in Mozilla.
 - `aValueArgument`
-  - : For commands which require an input argument, is a {{domxref("DOMString")}}
+  - : For commands which require an input argument, is a string
     providing that information. For example, `insertImage` requires the URL of
     the image to insert. Specify `null` if no argument is needed.
 
@@ -218,7 +218,7 @@ disabled.
 - `AutoUrlDetect`
   - : Changes the browser auto-link behavior (Internet Explorer only)
 
-## Example
+## Examples
 
 An example of [how to use
 execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
@@ -265,7 +265,7 @@ for (const buttonContainer of buttonContainers) {
     const elementName = button.getAttribute('data-el');
     button.addEventListener('click',
       () => insertText(`<${elementName}></${elementName}>`, pasteTarget) )
-  }  
+  }
 }
 
 // Inserts text at cursor, or replaces selected text

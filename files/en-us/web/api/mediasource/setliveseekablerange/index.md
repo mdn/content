@@ -23,7 +23,7 @@ media element.
 ## Syntax
 
 ```js
-mediaSource.setLiveSeekableRange(start, end)
+setLiveSeekableRange(start, end)
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ mediaSource.setLiveSeekableRange(start, end)
 
 {{jsxref('undefined')}}
 
-## Example
+## Examples
 
 ```js
 // TBD

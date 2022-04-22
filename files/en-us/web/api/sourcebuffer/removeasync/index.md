@@ -31,7 +31,7 @@ This method can only be called when {{domxref("SourceBuffer.updating", "updating
 ## Syntax
 
 ```js
-removePromise = sourceBuffer.removeAsync(start, end);
+removeAsync(start, end)
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ removePromise = sourceBuffer.removeAsync(start, end);
 A {{jsxref("Promise")}} whose fulfillment handler is executed once the buffers in the
 specified time range have been removed from the `SourceBuffer`.
 
-## Example
+## Examples
 
 This example establishes an asynchronous function, `emptySourceBuffer()`,
 which clears the contents of the specified `SourceBuffer`.

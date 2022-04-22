@@ -20,7 +20,7 @@ location/error monitoring handlers previously installed using
 ## Syntax
 
 ```js
-navigator.geolocation.clearWatch(id);
+clearWatch(id)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ navigator.geolocation.clearWatch(id);
   - : The ID number returned by the {{domxref("Geolocation.watchPosition()")}} method when
     installing the handler you wish to remove.
 
-## Example
+## Examples
 
 ```js
 var id, target, option;

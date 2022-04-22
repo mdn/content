@@ -21,7 +21,7 @@ either be `null` or `""` (the empty string); see [Non-existing attributes](#non-
 ## Syntax
 
 ```js
-let attribute = element.getAttribute(attributeName);
+getAttribute(attributeName)
 ```
 
 where

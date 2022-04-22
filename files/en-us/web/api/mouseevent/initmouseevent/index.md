@@ -28,10 +28,10 @@ before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 ## Syntax
 
 ```js
-event.initMouseEvent(type, canBubble, cancelable, view,
+initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,
-                     button, relatedTarget);
+                     button, relatedTarget)
 ```
 
 ### Parameters
@@ -90,7 +90,7 @@ event.initMouseEvent(type, canBubble, cancelable, view,
     with some event types (e.g., `mouseover` and `mouseout`). In
     other cases, pass `null`.
 
-## Example
+## Examples
 
 ### HTML
 

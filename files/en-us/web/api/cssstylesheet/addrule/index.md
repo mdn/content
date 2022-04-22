@@ -29,16 +29,16 @@ stylesheet. You should avoid using this method, and should instead use the more 
 ## Syntax
 
 ```js
-var result = cssStyleSheet.addRule(selector, styleBlock, index);
+addRule(selector, styleBlock, index)
 ```
 
 ### Parameters
 
 - `selector`
-  - : A {{domxref("DOMString")}} specifying the selector portion of the CSS rule. The
+  - : A string specifying the selector portion of the CSS rule. The
     default is the string `undefined`.
 - `styleBlock`
-  - : A {{domxref("DOMString")}} indicating the style block to apply to elements matching
+  - : A string indicating the style block to apply to elements matching
     the `selector`. The default is the string `undefined`.
 - `index` {{optional_inline}}
   - : An optional index into the stylesheet's {{domxref("CSSRuleList")}} at which to

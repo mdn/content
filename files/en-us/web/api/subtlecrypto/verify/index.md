@@ -23,12 +23,12 @@ indicating whether the signature is valid.
 ## Syntax
 
 ```js
-const result = crypto.subtle.verify(algorithm, key, signature, data);
+verify(algorithm, key, signature, data)
 ```
 
 ### Parameters
 
-- _`algorithm`_ is a {{domxref("DOMString")}} or object defining the
+- _`algorithm`_ is a string or object defining the
   algorithm to use, and for some algorithm choices, some extra parameters. The values
   given for the extra parameters must match those passed into the corresponding
   {{domxref("SubtleCrypto.sign()", "sign()")}} call.
@@ -54,7 +54,7 @@ const result = crypto.subtle.verify(algorithm, key, signature, data);
 
 ### Return value
 
-- `result` is a {{jsxref("Promise")}} that fulfills with a
+A {{jsxref("Promise")}} that fulfills with a
   boolean value: `true` if the signature is valid, `false`
   otherwise.
 

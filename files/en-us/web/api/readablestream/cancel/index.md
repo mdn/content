@@ -25,8 +25,8 @@ still and not completely get rid of the stream, you'd use
 ## Syntax
 
 ```js
-readableStream.cancel()
-readableStream.cancel(reason)
+cancel()
+cancel(reason)
 ```
 
 ### Parameters

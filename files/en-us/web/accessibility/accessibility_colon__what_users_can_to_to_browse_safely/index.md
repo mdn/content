@@ -73,7 +73,7 @@ Most operating systems such as Windows 10, have accessibility options that are s
 
 #### Turn off animations in the operating system
 
-In the Windows10 operating system, the user has an ability to turn off animations. This will not work on animated gifs; the source of the animation is self-contained within a gif and is not affected by these settings..
+In the Windows10 operating system, the user has an ability to turn off animations. This will not work on animated gifs; the source of the animation is self-contained within a gif and is not affected by these settings.
 
 ![Screen shot showing how to turn off animations in Windows10](turnoffanimationsinwindows.png)
 
@@ -90,7 +90,7 @@ Most Operating Systems have a way to let the user make an adjustment on the work
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Accessibility learning path](/en-US/docs/Learn/Accessibility)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
-- [Color vision simulation](/en-US/docs/Tools/Accessibility_inspector/Simulation)
+- [Color vision simulation](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html)
 - Discussion: "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)"
 
 ### Contributors

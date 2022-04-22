@@ -87,7 +87,7 @@ As an example, the mute button on an audio player labeled "mute" could indicate 
 | <kbd>Enter</kbd> | Activates the button. |
 | <kbd>Space</kbd> | Activates the button  |
 
-Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should return to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, , such as muting and unmuting an audio file, then focus typically remains on the button.
+Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should return to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, such as muting and unmuting an audio file, then focus typically remains on the button.
 
 ### Required JavaScript Features
 

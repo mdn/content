@@ -23,10 +23,10 @@ A browser's recommended resource timing buffer size is at least 150
 ## Syntax
 
 ```js
-performance.setResourceTimingBufferSize(maxSize);
+setResourceTimingBufferSize(maxSize)
 ```
 
-### Arguments
+### Parameters
 
 - maxSize
   - : A `number` representing the maximum number of
@@ -35,10 +35,9 @@ performance.setResourceTimingBufferSize(maxSize);
 
 ### Return value
 
-- none
-  - : This method has no return value.
+This method has no return value.
 
-## Example
+## Examples
 
 ```js
 function setResourceTimingBufferSize(maxSize) {

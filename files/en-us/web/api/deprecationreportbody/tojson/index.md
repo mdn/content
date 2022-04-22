@@ -16,7 +16,7 @@ The **`toJSON()`** method of the {{domxref("DeprecationReportBody")}} interface 
 ## Syntax
 
 ```js
-DeprecationReportBody.toJSON();
+toJSON()
 ```
 
 ### Parameters

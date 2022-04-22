@@ -18,7 +18,7 @@ While working on your Web Audio API code, you may find that you need tools to an
 
 ## Chrome
 
-A handy web audio inspector can be found in the [Chrome Web Store](https://chrome.google.com/webstore/detail/web-audio-inspector/cmhomipkklckpomafalojobppmmidlgl).
+A handy web audio inspector can be found in the [Chrome Web Store](https://chrome.google.com/webstore/detail/audion/cmhomipkklckpomafalojobppmmidlgl).
 
 ## Edge
 
@@ -26,7 +26,7 @@ _Add information for developers using Microsoft Edge._
 
 ## Firefox
 
-Firefox offers a native [Web Audio Editor](/en-US/docs/Tools/Web_Audio_Editor).
+Firefox offers a native [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html).
 
 ## Safari
 

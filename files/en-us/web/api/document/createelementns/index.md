@@ -18,8 +18,8 @@ To create an element without specifying a namespace URI, use the
 ## Syntax
 
 ```js
-document.createElementNS(namespaceURI, qualifiedName);
-document.createElementNS(namespaceURI, qualifiedName, options);
+createElementNS(namespaceURI, qualifiedName)
+createElementNS(namespaceURI, qualifiedName, options)
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ The new {{DOMxRef("Element")}}.
 - [XBL](/en-US/docs/Mozilla/Tech/XBL) {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : `http://www.mozilla.org/xbl`
 
-## Example
+## Examples
 
 This creates a new \<div> element in the {{Glossary("XHTML")}} namespace and
 appends it to the vbox element. Although this is not an extremely useful [XUL](/en-US/docs/Mozilla/Tech/XUL) document, it does demonstrate the use of

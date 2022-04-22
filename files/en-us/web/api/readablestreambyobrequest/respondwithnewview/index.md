@@ -19,7 +19,7 @@ The **`respondWithNewView()`** method of the
 ## Syntax
 
 ```js
-readableStreamBYOBRequestInstance.respondWithNewView(view);
+respondWithNewView(view)
 ```
 
 ### Parameters

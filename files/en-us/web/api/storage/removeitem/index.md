@@ -22,19 +22,19 @@ If there is no item associated with the given key, this method will do nothing.
 ## Syntax
 
 ```js
-storage.removeItem(keyName);
+removeItem(keyName)
 ```
 
 ### Parameters
 
 - `keyName`
-  - : A {{domxref("DOMString")}} containing the name of the key you want to remove.
+  - : A string containing the name of the key you want to remove.
 
 ### Return value
 
 {{jsxref("undefined")}}.
 
-## Example
+## Examples
 
 The following function creates three data items inside local storage, then removes the
 `image` data item.

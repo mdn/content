@@ -53,7 +53,7 @@ The extension can then listen for the user clicking one of the suggestions, usin
 browser.omnibox.onInputEntered.addListener((text, disposition) => {
   let url = text;
   if (!text.startsWith(SOURCE_URL)) {
-    // Update the url if the user clicks on the default suggestion.
+    // Update the URL if the user clicks on the default suggestion.
     url = `${SEARCH_URL}?q=${text}`;
   }
   switch (disposition) {

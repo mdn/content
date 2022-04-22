@@ -175,5 +175,5 @@ div {
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Edit Shape Paths in CSS — Firefox Developer Tools](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)
+- [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)

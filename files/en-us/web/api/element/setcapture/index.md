@@ -24,14 +24,14 @@ to this element until the mouse button is released or {{
 ## Syntax
 
 ```js
-element.setCapture(retargetToElement);
+setCapture(retargetToElement)
 ```
 
 - `retargetToElement`
   - : If `true`, all events are targeted directly to this element; if
     `false`, events can also fire at descendants of this element.
 
-## Example
+## Examples
 
 In this example, the current mouse coordinates are drawn while you mouse around after
 clicking and holding down on an element.

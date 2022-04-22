@@ -18,10 +18,10 @@ DOM nodes can be added to build an offscreen DOM tree.
 ## Syntax
 
 ```js
-var fragment = document.createDocumentFragment();
+createDocumentFragment()
 ```
 
-### Value
+### Return value
 
 A newly created, empty, {{domxref("DocumentFragment")}} object, which is ready to have
 nodes inserted into it.
@@ -46,7 +46,7 @@ fragment:
 let fragment = new DocumentFragment();
 ```
 
-## Example
+## Examples
 
 This example creates a list of major web browsers in a `DocumentFragment`,
 then adds the new DOM subtree to the document to be displayed.

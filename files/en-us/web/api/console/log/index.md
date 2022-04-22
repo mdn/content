@@ -25,8 +25,10 @@ or more JavaScript objects.
 ## Syntax
 
 ```js
-console.log(obj1 [, obj2, ..., objN]);
-console.log(msg [, subst1, ..., substN]);
+log(obj1)
+log(obj1, /* ..., */ objN)
+log(msg)
+log(msg, subst1, /* ..., */ substN])
 ```
 
 ### Parameters
@@ -88,6 +90,6 @@ change. This may not be what you want.
 ## See also
 
 - [MSDN: Using
-  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
+  the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
 - [NodeJS:
   Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

@@ -18,9 +18,9 @@ You can also, optionally, specify an error handling callback function.
 ## Syntax
 
 ```js
-navigator.geolocation.watchPosition(success)
-navigator.geolocation.watchPosition(success, error)
-navigator.geolocation.watchPosition(success, error, options)
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### Parameters

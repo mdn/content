@@ -24,13 +24,13 @@ on the entire document, starting at the document root.
 ## Syntax
 
 ```js
-var elements = element.getElementsByClassName(names);
+getElementsByClassName(names)
 ```
 
 ### Parameters
 
 - `names`
-  - : A {{domxref("DOMString")}} containing one or more class names to match on, separated
+  - : A string containing one or more class names to match on, separated
     by whitespace.
 
 ### Return value

@@ -8,7 +8,7 @@ tags:
   - Reference
   - WAI-ARIA
 ---
-Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** is a set of [roles]((/en-US/docs/Web/Accessibility/ARIA/Roles) and [attributes]((/en-US/docs/Web/Accessibility/ARIA/Attributes) that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
+Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** is a set of [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) and [attributes](/en-US/docs/Web/Accessibility/ARIA/Attributes) that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
 It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible JavaScript widgets, form hints and error messages, live content updates, and more.
 
@@ -74,7 +74,6 @@ It is also important to test your authored ARIA with actual assistive technology
 - [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
   - : Reference pages covering all the WAI-ARIA states and properties discussed on MDN.
 
-
 ## Standardization efforts
 
 - [WAI-ARIA specification](https://w3c.github.io/aria/)
@@ -88,7 +87,6 @@ It is also important to test your authored ARIA with actual assistive technology
   - : Built-in elements like {{HTMLElement("input")}}, {{HTMLElement("button")}} etc have built-in keyboard accessibility. If you 'fake' these with {{HTMLElement("div")}}s and ARIA, you must ensure your widgets are keyboard accessible.
 - [Live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
-
 
 ## Videos
 

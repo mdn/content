@@ -23,7 +23,7 @@ the element that it is attached to is called the {{glossary("shadow root")}}.
 ## Syntax
 
 ```js
-var shadowroot = element.createShadowRoot();
+createShadowRoot()
 ```
 
 ### Parameters

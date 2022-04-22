@@ -33,7 +33,7 @@ None.
 
 A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.
 
-## Example
+## Examples
 
 ### JavaScript
 

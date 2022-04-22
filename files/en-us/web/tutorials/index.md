@@ -169,7 +169,7 @@ These resources are created by forward-thinking companies and web developers who
 
 <!---->
 
-- [JavaScript Patterns](https://shichuan.github.io/javascript-patterns)
+- [JavaScript Patterns](https://shichuan.github.io/javascript-patterns/)
   - : A JavaScript pattern and antipattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
 - [How browsers work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   - : A detailed research article describing different modern browsers, their engines, page rendering etc.
@@ -179,4 +179,4 @@ These resources are created by forward-thinking companies and web developers who
 ### Extension Development
 
 - [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/extensions) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).
+  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).

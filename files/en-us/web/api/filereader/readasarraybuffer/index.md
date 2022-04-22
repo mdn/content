@@ -28,7 +28,7 @@ contains an {{jsxref("ArrayBuffer")}} representing the file's data.
 ## Syntax
 
 ```js
-instanceOfFileReader.readAsArrayBuffer(blob);
+readAsArrayBuffer(blob)
 ```
 
 ### Parameters

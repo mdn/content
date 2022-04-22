@@ -140,7 +140,7 @@ Languages such as Java allow you to declare methods as private, meaning that the
 
 JavaScript previously didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
 
-The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](http://www.google.com/search?q=javascript+module+pattern).
+The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](https://www.google.com/search?q=javascript+module+pattern).
 
 ```js
 var counter = (function() {

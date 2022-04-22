@@ -23,7 +23,7 @@ bypasses any browser caches if the previous fetch occurred over 24 hours ago.
 ## Syntax
 
 ```js
-serviceWorkerRegistration.update();
+update()
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ None.
 A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}}
 object.
 
-## Example
+## Examples
 
 The following simple example registers a service worker example then adds an event
 handler to a button so you can explicitly update the service worker whenever desired:

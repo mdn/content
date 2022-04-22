@@ -75,13 +75,13 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 #### Style panel improvements
 
-- Clicking the heading for any rule in the [style panel](/en-US/docs/Tools/Page_Inspector#css_pane) now opens the [Style Editor](/en-US/docs/Tools/Style_Editor) at the corresponding CSS.
-- Right-clicking on a rule in the [style panel](/en-US/docs/Tools/Page_Inspector#css_pane) now offers an option to copy the rule to the clipboard.
+- Clicking the heading for any rule in the [style panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#css-pane) now opens the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) at the corresponding CSS.
+- Right-clicking on a rule in the [style panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#css-pane) now offers an option to copy the rule to the clipboard.
 - Entering an unknown property name, or an illegal property value, displays a warning icon next to that property.
 
 #### Scratchpad improvements
 
-- The [Scratchpad](/en-US/docs/Tools/Scratchpad) now has an option in the Help menu to take you to the MDN documentation about Scratchpad.
+- The _Scratchpad_ now has an option in the Help menu to take you to the MDN documentation about Scratchpad.
 
 ## Changes for Mozilla and add-on developers
 
@@ -106,11 +106,11 @@ Starting in Firefox 13, Firefox for Windows requires at least Windows XP Service
 
 ### Interfaces
 
-- The {{interface("nsIScreen")}} interface now supports controlling rotation through the new `rotation` attribute.
-- The {{interface("nsIPrefBranch2")}} interface has been merged into {{interface("nsIPrefBranch")}} ({{bug("718255")}}).
-- The new message manager wakeup service, implemented by {{interface("nsIMessageWakeupService")}}, has been implemented. See {{bug(591052)}}.
-- The aliases `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset`, and `MozOutlineColor`, all of which were removed in previous versions of Gecko, have been removed from {{interface("nsIDOMCSS2Properties")}}, which should have been done with the aliases were initially removed.
-- The {{interface("nsINavHistoryQueryOptions")}} attribute `excludeItemIfParentHasAnnotation` has been removed, along with the corresponding query operation. It existed to support livemarks, which no longer exist.
+- The `nsIScreen` interface now supports controlling rotation through the new `rotation` attribute.
+- The `nsIPrefBranch2` interface has been merged into `nsIPrefBranch` ({{bug("718255")}}).
+- The new message manager wakeup service, implemented by `nsIMessageWakeupService`, has been implemented. See {{bug(591052)}}.
+- The aliases `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset`, and `MozOutlineColor`, all of which were removed in previous versions of Gecko, have been removed from `nsIDOMCSS2Properties`, which should have been done with the aliases were initially removed.
+- The `nsINavHistoryQueryOptions` attribute `excludeItemIfParentHasAnnotation` has been removed, along with the corresponding query operation. It existed to support livemarks, which no longer exist.
 
 ## See also
 

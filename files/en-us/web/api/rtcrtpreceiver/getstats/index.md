@@ -25,7 +25,7 @@ results are available.
 ## Syntax
 
 ```js
-var promise = RTCRtpReceiver.getStats();
+getStats()
 ```
 
 ### Return value
@@ -37,7 +37,7 @@ available. The promise's fulfillment handler receives as a parameter a
 The returned statistics include those from all streams which are coming in through the
 `RTCRtpReceiver`, as well as any of their dependencies.
 
-## Example
+## Examples
 
 This simple example obtains the statistics for an `RTCRtpReceiver` and
 updates an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the number of

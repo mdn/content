@@ -32,7 +32,7 @@ API instead.
 ## Syntax
 
 ```js
-const result = crypto.subtle.exportKey(format, key);
+exportKey(format, key)
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ const result = crypto.subtle.exportKey(format, key);
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
   - If `format` was `jwk`, then the promise fulfills
     with a JSON object containing the key.
@@ -121,7 +121,7 @@ is then PEM-encoded. [See the complete code on GitHub.](https://github.com/mdn/d
 
 ```js
 /*
-Convert  an ArrayBuffer into a string
+Convert an ArrayBuffer into a string
 from https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {
@@ -174,7 +174,7 @@ object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/b
 
 ```js
 /*
-Convert  an ArrayBuffer into a string
+Convert an ArrayBuffer into a string
 from https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {

@@ -27,7 +27,7 @@ shorthand property.
 ## Syntax
 
 ```js
-var value = style.getPropertyCSSValue(property);
+getPropertyCSSValue(property)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ var value = style.getPropertyCSSValue(property);
 - `value` is a {{domxref('CSSValue')}} containing the CSS value
   for a property. If none exists, returns `null`.
 
-## Example
+## Examples
 
 The following JavaScript code gets an object containing the computed RGB values of
 the `color` CSS property:

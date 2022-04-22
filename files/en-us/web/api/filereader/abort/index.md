@@ -19,7 +19,7 @@ the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 ## Syntax
 
 ```js
-instanceOfFileReader.abort();
+abort()
 ```
 
 ## Specifications

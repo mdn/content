@@ -23,7 +23,7 @@ method of the {{domxref("RTCRtpReceiver")}} interface returns an array of
 ## Syntax
 
 ```js
-var rtcRtpContributingSources = rtcRtpReceiver.getContributingSources()
+getSynchronizationSources()
 ```
 
 ### Parameters

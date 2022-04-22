@@ -20,12 +20,12 @@ error.
 ## Syntax
 
 ```js
-selectElt.setCustomValidity(string);
+setCustomValidity(string)
 ```
 
 ### Parameters
 
-- `string` is the {{domxref("DOMString")}} containing the error message.
+- `string` is the string containing the error message.
 
 ## Specifications
 

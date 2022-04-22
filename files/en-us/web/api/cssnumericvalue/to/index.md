@@ -21,7 +21,7 @@ another.
 ## Syntax
 
 ```js
-var cssUnitValue = CSSNumericValue.to(unit);
+to(unit)
 ```
 
 ### Parameters

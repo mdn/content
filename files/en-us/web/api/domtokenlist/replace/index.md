@@ -19,7 +19,7 @@ without adding the new token to the token list.
 ## Syntax
 
 ```js
-replace(oldToken, newToken);
+replace(oldToken, newToken)
 ```
 
 ### Parameters

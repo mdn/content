@@ -17,7 +17,7 @@ representing one of the ranges currently selected.
 ## Syntax
 
 ```js
-range = sel.getRangeAt(index)
+getRangeAt(index)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ range = sel.getRangeAt(index)
 
 The specified {{domxref("Range")}} object.
 
-## Example
+## Examples
 
 ```js
 let ranges = [];

@@ -306,7 +306,7 @@ const newLength = fruits.unshift('Strawberry');
 console.log(fruits);
 // ["Strawberry", "Banana", "Mango"]
 console.log(newLength);
-// 2
+// 3
 ```
 
 ### Remove a single item by index

@@ -22,14 +22,14 @@ For most standard uses, you'll probably want to use {{domxref("PositionSensorVRD
 ## Syntax
 
 ```js
-var myPositionstate = PositionSensorVRDevice.getImmediateState();
+getImmediateState()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref("VRPose")}} object.
 

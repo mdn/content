@@ -407,7 +407,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
       <td>48 (plus 16 Low Frequency Enhancement channels)</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>
         0 Hz - 96 kHz (standard audio channels)<br />0 Hz - 120 Hz (LFE
         channels)
@@ -653,7 +653,7 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
       <td>1</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>200 Hz to 3,400 Hz</td>
     </tr>
     <tr>
@@ -755,7 +755,7 @@ FLAC is a great choice for smaller audio effects files where pristine quality an
       <td>8</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>Full-spectrum</td>
     </tr>
     <tr>
@@ -1510,7 +1510,7 @@ In this case, it appears that FLAC is most likely the best codec to go with; ALA
 
 ## Audio encoding software
 
-There are many tools available for encoding audio. The simplest are those which are meant for ripping CDs or pulling in audio files and quickly and automatically converting them to MP3 or AAC format to store in a library, such as [iTunes](https://www.apple.com/itunes). But when developing web apps that use audio as a component of the app, such as games, you will need more control over the encoding process and more options surrounding the format used while encoding the audio.
+There are many tools available for encoding audio. The simplest are those which are meant for ripping CDs or pulling in audio files and quickly and automatically converting them to MP3 or AAC format to store in a library, such as [iTunes](https://www.apple.com/itunes/). But when developing web apps that use audio as a component of the app, such as games, you will need more control over the encoding process and more options surrounding the format used while encoding the audio.
 
 A few popular options:
 

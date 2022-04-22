@@ -38,10 +38,10 @@ are alleviated through other means.
 ## Syntax
 
 ```js
-t = performance.now();
+now()
 ```
 
-## Example
+## Examples
 
 ```js
 const t0 = performance.now();

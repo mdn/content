@@ -547,7 +547,7 @@ All these properties can be specified as either a string containing any valid [C
       <td><code>popup</code></td>
       <td>
         <p>
-          The background color of popups (such as the url bar dropdown and the
+          The background color of popups (such as the URL bar dropdown and the
           arrow panels).
         </p>
         <details open>
@@ -591,7 +591,7 @@ All these properties can be specified as either a string containing any valid [C
       <td>
         <p>
           The background color of items highlighted using the keyboard inside
-          popups (such as the selected url bar dropdown item).
+          popups (such as the selected URL bar dropdown item).
         </p>
         <div class="notecard note">
           <p>

@@ -28,7 +28,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/flexbox/flexbox1-download.html) to work in your own editor or in an online editor.
 
 ## Flex Layout Two
 
@@ -46,7 +46,7 @@ Additional questions:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox2-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/flexbox/flexbox2-download.html) to work in your own editor or in an online editor.
 
 ## Flex Layout Three
 
@@ -60,7 +60,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox3-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/flexbox/flexbox3-download.html) to work in your own editor or in an online editor.
 
 ## Flex Layout Four
 
@@ -74,7 +74,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox4-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/flexbox/flexbox4-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

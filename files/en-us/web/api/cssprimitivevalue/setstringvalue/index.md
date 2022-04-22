@@ -28,7 +28,7 @@ value will be unchanged and a {{domxref("DOMException")}} will be raised.
 ## Syntax
 
 ```js
-cssPrimitiveValue.setStringValue(stringType, stringValue);
+setStringValue(stringType, stringValue)
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ cssPrimitiveValue.setStringValue(stringType, stringValue);
     | `CSS_URI`    | The value is a {{cssxref("url", "url()")}}.                     |
 
 - stringValue
-  - : A {{domxref("DOMString")}} representing the new string value.
+  - : A string representing the new string value.
 
 ### Return value
 

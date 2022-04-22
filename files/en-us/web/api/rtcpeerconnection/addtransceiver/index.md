@@ -27,14 +27,15 @@ bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
 ## Syntax
 
 ```js
-rtpTransceiver = RTCPeerConnection.addTransceiver(trackOrKind, init);
+addTransceiver(trackOrKind)
+addTransceiver(trackOrKind, init)
 ```
 
 ### Parameters
 
 - `trackOrKind`
   - : A {{domxref("MediaStreamTrack")}} to associate with the transceiver, or a
-    {{domxref("DOMString")}} which is used as the {{domxref("MediaStreamTrack.kind",
+    string which is used as the {{domxref("MediaStreamTrack.kind",
     "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by
     extension of the {{domxref("RTCRtpReceiver")}} itself.
 - `init` {{optional_inline}}

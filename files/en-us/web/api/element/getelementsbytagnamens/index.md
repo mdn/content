@@ -19,13 +19,11 @@ that its search is restricted to descendants of the specified element.
 ## Syntax
 
 ```js
-elements = element.getElementsByTagNameNS(namespaceURI, localName)
+getElementsByTagNameNS(namespaceURI, localName)
 ```
 
-- `elements` is a live {{domxref("HTMLCollection")}} of found elements in
-  the order they appear in the tree.
-- `element` is the element from where the search should start. Note that
-  only the descendants of this element are included in the search, not the node itself.
+### Parameters
+
 - `namespaceURI` is the namespace URI of elements to look for (see
   {{domxref("Element.namespaceURI")}} and {{domxref("Attr.namespaceURI")}}). For
   example, if you need to look for XHTML elements, use the XHTML namespace URI,
@@ -34,7 +32,11 @@ elements = element.getElementsByTagNameNS(namespaceURI, localName)
   special value `"*"`, which matches all elements (see
   {{domxref("Element.localName")}} and {{domxref("Attr.localName")}}).
 
-## Example
+### Return value
+
+A live {{domxref("HTMLCollection")}} of found elements in the order they appear in the tree.
+
+## Examples
 
 ```js
 // check the alignment on a number of cells in a table in an XHTML document.

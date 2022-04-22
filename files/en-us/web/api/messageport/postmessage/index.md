@@ -21,10 +21,10 @@ transfers ownership of objects to other browsing contexts.
 ## Syntax
 
 ```js
-port.postMessage(message, transferList);
+postMessage(message, transferList)
 ```
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 
@@ -38,7 +38,7 @@ port.postMessage(message, transferList);
     ownership transferred to the receiving browsing context, so are no longer usable by
     the sending browsing context.
 
-## Example
+## Examples
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the

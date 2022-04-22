@@ -71,7 +71,7 @@ Note that most images on the web, including in Google Images, are copyrighted. T
 
 To choose a font:
 
-1. Go to [Google Fonts](https://www.google.com/fonts) and find one you like.
+1. Go to [Google Fonts](https://fonts.google.com/) and find one you like.
 2. Copy the lines of code Google gives you into your text editor to save for later.
 3. For more details about using Google Fonts, see [this page](https://developers.google.com/fonts/docs/getting_started)
 

@@ -19,7 +19,7 @@ The **`error()`** method of the
 ## Syntax
 
 ```js
-readableStreamBYOBRequestInstance.respond(bytesWritten);
+respond(bytesWritten)
 ```
 
 ### Parameters

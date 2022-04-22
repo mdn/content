@@ -20,7 +20,7 @@ indicating whether the given point is in the {{domxref("Range")}}. It returns
 ## Syntax
 
 ```js
-bool = range.isPointInRange( referenceNode, offset )
+isPointInRange( referenceNode, offset )
 ```
 
 ### Parameters
@@ -31,7 +31,11 @@ bool = range.isPointInRange( referenceNode, offset )
   - : The offset into {{domxref("Node")}} of the point to compare with the
     {{domxref("Range")}}.
 
-## Example
+### Return value
+
+A boolean.
+
+## Examples
 
 ```js
 range = document.createRange();

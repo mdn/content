@@ -285,4 +285,4 @@ This article has taken you through the basics of using the WebAssembly JavaScrip
 
 - [webassembly.org](https://webassembly.org/)
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
+- [WebAssembly on Mozilla Research](https://research.mozilla.org/)

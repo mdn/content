@@ -35,7 +35,7 @@ returned {{domxref("MediaKeySystemAccess")}} object's
 ## Syntax
 
 ```js
-promise = navigator.requestMediaKeySystemAccess(keySystem, supportedConfigurations);
+requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 ```
 
 ### Parameters

@@ -18,14 +18,14 @@ The **`deleteFromDocument()`** method of the
 ## Syntax
 
 ```js
-sel.deleteFromDocument()
+deleteFromDocument()
 ```
 
 ### Parameters
 
 _None._
 
-## Example
+## Examples
 
 This example lets you delete selected text by clicking a button. Upon clicking the
 button, the

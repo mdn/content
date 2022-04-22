@@ -20,7 +20,7 @@ of the sensors based on `Sensor`.
 ## Syntax
 
 ```js
-Sensor.start()
+start()
 ```
 
 ### Parameters

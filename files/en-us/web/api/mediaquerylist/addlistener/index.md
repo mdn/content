@@ -26,7 +26,7 @@ available in the browsers you need to support.
 ## Syntax
 
 ```js
-MediaQueryList.addListener(func)
+addListener(func)
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ MediaQueryList.addListener(func)
 
 Void.
 
-## Example
+## Examples
 
 ```js
 var paragraph = document.querySelector('p');

@@ -17,8 +17,8 @@ This article provides information about the changes in Firefox 83 that will affe
 
 ### Developer Tools
 
-- When using the `:screenshot` [helper command](/en-US/docs/Tools/Web_Console/Helpers) in the [Web Console](/en-US/docs/Tools/Web_Console), the `--dpr` parameter is no longer ignored when taking a fullscreen screenshot using `--fullpage` ({{bug(1645284)}}).
-- Developers can use the `scroll` badge in the [Page Inspector](/en-US/docs/Tools/Page_Inspector) to [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow). Selecting the badge highlights elements that are _causing_ overflow and marks them with the `overflow` badge ({{bug(1669129)}}).
+- When using the `:screenshot` [helper command](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), the `--dpr` parameter is no longer ignored when taking a fullscreen screenshot using `--fullpage` ({{bug(1645284)}}).
+- Developers can use the `scroll` badge in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) to [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html). Selecting the badge highlights elements that are _causing_ overflow and marks them with the `overflow` badge ({{bug(1669129)}}).
 
 ### HTML/XML
 

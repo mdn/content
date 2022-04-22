@@ -43,10 +43,10 @@ The sequence of events which occurs in response to this method being called:
 ## Syntax
 
 ```js
-RTCDataChannel.close();
+close()
 ```
 
-## Parameters
+### Parameters
 
 None.
 
@@ -54,7 +54,7 @@ None.
 
 `undefined`.
 
-## Example
+## Examples
 
 ```js
 var pc = new RTCPeerConnection();

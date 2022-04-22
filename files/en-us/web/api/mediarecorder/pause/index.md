@@ -31,7 +31,7 @@ browser queues a task that runs the below steps:
 ## Syntax
 
 ```js
-MediaRecorder.pause()
+pause()
 ```
 
 ### Return value
@@ -45,7 +45,7 @@ MediaRecorder.pause()
     the recording if the `MediaRecorder` is not active. If you call `pause()` while already paused,
     the method silently does nothing.
 
-## Example
+## Examples
 
 ```js
 ...

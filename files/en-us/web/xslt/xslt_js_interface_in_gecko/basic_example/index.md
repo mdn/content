@@ -113,7 +113,7 @@ function Init(){
   xslStylesheet = myXMLHTTPRequest.responseXML;
   xsltProcessor.importStylesheet(xslStylesheet);
 
-  // load the xml file, example1.xml
+  // load the XML file, example1.xml
   myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xml", false);
   myXMLHTTPRequest.send(null);

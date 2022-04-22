@@ -23,17 +23,14 @@ This second article in our [Express Tutorial](/en-US/docs/Learn/Server-side/Expr
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
-          >Set up a Node development environment</a
-        >. Review the Express Tutorial.
+        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Set up a Node development environment</a>.
+          Review the Express Tutorial.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To be able to start your own new website projects using the
-        <em>Express Application Generator</em>.
+        To be able to start your own new website projects using the <em>Express Application Generator</em>.
       </td>
     </tr>
   </tbody>
@@ -73,7 +70,7 @@ The generator has a number of options, which you can view on the command line us
     -H, --hogan          add hogan.js engine support
     -v, --view <engine>  add view <engine> support (dust|ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
         --no-view        use static html instead of view engine
-    -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
+    -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain CSS)
         --git            add .gitignore
     -f, --force          force on non-empty directory
     -h, --help           output usage information
@@ -91,7 +88,7 @@ You can also choose a view (template) engine using `--view` and/or a CSS generat
 
 ### What view engine should I use?
 
-The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](https://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
+The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](https://github.com/pillarjs/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
 
 > **Note:** If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) and the documentation for your target view engine.
 
@@ -425,8 +422,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 ```
 
-The next set of functions call `app.use()` to add the _middleware_ libraries into the request handling chain.
-In addition to the 3rd party libraries we imported previously, we use the `express.static` middleware to get _Express_ to serve all the static files in the **/public** directory in the project root.
+The next set of functions call `app.use()` to add the _middleware_ libraries that we imported above into the request handling chain.
+For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/api.html#req.body) with the form fields.
+After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **/public** directory in the project root.
 
 ```js
 app.use(logger('dev'));

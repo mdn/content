@@ -15,8 +15,6 @@ The **`DOMTimeStamp`** type represents an absolute or relative number of millise
 > **Note:** `DOMTimeStamp` has been removed from the WebIDL specification, but is referenced in other specifications.
 > In the High Resolution Time specification, `DOMTimeStamp` has been redefined as [`EpochTimeStamp`](/en-US/docs/Web/API/EpochTimeStamp).
 
-
-
 ## Specifications
 
 {{Specifications}}

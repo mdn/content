@@ -29,7 +29,7 @@ is raised. Modification to the corresponding style property can be achieved usin
 ## Syntax
 
 ```js
-var counterValue = cssPrimitiveValue.getCounterValue();
+getCounterValue()
 ```
 
 ### Return value

@@ -50,6 +50,12 @@ For {{SVGElement('line')}}, `y1` defines the y coordinate of the starting point 
             >&#x3C;percentage></a
           ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -95,6 +101,12 @@ For {{SVGElement('linearGradient')}}, `y1` defines the y coordinate of the start
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
           ></strong
         >
       </td>
