@@ -63,7 +63,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. {{ Bug(585877) }}
 - The {{ domxref("DocumentType") }} object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
 - The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
-- The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/WindowEventHandlers/onhashchange#the_hashchange_event).
+- The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/Window/hashchange_event).
 - The {{ domxref("FileReader") }} interface's `abort()` method now throws an exception when used if no file read is in progress.
 - The {{ domxref("window.postMessage()") }} method now uses [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to let you pass JavaScript objects instead of just strings from one window to another.
 - The {{ domxref("window.history") }} API now uses [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to serialize the objects you pass to the `pushState()` and `replaceState()` methods; this lets you use more complex objects (including those that contain cyclic graphs of references).

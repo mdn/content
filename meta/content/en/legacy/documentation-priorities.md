@@ -150,7 +150,6 @@ The following API interface reference documents (and their child pages) are curr
 - [`NavigatorLanguage`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage) (3)
 - [`NavigatorOnLine`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine) (3)
 - [`Window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) (182)
-- [`WindowEventHandlers`](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers) (13)
 
 ### URL API (43)
 

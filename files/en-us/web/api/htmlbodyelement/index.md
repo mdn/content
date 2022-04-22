@@ -17,7 +17,7 @@ The **`HTMLBodyElement`** interface provides special properties (beyond those in
 
 ## Properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
   - : Is a {{ domxref("DOMString") }} that represents the color of active hyperlinks.
@@ -34,7 +34,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domx
 
 ## Methods
 
-_No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}, and from {{domxref("WindowEventHandlers")}}._
+_No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Event handlers
 
@@ -92,4 +92,3 @@ The following {{domxref("Window")}} `onXYZ` event handler properties are also av
 ## See also
 
 - HTML element implementing this interface: {{ HTMLElement("body") }}
-- {{domxref("WindowEventHandlers")}}

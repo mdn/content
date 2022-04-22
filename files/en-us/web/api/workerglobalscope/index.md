@@ -19,7 +19,7 @@ This interface is usually specialized by each worker type: {{domxref("DedicatedW
 
 ## Properties
 
-_This interface inherits properties from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
 ### Standard properties
 
@@ -65,7 +65,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 ## Methods
 
-_This interface inherits methods from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ### Standard methods
 

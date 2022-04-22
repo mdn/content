@@ -85234,19 +85234,6 @@
       "rolfedh"
     ]
   },
-  "Web/API/WindowEventHandlers": {
-    "modified": "2020-10-15T21:29:33.100Z",
-    "contributors": [
-      "Wind1808",
-      "chrisdavidmills",
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "teoli",
-      "Ehsan"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:10:11.615Z",
     "contributors": [
