@@ -323,16 +323,15 @@ The available types are as follows:
 
 The `<input>` element is so powerful because of its attributes; the [`type`](#type) attribute, described with examples above, being the most important. Since every `<input>` element, regardless of type, is based on the {{domxref("HTMLInputElement")}} interface, they technically share the exact same set of attributes. However, in reality, most attributes have an effect on only a specific subset of input types. In addition, the way some attributes impact an input depends on the input type, impacting different input types in different ways.
 
-This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with. Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages. This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes). Those with extra importance as it relates to `<input>` are highlighted.
+This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with. Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages.
 
-Attributes for the `<input`> element include [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and:
+Attributes for the `<input`> element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
 
 | Attribute                           | Type or Types                    | Description                                                                           |
 | ----------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
 | [`accept`](#accept)                 | file                             | Hint for expected file type in file upload controls                                   |
 | [`alt`](#alt)                       | image                            | alt attribute for the image type. Required for accessibility                          |
 | [`autocomplete`](#autocomplete)     | all                              | Hint for form autofill feature                                                        |
-| [`autofocus`](#autofocus)           | all                              | Automatically focus the form control when the page is loaded                          |
 | [`capture`](#capture)               | file                             | Media capture input method in file upload controls                                    |
 | [`checked`](#checked)               | radio, checkbox                  | Whether the command or control is checked                                             |
 | [`dirname`](#dirname)               | text, search                     | Name of form field to use for sending the element's directionality in form submission |
