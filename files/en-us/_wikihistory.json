@@ -35873,27 +35873,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Document/onoffline": {
-    "modified": "2019-03-23T23:14:56.082Z",
-    "contributors": [
-      "mfluehr",
-      "teoli",
-      "jsx"
-    ]
-  },
-  "Web/API/Document/ononline": {
-    "modified": "2019-03-18T20:55:34.049Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "teoli",
-      "jsx",
-      "gurdev_singh",
-      "kscarfone",
-      "Sheppy",
-      "arivu86"
-    ]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:11:18.087Z",
     "contributors": [
