@@ -434,7 +434,7 @@ Returning to our spending costs example, the previous two snippets could be rewr
 
 ## Summary
 
-There are a few other things you could learn about tables in HTML, but this is all you need to know for now. Next, you can test yourself with our [table assessment](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data). Have fun!
+There are a few other things you could learn about tables in HTML, but this is all you need to know for now. Next, you can test yourself with our [HTML tables assessment](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data). Have fun!
 
 If you are already learning CSS and have done well on the assessment, you can move on and learn about styling HTML tables — see [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
 

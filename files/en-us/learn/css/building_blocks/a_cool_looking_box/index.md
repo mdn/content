@@ -22,7 +22,7 @@ In this assessment, you'll get some more practice in creating cool-looking boxes
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this assessment, you should have already worked
+        Before attempting this assessment you should have already worked
         through all the articles in this module.
       </td>
     </tr>

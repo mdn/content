@@ -18,8 +18,8 @@ With the things you have learned in the last few lessons you should find that yo
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this assessment you should have worked through the
-        rest of the CSS first steps module, and also have an understanding of HTML
+      	Before attempting this assessment you should have already worked through
+        all the articles in this module, and also have an understanding of HTML
         basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a

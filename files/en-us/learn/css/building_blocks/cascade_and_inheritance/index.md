@@ -249,7 +249,7 @@ It makes sense for web developers' stylesheets to override user stylesheets, so 
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: the Cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_tasks).
 
 ## Summary
 

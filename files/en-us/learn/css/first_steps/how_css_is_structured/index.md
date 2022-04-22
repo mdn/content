@@ -558,10 +558,6 @@ You should always make sure to separate distinct values from one another by at l
 
 **To find out how spacing can break CSS, try playing with spacing inside your test CSS.**
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module — see [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page). We'd advise going through the next article in the series first and not just skipping to it though!
-
 ## Summary
 
 At this point, you should have a better idea about how CSS is structured. It's also useful to understand how the browser uses HTML and CSS to display a webpage. The next article, [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works), explains the process.

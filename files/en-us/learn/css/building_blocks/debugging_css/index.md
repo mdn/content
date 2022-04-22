@@ -193,13 +193,13 @@ In the instance that your problem is actually a bug in a browser, then a reduced
 
 As you become more experienced with CSS, you will find that you get faster at figuring out issues. However, even the most experienced of us sometimes find ourselves wondering what on earth is going on. Taking a methodical approach, making a reduced test case, and explaining the issue to someone else will usually result in a fix being found.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
 ## Summary
 
 So there we have it, an introduction to debugging CSS, which should give you some useful skills to count on when you start to debug CSS and other types of code later on in your career.
 
 In the last article of this module, we'll take a look at how to [organize your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing).
+
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 ## In this module
 
