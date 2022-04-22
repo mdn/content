@@ -19,7 +19,7 @@ The **hexadecimal color syntax** is a notation for describing an [sRGB](/en-US/d
 #RRGGBBAA   // The eight-value syntax
 ```
 
-## Value
+### Value
 
 - `R` or `RR`
   - : The _red_ component of the color, as a case-insensitive hexadecimal number between `0` and `ff` (255)). If there is only one number, it is duplicated: `1` means `11`.
