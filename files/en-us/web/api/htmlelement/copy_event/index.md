@@ -11,7 +11,7 @@ tags:
   - copy
 browser-compat: api.HTMLElement.copy_event
 ---
-{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
+{{ APIRef("HTML DOM") }}
 
 The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
 
