@@ -34,7 +34,7 @@ The **hexadecimal color syntax** is a notation for describing an [sRGB](/en-US/d
 
 ## Examples
 
-```html hidden
+```html
 /* Hexadecimal syntax for a fully opaque hot pink */
 #f09 <div class="c1"></div>
 #F09 <div class="c2"></div>
@@ -42,7 +42,7 @@ The **hexadecimal color syntax** is a notation for describing an [sRGB](/en-US/d
 #FF0099 <div class="c4"></div> 
 ```
 
-```css hidden
+```css
 div {width: 40px; height: 40px;}
 .c1 { background: #f09}
 .c2 { background: #F09}
