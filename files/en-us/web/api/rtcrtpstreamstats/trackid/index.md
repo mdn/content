@@ -32,7 +32,7 @@ A {{domxref("DOMString")}} which uniquely identifies the
 for which statistics are being collected by this {{domxref("RTCStatsReport")}}.
 
 > **Note:** This value is _not_ the same as the value of
-> {{domxref("MediaStramTrack.id")}}.
+> {{domxref("MediaStreamTrack.id")}}.
 
 ## Specifications
 

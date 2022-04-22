@@ -10,7 +10,7 @@ tags:
   - Reference
   - Security
   - SecurityPolicyViolationEvent
-  - Statuscode
+  - Status code
 browser-compat: api.SecurityPolicyViolationEvent.statusCode
 ---
 {{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}

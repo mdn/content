@@ -43,7 +43,7 @@ local peer.
 You can think of the local and remote views of the same RTP stream as pairs, each of
 which has a reference back to the other one. Thus, if an {{domxref("RTCStatsReport")}}
 includes an `remote-outbound-rtp` statistics object (of type
-`RTCRemoteOutboundRtpStreamstats`), it should also have a corresponding
+`RTCRemoteOutboundRtpStreamStats`), it should also have a corresponding
 `inbound-rtp` object. Both of these provide information about the same batch
 of packets being transmitted from the remote peer to the local device. The difference is
 that `remote-outbound-rtp` describes statistics about the transmission(s)

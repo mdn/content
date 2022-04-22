@@ -18,7 +18,7 @@ The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API]
 ## Properties
 
 - {{domxref('StylePropertyMapReadOnly.size')}}
-  - : Returns an unsinged long integer containing the size of the `StylePropertyMapReadOnly` object.
+  - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
 
 ## Methods
 
