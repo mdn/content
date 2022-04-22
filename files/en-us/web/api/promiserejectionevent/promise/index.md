@@ -63,5 +63,5 @@ window.onunhandledrejection = function(event) {
     rejection events")}}
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
-- {{event("rejectionhandled")}}
+- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
 - {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
