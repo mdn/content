@@ -26,7 +26,7 @@ This is used to represent messages in:
 - [Broadcast channels](/en-US/docs/Web/API/Broadcast_Channel_API) (see {{domxref("Broadcastchannel.postMessage()")}}) and {{domxref("BroadcastChannel.message_event")}}).
 - WebRTC data channels (see {{domxref("RTCDataChannel.message_event", "onmessage")}}).
 
-The action triggered by this event is defined in a function set as the event handler for the relevant {{event("message")}} event (e.g. using an `onmessage` handler as listed above).
+The action triggered by this event is defined in a function set as the event handler for the relevant `message` event (e.g. using an `onmessage` handler as listed above).
 
 {{AvailableInWorkers}}
 {{InheritanceDiagram}}
@@ -93,7 +93,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
+Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
 
 ```js
 onconnect = function(e) {
