@@ -68,7 +68,7 @@ New ECMAScript 2015 features implemented:
 
 - Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, see the [fonts for Mozilla's MathML engine](/en-US/docs/Mozilla/MathML_Project/Fonts) and try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
 - The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
-- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic mathvariants ({{Bug(930504)}}).
+- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ({{Bug(930504)}}).
 
 ### SVG
 
