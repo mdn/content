@@ -424,7 +424,7 @@ We can run prettier against a codebase to just check if our code wants adjusting
 npx prettier --check index.js
 ```
 
-You should get on output along the lines of:
+You should get an output along the lines of:
 
 ```bash
 Checking formatting...
