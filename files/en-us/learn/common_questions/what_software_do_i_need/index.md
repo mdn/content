@@ -256,7 +256,7 @@ As you already know, you need a web browser to view websites. There are [dozens]
 
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/download-ie)
+- [Microsoft Internet Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70)
 - [Apple Safari](https://www.apple.com/safari/)
 
 If you're targeting a specific group (e.g., technical platform or country), you may have to test the site with additional browsers, like [Opera](https://www.opera.com/), [Konqueror](https://www.konqueror.org/), or [UC Browser](https://www.ucweb.com/ucbrowser/).

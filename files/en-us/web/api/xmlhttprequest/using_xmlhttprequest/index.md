@@ -934,7 +934,7 @@ Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
 1. [HTTP access control](/en-US/docs/Web/HTTP/CORS)
 1. [XMLHttpRequest -
     REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-1. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
+1. [Microsoft documentation](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
 1. ["Using the XMLHttpRequest
     Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
 1. [The `XMLHttpRequest` object:

@@ -52,7 +52,7 @@ Vary: <header-name>, <header-name>, ...
 
 ### Compatibility notes
 
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [Vary with care – Vary header problems in IE6-9](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/vary-with-care)
 
 ## See also
 
