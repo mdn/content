@@ -18,12 +18,8 @@ feedback operation.
 ## Syntax
 
 ```js
-void gl.pauseTransformFeedback();
+pauseTransformFeedback()
 ```
-
-### Parameters
-
-None.
 
 ### Return value
 

@@ -20,7 +20,7 @@ been deleted.
 ## Syntax
 
 ```js
-void gl.deleteTexture(texture);
+deleteTexture(texture)
 ```
 
 ### Parameters

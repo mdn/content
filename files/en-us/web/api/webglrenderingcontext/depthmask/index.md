@@ -17,7 +17,7 @@ buffer is enabled or disabled.
 ## Syntax
 
 ```js
-void gl.depthMask(flag);
+depthMask(flag)
 ```
 
 ### Parameters

@@ -17,6 +17,8 @@ specified node is part of the selection.
 ## Syntax
 
 ```js
+containsNode(node)
+containsNode(node)
 containsNode(node, partialContainment)
 ```
 

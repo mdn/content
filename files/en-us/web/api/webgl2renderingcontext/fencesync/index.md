@@ -17,7 +17,7 @@ The **`WebGL2RenderingContext.fenceSync()`** method of the [WebGL 2 API](/en-US/
 ## Syntax
 
 ```js
-WebGLSync gl.fenceSync(condition, flags);
+fenceSync(condition, flags)
 ```
 
 ### Parameters

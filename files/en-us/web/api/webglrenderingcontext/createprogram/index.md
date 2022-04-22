@@ -18,7 +18,7 @@ The **`WebGLRenderingContext.createProgram()`** method of the
 ## Syntax
 
 ```js
-WebGLProgram gl.createProgram();
+createProgram()
 ```
 
 ### Parameters

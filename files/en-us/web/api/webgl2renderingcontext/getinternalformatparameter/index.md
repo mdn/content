@@ -18,7 +18,7 @@ information about implementation-dependent support for internal formats.
 ## Syntax
 
 ```js
-any gl.getInternalformatParameter(target, internalformat, pname);
+getInternalformatParameter(target, internalformat, pname)
 ```
 
 ### Parameters

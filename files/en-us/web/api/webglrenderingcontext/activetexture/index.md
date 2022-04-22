@@ -18,7 +18,7 @@ make active.
 ## Syntax
 
 ```js
-void gl.activeTexture(texture);
+activeTexture(texture)
 ```
 
 ### Parameters

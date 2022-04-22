@@ -20,7 +20,7 @@ multiple GL contexts.
 ## Syntax
 
 ```js
-void gl.waitSync(sync, flags, timeout);
+waitSync(sync, flags, timeout)
 ```
 
 ### Parameters

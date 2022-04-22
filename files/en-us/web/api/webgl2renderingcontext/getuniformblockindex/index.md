@@ -18,7 +18,7 @@ a uniform block within a {{domxref("WebGLProgram")}}.
 ## Syntax
 
 ```js
-GLuint gl.getUniformBlockIndex(program, uniformBlockName);
+getUniformBlockIndex(program, uniformBlockName)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ GLuint gl.getUniformBlockIndex(program, uniformBlockName);
 - `program`
   - : A {{domxref("WebGLProgram")}} containing the uniform block.
 - `uniformName`
-  - : A {{domxref("DOMString")}} specifying the name of the uniform block to whose index
+  - : A string specifying the name of the uniform block to whose index
     to retrieve.
 
 ### Return value

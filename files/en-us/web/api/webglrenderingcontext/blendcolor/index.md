@@ -17,7 +17,7 @@ destination blending factors.
 ## Syntax
 
 ```js
-void gl.blendColor(red, green, blue, alpha);
+blendColor(red, green, blue, alpha)
 ```
 
 ### Parameters

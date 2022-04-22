@@ -17,7 +17,7 @@ incoming pixel depth to the current depth buffer value.
 ## Syntax
 
 ```js
-void gl.depthFunc(func);
+depthFunc(func)
 ```
 
 ### Parameters

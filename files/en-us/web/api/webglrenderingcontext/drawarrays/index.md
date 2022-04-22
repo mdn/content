@@ -16,7 +16,7 @@ The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/do
 ## Syntax
 
 ```js
-void gl.drawArrays(mode, first, count);
+drawArrays(mode, first, count)
 ```
 
 ### Parameters

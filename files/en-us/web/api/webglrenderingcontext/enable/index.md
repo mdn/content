@@ -17,7 +17,7 @@ for this context.
 ## Syntax
 
 ```js
-void gl.enable(cap);
+enable(cap)
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@ two-dimensional texture storage.
 ## Syntax
 
 ```js
-void gl.texStorage2D(target, levels, internalformat, width, height);
+texStorage2D(target, levels, internalformat, width, height)
 ```
 
 ### Parameters

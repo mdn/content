@@ -19,7 +19,7 @@ information about an active uniform block within a {{domxref("WebGLProgram")}}.
 ## Syntax
 
 ```js
-any gl.getActiveUniformBlockParameter(program, uniformBlockIndex, pname);
+getActiveUniformBlockParameter(program, uniformBlockIndex, pname)
 ```
 
 ### Parameters

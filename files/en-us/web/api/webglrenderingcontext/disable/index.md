@@ -17,7 +17,7 @@ capabilities for this context.
 ## Syntax
 
 ```js
-void gl.disable(cap);
+disable(cap)
 ```
 
 ### Parameters

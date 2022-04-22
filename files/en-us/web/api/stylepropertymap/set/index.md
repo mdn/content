@@ -19,7 +19,7 @@ interface changes the CSS declaration with the given property.
 ## Syntax
 
 ```js
-set(property,value)
+set(property, value)
 ```
 
 ### Parameters
