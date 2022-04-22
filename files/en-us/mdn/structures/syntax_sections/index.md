@@ -166,7 +166,7 @@ The name of each parameter in the list should be contained in a {{HTMLElement("c
 
 #### Return value section
 
-Next, include a "Return value" subsection, which explains what the return value of the constructor or method. See the above links for examples.
+Next, include a "Return value" subsection, which explains what the return value of the constructor or method is. See the above links as examples.
 
 If there is no return value, use the following text:
 
