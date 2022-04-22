@@ -85247,29 +85247,6 @@
       "Ehsan"
     ]
   },
-  "Web/API/WindowEventHandlers/onrejectionhandled": {
-    "modified": "2020-10-15T21:38:13.769Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "Sheppy",
-      "chrisdavidmills",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onunhandledrejection": {
-    "modified": "2020-10-15T21:38:15.201Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "Sheppy",
-      "chrisdavidmills",
-      "teoli",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:10:11.615Z",
     "contributors": [

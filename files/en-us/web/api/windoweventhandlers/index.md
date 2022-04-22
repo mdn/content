@@ -20,11 +20,6 @@ The **`WindowEventHandlers`** mixin describes the event handlers common to sever
 
 _The events properties, of the form `onXYZ`, are defined on the {{domxref("WindowEventHandlers")}}, and implemented by {{domxref("Window")}}, and {{domxref("WorkerGlobalScope")}} for Web Workers._
 
-- {{domxref("WindowEventHandlers.onrejectionhandled")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.
-- {{domxref("WindowEventHandlers.onunhandledrejection")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.
-
 ## Methods
 
 _This interface defines no method._

@@ -24,7 +24,7 @@ for errors.
 
 There are two types of `PromiseRejectionEvent`:
 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} is sent by the JavaScript runtime when a promise is
-rejected but the rejection goes unhandled. A {{event("rejectionhandled")}} event is
+rejected but the rejection goes unhandled. A {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}event is
 emitted if a promise is rejected but the rejection is caught by a rejection handler.
 
 ## Syntax
@@ -41,8 +41,7 @@ _The `PromiseRejectionEvent()` constructor also inherits parameters from
 - `type`
   - : A string representing the name of the type of the
     `PromiseRejectionEvent`. This is case-sensitive and should be one of
-    {{event("rejectionhandled", '"rejectionhandled"')}} or {{event("unhandledrejection",
-    '"unhandledrejection"')}}, to match the event names of the possible (non-synthetic)
+    {{domxref("Window.rejectionhandled_event", "rejectionhandled")}} or {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}, to match the event names of the possible (non-synthetic)
     {{domxref("PromiseRejectionEvent")}} events that user agents can actually fire).
 - `options`
 

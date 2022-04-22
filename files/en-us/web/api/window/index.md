@@ -309,8 +309,6 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("WindowEventHandlers.onrejectionhandled")}}
-  - : An event handler for handled {{jsxref("Promise")}} rejection events.
 - {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
   - : An event handler property for user proximity events (see {{domxref("UserProximityEvent")}}).
 
@@ -368,8 +366,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised.
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
-- {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
-  - : An event handler for unhandled {{jsxref("Promise")}} rejection events.
 
 ## Events
 
@@ -504,10 +500,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
   - : Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.
-    Also available through the {{domxref("WindowEventHandlers/onrejectionhandled", "onrejectionhandled")}} event handler property.
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
   - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
-    Also available using the {{domxref("WindowEventHandlers/onunhandledrejection", "onunhandledrejection")}} event handler property.
 
 ### Transition events
 
