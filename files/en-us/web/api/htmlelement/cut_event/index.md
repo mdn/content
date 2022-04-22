@@ -11,7 +11,7 @@ tags:
   - cut
 browser-compat: api.HTMLElement.cut_event
 ---
-{{ APIRef("HTML DOM") }} {{SeeCompatTable}}
+{{ APIRef("HTML DOM") }}
 
 The **`cut`** event fires when the user initiates a cut action through the browser's user interface.
 

@@ -11,7 +11,7 @@ tags:
   - paste
 browser-compat: api.HTMLElement.paste_event
 ---
-{{ APIRef("HTML DOM") }} {{SeeCompatTable}}
+{{ APIRef("HTML DOM") }}
 
 The **`paste`** event fires when the user initiates a paste action through the browser's user interface.
 
