@@ -31,6 +31,9 @@ The **`@page`** CSS at-rule is used to modify some CSS properties when printing 
 - [`size`](/en-US/docs/Web/CSS/@page/size)
   - : Specifies the target size and orientation of the page box's containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
 
+- [`page-orientation`](/en-US/docs/Web/CSS/@page/page-orientation)
+  - : Specifies the orientation of the document on the page, allowing it to be laid out and formatted as normal or be rotated to one either left or right side.
+
 ## Description
 
 You can't change all CSS properties with `@page`. You can only change the margins, orphans, widows, and page breaks of the document. Attempts to change any other CSS properties will be ignored.
