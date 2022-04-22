@@ -21,7 +21,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 - Discussions: [Telegram (MDN localization in Brazilian Portuguese)](https://t.me/mdn_l10n_pt_br)
 - Current contributors: [Luisa Migueres](https://github.com/lumigueres), [Julio Sampaio](https://github.com/juliosampaio), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
-### Chinese (zh-CN, zh-TW)
+### Chinese (zh-TW)
 
 - Discussions: [Telegram (MozTW L10n channel)](https://moztw.org/tg)
 - Current contributors: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [dibery](https://github.com/dibery)
