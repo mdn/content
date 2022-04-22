@@ -318,8 +318,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
-- {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
   - : Called after the window loses focus, such as due to a popup.
 - {{domxref("GlobalEventHandlers.onchange")}}
@@ -372,8 +370,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when a form is submitted
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
   - : An event handler for unhandled {{jsxref("Promise")}} rejection events.
-- {{domxref("WindowEventHandlers.onunload")}}
-  - : Called when the user navigates away from the page.
 
 ## Events
 
@@ -475,7 +471,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
   - : Fired when the window, the document and its resources are about to be unloaded.
-    Also available via the {{domxref("WindowEventHandlers/onbeforeunload", "onbeforeunload")}} property.
 - {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
   - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 - {{domxref("Window/load_event", "load")}}
@@ -483,7 +478,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("GlobalEventHandlers/onload", "onload")}} property.
 - {{domxref("Window/unload_event", "unload")}}
   - : Fired when the document or a child resource is being unloaded.
-    Also available via the {{domxref("WindowEventHandlers/onunload", "onunload")}} property.
 
 ### Manifest events
 

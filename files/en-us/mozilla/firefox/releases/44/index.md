@@ -99,7 +99,7 @@ Highlights:
 
 - For compatibility with specific existing sites, the property `Document.charset` has been implemented as an alias of {{domxref("Document.characterSet")}} ({{bug(647621)}}).
 - Support for the [`window.sidebar.addSearchEngine()`](/en-US/docs/Web/OpenSearch#installing_sherlock_plugins) method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ({{bug(862148)}}).
-- To fight unwanted pop-ups, prompts requested in {{domxref("WindowEventHandlers/onbeforeunload", "Window.onbeforeunload")}} of pages that have not been interacted with are no more displayed ({{bug(636905)}}).
+- To fight unwanted pop-ups, prompts requested in {{domxref("Window/beforeunload_event", "beforeunload")}} events of pages that have not been interacted with are no more displayed ({{bug(636905)}}).
 - The deprecated method {{domxref("MessageEvent.initMessageEvent()")}} has been reimplemented for backward compatibility ({{bug(949376)}}).
 - The obsolete property `DocumentType.internalSubset` has been removed ({{bug(801545)}}).
 - For compatibility with existing sites, the properties {{domxref("Window.orientation")}} and {{domxref("Window.onorientationchange")}}, as well as the {{domxref("Window.orientationchange_event", "orientationchange")}} event have been implemented ({{bug(920734)}}).
