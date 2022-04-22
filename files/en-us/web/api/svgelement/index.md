@@ -63,7 +63,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the [`onscroll`](/en-US/docs/Web/API/GlobalEventHandlers/onscroll) property.
 - [`unload`](/en-US/docs/Web/API/SVGElement/unload_event)
   - : Fired when the DOM implementation removes an SVG document from a window or frame.
-    Also available via the [`onunload`](/en-US/docs/Web/API/WindowEventHandlers/onunload) property.
 
 ## Specifications
 
