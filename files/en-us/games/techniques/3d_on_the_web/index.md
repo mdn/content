@@ -90,7 +90,6 @@ You can find all the source code for this series [demos on GitHub](https://end3r
 ### Frameworks
 
 - [Three.js](https://threejs.org/)
-- [Whitestorm.js](https://github.com/WhitestormJS/whs.js) (based on Three.js)
 - [PlayCanvas](https://playcanvas.com/)
 - [Babylon.js](https://www.babylonjs.com/)
 - [A-Frame](https://aframe.io/)
@@ -98,7 +97,6 @@ You can find all the source code for this series [demos on GitHub](https://end3r
 ### Tutorials
 
 - [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
-- [Building up a basic demo with Whitestorm.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js)
 - [Building up a basic demo with PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
 - [Building up a basic demo with Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)
 - [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
