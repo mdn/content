@@ -67,8 +67,6 @@ Some combination—but not necessarily all—of the following properties will ex
 
 For tracks containing video sources from the user's screen contents, the following additional properties are may be included in addition to those available for video tracks.
 
-- {{domxref("MediaTrackSupportedConstraints.cursor", "cursor")}}
-  - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.cursor", "cursor")}} constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.displaySurface", "displaySurface")}}
   - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface", "logicalSurface")}}

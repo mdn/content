@@ -57021,12 +57021,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MediaTrackConstraints/cursor": {
-    "modified": "2020-10-15T22:12:40.110Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaTrackConstraints/deviceId": {
     "modified": "2020-10-15T21:50:01.262Z",
     "contributors": [
@@ -57327,12 +57321,6 @@
       "sideshowbarker",
       "Jib",
       "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/cursor": {
-    "modified": "2020-10-15T22:12:35.345Z",
-    "contributors": [
       "Sheppy"
     ]
   },
