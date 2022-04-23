@@ -133,7 +133,9 @@ The use of the `::before` and `::after` pseudo-elements along with the `content`
 
 ## Summary
 
-There are a large number of pseudo-classes and pseudo-elements, and it's useful to have a list to refer to — below are links to their reference pages on MDN.
+In this article we've introduced CSS pseudo-classes and pseudo-elements, which are special types of selectors.
+
+Pseudo-classes enable you to target an element when it's in a particular state, as if you had added a class for that state to the DOM. Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that. The `::before` and `::after` pseudo-elements enable you to insert content into the document using CSS.
 
 In the next article, we'll learn about [combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators).
 
