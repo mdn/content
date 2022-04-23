@@ -8627,6 +8627,8 @@
 /en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions	/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
 /en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack	/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
 /en-US/docs/Web/API/MediaStream_API	/en-US/docs/Web/API/Media_Streams_API
+/en-US/docs/Web/API/MediaTrackConstraints/cursor	/en-US/docs/Web/API/MediaTrackConstraints
+/en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor	/en-US/docs/Web/API/MediaTrackSupportedConstraints
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilities	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
 /en-US/docs/Web/API/Media_Capabilities_API/MediaConfiguration	/en-US/docs/Web/API/MediaConfiguration

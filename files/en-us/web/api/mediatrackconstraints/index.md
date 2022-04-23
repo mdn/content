@@ -152,17 +152,6 @@ Some combination—but not necessarily all—of the following properties will ex
 
 These constraints apply to the `video` property of the object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to obtain a stream for screen sharing.
 
-- {{domxref("MediaTrackConstraints.cursor", "cursor")}}
-
-  - : A [`ConstrainDOMString`](#constraindomstring) which specifies whether or not to include the mouse cursor in the generated track, and if so, whether or not to hide it while not moving. The value may be a single one of the following strings, or an array of them to allow the browser flexibility in deciding what to do about the cursor.
-
-    - `always`
-      - : The mouse is always visible in the video content of the {domxref("MediaStream"), unless the mouse has moved outside the area of the content.
-    - `motion`
-      - : The mouse cursor is always included in the video if it's moving, and for a short time after it stops moving.
-    - `never`
-      - : The mouse cursor is never included in the shared video.
-
 - {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}}
 
   - : A [`ConstrainDOMString`](#constraindomstring) which specifies the types of display surface that may be selected by the user. This may be a single one of the following strings, or a list of them to allow multiple source surfaces:
