@@ -215,7 +215,7 @@ writing.onerror = function () {
 
 ### Why a different API than FileWriter?
 
-The [FileWriter specification](http://dev.w3.org/2009/dap/file-system/file-writer.html) defines FileWriters, objects aiming at representing editable files. [Discussions on public-webapps](http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html) led to the conclusion that the API would behave poorly in the case of different entities writing concurrently to the same file. The outcome of this discussion is the FileHandle API with its LockedFile and transaction mechanism.
+The [FileWriter specification](https://dev.w3.org/2009/dap/file-system/file-writer.html) defines FileWriters, objects aiming at representing editable files. [Discussions on public-webapps](https://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html) led to the conclusion that the API would behave poorly in the case of different entities writing concurrently to the same file. The outcome of this discussion is the FileHandle API with its LockedFile and transaction mechanism.
 
 ## Specifications
 

@@ -24,7 +24,7 @@ Before you call the only method in this interface, [`readEntries()`](</#readEntr
 
 #### Example
 
-In the following code snippet from [HTML5Rocks](http://www.html5rocks.com/en/tutorials/file/filesystem/), we create Web Workers and pass data from it to the main app.
+In the following code snippet from [HTML5Rocks](https://web.dev/read-files/), we create Web Workers and pass data from it to the main app.
 
 ```js
 // Taking care of the browser-specific prefixes.

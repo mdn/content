@@ -169,7 +169,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 <!---->
 
-- [Interfacing with the XPCOM cycle collector](/en-US/docs/Interfacing_with_the_XPCOM_cycle_collector) 
+- [Interfacing with the XPCOM cycle collector](/en-US/docs/Interfacing_with_the_XPCOM_cycle_collector)
   - : XPCOM code can now take advantage of the cycle collector, which helps ensure that unused memory gets released instead of leaking.
 
 <!---->
@@ -224,7 +224,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Find toolbar.** The Find toolbar now opens with the current selection.
 - **Plugin management.** Users can now disable individual plugins in the Add-on Manager.
 - **Integration with Windows Vista.** Firefox's menus now display using Vista's native theme.
-- **Integration with Mac OS X.** Firefox now supports [Growl](http://growl.info/) for notifications of completed downloads and available updates.
+- **Integration with Mac OS X.** Firefox now supports [Growl](https://growl.github.io/growl/) for notifications of completed downloads and available updates.
 - **Star button.** The new star button in the location bar lets you quickly add a new bookmark with a single click. A second click lets you file and tag your new bookmark.
 - **Tags.** You can now associate keywords with your bookmarks to easily sort them by topic.
 - **Location bar and auto-complete.** Type the title or tag of a page in the location bar to quickly find the site you were looking for in your history and bookmarks. Favicons, bookmark, and tag indicators help you see where the results are coming from.
