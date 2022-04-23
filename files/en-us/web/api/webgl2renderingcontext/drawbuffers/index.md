@@ -18,7 +18,7 @@ currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
 ## Syntax
 
 ```js
-void gl.drawBuffers(buffers);
+drawBuffers(buffers)
 ```
 
 ### Parameters

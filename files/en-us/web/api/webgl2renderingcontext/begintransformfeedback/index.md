@@ -18,7 +18,7 @@ feedback operation.
 ## Syntax
 
 ```js
-void gl.beginTransformFeedback(primitiveMode);
+beginTransformFeedback(primitiveMode)
 ```
 
 ### Parameters

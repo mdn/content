@@ -29,7 +29,7 @@ getEyeParameters(whichEye)
 ### Parameters
 
 - `whichEye`
-  - : A {{domxref("DOMString")}} representing the eye you want to return the eye parameters for. Available values are `left` and `right` (defined in the [VREye enum](https://w3c.github.io/webvr/spec/1.1/#interface-vreye)).
+  - : A string representing the eye you want to return the eye parameters for. Available values are `left` and `right` (defined in the [VREye enum](https://w3c.github.io/webvr/spec/1.1/#interface-vreye)).
 
 ### Return value
 

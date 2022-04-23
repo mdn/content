@@ -16,7 +16,7 @@ The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueu
 ## Syntax
 
 ```js
-VideoDecoder.configure(config)
+configure(config)
 ```
 
 ### Parameters
@@ -63,7 +63,7 @@ VideoDecoder.configure(config)
 
 > **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
-### Return Value
+### Return value
 
 None.
 

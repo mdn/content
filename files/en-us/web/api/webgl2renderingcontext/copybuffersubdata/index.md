@@ -18,7 +18,7 @@ buffer to another buffer.
 ## Syntax
 
 ```js
-void gl.copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);
+copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size)
 ```
 
 ### Parameters

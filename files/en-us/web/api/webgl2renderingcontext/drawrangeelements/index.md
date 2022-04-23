@@ -18,7 +18,7 @@ data in a given range.
 ## Syntax
 
 ```js
-void gl.drawRangeElements(mode, start, end, count, type, offset);
+drawRangeElements(mode, start, end, count, type, offset)
 ```
 
 ### Parameters

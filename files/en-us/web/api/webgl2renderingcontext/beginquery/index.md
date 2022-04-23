@@ -17,7 +17,7 @@ The **`WebGL2RenderingContext.beginQuery()`** method of the [WebGL 2 API](/en-US
 ## Syntax
 
 ```js
-void gl.beginQuery(target, query);
+beginQuery(target, query)
 ```
 
 ### Parameters

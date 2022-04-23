@@ -16,8 +16,8 @@ The **`allocationSize()`** method of the {{domxref("VideoFrame")}} interface ret
 ## Syntax
 
 ```js
-VideoFrame.allocationSize();
-VideoFrame.allocationSize(options);
+allocationSize()
+allocationSize(options)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ VideoFrame.allocationSize(options);
         - `offset`: An integer representing the offset in bytes where the given plane begins.
         - `stride`: An integer representing the number of bytes, including padding, used by each row of the plane.
 
-### Return Value
+### Return value
 
 An integer containing the number of bytes needed to hold the frame as specified by `options`.
 

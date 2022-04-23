@@ -17,7 +17,7 @@ target.
 ## Syntax
 
 ```js
-void gl.endQuery(target);
+endQuery(target)
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@ initializes {{domxref("WebGLTransformFeedback")}} objects.
 ## Syntax
 
 ```js
-WebGLTransformFeedback gl.createTransformFeedback();
+createTransformFeedback()
 ```
 
 ### Parameters

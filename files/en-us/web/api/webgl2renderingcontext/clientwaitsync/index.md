@@ -18,7 +18,7 @@ The **`WebGL2RenderingContext.clientWaitSync()`** method of the
 ## Syntax
 
 ```js
-GLenum gl.clientWaitSync(sync, flags, timeout);
+clientWaitSync(sync, flags, timeout)
 ```
 
 ### Parameters

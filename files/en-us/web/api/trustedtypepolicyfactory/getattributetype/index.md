@@ -16,9 +16,9 @@ The **`getAttributeType()`** method of the {{domxref("TrustedTypePolicyFactory")
 ## Syntax
 
 ```js
-TrustedTypePolicyFactory.getAttributeType(tagName, attribute)
-TrustedTypePolicyFactory.getAttributeType(tagName, attribute, elementNs)
-TrustedTypePolicyFactory.getAttributeType(tagName, attribute, elementNs, attrNs)
+getAttributeType(tagName, attribute)
+getAttributeType(tagName, attribute, elementNs)
+getAttributeType(tagName, attribute, elementNs, attrNs)
 ```
 
 ### Parameters
