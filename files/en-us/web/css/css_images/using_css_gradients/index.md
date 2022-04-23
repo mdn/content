@@ -567,7 +567,7 @@ div {
 
 ## Using conic gradients
 
-The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and color wheels, but they can also be used for creating checker boards and other interesting effects.
+The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and {{glossary("color wheel", "color wheels")}}, but they can also be used for creating checker boards and other interesting effects.
 
 The conic-gradient syntax is similar to the radial-gradient syntax, but the color-stops are placed around a gradient arc, the circumference of a circle, rather than on the gradient line emerging from the center of the gradient, and the color-stops are percentages or degrees: absolute lengths are not valid.
 
