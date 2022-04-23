@@ -378,7 +378,7 @@ As support is not yet comprehensive (and has little historical depth) you should
         <ul>
           <li>Color modes: YUV444, YUV422, YUV420</li>
           <li>Greyscale support: YUV400</li>
-          <li>Bits: 8/10/12 bit</li>
+          <li>Bits: 8/10/12-bit</li>
           <li>Alpha support</li>
           <li>ICC profile support</li>
           <li>

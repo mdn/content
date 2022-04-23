@@ -115,7 +115,7 @@ This codec parameter string's components are described in more detail in the tab
               <td>2</td>
               <td>
                 "Professional" profile adds support for 4:2:2 chroma subsampling
-                and 12 bit per component color.
+                and 12-bit per component color.
               </td>
             </tr>
           </tbody>
@@ -973,7 +973,7 @@ The first four components are required; everything from `CC` (chroma subsampling
       <td><code>FF</code></td>
       <td>
         Indicates whether to restrict the black level and color range of each
-        color component to the legal range. For 8 bit color samples, the legal
+        color component to the legal range. For 8-bit color samples, the legal
         range is 16-235. A value of <code>00</code> indicates that these
         limitations should be enforced, while a value of <code>01</code> allows
         the full range of possible values for each component, even if the

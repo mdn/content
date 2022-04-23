@@ -71,9 +71,9 @@ The [SVG](/en-US/docs/Web/Media/Formats/Image_types#SVG_Scalable_Vector_Graphics
 
 PNGs can be saved with three different output combinations:
 
-- 24 bit color + 8 bit transparency — offer full color accuracy and smooth transparencies at the expense of size. You probably want to avoid this combination in favor for WebP (see below).
-- 8 bit color + 8 bit transparency — offer no more than 255 colors but maintain smooth transparencies. The size is not too big. Those are the PNGs you would probably want.
-- 8 bit color + 1 bit transparency — offer no more than 255 colors and just offer no or full transparency per pixel which makes the transparency borders appear hard and jagged. The size is small but the price is visual fidelity.
+- 24-bit color + 8-bit transparency — offer full color accuracy and smooth transparencies at the expense of size. You probably want to avoid this combination in favor for WebP (see below).
+- 8-bit color + 8-bit transparency — offer no more than 255 colors but maintain smooth transparencies. The size is not too big. Those are the PNGs you would probably want.
+- 8-bit color + 1-bit transparency — offer no more than 255 colors and just offer no or full transparency per pixel which makes the transparency borders appear hard and jagged. The size is small but the price is visual fidelity.
 
 A good online tool for optimizing SVGs is [SVGOMG](https://jakearchibald.github.io/svgomg/). For PNGs there is [ImageOptim online](https://imageoptim.com/online) or [Squoosh](https://squoosh.app/).
 
