@@ -17,8 +17,8 @@ The **`getAttributeType()`** method of the {{domxref("TrustedTypePolicyFactory")
 
 ```js
 getAttributeType(tagName, attribute)
-getAttributeType(tagName, attribute, elementNs)
-getAttributeType(tagName, attribute, elementNs, attrNs)
+getAttributeType(tagName, attribute, elementNS)
+getAttributeType(tagName, attribute, elementNS, attrNS)
 ```
 
 ### Parameters
@@ -27,9 +27,9 @@ getAttributeType(tagName, attribute, elementNs, attrNs)
   - : A {{domxref("DOMString","string")}} containing the name of an HTML tag.
 - `attribute`
   - : A {{domxref("DOMString","string")}} containing an attribute.
-- `elementNs`{{optional_inline}}
+- `elementNS`{{optional_inline}}
   - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.
-- `attrNs`{{optional_inline}}
+- `attrNS`{{optional_inline}}
   - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to null.
 
 ### Return value
