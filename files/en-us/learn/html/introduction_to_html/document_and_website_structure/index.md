@@ -278,13 +278,9 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 > **Note:** Save your work somewhere; you might need it later on.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
-
 ## Summary
 
-At this point you should have a better idea about how to structure a web page/site. In the last article of this module, we'll study how to debug HTML.
+At this point, you should have a better idea about how to structure a web page/site. In the last article of this module, we'll learn how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
 
 ## See also
 

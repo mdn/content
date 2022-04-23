@@ -222,6 +222,8 @@ You can also download and install Virtual Machines, and run older versions of br
 
 You now have the knowledge to confidently use techniques such as Grid and Flexbox, create fallbacks for older browsers, and make use of any new techniques that might come along in the future.
 
+Now that you have worked through our articles on CSS layout, it's time to test your comprehension with our assessment for the module: [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension).
+
 ## See also
 
 - [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
@@ -247,5 +249,5 @@ You now have the knowledge to confidently use techniques such as Grid and Flexbo
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- Supporting older browsers
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -18,8 +18,8 @@ With the things you have learned in the last few lessons you should find that yo
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this assessment you should have worked through the
-        rest of the CSS first steps module, and also have an understanding of HTML
+      	Before attempting this assessment you should have already worked through
+        all the articles in this module, and also have an understanding of HTML
         basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
@@ -91,8 +91,8 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
 ## In this module
 
-1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
