@@ -609,7 +609,7 @@ Conceptually, the bitwise logical operators work as follows:
 
 - The operands are converted to thirty-two-bit integers and expressed by a series of bits (zeros and ones).
   Numbers with more than 32 bits get their most significant bits discarded.
-  For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
+  For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 
   ```
   Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001

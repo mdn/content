@@ -235,7 +235,7 @@ First, the code to specify the colors buffer is gone, replaced with this:
 // tell webgl how to pull out the texture coordinates from buffer
 {
     const num = 2; // every coordinate composed of 2 values
-    const type = gl.FLOAT; // the data in the buffer is 32 bit float
+    const type = gl.FLOAT; // the data in the buffer is 32-bit float
     const normalize = false; // don't normalize
     const stride = 0; // how many bytes to get from one set to the next
     const offset = 0; // how many bytes inside the buffer to start from
