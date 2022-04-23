@@ -171,7 +171,9 @@ article > p { }
 
 ## Summary
 
-You can take a look at the [CSS reference for the various types of selectors](/en-US/docs/Web/CSS/CSS_Selectors) in this Learn section or on MDN in general, or continue on to start your journey by finding out about [type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors).
+In this article we've introduced CSS selectors, which enable you to target particular HTML elements.  Next, we'll take a closer look at [type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors).
+
+For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
