@@ -103,10 +103,6 @@ Most event handler properties, of the form `onXYZ`, are defined on the {{DOMxRef
   - : Returns the event handling code for the {{domxref("Element/touchend_event", "touchend")}} event.
 - {{DOMxRef("TouchEventHandlers.ontouchmove")}} {{Non-standard_Inline}}
   - : Returns the event handling code for the {{domxref("Element/touchmove_event", "touchmove")}} event.
-- {{DOMxRef("TouchEventHandlers.ontouchenter")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
-- {{DOMxRef("TouchEventHandlers.ontouchleave")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
 - {{DOMxRef("TouchEventHandlers.ontouchcancel")}} {{Non-standard_Inline}}
   - : Returns the event handling code for the {{domxref("Element/touchcancel_event", "touchcancel")}} event.
 
