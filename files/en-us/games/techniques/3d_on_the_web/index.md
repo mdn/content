@@ -90,7 +90,6 @@ You can find all the source code for this series [demos on GitHub](https://end3r
 ### Frameworks
 
 - [Three.js](https://threejs.org/)
-- [Whitestorm.js](https://github.com/WhitestormJS/whs.js) (based on Three.js)
 - [PlayCanvas](https://playcanvas.com/)
 - [Babylon.js](https://www.babylonjs.com/)
 - [A-Frame](https://aframe.io/)
