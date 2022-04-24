@@ -60,7 +60,7 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
   - : The {{htmlattrxref("crossorigin", "img")}} attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
 - [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
   - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
-- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Preloading_content)
+- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload)
   - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
 ## Reference
@@ -86,5 +86,5 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
 
 ## Related topics
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
   - : This article covers most of the ways you use CSS to add color to HTML content, listing what parts of HTML documents can be colored and what CSS properties to use when doing so. Includes examples, links to palette-building tools, and more.
