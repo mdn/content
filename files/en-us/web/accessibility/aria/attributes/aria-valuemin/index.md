@@ -63,7 +63,7 @@ Inherited into roles:
 ## See Also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
-- [`<input type="range>` element `min` attribute](en-US/docs/Web/HTML/Element/input/range#min) attribute
+- [`<input type="range>` element `min` attribute](en-US/docs/Web/HTML/Element/input/range#min)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
 - [`aria-aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-aria-valuenow).
 

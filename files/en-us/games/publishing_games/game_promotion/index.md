@@ -48,7 +48,7 @@ Free portals offer traffic, but only the best ones are popular enough to generat
 
 You can try and reach the [press](https://indiegames.com/) about your game, but bear in mind that they get a tonne of requests like this every single day, so be humble and patient if they don't answer right away, and be polite when talking to them. Be sure to check first if they are dealing with specific genres of games or platforms, so you don't send them something that is not relevant to them in the first place. If you're honest with your approach and your game is good, then you've got more of a chance of success.
 
-If you want to learn more about the etiquette of contacting the press you should definitely check out [How To Contact Press](https://app.box.com/s/p0ft5zdolpi0ydkrykab) - a great guide from Pixel Prospector, and the [Video Game Journaliser lists](https://pixelprospector.com/videogamejournaliser.html) of Youtubers and video, indie and genre-related game sites to contact.
+If you want to learn more about the etiquette of contacting the press you should definitely check out [How To Contact Press](https://app.box.com/s/p0ft5zdolpi0ydkrykab) - a great guide from Pixel Prospector.
 
 ## Tutorials
 
@@ -78,7 +78,7 @@ The other event-related option is fairs (or expos) — at such an event you can 
 
 ## Promo codes
 
-If you're selling the game, then create the ability to distribute promo codes allowing people to access your game for free (or at least a demo or time-limited version), and send them all over the place — to press, youtubers, as competition prizes, etc. If the game reaches certain people you'll get a free advert to thousands of players. It can boost interest in your game more than anything else if you get lucky.
+If you're selling the game, then create the ability to distribute promo codes allowing people to access your game for free (or at least a demo or time-limited version), and send them all over the place — to press, YouTubers, as competition prizes, etc. If the game reaches certain people you'll get a free advert to thousands of players. It can boost interest in your game more than anything else if you get lucky.
 
 ## Fostering the community
 

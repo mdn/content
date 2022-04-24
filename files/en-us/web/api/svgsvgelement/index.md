@@ -103,7 +103,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.pauseAnimations()")}}
   - : Suspends (i.e., pauses) all currently running animations that are defined within the SVG document fragment corresponding to this {{SVGElement("svg")}} element, causing the animation clock corresponding to this document fragment to stand still until it is unpaused.
 - {{domxref("SVGSVGElement.unpauseAnimations()")}}
-  - : Unsuspends (i.e., unpauses) currently running animations that are defined within the SVG document fragment, causing the animation clock to continue from the time at which it was suspended.
+  - : Resumes (i.e., unpauses) currently running animations that are defined within the SVG document fragment, causing the animation clock to continue from the time at which it was suspended.
 - {{domxref("SVGSVGElement.animationsPaused()")}}
   - : Returns `true` if this SVG document fragment is in a paused state.
 - {{domxref("SVGSVGElement.getCurrentTime()")}}

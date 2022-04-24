@@ -1,5 +1,5 @@
 ---
-title: Videotrack.language
+title: VideoTrack.language
 slug: Web/API/VideoTrack/language
 tags:
   - API
