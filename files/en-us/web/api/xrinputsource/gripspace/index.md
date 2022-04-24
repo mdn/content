@@ -32,7 +32,7 @@ Imagine that the controller is shaped like a straight rod, held in the user's fi
 native origin of the grip space is located at the centroid—the center of mass—of the
 user's fist, tracking the position of the user's hand.
 
-**The coordinate system for the left-hand's grip space.**
+**The coordinate system for the left hand's grip space.**
 
 ![A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world.](gripspace-lefthand-light.svg)
 
@@ -44,7 +44,7 @@ As shown in the diagram above, the coordinate system is oriented as follows:
 
 - The x-axis is perpendicular to the palm of the user's hand, with the direction
   extending outward from the back of the hand being +X if the controller is in the
-  user's right hand or -X if the controller is in the left-hand.
+  user's right hand or -X if the controller is in the left hand.
 - The z-axis along the length of the rod, parallel to the user's palm and along the
   length of their grip. -Z is in the direction of the user's thumb, and +Z is in the
   opposite direction.
