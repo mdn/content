@@ -24,7 +24,7 @@ The articles below can help you learn more about HTML.
 ## Key resources
 
 - HTML Introduction
-  - : If you're new to Web development, be sure to read our [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article to learn what HTML is and how to use it.
+  - : If you're new to web development, be sure to read our [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article to learn what HTML is and how to use it.
 - HTML Tutorials
   - : For articles about how to use HTML, as well as tutorials and complete examples, check out our [HTML Learning Area](/en-US/docs/Learn/HTML).
 - HTML Reference
@@ -63,7 +63,7 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
 - [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Preloading_content)
   - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
-## References
+## Reference
 
 - [HTML reference](/en-US/docs/Web/HTML/Reference)
   - : HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with [links](/en-US/docs/Web/HTML/Link_types).

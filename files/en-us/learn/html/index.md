@@ -1,5 +1,5 @@
 ---
-title: Structuring the web with HTML
+title: Structuring the Web with HTML
 slug: Learn/HTML
 tags:
   - Beginner
@@ -24,9 +24,9 @@ To build websites, you should know about {{Glossary('HTML')}} — the fundamenta
 
 ## Prerequisites
 
-Before starting this topic, you should have at least basic familiarity with using computers and using the web passively (i.e. just looking at it, consuming the content). You should have a basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — both are parts of our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
+Before starting this topic, you should have at least basic familiarity with using computers and using the web passively (i.e. just looking at it, consuming the content). You should have a basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — both are parts of our [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
 
-It is recommended that you work through [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) before attempting this topic. However, this isn't absolutely necessary; much of what is covered in the [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article is also covered in our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module, albeit in a lot more detail.
+It is recommended that you work through [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) before attempting this topic. However, this isn't absolutely necessary; much of what is covered in the [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article is also covered in our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module, albeit in a lot more detail.
 
 After learning HTML, you can then move on to learning about more advanced topics such as:
 
@@ -52,5 +52,5 @@ This topic contains the following modules, in a suggested order for working thro
 
 - [Web forms](/en-US/docs/Learn/Forms)
   - : This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons it's not always obvious how to use them to their full potential. We'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.
-- [HTML (HyperText Markup Language)](/en-US/docs/Web/HTML)
+- [HTML (HyperText Markup Language) on MDN](/en-US/docs/Web/HTML)
   - : The main entry point for HTML reference documentation on MDN, including detailed element and attribute references — if you want to know what attributes an element has or what values an attribute has, for example, this is a great place to start.

@@ -289,7 +289,7 @@ The {{htmlelement("body")}} is a **block** element, meaning it takes up space on
 
 > **Note:** Don't be too concerned if you don't completely understand `display: block;` or the differences between a block element and an inline element. It will make more sense as you continue your study of CSS. You can find more information about different display values on MDN's [display reference page](/en-US/docs/Web/CSS/display).
 
-## Conclusion
+## Summary
 
 If you followed all the instructions in this article, you should have a page that looks similar to this one:
 
@@ -307,7 +307,7 @@ In this exercise, we have just scratched the surface of CSS. To go further, see 
 - [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
 - [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
 - [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- CSS basics
+- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [How the Web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

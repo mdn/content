@@ -45,10 +45,10 @@ By working through the articles listed below,  you will go from nothing to getti
 - [Publishing your sample code](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
   - : Once you have finished writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article describes how to get your simple sample code online with minimum effort.
 
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [How the Web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
   - : When you access your favorite website, a lot of complicated things happen in the background that you may not know about. Here we will outline what happens when you view a webpage on your computer.
 
 ## See also
 
 - [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): A great series of videos explaining web fundamentals, aimed at complete beginners to web development. Created by [Jérémie Patonnier](https://twitter.com/JeremiePat).
-- [The web and web standards](/en-US/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards): This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.
+- [The Web and web standards](/en-US/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards): This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.

@@ -34,7 +34,7 @@ You can work through sections in order, but each one is also self-contained. For
 
 You don't need any previous knowledge to start this course. All you need is a computer that can run modern web browsers, an internet connection, and a willingness to learn.
 
-If you are not sure if front-end web development is for you, and/or you want a gentle introduction before starting a longer and more complete course, work through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) module first.
+If you are not sure if front-end web development is for you, and/or you want a gentle introduction before starting a longer and more complete course, work through our [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) module first.
 
 ## Getting help
 
@@ -143,7 +143,7 @@ The assessments in each module are designed to test your knowledge of the subjec
 
 ### Making the web work for everyone
 
-Time to complete: 60–75 hours
+Time to complete: 45–55 hours
 
 #### Prerequisites
 

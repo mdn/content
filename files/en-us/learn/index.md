@@ -31,7 +31,7 @@ If you are a complete beginner, web development can be challenging — we will h
 ## Where to start
 
 - Complete beginner
-  - : If you are a complete beginner to web development, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) module, which provides a practical introduction to web development.
+  - : If you are a complete beginner to web development, we'd recommend that you start by working through our [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) module, which provides a practical introduction to web development.
 - Beyond the basics
   - : If you have a bit of knowledge already, the next step is to learn {{glossary("HTML")}} and {{glossary("CSS")}} in detail: start with our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module and move on to our [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module.
 - Moving onto scripting
@@ -47,11 +47,11 @@ If you are a complete beginner, web development can be challenging — we will h
 
 The following is a list of all the topics we cover in the MDN learning area.
 
-- [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web)
+- [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web)
   - : Provides a practical introduction to web development for complete beginners.
-- [HTML — Structuring the web](/en-US/docs/Learn/HTML)
+- [HTML — Structuring the Web](/en-US/docs/Learn/HTML)
   - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
-- [CSS — Styling the web](/en-US/docs/Learn/CSS)
+- [CSS — Styling the Web](/en-US/docs/Learn/CSS)
   - : CSS is the language that we can use to style and layout our web content, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
 - [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn/JavaScript)
   - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
