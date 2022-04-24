@@ -78,10 +78,10 @@ The main navigation is always on the left except in the smallest screen size, wh
 - **users may not notice the button** contains a navigation menu in the smallest screen size
 - **one more step** is needed to access the navigation items that are hidden
 
-![wide UI layout with vertical navigation menu down the left hand side](design_patterns-pattern9.gif)
+![wide UI layout with vertical navigation menu down the left-hand side](design_patterns-pattern9.gif)
 
-![moderate layout with vertical navigation down the left hand side and narrower content area](design_patterns-pattern10.gif)
+![moderate layout with vertical navigation down the left-hand side and narrower content area](design_patterns-pattern10.gif)
 
-![moderate but short layout with vertical navigation down the left hand side and narrower content area](design_patterns-pattern11.gif)
+![moderate but short layout with vertical navigation down the left-hand side and narrower content area](design_patterns-pattern11.gif)
 
-![narrow mobile layout with hidden left hand menu, which can be dragged onto the screen using a special button to reveal the menu options.](design_patterns-pattern12.gif)
+![narrow mobile layout with hidden left-hand menu, which can be dragged onto the screen using a special button to reveal the menu options.](design_patterns-pattern12.gif)

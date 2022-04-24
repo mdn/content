@@ -171,7 +171,7 @@ In this example we have created a sample site called The Can Store — it's a fi
 
 ![A fake ecommerce site showing search options in the left hand column, and product search results in the right-hand column.](can-store.png)
 
-By default, the site displays all the products, but you can use the form controls in the left hand column to filter them by category, or search term, or both.
+By default, the site displays all the products, but you can use the form controls in the left-hand column to filter them by category, or search term, or both.
 
 There is quite a lot of complex code that deals with filtering the products by category and search terms, manipulating strings so the data displays correctly in the UI, etc. We won't discuss all of it in the article, but you can find extensive comments in the code (see [can-script.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/can-store/can-script.js)).
 

@@ -41,7 +41,7 @@ One key difference between `url()` and `image()` is the ability to add a media f
 background-image: image('myimage.webp#xywh=0,20,40,60');
 ```
 
-The background image of the element will be the portion of the image _myImage.webp_ that starts at the coordinate 0px, 20px (the top left hand corner) and is 40px wide and 60px tall.
+The background image of the element will be the portion of the image _myImage.webp_ that starts at the coordinate 0px, 20px (the top left-hand corner) and is 40px wide and 60px tall.
 
 The `#xywh=#,#,#,#` media fragment syntax takes four comma separated numeric values. The first two represent the X and Y coordinates for the starting point of the box that will be created. The third value is the width of the box, and the last value is the height. By default, these are pixel values. The [spacial dimension definition in the media specification](https://www.w3.org/TR/media-frags/#naming-space) indicates that percentages will be supported as well:
 
