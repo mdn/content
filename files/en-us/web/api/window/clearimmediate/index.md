@@ -21,11 +21,11 @@ This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 ## Syntax
 
 ```js
-clearImmediate( immediateID )
+clearImmediate(immediateID)
 ```
 ### Parameters
 
-- immediateID 
+- `immediateID`
 
   - : The ID returned by {{DOMxRef("window.setImmediate")}}.
 
