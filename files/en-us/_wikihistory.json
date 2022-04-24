@@ -29749,18 +29749,6 @@
       "Klern"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/currentTransform": {
-    "modified": "2020-10-19T13:34:03.459Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "zbjornson",
-      "nmve",
-      "chrisdavidmills",
-      "daltomania"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/direction": {
     "modified": "2020-10-15T21:30:56.010Z",
     "contributors": [
