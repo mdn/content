@@ -102,7 +102,7 @@ A much more accurate source of data, if you can get it, comes from an analytics 
 
 But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.
 
-You may also consider using open source and privacy focussed analytics platforms like [Open Web Analytics](http://www.openwebanalytics.com) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
+You may also consider using open source and privacy focussed analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
 
 #### Setting up Google analytics
 

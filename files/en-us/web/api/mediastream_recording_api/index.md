@@ -146,7 +146,7 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 - [HTML5's Media Recorder API in Action on Chrome and Firefox](https://addpipe.com/blog/mediarecorder-api/)
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML5 video capture/playback/download using getUserMedia and the MediaRecorder API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
-- [Simple video recording demo](http://codepen.io/anon/pen/gpmPzm)
+- [Simple video recording demo](https://codepen.io/anon/pen/gpmPzm)
 - [Advanced media stream recorder sample](https://quickblox.github.io/javascript-media-recorder/sample/)
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [MediaStream Recorder API Now Available in Safari Technology Preview 73](https://addpipe.com/blog/safari-technology-preview-73-adds-limited-mediastream-recorder-api-support/)

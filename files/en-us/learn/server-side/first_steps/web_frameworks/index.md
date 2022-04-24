@@ -231,7 +231,7 @@ Popular sites using Django (from Django home page) include: Disqus, Instagram, K
 
 ### Flask (Python)
 
-[Flask](http://flask.pocoo.org/) is a microframework for Python.
+[Flask](https://flask.palletsprojects.com) is a microframework for Python.
 
 While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://www.restapitutorial.com/lessons/restfulresourcenaming.html) request dispatching. It has good documentation and an active community.
 
