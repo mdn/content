@@ -18,7 +18,7 @@ by a specified amount.
 ## Syntax
 
 ```js
-window.resizeBy(xDelta, yDelta)
+resizeBy(xDelta, yDelta)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ window.resizeBy(xDelta, yDelta)
 - `xDelta` is the number of pixels to grow the window horizontally.
 - `yDelta` is the number of pixels to grow the window vertically.
 
-## Example
+## Examples
 
 ```js
 // Shrink the window

@@ -20,7 +20,7 @@ This method will block while the print dialog is open.
 ## Syntax
 
 ```js
-window.print()
+print()
 ```
 
 ## Specifications

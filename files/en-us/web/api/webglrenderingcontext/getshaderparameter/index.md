@@ -18,7 +18,7 @@ given shader.
 ## Syntax
 
 ```js
-any gl.getShaderParameter(shader, pname);
+getShaderParameter(shader, pname)
 ```
 
 ### Parameters

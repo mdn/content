@@ -20,7 +20,7 @@ buffer object and specifies its layout.
 ## Syntax
 
 ```js
-void gl.vertexAttribPointer(index, size, type, normalized, stride, offset);
+vertexAttribPointer(index, size, type, normalized, stride, offset)
 ```
 
 ### Parameters

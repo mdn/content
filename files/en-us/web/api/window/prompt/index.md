@@ -20,7 +20,9 @@ Under some conditions — for example, when the user switches tabs — the brows
 ## Syntax
 
 ```js
-result = window.prompt(message, default);
+prompt()
+prompt(message)
+prompt(message, default)
 ```
 
 ### Parameters
@@ -37,7 +39,7 @@ result = window.prompt(message, default);
 
 A string containing the text entered by the user, or `null`.
 
-## Example
+## Examples
 
 ```js
 let sign = prompt("What's your sign?");

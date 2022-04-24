@@ -17,8 +17,8 @@ coordinates in the document.
 ## Syntax
 
 ```js
-window.scrollTo(x-coord, y-coord)
-window.scrollTo(options)
+scrollTo(x-coord, y-coord)
+scrollTo(options)
 ```
 
 ### Parameters

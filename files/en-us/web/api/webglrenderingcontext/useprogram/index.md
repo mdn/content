@@ -17,7 +17,7 @@ The **`WebGLRenderingContext.useProgram()`** method of the [WebGL API](/en-US/do
 ## Syntax
 
 ```js
-void gl.useProgram(program);
+useProgram(program)
 ```
 
 ### Parameters

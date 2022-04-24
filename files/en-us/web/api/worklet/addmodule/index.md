@@ -24,8 +24,8 @@ adds it to the current `Worklet`.
 ## Syntax
 
 ```js
-addPromise = worklet.addModule(moduleURL);
-addPromise = worklet.addModule(moduleURL, options);
+addModule(moduleURL)
+addModule(moduleURL, options)
 ```
 
 ### Parameters

@@ -31,8 +31,8 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 ## Syntax
 
 ```js
-targetWindow.postMessage(message, targetOrigin)
-targetWindow.postMessage(message, targetOrigin, transfer)
+postMessage(message, targetOrigin)
+postMessage(message, targetOrigin, transfer)
 ```
 
 ### Parameters
@@ -149,7 +149,7 @@ See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned c
   to shared memory", "", 1)}} which is starting to roll out to browsers (Firefox 79, for
 example).
 
-## Example
+## Examples
 
 ```js
 /*

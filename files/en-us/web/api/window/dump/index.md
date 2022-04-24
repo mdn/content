@@ -18,9 +18,7 @@ Output from `dump()` is _not_ sent to the browser's developer tools console. To 
 ## Syntax
 
 ```js
-window.dump(message);
-
-dump(message);
+dump(message)
 ```
 
 ### Parameters

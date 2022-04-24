@@ -20,15 +20,9 @@ already `CLOSED`, this method does nothing.
 ## Syntax
 
 ```js
-WebSocket.close();
-```
-
-```js
-WebSocket.close(code);
-```
-
-```js
-WebSocket.close(code, reason);
+close()
+close(code)
+close(code, reason)
 ```
 
 ### Parameters

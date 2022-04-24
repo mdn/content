@@ -21,7 +21,7 @@ into the depth buffer.
 ## Syntax
 
 ```js
-void gl.polygonOffset(factor, units);
+polygonOffset(factor, units)
 ```
 
 ### Parameters

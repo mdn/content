@@ -27,7 +27,7 @@ objects returned by
 ## Syntax
 
 ```js
-window.close();
+close()
 ```
 
 ## Examples

@@ -23,8 +23,8 @@ indexing with CSS property names.
 ## Syntax
 
 ```js
-window.getComputedStyle(element);
-window.getComputedStyle(element, pseudoElt);
+getComputedStyle(element)
+getComputedStyle(element, pseudoElt)
 ```
 
 - `element`

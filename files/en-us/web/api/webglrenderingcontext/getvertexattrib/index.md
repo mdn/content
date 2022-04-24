@@ -18,7 +18,7 @@ attribute at a given position.
 ## Syntax
 
 ```js
-any gl.getVertexAttrib(index, pname);
+getVertexAttrib(index, pname)
 ```
 
 ### Parameters
