@@ -71,7 +71,7 @@ It is possible to do the two things separately, but in practice you will nearly 
 
 Let's fork <https://github.com/mdn/content> right now; you'll definitely be contributing to this repo at some point. Follow these steps:
 
-1. Locate the Fork button at the top-right hand corner of the content repo's page, and press it:
+1. Locate the Fork button at the top-right-hand corner of the content repo's page, and press it:
 
     ![Button labeled fork, with the number 609 next to it](fork-button.png)
 

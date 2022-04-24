@@ -54,4 +54,4 @@ Similarly, you can also make hover states with:
 
 ## See also
 
-- [Full working demo at CSS Tricks](http://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [Full working demo at CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)

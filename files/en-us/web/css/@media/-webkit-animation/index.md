@@ -51,4 +51,4 @@ Not part of any standard.
 - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)
 - [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
 - [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
-- [Test page at quirksmode.org](http://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)

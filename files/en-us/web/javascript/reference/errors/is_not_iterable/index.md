@@ -10,7 +10,7 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not iterable" occurs when the value which is given as the
-right hand-side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
@@ -27,7 +27,7 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 ## What went wrong?
 
-The value which is given as the right hand-side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+The value which is given as the right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 An iterable can be a built-in iterable type such as

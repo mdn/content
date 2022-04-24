@@ -103,7 +103,7 @@ p {
 
 ### Result
 
-> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](http://fontsgeek.com/fonts/Leitura-Display-Swashes).
+> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
 
 {{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/font-variant-alternates') }}
 

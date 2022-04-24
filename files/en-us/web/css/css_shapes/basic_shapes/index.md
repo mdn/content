@@ -141,4 +141,4 @@ You may well find the Firefox Shape Inspector very useful here to create your po
 
 ![The polygon basic shape, highlighted with the Shapes Inspector.](shapes-polygon.png)
 
-Another useful resource is [Clippy](http://bennettfeely.com/clippy/) - a tool for creating shapes for `clip-path`, as the values for Basic Shapes are the same as those used for `clip-path`.
+Another useful resource is [Clippy](https://bennettfeely.com/clippy/) - a tool for creating shapes for `clip-path`, as the values for Basic Shapes are the same as those used for `clip-path`.
