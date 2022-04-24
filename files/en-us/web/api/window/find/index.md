@@ -27,6 +27,8 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround,
      aWholeWord, aSearchInFrames, aShowDialog)
 ```
 
+### Parameters
+
 - `aString`
   - : The text string for which to search.
 - `aCaseSensitive`
