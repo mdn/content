@@ -141,7 +141,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### APIs
 
-- The [Wifi information API](/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API), Speaker Manager API, and Tethering API, and [Settings API](/en-US/docs/Archive/B2G_OS/API/Settings_API) have been removed from the platform (see {{bug(1313788)}}, {{bug(1317853)}}, {{bug(1313789)}}, and {{bug(1313155)}} respectively).
+- The [Wi-Fi information API](/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API), Speaker Manager API, and Tethering API, and [Settings API](/en-US/docs/Archive/B2G_OS/API/Settings_API) have been removed from the platform (see {{bug(1313788)}}, {{bug(1317853)}}, {{bug(1313789)}}, and {{bug(1313155)}} respectively).
 
 ### Other
 

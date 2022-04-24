@@ -100,7 +100,7 @@ Let's start working on these, beginning with our development environment.
 
 This part of the toolchain is sometimes seen to be delaying the actual work, and it can be very easy to fall into a "rabbit hole" of tooling where you spend a lot of time trying to get the environment "just right".
 
-But you can look at this in the same way as setting up your physical work environment. The chair needs to be comfortable, and set up in a good position to help with your posture. You need power, Wifi, and USB ports! There might be important decorations or music that help with your mental state — these are all important to doing your best work possible, and they should also only need to be set up once, if done properly.
+But you can look at this in the same way as setting up your physical work environment. The chair needs to be comfortable, and set up in a good position to help with your posture. You need power, Wi-Fi, and USB ports! There might be important decorations or music that help with your mental state — these are all important to doing your best work possible, and they should also only need to be set up once, if done properly.
 
 In the same way, setting up your development environment, if done well, needs doing only once and should be reusable in many future projects. You will probably want to review this part of the toolchain semi-regularly and consider if there's any upgrades or changes you should introduce, but this shouldn't be required too often.
 
