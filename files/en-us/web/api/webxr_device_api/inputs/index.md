@@ -98,7 +98,7 @@ With this, you now have the point from which the targeting ray is emitted (`targ
 
 The input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property is an `XRSpace` you can use to render objects so they appear to be held in the viewer's hand.
 
-**Figure: The coordinate system for the left hand's grip space.**
+**Figure: The coordinate system for the left-hand's grip space.**
 ![A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world.](dark_left.svg)
 **Figure: The coordinate system for the right hand's grip space.**
 ![A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world.](dark_right.svg)

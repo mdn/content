@@ -35,7 +35,7 @@ the user's hands, and if it is, which hand. The value is one of the following:
 - `none`
   - : The input controller is not associated with one of the user's hands.
 - `left`
-  - : The input controller is being held in, worn on, or is attached to the user's left hand.
+  - : The input controller is being held in, worn on, or is attached to the user's left-hand.
 - `right`
   - : The input controller is being held in, worn on, or is attached to the user's right hand.
 

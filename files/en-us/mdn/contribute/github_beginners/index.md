@@ -211,7 +211,7 @@ Once you've got your main branch up to date in your fork, you must always create
 
 To create a new branch:
 
-1. Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left hand corner of the file list, which should say "main" on it:
+1. Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left-hand corner of the file list, which should say "main" on it:
 
     ![Button labeled main](branch-button.png)
 

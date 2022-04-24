@@ -370,7 +370,7 @@ These are not the only approach. You could instead decide on your grid and then 
 
 ### Enabling offset containers in our grid
 
-The grid we have created works well as long as we want to start all of the containers flush with the left hand side of the grid. If we wanted to leave an empty column space  before the first container — or between containers — we would need to create an offset class to add a left margin to our site to push it across the grid visually. More math!
+The grid we have created works well as long as we want to start all of the containers flush with the left-hand side of the grid. If we wanted to leave an empty column space  before the first container — or between containers — we would need to create an offset class to add a left margin to our site to push it across the grid visually. More math!
 
 Let's try this out.
 
@@ -392,7 +392,7 @@ Or if you prefer to calculate the percentages yourself, use this one:
 }
 ```
 
-You can now add this class to any container you want to leave a one column wide empty space on the left hand side of it. For example, if you have this in your HTML:
+You can now add this class to any container you want to leave a one column wide empty space on the left-hand side of it. For example, if you have this in your HTML:
 
 ```html
 <div class="col span6">14</div>
