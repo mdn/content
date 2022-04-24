@@ -37,7 +37,7 @@ new WebSocket(url, protocols)
 
 ### Exceptions
 
-- [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+- `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if:
     - parsing of [`url`](#url) fails
     - [`url`](#url) has a scheme other than `ws` or `wss`
