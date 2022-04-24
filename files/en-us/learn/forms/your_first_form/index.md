@@ -81,7 +81,7 @@ All forms start with a {{HTMLelement("form")}} element, like this:
 </form>
 ```
 
-This element formally defines a form. It's a container element like a {{HTMLelement("section")}} or {{HTMLelement("footer")}} element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the [`action`](/en-US/docs/Web/HTML/Attributes/action) and [`method`](/en-US/docs/Web/HTML/Attributes/method) attributes:
+This element formally defines a form. It's a container element like a {{HTMLelement("section")}} or {{HTMLelement("footer")}} element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the [`action`](/en-US/docs/Web/HTML/Element/form#attr-action) and [`method`](/en-US/docs/Web/HTML/Element/form#attr-method) attributes:
 
 - The `action` attribute defines the location (URL) where the form's collected data should be sent when it is submitted.
 - The `method` attribute defines which HTTP method to send the data with (usually `get` or `post`).
@@ -144,7 +144,7 @@ This is one of the oddities of HTML.
 The `<input>` tag is an empty element, meaning that it doesn't need a closing tag.
 {{HTMLElement("textarea")}} is not an empty element, meaning it should be closed with the proper ending tag.
 This has an impact on a specific feature of forms: the way you define the default value.
-To define the default value of an {{HTMLElement("input")}} element you have to use the [`value`](/en-US/docs/Web/HTML/Attributes/value) attribute like this:
+To define the default value of an {{HTMLElement("input")}} element you have to use the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute like this:
 
 ```html
 <input type="text" value="by default this element is filled with this text">
@@ -270,13 +270,13 @@ Save and reload, and you'll see that your form should look much less ugly.
 ## Sending form data to your web server
 
 The last part, and perhaps the trickiest, is to handle form data on the server side.
-The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Attributes/action) and [`method`](/en-US/docs/Web/HTML/Attributes/method) attributes.
+The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Element/form#attr-action) and [`method`](/en-US/docs/Web/HTML/Element/form#attr-method) attributes.
 
-We provide a [`name`](/en-US/docs/Web/HTML/Attributes/name) to each form control.
+We provide a `name` attribute for each form control.
 The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name.
 The form data is sent to the server as name/value pairs.
 
-To name the data in a form you need to use the `name` attribute on each form widget that will collect a specific piece of data.
+To name the data in a form, you need to use the `name` attribute on each form widget that will collect a specific piece of data.
 Let's look at some of our form code again:
 
 ```html
