@@ -7593,7 +7593,7 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D.createLinearGradient	/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient
 /en-US/docs/Web/API/CanvasRenderingContext2D.createPattern	/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern
 /en-US/docs/Web/API/CanvasRenderingContext2D.createRadialGradient	/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient
-/en-US/docs/Web/API/CanvasRenderingContext2D.currentTransform	/en-US/docs/Web/API/CanvasRenderingContext2D/currentTransform
+/en-US/docs/Web/API/CanvasRenderingContext2D.currentTransform	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasRenderingContext2D.direction	/en-US/docs/Web/API/CanvasRenderingContext2D/direction
 /en-US/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 /en-US/docs/Web/API/CanvasRenderingContext2D.drawImage	/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
@@ -7644,9 +7644,10 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D.textBaseline	/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline
 /en-US/docs/Web/API/CanvasRenderingContext2D.transform	/en-US/docs/Web/API/CanvasRenderingContext2D/transform
 /en-US/docs/Web/API/CanvasRenderingContext2D.translate	/en-US/docs/Web/API/CanvasRenderingContext2D/translate
+/en-US/docs/Web/API/CanvasRenderingContext2D/currentTransform	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasRenderingContext2D/drawCustomFocusRing	/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
-/en-US/docs/Web/API/CanvasRenderingContext2D/mozCurrentTransform	/en-US/docs/Web/API/CanvasRenderingContext2D/currentTransform
-/en-US/docs/Web/API/CanvasRenderingContext2D/mozCurrentTransformInverse	/en-US/docs/Web/API/CanvasRenderingContext2D/currentTransform
+/en-US/docs/Web/API/CanvasRenderingContext2D/mozCurrentTransform	/en-US/docs/Web/API/CanvasRenderingContext2D
+/en-US/docs/Web/API/CanvasRenderingContext2D/mozCurrentTransformInverse	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozDash	/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozDashOffset	/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozImageSmoothingEnabled	/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
