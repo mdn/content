@@ -175,6 +175,10 @@ In this article we've introduced CSS selectors, which enable you to target parti
 
 For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
 
+## See also
+
+- [CSS Diner](https://flukeout.github.io/) — an educational game to learn and better understand CSS selectors
+
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 ## In this module
