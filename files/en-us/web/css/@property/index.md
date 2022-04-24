@@ -8,6 +8,7 @@ tags:
   - Web
   - Property
   - Houdini
+  - Experimental
 browser-compat: css.at-rules.property
 ---
 {{CSSRef}}{{SeeCompatTable}}

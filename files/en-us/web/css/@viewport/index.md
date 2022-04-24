@@ -5,7 +5,7 @@ tags:
   - '@viewport'
   - At-rule
   - CSS
-  - Experimental
+  - Deprecated
   - Layout
   - Mobile
   - Reference

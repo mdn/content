@@ -5,6 +5,7 @@ tags:
   - At-rule
   - CSS
   - Reference
+  - Deprecated
 browser-compat: css.at-rules.document
 ---
 {{CSSRef}}{{Deprecated_header}}
