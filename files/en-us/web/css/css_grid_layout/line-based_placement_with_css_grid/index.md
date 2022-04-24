@@ -374,7 +374,7 @@ When we specify our grid area using the `grid-area` property we first define bot
 
 ## Counting backwards
 
-We can also count backwards from the block and inline end of the grid, for English that would be the right hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the second last line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
+We can also count backwards from the block and inline end of the grid, for English that would be the right-hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the second last line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
 
 In this next example, we have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.
 

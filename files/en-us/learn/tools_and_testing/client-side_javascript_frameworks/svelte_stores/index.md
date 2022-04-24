@@ -205,7 +205,7 @@ Let's now use our component.
 
 3. Load your test app now, and you should now see the `Alert` message on screen. You can click on it to dismiss it.
 
-    ![A simple notification in the top right hand corner of an app saying welcome to the to-do list app](01-alert-message.png)
+    ![A simple notification in the top right-hand corner of an app saying welcome to the to-do list app](01-alert-message.png)
 
 ## Making stores reactive with the reactive `$store` syntax
 

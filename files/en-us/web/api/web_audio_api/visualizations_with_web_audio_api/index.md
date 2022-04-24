@@ -134,7 +134,7 @@ Now we run through a loop, defining the position of a small segment of the wave 
       }
 ```
 
-Finally, we finish the line in the middle of the right hand side of the canvas, then draw the stroke we've defined:
+Finally, we finish the line in the middle of the right-hand side of the canvas, then draw the stroke we've defined:
 
 ```js
       canvasCtx.lineTo(canvas.width, canvas.height/2);
