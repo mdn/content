@@ -63,7 +63,7 @@ There's a sequence of things that have to happen in order to make it possible to
 
 ## ICE restart
 
-Sometimes, during the lifetime of a WebRTC session, network conditions change. One of the users might transition from a cellular to a WiFi network, or the network might become congested, for example. When this happens, the ICE agent may choose to perform **ICE restart**. This is a process by which the network connection is renegotiated, exactly the same way the initial ICE negotiation is performed, with one exception: media continues to flow across the original network connection until the new one is up and running. Then media shifts to the new network connection and the old one is closed.
+Sometimes, during the lifetime of a WebRTC session, network conditions change. One of the users might transition from a cellular to a Wi-Fi network, or the network might become congested, for example. When this happens, the ICE agent may choose to perform **ICE restart**. This is a process by which the network connection is renegotiated, exactly the same way the initial ICE negotiation is performed, with one exception: media continues to flow across the original network connection until the new one is up and running. Then media shifts to the new network connection and the old one is closed.
 
 > **Note:** Different browsers support ICE restart under different sets of conditions. Not all browsers will perform ICE restart due to network congestion, for example.
 

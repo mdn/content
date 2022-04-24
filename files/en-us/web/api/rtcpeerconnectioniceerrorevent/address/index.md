@@ -33,7 +33,7 @@ being used to attempt to establish the connection to the remote peer.
 This can be useful on multi-homed systems—devices with more than one network
 connection—to determine which network interface is being used. For example, on a mobile
 phone, there are typically at least two network interfaces available: the cellular
-connection and a WiFi connection.
+connection and a Wi-Fi connection.
 
 If the local IP address isn't exposed as part of a local candidate, the value of
 `address` is `null`.

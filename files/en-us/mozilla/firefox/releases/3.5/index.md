@@ -180,8 +180,8 @@ If you're an extension developer, you should start by reading [Updating extensio
   - : This article covers security-related changes in Firefox 3.5.
 - [Theme changes in Firefox 3.5](/en-US/Theme_changes_in_Firefox_3.5)
   - : This article covers theme-related changes in Firefox 3.5.
-- [Monitoring WiFi access points](/en-US/Monitoring_WiFi_access_points)
-  - : Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength.  This can be used in tandem with Geolocation to offer WiFi-based location service.
+- [Monitoring Wi-Fi access points](/en-US/Monitoring_WiFi_access_points)
+  - : Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength.  This can be used in tandem with Geolocation to offer Wi-Fi-based location service.
 
 #### Notable changes and improvements
 
