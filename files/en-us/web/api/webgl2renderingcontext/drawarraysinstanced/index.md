@@ -23,7 +23,7 @@ method. In addition, it can execute multiple instances of the range of elements.
 ## Syntax
 
 ```js
-void gl.drawArraysInstanced(mode, first, count, instanceCount);
+drawArraysInstanced(mode, first, count, instanceCount)
 ```
 
 ### Parameters

@@ -16,7 +16,7 @@ The **`error()`** method of the {{domxref("TransformStreamDefaultController")}} 
 ## Syntax
 
 ```js
-TransformStreamDefaultController.error(reason);
+error(reason)
 ```
 
 ### Parameters

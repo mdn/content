@@ -16,7 +16,7 @@ The **`toJSON()`** method of the {{domxref("TrustedScript")}} interface returns 
 ## Syntax
 
 ```js
-var json = TrustedScript.toJSON();
+toJSON()
 ```
 
 ### Return value

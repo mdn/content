@@ -21,7 +21,7 @@ the specified configuration is selected.
 ## Syntax
 
 ```js
-var promise = USBDevice.selectConfiguration(configurationValue)
+selectConfiguration(configurationValue)
 ```
 
 ### Parameters

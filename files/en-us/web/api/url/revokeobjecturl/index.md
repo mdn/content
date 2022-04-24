@@ -28,14 +28,18 @@ longer.
 ## Syntax
 
 ```js
-URL.revokeObjectURL(objectURL)
+revokeObjectURL(objectURL)
 ```
 
 ### Parameters
 
 - `objectURL`
-  - : A {{domxref("DOMString")}} representing a object URL that was previously created by
+  - : A string representing a object URL that was previously created by
     calling {{domxref("URL.createObjectURL", "createObjectURL()") }}.
+
+### Return value
+
+`undefined`.
 
 ## Examples
 

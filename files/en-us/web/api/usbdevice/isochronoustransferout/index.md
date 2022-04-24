@@ -22,7 +22,7 @@ transmitted to the USB device.
 ## Syntax
 
 ```js
-var promise = USBDevice.isochronousTransferOut(endpointNumber, data, packetLengths)
+isochronousTransferOut(endpointNumber, data, packetLengths)
 ```
 
 ### Parameters

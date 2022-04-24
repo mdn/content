@@ -22,7 +22,7 @@ preserved).
 ## Syntax
 
 ```js
-searchParams.sort();
+sort()
 ```
 
 ### Parameters

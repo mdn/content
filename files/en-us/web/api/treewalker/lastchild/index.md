@@ -19,10 +19,14 @@ returns `null` and the current node is not changed.
 ## Syntax
 
 ```js
-treeWalker.lastChild();
+lastChild()
 ```
 
-## Example
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

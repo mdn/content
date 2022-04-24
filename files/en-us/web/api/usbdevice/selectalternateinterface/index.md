@@ -21,7 +21,7 @@ the specified alternative endpoint is selected.
 ## Syntax
 
 ```js
-var promise = USBDevice.selectAlternateInterface(interfaceNumber, alternateSetting)
+selectAlternateInterface(interfaceNumber, alternateSetting)
 ```
 
 ### Parameters

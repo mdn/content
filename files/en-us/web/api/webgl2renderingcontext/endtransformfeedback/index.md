@@ -18,7 +18,7 @@ operation.
 ## Syntax
 
 ```js
-void gl.endTransformFeedback();
+endTransformFeedback()
 ```
 
 ### Parameters

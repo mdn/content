@@ -21,7 +21,7 @@ started.
 ## Syntax
 
 ```js
-var promise = USBDevice.open()
+open()
 ```
 
 ### Parameters

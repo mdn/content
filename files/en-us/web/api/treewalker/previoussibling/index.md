@@ -20,10 +20,14 @@ there is no such node, return `null` and the current node is not changed.
 ## Syntax
 
 ```js
-node = treeWalker.previousSibling();
+previousSibling()
 ```
 
-## Example
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

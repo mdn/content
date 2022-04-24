@@ -19,10 +19,14 @@ returns `null` and the current node is not changed.
 ## Syntax
 
 ```js
-node = treeWalker.nextNode();
+nextNode()
 ```
 
-## Example
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(
