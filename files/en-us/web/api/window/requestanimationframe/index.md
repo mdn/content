@@ -134,5 +134,5 @@ Edge versions below 17 and Internet Explorer do not reliably fire
 - [TestUFO: Test your web
   browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
 - Paul Irish: [requestAnimationFrame
-  API: now with sub-millisecond precision](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision)
+  API: now with sub-millisecond precision](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
 - [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

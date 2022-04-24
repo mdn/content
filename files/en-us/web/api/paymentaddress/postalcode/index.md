@@ -46,6 +46,6 @@ codes.
 ## See also
 
 - Universal Postal Union: [Post
-  code lookup service](http://www.upu.int/en/resources/postcodes/looking-up-a-postcode.html)
+  code lookup service](https://www.upu.int/en/resources/postcodes/looking-up-a-postcode.html)
 - Universal Postal Union: [Universal
-  Post\*Code® Database](http://www.upu.int/en/resources/postcodes/universal-postcoder-database.html)
+  Post\*Code® Database](https://www.upu.int/en/resources/postcodes/universal-postcoder-database.html)
