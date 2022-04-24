@@ -9,7 +9,7 @@ tags:
   - NDEFReadingEvent
 browser-compat: api.NDEFReadingEvent.message
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{APIRef()}}
 
 The **`message`** property of the {{domxref("NDEFReadingEvent")}} interface returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
 
