@@ -14,7 +14,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
-Structuring a page of content ready for laying it out using CSS is a very important skill to master, so in this assessment you'll be tested on your ability to think about how a page might end up looking, and choose appropriate structural semantics to build a layout on top of.
+Structuring a page of content in preparation for laying it out using CSS is a very important skill to master, so in this assessment you will be tested on your ability to predict a page layout and choose appropriate structural semantics upon which to build the layout.
 
 <table>
   <tbody>
@@ -41,11 +41,11 @@ Structuring a page of content ready for laying it out using CSS is a very import
 
 ## Starting point
 
-To get this assessment started, you should go and grab the [zip file containing all the starting assets](https://raw.githubusercontent.com/mdn/learning-area/main/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip).
+To get this assessment started, you should download the [zip file containing all the starting assets](https://raw.githubusercontent.com/mdn/learning-area/main/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip).
 
 The zip file contains:
 
-- The HTML you need to add structural markup to.
+- The HTML you need to add the structural markup.
 - CSS to style your markup.
 - Images that are used on the page.
 
@@ -55,9 +55,9 @@ Create the example on your local computer, or alternatively use an online tool s
 
 ## Project brief
 
-For this project, your task is to take the content for the homepage of a bird watching website and add structural elements to it so it can have a page layout applied to it. It needs to have:
+For this project, your task is to take the content for the homepage of a birdwatching website and add structural elements so that a page layout can be applied to the homepage. It needs to have:
 
-- A header spanning the full width of the site containing the main title for the page, the site logo, and the navigation menu. The title and logo appear side by side once styling is applied, and the navigation appears below those two items.
+- A header spanning the full width of the site containing the main title for the page, the site logo, and the navigation menu. The title and logo appear side-by-side once styling is applied, and the navigation appears below the title and logo.
 - A main content area containing two columns — a main block to contain the welcome text, and a sidebar to contain image thumbnails.
 - A footer containing copyright information and credits.
 
@@ -79,7 +79,7 @@ You should also:
 - Use the [W3C Nu HTML Checker](https://validator.w3.org/nu/) to catch unintended mistakes in your HTML, CSS, and SVG — mistakes you might have otherwise missed — so that you can fix them.
 - You don't need to know any CSS to do this assessment; you just need to put the provided CSS inside an HTML element.
 - The provided CSS is designed so that when the correct structural elements are added to the markup, they will appear green in the rendered page.
-- If you are getting stuck and can't envisage what elements to put where, draw out a simple block diagram of the page layout, and write on the elements you think should wrap each block. This is extremely helpful.
+- If you are getting stuck and can't envisage what the location of each element, draw a simple block diagram of the page layout, and write down the elements you think should wrap each block. This is extremely helpful.
 
 ## Example
 
