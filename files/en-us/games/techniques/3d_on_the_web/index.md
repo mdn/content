@@ -41,7 +41,7 @@ It's hard to imagine a game without collision detection — we always need to wo
 
 ### WebVR
 
-The concept of virtual reality is not new, but it's storming onto the web thanks to hardware advancements such as the [Oculus Rift](https://www.oculus.com/en-us/rift/), and the (currently experimental) [WebVR API](/en-US/docs/Web/API/WebVR_API) for capturing information from VR hardware and making it available for use in JavaScript applications. For more, read [WebVR — Virtual Reality for the Web](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR).
+The concept of virtual reality is not new, but it's storming onto the web thanks to hardware advancements such as the [Oculus Rift](https://www.oculus.com/rift/), and the (currently experimental) [WebVR API](/en-US/docs/Web/API/WebVR_API) for capturing information from VR hardware and making it available for use in JavaScript applications. For more, read [WebVR — Virtual Reality for the Web](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR).
 
 There's also the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) article showing you how easy it is to build 3D environments for virtual reality using the [A-Frame](https://aframe.io/) framework.
 
