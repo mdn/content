@@ -21,11 +21,13 @@ argument is provided.
 ```js
 item(index)
 ```
+
 ### Parameters
 
 - `index` is the index of the node to be fetched. The index is zero-based.
- 
+
 ### Return value
+
 The `index`th node in the `nodeList` returned by the `item` method.
 
 ## Alternate Syntax

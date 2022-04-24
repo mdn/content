@@ -35,6 +35,7 @@ the following configuration options:
 ```js
 getConfiguration()
 ```
+
 ### Return value
 
 An object.

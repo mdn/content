@@ -18,7 +18,7 @@ With the things you have learned in the last few lessons you should find that yo
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-      	Before attempting this assessment you should have already worked through
+        Before attempting this assessment you should have already worked through
         all the articles in this module, and also have an understanding of HTML
         basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
