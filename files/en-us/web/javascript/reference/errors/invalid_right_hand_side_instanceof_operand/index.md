@@ -30,7 +30,7 @@ TypeError: Right-hand side of 'instanceof' is not callable (Chrome)
 ## What went wrong?
 
 The [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) expects
-the right-hand side operands to be a constructor object,
+the right-hand-side operands to be a constructor object,
 i.e. an object which has a `prototype` property and is callable.
 
 ## Examples
