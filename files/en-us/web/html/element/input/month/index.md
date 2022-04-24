@@ -29,7 +29,7 @@ The control's UI varies in general from browser to browser; at the moment suppor
 In browsers that don't support `month` inputs, the control degrades gracefully to a simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
 
 For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
-Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.
+Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
 
 ![Month control on Chrome browser](month-control-chrome.png)
 

@@ -354,7 +354,7 @@ But there are some more complex types, which provide useful shortcuts to keep yo
 
 Try typing some of the above examples into your console, to get an idea of how they work. In each case, see if you can guess what the value is before you type in the second line.
 
-Note that you can quite happily use other variables on the right hand side of each expression, for example:
+Note that you can quite happily use other variables on the right-hand side of each expression, for example:
 
 ```js
 let x = 3; // x contains the value 3

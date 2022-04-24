@@ -169,7 +169,7 @@ To get around this, we need to test the example by running it through a local we
 
 In this example we have created a sample site called The Can Store — it's a fictional supermarket that only sells canned goods. You can find this [example live on GitHub](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/), and [see the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store).
 
-![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](can-store.png)
+![A fake ecommerce site showing search options in the left hand column, and product search results in the right-hand column.](can-store.png)
 
 By default, the site displays all the products, but you can use the form controls in the left hand column to filter them by category, or search term, or both.
 

@@ -62,7 +62,7 @@ To add some colors to the scene we need a new material that will be used on the 
 
 ![PlayCanvas Editor - New material](playcanvas-editor-newmaterial.png)
 
-Click on your new material in the assets tab and its entity inspector will appear on the right hand side of the display. Now edit the _Name_ text field to give it a unique name (we've chosen _boxMaterial_). A unique name will help us remember what this material is for — we will add more later!
+Click on your new material in the assets tab and its entity inspector will appear on the right-hand side of the display. Now edit the _Name_ text field to give it a unique name (we've chosen _boxMaterial_). A unique name will help us remember what this material is for — we will add more later!
 
 ![PlayCanvas Editor - Box material](playcanvas-editor-boxmaterial.png)
 

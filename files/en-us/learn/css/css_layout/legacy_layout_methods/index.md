@@ -158,7 +158,7 @@ The aim is to turn this into a demonstration grid of two rows on a twelve column
 
 ![](simple-grid-finished.png)
 
-In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [Changing the box model completely](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely) for more explanation).
+In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right-hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [Changing the box model completely](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely) for more explanation).
 
 ```css
 * {
@@ -185,7 +185,7 @@ Now use the row container that is wrapped around each row of the grid to clear o
 
 Applying this clearing means that we don't need to completely fill each row with elements making the full twelve columns. The rows will remain separated, and not interfere with each other.
 
-The gutters between the columns are 20 pixels wide. We create these gutters as a margin on the left side of each column — including the first column, to balance out the 20 pixels of padding on the right hand side of the container. So we have 12 gutters in total — 12 x 20 = 240.
+The gutters between the columns are 20 pixels wide. We create these gutters as a margin on the left side of each column — including the first column, to balance out the 20 pixels of padding on the right-hand side of the container. So we have 12 gutters in total — 12 x 20 = 240.
 
 We need to subtract that from our total width of 960 pixels, giving us 720 pixels for our columns. If we now divide that by 12, we know that each column should be 60 pixels wide.
 
