@@ -85,6 +85,7 @@ The items that can be _transferred_ are:
 - {{domxref("ImageBitmap")}}
 - {{domxref("VideoFrame")}}
 - {{domxref("OffscreenCanvas")}}
+- {{domxref("RTCDataChannel")}}
 
 > **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `Transferrable`.
 
