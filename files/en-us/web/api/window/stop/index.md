@@ -23,10 +23,10 @@ objects.
 ## Syntax
 
 ```js
-window.stop()
+stop()
 ```
 
-## Example
+## Examples
 
 ```js
 window.stop();

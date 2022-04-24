@@ -23,9 +23,11 @@ indexing with CSS property names.
 ## Syntax
 
 ```js
-window.getComputedStyle(element);
-window.getComputedStyle(element, pseudoElt);
+getComputedStyle(element)
+getComputedStyle(element, pseudoElt)
 ```
+
+### Parameters
 
 - `element`
   - : The {{DOMxRef("Element")}} for which to get the computed style.
@@ -33,7 +35,9 @@ window.getComputedStyle(element, pseudoElt);
   - : A string specifying the pseudo-element to match. Omitted (or `null`) for
     real elements.
 
-The returned `style` is a _live_ {{DOMxRef("CSSStyleDeclaration")}}
+### Return value
+
+A _live_ {{DOMxRef("CSSStyleDeclaration")}}
 object, which updates automatically when the element's styles are changed.
 
 ### Throws

@@ -16,8 +16,8 @@ window by the given amount.
 ## Syntax
 
 ```js
-window.scrollBy(x-coord, y-coord);
-window.scrollBy(options)
+scrollBy(x-coord, y-coord)
+scrollBy(options)
 ```
 
 ### Parameters

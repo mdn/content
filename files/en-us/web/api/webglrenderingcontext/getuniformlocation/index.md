@@ -46,7 +46,7 @@ The uniform itself is declared in the shader program using GLSL.
 ## Syntax
 
 ```js
-WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(program, name);
+getUniformLocation(program, name)
 ```
 
 ### Parameters
@@ -55,7 +55,7 @@ WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(program, name);
   - : The {{domxref("WebGLProgram")}} in which to locate the specified uniform variable.
 - `name`
 
-  - : A {{domxref("DOMString")}} specifying the name of the uniform variable whose
+  - : A string specifying the name of the uniform variable whose
     location is to be returned. The name can't have any whitespace in it, and you
     can't use this function to get the location of any uniforms starting with the
     reserved string `"gl_"`, since those are internal to the WebGL
@@ -102,7 +102,7 @@ The following errors may occur; to check for errors after
   - : The `program` parameter doesn't correspond to a GLSL program generated
     by WebGL, or the specified program hasn't been linked successfully.
 
-## Example
+## Examples
 
 In this example, taken from the `animateScene()` method in the article [A
 basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene), obtains the locations of three uniforms from

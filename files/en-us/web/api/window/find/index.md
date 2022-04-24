@@ -23,9 +23,11 @@ The **`Window.find()`** method finds a string in a window sequentially.
 ## Syntax
 
 ```js
-window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
-            aWholeWord, aSearchInFrames, aShowDialog);
+find(aString, aCaseSensitive, aBackwards, aWrapAround,
+     aWholeWord, aSearchInFrames, aShowDialog)
 ```
+
+### Parameters
 
 - `aString`
   - : The text string for which to search.
@@ -41,11 +43,11 @@ window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
 - `aSearchInFrames`
   - : A boolean value. If `true`, specifies a search in frames.
 
-### Returns
+### Return value
 
 `true` if the string is found; otherwise, `false`.
 
-## Example
+## Examples
 
 ### JavaScript
 

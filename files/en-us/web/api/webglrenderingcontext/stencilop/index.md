@@ -17,7 +17,7 @@ stencil test actions.
 ## Syntax
 
 ```js
-void gl.stencilOp(fail, zfail, zpass);
+stencilOp(fail, zfail, zpass)
 ```
 
 ### Parameters

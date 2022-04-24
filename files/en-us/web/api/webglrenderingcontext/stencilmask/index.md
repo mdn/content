@@ -20,7 +20,7 @@ back stencil writemasks to different values.
 ## Syntax
 
 ```js
-void gl.stencilMask(mask);
+stencilMask(mask)
 ```
 
 ### Parameters

@@ -17,8 +17,8 @@ particular place in the document.
 ## Syntax
 
 ```js
-window.scroll(x-coord, y-coord)
-window.scroll(options)
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### Parameters

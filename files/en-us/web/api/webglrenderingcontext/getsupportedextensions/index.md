@@ -18,7 +18,7 @@ extensions.
 ## Syntax
 
 ```js
-gl.getSupportedExtensions();
+getSupportedExtensions()
 ```
 
 ### Return value
