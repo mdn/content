@@ -148,7 +148,7 @@ let identityMatrix = [
 let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
-> **Warning:** These matrix functions are written for clarity of explanation, not for speed or memory management. These functions create a lot of new arrays, which can be particularly expensive for real-time operations due to garbage collection. In real production code it would be best to use optimized functions. [glMatrix](http://glmatrix.net/) is an example of a library that has a focus on speed and performance. The focus in the glMatrix library is to have target arrays that are allocated before the update loop.
+> **Warning:** These matrix functions are written for clarity of explanation, not for speed or memory management. These functions create a lot of new arrays, which can be particularly expensive for real-time operations due to garbage collection. In real production code it would be best to use optimized functions. [glMatrix](https://glmatrix.net/) is an example of a library that has a focus on speed and performance. The focus in the glMatrix library is to have target arrays that are allocated before the update loop.
 
 ## Translation matrix
 
@@ -229,7 +229,7 @@ let scaleMatrix = [
 
 ## Rotation matrix
 
-A **rotation matrix** is used to rotate a point or object. Rotation matrices look a little bit more complicated than scaling and transform matrices. They use trigonometric functions to perform the rotation. While this section won't break the steps down into exhaustive detail (check out [this article on Wolfram MathWorld](http://mathworld.wolfram.com/RotationMatrix.html) for that), take this example for illustration.
+A **rotation matrix** is used to rotate a point or object. Rotation matrices look a little bit more complicated than scaling and transform matrices. They use trigonometric functions to perform the rotation. While this section won't break the steps down into exhaustive detail (check out [this article on Wolfram MathWorld](https://mathworld.wolfram.com/RotationMatrix.html) for that), take this example for illustration.
 
 First, here's code that rotates a point around the origin without using matrices.
 

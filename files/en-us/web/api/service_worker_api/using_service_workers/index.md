@@ -20,7 +20,7 @@ The previous attempt, _AppCache_, seemed to be a good idea because it allowed yo
 
 > **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chromium 90, and is deprecated in Safari.
 
-Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](http://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
+Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](https://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
 
 ## Setting up to play with service workers
 

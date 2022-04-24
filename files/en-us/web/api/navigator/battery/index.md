@@ -41,4 +41,4 @@ A {{DOMxRef("BatteryManager")}}.
 - [Blog
   post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
 - [David Walsh on the
-  JavaScript Battery API](http://davidwalsh.name/battery-api)
+  JavaScript Battery API](https://davidwalsh.name/battery-api)
