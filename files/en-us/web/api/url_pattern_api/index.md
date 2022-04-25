@@ -92,8 +92,10 @@ console.log(pattern.test('https://example.com/books/')); // false
 
 ### Regex matchers limitations
 
-Some regex patterns do not work as you may expect: 
-- Starts with `^` will only match if used at the start of the protocol portion of the URLPattern and is redundant if used. 
+Some regex patterns do not work as you may expect:
+
+- Starts with `^` will only match if used at the start of the protocol portion of the URLPattern and is redundant if used.
+
   ```js
   // with `^` in pathname
   const pattern = new URLPattern({ pathname: '(^b)' });
@@ -110,7 +112,9 @@ Some regex patterns do not work as you may expect:
   console.log(pattern.test('https://example.com/index.html')); // true
   console.log(pattern.test('xhttps://example.com/index.html')); // false
   ```
+
 - Ends with `$` will only match if used at the end of the hash portion of the URLPattern and is redundant if used.
+
   ```js
   // with `$` in pathname
   const pattern = new URLPattern({ pathname: '(path$)' });
@@ -127,7 +131,9 @@ Some regex patterns do not work as you may expect:
   console.log(pattern.test('https://example.com/#hash')); // true
   console.log(pattern.test('xhttps://example.com/#otherhash')); // false
   ```
-- Lookaheads, and lookbehineds will never match any portion of the URLPattern.
+
+- Lookaheads, and lookbehinds will never match any portion of the URLPattern.
+
   ```js
   // lookahead
   const pattern = new URLPattern({ pathname: '(a(?=b))' });
@@ -149,7 +155,9 @@ Some regex patterns do not work as you may expect:
   console.log(pattern.test('https://example.com/ba')); // false
   console.log(pattern.test('https://example.com/xa')); // false
   ```
+
 - Parentheses need to be escaped in range expressions within URLPattern even though they don't in RegExp.
+
   ```js
   const pattern = new URLPattern({ pathname: '([()])' }); // throws
   const pattern = new URLPattern({ pathname: '([\\(\\)])' }); // ok
