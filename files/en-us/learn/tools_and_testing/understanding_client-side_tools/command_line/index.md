@@ -356,7 +356,6 @@ There are pros and cons each way — and the following lists of pros and cons fo
 Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits.
 Here we'll install locally, but feel free to install globally once you understand the relative risks.
 
-
 ### Installing Prettier
 
 Prettier is an opinionated code formatting tool for front end developers, focusing around JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON and more.
@@ -401,7 +400,6 @@ It'll help you to understand better how the tool is intended to be used.
 > **Note:** If you have not first installed prettier locally, then running `npx prettier` will download and run the latest version of prettier all in one go _just for that command_.
 > While that might sound great, new versions of prettier may slightly modify the output.
 > You want to install locally so that you are fixing the version of prettier that you are using for formatting until you are ready to change it.
-
 
 ### Playing with Prettier
 

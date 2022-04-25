@@ -16,7 +16,7 @@ The **`OfflineAudioCompletionEvent()`** constructor of the [Web Audio API](/en-U
 {{domxref("OfflineAudioCompletionEvent")}} object instance.
 
 > **Note:** You wouldn't generally use the constructor manually.
-> `OfflineAudioCompletionEvent`s are despatched to
+> `OfflineAudioCompletionEvent`s are dispatched to
 > {{domxref("OfflineAudioContext")}} instances for legacy reasons.
 
 ## Syntax

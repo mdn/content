@@ -24,6 +24,7 @@ The `MediaKeySystemAccess.createMediaKeys()` method returns a
 ```js
 createMediaKeys()
 ```
+
 ### Return value
 
 A {{jsxref('Promise')}}.

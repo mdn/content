@@ -18,6 +18,7 @@ capture all events of the specified type.
 ```js
 captureEvents(eventType)
 ```
+
 ### Parameters
 
 -`eventType`

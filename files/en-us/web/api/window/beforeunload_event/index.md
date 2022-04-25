@@ -87,7 +87,6 @@ nameInput.addEventListener("input", (event) => {
 
 {{Compat}}
 
-
 ## Compatibility notes
 
 The HTML specification states that authors should use the

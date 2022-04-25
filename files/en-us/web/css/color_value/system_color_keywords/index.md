@@ -99,7 +99,7 @@ The following keywords were defined in earlier versions of the CSS Color Module.
 
 ## Firefox non-standard system color extensions
 
-Firefox also supports some non-standard extensions to the system color keyword set. 
+Firefox also supports some non-standard extensions to the system color keyword set.
 
 - `-moz-ButtonDefault` {{non-standard_inline}}
   - : The border color that goes around buttons that represent the default action for a dialog box.

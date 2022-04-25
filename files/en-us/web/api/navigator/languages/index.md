@@ -52,4 +52,4 @@ navigator.languages  //["en-US", "zh-CN", "ja-JP"]
 
 - {{domxref("navigator.language")}}
 - {{domxref("navigator")}}
-- {{domxref("Window.languagechange_event", "languagechange")}} event 
+- {{domxref("Window.languagechange_event", "languagechange")}} event
