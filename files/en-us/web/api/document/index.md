@@ -476,30 +476,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
     Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.
 
-## Non-standard extensions {{Non-standard_Inline}}
-
-{{non-standard_header}}
-
-### Firefox notes
-
-Firefox defines some non-standard methods:
-
-- {{DOMxRef("Document.execCommandShowHelp()")}} {{deprecated_inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
-- {{DOMxRef("Document.getBoxObjectFor()")}} {{deprecated_inline}}
-  - : Use the {{DOMxRef("Element.getBoundingClientRect()")}} method instead.
-- {{DOMxRef("Document.loadOverlay()")}} {{deprecated_inline}}
-  - : Loads a [XUL overlay](/en-US/docs/XUL_Overlays) dynamically. This only works in XUL documents.
-- {{DOMxRef("Document.queryCommandText()")}} {{deprecated_inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14 {{GeckoRelease("14")}}.
-
-### Internet Explorer notes
-
-Microsoft defines some non-standard properties:
-
-- {{DOMxRef("Document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](https://developer.mozilla.org/en-US/docs/Web/API/Document).
-
 ## Specifications
 
 {{Specifications}}
