@@ -64,7 +64,7 @@ filter: url(file.svg#filter-element-id)
 
 ### Interpolation
 
-If both the beginning and end filters have a function list of the same length without {{cssxref("url","url()")}}, each of their filter functions is interpolated according to its specific rules. If they have different lengths, the missing equivalent filter functions from the longer list are added to the end of the shorter list using their lacuna values, then all filter functions are interpolated according to their specific rules. If one filter is `none`, it is replaced with the filter functions list of the other one using the filter function default values, then all filter functions are interpolated according to their specific rules. Otherwise, discrete interpolation is used.
+If both the beginning and end filters have a function list of the same length without {{cssxref("url","url()")}}, each of their filter functions is interpolated according to its specific rules. If they have different lengths, the missing equivalent filter functions from the longer list are added to the end of the shorter list using their initial values, then all filter functions are interpolated according to their specific rules. If one filter is `none`, it is replaced with the filter functions list of the other one using the filter function default values, then all filter functions are interpolated according to their specific rules. Otherwise, discrete interpolation is used.
 
 ## Functions
 
@@ -86,7 +86,7 @@ filter: url(resources.svg#c1)
 
 #### blur()
 
-The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image. The value of `radius` defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The lacuna value for interpolation is `0`. The parameter is specified as a CSS length, but does not accept percentage values.
+The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image. The value of `radius` defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The initial value for interpolation is `0`. The parameter is specified as a CSS length, but does not accept percentage values.
 
 ```css
 filter: blur(5px)
@@ -178,7 +178,7 @@ table.standard-table td {
 
 #### brightness()
 
-The {{cssxref("filter-function/brightness", "brightness()")}} function applies a linear multiplier to the input image, making it appear more or less bright. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. The lacuna value for interpolation is `1`.
+The {{cssxref("filter-function/brightness", "brightness()")}} function applies a linear multiplier to the input image, making it appear more or less bright. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. The initial value for interpolation is `1`.
 
 ```css
 filter: brightness(2)
@@ -275,7 +275,7 @@ table.standard-table td {
 
 #### contrast()
 
-The {{cssxref("filter-function/contrast", "contrast()")}} function adjusts the contrast of the input image. A value of `0%` will create an image that is completely gray. A value of `100%` leaves the input unchanged. Values of an amount over `100%` are allowed, providing results with more contrast. The lacuna value for interpolation is `1`.
+The {{cssxref("filter-function/contrast", "contrast()")}} function adjusts the contrast of the input image. A value of `0%` will create an image that is completely gray. A value of `100%` leaves the input unchanged. Values of an amount over `100%` are allowed, providing results with more contrast. The initial value for interpolation is `1`.
 
 ```css
 filter: contrast(200%)
@@ -521,7 +521,7 @@ table.standard-table td {
 
 #### grayscale()
 
-The {{cssxref("filter-function/grayscale", "grayscale()")}} function converts the input image to grayscale. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The lacuna value for interpolation is `0`.
+The {{cssxref("filter-function/grayscale", "grayscale()")}} function converts the input image to grayscale. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
 filter: grayscale(100%)
@@ -606,7 +606,7 @@ table.standard-table td {
 
 #### hue-rotate()
 
-The {{cssxref("filter-function/hue-rotate", "hue-rotate()")}} function applies a hue rotation on the input image. The value of `angle` defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg` leaves the input unchanged. The lacuna value for interpolation is `0`. Though there is no maximum value; the effect of values above `360deg` wraps around.
+The {{cssxref("filter-function/hue-rotate", "hue-rotate()")}} function applies a hue rotation on the input image. The value of `angle` defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg` leaves the input unchanged. The initial value for interpolation is `0`. Though there is no maximum value; the effect of values above `360deg` wraps around.
 
 ```css
 filter: hue-rotate(90deg)
@@ -696,7 +696,7 @@ table.standard-table td {
 
 #### invert()
 
-The {{cssxref("filter-function/invert", "invert()")}} function inverts the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The lacuna value for interpolation is `0`.
+The {{cssxref("filter-function/invert", "invert()")}} function inverts the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
 filter: invert(100%)
@@ -781,7 +781,7 @@ table.standard-table td {
 
 #### opacity()
 
-The {{cssxref("filter-function/opacity", "opacity()")}} function applies transparency to the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. The lacuna value for interpolation is `1`. This function is similar to the more established {{cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.
+The {{cssxref("filter-function/opacity", "opacity()")}} function applies transparency to the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. The initial value for interpolation is `1`. This function is similar to the more established {{cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.
 
 ```css
 filter: opacity(50%)
@@ -864,7 +864,7 @@ table.standard-table td {
 
 #### saturate()
 
-The {{cssxref("filter-function/saturate", "saturate()")}} function saturates the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely un-saturated. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of amount over `100%` are allowed, providing super-saturated results. The lacuna value for interpolation is `1`.
+The {{cssxref("filter-function/saturate", "saturate()")}} function saturates the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely un-saturated. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of amount over `100%` are allowed, providing super-saturated results. The initial value for interpolation is `1`.
 
 ```css
 filter: saturate(200%)
@@ -946,7 +946,7 @@ table.standard-table td {
 
 #### sepia()
 
-The {{cssxref("filter-function/sepia", "sepia()")}} function converts the input image to sepia. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely sepia. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The lacuna value for interpolation is `0`.
+The {{cssxref("filter-function/sepia", "sepia()")}} function converts the input image to sepia. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely sepia. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
 filter: sepia(100%)
