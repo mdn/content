@@ -27,7 +27,7 @@ snapshotItem(i)
 ### Parameters
 
 - `i`
-  - : A number. Index of the item.
+  - : A number, the index of the item.
 
 ### Return value
 
