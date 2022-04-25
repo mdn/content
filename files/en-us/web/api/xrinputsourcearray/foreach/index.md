@@ -31,7 +31,8 @@ list.
 ## Syntax
 
 ```js
-xrInputSourceArray.forEach(callback, thisArg);
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters

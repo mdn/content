@@ -19,7 +19,7 @@ next node from it or `null` if there are no more nodes.
 ## Syntax
 
 ```js
-var node = result.iterateNext();
+iterateNext()
 ```
 
 ### Return value
@@ -39,7 +39,7 @@ In case {{domxref("XPathResult.resultType")}} is not
 If the document is mutated since the result was returned, an
 {{domxref("XPathException")}} of type `INVALID_STATE_ERR` is thrown.
 
-## Example
+## Examples
 
 The following example shows the use of the `iterateNext()` method.
 
