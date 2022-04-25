@@ -127,7 +127,7 @@ In the first implementation of JavaScript, JavaScript values were represented as
 tag and a value. The type tag for objects was `0`. `null` was
 represented as the NULL pointer (`0x00` in most platforms). Consequently,
 `null` had `0` as type tag, hence the `typeof` return
-value `"object"`. ([reference](http://www.2ality.com/2013/10/typeof-null.html))
+value `"object"`. ([reference](https://2ality.com/2013/10/typeof-null.html))
 
 A fix was proposed for ECMAScript (via an opt-in), but
 [was rejected](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null).

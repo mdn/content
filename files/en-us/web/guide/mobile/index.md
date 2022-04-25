@@ -50,9 +50,9 @@ To create web sites that will work acceptably across different mobile browsers:
 
 For example, if you set a gradient as a background for some text using a vendor-prefixed property like `-webkit-linear-gradient`, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient", "linear-gradient()")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your `linear-gradient` rule.
 
-See this [list of Gecko-specific properties](/en-US/docs/Web/CSS/Mozilla_Extensions), and this [list of WebKit-specific properties](/en-US/docs/Web/CSS/WebKit_Extensions), and Peter Beverloo's [table of vendor-specific properties](http://peter.sh/experiments/vendor-prefixed-css-property-overview/).
+See this [list of Gecko-specific properties](/en-US/docs/Web/CSS/Mozilla_Extensions), and this [list of WebKit-specific properties](/en-US/docs/Web/CSS/WebKit_Extensions), and Peter Beverloo's [table of vendor-specific properties](https://peter.sh/experiments/vendor-prefixed-css-property-overview/).
 
-Using tools like [CSS Lint](http://csslint.net/) can help find problems like this in code, and preprocessors like [SASS](http://sass-lang.com/) and [LESS](http://lesscss.org/) can help you to produce cross-browser code.
+Using tools like [CSS Lint](http://csslint.net/) can help find problems like this in code, and preprocessors like [SASS](https://sass-lang.com/) and [LESS](https://lesscss.org/) can help you to produce cross-browser code.
 
 ### Take care with user agent sniffing
 

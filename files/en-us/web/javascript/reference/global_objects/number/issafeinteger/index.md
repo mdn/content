@@ -33,7 +33,7 @@ inclusive (± `9007199254740991` or ± 9,007,199,254,740,991).
 
 Handling values larger or smaller than \~9 quadrillion with full precision requires
 using an [arbitrary precision arithmetic library](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic).
-See [What Every Programmer Needs to Know about Floating Point Arithmetic](http://floating-point-gui.de/) for more
+See [What Every Programmer Needs to Know about Floating Point Arithmetic](https://floating-point-gui.de/) for more
 information on floating point representations of numbers.
 
 For larger integers, consider using the {{jsxref("BigInt")}} type.

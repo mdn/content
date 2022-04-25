@@ -23,7 +23,8 @@ Even more important than that, though, is the fact that user-agent detection is 
 
 ![](sumo_screenshot.png)Firstly, if your target audience includes users on older or low-end [feature phones](https://www.cnet.com/8301-17918_1-10461614-85.html "Feature Phones Definition"), it is worth noting that you may need to employ this strategy [to some degree](https://www.passani.it/gap/#adaptation "Mobile Adaptation") no matter what. This is because the default browsers on some feature-phones do not support the same markup that you would use to code a website targeted at the desktop, but instead understand formats like [XHTML-MP](https://en.wikipedia.org/wiki/XHTML_Mobile_Profile) or the older [WML](https://en.wikipedia.org/wiki/Wireless_Markup_Language).
 
-This factor aside, there is one case where this strategy really shines over other methods. If the functionality you would like to provide to your users on mobile devices is extremely different from that on a desktop, then using separate sites is likely to be the [most practical choice](https://tripleodeon.com/2010/10/not-a-mobile-web-merely-a-320px-wide-one). This is because you have the option of sending completely separate HTML, JavaScript, and CSS to phones and PCs.
+
+This factor aside, there is one case where this strategy really shines over other methods. If the functionality you would like to provide to your users on mobile devices is extremely different from that on a desktop, then using separate sites is likely to be the [most practical choice](https://tripleodeon.com/2010/10/not-a-mobile-web-merely-a-320px-wide-one/). This is because you have the option of sending completely separate HTML, JavaScript, and CSS to phones and PCs.
 
 Another case where you may be forced to use this approach is if you cannot, for whatever reason, modify your existing desktop site, and need to have a 100% separate mobile site. Though it's not ideal, at least you have this option.
 

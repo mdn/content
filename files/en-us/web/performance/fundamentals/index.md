@@ -181,7 +181,7 @@ The [Built-in Gecko Profiler](/en-US/docs/Performance/Profiling_with_the_Built-i
 
 > **Note:** You can use these tools with the Android browser by running Firefox and enabling [remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html).
 
-In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](http://www.slideshare.net/firt/mobile-web-high-performance) talk.
+In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](https://www.slideshare.net/firt/mobile-web-high-performance) talk.
 
 ### Test cases and submitting bugs
 

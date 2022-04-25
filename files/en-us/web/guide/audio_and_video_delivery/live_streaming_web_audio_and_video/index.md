@@ -145,7 +145,7 @@ In order to stream live audio and video, you will need to run specific streaming
 
 [GStreamer](https://gstreamer.freedesktop.org/) is an open source cross-platform multimedia framework that allows you to create a variety of media-handling components, including streaming components. Through its plugin system, GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, and FLV.)
 
-GStreamer plugins such as [souphttpclientsink](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) and [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) exist to stream media over HTTP. You can also integrate with Python's Twisted framework or use something like [Flumotion](http://www.flumotion.net/features/) (open source streaming software).
+GStreamer plugins such as [souphttpclientsink](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) and [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) exist to stream media over HTTP or you can also integrate with Python's Twisted framework.
 
 For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/nginx-rtmp-module).
 
@@ -183,7 +183,6 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 - [SHOUTcast](https://en.wikipedia.org/wiki/Shoutcast)
 - [GStreamer](https://en.wikipedia.org/wiki/GStreamer)
 - [Streaming GStreamer Pipelines Via HTTP](https://coaxion.net/blog/2013/10/streaming-gstreamer-pipelines-via-http/)
-- [Streaming media using GStreamer on the web](http://www.svesoftware.com/passkeeper/cms/article/streaming-media-using-gstreamer-web/)
 - [GStreamer and Raspberry Pi](https://nginx-rtmp.blogspot.it/2013/07/gstreamer-and-raspberry-pi.html)
 - [Acceptance of Media Source Extensions as W3C Candidate Recommendation will accelerate adoption of dash.js](http://msopentech.com/blog/2014/01/09/acceptance-media-source-extensions-w3c-candidate-recommendation-will-accelerate-adoption-dash-js/)
 - [Comparison of Streaming Media Systems](https://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems)
