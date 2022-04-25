@@ -62,7 +62,7 @@ div, #event-log {
 
 #event-log {
     width: 25rem;
-    height: 4rem;
+    height: 8rem;
     margin-bottom: 0;
     padding: .2rem;
 }
