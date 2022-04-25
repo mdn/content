@@ -34,7 +34,7 @@ where:
 
 ## Description
 
-Rules within a cascade layer cascade together, giving more control over the cascade to web developers. Any styles not in a layer are gathered together and placed into an anonymous layer that comes after all the declared layers. This means that any styles declared outside of a layer will override styles declared in a layer.
+Rules within a cascade layer cascade together, giving more control over the cascade to web developers. Any styles not in a layer are gathered together and placed into an anonymous layer that comes after all the declared layers. This means that any styles declared outside of a layer will override styles declared in a layer, regardless of specificity.
 
 The `@layer` at-rule is used to create a cascade layer in one of three ways.
 
@@ -82,7 +82,7 @@ The third way is to create a cascade layer with no name. For example:
 
 This creates an _anonymous cascade layer_. This layer functions in the same way as named layers; however, rules cannot be assigned to it later.
 
-Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet.
+Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except the @charset rules.
 
 ```css
 @import 'theme.css' layer(utilities);
