@@ -66,7 +66,7 @@ Firefox 3 provides a number of new [XUL](/en-US/docs/XUL) elements, as well as i
 - The `<radio>` element has a `group` attribute which may be set to the id of a `<radiogroup>` element which the radio button belongs to. This allows the radio buttons to arranged in a manner that may not be as suitable when placing them all inside a radiogroup.
 - Menus, panels and tooltips support two additional methods, [`openPopup()`](/en-US/docs/XUL/Method/openPopup) and [`openPopupAtScreen()`](/en-US/docs/XUL/Method/openPopupAtScreen). These methods should be used instead of `showPopup()` which was found to be confusing to use.
 - Handling of the `<key>` element improved for non-Latin keyboard layout users. See [Gecko Keypress Event](/en-US/docs/Gecko_Keypress_Event).
-- On macOS, the [activetitlebarcolor](/en-US/docs/XUL/Attribute/activetitlebarcolor) and [inactivetitlebarcolor](/en-US/docs/XUL/Attribute/inactivetitlebarcolor) attributes of the root elements (`<window>`, `<dialog>`, `<prefwindow>` and `<wizard>`) are available to customize the color of the windows' title bars.
+- On Mac OS X, the [activetitlebarcolor](/en-US/docs/XUL/Attribute/activetitlebarcolor) and [inactivetitlebarcolor](/en-US/docs/XUL/Attribute/inactivetitlebarcolor) attributes of the root elements (`<window>`, `<dialog>`, `<prefwindow>` and `<wizard>`) are available to customize the color of the windows' title bars.
 
 ### See also
 

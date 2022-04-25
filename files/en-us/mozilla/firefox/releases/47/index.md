@@ -97,7 +97,7 @@ _No change._
 ### Audio/Video
 
 - Now WAV file with u-law compression encoding can be played({{bug(851530)}}).
-- [Widevine](https://www.widevine.com/) Content Decryption Module provided by Google Inc. is available via the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) for use with MP4 (only; see {{bug(1257716)}} for EME-with-WebM support) on Windows Vista and later and on macOS enabling migration off Silverlight ({{bug(1265270)}}).
+- [Widevine](https://www.widevine.com/) Content Decryption Module provided by Google Inc. is available via the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) for use with MP4 (only; see {{bug(1257716)}} for EME-with-WebM support) on Windows Vista and later and on Mac OS X enabling migration off Silverlight ({{bug(1265270)}}).
 
 ## HTTP
 

@@ -162,7 +162,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 #### Improved Preferences
 
 - Instant Apply behavior on Linux and Mac
-  - : Changes made in the Preferences window now apply immediately, in line with typical behavior in other macOS and GNOME applications. This changes conforms with the Apple and GNOME Human Interface Guidelines.
+  - : Changes made in the Preferences window now apply immediately, in line with typical behavior in other Mac OS X and GNOME applications. This changes conforms with the Apple and GNOME Human Interface Guidelines.
 
 <!---->
 

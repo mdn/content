@@ -70,14 +70,14 @@ Windows user agents have the following variations, where _x.y_ is the Windows NT
 
 ## Macintosh
 
-Here, _x.y_ is the version of macOS (for instance, macOS 10.15). Starting in Firefox 87, Firefox caps the reported macOS version number to 10.15, so macOS 11.0 Big Sur and later will be reported as "10.15" in the User-Agent string.
+Here, _x.y_ is the version of Mac OS X (for instance, Mac OS X 10.15). Starting in Firefox 87, Firefox caps the reported Mac OS X version number to 10.15, so macOS 11.0 Big Sur and later will be reported as "10.15" in the User-Agent string.
 
 Note that [Firefox no longer officially supports Mac OS X on PowerPC](https://support.mozilla.org/kb/firefox-no-longer-works-mac-os-10-4-or-powerpc).
 
-| macOS version                    | Gecko user agent string                                                            |
+| Mac OS X version                    | Gecko user agent string                                                            |
 | ----------------------------------- | ---------------------------------------------------------------------------------- |
-| macOS on x86, x86_64, or aarch64 | Mozilla/5.0 (Macintosh; Intel macOS _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0 |
-| macOS on PowerPC                 | Mozilla/5.0 (Macintosh; PPC macOS _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0   |
+| Mac OS X on x86, x86_64, or aarch64 | Mozilla/5.0 (Macintosh; Intel Mac OS X _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0 |
+| Mac OS X on PowerPC                 | Mozilla/5.0 (Macintosh; PPC Mac OS X _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0   |
 
 ## Linux
 
@@ -214,9 +214,9 @@ Firefox for iOS uses the default Mobile Safari UA string, with an additional **F
 
 | Form factor | Firefox for iOS user agent string                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| iPod        | Mozilla/5.0 (iPod touch; CPU iPhone OS 8_3 like macOS) AppleWebKit/600.1.4 (KHTML, like Gecko) **FxiOS/1.0** Mobile/12F69 Safari/600.1.4 |
-| iPhone      | Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like macOS) AppleWebKit/600.1.4 (KHTML, like Gecko) **FxiOS/1.0** Mobile/12F69 Safari/600.1.4     |
-| iPad        | Mozilla/5.0 (Macintosh; Intel macOS 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15                       |
+| iPod        | Mozilla/5.0 (iPod touch; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) **FxiOS/1.0** Mobile/12F69 Safari/600.1.4 |
+| iPhone      | Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) **FxiOS/1.0** Mobile/12F69 Safari/600.1.4     |
+| iPad        | Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15                       |
 
 Regarding the deviation on iPad form factor, see this [issue](https://github.com/mozilla-mobile/firefox-ios/issues/6620).
 
@@ -227,9 +227,9 @@ These are some sample UA strings from other Gecko-based browsers on various plat
 | Browser                        | Gecko user agent string                                                                               |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------- |
 | Firefox for Maemo (Nokia N900) | Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1              |
-| Camino on Mac                  | Mozilla/5.0 (Macintosh; Intel macOS 10.5; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Camino/2.2.1      |
+| Camino on Mac                  | Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Camino/2.2.1      |
 | SeaMonkey on Windows           | Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1                 |
-| SeaMonkey on Mac               | Mozilla/5.0 (Macintosh; Intel macOS 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1 |
+| SeaMonkey on Mac               | Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1 |
 | SeaMonkey on Linux             | Mozilla/5.0 (X11; Linux i686; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1                |
 
 ## See also

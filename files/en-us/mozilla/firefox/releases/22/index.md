@@ -32,7 +32,7 @@ tags:
 - {{domxref("Node.isSupported")}} has been removed ({{bug(801562)}}).
 - `Node.setUserData` and `Node.getUserData` has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).
 - The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ({{bug("844134")}}).
-- The macOS backend for **Ambient Light Events** has been implemented.
+- The Mac OS X backend for **Ambient Light Events** has been implemented.
 - Elements in the HTML namespace with local names {{HTMLElement("bgsound")}}, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface. {{HTMLElement("bgsound")}} and {{HTMLElement("bgsound")}} implement {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.
 - The {{ domxref("NodeIterator.detach") }} method has been changed to do nothing ({{bug("823549")}}).
 - The {{domxref("BlobEvent")}} interface has been implemented ({{bug("834165")}}).

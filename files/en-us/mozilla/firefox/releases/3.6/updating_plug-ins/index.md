@@ -16,7 +16,7 @@ Several changes were made in Gecko 1.9.2 that may impact plug-in developers in p
 
 The `nsIPluginInstance` method `destroy()` has been removed, since it wasn't doing anything anyway.
 
-## macOS specific changes
+## Mac OS X specific changes
 
 ### CFM plug-ins no longer supported
 
