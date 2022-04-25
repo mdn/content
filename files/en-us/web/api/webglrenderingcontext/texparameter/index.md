@@ -42,7 +42,7 @@ texParameteri(target, GLenum pname, GLint param)
 
 - pname
   - : The `pname` parameter is a {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
-  parameter to set. 
+  parameter to set.
 
 <table class="standard-table">
   <thead>

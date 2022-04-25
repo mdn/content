@@ -20,6 +20,7 @@ This method compiles an {{DOMxRef("XPathExpression")}} which can then be used fo
 ```js
 createExpression(xpathText, namespaceURLMapper)
 ```
+
 ### Parameters
 
 - _xpathText_ is a string which is the XPath expression to be compiled.

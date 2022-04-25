@@ -50,7 +50,6 @@ Invalid frequency values:
 
 {{Specifications}}
 
-
 ## Browser compatibility
 
 {{Compat}}

@@ -64,7 +64,7 @@ The Download Manager API has changed slightly due to the transition from an RDF 
 
 If your extension accesses user login information using the Password Manager, it will need to be updated to use the new Login Manager API.
 
-- The article [Using nsILoginManager](/en-US/docs/XPCOM_Interface_Reference/Using_nsILoginManager) includes examples, including a demonstration of how to write your extension to work with both the Password Manager and the Login Manager, so it will work with both Firefox 3 and earlier versions. 
+- The article [Using nsILoginManager](/en-US/docs/XPCOM_Interface_Reference/Using_nsILoginManager) includes examples, including a demonstration of how to write your extension to work with both the Password Manager and the Login Manager, so it will work with both Firefox 3 and earlier versions.
 - `nsILoginInfo`
 - `nsILoginManager`
 
@@ -94,7 +94,7 @@ The `nsIAutoCompleteController` interface's `handleEnter()` method has been chan
 The internal string API is no longer exported; you must migrate to the external string API. See these articles for helpful information:
 
 - [Mozilla external string guide](/en-US/docs/Mozilla_external_string_guide)
-- [XPCOM Glue](/en-US/docs/XPCOM_Glue) 
+- [XPCOM Glue](/en-US/docs/XPCOM_Glue)
 - [Migrating from Internal Linkage to Frozen Linkage](/en-US/docs/Migrating_from_Internal_Linkage_to_Frozen_Linkage)
 
 ### Removed interfaces
