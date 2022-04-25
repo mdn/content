@@ -137,7 +137,7 @@ To avoid bringing on motion sickness in our users (or at least minimize the effe
 
 - Always maintain head tracking (this is the most important of all, especially if it occurs in middle of the experience.)
 - Use constant velocity; avoid acceleration or deceleration camera movements (use linear acceleration, and avoid vs easing if you can.)
-- Keep the framerate up (less than 30fps is uncomfortable.)
+- Keep the frame rate up (less than 30fps is uncomfortable.)
 - Avoid sharp and/or unexpected camera rotations.
 - Add fixed points of reference for fixed objects (otherwise the user will believe they are on the move.)
 - Do not use Depth of Field or Motion Blur post processing because you do not know where the eyes will focus.
@@ -151,11 +151,11 @@ Latency is the time between the physical head movement and the visual display re
 
 The Oculus Rift headset has a latency of 20 ms or less, but with mobile device-based setups it will depend heavily on the smartphone CPU power and other capabilities.
 
-### Framerate ( Frames per second / FPS )
+### Frame rate ( Frames per second / FPS )
 
-Based on the Wikipedia definition, framerate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered jittery, and annoying to the user.
+Based on the Wikipedia definition, frame rate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered jittery, and annoying to the user.
 
-One of the most difficult tasks is to maintain a constant and high framerate value, so we must optimize our code to make it as efficient as possible. It is preferable to have a decent framerate that doesn't constantly or suddenly change; for this you need to as few necessary objects moving into the scene as possible and (in the case of WebGL) try to reduce draw calls.
+One of the most difficult tasks is to maintain a constant and high frame rate value, so we must optimize our code to make it as efficient as possible. It is preferable to have a decent frame rate that doesn't constantly or suddenly change; for this you need to as few necessary objects moving into the scene as possible and (in the case of WebGL) try to reduce draw calls.
 
 ### Interpupillary distance ( IPD )
 

@@ -31,7 +31,7 @@ new PointerEvent(type, PointerEventInit);
     - `pointerId` — optional `long`, defaulting to `0`,
       sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.
     - `width` — optional `double`, defaulting to `1`,
-      sets the value of the instance'sc{{domxref("PointerEvent.width")}}.
+      sets the value of the instance's {{domxref("PointerEvent.width")}}.
     - `height` — optional `double`, defaulting to `1`,
       sets the value of the instance's {{domxref("PointerEvent.height")}}.
     - `pressure` — optional `float`, defaulting to `0`,

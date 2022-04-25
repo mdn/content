@@ -16,7 +16,7 @@ browser-compat: api.MediaStreamTrack.kind
 The **`MediaStreamTrack.kind`**
 read-only property returns a {{domxref("DOMString")}} set to `"audio"` if
 the track is an audio track and to `"video"`, if it is a video
-track. It doesn't change if the track is deassociated from its source.
+track. It doesn't change if the track is disassociated from its source.
 
 ## Syntax
 
