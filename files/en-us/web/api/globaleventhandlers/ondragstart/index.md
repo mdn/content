@@ -16,13 +16,13 @@ A {{domxref("GlobalEventHandlers","global event handler")}} for the
 ## Syntax
 
 ```js
-targetElement.ondragstart = dragstartHandler;
+target.ondragstart = functionRef;
 ```
 
 ### Return value
 
-- `dragstartHandler`
-  - : The _dragstart_ event handler for element `targetElement`.
+- `functionRef`
+  - : The _dragstart_ event handler for element `target`.
 
 ## Example
 
