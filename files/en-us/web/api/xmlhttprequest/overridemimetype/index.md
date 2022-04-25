@@ -28,13 +28,13 @@ as such. This method must be called before calling {{domxref("XMLHttpRequest.sen
 ## Syntax
 
 ```js
-XMLHttpRequest.overrideMimeType(mimeType)
+overrideMimeType(mimeType)
 ```
 
 ### Parameters
 
 - `mimeType`
-  - : A {{domxref("DOMString")}} specifying the MIME type to use instead of the one
+  - : A string specifying the MIME type to use instead of the one
     specified by the server. If the server doesn't specify a type,
     `XMLHttpRequest` assumes `"text/xml"`.
 
@@ -42,7 +42,7 @@ XMLHttpRequest.overrideMimeType(mimeType)
 
 `undefined`.
 
-## Example
+## Examples
 
 This example specifies a MIME type of `"text/plain"`, overriding the
 server's stated type for the data being received.

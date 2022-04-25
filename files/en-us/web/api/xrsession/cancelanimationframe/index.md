@@ -44,7 +44,7 @@ None.
 
 This function has no effect if the specified `handle` cannot be found.
 
-## Example
+## Examples
 
 In the example below we see code which starts up a WebXR session if immersive VR mode
 is supported. Once started, the session schedules its first frame to be rendered by

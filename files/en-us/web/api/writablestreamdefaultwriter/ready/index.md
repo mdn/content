@@ -3,7 +3,7 @@ title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
 tags:
   - API
-  - Method
+  - Property
   - Ready
   - Reference
   - Streams
@@ -19,17 +19,11 @@ The **`ready`** read-only property of the
 that resolves when the desired size of the stream's internal queue transitions from
 non-positive to positive, signaling that it is no longer applying backpressure.
 
-## Syntax
-
-```js
-var promise = writableStreamDefaultWriter.ready;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}}.
 
-## Example
+## Examples
 
 The following example shows two uses of the `ready` property. The first uses
 `ready` to ensure that the `WritableStream` is done writing and

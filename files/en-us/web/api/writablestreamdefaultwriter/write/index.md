@@ -26,7 +26,7 @@ destination.
 ## Syntax
 
 ```js
-var promise = writableStreamDefaultWriter.write(chunk);
+write(chunk)
 ```
 
 ### Parameters

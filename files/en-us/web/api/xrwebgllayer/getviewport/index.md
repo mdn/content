@@ -34,7 +34,7 @@ represented by the view.
 ## Syntax
 
 ```js
-getViewport(view);
+getViewport(view)
 ```
 
 ### Parameters
@@ -55,7 +55,7 @@ drawing to the portion of the layer corresponding to the specified `view`.
     that `XRFrame` and the {{domxref("XRWebGLLayer")}} are not part of the same
     [WebXR session](/en-US/docs/Web/API/XRSession).
 
-## Example
+## Examples
 
 This example demonstrates in part what the callback for the
 {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} function might

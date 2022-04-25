@@ -35,7 +35,7 @@ of input sources.
 ## Syntax
 
 ```js
-xrInputSourceArray.keys();
+keys()
 ```
 
 ### Parameters

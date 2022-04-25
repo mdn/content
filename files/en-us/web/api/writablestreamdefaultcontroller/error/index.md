@@ -24,13 +24,13 @@ the underlying sink.
 ## Syntax
 
 ```js
-writableStreamDefaultController.error(e);
+error(e)
 ```
 
 ### Parameters
 
 - e
-  - : A {{domxref("DOMString")}} representing the error you want future interactions to
+  - : A string representing the error you want future interactions to
     fail with.
 
 ### Return value
