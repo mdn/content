@@ -37,7 +37,7 @@ Since the document fragment is _in memory_ and not part of the main DOM tree,
 appending children to it does not cause page [reflow](https://developers.google.com/speed/docs/insights/browser-reflow?csw=1)
 (computation of element's position and geometry). Historically, using document fragments
 could result in [better
-performance](http://ejohn.org/blog/dom-documentfragments/).
+performance](https://johnresig.com/blog/dom-documentfragments/).
 
 You can also use the `DocumentFragment` constructor to create a new
 fragment:

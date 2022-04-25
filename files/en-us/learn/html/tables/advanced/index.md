@@ -434,12 +434,16 @@ Returning to our spending costs example, the previous two snippets could be rewr
 
 ## Summary
 
-There are a few other things you could learn about table HTML, but we have really given all you need to know at this moment in time. At this point, you might want to go and learn about styling HTML tables — see [Styling Tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
+There are a few other things you could learn about tables in HTML, but this is all you need to know for now. Next, you can test yourself with our [HTML tables assessment](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data). Have fun!
+
+If you are already learning CSS and have done well on the assessment, you can move on and learn about styling HTML tables — see [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
+
+If want to get started with learning CSS, check out the [CSS Learning Area](/en-US/docs/Learn/CSS)!
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 ## In this module
 
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- **HTML table advanced features and accessibility**
+- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

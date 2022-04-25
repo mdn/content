@@ -513,7 +513,7 @@ Each peer sends to the other peer a candidate for each possible transport config
 
 In addition, if something happens to cause a change in the streaming scenario, negotiation will begin again, with the {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event being sent to the {{domxref("RTCPeerConnection")}}, and the entire process starts again as described before. This can happen in a variety of situations, including:
 
-- Changes in the network status, such as a bandwidth change, transitioning from WiFi to cellular connectivity, or the like.
+- Changes in the network status, such as a bandwidth change, transitioning from Wi-Fi to cellular connectivity, or the like.
 - Switching between the front and rear cameras on a phone.
 - A change to the configuration of the stream, such as its resolution or frame rate.
 

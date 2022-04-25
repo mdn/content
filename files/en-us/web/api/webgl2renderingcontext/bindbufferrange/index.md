@@ -19,7 +19,7 @@ the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) binds a range of a given
 ## Syntax
 
 ```js
-void gl.bindBufferRange(target, index, buffer, offset, size);
+bindBufferRange(target, index, buffer, offset, size)
 ```
 
 ### Parameters

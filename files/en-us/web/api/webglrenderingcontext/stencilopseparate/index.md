@@ -18,7 +18,7 @@ back-facing stencil test actions.
 ## Syntax
 
 ```js
-void gl.stencilOpSeparate(face, fail, zfail, zpass);
+stencilOpSeparate(face, fail, zfail, zpass)
 ```
 
 ### Parameters

@@ -108,7 +108,7 @@ It is important that websites adopt `<link>` tag based prefetching instead of tr
 
 ### Which browsers support link prefetching?
 
-Browsers based on Mozilla 1.2 (or later) as well as browsers based on Mozilla 1.0.2 (or later) support prefetching. This includes Firefox and Netscape 7.01+. Camino builds as of March 2003 are based on Mozilla 1.0.1, and therefore do not support prefetching. [Test](https://gemal.dk/browserspy/prefetch.php) your browser to see if it supports Link Prefetching.
+Browsers based on Mozilla 1.2 (or later), as well as browsers based on Mozilla 1.0.2 (or later), support prefetching. This includes Firefox and Netscape 7.01+. Camino builds as of March 2003 are based on Mozilla 1.0.1, and therefore do not support prefetching. [Test](https://browserspy.dk/prefetch.php) your browser to see if it supports Link Prefetching.
 
 ### Privacy implications
 

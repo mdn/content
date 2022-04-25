@@ -16,7 +16,7 @@ The **`WebGLRenderingContext.pixelStorei()`** method of the [WebGL API](/en-US/d
 ## Syntax
 
 ```js
-void gl.pixelStorei(pname, param);
+pixelStorei(pname, param)
 ```
 
 ### Parameters

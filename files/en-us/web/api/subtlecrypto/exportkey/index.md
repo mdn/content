@@ -53,11 +53,11 @@ exportKey(format, key)
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-  - If `format` was `jwk`, then the promise fulfills
-    with a JSON object containing the key.
-  - Otherwise the promise fulfills with an
-    [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-    containing the key.
+- If `format` was `jwk`, then the promise fulfills
+  with a JSON object containing the key.
+- Otherwise the promise fulfills with an
+  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+  containing the key.
 
 ### Exceptions
 

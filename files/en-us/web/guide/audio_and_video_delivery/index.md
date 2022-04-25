@@ -399,7 +399,7 @@ AddType video/webm webmv
 
 Your files may have been encoded incorrectly — try encoding using one of the following tools, which are proven to be pretty reliable:
 
-- [Audacity](http://audacity.sourceforge.net/) — Free Audio Editor and Recorder
+- [Audacity](https://sourceforge.net/projects/audacity/) — Free Audio Editor and Recorder
 - [Miro](https://www.getmiro.com/) — Free, open-source music and video player
 - [Handbrake](https://handbrake.fr/) — Open Source Video Transcoder
 - [Firefogg](http://firefogg.org/) — Video and Audio encoding for Firefox

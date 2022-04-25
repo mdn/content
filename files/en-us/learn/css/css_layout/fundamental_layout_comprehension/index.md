@@ -42,7 +42,7 @@ Save the HTML document and stylesheet into a directory on your computer, and add
 
 This starting point has all of the content of your layout as displayed by the browser in normal flow.
 
-Alternatively, you could use a site like [Glitch](https://glitch.com/) to do your assessment, pasting in the the HTML and CSS. Note that if you use an online editor you will need to upload the images and replace the values in the `src` attributes to point to the new image locations. If the online editor you are using doesn't have a separate CSS panel, feel free to put it in a `<style>` element in the head of the document.
+Alternatively, you could use a site like [Glitch](https://glitch.com/) to do your assessment, pasting in the HTML and CSS. Note that if you use an online editor you will need to upload the images and replace the values in the `src` attributes to point to the new image locations. If the online editor you are using doesn't have a separate CSS panel, feel free to put it in a `<style>` element in the head of the document.
 
 > **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 

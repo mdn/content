@@ -26,7 +26,7 @@ lines.
 ## Syntax
 
 ```js
-void gl.lineWidth(width);
+lineWidth(width)
 ```
 
 ### Parameters

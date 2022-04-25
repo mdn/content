@@ -20,7 +20,7 @@ document by the specified number of pages.
 ## Syntax
 
 ```js
-window.scrollByPages(pages)
+scrollByPages(pages)
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ window.scrollByPages(pages)
 - `pages` is the number of pages to scroll. It may be a positive or
   negative integer.
 
-## Example
+## Examples
 
 ```js
 // scroll down the document by 1 page

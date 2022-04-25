@@ -30,7 +30,6 @@ getElementsByName(name)
 
 A live {{domxref("NodeList")}} collection, meaning it automatically updates as new elements with the same `name` are added to, or removed from, the document.
 
-
 ## Examples
 
 ```html

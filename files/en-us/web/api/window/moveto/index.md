@@ -21,7 +21,7 @@ interface moves the current window to the specified coordinates.
 ## Syntax
 
 ```js
-window.moveTo(x, y)
+moveTo(x, y)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ window.moveTo(x, y)
 - `x` is the horizontal coordinate to be moved to.
 - `y` is the vertical coordinate to be moved to.
 
-## Example
+## Examples
 
 This example moves the window to the top-left corner of the screen.
 

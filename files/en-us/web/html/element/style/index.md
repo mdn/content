@@ -37,11 +37,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
-- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : This attribute specifies that the styles only apply to the elements of its parent(s) and children.
-
-    > **Note:** This attribute may be re-introduced in the future per <https://github.com/w3c/csswg-drafts/issues/3547>. If you want to use the attribute now, you can use a [polyfill](https://github.com/samthor/scoped).
-
 - {{htmlattrdef("type")}} {{deprecated_inline}}
   - : This attribute should not be provided: if it is, the only permitted values are the empty string or a case-insensitive match for `text/css`.
 

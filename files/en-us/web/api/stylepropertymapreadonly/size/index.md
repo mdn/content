@@ -15,7 +15,7 @@ browser-compat: api.StylePropertyMapReadOnly.size
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`size`** read-only property of the
-{{domxref("StylePropertyMapReadOnly")}} interface returns an unsinged long integer
+{{domxref("StylePropertyMapReadOnly")}} interface returns an unsigned long integer
 containing the size of the `StylePropertyMapReadOnly` object.
 
 ## Value

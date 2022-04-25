@@ -14,6 +14,7 @@ Firefox 39 was released on July 2, 2015. This article lists key changes that are
 ### Developer Tools
 
 Highlights:
+
 - _WebIDE_ now supports debugging Firefox OS devices over Wi-Fi
 - _WebIDE_ now supports Cordova projects
 - [Animations view: rewind, fast-forward, and jump to a specific time](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-39)

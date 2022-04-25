@@ -79,7 +79,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Implemented ES2017 [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) in functions ({{bug(1303788)}}).
 - Implemented {{jsxref("Functions/rest_parameters", "rest parameter destructuring", "#Destructuring_rest_parameters", 1)}} ({{bug(1243717)}}).
 - The {{jsxref("Operators", "exponentiation operator (**)", "#Exponentiation_(**)", 1)}} is now enabled by default ({{bug(1291212)}}).
-- You can now use [IANA time zone names](http://www.iana.org/time-zones) in the `timeZone` option of date related APIs like {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} or {{jsxref("Date.toLocaleString()")}} ({{bug(837961)}}).
+- You can now use [IANA time zone names](https://www.iana.org/time-zones) in the `timeZone` option of date related APIs like {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} or {{jsxref("Date.toLocaleString()")}} ({{bug(837961)}}).
 
 #### Changes and removals
 

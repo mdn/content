@@ -18,7 +18,7 @@ the specified number of lines.
 ## Syntax
 
 ```js
-window.scrollByLines(lines)
+scrollByLines(lines)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ window.scrollByLines(lines)
 - `lines` is the number of lines to scroll the document by. It may be a
   positive or negative integer.
 
-## Example
+## Examples
 
 ```html
 <!-- Scroll up the document by 5 lines -->

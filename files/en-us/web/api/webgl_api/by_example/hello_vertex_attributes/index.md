@@ -118,10 +118,10 @@ function setupWebGL (evt) {
 
   document.querySelector("canvas").addEventListener("click",
     function (evt) {
-      var clickXrelativToCanvas =
+      var clickXRelativeToCanvas =
           evt.pageX - evt.target.offsetLeft;
       var clickXinWebGLCoords =
-          2.0 * (clickXrelativToCanvas- gl.drawingBufferWidth/2)
+          2.0 * (clickXRelativeToCanvas- gl.drawingBufferWidth/2)
           / gl.drawingBufferWidth;
       gl.bufferData(gl.ARRAY_BUFFER,
         new Float32Array([clickXinWebGLCoords]), gl.STATIC_DRAW);

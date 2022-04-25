@@ -36,7 +36,7 @@ which returns the entire raw header string.
 ## Syntax
 
 ```js
-var myHeader = XMLHttpRequest.getResponseHeader(headerName);
+getResponseHeader(headerName)
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ A string representing the header's text value, or `null`
 if either the response has not yet been received or the header doesn't exist in the
 response.
 
-## Example
+## Examples
 
 In this example, a request is created and sent, and a {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
 handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState",

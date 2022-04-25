@@ -30,11 +30,7 @@ In this assessment, we'll test your knowledge of some of the techniques discusse
       <th scope="row">Prerequisites:</th>
       <td>
         Before attempting this assessment you should have already worked through
-        the rest of the
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding"
-          >Multimedia and embedding</a
-        >
-        module.
+        all the articles in this module.
       </td>
     </tr>
     <tr>

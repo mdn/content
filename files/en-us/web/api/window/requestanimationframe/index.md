@@ -55,7 +55,7 @@ timestamp is a decimal number, in milliseconds, but with a minimal precision of 
 ## Syntax
 
 ```js
-window.requestAnimationFrame(callback);
+requestAnimationFrame(callback)
 ```
 
 ### Parameters
@@ -74,7 +74,7 @@ in the callback list. This is a non-zero value, but you may not make any other
 assumptions about its value. You can pass this value to
 {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.
 
-## Example
+## Examples
 
 In this example, an element is animated for 2 seconds (2000 milliseconds). The element
 moves at a speed of 0.1px/ms to the right, so its relative position (in CSS pixels) can
@@ -134,5 +134,5 @@ Edge versions below 17 and Internet Explorer do not reliably fire
 - [TestUFO: Test your web
   browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
 - Paul Irish: [requestAnimationFrame
-  API: now with sub-millisecond precision](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision)
+  API: now with sub-millisecond precision](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
 - [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

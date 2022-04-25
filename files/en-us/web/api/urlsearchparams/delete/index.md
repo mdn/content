@@ -20,7 +20,7 @@ list of all search parameters.
 ## Syntax
 
 ```js
-URLSearchParams.delete(name)
+delete(name)
 ```
 
 ### Parameters

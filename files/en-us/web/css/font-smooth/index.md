@@ -103,5 +103,5 @@ Not part of any standard.
 
 ## See also
 
-- [Please Stop "Fixing" Font Smoothing – UsabilityPost](http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
+- [Please Stop "Fixing" Font Smoothing – UsabilityPost](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
 - [Laissez-faire font smoothing and anti-aliasing](https://www.zachleat.com/web/font-smooth/)

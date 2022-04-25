@@ -359,8 +359,7 @@ Attributes for the `<input`> element include the [global HTML attributes](/en-US
 | [`step`](#step)                     | numeric types                    | Incremental values that are valid                                                     |
 | [`type`](#type)                     | all                              | Type of form control                                                                  |
 | [`value`](#value)                   | all                              | The initial value of the control                                                      |
-| [`width`](#width)                   | image                            | Same as `width` attribute for {{htmlelement('img')}}                                  
-
+| [`width`](#width)                   | image                            | Same as `width` attribute for {{htmlelement('img')}}
 
 A few additional non-standard attributes are listed following the descriptions of the standard attributes.
 
@@ -660,7 +659,6 @@ The following non-standard attributes are also available on some browsers. As a 
     </tr>
   </tbody>
 </table>
-
 
 - `autocorrect` {{non-standard_inline}}
 

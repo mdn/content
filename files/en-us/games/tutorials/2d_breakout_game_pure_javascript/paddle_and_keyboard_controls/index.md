@@ -120,7 +120,7 @@ else if(leftPressed) {
 }
 ```
 
-The `paddleX` position we're using will move between `0` on the left side of the canvas and `canvas.width-paddleWidth` on the right hand side, which will work exactly as we want it to.
+The `paddleX` position we're using will move between `0` on the left side of the canvas and `canvas.width-paddleWidth` on the right-hand side, which will work exactly as we want it to.
 
 Add the above code block into the `draw()` function at the bottom, just above the closing curly brace.
 

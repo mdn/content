@@ -88,7 +88,7 @@ The padding does not affect the overall width and height of the containers becau
 }
 ```
 
-This basically means that {{cssxref("width")}} and {{cssxref("height")}} will now set the dimensions of an element all the way up to and including the border, not just the content. So if you set `width: 40%`, the box width will always be `40%` of its parent, and any {{cssxref("padding")}} and {{cssxref("border")}} widths set on the box will be subtracted from the content width, not added to it. Very useful! Read more about this at [\* { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/), by Paul Irish.
+This basically means that {{cssxref("width")}} and {{cssxref("height")}} will now set the dimensions of an element all the way up to and including the border, not just the content. So if you set `width: 40%`, the box width will always be `40%` of its parent, and any {{cssxref("padding")}} and {{cssxref("border")}} widths set on the box will be subtracted from the content width, not added to it. Very useful! Read more about this at [\* { Box-sizing: Border-box } FTW](https://www.paulirish.com/2012/box-sizing-border-box-ftw/), by Paul Irish.
 
 ## Flexible replaced elements
 
@@ -349,7 +349,7 @@ There is a way to override this mobile rendering behavior — viewport, which is
 
 This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
 
-> **Note:** There is a spec called [device adaptation](http://dev.w3.org/csswg/css-device-adapt/), which defines the same functionality but in CSS, using a `@viewport` at-rule. This is probably a more logical place to put such information, but the spec is not as well supported as the viewport meta tag, therefore you should stick with that for now.
+> **Note:** There is a spec called [device adaptation](https://drafts.csswg.org/css-device-adapt/), which defines the same functionality but in CSS, using a `@viewport` at-rule. This is probably a more logical place to put such information, but the spec is not as well supported as the viewport meta tag, therefore you should stick with that for now.
 
 ## Responsive images/video
 
@@ -391,7 +391,7 @@ button {
 }
 ```
 
-This looks rather complicated, but really it's not — we are providing a number of media query options, as at this time different browsers support different resolution media query types and even units. Brett Jankord has a good explanation at [Cross Browser Retina/High Resolution Media Queries](http://www.brettjankord.com/2012/11/28/cross-browser-retina-high-resolution-media-queries/).
+This looks rather complicated, but really it's not — we are providing a number of media query options, as at this time different browsers support different resolution media query types and even units. Brett Jankord has a good explanation at [Cross Browser Retina/High Resolution Media Queries](https://www.brettjankord.com/2012/11/28/cross-browser-retina-high-resolution-media-queries/).
 
 ### \<video>
 
@@ -424,8 +424,8 @@ HTML images are a more difficult proposition. There is no mechanism inherent in 
 This all sounds good. But those solutions are definitely not ready for production yet — both are in a very early stage of standardization, and have no support across browsers. Currently we have to rely on various polyfills and other solutions, none of which are perfect for all situations, so you need to decide which one is right for your particular situation. Some available solutions are as follows:
 
 - [HiSRC](https://github.com/teleject/hisrc)
-  - : A [jQuery](http://jquery.com) plugin that allows you to create small, medium, and large versions of an image, and then serves the appropriate one according to the browser's resolution and available network speed.
-- [Mobify.js capturing](http://www.mobify.com/mobifyjs/v2/docs/capturing/)
+  - : A [jQuery](https://jquery.com/) plugin that allows you to create small, medium, and large versions of an image, and then serves the appropriate one according to the browser's resolution and available network speed.
+- [Mobify.js capturing](https://www.salesforce.com/products/commerce-cloud/headless-commerce/?sfdc-redirect=340)
   - : A very clever technique from Mozilla that allows you to capture the source of the page before it's parsed. This way, you can swap out image `src` values with JavaScript depending on browser features, circumventing browser preloading issues. This is promising, but doesn't work very well across older browsers.
 - [Picturefill](https://github.com/scottjehl/picturefill)
   - : A JavaScript-based polyfill for `<picture>`, which works nicely, but it does require a lot of custom markup.

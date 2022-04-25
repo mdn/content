@@ -80,5 +80,5 @@ p {
 ## See also
 
 - [Apple's documentation](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16)
-- [Gecko's behavior description](http://dbaron.org/log/20111126-font-inflation), by L. David Baron
+- [Gecko's behavior description](https://dbaron.org/log/20111126-font-inflation), by L. David Baron
 - [Microsoft's documentation](<https://msdn.microsoft.com/library/windows/apps/ff462082(v=vs.105).aspx#BKMK_AdjustingTextSizewithCustomCSS>)

@@ -18,7 +18,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the *java.net* package.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the *java.net* package.
 
 ### ServerSocket
 
@@ -56,9 +56,9 @@ public class WebSocket {
 
 Methods:
 
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
+- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
   Returns an input stream for this socket.
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
+- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
   Returns an output stream for this socket.
 
 ### OutputStream

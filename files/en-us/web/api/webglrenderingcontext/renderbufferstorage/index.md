@@ -18,7 +18,7 @@ renderbuffer object's data store.
 ## Syntax
 
 ```js
-void gl.renderbufferStorage(target, internalFormat, width, height);
+renderbufferStorage(target, internalFormat, width, height)
 ```
 
 ### Parameters

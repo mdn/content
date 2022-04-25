@@ -28,13 +28,13 @@ dispatched, it doesn't do anything anymore.
 ## Syntax
 
 ```js
-event.initUIEvent(type, canBubble, cancelable, view, detail)
+initUIEvent(type, canBubble, cancelable, view, detail)
 ```
 
 ### Parameters
 
 - _`type`_
-  - : Is a {{domxref("DOMString")}} defining the type of event.
+  - : Is a string defining the type of event.
 - _`canBubble`_
   - : Is a boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
@@ -49,7 +49,7 @@ event.initUIEvent(type, canBubble, cancelable, view, detail)
     event, depending on the type of event. For mouse events, it indicates how many times
     the mouse has been clicked on a given screen location.
 
-## Example
+## Examples
 
 ```js
 var e = document.createEvent("UIEvent");

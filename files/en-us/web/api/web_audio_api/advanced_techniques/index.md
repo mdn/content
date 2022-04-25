@@ -483,7 +483,7 @@ function playSample(audioContext, audioBuffer, time) {
 }
 ```
 
-> **Note:** The sound file was [sourced from soundbible.com](http://soundbible.com/1573-DTMF-Tones.html).
+> **Note:** The sound file was [sourced from soundbible.com](https://soundbible.com/1573-DTMF-Tones.html).
 
 ## Playing the audio in time
 

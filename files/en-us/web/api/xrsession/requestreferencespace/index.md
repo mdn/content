@@ -39,7 +39,7 @@ requestReferenceSpace(referenceSpaceType)
   - : A string specifying the type of reference space for which an instance is to be returned.
     The string must be one of the values below.
 
-### Values
+### Return value
 
 The types of reference space are listed below, with brief information about their use cases and which interface is used to implement them.
 

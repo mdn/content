@@ -18,7 +18,7 @@ coordinates.
 ## Syntax
 
 ```js
-void gl.viewport(x, y, width, height);
+viewport(x, y, width, height)
 ```
 
 ### Parameters

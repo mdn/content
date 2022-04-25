@@ -20,15 +20,9 @@ already `CLOSED`, this method does nothing.
 ## Syntax
 
 ```js
-WebSocket.close();
-```
-
-```js
-WebSocket.close(code);
-```
-
-```js
-WebSocket.close(code, reason);
+close()
+close(code)
+close(code, reason)
 ```
 
 ### Parameters
@@ -48,9 +42,9 @@ WebSocket.close(code, reason);
 
 ### Exceptions
 
-- `InvalidAccessError`
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if [`code`](#code) is neither an integer equal to `1000` nor an integer in the range `3000`–`4999`.
-- `SyntaxError`
+- `SyntaxError`  {{domxref("DOMException")}}
   - : Thrown if the UTF-8-encoded [`reason`](#reason) value is longer than 123 bytes.
 
 ## Specifications

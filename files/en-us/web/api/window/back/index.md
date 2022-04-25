@@ -23,7 +23,7 @@ Firefox-specific method and was removed in Firefox 31.
 ## Syntax
 
 ```js
-window.back();
+back()
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ None.
 
 `undefined`.
 
-## Example
+## Examples
 
 This simple example handles a click on a "Back" button by calling `back()`.
 

@@ -19,10 +19,10 @@ The **`open()`** method of the {{domxref('Window')}} interface loads a specified
 ## Syntax
 
 ```js
-open();
-open(url);
-open(url, target);
-open(url, target, windowFeatures);
+open()
+open(url)
+open(url, target)
+open(url, target, windowFeatures)
 ```
 
 ### Parameters

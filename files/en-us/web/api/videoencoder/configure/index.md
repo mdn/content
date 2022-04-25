@@ -16,7 +16,7 @@ The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueu
 ## Syntax
 
 ```js
-VideoEncoder.configure(config)
+configure(config)
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ VideoEncoder.configure(config)
         - `"quality"` (default)
         - `"realtime"`
 
-### Return Value
+### Return value
 
 None.
 

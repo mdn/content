@@ -32,14 +32,9 @@ loop.
 ## Syntax
 
 ```js
-window.requestIdleCallback(callback);
-window.requestIdleCallback(callback, options);
+requestIdleCallback(callback)
+requestIdleCallback(callback, options)
 ```
-
-### Return value
-
-An ID which can be used to cancel the callback by passing it into the
-{{domxref("window.cancelIdleCallback()")}} method.
 
 ### Parameters
 
@@ -54,7 +49,12 @@ An ID which can be used to cancel the callback by passing it into the
 
     - `timeout`: If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
 
-## Example
+### Return value
+
+An ID which can be used to cancel the callback by passing it into the
+{{domxref("window.cancelIdleCallback()")}} method.
+
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
 in the article [Cooperative Scheduling

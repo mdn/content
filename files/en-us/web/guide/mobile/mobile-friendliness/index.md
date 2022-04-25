@@ -19,13 +19,13 @@ These days, users can access the web on devices in a wide range of form factors,
 
 _"Adjust your content for mobile users."![alaska_air_mobile_and_desktop-300x225.png](alaska_air_mobile_and_desktop-300x225.png)_
 
-Think about what your users want to do at your site if they are on a phone. A great example of this is [Alaska Air's website](http://www.alaskaair.com/). Their desktop site focuses on getting visitors to book trips. Mobile users, however, are probably more interested in checking-in for a flight or seeing if their flight is delayed. They've adjusted their site's content to reflect this, and it meets the needs of mobile users.
+Think about what your users want to do at your site if they are on a phone. A great example of this is [Alaska Air's website](https://www.alaskaair.com/). Their desktop site focuses on getting visitors to book trips. Mobile users, however, are probably more interested in checking-in for a flight or seeing if their flight is delayed. They've adjusted their site's content to reflect this, and it meets the needs of mobile users.
 
 ### Goal #3 (Performance)
 
 _"Give your users a smooth experience, even on a slow connection."_
 
-Though things have been getting better in recent years, browsing the Internet over a wireless data connection can still be pretty painful. This makes it more essential than ever to practice [good performance practices](http://developer.yahoo.com/performance/rules.html), only sending the user the bits they will actually need.
+Though things have been getting better in recent years, browsing the Internet over a wireless data connection can still be pretty painful. This makes it more essential than ever to practice [good performance practices](https://developer.yahoo.com/performance/rules.html), only sending the user the bits they will actually need.
 
 ### Know your audience
 

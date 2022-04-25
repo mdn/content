@@ -19,7 +19,7 @@ as specified in the `lang` option of the
 
 The language itself is specified using a {{domxref("DOMString")}} representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 See the Sitepoint [ISO 2
-letter language codes](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) page for a simple reference.
+letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
 
 ## Value
 

@@ -104,7 +104,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
 
 6. You should see it printed out in the terminal.
 
-To set your `PATH` variable on Windows, follow the instructions at [How can I add a new folder to my system path?](http://windowsitpro.com/systems-management/how-can-i-add-new-folder-my-system-path)
+To set your `PATH` variable on Windows, follow the instructions at [How can I add a new folder to my system path?](https://www.itprotoday.com/)
 
 OK, let's try a quick test to make sure everything is working.
 
@@ -415,7 +415,7 @@ There has been a lot written about best practices for writing tests. You can fin
 2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the `google_test.js` test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps `results_page_title_set_correctly.js` would be slightly better?
 3. Write autonomous tests: Each test should work on it's own, and not depend on other tests to work.
 
-In addition, we should mention test results/reporting — we've been reporting results in our above examples using simple `console.log()` statements, but this is all done in JavaScript, so you can use whatever test running and reporting system you want, be it [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/), or some other tool.
+In addition, we should mention test results/reporting — we've been reporting results in our above examples using simple `console.log()` statements, but this is all done in JavaScript, so you can use whatever test running and reporting system you want, be it [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/), or some other tool.
 
 1. For example, try making a local copy of our [`mocha_test.js`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/selenium/mocha_test.js) example inside your project directory. Put it inside a subfolder called `test`. This example uses a long chain of promises to run all the steps required in our test — the promise-based methods WebDriver uses need to resolve for it to work properly.
 2. Install the mocha test harness by running the following command inside your project directory:

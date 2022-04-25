@@ -86,7 +86,6 @@ function fetchVideo() {
 
 You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
-
 ### Aborting a fetch operation with a timeout
 
 If you need to abort the operation on timeout then you can use the static {{domxref("AbortSignal.timeout()")}} method.
@@ -112,7 +111,6 @@ try {
     }
 }
 ```
-
 
 ### Aborting a fetch with timeout or explicit abort
 

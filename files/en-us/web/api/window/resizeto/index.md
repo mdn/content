@@ -17,7 +17,7 @@ window.
 ## Syntax
 
 ```js
-window.resizeTo(width, height)
+resizeTo(width, height)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ window.resizeTo(width, height)
     {{domxref("window.outerHeight","outerHeight")}} in pixels (including scroll bars,
     title bars, etc).
 
-## Example
+## Examples
 
 This function resizes the window so that it takes up one quarter of the available
 screen. See the {{domxref("Screen.availWidth")}} and {{domxref("Screen.availHeight")}}

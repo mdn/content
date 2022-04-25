@@ -26,7 +26,7 @@ The WebRTC statistics model's **`RTCRemoteOutboundRtpStreamStats`** dictionary e
 
 ## Properties
 
-_In addition to the properties defined by {{domxref("RTCSentRtpStreamStats")}} and its underlying {{domxref("RTCRtpStreamstats")}} and {{domxref("RTCStats")}} dictionaries, `RTCRemoteOutboundRtpStreamStats` defines the following properties._
+_In addition to the properties defined by {{domxref("RTCSentRtpStreamStats")}} and its underlying {{domxref("RTCRtpStreamStats")}} and {{domxref("RTCStats")}} dictionaries, `RTCRemoteOutboundRtpStreamStats` defines the following properties._
 
 - {{domxref("RTCRemoteOutboundRtpStreamStats.localId", "localId")}}
   - : A {{domxref("DOMString")}} which is used to find the local {{domxref("RTCInboundRtpStreamStats")}} object which shares the same Synchronization Source (SSRC).

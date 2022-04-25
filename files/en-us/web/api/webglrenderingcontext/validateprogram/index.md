@@ -19,7 +19,7 @@ used in the current WebGL state.
 ## Syntax
 
 ```js
-void gl.validateProgram(program);
+validateProgram(program)
 ```
 
 ### Parameters

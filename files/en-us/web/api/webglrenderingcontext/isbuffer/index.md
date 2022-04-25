@@ -17,7 +17,7 @@ passed {{domxref("WebGLBuffer")}} is valid and `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isBuffer(buffer);
+isBuffer(buffer)
 ```
 
 ### Parameters

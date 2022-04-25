@@ -89,4 +89,4 @@ The `style` attribute pins the SVG element to the background of the form.
 ## Related Links
 
 - Another SVG in HTML example: [A swarm of motes](/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example)
-- [Working example](http://jwatt.org/svg/demos/xhtml-with-inline-svg.xhtml) that works in both Mozilla and in Internet Explorer with Adobe's SVG Viewer installed. (For inline SVG to work in both Firefox and Internet Explorer it is necessary to serve documents with a different Content-Type to each browser. For this reason, if you're behind a proxy server that caches the page, the example wont work in the second browser you load it in because it will receive the wrong Content-Type.)
+- [Working example](https://jwatt.org/svg/demos/xhtml-with-inline-svg.xhtml) that works in both Mozilla and in Internet Explorer with Adobe's SVG Viewer installed. (For inline SVG to work in both Firefox and Internet Explorer it is necessary to serve documents with a different Content-Type to each browser. For this reason, if you're behind a proxy server that caches the page, the example wont work in the second browser you load it in because it will receive the wrong Content-Type.)

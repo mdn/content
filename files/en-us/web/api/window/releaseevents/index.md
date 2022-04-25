@@ -19,10 +19,14 @@ Releases the window from trapping events of a specific type.
 ## Syntax
 
 ```js
-window.releaseEvents(eventType)
+releaseEvents(eventType)
 ```
 
-`eventType` is a combination of the following values:
+### Parameters
+
+- `eventType`
+
+  - : `eventType` is a combination of the following values:
 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
 `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`,
 `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`,
@@ -32,7 +36,7 @@ window.releaseEvents(eventType)
 `Event.RESET`, `Event.RESIZE`, `Event.SELECT`,
 `Event.SUBMIT`, `Event.UNLOAD`.
 
-## Example
+## Examples
 
 ```js
 window.releaseEvents(Event.KEYPRESS)

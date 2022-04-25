@@ -17,7 +17,7 @@ One way to make a deep copy of a JavaScript object, if it can be [serialized](/e
 let ingredients_list = ["noodles",{"list":["eggs","flour","water"]}];
 let ingredients_list_deepcopy = JSON.parse(JSON.stringify(ingredients_list));
 
-// Change the value of the 'list' property in ingredients_list_copy.
+// Change the value of the 'list' property in ingredients_list_deepcopy.
 ingredients_list_deepcopy[1].list = ["rice flour","water"]
 // The 'list' property does not change in ingredients_list.
 console.log(ingredients_list[1].list);

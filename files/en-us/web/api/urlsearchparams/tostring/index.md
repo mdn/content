@@ -24,7 +24,7 @@ URL.
 ## Syntax
 
 ```js
-URLSearchParams.toString()
+toString()
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ None.
 
 ### Return value
 
-A {{domxref("DOMString")}}, without the question mark. (Returns an empty string if no
+A string, without the question mark. (Returns an empty string if no
 search parameters have been set.)
 
 ## Examples

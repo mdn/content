@@ -30,7 +30,7 @@ If the method call is successful, the request's `result` will be a string,
 which is the endpoint URL.
 
 > **Note:** if you do not need the URL any more, please use
-> {{domxref("Pushmanager.unregister()")}} to clean up after yourself.
+> {{domxref("PushManager.unregister()")}} to clean up after yourself.
 
 ## Examples
 

@@ -85,4 +85,4 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- **Structuring planet data**
+- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

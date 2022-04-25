@@ -18,7 +18,7 @@ The **`WebGL2RenderingContext.deleteSampler()`** method of the
 ## Syntax
 
 ```js
-void gl.deleteSampler(sampler);
+deleteSampler(sampler)
 ```
 
 ### Parameters
