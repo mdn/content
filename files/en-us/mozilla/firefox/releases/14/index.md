@@ -58,7 +58,7 @@ _No change._
 
 #### source-editor.jsm
 
-- Added a keyboard shortcut to toggle commenting for the current selection (Ctrl-/ or Cmd-/ on Mac OS X).
+- Added a keyboard shortcut to toggle commenting for the current selection (Ctrl-/ or Cmd-/ on macOS).
 - Added the Ctrl-\[ and Ctrl-] keyboard shortcuts for moving the text input position to the beginning and end of the current block.
 - Added the new [`getLineStart()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29) and [`getLineEnd()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29) methods.
 

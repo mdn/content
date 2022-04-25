@@ -508,7 +508,7 @@ authors:
   area for applications: e.g. user resizes the Windows taskbar, user positions the
   Windows taskbar on the left side (arabic language based) or right side (Hebrew
   language), user has a permanent MS-Office quick launch toolbar, etc.
-- some operating system (Mac OS X) forces presence of toolbars that can then fool the
+- some operating system (macOS) forces presence of toolbars that can then fool the
   web author's anticipations, calculations of the effective dimensions of the browser
   window
 

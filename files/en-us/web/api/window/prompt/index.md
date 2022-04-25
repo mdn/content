@@ -59,9 +59,9 @@ When the user clicks the OK button, text entered in the input field is returned.
 user clicks OK without entering any text, an empty string is returned. If the user
 clicks the Cancel button, this function returns `null`.
 
-The above prompt appears as follows (in Chrome on OS X):
+The above prompt appears as follows (in Chrome on macOS):
 
-[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
+[![prompt() dialog in Chrome on macOS](prompt.png)](prompt.png)
 
 ## Notes
 

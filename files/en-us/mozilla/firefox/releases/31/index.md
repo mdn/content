@@ -100,7 +100,7 @@ Highlights:
 
 - [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)
 - Added the ability to convert [between high-level BrowserWindow objects and DOM windows](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows), and [between high-level Tab objects and XUL tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs).
-- Updated the default theme used for panels on Mac OS X.
+- Updated the default theme used for panels on macOS.
 - Added [contentStyle and contentStyleFile](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content) options to panel.
 
 [GitHub commits made between Firefox 30 and Firefox 31](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31). This will not include any uplifts made after this release entered Aurora.

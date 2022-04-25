@@ -78,7 +78,7 @@ Some of the new features in Firefox 1.5:
 - **Improvements to product usability** including descriptive error pages, redesigned options menu, RSS discovery, and "Safe Mode" experience.
 - **Better accessibility support** including DHTML accessibility.
 - **Report a broken Web site wizard** to report Web sites that are not working in Firefox.
-- **Better support for Mac OS X** (10.2 and greater) including profile migration from Safari and Mac Internet Explorer.
+- **Better support for macOS** (10.2 and greater) including profile migration from Safari and Mac Internet Explorer.
 
 ### Security and Privacy
 

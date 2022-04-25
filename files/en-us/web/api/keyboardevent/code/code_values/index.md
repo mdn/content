@@ -1050,7 +1050,7 @@ when using it.
 
 ## Code values on Mac
 
-On Mac OS X, it's hard to get scancode or something which can distinguish a physical key from a key event. Therefore, Gecko always maps `code` value from the virtual keycode.
+On macOS, it's hard to get scancode or something which can distinguish a physical key from a key event. Therefore, Gecko always maps `code` value from the virtual keycode.
 
 In the cells,
 

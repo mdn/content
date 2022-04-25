@@ -72,7 +72,7 @@ Windows user agents have the following variations, where _x.y_ is the Windows NT
 
 Here, _x.y_ is the version of Mac OS X (for instance, Mac OS X 10.15). Starting in Firefox 87, Firefox caps the reported Mac OS X version number to 10.15, so macOS 11.0 Big Sur and later will be reported as "10.15" in the User-Agent string.
 
-Note that [Firefox no longer officially supports Mac OS X on PowerPC](https://support.mozilla.org/kb/firefox-no-longer-works-mac-os-10-4-or-powerpc).
+Note that [Firefox no longer officially supports macOS on PowerPC](https://support.mozilla.org/kb/firefox-no-longer-works-mac-os-10-4-or-powerpc).
 
 | Mac OS X version                    | Gecko user agent string                                                            |
 | ----------------------------------- | ---------------------------------------------------------------------------------- |

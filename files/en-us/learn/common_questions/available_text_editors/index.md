@@ -488,7 +488,7 @@ When you install a new text editor, your OS will probably continue to open text 
   - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
   - [older systems](https://pcsupport.about.com/od/fixtheproblem/f/chdefprogram.htm)
 
-- [Mac OS X](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
+- [macOS](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
 - Linux
 
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)

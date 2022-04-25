@@ -157,7 +157,7 @@ Highlights:
 #### New APIs
 
 - An experimental implementation of the Canvas API in Workers has landed: {{domxref("OfflineCanvas")}} and {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} are available behind the `gfx.offscreencanvas.enabled` preference, currently disabled by default ({{bug(709490)}}).
-- The Text2Speech API, part of Web Speech API, has now an OS X backend. But this is disabled by default ({{bug(1003452)}}).
+- The Text2Speech API, part of Web Speech API, has now an macOS backend. But this is disabled by default ({{bug(1003452)}}).
 
 #### Miscellaneous
 

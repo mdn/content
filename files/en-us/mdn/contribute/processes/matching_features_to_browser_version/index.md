@@ -304,7 +304,7 @@ Most of the time, APIs and other features are present in both the desktop and An
 
 ### Searchfox
 
-The [Searchfox](https://searchfox.org/) web site provides another method you can use to search Firefox source code. Searchfox is a tool that indexes the Firefox repositories (most usefully, the main [mozilla-central source code](https://searchfox.org/mozilla-central/source) and, interesting, the [WHATWG HTML specification is indexed](https://searchfox.org/whatwg-html/source) as well).
+The [Searchfox](https://searchfox.org/) website provides another method you can use to search Firefox source code. Searchfox is a tool that indexes the Firefox repositories (most usefully, the main [mozilla-central source code](https://searchfox.org/mozilla-central/source) and, interesting, the [WHATWG HTML specification is indexed](https://searchfox.org/whatwg-html/source) as well).
 
 ## Opera
 
@@ -334,7 +334,7 @@ You can then compare the WebKit version number to the Safari version history fou
 - [Trac revision timeline](https://trac.webkit.org/)
 - [Browse WebKit source](https://trac.webkit.org/browser)
 
-  - [By Apple product release number](https://trac.webkit.org/browser/webkit/releases/Apple) (Safari, iOS, Safari Technology Preview, watchOS, some older Mac OS X releases). This is how we number Safari in our [Browser Compatibility Database](https://github.com/mdn/browser-compat-data).
+  - [By Apple product release number](https://trac.webkit.org/browser/webkit/releases/Apple) (Safari, iOS, Safari Technology Preview, watchOS, some older macOS releases). This is how we number Safari in our [Browser Compatibility Database](https://github.com/mdn/browser-compat-data).
   - [By Safari build number](https://trac.webkit.org/browser/webkit/tags) (SVN tags)
   - [By WebKit build number](https://trac.webkit.org/browser/webkit/branches) (SVN branches)
   - {{interwiki("wikipedia", "Safari version history")}} (list of Safari versions with feature summaries and the corresponding WebKit build number for each)
