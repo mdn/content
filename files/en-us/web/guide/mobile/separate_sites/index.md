@@ -29,7 +29,7 @@ Another case where you may be forced to use this approach is if you cannot, for 
 
 ## Examples
 
-Most of the major Web applications you see in the wild have chosen this path, including [Facebook](http://m.facebook.com/), [YouTube](http://m.youtube.com/), [Digg](http://m.digg.com/), and [Flickr](http://m.flickr.com/). In fact, Mozilla picked this strategy for the mobile versions of [addons.mozilla.org](https://addons.mozilla.org/) (AMO) and [support.mozilla.org](http://support.mozilla.com/) (SUMO). If you'd like to see the source code behind an example of this approach in action, feel free to check out the [GitHub repository for AMO](https://github.com/jbalogh/zamboni/) or [SUMO](https://github.com/jsocol/kitsune).
+Most of the major Web applications you see in the wild have chosen this path, including [Facebook](http://m.facebook.com/) and [YouTube](http://m.youtube.com/). In fact, Mozilla picked this strategy for the mobile versions of [addons.mozilla.org](https://addons.mozilla.org/) (AMO) and [support.mozilla.org](http://support.mozilla.com/) (SUMO). If you'd like to see the source code behind an example of this approach in action, feel free to check out the [GitHub repository for AMO](https://github.com/jbalogh/zamboni/) or [SUMO](https://github.com/jsocol/kitsune).
 
 ## Approaches to mobile Web development
 
