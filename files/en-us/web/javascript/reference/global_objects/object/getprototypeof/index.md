@@ -76,5 +76,5 @@ since Opera 10.50.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Object/proto","Object.prototype.__proto__")}}
-- John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
+- John Resig's post on [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}

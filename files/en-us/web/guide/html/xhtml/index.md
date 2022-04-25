@@ -50,6 +50,6 @@ In practice, very few "XHTML" documents are served over the web with a `Content-
 
 - [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml) by David Hammond
 - [Sending XHTML as text/html Considered Harmful](http://www.hixie.ch/advocacy/xhtml) by Ian Hickson
-- [XHTML's Dirty Little Secret](http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) by Mark Pilgrim
-- [XHTML - What's the Point?](http://hsivonen.iki.fi/xhtml-the-point/) by Henri Sivonen
+- [XHTML's Dirty Little Secret](https://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) by Mark Pilgrim
+- [XHTML - What's the Point?](https://hsivonen.fi/xhtml-the-point/) by Henri Sivonen
 - [XHTML is not for Beginners](http://lachy.id.au/log/2005/12/xhtml-beginners) by Lachlan Hunt

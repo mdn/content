@@ -15,7 +15,7 @@ browser-compat: html.global_attributes.itemscope
 
 **`itemscope`** is a boolean [global attribute](/en-US/docs/Web/HTML/Global_attributes) that defines the scope of associated metadata. Specifying the **`itemscope`** attribute for an element creates a new item, which results in a number of name-value pairs that are associated with the element.
 
-A related attribute, {{htmlattrxref("itemtype")}}, is used to specify the valid URL of a vocabulary (such as [schema.org](http://schema.org/)) that describes the item and its properties context. In each of the following examples, the vocabulary is from [schema.org](https://schema.org/).
+A related attribute, {{htmlattrxref("itemtype")}}, is used to specify the valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context. In each of the following examples, the vocabulary is from [schema.org](https://schema.org/).
 
 Every HTML element may have an `itemscope` attribute specified. An `itemscope` element that does not have an associated `itemtype` must have an associated `itemref`.
 
@@ -28,7 +28,7 @@ Every HTML element may have an `itemscope` attribute specified. An `itemscope` e
 The following example specifies the `itemscope` attribute. The example specifies the `itemtype` as "http\://schema.org/Movie", and specifies three related `itemprop` attributes.
 
 ```html
-<div itemscope itemtype="http://schema.org/Movie">
+<div itemscope itemtype="https://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
   <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
   <span itemprop="genre">Science fiction</span>
@@ -84,11 +84,11 @@ When you specify the `itemscope` attribute for an element, a new item is created
 There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](www.schema.org) structured data for a recipe, as specified by the first `itemtype`, http\://schema.org/Recipe.
 
 ```html
-<div itemscope itemtype="http://schema.org/Recipe">
+<div itemscope itemtype="https://schema.org/Recipe">
   <h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
   <img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" />
   <p>
-    By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+    By <span itemprop="author" itemscope itemtype="https://schema.org/Person">
       <span itemprop="name">Carol Smith</span>
     </span>
   </p>
@@ -97,7 +97,7 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
   </p>
   <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</span>
   <br>
-  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+  <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
     <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews
   </span>
   <br>
@@ -105,7 +105,7 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
   Cook time: <time datetime="PT1H" itemprop="cookTime">1 hou</time>r<br>
   Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time><br>
   Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span><br>
-  <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
+  <span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
     Serving size: <span itemprop="servingSize">1 medium slice</span><br>
     Calories per serving: <span itemprop="calories">250 cal</span><br>
     Fat per serving: <span itemprop="fatContent">12 g</span><br>

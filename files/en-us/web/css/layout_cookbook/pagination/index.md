@@ -77,4 +77,4 @@ _Include the compat data for key properties you used, as in the example below wh
 - [Know your ARIA: 'Hidden' vs 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
 - [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques)
 - [Writing CSS With Accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
-- [a11y Style Guide: Pagination](http://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)
+- [a11y Style Guide: Pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)

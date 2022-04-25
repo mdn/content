@@ -50,7 +50,7 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 
 #### Advanced
 
-- [Learning advanced JavaScript](http://ejohn.org/apps/learn/) — John Resig's guide to advanced JavaScript
+- [Learning advanced JavaScript](https://johnresig.com/apps/learn/) — John Resig's guide to advanced JavaScript
 - [Crockford on Advanced JavaScript](https://uk.video.yahoo.com/watch/111585/1027823) — a three part video series on advanced JavaScript concepts
 - [JavaScript Garden](https://bonsaiden.github.com/JavaScript-Garden/) — Documentation of the most quirky parts of JavaScript.
 

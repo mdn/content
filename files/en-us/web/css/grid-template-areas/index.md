@@ -117,4 +117,4 @@ grid-template-areas: unset;
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
 - Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
+- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

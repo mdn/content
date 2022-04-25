@@ -20,7 +20,7 @@ format-number( number, pattern [,decimal-format] )
 - `number`
   - : The number to be formatted
 - `pattern`
-  - : A string in the format of the [JDK 1.1](http://java.sun.com/products/archive/jdk/1.1/) DecimalFormat class. (The documentation for JDK 1.1 is not available online. Here is the [Java SE 6 DecimalFormat](http://java.sun.com/javase/6/docs/api/java/text/DecimalFormat.html).)
+  - : A string in the format of the [JDK 1.1](https://www.oracle.com/java/technologies/downloads/archive/) DecimalFormat class. (The documentation for JDK 1.1 is not available online. Here is the [Java SE 6 DecimalFormat](https://docs.oracle.com/javase/6/docs/api/java/text/DecimalFormat.html).)
 - `decimal-format` (optional)
   - : The name of an [`xsl:decimal-format`](/en-US/docs/Web/XSLT/Element/decimal-format) element that defines the number format to be used. If omitted, the default decimal-format will be used.
 

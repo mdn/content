@@ -155,7 +155,7 @@ In open web apps any DOM element can be made directly editable using the [`conte
   - : This example tracks multiple touch points at a time, allowing the user to draw in a `{{htmlelement("canvas")}}` with more than one finger at a time. It will only work on a browser that supports touch events.
 - **[Simple pointer lock demo](/en-US/docs/Web/API/Pointer_Lock_API#example)**
   - : We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a `{{htmlelement("canvas")}}` element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.
-- **[contentEditable demo](http://html5demos.com/contenteditable)**
+- **[contentEditable demo](https://bestvpn.org/html5demos/contenteditable/)**
   - : This is a working example showing how contenteditable can be used to create an editable document section, the state of which is then saved using [LocalStorage](/en-US/docs/Web/API/Web_Storage_API).
 
 ## Tutorials
