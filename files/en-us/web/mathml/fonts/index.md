@@ -36,7 +36,7 @@ Install the _Latin Modern Math_ and _STIX_ fonts as follows:
 5. Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular.otf` file.
 6. Open the `STIXTwoMath-Regular.otf` file and click the **Install Font** button from the window that opens. If desired, you may also do the same for the other font files.
 
-> **Note:** A deprecated version of STIX is preinstalled starting with macOS Lion and should ensure relatively good MathML rendering. Enhancement requests have been submitted to Apple to ship OpenType MATH fonts in the default installation. If you have a developer account, these are problems 16841023 and 17021145.
+> **Note:** A deprecated version of STIX is preinstalled starting with OS X Lion and should ensure relatively good MathML rendering. Enhancement requests have been submitted to Apple to ship OpenType MATH fonts in the default installation. If you have a developer account, these are problems 16841023 and 17021145.
 
 ### Linux
 
