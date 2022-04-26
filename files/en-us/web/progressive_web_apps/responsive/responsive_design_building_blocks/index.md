@@ -425,8 +425,6 @@ This all sounds good. But those solutions are definitely not ready for productio
 
 - [HiSRC](https://github.com/teleject/hisrc)
   - : A [jQuery](https://jquery.com/) plugin that allows you to create small, medium, and large versions of an image, and then serves the appropriate one according to the browser's resolution and available network speed.
-- [Mobify.js capturing](https://www.salesforce.com/products/commerce-cloud/headless-commerce/?sfdc-redirect=340)
-  - : A very clever technique from Mozilla that allows you to capture the source of the page before it's parsed. This way, you can swap out image `src` values with JavaScript depending on browser features, circumventing browser preloading issues. This is promising, but doesn't work very well across older browsers.
 - [Picturefill](https://github.com/scottjehl/picturefill)
   - : A JavaScript-based polyfill for `<picture>`, which works nicely, but it does require a lot of custom markup.
 - [Adaptive images](http://adaptive-images.com/)

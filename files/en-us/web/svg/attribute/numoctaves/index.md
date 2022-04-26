@@ -117,5 +117,5 @@ html, body, svg {
 
 ## See also
 
-- [Understanding Perlin Noise](http://adrianb.io/2014/08/09/perlinnoise.html)
+- [Understanding Perlin Noise](https://adrianb.io/2014/08/09/perlinnoise.html)
 - {{SVGAttr("baseFrequency")}}

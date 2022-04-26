@@ -50,7 +50,7 @@ Some of the new features in Firefox 1.5:
 ### XUL and Extension Developers
 
 - [Building an Extension](/en-US/docs/Mozilla/Add-ons)
-  - : This tutorial will take you through the steps required to build a very basic extension for Firefox. Also see [another tutorial on MozillaZine knowledge base](http://kb.mozillazine.org/Getting_started_with_extension_development), which demonstrates the new features of the Extension Manager in 1.5 that make creating a new extension even easier.
+  - : This tutorial will take you through the steps required to build a very basic extension for Firefox. Also see [another tutorial on MozillaZine knowledge base](https://kb.mozillazine.org/Getting_started_with_extension_development), which demonstrates the new features of the Extension Manager in 1.5 that make creating a new extension even easier.
 - [XPCNativeWrapper](/en-US/docs/XPCNativeWrapper)
   - : `XPCNativeWrapper` is a way to wrap up an object so that it's [safe to access from privileged code](/en-US/docs/Safely_accessing_content_DOM_from_chrome). It can be used in all Firefox versions, though the behavior changed somewhat starting with Firefox 1.5 (Gecko 1.8).
 - [Preferences System](/en-US/docs/Preferences_System)

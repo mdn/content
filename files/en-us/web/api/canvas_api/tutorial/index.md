@@ -40,7 +40,7 @@ Using the `<canvas>` element is not very difficult, but you do need a basic unde
 ## See also
 
 - [Canvas topic page](/en-US/docs/Web/API/Canvas_API)
-- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
+- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
 
 ## A note to contributors
 

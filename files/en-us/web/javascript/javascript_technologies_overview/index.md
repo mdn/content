@@ -19,7 +19,7 @@ However, the umbrella term "JavaScript" as understood in a web browser context c
 
 The core language of JavaScript is standardized by the ECMA TC39 committee as a language named [ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources).
 
-This core language is also used in non-browser environments, for example in [node.js](http://nodejs.org/).
+This core language is also used in non-browser environments, for example in [node.js](https://nodejs.org).
 
 ### What falls under the ECMAScript scope?
 
