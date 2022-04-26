@@ -264,7 +264,7 @@ We already mentioned Stack Overflow, but there are other online resources that c
 
 It is good to find a community to be part of, and you'll get a lot of respect if you try to help others answer their questions as well as asking your own. Other good examples include:
 
-- [MDN Discourse](https://discourse.mozilla.org/c/mdn)
+- [MDN Discourse](https://discourse.mozilla.org/c/mdn/236)
 - [Sitepoint Forums](https://www.sitepoint.com/community/)
 - [webdeveloper.com Forums](https://www.webdeveloper.com/)
 

@@ -38,7 +38,7 @@ This room is for general discussion of MDN: using the site, reading content on t
 
 ### (Asynchronous) Discussions
 
-Longer-term discussions happen on our [MDN discussion forum](https://discourse.mozilla.org/c/mdn). You can post to the forum via email to [mdn@mozilla-community.org](mailto://mdn@mozilla-community.org). If you join the forum, you can choose to have notifications about discussions sent to you via email as well.
+Longer-term discussions happen on our [MDN discussion forum](https://discourse.mozilla.org/c/mdn/236). You can post to the forum via email to [mdn@mozilla-community.org](mailto://mdn@mozilla-community.org). If you join the forum, you can choose to have notifications about discussions sent to you via email as well.
 
 ## Report an issue
 
