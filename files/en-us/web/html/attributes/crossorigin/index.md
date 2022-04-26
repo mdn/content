@@ -16,7 +16,7 @@ spec-urls:
 
 {{HTMLSidebar}}
 
-The crossorigin attribute, valid on the {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, and {{ HTMLElement("video") }} elements, provides support for [CORS](/docs/Web/HTTP/CORS), defining how the element handles crossorigin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
+The crossorigin attribute, valid on the {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, and {{ HTMLElement("video") }} elements, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles crossorigin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
 
 The `crossorigin` content attribute on media elements is a CORS settings attribute.
 
@@ -64,7 +64,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
     <tr>
       <td><code>img</code>, <code>audio</code>, <code>video</code></td>
       <td>
-        When resource is placed in {{HTMLElement("canvas")}}, element is marked as "<a href="/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases">tainted</a>".
+        When resource is placed in {{HTMLElement("canvas")}}, element is marked as "<a href="/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases">tainted</a>".
       </td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ You can use the following {{HTMLElement("script")}} element to tell a browser to
 
 ### Example: Webmanifest with credentials
 
-The `use-credentials` value must be used when fetching a [manifest](/docs/Web/Manifest) that requires credentials, even if the file is from the same origin.
+The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Manifest) that requires credentials, even if the file is from the same origin.
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
@@ -120,7 +120,7 @@ The `use-credentials` value must be used when fetching a [manifest](/docs/Web/Ma
 
 ## See also
 
-- [Cross-Origin Resource Sharing (CORS)](/docs/Web/HTTP/CORS)
-- [HTML attribute: `rel`](/docs/Web/HTML/Attributes/rel)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTML attribute: `rel`](/en-US/docs/Web/HTML/Attributes/rel)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}
