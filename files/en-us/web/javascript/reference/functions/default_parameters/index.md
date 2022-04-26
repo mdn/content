@@ -96,8 +96,8 @@ test(null)       // 'object' (num is set to null)
 
 ### Evaluated at call time
 
-The default argument is evaluated at _call time_. So, unlike (for example)
-Python, a new object is created each time the function is called.
+The default argument is evaluated at _call time_. unlike (for example) Python,
+So, a new object is created each time the function is called at here.
 
 ```js
 function append(value, array = []) {
