@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
 
 The **`WebAssembly.LinkError()`** constructor creates a new
 WebAssembly `LinkError` object, which indicates an error during module
-instantiation (besides [traps](https://webassembly.org/docs/semantics/#traps)
+instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap)
 from the start function).
 
 ## Syntax

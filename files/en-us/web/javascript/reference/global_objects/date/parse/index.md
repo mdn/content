@@ -62,7 +62,7 @@ conjunction with the {{jsxref("Date.prototype.setTime()", "setTime()")}} method 
 
 The standard string representation of a date time string is a simplification of the ISO
 8601 calendar date extended format.
-(See the section [Date Time String Format](https://tc39.github.io/ecma262/#sec-date-time-string-format)
+(See the section [Date Time String Format](https://tc39.es/ecma262/#sec-date-time-string-format)
 in the ECMAScript specification for more details.)
 
 For example, "`2011-10-10`" (_date-only_ form),

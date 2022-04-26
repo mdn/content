@@ -68,7 +68,7 @@ The {{jsxref("Symbol")}} class has constants for so-called _well-known symbols_.
 
 Examples of well-known symbols are: {{jsxref("Symbol.iterator")}} for array-like objects, or {{jsxref("Symbol.search")}} for string objects.
 
-They are listed in the specification in the [Well-known symbols](https://tc39.github.io/ecma262/#sec-well-known-symbols) table:
+They are listed in the specification in the [Well-known symbols](https://tc39.es/ecma262/#sec-well-known-symbols) table:
 
 - `Symbol.hasInstance`
 - `Symbol.isConcatSpreadable`

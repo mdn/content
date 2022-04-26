@@ -65,7 +65,7 @@ Highlights:
   - The {{domxref("WebGL2RenderingContext.getBufferSubData()")}} method has been implemented to provide access to Buffer Objects ({{bug(1048731)}}).
 
 - In keeping with the evolving WebRTC specification, we have deprecated {{domxref("RTCIceServer.url")}} in favor of {{domxref("RTCIceServer.urls")}}, which lets you specify more than one URL for a given ICE server.
-- Some key names of `KeyboardEvent.key` are changed for conforming [the latest DOM Level 3 Events spec](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html). See [the tables of `KeyboardEvent.key` values in MDN](/en-US/docs/Web/API/KeyboardEvent/key#key_values). The green cells are new values. And purple values are still unstable. Be careful if you use them (meta bug for these changes is {{bug(900372)}}).
+- Some key names of `KeyboardEvent.key` are changed for conforming [the latest DOM Level 3 Events spec](https://w3c.github.io/DOM-Level-3-Events-key/). See [the tables of `KeyboardEvent.key` values in MDN](/en-US/docs/Web/API/KeyboardEvent/key#key_values). The green cells are new values. And purple values are still unstable. Be careful if you use them (meta bug for these changes is {{bug(900372)}}).
 - The {{domxref("console")}} interface is now working on {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}. It was previously available but not working ({{bug(1058644)}}).
 - The value of {{domxref("KeyboardEvent.key")}} was incorrectly being reported as `"RomanCharacters"` when the `英数` (`Eisu`) key was pressed. Now it correctly returns `"Eisu"`.
 

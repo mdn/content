@@ -113,7 +113,7 @@ const notANum        = Number.NaN
 
 ### Integer range for Number
 
-The following example shows the minimum and maximum integer values that can be represented as `Number` object. (More details on this are described in the ECMAScript standard, chapter _[6.1.6 The Number Type](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type)._)
+The following example shows the minimum and maximum integer values that can be represented as `Number` object. (More details on this are described in the ECMAScript standard, chapter _[6.1.6 The Number Type](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type)._)
 
 ```js
 const biggestInt  = Number.MAX_SAFE_INTEGER  //  (2**53 - 1) =>  9007199254740991
