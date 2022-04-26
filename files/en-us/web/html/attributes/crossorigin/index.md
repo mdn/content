@@ -31,13 +31,13 @@ These attributes are enumerated, and have the following possible values:
     <tr>
       <td><code>anonymous</code></td>
       <td>
-        Request uses CORS headers and credentials flag is set to <code>'same-origin'</code>. There is no exchange of <b>user credentials</b> via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
+        Request uses CORS headers and credentials flag is set to <code>'same-origin'</code>. There is no exchange of <strong>user credentials</strong> via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
       </td>
     </tr>
     <tr>
       <td><code>use-credentials</code></td>
       <td>
-        Request uses CORS headers, credentials flag is set to <code>'include'</code> and <b>user credentials</b> are always included.
+        Request uses CORS headers, credentials flag is set to <code>'include'</code> and <strong>user credentials</strong> are always included.
       </td>
     </tr>
     <tr>
