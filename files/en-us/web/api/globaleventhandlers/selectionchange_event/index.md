@@ -1,36 +1,44 @@
 ---
-title: GlobalEventHandlers.onselectionchange
-slug: Web/API/GlobalEventHandlers/onselectionchange
+title: 'selectionchange event'
+slug: Web/API/GlobalEventHandlers/selectionchange_event
 tags:
   - API
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
+  - Event
   - Reference
   - Selection
   - Selection API
-  - onselectionchange
-browser-compat: api.GlobalEventHandlers.onselectionchange
+browser-compat: api.GlobalEventHandlers.selectionchange_event
 ---
 {{ApiRef('DOM')}}
 
-The **`onselectionchange`** property of the {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for `selectionchange` events.
-
-The {{domxref("Document.selectionchange_event")}} is fired when the {{domxref("Selection")}} of a {{domxref("Document")}} is changed.
+The global **`selectionchange`** event is fired when the {{domxref("Selection")}} of a {{domxref("Document")}} is changed.
 The {{domxref("Selection")}} consists of a starting position and (optionally) a range of HTML nodes from that position.
 Clicking or starting a selection outside of a text field will generally fire this event.
 
-The {{domxref("HTMLTextAreaElement.selectionchange_event")}} and {{domxref("HTMLInputElement.selectionchange_event")}} events are fired, respectively, when the text selection within a {{HTMLElement("textarea")}} or {{HTMLElement("input")}} element is changed or the caret moves.
+Additionally, this even will fire when the text selection within a {{HTMLElement("textarea")}} or {{HTMLElement("input")}} element is changed or the caret moves.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-document.onselectionchange = functionRef;
+addEventListener('selectionchange', event => { });
+onselectionchange = event => { };
 ```
 
-### Value
+## Event type
 
-`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole argument.
+A generic {{domxref("Event")}}.
+
+## Event availability
+
+ The **`selectionchange`** event is a global event and available to the following interfaces:
+
+ - {{domxref("Window")}}
+ - {{domxref("Document")}}
+ - {{domxref("HTMLElement")}}
+ - {{domxref("SVGElement")}}
+ - {{domxref("MathMLElement")}}
 
 ## Example
 
@@ -90,5 +98,4 @@ myinput.addEventListener("selectionchange", () => {
 
 ## See also
 
-- {{event("selectionchange")}} event
-- Related event handler: {{domxref("GlobalEventHandlers.onselectstart")}}
+- {{domxref("GlobalEventHandlers.selectstart_event", "selectstart")}} event

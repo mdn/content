@@ -20,8 +20,8 @@ The {{domxref("Window/getSelection()", "Window.getSelection()")}} and {{domxref(
 
 The Selection API also provides two events, both firing on {{domxref("Document")}}:
 
-- the {{domxref("Document/selectstart_event", "selectstart")}} event is fired when the user starts to make a new selection
-- the {{domxref("Document/selectionchange_event", "selectionchange")}} event is fired when the current selection changes.
+- the {{domxref("GlobalEventHandlers/selectstart_event", "selectstart")}} event is fired when the user starts to make a new selection
+- the {{domxref("GlobalEventHandlers/selectionchange_event", "selectionchange")}} event is fired when the current selection changes.
 
 ## Interfaces
 
@@ -31,9 +31,9 @@ The Selection API also provides two events, both firing on {{domxref("Document")
   - : A method returning a `Selection` object representing the current selection or current position of the caret.
 - {{domxref("Window/getSelection()", "Window.getSelection()")}}
   - : A method returning a `Selection` object representing the current selection or current position of the caret.
-- {{domxref("Document/selectionchange_event", "Document.selectionchange")}}
+- {{domxref("GlobalEventHandlers/selectionchange_event", "selectionchange")}}
   - : An event which is fired when the current selection is changed.
-- {{domxref("Document/selectstart_event", "Document.selectstart")}}
+- {{domxref("GlobalEventHandlers/selectstart_event", "selectstart")}}
   - : An event which is fired when a user starts a new selection.
 
 ## Specifications

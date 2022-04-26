@@ -1211,12 +1211,9 @@
     "Selection API": {
       "overview": ["Selection API"],
       "interfaces": ["Selection"],
-      "properties": [
-        "Document.onselectionchange",
-        "GlobalEventHandlers.onselectstart"
-      ],
+      "properties": [],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
-      "events": ["Document: selectionchange", "Document: selectstart"]
+      "events": ["GlobalEventHandlers: selectionchange", "GlobalEventHandlers: selectstart"]
     },
     "Sensor API": {
       "overview": ["Sensor APIs"],

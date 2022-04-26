@@ -46,7 +46,7 @@ console.log(window.getSelection().containsNode(document.body, true));
 
 In this example, a message appears when you select the secret word. It uses
 {{domxref("EventTarget/addEventListener", "addEventListener()")}} to check for
-{{domxref("Document/selectionchange_event", "selectionchange")}} events.
+{{domxref("GlobalEventHandlers/selectionchange_event", "selectionchange")}} events.
 
 #### HTML
 

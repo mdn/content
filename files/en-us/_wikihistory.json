@@ -36422,38 +36422,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Document/selectionchange_event": {
-    "modified": "2020-10-15T21:39:03.500Z",
-    "contributors": [
-      "mfuji09",
-      "Jonathan_Watt",
-      "Zhang-Junzhi",
-      "chrisdavidmills",
-      "irenesmith",
-      "mfluehr",
-      "erikadoyle",
-      "Ehsan",
-      "spencer-brown",
-      "Nickolay",
-      "teoli"
-    ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2020-10-15T21:39:05.806Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "irenesmith",
-      "mfluehr",
-      "erikadoyle",
-      "Ehsan",
-      "wirmar",
-      "Nickolay",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
   "Web/API/Document/styleSheetSets": {
     "modified": "2020-12-11T06:37:41.616Z",
     "contributors": [
@@ -45424,31 +45392,6 @@
       "alecananian"
     ]
   },
-  "Web/API/GlobalEventHandlers/onselectionchange": {
-    "modified": "2020-10-15T21:51:39.271Z",
-    "contributors": [
-      "nakhodkiin",
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onselectstart": {
-    "modified": "2020-10-15T21:39:02.524Z",
-    "contributors": [
-      "kernp",
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "slayermass",
-      "valtlai",
-      "chrisdavidmills",
-      "jrmuizel",
-      "Konrud",
-      "teoli"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onsubmit": {
     "modified": "2020-10-15T21:06:50.687Z",
     "contributors": [
@@ -45554,6 +45497,31 @@
       "nairakhil13",
       "Sheppy",
       "Masayuki"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/selectionchange_event": {
+    "modified": "2020-10-15T21:51:39.271Z",
+    "contributors": [
+      "nakhodkiin",
+      "mfluehr",
+      "fscholz",
+      "valtlai",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/selectstart_event": {
+    "modified": "2020-10-15T21:39:02.524Z",
+    "contributors": [
+      "kernp",
+      "mfluehr",
+      "fscholz",
+      "sideshowbarker",
+      "slayermass",
+      "valtlai",
+      "chrisdavidmills",
+      "jrmuizel",
+      "Konrud",
+      "teoli"
     ]
   },
   "Web/API/Gyroscope": {

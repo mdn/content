@@ -7845,10 +7845,12 @@
 /en-US/docs/Web/API/Document/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
 /en-US/docs/Web/API/Document/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/Document/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
-/en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange
+/en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/selectionchange_event
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
 /en-US/docs/Web/API/Document/onvisibilitychange	/en-US/docs/Web/API/Document/visibilitychange_event
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
+/en-US/docs/Web/API/Document/selectionchange_event	/en-US/docs/Web/API/GlobalEventHandlers/selectionchange_event
+/en-US/docs/Web/API/Document/selectstart_event	/en-US/docs/Web/API/GlobalEventHandlers/selectstart_event
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment
 /en-US/docs/Web/API/DocumentFragment.querySelector	/en-US/docs/Web/API/DocumentFragment/querySelector
@@ -8135,6 +8137,8 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag
+/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/selectionchange_event
+/en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/GlobalEventHandlers/selectstart_event
 /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/GlobalFetch/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
@@ -8265,6 +8269,7 @@
 /en-US/docs/Web/API/HTMLInputElement/change_event	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/HTMLInputElement/click	/en-US/docs/Web/API/HTMLElement/click
 /en-US/docs/Web/API/HTMLInputElement/mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
+/en-US/docs/Web/API/HTMLInputElement/selectionchange_event	/en-US/docs/Web/API/GlobalEventHandlers/selectionchange_event
 /en-US/docs/Web/API/HTMLInputElement/stepUp()	/en-US/docs/Web/API/HTMLInputElement/stepUp
 /en-US/docs/Web/API/HTMLLinkElement.rel	/en-US/docs/Web/API/HTMLLinkElement/rel
 /en-US/docs/Web/API/HTMLLinkElement.relList	/en-US/docs/Web/API/HTMLLinkElement/relList
@@ -8322,6 +8327,7 @@
 /en-US/docs/Web/API/HTMLTableRowElement.insertCell	/en-US/docs/Web/API/HTMLTableRowElement/insertCell
 /en-US/docs/Web/API/HTMLTableRowElement.rowIndex	/en-US/docs/Web/API/HTMLTableRowElement/rowIndex
 /en-US/docs/Web/API/HTMLTemplateElement/HTMLTemplateElement.content	/en-US/docs/Web/API/HTMLTemplateElement/content
+/en-US/docs/Web/API/HTMLTextAreaElement/selectionchange_event	/en-US/docs/Web/API/GlobalEventHandlers/selectionchange_event
 /en-US/docs/Web/API/HTMLTextAreaElement1	/en-US/docs/Web/API/HTMLTextAreaElement
 /en-US/docs/Web/API/HTMLTimeElement.dateTime	/en-US/docs/Web/API/HTMLTimeElement/dateTime
 /en-US/docs/Web/API/HTMLVideoElement.getVideoPlaybackQuality	/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality
@@ -11331,8 +11337,8 @@
 /en-US/docs/Web/Events/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/Web/Events/select	/en-US/docs/Web/API/Element/select_event
 /en-US/docs/Web/Events/selectedcandidatepairchange	/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event
-/en-US/docs/Web/Events/selectionchange	/en-US/docs/Web/API/Document/selectionchange_event
-/en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Document/selectstart_event
+/en-US/docs/Web/Events/selectionchange	/en-US/docs/Web/API/GlobalEventHandlers/selectionchange_event
+/en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/GlobalEventHandlers/selectstart_event
 /en-US/docs/Web/Events/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/Events/shippingoptionchange	/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event
 /en-US/docs/Web/Events/show	/en-US/docs/Web/API/Element/show_event
