@@ -44,8 +44,7 @@ decrypt(algorithm, key, data)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the plaintext.
+A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containing the plaintext.
 
 ### Exceptions
 
