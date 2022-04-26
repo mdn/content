@@ -39,7 +39,7 @@ error(e)
 
 ### Exceptions
 
-- TypeError
+- {{jsxsref("TypeError")}}
   - : The stream you are trying to error is not a {{domxref("WritableStream")}}.
 
 ## Examples

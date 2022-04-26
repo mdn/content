@@ -35,7 +35,7 @@ An instance of the {{domxref("WritableStreamDefaultWriter")}} object.
 
 ### Exceptions
 
-- TypeError
+- {{jsxsref("TypeError")}}
   - : The provided `stream` value is not a {{domxref("WritableStream")}}, or it
     is locked to another writer already.
 
