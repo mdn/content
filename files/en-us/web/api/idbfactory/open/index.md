@@ -30,11 +30,9 @@ May trigger `upgradeneeded`, `blocked` or
 
 ## Syntax
 
-For the current standard:
-
 ```js
-var IDBOpenDBRequest = indexedDB.open(name);
-var IDBOpenDBRequest = indexedDB.open(name, version);
+open(name)
+open(name, version)
 ```
 
 ### Parameters

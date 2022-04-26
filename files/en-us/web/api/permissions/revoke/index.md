@@ -16,14 +16,13 @@ browser-compat: api.Permissions.revoke
 The **`Permissions.revoke()`** method of the
 {{domxref("Permissions")}} interface reverts a currently set permission back to its
 default state, which is usually `prompt`.
-
-## Syntax
-
 This method is called on the global {{domxref("Permissions")}} object
 {{domxref("navigator.permissions")}}.
 
+## Syntax
+
 ```js
-var revokePromise = navigator.permissions.revoke(descriptor);
+revoke(descriptor)
 ```
 
 ### Parameters

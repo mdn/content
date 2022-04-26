@@ -23,10 +23,8 @@ certain types or that have certain names, see {{domxref("Performance.getEntriesB
 
 ## Syntax
 
-General syntax:
-
 ```js
-entries = window.performance.getEntries();
+getEntries()
 ```
 
 ### Return value

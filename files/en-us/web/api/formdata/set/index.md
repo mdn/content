@@ -21,11 +21,9 @@ The difference between `set()` and {{domxref("FormData.append")}} is that if the
 
 ## Syntax
 
-There are two versions of this method: a two and a three parameter version:
-
 ```js
-formData.set(name, value);
-formData.set(name, value, filename);
+set(name, value)
+set(name, value, filename)
 ```
 
 #### Parameters

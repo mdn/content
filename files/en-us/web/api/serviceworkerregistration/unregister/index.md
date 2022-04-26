@@ -26,8 +26,7 @@ unregistered.
 ## Syntax
 
 ```js
-serviceWorkerRegistration.unregister().then(function(boolean) {
-});
+unregister()
 ```
 
 ### Parameters
@@ -39,7 +38,7 @@ None.
 {{jsxref("Promise")}} resolves with a boolean indicating whether the service worker has
 unregistered or not.
 
-## Example
+## Examples
 
 The following simple example registers a service worker example, but then immediately
 unregisters it again:

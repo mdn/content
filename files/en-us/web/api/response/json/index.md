@@ -21,9 +21,7 @@ Note that despite the method being named `json()`, the result is not JSON but is
 ## Syntax
 
 ```js
-response.json().then(data => {
-  // do something with your data
-});
+json()
 ```
 
 ### Parameters
@@ -35,7 +33,7 @@ None.
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
 anything that can be represented by JSON — an object, an array, a string, a number...
 
-## Example
+## Examples
 
 In our [fetch JSON example](https://github.com/mdn/fetch-examples/tree/master/fetch-json) (run [fetch JSON live](https://mdn.github.io/fetch-examples/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
   "Request()")}} constructor, then use it to fetch a `.json` file. When the

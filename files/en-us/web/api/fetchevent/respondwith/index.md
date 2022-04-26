@@ -73,14 +73,13 @@ resulting {{domxref("Window.location")}}. This means sites can still provide an
 ## Syntax
 
 ```js
-fetchEvent.respondWith(
-  // Promise that resolves to a Response.
-);
+respondWith(response)
 ```
 
 ### Parameters
 
-A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
+- `response`
+  - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
 `Response`. Otherwise, a network error is returned to Fetch.
 
 ### Return value

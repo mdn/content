@@ -17,7 +17,7 @@ restoring the context of a {{domxref("WebGLRenderingContext")}} object.
 ## Syntax
 
 ```js
-gl.getExtension('WEBGL_lose_context').restoreContext();
+restoreContext()
 ```
 
 ### Errors thrown

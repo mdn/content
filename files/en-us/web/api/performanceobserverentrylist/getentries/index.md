@@ -24,24 +24,16 @@ interfaces.
 
 ## Syntax
 
-General syntax:
-
 ```js
-entries = list.getEntries();
-entries = list.getEntries(PerformanceEntryFilterOptions);
-```
-
-Specific usage:
-
-```js
-entries = list.getEntries({name: "entry_name", entryType: "mark"});
+getEntries()
+getEntries(performanceEntryFilterOptions)
 ```
 
 ### Parameters
 
-- `PerformanceEntryFilterOptions`{{optional_inline}}
+- `performanceEntryFilterOptions` {{optional_inline}}
 
-  - : Is a `PerformanceEntryFilterOptions` dictionary, having the following
+  - : Is a `PerformanceEntryFilterOptions` object, having the following
     fields:
 
     - `"name"`, the name of a performance entry.

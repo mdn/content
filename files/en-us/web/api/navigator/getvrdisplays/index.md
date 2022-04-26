@@ -25,9 +25,7 @@ computer.
 ## Syntax
 
 ```js
-navigator.getVRDisplays().then(function(displays) {
-  // Do something with the available VR displays
-});
+getVRDisplays()
 ```
 
 ### Parameters
