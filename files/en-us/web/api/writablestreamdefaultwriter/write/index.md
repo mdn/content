@@ -42,7 +42,7 @@ writing process is initiated.
 
 ### Exceptions
 
-- TypeError
+- {{jsxsref("TypeError")}}
   - : The target stream is not a writable stream, or it does not have an owner.
 
 ## Examples

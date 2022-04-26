@@ -31,7 +31,7 @@ A {{domxref("WritableStreamDefaultWriter")}} object instance.
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxsref("TypeError")}}
   - : The stream you are trying to create a writer for is not a {{domxref("WritableStream")}}.
 
 ## Examples

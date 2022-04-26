@@ -39,7 +39,7 @@ a problem was encountered during the process.
 
 ### Exceptions
 
-- TypeError
+- {{jsxsref("TypeError")}}
   - : The stream you are trying to close is not a {{domxref("WritableStream")}}.
 
 ## Examples
