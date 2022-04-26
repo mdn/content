@@ -29,10 +29,8 @@ verify(algorithm, key, signature, data)
 ### Parameters
 
 - `algorithm`
-  - : A string or object defining the
-  algorithm to use, and for some algorithm choices, some extra parameters. The values
-  given for the extra parameters must match those passed into the corresponding
-  {{domxref("SubtleCrypto.sign()", "sign()")}} call.
+  - : A string or object defining the algorithm to use, and for some algorithm choices, some extra parameters.
+    The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.sign()", "sign()")}} call.
     - To use [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5),
     pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form `{ "name": "RSASSA-PKCS1-v1_5" }`.
     - To use [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), pass an {{domxref("RsaPssParams")}} object.
