@@ -7,7 +7,8 @@ tags:
   - Infrastructure
   - Navigation
 ---
-A 404 is a Standard Response Code meaning that the {{Glossary("Server", "server")}} cannot find the requested resource.
+
+The 404 or 4:04 error is an HTTP response code that indicates that the client was able to communicate with the [server](https://developer.mozilla.org/en-US/docs/Glossary/Server), but the server could not find what was requested, or was configured to not fulfill the request and not reveal the reason, the page no longer exists or the URL was entered incorrectly. They are not to be confused with other errors where a connection to the target server could not be made.
 
 ## See also
 
