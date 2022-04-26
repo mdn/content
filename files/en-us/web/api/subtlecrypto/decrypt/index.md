@@ -30,7 +30,6 @@ decrypt(algorithm, key, data)
   - : An object specifying the [algorithm](#supported_algorithms) to be used, and any extra parameters as
     required. The values given for the extra parameters must match those passed into the
     corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
-
     - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
     - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
     - To use [AES-CBC](#aes-cbc), pass an {{domxref("AesCbcParams")}} object.
@@ -41,7 +40,7 @@ decrypt(algorithm, key, data)
     of the {{domxref("CryptoKeyPair")}} object.
 - `data`
   - : A {{domxref("BufferSource")}} containing the data to
-   be decrypted (also known as {{glossary("ciphertext")}}).
+    be decrypted (also known as {{glossary("ciphertext")}}).
 
 ### Return value
 
