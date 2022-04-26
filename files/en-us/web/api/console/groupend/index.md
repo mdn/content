@@ -28,6 +28,10 @@ groupEnd()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}
@@ -35,3 +39,7 @@ None.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console.group()")}}
