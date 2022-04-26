@@ -32,7 +32,7 @@ setOrientation(x, y, z)
   - : The y value of the panner's direction vector in 3D space.
 - z
   - : The z value of the panner's direction vector in 3D space.
-  - 
+
 ### Return value
 
 {{jsxref('undefined')}}.

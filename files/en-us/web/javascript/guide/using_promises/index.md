@@ -251,8 +251,7 @@ Promise.all([func1(), func2(), func3()])
 .then(([result1, result2, result3]) => { /* use result1, result2 and result3 */ });
 ```
 
-It is important to note that if one of the promises in the array rejects, `Promise.all()` will throw the error and abort the other operations. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving. 
-
+It is important to note that if one of the promises in the array rejects, `Promise.all()` will throw the error and abort the other operations. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
 
 Sequential composition is possible using some clever JavaScript:
 
