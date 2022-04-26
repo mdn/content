@@ -179,7 +179,7 @@ We then have a narrow screen layout, designed to fit the bill for a mobile app/o
   }
 ```
 
-This first block resets a number of different things from the widescreen layouts that were't required for the mobile app.
+This first block resets a number of different things from the widescreen layouts that weren't required for the mobile app.
 
 ```css
   x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {

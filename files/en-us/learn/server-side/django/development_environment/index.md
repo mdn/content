@@ -127,7 +127,7 @@ sudo apt install python3-pip
 
 > **Note:** Python 3.8 is the oldest version [supported by Django 4.0](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django).
 > While Django recommend you update to the latest version, you don't _need_ to use the latest version for this tutorial.
-> If you want to update Python, then there are instructions on the Internet.
+> If you want to update Python, then there are instructions on the internet.
 
 ### macOS
 
