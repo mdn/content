@@ -21,6 +21,8 @@ This article provides information about the changes in Firefox 100 that will aff
 
 ### CSS
 
+- CSS media features for [`dynamic-range`](en-US/docs/Web/CSS/@media/dynamic-range) and [`video-dynamic-range`](en-US/docs/Web/CSS/@media/video-dynamic-range) are now supported. You can now test whether a user agent or an output device supports the combination of brightness, contrast ratio, and color depth by using `dynamic-range` and in the video plane by using `video-dynamic-range` ({{bug(1751217)}}).
+
 #### Removals
 
 ### JavaScript
