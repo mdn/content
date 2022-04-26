@@ -107,7 +107,7 @@ Boris Smus has written about the concept of [Responsive WebVR](https://smus.com/
 
 There's also a markup framework called [A-Frame](https://aframe.io/) that offers simple building blocks for WebVR, so you can rapidly build and experiment with VR websites and games: read the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) tutorial for more details.
 
-Immersion is more important than gameplay or graphics - you have to feel you're "inside" the experience. It's not easy to achieve, but it doesn't require realistic images. Quite the contrary as having a basic shapes flying around in high framerate can make a lot. Remember: experimenting is key - see what works for your game in particular.
+Immersion is more important than gameplay or graphics - you have to feel you're "inside" the experience. It's not easy to achieve, but it doesn't require realistic images. Quite the contrary as having a basic shapes flying around in high frame rate can make a lot. Remember: experimenting is key - see what works for your game in particular.
 
 ## The future of WebVR
 

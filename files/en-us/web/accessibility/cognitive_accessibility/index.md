@@ -116,7 +116,7 @@ Providing more than one way to navigate your site can help people find informati
 
 ### Ability to bypass blocks of content
 
-Providing a mechanism, such as a [skiplink](/en-US/docs/Web/HTML/Element/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
+Providing a mechanism, such as a [skip link](/en-US/docs/Web/HTML/Element/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
 
 ### Focus order makes sense
 

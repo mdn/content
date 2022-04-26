@@ -310,7 +310,7 @@ If, after reading through this article you decide that you can't be bothered to 
 
 - [plyr.io](https://plyr.io)
   - : This modern video player implements subtitles in both SRT and WebVTT file formats.
-- [playr](https://www.delphiki.com/html5/playr/)
+- [Playr](https://www.delphiki.com/html5/playr/)
   - : This small plugin implements subtitles, captions, and chapters as well as both WebVTT and SRT file formats.
 - [Flowplayer](https://flowplayer.org/player/)
   - : HTML5 player supporting WebVTT.

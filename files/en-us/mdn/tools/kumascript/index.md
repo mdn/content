@@ -17,7 +17,7 @@ On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a le
 
 - A way to reuse and localize content that appears repeatedly between documents (e.g., compatibility labels, section navigation, warning banners).
 - A way to build documents out of content pulled from other documents.
-- A way to fetch and include content from other web sites and services (e.g., Bugzilla).
+- A way to fetch and include content from other websites and services (e.g., Bugzilla).
 
 ### What KumaScript is not
 

@@ -74,7 +74,7 @@ drawLives();
 
 ## Improving rendering with requestAnimationFrame()
 
-Now let's work on something that is not connected to the game mechanics, but to the way it is being rendered. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} helps the browser render the game better than the fixed framerate we currently have implemented using {{domxref("setInterval()")}}. Replace the following line:
+Now let's work on something that is not connected to the game mechanics, but to the way it is being rendered. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} helps the browser render the game better than the fixed frame rate we currently have implemented using {{domxref("setInterval()")}}. Replace the following line:
 
 ```js
 var interval = setInterval(draw, 10);
@@ -98,7 +98,7 @@ Then, at the very bottom of the `draw()` function (just before the closing curly
 requestAnimationFrame(draw);
 ```
 
-The `draw()` function is now getting executed again and again within a `requestAnimationFrame()` loop, but instead of the fixed 10 milliseconds frame rate, we are giving control of the framerate back to the browser. It will sync the framerate accordingly and render the shapes only when needed. This produces a more efficient, smoother animation loop than the older `setInterval()` method.
+The `draw()` function is now getting executed again and again within a `requestAnimationFrame()` loop, but instead of the fixed 10 milliseconds frame rate, we are giving control of the frame rate back to the browser. It will sync the frame rate accordingly and render the shapes only when needed. This produces a more efficient, smoother animation loop than the older `setInterval()` method.
 
 ## Compare your code
 
