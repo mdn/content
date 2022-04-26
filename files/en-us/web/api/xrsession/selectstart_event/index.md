@@ -130,3 +130,4 @@ xrSession.onselectend = onSelectionEvent;
 ## See also
 
 - {{domxref("XRSession.select_event", "select")}} and {{domxref("XRSession.selectend_event", "selectend")}}
+- {{domxref("GlobalEventHandlers.beforexrselect_event", "beforexrselect")}}

@@ -94,3 +94,4 @@ xrSession.onselect = event => {
 ## See also
 
 - {{domxref("XRSession.selectstart_event", "selectstart")}} and {{domxref("XRSession.selectend_event", "selectend")}}
+- {{domxref("GlobalEventHandlers.beforexrselect_event", "beforexrselect")}}
