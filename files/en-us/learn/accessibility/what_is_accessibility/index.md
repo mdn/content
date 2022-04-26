@@ -166,7 +166,7 @@ Web browsers make use of special **accessibility APIs** (provided by the underly
 Different operating systems have different accessibility APIs available :
 
 - Windows: MSAA/IAccessible, UIAExpress, IAccessible2
-- Mac OS X: NSAccessibility
+- macOS: NSAccessibility
 - Linux: AT-SPI
 - Android: Accessibility framework
 - iOS: UIAccessibility

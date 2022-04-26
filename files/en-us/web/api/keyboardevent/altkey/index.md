@@ -13,7 +13,7 @@ browser-compat: api.KeyboardEvent.altKey
 {{APIRef("DOM Events")}}
 
 The **`KeyboardEvent.altKey`** read-only property is a
-boolean value that indicates if the <kbd>alt</kbd> key (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) was pressed (`true`) or not (`false`) when
+boolean value that indicates if the <kbd>alt</kbd> key (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) was pressed (`true`) or not (`false`) when
 the event occurred.
 
 ## Value

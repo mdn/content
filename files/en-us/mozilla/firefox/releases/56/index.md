@@ -76,7 +76,7 @@ _No changes._
 ### Other
 
 - Gecko now encodes URLs internally as [punycode](https://en.wikipedia.org/wiki/Punycode), to avoid URL encoding problems (see {{bug("945240")}}, also see discussion in {{bug("942074")}}).
-- Firefox on Windows and Mac OS X can now be made to run in [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) using the `-headless` flag (see {{bug(1355150)}} and {{bug(1355147)}}).
+- Firefox on Windows and macOS can now be made to run in [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) using the `-headless` flag (see {{bug(1355150)}} and {{bug(1355147)}}).
 
 ## Removals from the web platform
 

@@ -20,7 +20,7 @@ This section covers questions relating to general knowledge of the web ecosystem
 
 - [How does the Internet work?](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
   - : The **Internet** is the backbone of the web, the technical infrastructure that makes the web possible.
-    At its most basic, the Internet is a massive network of computers communicating with each other. This article
+    At its most basic, the internet is a massive network of computers communicating with each other. This article
     discusses how it works, in broad terms.
 - [What is the difference between
   webpage, website, web server, and search engine?](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)

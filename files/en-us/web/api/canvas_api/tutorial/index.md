@@ -16,7 +16,7 @@ This tutorial describes how to use the [**`<canvas>`**](/en-US/docs/Web/HTML/Ele
 
 `<canvas>` is an [HTML](/en-US/docs/Web/HTML) element which can be used to draw graphics via scripting (usually [JavaScript](/en-US/docs/Glossary/JavaScript)). This can, for instance, be used to draw graphs, combine photos, or create simple (and [not so simple](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster)) animations. The images on this page show examples of [**`<canvas>`**](/en-US/docs/Web/HTML/Element/canvas) implementations which will be created in this tutorial.
 
-First introduced in WebKit by Apple for the OS X Dashboard, `<canvas>` has since been implemented in browsers. Today, all major browsers support it.
+First introduced in WebKit by Apple for the macOS Dashboard, `<canvas>` has since been implemented in browsers. Today, all major browsers support it.
 
 ## Before you start
 

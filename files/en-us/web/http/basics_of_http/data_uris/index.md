@@ -50,7 +50,7 @@ The Web APIs have native methods to encode or decode to base64: [Base64 encoding
 
 ### Encoding on a Unix system
 
-Base64 encoding of a file or string on Linux and Mac OS X systems can be achieved using the command-line `base64` (or, as an alternative, the `uuencode` utility with `-m` argument).
+Base64 encoding of a file or string on Linux and macOS systems can be achieved using the command-line `base64` (or, as an alternative, the `uuencode` utility with `-m` argument).
 
 ```bash
 echo -n hello|base64

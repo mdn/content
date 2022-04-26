@@ -189,7 +189,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           </td>
           <td>
             An item may not be dropped at the current location.<br />{{bug("275173")}}:
-            On Windows and Mac OS X, <code>no-drop</code> is the same as <code>not-allowed</code>.
+            On Windows and macOS, <code>no-drop</code> is the same as <code>not-allowed</code>.
           </td>
         </tr>
         <tr style="cursor: not-allowed">
