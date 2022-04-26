@@ -18,7 +18,7 @@ the corresponding query object.
 ## Syntax
 
 ```js
-void ext.queryCounterEXT(query, target);
+queryCounterEXT(query, target)
 ```
 
 ### Parameters

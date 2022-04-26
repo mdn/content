@@ -34,12 +34,7 @@ of import + decrypt.
 ## Syntax
 
 ```js
-const result = crypto.subtle.wrapKey(
-    format,
-    key,
-    wrappingKey,
-    wrapAlgo
-);
+wrapKey(format, key, wrappingKey, wrapAlgo)
 ```
 
 ### Parameters

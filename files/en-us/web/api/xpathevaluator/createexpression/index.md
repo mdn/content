@@ -50,7 +50,7 @@ If the expression contains namespace prefixes which cannot be resolved by the sp
 {{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
 `NAMESPACE_ERROR` is raised.
 
-## Examples
+## Example
 
 The following example shows the use of the `evaluate()` method.
 

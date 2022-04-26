@@ -19,7 +19,7 @@ The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL
 ## Syntax
 
 ```js
-void ext.drawArraysInstancedANGLE(mode, first, count, primcount);
+drawArraysInstancedANGLE(mode, first, count, primcount)
 ```
 
 ### Parameters

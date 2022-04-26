@@ -32,7 +32,7 @@ abort(reason)
 ### Parameters
 
 - reason {{optional_inline}}
-  - : A string representing a human-readable reason for the abort.
+  - : A {{domxref("DOMString")}} representing a human-readable reason for the abort.
 
 ### Return value
 

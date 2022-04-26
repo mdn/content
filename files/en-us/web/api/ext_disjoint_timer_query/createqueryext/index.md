@@ -19,7 +19,7 @@ a set of GL commands.
 ## Syntax
 
 ```js
-WebGLTimerQueryEXT ext.createQueryEXT();
+createQueryEXT()
 ```
 
 ### Parameters

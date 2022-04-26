@@ -20,16 +20,14 @@ Use this method with {{domxref("Clients.claim()")}} to ensure that updates to th
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.skipWaiting().then(function() {
-  //Do something
-});
+skipWaiting()
 ```
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that immediately resolves with `undefined`.
 
-## Example
+## Examples
 
 While `self.skipWaiting()` can be called at any point during the service worker's execution, it will only have an effect if there's a newly installed service worker that might otherwise remain in the `waiting` state. Therefore, it's common to call `self.skipWaiting()` from inside of an {{domxref("InstallEvent")}} handler.
 

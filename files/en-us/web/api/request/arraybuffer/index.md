@@ -18,9 +18,7 @@ reads the request body and returns it as a promise that resolves with an {{jsxre
 ## Syntax
 
 ```js
-request.arrayBuffer().then(function(buffer) {
-   // do something with the buffer
-});
+arrayBuffer()
 ```
 
 ### Parameters

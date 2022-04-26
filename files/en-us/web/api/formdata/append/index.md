@@ -21,11 +21,9 @@ The difference between {{domxref("FormData.set")}} and `append()` is that if the
 
 ## Syntax
 
-There are two versions of this method: a two and a three parameter version:
-
 ```js
-formData.append(name, value);
-formData.append(name, value, filename);
+append(name, value)
+append(name, value, filename)
 ```
 
 ### Parameters
@@ -39,7 +37,7 @@ formData.append(name, value, filename);
 
 > **Note:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 

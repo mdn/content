@@ -19,9 +19,7 @@ that resolves with an {{jsxref("ArrayBuffer")}}.
 ## Syntax
 
 ```js
-response.arrayBuffer().then(function(buffer) {
-  // do something with buffer
-});
+arrayBuffer()
 ```
 
 ### Parameters
