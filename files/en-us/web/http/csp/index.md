@@ -74,6 +74,8 @@ A policy needs to include a {{CSP("default-src")}} or {{CSP("script-src")}} dire
 A policy needs to include a {{CSP("default-src")}} or {{CSP("style-src")}} directive to restrict inline styles from being applied from a {{HTMLElement("style")}} element or a `style` attribute.
 There are specific directives for a wide variety of types of items, so that each type can have its own policy, including fonts, frames, images, audio and video media, scripts, and workers.
 
+For a complete list of policy directives, see the reference page for the [Content-Security-Policy header](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy).
+
 ## Examples: Common use cases
 
 This section provides examples of some common security policy scenarios.
