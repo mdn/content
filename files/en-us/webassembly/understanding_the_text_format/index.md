@@ -42,7 +42,7 @@ Let's start with the simplest, shortest possible wasm module.
 
 This module is totally empty, but is still a valid module.
 
-If we convert our module to binary now (see [Converting WebAssembly text format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.org/docs/binary-encoding/#high-level-structure):
+If we convert our module to binary now (see [Converting WebAssembly text format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.github.io/spec/core/binary/index.html#high-level-structure):
 
 ```wasm
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
@@ -294,7 +294,7 @@ const global = new WebAssembly.Global({value: "i32", mutable: true}, 0);
 
 ### WebAssembly Memory
 
-The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have [Reference types](#reference_types) in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.org/docs/semantics/#linear-memory).
+The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have [Reference types](#reference_types) in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.github.io/spec/core/exec/index.html#linear-memory).
 
 From JavaScript's point of view, it's as though memory is all inside one big (resizable) {{jsxref("ArrayBuffer")}}. That's literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)).
 

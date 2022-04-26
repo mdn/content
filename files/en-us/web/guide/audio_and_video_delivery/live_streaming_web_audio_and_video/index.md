@@ -67,7 +67,7 @@ For example:
 
 ## Media Source Extensions (MSE)
 
-[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend {{ domxref("HTMLMediaElement") }} to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
+[Media Source Extensions](https://w3c.github.io/media-source/) is a W3C working draft that plans to extend {{ domxref("HTMLMediaElement") }} to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
 
 For example,  [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](https://web.archive.org/web/20170504035455/https://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
@@ -178,7 +178,7 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 - [Dynamic Streaming over HTTP](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [The State of MPEG-DASH Deployment](https://www.streamingmediaglobal.com/Articles/Editorial/Featured-Articles/The-State-of-MPEG-DASH-Deployment-96144.aspx)
 - [Look, no plugins: Live streaming to the browser using Media Source Extensions and MPEG-DASH](https://www.bbc.co.uk/rd/blog/2014/03/media-source-extensions)
-- [Media Source Extensions (W3C)](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html)
+- [Media Source Extensions (W3C)](https://w3c.github.io/media-source/)
 - [Icecast](https://en.wikipedia.org/wiki/Icecast)
 - [SHOUTcast](https://en.wikipedia.org/wiki/Shoutcast)
 - [GStreamer](https://en.wikipedia.org/wiki/GStreamer)

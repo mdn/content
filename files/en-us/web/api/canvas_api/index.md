@@ -83,7 +83,7 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 - [EaselJS](https://www.createjs.com/easeljs) is an open-source canvas library that makes creating games, generative art, and other highly graphical experiences easy.
 - [Fabric.js](http://fabricjs.com) is an open-source canvas library with SVG parsing capabilities.
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) is an open-source library for creating canvas-based data heat maps.
-- [JavaScript InfoVis Toolkit](https://thejit.org/) creates interactive data visualizations.
+- [JavaScript InfoVis Toolkit](https://philogb.github.io/jit/) creates interactive data visualizations.
 - [Konva.js](https://konvajs.org/) is a 2D canvas library for desktop and mobile applications.
 - [p5.js](https://p5js.org/) has a full set of canvas drawing functionality for artists, designers, educators, and beginners.
 - [Paper.js](http://paperjs.org/) is an open-source vector graphics scripting framework that runs on top of the HTML5 Canvas.

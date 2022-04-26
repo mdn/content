@@ -490,7 +490,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 - `continue`, `break`, `throw`
 - `return`
 
-The ECMAScript specification mentions [three rules of semicolon insertion](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
+The ECMAScript specification mentions [three rules of semicolon insertion](https://tc39.es/ecma262/#sec-rules-of-automatic-semicolon-insertion).
 
 1\. A semicolon is inserted before, when a [Line terminator](#line_terminators) or "}" is encountered that is not allowed by the grammar.
 

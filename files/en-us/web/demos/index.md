@@ -57,7 +57,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 - [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVG/pen/OXkOWj/)
 - [CSS Blockout](https://ondras.github.io/blockout/)
-- [Rubik's cube](https://ondras.zarovi.cz/demos/rubik/)
+- [Rubik's cube](https://ondras.github.io/rubik/)
 - [Loader with blend modes](https://codepen.io/equinusocio/full/qjyXPP/)
 - [CSS-based single page application](https://dmytsv.github.io/sass-spa/index.html#home) ([source code](https://github.com/dmytsv/sass-spa))
 
