@@ -21,7 +21,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### Canvas
 
-- [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](http://blobsallad.se/article/)
+- [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](https://blobsallad.se/article/)
 - [3D RayCaster](https://mdn.github.io/canvas-raycaster/index.html)
 - [miniPaint: Image editor](https://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
 - [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))

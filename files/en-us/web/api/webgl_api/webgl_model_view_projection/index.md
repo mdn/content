@@ -562,7 +562,7 @@ Up to this point, we've built up our own 3D rendering setup, step by step. Howev
 
 The **perspective projection matrix** is a type of projection matrix that accomplishes all of these requirements. The math also starts to get a bit more involved and won't be fully explained in these examples. In short, it combines dividing by w (as done with the previous examples) with some ingenious manipulations based on [similar triangles](https://en.wikipedia.org/wiki/Similarity_%28geometry%29). If you want to read a full explanation of the math behind it check out some of the following links:
 
-- [OpenGL Projection Matrix](http://www.songho.ca/opengl/gl_projectionmatrix.html)
+- [OpenGL Projection Matrix](https://www.songho.ca/opengl/gl_projectionmatrix.html)
 - [Perspective Projection](https://ogldev.org/)
 - [Trying to understand the math behind the perspective projection matrix in WebGL](https://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
 
