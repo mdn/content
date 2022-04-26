@@ -31,13 +31,13 @@ These attributes are enumerated, and have the following possible values:
     <tr>
       <td><code>anonymous</code></td>
       <td>
-        Request uses CORS headers and credentials flag is set to 'same-origin'. There is no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
+        Request uses CORS headers and credentials flag is set to <code>'same-origin'</code>. There is no exchange of <b>user credentials</b> via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
       </td>
     </tr>
     <tr>
       <td><code>use-credentials</code></td>
       <td>
-        Request uses CORS headers, credentials flag is set to 'include' and **user credentials** are always included.
+        Request uses CORS headers, credentials flag is set to <code>'include'</code> and <b>user credentials</b> are always included.
       </td>
     </tr>
     <tr>
@@ -64,7 +64,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
     <tr>
       <td><code>img</code>, <code>audio</code>, <code>video</code></td>
       <td>
-        When resource is placed in {{HTMLElement("canvas")}}, element is marked as "[tainted](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)".
+        When resource is placed in {{HTMLElement("canvas")}}, element is marked as "<a href="/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases">tainted</a>".
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
     <tr>
       <td><code>link</code></td>
       <td>
-        Request with no appropriate `crossorigin` header may be discarded.
+        Request with no appropriate <code>crossorigin</code> header may be discarded.
       </td>
     </tr>
   </tbody>
