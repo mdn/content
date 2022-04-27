@@ -43,6 +43,8 @@ let executing = browser.scripting.executeScript(
       - : `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
     - `func`
       - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context ase lost. Exactly one of `files` and `func` must be specified.
+    - `injectImmediately`{{optional_inline}}
+      - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.   
 
