@@ -32,8 +32,8 @@ can remove it later by calling {{domxref("clearInterval",
 setInterval(code)
 setInterval(code, delay)
 
-setInterval(function)
-setInterval(function, delay)
+setInterval(func)
+setInterval(func, delay)
 setInterval(func, delay, arg0)
 setInterval(func, delay, arg0, arg1)
 setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
@@ -75,7 +75,7 @@ avoid confusion when maintaining your code.
 
 ## Examples
 
-## Examples1: Basic syntax
+### Example 1: Basic syntax
 
 The following example demonstrates `setInterval()`'s basic syntax.
 
@@ -91,7 +91,7 @@ function myCallback(a, b)
 }
 ```
 
-## Examples2: Alternating two colors
+### Example 2: Alternating two colors
 
 The following example calls the `flashtext()` function once a second until
 the Stop button is pressed.

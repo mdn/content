@@ -21,7 +21,8 @@ with a content decryption module (CDM).
 ## Syntax
 
 ```js
-createSession(MediaKeySessionType])
+createSession()
+createSession(mediaKeySessionType)
 ```
 
 ## Specifications
