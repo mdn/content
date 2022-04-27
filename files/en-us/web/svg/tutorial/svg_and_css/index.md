@@ -11,6 +11,8 @@ tags:
   - SVG
   - Web
 ---
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+
 This page illustrates the application of CSS to the specialized language for creating graphics: [SVG](/en-US/docs/Web/SVG).
 
 Below you'll create a simple demonstration that runs in your SVG-enabled browser.
@@ -450,7 +452,7 @@ See below how the structure then looks like.
 
 </svg>
 ```
-
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 ## What next?
 
 In this demonstration, your SVG-enabled browser already knows how to display SVG elements. The stylesheet only modifies the display in certain ways. This is also true for HTML and XUL documents. But you can use CSS for general-purpose XML documents, where there is no predefined way to display the elements. The next page demonstrates this: [XML introduction](/en-US/docs/Web/XML/XML_introduction)
