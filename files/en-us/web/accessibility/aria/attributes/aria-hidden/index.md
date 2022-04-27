@@ -54,7 +54,7 @@ Using `aria-hidden="false"` will not re-expose the element to assistive technolo
 Adding `aria-hidden="true"` to the icon hides the icon character from being included in the accessible name.
 
 ```html
-<button type="button" aria-pressed="false">
+<button>
   <span class="fa fa-tweet" aria-hidden="true"></span>
   <span class="label">
     Tweet
