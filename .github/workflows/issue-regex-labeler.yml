@@ -1,7 +1,7 @@
 name: "Label issues by MDN URL or other regex match in issue description"
 on:
   issues:
-    types: [opened, edited]
+    types: [opened]
 
 jobs:
   triage:
