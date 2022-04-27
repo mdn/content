@@ -561,9 +561,9 @@ You can check out the add-ons to your app using the `heroku addons` command. Thi
 ```bash
 > heroku addons
 
-Add-on Plan Price State
+Add-on                                     Plan       Price  State
 ─────────────────────────────────────────  ─────────  ─────  ───────
-heroku-postgresql (postgresql-flat-26536) hobby-dev free created
+heroku-postgresql (postgresql-flat-26536)  hobby-dev  free   created
  └─ as DATABASE
 ```
 
@@ -588,7 +588,7 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 
 If you recall from the section on [getting the website ready to publish](#getting_your_website_ready_to_publish), we have to set environment variables for `DJANGO_SECRET_KEY` and `DJANGO_DEBUG`. Let's do this now.
 
-> **Note:** The secret key needs to be really secret! One way to generate a new key is to use the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/).
+> **Note:** The secret key needs to be really secret! One way to generate a new key is to use the [Django Secret Key Generator](https://www.miniwebtool.com/django-secret-key-generator/).
 
 We set `DJANGO_SECRET_KEY` using the `config:set` command (as shown below). Remember to use your own secret key!
 
