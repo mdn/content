@@ -36,4 +36,4 @@ The object's type, which will be one of the following:
 
 ## Specifications
 
-[EXSLT - EXSL:OBJECT-TYPE](http://www.exslt.org/exsl/functions/object-type/index.html)
+[EXSLT - EXSL:OBJECT-TYPE](http://exslt.org/exsl/functions/object-type/index.html)

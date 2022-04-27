@@ -109,7 +109,7 @@ It clones by recursing through the input object while maintaining a map of previ
 
 ## See also
 
-- [HTML Specification: Safe passing of structured data](https://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
+- [HTML Specification: Safe passing of structured data](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
 - {{Glossary("Transferable objects")}}
 - {{domxref("structuredClone()")}}
 - {{domxref("window.history")}}

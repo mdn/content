@@ -168,7 +168,7 @@ The specifics of how lighting estimation works, especially in the context of the
 
 There are a number of potential security issues involved with collecting all of this data in order to generate and apply lighting to your virtual objects using real-world data.
 
-Of course, many AR applications make it pretty clear where the user is located. If the user is running an app called _Touring the Louvre_, there's a very good chance the user is located in the [Musée du Louvre](https://louvre.fr/) in Paris, France. But browsers are required to take a number of steps to make it difficult to physically locate the user without their consent.
+Of course, many AR applications make it pretty clear where the user is located. If the user is running an app called _Touring the Louvre_, there's a very good chance the user is located in the [Musée du Louvre](https://www.louvre.fr/en) in Paris, France. But browsers are required to take a number of steps to make it difficult to physically locate the user without their consent.
 
 ### Ambient Light Sensor API
 

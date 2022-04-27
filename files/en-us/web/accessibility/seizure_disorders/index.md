@@ -92,7 +92,7 @@ This pixel area ratio calculates for relative size, but distance also matters.
 
 Distance matters because it affects the total field of vision. When viewers wear ocular masks for gaming, the field of vision is likely enveloped in its entirety by the screen. [WebVR](https://webvr.info/) is an open specification that makes it possible to experience VR in your browser, which can be experienced on phone, computer or headset. The concern about flashing images in an ocular mask is a growing one, since the mask is so close to the eyes.
 
-[The Epilepsy Society (UK)](https://epilepsysociety.org.uk/), in their article, ["3d Films and Virtual Reality"](https://epilepsysociety.org.uk//3d-films-and-virtual-reality#.XQlC5ohKiUk), noted: _"With VR the images flash very quickly and generally this is too quickly to trigger a seizure in people with photosensitive epilepsy. However, the field of view is large and so more of the eye is stimulated. This means that more of the brain may be affected and this may trigger a photosensitive seizure."_
+[The Epilepsy Society (UK)](https://epilepsysociety.org.uk/), in their article, ["3d Films and Virtual Reality"](https://epilepsysociety.org.uk/3d-films-and-virtual-reality#.XQlC5ohKiUk), noted: _"With VR the images flash very quickly and generally this is too quickly to trigger a seizure in people with photosensitive epilepsy. However, the field of view is large and so more of the eye is stimulated. This means that more of the brain may be affected and this may trigger a photosensitive seizure."_
 
 (Note that some users will not be able to see with blinking cursors, and may get migraines, motion sickness, and disorientation, although blinking cursors occupy a much smaller area of the screen.)
 
