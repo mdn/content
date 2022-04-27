@@ -13,19 +13,21 @@ browser-compat: api.Element.replaceWith
 
 The **`Element.replaceWith()`** method replaces this
 `Element` in the children list of its parent with a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects. {{domxref("DOMString")}}
+{{domxref("Node")}} or string objects. string
 objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
 ```js
-replaceWith(...nodes)
+replaceWith(param0)
+replaceWith(param0, param1)
+replaceWith(param0, param1, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace.
+- `param0, ..., paramN`
+  - : A set of {{domxref("Node")}} or string objects to replace.
 
 ### Exceptions
 

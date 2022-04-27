@@ -12,20 +12,22 @@ browser-compat: api.Element.after
 {{APIRef("DOM")}}
 
 The **`Element.after()`** method inserts a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+{{domxref("Node")}} or string objects in the children list of the
 `Element`'s parent, just after the `Element`.
-{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
+string objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
 ```js
-after(... nodes)
+after(node0)
+after(node0, node1)
+after(node0, node1, /* ... ,*/ nodeN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `node0, ..., nodeN`
+  - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Exceptions
 

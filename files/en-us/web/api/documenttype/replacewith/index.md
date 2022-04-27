@@ -16,12 +16,14 @@ The **`DocumentType.replaceWith()`** method replaces the document type with a se
 ## Syntax
 
 ```js
-replaceWith(...nodes)
+replaceWith(node0)
+replaceWith(node0, node1)
+replaceWith(node0, node1, /* ... ,*/ nodeN)
 ```
 
 ### Parameters
 
-- `nodes`
+- `node0, ..., nodeN`
   - : A set of nodes to replace the {{domxref("DocumentType")}} with.
 
 ### Exceptions

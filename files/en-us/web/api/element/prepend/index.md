@@ -14,20 +14,22 @@ browser-compat: api.Element.prepend
 {{APIRef("DOM")}}
 
 The **`Element.prepend()`** method inserts a set of
-{{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child
-of the {{domxref("Element")}}. {{domxref("DOMString")}} objects are inserted as
+{{domxref("Node")}} objects or string objects before the first child
+of the {{domxref("Element")}}. string objects are inserted as
 equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
 ```js
-prepend(...nodesOrDOMStrings);
+prepend(param0)
+prepend(param0, param1)
+prepend(param0, param1, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodesOrDOMStrings`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param0, ..., paramN`
+  - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Return value
 

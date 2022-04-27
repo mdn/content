@@ -18,15 +18,14 @@ removes the specified _tokens_ from the list.
 ## Syntax
 
 ```js
-remove(token);
-remove(token, token);
-remove(token, token, token);
-...
+remove(token0)
+remove(token0, token1)
+remove(token0, token1, /* ... ,*/ token)
 ```
 
 ### Parameters
 
-- `token`
+- `token0, ..., tokenN`
   - : A string representing the token you want to remove from the list.
     If the string is not in the list, no error is thrown, and nothing happens.
 

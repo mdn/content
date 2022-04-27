@@ -21,17 +21,17 @@ This only works when the application is authorized to use the specified device.
 ## Syntax
 
 ```js
-HTMLMediaElement.setSinkId(sinkId).then(function() { /* ... */ })
+setSinkId(sinkId)
 ```
-
-### Returns
-
-A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ### Parameters
 
 - sinkId
   - : The {{domxref("MediaDeviceInfo.deviceId")}} of the audio output device.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ### Exceptions
 

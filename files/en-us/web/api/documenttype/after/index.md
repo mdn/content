@@ -12,20 +12,22 @@ browser-compat: api.DocumentType.after
 {{APIRef("DOM")}}
 
 The **`DocumentType.after()`** method inserts a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+{{domxref("Node")}} or string objects in the children list of the
 `DocumentType`'s parent, just after the `DocumentType`.
-{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
+string objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
 ```js
-after(... nodes)
+after(param0)
+after(param0, param1)
+after(param0, param1, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param0, ..., paramN`
+  - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Exceptions
 

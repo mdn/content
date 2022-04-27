@@ -25,7 +25,7 @@ createNodeIterator(root, whatToShow, filter)
 
 - `root`
   - : The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.
- 
+
 - `whatToShow` {{optional_inline}}
 
   - : Is an optional `unsigned long` representing a bitmask created by

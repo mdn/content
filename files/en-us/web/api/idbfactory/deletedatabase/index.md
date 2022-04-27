@@ -59,7 +59,7 @@ deleteDatabase(name, options)
 A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request
 are fired.
 
-## Example
+## Examples
 
 ```js
 var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");

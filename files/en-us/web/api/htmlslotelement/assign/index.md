@@ -19,12 +19,14 @@ The **`assign()`** method of the
 ## Syntax
 
 ```js
-HTMLSlotElement.assign(...nodes)
+assign(node0)
+assign(node0, node1)
+assign(node0, node1, /* ... ,*/ nodeN)
 ```
 
 ### Parameters
 
-- ...`nodes`
+- ...`node0, ..., nodeN`
   - : A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.
 
 ### Return value

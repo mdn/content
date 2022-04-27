@@ -76,7 +76,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 | ----------- | ------------------------------------------------------------------ |
 | `TypeError` | The value of version is zero or a negative number or not a number. |
 
-## Example
+## Examples
 
 Example of calling `open` with the current specification's
 `version` parameter:
