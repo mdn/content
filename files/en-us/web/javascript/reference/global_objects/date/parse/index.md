@@ -111,7 +111,7 @@ new Date('2014-25-23').toISOString();
 // throws "RangeError: invalid date" in all ES5-compliant browsers
 ```
 
-SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://dxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
+SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://searchfox.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
 The string "`10 06 2014`" is an example of a non-conforming ISO format and
 thus falls back to a custom routine. See also this [rough outline](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) on
 how the parsing works.
