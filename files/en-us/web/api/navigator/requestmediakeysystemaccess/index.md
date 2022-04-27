@@ -62,12 +62,12 @@ fulfillment handler receives as input just one parameter:
 In case of an error, the returned {{jsxref('Promise')}} is rejected with a
 {{domxref('DOMException')}} whose name indicates what kind of error occurred.
 
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Either the specified `keySystem` isn't supported by the platform or the
     browser, or none of the configurations specified by
     `supportedConfigurations` can be satisfied (if, for example, none of the
     `codecs` specified in `contentType` are available).
-- `TypeError`
+- {{jsxref("TypeError")}}`
   - : Either `keySystem` is an empty string or the
     `supportedConfigurations` array is empty.
 

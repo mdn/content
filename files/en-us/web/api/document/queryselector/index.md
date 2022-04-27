@@ -54,8 +54,8 @@ If you need a list of all elements matching the specified selectors, you should 
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified _selectors_ is invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified _selectors_ is invalid.
 
 ## Usage notes
 

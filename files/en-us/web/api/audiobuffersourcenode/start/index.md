@@ -59,7 +59,7 @@ start(when, offset, duration)
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if a negative value was specified for one or more of the three time parameters. Please
     don't attempt to tamper with the laws of temporal physics.
 - `InvalidStateError` {{domxref("DOMException")}}

@@ -37,8 +37,8 @@ var PermissionState = FileSystemHandle.requestPermission(FileSystemHandlePermiss
 
 ### Exceptions
 
-- `TypeError`
-  - : No parameter is specified or the `mode` is not that of
+- {{jsxref("TypeError")}}
+  - : Thrown if no parameter is specified or the `mode` is not that of
     `'read'` or `'readwrite'`
 
 ## Examples

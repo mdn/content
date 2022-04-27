@@ -30,7 +30,7 @@ A 128-bit UUID.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `name` does not appear in the registry.
 
 ## Examples

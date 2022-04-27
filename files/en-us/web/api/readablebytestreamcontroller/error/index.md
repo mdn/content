@@ -34,8 +34,8 @@ error(e)
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableByteStreamController`, or the stream
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream
     is not readable for some other reason.
 
 ## Examples

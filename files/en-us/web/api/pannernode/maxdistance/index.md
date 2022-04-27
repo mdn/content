@@ -22,8 +22,8 @@ A double. The default is `10000`, and non-positive values are not allowed.
 
 ### Exceptions
 
-- `RangeError`
-  - : The property has been given a value that is outside the accepted range.
+- {{jsxref("RangeError")}}
+  - : Thrown if the property has been given a value that is outside the accepted range.
 
 ## Examples
 

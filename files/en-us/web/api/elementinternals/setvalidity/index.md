@@ -63,7 +63,7 @@ None.
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element does not have its `formAssociated` property set to `true`.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if one or more `flags` is `true`.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if `anchor` is given, but the anchor is not a shadow-including descendant of the element.

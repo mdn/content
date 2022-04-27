@@ -40,7 +40,7 @@ A {{domxref("DOMString")}} containing the XML representation of the specified DO
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified `rootNode` is not a compatible node type. The root node
     must be either {{domxref("Node")}} or {{domxref("Attr")}}.
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -70,7 +70,7 @@ The following types are also permitted as descendants of the root node, in addit
 - {{domxref("ProcessingInstruction")}}
 - {{domxref("Attr")}}
 
-If any other type is encountered, a `TypeError` exception is thrown.
+If any other type is encountered, a {{jsxref("TypeError")}} exception is thrown.
 
 ### Notes on the resulting XML
 

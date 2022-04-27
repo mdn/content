@@ -80,7 +80,7 @@ from the list below.
     has no parameters to set.
 - `OperationError` {{domxref("DOMException")}}
   - : Returned if an error occurs that does not match the ones specified here.
-- `RangeError` {{domxref("DOMException")}}
+- {{jsxref("RangeError")}}
   - : Returned if the value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy",
     "scaleResolutionDownBy")}} is less than 1.0, which would result in scaling up rather
     than down, which is not allowed; or one or more of the specified encodings'

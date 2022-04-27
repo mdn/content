@@ -59,7 +59,7 @@ setPositionState(stateDict)
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : This error can occur in an array of circumstances:
 

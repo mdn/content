@@ -27,7 +27,7 @@ The possible values are:
 
 ## Value
 
-A enum — see [`DistanceModelType`](https://webaudio.github.io/web-audio-api/#idl-def-DistanceModelType).
+An enum — see [`DistanceModelType`](https://webaudio.github.io/web-audio-api/#idl-def-DistanceModelType).
 
 ## Examples
 

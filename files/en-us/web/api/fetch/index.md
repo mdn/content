@@ -131,10 +131,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
 
 ### Exceptions
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
 
 <table>

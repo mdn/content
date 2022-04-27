@@ -63,7 +63,7 @@ None.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `config` is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoEncoder.state","state")}} is `"closed"`.
