@@ -15,11 +15,13 @@ The `menu` role is a type of composite widget that offers a list of choices to t
 
 ## Description
 
-A `menu` is often represents a grouping of common actions or functions that the user can invoke. The `menu` role is appropriate when a list of menu items is presented in a manner similar to a menu on a desktop application. Submenus, also known as pop-up menus, also have the role `menu`.
+A `menu` generally represents a grouping of common actions or functions that the user can invoke. The `menu` role is appropriate when a list of menu items is presented in a manner similar to a menu on a desktop application. Submenus, also known as pop-up menus, also have the role `menu`. 
 
-A `menu` widget is usually opened, or made visible, by activating a menu button, choosing an item in a menu that opens a submenu, or by invoking a command, such as <kbd>Shift + F10</kbd> in Windows which opens a context specific menu. 
+While the term "menu" is generically used a term used to describe site navigation, the `menu` role is for a list of action or functions that require complex functionality, such as composite widget focus management and first-character navigation
 
-When a user activates a choice in a menu, the menu usually closes. If the menu choice action invokes a submenu, the menu will remain open and the submenu is displayed. 
+A menu can be a permanently visible list of controls or a widget that can be made to open and close. A closed `menu` widget is usually opened, or made visible, by activating a menu button, choosing an item in a menu that opens a submenu, or by invoking a command, such as <kbd>Shift + F10</kbd> in Windows which opens a context specific menu. 
+
+When a user activates a choice in a menu that has been opened, the menu usually closes. If the menu choice action invokes a submenu, the menu will remain open and the submenu is displayed. 
 
 When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements. 
 
@@ -27,11 +29,13 @@ Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuite
 
 Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role, and separated by elements with role [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role). Neither `group` nor `separator` receive focus or are interactive. 
 
+> **Note:** The `menu` role is similar to the HTML {{HTMLElement('menu')}} element. Using `<menu role="menu">` may seem redundant, but as most browsers expose the `<menu>` as a [`list`](../list_role/), when using the native `<menu>`, including the `menu` role and providing keyboard navigation are necessary..
+
 If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menu button or parent menubar item (or the context action that opened the menu). 
 
 Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. Include `aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
 
-If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) instead. 
+If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role instead. 
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -61,9 +65,9 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - <kbd>Escape</kbd>	
   - : When in a submenu, closes the submenu and moves focus to parent menu or menubar item.
 - <kbd>Right Arrow</kdb>	
-  - : Moves focus to the next item in the menubar. If focus is on the last item, moves focus to the first item. If in a submenu, if focus is on an item that does not have a submenu, closes the submenu and moves focus to next item in the menubar. Otherwise,opens submenu of newly focused menubar item, keeping focus on that parent menubar item.
+  - : In a menubar, moves focus to the next item in the menubar. If focus is on the last item, moves focus to the first item. If in a submenu, if focus is on an item that does not have a submenu, closes the submenu and moves focus to next item in the menubar. Otherwise, opens submenu of newly focused menubar item, keeping focus on that parent menubar item. If not in a menubar or submenu and not on a menuitem with a submenu, if focus is not the last focusable element in the menu, optionally moves focus to the next focusable element.
 - <kbd>Left Arrow	</kdb>	
-  - : Moves focus to the previous item in the menubar. If focus is on the first item, moves focus to the last item. If in a submenu, closes submenu and moves focus to parent menu item.
+  - : Moves focus to the previous item in the menubar. If focus is on the first item, moves focus to the last item. If in a submenu, closes submenu and moves focus to parent menu item. If not in a menubar or submenu, if focus is not the first focusable element in the menu, optionally moves focus to the last focusable element.
 - <kbd>Down Arrow</kdb>	
   - : Opens submenu and moves focus to first item in the submenu.
 - <kbd>Up Arrow</kdb>	
@@ -121,6 +125,10 @@ Below are two example menu implementations.
 </div>
 ```
 
+To progressively enhance this navigation widget that is by default accessible, the class to hide the `menu` and the inclusion of `tabindex="-1"` on the interactive menuitem content should be added with JavaScript on load. 
+
+When including a "menu" for site navigation, do not use the `menu` role. Rather, for the main site navigation use the native HTML {{HTMLElement('nav')}} element or simply a list of links. The `menu` role should be reserved for composite widgets requiring focus management. See [ARIA practices for disclosure navigation](https://www.w3.org/TR/wai-aria-practices-1.2/examples/disclosure/disclosure-navigation.html) for an explanation and additional examples.
+
 ### Example 2: menubar submenu option picker
 
 The following snippet of code is a popup menu nested in a menubar. It is displayed when the menu button is activated. It is a menu to select the text color from a list of color options:
@@ -171,6 +179,7 @@ The navigation example has a static button. In submenu example has a button that
 
 ## See Also
 
+- HTML {{HTMLElement('menu')}} element
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
