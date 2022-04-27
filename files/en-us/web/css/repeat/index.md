@@ -51,7 +51,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ## Syntax
 
 The `repeat()` function takes two arguments:
-- **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid.
+- **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid container.
 - **tracks**: the second argument specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
 
 If you use [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) to set the repeat count, you may only specify track sizes using the [`<fixed-size>`](#fixed-size) type, not the [`<track-size>`](#track-size) type. This give us three main syntax forms for `repeat()`:
