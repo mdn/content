@@ -81,11 +81,12 @@ not visit elements in a consistent order. Therefore, it is better to use a
 ### Iterating over own properties only
 
 If you only want to consider properties attached to the object itself, and not its
-prototypes, use {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} or
-perform a {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} check
-({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable()")}} can also
-be used). Alternatively, if you know there won't be any outside code interference, you
-can extend built-in prototypes with a check method.
+prototypes, you can use one of the following techniques:
+
+- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObject)")}}
+- {{jsxref("Object.hasOwn", "Object.hasOwn(myObject)")}}
+
+If `Object.hasOwn()` is not available, you can use {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} instead, but in this situation it's better to use the form `Object.prototype.hasOwnProperty.call(myObject, prop)`, in case `myObject` has overwritten the inherited `hasOwnProperty()` method.
 
 ## Why Use for...in?
 
