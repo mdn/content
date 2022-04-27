@@ -24,7 +24,7 @@ The **`getVideoTracks()`** method of the
 ## Syntax
 
 ```js
-var mediaStreamTracks[] = mediaStream.getVideoTracks();
+getVideoTracks()
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ Early versions of this API included a special `VideoStreamTrack` interface
 which was used as the type for each entry in the list of video streams; however, this
 has since been merged into the main {{domxref("MediaStreamTrack")}} interface.
 
-## Example
+## Examples
 
 The following example, extracted from [Chrome's
 Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses `getVideoTracks()` to

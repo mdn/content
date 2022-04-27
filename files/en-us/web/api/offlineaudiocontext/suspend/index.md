@@ -28,7 +28,7 @@ precise suspension.
 ## Syntax
 
 ```js
-OfflineAudioContext.suspend(suspendTime).then(function() { /* ... */ });
+suspend(suspendTime)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ OfflineAudioContext.suspend(suspendTime).then(function() { /* ... */ });
 - suspendTime
   - : A {{jsxref("double")}} specifying the suspend time, in seconds.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} resolving to {{jsxref('undefined')}}.
 

@@ -20,8 +20,10 @@ a new string.
 ## Syntax
 
 ```js
-element.setRangeText(replacement);
-element.setRangeText(replacement, start, end [, selectMode]);
+setRangeText(replacement)
+setRangeText(replacement, start)
+setRangeText(replacement, start, end)
+setRangeText(replacement, start, end, selectMode)
 ```
 
 ### Parameters
@@ -45,7 +47,7 @@ element.setRangeText(replacement, start, end [, selectMode]);
     - `"end"` moves the selection to just after the inserted text.
     - `"preserve"` attempts to preserve the selection. This is the default.
 
-## Example
+## Examples
 
 Click the button in this example to replace part of the text in the text box. The newly
 inserted text will be highlighted (selected) afterwards.

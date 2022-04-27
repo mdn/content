@@ -80,7 +80,7 @@ If the provided context node is not a type permitted as an XPath context node or
 request type is not permitted by the {{domxref("XPathEvaluator")}}, a
 {{domxref("DOMException")}} of type `NOT_SUPPORTED_ERR` is raised.
 
-## Example
+## Examples
 
 The following example shows the use of the `evaluate()` method.
 

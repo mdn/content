@@ -25,7 +25,8 @@ the value of `src` and `href` attributes.
 ## Syntax
 
 ```js
-FileSystemEntry.toURL([mimeType]);
+toURL()
+toURL(mimeType)
 ```
 
 ### Parameters
@@ -38,11 +39,11 @@ FileSystemEntry.toURL([mimeType]);
 
 ### Return value
 
-A {{domxref("DOMString")}} containing a URL that can then be used as a document
+A string containing a URL that can then be used as a document
 reference in HTML content, or an empty string if the URL can't be generated (such as if
 the file system implementation doesn't support `toURL()`).
 
-## Example
+## Examples
 
 If you have a {{domxref("FileSystemFileEntry")}} corresponding to an image file in a
 file system available to your Web site or app, you can call `toURL()` to get

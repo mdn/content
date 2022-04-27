@@ -29,7 +29,8 @@ instead.
 ## Syntax
 
 ```js
-FileSystemEntry.remove(successCallback[, errorCallback]);
+remove(successCallback)
+remove(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -59,7 +60,7 @@ FileSystemEntry.remove(successCallback[, errorCallback]);
   - : The entry couldn't be removed due to permissions or other access constraints, or
     because there are too many calls being made on file resources.
 
-## Example
+## Examples
 
 This example deletes a temporary work file.
 

@@ -16,14 +16,17 @@ Returns a new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
 ## Syntax
 
 ```js
-const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
+createNodeIterator(root)
+createNodeIterator(root, whatToShow)
+createNodeIterator(root, whatToShow, filter)
 ```
 
-### Values
+### Return value
 
 - `root`
   - : The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.
-- `whatToShow` {{ optional_inline() }}
+ 
+- `whatToShow` {{optional_inline}}
 
   - : Is an optional `unsigned long` representing a bitmask created by
     combining the constant properties of
@@ -47,7 +50,7 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | Shows {{ domxref("ProcessingInstruction") }} nodes.                                                                                                                                                                                                                                                                                                                                                      |
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                              |
 
-- `filter` {{ optional_inline() }}
+- `filter` {{optional_inline}}
   - : A callback function or an object with an `acceptNode()` method. The function or method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes. The method should return one of `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the [Example](#example).
 
 ## Examples

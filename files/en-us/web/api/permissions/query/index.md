@@ -15,12 +15,12 @@ The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface
 ## Syntax
 
 ```js
-navigator.permissions.query(PermissionDescriptor).then(function(permissionStatus) { /* ... */ })
+query(permissionDescriptor)
 ```
 
 ### Parameters
 
-- `PermissionDescriptor`
+- `permissionDescriptor`
 
   - : An object that sets options for the `query` operation consisting of a comma-separated list of name-value pairs. The available options are:
 
@@ -32,7 +32,7 @@ navigator.permissions.query(PermissionDescriptor).then(function(permissionStatus
 
 > **Note:** The `persistent-storage` permission allows an origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
 
@@ -58,7 +58,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 navigator.permissions.query({name:'geolocation'}).then(function(result) {

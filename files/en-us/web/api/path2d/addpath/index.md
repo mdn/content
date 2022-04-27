@@ -19,7 +19,8 @@ of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
 ## Syntax
 
 ```js
-void path.addPath(path [, transform]);
+addPath(path)
+addPath(path, transform)
 ```
 
 ### Parameters

@@ -14,7 +14,7 @@ browser-compat: api.HTMLInputElement.stepDown
 
 The
 **`HTMLInputElement.stepDown([n])`** method decrements the
-value of a numeric type of  {{HTMLElement("input")}} element by the value of the
+value of a numeric type of {{HTMLElement("input")}} element by the value of the
 [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute or up
 to `n` multiples of the step attribute if a number is passed as the
 parameter.
@@ -107,21 +107,22 @@ support the `step` attribute (see the list of supported input types above), or i
 ## Syntax
 
 ```js
-element.stepDown( [ stepDecrement ] );
+stepDown()
+stepDown(stepDecrement)
 ```
 
 ### Parameters
 
-- _`stepDecrement`_
+- _`stepDecrement`_ {{optional_inline}}
 
-  - : The optional  `stepDecrement` parameter is a numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
+  - : A numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
 
     If the value is a float, the value will decrement as if
     [`Math.floor(stepDecrement)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
     was passed. If the value is negative, the value will be incremented instead of
     decremented.
 
-## Example
+## Examples
 
 Click the button in this example to decrement the {{HTMLElement("input/number",
   "number")}} input type:

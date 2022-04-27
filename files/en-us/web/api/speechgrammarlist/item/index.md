@@ -23,10 +23,15 @@ objects to be retrieved from the `SpeechGrammarList` using array syntax.
 ## Syntax
 
 ```js
-var myFirstGrammar = speechGrammarListInstance[0];
+item(index)
 ```
 
-### Returns
+### Parameters
+
+- `index`
+  - : Index of the item to retrieve.
+
+### Return value
 
 A {{domxref("SpeechGrammar")}} object.
 

@@ -27,7 +27,8 @@ To remove a single file, or an empty directory, you can also use
 ## Syntax
 
 ```js
-FileSystemDirectoryEntry.removeRecursively(successCallback[, errorCallback]);
+removeRecursively(successCallback)
+removeRecursively(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -74,7 +75,7 @@ a single parameter: a {{domxref("FileError")}} object describing the error. The
 > files may not be deleted. You should provide an `errorCallback` to watch
 > for and handle this, perhaps by trying again.
 
-## Example
+## Examples
 
 ```js
 directory.removeRecursively(function() {

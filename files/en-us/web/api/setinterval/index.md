@@ -29,9 +29,14 @@ can remove it later by calling {{domxref("clearInterval",
 ## Syntax
 
 ```js
-var intervalID = setInterval(func, [delay, arg1, arg2, ...]);
-var intervalID = setInterval(function[, delay]);
-var intervalID = setInterval(code, [delay]);
+setInterval(code)
+setInterval(code, delay)
+
+setInterval(function)
+setInterval(function, delay)
+setInterval(func, delay, arg0)
+setInterval(func, delay, arg0, arg1)
+setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
 ```
 
 ### Parameters
@@ -47,7 +52,7 @@ var intervalID = setInterval(code, [delay]);
   - : The time, in milliseconds (thousandths of a second), the timer should delay in
     between executions of the specified function or code. Defaults to 0 if not specified. See [Delay restrictions](#delay_restrictions)
     below for details on the permitted range of `delay` values.
-- `arg1, ..., argN` {{optional_inline}}
+- `arg0, ..., argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by
     _func_ once the timer expires.
 
@@ -70,7 +75,7 @@ avoid confusion when maintaining your code.
 
 ## Examples
 
-### Example 1: Basic syntax
+## Examples1: Basic syntax
 
 The following example demonstrates `setInterval()`'s basic syntax.
 
@@ -86,7 +91,7 @@ function myCallback(a, b)
 }
 ```
 
-### Example 2: Alternating two colors
+## Examples2: Alternating two colors
 
 The following example calls the `flashtext()` function once a second until
 the Stop button is pressed.
@@ -137,7 +142,7 @@ function flashText() {
 function stopTextColor() {
   clearInterval(nIntervId);
   // release our intervalID from the variable
-  nIntervId = null; 
+  nIntervId = null;
 }
 
 document.getElementById("start").addEventListener("click", changeColor);

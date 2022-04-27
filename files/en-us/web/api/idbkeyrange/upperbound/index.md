@@ -23,14 +23,16 @@ it includes the upper endpoint value and is closed.
 ## Syntax
 
 ```js
-var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])
+upperBound(bound)
+upperBound(bound, open)
 ```
 
 ### Parameters
 
-- *bound* specifies the upper bound of the new key range.
-- _open_ indicates whether the upper bound excludes the endpoint value. The
-  default is false. {{optional_inline}}
+- `bound` 
+  - : Specifies the upper bound of the new key range.
+- `open` {{optional_inline}}
+  - : Indicates whether the upper bound excludes the endpoint value. The default is false.
 
 ### Return value
 
@@ -44,7 +46,7 @@ This method may raise a {{domxref("DOMException")}} of the following type:
 | ----------- | ----------------------------------------------- |
 | `DataError` | The value parameter passed was not a valid key. |
 
-## Example
+## Examples
 
 The following example illustrates how you'd use an upper bound key range. Here we
 declare `keyRangeValue = IDBKeyRange.upperBound("F");` — a range that

@@ -21,13 +21,17 @@ within the directory subtree rooted at the directory on which it's called.
 ## Syntax
 
 ```js
-FileSystemDirectoryEntry.getFile([path][, options][, successCallback][, errorCallback]);
+getFile()
+getFile(path)
+getFile(path, options)
+getFile(path, options, successCallback)
+getFile(path, options, successCallback, errorCallback)
 ```
 
 ### Parameters
 
 - `path` {{optional_inline}}
-  - : A {{domxref("USVString")}} specifying the path, relative to the directory on which
+  - : A string specifying the path, relative to the directory on which
     the method is called, describing which file's entry to return.
 - `options` {{optional_inline}}
   - : An object which allows you
@@ -82,7 +86,7 @@ None.
     unsupported file descriptor such as a pipe; this depends on the user agent to some
     extent.
 
-## Example
+## Examples
 
 In this example, a function is presented whose job it is to locate within a user's app
 data directory a JSON file containing a user dictionary for a specified language, then
