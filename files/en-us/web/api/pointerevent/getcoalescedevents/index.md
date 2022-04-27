@@ -20,14 +20,14 @@ The **`getCoalescedEvents()`** method of the
 ## Syntax
 
 ```js
-var pointerEvents[] = PointerEvent.getCoalescedEvents()
+getCoalescedEvents()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A sequence of {{domxref('PointerEvent')}} instances.
 

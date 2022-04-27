@@ -22,7 +22,8 @@ The `Worker` can send back information to the thread that spawned it using the {
 ## Syntax
 
 ```js
-worker.postMessage(message, [transfer]);
+postMessage(message)
+postMessage(message, transfer)
 ```
 
 ### Parameters
@@ -39,11 +40,11 @@ worker.postMessage(message, [transfer]);
 
     Transferable objects are instances of classes like {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects that can be transferred. `null` is not an acceptable value for `transfer`.
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 
-## Example
+## Examples
 
 The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{event("change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
 

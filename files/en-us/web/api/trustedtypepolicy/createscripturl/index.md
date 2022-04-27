@@ -16,13 +16,14 @@ The **`createScriptURL()`** method of the {{domxref("TrustedTypePolicy")}} inter
 ## Syntax
 
 ```js
-var str = TrustedTypePolicy.createScriptURL(input[,args]);
+createScriptURL(input)
+createScriptURL(input, args)
 ```
 
 ### Parameters
 
 - `input`
-  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
+  - : A string containing the string to be sanitized by the policy.
 - `args`{{optional_inline}}
   - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 

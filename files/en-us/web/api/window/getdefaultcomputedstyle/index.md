@@ -17,7 +17,8 @@ styles are taken into account.
 ## Syntax
 
 ```js
-var style = window.getDefaultComputedStyle(element [, pseudoElt]);
+getDefaultComputedStyle(element)
+getDefaultComputedStyle(element, pseudoElt)
 ```
 
 ### Parameters
@@ -35,7 +36,7 @@ object. The object is of the same type as the object returned by
 {{domxref("Window.getComputedStyle()")}}, but only takes into account user-agent and
 user rules.
 
-## Example
+## Examples
 
 ### Simple example
 

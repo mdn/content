@@ -23,14 +23,19 @@ piece of code once the timer expires.
 ## Syntax
 
 ```js
-var timeoutID = setTimeout(function[, delay, arg1, arg2, ...]);
-var timeoutID = setTimeout(function[, delay]);
-var timeoutID = setTimeout(code[, delay]);
+setTimeout(code)
+setTimeout(code, delay)
+
+setTimeout(functionRef)
+setTimeout(functionRef, delay)
+setTimeout(functionRef, delay, arg0)
+setTimeout(functionRef, delay, arg0, arg1)
+setTimeout(functionRef, delay, arg0, arg1, /* ... ,*/ argN)
 ```
 
 ### Parameters
 
-- `function`
+- `functionRef`
   - : A {{jsxref("function")}} to be executed after the timer expires.
 - `code`
   - : An alternative syntax that allows you to include a string instead of a function,

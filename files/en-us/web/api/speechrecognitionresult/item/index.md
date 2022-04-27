@@ -24,10 +24,15 @@ array syntax.
 ## Syntax
 
 ```js
-var myAlternative = speechRecognitionResultInstance[0];
+item(index)
 ```
 
-### Returns
+### Parameters
+
+- `index`
+  - : Index of the item to retrieve.
+
+### Return value
 
 A {{domxref("SpeechRecognitionAlternative")}} object.
 

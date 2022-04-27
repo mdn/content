@@ -23,7 +23,8 @@ The reading operation starts at the position given by the
 ## Syntax
 
 ```js
-var request = instanceOfLockedFile.readAsText(size[, encoding]);
+readAsText(size)
+readAsText(size, encoding)
 ```
 
 ### Parameters
@@ -34,7 +35,7 @@ var request = instanceOfLockedFile.readAsText(size[, encoding]);
   - : A string indicating the encoding to use for the returned data. By default, UTF-8 is
     assumed if this parameter is not specified.
 
-### Return
+### Return value
 
 A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
 In case of success, the request's `result` is a string representing the data

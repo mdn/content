@@ -20,7 +20,8 @@ The {{domxref("FileSystemEntry")}} interface's method
 ## Syntax
 
 ```js
-FileSystemEntry.getParent(successCallback[, errorCallback]);
+getParent(successCallback, errorCallback)
+getParent(successCallback)
 ```
 
 ### Parameters
@@ -49,9 +50,9 @@ FileSystemEntry.getParent(successCallback[, errorCallback]);
 - `FileError.SECURITY_ERR`
   - : Security restrictions prohibit obtaining the parent directory's information.
 
-## Example
+## Examples
 
-This example renames  the file specified by the variable `fileEntry` to
+This example renames the file specified by the variable `fileEntry` to
 `"newname.html"`.
 
 ```js

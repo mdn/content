@@ -34,7 +34,7 @@ getEntries()
     chronological order based on the entries'
     {{domxref("PerformanceEntry.startTime","startTime")}}.
 
-## Example
+## Examples
 
 ```js
 function use_PerformanceEntry_methods() {

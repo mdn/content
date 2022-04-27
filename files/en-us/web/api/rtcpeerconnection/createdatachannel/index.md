@@ -27,7 +27,8 @@ started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "
 ## Syntax
 
 ```js
-dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
+createDataChannel(label)
+createDataChannel(label, options)
 ```
 
 ### Parameters

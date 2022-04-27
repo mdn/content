@@ -17,7 +17,8 @@ In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** 
 ## Syntax
 
 ```js
-let element = document.createElement(tagName[, options]);
+createElement(tagName)
+createElement(tagName, options)
 ```
 
 ### Parameters

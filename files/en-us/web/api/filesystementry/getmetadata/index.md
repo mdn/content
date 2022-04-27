@@ -24,7 +24,8 @@ its modification date and time and its size.
 ## Syntax
 
 ```js
-FileSystemEntry.getMetadata(successCallback[, errorCallback]);
+getMetadata(successCallback)
+getMetadata(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -49,7 +50,7 @@ FileSystemEntry.getMetadata(successCallback[, errorCallback]);
 - `FileError.SECURITY_ERR`
   - : Security restrictions prohibit obtaining the requested metadata.
 
-## Example
+## Examples
 
 This example checks the size of a log file in a temporary folder and, if it exceeds a
 megabyte, moves it into a different directory.

@@ -52,7 +52,7 @@ revoke(descriptor)
 > origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
 > storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that calls its fulfillment handler with a
 {{domxref("PermissionStatus")}} object indicating the result of the request.
@@ -64,7 +64,7 @@ A {{jsxref("Promise")}} that calls its fulfillment handler with a
     the permission doesn't exist or is currently unsupported (e.g. `midi`, or
     `push` with `userVisibleOnly`).
 
-## Example
+## Examples
 
 This function can be used by an app to request that its own Geolocation API permission
 be revoked.

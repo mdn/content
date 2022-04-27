@@ -53,7 +53,7 @@ entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects th
 the filter are found, an empty list is returned. If no argument is given, all entries
 are returned.
 
-## Example
+## Examples
 
 ```js
 function print_perf_entry(pe) {

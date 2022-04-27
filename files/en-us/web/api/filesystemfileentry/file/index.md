@@ -21,7 +21,8 @@ the directory entry.
 ## Syntax
 
 ```js
-FileSystemFileEntry.file(successCallback[, errorCallback]);
+file(successCallback)
+file(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -38,7 +39,7 @@ FileSystemFileEntry.file(successCallback[, errorCallback]);
 
 {{jsxref("undefined")}}.
 
-## Example
+## Examples
 
 This example establishes a method, `readFile()`, reads a text file and calls
 a specified callback function with the received text (in a {{jsxref("String")}} object)

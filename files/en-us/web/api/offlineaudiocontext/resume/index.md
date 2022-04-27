@@ -23,14 +23,14 @@ not currently suspended or the rendering has not started, the promise is rejecte
 ## Syntax
 
 ```js
-OfflineAudioContext.resume().then(function() { /* ... */ });
+resume()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} resolving to {{jsxref('undefined')}}.
 

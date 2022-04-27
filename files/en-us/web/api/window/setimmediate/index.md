@@ -26,15 +26,23 @@ updates.
 ## Syntax
 
 ```js
-var immediateID = setImmediate(func, [param1, param2, ...]);
-var immediateID = setImmediate(func);
+setImmediate(func)
+setImmediate(func, param0)
+setImmediate(func, param0, param1)
+setImmediate(func, param0, param1, /* ... ,*/ paramN)
 ```
 
-- where `immediateID` is the ID of the immediate which can be used later
-  with {{DOMxRef("window.clearImmediate")}}.
-- `func` is the function you wish to call.
+### Parameters
 
-All parameters will be passed directly to your function.
+- `func`
+  - :  The function you wish to call.
+
+- `param0, ..., paramN`
+  - : All parameters will be passed directly to your function.
+
+### Return value
+
+The ID of the immediate which can be used later with {{DOMxRef("window.clearImmediate")}}.
 
 ## Notes
 

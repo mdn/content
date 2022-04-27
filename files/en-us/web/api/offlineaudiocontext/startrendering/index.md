@@ -27,18 +27,18 @@ eventually be removed, but currently both mechanisms are provided for legacy rea
 ## Syntax
 
 ```js
-startRendering();
+startRendering()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 
-## Example
+## Examples
 
 In this simple example, we declare both an {{domxref("AudioContext")}} and an
 `OfflineAudioContext` object. We use the `AudioContext` to load an
