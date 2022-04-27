@@ -66,7 +66,7 @@ It is good practice to organize the links into three groups:
 
 - General knowledge
   - : These links provide higher-level information about the term or topic.
-    For example: a link to a relevant [Wikipedia](https://wikipedia.org/) page.
+    For example: a link to a relevant [Wikipedia](https://www.wikipedia.org/) page.
 - Technical reference
   - : These links offer in-depth technical information, on MDN Web Docs or other sites.
 - Learn about it
@@ -77,7 +77,7 @@ It is good practice to organize the links into three groups:
 Some terms can have multiple meanings depending upon context.
 To resolve ambiguity, follow these guidelines:
 
-- The term's main page must be a disambiguation page containing the [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs)  macro.
+- The term's main page must be a disambiguation page containing the [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) macro.
 - The term has subpages that define the term for different contexts.
 
 Let's illustrate this with an example.

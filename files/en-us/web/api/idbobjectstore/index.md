@@ -31,7 +31,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 ## Methods
 
 - {{domxref("IDBObjectStore.add()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for adding new records to an object store.
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for adding new records to an object store.
 - {{domxref("IDBObjectStore.clear()")}}
   - : Creates and immediately returns an {{domxref("IDBRequest")}} object, and clears this object store in a separate thread. This is for deleting all current records out of an object store.
 - {{domxref("IDBObjectStore.count()")}}
@@ -57,7 +57,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 - {{domxref("IDBObjectStore.openKeyCursor()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursor")}}. Used for iterating through an object store with a key.
 - {{domxref("IDBObjectStore.put()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is `readwrite`.
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is `readwrite`.
 
 ## Example
 

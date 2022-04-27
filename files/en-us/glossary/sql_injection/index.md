@@ -12,7 +12,7 @@ SQL injection takes advantage of Web apps that fail to validate user input. Hack
 
 SQL injection can gain unauthorized access to a database or to retrieve information directly from the database. Many data breaches are due to SQL injection.
 
-[![](sql_inj_xss.gif)](https://www.acunetix.com/wp-content/uploads/2010/09/sql_inj_xss.gif)
+[![](sql_inj_xss.gif)](https://cdn.acunetix.com/wp_content/uploads/2010/09/sql_inj_xss.gif)
 
 ## How It Works
 

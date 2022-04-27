@@ -23,7 +23,7 @@ A-Frame is built on top of [WebGL](/en-US/docs/Web/API/WebGL_API), and provides 
 
 Let's start by setting up an environment to create something with A-Frame. We'll then build up a demo and run it. You should start off by:
 
-- Making sure you are using a modern browser with good WebGL support (and WebVR support if you have available VR hardware) such as the latest Firefox or Chrome — download [Firefox Nightly](https://nightly.mozilla.org/) or Chrome (v54 or higher).
+- Making sure you are using a modern browser with good WebGL support (and WebVR support if you have available VR hardware) such as the latest Firefox or Chrome — download [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) or Chrome (v54 or higher).
 - (Optional) set up a VR device such as Oculus Rift or Google Cardboard.
 - Create a new directory to store your project in.
 - Save a copy of the latest [A-Frame JavaScript library file](https://github.com/aframevr/aframe/tree/master/dist) inside your directory (check the GitHub repository for latest stable a dev builds).

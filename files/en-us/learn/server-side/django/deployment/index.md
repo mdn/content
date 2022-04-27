@@ -150,7 +150,7 @@ python3 manage.py check --deploy
 
 ## Example: Installing LocalLibrary on Heroku
 
-This section provides a practical demonstration of how to install _LocalLibrary_ on the [Heroku PaaS cloud](https://heroku.com).
+This section provides a practical demonstration of how to install _LocalLibrary_ on the [Heroku PaaS cloud](https://www.heroku.com/).
 
 ### Why Heroku?
 
@@ -588,7 +588,7 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 
 If you recall from the section on [getting the website ready to publish](#getting_your_website_ready_to_publish), we have to set environment variables for `DJANGO_SECRET_KEY` and `DJANGO_DEBUG`. Let's do this now.
 
-> **Note:** The secret key needs to be really secret! One way to generate a new key is to use the [Django Secret Key Generator](https://www.miniwebtool.com/django-secret-key-generator/).
+> **Note:** The secret key needs to be really secret! One way to generate a new key is to use the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/).
 
 We set `DJANGO_SECRET_KEY` using the `config:set` command (as shown below). Remember to use your own secret key!
 

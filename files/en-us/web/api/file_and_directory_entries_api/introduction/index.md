@@ -185,4 +185,4 @@ This section defines and explains terms used in the File and Directory Entries A
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Exploring the FileSystem APIs](https://www.html5rocks.com/en/tutorials/file/filesystem/) (HTML5 Rocks)
+- [Exploring the FileSystem APIs](https://web.dev/read-files/) (HTML5 Rocks)

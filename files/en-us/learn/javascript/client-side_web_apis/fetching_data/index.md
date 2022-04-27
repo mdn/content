@@ -55,7 +55,7 @@ A web page consists of an HTML page and (usually) various other files, such as s
 
 ![Traditional page loading](traditional-loading.svg)
 
-This model works perfectly well for many sites. But consider a website that's very data-driven. For example, a library website like the [Vancouver Public Library](https://vpl.ca). Among other things you could think of a site like this as a user interface to a database. It might let you search for a particular genre of book, or might show you recommendations for books you might like, based on books you've previously borrowed. When you do this, it needs to update the page with the new set of books to display. But note that most of the page content — including items like the page header, sidebar, and footer — stays the same.
+This model works perfectly well for many sites. But consider a website that's very data-driven. For example, a library website like the [Vancouver Public Library](https://www.vpl.ca/). Among other things you could think of a site like this as a user interface to a database. It might let you search for a particular genre of book, or might show you recommendations for books you might like, based on books you've previously borrowed. When you do this, it needs to update the page with the new set of books to display. But note that most of the page content — including items like the page header, sidebar, and footer — stays the same.
 
 The trouble with the traditional model here is that we'd have to fetch and load the entire page, even when we only need to update one part of it. This is inefficient and can result in a poor user experience.
 

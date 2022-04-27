@@ -16,7 +16,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 ### HTML
 
 - The `title` attribute now supports newline characters to allow multi-line tooltips.
-- If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the [specification](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html). Now the fallback content is rendered instead.
+- If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the [specification](https://html.spec.whatwg.org/multipage/canvas.html). Now the fallback content is rendered instead.
 - The `crossorigin` attribute is now supported on {{HTMLElement("video")}}.
 
 ### CSS

@@ -39,7 +39,7 @@ The following sites and tools are helpful when trying to track down history info
 - [Chromium bug database](https://bugs.chromium.org/)
 - [Chromium source code](https://chromium.googlesource.com/chromium)
 - [Chromium source code by release version number](https://chromium.googlesource.com/chromium/src.git/+refs)
-- [Google Chrome Platform Status](https://www.chromestatus.com/)
+- [Google Chrome Platform Status](https://chromestatus.com/features)
 - [Chromium Code Search](https://cs.chromium.org/)
 - [Find Releases Tool](https://storage.googleapis.com/chromium-find-releases-static/index.html)
 - [List of everything exposed to the Web in Chrome](https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/global-interface-listing-expected.txt?g=0)

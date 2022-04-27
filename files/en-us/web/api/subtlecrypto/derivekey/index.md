@@ -261,5 +261,5 @@ async function encrypt(plaintext, salt, iv) {
 
 - [HKDF specification](https://datatracker.ietf.org/doc/html/rfc5869).
 - [NIST guidelines for password-based key derivation](https://csrc.nist.gov/publications/detail/sp/800-132/final).
-- [Password storage cheat sheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet).
+- [Password storage cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html).
 - [Advice on choosing an iteration count for PBKDF2](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pkbdf2-sha256/3993#3993).

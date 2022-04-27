@@ -25,8 +25,8 @@ To understand common patterns, it helps to read browser documentation. If you ar
 - Microsoft: [Internet Explorer Standards Support Documentation](https://docs.microsoft.com/en-us/openspecs/ie_standards/ms-iestandlp/8aea05e3-8c1e-4a9a-9614-31f71e679457)
 - WebKit: Because there are several different editions of this engine, things are a little trickier.
 
-  - [The WebKit blog](https://www.webkit.org/blog/) and [Planet WebKit](https://planet.webkit.org/) aggregate the best articles by WebKit core developers.
-  - [Chrome platform status site](https://www.chromestatus.com/features) is also important.
+  - [The WebKit blog](https://webkit.org/blog/) and [Planet WebKit](https://planet.webkit.org/) aggregate the best articles by WebKit core developers.
+  - [Chrome platform status site](https://chromestatus.com/features) is also important.
   - As well as [the Apple web site.](https://developer.apple.com/technologies/safari/)
 
 ## Make things simple

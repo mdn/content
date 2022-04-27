@@ -320,7 +320,7 @@ Static sites can have as few or as many unique pages as you want. Just as framew
 
 Static site generators have been around for quite a long time, and they have seen a bit of a revival in the recent history of the web. A handful of powerful options are now available, such as [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/), [Eleventy](https://www.11ty.dev/), and [Gatsby](https://www.gatsbyjs.org/).
 
-If you'd like to learn more about static site generators on the whole, check out Tatiana Mac's [Beginner's guide to Eleventy](https://tatianamac.com/posts/beginner-eleventy-tutorial-parti/). In the first article of the series, she explains what a static site generator is, and how it relates to other means of publishing web content.
+If you'd like to learn more about static site generators on the whole, check out Tatiana Mac's [Beginner's guide to Eleventy](https://www.tatianamac.com/posts/beginner-eleventy-tutorial-parti/). In the first article of the series, she explains what a static site generator is, and how it relates to other means of publishing web content.
 
 ## Summary
 

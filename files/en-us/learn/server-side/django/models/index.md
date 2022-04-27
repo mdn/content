@@ -398,7 +398,7 @@ The method `__str__()` represents the `BookInstance` object using a combination 
 > **Note:** A little Python:
 >
 > - Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): `f'{self.id} ({self.book.title})'`.
-> - In older versions of this tutorial, we were using a [formatted string](https://www.python.org/dev/peps/pep-3101/) syntax, which is also a valid way of formatting strings in Python (e.g. `'{0} ({1})'.format(self.id,self.book.title)`).
+> - In older versions of this tutorial, we were using a [formatted string](https://peps.python.org/pep-3101/) syntax, which is also a valid way of formatting strings in Python (e.g. `'{0} ({1})'.format(self.id,self.book.title)`).
 
 ### Author model
 

@@ -29,7 +29,7 @@ Values of this type are objects. They contain the following properties:
 
 - `certificateTransparencyStatus` {{optional_inline}}
 
-  - : `String`. Indicates the [Certificate Transparency](https://www.certificate-transparency.org/) status for the connection. This may take any one of the following values:
+  - : `String`. Indicates the [Certificate Transparency](https://certificate.transparency.dev/) status for the connection. This may take any one of the following values:
 
     - "not_applicable"
     - "policy_compliant"

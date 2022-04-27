@@ -56,7 +56,7 @@ The possible values for the first parameter are listed below. If the first param
 
 ## Cross-origin resources
 
-The first set of directives control [CORS](https://www.w3.org/TR/cors/) (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.
+The first set of directives control [CORS](https://fetch.spec.whatwg.org/) (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. A web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the appropriate CORS headers.
 

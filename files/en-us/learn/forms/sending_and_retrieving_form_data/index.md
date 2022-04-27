@@ -192,7 +192,7 @@ Whichever HTTP method you choose, the server receives a string that will be pars
 
 ### Example: Raw PHP
 
-[PHP](https://php.net/) offers some global objects to access the data. Assuming you've used the `POST` method, the following example just takes the data and displays it to the user. Of course, what you do with the data is up to you. You might display it, store it into a database, send it by email, or process it in some other way.
+[PHP](https://www.php.net/) offers some global objects to access the data. Assuming you've used the `POST` method, the following example just takes the data and displays it to the user. Of course, what you do with the data is up to you. You might display it, store it into a database, send it by email, or process it in some other way.
 
 ```php
 <?php
@@ -314,7 +314,7 @@ If you've worked your way through these tutorials in order, you now know how to 
 If you want to learn more about securing a web application, you can dig into these resources:
 
 - [Server-side website programming first steps](/en-US/docs/Learn/Server-side/First_steps)
-- [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
+- [The Open Web Application Security Project (OWASP)](https://owasp.org/)
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
 {{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}

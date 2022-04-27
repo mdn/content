@@ -12,7 +12,7 @@ tags:
 This page lists Firefox's experimental and partially implemented features, including those for proposed or cutting-edge web platform standards, along with information on the builds in which they are present, whether or not they are activated "by default", and which _preference_ can be used to activate or deactivate them.
 This allows you to test the features before they are released.
 
-New features appear first in the [Firefox Nightly](https://nightly.mozilla.org/) build, where they are often enabled by default.
+New features appear first in the [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) build, where they are often enabled by default.
 They later propagate though to [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and eventually to the release build.
 Once a feature is enabled by default in a release build it is no longer experimental, and should be removed from the topic.
 
@@ -2013,5 +2013,5 @@ This feature lets you enable smooth pinch zooming on desktop computers without r
 ## See also
 
 - [Firefox developer release notes](/en-US/docs/Mozilla/Firefox/Releases)
-- [Firefox Nightly](https://nightly.mozilla.org/)
+- [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
