@@ -31,7 +31,7 @@ createAnswer()
 createAnswer(options)
 
 createAnswer(successCallback, failureCallback)
-createAnswer(successCallback, failureCallback, options) 
+createAnswer(successCallback, failureCallback, options)
 ```
 
 ### Parameters
