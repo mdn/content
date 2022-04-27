@@ -43,7 +43,7 @@ You are working at a school; currently your students are studying the planets of
 
 ### Steps to complete
 
-The following steps describe what you need to do to complete the table example. All the data you'll need is contained in the `planets-data.txt` file. If you have trouble visualizing the data, look at the live example above, or try drawing a diagram.
+The following steps describe what you need to do to complete the table example. All the data you'll need is contained in the `planets-data.txt` file. If you have trouble visualizing the data, look at the live example below, or try drawing a diagram.
 
 1. Open your copy of `blank-template.html`, and start the table off by giving it an outer container, a table header, and a table body. You don't need a table footer for this example.
 2. Add the provided caption to your table.
