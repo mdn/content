@@ -52,7 +52,7 @@ the immediate actions, just like {{DOMxRef("clearTimeout")}} for
 
 This method can be used instead of the `setTimeout(fn, 0)` method to execute
 [heavy
-operations](https://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/).
+operations](https://humanwhocodes.com/blog/2009/08/11/timed-array-processing-in-javascript/).
 
 The feature can be emulated in a few different ways:
 

@@ -44,7 +44,7 @@ Returns a node set like:
 
 ## Specifications
 
-[EXSLT - STR:SPLIT](http://www.exslt.org/str/functions/split/index.html)
+[EXSLT - STR:SPLIT](http://exslt.org/str/functions/split/index.html)
 
 ## See also
 

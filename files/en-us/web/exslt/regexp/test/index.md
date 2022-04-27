@@ -38,4 +38,4 @@ The character flags are:
 
 ## Specifications
 
-[EXSLT - REGEXP:TEST](http://www.exslt.org/regexp/functions/test/index.html)
+[EXSLT - REGEXP:TEST](http://exslt.org/regexp/functions/test/index.html)

@@ -269,7 +269,7 @@ function openRequestedSinglePopup(url) {
 
   - : You cannot reliably because the users can prevent the window from being resized by
     setting `dom.disable_window_move_resize` to `true` in
-    `about:config` or by editing accordingly their [user.js file](https://www.mozilla.org/support/firefox/edit#user).
+    `about:config` or by editing accordingly their [user.js file](http://kb.mozillazine.org/User.js_file).
 
     In general, users usually disable moving and resizing of existing windows because
     allowing authors' scripts to do so has been abused overwhelmingly in the past and the
@@ -370,7 +370,7 @@ recommendable usability and accessibility guidelines:
 - [Top Ten Web-Design Mistakes of
   2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
 - [Links
-  & JavaScript Living Together in Harmony](https://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
+  & JavaScript Living Together in Harmony](https://evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
 - [comp.lang.javascript newsgroup
   discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
 
@@ -492,7 +492,7 @@ authors:
 - web author is not aware of default margin (and/or border and/or padding) values
   applying to root element or body node in various browsers and various browser versions
 - user uses an user stylesheet ([userContent.css in
-  Mozilla-based browsers](https://www.mozilla.org/support/firefox/edit#content)) for his viewing habits that increases document box
+  Mozilla-based browsers](https://kb.mozillazine.org/index.php?title=UserContent.css)) for his viewing habits that increases document box
   dimensions (margin, padding, default font size)
 - user can customize individually the size (height or width) of most toolbars via
   operating system settings. E.g. window resizing borders, height of browser titlebar,
