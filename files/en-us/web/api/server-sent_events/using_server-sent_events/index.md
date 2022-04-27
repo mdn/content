@@ -138,7 +138,7 @@ Each message received has some combination of the following fields, one per line
 - `event`
   - : A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use `addEventListener()` to listen for named events. The `onmessage` handler is called if no event name is specified for a message.
 - `data`
-  - : The data field for the message. When the `EventSource` receives multiple consecutive lines that begin with `data:`, [it concatenates them](https://www.w3.org/TR/eventsource/#dispatchMessage), inserting a newline character between each one. Trailing newlines are removed.
+  - : The data field for the message. When the `EventSource` receives multiple consecutive lines that begin with `data:`, [it concatenates them](https://html.spec.whatwg.org/multipage/#dispatchMessage), inserting a newline character between each one. Trailing newlines are removed.
 - `id`
   - : The event ID to set the [`EventSource`](/en-US/docs/Web/API/EventSource) object's last event ID value.
 - `retry`

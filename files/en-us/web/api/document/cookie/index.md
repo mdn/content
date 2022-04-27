@@ -363,7 +363,7 @@ engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or b
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by
 preventing access to cookie value through Javascript. Read more about [Cookies and
-Security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/).
+Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
 
 ## Notes
 

@@ -223,5 +223,5 @@ In such cases, consider what the reality is — i.e. what browsers are actually 
 For example, as of Jan 2019 the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute has a conflict, which was summarized like so:
 
 > **Warning:** Spec conflict: The [WHATWG spec lists `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode), and modern browsers are working towards supporting it.
-> The [W3C HTML 5.2 spec](https://www.w3.org/TR/html52/index.html#contents) however no longer lists it (i.e. marks it as obsolete).
+> The [W3C HTML 5.2 spec](https://html.spec.whatwg.org/multipage/index.html#contents) however no longer lists it (i.e. marks it as obsolete).
 > You should consider the WHATWG definition as correct, until a consensus is reached.=

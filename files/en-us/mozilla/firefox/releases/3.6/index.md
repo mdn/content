@@ -131,7 +131,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/Updating_themes) for a list of changes related to themes.
 
 - [Lightweight themes](/en-US/docs/Themes/Lightweight_themes)
-  - : Firefox 3.6 supports lightweight themes; these are easy-to-create themes that apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing [Personas](https://www.getpersonas.com/) theme architecture into Firefox.
+  - : Firefox 3.6 supports lightweight themes; these are easy-to-create themes that apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing [Personas](https://addons.mozilla.org/en-US/firefox/themes/) theme architecture into Firefox.
 
 ### Miscellaneous
 
