@@ -20,9 +20,8 @@ The MathML `<mfrac>` element is used to display fractions.
 
 ## Attributes
 
-- `bevelled` {{deprecated_inline}}
+- `bevelled`
   - : Specifies the way the fraction is displayed. If `true`, the fraction line is bevelled, which means that numerator and denominator are displayed side by side and separated by a slash (/). Otherwise, if set to `false` (which is the default value), numerator and denominator are on top of each other.
-    This attribute is deprecated and will be removed in the future. Use U+2044 (fraction slash) instead.
 - `class`, `id`, `style`
   - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
 - `denomalign` {{deprecated_inline}}
