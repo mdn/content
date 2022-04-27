@@ -212,7 +212,7 @@ app.use(helmet());
 
 ## Example: Installing LocalLibrary on Heroku
 
-This section provides a practical demonstration of how to install _LocalLibrary_ on the [Heroku PaaS cloud](https://heroku.com).
+This section provides a practical demonstration of how to install _LocalLibrary_ on the [Heroku PaaS cloud](https://www.heroku.com/).
 
 ### Why Heroku?
 

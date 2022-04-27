@@ -223,7 +223,7 @@ canvas { width: 100%; height: 100%; }
 
 ## Conclusion
 
-This article has taught the very basics of shaders. Our example doesn't do much but there are many more cool things you can do with shaders — check out some really cool ones on [ShaderToy](https://shadertoy.com/) for inspiration and to learn from their sources.
+This article has taught the very basics of shaders. Our example doesn't do much but there are many more cool things you can do with shaders — check out some really cool ones on [ShaderToy](https://www.shadertoy.com/) for inspiration and to learn from their sources.
 
 ## See also
 

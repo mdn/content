@@ -31,4 +31,4 @@ An HTML file is normally saved with an `.htm` or `.html` extension, served by a 
 - [Our HTML tutorial](/en-US/docs/Learn/HTML)
 - [The web course on codecademy.com](https://www.codecademy.com/learn/learn-html)
 - [The HTML documentation on MDN](/en-US/docs/Web/HTML)
-- [The HTML specification](https://www.w3.org/TR/html5/)
+- [The HTML specification](https://html.spec.whatwg.org/multipage/)
