@@ -17,7 +17,7 @@ CT requirements can be satisfied via any one of the following mechanisms:
 - A TLS extension of type `signed_certificate_timestamp` sent during the handshake
 - Supporting OCSP stapling (that is, the `status_request` TLS extension) and providing a `SignedCertificateTimestampList`
 
-> **Note:** When a site enables the `Expect-CT` header, they are requesting that the browser check that any certificate for that site appears in **[public CT logs](https://www.certificate-transparency.org/known-logs)**.
+> **Note:** When a site enables the `Expect-CT` header, they are requesting that the browser check that any certificate for that site appears in **[public CT logs](https://github.com/google/certificate-transparency-community-site/blob/master/docs/google/known-logs.md)**.
 
 > **Note:** Browsers **ignore** the `Expect-CT` header over HTTP; the header only has effect on HTTPS connections.
 

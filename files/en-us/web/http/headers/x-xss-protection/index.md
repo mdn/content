@@ -17,7 +17,7 @@ The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explore
 
 > **Note:**
 >
-> - Chrome has [removed their XSS Auditor](https://www.chromestatus.com/feature/5021976655560704)
+> - Chrome has [removed their XSS Auditor](https://chromestatus.com/feature/5021976655560704)
 > - Firefox has not, and [will not implement `X-XSS-Protection`](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
 > - Edge has [retired their XSS filter](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)
 >

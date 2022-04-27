@@ -56,6 +56,6 @@ Some browsers may decide to disable certain APIs in non-secure contexts or apply
 ## See also
 
 - [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
-- ["secure context" query on Chrome Platform Status](https://www.chromestatus.com/features#secure%20context)
+- ["secure context" query on Chrome Platform Status](https://chromestatus.com/features#secure%20context)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

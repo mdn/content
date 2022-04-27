@@ -489,7 +489,7 @@ Examples of this usage can be [found above](#preflighted_requests).
 
 | Specification                                                    | Status                   | Comment                                                                          |
 | ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
+| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://fetch.spec.whatwg.org/) specification. |
 
 ## Browser compatibility
 

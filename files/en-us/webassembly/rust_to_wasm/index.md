@@ -249,7 +249,7 @@ $ wasm-pack build --target bundler
 
 We are building an npm package, so you need to have Node.js and npm installed.
 
-To get Node.js and npm, go to the [Get npm!](https://www.npmjs.com/get-npm) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
+To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
 
 Next, let's use \`npm link\` to make this package available to other JavaScript packages installed
 
