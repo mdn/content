@@ -235,7 +235,7 @@ This section describes the most common reasons.
 
 #### Nested timeouts
 
-As specified in the [HTML standard](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers),
+As specified in the [HTML standard](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers),
 browsers will enforce a minimum timeout of 4 milliseconds once a nested call to `setTimeout` has been scheduled 5 times.
 
 This can be seen in the following example, in which we nest a call to `setTimeout` with a delay of `0` milliseconds,

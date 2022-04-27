@@ -43,7 +43,7 @@ tags:
 
     from WebThing
 
-3. [<dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn>](https://wave.webaim.org/) from [WebAIM](https://www.webaim.org/)
+3. [<dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn>](https://wave.webaim.org/) from [WebAIM](https://webaim.org/)
 
     WAVE 4.0 beta is another powerful, free online webpage accessibility validation service that identifies accessibility errors and reports accessibility warnings about webpage related to Section 508 standards and/or the WCAG guidelines. Its purpose is to aid humans in the web accessibility evaluation process. Rather than providing a complex technical report, WAVE 4.0 shows the original web page with embedded icons and indicators that reveal the accessibility information within your page. You can get accessibility report for errors, warnings. You can view the structure and order view of the document. You can see a text-only view and outline view of the document.
 
