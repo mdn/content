@@ -252,7 +252,7 @@ The following steps show how you can use NPM to download a package, save it into
 
 ### Development dependencies
 
-If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool [eslint](https://eslint.org/) you would call NPM as shown:
+If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool [ESLint](https://eslint.org/) you would call NPM as shown:
 
 ```bash
 npm install eslint --save-dev

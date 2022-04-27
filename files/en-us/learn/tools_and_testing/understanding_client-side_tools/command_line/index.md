@@ -397,9 +397,9 @@ Stdin is read if it is piped to Prettier and no files are given.
 It's always worth at the very least skimming over the usage information, even if it is long.
 It'll help you to understand better how the tool is intended to be used.
 
-> **Note:** If you have not first installed prettier locally, then running `npx prettier` will download and run the latest version of prettier all in one go _just for that command_.
-> While that might sound great, new versions of prettier may slightly modify the output.
-> You want to install locally so that you are fixing the version of prettier that you are using for formatting until you are ready to change it.
+> **Note:** If you have not first installed Prettier locally, then running `npx prettier` will download and run the latest version of Prettier all in one go _just for that command_.
+> While that might sound great, new versions of Prettier may slightly modify the output.
+> You want to install locally so that you are fixing the version of Prettier that you are using for formatting until you are ready to change it.
 
 ### Playing with Prettier
 
@@ -416,7 +416,7 @@ function printMe(obj){console.log(obj.b.c)}
 printMe(myObj)
 ```
 
-We can run prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
+We can run Prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
 
 ```bash
 npx prettier --check index.js
@@ -430,7 +430,7 @@ index.js
 Code style issues found in the above file(s). Forgot to run Prettier?
 ```
 
-So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the prettier command will fix those up, leaving us to focus on actually writing useful code.
+So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the `prettier` command will fix those up, leaving us to focus on actually writing useful code.
 
 Now try running this version of the command:
 
@@ -461,7 +461,7 @@ printMe(myObj);
 
 Depending on your workflow (or the workflow that you pick) you can make this an automated part of your process. Automation is really where tools excel; our personal preference is the kind of automation that "just happens" without having to configure anything.
 
-With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke prettier:
+With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke Prettier:
 
 - Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
