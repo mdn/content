@@ -56,7 +56,7 @@ The possible values for the first parameter are listed below. If the first param
 
 ## Cross-origin resources
 
-The first set of directives control [CORS](https://www.w3.org/TR/cors/) (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.
+The first set of directives control [CORS](https://fetch.spec.whatwg.org/) (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. A web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the appropriate CORS headers.
 
@@ -165,60 +165,60 @@ Servers should use text/javascript for JavaScript resources as indicated in the 
 ```bash
 <IfModule mod_expires.c>
   # Data interchange
-    AddType application/atom+xml      atom
-    AddType application/json          json map topojson
-    AddType application/ld+json       jsonld
-    AddType application/rss+xml       rss
-    AddType application/geo+json      geojson
-    AddType application/rdf+xml       rdf
-    AddType application/xml           xml
+    AddType application/atom+xml atom
+    AddType application/json json map topojson
+    AddType application/ld+json jsonld
+    AddType application/rss+xml rss
+    AddType application/geo+json geojson
+    AddType application/rdf+xml rdf
+    AddType application/xml xml
   # JavaScript
-    AddType text/javascript           js mjs
+    AddType text/javascript js mjs
   # Manifest files
-    AddType application/manifest+json     webmanifest
-    AddType application/x-web-app-manifest+json         webapp
-    AddType text/cache-manifest           appcache
+    AddType application/manifest+json webmanifest
+    AddType application/x-web-app-manifest+json webapp
+    AddType text/cache-manifest appcache
   # Media files
-    AddType audio/mp4                     f4a f4b m4a
-    AddType audio/ogg                     oga ogg opus
-    AddType image/bmp                     bmp
-    AddType image/svg+xml                 svg svgz
-    AddType image/webp                    webp
-    AddType video/mp4                     f4v f4p m4v mp4
-    AddType video/ogg                     ogv
-    AddType video/webm                    webm
-    AddType image/x-icon    cur ico
+    AddType audio/mp4 f4a f4b m4a
+    AddType audio/ogg oga ogg opus
+    AddType image/bmp bmp
+    AddType image/svg+xml svg svgz
+    AddType image/webp webp
+    AddType video/mp4 f4v f4p m4v mp4
+    AddType video/ogg ogv
+    AddType video/webm webm
+    AddType image/x-icon cur ico
   # HEIF Images
-    AddType image/heic                    heic
-    AddType image/heif                    heif
+    AddType image/heic heic
+    AddType image/heif heif
   # HEIF Image Sequence
-    AddType image/heics                   heics
-    AddType image/heifs                   heifs
+    AddType image/heics heics
+    AddType image/heifs heifs
   # AVIF Images
-    AddType image/avif                    avif
+    AddType image/avif avif
   # AVIF Image Sequence
-    AddType image/avis                    avis
+    AddType image/avis avis
   # WebAssembly
-    AddType application/wasm              wasm
+    AddType application/wasm wasm
   # Web fonts
-    AddType font/woff                         woff
-    AddType font/woff2                        woff2
-    AddType application/vnd.ms-fontobject                eot
-    AddType font/ttf                          ttf
-    AddType font/collection                   ttc
-    AddType font/otf                          otf
+    AddType font/woff woff
+    AddType font/woff2 woff2
+    AddType application/vnd.ms-fontobject eot
+    AddType font/ttf ttf
+    AddType font/collection ttc
+    AddType font/otf otf
   # Other
-    AddType application/octet-stream          safariextz
-    AddType application/x-bb-appworld         bbaw
-    AddType application/x-chrome-extension    crx
-    AddType application/x-opera-extension     oex
-    AddType application/x-xpinstall           xpi
-    AddType text/calendar                     ics
-    AddType text/markdown                     markdown md
-    AddType text/vcard                        vcard vcf
-    AddType text/vnd.rim.location.xloc        xloc
-    AddType text/vtt                          vtt
-    AddType text/x-component                  htc
+    AddType application/octet-stream safariextz
+    AddType application/x-bb-appworld bbaw
+    AddType application/x-chrome-extension crx
+    AddType application/x-opera-extension oex
+    AddType application/x-xpinstall xpi
+    AddType text/calendar ics
+    AddType text/markdown markdown md
+    AddType text/vcard vcard vcf
+    AddType text/vnd.rim.location.xloc xloc
+    AddType text/vtt vtt
+    AddType text/x-component htc
 </IfModule>
 ```
 

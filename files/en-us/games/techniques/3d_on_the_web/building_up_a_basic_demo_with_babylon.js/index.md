@@ -9,7 +9,7 @@ tags:
 ---
 {{GamesSidebar}}
 
-[Babylon.js](https://babylonjs.com/) is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
+[Babylon.js](https://www.babylonjs.com/) is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
 
 We will try to create a simple demo first — a cube rendered on the screen. If you have already worked through our _Building up a basic demo_ [series](/en-US/docs/Games/Techniques/3D_on_the_web) with [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) or [A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) (or you are familiar with other 3D libraries) you'll notice that Babylon.js works on similar concepts: camera, light and objects.
 

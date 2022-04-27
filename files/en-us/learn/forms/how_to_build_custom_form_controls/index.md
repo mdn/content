@@ -80,7 +80,7 @@ It is best not to invent new user interactions. For any interaction you do add, 
 
 - [UXMatters.com](https://www.uxmatters.com/)
 - [UXDesign.com](http://uxdesign.com/)
-- [The UX Design section of SmashingMagazine](https://uxdesign.smashingmagazine.com/)
+- [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
 > **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
 
