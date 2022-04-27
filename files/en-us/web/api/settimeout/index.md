@@ -35,7 +35,7 @@ setTimeout(functionRef, delay, arg0, arg1, /* ... ,*/ argN)
 
 ### Parameters
 
-- `function`
+- `functionRef`
   - : A {{jsxref("function")}} to be executed after the timer expires.
 - `code`
   - : An alternative syntax that allows you to include a string instead of a function,
