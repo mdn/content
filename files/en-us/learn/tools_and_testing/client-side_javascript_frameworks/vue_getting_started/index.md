@@ -115,7 +115,7 @@ To explore various features of Vue, we will be building up a sample todo list ap
 
     to proceed.
 
-4. Next, you'll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit
+4. Next, you'll select a config for the linter / formatter. Navigate to "ESLint with error prevention only" and hit
 
     <kbd>Enter</kbd>
 
@@ -153,7 +153,7 @@ If you've never run the Vue CLI before, you'll get one more question — you'll 
 
 If everything went successfully, the CLI should have created a series of files and directories for your project. The most significant ones are as follows:
 
-- `.eslintrc.js`: This is a config file for [eslint](https://eslint.org/). You can use this to manage your linting rules.
+- `.eslintrc.js`: This is a config file for [ESLint](https://eslint.org/). You can use this to manage your linting rules.
 - `babel.config.js`: This is the config file for [Babel](https://babeljs.io/), which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.
 - `.browserslistrc`: This is a config for [Browserslist](https://github.com/browserslist/browserslist). You can use this to control which browsers your tooling optimizes for.
 - `public`: This directory contains static assets that are published, but not processed by [Webpack](https://webpack.js.org/) during build (with one exception; `index.html` gets some processing).
