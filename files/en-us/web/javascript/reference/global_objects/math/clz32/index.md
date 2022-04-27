@@ -92,6 +92,13 @@ function ctrz(integer){ // count trailing zeros
     // 2. Now, inversing the bits reveals the lowest bits
     return 32 - clz(~integer) |0; // `|0` ensures integer coercion
 }
+function ctrz2(integer){ // alternative ctrz
+    integer >>>= 0 // ensures coercion to Uint32
+    if (integer === 0) return 32; // the word is all zeros
+    integer &= -integer; // equivalent to `int = int & (~int + 1)`
+    return 31 - clz(x);
+}
+
 function ctron(integer){ // count trailing ones
     // No shift-filling-in-with-ones operator is available in
     // JavaScript, so the below code is the fastest
