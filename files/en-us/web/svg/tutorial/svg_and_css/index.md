@@ -11,6 +11,8 @@ tags:
   - SVG
   - Web
 ---
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+
 This page illustrates the application of CSS to the specialized language for creating graphics: [SVG](/en-US/docs/Web/SVG).
 
 Below you'll create a simple demonstration that runs in your SVG-enabled browser.
