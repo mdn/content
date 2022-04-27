@@ -116,7 +116,7 @@ Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects a
 - which object is thrown
 - for exceptions that are `DOMException` objects, the `name` of the exception.
 
-Here is an example where a method can raise a `DOMException` with a name of `IndexSizeError`, a `DOMException` with a name of `SyntaxError` and a JavaScript exception of type `TypeError`:
+Here is an example where a method can raise a `DOMException` with a name of `IndexSizeError`, a second `DOMException` with a name of `InvalidNodeTypeError` and a JavaScript exception of type `TypeError`:
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown …
