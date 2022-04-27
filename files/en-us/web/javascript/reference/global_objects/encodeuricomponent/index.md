@@ -87,7 +87,7 @@ For example, if a user writes `Jack & Jill`, the text may get encoded as
 ampersand could be interpreted on the server as the start of a new field and jeopardize
 the integrity of the data.
 
-For [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
+For [`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
 
 To be more stringent in adhering to {{rfc("3986")}} (which reserves !, ', (, ),
 and \*), even though these characters have no formalized URI delimiting uses, the

@@ -31,7 +31,7 @@ If you want to avoid using user agent detection, you have options!
 
 - Feature detection
 
-  - : Feature detection is where you don't try to figure out which browser is rendering your page, but instead, you check to see if the specific feature you need is available. If it's not, you use a fallback. In those rare cases where behavior differs between browsers, instead of checking the user agent string, you should instead implement a test to detect how the browser implements the API and determine how to use it from that. An example of feature detection is as follows. In 2017, Chrome [unflagged experimental lookbehind support in regular expressions](https://www.chromestatus.com/feature/5668726032564224), but no other browser supported it. So, you might have thought to do this:
+  - : Feature detection is where you don't try to figure out which browser is rendering your page, but instead, you check to see if the specific feature you need is available. If it's not, you use a fallback. In those rare cases where behavior differs between browsers, instead of checking the user agent string, you should instead implement a test to detect how the browser implements the API and determine how to use it from that. An example of feature detection is as follows. In 2017, Chrome [unflagged experimental lookbehind support in regular expressions](https://chromestatus.com/feature/5668726032564224), but no other browser supported it. So, you might have thought to do this:
 
 ```js
 // this code snippet splits a string in a special notation

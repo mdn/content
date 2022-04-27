@@ -136,6 +136,6 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
 - [Introduction to Feature Policy](https://developer.chrome.com/blog/feature-policy/)
-- [Feature policies on www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
+- [Feature policies on www.chromestatus.com](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

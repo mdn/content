@@ -115,7 +115,7 @@ If you need to install fonts on a system without administrator privilege, the ea
 You can actually render MathML using any font with a MATH table and related Open Font Format features. A list of such math fonts is provided below. You can use the _advanced font preference menu_ to configure the default font for mathematics. Alternatively, you can try the [MathML-fontsettings add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/).
 
 - [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
-- [Cambria Math](https://www.microsoft.com/typography/fonts/family.aspx?FID=360)
+- [Cambria Math](https://docs.microsoft.com/en-us/typography/font-list/?FID=360)
 - [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
 - [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math) (under development)
 - [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math)

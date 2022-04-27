@@ -80,7 +80,7 @@ The WebAssembly ecosystem is at a nascent stage; more tools will undoubtedly eme
 - Porting a C/C++ application with [Emscripten](https://emscripten.org/).
 - Writing or generating WebAssembly directly at the assembly level.
 - Writing a Rust application and targeting WebAssembly as its output.
-- Using [AssemblyScript](https://assemblyscript.org/) which looks similar to TypeScript and compiles to WebAssembly binary.
+- Using [AssemblyScript](https://www.assemblyscript.org/) which looks similar to TypeScript and compiles to WebAssembly binary.
 
 Let's talk about these options:
 
@@ -128,7 +128,7 @@ It is also possible to write Rust code and compile over to WebAssembly, thanks t
 
 ### Using AssemblyScript
 
-For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code intellisense, etc. You can check its documentation on <https://assemblyscript.org/>.
+For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code intellisense, etc. You can check its documentation on <https://www.assemblyscript.org/>.
 
 ## Summary
 

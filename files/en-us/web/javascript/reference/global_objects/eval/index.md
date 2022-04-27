@@ -73,7 +73,7 @@ eval(expression.toString());            // returns 4
 ```
 
 If you use the `eval` function _indirectly,_ by invoking it via a
-reference other than `eval`, [as of ECMAScript 5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2)
+reference other than `eval`, [as of ECMAScript 5](https://262.ecma-international.org/5.1/#sec-10.4.2)
 it works in the global scope rather than the local scope. This means, for
 instance, that function declarations create global functions, and that the code being
 evaluated doesn't have access to local variables within the scope where it's being
@@ -286,7 +286,7 @@ can (and should) write:
 setTimeout(function() { /* ... */ }, 1000);
 
 // instead of elt.setAttribute("onclick", "...") use:
-elt.addEventListener('click', function() { /* ... */ } , false); 
+elt.addEventListener('click', function() { /* ... */ } , false);
 ```
 
 [Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to

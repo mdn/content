@@ -14,7 +14,7 @@ In other articles we looked at how to [build a cross browser video player](/en-U
 
 ## Captioned video example
 
-In this article, we will refer to the Video player with captions example. This example uses an excerpt from the [Sintel open movie](https://www.sintel.org/), created by the [Blender Foundation](https://www.blender.org/foundation/).
+In this article, we will refer to the Video player with captions example. This example uses an excerpt from the [Sintel open movie](https://durian.blender.org/), created by the [Blender Foundation](https://www.blender.org/foundation/).
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
@@ -44,7 +44,7 @@ Video providers (such as the [Blender Foundation](https://www.blender.org/founda
 
 This section summarizes the modifications made to the previous article's code in order to facilitate the addition of subtitles to the video. If you are not interested in this, and just want to get straight into the JavaScript and more relevant CSS, skip to the [Subtitle implementation](#subtitle_implementation) section.
 
-In this example we are using a different video, [Sintel](https://www.sintel.org/), as it actually has some speech in it and therefore is better for illustrating how subtitles work!
+In this example we are using a different video, [Sintel](https://durian.blender.org/), as it actually has some speech in it and therefore is better for illustrating how subtitles work!
 
 ### HTML Markup
 
@@ -316,13 +316,13 @@ If, after reading through this article you decide that you can't be bothered to 
   - : HTML5 player supporting WebVTT.
 - [jwplayer](https://www.jwplayer.com/)
   - : This video player is very extensive and does a lot more than support video captions. It supports the WebVTT, SRT and DFXP formats.
-- [MediaElement.js](http://mediaelementjs.com/)
+- [MediaElement.js](http://www.mediaelementjs.com/)
   - : Another complete video player that also support video captions, albeit only in SRT format.
 - [LeanBack Player](https://www.leanbackplayer.com/)
   - : Yet another video player that supports WebVTT captions as well as providing other standard player functionality.
-- [SublimeVideo](https://sublimevideo.net)
+- [SublimeVideo](https://www.sublimevideo.net/)
   - : This player also supports captions through WebVTT and SRT files.
-- [Video.js](https://www.videojs.com/)
+- [Video.js](https://videojs.com/)
   - : Supports WebVTT video subtitles.
 - [Radiant Media Player](https://www.radiantmediaplayer.com)
   - : Supports multi-languages WebVTT closed captions
