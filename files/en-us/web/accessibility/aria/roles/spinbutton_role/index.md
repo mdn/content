@@ -66,16 +66,20 @@ There are some types of user interface components that, when represented in a pl
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) (required)
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax`, indicating the current value of the spinbutton. If not present, there is no default value.
+
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
   - : Assistive technologies often present the value of `aria-valuenow` as a number. If this would not be accurate, use `aria-valuetext` to provide the spinbutton with a more understandable value.
+  
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
   - : Set to a decimal value representing the minimum value and less than `aria-valuemax`. If not present, there is no default value.
+
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
   - : Set to a decimal value representing the maximum value and greater than `aria-valuemin`. If not present, there is no default value.
+
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : Defines the string value or identifies the element (or elements) that label the spinbutton element providing an accessible name. An accessible name is required.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) 
- - : Defines a string value that label the spinbutton element providing an accessible name when no visible label is available to provide the required accessible name.
+   - : Defines a string value that label the spinbutton element providing an accessible name when no visible label is available to provide the required accessible name.
 
 ## Examples
 
