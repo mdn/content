@@ -137,7 +137,7 @@ inputElem.addEventListener('change', changeGridAutoFlow);
 
 #### Result
 
-{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "230px")}}
+{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "260px")}}
 
 ## Specifications
 
