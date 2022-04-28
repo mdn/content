@@ -35,9 +35,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if the number of the row to delete, specified by the parameter,
-    is greater or equal to the number of available rows,
-    or if it is negative and not equal to the special index `-1`, representing the last row of the table.
+  - : Thrown if `index` is greater than or equal to the number of available rows or is a negative value other than `-1`.
 
 ## Examples
 
