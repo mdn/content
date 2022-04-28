@@ -93,9 +93,9 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 
 ### Parameters
 
-- parameter1{{Optional_Inline}}
+- `parameter1` {{Optional_Inline}}
   - : Include a brief description of the parameter and what it does here. Include one term and definition for each parameter. If the parameter is not optional, remove the \\{{optional_inline}} macro call.
-- parameter2
+- `parameter2`
   - : etc.
 
 ### Return value
@@ -106,9 +106,9 @@ If the method doesn't return anything, just put "{{jsxref('undefined')}}.".
 
 ### Exceptions
 
-- Exception1
+- `Exception1`
   - : Include a list of all the exceptions that the method can raise, along with descriptions of how that exception is raised. Include one term and definition for each exception.
-- Exception2
+- `Exception2`
   - : etc.
 
 Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects and regular JavaScript exceptions, like {{jsxref("TypeError")}} and {{jsxref("RangeError")}}. A web developer needs to know:
