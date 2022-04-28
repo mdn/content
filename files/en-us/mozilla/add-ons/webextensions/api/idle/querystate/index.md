@@ -42,7 +42,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-In this simple snippet, we call `queryState()` and then check if the returned `newState` is `idle` or `active`, logging a message as appropriate. Because we have specified  a `detectionIntervalInSeconds` of 15, an `idle` state will only be reported if there has been no user activity for at least 15 seconds
+In this simple snippet, we call `queryState()` and then check if the returned `newState` is `idle` or `active`, logging a message as appropriate. Because we have specified a `detectionIntervalInSeconds` of 15, an `idle` state will only be reported if there has been no user activity for at least 15 seconds
 
 ```js
 function onGot(newState) {

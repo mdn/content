@@ -47,7 +47,7 @@ We can draw the paddle wherever we want, but it should respond to the user's act
 
 - Two variables for storing information on whether the left or right control button is pressed.
 - Two event listeners for `keydown` and `keyup` events. We want to run some code to handle the paddle movement when the buttons are pressed.
-- Two functions handling the `keydown` and `keyup` events  the code that will be run when the buttons are pressed.
+- Two functions handling the `keydown` and `keyup` events the code that will be run when the buttons are pressed.
 - The ability to move the paddle left and right
 
 Pressed buttons can be defined and initialized with boolean variables like in the example. Add these lines somewhere near the rest of your variables:

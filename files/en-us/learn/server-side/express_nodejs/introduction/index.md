@@ -447,7 +447,7 @@ $ npm install mongodb
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
 
 ```js
-//this works with older versions of  mongodb version ~ 2.2.33
+//this works with older versions of mongodb version ~ 2.2.33
 const MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {

@@ -36,7 +36,7 @@ Values of this type are strings. Possible values are:
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`
-  - : Resources loaded by a  {{HTMLElement("video")}} or  {{HTMLElement("audio")}} element.
+  - : Resources loaded by a {{HTMLElement("video")}} or {{HTMLElement("audio")}} element.
 - `object`
 
   - : Resources loaded by an {{HTMLElement("object")}} or {{HTMLElement("embed")}} element.

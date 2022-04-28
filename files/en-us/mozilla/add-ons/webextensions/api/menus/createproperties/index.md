@@ -12,7 +12,7 @@ browser-compat: webextensions.api.menus.createProperties
 ---
 {{AddonSidebar()}}
 
-An `object` passed to the  {{WebExtAPIRef("menus.create()", "menus.create()")}} or  {{WebExtAPIRef("menus.update()", "menus.update()")}} methods to describe the properties of the new or updated menu item.
+An `object` passed to the {{WebExtAPIRef("menus.create()", "menus.create()")}} or {{WebExtAPIRef("menus.update()", "menus.update()")}} methods to describe the properties of the new or updated menu item.
 
 - `checked` {{optional_inline}}
   - : `boolean`. The initial state of a checkbox or radio item: `true` for selected and `false` for unselected. Only one radio item can be selected at a time in a given group of radio items.

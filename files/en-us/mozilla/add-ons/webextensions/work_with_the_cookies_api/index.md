@@ -202,7 +202,7 @@ A background script ([background.js](https://github.com/mdn/webextensions-exampl
     });
 ```
 
-If the `"bgpicker"` cookie exists for the website, the details of the icon and color selected earlier are retrieved and passed to the  content script [updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js) using messages:
+If the `"bgpicker"` cookie exists for the website, the details of the icon and color selected earlier are retrieved and passed to the content script [updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js) using messages:
 
 ```js
     gettingCookies.then((cookie) => {

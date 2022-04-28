@@ -257,7 +257,7 @@ If you view these checkboxes in a browser that doesn't support {{cssxref("appear
 
 ## What can be done about the "ugly" elements?
 
-Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly  style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
 The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.
 
