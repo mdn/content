@@ -27,7 +27,7 @@ replaceChildren(param1, param2, /* ... ,*/ paramN)
 
 ### Parameters
 
-- `param1`, ..., `paramN`
+- `param1`, …, `paramN`
   - : A set of {{domxref("Node")}} or string objects to replace the
     `Element`'s existing children with. If no replacement objects are
     specified, then the `Element` is emptied of all child nodes.

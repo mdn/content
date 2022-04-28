@@ -26,7 +26,7 @@ assign(node1, node2, /* ... ,*/ nodeN)
 
 ### Parameters
 
-- `node1`, ..., `nodeN`
+- `node1`, …, `nodeN`
   - : A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.
 
 ### Return value

@@ -23,7 +23,7 @@ replaceWith(node1, node2, /* ... ,*/ nodeN)
 
 ### Parameters
 
-- `node1`, ..., `nodeN`
+- `node1`, …, `nodeN`
   - : A set of nodes to replace the {{domxref("DocumentType")}} with.
 
 ### Exceptions

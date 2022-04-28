@@ -25,7 +25,7 @@ remove(token1, token2, /* ... ,*/ tokenN)
 
 ### Parameters
 
-- `token1`, ..., `tokenN`
+- `token1`, …, `tokenN`
   - : A string representing the token you want to remove from the list.
     If the string is not in the list, no error is thrown, and nothing happens.
 

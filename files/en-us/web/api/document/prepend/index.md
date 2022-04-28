@@ -29,7 +29,7 @@ preppend(param1, param2, /* ... ,*/ paramN)
 
 ### Parameters
 
-- `param1`, ..., `paramN`
+- `param1`, …, `paramN`
   - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Exceptions
