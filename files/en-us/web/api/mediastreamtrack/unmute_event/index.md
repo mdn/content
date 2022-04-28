@@ -23,6 +23,19 @@ This ends the {{domxref("MediaStreamTrack.muted", "muted")}} state that began wi
 
 This event is not cancelable and does not bubble.
 
+## Unmute track
+
+```js
+const transceivers = peer.getTransceivers();
+
+const audioTrack = transceivers[0];
+audioTrack.direction = 'sendrecv';
+
+const videoTrack = transceivers[1];
+videoTrack.direction = 'sendrecv';
+```
+`transceivers` is an array of {{domxref("RTCRtpTransceiver")}} where you can find the audio or video track sent and received. More information about the behavior around modify {{domxref("RTCRtpTransceiver.direction", "direction")}}.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -64,6 +77,30 @@ musicTrack.mute = event = > {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
 ```
+
+## Full example
+
+```js
+// Peer 1 (Receiver)
+audioTrack.addEventListener('unmute', event => {
+  // Do something in UI
+});
+
+videoTrack.addEventListener('unmute', event => {
+  // Do something in UI
+});
+
+// Peer 2 (Sender)
+const transceivers = peer.getTransceivers();
+
+const audioTrack = transceivers[0];
+audioTrack.direction = 'sendrecv';
+
+const videoTrack = transceivers[1];
+videoTrack.direction = 'sendrecv';
+```
+
+> **Note:** In Safari < 14.1 exists an active bug which not fire the `unmute` event.
 
 ## Specifications
 
