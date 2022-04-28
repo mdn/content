@@ -19,9 +19,9 @@ The **`assign()`** method of the
 ## Syntax
 
 ```js
-assign(node0)
-assign(node0, node1)
-assign(node0, node1, /* ... ,*/ nodeN)
+assign(node1)
+assign(node1, node2)
+assign(node1, node2, /* ... ,*/ nodeN)
 ```
 
 ### Parameters

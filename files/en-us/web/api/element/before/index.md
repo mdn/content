@@ -19,14 +19,14 @@ String objects are inserted as equivalent {{domxref("Text")}} nodes.
 ## Syntax
 
 ```js
-before(param0)
-before(param0, param1)
-before(param0, param1, /* ... ,*/ paramN)
+before(param1)
+before(param1, param2)
+before(param1, param2, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `param0, ..., paramN`
+- `param1`, ..., `paramN`
   - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Exceptions

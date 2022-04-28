@@ -22,14 +22,14 @@ This method prepends a child to a `Document`. To prepend to an arbitrary element
 ## Syntax
 
 ```js
-prepend(param0)
-prepend(param0, param1)
-preppend(param0, param1, /* ... ,*/ paramN)
+prepend(param1)
+prepend(param1, param2)
+preppend(param1, param2, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `param0, ..., paramN`
+- `param1`, ..., `paramN`
   - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Exceptions

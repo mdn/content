@@ -19,14 +19,14 @@ The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef(
 ## Syntax
 
 ```js
-createTouchList(touch0)
-createTouchList(touch0, touch1)
-createTouchList(touch0, touch1, /* ... ,*/ touchN)
+createTouchList(touch1)
+createTouchList(touch1, touch2)
+createTouchList(touch1, touch2, /* ... ,*/ touchN)
 ```
 
 ### Parameters
 
-- `touch0, ..., touchN`
+- `touch1`, ..., `touchN`
   - : Zero or more {{DOMxRef("Touch")}} objects. **Note:** Firefox also
     accepts an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of
     {{DOMxRef("Touch")}} objects.

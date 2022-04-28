@@ -30,14 +30,14 @@ Differences from {{domxref("Node.appendChild()")}}:
 ## Syntax
 
 ```js
-append(param0)
-append(param0, param1)
-append(param0, param1, /* ... ,*/ paramN)
+append(param1)
+append(param1, param2)
+append(param1, param2, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `param0, ..., paramN`
+- `param1`, ..., `paramN`
   - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Exceptions

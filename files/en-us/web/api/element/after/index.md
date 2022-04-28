@@ -19,14 +19,14 @@ String objects are inserted as equivalent {{domxref("Text")}} nodes.
 ## Syntax
 
 ```js
-after(node0)
-after(node0, node1)
-after(node0, node1, /* ... ,*/ nodeN)
+after(node1)
+after(node1, node2)
+after(node1, node2, /* ... ,*/ nodeN)
 ```
 
 ### Parameters
 
-- `node0, ..., nodeN`
+- `node1`, ..., `nodeN`
   - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Exceptions

@@ -19,14 +19,14 @@ objects are inserted as equivalent {{domxref("Text")}} nodes.
 ## Syntax
 
 ```js
-replaceWith(param0)
-replaceWith(param0, param1)
-replaceWith(param0, param1, /* ... ,*/ paramN)
+replaceWith(param1)
+replaceWith(param1, param2)
+replaceWith(param1, param2, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `param0, ..., paramN`
+- `param1`, ..., `paramN`
   - : A set of {{domxref("Node")}} or string objects to replace.
 
 ### Exceptions

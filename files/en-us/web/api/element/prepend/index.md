@@ -21,14 +21,14 @@ equivalent {{domxref("Text")}} nodes.
 ## Syntax
 
 ```js
-prepend(param0)
-prepend(param0, param1)
-prepend(param0, param1, /* ... ,*/ paramN)
+prepend(param1)
+prepend(param1, param2)
+prepend(param1, param2, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `param0, ..., paramN`
+- `param1`, ..., `paramN`
   - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Return value
