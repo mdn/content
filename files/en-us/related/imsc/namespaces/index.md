@@ -44,7 +44,7 @@ But this is not very efficient. Imagine a document with hundreds of subtitles. T
 
 ### Default namespaces
 
-Fortunately, you don't need to do the above — instead you can just use a default namespace. If you set the attribute `xmlns` on the  document's root element to the value `http://www.w3.org/ns/ttml`, all elements nested inside the root will inherit this namespace — they will all have that namespace too.
+Fortunately, you don't need to do the above — instead you can just use a default namespace. If you set the attribute `xmlns` on the document's root element to the value `http://www.w3.org/ns/ttml`, all elements nested inside the root will inherit this namespace — they will all have that namespace too.
 
 ```xml
 <tt xmlns="http://www.w3.org/ns/ttml" xml:lang="en">

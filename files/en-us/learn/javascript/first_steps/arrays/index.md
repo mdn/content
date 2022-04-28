@@ -183,7 +183,7 @@ if (index !== -1) {
 console.log(cities);     // [ "Manchester", "Edinburgh", "Carlisle" ]
 ```
 
-In this call to `splice()`, the first argument says where to start removing items, and the second argument says  how many items should be removed. So you can remove more than one item:
+In this call to `splice()`, the first argument says where to start removing items, and the second argument says how many items should be removed. So you can remove more than one item:
 
 ```js
 const cities = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];

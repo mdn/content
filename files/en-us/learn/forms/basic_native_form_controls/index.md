@@ -62,7 +62,7 @@ All basic text controls share some common behaviors:
 
 ### Single line text fields
 
-A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to `text`, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
+A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to `text`, or by omitting the {{htmlattrxref("type","input")}} attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
 
 > **Note:** You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 

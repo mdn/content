@@ -19,7 +19,7 @@ After modifying the gameplay mechanics, we are now able to lose — this is grea
 
 ## Setting up the brick variables
 
-The overall aim of this lesson is to render a few lines of code for the  bricks, using a nested loop that works through a two-dimensional array. First however we need to set up some variables to define information about the bricks such as their width and height, rows and columns, etc. Add the following lines to your code below the variables which you have previously declared in your program.
+The overall aim of this lesson is to render a few lines of code for the bricks, using a nested loop that works through a two-dimensional array. First however we need to set up some variables to define information about the bricks such as their width and height, rows and columns, etc. Add the following lines to your code below the variables which you have previously declared in your program.
 
 ```js
 var brickRowCount = 3;

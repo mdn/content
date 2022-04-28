@@ -100,7 +100,7 @@ Lists the changes to the state of the tab that was updated. To learn more about 
 - `hidden`{{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - `isArticle`{{optional_inline}}
-  - : `boolean`. True if the tab is an article and is therefore eligible for display in  {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
+  - : `boolean`. True if the tab is an article and is therefore eligible for display in {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
 - `mutedInfo`{{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.
 - `pinned`{{optional_inline}}

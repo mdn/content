@@ -61,7 +61,7 @@ original[0] = 1;
 console.log(clone[0]);  // 0
 
 // Transferring the Uint8Array would throw an exception as it is not a transferrable object
-// const transferred = structuredClone(original, {transfer: [original]}); 
+// const transferred = structuredClone(original, {transfer: [original]});
 
 // We can transfer Uint8Array.buffer.
 const transferred = structuredClone(original, {transfer: [original.buffer]});

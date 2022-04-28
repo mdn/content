@@ -180,7 +180,7 @@ Let's have an example by turning our box into a cloud:
 }
 
 .fancy::before {
-  /* This is the  size of the clouds left ear */
+  /* This is the size of the clouds left ear */
   width  : 125px;
   height : 125px;
 
