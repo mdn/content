@@ -24,7 +24,7 @@ read-only, or do you want to write to the object stores?) The default value is
 
 ## Value
 
-An {{domxref("IDBTransactionMode")}} object defining the mode for isolating access to
+An object defining the mode for isolating access to
 data in the current object stores:
 
 - `readonly`

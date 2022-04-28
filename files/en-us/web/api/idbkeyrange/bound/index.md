@@ -49,7 +49,7 @@ bound(lower, upper, lowerOpen, upperOpen)
 ### Exceptions
 
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown when one of the following conditions is met:<
+  - : Thrown when one of the following conditions is met:
     - The lower or upper parameters were not passed a valid key.
     - The lower key is greater than the upper key.
     - The lower key and upper key match and either of the bounds are open.

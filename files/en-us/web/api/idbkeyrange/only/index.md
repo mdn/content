@@ -37,7 +37,7 @@ only(value)
 ### Exceptions
 
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the value parameter passed was not a valid key.
+  - : Thrown if the `value` parameter was not a valid key.
 
 ## Examples
 

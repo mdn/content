@@ -71,7 +71,7 @@ request are fired.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the value of version is zero or a negative number or not a number.
+  - : Thrown if the value of `version` is not a number greater than zero.
 
 ## Examples
 

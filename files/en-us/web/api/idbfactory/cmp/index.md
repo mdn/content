@@ -53,7 +53,7 @@ possible values and their meanings:
 
 ### Exceptions
 
-- `DataError`{{domxref("DOMException")}}
+- `DataError` {{domxref("DOMException")}}
   - : Thrown if one of the supplied keys was not a valid key.
 
 ## Examples

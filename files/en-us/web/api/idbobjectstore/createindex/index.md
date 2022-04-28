@@ -47,7 +47,7 @@ createIndex(indexName, keyPath, objectParameters)
     `keyPath`.
 - `objectParameters` {{optional_inline}}
 
-  - : An {{domxref("IDBIndexParameters")}} object, which can include the following
+  - : An object which can include the following
     properties:
     - `unique`
       - : If true, the index will not allow duplicate values for a single key.
@@ -58,10 +58,10 @@ createIndex(indexName, keyPath, objectParameters)
     - `locale` {{non-standard_inline}}
       - : Currently Firefox-only (43+), this allows you to specify a locale for the index.
         Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale
-        (see [locale-aware sortin](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting)).
+        (see [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting)).
         You can specify its value in one of three ways:
         - `string`: A string containing a specific locale code, e.g. `en-US`, or `pl`.
-        - `auto`</code>`: The platform default locale will be used (may be changed by user agent settings.)
+        - `auto`: The platform default locale will be used (may be changed by user agent settings).
         - `null` or `undefined`: If no locale is specified, normal JavaScript sorting will be used — not locale-aware.
 
 ### Return value

@@ -46,7 +46,7 @@ Void.
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the `position` specified is not a recognized value.
+  - : Thrown if `where` is not a recognized value.
 
 ### Visualization of position names
 
