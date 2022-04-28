@@ -64,7 +64,7 @@ function previewFile() {
 
 ### Live Result
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+{{EmbedLiveSample("Examples", "100%", 240)}}
 
 ## Example reading multiple files
 

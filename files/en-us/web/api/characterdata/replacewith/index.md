@@ -49,7 +49,7 @@ em.textContent = "Italic text";
 text.replaceWith(em); // Replace `Some text` by `Italic text`
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

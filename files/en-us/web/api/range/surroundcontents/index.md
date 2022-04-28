@@ -55,7 +55,7 @@ range.surroundContents(newParent);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

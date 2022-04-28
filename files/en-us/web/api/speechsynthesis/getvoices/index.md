@@ -71,7 +71,7 @@ if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !=
 <select id="voiceSelect"></select>
 ```
 
-{{EmbedLiveSample("Example", 400, 25)}}
+{{EmbedLiveSample("Examples", 400, 25)}}
 
 ## Specifications
 

@@ -92,7 +92,7 @@ slider.onpointerup = stopSliding;
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
