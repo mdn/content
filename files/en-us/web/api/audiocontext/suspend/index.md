@@ -23,6 +23,10 @@ This method will cause an `INVALID_STATE_ERR` exception to be thrown if called o
 suspend()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}. The promise is rejected if the context has already been closed.
