@@ -46,7 +46,7 @@ Returns a {{jsxref('Promise')}} which fulfills with an array of
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : No parameter is specified or the `type` is not that of an
     `ImageBitmapSource`.
 

@@ -40,7 +40,7 @@ A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` par
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is locked.
 
 ## Examples

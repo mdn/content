@@ -43,7 +43,7 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemFileHandle')}
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the name specified is not a valid string or contains characters that would
     interfere with the native file system
 - `TypeMismatchError` {{domxref("DOMException")}}

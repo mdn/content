@@ -100,7 +100,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 
         Additional information can be found in {{domxref("RTCIceCandidate.usernameFragment")}}.
 
-    The method will throw a `TypeError` exception if both `sdpMid` and `sdpMLineIndex` are `null`.
+    The method will throw a {{jsxref("TypeError")}} exception if both `sdpMid` and `sdpMLineIndex` are `null`.
 
     The contents of the object should be constructed from a message received over the signaling channel, describing a newly received ICE candidate that's ready to be delivered to the local ICE agent.
 
@@ -137,7 +137,7 @@ When an error occurs while attempting to add the ICE candidate, the
 below as the {{domxref("DOMException.name", "name")}} attribute in the specified
 {{domxref("DOMException")}} object passed to the rejection handler.
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the specified candidate's {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} and
     {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} are both `null`.
 - `InvalidStateError` {{domxref("DOMException")}}

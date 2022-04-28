@@ -72,7 +72,7 @@ The promise may be rejected with the following exceptions:
     For example, a browser may require that the top-level browsing context's `Document` is full screen.
     The promise may also be rejected with this error if the document has the sandboxed orientation lock browsing context flag set.
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The `orientation` argument was not supplied.
 
 ## Examples

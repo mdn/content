@@ -43,9 +43,9 @@ A {{jsxref('Promise')}} which returns undefined.
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError`{{domxref("DOMException")}}
   - : If the {{domxref('PermissionState')}} is not 'granted'.
-- TypeError
+- {{jsxref("TypeError")}}
   - : If the size is undefined or not an unsigned long.
 
 ## Examples

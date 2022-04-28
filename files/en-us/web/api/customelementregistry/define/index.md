@@ -57,7 +57,7 @@ Void.
     or <code>extends</code> is specified but the element it is trying to extend is an unknown element.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the provided name is not a [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the referenced constructor is not a constructor.
 
 > **Note:** You'll often get `NotSupportedError`s thrown that

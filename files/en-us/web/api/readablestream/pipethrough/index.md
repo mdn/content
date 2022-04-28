@@ -67,8 +67,8 @@ The `readable` side of the `transformStream`.
 
 ### Exceptions
 
-- `TypeError`
-  - : The `writable` and/or `readable` property of `transformStream` are undefined.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `writable` and/or `readable` property of `transformStream` are undefined.
 
 ## Examples
 

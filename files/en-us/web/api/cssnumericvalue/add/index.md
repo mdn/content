@@ -36,8 +36,8 @@ A {{domxref('CSSMathSum')}}
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

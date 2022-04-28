@@ -38,7 +38,7 @@ None.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `config` is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("AudioEncoder.state","state")}} is `"closed"`.

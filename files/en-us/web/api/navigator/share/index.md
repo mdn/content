@@ -48,9 +48,9 @@ A {{jsxref("Promise")}} that resolves with `undefined`, or rejected with one of 
 
 The {{jsxref("Promise")}} may be rejected with one of the following `DOMException` values:
 
-- `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : The [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission has not been granted, or the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : The specified share data cannot be validated. Possible reasons include:
 
@@ -59,9 +59,9 @@ The {{jsxref("Promise")}} may be rejected with one of the following `DOMExceptio
     - Files are specified but the implementation does not support file sharing.
     - Sharing the specified data would be considered a "hostile share" by the user-agent.
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The user canceled the share operation or there are no share targets available.
-- `DataError`
+- `DataError` {{domxref("DOMException")}}
   - : There was a problem starting the share target or transmitting the data.
 
 ## Shareable file types

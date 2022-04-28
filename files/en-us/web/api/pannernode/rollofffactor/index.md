@@ -27,8 +27,8 @@ A number whose range depends on the {{ domxref("PannerNode.distanceModel", "dist
 
 ### Exceptions
 
-- `RangeError`
-  - : The property has been given a value that is outside the accepted range.
+- {{jsxref("RangeError")}}
+  - : Thrown if the property has been given a value that is outside the accepted range.
 
 ## Examples
 
