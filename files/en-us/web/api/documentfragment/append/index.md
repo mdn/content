@@ -14,7 +14,7 @@ browser-compat: api.DocumentFragment.append
 
 The **`DocumentFragment.append()`** method
 inserts a set of {{domxref("Node")}} objects or string objects after
-the last child of the document fragment. string objects
+the last child of the document fragment. String objects
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 This method appends a child to a `DocumentFragment`. To append to an arbitrary element in the tree, see {{domxref("Element.append()")}}.

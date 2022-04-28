@@ -14,7 +14,7 @@ browser-compat: api.Element.append
 
 The **`Element.append()`** method
 inserts a set of {{domxref("Node")}} objects or string objects after
-the last child of the `Element`. string objects
+the last child of the `Element`. String objects
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 Differences from {{domxref("Node.appendChild()")}}:

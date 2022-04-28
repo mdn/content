@@ -15,7 +15,7 @@ browser-compat: api.Element.prepend
 
 The **`Element.prepend()`** method inserts a set of
 {{domxref("Node")}} objects or string objects before the first child
-of the {{domxref("Element")}}. string objects are inserted as
+of the {{domxref("Element")}}. String objects are inserted as
 equivalent {{domxref("Text")}} nodes.
 
 ## Syntax

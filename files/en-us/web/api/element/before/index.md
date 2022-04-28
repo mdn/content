@@ -14,7 +14,7 @@ browser-compat: api.Element.before
 The **`Element.before()`** method inserts a set of
 {{domxref("Node")}} or string objects in the children list of this
 `Element`'s parent, just before this `Element`.
-string objects are inserted as equivalent {{domxref("Text")}} nodes.
+String objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 

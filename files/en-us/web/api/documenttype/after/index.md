@@ -14,7 +14,7 @@ browser-compat: api.DocumentType.after
 The **`DocumentType.after()`** method inserts a set of
 {{domxref("Node")}} or string objects in the children list of the
 `DocumentType`'s parent, just after the `DocumentType`.
-string objects are inserted as equivalent {{domxref("Text")}} nodes.
+String objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 

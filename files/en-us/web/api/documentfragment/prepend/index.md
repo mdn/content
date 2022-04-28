@@ -14,7 +14,7 @@ browser-compat: api.DocumentFragment.prepend
 
 The **`DocumentFragment.prepend()`** method
 inserts a set of {{domxref("Node")}} objects or string objects before
-the first child of the document fragment. string objects
+the first child of the document fragment. String objects
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 This method prepends a child to a `DocumentFragment`. To prepend to an arbitrary element in the tree, see {{domxref("Element.prepend()")}}.

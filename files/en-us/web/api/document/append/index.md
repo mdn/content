@@ -14,7 +14,7 @@ browser-compat: api.Document.append
 
 The **`Document.append()`** method
 inserts a set of {{domxref("Node")}} objects or string objects after
-the last child of the document. string objects
+the last child of the document. String objects
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 This method appends a child to a `Document`. To append to an arbitrary element in the tree, see {{domxref("Element.append()")}}.

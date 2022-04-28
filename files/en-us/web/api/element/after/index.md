@@ -14,7 +14,7 @@ browser-compat: api.Element.after
 The **`Element.after()`** method inserts a set of
 {{domxref("Node")}} or string objects in the children list of the
 `Element`'s parent, just after the `Element`.
-string objects are inserted as equivalent {{domxref("Text")}} nodes.
+String objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
