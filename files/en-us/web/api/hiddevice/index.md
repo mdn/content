@@ -44,6 +44,8 @@ This interface also inherits methods from {{domxref("EventTarget")}}.
   - : Opens a connection to this HID device, and returns a {{jsxref("Promise")}} which resolves once the connection has been successful.
 - {{domxref("HIDDevice.close()")}}
   - : Closes the connection to this HID device, and returns a {{jsxref("Promise")}} which resolves once the connection has been closed.
+- {{domxref("HIDDevice.forget()")}}
+  - : Closes the connection to this HID device and resets access permission, and returns a {{jsxref("Promise")}} which resolves once the permission was reset.
 - {{domxref("HIDDevice.sendReport()")}}
   - : Sends an output report to this HID Device, and returns a {{jsxref("Promise")}} which resolves once the report has been sent.
 - {{domxref("HIDDevice.sendFeatureReport()")}}

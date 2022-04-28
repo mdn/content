@@ -28,6 +28,8 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
 
 ## Methods
 
+- {{domxref("SerialPort.forget()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves when the port coloses and is forgotten.
 - {{domxref("SerialPort.getInfo()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.
 - {{domxref("SerialPort.open()")}}
