@@ -79,7 +79,7 @@ There are some types of user interface components that, when represented in a pl
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : Defines the string value or identifies the element (or elements) that label the spinbutton element providing an accessible name. An accessible name is required.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) 
-   - : Defines a string value providing the accessible name when no visible label is available to provide the required accessible name via {{HTMLElement('label')}} or `aria-labelledby`.
+   - : Defines a string value that labels the spinbutton element. This provides an accessible name to the element when no visible label is available to provide the required accessible name via {{HTMLElement('label')}} or `aria-labelledby`.
 
 ## Examples
 
