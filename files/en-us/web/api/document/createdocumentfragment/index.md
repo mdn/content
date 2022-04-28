@@ -77,7 +77,7 @@ element.appendChild(fragment);
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{EmbedLiveSample("Examples", 600, 140)}}
 
 ## Specifications
 
