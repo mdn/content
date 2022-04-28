@@ -34,9 +34,9 @@ image where a CSS property expects a file.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : Thrown when one of the arguments is invalid or missing.
-- InvalidModificationError
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown when the a worklet already exists with the specified name.
 
 ## Examples

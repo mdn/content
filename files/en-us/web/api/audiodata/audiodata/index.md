@@ -45,7 +45,7 @@ new AudioData(init);
 
 ## Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `init` is in an incorrect format.
 
 ## Specifications

@@ -48,11 +48,11 @@ stop(when)
 
 ### Exceptions
 
-- `InvalidStateNode`
-  - : The node has not been started by calling {{domxref("AudioScheduledSourceNode.start",
+- `InvalidStateNode` {{domxref("DOMException")}}
+  - : Thrown if the node has not been started by calling {{domxref("AudioScheduledSourceNode.start",
     "start()")}}.
-- `RangeError`
-  - : The value specified for `when` is negative.
+- {{jsxref("RangeError")}}
+  - : Thrown if the value specified for `when` is negative.
 
 ## Examples
 

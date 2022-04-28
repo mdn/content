@@ -61,7 +61,7 @@ button.addEventListener('click', function () {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

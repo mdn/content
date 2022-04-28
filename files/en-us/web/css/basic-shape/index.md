@@ -116,7 +116,7 @@ The values in a `<basic-shape>` function are computed as specified, with these e
 
 ### Interpolation of basic shapes
 
-When animating between one `<basic-shape>` and another, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.
+When animating between one `<basic-shape>` and another, the rules below are applied. The values in the shape functions {{Glossary("interpolation", "interpolate")}} as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.
 
 - Both shapes must use the same reference box.
 - If both shapes are the same type, that type is `ellipse()` or `circle()`, and none of the radii use the `closest-side` or `farthest-side` keywords, interpolate between each value in the shape functions.

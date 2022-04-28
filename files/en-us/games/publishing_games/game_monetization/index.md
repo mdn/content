@@ -51,7 +51,7 @@ Finding publishers might be hard at first — try to look for them at the [HTML5
 
 ### Exclusive licenses
 
-The exclusive license is a type of license for one publisher — you've built a game and you're selling all the rights to it to a single entity along with the rights to redistribute it — [Softgames](https://www.softgames.de/) are an example of such a publisher. You can't sell it again in any form while that publisher has the rights— that's why exclusive deals are worth quite a lot of money. How much exactly? It depends on the quality of the game, it's genre, its publisher, and many others, but usually it will be something between 2000 and 5000 USD. Once you've sold an exclusive license you can forget about promoting that particular game as you won't earn more, so go into such a deal only if you're sure it's profitable enough.
+The exclusive license is a type of license for one publisher — you've built a game and you're selling all the rights to it to a single entity along with the rights to redistribute it — [Softgames](https://www.softgames.com/) are an example of such a publisher. You can't sell it again in any form while that publisher has the rights— that's why exclusive deals are worth quite a lot of money. How much exactly? It depends on the quality of the game, it's genre, its publisher, and many others, but usually it will be something between 2000 and 5000 USD. Once you've sold an exclusive license you can forget about promoting that particular game as you won't earn more, so go into such a deal only if you're sure it's profitable enough.
 
 ### Non-exclusive licenses
 
@@ -79,7 +79,7 @@ There are other ways you can earn money when building HTML5 games, and it doesn'
 
 ### Selling resources
 
-If you're a graphic designer, you can sell the assets from the games you've created, or something brand new exclusively for that purpose at online shops like [Envato Market](https://market.envato.com/). It's not much, but if you're a known designer it can be an extra passive stream of income.
+If you're a graphic designer, you can sell the assets from the games you've created, or something brand new exclusively for that purpose at online shops like [Envato Market](https://themeforest.net/). It's not much, but if you're a known designer it can be an extra passive stream of income.
 
 ### Writing articles and tutorials
 

@@ -25,6 +25,10 @@ This method can also be used to abort operations at particular points in code, r
 throwIfAborted()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 None.

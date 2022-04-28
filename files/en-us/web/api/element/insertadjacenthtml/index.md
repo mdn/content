@@ -126,7 +126,7 @@ reset.addEventListener('click', () => {
 
 #### Result
 
-{{EmbedLiveSample("Example", 100, 100)}}
+{{EmbedLiveSample("Examples", 100, 100)}}
 
 ## Specifications
 

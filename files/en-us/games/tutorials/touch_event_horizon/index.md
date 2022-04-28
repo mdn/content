@@ -37,4 +37,4 @@ touchmove
 
 ## Summary
 
-This tutorial shows how to use Touch Events to create a game on a \<canvas>. This is a multi-player game relying on the Tap and Drag gestures.
+This tutorial shows how to use Touch Events to create a game on a \<canvas>. This is a multiplayer game relying on the Tap and Drag gestures.

@@ -40,7 +40,7 @@ the stream. The following are possible:
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The source object is not a `ReadableStreamBYOBReader`, the stream has no
     owner, the view is not an object or has become detached, or the view's length is 0.
 

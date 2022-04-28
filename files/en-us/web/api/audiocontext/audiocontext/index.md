@@ -82,7 +82,7 @@ tab_ at a time.
 #### Non-standard exceptions in Chrome
 
 If the value of the `latencyHint` property isn't valid,
-Chrome throws a `TypeError` exception with the message
+Chrome throws a {{jsxref("TypeError")}} exception with the message
 "The provided value '...' is not a valid enum value of type
 AudioContextLatencyCategory".
 

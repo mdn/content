@@ -45,7 +45,7 @@ table.deleteTFoot();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

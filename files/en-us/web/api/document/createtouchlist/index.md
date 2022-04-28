@@ -19,12 +19,14 @@ The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef(
 ## Syntax
 
 ```js
-var list = document.createTouchList([touch1 [, touch2 [, ...]]]);
+createTouchList(touch1)
+createTouchList(touch1, touch2)
+createTouchList(touch1, touch2, /* ... ,*/ touchN)
 ```
 
 ### Parameters
 
-- `touches`
+- `touch1`, …, `touchN`
   - : Zero or more {{DOMxRef("Touch")}} objects. **Note:** Firefox also
     accepts an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of
     {{DOMxRef("Touch")}} objects.
@@ -35,7 +37,7 @@ var list = document.createTouchList([touch1 [, touch2 [, ...]]]);
   - : A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
     specified by the `touches` parameter.
 
-## Example
+## Examples
 
 This example illustrates using the {{DOMxRef("Document.createTouchList()")}} method to
 create {{DOMxRef("TouchList")}} objects.

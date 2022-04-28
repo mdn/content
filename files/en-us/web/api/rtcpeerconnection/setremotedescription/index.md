@@ -122,7 +122,7 @@ by `setRemoteDescription()`:
     {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid. The
     error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
     indicates the line number within the SDP on which the syntax error was detected.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the specified `RTCSessionDescriptionInit` or
     `RTCSessionDescription` object is missing the
     {{domxref("RTCSessionDescription.type", "type")}} property, or no description

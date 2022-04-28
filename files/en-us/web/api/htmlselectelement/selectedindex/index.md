@@ -51,7 +51,7 @@ selectElem.addEventListener('change', function() {
 })
 ```
 
-{{EmbedLiveSample("Example", "200px", "80px")}}
+{{EmbedLiveSample("Examples", "200px", "120px")}}
 
 ## Specifications
 

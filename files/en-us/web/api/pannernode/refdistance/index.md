@@ -18,12 +18,12 @@ The `refDistance` property's default value is `1`.
 
 ## Value
 
-A non-negative number. If the value is set to less than 0, a `RangeError` is thrown.
+A non-negative number. If the value is set to less than 0, a {{jsxref("RangeError")}} is thrown.
 
 ### Exceptions
 
-- `RangeError`
-  - : The property has been given a value that is outside the accepted range.
+- {{jsxref("RangeError")}}
+  - : Thrown if the property has been given a value that is outside the accepted range.
 
 ## Examples
 

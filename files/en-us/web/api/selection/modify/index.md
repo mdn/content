@@ -96,7 +96,7 @@ function modify() {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 200)}}
+{{EmbedLiveSample("Examples", 700, 200)}}
 
 ## Specifications
 

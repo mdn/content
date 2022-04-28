@@ -29,7 +29,7 @@ new MediaStreamTrackGenerator(options);
 
 ## Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `init.kind` is not `"video"` or `"audio"`.
 
 ## Examples

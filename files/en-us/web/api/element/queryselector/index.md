@@ -53,8 +53,8 @@ If no matches are found, the returned value is `null`.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The specified `selectors` are invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the specified `selectors` are invalid.
 
 ## Examples
 

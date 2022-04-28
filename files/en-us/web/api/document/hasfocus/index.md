@@ -71,7 +71,7 @@ setInterval(checkPageFocus, 300);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

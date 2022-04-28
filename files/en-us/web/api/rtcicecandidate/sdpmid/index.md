@@ -32,7 +32,7 @@ A {{domxref("DOMString")}} which uniquely identifies the source media component 
 which the candidate draws data, or `null` if no such association exists for the candidate.
 
 > **Note:** Attempting to add a candidate (using {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
-> value of `null` for both `sdpMid` and `sdpMLineIndex` will throw a `TypeError` exception.
+> value of `null` for both `sdpMid` and `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.
 
 ## Examples
 

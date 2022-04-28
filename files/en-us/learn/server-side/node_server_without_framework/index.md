@@ -17,7 +17,7 @@ This article provides a simple static file server built with pure Node.js withou
 The most popular are:
 
 - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs): A widely used framework.
-- [Hapi.js](https://hapijs.com/): A rich framework for building applications and services
+- [Hapi.js](https://hapi.dev/): A rich framework for building applications and services
 - [Total](https://www.totaljs.com/): The all-in-one Node.js framework, which does not depend on any other framework, or module.
 
 These will not suit every situation. A developer may need to build their own server without other dependencies.

@@ -53,7 +53,7 @@ There are two main types of setup, mobile or computer-connected. Their minimum h
 
 Other hardware that complements the VR experience includes:
 
-- **A hand recognition sensor**: A sensor that tracks the position and movement of your hand, allowing it to become an interesting controller, and an object in VR gameworlds. The most advanced to date is the [Leap Motion](https://www.leapmotion.com/), which works with the computer (connected to the Oculus Rift) and can also work connected to a mobile device (the latter is in an experimental phase.)
+- **A hand recognition sensor**: A sensor that tracks the position and movement of your hand, allowing it to become an interesting controller, and an object in VR gameworlds. The most advanced to date is the [Leap Motion](https://www.ultraleap.com/), which works with the computer (connected to the Oculus Rift) and can also work connected to a mobile device (the latter is in an experimental phase.)
 - **A gamepad**: We can configure an XBox controller or similar to work as a keyboard in the browser — this offers further possibilities of interaction with a VR webpage. There are some gamepads that work with a mobile setup — like the [MergeVR headset](http://www.mergevr.com/) — but these are connected via Bluetooth so don't work with WebVR.
 - **An eye tracking sensor (experimental)**: The FOVE project is the first headset that reads subtle eye movements.
 - **A facial expression tracker (experimental)**: Researchers at the University of Southern California and Facebook's Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.

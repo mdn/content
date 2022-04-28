@@ -93,8 +93,8 @@ An instance of the {{domxref("ReadableStream")}} object.
 
 ### Exceptions
 
-- RangeError
-  - : The supplied type value is neither `"bytes"` nor `undefined`.
+- {{jsxref("RangeError")}}
+  - : Thrown if the supplied type value is neither `"bytes"` nor `undefined`.
 
 ## Examples
 

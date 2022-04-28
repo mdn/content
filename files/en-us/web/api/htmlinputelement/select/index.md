@@ -46,7 +46,7 @@ function selectText() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Notes
 

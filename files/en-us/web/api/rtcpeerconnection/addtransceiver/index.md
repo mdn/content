@@ -50,9 +50,8 @@ addTransceiver(trackOrKind, init)
 
 ### Exceptions
 
-- `TypeError`
-  - : A string was specified as `trackOrKind` which is not valid. The string
-    must be either `"audio"` or `"video"`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
 
 ## Specifications
 

@@ -55,7 +55,7 @@ caption.textContent = 'This caption was created by JavaScript!';
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

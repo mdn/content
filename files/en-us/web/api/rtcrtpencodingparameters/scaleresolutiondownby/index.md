@@ -50,7 +50,7 @@ size.
 
 A value less than 1.0 would cause the video to get larger rather than smaller, which is
 not the intent of this property. Therefore, specifying a value less than 1.0 is not
-permitted and will cause a `RangeError` exception to be thrown by
+permitted and will cause a {{jsxref("RangeError")}} exception to be thrown by
 {{domxref("RTCPeerConnection.addTransceiver()")}} or
 {{domxref("RTCRtpSender.setParameters()")}}.
 

@@ -27,7 +27,7 @@ If the alpha value is given as a percentage, 0% corresponds to fully transparent
 
 ## Interpolation
 
-When animated, values of the `<alpha-value>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/single-transition-timing-function) associated with the animation.
+When animated, values of the `<alpha-value>` CSS data type are {{Glossary("interpolation", "interpolated")}} as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/single-transition-timing-function) associated with the animation.
 
 ## Examples
 
