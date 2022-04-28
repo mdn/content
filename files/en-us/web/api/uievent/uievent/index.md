@@ -29,7 +29,7 @@ new UIEvent(typeArg, UIEventInit);
   - : Is a `UIEventInit` dictionary, having the following fields:
 
     - **`detail`**: optional and defaulting to `0`,
-      of type `long`, that is a event-dependant value associated with the
+      of type `long`, that is a event-dependent value associated with the
       event. {{domxref("UIEvent.detail")}} lists the semantic for standard events.
     - **`view`**: optional and defaulting to
       `null`, of type {{domxref("WindowProxy")}}, that is the
