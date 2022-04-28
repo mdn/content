@@ -46,7 +46,7 @@ Free portals offer traffic, but only the best ones are popular enough to generat
 
 ## Press
 
-You can try and reach the [press](https://indiegames.com/) about your game, but bear in mind that they get a tonne of requests like this every single day, so be humble and patient if they don't answer right away, and be polite when talking to them. Be sure to check first if they are dealing with specific genres of games or platforms, so you don't send them something that is not relevant to them in the first place. If you're honest with your approach and your game is good, then you've got more of a chance of success.
+You can try and reach the [press](https://indiegamesplus.com/) about your game, but bear in mind that they get a tonne of requests like this every single day, so be humble and patient if they don't answer right away, and be polite when talking to them. Be sure to check first if they are dealing with specific genres of games or platforms, so you don't send them something that is not relevant to them in the first place. If you're honest with your approach and your game is good, then you've got more of a chance of success.
 
 If you want to learn more about the etiquette of contacting the press you should definitely check out [How To Contact Press](https://app.box.com/s/p0ft5zdolpi0ydkrykab) - a great guide from Pixel Prospector.
 
