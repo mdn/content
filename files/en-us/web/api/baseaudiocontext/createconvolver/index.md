@@ -28,6 +28,10 @@ Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more in
 createConvolver()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("ConvolverNode")}}.
