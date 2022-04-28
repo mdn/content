@@ -170,7 +170,7 @@ Next, include a "Return value" subsection, which explains what the return value 
 
 If there is no return value, use the following text:
 
-None (\{\{jsxref("undefined")}}).
+None (\\{{jsxref("undefined")}}).
 
 #### Exceptions section
 
