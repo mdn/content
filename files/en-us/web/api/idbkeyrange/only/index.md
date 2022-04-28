@@ -27,7 +27,7 @@ only(value)
 
 ### Parameters
 
-- `value``
+- `value`
   - : The value for the new key range.
 
 ### Return value
