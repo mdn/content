@@ -103,7 +103,7 @@ In order to be **iterable**, an object must implement the **@@iterator** method.
 
 It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.
 
-Iterables which can iterate only once (such as Generators) customarily return `this` from their **@@iterator** method, whereas iterables which can be iterated many times must return a new iterator on each invocation of **@@iterator**.
+iterators which can iterate only once (such as Generators) customarily return `this` from their **@@iterator** method, whereas iterables which can be iterated many times must return a new iterator on each invocation of **@@iterator**.
 
 ```js
 function* makeIterator() {
