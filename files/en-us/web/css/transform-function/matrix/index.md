@@ -14,6 +14,8 @@ browser-compat: css.types.transform-function.matrix
 The **`matrix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a homogeneous 2D transformation matrix. Its result is
 a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+{{EmbedInteractiveExample("pages/css/function-matrix.html")}}
+
 > **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for
 > `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
 
