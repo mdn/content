@@ -57,7 +57,7 @@ decodeAudioData(arrayBuffer)
 Void, or a {{jsxref("Promise") }} object that fulfills with the
 _decodedData_.
 
-## Example
+## Examples
 
 In this section we will first cover the older callback-based system and then the newer
 promise-based syntax.

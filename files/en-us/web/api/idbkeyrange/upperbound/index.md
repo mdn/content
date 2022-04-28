@@ -29,7 +29,7 @@ upperBound(bound, open)
 
 ### Parameters
 
-- `bound` 
+- `bound`
   - : Specifies the upper bound of the new key range.
 - `open` {{optional_inline}}
   - : Indicates whether the upper bound excludes the endpoint value. The default is false.
