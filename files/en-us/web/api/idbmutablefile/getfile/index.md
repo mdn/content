@@ -11,8 +11,6 @@ tags:
 ---
 {{APIRef("File System API")}}{{non-standard_header}}
 
-## Summary
-
 The `getFile` method allows to retrieve a read-only snapshot of the handled
 file in the form of a {{domxref("File")}} object.
 

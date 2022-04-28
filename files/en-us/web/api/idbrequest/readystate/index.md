@@ -17,7 +17,7 @@ browser-compat: api.IDBRequest.readyState
 The **`readyState`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the state of the request.
 
-\>Every request starts in the `pending` state. The state changes to
+Every request starts in the `pending` state. The state changes to
 `done` when the request completes successfully or when an error
 occurs.
 

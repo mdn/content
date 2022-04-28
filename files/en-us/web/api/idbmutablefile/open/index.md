@@ -11,8 +11,6 @@ tags:
 ---
 {{APIRef("File System API")}}{{non-standard_header}}
 
-## Summary
-
 The `open` method returns a {{domxref("LockedFile")}} object that allows to
 safely write in the file.
 

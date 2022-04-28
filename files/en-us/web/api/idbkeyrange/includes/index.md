@@ -28,7 +28,8 @@ includes(key)
 
 ### Parameters
 
-_key_ The key you want to check for in your key range. This can be any type.
+- `key`
+  - : The key you want to check for in your key range. This can be any type.
 
 ### Return value
 
@@ -36,11 +37,8 @@ A boolean value.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following type:
-
-| Attribute                                   | Description                           |
-| ------------------------------------------- | ------------------------------------- |
-| [`DataError`](/en-US/docs/Web/API/DOMError) | The supplied key was not a valid key. |
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the supplied key was not a valid key.
 
 ## Examples
 

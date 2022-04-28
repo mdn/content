@@ -40,11 +40,8 @@ upperBound(bound, open)
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following type:
-
-| Exception   | Description                                     |
-| ----------- | ----------------------------------------------- |
-| `DataError` | The value parameter passed was not a valid key. |
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the value parameter passed was not a valid key.
 
 ## Examples
 
