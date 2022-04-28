@@ -51,7 +51,7 @@ setTimeout(functionRef, delay, arg0, arg1, /* ... ,*/ argN)
 
     Also note that if the value isn’t a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
-- `arg1, ..., argN` {{optional_inline}}
+- `arg0, ..., argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by
     `function`.
 
