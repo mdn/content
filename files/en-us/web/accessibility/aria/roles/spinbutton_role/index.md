@@ -26,7 +26,7 @@ In addition to including the {{htmlattrxref('tabindex')}} attribute to enable sp
 
 > **Note:** It is recommended to use [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) element, or other input types for dates and time that also implicitly have the `role="spinbutton"` semantic, rather than the `spinbutton` role. User agents provide stylized widget for the these input elements which provide default increment, decrement, and native range limiting functionality. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript, and CSS.
 
-### The `spinbutton` role compared with other range options
+### ARIA range widget options
 
 ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), including progressbars, meters, sliders and spinbuttons.
 
@@ -129,7 +129,7 @@ In this case, the only JavaScript needed would be to update the `aria-valuetext`
 | Right and Up arrows | Increase the selected value by one step |
 | Left and Down arrows | Decrease the selected value by one step|
 | Page Up | (Optional) Increase the value by a set amount greater than or equal to one step |
-| Page Up and Page Down | (Optional) Decrease the value by a set amount greater than or equal to one step |
+| Page Down | (Optional) Decrease the value by a set amount greater than or equal to one step |
 | Home | Set the spinbutton to the minimum value |
 | End | Set the spinbutton to the maximum value |
 
