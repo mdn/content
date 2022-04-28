@@ -139,7 +139,7 @@ The required styles are those necessary to handle the three states of our contro
 We need an extra class `active` to define the look and feel of our control when it is in its active state. Because our control is focusable, we double this custom style with the {{cssxref(":focus")}} pseudo-class in order to be sure they will behave the same.
 
 ```css
-.select .active,
+.select.active,
 .select:focus {
   outline: none;
 
