@@ -51,7 +51,7 @@ At this point we've got a fully working component; we're now ready to add multip
 
 ## Rendering lists with v-for
 
-To be an effective to-do list, we need to be able to render multiple to-do items. To do that, Vue has a special directive, [`v-for`](https://vuejs.org/v2/api/#v-for). This is a built-in Vue directive that lets us include a loop inside of our template, repeating the rendering of a template feature for each item in an array. We'll use this to iterate through an array of to-do items and display them in our app in separate `ToDoItem` components.
+To be an effective to-do list, we need to be able to render multiple to-do items. To do that, Vue has a special directive, [`v-for`](https://v2.vuejs.org/v2/api/#v-for). This is a built-in Vue directive that lets us include a loop inside of our template, repeating the rendering of a template feature for each item in an array. We'll use this to iterate through an array of to-do items and display them in our app in separate `ToDoItem` components.
 
 ### Adding some data to render
 

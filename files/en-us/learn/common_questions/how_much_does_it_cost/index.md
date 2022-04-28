@@ -109,7 +109,7 @@ Hosting providers charge you according to how much {{Glossary("Bandwidth", "band
 
 ### Domain names
 
-Your domain name has to be purchased through a domain name provider (a registrar). Your hosting provider may also be a registrar ([1&1](https://www.1and1.com/), [Gandi](https://www.gandi.net/?lang=en) for instance are at the same time registrars and hosting providers). The domain name usually costs $5-15 per year. This cost varies depending on:
+Your domain name has to be purchased through a domain name provider (a registrar). Your hosting provider may also be a registrar ([Ionos](https://www.ionos.com/), [Gandi](https://www.gandi.net/?lang=en) for instance are at the same time registrars and hosting providers). The domain name usually costs $5-15 per year. This cost varies depending on:
 
 - Local obligations: some country top-level domain names are more costly, as different countries set different prices.
 - Services associated with the domain name: some registrars provide spam protection by hiding your postal address and email address behind their own addresses: the postal address can be provided in care of the registrar, and your email address can be obscured via your registrar's alias.

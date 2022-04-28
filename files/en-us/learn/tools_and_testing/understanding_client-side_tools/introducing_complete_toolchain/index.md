@@ -45,7 +45,7 @@ The toolchain that we are creating in this article will be used to build and dep
 
 ![screenshot of the sample will it miss website](will-it-miss-screenshot.png)
 
-You can see a live version of the site at [near-misses.netlify.com](https://near-misses.netlify.com/).
+You can see a live version of the site at [near-misses.netlify.com](https://near-misses.netlify.app/).
 
 ## Tools used in our toolchain
 

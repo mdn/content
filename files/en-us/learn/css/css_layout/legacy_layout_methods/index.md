@@ -470,7 +470,7 @@ In your project you might still choose to use a flexbox 'grid' due to the additi
 
 ## Third party grid systems
 
-Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS Grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://foundation.zurb.com/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
+Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS Grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://get.foundation/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
 
 Let's take a look at one of these standalone systems as it demonstrates common techniques for working with a grid framework. The grid we will be using is part of Skeleton, a simple CSS framework.
 

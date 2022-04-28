@@ -49,9 +49,9 @@ In this article, we will teach you how to install your own automation environmen
 
 ## Selenium
 
-[Selenium](https://www.seleniumhq.org/) is the most popular browser automation tool. There are other ways, but the best way to use Selenium is via WebDriver, a powerful API that builds on top of Selenium and makes calls to a browser to automate it, carrying out actions such as "open this web page", "move over this element on the page", "click this link", "see whether the link opens this URL", etc. This is ideal for running automated tests.
+[Selenium](https://www.selenium.dev/) is the most popular browser automation tool. There are other ways, but the best way to use Selenium is via WebDriver, a powerful API that builds on top of Selenium and makes calls to a browser to automate it, carrying out actions such as "open this web page", "move over this element on the page", "click this link", "see whether the link opens this URL", etc. This is ideal for running automated tests.
 
-How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See [Setting Up a Selenium-WebDriver Project](https://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project) for more details of Selenium setups for different languages.
+How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See [Setting Up a Selenium-WebDriver Project](https://www.selenium.dev/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project) for more details of Selenium setups for different languages.
 
 Different browsers require different drivers to allow WebDriver to communicate with and control them. See [Platforms Supported by Selenium](https://www.selenium.dev/downloads/) for more information on where to get browser drivers from, etc.
 
@@ -211,7 +211,7 @@ Fun huh? Let's move on, look at the basics of WebDriver syntax, in a bit more de
 
 ## WebDriver syntax crash course
 
-Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference, and the Selenium main documentation's [Selenium WebDriver](https://www.seleniumhq.org/docs/03_webdriver.jsp) and [WebDriver: Advanced Usage](https://www.seleniumhq.org/docs/04_webdriver_advanced.jsp) pages, which contain multiple examples to learn from written in different languages.
+Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference, and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/docs/03_webdriver.jsp) and [WebDriver: Advanced Usage](https://www.selenium.dev/docs/04_webdriver_advanced.jsp) pages, which contain multiple examples to learn from written in different languages.
 
 ### Starting a new test
 
@@ -289,7 +289,7 @@ driver.get('https://mdn.github.io/learning-area/tools-testing/cross-browser-test
 
 ### Interacting with the document
 
-Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can [select UI elements in many ways](https://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements) in WebDriver, including by ID, class, element name, etc. The actual selection is done by the `findElement()` method, which accepts as a parameter a selection method. For example, to select an element by ID:
+Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can [select UI elements in many ways](https://www.selenium.dev/docs/03_webdriver.jsp#locating-ui-elements-webelements) in WebDriver, including by ID, class, element name, etc. The actual selection is done by the `findElement()` method, which accepts as a parameter a selection method. For example, to select an element by ID:
 
 ```js
 const element = driver.findElement(By.id('myElementId'));
@@ -305,7 +305,7 @@ const button = driver.findElement(By.css('button:nth-of-type(1)'));
 
 ### Testing your element
 
-There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at [Getting text values](https://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values) on the WebDriver docs.
+There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at [Getting text values](https://www.selenium.dev/docs/03_webdriver.jsp#getting-text-values) on the WebDriver docs.
 
 If we wanted to get the text inside our button, we could do this:
 
@@ -409,7 +409,7 @@ When you run it, you should now see the test execute and the browser instance sh
 
 ## Test best practices
 
-There has been a lot written about best practices for writing tests. You can find some good background information at [Test Design Considerations](https://www.seleniumhq.org/docs/06_test_design_considerations.jsp). In general, you should make sure that your tests are:
+There has been a lot written about best practices for writing tests. You can find some good background information at [Test Design Considerations](https://www.selenium.dev/docs/06_test_design_considerations.jsp). In general, you should make sure that your tests are:
 
 1. Using good locator strategies: When you are [Interacting with the document](#interacting_with_the_document), make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.
 2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the `google_test.js` test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps `results_page_title_set_correctly.js` would be slightly better?
