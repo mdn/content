@@ -106,7 +106,7 @@ During the output manipulation stage all the fragments of the primitives from th
 
 ![Output merging](mdn-games-3d-output-merging.png)
 
-During output merging some processing is also applied to ignore information that is not needed — for example the parameters of objects that are out of the screen or behind other objects, and thus not visible, are not calculated.
+During output merging some processing is also applied to ignore information that is not needed — for example the parameters of objects that are outside the screen or behind other objects, and thus not visible, are not calculated.
 
 ## Conclusion
 
