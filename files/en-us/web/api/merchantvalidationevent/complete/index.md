@@ -42,7 +42,7 @@ complete(merchantSessionPromise)
 This exception may be passed into the rejection handler for the promise:
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the event did not come directly from the user agent, but was instead dispatched by other code. Another payment request is currently being processed, the current payment request is not currently being displayed to the user, or payment information is currently being updated.
+  - : Returned if the event did not come directly from the user agent, but was instead dispatched by other code. Another payment request is currently being processed, the current payment request is not currently being displayed to the user, or payment information is currently being updated.
 
 ## Examples
 
