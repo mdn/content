@@ -51,7 +51,7 @@ rect2.bind("EnterFrame", function () {
 
 ## Circle Collision
 
-Another simple shape for collision detection is between two circles. This algorithm works by taking the centre points of the two circles and ensuring the distance between the centre points are less than the two radii added together.
+Another simple shape for collision detection is between two circles. This algorithm works by taking the center points of the two circles and ensuring the distance between the center points are less than the two radii added together.
 
 ```html hidden
 <div id="cr-stage"></div>
