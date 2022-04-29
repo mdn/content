@@ -47,7 +47,7 @@ Everything in CSS has a box around it, and understanding these boxes is key to b
 
 ## Block and inline boxes
 
-In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. These characteristics refer to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes also have an **inner display type** and an **outer display type**. First, we will explain what we mean by block box and inline box. We will then explain what is meant by an inner and outer display type.
+In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. The type affects the behavior of the box in relation to page flow and other boxes on the page. Boxes have an **inner display type** and an **outer display type**. We'll start explaining the block box and inline box concept. And later, we'll tackle the inner and outer display types. 
 
 If a box has an outer display type of `block`, then:
 
@@ -284,7 +284,7 @@ In the example below, you can change the values for padding on the class `.box` 
 
 All of the above fully applies to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but they do not change the relationship of other content to our inline box and so the padding and border overlaps other words in the paragraph. Horizontal padding, margins, and borders are respected and will cause other content to move away from the box.
+In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The horizontal padding, margins, and borders move other content away from the box.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 700)}}
 
