@@ -42,9 +42,9 @@ In this example, before attempting to request fullscreen mode for a
 checked, in order to avoid making the attempt when not available.
 
 ```js
-function requestFullScreen() {
+function requestFullscreen() {
   if (document.fullscreenEnabled) {
-    videoElement.requestFullScreen();
+    videoElement.requestFullscreen();
   } else {
     console.log('Your browser cannot use fullscreen right now');
   }
