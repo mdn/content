@@ -75,7 +75,7 @@ let throwExceptionWithStack = (param) => {
   throw new WebAssembly.Exception(tag, [param], {traceStack: true});
 };
 
-//Note: importObject propeties match the WebAssembly import statements.
+//Note: importObject properties match the WebAssembly import statements.
 const importObject = { "extmod": {"exttag": tag, "throwExnWithStack": throwExceptionWithStack} }
 WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject )
   .then(obj => {

@@ -56,7 +56,7 @@ it may be either imported into or exported from the calling code.
 ### Getting exception value from imported tag
 
 Consider the following WebAssembly code, which is assumed to be compiled to a file **example.wasm**.
-This imports a tag, which it refers to internally as `$tagname`, and exports a method `run1` that can be called by external code to thow an exception using the tag.
+This imports a tag, which it refers to internally as `$tagname`, and exports a method `run1` that can be called by external code to throw an exception using the tag.
 
 ```wasm
 (module
