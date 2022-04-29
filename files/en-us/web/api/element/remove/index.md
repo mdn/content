@@ -18,6 +18,10 @@ The **`Element.remove()`** method removes the element from the DOM.
 remove()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Using `remove()`

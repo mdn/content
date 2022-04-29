@@ -22,6 +22,10 @@ file in the form of a {{domxref("File")}} object.
 getFile()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMRequest")}} object. In case of success, the request's

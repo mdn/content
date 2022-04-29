@@ -20,6 +20,10 @@ The **`Document.clear()`** method does nothing, but doesn't raise any error.
 clear()
 ```
 
+### Parameters
+
+None.
+
 ## Specifications
 
 {{Specifications}}

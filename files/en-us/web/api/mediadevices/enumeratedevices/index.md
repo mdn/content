@@ -23,6 +23,10 @@ The list of returned devices will omit any devices for which the corresponding p
 enumerateDevices()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled.

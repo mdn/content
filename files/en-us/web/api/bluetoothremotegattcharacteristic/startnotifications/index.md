@@ -24,6 +24,10 @@ there is an active notification on it.
 startNotifications()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance.

@@ -26,6 +26,10 @@ state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{d
 restore()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Restoring a saved state

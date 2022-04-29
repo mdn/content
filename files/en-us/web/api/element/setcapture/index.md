@@ -27,6 +27,8 @@ to this element until the mouse button is released or {{
 setCapture(retargetToElement)
 ```
 
+### Parameters
+
 - `retargetToElement`
   - : If `true`, all events are targeted directly to this element; if
     `false`, events can also fire at descendants of this element.

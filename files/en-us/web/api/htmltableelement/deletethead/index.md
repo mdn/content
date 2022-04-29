@@ -21,6 +21,10 @@ The **`HTMLTableElement.deleteTHead()`** removes the
 deleteTHead()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 This example uses JavaScript to delete a table's header.

@@ -21,6 +21,10 @@ createNodeIterator(root, whatToShow)
 createNodeIterator(root, whatToShow, filter)
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 - `root`

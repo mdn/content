@@ -29,6 +29,10 @@ value doesn't contain a string value, a {{domxref("DOMException")}} is raised.
 getStringValue()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A `string` value.

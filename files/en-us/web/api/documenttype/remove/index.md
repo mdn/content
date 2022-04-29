@@ -24,6 +24,10 @@ The **`DocumentType.remove()`** method removes a document's `doctype`.
 remove()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Using `remove()`

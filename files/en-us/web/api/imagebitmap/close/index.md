@@ -21,6 +21,10 @@ method disposes of all graphical resources associated with an `ImageBitmap`.
 close()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

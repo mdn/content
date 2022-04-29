@@ -25,6 +25,10 @@ it throws an error.
 readValue()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to an {{jsxref("DataView")}}.

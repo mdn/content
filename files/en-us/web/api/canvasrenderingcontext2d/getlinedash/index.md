@@ -20,6 +20,10 @@ The **`getLineDash()`** method of the Canvas 2D API's
 getLineDash()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{jsxref("Array")}} of numbers that specify distances to alternately draw a line and

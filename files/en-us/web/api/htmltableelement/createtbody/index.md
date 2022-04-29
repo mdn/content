@@ -28,6 +28,10 @@ The **`createTBody()`** method of
 createTBody()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}

@@ -23,6 +23,10 @@ nothing.
 deleteCaption()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 This example uses JavaScript to delete a table's caption.

@@ -25,7 +25,11 @@ information.
 reload()
 ```
 
-## location.reload() has no parameter
+### Parameters
+
+None.
+
+#### location.reload() has no parameter
 
 Firefox supports a non-standard [`forceGet` boolean parameter](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551) for `location.reload()`, to tell Firefox to bypass its cache and force-reload the current document. However, in all other browsers, any parameter you specify in a `location.reload()` call will be ignored and have no effect of any kind.
 

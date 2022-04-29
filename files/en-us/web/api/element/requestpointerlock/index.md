@@ -27,6 +27,10 @@ To track the success or failure of the request, it is necessary to listen for th
 requestPointerLock()
 ```
 
+### Parameters
+
+None.
+
 ## Specifications
 
 {{Specifications}}

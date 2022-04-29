@@ -20,6 +20,10 @@ document, opened with {{domxref("Document.open()")}}.
 close()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

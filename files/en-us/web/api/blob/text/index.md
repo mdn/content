@@ -21,6 +21,10 @@ string containing the contents of the blob, interpreted as UTF-8.
 text()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A promise that resolves with a string which contains the blob's data

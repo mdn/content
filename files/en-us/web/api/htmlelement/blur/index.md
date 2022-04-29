@@ -20,6 +20,10 @@ removes keyboard focus from the current element.
 blur()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Remove focus from a text input

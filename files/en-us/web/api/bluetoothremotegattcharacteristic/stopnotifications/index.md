@@ -24,6 +24,10 @@ there is no longer an active notification on it.
 stopNotifications()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}}.
