@@ -111,4 +111,4 @@ elements from two different namespaces within a single document:
 - {{DOMxRef("document.createElement()")}}
 - {{DOMxRef("document.createTextNode()")}}
 - {{DOMxRef("Element.namespaceURI")}}
-- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114)
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

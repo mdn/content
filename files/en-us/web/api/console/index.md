@@ -279,4 +279,4 @@ The output in the console looks something like this:
 
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
 - [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
-- [Safari Web Inspector](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
+- [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
