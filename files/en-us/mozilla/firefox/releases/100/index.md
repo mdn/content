@@ -61,6 +61,8 @@ This article provides information about the changes in Firefox 100 that will aff
 
 ### WebDriver conformance (Marionette)
 
+- Added support for user prompts (e.g. `alert`) on Android ({{bug(1708105)}}).
+
 #### Removals
 
 ## Changes for add-on developers
