@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.WebAssembly.Tag
 The **`WebAssembly.Tag`** object defines a _type_ of a WebAssembly exception that can be thrown to/from WebAssembly code.
 
 When creating a [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception), the tag defines the data types and order of the values carried by the exception.
-The same unique tag instance must be used to access the values of the exception (for example, when using [`Exception.protoytpe.getArg()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg)).
+The same unique tag instance must be used to access the values of the exception (for example, when using [`Exception.prototype.getArg()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg)).
 
 [Constructing](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag) an instance of `Tag` creates a new unique tag.
 This tag can be passed to a WebAssembly module as a tag import, where it will become a typed tag defined in the _tag section_ of the WebAssembly module.
@@ -64,7 +64,7 @@ The WebAssembly module might then import the tag as shown below:
 
 If the tag was used to throw an exception that propagated to JavaScript, we could use the tag to inspect its values.
 
-> **Note:** There are many alternatives. We could also use the tag to create a [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) and throw that from a function called by WebAssebly.
+> **Note:** There are many alternatives. We could also use the tag to create a [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) and throw that from a function called by WebAssembly.
 
 
 
