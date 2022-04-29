@@ -19,9 +19,7 @@ browser-compat: api.MouseEvent.movementY
 The **`movementY`** read-only property of the {{domxref("MouseEvent")}} interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous {{domxref("Element/mousemove_event", "mousemove")}} event.
 In other words, the value of the property is computed like this: `currentEvent.movementY = currentEvent.screenY - previousEvent.screenY`.
 
-> **Warning:** Different from the description in the specification, browsers may use different units for `movementY` and {{domxref("MouseEvent.screenY", "screenY")}}. The unit of `movementY` may be physical pixel of the screen, logical pixel from the operating system, or CSS pixel from the browser.
->
-> See also [Issue #42 - w3c/pointerlock](https://github.com/w3c/pointerlock/issues/42)
+> **Warning:** Browsers [use different units for `movementY` and {{domxref("MouseEvent.screenY", "screenY")}}](https://github.com/w3c/pointerlock/issues/42) than what the specification defines. Depending on the browser and operating system, the `movementY` units may be a physical pixel, a logical pixel, or a CSS pixel.
 
 ## Value
 
