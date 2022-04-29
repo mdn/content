@@ -36,8 +36,8 @@ detached from the original document, then the document receives these events ins
 ## Syntax
 
 ```js
-requestFullScreen()
-requestFullScreen(options)
+requestFullscreen()
+requestFullscreen(options)
 ```
 
 ### Parameters
