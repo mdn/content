@@ -1,5 +1,5 @@
 ---
-title: Worker.prototype.postMessage()
+title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
 tags:
   - API
