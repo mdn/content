@@ -24,14 +24,14 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 
 ## Properties
 
-- {{WebExtAPIRef("extension.lastError")}}
+- {{WebExtAPIRef("extension.lastError")}}{{deprecated_inline}}
   - : Set for the lifetime of a callback if an asynchronous extension API has resulted in an error. If no error has occurred, `lastError` will be {{jsxref("undefined")}}.
 - {{WebExtAPIRef("extension.inIncognitoContext")}}
   - : `True` for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with '`split`' `incognito_behavior`.)
 
 ## Functions
 
-- {{WebExtAPIRef("extension.getBackgroundPage()")}}
+- {{WebExtAPIRef("extension.getBackgroundPage()")}} {{deprecated_inline}}
   - : Returns the [`Window`](/en-US/docs/Web/API/Window) object for the background page running inside the current extension. Returns {{jsxref("null")}} if the extension has no background page.
 - {{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}
   - : Returns an array of the JavaScript [Window](/en-US/docs/Web/API/Window) objects for each of the tabs running inside the current extension.

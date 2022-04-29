@@ -15,6 +15,8 @@ browser-compat: webextensions.api.extension.getBackgroundPage
 ---
 {{AddonSidebar()}}
 
+> **Warning:** This function is deprecated.
+
 Alias for {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
 > **Note:** This method cannot be used in Private Browsing mode — it always returns an empty array. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. For more info see {{bug(1329304)}}.

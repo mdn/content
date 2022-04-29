@@ -1,0 +1,270 @@
+---
+title: Background scripts
+slug: Mozilla/Add-ons/WebExtensions/Background_scripts
+tags:
+  - WebExtensions
+---
+{{AddonSidebar}}
+
+Background scripts or a background page enable you to monitor and react to events in the browser, such as navigating to a new page, removing a bookmark, or closing a tab.
+
+Background scripts or a page are:
+
+- Persistent – loaded when the extension starts and unloaded when the extension is disabled or uninstalled.
+- Non-persistent – loaded only when needed to respond to an event and unloaded when they become idle. However, a background page does not unload until all visible views and message ports are closed. Opening a view does not cause the background page to load but does prevent it from closing. These background pages are also known as event pages.
+
+In manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In manifest V3, only non-persistent background scripts or a page are supported.
+
+If you have persistent background scripts or a page in manifest V2, [Convert to non-persistent](#convert_to_non-persistent) provides advice on transitioning them to non-persistent.
+
+# Background script environment
+
+## DOM APIs
+
+Background scripts run in the context of a special page called a background page. This gives them a [`window`](/en-US/docs/Web/API/Window) global, along with all the standard DOM APIs provided by that object.
+
+> **Warning:** In Firefox, background pages do not support the use of [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), or [`prompt()`](/en-US/docs/Web/API/Window/prompt).
+
+## WebExtension APIs
+
+Background scripts can use any [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), as long as their extension has the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+
+## Cross-origin access
+
+Background scripts can make XHR requests to hosts they have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for.
+
+## Web content
+
+Background scripts do not get direct access to web pages. However, they can load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into web pages and [communicate with these content scripts using a message-passing API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
+
+## Content security policy
+
+Background scripts are restricted from certain potentially dangerous operations, such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), through a Content Security Policy.
+
+See [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for more details.
+
+# Implementing background scripts
+
+This section describes how to implement a non-persistent background script.  
+
+## Specify the background scripts
+
+In your extension, you include a background script using the  [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for manifest V3 extensions as it is ignored.
+
+```json
+"background": {
+  "scripts": ["background-script.js"],
+  "persistent": false
+}
+```
+
+You can specify multiple background scripts. If you do, they run in the same context, just like scripts loaded into a web page.
+
+Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES6 modules:
+
+**manifest.json**
+
+```json
+"background": {
+  "page": "background-page.html",
+  "persistent": false
+}
+```
+
+**background-page.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script type="module" src="background-script.js"></script>
+  </head>
+</html>
+```
+
+You cannot specify background scripts and a background page.
+
+## Initialize the extension
+
+Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization, such as a context menu.
+
+```
+brower.runtime.onInstalled.addListener(function() {
+  brower.contextMenus.create({
+    "id": "sampleContextMenu",
+    "title": "Sample Context Menu",
+    "contexts": ["selection"]
+  });
+});
+```
+
+## Add listeners
+
+Structure background scripts around events the extension depends on. Defining relevant events enables background scripts to lie dormant until those events are fired and prevents the extension from missing essential triggers.
+
+Listeners must be registered synchronously from the start of the page.
+
+```
+brower.runtime.onInstalled.addListener(function() {
+  brower.contextMenus.create({
+    "id": "sampleContextMenu",
+    "title": "Sample Context Menu",
+    "contexts": ["selection"]
+  });
+});
+
+// This will run when a bookmark is created.
+brower.bookmarks.onCreated.addListener(function() {
+  // do something
+});
+
+```
+
+Do not register listeners asynchronously, as they will not be properly triggered.
+
+```
+brower.runtime.onInstalled.addListener(function() {
+  // ERROR! Events must be registered synchronously from the start of
+  // the page.
+  brower.bookmarks.onCreated.addListener(function() {
+    // do something
+  });
+});
+```
+
+Extensions can remove listeners from their background scripts by calling {{WebExtAPIRef("runtime.onMessage")}} `removeListener`. If all listeners for an event are removed, the browser no longer loads the extension's background script for that event.
+
+```
+brower.runtime.onMessage.addListener(function(message, sender, reply) {
+    brower.runtime.onMessage.removeListener(event);
+});
+```
+
+## Filter events
+
+Use APIs that support event filters to restrict listeners to the cases the extension cares about. If an extension is listening for {{WebExtAPIRef("tabs.onUpdated")}}, use the {{WebExtAPIRef("webNavigation.onCompleted")}} event with filters instead, as the tabs API does not support filters.
+
+```
+brower.webNavigation.onCompleted.addListener(function() {
+    alert("This is my favorite website!");
+}, {url: [{urlMatches : 'https://www.google.com/'}]});
+```
+
+## React to listeners
+
+Listeners exist to trigger functionality once an event has fired. To react to an event, structure the desired reaction inside of the listener event.
+
+```
+brower.runtime.onMessage.addListener(function(message, callback) {
+  if (message.data == "setAlarm") {
+    brower.alarms.create({delayInMinutes: 5})
+  } else if (message.data == "runLogic") {
+    brower.tabs.executeScript({file: 'logic.js'});
+  } else if (message.data == "changeColor") {
+    brower.tabs.executeScript(
+        {code: 'document.body.style.backgroundColor="orange"'});
+  };
+});
+```
+
+## Unload background scripts
+
+Data should be persisted periodically to not lose important information if an extension crashes without receiving {{WebExtAPIRef("runtime.onSuspend")}}. Use the storage API to assist with this.
+
+```
+brower.storage.local.set({variable: variableInformation});
+```
+
+If an extension uses message passing, ensure all ports are closed. The background script does not unload until all message ports have shut. Listening to the {{WebExtAPIRef("runtime.Port")}} `onDisconnect` lets you discover when open ports are closing. Manually close them with {{WebExtAPIRef("runtime.Port")}} `disconnect`.
+
+```
+brower.runtime.onMessage.addListener(function(message, callback) {
+  if (message == 'hello') {
+    sendResponse({greeting: 'welcome!'})
+  } else if (message == 'goodbye') {
+    brower.runtime.Port.disconnect();
+  }
+});
+```
+
+Background scripts unload after a few seconds of inactivity. If any cleanup is required, listen to {{WebExtAPIRef("runtime.onSuspend")}}.
+
+```
+brower.runtime.onSuspend.addListener(function() {
+  console.log("Unloading.");
+  chrome.browserAction.setBadgeText({text: ""});
+});
+```
+
+However, persisting data should be preferred rather than relying on {{WebExtAPIRef("runtime.onSuspend")}}. It doesn't allow for as much cleanup as may be needed and does not help in case of a crash.
+
+# Convert to non-persistent
+
+If you've a persistent background script, this section provides instructions on converting it to the non-persistent model.
+
+## Update you `manifest.json` file
+
+In your extension's `manifest.json` file, change the persistent property of [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key to `false` for your script or page. 
+
+```
+"background": {
+  …,
+  "persistent": false
+}
+```
+
+## Move event listeners
+
+Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern, moved to the top-level, and unnested.
+
+```
+browser.runtime.onStartup.addListener(function() {
+  // run startup function
+})
+```
+
+## Record state changes
+
+As scripts now open and close as needed, use the storage API to set and return states and values. Use {{WebExtAPIRef("storage.local")}} `set`to update on the local machine.
+
+```
+  browser.storage.local.set({ variable: variableInformation });
+```
+
+Use {{WebExtAPIRef("storage.local")}} `get` to retrieve the value of that variable.
+
+```
+browser.storage.local.get(['variable'], function(result) {
+  let someVariable = result.variable;
+  // Do something with someVariable
+});
+```
+
+## Change timers into alarms
+
+DOM-based timers, such as `window.setTimeout()` or `window.setInterval()`, are not honored in non-persistent background scripts if they trigger when the background page is dormant. Instead, use the alarms API.
+
+```
+window.alarms.create({delayInMinutes: 3.0})
+```
+
+Then add a listener.
+
+```
+window.alarms.onAlarm.addListener(function() {
+  alert("Hello, world!")
+});
+```
+
+## Update calls for background script functions
+
+If using {{WebExtAPIRef("extension.getBackgroundPage")}} to call a function from the background page, update to {{WebExtAPIRef("runtime.getBackgroundPage")}} . The `runtime` method includes a callback function to ensure the background script has loaded.
+
+```
+document.getElementById('target').addEventListener('click', function() {
+  window.runtime.getBackgroundPage(function(backgroundPage){
+    backgroundPage.backgroundFunction()
+  })
+});
+```

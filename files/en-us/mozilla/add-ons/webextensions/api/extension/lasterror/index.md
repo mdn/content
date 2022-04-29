@@ -15,6 +15,8 @@ browser-compat: webextensions.api.extension.lastError
 ---
 {{AddonSidebar()}}
 
+> **Warning:** This function is deprecated, use {{WebExtAPIRef("runtime.lastError")}} instead.
+
 An alias for {{WebExtAPIRef("runtime.lastError")}}.
 
 ## Browser compatibility
