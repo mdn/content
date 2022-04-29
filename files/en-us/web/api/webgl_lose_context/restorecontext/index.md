@@ -24,9 +24,12 @@ restoreContext()
 
 None.
 
-### Errors thrown
+### Exceptions
 
-- `INVALID_OPERATION` if the context was not lost.
+This method doesn't raise any exception, but an error can be notified by the {{domxref("WEBGLRenderingContext.getError", "getError()")}} method's return value:
+
+- `INVALID_OPERATION` (`0x0502`)
+  - : Set if the context was not lost.
 
 ## Examples
 
