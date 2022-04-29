@@ -1,5 +1,5 @@
 ---
-title: The Web and web standards
+title: The web and web standards
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 tags:
   - Beginner
@@ -12,7 +12,7 @@ tags:
 
 This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.
 
-## Brief history of the Web
+## Brief history of the web
 
 We'll keep this very brief, as there are many (more) detailed accounts of the web's history out there, which we'll link to later on (also try searching for "history of the web" in your favorite search engine and see what you get, if you are interested in more detail.)
 

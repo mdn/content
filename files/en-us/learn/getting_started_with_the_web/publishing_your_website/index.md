@@ -100,4 +100,4 @@ To learn more, see [GitHub Pages Help](https://docs.github.com/en/pages/getting-
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the Web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

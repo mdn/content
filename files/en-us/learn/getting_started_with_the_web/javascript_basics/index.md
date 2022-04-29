@@ -475,7 +475,7 @@ function setUserName() {
 
 In human language, this means: If `myName` has no value, run `setUserName()` again from the start. If it does have a value (if the above statement is not true), then store the value in `localStorage` and set it as the heading's text.
 
-## Summary
+## Conclusion
 
 If you have followed all the instructions in this article, you should end up with a page that looks something like the image below. You can also [view our version](https://mdn.github.io/beginner-html-site-scripted/).
 
@@ -503,4 +503,4 @@ We have just scratched the surface of JavaScript. If you enjoyed playing, and wi
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the Web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

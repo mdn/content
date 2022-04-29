@@ -222,7 +222,7 @@ You might get unexpected results if you omit the `https://` or `http://` part, c
 
 Add a link to your page now, if you haven't already done so.
 
-## Summary
+## Conclusion
 
 If you have followed all the instructions in this article, you should end up with a page that looks like the one below (you can also [view it here](https://mdn.github.io/beginner-html-site/)):
 
@@ -243,4 +243,4 @@ Here, we have only really scratched the surface of HTML. To find out more, go to
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the Web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
