@@ -75,7 +75,7 @@ function clon(integer){
 }
 ```
 
-Further, this technique could be extended to create jumpless "Count Trailing Zeros" function as seen below. The `ctrz` function below
+Further, this technique could be extended to create a jumpless "Count Trailing Zeros" function, as seen below. The `ctrz` function below
 fills in all the high bits with the lowest filled bit, then negates the bits to erase
 all higher set bits so that `clz` can then be used.
 
