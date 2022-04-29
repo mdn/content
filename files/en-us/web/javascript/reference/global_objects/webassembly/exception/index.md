@@ -52,11 +52,11 @@ Once the exception is available to the WebAssembly module, it can attach a stack
 
 This example shows how to define a tag and import it into a module, then use it to throw an exception that is caught in JavaScript.
 
-The following WebAssembly code, is assumed to be compiled to a file **example.wasm**.
-- The module imports a tag referred to internally as `$tagname` that has a single `i32` param.
+Consider the following WebAssembly code, which is assumed to be compiled to a file **example.wasm**.
+- The module imports a tag that is referred to as `$tagname` internally and that has a single `i32` param.
   The tag expects the tag to be passed using module `extmod` and tag `exttag`. 
 - The `$throwException` fnction throws an exception using the `throw` keyword, taking the `$tagname` and the parameter argument.
-- The module exports a function `run1()` that throws an exception with the value "42".
+- The module exports the function `run1()` that throws an exception with the value "42".
 
 ```wasm
 (module
@@ -77,7 +77,7 @@ The following WebAssembly code, is assumed to be compiled to a file **example.wa
 )
 ```
 
-The code below below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) to import the  **example.wasm** file, passing in an "import object" (`importObject`) that includes a new {{jsxref("WebAssembly.Tag")}} named `tag_to_import`.
+The code below below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) to import the **example.wasm** file, passing in an "import object" (`importObject`) that includes a new {{jsxref("WebAssembly.Tag")}} named `tag_to_import`.
 The import object defines an object with properties that match the `import` statement in the WebAssembly code.
 
 Once the file is instantiated, the code calls the exported WebAssembly `run1()` method, which will immediately throw an exception.
@@ -108,7 +108,7 @@ example.js:41 getArg 0 : 42
 The exception is caught in JavaScript using the `catch` block.
 We can see it is of type `WebAssembly.Exception`, but if we didn't have the right tag we couldn't do much else.
 
-However because we have the tag we use [`Exception.protoytpe.is()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is) to check it's the right one, and because it is correct we call [`Exception.protoytpe.getArg()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg) to read the value of "42".
+However, because we have the tag, we use [`Exception.protoytpe.is()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is) to check that it's the right one, and because it is correct, we call [`Exception.protoytpe.getArg()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg) to read the value of "42".
 
 ## Specifications
 
@@ -120,6 +120,6 @@ However because we have the tag we use [`Exception.protoytpe.is()`](/en-US/docs/
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

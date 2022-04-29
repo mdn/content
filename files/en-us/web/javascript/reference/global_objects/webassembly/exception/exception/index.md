@@ -32,7 +32,7 @@ new Exception(tag, payload, options)
 - `tag`
   - : An {{jsxref("WebAssembly.Tag")}} defining the data types expected for each of the values in the `payload`.
 - `payload`
-  - : An array of one or more data fields comprising the payload the exception.
+  - : An array of one or more data fields comprising the payload of the exception.
     The elements must match the data types of the corresponding elements in the `tag`.
     If the number of data fields in the payload and their types don't match, a {{jsxref("TypeError")}} exception is thrown.
 - `options` {{optional_inline}}
@@ -70,6 +70,6 @@ The [`stack` example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAss
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

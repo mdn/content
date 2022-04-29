@@ -15,11 +15,11 @@ browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 
 The **`getArg()`** prototype method of the [`Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) object can be used to get the value of a specified item in the exception's data arguments.
 
-The method passes a {{jsxref("WebAssembly.Tag")}}, and will only succeed if the thrown `Exception` was created using the same tag (otherwise it will throw a `TypeError`).
+The method passes a {{jsxref("WebAssembly.Tag")}} and will only succeed if the thrown `Exception` was created using the same tag; otherwise it will throw a `TypeError`.
 This ensures that the exception can only be read if the calling code has access to the tag.
-Tags that are neither imported into, or exported from, the WebAssembly code are internal, and their associated runtime exceptions cannot be queried using this method!
+Tags that are neither imported into or exported from the WebAssembly code are internal, and their associated runtime exceptions cannot be queried using this method!
 
-> **Note:** It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag).
+> **Note:** It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
 
 ## Syntax
 
@@ -30,8 +30,8 @@ getArg(exceptionTag, index)
 ### Parameters
 
 - `exceptionTag`
-  - : A {{jsxref("WebAssembly.Tag")}}, which must match the tag associated with this exception.
-    If the tags don't match the method will throw a {{jsxref("TypeError")}} exception. 
+  - : A {{jsxref("WebAssembly.Tag")}} that must match the tag associated with this exception.
+    If the tags don't match, the method will throw a {{jsxref("TypeError")}} exception. 
 - `index`
   - : The index of the value in the data arguments to return, 0-indexed.
     If the index exceeds the available elements, the method will throw a {{jsxref("RangeError")}} exception. 
@@ -45,13 +45,13 @@ The value of the argument at `index`.
 - {{jsxref("TypeError")}}
   - : The exception was not created with the tag passed to the method.
 - {{jsxref("RangeError")}}
-  - : The `index` parameter is ≥ the number of fields in the data.
+  - : The value of the `index` parameter is greater than or equal to the number of fields in the data.
   
 
 ## Examples
 
 In order to get the values of an exception, the tag must be "known" to the calling code;
-It may be either imported into or exported from the calling code.
+it may be either imported into or exported from the calling code.
 
 ### Getting exception value from imported tag
 
@@ -102,7 +102,7 @@ example.js:41 getArg 0 : 1
 ```
 
 The code catches the exception and uses `getArg()` to print the value at the first index.
-In this case it is just "1".
+In this case, it is just "1".
 
 
 ### Getting exception value from an exported tag
@@ -126,7 +126,7 @@ Here is the same WebAssembly module, simply replacing the import with an export.
 )
 ```
 
-The JavaScript is similar too. In this case we have no imports, but instead we get the exported tag and use that to get the argument.
+The JavaScript is similar too. In this case, we have no imports, but instead we get the exported tag and use that to get the argument.
 To make it a little more "safe", here we also test that we have the right tag using the [`is()` method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is).
 
 ```js

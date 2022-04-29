@@ -52,7 +52,7 @@ console.log(`Tag1: ${ exception1.is(tag1) }`);
 // Tag1: true
 ```
 
-We can also demonstrate that this exception will not match another tag, event if is created with the same parameters.
+We can also demonstrate that this exception will not match another tag even if the tag is created with the same parameters.
 ```js
 // Create a new tag (with same parameters) and verify it does not match the exception
 const tag2 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
@@ -72,6 +72,6 @@ console.log(`Tag2: ${ exception1.is(tag2) }`);
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

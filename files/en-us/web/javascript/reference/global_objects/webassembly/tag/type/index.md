@@ -31,7 +31,7 @@ None
 
 An object with a property named `parameters` that references the array of data types associated with this [`Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag).
 
-This is the same as the `type` object that was originally passed into the [`Tag()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag)
+This is the same as the `type` object that was originally passed into the [`Tag()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag).
 
 
 ## Examples
@@ -59,6 +59,6 @@ console.log(tag.type());
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

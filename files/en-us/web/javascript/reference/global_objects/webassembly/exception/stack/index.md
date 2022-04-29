@@ -17,7 +17,7 @@ browser-compat: javascript.builtins.WebAssembly.Exception.stack
 The read-only **`stack`** property of an object instance of type [`Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) _may_ contain a stack trace for an exception thrown from WebAssembly code.
 
 Exceptions thrown from WebAssembly code do not include a stack trace by default.
-If WebAssembly code needs to provide a stack trace it must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception).
+If WebAssembly code needs to provide a stack trace, it must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception).
 The virtual machine can then attach a stack trace to the exception when it is thrown.
 
 > **Note:** Stack traces are not normally sent from WebAssembly code to improve performance.
@@ -42,8 +42,8 @@ ${url}:wasm-function[${funcIndex}]:${pcOffset}
 This example demonstrate how to throw an exception from WebAssembly that includes a stack trace.
 
 Consider the following WebAssembly code, which is assumed to be compiled to a file named **example.wasm**.
-This imports a tag, which it refers to internally as `$tagname`, and imports a function that it refers to as $throwExnWithStack.
-It exports a method `run1` that can be called by external code to call $throwExnWithStack (and hence the JavaScript function)
+This imports a tag, which it refers to as `$tagname` internally, and imports a function that it refers to as `$throwExnWithStack`.
+It exports the method `run1` that can be called by external code to call `$throwExnWithStack` (and hence the JavaScript function)
 
 ```wasm
 (module
@@ -95,7 +95,7 @@ The most "relevant" part of this code is the line where the Exception is created
 ```js
 new WebAssembly.Exception(tag, [param], {traceStack: true});
 ```
-Passing in `{traceStack: true}` tells the WebAssembly virtual machine that it should attached the stack to the exception that it is throwing.
+Passing in `{traceStack: true}` tells the WebAssembly virtual machine that it should attach the stack to the exception that it is throwing.
 Without this, the stack would be `undefined`.
 
 ## Specifications
@@ -108,6 +108,6 @@ Without this, the stack would be `undefined`.
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
