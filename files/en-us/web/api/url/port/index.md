@@ -14,7 +14,8 @@ browser-compat: api.URL.port
 
 The **`port`** property of the {{domxref("URL")}} interface is
 a {{domxref("USVString")}} containing the port number of the URL. If the URL does not
-contain an explicit port number, it will be set to `''`.
+contain an explicit port number, or if the explicit port number is the default port number for the given scheme,
+it will be set to `''`.
 
 {{AvailableInWorkers}}
 
@@ -25,8 +26,14 @@ A {{domxref("USVString")}}.
 ## Examples
 
 ```js
-const url = new URL('https://mydomain.com:80/svn/Repos/');
-console.log(url.port); // Logs '80'
+const url1 = new URL('https://mydomain.com:4043/svn/Repos/');
+console.log(url1.port); // Logs '4043'
+
+const url2 = new URL('https://mydomain.com/svn/Repos/');
+console.log(url2.port); // Logs '' as it the default port is used
+
+const url3 = new URL('https://mydomain.com:443/svn/Repos/');
+console.log(url3.port); // Logs '' as 443 is the default port.
 ```
 
 ## Specifications
