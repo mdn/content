@@ -1,7 +1,7 @@
 ---
 title: 'aria-required'
 slug: Web/Accessibility/ARIA/Attributes/aria-required
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -56,9 +56,9 @@ This could be written semantically, without the need for JavaScript:
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRequired")}}
-  - : The  [`ariaRequired`](/en-US/docs/Web/API/Element/ariaRequired) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-required` attribute.
+  - : The [`ariaRequired`](/en-US/docs/Web/API/Element/ariaRequired) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-required` attribute.
 - {{domxref("ElementInternals.ariaRequired")}}
-  - : The  [`ariaRequired`](/en-US/docs/Web/API/ElementInternals/ariaRequired) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-required` attribute.
+  - : The [`ariaRequired`](/en-US/docs/Web/API/ElementInternals/ariaRequired) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-required` attribute.
 
 ## Associated roles
 

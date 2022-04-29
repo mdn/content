@@ -1,7 +1,7 @@
 ---
 title: 'aria-braillelabel'
 slug: Web/Accessibility/ARIA/Attributes/aria-braillelabel
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute

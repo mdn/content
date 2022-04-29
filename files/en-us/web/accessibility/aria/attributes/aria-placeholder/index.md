@@ -1,7 +1,7 @@
 ---
 title: 'aria-placeholder'
 slug: Web/Accessibility/ARIA/Attributes/aria-placeholder
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -41,9 +41,9 @@ The `aria-placeholder` is used in addition to, not instead of, a label. They hav
 ## ARIAMixin API
 
 - {{domxref("Element.ariaPlaceholder")}}
-  - : The  [`ariaPlaceholder`](/en-US/docs/Web/API/Element/ariaPlaceholder) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-placeholder` attribute.
+  - : The [`ariaPlaceholder`](/en-US/docs/Web/API/Element/ariaPlaceholder) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-placeholder` attribute.
 - {{domxref("ElementInternals.ariaPlaceholder")}}
-  - : The  [`ariaPlaceholder`](/en-US/docs/Web/API/ElementInternals/ariaPlaceholder) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-placeholder` attribute.
+  - : The [`ariaPlaceholder`](/en-US/docs/Web/API/ElementInternals/ariaPlaceholder) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-placeholder` attribute.
 
 ## Associated roles
 
