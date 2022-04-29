@@ -53,7 +53,7 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
   - : Returns a {{domxref("DOMString")}} containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message ("`200 OK`", for example).
 
-    > **Note:** According to the HTTP/2 specification ([8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)), HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
+    > **Note:** According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : Is an `unsigned long` representing the number of milliseconds a request can take before automatically being terminated.
