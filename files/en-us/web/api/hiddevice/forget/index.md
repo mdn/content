@@ -21,7 +21,7 @@ HIDDevice.forget()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

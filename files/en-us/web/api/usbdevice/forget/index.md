@@ -28,7 +28,7 @@ None.
 
 ### Return value
 
-A {{jsxref("promise")}} which resolves `undefined`.
+A {{jsxref("promise")}} which resolves with `undefined` once the device access permission is revoked.
 
 ## Specifications
 

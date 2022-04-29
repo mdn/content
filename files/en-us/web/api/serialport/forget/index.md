@@ -11,7 +11,7 @@ browser-compat: api.SerialPort.forget
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-The **`SerialPort.forget()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port is closed and is forgotten.
+The **`SerialPort.forget()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the serial port is closed and is forgotten.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}}.
+A {{jsxref("Promise")}} that resolves with `undefined` once the connection is closed and device is forgeotten (permission is reset).
 
 ## Specifications
 
