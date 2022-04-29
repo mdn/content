@@ -1,6 +1,6 @@
 ---
 title: ARIA annotations
-slug: Web/Accessibility/ARIA/Annotations 
+slug: Web/Accessibility/ARIA/Annotations
 tags:
   - ARIA
   - Accessibility

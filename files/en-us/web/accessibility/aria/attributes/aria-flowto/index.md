@@ -1,7 +1,7 @@
 ---
 title: 'aria-flowto'
 slug: Web/Accessibility/ARIA/Attributes/aria-flowto
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute

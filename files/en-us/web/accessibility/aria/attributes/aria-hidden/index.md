@@ -1,7 +1,7 @@
 ---
 title: 'aria-hidden'
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -22,7 +22,7 @@ Adding `aria-hidden="true"` to an element removes that element and all of its ch
 - Duplicated content, such as repeated text
 - Offscreen or collapsed content, such as menus
 
-The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't visually hide anything.  
+The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't visually hide anything.
 
 `aria-hidden="true"` should not be used on elements that can receive focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element.
 
@@ -37,7 +37,7 @@ Use caution when using `aria-hidden` to hide visibly rendered content from assis
 On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonym `role="none"` seem similar, but the intent behind each is different.
 
 - `aria-hidden="true"` will remove the entire element from the accessibility API.
-- `role="presentation"` and `role="none"` will remove the semantic meaning of an element while still exposing it and its content to assistive technology.  
+- `role="presentation"` and `role="none"` will remove the semantic meaning of an element while still exposing it and its content to assistive technology.
 
 `aria-hidden="true"` should not be added when:
 
@@ -76,9 +76,9 @@ We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide t
 ## ARIAMixin API
 
 - {{domxref("Element.ariaHidden")}}
-  - : The  [`ariaHidden`](/en-US/docs/Web/API/Element/ariaHidden) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-hidden` attribute, which Indicates whether the element is exposed to an accessibility API.
+  - : The [`ariaHidden`](/en-US/docs/Web/API/Element/ariaHidden) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-hidden` attribute, which Indicates whether the element is exposed to an accessibility API.
 - {{domxref("ElementInternals.ariaHidden")}}
-  - : The  [`ariaHidden`](/en-US/docs/Web/API/ElementInternals/ariaHidden) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-hidden` attribute
+  - : The [`ariaHidden`](/en-US/docs/Web/API/ElementInternals/ariaHidden) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-hidden` attribute
 
 ## Associated roles
 
