@@ -345,7 +345,7 @@ In the example below, we have demonstrated an image and a gradient in use as a v
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 900)}}
 
-> **Note:** there are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
+> **Note:** There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
 
 ## Position
 
@@ -363,7 +363,7 @@ In the following example we have positioned a background image 40px from the top
 
 Throughout the examples above, we've seen places where keywords are used as a value (for example `<color>` keywords like `red`, `black`, `rebeccapurple`, and `goldenrod`). These keywords are more accurately described as _identifiers_, a special value that CSS understands. As such they are not quoted — they are not treated as strings.
 
-There are places where you use strings in CSS. For example [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
+There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 600)}}
 
