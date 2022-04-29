@@ -1,6 +1,6 @@
 ---
 title: Element.requestFullscreen()
-slug: Web/API/Element/requestFullScreen
+slug: Web/API/Element/requestFullscreen
 tags:
   - API
   - DOM
@@ -36,8 +36,8 @@ detached from the original document, then the document receives these events ins
 ## Syntax
 
 ```js
-requestFullScreen()
-requestFullScreen(options)
+requestFullscreen()
+requestFullscreen(options)
 ```
 
 ### Parameters
