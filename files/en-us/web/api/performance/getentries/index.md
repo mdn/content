@@ -27,6 +27,10 @@ certain types or that have certain names, see {{domxref("Performance.getEntriesB
 getEntries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 - entries

@@ -22,6 +22,10 @@ existing push endpoint registrations.
 registrations()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.

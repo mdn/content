@@ -19,6 +19,10 @@ The **`toString()`** {{Glossary("stringifier")}} method of a {{domxref("WorkerLo
 toString()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

@@ -23,6 +23,10 @@ node is not changed.
 parentNode()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Node")}} object or `null`.

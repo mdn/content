@@ -34,6 +34,10 @@ the following steps:
 resume()
 ```
 
+### Parameters
+
+None.
+
 ### Errors
 
 An `InvalidState` error is raised if the `resume()` method is

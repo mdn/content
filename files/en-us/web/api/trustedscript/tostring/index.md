@@ -19,6 +19,10 @@ The **`toString()`** method of the {{domxref("TrustedScript")}} interface return
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMString","string")}} containing the sanitized script.

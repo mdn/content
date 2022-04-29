@@ -24,6 +24,10 @@ When the `terminate()` method is called on a {{domxref("PresentationConnection")
 terminate()
 ```
 
+### Parameters
+
+None.
+
 ## Browser compatibility
 
 {{Compat}}

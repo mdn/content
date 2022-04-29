@@ -19,6 +19,8 @@ The **`appendItem()`** method of the {{domxref("SVGPointList")}} interface adds 
 appendItem(obj)
 ```
 
+### Parameters
+
 - `obj`
   - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be appended.
 

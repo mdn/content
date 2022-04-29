@@ -23,6 +23,10 @@ collecting reports in its report queue.
 observe()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

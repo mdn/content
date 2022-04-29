@@ -20,6 +20,10 @@ restoring the context of a {{domxref("WebGLRenderingContext")}} object.
 restoreContext()
 ```
 
+### Parameters
+
+None.
+
 ### Errors thrown
 
 - `INVALID_OPERATION` if the context was not lost.

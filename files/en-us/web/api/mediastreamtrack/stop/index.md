@@ -24,6 +24,10 @@ The **`MediaStreamTrack.stop()`** method stops the track.
 stop()
 ```
 
+### Parameters
+
+None.
+
 ## Description
 
 Calling `stop()` tells the {{glossary("user agent")}} that the track's

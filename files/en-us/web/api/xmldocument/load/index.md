@@ -21,6 +21,10 @@ browser-compat: api.XMLDocument.load
 load()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

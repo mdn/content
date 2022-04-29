@@ -28,6 +28,10 @@ document fragment valid.
 extractContents()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Basic example

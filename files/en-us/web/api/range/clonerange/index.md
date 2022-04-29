@@ -23,6 +23,10 @@ The returned clone is copied by value, not reference, so a change in either
 cloneRange()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

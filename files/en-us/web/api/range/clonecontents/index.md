@@ -28,6 +28,10 @@ fragment valid.
 cloneContents()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DocumentFragment") }} object.

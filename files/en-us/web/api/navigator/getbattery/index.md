@@ -27,6 +27,10 @@ documentation for additional details, a guide to using the API, and sample code.
 getBattery()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{JSxRef("Promise")}} which, when resolved, calls its fulfillment handler with a

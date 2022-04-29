@@ -25,6 +25,10 @@ events.
 disconnect()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

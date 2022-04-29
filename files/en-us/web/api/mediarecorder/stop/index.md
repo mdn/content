@@ -34,6 +34,10 @@ following steps:
 stop()
 ```
 
+### Parameters
+
+None.
+
 ### Errors
 
 An `InvalidState` error is raised if the `stop()` method is
