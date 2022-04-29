@@ -25,19 +25,6 @@ During the time between the `mute` event and the `unmute` event, the value of th
 
 This event is not cancelable and does not bubble.
 
-## Mute track
-
-```js
-const transceivers = peer.getTransceivers();
-
-const audioTrack = transceivers[0];
-audioTrack.direction = 'recvonly';
-
-const videoTrack = transceivers[1];
-videoTrack.direction = 'recvonly';
-```
-`transceivers` is an array of {{domxref("RTCRtpTransceiver")}} where you can find the audio or video track sent and received. More information about the behavior around modify {{domxref("RTCRtpTransceiver.direction", "direction")}}.
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -80,7 +67,9 @@ musicTrack.onunmute = event = > {
 }
 ```
 
-## Full example
+### Mute tracks through receivers
+
+The following example shows how to mute tracks using receivers.
 
 ```js
 // Peer 1 (Receiver)
@@ -102,7 +91,7 @@ const videoTrack = transceivers[1];
 videoTrack.direction = 'recvonly';
 ```
 
-> **Note:** In Safari < 14.1 exists an active bug which not fire the `mute` event.
+`transceivers` is an array of {{domxref("RTCRtpTransceiver")}} where you can find the audio or video track sent and received. For more information, see the {{domxref("RTCRtpTransceiver.direction", "direction")}} article.
 
 ## Specifications
 
@@ -115,3 +104,4 @@ videoTrack.direction = 'recvonly';
 ## See also
 
 - {{domxref("MediaStreamTrack/unmute_event", "unmute")}} event
+- {{domxref("RTCRtpTransceiver.direction", "direction")}}
