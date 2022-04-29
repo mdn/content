@@ -13,7 +13,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
-Everything in CSS has a box around it, and understanding these boxes is key to being able to create layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the CSS _Box Model_ so that you can build more complex layout tasks with an understanding of how it works and the terminology that relates to it.
+Everything in CSS has a box around it, and understanding these boxes is key to being able to create more complex layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the CSS _Box Model_. You'll get an understanding of how it works and the terminology that relates to it.
 
 <table>
   <tbody>
@@ -49,12 +49,12 @@ Everything in CSS has a box around it, and understanding these boxes is key to b
 
 In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. These characteristics refer to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes also have an **inner display type** and an **outer display type**. First, we will explain what we mean by block box and inline box. We will then explain what is meant by an inner and outer display type.
 
-If a box has an outer display type of `block`, it will behave in the following ways:
+If a box has an outer display type of `block`, then:
 
 - The box will break onto a new line.
-- The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.
 - The {{cssxref("width")}} and {{cssxref("height")}} properties are respected.
-- Padding, margin and border will cause other elements to be pushed away from the box
+- Padding, margin and border will cause other elements to be pushed away from the box.
+- The box will extend in the inline direction to fill the space available in its container. In most cases the box will become as wide as its container, filling up 100% of the space available.
 
 Some HTML elements, such as `<h1>` and `<p>`, use `block` as their outer display type by default.
 
@@ -85,7 +85,7 @@ Block and inline layout, however, is the default way that things on the web beha
 
 ## Examples of different display types
 
-Let's move on and have a look at some examples. Below we have three different HTML elements, all of which have an outer display type of `block`. The first is a paragraph, which has a border added in CSS. The browser renders this as a block box, so the paragraph begins on a new line, and expands to the full width available to it.
+Let's have a look at some examples. Below we have three different HTML elements, all of which have an outer display type of `block`. The first is a paragraph, which has a border added in CSS. The browser renders this as a block box, so the paragraph begins on a new line, and expands to the full width available to it.
 
 The second is a list, which is laid out using `display: flex`. This establishes flex layout for the items inside the container, however, the list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.
 
@@ -148,11 +148,7 @@ The _actual_ space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5
 
 ### The alternative CSS box model
 
-You might think it is rather inconvenient to have to add up the border and padding to get the real size of the box, and you would be right! For this reason, CSS had an alternative box model introduced some time after the standard box model. Using this model, any width is the width of the visible box on the page, therefore the content area width is that width minus the width for the padding and border. The same CSS as used above would give the below result (width = 350px, height = 150px).
-
-![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
-
-By default, browsers use the standard box model. If you want to turn on the alternative model for an element, you do so by setting `box-sizing: border-box` on it. By doing this, you are telling the browser to use the border box, as shown above, as your defined area.
+By default, browsers use the standard box model described above. If it feels inconvenient to have to add up the border and padding to get the real size of the box, CSS provides an alternative box model. To turn on the alternative model for an element, set `box-sizing: border-box` on it. This tells the browser to use the border box as your defined area.
 
 ```css
 .box {
@@ -160,7 +156,11 @@ By default, browsers use the standard box model. If you want to turn on the alte
 }
 ```
 
-If you want all of your elements to use the alternative box model, and this is a common choice among developers, set the `box-sizing` property on the `<html>` element, then set all other elements to inherit that value, as seen in the snippet below. If you want to understand the thinking behind this, see [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+When you use this model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border. In the example below, the same CSS as used above leads to the following result  (width = 350px, height = 150px):
+
+![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
+
+If you want all of your elements to use the alternative box model (which is a common choice among developers), set the `box-sizing` property on the `<html>` element and set all other elements to inherit that value, as in the snippet below. If you want to understand the thinking behind this, see [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
 
 ```css
 html {
@@ -212,15 +212,18 @@ We can control all margins of an element at once using the {{cssxref("margin")}}
 
 #### Margin collapsing
 
-A key thing to understand about margins is the concept of **margin collapsing**. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, and its size will be equal to the largest individual margin. If one margin is negative, its value will be _subtracted_ from the total. Where both are negative, the margins will collapse and the smallest (furthest from zero) value will be used.
+A key thing to understand about margins is the concept of **margin collapsing**:
+- Positive margins on two elements whose margins touch will combine to become one margin. Its size will be equal to the largest individual margin.
+- If one margin is negative, its value will be _subtracted_ from the total. 
+- Where both are negative, the margins will collapse and the smallest (furthest from zero) value will be used.
 
-In the example below, we have two paragraphs. The top paragraph has a `margin-bottom` of 50 pixels. The second paragraph has a `margin-top` of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.
+In the example below, we have two paragraphs. The top paragraph has a `margin-bottom` of 50 pixels, the other has a `margin-top` of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.
 
 **You can test this by setting the `margin-top` of paragraph two to 0. The visible margin between the two paragraphs will not change — it retains the 50 pixels set in the `margin-bottom` of paragraph one. If you set it to -10px, you'll see that the overall margin becomes 40px — it subtracts from the 50px.**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}}
 
-There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.
+A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect. 
 
 ### Borders
 
@@ -230,20 +233,20 @@ For styling borders, there are a large number of properties — there are four b
 
 You can set the width, style, or color of all four borders at once using the {{cssxref("border")}} property.
 
-To set the properties of each side individually, you can use:
+To set the properties of each side individually, use:
 
 - {{cssxref("border-top")}}
 - {{cssxref("border-right")}}
 - {{cssxref("border-bottom")}}
 - {{cssxref("border-left")}}
 
-To set the width, style, or color of all sides, use the following:
+To set the width, style, or color of all sides, use:
 
 - {{cssxref("border-width")}}
 - {{cssxref("border-style")}}
 - {{cssxref("border-color")}}
 
-To set the width, style, or color of a single side, you can use one of the more granular longhand properties:
+To set the width, style, or color of a single side, use one of the more granular longhand properties:
 
 - {{cssxref("border-top-width")}}
 - {{cssxref("border-top-style")}}
@@ -258,30 +261,28 @@ To set the width, style, or color of a single side, you can use one of the more 
 - {{cssxref("border-left-style")}}
 - {{cssxref("border-left-color")}}
 
-In the example below, we have used various shorthands and longhands to create borders. Play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different styles of border you can choose from.
+In the example below, we have used various shorthands and longhands to create borders. Play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different available border styles.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 700)}}
 
 ### Padding
 
-The padding sits between the border and the content area. Unlike margins, you cannot have negative amounts of padding, so the value must be 0 or a positive value. Padding is typically used to push the content away from the border. Any background applied to your element will display behind the padding.
+The padding sits between the border and the content area and is used to push the content away from the border. Unlike margins, you cannot have a negative padding. Any background applied to your element will display behind the padding.
 
-We can control the padding on all sides of an element using the {{cssxref("padding")}} property, or on each side individually using the equivalent longhand properties:
+The {{cssxref("padding")}} property controls the padding on all sides of an element. To control each side individually, use these longhand properties:
 
 - {{cssxref("padding-top")}}
 - {{cssxref("padding-right")}}
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
 
-**If you change the values for padding on the class `.box` in the example below, you can see that this changes where the text begins in relation to the box.**
-
-**You can also change the padding on the class `.container,` which will make space between the container and the box. Padding can be changed on any element, and will make space between its border and whatever is inside the element.**
+In the example below, you can change the values for padding on the class `.box` to see that this changes where the text begins in relation to the box. You can also change the padding on the class `.container` to create space between the container and the box. You can change the padding on any element to create space between its border and whatever is inside the element.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 700)}}
 
 ## The box model and inline boxes
 
-All of the above applies fully to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
+All of the above fully applies to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
 In the example below, we have a `<span>` inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but they do not change the relationship of other content to our inline box and so the padding and border overlaps other words in the paragraph. Horizontal padding, margins, and borders are respected and will cause other content to move away from the box.
 
@@ -289,7 +290,7 @@ In the example below, we have a `<span>` inside a paragraph and have applied a `
 
 ## Using display: inline-block
 
-There is a special value of `display`, which provides a middle ground between `inline` and `block`. This is useful for situations where you do not want an item to break onto a new line, but do want it to respect `width` and `height` and avoid the overlapping seen above.
+`display: inline-block` is a special value of `display`, which provides a middle ground between `inline` and `block`. Use it if you do not want an item to break onto a new line, but do want it to respect `width` and `height` and avoid the overlapping seen above.
 
 An element with `display: inline-block` does a subset of the block things we already know about:
 
