@@ -60,7 +60,6 @@ The table below details the differences between the methods available on the `Ob
       </td>
     </tr>
     <tr>
-    <tr>
       <td><code>get()</code></td>
       <td>N/A</td>
       <td>
