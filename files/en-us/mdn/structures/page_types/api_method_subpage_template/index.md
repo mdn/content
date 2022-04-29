@@ -98,11 +98,13 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 - `parameter2`
   - : etc.
 
+> **Note:** This section is mandatory. If there aren't any parameter, put "None." instead of the definition list. 
+
 ### Return value
 
 Include a description of the method's return value, including data type and what it represents.
 
-If the method doesn't return anything, just put "{{jsxref('undefined')}}.".
+If the method doesn't return anything, just put "None {{jsxref('undefined')}}.".
 
 ### Exceptions
 
