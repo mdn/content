@@ -26,6 +26,7 @@ read-only, or do you want to write to the object stores?) The default value is
 
 A string defining the mode for isolating access to data in the current object stores.
 The following values are available:
+
 - `readonly`
   - : Allows data to be read but not changed.
 - `readwrite`
@@ -33,7 +34,7 @@ The following values are available:
 - `versionchange`
   - : Allows any operation to be performed, including ones that delete and
     create object stores and indexes.
-    This mode is for updating the version number of transactions 
+    This mode is for updating the version number of transactions
     that were started using {{domxref("IDBDatabase.setVersion()")}}.
     Transactions of this mode cannot run concurrently with other transactions.
     Transactions in this mode are known as _upgrade transactions_.
