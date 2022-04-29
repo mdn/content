@@ -44,7 +44,7 @@ _This interface also inherits methods from its parents, {{domxref("Node")}} and 
 - {{domxref("CharacterData.remove()")}}
   - : Removes the object from its parent children list.
 - {{domxref("CharacterData.replaceData()")}}
-  - : Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, `data` contains the modified string.
+  - : Replaces the specified amount of characters, starting at the specified offset, with the specified string; when this method returns, `data` contains the modified string.
 - {{DOMxRef("CharacterData.replaceWith()")}}
   - : Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
 - {{domxref("CharacterData.substringData()")}}

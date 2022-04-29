@@ -22,9 +22,9 @@ environment.
 ## Properties
 
 - {{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} that uniquely identifies a device.
+  - : A string that uniquely identifies a device.
 - {{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} that provides a human-readable name for the device.
+  - : A string that provides a human-readable name for the device.
 - {{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 

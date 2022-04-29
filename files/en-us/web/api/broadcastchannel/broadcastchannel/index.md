@@ -26,7 +26,7 @@ new BroadcastChannel(channelName);
 ### Values
 
 - _channelName_
-  - : Is a {{domxref("DOMString")}} representing the name of the channel; there is one
+  - : Is a string representing the name of the channel; there is one
     single channel with this name for all {{glossary("browsing context", "browsing
     contexts")}} with the same {{glossary("origin")}}.
 

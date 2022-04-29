@@ -62,7 +62,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 ### DOM
 
 - The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} {{domxref("HTMLHyperLinkElementUtils")}} properties previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return "`/x?a=true&b=false"` and `search` would return "", rather than "`/x`" and "`?a=true&b=false"` respectively. This has now been fixed ({{bug(1310483)}}).
-- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a {{domxref("USVString")}} or sequence of {{domxref("USVString")}}s as an init object ({{bug("1330678")}}).
+- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a string or sequence of strings as an init object ({{bug("1330678")}}).
 - The {{domxref("Selection.setBaseAndExtent()")}} method of the [Selection API](/en-US/docs/Web/API/Selection) is now implemented (see {{bug(1321623)}}).
 - The ["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) addition to `file` type {{htmlelement("input")}} `values` has been implemented in Gecko, giving it parity with other browsers (see {{bug(1274596)}}).
 - {{domxref("Node.getRootNode()")}} has been implemented, replacing the deprecated `Node.rootNode` property ({{bug(1269155)}}).
