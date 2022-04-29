@@ -38,7 +38,7 @@ A {{domxref("ReadableStreamDefaultReader")}} or {{domxref("ReadableStreamBYOBRea
 
 ### Exceptions
 
-- {{jsxref("RangeeError")}}
+- {{jsxref("RangeError")}}
   - : Thrown if the provided mode value is not `"byob"` or `undefined`.
 - {{jsxref("TypeError")}}
   - : Thrown if the stream you are trying to create a reader for is not a
