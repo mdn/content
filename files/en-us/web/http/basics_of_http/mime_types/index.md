@@ -198,7 +198,7 @@ The following image types are used commonly enough to be considered _safe_ for u
 - [`image/svg+xml`](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
 - [`image/webp`](/en-US/docs/Web/Media/Formats/Image_types#webp_image): Web Picture format (WEBP)
 
-The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types##common_image_file_types) provides information and recommendations about when to use the different image formats.
+The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types#common_image_file_types) provides information and recommendations about when to use the different image formats.
 
 ### Audio and video types
 
