@@ -21,8 +21,8 @@ As with many things, it's not that simple. There might be another XML vocabulary
 
 So normally you use longer strings as namespace names. A URL is a very popular form of namespace. It is easy to remember and can also point to further information about that XML vocabulary.
 
-- The W3C standard IMSC uses the URL [`http://www.w3.org/ns/ttml`](https://www.w3.org/ns/ttml) as the namespace for the `<p>` element.
-- For the `<p>` in HTML the namespace is [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml).
+- The W3C standard IMSC uses the URL [`http://www.w3.org/ns/ttml`](https://www.w3.org/ns/ttml/) as the namespace for the `<p>` element.
+- For the `<p>` in HTML the namespace is [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/).
 
 If you use the namespace `http://www.w3.org/ns/ttml` it is quite safe to assume that you are referring to elements from the IMSC vocabulary.
 

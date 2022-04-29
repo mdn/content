@@ -159,7 +159,7 @@ Working directly with the DOM, as in this example, requires understanding many t
 
 JavaScript frameworks were created to make this kind of work a lot easier — they exist to provide a better _developer experience_. They don't bring brand-new powers to JavaScript; they give you easier access to JavaScript's powers so you can build for today's web.
 
-If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/dengeist/pen/XWbPNmw), which also allows users to add and delete new tasks.
+If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/mxmason/pen/XWbPNmw), which also allows users to add and delete new tasks.
 
 Read more about the JavaScript used in this section:
 

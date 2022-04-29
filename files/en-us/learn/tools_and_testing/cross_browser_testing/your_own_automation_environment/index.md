@@ -708,7 +708,7 @@ Let's write an example:
     driver.quit();
     ```
 
-3. From your [Sauce Labs user settings](https://saucelabs.com/beta/user-settings), get your user name and access key. Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
+3. From your [Sauce Labs user settings](https://app.saucelabs.com/user-settings), get your user name and access key. Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
 4. Run your test with the following command:
 
     ```bash
@@ -717,7 +717,7 @@ Let's write an example:
 
     The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
-5. Now if you go to your [Sauce Labs Automated Test dashboard](https://saucelabs.com/beta/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
+5. Now if you go to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
     ![](sauce_labs_automated_test.png)
 
 > **Note:** Sauce Labs' [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
@@ -784,7 +784,7 @@ To do this, you need to:
 
 Here we've set a `testPassed` variable to `true` or `false` depending on whether the test passed or fails, then we've used the `saucelabs.updateJob()` method to update the details.
 
-If you now go back to your [Sauce Labs Automated Test dashboard](https://saucelabs.com/beta/dashboard/tests) page, you should see your new job now has the updated data attached to it:
+If you now go back to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you should see your new job now has the updated data attached to it:
 
 ![](sauce_labs_updated_job_info.png)
 

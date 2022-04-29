@@ -852,7 +852,7 @@ We have seen all the basics of building a custom form control, but as you can se
 Here are a few libraries you should consider before coding your own:
 
 - [jQuery UI](https://jqueryui.com/)
-- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns)
+- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 - [Nice Forms](https://www.emblematiq.com/lab/niceforms/)
 

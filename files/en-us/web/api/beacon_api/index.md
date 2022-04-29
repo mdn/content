@@ -34,6 +34,6 @@ The method takes two arguments, the URL and the data to send in the request. The
 
 - [Beacon standard](https://w3c.github.io/beacon/)
 - [Beacon CanIUse data](https://caniuse.com/#search=beacon)
-- [Intercepting beacons through service workers](https://ehsanakhgari.org/blog/2015-04-08/intercepting-beacons-through-service-workers); Ehsan Akhgari; 2015-Apr-08
+- [Intercepting beacons through service workers](https://ehsanakhgari.org/blog/2015-04-08/intercepting-beacons-through-service-workers/); Ehsan Akhgari; 2015-Apr-08
 - <https://webkit.org/blog/8821/link-click-analytics-and-privacy/>
 - [Beaconing in Practice](https://calendar.perfplanet.com/2020/beaconing-in-practice/)
