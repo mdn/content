@@ -52,7 +52,7 @@ After the `clientDataJSON` object is converted from an
     - `status`: A string which is either `"supported"` which
       indicates the client support token binding but did not negotiate with the relying
       party or `"present"` when token binding was used already
-    - `id`: A {{domxref("DOMString")}} which is the [base64url](/en-US/docs/Glossary/Base64)
+    - `id`: A string which is the [base64url](/en-US/docs/Glossary/Base64)
       encoding of the token binding ID which was used for the communication.
 
     Should this property be absent, it would indicate that the client does not support

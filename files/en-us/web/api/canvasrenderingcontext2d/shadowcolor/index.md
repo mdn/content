@@ -29,7 +29,7 @@ stroking.
 
 ## Value
 
-A {{domxref("DOMString")}} parsed as a [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;color&gt;")}} value. The default value is fully-transparent black.
+A string parsed as a [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;color&gt;")}} value. The default value is fully-transparent black.
 
 ## Examples
 

@@ -25,7 +25,7 @@ string.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
+A string specifying the track's human-readable label, if one is
 available in the track metadata. Otherwise, an empty string (`""`) is
 returned.
 

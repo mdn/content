@@ -20,7 +20,7 @@ An object based on {{domxref("AddressErrors")}} includes a **`country`** propert
 
 ## Value
 
-If an error occurred during validation of the address due to the {{domxref("PaymentAddress.country", "country")}} property having an invalid value, this property is set to a {{domxref("DOMString")}} providing a human-readable error message explaining the validation error.
+If an error occurred during validation of the address due to the {{domxref("PaymentAddress.country", "country")}} property having an invalid value, this property is set to a string providing a human-readable error message explaining the validation error.
 
 The text should also include, when possible, advice about how to go about correcting the error.
 

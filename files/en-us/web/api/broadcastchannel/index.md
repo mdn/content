@@ -28,7 +28,7 @@ The **`BroadcastChannel`** interface represents a named channel that any {{gloss
 _This interface also inherits properties from its parent, {{domxref("EventTarget")}}._
 
 - {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString")}}, the name of the channel.
+  - : Returns a string, the name of the channel.
 
 ## Methods
 

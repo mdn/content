@@ -31,7 +31,7 @@ Essentially: the nonce should ensure that counter blocks are not reused from one
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `AES-CTR`.
+  - : A string. This should be set to `AES-CTR`.
 - `counter`
   - : A {{domxref("BufferSource")}} — the initial value of the counter block. This must be 16 bytes long (the AES block size). The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce. For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
 - `length`

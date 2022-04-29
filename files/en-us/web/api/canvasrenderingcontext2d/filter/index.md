@@ -19,7 +19,7 @@ It is similar to the CSS {{cssxref("filter")}} property and accepts the same val
 ## Value
 
 The `filter` property accepts a value of `"none"` or one or more
-of the following filter functions in a {{domxref("DOMString")}}.
+of the following filter functions in a string.
 
 - [`url()`](</en-US/docs/Web/CSS/filter#url()>)
   - : A CSS {{cssxref("url", "url()")}}. Takes an IRI pointing to an SVG filter element,
