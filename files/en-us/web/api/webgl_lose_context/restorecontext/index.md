@@ -26,10 +26,10 @@ None.
 
 ### Exceptions
 
-This method doesn't raise any exception, but an error can be notified using the {{domxref("WEBGLRenderingContext.getError", "getError()")}} method's return value:
+Browsers may not report WebGL errors by default. WebGL's error reporting works by calling {{domxref("WEBGLRenderingContext.getError", "getError()")}} and checking for errors. The following exceptions may be thrown:
 
-- `INVALID_OPERATION` (`0x0502`)
-  - : Set if the context was not lost.
+- `INVALID_OPERATION`
+  - : Thrown if the context was not lost.
 
 ## Examples
 
