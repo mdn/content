@@ -27,7 +27,7 @@ values()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

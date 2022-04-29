@@ -24,12 +24,13 @@ either be `null` or `""` (the empty string); see [Non-existing attributes](#non-
 getAttribute(attributeName)
 ```
 
-where
+### Parameters
 
-- `attribute` is a string containing the value of
-  `attributeName`.
-- `attributeName` is the name of the attribute whose value you
-  want to get.
+- `attributeName` is the name of the attribute whose value you want to get.
+
+### Return value
+
+A string containing the value of `attributeName`.
 
 ## Examples
 
