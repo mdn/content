@@ -28,6 +28,10 @@ It positions an incoming audio stream in a stereo image using a [low-cost pannin
 createStereoPanner()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("StereoPannerNode")}}.

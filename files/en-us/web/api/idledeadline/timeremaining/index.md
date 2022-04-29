@@ -30,6 +30,10 @@ should return control to the user agent's event loop.
 timeRemaining()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMHighResTimeStamp")}} value (which is a floating-point number)

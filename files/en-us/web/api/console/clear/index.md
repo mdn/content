@@ -21,6 +21,10 @@ environment allows it.
 clear()
 ```
 
+### Parameters
+
+None.
+
 ## Specifications
 
 {{Specifications}}

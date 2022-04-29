@@ -24,6 +24,10 @@ returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
 getDescriptors(bluetoothDescriptorUUID)
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}}

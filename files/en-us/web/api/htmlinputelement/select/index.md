@@ -22,6 +22,10 @@ that includes a text field.
 select()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 Click the button in this example to select all the text in the

@@ -20,6 +20,10 @@ version of {{domxref("HTMLAreaElement.href")}}.
 toString()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Calling toString on an area element

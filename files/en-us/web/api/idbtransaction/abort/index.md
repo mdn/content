@@ -29,6 +29,10 @@ their {{domxref("IDBRequest.error")}} attribute set to {{exception("AbortError")
 abort()
 ```
 
+### Parameters
+
+None.
+
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}

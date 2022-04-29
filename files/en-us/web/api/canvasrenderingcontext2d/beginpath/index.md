@@ -25,6 +25,10 @@ this method when you want to create a new path.
 beginPath()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Creating distinct paths

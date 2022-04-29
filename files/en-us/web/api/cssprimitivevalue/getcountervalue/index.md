@@ -32,6 +32,10 @@ is raised. Modification to the corresponding style property can be achieved usin
 getCounterValue()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Counter")}} object representing the counter value.

@@ -25,6 +25,10 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 forward()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 The following examples create a button that moves forward one step in the session

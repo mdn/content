@@ -23,6 +23,10 @@ in this object. The values are {{jsxref("String")}} objects.
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.

@@ -28,6 +28,10 @@ it, and then returns it.
 createCaption()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 {{domxref("HTMLTableCaptionElement")}}

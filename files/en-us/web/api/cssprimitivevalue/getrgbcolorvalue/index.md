@@ -31,6 +31,10 @@ Modification to the corresponding style property can be achieved using the
 getRGBColorValue()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("RGBColor")}} object representing the color value.

@@ -31,6 +31,10 @@ Modification to the corresponding style property can be achieved using the
 getRectValue()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Rect")}} object representing the rect value.

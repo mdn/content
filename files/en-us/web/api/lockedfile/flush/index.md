@@ -28,6 +28,10 @@ lost. To avoid that, it's possible to force a write onto the disk by calling the
 flush()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("FileRequest")}} object to handle the success or failure of the operation.

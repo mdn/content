@@ -23,6 +23,10 @@ element, and then returns `false`.
 checkValidity()
 ```
 
+### Parameters
+
+None.
+
 ## Specifications
 
 {{Specifications}}

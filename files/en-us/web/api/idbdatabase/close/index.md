@@ -29,6 +29,10 @@ operation is pending.
 close()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

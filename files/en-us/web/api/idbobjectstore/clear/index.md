@@ -32,6 +32,10 @@ or {{domxref("IDBKeyRange")}}.
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this

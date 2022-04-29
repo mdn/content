@@ -50,6 +50,10 @@ The drawing state that gets saved onto a stack consists of:
 save()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Saving the drawing state

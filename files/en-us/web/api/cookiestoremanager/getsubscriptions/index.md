@@ -19,6 +19,10 @@ The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} int
 getSubscriptions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("promise")}} that resolves with a list of objects, each containing:
