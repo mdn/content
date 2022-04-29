@@ -19,6 +19,10 @@ Makes a request to bring the window to the front. It may fail due to user settin
 focus()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

@@ -25,6 +25,10 @@ iterates, releasing any resources used by the set and setting the iterator's sta
 detach()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

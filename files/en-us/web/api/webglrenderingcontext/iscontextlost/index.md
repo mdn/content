@@ -25,6 +25,10 @@ must be re-established before rendering can resume.
 isContextLost()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A boolean value which is `true` if the context is lost, or

@@ -41,6 +41,10 @@ are alleviated through other means.
 now()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

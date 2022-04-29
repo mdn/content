@@ -26,6 +26,10 @@ objects.
 stop()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

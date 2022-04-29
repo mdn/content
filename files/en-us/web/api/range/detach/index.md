@@ -20,6 +20,10 @@ resources. The method has been kept for compatibility.
 detach()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

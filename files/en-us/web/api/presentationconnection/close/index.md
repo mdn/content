@@ -22,6 +22,10 @@ When the `close()` method is called on a {{domxref("PresentationConnection")}}, 
 close()
 ```
 
+### Parameters
+
+None.
+
 ## Browser compatibility
 
 {{Compat}}

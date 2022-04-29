@@ -21,6 +21,10 @@ feedback operation.
 pauseTransformFeedback()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 None.

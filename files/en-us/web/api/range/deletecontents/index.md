@@ -22,6 +22,10 @@ Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
 deleteContents()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

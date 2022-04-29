@@ -24,6 +24,10 @@ of {{domxref("URL.href")}}.
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string.

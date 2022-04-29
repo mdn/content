@@ -23,6 +23,10 @@ the current position of the caret.
 getSelection()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Selection")}} object.

@@ -25,6 +25,10 @@ although in practice it seems to have the same effect as
 toJSON()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string.

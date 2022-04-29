@@ -23,6 +23,10 @@ This method will block while the print dialog is open.
 print()
 ```
 
+### Parameters
+
+None.
+
 ## Specifications
 
 {{Specifications}}

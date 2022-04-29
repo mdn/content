@@ -40,6 +40,10 @@ runs the following steps:
 requestData()
 ```
 
+### Parameters
+
+None.
+
 ### Errors
 
 An `InvalidState` error is raised if the `requestData()` method

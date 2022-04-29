@@ -30,6 +30,10 @@ objects returned by
 close()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### Closing a window opened with `window.open()`

@@ -26,6 +26,10 @@ details on the returned value.
 getBoundingClientRect()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ### HTML

@@ -28,6 +28,10 @@ callback will return any reports. The associated observer will no longer be acti
 disconnect()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

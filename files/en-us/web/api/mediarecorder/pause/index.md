@@ -34,6 +34,10 @@ browser queues a task that runs the below steps:
 pause()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 `undefined`.

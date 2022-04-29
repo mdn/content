@@ -28,6 +28,10 @@ throw.
 previousNode()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

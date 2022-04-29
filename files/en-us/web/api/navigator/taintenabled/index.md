@@ -24,6 +24,10 @@ method only stays for maintaining compatibility with very old scripts.
 taintEnabled()
 ```
 
+### Parameters
+
+None.
+
 ## Specifications
 
 {{Specifications}}

@@ -22,6 +22,10 @@ returns `null` and the current node is not changed.
 lastChild()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Node")}} object or `null`.

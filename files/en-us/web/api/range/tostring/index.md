@@ -24,6 +24,10 @@ ineffective.
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string.
