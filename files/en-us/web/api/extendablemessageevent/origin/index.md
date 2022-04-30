@@ -19,7 +19,7 @@ The **`origin`** read-only property of the
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

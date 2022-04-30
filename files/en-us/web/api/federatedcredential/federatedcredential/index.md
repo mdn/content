@@ -30,7 +30,7 @@ new FederatedCredential(init)
 
   - : Options are:
 
-    - `provider`: A {{domxref("USVString")}}; identifying the credential
+    - `provider`: A string; identifying the credential
       provider.
 
 ## Specifications
