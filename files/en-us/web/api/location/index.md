@@ -114,5 +114,5 @@ location.assign('http://another.site') // load another page
 
 ## See also
 
-- Two methods creating such an object: {{domxref("Window.location")}} and {{domxref("Document.location")}}.
-- URL related interfaces: {{domxref("URL")}}, {{domxref("URLSearchParams")}} and {{domxref("HTMLHyperlinkElementUtils")}}
+- Two `Location` properties: {{domxref("Window.location")}} and {{domxref("Document.location")}}.
+- URL manipulation interfaces: {{domxref("URL")}} and {{domxref("URLSearchParams")}}.
