@@ -25,7 +25,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 - `xpathExpression` is a string representing the XPath to be evaluated.
 - `contextNode` specifies the _context node_ for the query (see
   the [XPath
-  specification](https://www.w3.org/TR/xpath)). It's common to pass `document` as the context
+  specification](https://www.w3.org/TR/xpath/)). It's common to pass `document` as the context
   node.
 - `namespaceResolver` is a function that will be passed any namespace
   prefixes and should return a string representing the namespace URI associated with
@@ -205,4 +205,4 @@ nodes may have moved, been changed, added, or removed.
 - {{domxref("Document.createExpression()")}}
 - {{domxref("XPathResult")}}
 - [XPath Code Snippets](/en-US/docs/Code_snippets/XPath)
-- [Check for browser support](https://codepen.io/johan/full/ckFgn)
+- [Check for browser support](https://codepen.io/johan/full/DJoqaX)
