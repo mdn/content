@@ -17,7 +17,7 @@ browser-compat: api.TransitionEvent.initTransitionEvent
 
 The **`TransitionEvent.initTransitionEvent()`** method
 Initializes a transition event created using the deprecated
-{{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}}
+{{domxref("Document.createEvent()", "Document.createEvent('TransitionEvent')")}}
 method.
 
 `TransitionEvent` created that way are untrusted.
