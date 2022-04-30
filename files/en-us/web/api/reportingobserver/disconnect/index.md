@@ -25,8 +25,12 @@ callback will return any reports. The associated observer will no longer be acti
 ## Syntax
 
 ```js
-reportingObserverInstance.disconnect()
+disconnect()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 

@@ -157,7 +157,7 @@ Remember about the progressive enhancement approach — offer a usable product n
 ## Final thoughts
 
 That's all for this tutorial series — we went through the [source code of the js13kPWA example app](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) and learned about the use of progressive web apps features including an [Introduction](/en-US/docs/Web/Progressive_web_apps/Introduction), [PWA structure](/en-US/docs/Web/Progressive_web_apps/App_structure), [offline availability with Service Workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [installable PWAs](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), and finally notifications.
-We also explained push with help from the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook).
+We also explained push with help from the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook).
 And in this article, we've looked into the concept of progressive loading, including an interesting example that makes use of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API).
 
 Feel free to experiment with the code, enhance your existing app with PWA features, or build something entirely new on your own. PWAs give a huge advantage over regular web apps.

@@ -31,10 +31,10 @@ the properties within may be changed at will.
 ## Syntax
 
 ```js
-var point = DOMPoint.fromPoint(sourcePoint);
+fromPoint(sourcePoint)
 ```
 
-### Properties
+### Parameters
 
 - `sourcePoint`
 

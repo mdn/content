@@ -37,7 +37,7 @@ reference page.
 ## Syntax
 
 ```js
-var buffer = baseAudioContext.createBuffer(numOfChannels, length, sampleRate);
+createBuffer(numOfChannels, length, sampleRate)
 ```
 
 ### Parameters
@@ -58,7 +58,7 @@ var buffer = baseAudioContext.createBuffer(numOfChannels, length, sampleRate);
   - : The sample rate of the linear audio data in sample-frames per second. All browsers
     must support sample rates in at least the range 8,000 Hz to 96,000 Hz.
 
-### Returns
+### Return value
 
 An {{domxref("AudioBuffer")}} configured based on the specified options.
 
@@ -68,7 +68,7 @@ An {{domxref("AudioBuffer")}} configured based on the specified options.
   - : Thrown if one or more of the options are negative or otherwise has an invalid value (such as
     `numberOfChannels` being higher than supported, or a
     `sampleRate` outside the nominal range).
-- `RangeError` {{domxref("DOMException")}}
+- {{jsxref("RangeError")}}
   - : Thrown if there isn't enough memory available to allocate the buffer.
 
 ## Examples

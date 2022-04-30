@@ -16,8 +16,12 @@ capture all events of the specified type.
 ## Syntax
 
 ```js
-window.captureEvents(eventType)
+captureEvents(eventType)
 ```
+
+### Parameters
+
+-`eventType`
 
 `eventType` is a combination of the following values:
 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
@@ -29,7 +33,7 @@ window.captureEvents(eventType)
 `Event.RESET`, `Event.RESIZE`, `Event.SELECT`,
 `Event.SUBMIT`, `Event.UNLOAD`.
 
-## Example
+## Examples
 
 ```html
 <!DOCTYPE html>

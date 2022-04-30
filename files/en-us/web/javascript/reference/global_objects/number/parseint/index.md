@@ -29,7 +29,7 @@ Number.parseInt(string, radix)
   - : The value to parse. If this argument is not a string, then it is converted to one
     using the [`ToString`](https://tc39.es/ecma262/#sec-tostring)
     abstract operation. Leading whitespace in this argument is ignored.
-- `radix`_ {{optional_inline}}_
+- `radix` {{optional_inline}}
 
   - : An integer between `2` and `36` that represents the
     _radix_ (the base in mathematical numeral systems) of the

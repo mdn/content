@@ -27,8 +27,12 @@ overall gain (or volume) of the audio graph.
 ## Syntax
 
 ```js
-var gainNode = AudioContext.createGain();
+createGain()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -37,7 +41,7 @@ audio whose volume has been adjusted in gain (volume) to a level specified by th
 {{domxref("GainNode.gain")}} [a-rate](/en-US/docs/Web/API/AudioParam#a-rate)
 parameter.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create a
 `GainNode`, which is then used to mute and unmute the audio when a Mute

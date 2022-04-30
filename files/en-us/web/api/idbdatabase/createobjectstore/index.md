@@ -29,8 +29,8 @@ transaction.
 ## Syntax
 
 ```js
-IDBDatabase.createObjectStore(name);
-IDBDatabase.createObjectStore(name, options);
+createObjectStore(name)
+createObjectStore(name, options)
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ IDBDatabase.createObjectStore(name, options);
 - `name`
   - : The name of the new object store to be created. Note that it is possible to create
     an object store with an empty name.
-- `optionalParameters` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options object whose attributes are optional parameters to the method. It
     includes the following properties:
@@ -81,7 +81,7 @@ IDBDatabase.createObjectStore(name, options);
 
     Unknown parameters are ignored.
 
-### Returns
+### Return value
 
 A new {{domxref("IDBObjectStore")}}.
 
@@ -105,7 +105,7 @@ one of the following types:
   - : Thrown if `autoIncrement` is set to true and `keyPath` is
         either an empty string or an array containing an empty string.
 
-## Example
+## Examples
 
 ```js
 // Let us open our database

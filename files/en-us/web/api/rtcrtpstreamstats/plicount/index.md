@@ -31,13 +31,7 @@ packet to the sender.
 A PLI packet indicates that some amount of encoded video
 data has been lost for one or more frames.
 
-## Syntax
-
-```js
-var pliCount = RTCRtpStreamStats.pliCount;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of times a PLI packet was sent by the stream's
 receiver to the sender.

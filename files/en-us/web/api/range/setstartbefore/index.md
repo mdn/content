@@ -18,7 +18,7 @@ for the `referenceNode`.
 ## Syntax
 
 ```js
-range.setStartBefore(referenceNode);
+setStartBefore(referenceNode)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ range.setStartBefore(referenceNode);
 - _referenceNode_
   - : The {{domxref("Node")}} before which the {{domxref("Range")}} should start.
 
-## Example
+## Examples
 
 ```js
 var range = document.createRange();

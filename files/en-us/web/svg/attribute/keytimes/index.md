@@ -68,7 +68,7 @@ There must be exactly as many values in the `keyTimes` list as in the `values` l
 
 Each successive time value must be greater than or equal to the preceding time value.
 
-The `keyTimes` list semantics depends upon the interpolation mode:
+The `keyTimes` list semantics depends upon the {{Glossary("interpolation")}} mode:
 
 - For linear and spline animation, the first time value in the list must be 0, and the last time value in the list must be `1`. The key time associated with each value defines when the value is set; values are interpolated between the key times.
 - For discrete animation, the first time value in the list must be `0`. The time associated with each value defines when the value is set; the animation function uses that value until the next time defined in the list.

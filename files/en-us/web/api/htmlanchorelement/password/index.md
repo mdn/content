@@ -16,14 +16,9 @@ If it is set without first setting the
 [`username`](/en-US/docs/Web/API/HTMLAnchorElement/username)
 property, it silently fails.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.password;
-// Setter
-anchor.password = string;
-```
+A string.
 
 ## Examples
 

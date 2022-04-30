@@ -26,8 +26,12 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 ## Syntax
 
 ```js
-history.back()
+back()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 

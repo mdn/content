@@ -17,7 +17,7 @@ There are several arguments against using video content for technical documentat
 
 - Video is linear.
   People don't tend to read online documentation in a linear fashion, starting at the start and reading through to the end.
-  [They scan](https://www.sensible.com/chapter.html).
+  _They scan._
   Video is really hard to scan — it forces the user to consume the content start-to-finish.
 - Video is less information-dense than text.
   It takes longer to consume a video explaining something than it does to read the equivalent instructions.
@@ -34,7 +34,7 @@ We tend to most commonly use video when describing some kind of instruction sequ
 It is especially useful when trying to describe processes that cross over multiple applications or windows, and include GUI interactions that might not be simple to describe: _"now click on the button near the top-left that looks a bit like a duck"_.
 
 In such cases it is often more effective to just **show** what you mean.
-We most commonly use videos when explaining features of the [Firefox DevTools](/en-US/docs/Tools).
+We most commonly use videos when explaining features of the [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
 
 ## What should MDN videos look like?
 
@@ -49,7 +49,7 @@ Videos for MDN should be:
 
 To explain something more complex, you can use a blend of short videos and screenshots, interspersed with text.
 The text can help reinforce the points made in the video, and the user can rely on the text or the video as they choose.
-See [Working with the Animation Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#animation_inspector) for a good example.
+See [Working with the Animation Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#animation-inspector) for a good example.
 
 In addition, you should consider the following tips:
 
@@ -135,7 +135,7 @@ Make sure the mouse pointer doesn't obscure any icons or text that are important
 
 Remember to pause for a second or two at the end, to show the result of the flow.
 
-> **Note:** If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the [Rulers Tool](/en-US/docs/Tools/Rulers) to make sure the viewport is at the right aspect ratio for the recording.
+> **Note:** If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) to make sure the viewport is at the right aspect ratio for the recording.
 
 ### Post-production
 
@@ -170,7 +170,7 @@ This is used by inserting the following in your page at the position you want th
 ```
 
 The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL.
-For example, the video embedded in our [Page inspector 3-pane mode](/en-US/docs/Tools/Page_Inspector/3-pane_mode) article is available at https\://www\.youtube.com/watch?v=ELS2OOUvxIw, so the required macro call looks like this:
+For example, the video embedded in our [Page inspector 3-pane mode](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/3-pane_mode/index.html) article is available at https\://www\.youtube.com/watch?v=ELS2OOUvxIw, so the required macro call looks like this:
 
 ```
 \{{EmbedYouTube("ELS2OOUvxIw")}}

@@ -146,22 +146,11 @@ Some combination—but not necessarily all—of the following properties will ex
 - {{domxref("MediaTrackConstraints.width", "width")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the video width or range of widths which are acceptable and/or required.
 - resizeMode
-  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.
+  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output in order to satisfy other constraints that affect the resolution.
 
 ### Properties of shared screen tracks
 
 These constraints apply to the `video` property of the object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to obtain a stream for screen sharing.
-
-- {{domxref("MediaTrackConstraints.cursor", "cursor")}}
-
-  - : A [`ConstrainDOMString`](#constraindomstring) which specifies whether or not to include the mouse cursor in the generated track, and if so, whether or not to hide it while not moving. The value may be a single one of the following strings, or an array of them to allow the browser flexibility in deciding what to do about the cursor.
-
-    - `always`
-      - : The mouse is always visible in the video content of the {domxref("MediaStream"), unless the mouse has moved outside the area of the content.
-    - `motion`
-      - : The mouse cursor is always included in the video if it's moving, and for a short time after it stops moving.
-    - `never`
-      - : The mouse cursor is never included in the shared video.
 
 - {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}}
 

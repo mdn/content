@@ -16,13 +16,14 @@ The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface 
 ## Syntax
 
 ```js
-var str = TrustedTypePolicy.createHTML(input[,args]);
+createHTML(input)
+createHTML(input, args)
 ```
 
 ### Parameters
 
 - `input`
-  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
+  - : A string containing the string to be sanitized by the policy.
 - `args`{{optional_inline}}
   - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 

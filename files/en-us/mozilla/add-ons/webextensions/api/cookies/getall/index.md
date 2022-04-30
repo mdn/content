@@ -59,7 +59,7 @@ let getting = browser.cookies.getAll(
     - `path`{{optional_inline}}
       - : A `string` representing a path — the cookies' path must be identical to this one.
     - `secure`{{optional_inline}}
-      - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies..
+      - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies.
     - `session`{{optional_inline}}
       - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
     - `storeId`{{optional_inline}}

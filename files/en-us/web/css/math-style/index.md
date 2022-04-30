@@ -24,6 +24,7 @@ math-style: compact;
 math-style: inherit;
 math-style: initial;
 math-style: revert;
+math-style: revert-layer;
 math-style: unset;
 ```
 

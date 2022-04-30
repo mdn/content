@@ -13,7 +13,7 @@ These features will help screen reader developers improve the quality and perfor
 
 Please read the [ARIA spec](https://www.w3.org/WAI/PF/aria/#liveregions) or the [live region report](/en-US/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support) to learn about ARIA live region markup.
 
-As always, we're open to questions and suggestions for changes in [community forums](https://www.mozilla.org/access/#community).
+As always, we're open to questions and suggestions for changes in [community forums](https://support.mozilla.org/en-US/kb/get-community-support).
 
 ## Events fired for web page mutations
 

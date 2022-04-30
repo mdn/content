@@ -27,9 +27,7 @@ record — without having to explicitly look up the record's key.
 ## Syntax
 
 ```js
-var request = objectStore.delete(Key);
-
-var request = objectStore.delete(KeyRange);
+delete(Key)
 ```
 
 ### Parameters

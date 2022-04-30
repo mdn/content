@@ -19,7 +19,7 @@ program's fragment and vertex shaders.
 ## Syntax
 
 ```js
-void gl.linkProgram(program);
+linkProgram(program)
 ```
 
 ### Parameters

@@ -22,10 +22,14 @@ being too small for the user to interact with.
 ## Syntax
 
 ```js
-window.sizeToContent()
+sizeToContent()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 ```js
 window.sizeToContent();

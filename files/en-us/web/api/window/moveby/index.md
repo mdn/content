@@ -21,7 +21,7 @@ interface moves the current window by a specified amount.
 ## Syntax
 
 ```js
-window.moveBy(deltaX, deltaY)
+moveBy(deltaX, deltaY)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ window.moveBy(deltaX, deltaY)
 - `deltaY` is the amount of pixels to move the window vertically. Positive
   values are down, while negative values are up.
 
-## Example
+## Examples
 
 This example moves the window 10 pixels to the right and 10 pixels up.
 

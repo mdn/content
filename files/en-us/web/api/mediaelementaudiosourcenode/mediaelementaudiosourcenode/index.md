@@ -47,7 +47,7 @@ new MediaElementAudioSourceNode(context, options);
 
 A new {{domxref("MediaElementAudioSourceNode")}} object instance.
 
-## Example
+## Examples
 
 ```js
 var ac = new AudioContext();

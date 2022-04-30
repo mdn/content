@@ -21,8 +21,12 @@ called.
 ## Syntax
 
 ```js
-gl.getExtension('WEBGL_lose_context').loseContext();
+loseContext()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 

@@ -20,7 +20,7 @@ associated stream.
 ## Syntax
 
 ```js
-readableByteStreamController.enqueue(chunk);
+enqueue(chunk)
 ```
 
 ### Parameters
@@ -34,8 +34,8 @@ readableByteStreamController.enqueue(chunk);
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableByteStreamController`, or the stream
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream
     cannot be read for some other reason, or the chunk is not an object, or the chunk's
     internal array buffer is non-existent or detached.
 

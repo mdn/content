@@ -14,7 +14,7 @@ The **`ge`** instructions, short for *greater or equal*, check if a number is gr
 
 The integer types have separate greater or equal instructions for signed (**`ge_s`**) and unsigned (**`ge_u`**) numbers.
 
-{{EmbedInteractiveExample("pages/wat/ge.html")}}
+{{EmbedInteractiveExample("pages/wat/ge.html", "tabbed-taller")}}
 
 ## Syntax
 

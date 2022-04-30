@@ -18,10 +18,14 @@ The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} i
 ## Syntax
 
 ```js
-animationTiming = animation.getTiming();
+getTiming()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An object.
 

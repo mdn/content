@@ -24,14 +24,18 @@ filter configurable as several different common filter types.
 ## Syntax
 
 ```js
-baseAudioContext.createBiquadFilter();
+createBiquadFilter()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("BiquadFilterNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create a Biquad filter
 node. For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (look

@@ -24,7 +24,7 @@ connection.
 ## Syntax
 
 ```js
-transceiverList = rtcPeerConnection.getTransceivers();
+getTransceivers()
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ An array of the {{domxref("RTCRtpTransceiver")}} objects representing the transc
 handling sending and receiving all media on the `RTCPeerConnection`. The list
 is in the order in which the transceivers were added to the connection.
 
-## Example
+## Examples
 
 The following snippet of code stops all transceivers associated with an
 `RTCPeerConnection`.

@@ -29,10 +29,14 @@ or {{domxref("IDBKeyRange")}}.
 ## Syntax
 
 ```js
-var request = objectStore.clear();
+clear()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this
 operation are fired.
@@ -68,7 +72,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   </tbody>
 </table>
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and
 clear all the current data out of the object store using `clear()`. For a

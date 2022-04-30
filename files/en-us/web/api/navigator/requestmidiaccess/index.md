@@ -23,8 +23,8 @@ If permission is granted then the {{jsxref('Promise')}} resolves and a [`MIDIAcc
 ## Syntax
 
 ```js
-navigator.requestMIDIAccess();
-navigator.requestMIDIAccess(MIDIOptions);
+requestMIDIAccess()
+requestMIDIAccess(MIDIOptions)
 ```
 
 ### Parameters
@@ -42,13 +42,13 @@ A {{jsxref('Promise')}} that resolves with a [`MIDIAccess`](/en-US/docs/Web/API/
 
 ### Exceptions
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : If the document or page is closed due to user navigation.
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : If the underlying system raises any errors.
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : If the feature or options are not supported by the system.
-- `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : If the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, an iframe without the correct [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy), or when the user has previously denied a permissions access to the feature).
 
 ## Examples

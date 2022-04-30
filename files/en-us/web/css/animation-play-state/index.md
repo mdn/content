@@ -31,6 +31,7 @@ animation-play-state: paused, running, running;
 animation-play-state: inherit;
 animation-play-state: initial;
 animation-play-state: revert;
+animation-play-state: revert-layer;
 animation-play-state: unset;
 ```
 

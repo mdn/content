@@ -23,11 +23,9 @@ read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, where the secure connection handshake starts. If
 no such connection is requested, it returns `0`.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.secureConnectionStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

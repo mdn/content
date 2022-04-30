@@ -19,7 +19,7 @@ associated stream.
 ## Syntax
 
 ```js
-readableStreamDefaultController.enqueue(chunk);
+enqueue(chunk)
 ```
 
 ### Parameters
@@ -33,8 +33,8 @@ readableStreamDefaultController.enqueue(chunk);
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 

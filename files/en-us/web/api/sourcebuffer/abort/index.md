@@ -22,7 +22,7 @@ interface aborts the current segment and resets the segment parser.
 ## Syntax
 
 ```js
-sourceBuffer.abort();
+abort()
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ None.
         `SourceBuffer` has been removed from the
         {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 The spec description of `abort()` is somewhat confusing — consider for
 example step 1 of [reset

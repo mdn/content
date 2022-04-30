@@ -31,7 +31,7 @@ from the user in order to identify them. Common user-verifying platform authenti
 ## Syntax
 
 ```js
-PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
+isUserVerifyingPlatformAuthenticatorAvailable()
 ```
 
 ### Parameters
@@ -80,5 +80,5 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 - [Windows
   Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello)
 - [Web
-  Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/microsoft-edge/dev-guide/windows-integration/web-authentication) and especially the [special
-  considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/microsoft-edge/dev-guide/windows-integration/web-authentication#special-considerations-for-windows-hello)
+  Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) and especially the [special
+  considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/#special-considerations-for-windows-hello)

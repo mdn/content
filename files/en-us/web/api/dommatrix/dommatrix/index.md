@@ -33,7 +33,7 @@ new DOMMatrix(init)
     - for a 6-element array of components in the form `[a, b, c, d, e, f]`, a 2D matrix is created, initialized with the provided components.
     - for a 16-element array of components (in the column-major order) in the form `[m11, m12, m13, …, m42, m43, m44]`, a 3D matrix is created, initialized with the provided components.
 
-## Example
+## Examples
 
 This example creates a DOMMatrix to use as an argument for calling
 {{domxref("Point.matrixTransform()")}}.

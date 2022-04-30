@@ -25,13 +25,13 @@ the method was called.
 ## Syntax
 
 ```js
-elementList = parentNode.querySelectorAll(selectors);
+querySelectorAll(selectors)
 ```
 
 ### Parameters
 
 - `selectors`
-  - : A {{domxref("DOMString")}} containing one or more selectors to match against. This
+  - : A string containing one or more selectors to match against. This
     string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
     string; if it's not, a `SyntaxError` exception is thrown. See [Locating
     DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
@@ -53,8 +53,8 @@ each descendant node that matches at least one of the specified selectors.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified `selectors` string is not valid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified `selectors` string is not valid.
 
 ## Examples
 

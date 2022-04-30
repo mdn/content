@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A boolean value reflecting the {{htmlattrxref("default", "track")}} attribute, indicating that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
 
-  - : Returns  an `unsigned short` that show the readiness state of the track:
+  - : Returns an `unsigned short` that show the readiness state of the track:
 
     | Constant  | Value | Description                                                                                                                                                                              |
     | --------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

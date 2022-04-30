@@ -407,7 +407,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
       <td>48 (plus 16 Low Frequency Enhancement channels)</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>
         0 Hz - 96 kHz (standard audio channels)<br />0 Hz - 120 Hz (LFE
         channels)
@@ -653,7 +653,7 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
       <td>1</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>200 Hz to 3,400 Hz</td>
     </tr>
     <tr>
@@ -755,7 +755,7 @@ FLAC is a great choice for smaller audio effects files where pristine quality an
       <td>8</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>Full-spectrum</td>
     </tr>
     <tr>
@@ -813,7 +813,7 @@ The **G.711** specification, published by the International Telecommunications U
 
 G.711 is not a high fidelity codec, but is instead optimized to support a wide range of voice levels (from whisper to shout) while maintaining high intelligibility and low computational complexity. G.711 uses a logarithmic companding algorithm which provides 14 bits of dynamic range in an 8-bit sample. It uses a sampling rate of 8000 samples/sec, corresponding to a bitrate of 64000 bps.
 
-There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: {{interwiki("wikipedia", "M-law", "µ-law")}} (commonly used in North America and Japan) and {{interwiki("wikipedia", "A-law")}} (common in the rest of the world). There is no substantial quality difference between the two laws, and it is simple to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and viceversa.
+There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: {{interwiki("wikipedia", "M-law", "µ-law")}} (commonly used in North America and Japan) and {{interwiki("wikipedia", "A-law")}} (common in the rest of the world). There is no substantial quality difference between the two laws, and it is simple to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and vice versa.
 
 This codec is required to be supported by all [WebRTC](/en-US/docs/Web/API/WebRTC_API) solutions because it is simple, easy to implement, widely-used, and broadly compatible across all modern computing platforms.
 
@@ -1510,7 +1510,7 @@ In this case, it appears that FLAC is most likely the best codec to go with; ALA
 
 ## Audio encoding software
 
-There are many tools available for encoding audio. The simplest are those which are meant for ripping CDs or pulling in audio files and quickly and automatically converting them to MP3 or AAC format to store in a library, such as [iTunes](https://www.apple.com/itunes). But when developing web apps that use audio as a component of the app, such as games, you will need more control over the encoding process and more options surrounding the format used while encoding the audio.
+There are many tools available for encoding audio. The simplest are those which are meant for ripping CDs or pulling in audio files and quickly and automatically converting them to MP3 or AAC format to store in a library, such as [iTunes](https://www.apple.com/itunes/). But when developing web apps that use audio as a component of the app, such as games, you will need more control over the encoding process and more options surrounding the format used while encoding the audio.
 
 A few popular options:
 
@@ -1520,7 +1520,7 @@ A few popular options:
   - : A highly popular open source front-end to FFmpeg which adds a graphical user interface that makes it much easier to control the wide variety of options FFmpeg offers while encoding audio and/or video. Binaries are available for macOS, Linux, and Windows.
 - [Audacity](https://www.audacityteam.org/)
   - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format.  Available for macOS, Linux, and Windows.
-- [LAME](http://lame.sourceforge.net/)
+- [LAME](https://lame.sourceforge.io/)
   - : A high quality open source MP3 encoder with support for CBR, ABR, and VBR encoding as well as a variety of other options. Distributed only in source form by the LAME project, but can be installed using [Homebrew](https://brew.sh/) or similar tools.
 
 ## See also

@@ -23,7 +23,8 @@ The **`cancel()`** method of the
 ## Syntax
 
 ```js
-var promise = readableStreamBYOBReader.cancel(reason);
+cancel()
+cancel(reason)
 ```
 
 ### Parameters
@@ -38,7 +39,7 @@ parameter.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The source object is not a `ReadableStreamBYOBReader`, or the stream has
     no owner.
 

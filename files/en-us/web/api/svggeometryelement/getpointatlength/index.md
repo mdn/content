@@ -20,7 +20,7 @@ point at a given distance along the path.
 ## Syntax
 
 ```js
-DOMPoint someElement.getPointAtLength(float distance);
+getPointAtLength(distance)
 ```
 
 ### Parameters

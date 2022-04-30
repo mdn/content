@@ -42,8 +42,10 @@ In this article we will say hello to React. We'll discover a little bit of detai
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To set up a local React development environment, create a start app, and
-        understand the basics of how it works
+        <p>
+          To set up a local React development environment, create a start app, and
+          understand the basics of how it works
+        </p>
       </td>
     </tr>
   </tbody>

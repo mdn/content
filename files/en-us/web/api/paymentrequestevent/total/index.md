@@ -18,13 +18,7 @@ The **`total`** readonly property of the
 {{domxref('PaymentCurrencyAmount')}} object containing the total amount being requested
 for payment.
 
-## Syntax
-
-```js
-var paymentCurrencyAmount = paymentRequestEvent.total
-```
-
-### Value
+## Value
 
 A {{domxref('PaymentCurrencyAmount')}} object.
 

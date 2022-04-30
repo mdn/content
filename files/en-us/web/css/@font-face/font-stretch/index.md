@@ -35,10 +35,10 @@ font-stretch: 200%;
 
 /* multiple values */
 font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;;
+font-stretch: condensed ultra-condensed;
 ```
 
-The `font-weight` property is described using any one of the values listed below.
+The `font-stretch` property is described using any one of the values listed below.
 
 ### Values
 

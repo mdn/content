@@ -12,7 +12,7 @@ tags:
 
 The **`sub`** instructions, short for *subtraction*, are used for subtracting one number from another number, similar to the **`-`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/sub.html")}}
+{{EmbedInteractiveExample("pages/wat/sub.html", "tabbed-taller")}}
 
 ## Syntax
 

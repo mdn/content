@@ -21,7 +21,7 @@ interface closes the connection, if one is made, and sets the
 ## Syntax
 
 ```js
-eventSource.close();
+close()
 ```
 
 ### Parameters

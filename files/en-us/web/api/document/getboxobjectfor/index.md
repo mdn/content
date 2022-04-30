@@ -19,13 +19,18 @@ Returns a `boxObject` (x, y, width, height) for a specified element.
 ## Syntax
 
 ```js
-boxObject = document.getBoxObjectFor(element);
+getBoxObjectFor(element)
 ```
 
-- _boxObject_ is an {{interface("nsIBoxObject")}}.
+### Parameters
+
 - _element_ is a {{domxref("element","DOMElement")}}.
 
-## Example
+### Return value
+
+A `nsIBoxObject`.
+
+## Examples
 
 ```js
 var myDiv = document.getElementById("myDiv"),
@@ -41,7 +46,7 @@ alert (
 
 ## Notes
 
-Specified in [nsIXULDocument.idl](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl)
+Specified in nsIXULDocument.idl
 
 ## Browser compatibility
 

@@ -28,6 +28,7 @@ font-variation-settings: "XHGT" 0.7;
 font-variation-settings: inherit;
 font-variation-settings: initial;
 font-variation-settings: revert;
+font-variation-settings: revert-layer;
 font-variation-settings: unset;
 ```
 

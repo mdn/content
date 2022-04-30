@@ -26,7 +26,7 @@ method has not finished. This will result in a `TypeError` being thrown.
 ## Syntax
 
 ```js
-readableStreamDefaultReader.releaseLock();
+releaseLock()
 ```
 
 ### Parameters
@@ -39,8 +39,8 @@ None.
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultReader`, or a read
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultReader`, or a read
     request is pending.
 
 ## Examples

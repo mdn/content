@@ -24,15 +24,13 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.has(cacheName).then(function(boolean) {
-  // true: your cache exists!
-});
+has(cacheName)
 ```
 
 ### Parameters
 
 - `cacheName`
-  - : A {{domxref("DOMString")}} representing the name of the {{domxref("Cache")}} object
+  - : A string representing the name of the {{domxref("Cache")}} object
     you are looking for in the {{domxref("CacheStorage")}}.
 
 ### Return value

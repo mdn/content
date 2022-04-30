@@ -21,7 +21,7 @@ values passed. The passed values must be of the same type.
 ## Syntax
 
 ```js
-var cssUnitValue = CSSNumericValue.min(number1 ... numberN);
+min(number1 numberN)
 ```
 
 ### Parameters
@@ -35,8 +35,8 @@ A {{domxref('CSSUnitValue')}}.
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

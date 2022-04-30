@@ -18,7 +18,7 @@ The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that 
 ## Syntax
 
 ```js
-HIDDevice.open();
+open()
 ```
 
 ### Parameters

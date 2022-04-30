@@ -17,7 +17,7 @@ passed object is a valid {{domxref("WebGLSync")}} object.
 ## Syntax
 
 ```js
-GLboolean gl.isSync(sync);
+isSync(sync)
 ```
 
 ### Parameters

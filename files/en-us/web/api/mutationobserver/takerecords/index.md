@@ -32,7 +32,7 @@ observer.
 ## Syntax
 
 ```js
-const mutationRecords = mutationObserver.takeRecords()
+takeRecords()
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ the observed portion of the document's DOM tree.
 > delivered to the observer's callback is left empty after calling
 > `takeRecords()`.
 
-## Example
+## Examples
 
 In this example, we demonstrate how to handle any undelivered
 {{domxref("MutationRecord")}}s by calling `takeRecords()` just before

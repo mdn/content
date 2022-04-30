@@ -38,7 +38,7 @@ _This interface also inherits properties from its parent, {{domxref("EventTarget
 - {{domxref("EventSource.readyState")}} {{readonlyinline}}
   - : A number representing the state of the connection. Possible values are `CONNECTING` (`0`), `OPEN` (`1`), or `CLOSED` (`2`).
 - {{domxref("EventSource.url")}} {{readonlyinline}}
-  - : A {{domxref("DOMString")}} representing the URL of the source.
+  - : A string representing the URL of the source.
 - {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
   - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
 

@@ -14,7 +14,7 @@ browser-compat: api.FormData.values
 
 The **`FormData.values()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values
-contained in this object. The values are {{domxref("USVString")}} or
+contained in this object. The values are string or
 {{domxref("Blob")}} objects.
 
 > **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
@@ -22,14 +22,18 @@ contained in this object. The values are {{domxref("USVString")}} or
 ## Syntax
 
 ```js
-formData.values();
+values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test FormData object

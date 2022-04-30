@@ -75,4 +75,4 @@ window.addEventListener("beforeunload", function (e) {
 - {{Event("load")}}
 - {{Event("beforeunload")}}
 - {{Event("unload")}}
-- [Unloading Documents — Prompt to unload a document](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)

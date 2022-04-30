@@ -41,7 +41,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
     The `defer` attribute may be specified with the `async` attribute, so legacy browsers that only support `defer` (and not `async`) fall back to the `defer` behavior instead of the default blocking behavior.
 
-    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag) and [end](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag) tags in HTML, [in foreign content](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag), and [in XML](https://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting); and so on.
+    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://html.spec.whatwg.org/multipage/scripting.html) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://html.spec.whatwg.org/multipage/syntax.html) and [end](https://html.spec.whatwg.org/multipage/syntax.html) tags in HTML, [in foreign content](https://html.spec.whatwg.org/multipage/syntax.html), and [in XML](https://html.spec.whatwg.org/multipage/xhtml.html); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://html.spec.whatwg.org/multipage/webappapis.html); and so on.
 
 - {{domxref("HTMLScriptElement.crossOrigin")}} {{experimental_inline}}
   - : Is a {{domxref("DOMString")}} reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
@@ -51,7 +51,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
     > **Note:** When inserted using the [`document.write()`](/en-US/docs/Web/API/Document/write) method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML) or [`outerHTML`](/en-US/docs/Web/API/Element/outerHTML), they do not execute at all.
 
-- {{domxref("HTMLScriptElement.fetchpriority")}}
+- {{domxref("HTMLScriptElement.fetchPriority")}}
   - : An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLScriptElement.noModule")}}
   - : Is a boolean value that if true, stops the script's execution in browsers that support [ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
@@ -144,4 +144,4 @@ Classic scripts are assumed to be supported on all browsers.
 - HTML {{HTMLElement("noscript")}} element
 - {{domxref("document.currentScript")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) (code snippets similar to scripts but executed in [another global context](/en-US/docs/Web/API/DedicatedWorkerGlobalScope))
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pieisgood.org/test/script-link-events/)
+- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)

@@ -18,7 +18,7 @@ portions of the contents of attachments in a framebuffer.
 ## Syntax
 
 ```js
-void gl.invalidateSubFramebuffer(target, attachments, x, y, width, height);
+invalidateSubFramebuffer(target, attachments, x, y, width, height)
 ```
 
 ### Parameters

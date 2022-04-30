@@ -41,6 +41,7 @@ font-weight: 900;
 font-weight: inherit;
 font-weight: initial;
 font-weight: revert;
+font-weight: revert-layer;
 font-weight: unset;
 ```
 

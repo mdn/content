@@ -29,9 +29,7 @@ retrieval become keys to the stored response operations.
 ## Syntax
 
 ```js
-cache.addAll(requests[]).then(function() {
-  // requests have been added to the cache
-});
+addAll(requests)
 ```
 
 ### Parameters
@@ -46,7 +44,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : The URL scheme is not `http` or `https`.
 

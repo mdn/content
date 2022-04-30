@@ -20,14 +20,18 @@ in this object. The values are {{jsxref("String")}} objects.
 ## Syntax
 
 ```js
-headers.values();
+values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test Headers object

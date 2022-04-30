@@ -27,7 +27,8 @@ started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "
 ## Syntax
 
 ```js
-dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
+createDataChannel(label)
+createDataChannel(label, options)
 ```
 
 ### Parameters
@@ -98,7 +99,7 @@ included; otherwise, the defaults listed above are established.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown in the following situations:
     - The label and/or protocol string is too long; these cannot be longer than 65,535
       bytes (bytes, rather than characters).

@@ -47,8 +47,12 @@ The drawing state that gets saved onto a stack consists of:
 ## Syntax
 
 ```js
-void ctx.save();
+save()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 

@@ -19,8 +19,8 @@ If the `flatten` option is set to `true`, it returns a sequence of both the node
 ## Syntax
 
 ```js
-HTMLSlotElement.assignedNodes()
-HTMLSlotElement.assignedNodes(options)
+assignedNodes()
+assignedNodes(options)
 ```
 
 ### Parameters

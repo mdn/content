@@ -18,7 +18,7 @@ if the passed object is a valid {{domxref("WebGLTransformFeedback")}} object.
 ## Syntax
 
 ```js
-GLboolean gl.isTransformFeedback(transformFeedback);
+isTransformFeedback(transformFeedback)
 ```
 
 ### Parameters

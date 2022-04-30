@@ -25,7 +25,7 @@ of media.
 ## Syntax
 
 ```js
-mediaCapabilities.encodingInfo(mediaEncodingConfiguration)
+encodingInfo(mediaEncodingConfiguration)
 ```
 
 ### Parameters
@@ -48,13 +48,13 @@ Browsers will report a supported media configuration as `smooth` and `powerEffic
 
 ### Exceptions
 
-A `TypeError` is raised if the `MediaConfiguration` passed to the
-`encodingInfo()` method is invalid, either because the type is not video or
-audio, the `contentType` is not a valid codec MIME type, or any other error
-in the media configuration passed to the method, including omitting any of the [media encoding configuration](/en-US/docs/Web/API/MediaEncodingConfiguration)
-elements.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `MediaConfiguration` passed to the `encodingInfo()` method is invalid, which may be for any of the following reasons:
+    - the type is not video or audio,
+    - the `contentType` is not a valid codec MIME type,
+    - there is some other error in the media configuration passed to the method, including omitting any of the [media encoding configuration](/en-US/docs/Web/API/MediaEncodingConfiguration) elements.
 
-## Example
+## Examples
 
 ```js
 //Create media configuration to be tested

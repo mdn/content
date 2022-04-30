@@ -19,7 +19,7 @@ the resulting nodes into the DOM tree at a specified position.
 ## Syntax
 
 ```js
-element.insertAdjacentHTML(position, text);
+insertAdjacentHTML(position, text)
 ```
 
 ### Parameters
@@ -126,7 +126,7 @@ reset.addEventListener('click', () => {
 
 #### Result
 
-{{EmbedLiveSample("Example", 100, 100)}}
+{{EmbedLiveSample("Examples", 100, 100)}}
 
 ## Specifications
 

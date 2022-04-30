@@ -19,7 +19,7 @@ Under some conditions — for example, when the user switches tabs — the brows
 ## Syntax
 
 ```js
-result = window.confirm(message);
+confirm(message)
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ A boolean indicating whether OK (`true`) or Cancel (`false`) was
 selected. If a browser is ignoring in-page dialogs, then the returned value is always
 `false`.
 
-## Example
+## Examples
 
 ```js
 if (window.confirm("Do you really want to leave?")) {
@@ -43,7 +43,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 Produces:
 
-![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
+![Firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
 ## Notes
 

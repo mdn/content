@@ -23,13 +23,11 @@ the boundary point of the {{domxref("Range")}}. For other {{domxref("Node")}} ty
 To change the `startOffset` of a {{domxref("Range")}}, use the
 {{domxref("Range.setStart")}} method.
 
-## Syntax
+## Value
 
-```js
-startRangeOffset = range.startOffset;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 var range = document.createRange();

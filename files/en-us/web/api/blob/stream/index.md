@@ -18,8 +18,12 @@ which upon reading returns the data contained within the `Blob`.
 ## Syntax
 
 ```js
-stream();
+stream()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

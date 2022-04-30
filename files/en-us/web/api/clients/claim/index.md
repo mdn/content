@@ -25,7 +25,7 @@ regularly over the network, or possibly via a different service worker.
 ## Syntax
 
 ```js
-await clients.claim();
+claim()
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ None.
 
 A {{jsxref("Promise")}} that resolves to `undefined`.
 
-## Example
+## Examples
 
 The following example uses `claim()` inside service worker's "`activate`" event listener so that clients loaded in the same scope do not need to be reloaded before their fetches will go through this service worker.
 

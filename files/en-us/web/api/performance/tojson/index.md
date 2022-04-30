@@ -19,20 +19,18 @@ object's properties.
 ## Syntax
 
 ```js
-myPerf = performance.toJSON()
+toJSON()
 ```
 
-### Arguments
+### Parameters
 
-- None
-  - :
+None.
 
 ### Return value
 
-- myPerf
-  - : A JSON object that is the serialization of the {{domxref("Performance")}} object.
+A JSON object that is the serialization of the {{domxref("Performance")}} object.
 
-## Example
+## Examples
 
 ```js
 var js;

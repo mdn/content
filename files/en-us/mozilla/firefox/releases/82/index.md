@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 82 that will affe
 
 ### Developer tools
 
-- You can now [inspect server-sent events](/en-US/docs/Tools/Network_Monitor/Inspecting_server-sent_events) using the [Network Monitor](/en-US/docs/Tools/Network_Monitor) ({{bug(1640857)}}).
+- You can now [inspect server-sent events](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_server-sent_events/index.html) using the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ({{bug(1640857)}}).
 - The Network Monitor's _Message_ panel has now been merged with the _Response_ panel — messages (e.g. from WebSockets or server-sent events) can now be viewed right below the responses list ({{bug(1636421)}}).
 
 ### HTML
@@ -29,7 +29,7 @@ This article provides information about the changes in Firefox 82 that will affe
 
 - Support for the new {{CSSxRef("::file-selector-button", "::file-selector-button")}} pseudo-element has been added. This pseudo-element represents the file selection button inside an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element ({{bug(1635675)}}, {{bug(1662478)}}).
 - We have improved error recovery for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes. These pseudo-classes now accept a forgiving selector list, where an invalid selector in the list will not render the entire list invalid ({{bug(1664718)}}).
-- `appearance: button` now applies only to buttons; the `button` value of  {{CSSxRef("appearance")}} will otherwise behave as `auto` ({{bug(1662703)}}).
+- `appearance: button` now applies only to buttons; the `button` value of {{CSSxRef("appearance")}} will otherwise behave as `auto` ({{bug(1662703)}}).
 
 #### Removals
 

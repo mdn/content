@@ -24,8 +24,12 @@ To track the success or failure of the request, it is necessary to listen for th
 ## Syntax
 
 ```js
-instanceOfElement.requestPointerLock();
+requestPointerLock()
 ```
+
+### Parameters
+
+None.
 
 ## Specifications
 

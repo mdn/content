@@ -26,13 +26,7 @@ browser-compat: api.RTCError.errorDetail
 The {{domxref("RTCError")}} interface's read-only
 **`errorDetail`** property is a string indicating the [WebRTC](/en-US/docs/Web/API/WebRTC_API)-specific error code that occurred.
 
-## Syntax
-
-```js
-let rtcErrorDetail = rtcError.errorDetail;
-```
-
-### Value
+## Value
 
 A read-only string whose value indicates the type of WebRTC-specific error that
 occurred on an {{domxref("RTCPeerConnection")}}. The possible values are taken from the
@@ -54,7 +48,7 @@ occurred on an {{domxref("RTCPeerConnection")}}. The possible values are taken f
     certificate against the provided fingerprints, this error doesn't occur, though this
     situation may result instead in a `dtls-failure` error.
 - `hardware-encoder-error`
-  - : The hardsare encoder doesn't support the given configuration parameters.
+  - : The hardware encoder doesn't support the given configuration parameters.
 - `hardware-encoder-not-available`
   - : The hardware encoder resources required to accomplish the requested operation aren't
     available.

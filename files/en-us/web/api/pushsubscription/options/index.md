@@ -17,13 +17,7 @@ The **`options`** read-only property
 of the {{domxref("PushSubscription")}} interface is an object containing the options
 used to create the subscription.
 
-## Syntax
-
-```js
-var options = PushSubscription.options
-```
-
-### Value
+## Value
 
 An read-only {{domxref("PushSubscriptionOptions")}} object containing the following values:
 

@@ -49,7 +49,7 @@ new ChannelSpitterNode(context, options);
 
 A new {{domxref("ChannelSplitterNode")}} object instance.
 
-## Example
+## Examples
 
 ```js
 var ac = new AudioContext();

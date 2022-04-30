@@ -22,10 +22,14 @@ it throws an error.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.readValue().then(function(dataView) { /* ... */ })
+readValue()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} that resolves to an {{jsxref("DataView")}}.
 

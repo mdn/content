@@ -4,7 +4,6 @@ slug: Web/CSS/:where
 tags:
   - ':where'
   - CSS
-  - Experimental
   - NeedsBrowserCompatibility
   - NeedsContent
   - NeedsExample

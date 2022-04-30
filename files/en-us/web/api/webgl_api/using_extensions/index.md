@@ -7,7 +7,7 @@ tags:
 ---
 {{WebGLSidebar}}
 
-WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](http://www.khronos.org/registry/webgl/extensions/).
+WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://www.khronos.org/registry/webgl/extensions/).
 
 > **Note:** In WebGL, unlike in other GL APIs, extensions are only available if explicitly requested.
 
@@ -25,7 +25,7 @@ var ext = (
 );
 ```
 
-Note that, vendor prefix have been discouraged more and more and thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.
+Note that, vendor prefix have been discouraged thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.
 
 The feature flags are:
 
@@ -76,5 +76,5 @@ If an extension defines specific symbols or functions that are not available in 
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
 - {{domxref("WebGLRenderingContext.getExtension()")}}
-- [webglreport.com](http://webglreport.com)
+- [webglreport.com](https://webglreport.com/)
 - [webglstats.com](http://webglstats.com)

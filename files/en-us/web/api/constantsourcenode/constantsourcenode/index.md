@@ -38,7 +38,7 @@ new ConstantSourceNode(context, options);
       \-1.0 to 1.0, but the value can be anywhere in the range from
       `-Infinity` to `+Infinity`.
 
-## Example
+## Examples
 
 In this example, an audio context is created, then a `ConstantSourceNode` is
 established with its `offset` initialized to 0.5.

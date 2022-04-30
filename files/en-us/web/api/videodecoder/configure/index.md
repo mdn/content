@@ -16,7 +16,7 @@ The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueu
 ## Syntax
 
 ```js
-VideoDecoder.configure(config)
+configure(config)
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ VideoDecoder.configure(config)
     - `colorSpace`
       - : An object. representing a {{domxref("VideoColorSpace")}}, containing the following members:
         - `primaries`
-          - : A string representing the color gamut of the video sample. One of:
+          - : A string representing the color {{glossary("gamut")}} of the video sample. One of:
             - `"bt709"`
             - `"bt470bg"`
             - `"smpte170m"`
@@ -63,13 +63,13 @@ VideoDecoder.configure(config)
 
 > **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
-### Return Value
+### Return value
 
 None.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `config` is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoDecoder.state","state")}} is `"closed"`.

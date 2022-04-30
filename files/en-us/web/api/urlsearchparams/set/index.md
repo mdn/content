@@ -21,7 +21,7 @@ parameter doesn't exist, this method creates it.
 ## Syntax
 
 ```js
-URLSearchParams.set(name, value)
+set(name, value)
 ```
 
 ### Parameters
@@ -53,7 +53,7 @@ some search parameters.
 
 You can copy and paste the example in a code environment like Codepen, JSFiddle, or the
 [multi-line
-JavaScript interpreter in Firefox](/en-US/docs/Tools/Web_Console/The_command_line_interpreter).
+JavaScript interpreter in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html).
 
 - line #41: Comment out this line to stop dumping the search parameters to the
   console (`debug()`).

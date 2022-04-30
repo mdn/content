@@ -18,7 +18,7 @@ attribute variable in a given {{domxref("WebGLProgram")}}.
 ## Syntax
 
 ```js
-GLint gl.getAttribLocation(program, name);
+getAttribLocation(program, name)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ GLint gl.getAttribLocation(program, name);
 - program
   - : A {{domxref("WebGLProgram")}} containing the attribute variable.
 - name
-  - : A {{domxref("DOMString")}} specifying the name of the attribute variable whose
+  - : A string specifying the name of the attribute variable whose
     location to get.
 
 ### Return value

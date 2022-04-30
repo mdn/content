@@ -17,13 +17,7 @@ property is read only.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var name = entry.name;
-```
-
-### Return value
+## Value
 
 The return value depends on the subtype of the `PerformanceEntry` object and
 the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table below.
@@ -85,7 +79,7 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
   </tbody>
 </table>
 
-## Example
+## Examples
 
 The following example shows the use of the `name` property.
 

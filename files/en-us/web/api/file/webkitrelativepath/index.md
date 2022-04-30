@@ -17,13 +17,13 @@ browser-compat: api.File.webkitRelativePath
 {{APIRef("File API")}}{{non-standard_header}}
 
 The **`File.webkitRelativePath`** is a read-only property that
-contains a {{domxref("USVString")}} which specifies the file's path relative to the
+contains a string which specifies the file's path relative to the
 directory selected by the user in an {{HTMLElement("input")}} element with its
 {{htmlattrxref("webkitdirectory", "input")}} attribute set.
 
 ## Value
 
-A {{domxref("USVString")}} containing the path of the file relative to the ancestor
+A string containing the path of the file relative to the ancestor
 directory the user selected.
 
 ## Example

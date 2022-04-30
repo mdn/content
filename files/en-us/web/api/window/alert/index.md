@@ -19,7 +19,8 @@ Under some conditions — for example, when the user switches tabs — the brows
 ## Syntax
 
 ```js
-window.alert(message);
+alert()
+alert(message)
 ```
 
 ### Parameters
@@ -28,7 +29,11 @@ window.alert(message);
   - : A string you want to display in the alert dialog, or, alternatively, an object that
     is converted into a string and displayed.
 
-## Example
+### Return value
+
+`undefined`.
+
+## Examples
 
 ```js
 window.alert("Hello world!");

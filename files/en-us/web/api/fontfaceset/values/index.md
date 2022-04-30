@@ -16,10 +16,14 @@ The **`values()`** method of the {{domxref("FontFaceSet")}} interface returns a 
 ## Syntax
 
 ```js
-FontFaceSet.values()
+values()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A new iterator object containing the values for each element in the given `FontFaceSet`, in insertion order.
 

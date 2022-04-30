@@ -17,13 +17,7 @@ The **`repeat`** read-only property of the
 `true` if the given key is being held down such that it is automatically
 repeating.
 
-## Syntax
-
-```js
-var repeat = event.repeat;
-```
-
-### Return value
+## Value
 
 A boolean value
 

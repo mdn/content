@@ -22,10 +22,14 @@ events.
 ## Syntax
 
 ```js
-element.click()
+click()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 Simulate a mouse-click when moving the mouse pointer over a checkbox:
 

@@ -23,13 +23,7 @@ interface {{domxref("RTCTrackEvent")}}'s read-only **`track`**
 property specifies the {{domxref("MediaStreamTrack")}} that has been added to the
 {{domxref("RTCPeerConnection")}}.
 
-## Syntax
-
-```js
-var track = trackEvent.track;
-```
-
-### Value
+## Value
 
 A {{domxref("MediaStreamTrack")}} indicating the track which has been added to the
 {{domxref("RTCPeerConnection")}}.

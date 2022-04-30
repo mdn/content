@@ -19,8 +19,12 @@ the `OffscreenCanvas`.
 ## Syntax
 
 ```js
-ImageBitmap OffscreenCanvas.transferToImageBitmap()
+transferToImageBitmap()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -43,7 +43,7 @@ navigator.webkitPersistentStorage.requestQuota (
 
 Your user must grant your app permission to store data locally before your app can use persistent storage. Once your user grants it, you don't need to call `requestQuota()` again. Subsequent calls are a noop.
 
-Another API, the Quota Management API, lets you query an origin's current quota usage and allocation using `window.webkitPersistentStorage.queryUsageAndQuota()`. To learn more, see this [StackOverflow Answer](http://stackoverflow.com/a/29662985/89484). (An older version of the API is described at [Managing HTML5 Offline Storage](https://developer.chrome.com/apps/offline_storage?csw=1).)
+Another API, the Quota Management API, lets you query an origin's current quota usage and allocation using `window.webkitPersistentStorage.queryUsageAndQuota()`. To learn more, see this [StackOverflow Answer](https://stackoverflow.com/questions/17809824/how-to-use-navigator-instead-of-window-webkitstorageinfo-html5-file-system-api/29662985). (An older version of the API is described at [Managing HTML5 Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/?csw=1).)
 
 ### Working within a single origin
 

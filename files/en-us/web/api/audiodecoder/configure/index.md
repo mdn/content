@@ -16,7 +16,7 @@ The **`configure()`** method of the {{domxref("AudioDecoder")}} interface enqueu
 ## Syntax
 
 ```js
-AudioDecoder.configure(config)
+configure(config)
 ```
 
 ### Parameters
@@ -34,13 +34,13 @@ AudioDecoder.configure(config)
 
 > **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `config` is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("AudioDecoder.state","state")}} is `"closed"`.

@@ -21,8 +21,12 @@ method only stays for maintaining compatibility with very old scripts.
 ## Syntax
 
 ```js
-result = window.navigator.taintEnabled()
+taintEnabled()
 ```
+
+### Parameters
+
+None.
 
 ## Specifications
 

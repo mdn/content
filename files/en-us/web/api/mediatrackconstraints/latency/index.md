@@ -31,15 +31,7 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var constraintsObject = { latency: constraint };
-
-constraintsObject.latency = constraint;
-```
-
-### Value
+## Value
 
 A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) describing the acceptable or required value(s) for an
 audio track's latency, with values specified in seconds. In audio processing, latency is
@@ -61,7 +53,7 @@ best-possible value.
 > constraints, and so forth, so even in an "exact" match, some variation should be
 > expected.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

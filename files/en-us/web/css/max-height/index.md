@@ -42,6 +42,7 @@ max-height: fit-content(20em);
 max-height: inherit;
 max-height: initial;
 max-height: revert;
+max-height: revert-layer;
 max-height: unset;
 ```
 

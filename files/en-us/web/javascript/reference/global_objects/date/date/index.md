@@ -63,7 +63,7 @@ There are five basic forms for the `Date()` constructor:
         {{jsxref("Date.parse()")}} method. (These formats are
         [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14),
         and also strings in a
-        [version of ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
+        [version of ISO8601](https://262.ecma-international.org/11.0/#sec-date.parse).)
 
         > **Note:** Parsing of date strings with the `Date`
         > constructor (and `Date.parse()`, which works the same way) is

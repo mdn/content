@@ -31,7 +31,8 @@ elements too.
 ## Syntax
 
 ```js
-const animations = Element.getAnimations(options);
+getAnimations()
+getAnimations(options)
 ```
 
 ### Parameters

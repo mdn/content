@@ -264,9 +264,9 @@ We already mentioned Stack Overflow, but there are other online resources that c
 
 It is good to find a community to be part of, and you'll get a lot of respect if you try to help others answer their questions as well as asking your own. Other good examples include:
 
-- [MDN Discourse](https://discourse.mozilla.org/c/mdn)
+- [MDN Discourse](https://discourse.mozilla.org/c/mdn/236)
 - [Sitepoint Forums](https://www.sitepoint.com/community/)
-- [webdeveloper.com Forums](https://www.webdeveloper.com/)
+- [webdeveloper.com Forums](https://webdeveloper.com/)
 
 However, it also makes sense to find useful groups on social networking sites such as Twitter or Facebook. Look for groups that discuss web development subjects you are interested in and join up. Follow people on twitter you know are influential, smart, or just plain seem to share lots of useful tips.
 

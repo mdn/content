@@ -107,7 +107,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 ```php
 <?php
     $page_title = "Third page";
-    $page_content = "<p>This is the content of <strong>third_page.php</strong>. This content is stored into a php variable.</p>";
+    $page_content = "<p>This is the content of <strong>third_page.php</strong>. This content is stored into a PHP variable.</p>";
 
     if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
         echo json_encode(array("page" => $page_title, "content" => $page_content));
@@ -167,7 +167,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 **include/after_content.php**:
 
 ```php
-<p>This is the footer. It is shared between all ajax pages.</p>
+<p>This is the footer. It is shared between all Ajax pages.</p>
 ```
 
 **include/before_content.php**:
@@ -405,4 +405,4 @@ For more information, please see: [Working with the History API](/en-US/docs/Web
 ## See also
 
 - {{ domxref("window.history") }}
-- {{ domxref("WindowEventHandlers.onpopstate") }}
+- {{domxref("Window/popstate_event", "popstate")}} event

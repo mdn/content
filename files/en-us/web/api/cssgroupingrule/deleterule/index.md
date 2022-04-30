@@ -18,7 +18,7 @@ rules.
 ## Syntax
 
 ```js
-cssGroupingRule.deleteRule(index);
+deleteRule(index)
 ```
 
 ### Parameters

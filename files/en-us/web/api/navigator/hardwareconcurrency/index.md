@@ -15,12 +15,6 @@ The **`navigator.hardwareConcurrency`** read-only property
 returns the number of logical processors available to run threads on the user's
 computer.
 
-## Syntax
-
-```js
-logicalProcessors = window.navigator.hardwareConcurrency
-```
-
 ## Value
 
 A number between 1 and the number of logical processors potentially available to the user agent.

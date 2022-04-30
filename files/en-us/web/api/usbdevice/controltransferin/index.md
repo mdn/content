@@ -22,7 +22,7 @@ been received from the USB device.
 ## Syntax
 
 ```js
-var promise = USBDevice.controlTransferIn(setup, length)
+controlTransferIn(setup, length)
 ```
 
 ### Parameters

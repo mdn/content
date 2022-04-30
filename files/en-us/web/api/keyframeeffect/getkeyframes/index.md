@@ -20,7 +20,7 @@ The **`getKeyframes()`** method of a {{domxref("KeyframeEffect")}} returns an Ar
 ## Syntax
 
 ```js
-var keyframes = keyframeEffect.getKeyframes();
+getKeyframes()
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ Returns a sequence of objects with the following format:
 
 ## Examples
 
-In the [Red Queen Race](http://codepen.io/rachelnabors/pen/PNGGaV) example, we can inspect Alice and the RedQueen's animation to see its individual keyframes like so:
+In the [Red Queen Race](https://codepen.io/rachelnabors/pen/PNGGaV) example, we can inspect Alice and the RedQueen's animation to see its individual keyframes like so:
 
 ```js
 // Return the array of keyframes

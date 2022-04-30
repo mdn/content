@@ -16,13 +16,18 @@ browser-compat: api.Element.setAttributeNodeNS
 ## Syntax
 
 ```js
-replacedAttr = element.setAttributeNodeNS(attributeNode)
+setAttributeNodeNS(attributeNode)
 ```
 
-- `replacedAttr` is the replaced attribute node, if any, returned by this function.
+### Parameters
+
 - `attributeNode` is an `Attr` node.
 
-## Example
+### Return value
+
+The replaced attribute node, if any, returned by this function.
+
+## Examples
 
 ```js
 // <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"

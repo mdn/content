@@ -41,7 +41,7 @@ effect.
 ## Syntax
 
 ```js
-aPromise = rtcPeerConnection.setRemoteDescription(sessionDescription);
+setRemoteDescription(sessionDescription)
 ```
 
 ### Parameters
@@ -122,7 +122,7 @@ by `setRemoteDescription()`:
     {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid. The
     error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
     indicates the line number within the SDP on which the syntax error was detected.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the specified `RTCSessionDescriptionInit` or
     `RTCSessionDescription` object is missing the
     {{domxref("RTCSessionDescription.type", "type")}} property, or no description
@@ -198,7 +198,7 @@ When using the deprecated callback-based version of
   - : The {{domxref("RTCSessionDescription")}} specified by the
     `sessionDescription` parameter is invalid.
 
-## Example
+## Examples
 
 Here we see a function which handles an offer received from the remote peer. This code
 is derived from the example and tutorial in the article [Signaling and

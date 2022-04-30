@@ -25,14 +25,18 @@ The **`createTBody()`** method of
 ## Syntax
 
 ```js
-table.createTBody();
+createTBody()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}
 
-## Example
+## Examples
 
 ```js
 let mybody = mytable.createTBody();

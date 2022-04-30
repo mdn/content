@@ -16,7 +16,11 @@ A value of `1.0` is also returned if the implementation isn't able to determine 
 or if the system is not battery-powered.
 When its value changes, the [`levelchange`](/en-US/docs/Web/API/BatteryManager/levelchange_event) event is fired.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ### HTML Content
 

@@ -60,7 +60,7 @@ If you are a front-end developer, you may already know what to do. An HTML5 game
 
 If you want to make money out of game dev, you should secure your source code one way or another against people who could easily take it and sell it as their own. You can concatenate and minify the code to make it smaller and uglify it so it's a lot harder to reverse engineer your game. Another good measure to take is to provide an online demo if you're planning on packaging it and selling it in a closed store like iTunes or Steam.
 
-If you're working on a side project just for fun, then leaving the source open will benefit those who would like to learn from what you've created. You don't even have to worry about looking for a hosting provider as it's possible to [host games on GitHub Pages](https://dev.end3r.com/2014/02/host-your-html5-games-on-github-pages/). You'll get free hosting, version control and possible contributors if your project is interesting enough.
+If you're working on a side project just for fun, then leaving the source open will benefit those who would like to learn from what you've created. You don't even have to worry about looking for a hosting provider as it's possible to [host games on GitHub Pages](https://end3r.com/blog/2014/02/host-your-html5-games-on-github-pages/). You'll get free hosting, version control and possible contributors if your project is interesting enough.
 
 ### Publishers and portals
 
@@ -116,8 +116,8 @@ There are various tools to choose from depending on your skills, preferred frame
 
 Other alternative tools are:
 
-- [Intel XDK](https://software.intel.com/en-us/intel-xdk) — an exciting alternative, similar to CocoonIO.
-- [Electron](https://electron.atom.io/) — known as Atom Shell — is an open-sourced and cross-platform tool from GitHub.
+- [Intel XDK](https://www.intel.com/content/www/us/en/developer/tools/overview.html) — an exciting alternative, similar to CocoonIO.
+- [Electron](https://www.electronjs.org/) — known as Atom Shell — is an open-sourced and cross-platform tool from GitHub.
 - [Manifold.js](https://manifoldjs.com/) — this tool from the Microsoft team can create native distributions of HTML5 games from iOS, Android, and Windows.
 
 ## Summary

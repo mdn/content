@@ -20,7 +20,7 @@ The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a c
 
 ## Processing orientation events
 
-All you need to do in order to begin receiving orientation change is to listen to the {{event("deviceorientation")}} event:
+All you need to do in order to begin receiving orientation change is to listen to the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event:
 
 > **Note:** [parallax](https://github.com/wagerfield/parallax) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
@@ -60,7 +60,7 @@ The value reported for each axis indicates the amount of rotation around a given
 
 ### Orientation example
 
-This example will work on any browser supporting the {{event("deviceorientation")}} event and running on a device able to detect its orientation.
+This example will work on any browser supporting the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event and running on a device able to detect its orientation.
 
 So let's imagine a ball in a garden:
 
@@ -130,13 +130,13 @@ function handleOrientation(event) {
 window.addEventListener('deviceorientation', handleOrientation);
 ```
 
-{{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{domxref("Window/deviceorientation_event", "deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.
+{{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{domxref("Window.deviceorientation_event", "deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.
 
 {{EmbedLiveSample('Orientation_example', '230', '260')}}
 
 ## Processing motion events
 
-Motion events are handled the same way as the orientation events except that they have their own event's name: {{domxref("Window/devicemotion_event", "devicemotion")}}
+Motion events are handled the same way as the orientation events except that they have their own event's name: {{domxref("Window.devicemotion_event", "devicemotion")}}
 
 ```js
 window.addEventListener("devicemotion", handleMotion, true);

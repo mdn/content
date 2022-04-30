@@ -21,11 +21,14 @@ For more details about media stream destination nodes, check out the {{domxref("
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var destination = audioCtx.createMediaStreamDestination();
+createMediaStreamDestination()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("MediaStreamAudioDestinationNode")}}.
 

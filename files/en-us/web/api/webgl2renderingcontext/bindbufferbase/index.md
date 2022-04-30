@@ -19,7 +19,7 @@ The **`WebGL2RenderingContext.bindBufferBase()`** method of the
 ## Syntax
 
 ```js
-void gl.bindBufferBase(target, index, buffer);
+bindBufferBase(target, index, buffer)
 ```
 
 ### Parameters

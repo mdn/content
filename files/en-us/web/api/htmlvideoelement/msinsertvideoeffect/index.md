@@ -19,13 +19,14 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ## Syntax
 
 ```js
-str = HTMLMediaElement.msInsertVideoEffect(activatableClassId: {{DOMxRef("DOMString")}}, effectRequired: {{JSxRef("Boolean", "boolean")}}, config);
+msInsertVideoEffect(activatableClassId, effectRequired)
+msInsertVideoEffect(activatableClassId, effectRequired, config)
 ```
 
 ### Parameters
 
 - activatableClassId
-  - : A {{DOMxRef("DOMString")}} defining the video effects class.
+  - : A string defining the video effects class.
 - effectRequired
   - : A {{JSxRef("Boolean")}} which if set to
     _true_ requires a video effect to be defined.
@@ -37,7 +38,7 @@ str = HTMLMediaElement.msInsertVideoEffect(activatableClassId: {{DOMxRef("DOMStr
 
 This method does not return a value.
 
-## Example
+## Examples
 
 ```js
 var oVideo1 = document.getElementById("video1");

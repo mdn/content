@@ -27,8 +27,12 @@ Most elements only have one border box each, but a multiline [inline element](/e
 ## Syntax
 
 ```js
-let rectCollection = object.getClientRects();
+getClientRects()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

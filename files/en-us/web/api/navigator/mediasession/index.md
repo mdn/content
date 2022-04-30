@@ -36,13 +36,7 @@ physical play, pause, seek, and other similar controls. An internet radio app, f
 example, can use `setActionHandler()` to let fhe media controls on a keyboard
 or elsewhere on the user's device be used to control the app's media playback.
 
-## Syntax
-
-```js
-let mediaSession = navigator.mediaSession;
-```
-
-### Value
+## Value
 
 A {{domxref("MediaSession")}} object the current document can use to share information
 about media it's playing and its current playback status. This information can include
@@ -50,7 +44,7 @@ typical metadata such as the title, artist, and album name of the song being pla
 well as potentially one or more images containing things like album art, artist photos,
 and so forth.
 
-## Example
+## Examples
 
 In this example, metadata is submitted to the `mediaSession` object. Note
 that the code begins by ensuring that the {{domxref("navigator.mediaSession")}} property

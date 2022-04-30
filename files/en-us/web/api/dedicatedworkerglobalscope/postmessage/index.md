@@ -41,11 +41,11 @@ postMessage(aMessage, transferList)
 
     Only {{Glossary("transferable objects")}} can be transferred.
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 
-## Example
+## Examples
 
 The following code snippet shows `worker.js`, in which an `onmessage` handler is used to handle messages from the main script.
 Inside the handler a calculation is done from which a result message is created; this is then sent back to the main thread using `postMessage(workerResult);`

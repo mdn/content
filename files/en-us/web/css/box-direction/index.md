@@ -23,6 +23,7 @@ box-direction: reverse;
 box-direction: inherit;
 box-direction: initial;
 box-direction: revert;
+box-direction: revert-layer;
 box-direction: unset;
 ```
 

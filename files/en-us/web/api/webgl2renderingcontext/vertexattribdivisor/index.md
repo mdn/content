@@ -26,7 +26,7 @@ with {{domxref("WebGL2RenderingContext.drawArraysInstanced()",
 ## Syntax
 
 ```js
-void gl.vertexAttribDivisor(index, divisor);
+vertexAttribDivisor(index, divisor)
 ```
 
 ### Parameters

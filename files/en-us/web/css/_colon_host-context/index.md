@@ -4,7 +4,6 @@ slug: Web/CSS/:host-context
 tags:
   - ':host-context()'
   - CSS
-  - Experimental
   - Layout
   - Pseudo-class
   - Reference

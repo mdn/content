@@ -42,6 +42,7 @@ max-width: fit-content(20em);
 max-width: inherit;
 max-width: initial;
 max-width: revert;
+max-width: revert-layer;
 max-width: unset;
 ```
 

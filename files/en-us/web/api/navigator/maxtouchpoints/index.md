@@ -15,13 +15,11 @@ The **`maxTouchPoints`** read-only property of the
 {{domxref("Navigator")}} interface returns the maximum number of simultaneous touch
 contact points are supported by the current device.
 
-## Syntax
+## Value
 
-```js
-touchPoints = navigator.maxTouchPoints;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 if (navigator.maxTouchPoints > 1) {

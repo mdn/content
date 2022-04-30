@@ -18,7 +18,7 @@ of the active uniform block at a given index within a {{domxref("WebGLProgram")}
 ## Syntax
 
 ```js
-DOMString gl.getActiveUniformBlockName(program, uniformBlockIndex);
+getActiveUniformBlockName(program, uniformBlockIndex)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ DOMString gl.getActiveUniformBlockName(program, uniformBlockIndex);
 
 ### Return value
 
-A {{domxref("DOMString")}} indicating the active uniform block name.
+A string indicating the active uniform block name.
 
 ## Examples
 

@@ -43,7 +43,7 @@ An object implementing `FormData` can directly be used in a {{jsxref("Statements
 - {{domxref("FormData.set()")}}
   - : Sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
 - {{domxref("FormData.values()")}}
-  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all values  contained in this object.
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all values contained in this object.
 
 ## Specifications
 

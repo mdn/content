@@ -17,7 +17,7 @@ previously called commands are finished.
 ## Syntax
 
 ```js
-void gl.finish();
+finish()
 ```
 
 ### Parameters

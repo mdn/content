@@ -21,7 +21,7 @@ This allows web apps to override text edit behavior before the browser modifies 
 ## Syntax
 
 ```js
-var staticRanges[] = inputEvent.getTargetRanges()
+getTargetRanges()
 ```
 
 ### Parameters

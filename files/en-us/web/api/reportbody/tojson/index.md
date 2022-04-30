@@ -16,12 +16,12 @@ The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _seria
 ## Syntax
 
 ```js
-ReportBody.toJSON();
+toJSON()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

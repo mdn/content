@@ -25,7 +25,8 @@ browser and returns a constructor for the new element.
 ## Syntax
 
 ```js
-var constructor = document.registerElement(tag-name, options);
+registerElement(tag-name)
+registerElement(tag-name, options)
 ```
 
 ### Parameters
@@ -37,7 +38,7 @@ var constructor = document.registerElement(tag-name, options);
   - : An object with properties **prototype** to base the custom element on,
     and **extends**, an existing tag to extend. Both of these are optional.
 
-## Example
+## Examples
 
 Here is a very simple example:
 

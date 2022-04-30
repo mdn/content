@@ -24,7 +24,7 @@ varies depending on the type of URL:
   `'://'`, followed by the domain, followed by `':'`, followed by
   the port (the default port, `80` and `443` respectively, if
   explicitly specified).
-- For `file:` URLs, the value is browser dependant.
+- For `file:` URLs, the value is browser dependent.
 - for `blob:` URLs, the origin of the URL following `blob:` will
   be used, e.g `"blob:https://mozilla.org"` will be returned as
   `"https://mozilla.org".`

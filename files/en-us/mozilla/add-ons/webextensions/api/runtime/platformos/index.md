@@ -22,7 +22,7 @@ The operating system the browser is running on.
 Values of this type are strings. Possible values are:
 
 - `"mac"`
-  - : The underlying operating system is Mac OS X.
+  - : The underlying operating system is macOS.
 - `"win"`
   - : The underlying operating system is Windows.
 - `"android"`

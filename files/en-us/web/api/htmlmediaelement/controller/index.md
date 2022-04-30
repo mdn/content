@@ -31,7 +31,3 @@ In 2016, the whole Media Controller feature was [removed from the HTML specifica
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- The interface defining it, {{domxref("HTMLMediaElement")}}.

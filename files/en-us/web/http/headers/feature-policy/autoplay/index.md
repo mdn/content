@@ -35,7 +35,7 @@ Feature-Policy: autoplay <allowlist>;
 
 ## Default policy
 
-The default value in [Google Chrome](https://www.chromestatus.com/feature/5100524789563392) is
+The default value in [Google Chrome](https://chromestatus.com/feature/5100524789563392) is
 `'self'`.
 
 ## Specifications

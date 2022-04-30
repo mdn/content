@@ -20,7 +20,7 @@ data.
 ## Syntax
 
 ```js
-WebGLVertexArrayObject gl.createVertexArray();
+createVertexArray()
 ```
 
 ### Parameters

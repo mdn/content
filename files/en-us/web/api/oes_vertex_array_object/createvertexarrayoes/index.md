@@ -21,7 +21,7 @@ data.
 ## Syntax
 
 ```js
-WebGLVertexArrayObjectOES ext.createVertexArrayOES();
+createVertexArrayOES()
 ```
 
 ### Parameters

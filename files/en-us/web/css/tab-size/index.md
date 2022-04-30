@@ -30,6 +30,7 @@ tab-size: 2em;
 tab-size: inherit;
 tab-size: initial;
 tab-size: revert;
+tab-size: revert-layer;
 tab-size: unset;
 ```
 

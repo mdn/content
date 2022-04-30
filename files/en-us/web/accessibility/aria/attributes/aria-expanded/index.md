@@ -1,7 +1,7 @@
 ---
 title: 'aria-expanded'
 slug: Web/Accessibility/ARIA/Attributes/aria-expanded
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -78,9 +78,9 @@ A parent row is a row that can be expanded or collapsed to show or hide a set of
 ## ARIAMixin API
 
 - {{domxref("Element.ariaExpanded")}}
-  - : The  [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-expanded` attribute.
+  - : The [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-expanded` attribute.
 - {{domxref("ElementInternals.ariaExpanded")}}
-  - : The  [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-expanded` attribute.
+  - : The [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-expanded` attribute.
 
 ## Associated roles
 

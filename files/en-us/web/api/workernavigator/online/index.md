@@ -29,20 +29,14 @@ the internet. You could be getting false positives, such as in cases where the c
 is running a virtualization software that has virtual ethernet adapters that are always
 "connected." Therefore, if you really want to determine the online status of the
 browser, you should develop additional means for checking. To learn more, see the HTML5
-Rocks article, [Working Off the Grid](http://www.html5rocks.com/en/mobile/workingoffthegrid.html).
+Rocks article, [Working Off the Grid](https://www.html5rocks.com/en/mobile/workingoffthegrid/).
 
 In Firefox and Internet Explorer, switching the browser to offline mode sends a
 `false` value. Until Firefox 41, all other conditions return a
 `true` value; testing actual behavior on Nightly 68 on Windows shows that it
 only looks for LAN connection like Chrome and Safari giving false positives.
 
-## Syntax
-
-```js
-online = navigator.onLine;
-```
-
-### Value
+## Value
 
 `online` is a boolean `true` or `false`.
 

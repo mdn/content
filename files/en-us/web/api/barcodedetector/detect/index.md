@@ -7,9 +7,10 @@ tags:
   - Method
   - barcode
   - shape detection
+  - Experimental
 browser-compat: api.BarcodeDetector.detect
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`detect()`** method of the
 {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which fulfills
@@ -45,7 +46,7 @@ Returns a {{jsxref('Promise')}} which fulfills with an array of
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : No parameter is specified or the `type` is not that of an
     `ImageBitmapSource`.
 

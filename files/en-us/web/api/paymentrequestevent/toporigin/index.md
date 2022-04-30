@@ -17,13 +17,7 @@ The **`topOrigin`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns the top level payee origin where
 the {{domxref("PaymentRequest")}} object was initialized.
 
-## Syntax
-
-```js
-var aUsvString = paymentRequestEvent.topOrigin
-```
-
-### Value
+## Value
 
 A USVString
 

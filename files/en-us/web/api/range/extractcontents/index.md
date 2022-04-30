@@ -25,10 +25,14 @@ document fragment valid.
 ## Syntax
 
 ```js
-documentFragment = range.extractContents();
+extractContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 ### Basic example
 

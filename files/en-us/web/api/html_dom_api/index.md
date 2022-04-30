@@ -131,7 +131,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 - {{DOMxRef("HTMLOptionElement")}}
 - {{DOMxRef("HTMLOutputElement")}}
 - {{DOMxRef("HTMLParagraphElement")}}
-- {{DOMxRef("HTMLParamElement")}}
 - {{DOMxRef("HTMLPictureElement")}}
 - {{DOMxRef("HTMLPreElement")}}
 - {{DOMxRef("HTMLProgressElement")}}

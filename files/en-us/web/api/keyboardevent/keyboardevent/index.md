@@ -17,14 +17,15 @@ The **`KeyboardEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new KeyboardEvent(typeArg, KeyboardEventInit);
+new KeyboardEvent(typeArg)
+new KeyboardEvent(typeArg, keyboardEventInit)
 ```
 
-### Values
+### Parameters
 
-- _typeArg_
+- `typeArg`
   - : Is a {{domxref("DOMString")}} representing the name of the event.
-- _KeyboardEventInit_{{optional_inline}}
+- `keyboardEventInit` {{optional_inline}}
 
   - : Is a `KeyboardEventInit` dictionary, having the following fields:
 
@@ -41,8 +42,7 @@ new KeyboardEvent(typeArg, KeyboardEventInit);
     - `"altKey"`, optional boolean value, defaulting to `false`,
       that sets the value of {{domxref("KeyboardEvent.altKey")}}.
     - `"metaKey"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.metaKey")}}.<
-      /li>
+      that sets the value of {{domxref("KeyboardEvent.metaKey")}}.
     - `"repeat"`, optional boolean value, defaulting to `false`,
       that sets the value of {{domxref("KeyboardEvent.repeat")}}.
     - `"isComposing"`, optional boolean value, defaulting to `false`,

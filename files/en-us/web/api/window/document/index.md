@@ -13,7 +13,11 @@ browser-compat: api.Window.document
 
 **`window.document`** returns a reference to the [document](/en-US/docs/Web/API/Document) contained in the window.
 
-## Example
+## Value
+
+A [document](/en-US/docs/Web/API/Document) object.
+
+## Examples
 
 ```js
 console.log(window.document.title);

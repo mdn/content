@@ -7,11 +7,10 @@ tags:
   - JavaScript
   - Method
   - Reference
-  - Experimental
   - supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`Intl.supportedValuesOf()`** method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
 

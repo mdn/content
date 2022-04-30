@@ -20,8 +20,12 @@ the current position of the caret.
 ## Syntax
 
 ```js
-selection = window.getSelection();
+getSelection()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

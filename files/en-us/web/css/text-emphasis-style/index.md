@@ -38,6 +38,7 @@ text-emphasis-style: open sesame;
 text-emphasis-style: inherit;
 text-emphasis-style: initial;
 text-emphasis-style: revert;
+text-emphasis-style: revert-layer;
 text-emphasis-style: unset;
 ```
 

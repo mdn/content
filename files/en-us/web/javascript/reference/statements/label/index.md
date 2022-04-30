@@ -151,13 +151,13 @@ console.log('swap');
 // this will log:
 
 // "face"
-// "swap" 
+// "swap"
 ```
 
 ### Labeled function declarations
 
 Starting with ECMAScript 2015, labeled function declarations are now standardized for non-strict code in the
-[web compatibility annex of the specification](https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations).
+[web compatibility annex of the specification](https://262.ecma-international.org/6.0/#sec-labelled-function-declarations).
 
 ```js
 L: function F() {}

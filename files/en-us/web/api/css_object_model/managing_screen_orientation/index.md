@@ -135,7 +135,7 @@ And here's the result
 
 ## Locking the screen orientation
 
-> **Warning:** This API is experimental and currently available on [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) and [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) with a `moz` prefix, and for Internet Explorer on Windows 8.1 and above  with a `ms` prefix.
+> **Warning:** This API is experimental and currently available on [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) and [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) with a `moz` prefix, and for Internet Explorer on Windows 8.1 and above with a `ms` prefix.
 
 Some devices (mainly mobile devices) can dynamically change the orientation of the screen based on their own orientation, ensuring that the user will always be able to read what's on the screen. While this behavior is perfectly suited for text content, there is some content that can be negatively affected by such a change. For example, games based on the orientation of the device could be messed up by such a change of the orientation.
 
@@ -143,7 +143,7 @@ The Screen Orientation API is made to prevent or handle such a change.
 
 ### Listening orientation change
 
-The {{event("orientationchange")}} event is triggered each time the device change the orientation of the screen and the orientation itself can be read with the {{domxref("Screen.orientation")}} property.
+The {{domxref("Window.orientationchange_event", "orientationchange")}} event is triggered each time the device change the orientation of the screen and the orientation itself can be read with the {{domxref("Screen.orientation")}} property.
 
 ```js
 screen.addEventListener("orientationchange", function () {
@@ -161,9 +161,9 @@ The {{domxref("Screen.lockOrientation()")}} accepts a string (or series of strin
 screen.lockOrientation('landscape');
 ```
 
-> **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{event("orientationchange")}} event because both applications will keep the orientation they had.
+> **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event because both applications will keep the orientation they had.
 >
-> However, locking the orientation can fire an {{event("orientationchange")}} event if the orientation had to be changed to satisfy the lock requirements.
+> However, locking the orientation can fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event if the orientation had to be changed to satisfy the lock requirements.
 
 ## Firefox OS and Android: Orientation lock using the manifest
 
@@ -180,4 +180,4 @@ For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) speci
 - {{domxref("Screen.unlockOrientation()")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
-- [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)
+- [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)

@@ -26,8 +26,8 @@ legacy techniques for sending analytics, such as the use of
 ## Syntax
 
 ```js
-navigator.sendBeacon(url);
-navigator.sendBeacon(url, data);
+sendBeacon(url)
+sendBeacon(url, data)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ navigator.sendBeacon(url, data);
   - : The URL that will receive the _data_. Can be relative or absolute.
 - `data` {{Optional_inline}}
   - : A {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}},
-    {{domxref("DOMString")}}, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}}
+    string, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}}
     object containing the data to send.
 
 ### Return values
@@ -113,7 +113,7 @@ Like `beforeunload` and `unload`, this event is not reliably fired, especially o
 
 ## Examples
 
-The following example specifies a handler for the {{event("visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
+The following example specifies a handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
 
 ```js
 document.addEventListener('visibilitychange', function logData() {
@@ -140,7 +140,7 @@ document.addEventListener('visibilitychange', function logData() {
   detail why you should use `visibilitychange`, not
   `beforeunload`/`unload`.
 - [Page
-  Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling
+  Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling
   page lifecycle behavior in your web applications.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
 - [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.

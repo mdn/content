@@ -30,7 +30,8 @@ and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for more inform
 ## Syntax
 
 ```js
-const appliedPromise = track.applyConstraints([constraints])
+applyConstraints()
+applyConstraints(constraints)
 ```
 
 ### Parameters

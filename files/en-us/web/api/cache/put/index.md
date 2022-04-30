@@ -47,9 +47,7 @@ fetch(url).then(function(response) {
 ## Syntax
 
 ```js
-cache.put(request, response).then(function() {
-  // request/response pair has been added to the cache
-});
+put(request, response)
 ```
 
 ### Parameters
@@ -63,8 +61,10 @@ cache.put(request, response).then(function() {
 
 A {{jsxref("Promise")}} that resolves with `undefined`.
 
-> **Note:** The promise will reject with a `TypeError` if the
-> URL scheme is not `http` or `https`.
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Returned if the URL scheme is not `http` or `https`.
 
 ## Examples
 

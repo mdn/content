@@ -28,13 +28,7 @@ Real-time Transport Control Protocol ({{Glossary("RTCP")}}) packets.
 This transport is responsible for receiving the data for the media on the sender's
 {{domxref("RTCRtpReceiver.track", "track")}}.
 
-## Syntax
-
-```js
-let transport = rtcRtpSender.transport;
-```
-
-### Value
+## Value
 
 An {{domxref("RTCDtlsTransport")}} object representing the underlying transport being
 used by the sender to exchange packets with the remote peer, or `null` if the

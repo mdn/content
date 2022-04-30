@@ -24,7 +24,7 @@ This method is part of the {{domxref("WEBGL_draw_buffers")}} extension.
 ## Syntax
 
 ```js
-void gl.getExtension('WEBGL_draw_buffers').drawBuffersWEBGL(buffers);
+drawBuffersWEBGL(buffers)
 ```
 
 ### Parameters

@@ -27,15 +27,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.frameRate")}} as returned
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { frameRate: constraint };
-
-constraintsObject.frameRate = constraint;
-```
-
-### Value
+## Value
 
 A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) describing the acceptable or required value(s) for a
 video track's frame rate, in frames per second.
@@ -47,7 +39,7 @@ will guide the user agent in its efforts to provide an exact match to the requir
 rate (if `exact` is specified or both `min` and `max`
 are provided and have the same value) or to a best-possible value.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

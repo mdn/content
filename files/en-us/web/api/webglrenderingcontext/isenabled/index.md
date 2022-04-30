@@ -20,7 +20,7 @@ By default, all capabilities except `gl.DITHER` are
 ## Syntax
 
 ```js
-GLboolean gl.isEnabled(cap);
+isEnabled(cap)
 ```
 
 ### Parameters

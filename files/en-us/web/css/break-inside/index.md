@@ -27,6 +27,7 @@ break-inside: avoid-region;
 break-inside: inherit;
 break-inside: initial;
 break-inside: revert;
+break-inside: revert-layer;
 break-inside: unset;
 ```
 

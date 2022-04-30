@@ -15,6 +15,8 @@ The **`rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS
 fixed point on the 2D plane, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data
 type.
 
+{{EmbedInteractiveExample("pages/css/function-rotate.html")}}
+
 The fixed point that the element rotates around — mentioned above — is also known as the **transform
 origin**. This defaults to the center of the element, but you can set your own custom transform origin using
 the {{ cssxref("transform-origin") }} property.

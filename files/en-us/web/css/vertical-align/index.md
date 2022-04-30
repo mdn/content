@@ -45,6 +45,7 @@ vertical-align: 20%;
 vertical-align: inherit;
 vertical-align: initial;
 vertical-align: revert;
+vertical-align: revert-layer;
 vertical-align: unset;
 ```
 

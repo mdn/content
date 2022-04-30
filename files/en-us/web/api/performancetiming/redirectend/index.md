@@ -25,11 +25,9 @@ in milliseconds since the UNIX epoch, the last HTTP redirect is completed, that 
 the last byte of the HTTP response has been received. If there is no redirect, or if one
 of the redirect is not of the same origin, the value returned is `0`.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.redirectEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

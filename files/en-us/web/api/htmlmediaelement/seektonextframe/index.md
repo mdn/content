@@ -40,10 +40,12 @@ happens.
 ## Syntax
 
 ```js
-var seekCompletePromise = HTMLMediaElement.seekToNextFrame();
-
-HTMLMediaElement.seekToNextFrame();
+seekToNextFrame()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -8,7 +8,7 @@ tags:
   - NDEFMessage
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{APIRef()}}
 
 The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.
 

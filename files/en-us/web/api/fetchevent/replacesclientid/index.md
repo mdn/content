@@ -29,7 +29,7 @@ imminently be replaced, right before a navigation.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -52,7 +52,7 @@ Before you get started with working on any particular repo, follow these steps:
 
 At this point you need to set up an SSH key on your GitHub account. This is basically a security mechanism that identifies you to GitHub, and means that you don't have to authenticate each time you use GitHub services.
 
-GitHub have created a useful guide to setting this up — see the starting point at [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh). Follow each of the steps here to get set up with SSH on GitHub.
+GitHub have created a useful guide to setting this up — see the starting point at [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh). Follow each of the steps here to get set up with SSH on GitHub.
 
 If you don't do this, you'll still be able to contribute to MDN, but you'll have to enter your username and password every time you interact with GitHub (e.g. whenever you submit a pull request, as seen below).
 
@@ -71,7 +71,7 @@ It is possible to do the two things separately, but in practice you will nearly 
 
 Let's fork <https://github.com/mdn/content> right now; you'll definitely be contributing to this repo at some point. Follow these steps:
 
-1. Locate the Fork button at the top-right hand corner of the content repo's page, and press it:
+1. Locate the Fork button at the top-right-hand corner of the content repo's page, and press it:
 
     ![Button labeled fork, with the number 609 next to it](fork-button.png)
 
@@ -211,7 +211,7 @@ Once you've got your main branch up to date in your fork, you must always create
 
 To create a new branch:
 
-1. Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left hand corner of the file list, which should say "main" on it:
+1. Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left-hand corner of the file list, which should say "main" on it:
 
     ![Button labeled main](branch-button.png)
 

@@ -13,7 +13,11 @@ The **`BatteryManager.charging`** property is a Boolean value indicating whether
 
 If the battery is charging, this value is `true`. Otherwise, it is `false`.
 
-## Example
+## Value
+
+A boolean.
+
+## Examples
 
 ### HTML Content
 

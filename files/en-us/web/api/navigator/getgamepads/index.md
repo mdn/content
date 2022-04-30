@@ -24,10 +24,14 @@ Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if
 ## Syntax
 
 ```js
- var gamepads = navigator.getGamepads();
+getGamepads()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {

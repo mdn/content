@@ -18,14 +18,19 @@ characters.
 ## Syntax
 
 ```js
-var text = document.createTextNode(data);
+createTextNode(data)
 ```
 
-- _text_ is a {{domxref("Text")}} node.
+### Parameters
+
 - _data_ is a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
   containing the data to be put in the text node.
 
-## Example
+### Return value
+
+A {{domxref("Text")}} node.
+
+## Examples
 
 ```html
 <!DOCTYPE html>

@@ -20,8 +20,8 @@ UI, this method returns the first device matching the criteria.
 ## Syntax
 
 ```js
-Bluetooth.requestDevice([options])
-  .then(function(bluetoothDevice) { /* ... */ })
+requestDevice()
+requestDevice(options)
 ```
 
 ### Return value
@@ -42,9 +42,9 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
       requesting script can accept all Bluetooth devices. The default is
       `false`.
 
-## Exceptions
+### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `options` do not make sense. For example,
     `options.filters` is present and `options.acceptAllDevices` is
     `true`, or if `options.filters` is not present and
@@ -56,7 +56,7 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
   - : Thrown if this operation is not permitted in this context due to security concerns. For
     example, it is called from insecure origin.
 
-## Example
+## Examples
 
 ```js
 // Discovery options match any devices advertising:

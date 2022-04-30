@@ -18,10 +18,14 @@ The **`HTMLTableElement.deleteTHead()`** removes the
 ## Syntax
 
 ```js
-HTMLTableElement.deleteTHead();
+deleteTHead()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 This example uses JavaScript to delete a table's header.
 
@@ -44,7 +48,7 @@ table.deleteTHead();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

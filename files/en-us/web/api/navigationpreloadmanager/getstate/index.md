@@ -19,7 +19,11 @@ The **`getState()`** method of the {{domxref("NavigationPreloadManager")}} inter
 getState()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} that resolves with an object that has the following properties:
 

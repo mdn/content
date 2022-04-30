@@ -25,23 +25,23 @@ Example data types are `text/plain` and `text/uri-list`.
 ## Syntax
 
 ```js
-void dataTransfer.setData(format, data);
+setData(format, data)
 ```
 
-### Arguments
+### Parameters
 
 - _format_
-  - : A {{domxref("DOMString")}} representing the type of the drag data to add to the
+  - : A string representing the type of the drag data to add to the
     {{domxref("DataTransfer","drag object")}}.
 - _data_
-  - : A {{domxref("DOMString")}} representing the data to add to the
+  - : A string representing the data to add to the
     {{domxref("DataTransfer","drag object")}}.
 
 ### Return value
 
 None.
 
-## Example
+## Examples
 
 This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.getData","getData()")}},

@@ -11,7 +11,7 @@ tags:
   - cut
 browser-compat: api.HTMLElement.cut_event
 ---
-{{ APIRef("HTML DOM") }} {{SeeCompatTable}}
+{{ APIRef("HTML DOM") }}
 
 The **`cut`** event fires when the user initiates a cut action through the browser's user interface.
 
@@ -36,7 +36,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} operation, along with its MIME type.
+  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ### Value
 

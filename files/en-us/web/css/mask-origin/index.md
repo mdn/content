@@ -36,6 +36,7 @@ mask-origin: view-box, fill-box, border-box;
 mask-origin: inherit;
 mask-origin: initial;
 mask-origin: revert;
+mask-origin: revert-layer;
 mask-origin: unset;
 ```
 

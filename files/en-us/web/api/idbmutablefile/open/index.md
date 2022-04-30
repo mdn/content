@@ -19,7 +19,7 @@ safely write in the file.
 ## Syntax
 
 ```js
-var myFile = instanceOfFileHandle.open(mode);
+open(mode)
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ var myFile = instanceOfFileHandle.open(mode);
   - : A string that specifies the writing mode for the file. It can be
     `readonly` or `readwrite`.
 
-### Return
+### Return value
 
 A {{domxref("LockedFile")}} object.
 

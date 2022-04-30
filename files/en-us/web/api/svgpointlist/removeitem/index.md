@@ -16,8 +16,10 @@ The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface remov
 ## Syntax
 
 ```js
-SVGPointList.removeItem(index);
+removeItem(index)
 ```
+
+### Parameters
 
 - `index`
   - : The index of the item to remove.

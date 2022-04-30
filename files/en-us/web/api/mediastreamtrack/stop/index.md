@@ -21,8 +21,12 @@ The **`MediaStreamTrack.stop()`** method stops the track.
 ## Syntax
 
 ```js
-track.stop()
+stop()
 ```
+
+### Parameters
+
+None.
 
 ## Description
 

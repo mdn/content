@@ -33,7 +33,15 @@ toLocaleDateString(locales, options)
 The `locales` and `options` arguments customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
 In implementations, which ignore the `locales` and `options` arguments, the locale used and the form of the string returned are entirely implementation dependent.
 
-See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor for details on these parameters and how to use them.
+- `locales` {{optional_inline}}
+
+  - : These are the same locales as documented in the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor.
+    They include (non-exhaustively): `nu`, `ca`, `hc`.
+
+- `options` {{optional_inline}}
+
+  - : These are the same options as documented in the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor. They include (non-exhaustively) the following properties:
+    `dateStyle`, `timeStyle`, `calendar`, `dayPeriod`, `numberingSystem`, `localeMatcher`, `weekday`, `era`, `year`, `month`, `day`, `hour`, `minute`, `second`, `fractionalSecondDigits`, `timeZoneName`.
 
 The default value for each date-time component property is {{jsxref("undefined")}}, but if the `weekday`, `year`, `month`, `day` properties are all {{jsxref("undefined")}}, then `year`, `month`, and `day` are assumed to be `"numeric"`.
 

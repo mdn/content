@@ -37,6 +37,7 @@ block-size: auto;
 block-size: inherit;
 block-size: initial;
 block-size: revert;
+block-size: revert-layer;
 block-size: unset;
 ```
 

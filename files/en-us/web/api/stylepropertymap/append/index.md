@@ -20,7 +20,7 @@ The **`append()`** method of the
 ## Syntax
 
 ```js
-StylePropertyMap.append(property,value)
+append(property, value)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ StylePropertyMap.append(property,value)
 
 {{jsxref('undefined')}}.
 
-## Example
+## Examples
 
 This example shows an extra background image value being added to the
 {{cssxref('background-image')}} property of the element, using

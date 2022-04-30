@@ -68,17 +68,17 @@ new Notification(title, options);
       - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
 
       Appropriate responses are built using `event.action` within the
-      {{event("notificationclick")}} event.
+      {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `silent`: A boolean value specifying whether the
       notification is silent (no sounds or vibrations issued), regardless of the device
       settings. The default is `false`, which means it won't be silent.
 
-## Example
+## Examples
 
 In our
 [`Emogotchi demo`](https://chrisdavidmills.github.io/emogotchi/)
-([see source code](https://github.com/mdn/emogotchi)), we run a
+([see source code](https://github.com/chrisdavidmills/emogotchi)), we run a
 `spawnNotification()` function when we want to trigger a notification. The
 function is passed parameters to specify the body, icon, and title we want, and then it
 creates the necessary `options` object and triggers the notification by using
@@ -106,7 +106,7 @@ function spawnNotification(body, icon, title) {
 
 Starting in Chrome 49, notifications don't work in incognito mode.
 
-Chrome for Android will throw a `TypeError` when calling the
+Chrome for Android will throw a {{jsxref("TypeError")}} when calling the
 `Notification` constructor. It only supports creating
 notifications from a service worker. See the
 [Chromium issue tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=481856) for more details.

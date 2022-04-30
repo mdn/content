@@ -22,7 +22,8 @@ that the form be submitted using a specific submit button.
 ## Syntax
 
 ```js
-htmlFormElement.requestSubmit(submitter);
+requestSubmit()
+requestSubmit(submitter)
 ```
 
 ### Parameters
@@ -43,12 +44,12 @@ None.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified `submitter` is not a submit button.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` isn't a member of the form on
     which `requestSubmit()` was called. The submitter must be either a
-    descendant of the form element or must have an {{htmlattrxref("form", "input")}}
+    descendant of the form element or must have a {{htmlattrxref("form", "input")}}
     attribute referring to the form.
 
 ## Usage notes

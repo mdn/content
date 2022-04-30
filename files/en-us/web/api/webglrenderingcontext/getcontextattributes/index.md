@@ -18,8 +18,12 @@ parameters. Might return {{jsxref("null")}}, if the context is lost.
 ## Syntax
 
 ```js
-gl.getContextAttributes();
+getContextAttributes()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -25,14 +25,18 @@ It positions an incoming audio stream in a stereo image using a [low-cost pannin
 ## Syntax
 
 ```js
-baseAudioContext.createStereoPanner();
+createStereoPanner()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("StereoPannerNode")}}.
 
-## Example
+## Examples
 
 In our [StereoPannerNode
 example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see

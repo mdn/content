@@ -15,13 +15,7 @@ The **`type`** read-only property of the
 {{domxref("Selection")}} interface returns a {{domxref("DOMString")}} describing the
 type of the current selection.
 
-## Syntax
-
-```js
-value = sel.type
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} describing the type of the current selection. Possible
 values are:
@@ -31,7 +25,7 @@ values are:
   text, but no range has been selected).
 - `Range`: A range has been selected.
 
-## Example
+## Examples
 
 In this example, the event handler will fire each time a new selection is made.
 `console.log(selection.type)` will return `Caret` or

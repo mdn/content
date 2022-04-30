@@ -25,14 +25,18 @@ Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more in
 ## Syntax
 
 ```js
-baseAudioContext.createConvolver();
+createConvolver()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("ConvolverNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create a convolver node.
 The basic premise is that you create an AudioBuffer containing a sound sample to be used

@@ -26,7 +26,7 @@ There are two types of custom elements you can create:
 ## Syntax
 
 ```js
-customElements.define(name, constructor, options);
+define(name, constructor, options)
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ Void.
     or <code>extends</code> is specified but the element it is trying to extend is an unknown element.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the provided name is not a [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the referenced constructor is not a constructor.
 
 > **Note:** You'll often get `NotSupportedError`s thrown that
@@ -171,20 +171,20 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // count words in element's parent element
-    var wcParent = this.parentNode;
+    const wcParent = this.parentNode;
 
     function countWords(node){
-      var text = node.innerText || node.textContent
-      return text.split(/\s+/g).length;
+      const text = node.innerText || node.textContent;
+      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    const count = `Words: ${countWords(wcParent)}`;
 
     // Create a shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({mode: 'open'});
 
     // Create text node and add word count to it
-    var text = document.createElement('span');
+    const text = document.createElement('span');
     text.textContent = count;
 
     // Append it to the shadow root
@@ -192,10 +192,9 @@ class WordCount extends HTMLParagraphElement {
 
     // Update count when element content changes
     setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+      const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
-    }, 200)
-
+    }, 200);
   }
 }
 

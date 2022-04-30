@@ -20,11 +20,11 @@ new `SecurityPolicyViolationEvent` object instance.
 ## Syntax
 
 ```js
-new SecurityPolicyViolationEvent(type);
-new SecurityPolicyViolationEvent(type, init);
+new SecurityPolicyViolationEvent(type)
+new SecurityPolicyViolationEvent(type, init)
 ```
 
-### Properties
+### Parameters
 
 - type
   - : A {{domxref("DOMString")}} representing the type of security policy violation that
@@ -84,7 +84,7 @@ new SecurityPolicyViolationEvent(type, init);
 
 A `SecurityPolicyViolationEvent` object instance.
 
-## Example
+## Examples
 
 ```js
 let SPVEvt = new SecurityPolicyViolationEvent('foo', {

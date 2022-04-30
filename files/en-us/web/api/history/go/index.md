@@ -22,7 +22,8 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 ## Syntax
 
 ```js
-history.go([delta])
+go()
+go(delta)
 ```
 
 ### Parameters

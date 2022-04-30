@@ -27,7 +27,7 @@ cards.
 ## Syntax
 
 ```js
-retryPromise = paymentRequest.retry(errorFields);
+retry(errorFields)
 ```
 
 ### Parameters

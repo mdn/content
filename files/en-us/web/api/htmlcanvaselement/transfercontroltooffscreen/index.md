@@ -20,8 +20,12 @@ thread or on a worker.
 ## Syntax
 
 ```js
-OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
+transferControlToOffscreen()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

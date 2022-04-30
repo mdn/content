@@ -76,7 +76,7 @@ _This interface doesn't inherit any methods. None of the following methods alter
   - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
 
-  - : Creates and returns a {{domxref("DOMString")}} object which contains a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation. See the {{cssxref("matrix", "matrix()")}} CSS function for details on this syntax.
+  - : Creates and returns a string object which contains a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation. See the {{cssxref("matrix", "matrix()")}} CSS function for details on this syntax.
 
     For a 2D matrix, the elements `a` through `f` are listed, for a total of six values and the form `matrix(a, b, c, d, e, f)`.
 
@@ -94,9 +94,9 @@ _This interface doesn't inherit any methods. None of the following methods alter
 _This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 
 - {{domxref("DOMMatrix.fromFloat32Array", "fromFloat32Array()")}}
-  - : Creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a `TypeError` exception is thrown.
+  - : Creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
 - {{domxref("DOMMatrix.fromFloat64Array", "fromFloat64Array()")}}
-  - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a `TypeError` exception is thrown.
+  - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
 - {{domxref("DOMMatrix.fromMatrix", "fromMatrix()")}}
   - : Creates a new mutable `DOMMatrix` object given an existing matrix or a {{domxref("DOMMatrixInit")}} dictionary which provides the values for its properties. If no matrix is specified, the matrix is initialized with every element set to `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
 

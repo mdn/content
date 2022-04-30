@@ -24,8 +24,12 @@ available configuration options.
 ## Syntax
 
 ```js
-const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities()
+getPhotoCapabilities()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -40,7 +44,7 @@ A {{jsxref("Promise")}} that resolves with an object containing the following pr
 - `fillLightMode`
   - : Returns an array of available fill light options. Options include `auto`, `off`, or `flash`.
 
-## Example
+## Examples
 
 The following example, extracted from [Chrome's
 Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from

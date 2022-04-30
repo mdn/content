@@ -43,6 +43,7 @@ outline: green solid 3px;
 outline: inherit;
 outline: initial;
 outline: revert;
+outline: revert-layer;
 outline: unset;
 ```
 

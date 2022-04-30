@@ -25,7 +25,7 @@ If an utterance is currently being spoken, speaking will stop immediately.
 cancel()
 ```
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 

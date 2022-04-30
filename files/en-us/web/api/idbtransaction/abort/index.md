@@ -26,15 +26,19 @@ their {{domxref("IDBRequest.error")}} attribute set to {{exception("AbortError")
 ## Syntax
 
 ```js
-transaction.abort();
+abort()
 ```
+
+### Parameters
+
+None.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the transaction has already been committed or aborted.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event

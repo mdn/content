@@ -20,14 +20,14 @@ interface returns a new {{domxref("MessageChannel")}} object with two new
 ## Syntax
 
 ```js
-new MessageChannel();
+new MessageChannel()
 ```
 
-### Returns
+### Parameters
 
 A newly created {{domxref("MessageChannel")}} object.
 
-## Example
+## Examples
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the

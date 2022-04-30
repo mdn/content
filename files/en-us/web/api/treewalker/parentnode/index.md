@@ -20,10 +20,18 @@ node is not changed.
 ## Syntax
 
 ```js
-node = treeWalker.parentNode();
+parentNode()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

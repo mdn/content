@@ -29,7 +29,7 @@ non-standard and _should not be used_.
 ## Syntax
 
 ```js
-Point = Window.convertPointFromNodeToPage(node, nodePoint);
+convertPointFromNodeToPage(node, nodePoint)
 ```
 
 ### Parameters
@@ -60,4 +60,4 @@ current CSS Transforms Module Level 1 Working Draft.
 - {{domxref("Window.webkitConvertPointFromPageToNode")}}
 - Mozilla implementation bug: {{bug(850806)}}
 - [`webkitConvertPointFromNodeToPage`
-  documentation at IE Dev Center](https://msdn.microsoft.com/library/ie/dn760734%28v=vs.85%29.aspx)
+  documentation at IE Dev Center](https://developer.mozilla.org/en-US/docs/web/api/window/webkitconvertpointfromnodetopage)

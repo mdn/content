@@ -30,7 +30,7 @@ For more details about media stream audio source nodes, check out the {{
 ## Syntax
 
 ```js
-audioSourceNode = audioContext.createMediaStreamSource(stream);
+createMediaStreamSource(stream)
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ audioSourceNode = audioContext.createMediaStreamSource(stream);
 A new {{domxref("MediaStreamAudioSourceNode")}} object representing the audio node
 whose media is obtained from the specified source stream.
 
-## Example
+## Examples
 
 In this example, we grab a media (audio + video) stream from {{
     domxref("navigator.getUserMedia") }}, feed the media into a {{ htmlelement("video") }}

@@ -48,7 +48,7 @@ Lastly, an application may want to style the drop target element to visually ind
 
 The {{event("drop")}} event is fired when the user drops the file(s). In the following drop handler, if the browser supports {{domxref("DataTransferItemList")}} interface, the {{domxref("DataTransferItem.getAsFile","getAsFile()")}} method is used to access each file; otherwise the {{domxref("DataTransfer")}} interface's {{domxref("DataTransfer.files","files")}} property is used to access each file.
 
-This example shows how to write the name of each dragged file to the console. In a _real_ application, an application may want to process a file using  the {{domxref("File","File API")}}.
+This example shows how to write the name of each dragged file to the console. In a _real_ application, an application may want to process a file using the {{domxref("File","File API")}}.
 
 Note that in this example, any drag item that is not a file is ignored.
 

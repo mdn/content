@@ -92,7 +92,7 @@ For events with no secondary target, `relatedTarget` returns
 
 An {{domxref("EventTarget")}} object or `null`.
 
-## Example
+## Examples
 
 Try moving your mouse cursor into and out of the red and blue boxes.
 

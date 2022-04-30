@@ -39,11 +39,7 @@ The `<tbody>` element, along with its cousins {{HTMLElement("thead")}} and {{HTM
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        The <code>&#x3C;tbody></code> element is not a required child element
-        for a parent {{ HTMLElement("table") }} element to graphically
-        render. However, it must not be present, if its parent
-        {{ HTMLElement("table") }} element has a
-        {{ HTMLElement("tr") }} element as a child.
+        The `<tbody>` element is not a required child element for a parent {{ HTMLElement("table") }} element to graphically render. However, it must be present, if the parent {{ HTMLElement("table") }} element has a {{HTMLElement("thead")}}, a {{HTMLElement("tfoot")}} or another {{HTMLElement("tbody")}} element as a child. If the `<tbody>` element starts with a {{HTMLElement("tbody")}} element, and is not following a non-closed `<tbody>` element, its opening tag can be omitted.
       </td>
     </tr>
     <tr>

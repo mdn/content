@@ -43,6 +43,7 @@ font-variant-caps: titling-caps;
 font-variant-caps: inherit;
 font-variant-caps: initial;
 font-variant-caps: revert;
+font-variant-caps: revert-layer;
 font-variant-caps: unset;
 ```
 

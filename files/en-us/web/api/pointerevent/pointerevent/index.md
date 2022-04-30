@@ -16,22 +16,23 @@ and untrusted {{domxref("PointerEvent")}} object instance.
 ## Syntax
 
 ```js
-new PointerEvent(type, PointerEventInit);
+new PointerEvent(type)
+new PointerEvent(type, pointerEventInit)
 ```
 
-### Arguments
+### Parameters
 
-- _type_
+- `type`
   - : Is a {{domxref("DOMString")}} representing the name of the event (see [PointerEvent event
     types](/en-US/docs/Web/API/PointerEvent#pointer_event_types)).
-- _PointerEventInit_{{optional_inline}}
+- `pointerEventInit` {{optional_inline}}
 
   - : Is a `PointerEventInit` dictionary, having the following fields:
 
     - `pointerId` — optional `long`, defaulting to `0`,
       sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.
     - `width` — optional `double`, defaulting to `1`,
-      sets the value of the instance'sc{{domxref("PointerEvent.width")}}.
+      sets the value of the instance's {{domxref("PointerEvent.width")}}.
     - `height` — optional `double`, defaulting to `1`,
       sets the value of the instance's {{domxref("PointerEvent.height")}}.
     - `pressure` — optional `float`, defaulting to `0`,
@@ -53,7 +54,7 @@ new PointerEvent(type, PointerEventInit);
     > accepts fields from the {{domxref("MouseEvent.MouseEvent","MouseEvent")}},
     > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event", "EventInit")}} dictionaries.
 
-## Example
+## Examples
 
 ```js
 var moveEvent = new PointerEvent("pointermove");

@@ -42,13 +42,7 @@ needs both:
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
-
-```js
-response = publicKeyCredential.response
-```
-
-### Value
+## Value
 
 An {{domxref("AuthenticatorResponse")}} object containing the data a relying party's
 script will receive and which should be sent to the relying party's server in order to

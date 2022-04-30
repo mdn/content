@@ -17,7 +17,7 @@ the drawing to a specified rectangle.
 ## Syntax
 
 ```js
-void gl.scissor(x, y, width, height);
+scissor(x, y, width, height)
 ```
 
 ### Parameters

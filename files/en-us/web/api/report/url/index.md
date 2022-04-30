@@ -16,13 +16,7 @@ browser-compat: api.Report.url
 The **`url`** read-only property of the {{domxref("Report")}}
 interface returns the URL of the document that generated the report.
 
-## Syntax
-
-```js
-let reportURL = reportInstance.url
-```
-
-### Returns
+## Value
 
 A string representing the URL of the document that generated the report.
 

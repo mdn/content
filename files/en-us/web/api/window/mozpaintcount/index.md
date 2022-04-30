@@ -20,17 +20,9 @@ browser-compat: api.Window.mozPaintCount
 Returns the number of times the current document has been painted to the screen in this
 window.
 
-## Syntax
+## Value
 
-```js
-var paintCount = window.mozPaintCount;
-```
-
-- `paintCount` stores the `window.mozPaintCount`
-  property value.
-- The `window.mozPaintCount` value is a `long long`, and starts
-  at zero when the document is first created, incrementing by one each time the document
-  is painted.
+A `long long` value that starts at zero when the document is first created and is incremented by one each time the document is painted.
 
 ## Specifications
 

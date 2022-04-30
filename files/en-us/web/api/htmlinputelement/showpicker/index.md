@@ -34,10 +34,14 @@ can also be prepopulated with items from a {{htmlelement("datalist")}} element o
 ## Syntax
 
 ```js
-element.showPicker();
+showPicker()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 Click the button in this example to show a color picker.
 
@@ -67,7 +71,7 @@ button.addEventListener("click", () => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

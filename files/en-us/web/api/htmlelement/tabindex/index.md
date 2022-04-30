@@ -30,7 +30,7 @@ may even be negative, though each browser trims very large values.
 
 ## Value
 
-`index` is an integer
+An integer.
 
 ## Examples
 

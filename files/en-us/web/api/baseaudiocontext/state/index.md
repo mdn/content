@@ -19,7 +19,7 @@ interface returns the current state of the `AudioContext`.
 
 ## Value
 
-A {{domxref("DOMString")}}. Possible values are:
+A string. Possible values are:
 
 - `suspended`: The audio context has been suspended (with the
   {{domxref("AudioContext.suspend()")}} method.)

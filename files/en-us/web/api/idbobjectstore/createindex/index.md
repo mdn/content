@@ -32,8 +32,8 @@ mode callback.
 ## Syntax
 
 ```js
-var myIDBIndex = objectStore.createIndex(indexName, keyPath);
-var myIDBIndex = objectStore.createIndex(indexName, keyPath, objectParameters);
+createIndex(indexName, keyPath)
+createIndex(indexName, keyPath, objectParameters)
 ```
 
 ### Parameters
@@ -128,7 +128,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
         this case as well, which was misleading; this has now been fixed (see
         {{Bug("1176165")}}.)
 
-## Example
+## Examples
 
 In the following example you can see
 the {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler being used to update the

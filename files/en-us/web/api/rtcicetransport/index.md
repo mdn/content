@@ -39,7 +39,7 @@ _The `RTCIceTransport` interface inherits properties from its parent, {{domxref(
 _Also includes methods from {{domxref("EventTarget")}}, the parent interface._
 
 - {{domxref("RTCIceTransport.getLocalCandidates", "getLocalCandidates()")}}
-  - : Returns an array of {{domxref("RTCIceCandidate")}} objects, each describing one of the ICE candidates that have been gathered so far for the local device. These are the same candidates which have already been sent to the remote peer by sending an {{event("icecandidate")}} event to the {{domxref("RTCPeerConnection")}} for transmission.
+  - : Returns an array of {{domxref("RTCIceCandidate")}} objects, each describing one of the ICE candidates that have been gathered so far for the local device. These are the same candidates which have already been sent to the remote peer by sending an {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event to the {{domxref("RTCPeerConnection")}} for transmission.
 - {{domxref("RTCIceTransport.getLocalParameters", "getLocalParameters()")}}
   - : Returns a {{domxref("RTCIceParameters")}} object describing the ICE parameters established by a call to the {{domxref("RTCPeerConnection.setLocalDescription()")}} method. Returns `null` if parameters have not yet been received.
 - {{domxref("RTCIceTransport.getRemoteCandidates", "getRemoteCandidates()")}}
@@ -47,7 +47,7 @@ _Also includes methods from {{domxref("EventTarget")}}, the parent interface._
 - {{domxref("RTCIceTransport.getRemoteParameters", "getRemoteParameters()")}}
   - : Returns a {{domxref("RTCIceParameters")}} object containing the ICE parameters for the remote device, as set by a call to {{domxref("RTCPeerConnection.setRemoteDescription()")}}. If `setRemoteDescription()` hasn't been called yet, the return value is `null`.
 - {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}
-  - : Returns a {{domxref("RTCIceCandidatePair")}} object that identifies the two candidates—one for each end of the connection—that have been selected so far. It's possible that a better pair will be found and selected later; if you need to keep up with this, watch for the {{event("selectedcandidatepairchange")}} event. If no candidate pair has been selected yet, the return value is `null`.
+  - : Returns a {{domxref("RTCIceCandidatePair")}} object that identifies the two candidates—one for each end of the connection—that have been selected so far. It's possible that a better pair will be found and selected later; if you need to keep up with this, watch for the {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}} event. If no candidate pair has been selected yet, the return value is `null`.
 
 ## Events
 

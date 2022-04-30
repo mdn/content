@@ -19,17 +19,24 @@ returns `null` and the current node is not changed.
 ## Syntax
 
 ```js
-node = treeWalker.lastChild();
+lastChild()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 var node = treeWalker.lastChild(); // returns the last visible child of the root element
 ```

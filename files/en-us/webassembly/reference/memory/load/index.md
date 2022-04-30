@@ -11,9 +11,9 @@ tags:
 
 The **`load`** instructions, are used to load a number from memory onto the stack.
 
-For the integer numbers, you can also load a narrower number from memory and extend it into a wider type, e.g. load a unsigned 8 bit number and convert it into a i32 (**`i32.load8_u`**). These instructions are separate for signed and unsigned numbers.
+For the integer numbers, you can also load a narrower number from memory and extend it into a wider type, e.g. load a unsigned 8-bit number and convert it into a i32 (**`i32.load8_u`**). These instructions are separate for signed and unsigned numbers.
 
-{{EmbedInteractiveExample("pages/wat/load.html")}}
+{{EmbedInteractiveExample("pages/wat/load.html", "tabbed-taller")}}
 
 ## Syntax
 

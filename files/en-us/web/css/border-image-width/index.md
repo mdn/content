@@ -45,6 +45,7 @@ border-image-width: 5% 2em 10% auto;
 border-image-width: inherit;
 border-image-width: initial;
 border-image-width: revert;
+border-image-width: revert-layer;
 border-image-width: unset;
 ```
 

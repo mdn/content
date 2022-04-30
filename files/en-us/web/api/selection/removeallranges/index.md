@@ -19,12 +19,12 @@ leaving nothing selected.
 ## Syntax
 
 ```js
-sel.removeAllRanges();
+removeAllRanges()
 ```
 
 ### Parameters
 
-_None._
+None.
 
 ## Specifications
 

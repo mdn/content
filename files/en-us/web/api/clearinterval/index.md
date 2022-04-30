@@ -38,7 +38,7 @@ However, for clarity, you should avoid doing so.
 
 {{jsxref("undefined")}}
 
-## Example
+## Examples
 
 See the [`setInterval()`
 examples](/en-US/docs/Web/API/setInterval#Examples).

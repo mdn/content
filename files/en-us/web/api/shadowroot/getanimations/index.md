@@ -26,7 +26,7 @@ target elements are descendants of the shadow tree. This array includes [CSS Ani
 ## Syntax
 
 ```js
-getAnimations();
+getAnimations()
 ```
 
 ### Parameters

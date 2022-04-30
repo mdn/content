@@ -19,13 +19,7 @@ The returned object lets you examine and configure persistence of data stores an
 learn approximately how much more space your browser has available for local storage
 use.
 
-## Syntax
-
-```js
-var storageManager = navigator.storage;
-```
-
-### Value
+## Value
 
 A {{domxref("StorageManager")}} object you can use to maintain persistence for stored
 data, as well as to determine roughly how much room there is for data to be stored.

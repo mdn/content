@@ -31,6 +31,7 @@ initial-letter: 3.0 2;  /* Initial letter occupies 3 lines and
 initial-letter: inherit;
 initial-letter: initial;
 initial-letter: revert;
+initial-letter: revert-layer;
 initial-letter: unset;
 ```
 

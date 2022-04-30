@@ -17,7 +17,7 @@ The **`list-style-position`** [CSS](/en-US/docs/Web/CSS) property sets the posit
 
 It is often more convenient to use the shorthand {{cssxref("list-style")}}.
 
-> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;`. [By default](https://www.w3.org/TR/html5/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
+> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;`. [By default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
 
 Note that there is variance among browsers regarding behavior when a block element is placed first within a list element declared as `list-style-position: inside`. Chrome and Safari both place this element on the same line as the marker box, whereas Firefox, Internet Explorer, and Opera place it on the next line. For more information on this, see {{bug(36854)}}.
 
@@ -32,6 +32,7 @@ list-style-position: outside;
 list-style-position: inherit;
 list-style-position: initial;
 list-style-position: revert;
+list-style-position: revert-layer;
 list-style-position: unset;
 ```
 

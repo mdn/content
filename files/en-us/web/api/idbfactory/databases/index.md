@@ -1,5 +1,5 @@
 ---
-title: IDBFactory.databases
+title: IDBFactory.databases()
 slug: Web/API/IDBFactory/databases
 tags:
   - API
@@ -22,7 +22,7 @@ The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a 
 ## Syntax
 
 ```js
-const promise = indexedDB.databases()
+databases()
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 | {{exception("SecurityError")}} | The method is called from an opaque origin.          |
 | Other error                              | Specification does not describe all possible errors. |
 
-## Example
+## Examples
 
 ```js
 const promise = indexedDB.databases()

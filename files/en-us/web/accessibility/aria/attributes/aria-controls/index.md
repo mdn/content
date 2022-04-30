@@ -1,7 +1,7 @@
 ---
 title: 'aria-controls'
 slug: Web/Accessibility/ARIA/Attributes/aria-controls
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -13,7 +13,7 @@ The global `aria-controls` property identifies the element (or elements) whose c
 
 ## Description
 
-When an interactive or input control, be it a checkbox, radio button, tab panel, icon, toggles, or other, has an impact on another element in a document or application, the `aria-control` attributes should be included to indicate which element or elements the user interface widget controls. The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, regardless of what type of interaction initiates the impacted behavior.
+When an interactive or input control, be it a checkbox, radio button, tab panel, icon, toggles, or other, has an impact on another element in a document or application, the `aria-controls` attribute should be included to indicate which element or elements the user interface widget controls. The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, regardless of what type of interaction initiates the impacted behavior.
 
 A [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/Combobox_role) element has `aria-controls` set to a value that refers to the element that serves as the popup. The `aria-controls` only needs to be set when the popup is visible, but it is valid and easier to program to reference an element that is not visible.
 
@@ -30,15 +30,15 @@ In this tabs example, each tab controls one tabpanel:
 ```html
 <div class="tab-interface">
   <div role="tablist" aria-label="Sample Tabs">
-    <span role="tab" aria-selected="true" aria-controls="panel-1" 
+    <span role="tab" aria-selected="true" aria-controls="panel-1"
       id="tab-1" tabindex="0">
           First Tab
         </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-2" 
+    <span role="tab" aria-selected="false" aria-controls="panel-2"
       id="tab-2" tabindex="-1">
           Second Tab
         </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-3" 
+    <span role="tab" aria-selected="false" aria-controls="panel-3"
       id="tab-3" tabindex="-1">
           Third Tab
         </span>
@@ -65,7 +65,7 @@ In this tabs example, each tab controls one tabpanel:
 ## ARIAMixin API
 
 - {{domxref("Element.ariaBusy")}}
-  - : The  [`ariaControls`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-controls` attribute, which indicates whether an element is being modified.
+  - : The [`ariaControls`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-controls` attribute, which indicates whether an element is being modified.
 
 ## Associated roles
 

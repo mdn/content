@@ -22,13 +22,7 @@ The {{domxref("RTCError")}} read-only property
 **`receivedAlert`** specifies the fatal {{Glossary("DTLS")}}
 error which resulted in an alert being received from the remote peer.
 
-## Syntax
-
-```js
-let receivedAlert = rtcError.receivedAlert;
-```
-
-### Value
+## Value
 
 An unsigned long integer value specifying the fatal {{Glossary("DTLS")}} error which
 resulted in an alert being received from the remote peer.

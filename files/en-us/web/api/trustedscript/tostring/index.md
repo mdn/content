@@ -16,8 +16,12 @@ The **`toString()`** method of the {{domxref("TrustedScript")}} interface return
 ## Syntax
 
 ```js
-var str = TrustedScript.toString();
+toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -22,7 +22,7 @@ tags:
   - movement
   - tracking
 ---
-{{DefaultAPISidebar("WebXR Device API")}}{{draft("Most but not all of this article is complete; however, there are missing diagrams and examples yet to be added. Contributions and/or patience are welcome!")}}
+{{DefaultAPISidebar("WebXR Device API")}}
 
 The WebXR APIs used for implementing augmented and virtual reality is designed specifically to provide the ability to insert a human into a virtual environment. To accomplish this, software needs the ability to not only track the locations, orientation, and movements of objects in the virtual world, but the user's location, orientation, and movement as well. But WebXR goes beyond that by adding the ability to track the location, orientation, and motion of the input devices which generate data used to determine the position and movement of individual parts of the viewer's body (with appropriate equipment).
 

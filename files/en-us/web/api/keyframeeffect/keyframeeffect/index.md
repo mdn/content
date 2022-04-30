@@ -71,7 +71,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
         set to `accumulate` or `replace` (see above). Defaults
         to `replace`.
 
-The single argument constructor (see above) creates a clone of an existing  {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
+The single argument constructor (see above) creates a clone of an existing {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
 
 - sourceKeyFrames
   - : A {{domxref("KeyframeEffect")}} object that you want to clone.
@@ -91,9 +91,9 @@ const rabbitDownKeyframes = new KeyframeEffect(
     ],
     { duration: 3000, fill: 'forwards' } // keyframe options
   );
-  
+
 const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
-  
+
 // Play rabbit animation
 rabbitDownAnimation.play();
 ```

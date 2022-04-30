@@ -8,16 +8,13 @@ tags:
   - XUL
 ---
 {{FirefoxSidebar}}
-
-{{ draft() }}
-
 This article covers security-related changes in Firefox 3.5.
 
 ## Changes to chrome registration
 
 A security hole was closed in order to prevent remote content to be used as chrome.  This could impact any add-on that included a resource in their `chrome.manifest` file that referenced a file on the web.
 
-Fixing this bug was accomplished by adding a new `URI_IS_LOCAL_RESOURCE` flag to the {{ interface("nsIProtocolHandler") }} interface that indicates that the protocol is safe to register as chrome.  Any add-on that creates its own protocol handler and tries to register it in its `chrome.manifest` file will have to use this flag in order to work correctly.
+Fixing this bug was accomplished by adding a new `URI_IS_LOCAL_RESOURCE` flag to the `nsIProtocolHandler` interface that indicates that the protocol is safe to register as chrome.  Any add-on that creates its own protocol handler and tries to register it in its `chrome.manifest` file will have to use this flag in order to work correctly.
 
 ## Private browsing
 
@@ -31,7 +28,7 @@ In previous versions of Firefox 3, SSL certificate errors resulted in the presen
 
 `about:certerror?e=error&u=url&d=desc`
 
-Embedders needing to provide custom certificate error pages can now do so by supplying their own `about:` page  implementation, and setting the `security.alternate_certificate_error_page` preference to the appropriate page name (e.g. `"certerror`").
+Embedders needing to provide custom certificate error pages can now do so by supplying their own `about:` page implementation, and setting the `security.alternate_certificate_error_page` preference to the appropriate page name (e.g. `"certerror`").
 
 ## See also
 

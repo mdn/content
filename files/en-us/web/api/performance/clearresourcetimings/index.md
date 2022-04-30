@@ -22,20 +22,18 @@ to zero. To set the size of the browser's performance data buffer, use the
 ## Syntax
 
 ```js
-performance.clearResourceTimings();
+clearResourceTimings()
 ```
 
-### Arguments
+### Parameters
 
-- void
-  - :
+None.
 
 ### Return value
 
-- none
-  - : This method has no return value.
+none
 
-## Example
+## Examples
 
 ```js
 function load_resource() {

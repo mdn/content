@@ -46,10 +46,11 @@ box-shadow: inset 5em 1em gold;
 /* Any number of shadows, separated by commas */
 box-shadow: 3px 3px red, -1em 0 0.4em olive;
 
-/* Global keywords */
+/* Global values */
 box-shadow: inherit;
 box-shadow: initial;
 box-shadow: revert;
+box-shadow: revert-layer;
 box-shadow: unset;
 ```
 

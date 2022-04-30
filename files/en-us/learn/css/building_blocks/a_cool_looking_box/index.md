@@ -22,7 +22,7 @@ In this assessment, you'll get some more practice in creating cool-looking boxes
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this assessment, you should have already worked
+        Before attempting this assessment you should have already worked
         through all the articles in this module.
       </td>
     </tr>
@@ -66,7 +66,7 @@ We'd like you to style the provided {{htmlelement("p")}}, giving it the followin
 - The same color for the text; make it readable using a black text shadow.
 - A fairly subtle border radius.
 - A 1-pixel solid border with a color similar to the base color, but a slightly darker shade.
-- A linear semi-transparent black gradient that goes toward the bottom right corner. Make it completely transparent at the start, gradiating to around 0.2 opacity by 30% along, and remaining at the same color until the end.
+- A linear semi-transparent black gradient that goes toward the bottom right corner. Make it completely transparent at the start, grading to around 0.2 opacity by 30% along, and remaining at the same color until the end.
 - Multiple box shadows. Give it one standard box shadow to make the box look slightly raised off the page. The other two should be inset box shadows — a semi-transparent white shadow near the top left and a semi-transparent black shadow near the bottom right — to add to the nice raised 3D look of the box.
 
 ## Hints and tips
@@ -84,7 +84,7 @@ The following screenshot shows an example of what the finished design could look
 If you would like your work assessed, or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for A cool-looking box".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
@@ -97,13 +97,22 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
 - [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+
+  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 - [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
 - [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
 - [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
 - [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 - [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 - [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 - [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

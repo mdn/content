@@ -16,7 +16,7 @@ browser-compat: api.MerchantValidationEvent.MerchantValidationEvent
 ---
 {{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
-The **`MerchantValidationEvent()`** constructor creates a new {{domxref("MerchantValidationEvent")}} object. You should not have to create these events yourself; instead, just handle the {{event("merchantvalidation")}} event.
+The **`MerchantValidationEvent()`** constructor creates a new {{domxref("MerchantValidationEvent")}} object. You should not have to create these events yourself; instead, just handle the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event.
 
 ## Syntax
 
@@ -43,10 +43,10 @@ A newly-created {{domxref("MerchantValidationEvent")}} providing the information
 
 ### Exceptions
 
-- `TypeError`
-  - : The string specified as `validationURL` could not be parsed as a URL.
-- `RangeError`
-  - : The specified `methodName` does not correspond to a known and supported merchant or is not a well-formed standard payment method identifier.
+- {{jsxref("TypeError")}}
+  - : Thrown if the string specified as `validationURL` could not be parsed as a URL.
+- {{jsxref("RangeError")}}
+  - : Thrown if the specified `methodName` does not correspond to a known and supported merchant or is not a well-formed standard payment method identifier.
 
 ## Browser compatibility
 

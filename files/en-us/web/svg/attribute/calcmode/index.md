@@ -9,7 +9,7 @@ tags:
 ---
 {{SVGRef}}
 
-The **`calcMode`** attribute specifies the interpolation mode for the animation.
+The **`calcMode`** attribute specifies the {{Glossary("interpolation")}} mode for the animation.
 
 The default mode is `linear`, however if the attribute does not support linear interpolation (e.g. for strings), the `calcMode` attribute is ignored and discrete interpolation is used.
 

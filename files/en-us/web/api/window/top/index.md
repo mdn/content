@@ -15,11 +15,9 @@ browser-compat: api.Window.top
 
 Returns a reference to the topmost window in the window hierarchy.
 
-## Syntax
+## Value
 
-```js
-var topWindow = window.top;
-```
+The reference to the topmost window.
 
 ## Notes
 

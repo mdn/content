@@ -73,7 +73,7 @@ eval(expression.toString());            // returns 4
 ```
 
 If you use the `eval` function _indirectly,_ by invoking it via a
-reference other than `eval`, [as of ECMAScript 5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2)
+reference other than `eval`, [as of ECMAScript 5](https://262.ecma-international.org/5.1/#sec-10.4.2)
 it works in the global scope rather than the local scope. This means, for
 instance, that function declarations create global functions, and that the code being
 evaluated doesn't have access to local variables within the scope where it's being
@@ -105,7 +105,7 @@ lead to possible attacks in ways to which the similar
 `eval()` is also slower than the alternatives, since it has to invoke the
 JavaScript interpreter, while many other constructs are optimized by modern JS engines.
 
-Additionally, modern javascript interpreters convert javascript to machine code. This
+Additionally, modern JavaScript interpreters convert JavaScript to machine code. This
 means that any concept of variable naming gets obliterated. Thus, any use of
 `eval()` will force the browser to do long expensive variable name lookups to
 figure out where the variable exists in the machine code and set its value.
@@ -286,7 +286,7 @@ can (and should) write:
 setTimeout(function() { /* ... */ }, 1000);
 
 // instead of elt.setAttribute("onclick", "...") use:
-elt.addEventListener('click', function() { /* ... */ } , false); 
+elt.addEventListener('click', function() { /* ... */ } , false);
 ```
 
 [Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to

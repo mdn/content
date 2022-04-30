@@ -19,10 +19,14 @@ Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
 ## Syntax
 
 ```js
-range.deleteContents()
+deleteContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 ```js
 range = document.createRange();

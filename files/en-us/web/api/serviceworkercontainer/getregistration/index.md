@@ -21,7 +21,8 @@ a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
 ## Syntax
 
 ```js
-serviceWorkerContainer.getRegistration(clientURL).then(function(serviceWorkerRegistration) { /* ... */ });
+getRegistration()
+getRegistration(clientURL)
 ```
 
 ### Parameters
@@ -34,7 +35,7 @@ serviceWorkerContainer.getRegistration(clientURL).then(function(serviceWorkerReg
 A {{jsxref("Promise")}} that resolves to a {{domxref("ServiceWorkerRegistration")}}
 object or `undefined`.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.getRegistration('/app').then(function(registration) {

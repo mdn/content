@@ -16,11 +16,9 @@ browser-compat: api.Screen.top
 
 Returns the distance in pixels from the top side of the current screen.
 
-## Syntax
+## Value
 
-```js
-let top = window.screen.top;
-```
+A number.
 
 ## Specifications
 

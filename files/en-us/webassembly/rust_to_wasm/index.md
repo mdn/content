@@ -233,7 +233,7 @@ Serve the root directory of the project with a local web server, (e.g. `python3 
 
 > **Note:** Make sure to use an up to date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
 
-Load `index.html` from the web server (if you used the python3 example: `http://localhost:8000`). An alert box appears on the screen, with `Hello, WebAssembly!` in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.
+Load `index.html` from the web server (if you used the Python3 example: `http://localhost:8000`). An alert box appears on the screen, with `Hello, WebAssembly!` in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.
 
 ## Making our package available to npm
 
@@ -249,7 +249,7 @@ $ wasm-pack build --target bundler
 
 We are building an npm package, so you need to have Node.js and npm installed.
 
-To get Node.js and npm, go to the [Get npm!](https://www.npmjs.com/get-npm) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
+To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
 
 Next, let's use \`npm link\` to make this package available to other JavaScript packages installed
 

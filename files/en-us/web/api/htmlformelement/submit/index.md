@@ -36,10 +36,14 @@ submitted when you do it with original HTML form submit.
 ## Syntax
 
 ```js
-HTMLFormElement.submit()
+submit()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 ```js
 document.forms["myform"].submit();

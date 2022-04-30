@@ -20,7 +20,9 @@ the current position of the device.
 ## Syntax
 
 ```js
-navigator.geolocation.getCurrentPosition(success, error, [options])
+getCurrentPosition(success)
+getCurrentPosition(success, error)
+getCurrentPosition(success, error, options)
 ```
 
 ### Parameters

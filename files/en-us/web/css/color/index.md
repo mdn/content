@@ -70,6 +70,7 @@ color: hwb(.25turn 0% 40% / 50%);
 color: inherit;
 color: initial;
 color: revert;
+color: revert-layer;
 color: unset;
 ```
 

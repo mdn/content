@@ -59,8 +59,8 @@ origin to the specified `position` and facing in the direction indicated by
 
 ### Exceptions
 
-- `TypeError`
-  - : The value of the `w` coordinate in the specified `position` is
+- {{jsxref("TypeError")}}
+  - : Thrown if the value of the `w` coordinate in the specified `position` is
     not 1.0.
 
 ## Examples

@@ -18,8 +18,8 @@ of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) set
 ## Syntax
 
 ```js
-void gl.samplerParameteri(sampler, pname, param);
-void gl.samplerParameterf(sampler, pname, param);
+samplerParameteri(sampler, pname, param)
+samplerParameterf(sampler, pname, param)
 ```
 
 ### Parameters

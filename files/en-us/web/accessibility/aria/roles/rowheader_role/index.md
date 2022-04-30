@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: rowheader role'
 slug: Web/Accessibility/ARIA/Roles/rowheader_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -43,7 +43,7 @@ An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARI
 
 It is a structural equivalent to the {{HTMLElement('th')}} element with a scope of `row`, `<th scope="row">`. Using the native {{HTMLElement('th')}} HTML element is strongly encouraged.
 
-To create an ARIA row header, add `role="rowheader"` to the element. That row header must be nested within a `row`, which, in turn, is nested within a `rowgroup`, or directly within a `grid`, `table` or `treegrid`,.
+To create an ARIA row header, add `role="rowheader"` to the element. That row header must be nested within a `row`, which, in turn, is nested within a `rowgroup`, or directly within a `grid`, `table` or `treegrid`.
 
 > **Note:** Using the native [table elements](/en-US/docs/Learn/HTML/Tables/Basics) whenever possible, is strongly encouraged.
 
@@ -100,7 +100,7 @@ The above is a non-semantic ARIA table with a table header and table body, with 
 
 ## Best practices
 
-Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, and so on for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for all the ARIA table roles  is when the CSS's `display` property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to add in the semantics.
+Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, and so on for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for all the ARIA table roles is when the CSS's `display` property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to add in the semantics.
 
 ```html
 <table role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">

@@ -21,7 +21,7 @@ The **`arguments.callee`** property contains the currently executing function.
 
 ### Why was `arguments.callee` removed from ES5 strict mode?
 
-(adapted from [a Stack Overflow answer by olliej](http://stackoverflow.com/a/235760/578288))
+(adapted from [a Stack Overflow answer by olliej](https://stackoverflow.com/questions/103598/why-was-the-arguments-callee-caller-property-deprecated-in-javascript/235760))
 
 Early versions of JavaScript did not allow named function expressions, and for this reason you could not make a recursive function expression.
 

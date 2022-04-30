@@ -19,10 +19,10 @@ current state of the specified modifier key: `true` if the modifier is active
 ## Syntax
 
 ```js
-var active = event.getModifierState(keyArg);
+getModifierState(keyArg)
 ```
 
-### Returns
+### Return value
 
 A boolean value
 
@@ -214,7 +214,7 @@ Note that which modifier key makes it return true depends on platforms, browsers
 user settings. For example, Firefox users can customize this with a pref,
 `"ui.key.accelKey"`.
 
-## Example
+## Examples
 
 ```js
 // Ignore if following modifier is active.

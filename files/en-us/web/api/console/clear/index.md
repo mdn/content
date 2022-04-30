@@ -18,8 +18,12 @@ environment allows it.
 ## Syntax
 
 ```js
-console.clear();
+clear()
 ```
+
+### Parameters
+
+None.
 
 ## Specifications
 

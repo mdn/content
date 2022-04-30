@@ -33,7 +33,7 @@ and a list of the characteristics of this service.
   - : Returns a boolean value indicating whether this is a primary or secondary
     service.
 - {{domxref("BluetoothRemoteGATTService.uuid")}}{{readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} representing the UUID of this service.
+  - : Returns a string representing the UUID of this service.
 
 ## Methods
 

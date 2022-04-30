@@ -12,7 +12,7 @@ browser-compat: api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
 
 The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("ExtendableCookieChangeEvent")}} object which is the event type passed to {{domxref("ServiceWorkerRegistration.oncookiechange()")}}. This constructor is called by the browser when a change event occurs.
 
-> **Note:** This event constructor is generally not needed for production web sites. It's primary use is for tests that require an instance of this event.
+> **Note:** This event constructor is generally not needed for production websites. It's primary use is for tests that require an instance of this event.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ new ExtendableCookieChangeEvent(type, eventInitDict);
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with the value `"changed"` or `"deleted"`.
+  - : A string with the value `"changed"` or `"deleted"`.
 - `eventInitDict`{{Optional_Inline}}
 
   - : An object containing:

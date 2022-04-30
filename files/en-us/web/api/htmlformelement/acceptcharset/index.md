@@ -18,14 +18,11 @@ list of the supported [character
 encodings](/en-US/docs/Glossary/character_encoding) for the given {{htmlelement("form")}} element. This list can be
 comma-separated or space-separated.
 
-## Syntax
+## Value
 
-```js
-var string = form.acceptCharset;
-form.acceptCharset = string;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 let inputs = document.forms['myform'].acceptCharset;

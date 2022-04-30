@@ -17,7 +17,7 @@ passed {{domxref("WebGLProgram")}} is valid, `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isProgram(program);
+isProgram(program)
 ```
 
 ### Parameters

@@ -22,11 +22,9 @@ the subscription ID associated with the push subscription.
 
 > **Warning:** Instead of this feature, use the {{domxref("PushSubscription.endPoint")}} property on the same interface.
 
-## Syntax
+## Value
 
-```js
-var subId = pushSubscription.subscriptionId;
-```
+A string.
 
 ## Specifications
 

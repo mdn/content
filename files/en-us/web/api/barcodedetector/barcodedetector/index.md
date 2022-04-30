@@ -8,9 +8,10 @@ tags:
   - barcode
   - barcode detection
   - shape detection
+  - Experimental
 browser-compat: api.BarcodeDetector.BarcodeDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`BarcodeDetector()`** constructor creates
 a new {{domxref("BarcodeDetector")}} object which detects linear and two-dimensional
@@ -31,8 +32,7 @@ new BarcodeDetector();
     options are:
 
     - `formats`: An {{jsxref('Array')}} of barcode formats as strings. To
-      see a full list of supported formats see the {{domxref('Barcode Detection
-        API','Barcode Detection API overview page')}}.
+      see a full list of supported formats see the {{domxref('Barcode Detection API','Barcode Detection API overview page')}}.
 
 ## Examples
 

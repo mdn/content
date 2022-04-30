@@ -27,7 +27,7 @@ shorthand property.
 ## Syntax
 
 ```js
-var value = style.getPropertyCSSValue(property);
+getPropertyCSSValue(property)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ var value = style.getPropertyCSSValue(property);
 - `value` is a {{domxref('CSSValue')}} containing the CSS value
   for a property. If none exists, returns `null`.
 
-## Example
+## Examples
 
 The following JavaScript code gets an object containing the computed RGB values of
 the `color` CSS property:
@@ -52,7 +52,7 @@ var rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

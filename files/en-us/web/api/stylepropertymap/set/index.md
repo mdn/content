@@ -19,7 +19,7 @@ interface changes the CSS declaration with the given property.
 ## Syntax
 
 ```js
-StylePropertyMap.set(property,value)
+set(property, value)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ StylePropertyMap.set(property,value)
 
 {{jsxref('undefined')}}
 
-## Example
+## Examples
 
 This example sets the {{cssxref('padding-top')}} property, with the given value, within
 the element's [style

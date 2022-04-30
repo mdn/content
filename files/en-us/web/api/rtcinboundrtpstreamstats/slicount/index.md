@@ -36,13 +36,7 @@ In general, what's usually of interest is that the higher this number is, the mo
 stream data is becoming corrupted between the sender and the receiver, requiring resends
 or dropping frames.
 
-## Syntax
-
-```js
-var sliCount = rtcInboundRtpStreamStats.sliCount;
-```
-
-### Value
+## Value
 
 An unsigned integer indicating the number of SLI packets this receiver sent to the
 remote sender due to lost runs of macroblocks. A high value of `sliCount` may

@@ -92,7 +92,7 @@ CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be us
   - : Some accessibility considerations when working with grid layout.
 - [CSS Grid and progressive enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
   - : How to ensure your site still works well in browsers that don't support grid.
-- [Realising common layouts using CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+- [Realizing common layouts using CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
   - : Using grid to build some common layouts.
 - [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
   - : An explanation of the subgrid value, part of Grid Level 2.

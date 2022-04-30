@@ -27,8 +27,8 @@ that same origin.
 ## Syntax
 
 ```js
-serviceWorkerRegistration.getNotifications(options)
-.then(function(notificationsList) { /* ... */ });
+getNotifications()
+getNotifications(options)
 ```
 
 ### Parameters
@@ -38,14 +38,14 @@ serviceWorkerRegistration.getNotifications(options)
   - : An object containing options to filter the notifications returned. The available
     options are:
 
-    - `tag`: A {{domxref("DOMString")}} representing a notification tag. If
+    - `tag`: A string representing a notification tag. If
       specified, only notifications that have this tag will be returned.
 
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a list of {{domxref("Notification")}} objects.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.register('sw.js');

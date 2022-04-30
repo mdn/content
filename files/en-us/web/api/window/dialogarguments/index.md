@@ -22,11 +22,9 @@ method.
 This lets you determine what parameters were specified when the modal
 dialog was created.
 
-## Syntax
+## Value
 
-```js
-value = window.dialogArguments;
-```
+The arguments passed to the dialog.
 
 ## Browser compatibility
 

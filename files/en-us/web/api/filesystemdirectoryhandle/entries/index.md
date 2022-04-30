@@ -21,12 +21,12 @@ enumerates properties in the prototype chain as well).
 ## Syntax
 
 ```js
- FileSystemDirectoryHandle.entries();
+ entries()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

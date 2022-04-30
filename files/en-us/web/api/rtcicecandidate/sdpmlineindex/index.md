@@ -33,9 +33,9 @@ indicating which media source is associated with the candidate, or `null` if no 
 > **Note:** Attempting to add a candidate (using
 > {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
 > value of `null` for either `sdpMid` or
-> `sdpMLineIndex` will throw a `TypeError` exception.
+> `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.
 
-## Example
+## Examples
 
 ...
 

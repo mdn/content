@@ -25,32 +25,28 @@ still and not completely get rid of the stream, you'd use
 ## Syntax
 
 ```js
-var promise = readableStream.cancel(reason);
+cancel()
+cancel(reason)
 ```
 
 ### Parameters
 
-- reason {{optional_inline}}
+- `reason` {{optional_inline}}
   - : A human-readable reason for the cancellation. The underlying source may or may not use it.
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills with the value given in the `reason`
-parameter.
+A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` parameter.
 
 ### Exceptions
 
-- TypeError
-  - : The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is
-    locked.
+- {{jsxref("TypeError")}}
+  - : The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is locked.
 
 ## Examples
 
-In Jake Archibald's [cancelling a
-fetch](https://jsbin.com/gameboy/edit?js,console) example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each
-chunk is searched for the string "service workers". When the search terms is found,
-`cancel()` is used to cancel the stream — the job is finished so it is no
-longer needed.
+In Jake Archibald's [cancelling a fetch](https://jsbin.com/gameboy/edit?js,console) example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each
+chunk is searched for the string "service workers". When the search terms is found, `cancel()` is used to cancel the stream — the job is finished so it is no longer needed.
 
 ```js
 var searchTerm = "service workers";

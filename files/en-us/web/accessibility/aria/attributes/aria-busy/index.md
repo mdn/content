@@ -1,7 +1,7 @@
 ---
 title: 'aria-busy'
 slug: Web/Accessibility/ARIA/Attributes/aria-busy
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -44,7 +44,7 @@ If changes to a rendered widget would create a state where the widget is missing
 ## ARIAMixin API
 
 - {{domxref("Element.ariaBusy")}}
-  - : The  [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified.
+  - : The [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified.
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-busy="false"></div>

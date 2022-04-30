@@ -30,9 +30,9 @@ None.
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : One of the arguments is the empty string
+  - : Thrown if one of the arguments is the empty string
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : A token contains ASCII whitespace.
+  - : Thrown if a token contains ASCII whitespace.
 
 ## Examples
 

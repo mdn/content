@@ -18,7 +18,7 @@ deleted.
 ## Syntax
 
 ```js
-void gl.deleteBuffer(buffer);
+deleteBuffer(buffer)
 ```
 
 ### Parameters

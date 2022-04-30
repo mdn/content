@@ -61,6 +61,9 @@ b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 This solution has been proposed by [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
 
 Another possible solution without utilizing the now deprecated 'unescape' and 'escape' functions.
+This alternative, though, does not perform base64 encoding of the input string.
+Note the differences in the outputs of `utf8_to_b64` and `b64EncodeUnicode`.
+Adopting this alternative may lead to interoperability issues with other applications.
 
 ```js
 function b64EncodeUnicode(str) {
@@ -77,7 +80,7 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### Solution #2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
 
-> **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or viceversa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
+> **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
 
 ```js
 "use strict";

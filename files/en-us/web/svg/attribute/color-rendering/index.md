@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.color-rendering
 ---
 {{deprecated_header}}
 
-The **`color-rendering`** attribute provides a hint to the SVG user agent about how to optimize its color interpolation and compositing operations.
+The **`color-rendering`** attribute provides a hint to the SVG user agent about how to optimize its color {{Glossary("interpolation")}} and compositing operations.
 
 `color-rendering` takes precedence over {{SVGAttr("color-interpolation-filters")}}. For example, assume `color-rendering: optimizeSpeed` and `color-interpolation-filters: linearRGB`. In this case, the SVG user agent should perform color operations in a way that optimizes performance, which might mean sacrificing the color interpolation precision as specified by through the `linearRGB` value for `color-interpolation-filters`.
 

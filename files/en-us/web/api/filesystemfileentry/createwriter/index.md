@@ -24,7 +24,8 @@ which can be used to write data into the file represented by the directory entry
 ## Syntax
 
 ```js
-FileSystemFileEntry.createWriter(successCallback[, errorCallback]);
+createWriter(successCallback)
+createWriter(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -42,7 +43,7 @@ FileSystemFileEntry.createWriter(successCallback[, errorCallback]);
 
 {{jsxref("undefined")}}.
 
-## Example
+## Examples
 
 This example establishes a method, `writeToFileEntry()`, which outputs a
 text string to the file corresponding to the passed-in directory entry.

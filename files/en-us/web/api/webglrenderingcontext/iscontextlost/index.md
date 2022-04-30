@@ -22,8 +22,12 @@ must be re-established before rendering can resume.
 ## Syntax
 
 ```js
-let isLost = gl.isContextLost();
+isContextLost()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

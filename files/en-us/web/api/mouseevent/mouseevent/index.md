@@ -18,10 +18,10 @@ The **`MouseEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new MouseEvent(typeArg, mouseEventInit);
+new MouseEvent(typeArg, mouseEventInit)
 ```
 
-### Values
+### Parameters
 
 - _typeArg_
   - : Is a {{domxref("DOMString")}} representing the name of the event.
@@ -81,7 +81,7 @@ new MouseEvent(typeArg, mouseEventInit);
       The absence of any affected hit region is represented with the `null` value.
 
     In some implementations, passing anything other than a number for the screen and
-    client fields will throw a `TypeError`.
+    client fields will throw a {{jsxref("TypeError")}}.
 
     > **Note:** The `MouseEventInit` dictionary also accepts fields from
     > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and from {{domxref("Event.Event",

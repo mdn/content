@@ -37,6 +37,7 @@ grid-row-start: 5 somegridarea span;
 grid-row-start: inherit;
 grid-row-start: initial;
 grid-row-start: revert;
+grid-row-start: revert-layer;
 grid-row-start: unset;
 ```
 
@@ -166,4 +167,4 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 - Related CSS properties: {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

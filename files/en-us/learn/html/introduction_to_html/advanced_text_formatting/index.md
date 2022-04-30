@@ -626,7 +626,7 @@ You will occasionally need to use superscript and subscript when marking up item
 
 The output of this code looks like so:
 
-{{ EmbedLiveSample('Superscript_and_subscript', '100%', '141px') }}
+{{ EmbedLiveSample('Superscript_and_subscript', '100%', 160) }}
 
 ## Representing computer code
 
@@ -660,7 +660,7 @@ para.onclick = function() {
 
 The above code will look like so:
 
-{{ EmbedLiveSample('Representing_computer_code','100%',300) }}
+{{ EmbedLiveSample('Representing_computer_code','100%',350) }}
 
 ## Marking up times and dates
 
@@ -672,6 +672,7 @@ HTML also provides the {{htmlelement("time")}} element for marking up times and 
 
 Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:
 
+<!-- markdownlint-disable MD033 -->
 - 20 January 2016
 - 20th January 2016
 - Jan 20 2016
@@ -681,6 +682,8 @@ Why is this useful? Well, there are many different ways that humans write down d
 - <span lang="fr">20e Janvier 2016</span>
 - <span lang="ja">2016 年 1 月 20 日</span>
 - And so on
+
+<!-- markdownlint-enable MD033 -->
 
 But these different forms cannot be easily recognized by computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The {{htmlelement("time")}} element allows you to attach an unambiguous, machine-readable time/date for this purpose.
 
@@ -711,7 +714,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-That marks the end of our study of HTML text semantics. Bear in mind that what you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild, or at least might find interesting. To find way more HTML elements, you can take a look at our [HTML element reference](/en-US/docs/Web/HTML/Element) (the [Inline text semantics](/en-US/docs/Web/HTML/Element#inline_text_semantics) section would be a great place to start.) In the next article we will look at the HTML elements you'd use to structure the different parts of an HTML document.
+That marks the end of our study of HTML text semantics. Bear in mind that what you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild, or at least might find interesting. To find way more HTML elements, you can take a look at our [HTML element reference](/en-US/docs/Web/HTML/Element) (the [Inline text semantics](/en-US/docs/Web/HTML/Element#inline_text_semantics) section would be a great place to start). In the next article, we'll look at the HTML elements you'd use to [structure the different parts of an HTML document](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure).
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 

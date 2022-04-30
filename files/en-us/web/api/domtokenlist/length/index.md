@@ -14,7 +14,7 @@ of objects stored in the object.
 
 ## Value
 
-An positive integer, or `0` if the list is empty..
+An positive integer, or `0` if the list is empty.
 
 ## Examples
 

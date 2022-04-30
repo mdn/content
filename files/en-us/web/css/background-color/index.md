@@ -53,6 +53,7 @@ background-color: transparent;
 background-color: inherit;
 background-color: initial;
 background-color: revert;
+background-color: revert-layer;
 background-color: unset;
 ```
 

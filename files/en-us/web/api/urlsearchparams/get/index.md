@@ -19,7 +19,7 @@ interface returns the first value associated to the given search parameter.
 ## Syntax
 
 ```js
-URLSearchParams.get(name)
+get(name)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ URLSearchParams.get(name)
 
 ### Return value
 
-A {{domxref("USVString")}} if the given search parameter is found; otherwise,
+A string if the given search parameter is found; otherwise,
 **`null`**.
 
 ## Examples

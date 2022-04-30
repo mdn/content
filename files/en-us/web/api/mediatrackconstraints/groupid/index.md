@@ -27,15 +27,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.groupId")}} as returned b
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { groupId: constraint };
-
-constraintsObject.groupId = constraint;
-```
-
-### Value
+## Value
 
 An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
 ideal, and/or exact (mandatory) group IDs which are acceptable as the source of media
@@ -60,7 +52,7 @@ Because of this, there's no use for the group ID when calling
 value, and you can't use it to ensure the same group is used across multiple browsing
 sessions when calling `getUserMedia()`.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

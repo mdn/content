@@ -41,6 +41,7 @@ overflow: hidden visible;
 overflow: inherit;
 overflow: initial;
 overflow: revert;
+overflow: revert-layer;
 overflow: unset;
 ```
 
@@ -59,7 +60,7 @@ The `overflow` property is specified as one or two keywords chosen from the list
 - `auto`
   - : Depends on the {{Glossary("user agent")}}. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block formatting context. Desktop browsers provide scrollbars if content overflows.
 - `overlay` {{deprecated_inline}}
-  - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space. Only supported in WebKit-based (e.g., Safari) and Blink-based (e.g., Chrome or Opera) browsers.
+  - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space.
 
 #### Mozilla extensions
 
@@ -181,4 +182,4 @@ p.auto {
 ## See also
 
 - Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS Overflow](/en-US/docs/Web/CSS/CSS_Overflow) and [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow)
+- [CSS Overflow](/en-US/docs/Web/CSS/CSS_Overflow) and [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)

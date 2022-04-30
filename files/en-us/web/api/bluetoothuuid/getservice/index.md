@@ -16,7 +16,7 @@ The **`getService()`**  method of the {{domxref("BluetoothUUID")}} interface ret
 ## Syntax
 
 ```js
-BluetoothUUID.getService(name);
+getService(name)
 ```
 
 ### Parameters
@@ -24,13 +24,13 @@ BluetoothUUID.getService(name);
 - `name`
   - : A {{domxref("DOMString","string")}} containing the name of the service.
 
-### Returns
+### Return value
 
 A 128-bit UUID.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `name` does not appear in the registry.
 
 ## Examples

@@ -24,14 +24,18 @@ waveform. It basically generates a constant tone.
 ## Syntax
 
 ```js
-var oscillatorNode = audioCtx.createOscillator();
+createOscillator()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("OscillatorNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create an oscillator
 node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see

@@ -49,6 +49,7 @@ font-family: fangsong;
 font-family: inherit;
 font-family: initial;
 font-family: revert;
+font-family: revert-layer;
 font-family: unset;
 ```
 
@@ -88,7 +89,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
     - `cursive`
 
-      - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.
+      - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
 
         For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.
 

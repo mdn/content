@@ -119,7 +119,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 <!---->
 
-- [Using nsILoginManager](/en-US/docs/XPCOM_Interface_Reference/Using_nsILoginManager)
+- Using nsILoginManager
   - : The Password Manager has been replaced by the new Login Manager.
 
 <!---->
@@ -155,12 +155,12 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 <!---->
 
 - [Idle service](/en-US/docs/nsIIdleService)
-  - : Firefox 3 offers the new {{Interface("nsIIdleService")}} interface, which lets extensions determine how long it's been since the user last pressed a key or moved their mouse.
+  - : Firefox 3 offers the new `nsIIdleService` interface, which lets extensions determine how long it's been since the user last pressed a key or moved their mouse.
 
 <!---->
 
 - [ZIP writer](/en-US/docs/nsIZipWriter)
-  - : The new {{Interface("nsIZipWriter")}} interface lets extensions create ZIP archives.
+  - : The new `nsIZipWriter` interface lets extensions create ZIP archives.
 
 <!---->
 
@@ -175,7 +175,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 <!---->
 
 - [The Thread Manager](/en-US/docs/The_Thread_Manager)
-  - : Firefox 3 provides the new {{Interface("nsIThreadManager")}} interface, along with new interfaces for threads and thread events, which provides a convenient way to create and manage threads in your code.
+  - : Firefox 3 provides the new `nsIThreadManager` interface, along with new interfaces for threads and thread events, which provides a convenient way to create and manage threads in your code.
 
 <!---->
 
@@ -185,11 +185,11 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 <!---->
 
 - [The `nsIJSON` interface](/en-US/docs/nsIJSON)
-  - : Firefox 3 offers the new {{Interface("nsIJSON")}} interface, which offers high-performance encoding and decoding of [JSON](/en-US/docs/Glossary/JSON) strings.
+  - : Firefox 3 offers the new `nsIJSON` interface, which offers high-performance encoding and decoding of [JSON](/en-US/docs/Glossary/JSON) strings.
 
 <!---->
 
-- [The nsIParentalControlsService interface](/en-US/docs/XPCOM_Interface_Reference/nsIParentalControlsService)
+- The `nsIParentalControlsService` interface
   - : Firefox 3 now supports the Microsoft Windows Vista parental controls feature, and allows code to interact with it.
 
 <!---->
@@ -224,7 +224,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Find toolbar.** The Find toolbar now opens with the current selection.
 - **Plugin management.** Users can now disable individual plugins in the Add-on Manager.
 - **Integration with Windows Vista.** Firefox's menus now display using Vista's native theme.
-- **Integration with Mac OS X.** Firefox now supports [Growl](http://growl.info/) for notifications of completed downloads and available updates.
+- **Integration with Mac OS X.** Firefox now supports [Growl](https://growl.github.io/growl/) for notifications of completed downloads and available updates.
 - **Star button.** The new star button in the location bar lets you quickly add a new bookmark with a single click. A second click lets you file and tag your new bookmark.
 - **Tags.** You can now associate keywords with your bookmarks to easily sort them by topic.
 - **Location bar and auto-complete.** Type the title or tag of a page in the location bar to quickly find the site you were looking for in your history and bookmarks. Favicons, bookmark, and tag indicators help you see where the results are coming from.

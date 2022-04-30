@@ -1,7 +1,7 @@
 ---
 title: 'aria-errormessage'
 slug: Web/Accessibility/ARIA/Attributes/aria-errormessage
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -51,11 +51,11 @@ When an object is invalid, we use JavaScript to add `aria-invalid="true"`. The a
 
 ```html
 <p>
-  <label for="email">Email address:</label> 
+  <label for="email">Email address:</label>
   <input type="email" name="email" id="email"
     aria-invalid="true" aria-errormessage="err1" />
   <span id="err1" class="errormessage">Error: Enter a valid email address</span>
-</p> 
+</p>
 ```
 
 When we went from valid to invalid, the only JavaScript change for this example was an update to `aria-invalid` on the email input object. As the error message follows the input and becomes visible and available on the accessibility tree, we are able to keep our example simple. We could have also applied an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) property or used a live region roles such as [`alert`](/en-US/docs/Web/Accessibility/ARIA/roles/Alert_role).

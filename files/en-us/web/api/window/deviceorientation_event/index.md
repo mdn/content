@@ -78,6 +78,6 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 ## See also
 
-- [`devicemotion`](/en-US/docs/Web/API/Window/devicemotion_event)
+- [`devicemotion`](/en-US/docs/Web/API/Window.devicemotion_event)
 - [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
 - [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)

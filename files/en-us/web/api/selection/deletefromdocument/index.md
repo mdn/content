@@ -18,14 +18,14 @@ The **`deleteFromDocument()`** method of the
 ## Syntax
 
 ```js
-sel.deleteFromDocument()
+deleteFromDocument()
 ```
 
 ### Parameters
 
-_None._
+None.
 
-## Example
+## Examples
 
 This example lets you delete selected text by clicking a button. Upon clicking the
 button, the
@@ -53,7 +53,7 @@ function deleteSelection() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

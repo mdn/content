@@ -104,16 +104,16 @@ console.log(appleStore.next())      // { value: 5, done: false }
 console.log(appleStore.next())      // { value: undefined, done: true }
 ```
 
-You can also send a value with next(value) into the generator. 'step' evaluates as a
-return value in this syntax \[_rv_] = **yield**
-\[_expression_]
+You can also send a value with `next(value)` into the generator. `step` evaluates as a
+return value in this syntax `[_rv_] = **yield** [expression]` — although a value passed
+to the generator's `next()` method is ignored the first time `next()` is called.
 
 ```js
 function* counter(value) {
  let step;
 
  while (true) {
-   step = yield ++value;
+   step = yield value++;
 
    if (step) {
      value += step;
@@ -122,6 +122,7 @@ function* counter(value) {
 }
 
 const generatorFunc = counter(0);
+console.log(generatorFunc.next().value);   // 0
 console.log(generatorFunc.next().value);   // 1
 console.log(generatorFunc.next().value);   // 2
 console.log(generatorFunc.next().value);   // 3

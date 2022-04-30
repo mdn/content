@@ -22,7 +22,7 @@ A high-level description of what happens in an `RTCPeerConnection` was shown in 
 
 ## Resources
 
-- A good tutorial on basic features in WebRTC is at [HTML5 Rocks](http://www.html5rocks.com/en/tutorials/webrtc/basics/).   A collection of basic test pages to support development are at [webrtc-landing](https://mozilla.github.io/webrtc-landing).
+- A good tutorial on basic features in WebRTC is at [HTML5 Rocks](https://www.html5rocks.com/en/tutorials/webrtc/basics/).   A collection of basic test pages to support development are at [webrtc-landing](https://mozilla.github.io/webrtc-landing/).
 - You can make simple person-to-person calls (including to people using Chrome) at [apprtc.appspot.com](https://apprtc.appspot.com/).
 - A high-level description of what happens in an `RTCPeerConnection` was shown in the [Mozilla Hacks](https://hacks.mozilla.org/category/webrtc/) blog article [Embedding WebRTC video chat](https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/).
 

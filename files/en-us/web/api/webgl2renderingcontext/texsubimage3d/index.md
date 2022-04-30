@@ -18,19 +18,10 @@ current texture.
 ## Syntax
 
 ```js
-void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, ArrayBufferView? srcData, optional srcOffset);
-
-void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, ImageBitmap? pixels);
-
-void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, ImageData? pixels);
-
-void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, HTMLImageElement? pixels);
-
-void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, HTMLCanvasElement? pixels);
-
-void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, HTMLVideoElement? pixels);
-
-void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, GLintptr offset);
+texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels)
+texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, offset)
+texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, srcData)
+texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, srcData, srcOffset)
 ```
 
 ### Parameters
@@ -88,7 +79,7 @@ void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, d
     - `gl.RGB32F`
     - `gl.RGB8UI`
     - `gl.RGBA8`
-    - `gl.SRGB_APLHA8`
+    - `gl.SRGB_ALPHA8`
     - `gl.RGB5_A1`
     - `gl.RGBA4444`
     - `gl.RGBA16F`
@@ -138,6 +129,10 @@ void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, d
     - {{domxref("HTMLImageElement")}},
     - {{domxref("HTMLCanvasElement")}},
     - {{domxref("HTMLVideoElement")}}.
+
+- `srcData`
+
+  - : {{domxref("ArrayBufferView")}}
 
 - offset
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data

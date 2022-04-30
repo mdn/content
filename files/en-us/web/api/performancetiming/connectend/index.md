@@ -27,11 +27,9 @@ value will be the same as {{domxref("PerformanceTiming.fetchStart")}}. A connect
 considered as opened when all secure connection handshake, or SOCKS authentication, is
 terminated.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.connectEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

@@ -21,28 +21,22 @@ The
 {{domxref("PaintWorklet")}} interface registers a class programmatically generate an
 image where a CSS property expects a file.
 
-## Syntax
-
-```js
-registerPaint(name, class);
-```
-
-### Parameters
+## Value
 
 - name
   - : The name of the worklet class to register.
 - class
   - : A reference to the class that implements the worklet.
 
-### Return value
+## Value
 
 {{jsxref('undefined')}}
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : Thrown when one of the arguments is invalid or missing.
-- InvalidModificationError
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown when the a worklet already exists with the specified name.
 
 ## Examples
@@ -77,7 +71,7 @@ class CheckerboardPainter {
 registerPaint('checkerboard', CheckerboardPainter);
 ```
 
-The first step in using a paintworket is defining the paint worklet using the
+The first step in using a paintworklet is defining the paint worklet using the
 `registerPaint()` function, as done above. To use it, you register it with
 the `CSS.paintWorklet.addModule()` method:
 

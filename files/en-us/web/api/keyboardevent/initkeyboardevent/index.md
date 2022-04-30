@@ -20,7 +20,7 @@ Web applications should use constructor instead of this if it's available.
 ## Syntax
 
 ```js
-kbdEvent.initKeyboardEvent(typeArg, canBubbleArg, cancelableArg,
+initKeyboardEvent(typeArg, canBubbleArg, cancelableArg,
                            viewArg, charArg, keyArg,
                            locationArg, modifiersListArg, repeat)
 ```

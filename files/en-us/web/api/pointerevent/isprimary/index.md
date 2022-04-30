@@ -39,19 +39,12 @@ pointers, these pointers will all produce _compatibility mouse events_ (see
 {{domxref("Pointer_events")}} for more information about pointer, mouse and touch
 interaction).
 
-## Syntax
+## Value
 
-```js
-var isPrimary = pointerEvent.isPrimary;
-```
-
-### Return value
-
-- `isPrimary`
-  - : Returns `true` if the pointer for this event is the primary pointer and
+A boolean, `true` if the pointer for this event is the primary pointer and
     returns `false` otherwise.
 
-## Example
+## Examples
 
 This example illustrates using the value of `isPrimary` to call the
 appropriate processing function.

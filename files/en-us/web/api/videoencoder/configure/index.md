@@ -16,7 +16,7 @@ The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueu
 ## Syntax
 
 ```js
-VideoEncoder.configure(config)
+configure(config)
 ```
 
 ### Parameters
@@ -57,13 +57,13 @@ VideoEncoder.configure(config)
         - `"quality"` (default)
         - `"realtime"`
 
-### Return Value
+### Return value
 
 None.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `config` is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoEncoder.state","state")}} is `"closed"`.

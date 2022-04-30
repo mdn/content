@@ -153,7 +153,7 @@ function getXPathForElement(el, xml) {
 ### Resources
 
 - [XPath](/en-US/docs/Web/XPath)
-- [Forum discussion on this topic](http://forums.mozillazine.org/viewtopic.php?t=229106)
+- [Forum discussion on this topic](https://forums.mozillazine.org/viewtopic.php?t=229106)
 
 ## See also
 

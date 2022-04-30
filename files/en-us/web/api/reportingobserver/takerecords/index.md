@@ -19,8 +19,12 @@ in the observer's report queue, and empties the queue.
 ## Syntax
 
 ```js
-reportingObserverInstance.takeRecords()
+takeRecords()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

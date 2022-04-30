@@ -33,6 +33,7 @@ text-decoration-thickness: 10%;
 text-decoration-thickness: inherit;
 text-decoration-thickness: initial;
 text-decoration-thickness: revert;
+text-decoration-thickness: revert-layer;
 text-decoration-thickness: unset;
 ```
 

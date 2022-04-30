@@ -16,8 +16,12 @@ The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interfa
 ## Syntax
 
 ```js
-var json = PerformanceElementTiming.toJSON();
+toJSON()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

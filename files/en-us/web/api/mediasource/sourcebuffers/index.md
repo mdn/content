@@ -21,17 +21,11 @@ The **`sourceBuffers`** read-only property of the
 containing the list of {{domxref("SourceBuffer")}} objects associated with this
 `MediaSource`.
 
-## Syntax
-
-```js
-var mySourceBuffers = mediaSource.sourceBuffers;
-```
-
-### Value
+## Value
 
 A {{domxref("SourceBufferList")}}.
 
-## Example
+## Examples
 
 The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo
 live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download

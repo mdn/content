@@ -18,7 +18,7 @@ transform feedback operation.
 ## Syntax
 
 ```js
-void gl.resumeTransformFeedback();
+resumeTransformFeedback()
 ```
 
 ### Parameters

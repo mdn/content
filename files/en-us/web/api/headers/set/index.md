@@ -28,7 +28,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 ## Syntax
 
 ```js
-myHeaders.set(name, value);
+set(name, value)
 ```
 
 ### Parameters
@@ -39,11 +39,11 @@ myHeaders.set(name, value);
 - `value`
   - : The new value you want to set.
 
-### Returns
+### Return value
 
 {{jsxref('undefined')}}.
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 

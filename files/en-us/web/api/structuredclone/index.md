@@ -22,15 +22,15 @@ Transferred objects are detached from the original object and attached to the ne
 
 ```js
 structuredClone(value)
-structuredClone(value, { transfer })
+structuredClone(value, transferables)
 ```
 
 ### Parameters
 
 - `value`
   - : The object to be cloned.
-    This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-- `transfer` {{optional_inline}}
+    This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
+- `transferables` {{optional_inline}}
   - : An array of {{Glossary("transferable objects")}} in `value` that will be moved rather than cloned to the returned object.
 
 ### Return value
@@ -78,7 +78,7 @@ for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 
-const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] }).
+const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
 console.log(uInt8Array.byteLength);  // 0
 ```
 

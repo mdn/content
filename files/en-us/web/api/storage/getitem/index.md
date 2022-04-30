@@ -18,21 +18,21 @@ the key does not exist, in the given `Storage` object.
 ## Syntax
 
 ```js
-var aValue = storage.getItem(keyName);
+getItem(keyName)
 ```
 
 ### Parameters
 
 - `keyName`
-  - : A {{domxref("DOMString")}} containing the name of the key you want to retrieve the
+  - : A string containing the name of the key you want to retrieve the
     value of.
 
 ### Return value
 
-A {{domxref("DOMString")}} containing the value of the key. If the key does not exist,
+A string containing the value of the key. If the key does not exist,
 `null` is returned.
 
-## Example
+## Examples
 
 The following function retrieves three data items from local storage, then uses them to
 set custom styles on a page.

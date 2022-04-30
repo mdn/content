@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Object.defineGetter
 > [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 > or the {{jsxref("Object.defineProperty()")}} API. While this
 > feature is widely implemented, it is only described in the
-> [ECMAScript specification](https://tc39.github.io/ecma262/#sec-additional-ecmascript-features-for-web-browsers)
+> [ECMAScript specification](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers)
 > because of legacy usage. This method should not be used since
 > better alternatives exist.
 

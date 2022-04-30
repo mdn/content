@@ -17,13 +17,7 @@ The **`tangentialPressure`** read-only property of the
 {{domxref("PointerEvent")}} interface represents the normalized tangential pressure of
 the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)).
 
-## Syntax
-
-```js
-var tanPressure = pointerEvent.tangentialPressure;
-```
-
-### Return value
+## Value
 
 A `float` representing the normalized tangential pressure of the pointer
 input in the range `-1` to `1`, inclusive, where `0` is
@@ -33,7 +27,7 @@ Note that some hardware may only support positive values in the range `0` to
 `1`. For hardware that does not support tangential pressure, the value will
 be `0`.
 
-## Example
+## Examples
 
 In this snippet, when a {{event("pointerdown")}} event is fired, different functions
 are called depending on the value of the event's `tangentialPressure`

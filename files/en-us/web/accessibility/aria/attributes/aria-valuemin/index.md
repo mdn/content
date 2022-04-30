@@ -1,7 +1,7 @@
 ---
 title: 'aria-valuemin'
 slug: Web/Accessibility/ARIA/Attributes/aria-valuemin
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -32,9 +32,9 @@ The maximum value is defined with [`aria-valuemax`](/en-US/docs/Web/Accessibilit
 ## ARIAMixin API
 
 - {{domxref("Element.ariaValueMin")}}
-  - : The  [`ariaValueMin`](/en-US/docs/Web/API/Element/ariaValueMin) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuemin` attribute.
+  - : The [`ariaValueMin`](/en-US/docs/Web/API/Element/ariaValueMin) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuemin` attribute.
 - {{domxref("ElementInternals.ariaValueMin")}}
-  - : The  [`ariaValueMin`](/en-US/docs/Web/API/ElementInternals/ariaValueMin) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-valuemin` attribute.
+  - : The [`ariaValueMin`](/en-US/docs/Web/API/ElementInternals/ariaValueMin) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-valuemin` attribute.
 
 ## Associated roles
 
@@ -63,7 +63,7 @@ Inherited into roles:
 ## See Also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
-- [`<input type="range>` element `min` attribute](en-US/docs/Web/HTML/Element/input/range#min) attribute
+- [`<input type="range>` element `min` attribute](en-US/docs/Web/HTML/Element/input/range#min)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
 - [`aria-aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-aria-valuenow).
 

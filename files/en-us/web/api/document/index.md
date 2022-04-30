@@ -181,7 +181,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.adoptNode()")}}
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -251,7 +251,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
   - : Replaces entities, normalizes text nodes, etc.
 - {{DOMxRef("Document.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
 - {{DOMxRef("Document.querySelectorAll()")}}
@@ -475,30 +475,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
     Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.
-
-## Non-standard extensions {{Non-standard_Inline}}
-
-{{non-standard_header}}
-
-### Firefox notes
-
-Firefox defines some non-standard methods:
-
-- {{DOMxRef("Document.execCommandShowHelp()")}} {{deprecated_inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
-- {{DOMxRef("Document.getBoxObjectFor()")}} {{deprecated_inline}}
-  - : Use the {{DOMxRef("Element.getBoundingClientRect()")}} method instead.
-- {{DOMxRef("Document.loadOverlay()")}} {{deprecated_inline}}
-  - : Loads a [XUL overlay](/en-US/docs/XUL_Overlays) dynamically. This only works in XUL documents.
-- {{DOMxRef("Document.queryCommandText()")}} {{deprecated_inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14 {{GeckoRelease("14")}}.
-
-### Internet Explorer notes
-
-Microsoft defines some non-standard properties:
-
-- {{DOMxRef("Document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](https://msdn.microsoft.com/library/ms533752%28v=VS.85%29.aspx).
 
 ## Specifications
 

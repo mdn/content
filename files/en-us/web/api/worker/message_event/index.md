@@ -20,9 +20,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('messageerror', event => { });
+addEventListener('message', event => { });
 
-onmessageerror = event => { };
+onmessage = event => { };
 ```
 
 ## Event type

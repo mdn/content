@@ -22,7 +22,7 @@ with the associated stream to error.
 ## Syntax
 
 ```js
-readableStreamDefaultController.error(e);
+error(e)
 ```
 
 ### Parameters
@@ -36,8 +36,8 @@ readableStreamDefaultController.error(e);
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 

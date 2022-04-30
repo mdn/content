@@ -53,7 +53,7 @@ These may vary substantially depending on the specifics of the service, and a gi
 - `https://apple.com/apple-pay`
   - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. Currently, Apple Pay is only supported by Safari.
 - `https://google.com/pay`
-  - : Payments are processed by [Google Pay](https://pay.google.com/). This is currently supported only by Chrome and Chromium-based browsers.
+  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home). This is currently supported only by Chrome and Chromium-based browsers.
 
 ## Functions of a payment handler
 
@@ -79,7 +79,7 @@ In this example, `fetchValidationData()` is a function which loads the payment h
 
 By then delivering this data (or a {{jsxref("Promise")}} which resolves to the loaded data) to the payment handler by passing it into `complete()`, the payment handler can use the retrieved data and whatever algorithm and other data to support in order to verify that the merchant can use the payment handler.
 
-Thus, it's important to note that the {{Glossary("user agent")}} never sends a {{event("merchantvalidation")}} event, unless the user agent itself implements a payment handler. For instance, Safari has integrated support for Apple Pay, so the Apple Pay payment handler uses this to ensure that Apple Pay can be used to pay the merchant by sending `merchantvalidation` to the client, instructing it to fetch the server's validation data and deliver it to the payment handler by calling `complete()`.
+Thus, it's important to note that the {{Glossary("user agent")}} never sends a {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event, unless the user agent itself implements a payment handler. For instance, Safari has integrated support for Apple Pay, so the Apple Pay payment handler uses this to ensure that Apple Pay can be used to pay the merchant by sending `merchantvalidation` to the client, instructing it to fetch the server's validation data and deliver it to the payment handler by calling `complete()`.
 
 ## Specifications
 

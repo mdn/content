@@ -21,7 +21,7 @@ animation frame request previously scheduled through a call to
 ## Syntax
 
 ```js
-window.cancelAnimationFrame(requestID);
+cancelAnimationFrame(requestID)
 ```
 
 ### Parameters

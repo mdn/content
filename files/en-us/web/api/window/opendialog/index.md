@@ -32,22 +32,28 @@ to interact with the opener window until they close the modal dialog.
 ## Syntax
 
 ```js
-newWindow = openDialog(url, name, features, arg1, arg2, ...)
+openDialog(url)
+openDialog(url, name)
+openDialog(url, name, features)
+openDialog(url, name, features, arg0, arg1, /* ... ,*/ argN)
 ```
 
-- `newWindow`
-  - : The opened window
+### Parameters
+
 - `url`
   - : The URL to be loaded in the newly opened window.
-- `name`
-  - : The window name (optional). See {{domxref("window.open()")}} description for
-    detailed information.
-- `features`
+- `name` {{optional_inline}}
+  - : The window name. See {{domxref("window.open()")}} description for detailed information.
+- `features` {{optional_inline}}
   - : See {{domxref("window.open()")}} for details.
 - `arg1`, `arg2`, ...
   - : The arguments to be passed to the new window (optional).
 
-## Example
+### Return value
+
+The opened window.
+
+## Examples
 
 ```js
 var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);

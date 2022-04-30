@@ -50,7 +50,7 @@ When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menubar_rol
 ## ARIAMixin API
 
 - {{domxref("Element.ariaHasPopup")}}
-  - : The  [`ariaHasPopup`](/en-US/docs/Web/API/Element/ariaHasPopup) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
+  - : The [`ariaHasPopup`](/en-US/docs/Web/API/Element/ariaHasPopup) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 - {{domxref("ElementInternals.ariaHasPopup")}}
   - : The [`ariaHasPopup`](/en-US/docs/Web/API/ElementInternals/ariaHasPopup) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-haspopup` attribute.
 

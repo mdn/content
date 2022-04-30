@@ -30,7 +30,7 @@ CSS does not provide a direct mechanism for specifying a unique color for each l
 
 ```css
 /* <color> values */
-text-decoration-color: currentcolor;
+text-decoration-color: currentColor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
 text-decoration-color: rgba(255, 128, 128, 0.5);
@@ -40,6 +40,7 @@ text-decoration-color: transparent;
 text-decoration-color: inherit;
 text-decoration-color: initial;
 text-decoration-color: revert;
+text-decoration-color: revert-layer;
 text-decoration-color: unset;
 ```
 

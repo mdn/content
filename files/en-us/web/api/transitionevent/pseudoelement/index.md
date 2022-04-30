@@ -19,11 +19,9 @@ The **`TransitionEvent.pseudoElement`** read-only property is a
 If the transition doesn't run on a pseudo-element but on the element, an empty string:
 ` ''``. `
 
-## Syntax
+## Value
 
-```js
-name = TransitionEvent.pseudoElement
-```
+A string.
 
 ## Specifications
 

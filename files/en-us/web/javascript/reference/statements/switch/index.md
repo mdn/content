@@ -48,8 +48,8 @@ switch (expression) {
 - `case valueN` {{optional_inline}}
   - : A `case` clause used to match against `expression`.
     If the `expression` matches the specified
-    `valueN`, the statements inside the `case` clause are
-    executed until either the end of the `switch` statement or a
+    `valueN`, the statements inside the matching `case` clause are
+    executed, and then the statements inside all `case` clauses which follow the matching `case` clause are executed — until either the end of the `switch` statement or a
     `break`.
 - `default` {{optional_inline}}
   - : A `default` clause; if provided, this clause is executed if the value of

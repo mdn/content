@@ -28,7 +28,7 @@ These are the values sent when the context doesn't give better information. Note
 | Edge                       | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                                                      |
 | Opera                      | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1`                                     |
 
-\[1] This value can be modified using the [`network.http.accept.default`](http://kb.mozillazine.org/Network.http.accept.default) parameter.
+\[1] This value can be modified using the [`network.http.accept.default`](https://kb.mozillazine.org/Network.http.accept.default) parameter.
 
 \[2] This is an improvement over earlier `Accept` headers as it no longer ranks `image/png` above `text/html`.
 

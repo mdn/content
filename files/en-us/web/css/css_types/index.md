@@ -28,7 +28,7 @@ In formal CSS syntax, data types are denoted by a keyword placed between the ine
 
 ## Textual data types
 
-These types include keywords and identifiers as well as strings, and urls.
+These types include keywords and identifiers as well as strings, and URLs.
 
 - Pre-defined keywords
   - : Keywords with a pre-defined meaning, for example the value of `collapse` for the {{cssxref("border-collapse")}} property.
@@ -106,7 +106,7 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 [The CSS Images Specification](https://www.w3.org/TR/css-images-3/) defines the data types which deal with images, including gradients.
 
 - `<image>`
-  - : A url reference to an image or a color gradient. See more information on the {{cssxref("&lt;image&gt;")}} page.
+  - : A URL reference to an image or a color gradient. See more information on the {{cssxref("&lt;image&gt;")}} page.
 - `<color-stop-list>`
   - : A list of two or more color stops with optional transition information using a color hint.
 - `<linear-color-stop>`

@@ -310,7 +310,7 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
 
 ### Line-based placement with right to left text
 
-If I now add the {{cssxref("direction")}} property with a value of `rtl` to the grid container, line 1 becomes the right hand side of the grid, and line -1 on the left.
+If I now add the {{cssxref("direction")}} property with a value of `rtl` to the grid container, line 1 becomes the right-hand side of the grid, and line -1 on the left.
 
 ```css hidden
 * {box-sizing: border-box;}

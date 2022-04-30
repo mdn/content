@@ -21,8 +21,12 @@ interface creates a duplicate of the `MediaStreamTrack`. This new
 ## Syntax
 
 ```js
-const newTrack = track.clone()
+clone()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

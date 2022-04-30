@@ -31,12 +31,12 @@ If PDF inline viewing is supported this has entries for MIME types `application/
 Otherwise an empty `MimeTypeArray` is returned.
 The description and file suffixes supported by enabled plugins are hard coded to `'pdf'` and `'Portable Document Format'`, respectively.
 
-## Example
+## Examples
 
 The code below tests whether PDF files can be viewed inline, and then prints the description of the plugin and the file suffixes it supports.
 
 ```js
-if ('application/pdf' in navigator.mimeTypes) { 
+if ('application/pdf' in navigator.mimeTypes) {
   // browser supports inline viewing of PDF files.
 
   const { description, suffixes } = navigator.mimeTypes['application/pdf'];

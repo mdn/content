@@ -12,7 +12,7 @@ tags:
 This page lists Firefox's experimental and partially implemented features, including those for proposed or cutting-edge web platform standards, along with information on the builds in which they are present, whether or not they are activated "by default", and which _preference_ can be used to activate or deactivate them.
 This allows you to test the features before they are released.
 
-New features appear first in the [Firefox Nightly](https://nightly.mozilla.org/) build, where they are often enabled by default.
+New features appear first in the [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) build, where they are often enabled by default.
 They later propagate though to [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and eventually to the release build.
 Once a feature is enabled by default in a release build it is no longer experimental, and should be removed from the topic.
 
@@ -309,7 +309,7 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
 
 ### The fit-content() function for width and other sizing properties
 
-The {{cssxref("fit-content", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
+The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
 
 <table>
   <thead>
@@ -1923,7 +1923,7 @@ The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/S
 
 ### CSS browser compatibility tooltips
 
-The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#browser_compat_warnings).
+The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#browser-compat-warnings).
 
 <table>
   <thead>
@@ -2013,5 +2013,5 @@ This feature lets you enable smooth pinch zooming on desktop computers without r
 ## See also
 
 - [Firefox developer release notes](/en-US/docs/Mozilla/Firefox/Releases)
-- [Firefox Nightly](https://nightly.mozilla.org/)
+- [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)

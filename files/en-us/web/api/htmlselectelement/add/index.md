@@ -17,17 +17,20 @@ collection of `option` elements for this `select` element.
 ## Syntax
 
 ```js
-collection.add(item[, before]);
+add(item)
+add(item, before)
 ```
 
 ### Parameters
 
-- _item_ is an {{domxref("HTMLOptionElement")}} or
-  {{domxref("HTMLOptGroupElement")}}
-- _before_ is optional and an element of the collection, or an index of type
-  _long_, representing the _item_ should be inserted before. If this
-  parameter is `null` (or the index does not exist), the new element is
-  appended to the end of the collection.
+- _item_
+  - : An {{domxref("HTMLOptionElement")}} or
+    {{domxref("HTMLOptGroupElement")}}
+- _before_ {{optional_inline}}
+  - : An element of the collection, or an index of type
+    _long_, representing the _item_ should be inserted before. If this
+    parameter is `null` (or the index does not exist), the new element is
+    appended to the end of the collection.
 
 ### Exceptions
 

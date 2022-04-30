@@ -1,7 +1,7 @@
 ---
 title: 'aria-sort'
 slug: Web/Accessibility/ARIA/Attributes/aria-sort
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -73,9 +73,9 @@ We provided instructions in the caption for assistive technology who may not see
 ## ARIAMixin API
 
 - {{domxref("Element.ariaSort")}}
-  - : The  [`ariaSort`](/en-US/docs/Web/API/Element/ariaSort) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-sort` attribute.
+  - : The [`ariaSort`](/en-US/docs/Web/API/Element/ariaSort) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-sort` attribute.
 - {{domxref("ElementInternals.ariaSort")}}
-  - : The  [`ariaSort`](/en-US/docs/Web/API/ElementInternals/ariaSort) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-sort` attribute.
+  - : The [`ariaSort`](/en-US/docs/Web/API/ElementInternals/ariaSort) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-sort` attribute.
 
 ## Associated roles
 
@@ -93,7 +93,7 @@ Used in roles:
 ## See Also
 
 - [Sortable table example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/table/sortable-table.html) -W3C
-- [`aria-pressed`](en-US/docs/Web/Accessibility/aria/Attributes/aria-pressed)
+- [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - The {{HTMLElement('th')}} element
 
 <section id="Quick_links">

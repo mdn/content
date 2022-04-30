@@ -17,13 +17,7 @@ The **`paymentRequestId`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns the ID of the
 {{domxref("PaymentRequest")}} object.
 
-## Syntax
-
-```js
-var id = paymentRequestEvent.paymentRequestId
-```
-
-### Value
+## Value
 
 A DOMString contains the ID.
 

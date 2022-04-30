@@ -16,13 +16,7 @@ The read-only **`bodyUsed`** property of the
 {{domxref("Request")}} interface is a boolean value that indicates
 whether the request body has been read yet.
 
-## Syntax
-
-```js
-request.bodyUsed;
-```
-
-### Value
+## Value
 
 A boolean value.
 

@@ -23,7 +23,7 @@ properties in the prototype chain as well).
 ## Syntax
 
 ```js
-CSSTransformValue.entries(obj);
+entries(obj)
 ```
 
 ### Parameters

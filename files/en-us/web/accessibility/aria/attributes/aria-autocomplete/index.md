@@ -1,7 +1,7 @@
 ---
 title: 'aria-autocomplete'
 slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -60,14 +60,14 @@ Used in roles:
 | Specification         | Status            |
 | ---------------- | ---------------- |
 | {{SpecName("ARIA","#aria-autocomplete","ARIA: aria-autocomplete Attribute")}}              | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","##combobox","using aria-autocomplete in a combobox")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2", "#combobox", "using aria-autocomplete in a combobox")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 ## See Also
 
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) role
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
 - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
-- {{HTMLElement('datalist')}} element and the [`<input> list` attribute](/en-US/docs/Web/HTML/Element/input#attr-list)
+- {{HTMLElement('datalist')}} element and the [`<input> list` attribute](/en-US/docs/Web/HTML/Element/input#list)
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute
 - [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) attribute

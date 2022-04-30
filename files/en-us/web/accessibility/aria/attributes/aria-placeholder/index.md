@@ -1,7 +1,7 @@
 ---
 title: 'aria-placeholder'
 slug: Web/Accessibility/ARIA/Attributes/aria-placeholder
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -14,7 +14,7 @@ The `aria-placeholder` attribute defines a short hint (a word or short phrase) i
 
 ## Description
 
-A placeholder is text that appears in the form control when it has no value set. The HTML [`placeholder`](/en-US/docs/Web/HTML/Element/input#attr-placeholder) attribute enables providing a sample value or a brief description of the expected format for several HTML {{HTMLElement('input')}} types and {{HTMLElement('textarea')}}.
+A placeholder is text that appears in the form control when it has no value set. The HTML [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute enables providing a sample value or a brief description of the expected format for several HTML {{HTMLElement('input')}} types and {{HTMLElement('textarea')}}.
 
 If you are creating a `textbox` using any other element, `placeholder` is not supported. That is where `aria-placeholder` comes into play. The `aria-placeholder` attribute can be used to defines a short hint to help the user understand what type of data is expected when a non-semantic form control has no value.
 
@@ -41,9 +41,9 @@ The `aria-placeholder` is used in addition to, not instead of, a label. They hav
 ## ARIAMixin API
 
 - {{domxref("Element.ariaPlaceholder")}}
-  - : The  [`ariaPlaceholder`](/en-US/docs/Web/API/Element/ariaPlaceholder) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-placeholder` attribute.
+  - : The [`ariaPlaceholder`](/en-US/docs/Web/API/Element/ariaPlaceholder) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-placeholder` attribute.
 - {{domxref("ElementInternals.ariaPlaceholder")}}
-  - : The  [`ariaPlaceholder`](/en-US/docs/Web/API/ElementInternals/ariaPlaceholder) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-placeholder` attribute.
+  - : The [`ariaPlaceholder`](/en-US/docs/Web/API/ElementInternals/ariaPlaceholder) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-placeholder` attribute.
 
 ## Associated roles
 
@@ -63,7 +63,7 @@ Inherited into roles:
 
 ## See Also
 
-- [HTML `placeholder` attribute](/en-US/docs/Web/HTML/Element/input#attr-placeholder)
+- [HTML `placeholder` attribute](/en-US/docs/Web/HTML/Element/input#placeholder)
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 

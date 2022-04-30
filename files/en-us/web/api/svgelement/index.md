@@ -36,7 +36,7 @@ _Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, 
 - {{DOMxRef("SVGElement.tabIndex")}}
   - : The position of the element in the tabbing order.
 - {{DOMxRef("SVGElement.viewportElement")}}{{ReadOnlyInline}}
-  - : The {{DOMxRef("SVGElement")}}, which established the current viewport. Often, the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
+  - : The {{DOMxRef("SVGElement")}} which established the current viewport. Often the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
 
 ## Methods
 
@@ -44,7 +44,7 @@ _This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAn
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("WindowEventHandlers")}}.
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}}.
 
 - [`abort`](/en-US/docs/Web/API/SVGElement/abort_event)
   - : Fired when page loading is stopped before an SVG element has been allowed to load completely.
@@ -63,7 +63,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the [`onscroll`](/en-US/docs/Web/API/GlobalEventHandlers/onscroll) property.
 - [`unload`](/en-US/docs/Web/API/SVGElement/unload_event)
   - : Fired when the DOM implementation removes an SVG document from a window or frame.
-    Also available via the [`onunload`](/en-US/docs/Web/API/WindowEventHandlers/onunload) property.
 
 ## Specifications
 

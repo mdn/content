@@ -29,7 +29,7 @@ new DeviceMotionEvent(type, options)
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} representing the name of the event.
+  - : A string representing the name of the event.
 - `options`{{Optional_Inline}}
 
   - : Options are as follows:

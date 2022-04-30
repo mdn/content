@@ -34,7 +34,7 @@ array, from first to last.
 ## Syntax
 
 ```js
-xrInputSourceArray.values();
+values()
 ```
 
 ### Parameters

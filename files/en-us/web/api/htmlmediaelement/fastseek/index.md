@@ -22,7 +22,7 @@ media to the new time with precision tradeoff.
 ## Syntax
 
 ```js
-HTMLMediaElement.fastSeek(time);
+fastSeek(time)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ HTMLMediaElement.fastSeek(time);
 
 None.
 
-## Example
+## Examples
 
 This example quickly seeks to 20-second position of the video element.
 

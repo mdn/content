@@ -15,10 +15,18 @@ Shifts focus away from the window.
 ## Syntax
 
 ```js
-window.blur()
+blur()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+`undefined`.
+
+## Examples
 
 ```js
 window.blur();

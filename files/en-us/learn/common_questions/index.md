@@ -20,7 +20,7 @@ This section covers questions relating to general knowledge of the web ecosystem
 
 - [How does the Internet work?](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
   - : The **Internet** is the backbone of the web, the technical infrastructure that makes the web possible.
-    At its most basic, the Internet is a massive network of computers communicating with each other. This article
+    At its most basic, the internet is a massive network of computers communicating with each other. This article
     discusses how it works, in broad terms.
 - [What is the difference between
   webpage, website, web server, and search engine?](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
@@ -71,7 +71,7 @@ Questions related to the tools/software you can use to build websites.
   on Google App Engine?](/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
   - : Looking for a place to host your website? Here's a step-by-step guide to hosting your website on Google App Engine.
 - [What
-  tools are available to debug and improve website performance?](/en-US/docs/Tools/Performance)
+  tools are available to debug and improve website performance?](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : This set of articles shows you how to use the Developer Tools in Firefox to debug and improve performance of your
     website, using the tools to check memory usage, the JavaScript call tree, the number of DOM nodes being rendered, and
     more.

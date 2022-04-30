@@ -30,7 +30,8 @@ for there still to be an entry with the type `"Files"` left in the object's
 ## Syntax
 
 ```js
-DataTransfer.clearData([format]);
+clearData()
+clearData(format)
 ```
 
 ### Parameters
@@ -40,7 +41,7 @@ DataTransfer.clearData([format]);
     this parameter is an empty string or is not provided, the data for all types is
     removed.
 
-## Example
+## Examples
 
 This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.getData()","getData()")}},

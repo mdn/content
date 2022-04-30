@@ -33,8 +33,16 @@ the following configuration options:
 ## Syntax
 
 ```js
-var mediaKeySystemConfiguration = mediaKeySystemAccess.getConfiguration();
+getConfiguration()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+An object.
 
 ## Specifications
 

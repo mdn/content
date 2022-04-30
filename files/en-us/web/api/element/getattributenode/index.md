@@ -16,13 +16,18 @@ Returns the specified attribute of the specified element, as an `Attr` node.
 ## Syntax
 
 ```js
-var attrNode = element.getAttributeNode(attrName);
+getAttributeNode(attrName)
 ```
 
-- `attrNode` is an `Attr` node for the attribute.
+### Parameters
+
 - `attrName` is a string containing the name of the attribute.
 
-## Example
+### Return value
+
+An `Attr` node for the attribute.
+
+## Examples
 
 ```js
 // html: <div id="top" />

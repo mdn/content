@@ -86,6 +86,8 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/display-mode", "display-mode")}}
   - : The display mode of the application, as specified in the web app manifest's [`display`](/en-US/docs/Web/Manifest#display) member.
     Defined in the [Web App Manifest spec](https://w3c.github.io/manifest/#the-display-mode-media-feature).
+- {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - : Combination of brightness, contrast ratio, and color depth that are supported by the user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/forced-colors", "forced-colors")}}
   - : Detect whether user agent restricts color palette.
     Added in Media Queries Level 5.
@@ -129,6 +131,8 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/update-frequency", "update")}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.
+- {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - : Combination of brightness, contrast ratio, and color depth that are supported by the video plane of user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/width", "width")}}
   - : Width of the viewport including width of scrollbar.
 

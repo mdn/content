@@ -17,13 +17,13 @@ The [WebVR](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR) and [WebGL](/en-US
 
 The current version of A-Frame is 0.3.2, which means it's highly experimental, but it already works and you can test it right away in the browser. It runs on desktop, mobile (iOS and Android), and Oculus Rift, Gear VR and HTC Vive.
 
-A-Frame is built on top of [WebGL](/en-US/docs/Web/API/WebGL_API), and provides pre built components to use in applications — models, video players, skyboxes, geometries, controls, animations, cursors, etc. It is based on the [entity component system](https://en.wikipedia.org/wiki/Entity_component_system), which is known in the game development world, but it targets web developers with a familiar markup structure, manipulable with JavaScript. The end result is 3D web experiences, which are VR-enabled by default.
+A-Frame is built on top of [WebGL](/en-US/docs/Web/API/WebGL_API), and provides pre-built components to use in applications — models, video players, skyboxes, geometries, controls, animations, cursors, etc. It is based on the [entity component system](https://en.wikipedia.org/wiki/Entity_component_system), which is known in the game development world, but it targets web developers with a familiar markup structure, manipulable with JavaScript. The end result is 3D web experiences, which are VR-enabled by default.
 
 ## Environment setup
 
 Let's start by setting up an environment to create something with A-Frame. We'll then build up a demo and run it. You should start off by:
 
-- Making sure you are using a modern browser with good WebGL support (and WebVR support if you have available VR hardware) such as the latest Firefox or Chrome — download [Firefox Nightly](https://nightly.mozilla.org/) or Chrome (v54 or higher).
+- Making sure you are using a modern browser with good WebGL support (and WebVR support if you have available VR hardware) such as the latest Firefox or Chrome — download [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) or Chrome (v54 or higher).
 - (Optional) set up a VR device such as Oculus Rift or Google Cardboard.
 - Create a new directory to store your project in.
 - Save a copy of the latest [A-Frame JavaScript library file](https://github.com/aframevr/aframe/tree/master/dist) inside your directory (check the GitHub repository for latest stable a dev builds).
@@ -133,7 +133,7 @@ A camera entity can be created by adding an [`<a-camera>`](https://aframe.io/doc
 </a-camera>
 ```
 
-We've also defined a cursor for the given camera, using the `cursor-*` attributes (by default it is invisible.) — we've set its scale so it will more easily visible, its color, and some opacity so it won't completely covering the objects behind it.
+We've also defined a cursor for the given camera, using the `cursor-*` attributes (by default it is invisible.) — we've set its scale so it will more easily visible, its color, and some opacity so it won't completely cover the objects behind it.
 
 ### Adding lights
 

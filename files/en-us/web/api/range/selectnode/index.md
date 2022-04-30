@@ -18,7 +18,7 @@ the parent of the _referenceNode_.
 ## Syntax
 
 ```js
-range.selectNode(referenceNode);
+selectNode(referenceNode)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ range.selectNode(referenceNode);
 - _referenceNode_
   - : The {{domxref("Node")}} to select within a {{domxref("Range")}}.
 
-## Example
+## Examples
 
 ```js
 let range = document.createRange();

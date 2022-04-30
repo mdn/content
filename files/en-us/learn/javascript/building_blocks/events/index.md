@@ -55,7 +55,7 @@ There are many different types of events that can occur.
 
 For example:
 
-- The user selects a certain element or hovers the cursor over a certain element.
+- The user selects, clicks, or hovers the cursor over a certain element.
 - The user chooses a key on the keyboard.
 - The user resizes or closes the browser window.
 - A web page finishes loading.
@@ -389,7 +389,7 @@ Try typing into the text box and see the output:
 
 Sometimes, you'll come across a situation where you want to prevent an event from doing what it does by default.
 The most common example is that of a web form, for example, a custom registration form.
-When you fill in the details and select the submit button, the natural behavior is for the data to be submitted to a specified page on the server for processing, and the browser to be redirected to a "success message" page of some kind (or the same page, if another is not specified.)
+When you fill in the details and click the submit button, the natural behavior is for the data to be submitted to a specified page on the server for processing, and the browser to be redirected to a "success message" page of some kind (or the same page, if another is not specified.)
 
 The trouble comes when the user has not submitted the data correctly — as a developer, you want to prevent the submission to the server and give an error message saying what's wrong and what needs to be done to put things right.
 Some browsers support automatic form data validation features, but since many don't, you are advised to not rely on those and implement your own validation checks.
@@ -602,10 +602,10 @@ const video = document.querySelector('video');
 video.addEventListener('click', () => video.play());
 ```
 
-Now, when the area of the `<div>` outside the video is selected, the box should be hidden again and when the video itself is selected, the video should start to play.
+Now, when the area of the `<div>` outside the video is clicked, the box should be hidden again and when the video itself is clicked, the video should start to play.
 
-But there's a problem — currently, when you select the video it starts to play, but it causes the `<div>` to be hidden at the same time.
-This is because the video is inside the `<div>` — it is part of it — so selecting the video actually runs _both_ the above event handlers.
+But there's a problem — currently, when you click the video it starts to play, but it causes the `<div>` to be hidden at the same time.
+This is because the video is inside the `<div>` — it is part of it — so clicking the video actually runs _both_ the above event handlers.
 
 ### Bubbling and capturing explained
 
@@ -614,21 +614,21 @@ When an event is fired on an element that has parent elements (in this case, the
 In the **capturing** phase:
 
 - The browser checks to see if the element's outer-most ancestor ({{htmlelement("html")}}) has a `click` event handler registered on it for the capturing phase, and runs it if so.
-- Then it moves on to the next element inside `<html>` and does the same thing, then the next one, and so on until it reaches the direct parent of the element that was actually selected.
+- Then it moves on to the next element inside `<html>` and does the same thing, then the next one, and so on until it reaches the direct parent of the element that was actually clicked.
 
 In the **target** phase:
 
 - The browser checks to see if the {{domxref("Event.target", "target")}} property has an event handler for the `click` event registered on it, and runs it if so.
-- Then, if {{domxref("Event.bubbles", "bubbles")}} is `true`, it propagates the event to the direct parent of the selected element, then the next one, and so on until it reaches the `<html>` element.
+- Then, if {{domxref("Event.bubbles", "bubbles")}} is `true`, it propagates the event to the direct parent of the clicked element, then the next one, and so on until it reaches the `<html>` element.
   Otherwise, if {{domxref("Event.bubbles", "bubbles")}} is `false`, it doesn't propagate the event to any ancestors of the target.
 
 In the **bubbling** phase, the exact opposite of the **capturing** phase occurs:
 
-- The browser checks to see if the direct parent of the element selected has a `click` event handler registered on it for the bubbling phase, and runs it if so.
+- The browser checks to see if the direct parent of the clicked element has a `click` event handler registered on it for the bubbling phase, and runs it if so.
 - Then it moves on to the next immediate ancestor element and does the same thing, then the next one, and so on until it reaches the `<html>` element.
 
 In modern browsers, by default, all event handlers are registered for the bubbling phase.
-So in our current example, when you select the video, the event bubbles from the `<video>` element outwards to the `<html>` element.
+So in our current example, when you click the video, the event bubbles from the `<video>` element outwards to the `<html>` element.
 Along the way:
 
 - It finds the `click` handler on the `video` element and runs it, so the video first starts playing.
@@ -723,7 +723,7 @@ clearButton.addEventListener('click', clearOutput);
 ### Fixing the problem with stopPropagation()
 
 As we saw in the video example, this can be a very annoying behavior, but there is a way to prevent it!
-The standard [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when invoked on a handler's event object, makes it so that first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
+The standard [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when invoked on a handler's event object, makes it so that the first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
 
 So we can fix our current problem by changing the second handler function in the previous code block to this:
 
@@ -818,7 +818,7 @@ As mentioned, events are not really part of the core JavaScript — they are def
 Also, it is important to understand that the different contexts in which JavaScript is used have different event models — from Web APIs to other areas such as browser WebExtensions and Node.js (server-side JavaScript).
 We are not expecting you to understand all of these areas now, but it certainly helps to understand the basics of events as you forge ahead with learning web development.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](https://discourse.mozilla.org/c/mdn/learn) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](https://discourse.mozilla.org/c/mdn/learn/250) to ask for help.
 
 ## See also
 

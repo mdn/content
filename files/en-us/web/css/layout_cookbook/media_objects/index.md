@@ -33,7 +33,7 @@ Media Object pattern needs some or all of the following characteristics:
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects--download.html)
 
 ## Choices made
 
@@ -55,7 +55,7 @@ There are a number of possible fallbacks for this pattern, depending on the brow
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects-fallback--download.html)
 
 Once floated elements become grid items the float no longer applies so you don't need to do anything special to clear the float.
 

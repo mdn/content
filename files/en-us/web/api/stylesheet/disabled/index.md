@@ -21,13 +21,11 @@ if it's an inactive [alternative
 style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets). Note that `disabled == false` does not guarantee the style
 sheet is applied (it could be removed from the document, for instance).
 
-## Syntax
+## Value
 
-```js
-bool = stylesheet.disabled
-```
+A boolean.
 
-## Example
+## Examples
 
 ```js
 // If the stylesheet is disabled...

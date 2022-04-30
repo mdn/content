@@ -37,13 +37,7 @@ string is user configurable. For example:
 - Safari and iCab allow users to change the browser user agent string to predefined
   Internet Explorer or Netscape strings via a menu.
 
-## Syntax
-
-```js
-var ua = navigator.userAgent;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying the complete user agent string the browser
 provides both in {{Glossary("HTTP")}} headers and in response to this and other related
@@ -60,7 +54,7 @@ Localization; rv: revision-version-number) product/productSub
 Application-Name Application-Name-version
 ```
 
-## Example
+## Examples
 
 ```js
 alert(navigator.userAgent)

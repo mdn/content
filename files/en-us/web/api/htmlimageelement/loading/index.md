@@ -80,7 +80,7 @@ To prevent this reflow from occurring, you should explicitly specify the size of
 image's presentation using the image element's {{htmlattrxref("width", "img")}} and
 {{htmlattrxref("height", "img")}} attributes. By establishing the intrinsic aspect ratio
 in this manner, you prevent elements from shifting around while the document loads,
-which can be disconcerting or offputting at best and can cause users to click the wrong
+which can be disconcerting or off-putting at best and can cause users to click the wrong
 thing at worst, depending on the exact timing of the deferred loads and reflows.
 
 ## Examples

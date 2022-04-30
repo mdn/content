@@ -23,7 +23,7 @@ method.
 ## Syntax
 
 ```js
-void gl.clear(mask);
+clear(mask)
 ```
 
 ### Parameters

@@ -28,12 +28,9 @@ The format of the string must follow one of the following HTML microsyntax:
 | ------------------------------------------- | ------------------------------------------------------------------- | ----------------- |
 | List of one or more valid font family names | _A list of font names, that have to be present on the local system_ | `courier,verdana` |
 
-## Syntax
+## Value
 
-```js
-faceString = fontObj.face;
-fontObj.face = faceString;
-```
+A string.
 
 ## Examples
 

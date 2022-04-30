@@ -140,7 +140,7 @@ For one thing, props come from the parent of a component. Our `<Form />` will no
 
 React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
 
-To use a React hook, we need to import it from the react module. In `Form.js`, change your very first line so that it reads like this:
+To use a React hook, we need to import it from the React module. In `Form.js`, change your very first line so that it reads like this:
 
 ```js
 import React, { useState } from "react";
@@ -458,7 +458,7 @@ function toggleTaskCompleted(id) {
 }
 ```
 
-Here, we define an `updatedTasks` constant that maps over the original `tasks` array.  If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)  to create a new object, and toggle the `checked` property of that object before returning it. If it doesn't match, we return the original object.
+Here, we define an `updatedTasks` constant that maps over the original `tasks` array.  If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to create a new object, and toggle the `checked` property of that object before returning it. If it doesn't match, we return the original object.
 
 Then we call `setTasks()` with this new array in order to update our state.
 

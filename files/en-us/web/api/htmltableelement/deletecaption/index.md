@@ -20,10 +20,14 @@ nothing.
 ## Syntax
 
 ```js
-HTMLTableElement.deleteCaption()
+deleteCaption()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 This example uses JavaScript to delete a table's caption.
 
@@ -46,7 +50,7 @@ table.deleteCaption();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

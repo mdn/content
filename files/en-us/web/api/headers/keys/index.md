@@ -20,14 +20,18 @@ in this object. The keys are {{jsxref("String")}} objects.
 ## Syntax
 
 ```js
-headers.keys();
+keys()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test Headers object

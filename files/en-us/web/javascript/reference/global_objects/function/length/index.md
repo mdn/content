@@ -41,7 +41,7 @@ console.log((function(...args) {}).length);
 
 console.log((function(a, b = 1, c) {}).length);
 // 1, only parameters before the first one with
-// a default value is counted
+// a default value are counted
 ```
 
 ## Specifications

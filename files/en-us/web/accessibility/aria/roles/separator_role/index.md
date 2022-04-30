@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: separator role'
 slug: Web/Accessibility/ARIA/Roles/separator_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -20,7 +20,7 @@ Elements with the role `separator` have an implicit [`aria-orientation`](/en-US/
 
 ### Non-focusable separator
 
-A non-focusable separator is a static structural element that can be used to help visually divide two groups of menu items in a menu or to provide a horizontal rule between two sections of a page. Thematic breaks that aren't focusable  can still be perceivable by a screen reader user when using a reading cursor that does not depend on focus.
+A non-focusable separator is a static structural element that can be used to help visually divide two groups of menu items in a menu or to provide a horizontal rule between two sections of a page. Thematic breaks that aren't focusable can still be perceivable by a screen reader user when using a reading cursor that does not depend on focus.
 
 ```html
 <h2>My first blog post</h2>

@@ -47,7 +47,7 @@ To add an animation to the object we use the `animations.add()` method, which co
 
 - The name we chose for the animation
 - An array defining the order in which to display the frames during the animation. If you look again at the `wobble.png` image, you'll see there are three frames. Phaser extracts these and stores references to them in an array — positions 0, 1, and 2. The above array says that we are displaying frame 0, then 1, then 0, etc.
-- The framerate, in fps. Since we are running the animation at 24fps and there are 9 frames, the animation will display just under three times per second.
+- The frame rate, in fps. Since we are running the animation at 24fps and there are 9 frames, the animation will display just under three times per second.
 
 ## Applying the animation when the ball hits the paddle
 
@@ -75,7 +75,7 @@ The animation is played every time the ball hits the paddle. You can add the `an
 
 Whereas animations play external sprites sequentially, tweens smoothly animate properties of an object in the gameworld, such as width or opacity.
 
-Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your `ballhitBrick()` function, find your `brick.kill();` line, and replace it with the following:
+Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your `ballHitBrick()` function, find your `brick.kill();` line, and replace it with the following:
 
 ```js
 var killTween = game.add.tween(brick.scale);

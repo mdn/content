@@ -15,14 +15,9 @@ The **`HTMLAnchorElement.pathname`** property is a
 the URL not including the query string or fragment (or the empty string if there is no
 path).
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.pathname;
-// Setter
-anchor.pathname = string;
-```
+A string.
 
 ## Examples
 

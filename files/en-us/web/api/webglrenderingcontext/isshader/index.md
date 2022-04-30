@@ -17,7 +17,7 @@ passed {{domxref("WebGLShader")}} is valid, `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isShader(shader);
+isShader(shader)
 ```
 
 ### Parameters

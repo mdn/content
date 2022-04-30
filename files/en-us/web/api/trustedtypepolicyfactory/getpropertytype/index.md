@@ -16,8 +16,8 @@ The **`getPropertyType()`** method of the {{domxref("TrustedTypePolicyFactory")}
 ## Syntax
 
 ```js
-TrustedTypePolicyFactory.getPropertyType(tagName, property)
-TrustedTypePolicyFactory.getPropertyType(tagName, property, elementNS)
+getPropertyType(tagName, property)
+getPropertyType(tagName, property, elementNS)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ TrustedTypePolicyFactory.getPropertyType(tagName, property, elementNS)
   - : A {{domxref("DOMString","string")}} containing the name of an HTML tag.
 - `property`
   - : A {{domxref("DOMString","string")}} containing a property, for example `"innerHTML"`.
-- `elementNs`{{optional_inline}}
+- `elementNS`{{optional_inline}}
   - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.
 
 ### Return value

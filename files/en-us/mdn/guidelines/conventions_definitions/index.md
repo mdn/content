@@ -20,7 +20,7 @@ This article defines some conventions and definitions that are commonly used on 
 
 - Deprecated
   - : On MDN, the term **deprecated** is used to mark an API or technology that is no longer recommended, but is still implemented and may still work.
-    More recently, we've updated it to the definition used in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information), which is that "the feature is no longer recommended. It might be removed in the future or might only be kept for compatibility purposes. Avoid using this functionality."
+    More recently, we've updated it to the definition used in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md), which is that "the feature is no longer recommended. It might be removed in the future or might only be kept for compatibility purposes. Avoid using this functionality."
 - Obsolete
   - : On MDN, the term **obsolete** was used to mark an API or technology that is not only no longer recommended, but also no longer implemented in browsers.
     This was, however, confusing — it is similar to **deprecated**, and the distinction is not very helpful (you still shouldn't use it in a production site).
@@ -37,7 +37,7 @@ One or both of these will be true:
 - Its defining spec is likely to change significantly, in backwards-incompatible ways (i.e. it may break existing code that relies on the feature).
 
 If one or both of these definitions is true, then you should think carefully before you start using that technology in any kind of production project (i.e. not just a demo or experiment).
-See also the definition of experimental in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information).
+See also the definition of experimental in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
 
 Conversely, an item is no longer experimental when:
 
@@ -60,7 +60,7 @@ A good example is the [B2G (Firefox OS) project](/en-US/docs/Archive/B2G_OS).
 
 A page should be archived if it fits the above description.
 To archive a page, you should use the "Move page feature" (_Advanced > Move this article_) to move the page into the Archive page tree (/en-US/docs/Archive).
-You might not have the permissions to use this feature, and before you start archiving pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
+You might not have the permissions to use this feature, and before you start archiving pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Deleted pages
 
@@ -73,7 +73,7 @@ These might be:
 - Articles covering techniques that were later shown to be bad practice and superseded by better techniques.
 - Articles containing information that were later replaced by other, better quality articles.
 - Articles containing content that is inappropriate for MDN.
-- Translations that are old, out-of-date, and difficult to fix, meaning that the English version is preferrable and starting a new translation would be an easier option.
+- Translations that are old, out-of-date, and difficult to fix, meaning that the English version is preferable and starting a new translation would be an easier option.
 
 #### When should a page be deleted?
 
@@ -223,5 +223,5 @@ In such cases, consider what the reality is — i.e. what browsers are actually 
 For example, as of Jan 2019 the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute has a conflict, which was summarized like so:
 
 > **Warning:** Spec conflict: The [WHATWG spec lists `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode), and modern browsers are working towards supporting it.
-> The [W3C HTML 5.2 spec](https://www.w3.org/TR/html52/index.html#contents) however no longer lists it (i.e. marks it as obsolete).
+> The [W3C HTML 5.2 spec](https://html.spec.whatwg.org/multipage/index.html#contents) however no longer lists it (i.e. marks it as obsolete).
 > You should consider the WHATWG definition as correct, until a consensus is reached.=

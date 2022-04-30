@@ -21,11 +21,9 @@ when the `requestPayerPhone` option is set to `true` in the
 {{domxref('PaymentOptions')}} object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
-## Syntax
+## Value
 
-```js
-var payerPhone = PaymentResponse.payerPhone;
-```
+A string.
 
 ## Browser compatibility
 

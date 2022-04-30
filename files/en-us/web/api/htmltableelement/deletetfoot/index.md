@@ -18,10 +18,14 @@ The **`HTMLTableElement.deleteTFoot()`** method removes the
 ## Syntax
 
 ```js
-HTMLTableElement.deleteTFoot();
+deleteTFoot()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 This example uses JavaScript to delete a table's footer.
 
@@ -45,7 +49,7 @@ table.deleteTFoot();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

@@ -50,6 +50,7 @@ place-content: stretch space-evenly;
 place-content: inherit;
 place-content: initial;
 place-content: revert;
+place-content: revert-layer;
 place-content: unset;
 ```
 

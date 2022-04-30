@@ -20,8 +20,12 @@ To track the success or failure of the request, it is necessary to listen for th
 ## Syntax
 
 ```js
-document.exitPointerLock();
+exitPointerLock()
 ```
+
+### Parameters
+
+None.
 
 ## Specifications
 

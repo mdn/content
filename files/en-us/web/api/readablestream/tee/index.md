@@ -29,7 +29,7 @@ will generally lock it for the duration, preventing other readers from locking i
 ## Syntax
 
 ```js
-var teedStreams = readableStream.tee();
+tee()
 ```
 
 ### Parameters
@@ -42,8 +42,8 @@ An {{jsxref("Array")}} containing two {{domxref("ReadableStream")}} instances.
 
 ### Exceptions
 
-- TypeError
-  - : The source stream is not a `ReadableStream`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source stream is not a `ReadableStream`.
 
 ## Examples
 

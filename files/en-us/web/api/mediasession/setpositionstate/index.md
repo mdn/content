@@ -33,7 +33,8 @@ Call this method on the `navigator` object's
 ## Syntax
 
 ```js
-navigator.mediaSession.setPositionState(stateDict);
+setPositionState()
+setPositionState(stateDict)
 ```
 
 ### Parameters
@@ -58,7 +59,7 @@ navigator.mediaSession.setPositionState(stateDict);
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : This error can occur in an array of circumstances:
 
@@ -68,7 +69,7 @@ navigator.mediaSession.setPositionState(stateDict);
       either negative or greater than `duration`.
     - Its `playbackRate` is zero.
 
-## Example
+## Examples
 
 Below is a function which updates the position state of the current
 {{domxref('MediaSession')}} track.

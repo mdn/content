@@ -25,7 +25,7 @@ KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric
 ## Syntax
 
 ```js
-var value = KeyboardLayoutMap.get(key)
+get(key)
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ var value = KeyboardLayoutMap.get(key)
 
 The value of the specified key.
 
-## Example
+## Examples
 
 The following example demonstrates how to get the location- or layout-specific string
 associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.

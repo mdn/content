@@ -25,13 +25,7 @@ uniquely identifies the {{domxref("RTCIceTransport")}} that was inspected to obt
 the transport-related statistics contained in the
 {{domxref("RTCIceCandidatePairStats")}} object.
 
-## Syntax
-
-```js
-transportId = rtcIceCandidatePairStats.transportId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which uniquely identifies the `RTCIceTransport`
 object from which the transport-related data was obtained for the statistics contained

@@ -24,7 +24,7 @@ rid of the stream and discard any enqueued chunks, you'd use
 ## Syntax
 
 ```js
-readableStreamDefaultController.close();
+close()
 ```
 
 ### Parameters
@@ -37,8 +37,8 @@ None.
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 

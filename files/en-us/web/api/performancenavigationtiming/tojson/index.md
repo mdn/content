@@ -16,21 +16,20 @@ a JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.
 ## Syntax
 
 ```js
-json = resourcePerfEntry.toJSON();
+toJSON()
 ```
 
-### Arguments
+### Parameters
 
-None
+None.
 
 ### Return value
 
-- json
-  - : A JSON object that is the serialization of the
+A JSON object that is the serialization of the
     {{domxref("PerformanceNavigationTiming")}} object as a map with entries from the
     closest inherited interface and with entries for each of the serializable attributes.
 
-## Example
+## Examples
 
 ```js
 // Get a resource performance entry

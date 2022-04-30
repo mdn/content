@@ -24,10 +24,14 @@ The `abort` method is used to release the lock on the
 ## Syntax
 
 ```js
-var request = instanceOfLockedFile.abort();
+abort()
 ```
 
-### Return
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
 

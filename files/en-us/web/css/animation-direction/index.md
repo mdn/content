@@ -34,6 +34,7 @@ animation-direction: alternate, reverse, normal;
 animation-direction: inherit;
 animation-direction: initial;
 animation-direction: revert;
+animation-direction: revert-layer;
 animation-direction: unset;
 ```
 

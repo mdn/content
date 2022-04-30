@@ -32,14 +32,14 @@ Request API (or even provide instructions for paying by mail or by phone).
 ## Syntax
 
 ```js
-paymentRequest.canMakePayment()
-    .then( canPay => { /* ... */ })
-    .catch( error => { /* ... */ })
-
-canPay = await paymentRequest.canMakePayment();
+canMakePayment()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} to a boolean value that resolves to `true`
 if the user agent supports any of the payment methods supplied when instantiating the
@@ -49,10 +49,6 @@ constructor. If the payment can't be processed, the promise receives a value of
 
 > **Note:** If you call this too often, the browser may reject the
 > returned promise with a `DOMException`.
-
-### Parameters
-
-None
 
 ## Examples
 

@@ -20,10 +20,14 @@ The returned clone is copied by value, not reference, so a change in either
 ## Syntax
 
 ```js
-clone = range.cloneRange();
+cloneRange()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 ```js
 range = document.createRange();

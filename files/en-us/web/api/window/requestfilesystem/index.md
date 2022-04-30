@@ -24,12 +24,13 @@ The non-standard {{domxref("Window")}} method
 method which lets a web site or app gain access to a sandboxed file system for its own
 use. The returned {{domxref("FileSystem")}} is then available for use with the other [file system APIs](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
-## Syntax
-
 > **Note:** This method is prefixed with `webkit` in all browsers that implement it.
 
+## Syntax
+
 ```js
-window.requestFileSystem(type, size, successCallback[, errorCallback]);
+requestFileSystem(type, size, successCallback)
+requestFileSystem(type, size, successCallback, errorCallback)
 ```
 
 ### Parameters

@@ -10,7 +10,7 @@ tags:
 
 Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.
 
-Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardwares).
+Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardware).
 
 The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.
 
@@ -262,7 +262,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
     };
 
     const processData = () => {
-        // Create one big buffer with all all the chunks
+        // Create one big buffer with all the chunks
         const stringData = Buffer.concat(chunks);
 
         // The browser will emit the size as a header of the payload,

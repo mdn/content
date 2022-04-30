@@ -24,7 +24,7 @@ invoking the close behavior. During this time any further attempts to write will
 ## Syntax
 
 ```js
-var promise = writableStreamDefaultWriter.close();
+close()
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ a problem was encountered during the process.
 
 ### Exceptions
 
-- TypeError
+- {{jsxsref("TypeError")}}
   - : The stream you are trying to close is not a {{domxref("WritableStream")}}.
 
 ## Examples

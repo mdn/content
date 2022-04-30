@@ -26,11 +26,9 @@ document, that is when its {{domxref("Document.readyState")}} changes to
 `'complete'` and the corresponding {{event("readystatechange")}} event is
 thrown.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domComplete;
-```
+An `unsigned long long`.
 
 ## Specifications
 

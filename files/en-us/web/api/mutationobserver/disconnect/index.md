@@ -32,7 +32,7 @@ The observer can be reused by calling its
 ## Syntax
 
 ```js
-mutationObserver.disconnect()
+disconnect()
 ```
 
 ### Parameters
@@ -53,7 +53,7 @@ by the browser's garbage collection mechanism, the `MutationObserver` will stop 
 the removed element. However, the `MutationObserver` itself can continue to exist to observe
 other existing elements.
 
-## Example
+## Examples
 
 This example creates an observer, then disconnects from it, leaving it available for
 possible reuse.

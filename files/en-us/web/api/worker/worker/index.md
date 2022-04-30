@@ -35,9 +35,13 @@ new Worker(aURL, options);
 
 ### Exceptions
 
-- A `SecurityError` is raised if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.
-- A `NetworkError` is raised if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript` (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) may be accepted).
-- A `SyntaxError` is raised if _aURL_ cannot be parsed.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.
+- `NetworkError` {{domxref("DOMException")}}
+  - : Thrown if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript` 
+    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) may be accepted).
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if _aURL_ cannot be parsed.
 
 ## Examples
 

@@ -1,7 +1,7 @@
 ---
 title: 'aria-rowspan'
 slug: Web/Accessibility/ARIA/Attributes/aria-rowspan
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -30,9 +30,9 @@ The value of `aria-rowspan` is an integer greater than or equal to 0 and less th
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRowSpan")}}
-  - : The  [`ariaRowSpan`](/en-US/docs/Web/API/Element/ariaRowSpan) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowspan` attribute.
+  - : The [`ariaRowSpan`](/en-US/docs/Web/API/Element/ariaRowSpan) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowspan` attribute.
 - {{domxref("ElementInternals.ariaRowSpan")}}
-  - : The  [`ariaRowSpan`](/en-US/docs/Web/API/ElementInternals/ariaRowSpan) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowspan` attribute.
+  - : The [`ariaRowSpan`](/en-US/docs/Web/API/ElementInternals/ariaRowSpan) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowspan` attribute.
 
 ## Associated roles
 

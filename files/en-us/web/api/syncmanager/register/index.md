@@ -20,13 +20,9 @@ The **`SyncManager.register`** method of the
 ## Syntax
 
 ```js
-SyncManager.register([options]).then(function(syncRegistration) { /* ... */ })
+register()
+register(options)
 ```
-
-### Returns
-
-A {{jsxref("Promise")}} that resolves to an instance of
-{{domxref("SyncRegistration")}}.
 
 ### Parameters
 
@@ -56,6 +52,11 @@ A {{jsxref("Promise")}} that resolves to an instance of
       `'network-offline'`, `'network-online'`,
       `'network-non-mobile'`. The default value is
       `'network-online'`.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to an instance of
+{{domxref("SyncRegistration")}}.
 
 ## Browser compatibility
 
