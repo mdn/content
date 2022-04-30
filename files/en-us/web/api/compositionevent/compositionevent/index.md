@@ -17,15 +17,15 @@ constructor creates a new {{domxref("CompositionEvent")}} object instance.
 
 ```js
 new CompositionEvent(typeArg)
-new CompositionEvent(typeArg, CompositionEventInit)
+new CompositionEvent(typeArg, compositionEventInit)
 ```
 
-### Values
+### Parameters
 
 - `typeArg`
   - : Is a string representing the name of the event.
-- `CompositionEventInit` {{optional_inline}}
 
+- `CompositionEventInit` {{optional_inline}}
   - : A `CompositionEventInit` dictionary object, which can contain the
     following members:
 

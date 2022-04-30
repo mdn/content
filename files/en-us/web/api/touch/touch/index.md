@@ -19,7 +19,7 @@ The **`Touch()`** constructor creates a new {{domxref("Touch")}} object.
 new Touch(touchInit)
 ```
 
-### Arguments
+### Parameters
 
 - _touchInit_
 

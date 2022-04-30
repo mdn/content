@@ -22,10 +22,10 @@ The **`TransitionEvent()`** constructor returns a newly created
 ```js
 new TransitionEvent(type, {propertyName : aPropertyName,
                            elapsedTime  : aFloat,
-                           pseudoElement: aPseudoElementName});
+                           pseudoElement: aPseudoElementName})
 ```
 
-### Arguments
+### Parameters
 
 _The `TransitionEvent()` constructor also inherits arguments from
 {{domxref("Event.Event", "Event()")}}._
