@@ -13,7 +13,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
-Everything in CSS has a box around it, and understanding these boxes is key to being able to create more complex layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the CSS _Box Model_. You'll get an understanding of how it works and the terminology that relates to it.
+Everything in CSS has a box around it, and understanding these boxes is key to being able to create more complex layouts with CSS, or to align items with other items. In this lesson, we will take a look at the CSS _Box Model_. You'll get an understanding of how it works and the terminology that relates to it.
 
 <table>
   <tbody>
@@ -47,7 +47,9 @@ Everything in CSS has a box around it, and understanding these boxes is key to b
 
 ## Block and inline boxes
 
-In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. The type affects the behavior of the box in relation to page flow and other boxes on the page. Boxes have an **inner display type** and an **outer display type**. We'll start explaining the block box and inline box concept. And later, we'll tackle the inner and outer display types. 
+In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. The type affects the behavior of the box in terms of page flow and in relation to other boxes on the page. Boxes have an **inner display type** and an **outer display type**. Let's start with the outer type.
+
+You can set the values of the {{cssxref("display")}} property to `block` or `inline`. This defines the type of box applied to an element and relates to the outer display type.
 
 If a box has an outer display type of `block`, then:
 
@@ -67,11 +69,9 @@ If a box has an outer display type of `inline`, then:
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
-The type of box applied to an element is defined by {{cssxref("display")}} property values such as `block` and `inline`, and relates to the **outer** value of `display`.
-
 ## Aside: Inner and outer display types
 
-At this point, we'd better also explain **inner** and **outer** display types. As mentioned above, boxes in CSS have an _outer_ display type, which details whether the box is block or inline.
+At this point, we'd better also explain **inner** and **outer** display types. As mentioned above, boxes in CSS have an
 
 Boxes also have an _inner_ display type, however, which dictates how elements inside that box are laid out. By default, the elements inside a box are laid out in **[normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)**, which means that they behave just like any other block and inline elements (as explained above).
 
@@ -214,7 +214,7 @@ We can control all margins of an element at once using the {{cssxref("margin")}}
 
 A key thing to understand about margins is the concept of **margin collapsing**:
 - Positive margins on two elements whose margins touch will combine to become one margin. Its size will be equal to the largest individual margin.
-- If one margin is negative, its value will be _subtracted_ from the total. 
+- If one margin is negative, its value will be _subtracted_ from the total.
 - Where both are negative, the margins will collapse and the smallest (furthest from zero) value will be used.
 
 In the example below, we have two paragraphs. The top paragraph has a `margin-bottom` of 50 pixels, the other has a `margin-top` of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.
@@ -223,7 +223,7 @@ In the example below, we have two paragraphs. The top paragraph has a `margin-bo
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}}
 
-A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect. 
+A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
 
 ### Borders
 
