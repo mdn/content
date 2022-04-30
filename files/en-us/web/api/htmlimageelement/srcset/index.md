@@ -62,7 +62,7 @@ candidates match. Otherwise, the condition descriptor may take one of two forms:
   specifies the condition in which the corresponding image resource should be used as
   the display's pixel density. This is written by stating the pixel density as a
   positive, non-zero floating-point value followed by the lower-case letter "x". As an
-  example, to state that the corresponding  image should be used when the pixel density
+  example, to state that the corresponding image should be used when the pixel density
   is double the standard density, you can give the pixel density descriptor
   `2x` or `2.0x`.
 

@@ -51,7 +51,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How
 You can check the setting selected by the user agent after the display media has been
 created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
-video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
+video {{domxref("MediaStreamTrack")}}, then checking the value of the returned
 {{domxref("MediaTrackSettings")}} object's
 {{domxref("MediaTrackSettings.displaySurface", "displaySurface")}} object.
 
