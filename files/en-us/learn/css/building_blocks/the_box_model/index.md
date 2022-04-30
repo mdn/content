@@ -230,10 +230,10 @@ We can control all margins of an element at once using the {{cssxref("margin")}}
 
 #### Margin collapsing
 
-A key thing to understand about margins is the concept of **margin collapsing**:
-- Positive margins on two elements whose margins touch will combine to become one margin. Its size will be equal to the largest individual margin.
+Depending on whether two elements whose margins touch have positive or negative margins, the results will be different:
+- Two positive margins will combine to become one margin. Its size will be equal to the largest individual margin.
+- Two negative margins will collapse and the smallest (furthest from zero) value will be used.
 - If one margin is negative, its value will be _subtracted_ from the total.
-- Where both are negative, the margins will collapse and the smallest (furthest from zero) value will be used.
 
 In the example below, we have two paragraphs. The top paragraph has a `margin-bottom` of 50 pixels, the other has a `margin-top` of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.
 
