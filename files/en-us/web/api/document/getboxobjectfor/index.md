@@ -28,7 +28,7 @@ getBoxObjectFor(element)
 
 ### Return value
 
-An `nsIBoxObject`.
+A `nsIBoxObject`.
 
 ## Examples
 
