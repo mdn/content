@@ -83,40 +83,44 @@ If you look more into CSS layout, you will also come across other inner values y
 
 ## Examples of different display types
 
-Let's have a look at some examples. Below we have three different HTML elements, all of which have an outer display type of `block`. The first is a paragraph, which has a border added in CSS. The browser renders this as a block box, so the paragraph begins on a new line, and expands to the full width available to it.
+Below we have three different HTML elements, all of which have an outer display type of `block`.
 
-The second is a list, which is laid out using `display: flex`. This establishes flex layout for the items inside the container, however, the list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.
+- A paragraph with a border added in CSS. The browser renders this as a block box. The paragraph starts on a new line and uses the entire available width.
 
-Below this, we have a block-level paragraph, inside which are two `<span>` elements. These elements would normally be `inline`, however, one of the elements has a class of block, and we have set it to `display: block`.
+- A list, which is laid out using `display: flex`. This establishes flex layout for the items inside the container. The list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.
+
+- A block-level paragraph, inside which are two `<span>` elements. These elements would normally be `inline`, however, one of the elements has a class of block, and we have set it to `display: block`.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1100)}}
 
-In the next example, we can see how `inline` elements behave. The `<span>` elements in the first paragraph are inline by default and so do not force line breaks.
+In the next example, we can see how `inline` elements behave.
 
-We also have a `<ul>` element which is set to `display: inline-flex`, creating an inline box around some flex items.
+- The `<span>` elements in the first paragraph are inline by default and so do not force line breaks.
 
-Finally, we have two paragraphs both set to `display: inline`. The inline flex container and paragraphs all run together on one line rather than breaking onto new lines as they would do if they were displaying as block-level elements.
+- The `<ul>` element that is set to `display: inline-flex` creates an inline box around some flex items.
 
-**In the example, you can change `display: inline` to `display: block` or `display: inline-flex` to `display: flex` to toggle between these display modes.**
+- The two paragraphs are both set to `display: inline`. The inline flex container and paragraphs all run together on one line rather than breaking onto new lines (as they would do if they were displaying as block-level elements).
+
+**To toggle between the display modes, you can change `display: inline` to `display: block` or `display: inline-flex` to `display: flex`.**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1100)}}
 
-You will encounter things like flex layout later in these lessons; the key thing to remember for now is that changing the value of the `display` property can change whether the outer display type of a box is block or inline, which changes the way it displays alongside other elements in the layout.
-
-In the rest of the lesson, we will concentrate on the outer display type.
+The key thing to remember for now is: Changing the value of the `display` property can change whether the outer display type of a box is block or inline. This changes the way it displays alongside other elements in the layout.
 
 ## What is the CSS box model?
 
-The CSS box model as a whole applies to block boxes. Inline boxes use just _some_ of the behavior defined in the box model. The model defines how the different parts of a box — margin, border, padding, and content — work together to create a box that you can see on a page. To add some additional complexity, there is a standard and an alternate box model.
+The CSS box model as a whole applies to block boxes and defines how the different parts of a box — margin, border, padding, and content — work together to create a box that you can see on a page. Inline boxes use just _some_ of the behavior defined in the box model.
+
+To add complexity, there is a standard and an alternate box model. By default, browsers use the standard box model.
 
 ### Parts of a box
 
 Making up a block box in CSS we have the:
 
-- **Content box**: The area where your content is displayed, which can be sized using properties like {{cssxref("width")}} and {{cssxref("height")}}.
-- **Padding box**: The padding sits around the content as white space; its size can be controlled using {{cssxref("padding")}} and related properties.
-- **Border box**: The border box wraps the content and any padding. Its size and style can be controlled using {{cssxref("border")}} and related properties.
-- **Margin box**: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements. Its size can be controlled using {{cssxref("margin")}} and related properties.
+- **Content box**: The area where your content is displayed; size it using properties like {{cssxref("width")}} and {{cssxref("height")}}.
+- **Padding box**: The padding sits around the content as white space; size it using {{cssxref("padding")}} and related properties.
+- **Border box**: The border box wraps the content and any padding; size it using {{cssxref("border")}} and related properties.
+- **Margin box**: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements, size it using {{cssxref("margin")}} and related properties.
 
 The below diagram shows these layers:
 
@@ -124,9 +128,9 @@ The below diagram shows these layers:
 
 ### The standard CSS box model
 
-In the standard box model, if you give a box a `width` and a `height` attribute, this defines the width and height of the _content box_. Any padding and border is then added to that width and height to get the total size taken up by the box. This is shown in the image below.
+In the standard box model, if you give a box a `width` and a `height` attribute, this defines the width and height of the _content box_. Any padding and border is then added to that width and height to get the total size taken up by the box (see image below).
 
-If we assume that a box has the following CSS defining `width`, `height`, `margin`, `border`, and `padding`:
+If we assume that a box has the following CSS:
 
 ```css
 .box {
@@ -146,7 +150,9 @@ The _actual_ space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5
 
 ### The alternative CSS box model
 
-By default, browsers use the standard box model described above. If it feels inconvenient to have to add up the border and padding to get the real size of the box, CSS provides an alternative box model. To turn on the alternative model for an element, set `box-sizing: border-box` on it. This tells the browser to use the border box as your defined area.
+In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border (see image below). No need to add up the border and padding to get the real size of the box.
+
+To turn on the alternative model for an element, set `box-sizing: border-box` on it.
 
 ```css
 .box {
@@ -154,11 +160,23 @@ By default, browsers use the standard box model described above. If it feels inc
 }
 ```
 
-When you use this model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border. In the example below, the same CSS as used above leads to the following result  (width = 350px, height = 150px):
+If we assume the box has the same CSS as above:
+
+```css
+.box {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  padding: 25px;
+  border: 5px solid black;
+}
+```
+
+The _actual_ space taken up by the box will be 350px wide and 150px high.
 
 ![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
 
-If you want all of your elements to use the alternative box model (which is a common choice among developers), set the `box-sizing` property on the `<html>` element and set all other elements to inherit that value, as in the snippet below. If you want to understand the thinking behind this, see [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+To use the alternative box model for all of your elements (which is a common choice among developers), set the `box-sizing` property on the `<html>` element and set all other elements to inherit that value:
 
 ```css
 html {
@@ -168,6 +186,8 @@ html {
   box-sizing: inherit;
 }
 ```
+
+If you want to understand the thinking behind this, see [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
 
 > **Note:** An interesting bit of history — Internet Explorer used to default to the alternative box model, with no mechanism available to switch.
 
