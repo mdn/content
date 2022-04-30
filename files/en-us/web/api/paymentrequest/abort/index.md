@@ -27,7 +27,7 @@ abort()
 
 None.
 
-### Returns value
+### Return value
 
 None ({{jsxref('undefined')}}).
 
