@@ -20,7 +20,7 @@ The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' 
 Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("transitionProperty")}}.
 
 - {{domxref("CSSTransition.transitionProperty")}}{{readonlyinline}}
-  - : Returns the transition CSS property name as a {{domxref("CSSOMString")}}.
+  - : Returns the transition CSS property name as a string.
 
 ### Event handlers
 

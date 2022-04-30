@@ -30,7 +30,7 @@ Each exception has a **name**, which is a short "PascalCase"-style string identi
 - {{domxref("DOMException.message")}} {{readOnlyInline}}
   - : Returns a {{ domxref("DOMString") }} representing a message or description associated with the given [error name](#error_names).
 - {{domxref("DOMException.name")}} {{readOnlyInline}}
-  - : Returns a {{domxref("DOMString")}} that contains one of the strings associated with an [error name](#error_names).
+  - : Returns a string that contains one of the strings associated with an [error name](#error_names).
 
 ## Error names
 

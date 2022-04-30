@@ -25,7 +25,7 @@ interface represents the current computed CSS property value.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the current CSS property value.
+A string representing the current CSS property value.
 
 ## Examples
 

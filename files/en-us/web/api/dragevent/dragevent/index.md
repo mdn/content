@@ -30,7 +30,7 @@ new DragEvent(type, DragEventInit);
 ### Arguments
 
 - _type_
-  - : Is a `{{domxref("DOMString")}}` representing the name of the event (see
+  - : Is a `string` representing the name of the event (see
     [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
 - _DragEventInit_{{optional_inline}}
 

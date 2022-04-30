@@ -23,7 +23,7 @@ new CompositionEvent(typeArg, CompositionEventInit)
 ### Values
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : Is a string representing the name of the event.
 - `CompositionEventInit` {{optional_inline}}
 
   - : A `CompositionEventInit` dictionary object, which can contain the
