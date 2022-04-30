@@ -18,7 +18,7 @@ that generated the `CompositionEvent` object.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the event data:
+A string representing the event data:
 
 - For `compositionstart` events, this is the currently selected text that
   will be replaced by the string being composed. This value doesn't change even if

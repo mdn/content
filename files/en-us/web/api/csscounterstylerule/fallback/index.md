@@ -15,7 +15,7 @@ The **`fallback`** property of the {{domxref("CSSCounterStyleRule")}} interface 
 
 ## Value
 
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

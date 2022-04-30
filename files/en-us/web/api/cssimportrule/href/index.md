@@ -21,7 +21,7 @@ associated stylesheet.
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

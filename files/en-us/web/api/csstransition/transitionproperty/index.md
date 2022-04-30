@@ -18,7 +18,7 @@ transition was generated.
 
 ## Value
 
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

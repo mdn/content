@@ -24,15 +24,15 @@ This interface inherits properties from {{domxref("MouseEvent")}} and
 ## Syntax
 
 ```js
-new DragEvent(type, DragEventInit);
+new DragEvent(type, dragEventInit)
 ```
 
-### Arguments
+### Parameters
 
-- _type_
-  - : Is a `{{domxref("DOMString")}}` representing the name of the event (see
+- `type`
+  - : Is a string representing the name of the event (see
     [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
-- _DragEventInit_{{optional_inline}}
+- `dragEventInit` {{optional_inline}}
 
   - : Is a `DragEventInit` dictionary, having the following fields:
 

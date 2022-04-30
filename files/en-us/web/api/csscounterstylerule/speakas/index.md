@@ -15,7 +15,7 @@ The **`speakAs`** property of the {{domxref("CSSCounterStyleRule")}} interface g
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 
