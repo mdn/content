@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: menuitem role'
 slug: Web/Accessibility/ARIA/Roles/menuitem_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
