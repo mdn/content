@@ -20,8 +20,12 @@ object.
 ## Syntax
 
 ```js
-new Range();
+new Range()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 

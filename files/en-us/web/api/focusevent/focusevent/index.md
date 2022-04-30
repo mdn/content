@@ -23,7 +23,7 @@ new FocusEvent(typeArg);
 new FocusEvent(typeArg, focusEventInit);
 ```
 
-### Properties
+### Parameters
 
 _The `FocusEvent()` constructor also inherits arguments from
 {{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event",

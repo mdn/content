@@ -16,15 +16,15 @@ The **`UIEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new UIEvent(typeArg);
-new UIEvent(typeArg, UIEventInit);
+new UIEvent(typeArg)
+new UIEvent(typeArg, uiEventInit)
 ```
 
-### Values
+### Parameters
 
 - `typeArg`
   - : Is a {{domxref("DOMString")}} representing the name of the event.
-- `UIEventInit` {{optional_inline}}
+- `uiEventInit` {{optional_inline}}
 
   - : Is a `UIEventInit` dictionary, having the following fields:
 
