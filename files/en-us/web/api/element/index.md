@@ -184,15 +184,15 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("EventTarget.addEventListener()")}}
   - : Registers an event handler to a specific event type on the element.
 - {{DOMxRef("Element.after()")}}
-  - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the `Element`'s parent, just after the `Element`.
+  - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
 - {{DOMxRef("Element.attachShadow()")}}
   - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.animate()")}} {{Experimental_Inline}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
 - {{DOMxRef("Element.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the element.
+  - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.
 - {{DOMxRef("Element.before()")}}
-  - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the `Element`'s parent, just before the `Element`.
+  - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
 - {{DOMxRef("Element.closest()")}}
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
 - {{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -242,7 +242,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.matches()")}}
   - : Returns a boolean value indicating whether or not the element would be selected by the specified selector string.
 - {{DOMxRef("Element.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the element.
+  - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
 - {{DOMxRef("Element.querySelector()")}}
   - : Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.
 - {{DOMxRef("Element.querySelectorAll()")}}
@@ -262,7 +262,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.replaceChildren()")}}
   - : Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.
 - {{DOMxRef("Element.replaceWith()")}}
-  - : Replaces the element in the children list of its parent with a set of {{domxref("Node")}} or string objects.
+  - : Replaces the element in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
 - {{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}
   - : Asynchronously asks the browser to make the element fullscreen.
 - {{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}
