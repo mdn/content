@@ -103,5 +103,5 @@ When using the inline HTML markup (`<body onerror="alert('an error occurred')">`
 
 ## See also
 
-- [Capture and report JavaScript errors with window.onerror (blog.sentry.io, 2016)](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror)
+- [Capture and report JavaScript errors with window.onerror (blog.sentry.io, 2016)](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror/)
 - [How to catch JavaScript Errors with window.onerror (even on Chrome and Firefox) (danlimerick.wordpress.com, 2014)](https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/)

@@ -16,7 +16,7 @@ browser-compat: css.at-rules.media.-webkit-transition
 
 The **`-webkit-transition`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Chrome extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if the browsing context supports [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions). It was never supported in browsers not based on WebKit or Blink.
 
-Apple has [a description in Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3); this is now called `transition` there.
+Apple has [a description in Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3); this is now called `transition` there.
 
 > **Note:** You should not use this media feature; it was never specified, has never been widely implemented, and has been removed from all browsers. Use an {{cssxref("@supports")}} feature query instead.
 

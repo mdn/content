@@ -12,7 +12,7 @@ tags:
 ---
 {{DefaultAPISidebar("DOM")}}
 
-This page describes how to use the [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core) API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.
+This page describes how to use the [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core/) API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.
 
 ### Dynamically creating a DOM tree
 
