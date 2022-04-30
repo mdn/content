@@ -74,7 +74,7 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .box {
@@ -157,7 +157,7 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .box {
@@ -210,7 +210,7 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .box {
