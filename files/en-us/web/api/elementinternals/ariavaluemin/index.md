@@ -19,7 +19,7 @@ The **`ariaValueMin`** property of the {{domxref("ElementInternals")}} interface
 
 ## Value
 
-A {{domxref("DOMString")}} which contains a number.
+A string which contains a number.
 
 ## Examples
 
