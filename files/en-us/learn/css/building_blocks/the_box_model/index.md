@@ -120,7 +120,7 @@ Making up a block box in CSS we have the:
 - **Content box**: The area where your content is displayed; size it using properties like {{cssxref("width")}} and {{cssxref("height")}}.
 - **Padding box**: The padding sits around the content as white space; size it using {{cssxref("padding")}} and related properties.
 - **Border box**: The border box wraps the content and any padding; size it using {{cssxref("border")}} and related properties.
-- **Margin box**: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements, size it using {{cssxref("margin")}} and related properties.
+- **Margin box**: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using {{cssxref("margin")}} and related properties.
 
 The below diagram shows these layers:
 
@@ -152,7 +152,7 @@ The _actual_ space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5
 
 In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border (see image below). No need to add up the border and padding to get the real size of the box.
 
-To turn on the alternative model for an element, set `box-sizing: border-box` on it.
+To turn on the alternative model for an element, set `box-sizing: border-box` on it:
 
 ```css
 .box {
@@ -172,7 +172,7 @@ If we assume the box has the same CSS as above:
 }
 ```
 
-The _actual_ space taken up by the box will be 350px wide and 150px high.
+Now, the _actual_ space taken up by the box will be 350px wide and 150px high.
 
 ![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
 
