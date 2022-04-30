@@ -13,8 +13,7 @@ browser-compat: api.URL.port
 {{ApiRef("URL API")}}
 
 The **`port`** property of the {{domxref("URL")}} interface is
-a {{domxref("USVString")}} containing the port number of the URL. If the URL does not
-contain an explicit port number, or the given port number matches the protocol's default, it will be set to `''`.
+a {{domxref("USVString")}} containing the port number of the URL. If an input string passed to URL() constructor doesn’t contain an explicit port number (e.g., https://localhost) or contains a port number that’s the default port number corresponding to the protocol part of the input string (e.g., https://localhost:443), then in the URL object the constructor returns, the value of the port property will be an empty string: `''`.
 
 {{AvailableInWorkers}}
 
