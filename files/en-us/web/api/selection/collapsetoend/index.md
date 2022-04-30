@@ -23,7 +23,7 @@ collapseToEnd()
 
 ### Parameters
 
-_None._
+None.
 
 ## Specifications
 

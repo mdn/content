@@ -21,7 +21,7 @@ toJSON()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

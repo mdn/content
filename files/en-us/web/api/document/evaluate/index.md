@@ -20,6 +20,8 @@ expression and other given parameters.
 evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 ```
 
+### Parameters
+
 - `xpathExpression` is a string representing the XPath to be evaluated.
 - `contextNode` specifies the _context node_ for the query (see
   the [XPath

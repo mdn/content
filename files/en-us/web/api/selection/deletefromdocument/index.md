@@ -23,7 +23,7 @@ deleteFromDocument()
 
 ### Parameters
 
-_None._
+None.
 
 ## Examples
 
