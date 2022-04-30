@@ -434,7 +434,7 @@ aside {
     <h2>Other things</h2>
     <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
@@ -511,7 +511,7 @@ aside {
   <aside><h2>Other things</h2>
     <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
@@ -594,7 +594,7 @@ aside {
   <aside><h2>Other things</h2>
     <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
