@@ -27,7 +27,7 @@ createSession(mediaKeySessionType)
 
 ### Parameters
 
-- `mediaKeySessionType`
+- `mediaKeySessionType`  {{optional_inline}}
   - : A string. Either "temporary" or "persistent-license". The default value is "temporary".
 
 ### Return value
