@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: scrollbar role'
 slug: Web/Accessibility/ARIA/Roles/scrollbar_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -46,7 +46,7 @@ Like a native scroll bar, users interact with `scrollbar` elements directly or i
 
 When using a mouse, the user must be able to activate the `scrollbar` by clicking the scroll arrows at either end of the scroll bar, if present, clicking an empty portion of the scroll track, as well as clicking and dragging the scroll thumb.
 
-Keyboard scrolling must also be supported. When focus is within the viewport controlled by a `scrollbar`, the <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> (or <kbd>Left Arrow</kbd> and <kbd>Right Arrow</kbd> for a horizontal scroll bar)  should move the scroll bar thumb proportionally. Additionally, the <kbd>Page Up</kbd>, <kbd>Page Down</kbd>, <kbd>Space</kbd>, and <kbd>Shift + Space</kbd> keys must move the content and the scroll thumb the height (or width) of the viewport for each key press until the bottom or top (or left or right) of the content is in view.
+Keyboard scrolling must also be supported. When focus is within the viewport controlled by a `scrollbar`, the <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> (or <kbd>Left Arrow</kbd> and <kbd>Right Arrow</kbd> for a horizontal scroll bar) should move the scroll bar thumb proportionally. Additionally, the <kbd>Page Up</kbd>, <kbd>Page Down</kbd>, <kbd>Space</kbd>, and <kbd>Shift + Space</kbd> keys must move the content and the scroll thumb the height (or width) of the viewport for each key press until the bottom or top (or left or right) of the content is in view.
 
 JavaScript must be used to translate the `scrollbar` action into scrolling commands, providing the user with feedback by:
 
@@ -56,7 +56,7 @@ JavaScript must be used to translate the `scrollbar` action into scrolling comma
 
 The default orientation of the `scrollbar` role is vertical. Including [`aria-orientation="vertical"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation), in this case, is optional. The orientation represents the orientation of the scrollbar and the scrolling effect on the viewing area controlled by the scrollbar. If the scrolling is left to right or right to left and not top to bottom, include `aria-orientation="horizontal"` on the element with the `scrollbar` role.
 
-> **Note:** An accessible name is **required**. If the `scrollbar` role is applied to an HTML {{HTMLElement('input')}} element (or `<meter>` or `<progress>` element), the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
+> **Note:** An accessible name is **required**. If the `scrollbar` role is applied to an HTML {{HTMLElement('input')}} element (or `<meter>` or `<progress>` element), the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
 ### All descendants are presentational
 
@@ -108,7 +108,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 - <kbd>Left Arrow</kbd>
   - : With horizontal scrolling, the content in the viewport moves left the width of one character with the thumb moving left across the scroll bar slider proportionally, until the left edge of the content abuts the left end of the viewport and the thumb is aligned on the left end of the scrollbar.
 - <kbd>Right Arrow</kbd>
-  - : With horizontal scrolling, the content in the viewport moves right the width of one character with the thumb moving right across the scroll bar slider proportionally, until the right edge of the content abuts the right end of the viewport and the thumb is aligned on the right end of the scrollbar.  
+  - : With horizontal scrolling, the content in the viewport moves right the width of one character with the thumb moving right across the scroll bar slider proportionally, until the right edge of the content abuts the right end of the viewport and the thumb is aligned on the right end of the scrollbar.
 - <kbd>Page Up</kbd>  and <kbd>Shift + Space</kbd>
   - : The content in the viewport moves up the height of one viewport with the thumb moving up the scroll bar slider proportionally, until the top of the content and scrollbar are reached.
 - <kbd>Page Down</kbd> and  <kbd>Space</kbd>

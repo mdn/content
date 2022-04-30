@@ -24,7 +24,7 @@ new ExtendableCookieChangeEvent(type, eventInitDict);
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with the value `"changed"` or `"deleted"`.
+  - : A string with the value `"changed"` or `"deleted"`.
 - `eventInitDict`{{Optional_Inline}}
 
   - : An object containing:

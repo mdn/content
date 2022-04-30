@@ -24,7 +24,7 @@ removeAllRanges()
 
 ### Parameters
 
-_None._
+None.
 
 ## Specifications
 

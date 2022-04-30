@@ -24,7 +24,7 @@ new EventSource(url, configuration);
 ### Parameters
 
 - `url`
-  - : A {{domxref("USVString")}} that represents the location of the remote resource
+  - : A string that represents the location of the remote resource
     serving the events/messages.
 - `configuration` {{optional_inline}}
 

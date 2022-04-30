@@ -21,7 +21,7 @@ the {{domxref("DedicatedWorkerGlobalScope")}}.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

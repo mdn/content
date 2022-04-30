@@ -17,7 +17,7 @@ The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The grouping element this element owns or controls is expanded.

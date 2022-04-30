@@ -53,7 +53,7 @@ _The `File` interface doesn't define any methods, but inherits methods from the 
 - {{DOMxRef("Blob.prototype.stream()")}}
   - : Transforms the `File` into a {{DOMxRef("ReadableStream")}} that can be used to read the `File` contents.
 - {{DOMxRef("Blob.prototype.text()")}}
-  - : Transforms the `File` into a stream and reads it to completion. It returns a promise that resolves with a {{DOMxRef("USVString")}} (text).
+  - : Transforms the `File` into a stream and reads it to completion. It returns a promise that resolves with a string (text).
 - {{DOMxRef("Blob.prototype.arrayBuffer()")}}
   - : Transforms the `File` into a stream and reads it to completion. It returns a promise that resolves with an {{jsxref("ArrayBuffer")}}.
 

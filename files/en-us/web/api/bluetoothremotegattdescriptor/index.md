@@ -37,7 +37,7 @@ which provides further information about a characteristic's value.
 
 - {{DOMxRef("BluetoothRemoteGATTDescriptor.readValue()")}}
   - : Returns a {{JSxRef("Promise")}} that resolves to
-    an {{JSxRef("ArrayBuffer")}} holding a duplicate  of the `value` property
+    an {{JSxRef("ArrayBuffer")}} holding a duplicate of the `value` property
     if it is available and supported. Otherwise it throws an error.
 - {{DOMxRef("BluetoothRemoteGATTDescriptor.writeValue()")}}
   - : Sets the value property to the bytes contained in an {{JSxRef("ArrayBuffer")}} and
