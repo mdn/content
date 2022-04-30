@@ -32,7 +32,7 @@ It can be used as both a setter and getter.
 ```
 
 ```js
-// An  element is in the document
+// An element is in the document
 const area1 = document.getElementById("area1");
 const area2 = document.getElementById("area2");
 

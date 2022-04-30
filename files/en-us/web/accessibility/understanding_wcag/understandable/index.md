@@ -1,6 +1,6 @@
 ---
 title: Understandable
-slug: Web/Accessibility/Understanding_WCAG/Understandable 
+slug: Web/Accessibility/Understanding_WCAG/Understandable
 tags:
   - Accessibility
   - HELP

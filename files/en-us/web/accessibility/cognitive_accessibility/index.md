@@ -1,6 +1,6 @@
 ---
 title: Cognitive accessibility
-slug: Web/Accessibility/Cognitive_accessibility 
+slug: Web/Accessibility/Cognitive_accessibility
 tags:
   - Accessibility
   - Best practices

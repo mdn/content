@@ -33,7 +33,7 @@ _Inherits properties from its parent, {{domxref("Event")}}._
 ## Methods
 
 - {{domxref("BeforeInstallPromptEvent.prompt()")}}
-  - : Allows a developer to show the install prompt at a time of their own choosing. This method returns a  {{jsxref("Promise")}}.
+  - : Allows a developer to show the install prompt at a time of their own choosing. This method returns a {{jsxref("Promise")}}.
 
 ## Example
 
