@@ -28,7 +28,7 @@ instead.
 
 ## Value
 
-Reading the value of `outerHTML` returns a {{domxref("DOMString")}}
+Reading the value of `outerHTML` returns a string
 containing an HTML serialization of the `element` and its descendants.
 Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified

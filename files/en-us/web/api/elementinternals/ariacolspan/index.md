@@ -19,7 +19,7 @@ The **`ariaColSpan`** property of the {{domxref("ElementInternals")}} interface 
 
 ## Value
 
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 

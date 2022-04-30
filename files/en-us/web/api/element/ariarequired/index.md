@@ -19,7 +19,7 @@ The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : Users need to provide input on an element before a form is submitted.

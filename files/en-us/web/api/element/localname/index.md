@@ -17,7 +17,7 @@ local part of the qualified name of an element.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the local part of the element's qualified name.
+A string representing the local part of the element's qualified name.
 
 ## Examples
 

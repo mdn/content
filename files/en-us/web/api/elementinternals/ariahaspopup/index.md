@@ -19,7 +19,7 @@ The **`ariaHasPopup`** property of the {{domxref("ElementInternals")}} interface
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"false"`
   - : The element does not have a popup.

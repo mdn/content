@@ -23,7 +23,7 @@ use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}
 
 ## Value
 
-A {{domxref("DOMString")}} containing the HTML serialization of the element's
+A string containing the HTML serialization of the element's
 descendants. Setting the value of `innerHTML` removes all of the element's
 descendants and replaces them with nodes constructed by parsing the HTML given in the
 string _htmlString_.
