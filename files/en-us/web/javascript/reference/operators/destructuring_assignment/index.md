@@ -210,7 +210,7 @@ function parseProtocol(url) {
     return false;
   }
   console.log(parsedURL);
-  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
+  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   // "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
 
   const [, protocol, fullhost, fullpath] = parsedURL;

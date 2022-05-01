@@ -53,7 +53,7 @@ new Exception(tag, payload, options)
 
 This example shows the creation of an exception using a simple tag.
 ```js
-// Create tag and use it to create an exception 
+// Create tag and use it to create an exception
 const tag = new WebAssembly.Tag({ parameters: ["i32", "f32"] });
 const exception = new WebAssembly.Exception(tag, [42, 42.3]);
 ```

@@ -35,7 +35,7 @@ setHTML(input, options)
 
      - `sanitizer`
        - : A {{domxref("Sanitizer")}} object which defines what elements of the input will be sanitized.
-         If not specified, the default {{domxref("Sanitizer")}} object is used. 
+         If not specified, the default {{domxref("Sanitizer")}} object is used.
 
 ### Return value
 

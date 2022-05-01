@@ -54,7 +54,7 @@ WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject )
     ...
 ```
 
-The WebAssembly module might then import the tag as shown below: 
+The WebAssembly module might then import the tag as shown below:
 
 ```wasm
 (module

@@ -52,7 +52,7 @@ It exports the method `run1` that can be called by external code to call `$throw
 
   ;; import function that will be referred to here as $throwExnWithStack
   (import "extmod" "throwExnWithStack" (func $throwExnWithStack (param i32) ) )
-  
+
   ;; call $throwExnWithStack passing 42 as parameter
   (func (export "run1")
 	i32.const 42

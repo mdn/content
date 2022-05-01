@@ -41,7 +41,7 @@ The `index`th node in the `nodeList` returned by the `item` method.
 
 - {{jsxref("TypeError")}}
   - : Thrown if no argument is provided.
-  
+
 ## Examples
 
 ```js
