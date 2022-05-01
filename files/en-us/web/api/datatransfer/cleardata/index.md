@@ -166,7 +166,7 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 ```
 
-{{EmbedLiveSample('Example', 300, 250)}}
+{{EmbedLiveSample('Examples', 300, 300)}}
 
 ## Specifications
 
