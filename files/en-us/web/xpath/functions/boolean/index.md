@@ -33,7 +33,7 @@ Boolean `true` or `false` after evaluating `expression`.
 
 ## Defined
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-boolean)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath/#function-boolean)
 
 ## Gecko support
 

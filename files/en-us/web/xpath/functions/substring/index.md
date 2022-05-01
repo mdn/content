@@ -36,7 +36,7 @@ As in other XPath functions, the position is not zero-based. The first character
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath/#function-substring)
 
 ### Gecko support
 

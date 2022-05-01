@@ -30,7 +30,7 @@ The nearest integer less then, greater than, or equal to*`decimal`*.
 
 ### Defined
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-round)
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath/#function-round)
 
 ### Gecko support
 

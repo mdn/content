@@ -26,7 +26,7 @@ The normalized string.
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-normalize-space)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath/#function-normalize-space)
 
 ### Gecko support
 

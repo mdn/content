@@ -32,7 +32,7 @@ for example:
 
 ### Defined
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-ceiling)
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath/#function-ceiling)
 
 ### Gecko support
 

@@ -26,7 +26,7 @@ An integer representing the number of nodes in a node-set.
 
 ### Defined
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-count)
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath/#function-count)
 
 ### Gecko support
 

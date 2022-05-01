@@ -26,7 +26,7 @@ Boolean `true` or `false`.
 
 ### Defined
 
-[XPath 1.0 15](https://www.w3.org/TR/xslt#function-function-available)
+[XPath 1.0 15](https://www.w3.org/TR/xslt/#function-function-available)
 
 ### Gecko support
 

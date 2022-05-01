@@ -28,7 +28,7 @@ starts-with(haystack, needle)
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-starts-with)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath/#function-starts-with)
 
 ### Gecko support
 

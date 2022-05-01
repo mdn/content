@@ -28,7 +28,7 @@ contains(haystack, needle)
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-contains)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath/#function-contains)
 
 ### Gecko support
 

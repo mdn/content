@@ -33,7 +33,7 @@ The resulting number after converting the object.
 
 ### Defined
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-number)
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath/#function-number)
 
 ### Gecko support
 

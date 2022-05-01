@@ -81,4 +81,4 @@ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
 ## See also
 
 - {{jsxref("Intl")}}
-- [A polyfill of `Intl.ListFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-listformat)
+- [A polyfill of `Intl.ListFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-listformat/)

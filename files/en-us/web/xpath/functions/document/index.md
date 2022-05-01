@@ -46,7 +46,7 @@ This function is an XSLT-specific addition to XPath. It is not a part of the cor
 
 ### Defined
 
-[XSLT 1.0 12.1](https://www.w3.org/TR/xslt#function-document)
+[XSLT 1.0 12.1](https://www.w3.org/TR/xslt/#function-document)
 
 ### Gecko support
 
