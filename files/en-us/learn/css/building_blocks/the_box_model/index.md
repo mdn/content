@@ -187,7 +187,7 @@ html {
 }
 ```
 
-If you want to understand the thinking behind this, see [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+To understand the underlying idea, you can read [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
 
 > **Note:** An interesting bit of history — Internet Explorer used to default to the alternative box model, with no mechanism available to switch.
 
