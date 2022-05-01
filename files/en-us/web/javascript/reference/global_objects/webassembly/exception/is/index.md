@@ -41,7 +41,7 @@ A boolean `true` if the specified tag matches the exception, and `false` otherwi
 The code below shows how to use `is()` to verify that a tag matches an [`Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception).
 
 ```js
-// Create tag and use it to create an exception 
+// Create tag and use it to create an exception
 const tag1 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
 const exception1 = new WebAssembly.Exception(tag1, [42, 42.3]);
 

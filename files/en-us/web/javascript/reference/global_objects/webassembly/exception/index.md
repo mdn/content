@@ -54,7 +54,7 @@ This example shows how to define a tag and import it into a module, then use it 
 
 Consider the following WebAssembly code, which is assumed to be compiled to a file **example.wasm**.
 - The module imports a tag that is referred to as `$tagname` internally and that has a single `i32` param.
-  The tag expects the tag to be passed using module `extmod` and tag `exttag`. 
+  The tag expects the tag to be passed using module `extmod` and tag `exttag`.
 - The `$throwException` function throws an exception using the `throw` keyword, taking the `$tagname` and the parameter argument.
 - The module exports the function `run1()` that throws an exception with the value "42".
 

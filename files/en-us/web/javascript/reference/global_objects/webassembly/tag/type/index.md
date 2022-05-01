@@ -43,7 +43,7 @@ The result is printed to the console:
 const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 console.log(tag.type());
 
-//Console output: 
+//Console output:
 // Object { parameters: (2) […] }
 //   parameters: Array [ "i32", "i64" ]
 //   <prototype>: Object { … }
