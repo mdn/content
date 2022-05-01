@@ -11,8 +11,10 @@ browser-compat: api.Document.evaluate
 ---
 {{ ApiRef("DOM") }}
 
-Returns an {{domxref("XPathResult")}} based on an [XPath](/en-US/docs/Web/XPath)
-expression and other given parameters.
+The **`evaluate()`** method of the {{domxref("Document")}} interface selects elements based on the [XPath](/en-US/docs/Web/XPath)
+expression given in parameters.
+
+XPath expressions can be evaluated on both HTML and XML documents.
 
 ## Syntax
 
@@ -22,23 +24,28 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 
 ### Parameters
 
-- `xpathExpression` is a string representing the XPath to be evaluated.
-- `contextNode` specifies the _context node_ for the query (see
-  the [XPath
-  specification](https://www.w3.org/TR/xpath/)). It's common to pass `document` as the context
-  node.
-- `namespaceResolver` is a function that will be passed any namespace
-  prefixes and should return a string representing the namespace URI associated with
-  that prefix. It will be used to resolve prefixes within the XPath itself, so that
-  they can be matched with the document. `null` is common for HTML
-  documents or when no namespace prefixes are used.
-- `resultType` is an integer that corresponds to the type of result
-  `XPathResult` to return. Use [named constant
-  properties](#result_types), such as `XPathResult.ANY_TYPE`, of the XPathResult
-  constructor, which correspond to integers from 0 to 9.
-- `result` is an existing `XPathResult` to use for the
-  results. `null` is the most common and will create a new
-  `XPathResult`
+- `xpathExpression`
+  - : A string representing the _xpath_ to be evaluated.
+- `contextNode`
+  - : The _context node_ for the query (see the [XPath specification](https://www.w3.org/TR/1999/REC-xpath-19991116/)).
+    It's common to pass `document` as the context node.
+- `namespaceResolver`
+  - : A function that will be passed any namespace prefixes
+    and should return a string representing the namespace URI associated with that prefix.
+    It will be used to resolve prefixes within the _xpath_ itself,
+    so that they can be matched with the document. 
+    The value `null` is common for HTML documents or when no namespace prefixes are used.
+- `resultType` 
+  - : An integer that corresponds to the type of result `XPathResult` to return.
+    Use [named constant properties](#result_types), such as `XPathResult.ANY_TYPE`,
+    of the XPathResult constructor, which correspond to integers from 0 to 9.
+- `result`
+  - : An existing `XPathResult` to use for the results. If set to`null` the method will create and return a new `XPathResult`.
+
+## Return value
+
+An {{domxref("XPathResult")}} linking to the selected nodes. If `result` was `null`, it is a new object,
+if not, it is the same object as the one passed as the `result` parameter.
 
 ## Examples
 
@@ -77,15 +84,7 @@ context node, document.body. If the "." was left out (leaving `//h2`) the
 query would start from the root node (`html`) which would be more
 wasteful.)
 
-See [Introduction to using XPath in
-JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) for more information.
-
-## Notes
-
-- XPath expressions can be evaluated on HTML and XML documents.
-- While using document.evaluate() works in FF2, in FF3 one must use
-  someXMLDoc.evaluate() if evaluating against something other than the current
-  document.
+See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) for more information.
 
 ## Result types
 
@@ -204,5 +203,4 @@ nodes may have moved, been changed, added, or removed.
 
 - {{domxref("Document.createExpression()")}}
 - {{domxref("XPathResult")}}
-- [XPath Code Snippets](/en-US/docs/Code_snippets/XPath)
 - [Check for browser support](https://codepen.io/johan/full/DJoqaX)
