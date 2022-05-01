@@ -118,4 +118,4 @@ Same example as before with a curved path and following the direction of the pat
 
 - [SVG](/en-US/docs/Web/SVG)
 - [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
-- [SMIL Specification](https://www.w3.org/TR/REC-smil//)
+- [SMIL Specification](https://www.w3.org/TR/REC-smil/)
