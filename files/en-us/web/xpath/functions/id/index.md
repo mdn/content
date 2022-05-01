@@ -31,7 +31,7 @@ A node-set containing the node or nodes identified by the given id or ids.
 
 ### Defined
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath/#function-id)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-id)
 
 ### Gecko support
 
