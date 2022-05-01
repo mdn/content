@@ -203,5 +203,4 @@ nodes may have moved, been changed, added, or removed.
 
 - {{domxref("Document.createExpression()")}}
 - {{domxref("XPathResult")}}
-- [XPath Code Snippets](/en-US/docs/Code_snippets/XPath)
 - [Check for browser support](https://codepen.io/johan/full/DJoqaX)
