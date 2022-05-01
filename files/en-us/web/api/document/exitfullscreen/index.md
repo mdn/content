@@ -57,7 +57,7 @@ document.onclick = function (event) {
 ```
 
 > **Note:** For a more complete example, see the
-> {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullScreen", "Example")}}.
+> {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullscreen", "Examples")}}.
 
 ## Specifications
 
