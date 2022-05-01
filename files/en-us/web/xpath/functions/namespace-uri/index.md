@@ -34,7 +34,7 @@ A string representing URI of the namespace in which the given node resides.
 
 ### Defined
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-local-name)
 
 ### Gecko support
 
