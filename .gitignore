@@ -5,3 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 _githistory.json
 .DS_Store
+jspm_packages
+.node_repl_history
+.cache/.rpt2_cache
+npm-debug.log*
