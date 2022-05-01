@@ -312,7 +312,7 @@ You see this fairly frequently in navigation bars. The navigation below is displ
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Box Model](/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The box model](/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks).
 
 ## Summary
 

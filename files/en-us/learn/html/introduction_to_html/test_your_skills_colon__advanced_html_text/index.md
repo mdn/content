@@ -12,7 +12,7 @@ tags:
 
 The aim of this skill test is to assess whether you've understood our [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) article.
 
-> **Note:** You can try out solutions in the interactive editors below; however, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
@@ -47,7 +47,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Assessment or further help
 
-You can practice these examples in the Interactive Editors above.
+You can practice these examples in the Interactive Editors mentioned above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 

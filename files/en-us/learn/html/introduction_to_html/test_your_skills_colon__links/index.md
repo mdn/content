@@ -12,7 +12,7 @@ tags:
 
 The aim of this skill test is to assess whether you've understood our [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) article.
 
-> **Note:** You can try out solutions in the interactive editors below; however, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
@@ -25,7 +25,7 @@ In this task we want you to help fill in the links on our Whales information pag
 - The second link should be turned into a link you can click to open up an email in the user's default mail application, with the recipient set as "whales\@example.com".
 - You'll get a bonus point if you also set it so that the subject line of the email is automatically filled in as "Question about Whales".
 
-> **Note:** The first link in the example has the `target="_blank"` attribute set on it, so that when you click on it, it opens the page in a new tab. This is not strictly best practice, but we've done it here so that the page doesn't open in the embedded `<iframe>`, getting rid of your example code in the process!
+> **Note:** The first link in the example has the `target="_blank"` attribute set on it, so that when you click on it, it opens the linked page in a new tab. This is not strictly best practice, but we've done it here so that the page doesn't open in the embedded `<iframe>`, getting rid of your example code in the process!
 
 Try updating the live code below to recreate the finished example:
 
@@ -73,7 +73,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Assessment or further help
 
-You can practice these examples in the Interactive Editors above.
+You can practice these examples in the Interactive Editors mentioned above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 

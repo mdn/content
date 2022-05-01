@@ -4,16 +4,19 @@ slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 tags:
   - Beginner
   - CSS
+  - Learn
+  - Selectors
+  - test your skills
 ---
 {{LearnSidebar}}
 
-The aim of this task is to help you check your understanding of selectors in CSS.
+The aim of this skill test is to assess whether you've understood our [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) article.
 
-> **Note:** You can try out solutions in the interactive editors below, however, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-## Selectors One
+## Selectors 1
 
 Without changing the HTML, use CSS to do the following things:
 
@@ -29,9 +32,9 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/type-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/type-download.html) to work in your own editor or in an online editor.
 
-## Selectors Two
+## Selectors 2
 
 Without changing the HTML, make the following changes to the look of the content in this example:
 
@@ -48,9 +51,9 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/class-id-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/class-id-download.html) to work in your own editor or in an online editor.
 
-## Selectors Three
+## Selectors 3
 
 In this example, try making the following changes without adding to the HTML.
 
@@ -66,9 +69,9 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/pseudo-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/pseudo-download.html) to work in your own editor or in an online editor.
 
-## Selectors Four
+## Selectors 4
 
 In this task try the following:
 
@@ -83,9 +86,9 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/combinators-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/combinators-download.html) to work in your own editor or in an online editor.
 
-## Selectors Five
+## Selectors 5
 
 In this final task add CSS using attribute selectors to do the following:
 
@@ -101,7 +104,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/attribute-links-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/attribute-links-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 
@@ -112,9 +115,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Selectors skill test 1".
+    - A descriptive title such as "Assessment wanted for Selectors 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.
-
-3. You Can find all the answers in [CodePen Collection](https://codepen.io/collection/DxBgky?grid_type=grid)

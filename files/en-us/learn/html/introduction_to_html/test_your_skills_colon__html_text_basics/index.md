@@ -12,13 +12,15 @@ tags:
 
 The aim of this skill test is to assess whether you've understood our [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) article.
 
-> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## HTML text basics 1
 
-In this task we want you to mark up the provided HTML using semantic heading and paragraph elements. Try updating the live code below to create the finished example:
+In this task we want you to mark up the provided HTML using semantic heading and paragraph elements.
+
+Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
 
@@ -30,7 +32,7 @@ In this task we want you to mark up the provided HTML using semantic heading and
 
 In this task we want you to turn the first un-marked up list into an unordered list, and the second one into an ordered list.
 
-Try updating the live code below to create the finished example:
+Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2.html", '100%', 700)}}
 
@@ -42,7 +44,7 @@ Try updating the live code below to create the finished example:
 
 In this task you are provided with a paragraph, and your aim is to use some inline elements to mark up a couple of appropriate words with strong importance, and a couple with emphasis.
 
-Try updating the live code below to create the finished example:
+Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3.html", '100%', 700)}}
 
@@ -52,7 +54,7 @@ Try updating the live code below to create the finished example:
 
 ## Assessment or further help
 
-You can practice these examples in the Interactive Editors above.
+You can practice these examples in the Interactive Editors mentioned above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
