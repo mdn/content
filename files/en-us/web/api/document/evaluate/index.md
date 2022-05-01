@@ -11,7 +11,7 @@ browser-compat: api.Document.evaluate
 ---
 {{ ApiRef("DOM") }}
 
-The **`evaluate()`** method of the {{domxref("Document")}} interface selects element of the `Document` based on the [XPath](/en-US/docs/Web/XPath)
+The **`evaluate()`** method of the {{domxref("Document")}} interface selects elements based on the [XPath](/en-US/docs/Web/XPath)
 expression given in parameters.
 
 XPath expressions can be evaluated on both HTML and XML documents.
