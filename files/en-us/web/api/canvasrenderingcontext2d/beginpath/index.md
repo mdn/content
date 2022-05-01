@@ -29,6 +29,10 @@ beginPath()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Creating distinct paths
