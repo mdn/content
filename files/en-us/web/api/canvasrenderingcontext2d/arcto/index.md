@@ -42,6 +42,10 @@ arcTo(x1, y1, x2, y2, radius)
 - `radius`
   - : The arc's radius. Must be non-negative.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### How arcTo works
