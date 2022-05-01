@@ -38,6 +38,10 @@ resume()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Errors
 
 An `InvalidState` error is raised if the `resume()` method is

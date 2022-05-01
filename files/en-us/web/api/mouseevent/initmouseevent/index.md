@@ -90,6 +90,10 @@ initMouseEvent(type, canBubble, cancelable, view,
     with some event types (e.g., `mouseover` and `mouseout`). In
     other cases, pass `null`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML

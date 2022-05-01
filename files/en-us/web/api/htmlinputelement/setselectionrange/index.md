@@ -63,6 +63,10 @@ treated as the value of `selectionEnd`.
     - `"backward"`
     - `"none"` if the direction is unknown or irrelevant. Default value.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Click the button in this example to select the third, fourth, and fifth characters in

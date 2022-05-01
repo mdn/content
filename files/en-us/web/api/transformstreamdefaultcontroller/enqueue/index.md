@@ -26,6 +26,10 @@ enqueue(chunk)
 - `chunk`
   - : The chunk being queued. A chunk is a single piece of data. It can be any type of data, and a stream can contain chunks of different types.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 In this example an encoded chunk is passed to the queue using the `enqueue()` method.

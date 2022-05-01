@@ -33,6 +33,10 @@ back()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 The following short example causes a button on the page to navigate back one entry in

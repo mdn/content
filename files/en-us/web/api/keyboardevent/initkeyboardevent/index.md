@@ -49,6 +49,10 @@ initKeyboardEvent(typeArg, canBubbleArg, cancelableArg,
 - _`metaKey`_
   - : Whether the Meta key modifier is active.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

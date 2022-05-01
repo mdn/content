@@ -26,6 +26,10 @@ close()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Browser compatibility
 
 {{Compat}}
