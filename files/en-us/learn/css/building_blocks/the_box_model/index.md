@@ -83,7 +83,7 @@ If you look more into CSS layout, you will also come across other inner values y
 
 ## Examples of different display types
 
-Below we have three different HTML elements, all of which have an outer display type of `block`.
+The example below has three different HTML elements, all of which have an outer display type of `block`. 
 
 - A paragraph with a border added in CSS. The browser renders this as a block box. The paragraph starts on a new line and uses the entire available width.
 
