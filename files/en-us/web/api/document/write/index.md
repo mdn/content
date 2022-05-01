@@ -27,6 +27,10 @@ write(markup)
 - _markup_
   - : A string containing the text to be written to the document.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```html

@@ -22,6 +22,10 @@ writeln(line)
 
 - `line` is string containing a line of text.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

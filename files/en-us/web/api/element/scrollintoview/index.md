@@ -59,6 +59,10 @@ scrollIntoView(scrollIntoViewOptions)
         One of `start`, `center`, `end`, or
         `nearest`. Defaults to `nearest`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

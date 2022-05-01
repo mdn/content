@@ -40,6 +40,10 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
   results. `null` is the most common and will create a new
   `XPathResult`
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

@@ -50,6 +50,10 @@ putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 - `dirtyHeight` {{optional_inline}}
   - : Height of the rectangle to be painted. Defaults to the height of the image data.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}

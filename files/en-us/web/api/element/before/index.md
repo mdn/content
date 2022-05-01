@@ -29,6 +29,10 @@ before(param1, param2, /* ... ,*/ paramN)
 - `param1`, …, `paramN`
   - : A set of {{domxref("Node")}} or string objects to insert.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}

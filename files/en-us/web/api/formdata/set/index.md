@@ -37,6 +37,10 @@ set(name, value, filename)
 
 > **Note:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 The following line creates an empty `FormData` object:

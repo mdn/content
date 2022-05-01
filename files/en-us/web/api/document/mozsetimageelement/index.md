@@ -31,6 +31,10 @@ mozSetImageElement(imageElementId, imageElement)
   to that image element string. Specify `null` to remove the background
   element.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example changes the background of a {{ HTMLElement("div") }} block each time the

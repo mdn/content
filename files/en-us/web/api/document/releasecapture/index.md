@@ -26,6 +26,10 @@ releaseCapture()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 See the [example](/en-US/docs/Web/API/Element/setCapture#example) for

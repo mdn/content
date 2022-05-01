@@ -30,6 +30,10 @@ replaceWith(nodes)
 
 > **Note:** If there no argument is passed, this method acts just remove the node from the DOM tree.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}

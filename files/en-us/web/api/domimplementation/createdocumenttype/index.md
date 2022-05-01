@@ -33,6 +33,10 @@ createDocumentType(qualifiedNameStr, publicId, systemId)
 - `systemId`
   - : Is a string containing the `SYSTEM` identifiers.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

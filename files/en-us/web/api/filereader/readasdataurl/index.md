@@ -34,6 +34,10 @@ readAsDataURL(blob)
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML
