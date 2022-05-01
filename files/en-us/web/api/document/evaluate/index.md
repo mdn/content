@@ -40,8 +40,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
     Use [named constant properties](#result_types), such as `XPathResult.ANY_TYPE`,
     of the XPathResult constructor, which correspond to integers from 0 to 9.
 - `result`
-  - : An existing `XPathResult` to use for the results. If set to`null` the method will create and return a new
-  `XPathResult`.
+  - : An existing `XPathResult` to use for the results. If set to`null` the method will create and return a new `XPathResult`.
 
 ## Return value
 
