@@ -60,7 +60,7 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : A {{domxref("XMLHttpRequestUpload")}} representing the upload process.
 - {{domxref("XMLHttpRequest.withCredentials")}}
-  - : Whether or not cross-site `Access-Control` requests should be made using credentials such as cookies or authorization headers.
+  - : Returns `true` if cross-site `Access-Control` requests should be made using credentials such as cookies or authorization headers; otherwise `false`.
 
 ### Non-standard properties
 
