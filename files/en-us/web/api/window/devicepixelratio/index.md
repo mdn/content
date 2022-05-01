@@ -117,9 +117,9 @@ updatePixelRatio();
 ```
 
 The string `mqString` is set up to be the media query itself. The media
-query, which begins as `(resolution: 1dppx)` (for standard  displays) or
+query, which begins as `(resolution: 1dppx)` (for standard displays) or
 `(resolution: 2dppx)` (for Retina/HiDPI displays), checks to see if the
-current display resolution matches a specific  number of device dots per
+current display resolution matches a specific number of device dots per
 `px`.
 
 The `updatePixelRatio()` function fetches the current value of

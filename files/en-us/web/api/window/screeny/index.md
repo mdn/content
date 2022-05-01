@@ -18,7 +18,7 @@ The **`Window.screenY`** read-only property returns the vertical distance, in CS
 
 ## Value
 
-A number equal to the number of CSS pixels from the top edge of the browser viewport to the  top edge of the screen.
+A number equal to the number of CSS pixels from the top edge of the browser viewport to the top edge of the screen.
 
 ## Examples
 

@@ -32,7 +32,7 @@ A generic {{DOMxRef("Event")}} with no added properties.
 In the following example, `cue1` prints to the console when it is the active cue.
 
 ```js
-cue1.addEventListener('enter', event => { 
+cue1.addEventListener('enter', event => {
   console.log('Cue 1 has displayed');
 });
 ```
