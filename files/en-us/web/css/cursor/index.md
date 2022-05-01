@@ -72,7 +72,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 - `keyword`
 
   - : A keyword value _must_ be specified, indicating either the type of cursor to use, or the fallback cursor to use if all specified icons fail to load.
-  
+
     The available keywords are listed in the table below.
     You can hover your mouse over the table rows to see the effect of the different cursor keyword values on your browser.
 

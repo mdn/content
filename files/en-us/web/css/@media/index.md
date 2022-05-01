@@ -78,7 +78,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}  {{deprecated_inline}}
   - : Width-to-height aspect ratio of the output device.
     Deprecated in Media Queries Level 4.
-- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}  
+- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
   - : Height of the rendering surface of the output device.
     Deprecated in Media Queries Level 4.
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
@@ -127,7 +127,7 @@ Media feature expressions test for their presence or value, and are entirely opt
   - : Pixel density of the output device.
 - {{cssxref("@media/scripting", "scripting")}}
   - : Detects whether scripting (i.e. JavaScript) is available.
-    Added in Media Queries Level 5.  
+    Added in Media Queries Level 5.
 - {{cssxref("@media/update-frequency", "update")}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.
