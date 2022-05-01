@@ -119,7 +119,7 @@ There are two multipart types:
     [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#message)
 - `multipart`
   - : Data that consists of multiple components which may individually have different MIME types.
-    Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
+    Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "", "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
     "Partial Content" response returned when the fetched data is only part of the content, such as is delivered using the {{HTTPHeader("Range")}} header).
     [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
 
