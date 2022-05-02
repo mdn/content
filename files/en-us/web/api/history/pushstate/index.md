@@ -59,6 +59,10 @@ pushState(state, unused, url)
     URL; otherwise, `pushState()` will throw an exception. If this parameter
     isn't specified, it's set to the document's current URL.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Description
 
 In a sense, calling `pushState()` is similar to

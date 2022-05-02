@@ -35,6 +35,10 @@ go(delta)
     moves back two pages. If no value is passed or if `delta` equals 0, it has
     the same result as calling `location.reload()`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 To move back one page (the equivalent of calling {{domxref("History.back",

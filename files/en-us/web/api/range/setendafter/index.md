@@ -26,6 +26,10 @@ setEndAfter(referenceNode)
 - `referenceNode`
   - : The {{domxref("Node")}} to end the {{domxref("Range")}} after.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

@@ -35,6 +35,10 @@ surroundContents(newParent)
 - `newParent`
   - : A {{ domxref("Node") }} with which to surround the contents.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML

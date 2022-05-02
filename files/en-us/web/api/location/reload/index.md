@@ -37,6 +37,10 @@ The history of it is: some version of Netscape Navigator added support for it, w
 
 So a boolean parameter is not part of the current specification for `location.reload()` — and in fact has _never_ been part of any specification for `location.reload()` ever published.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

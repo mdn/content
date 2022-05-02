@@ -31,6 +31,10 @@ selectNodeContents(referenceNode)
   - : The {{ domxref("Node") }} whose contents will be selected within a {{
     domxref("Range") }}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

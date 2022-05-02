@@ -29,6 +29,10 @@ forward()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 The following examples create a button that moves forward one step in the session

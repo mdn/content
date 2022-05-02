@@ -64,6 +64,10 @@ initProgressEvent(typeArg, canBubbleArg, cancelableArg, lengthComputable, loaded
     underlying process is in the progress of performing. When downloading a resource using
     HTTP, this only represent the content itself, not headers and other overhead.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 This feature does not exist in any specifications.

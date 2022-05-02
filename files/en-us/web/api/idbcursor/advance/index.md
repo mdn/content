@@ -31,6 +31,10 @@ advance(count)
 - `count`
   - : The number of times to move the cursor forward.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:

@@ -23,6 +23,10 @@ terminate()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 In the below example the `terminate()` method is called on a {{domxref("TransformStreamDefaultController")}}.
