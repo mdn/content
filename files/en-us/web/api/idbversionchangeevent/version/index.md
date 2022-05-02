@@ -23,7 +23,7 @@ in a [versionchange](/en-US/docs/Web/API/IDBTransaction#version_change) transact
 
 ## Value
 
-A {{jsxref("Number")}} containing a 64-bit integer.
+A number containing a 64-bit integer.
 
 ## Browser compatibility
 
