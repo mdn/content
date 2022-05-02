@@ -62,12 +62,11 @@
     "Bluetooth API": {
       "overview": ["Web Bluetooth API"],
       "interfaces": [
-        "BluetoothAdvertisingData",
         "BluetoothDevice",
-        "BluetoothGATTCharacteristic",
-        "BluetoothGATTDescriptor",
-        "BluetoothGATTRemoteServer",
-        "BluetoothGATTService"
+        "BluetoothRemoteGATTCharacteristic",
+        "BluetoothRemoteGATTServer",
+        "BluetoothRemoteGATTService",
+        "BluetoothUUID"
       ],
       "methods": [],
       "properties": [],

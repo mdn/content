@@ -13,7 +13,7 @@ tags:
   - uuid
 browser-compat: api.BluetoothRemoteGATTCharacteristic.uuid
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.uuid`** read-only
 property returns a string containing the UUID of the characteristic, for
