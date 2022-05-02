@@ -37,7 +37,7 @@ number. The range of allowed values can be described like this: \[0, +∞).
 ### Invalid cases
 
 ```js example-bad
-'abc'.repeat(-1); // RangeError 
+'abc'.repeat(-1); // RangeError
 ```
 
 ### Valid cases

@@ -151,7 +151,7 @@ You can also use the `cause` property in [custom error types](#custom_error_type
 ```js
 class MyError extends Error {
   constructor(/* some arguments */) {
-    // Needs to pass both `message` and `options` to install the "cause" property. 
+    // Needs to pass both `message` and `options` to install the "cause" property.
     super(message, options);
   }
 }

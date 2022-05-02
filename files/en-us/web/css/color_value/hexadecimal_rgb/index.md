@@ -39,7 +39,7 @@ The **hexadecimal color syntax** is a notation for describing an [sRGB](/en-US/d
 #f09 <div class="c1"></div>
 #F09 <div class="c2"></div>
 #ff0099 <div class="c3"></div>
-#FF0099 <div class="c4"></div> 
+#FF0099 <div class="c4"></div>
 ```
 
 ```css

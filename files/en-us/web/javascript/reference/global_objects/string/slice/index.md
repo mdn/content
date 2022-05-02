@@ -28,7 +28,7 @@ slice(beginIndex, endIndex)
 - `beginIndex`
 
   - : The zero-based index at which to begin extraction.
-  
+
     If `beginIndex` is negative, `slice()` begins extraction from
     `str.length + beginIndex`. (E.g. `"test".slice(-2)` returns `"st"`)
 

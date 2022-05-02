@@ -19,7 +19,7 @@ The **`ariaLabel`** property of the {{domxref("ElementInternals")}} interface re
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

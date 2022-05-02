@@ -21,7 +21,7 @@ An array of report formats. Each entry contains the following:
 
   - : An integer representing the usage page component of the HID usage associated with this collection. The usage for a top level collection is used to identify the device type.
 
-    Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-122) document
+    Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-13) document
 
 - `usage`
   - : An integer representing the usage ID component of the HID usage associated with this collection.

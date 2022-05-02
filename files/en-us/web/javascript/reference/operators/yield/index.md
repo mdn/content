@@ -105,7 +105,7 @@ console.log(appleStore.next())      // { value: undefined, done: true }
 ```
 
 You can also send a value with `next(value)` into the generator. `step` evaluates as a
-return value in this syntax `[_rv_] = **yield** [expression]` — although a value passed
+return value in this syntax `[_rv_] = **yield** [expression]` — although a value passed
 to the generator's `next()` method is ignored the first time `next()` is called.
 
 ```js

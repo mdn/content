@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: searchbox role'
 slug: Web/Accessibility/ARIA/Roles/searchbox_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -19,7 +19,7 @@ The `searchbox` can be used instead of [`textbox`](/en-US/docs/Web/Accessibility
 The `searchbox` must have an accessible name. If the `searchbox` role is applied to an HTML {{HTMLElement('input')}} element, an associated {{HTMLElement('label')}} should be used.
 Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
-The screen reader will announce "search box", "search edit", or "search field" plus the accessible name. This can be redundant if "search" is included in the label.  
+The screen reader will announce "search box", "search edit", or "search field" plus the accessible name. This can be redundant if "search" is included in the label.
 
 ## Examples
 

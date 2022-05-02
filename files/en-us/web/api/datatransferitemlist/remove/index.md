@@ -132,7 +132,7 @@ function dragend_handler(ev) {
   }
 ```
 
-{{ EmbedLiveSample('Example', '300', '450', '', 'Web/API/DataTransferItemList/remove')
+{{ EmbedLiveSample('Examples', '300', '450', '', 'Web/API/DataTransferItemList/remove')
   }}
 
 ## Specifications

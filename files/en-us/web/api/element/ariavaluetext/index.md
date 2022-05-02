@@ -17,7 +17,7 @@ The **`ariaValueText`** property of the {{domxref("Element")}} interface reflect
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

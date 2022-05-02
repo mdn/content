@@ -101,7 +101,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

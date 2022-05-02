@@ -78,4 +78,4 @@ value.
 
 ## See also
 
-- {{RFC(5245, "4.1.2.1")}}: Recommended Formula section in the ICE specification
+- {{RFC(5245, "", "4.1.2.1")}}: Recommended Formula section in the ICE specification

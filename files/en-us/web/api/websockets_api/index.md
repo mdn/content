@@ -76,5 +76,5 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 ## See also
 
 - [RFC 6455 — The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)
-- [WebSocket API Specification](https://websockets.spec.whatwg.org//)
+- [WebSocket API Specification](https://websockets.spec.whatwg.org/)
 - [Server-Sent Events](/en-US/docs/Web/API/Server-sent_events)

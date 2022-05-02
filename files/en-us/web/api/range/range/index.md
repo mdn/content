@@ -20,8 +20,12 @@ object.
 ## Syntax
 
 ```js
-new Range();
+new Range()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 
@@ -62,7 +66,7 @@ selection.addRange(range);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples", 400, 210)}}
 
 ## Specifications
 

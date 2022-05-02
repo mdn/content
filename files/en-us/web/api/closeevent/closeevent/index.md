@@ -16,11 +16,11 @@ The **`CloseEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new CloseEvent(typeArg);
-new CloseEvent(typeArg, closeEventInit);
+new CloseEvent(typeArg)
+new CloseEvent(typeArg, closeEventInit)
 ```
 
-### Values
+### Parameters
 
 - `typeArg`
   - : Is a string representing the name of the event.

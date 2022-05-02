@@ -19,7 +19,7 @@ events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the la
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

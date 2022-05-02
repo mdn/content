@@ -57,7 +57,7 @@ A subset of nested statements, which can be used as a statement of a style sheet
 
 Much like the values of properties, each at-rule has a different syntax. Nevertheless, several of them can be grouped into a special category named **conditional group rules**. These statements share a common syntax and each of them can include _nested statements_—either _rulesets_ or _nested at-rules_. Furthermore, they all convey a common semantic meaning—they all link some type of condition, which at any time evaluates to either **true** or **false**. If the condition evaluates to **true**, then all of the statements within the group will be applied.
 
-Conditional group rules are defined in [CSS Conditionals Level 3](https://dev.w3.org/csswg/css3-conditional/) and are:
+Conditional group rules are defined in [CSS Conditionals Level 3](https://drafts.csswg.org/css-conditional-3/) and are:
 
 - {{cssxref("@media")}},
 - {{cssxref("@supports")}},

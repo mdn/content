@@ -28,7 +28,7 @@ These features include:
 
 The {{domxref("MediaCapabilities")}} is available using the {{domxref("Navigator.mediaCapabilities", "mediaCapabilities")}} property which is provided by both the `navigator` object and the {{domxref("WorkerNavigator")}} object; in other words, the Media Capabilities API is available both on the main thread and from workers.
 
-If the object exists, Media Capabilities API is available. You can, therefore, test for the presence of the API  like so:
+If the object exists, Media Capabilities API is available. You can, therefore, test for the presence of the API like so:
 
 ```js
 if ("mediaCapabilities" in navigator) {
@@ -38,7 +38,7 @@ if ("mediaCapabilities" in navigator) {
 }
 ```
 
-Taking video as an example, to obtain information about video decoding abilities, you create a video decoding configuration which you pass as a parameter to  {{domxref("MediaCapabilities.decodingInfo()")}} method. This returns a promise that fulfills with information about the media capabilities as to whether the video can be decoded, and whether decoding will be smooth and power efficient. You can also test audio decoding as well as video and audio encoding.
+Taking video as an example, to obtain information about video decoding abilities, you create a video decoding configuration which you pass as a parameter to {{domxref("MediaCapabilities.decodingInfo()")}} method. This returns a promise that fulfills with information about the media capabilities as to whether the video can be decoded, and whether decoding will be smooth and power efficient. You can also test audio decoding as well as video and audio encoding.
 
 ### Creating a video decoding configuration
 

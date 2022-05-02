@@ -22,7 +22,7 @@ The **`locale`** read-only property of the
 
 ## Value
 
-A {{domxref("DOMString")}} representing the locale of current input method.
+A string representing the locale of current input method.
 
 ## Specifications
 

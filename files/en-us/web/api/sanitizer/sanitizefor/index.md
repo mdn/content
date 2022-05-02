@@ -67,7 +67,7 @@ console.log(sanitizedDiv.innerHTML)
 // At some point later ...
 
 // Get the element to update. This must be a div to match our sanitizeFor() context.
-// Set its content to be the children of our sanitized element. 
+// Set its content to be the children of our sanitized element.
 document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 ```
 

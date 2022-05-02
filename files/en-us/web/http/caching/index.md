@@ -214,6 +214,6 @@ if (req.http.Accept-Encoding) {
 ## See also
 
 - [RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/rfc7234)
-- [Caching Tutorial – Mark Nottingham](https://www.mnot.net/cache_docs)
+- [Caching Tutorial – Mark Nottingham](https://www.mnot.net/cache_docs/)
 - [Prevent unnecessary network requests with the HTTP Cache – Jeff Posnick & Ilya Grigorik](https://web.dev/http-cache/)
 - [RedBot](https://redbot.org/), a tool to check your cache-related HTTP headers.

@@ -33,7 +33,7 @@ There are a number of different types of workers:
 
 ### Worker global contexts and functions
 
-Workers run in a different global context than the current {{DOMxRef("window")}}! While  {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (`WindowOrWorkerGlobalScope`), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts:
+Workers run in a different global context than the current {{DOMxRef("window")}}! While {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (`WindowOrWorkerGlobalScope`), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts:
 
 - {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers
 - {{domxref("SharedWorkerGlobalScope")}} for shared workers

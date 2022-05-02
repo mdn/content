@@ -76,7 +76,7 @@ You can use {{jsxref("Functions/arguments/length", "arguments.length")}} to coun
 The {{jsxref("Operators/typeof", "typeof")}} operator returns `'object'` when used with `arguments`
 
 ```js
-console.log(typeof arguments); // 'object' 
+console.log(typeof arguments); // 'object'
 ```
 
 The type of individual arguments can be determined by indexing `arguments`:

@@ -112,12 +112,12 @@ Here is the same WebAssembly module, simply replacing the import with an export.
 (module
 
   ;; Export tag giving it external name: "exptag"
-  (tag $tagname (export "exptag") (param i32) )  
+  (tag $tagname (export "exptag") (param i32) )
   (func $throwException (param i32)
      local.get 0
      throw $tagname
   ) 
-      (func (export "run1")
+  (func (export "run1")
      i32.const 1
      call $throwException
   )

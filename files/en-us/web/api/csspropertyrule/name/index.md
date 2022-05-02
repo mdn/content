@@ -19,7 +19,7 @@ The read-only **`name`** property of the {{domxref("CSSPropertyRule")}} interfac
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

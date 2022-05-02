@@ -1,6 +1,6 @@
 ---
 title: How to file ARIA-related bugs
-slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs 
+slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
 tags:
   - ARIA
   - Bugzilla

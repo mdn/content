@@ -65,7 +65,7 @@ console.log(myLocMaximized.baseName);
 
 // Prints "fr-Latn-FR-u-ca-gregory-hc-h24".
 // Note that the extension tags (after "-u") remain unchanged.
-console.log(myLocMaximized.toString()); 
+console.log(myLocMaximized.toString());
 ```
 
 ## Specifications

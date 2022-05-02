@@ -13,7 +13,7 @@ browser-compat: api.ProgressEvent.initProgressEvent
 
 The **`ProgressEvent.initProgressEvent()`** method Initializes
 an animation event created using the deprecated {{domxref("Document.createEvent()",
-  "Document.createEvent(\"ProgressEvent\")")}} method.
+  "Document.createEvent('ProgressEvent')")}} method.
 
 `ProgressEvent` created that way are untrusted.
 
