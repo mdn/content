@@ -179,7 +179,6 @@ The navigation example has a static button. In submenu example has a button that
 
 ## See Also
 
-- HTML {{HTMLElement('menu')}} element
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
