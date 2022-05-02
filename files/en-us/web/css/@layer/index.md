@@ -21,7 +21,6 @@ The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rul
 @layer layer-name;
 @layer layer-name, layer-name, layer-name;
 @layer {rules};
-@import url layer( layer-name );
 ```
 
 where:
@@ -29,12 +28,10 @@ where:
   - : Is the name of the cascade layer.
 - _rules_
   - : Is the set of CSS rules in the cascade layer.
-- _url_
-  - : Is a {{CSSxRef("&lt;string&gt;")}}, a `<url>`, or a {{CSSxRef("url")}} function representing the location of the resource to import. The URL may be absolute or relative.
 
 ## Description
 
-Rules within a cascade layer cascade together, giving more control over the cascade to web developers. Any styles not in a layer are gathered together and placed into an anonymous layer that comes after all the declared layers. This means that any styles declared outside of a layer will override styles declared in a layer, regardless of specificity.
+Rules within a cascade layer cascade together, giving more control over the cascade to web developers. Any styles not in a layer are gathered together and placed into a single anonymous layer that comes after all the declared layers, named and anonymous. This means that any styles declared outside of a layer will override styles declared in a layer, regardless of specificity.
 
 The `@layer` at-rule is used to create a cascade layer in one of three ways.
 
@@ -58,7 +55,7 @@ The second way is to create a named cascade layer without assigning any styles. 
 @layer utilities;
 ```
 
-Or multiple layers can be defined at once, as shown below:
+Multiple layers can be defined at once, as shown below:
 
 ```css
 @layer theme, layout, utilities;
@@ -80,7 +77,7 @@ The third way is to create a cascade layer with no name. For example:
 }
 ```
 
-This creates an _anonymous cascade layer_. This layer functions in the same way as named layers; however, rules cannot be assigned to it later.
+This creates an _anonymous cascade layer_. This layer functions in the same way as named layers; however, rules cannot be assigned to it later. The order of precedence for anonymous layers is the order in which layers are declared, named or not, and lower than the styles declared outside of a layer.
 
 Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except the @charset rules.
 
