@@ -520,6 +520,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 1. Click **Build a Database** button in the Database Deployments section.
     ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
+    
 2. This will open the _Deploy a cloud database_ screen. Click on the **Create** button under the _Shared_ deployment option.
     ![Choose a deployment option when using MongoDB Atlas.](mongodb_atlas_-_deploy.jpg)
 
@@ -529,11 +530,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     - Select any provider from the *Cloud Provider & Region* section. Different providers offer different regions.
     - **Cluster Tier** and **Additional Settings** don't need to be changed. You can change the name of your Cluster under **Cluster Name**. We are naming it Cluster0 for this tutorial.
     - Click the **Create Cluster** button (creation of the cluster will take some minutes).
-
-<!-- 3. You will return to the _Cluster Overview_ screen.
-    ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
-
-    - Click the **Collections** button. -->
 
 4. This will open the _Security Quickstart_ section.
     ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
@@ -554,17 +550,28 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 6. You will return to the __Database Deployments__ screen.
     ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
-      - Click the **Browse Collections** button.
+    - Click the **Browse Collections** button.
 
 7. This will open the _Collections_ section.
     ![Create a database on MongoDB Atlas.](mongodb_atlas_-_adddata.jpg)
 
-      - Click the **Add My Own Data** button.
+    - Click the **Add My Own Data** button.
 
+8. This will open the _Create Database_ screen.
+    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
 
-    <!-- - Enter the name for the new database as `local_library`.
+    - Enter the name for the new database as `local_library`.
     - Enter the name of the collection as `Collection0`.
-    - Click the **Create** button to create the database. -->
+    - Click the **Create** button to create the database.
+
+
+
+
+
+<!-- OLD CONTENT BELOW -->
+
+
+
 
 
 6. You will return to the Collection screen with your database created.
