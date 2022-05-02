@@ -24,13 +24,13 @@ recognition service from listening to incoming audio, and attempts to return a
 stop()
 ```
 
-### Return value
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

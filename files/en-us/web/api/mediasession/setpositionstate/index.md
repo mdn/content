@@ -55,7 +55,7 @@ setPositionState(stateDict)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

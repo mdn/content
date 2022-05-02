@@ -71,7 +71,7 @@ setActionHandler(type, callback)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Description
 

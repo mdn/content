@@ -40,7 +40,7 @@ requestSubmit(submitter)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
