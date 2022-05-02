@@ -25,6 +25,10 @@ new MessageChannel()
 
 ### Parameters
 
+None ({{jsxref("undefined")}}).
+
+### Return value
+
 A new {{domxref("MessageChannel")}} object.
 
 ## Examples
