@@ -1,11 +1,11 @@
 ---
-title: browser_action
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
+title: action
+slug: Mozilla/Add-ons/WebExtensions/manifest.json/action
 tags:
   - Add-ons
   - Extensions
   - WebExtensions
-browser-compat: webextensions.manifest.browser_action
+browser-compat: webextensions.manifest.action
 ---
 {{AddonSidebar}}
 
@@ -21,13 +21,13 @@ browser-compat: webextensions.manifest.browser_action
     </tr>
     <tr>
       <th scope="row">Manifest version</th>
-      <td>2</td>
+      <td>3 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
-"browser_action": {
+"action": {
   "browser_style": true,
   "default_icon": {
     "16": "button/geo-16.png",
@@ -51,17 +51,17 @@ browser-compat: webextensions.manifest.browser_action
   </tbody>
 </table>
 
-A browser action is a button that your extension adds to the browser's toolbar. The button has an icon, and may optionally have a popup whose content is specified using HTML, CSS, and JavaScript.
+An action is a button that your extension adds to the browser's toolbar. The button has an icon, and may optionally have a popup whose content is specified using HTML, CSS, and JavaScript.
 
-This key is replaced by [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) in Manifest V3 extensions.
+This key replaces [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) in Manifest V3 extensions.
 
-If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) when the user clicks the button.
+If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) when the user clicks the button.
 
-You can also create and manipulate browser actions programmatically using the [browserAction API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+You can also create and manipulate actions programmatically using the {{WebExtAPIRef("action")}} .
 
 ## Syntax
 
-The `browser_action` key is an object that may have any of the following properties, all optional:
+The `action` key is an object that may have any of these properties, all optional:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -178,7 +178,7 @@ The `browser_action` key is an object that may have any of the following propert
       <td><code>Object</code> or <code>String</code></td>
       <td>
         <p>
-          Use this to specify one or more icons for the browser action. The icon
+          Use this to specify one or more icons for the action. The icon
           is shown in the browser toolbar by default.
         </p>
         <p>
@@ -200,7 +200,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>
           You cannot specify multiple icons of the same sizes.<br /><br />See
           <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes"
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#choosing_icon_sizes"
             >Choosing icon sizes</a
           >
           for more guidance on this.
@@ -321,7 +321,7 @@ The `browser_action` key is an object that may have any of the following propert
 
 ## Choosing icon sizes
 
-The browser action's icon may need to be displayed in different sizes in different contexts:
+The action's icon may need to be displayed in different sizes in different contexts:
 
 - The icon is displayed in the browser toolbar. Older versions of Firefox supported the option of placing the icon in the browser's menu panel (the panel that opens when the user clicks the "hamburger" icon). In those versions of Firefox the icon in the menu panel was larger than the icon in the toolbar.
 - On a high-density display like a Retina screen, icons needs to be twice as big.
@@ -356,7 +356,7 @@ If Firefox can't find an exact match for the size it wants, then it will pick th
 ## Example
 
 ```json
-"browser_action": {
+"action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -364,14 +364,14 @@ If Firefox can't find an exact match for the size it wants, then it will pick th
 }
 ```
 
-A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
+An action with just an icon, specified in 2 sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+ browser.Action.onClicked.addListener(handleClick);
 ```
 
 ```json
-"browser_action": {
+"action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -381,16 +381,8 @@ A browser action with just an icon, specified in 2 different sizes. The extensio
 }
 ```
 
-A browser action with an icon, a title, and a popup. The popup will be shown when the user clicks the button.
-
-For a simple, but complete, extension that uses a browser action, see the [walkthrough tutorial](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
+An action with an icon, a title, and a popup. The popup is shown when the user clicks the button.
 
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
-- [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
-- [Browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)

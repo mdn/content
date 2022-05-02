@@ -24,6 +24,10 @@ browser-compat: webextensions.manifest.options_page
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json;">"options_page": "options/options.html"</pre>
