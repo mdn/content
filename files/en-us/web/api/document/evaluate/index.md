@@ -65,7 +65,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
       - : A result set containing snapshots of all the nodes matching the
         expression. The nodes in the result set are not necessarily in the same
         order they appear in the document.
-        > **Note:** Results of this types are snapshots, which are essentially lists of matched nodes.
+        > **Note:** Results of this type are snapshots, which are essentially lists of matched nodes.
         > You can make changes to the document by altering snapshot nodes.
         > Modifying the document doesn't invalidate the snapshot;
         > however, if the document is changed, the snapshot may not correspond to the current state of the document,
@@ -74,6 +74,11 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
       - : A result set containing snapshots of all the nodes matching the
         expression. The nodes in the result set are in the same order they
         appear in the document.
+        > **Note:** Results of this type are snapshots, which are essentially lists of matched nodes.
+        > You can make changes to the document by altering snapshot nodes.
+        > Modifying the document doesn't invalidate the snapshot;
+        > however, if the document is changed, the snapshot may not correspond to the current state of the document,
+        > since nodes may have moved, been changed, added, or removed.
     - `ANY_UNORDERED_NODE_TYPE` (`8`)
       - : A result set containing any single node that matches the expression. The
         node is not necessarily the first node in the document that matches the
