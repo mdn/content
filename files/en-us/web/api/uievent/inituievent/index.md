@@ -49,6 +49,10 @@ initUIEvent(type, canBubble, cancelable, view, detail)
     event, depending on the type of event. For mouse events, it indicates how many times
     the mouse has been clicked on a given screen location.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

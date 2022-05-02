@@ -59,6 +59,10 @@ open(method, url, async, user, password)
   - : The optional password to use for authentication purposes; by default, this is the
     `null` value.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}
