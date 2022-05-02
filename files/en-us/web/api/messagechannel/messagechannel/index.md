@@ -25,7 +25,7 @@ new MessageChannel()
 
 ### Parameters
 
-A newly created {{domxref("MessageChannel")}} object.
+A new {{domxref("MessageChannel")}} object.
 
 ## Examples
 
