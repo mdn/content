@@ -39,7 +39,7 @@ _This interface inherits methods from {{domxref('Worklet')}}._
 
 - {{domxref('PaintWorklet.registerPaint()')}}
   - : Registers a class programmatically generate an image where a CSS property expects a file.
-- {{domxref('Worklet.addModule', 'CSS.PaintWorklet.addModule()')}}
+- {{domxref('Worklet.addModule', 'PaintWorklet.addModule()')}}
   - : The [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) method, inherited from the _{{domxref('Worklet')}}_ interface loads the module in the given JavaScript file and adds it to the current PaintWorklet.
 
 ## Examples
@@ -117,4 +117,4 @@ You can also use the {{cssxref('@supports')}} at-rule.
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Houdini)
+- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)
