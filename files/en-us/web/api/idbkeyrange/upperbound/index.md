@@ -23,13 +23,13 @@ it includes the upper endpoint value and is closed.
 ## Syntax
 
 ```js
-upperBound(bound)
-upperBound(bound, open)
+upperBound(upper)
+upperBound(upper, open)
 ```
 
 ### Parameters
 
-- `bound`
+- `upper`
   - : Specifies the upper bound of the new key range.
 - `open` {{optional_inline}}
   - : Indicates whether the upper bound excludes the endpoint value. The default is false.
@@ -41,7 +41,7 @@ upperBound(bound, open)
 ### Exceptions
 
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the value parameter passed was not a valid key.
+  - : Thrown if the key associated with `upper` parameteri is not a valid key.
 
 ## Examples
 
