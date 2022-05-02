@@ -22,7 +22,7 @@ database.
 
 ## Value
 
-A {{jsxref("Number")}} containing a 64-bit integer.
+A number that is a 64-bit integer.
 
 ## Examples
 
