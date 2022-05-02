@@ -557,59 +557,34 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
     - Click the **Add My Own Data** button.
 
-8. This will open the _Create Database_ screen.
+8. This will open the _Create Database_ modal window.
     ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
 
     - Enter the name for the new database as `local_library`.
     - Enter the name of the collection as `Collection0`.
     - Click the **Create** button to create the database.
 
-
-
-
-
-<!-- OLD CONTENT BELOW -->
-
-
-
-
-
-6. You will return to the Collection screen with your database created.
+9. You will return to the _Collections_ screen with your database created.
     ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
 
-    - Click the _Overview_ tab to return the cluster overview.
+    - Click the _Overview_ tab to return to the cluster overview.
 
-7. From the Cluster0 Overview screen click the **Connect** button.
-    ![Configure a connection when after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
-8. This will open the Connect to Cluster screen.
-    ![Choose a connection type when connecting with MongoDB Atlas.](connect_to_cluster_allowanywhere.png)
+10. From the Cluster0 Overview screen click the **Connect** button.
+    ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
-    - Click the **Allow Access from Anywhere** button.
-      This will open a form with `0.0.0.0/0` pre-seeded for the IP Address. Click the **Add IP Address** button.
-
-      > **Note:** It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
-
-    - Enter a username and password and click **Create MongoDB User** button.
-
-      > **Note:** Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
-
-    - If you have completed the 2 previous steps, the button **Choose a connection method** will turn green.
-    - Click the **Choose a connection method** button.
-
-9. You should now be able to access the _Choose a connection_ method tab.
+11. This will open the _Connect to Cluster_ modal window. Click the **Connect your application** option.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
-    - Click the **Connect Your Application** option.
-
-10. This will open the _Connect_ screen.
-    ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv_2020-03.png)
+12. This will open the _Connect_ screen.
+    ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
     - Click the **Copy** button to copy the connection string.
-    - Save this string somewhere safe.
+    - Paste this in a local text editor.
     - Update the password with your user's password.
-    - Replace test with `local_library`.
+    - Replace `myFirstDatabase` with `local_library`.
+    - Save this string somewhere safe.
 
-You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.a9azn.mongodb.net/local_library?retryWrites=true`
+You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.upbx7.mongodb.net/local_library?retryWrites=true&w=majority`
 
 ## Install Mongoose
 
