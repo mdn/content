@@ -12,7 +12,7 @@ tags:
   - writeValue
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValue
 ---
-{{Deprecated_header}}
+{{APIRef("Bluetooth API")}}{{Deprecated_header}}
 
 Use {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} and {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}} instead.
 

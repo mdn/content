@@ -12,7 +12,7 @@ tags:
   - uuid
 browser-compat: api.BluetoothRemoteGATTService.uuid
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.uuid`** read-only property
 returns a string representing the UUID of this service.

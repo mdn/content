@@ -13,7 +13,7 @@ tags:
   - writeValue()
 browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 ---
-{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.writeValue()`**
 method sets the value property to the bytes contained in
