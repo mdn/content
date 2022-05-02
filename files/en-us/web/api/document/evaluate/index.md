@@ -33,9 +33,9 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
   - : A function that will be passed any namespace prefixes
     and should return a string representing the namespace URI associated with that prefix.
     It will be used to resolve prefixes within the _xpath_ itself,
-    so that they can be matched with the document. 
+    so that they can be matched with the document.
     The value `null` is common for HTML documents or when no namespace prefixes are used.
-- `resultType` 
+- `resultType`
   - : An integer that corresponds to the type of result `XPathResult` to return.
     Use [named constant properties](#result_types), such as `XPathResult.ANY_TYPE`,
     of the XPathResult constructor, which correspond to integers from 0 to 9.

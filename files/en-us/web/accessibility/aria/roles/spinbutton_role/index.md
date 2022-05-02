@@ -12,13 +12,13 @@ tags:
   - spinbutton
 ---
 
-The `spinbutton` role defines a type of range that expects the user to select a value from among discrete choices. 
+The `spinbutton` role defines a type of range that expects the user to select a value from among discrete choices.
 
 ## Description
 
 The `spinbutton` role indicates that the element is an input widget that restricts its value to a set or range of discrete values. The role also comes with increment and decrement functionality. For example, in a widget that enables users to choose an amount to bet in a game of Texas Holdem, the `spinbutton` role can allow users to select a number between the minimum and maximum bets in increments, as allowed by the current game rules.
 
-The spinbutton represents the range of possible values. The value of the spinbutton input represents the current value. 
+The spinbutton represents the range of possible values. The value of the spinbutton input represents the current value.
 
 Spinbuttons often have three components, including a text field that displays the current value, an increment button, and a decrement button. The text field is usually the only focusable component because the increment and decrement functions are keyboard accessible via arrow keys. Typically, the text field also allows users to directly edit the value.
 
@@ -52,7 +52,7 @@ For `spinbutton`, unless using semantic HTML elements like [`<input type="number
 
 The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the spinbutton. The optional minimum, maximum, and current values should be numeric. When the values these numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a spinbutton for t-shirt sizes, the `aria-valuetext` attribute should shift from `XX-Small` through `XX-Large` as the `aria-valuenow` increases.
 
-The `aria-valuetext` value must be updated as the value or `aria-valuenow` is updated. ARIA attributes are supported on semantic HTML elements. While there is no equivalent HTML attribute for `<input>`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. When `aria-valuetext` is an important feature for a spinbutton, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}} elements instead. 
+The `aria-valuetext` value must be updated as the value or `aria-valuenow` is updated. ARIA attributes are supported on semantic HTML elements. While there is no equivalent HTML attribute for `<input>`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. When `aria-valuetext` is an important feature for a spinbutton, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}} elements instead.
 
 An accessible name is **required**. If the `spinbutton` role is applied to an HTML {{HTMLElement('input')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
@@ -60,7 +60,7 @@ When not using the HTML {{HTMLElement('input')}} element to create your spinbutt
 
 ### Descendants limited to buttons or text
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain specific content. The children or owned elements of `spinbutton` are limited to a  textbox and two buttons. Alternatively, the `spinbutton` role can be applied to a `text` input and sibling buttons can be used to support the increment and decrement functions. 
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain specific content. The children or owned elements of `spinbutton` are limited to a  textbox and two buttons. Alternatively, the `spinbutton` role can be applied to a `text` input and sibling buttons can be used to support the increment and decrement functions.
 
 ## Associated roles, states, and properties
 
@@ -78,8 +78,8 @@ There are some types of user interface components that, when represented in a pl
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : Defines the string value or identifies the element (or elements) that label the spinbutton element providing an accessible name. An accessible name is required.
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) 
-   - : Defines a string value that labels the spinbutton element. This provides an accessible name to the element when no visible label is available to provide the required accessible name via {{HTMLElement('label')}} or `aria-labelledby`.
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+  - : Defines a string value that labels the spinbutton element. This provides an accessible name to the element when no visible label is available to provide the required accessible name via {{HTMLElement('label')}} or `aria-labelledby`.
 
 ## Examples
 
@@ -105,6 +105,7 @@ In the example below, a `spinbutton` role has been defined to allow users to sel
 In this example, we included a negative `tabindex` to remove the buttons from the default tabbing order. We also added `tabindex` to a normally non-interactive {{HTMLElement('div')}} to add the `spinbutton` itself to the tabbing order. This example requires JavaScript to handle keyboard actions when the spinbutton has focus and when a mouse user clicks on the buttons.
 
 ### With semantic HTML
+
 This could have also been written using semantic HTML, removing the need for any CSS or JavaScript and also removing the need to include and provide functionality for extraneous incrementing and decrementing buttons. The code snippet below shows the previous example without the `spinbutton` role and using semantic HTML.
 
 ```html
