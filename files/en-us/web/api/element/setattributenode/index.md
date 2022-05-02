@@ -69,3 +69,7 @@ used to change element's attributes.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}
