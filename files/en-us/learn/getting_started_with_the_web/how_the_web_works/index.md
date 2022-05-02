@@ -1,5 +1,5 @@
 ---
-title: How the Web works
+title: How the web works
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
 tags:
   - Beginner
@@ -99,4 +99,4 @@ Street photo: [Street composing](https://www.pinterest.com/pin/40053896058067685
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- How the web works
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
