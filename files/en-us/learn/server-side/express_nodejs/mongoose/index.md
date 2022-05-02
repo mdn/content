@@ -518,8 +518,8 @@ You will first need to [create an account](https://www.mongodb.com/cloud/atlas/r
 
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
-1. Click **Build a Cluster** button in the Clusters Overview section.
-    ![Create a cluster on MongoDB Atlas.](mongodb_atlas_-_createcluster.jpg)
+1. Click **Build a Database** button in the Database Deployments section.
+    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
 2. This will open the _Create New Cluster_ screen.
     ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_chooseproviderregion.jpg)
 
