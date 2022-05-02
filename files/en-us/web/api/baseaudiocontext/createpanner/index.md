@@ -32,6 +32,10 @@ audio.
 createPanner()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("PannerNode")}}.

@@ -26,6 +26,14 @@ state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{d
 restore()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Restoring a saved state

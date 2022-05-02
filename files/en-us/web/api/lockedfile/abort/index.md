@@ -27,6 +27,10 @@ The `abort` method is used to release the lock on the
 abort()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("FileRequest")}} object to handle the success or failure of the operation.

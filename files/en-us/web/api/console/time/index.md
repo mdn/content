@@ -35,6 +35,10 @@ time(label)
     calling {{domxref("console.timeEnd()")}} to stop the timer and get the time output to
     the console.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

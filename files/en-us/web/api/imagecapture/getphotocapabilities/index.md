@@ -27,6 +27,10 @@ available configuration options.
 getPhotoCapabilities()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with an object containing the following properties:

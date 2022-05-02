@@ -22,6 +22,10 @@ The **`HTMLInputElement.checkValidity()`** method returns a boolean value which 
 checkValidity()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns `true` if the value of the element has no validity problems; otherwise returns `false`.

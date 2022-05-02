@@ -20,11 +20,11 @@ The **`BlobEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
-new BlobEvent({data: aSpecificBlob});
-new BlobEvent({data: aSpecificBlob}, timecode);
+new BlobEvent({data: aSpecificBlob})
+new BlobEvent({data: aSpecificBlob}, timecode)
 ```
 
-### Arguments
+### Parameters
 
 _The `BlobEvent()` constructor also inherits arguments from
 {{domxref("Event.Event", "Event()")}}._

@@ -37,7 +37,7 @@ The Barcode Detection API supports the following barcode formats:
       <td>aztec</td>
       <td>
         A square two-dimensional matrix following iso24778 and with a square
-        bullseye pattern at their centre, thus resembling an Aztec pyramid. Does
+        bullseye pattern at their center, thus resembling an Aztec pyramid. Does
         not require a surrounding blank zone.
       </td>
       <td>

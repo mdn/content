@@ -50,6 +50,10 @@ initCloseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason)
   - : a string describing the reason of the close in human-readable
     way.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 _This is no part of any specifications, though it was in some early drafts._

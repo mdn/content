@@ -30,6 +30,10 @@ querySelectorAll(selectors)
   - : Is a string containing one or more CSS selectors separated by
     commas.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example returns a list of all `div` elements within the

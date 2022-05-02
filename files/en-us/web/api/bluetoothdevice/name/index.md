@@ -15,7 +15,7 @@ browser-compat: api.BluetoothDevice.name
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothDevice.name`** read-only property returns a
-{{DOMxRef("DOMString")}} that provides a human-readable name for the device.
+string that provides a human-readable name for the device.
 
 > **Note:** This page describes the W3C Community Group BluetoothDevice.name property. For the
 > Firefox OS property of the same name, see
@@ -24,7 +24,7 @@ The **`BluetoothDevice.name`** read-only property returns a
 
 ## Value
 
-A {{DOMxRef("DOMString")}}.
+A string.
 
 ## Specifications
 

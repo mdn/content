@@ -21,6 +21,10 @@ transform feedback operation.
 resumeTransformFeedback()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 None.

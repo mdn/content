@@ -97,7 +97,7 @@ var obj = {
 
 obj.myname(); // myname
 
- 
+
 ```
 
 ## Specifications

@@ -17,14 +17,15 @@ The **Touch`Event()`** constructor creates a new {{domxref("TouchEvent")}}.
 ## Syntax
 
 ```js
-new TouchEvent(typeArg, touchEventInit);
+new TouchEvent(typeArg)
+new TouchEvent(typeArg, touchEventInit)
 ```
 
-### Values
+### Parameters
 
-- _typeArg_
+- `typeArg`
   - : Is a {{domxref("DOMString")}} representing the name of the event.
-- _touchEventInit_ {{optional_inline}}
+- `touchEventInit` {{optional_inline}}
 
   - : Is a Touch`EventInit` dictionary, having the following fields:
 

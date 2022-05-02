@@ -23,6 +23,10 @@ there is no such node, return `null` and the current node is not changed.
 previousSibling()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Node")}} object or `null`.

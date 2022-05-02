@@ -22,6 +22,14 @@ the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 abort()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

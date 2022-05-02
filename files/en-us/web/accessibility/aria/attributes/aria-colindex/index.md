@@ -1,7 +1,7 @@
 ---
 title: 'aria-colindex'
 slug: Web/Accessibility/ARIA/Attributes/aria-colindex
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -88,9 +88,9 @@ If all the columns are in the DOM, neither `aria-colcount` nor `aria-colindex` a
 ## ARIAMixin API
 
 - {{domxref("Element.ariaColIndex")}}
-  - : The  [`ariaColIndex`](/en-US/docs/Web/API/Element/ariaColIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-colindex` attribute.
+  - : The [`ariaColIndex`](/en-US/docs/Web/API/Element/ariaColIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-colindex` attribute.
 - {{domxref("ElementInternals.ariaColIndex")}}
-  - : The  [`ariaColIndex`](/en-US/docs/Web/API/ElementInternals/ariaColIndex) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-colindex` attribute.
+  - : The [`ariaColIndex`](/en-US/docs/Web/API/ElementInternals/ariaColIndex) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-colindex` attribute.
 
 ## Associated roles
 

@@ -24,6 +24,10 @@ called.
 loseContext()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 With this method, you can simulate the

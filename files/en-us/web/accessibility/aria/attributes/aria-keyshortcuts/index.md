@@ -1,7 +1,7 @@
 ---
 title: 'aria-keyshortcuts'
 slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -36,7 +36,7 @@ aria-keyshortcuts="alt+shift+p control+f"
 aria-keyshortcuts="Meta+C Meta+Shift+C"
 ```
 
-Modifier keys are keys that don't have any impact when used on their own. They are written as "Alt", "Control", "Shift", "Meta" (Command key on Mac), or "AltGraph" (Option key on Mac).  
+Modifier keys are keys that don't have any impact when used on their own. They are written as "Alt", "Control", "Shift", "Meta" (Command key on Mac), or "AltGraph" (Option key on Mac).
 
 Non-modifier keys are keys that have impact when used alone, be that printing a character, moving focus, or otherwise creating a keyboard event when used. Non-modifiers that print a single character include characters like `P`, `z` and `.`.
 
@@ -92,7 +92,7 @@ In this example, we ensured the presence of the shortcut was known to sited user
 
 While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use accesskeys for most general-purpose websites and web apps.
 
-In addition to poor browser support, the same concerns arise for `accesskey` as exist for `aria-keyshortcuts`:  
+In addition to poor browser support, the same concerns arise for `accesskey` as exist for `aria-keyshortcuts`:
 
 - An accesskey value can conflict with a system or browser keyboard shortcut, or assistive technology functionality.
 - Certain key values may not be present on certain keyboards, especially when internationalization is a concern. So adapting to specific languages could cause further problems.
@@ -115,9 +115,9 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 ## ARIAMixin API
 
 - {{domxref("Element.ariaKeyShortcuts")}}
-  - : The  [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
+  - : The [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
 - {{domxref("ElementInternals.ariaKeyShortcuts")}}
-  - : The  [`ariaKeyShortcuts`](/en-US/docs/Web/API/ElementInternals/ariaKeyShortcuts) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
+  - : The [`ariaKeyShortcuts`](/en-US/docs/Web/API/ElementInternals/ariaKeyShortcuts) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
 
 ## Associated roles
 

@@ -48,6 +48,10 @@ waitUntil(promise)
 
 A {{jsxref("Promise")}}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Using `waitUntil()` within a service worker's `install` event:

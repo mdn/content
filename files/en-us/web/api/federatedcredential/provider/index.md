@@ -14,12 +14,12 @@ browser-compat: api.FederatedCredential.provider
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`provider`** property of the
-{{domxref("FederatedCredential")}} interface returns a {{domxref("USVString")}}
+{{domxref("FederatedCredential")}} interface returns a string
 containing a credential's federated identity provider.
 
 ## Value
 
-A {{domxref("USVString")}} containing a credential's federated identity provider.
+A string containing a credential's federated identity provider.
 
 ## Examples
 

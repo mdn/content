@@ -64,4 +64,13 @@ Rotation around the y axis -- that is, tilting the device toward the left or rig
 
 The gamma angle is 0° when the device's left and right sides are the same distance from the surface of the Earth, and increases toward 90° as the device is tipped toward the right, and toward -90° as the device is tipped toward the left.
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device orientation</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li></ul></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device orientation</a></li>
+    <li>{{domxref("DeviceOrientationEvent")}}</li>
+    <li>{{domxref("DeviceMotionEvent")}}</li>
+    <li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D
+        Transforms</a></li>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+  </ol>
+</section>

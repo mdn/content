@@ -21,6 +21,14 @@ whole URL. It is a read-only version of {{domxref("Location.href")}}.
 toString()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

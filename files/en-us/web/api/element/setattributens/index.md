@@ -27,6 +27,10 @@ setAttributeNS(namespace, name, value)
   that is, a namespace prefix followed by a colon followed by a local name.
 - `value` is the desired string value of the new attribute.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

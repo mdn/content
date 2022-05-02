@@ -89,6 +89,10 @@ initKeyEvent (type, bubbles, cancelable, viewArg,
   - : Is a `unsigned long` representing the Unicode character associated with
     the depressed key otherwise `0`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

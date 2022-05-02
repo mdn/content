@@ -1,7 +1,7 @@
 ---
 title: 'aria-selected'
 slug: Web/Accessibility/ARIA/Attributes/aria-selected
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -53,15 +53,15 @@ In this `tablist` example, the first `tab` is selected:
 ```html
 <div class="tab-interface">
   <div role="tablist" aria-label="Sample Tabs">
-    <span role="tab" aria-selected="true" aria-controls="panel-1" 
+    <span role="tab" aria-selected="true" aria-controls="panel-1"
       id="tab-1" tabindex="0">
           First Tab
         </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-2" 
+    <span role="tab" aria-selected="false" aria-controls="panel-2"
       id="tab-2" tabindex="-1">
           Second Tab
         </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-3" 
+    <span role="tab" aria-selected="false" aria-controls="panel-3"
       id="tab-3" tabindex="-1">
           Third Tab
         </span>
@@ -93,9 +93,9 @@ In this `tablist` example, the first `tab` is selected:
 ## ARIAMixin API
 
 - {{domxref("Element.ariaSelected")}}
-  - : The  [`ariaSelected`](/en-US/docs/Web/API/Element/ariaSelected) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-selected` attribute.
+  - : The [`ariaSelected`](/en-US/docs/Web/API/Element/ariaSelected) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-selected` attribute.
 - {{domxref("ElementInternals.ariaSelected")}}
-  - : The  [`ariaSelected`](/en-US/docs/Web/API/ElementInternals/ariaSelected) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-selected` attribute.
+  - : The [`ariaSelected`](/en-US/docs/Web/API/ElementInternals/ariaSelected) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-selected` attribute.
 
 ## Associated roles
 

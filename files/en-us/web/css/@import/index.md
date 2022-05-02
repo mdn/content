@@ -35,11 +35,11 @@ where:
 - _supports-query_
   - : Is either a {{CSSxRef("@supports", "&lt;supports-condition&gt;", "#Syntax")}} or a {{CSSxRef("Syntax", "&lt;declaration&gt;", "#CSS_declarations")}}. If the import conditions do not match, the rules in the imported stylesheet do not apply.
 - _layer-name_
-  - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) that imports the contents of the linked resource. A cascade layer declared without a name (anonymous cascade layer) does not provide any means for re-arranging or adding styles and cannot be referenced from outside.
+  - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported.
 
 ## Description
 
-Imported rules must precede all other types of rules, except {{CSSxRef("@charset")}} rules. The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#Conditional_Group_Rules).
+Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules. The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#Conditional_Group_Rules).
 
 So that {{glossary("user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) after the URL. In the absence of any media query, the import is unconditional. Specifying `all` for the `list-of-media-queries` has the same effect.
 
@@ -100,7 +100,7 @@ In the above example, the rules in `headings.css` and `links.css` stylesheets ca
 @import 'style.css' layer;
 ```
 
-These are examples of creating anonymous cascade layers and importing the linked rules into them.
+This is an example of creating two separate anonymous cascade layers and importing the linked rules into each one separately. A cascade layer declared without a name is an anonymous cascade layer. Anonymous cascade layers are finalized when created: they do not provide any means for re-arranging or adding styles and they cannot be referenced from outside.
 
 ## Specifications
 

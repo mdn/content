@@ -26,6 +26,10 @@ and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on 
 getSettings()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("MediaTrackSettings")}} object describing the current configuration of the

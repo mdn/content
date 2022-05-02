@@ -25,6 +25,10 @@ being too small for the user to interact with.
 sizeToContent()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

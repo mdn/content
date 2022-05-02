@@ -24,6 +24,10 @@ interface creates a duplicate of the `MediaStreamTrack`. This new
 clone()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new {{domxref("MediaStreamTrack")}} instance which is identical to the one

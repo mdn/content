@@ -22,6 +22,14 @@ The `MediaKeySession.remove()` method returns a {{jsxref('Promise')}} after remo
 remove()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Return value
 
 A {{jsxref('Promise')}} that resolves to a boolean indicating whether the load succeeded or failed.

@@ -457,7 +457,7 @@ Server running at http://localhost:1234
 ✨  Built in 5.48s.
 ```
 
-In addition, the npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script), although in most cases your own scripts will run just fine.
+In addition, the npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script/), although in most cases your own scripts will run just fine.
 
 You can add all kinds of things to the `scripts` property that help you do your job. We certainly have, and [others have too](https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6).
 
@@ -469,8 +469,8 @@ This brings us to the end of our tour of package managers. Our next move is to b
 
 ## See also
 
-- [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts)
-- [package.json reference](https://docs.npmjs.com/files/package.json)
+- [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
+- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
 
 ## In this module
 

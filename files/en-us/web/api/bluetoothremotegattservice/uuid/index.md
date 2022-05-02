@@ -15,11 +15,11 @@ browser-compat: api.BluetoothRemoteGATTService.uuid
 {{SeeCompatTable}}
 
 The **`BluetoothGATTService.uuid`** read-only property
-returns a {{domxref("DOMString")}} representing the UUID of this service.
+returns a string representing the UUID of this service.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

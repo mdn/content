@@ -26,6 +26,10 @@ selectAllChildren(parentNode)
   - : All children of `parentNode` will be selected. `parentNode`
     itself is not part of the selection.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML

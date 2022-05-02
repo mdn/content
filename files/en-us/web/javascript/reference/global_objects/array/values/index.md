@@ -62,7 +62,7 @@ iterator.next()["value"];      // "c"
 iterator.next();               // Object { value: "d", done: false }
 iterator.next();               // Object { value: "e", done: false }
 iterator.next();               // Object { value: undefined, done: true }
-iterator.next().value;         // undefined 
+iterator.next().value;         // undefined
 ```
 
 > **Warning:** The array iterator object is one use or temporary object

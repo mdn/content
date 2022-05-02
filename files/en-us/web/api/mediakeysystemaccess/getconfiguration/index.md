@@ -36,6 +36,10 @@ the following configuration options:
 getConfiguration()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An object.

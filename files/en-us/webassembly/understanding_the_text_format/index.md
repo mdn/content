@@ -72,7 +72,8 @@ The signature is a sequence of parameter type declarations followed by a list of
 - The absence of a `(result)` means the function doesn't return anything.
 - In the current iteration, there can be at most 1 return type, but [later this will be relaxed](https://github.com/WebAssembly/spec/blob/master/proposals/multi-value/Overview.md) to any number.
 
-Each parameter has a type explicitly declared; wasm currently has four available number types (plus reference types; see the [Reference types](#reference_types)) section below):
+Each parameter has a type explicitly declared; wasm [Number types](#number_types), [Reference types](#reference_types), [Vector types](#vector_types).
+The number types are:
 
 - `i32`: 32-bit integer
 - `i64`: 64-bit integer
@@ -574,7 +575,22 @@ The new operations are:
 
 > **Note:** You can find more information in the [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) proposal.
 
-## Reference types
+## Types
+
+### Number types
+
+Web assembly currently has four available _number types_:
+
+- `i32`: 32-bit integer
+- `i64`: 64-bit integer
+- `f32`: 32-bit float
+- `f64`: 64-bit float
+
+### Vector types
+
+- `v128`: 128 bit vector of packed integer, floating-point data, or a single 128 bit type.
+
+### Reference types
 
 The [reference types proposal](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) (supported in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79)) provides two main features:
 

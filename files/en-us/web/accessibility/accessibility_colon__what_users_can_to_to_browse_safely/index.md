@@ -1,5 +1,5 @@
 ---
-title: 'Accessibility: What users can do to browse more safely' 
+title: 'Accessibility: What users can do to browse more safely'
 slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
 tags:
   - color
@@ -79,7 +79,7 @@ In the Windows10 operating system, the user has an ability to turn off animation
 
 #### Grayscale
 
-Those who have suffered traumatic brain injury (TBI) may be highly sensitive to color; it can require such a great "investment of cognitive energy" on their part, there's no energy for other daily tasks. Enabling grayscale presentation of the content reduces the cognitive workload.  It may assist users with other disabilities, as well. An interesting discussion by users on the benefits of using grayscale may be found in the discussion thread, "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)".   Of particular interest is a user who has Photosensitive Epilepsy, and uses it when  feeling "seizure-y".
+Those who have suffered traumatic brain injury (TBI) may be highly sensitive to color; it can require such a great "investment of cognitive energy" on their part, there's no energy for other daily tasks. Enabling grayscale presentation of the content reduces the cognitive workload.  It may assist users with other disabilities, as well. An interesting discussion by users on the benefits of using grayscale may be found in the discussion thread, "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)".   Of particular interest is a user who has Photosensitive Epilepsy, and uses it when feeling "seizure-y".
 
 Most Operating Systems have a way to let the user make an adjustment on the workstation. In the screenshot below, you can see an example of Windows 10 Accessibility Settings allowing for color filters to be selected. Grayscale is enabled when the color filters button is toggled "on"
 

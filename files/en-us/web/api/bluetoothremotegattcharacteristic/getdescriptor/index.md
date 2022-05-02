@@ -24,6 +24,10 @@ first {{domxref("BluetoothRemoteGATTDescriptor")}} for a given descriptor UUID.
 getDescriptor(bluetoothDescriptorUUID)
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to the

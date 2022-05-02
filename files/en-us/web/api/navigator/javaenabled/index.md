@@ -18,6 +18,10 @@ This method always returns false.
 javaEnabled()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The boolean value `false`.

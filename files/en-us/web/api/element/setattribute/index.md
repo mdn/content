@@ -89,7 +89,7 @@ This demonstrates two things:
   All that matters is that if the attribute is present at all, _regardless of its actual value_, its value is considered to be `true`.
   The absence of the attribute means its value is `false`. By setting the value of the `disabled` attribute to the empty string (`""`), we are setting `disabled` to `true`, which results in the button being disabled.
 
-{{ EmbedLiveSample('Example', '300', '50') }}
+{{ EmbedLiveSample('Examples', '300', '50') }}
 
 {{DOMAttributeMethods}}
 

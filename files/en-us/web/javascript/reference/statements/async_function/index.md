@@ -314,7 +314,7 @@ Alternatively, you can chain the promise with `catch()`:
 
 ```js
 async function getProcessedData(url) {
-  const v = await downloadData(url).catch(e => { 
+  const v = await downloadData(url).catch(e => {
     return downloadFallbackData(url)
   })
   return processDataInWorker(v)

@@ -1,7 +1,7 @@
 ---
 title: 'aria-describedby'
 slug: Web/Accessibility/ARIA/Attributes/aria-describedby
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute

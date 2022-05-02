@@ -21,6 +21,10 @@ This only applies to Progressive Web Apps installed on desktop operating systems
 getTitlebarAreaRect()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMRect")}} that provides the coordinates and size of the title bar area within the app's content.

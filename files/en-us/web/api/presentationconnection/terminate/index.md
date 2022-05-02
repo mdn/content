@@ -24,6 +24,14 @@ When the `terminate()` method is called on a {{domxref("PresentationConnection")
 terminate()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Browser compatibility
 
 {{Compat}}

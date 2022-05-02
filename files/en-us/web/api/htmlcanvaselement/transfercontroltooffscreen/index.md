@@ -23,6 +23,10 @@ thread or on a worker.
 transferControlToOffscreen()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("OffscreenCanvas")}} object.

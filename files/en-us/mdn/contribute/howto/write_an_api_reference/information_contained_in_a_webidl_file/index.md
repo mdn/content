@@ -30,7 +30,7 @@ WebIDL can be found in multiple locations:
 WebIDL is defined in [its specification](https://heycam.github.io/webidl/). But it has been designed to be extended to convey more information, and browser vendors have done so:
 
 - For Gecko, Mozilla created the [documentation](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) of its dialectal WebIDL.
-- For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl) to describe its extensions.
+- For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl/) to describe its extensions.
 - For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
 
 > **Note:** We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.

@@ -22,6 +22,10 @@ by the implementation.
 getSupportedProfiles()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{jsxref("Array")}} of string elements indicating which ASTC

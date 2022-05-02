@@ -26,7 +26,7 @@ new Blob(array, options);
 
 - `array`
   - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
-    {{domxref("Blob")}}, {{domxref("USVString")}} objects, or a mix of any of such
+    {{domxref("Blob")}}, string objects, or a mix of any of such
     objects, that will be put inside the {{domxref("Blob")}}. `USVString`
     objects are encoded as UTF-8.
 - `options` {{optional_inline}}

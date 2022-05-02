@@ -17,7 +17,7 @@ For details of how to supply appropriate values for this parameter, see the spec
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `AES-GCM`.
+  - : A string. This should be set to `AES-GCM`.
 - `iv`
   - : A {{domxref("BufferSource")}} — the initialization vector. This must be unique for every encryption operation carried out with a given key. Put another way: never reuse an IV with the same key. The AES-GCM specification recommends that the IV should be 96 bits long, and typically contains bits from a random number generator. [Section 8.2 of the specification](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A65%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) outlines methods for constructing IVs. Note that the IV does not have to be secret, just unique: so it is OK, for example, to transmit it in the clear alongside the encrypted message.
 - `additionalData` {{optional_inline}}

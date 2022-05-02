@@ -83,4 +83,11 @@ function orient( aa ) {
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 - [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device orientation</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li></ul></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device orientation</a></li>
+    <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></li>
+    <li>{{domxref("DeviceOrientationEvent")}}</li>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+  </ol>
+</section>

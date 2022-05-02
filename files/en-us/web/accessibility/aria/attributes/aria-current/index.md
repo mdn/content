@@ -1,7 +1,7 @@
 ---
 title: "aria-current"
 slug: Web/Accessibility/ARIA/Attributes/aria-current
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute

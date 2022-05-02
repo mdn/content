@@ -159,7 +159,7 @@ Working directly with the DOM, as in this example, requires understanding many t
 
 JavaScript frameworks were created to make this kind of work a lot easier — they exist to provide a better _developer experience_. They don't bring brand-new powers to JavaScript; they give you easier access to JavaScript's powers so you can build for today's web.
 
-If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/dengeist/pen/XWbPNmw), which also allows users to add and delete new tasks.
+If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/mxmason/pen/XWbPNmw), which also allows users to add and delete new tasks.
 
 Read more about the JavaScript used in this section:
 
@@ -275,7 +275,7 @@ You should seriously consider the support matrix and DSLs of a framework when ma
 Citations for this table:
 
 - [React browser support: official docs](https://reactjs.org/docs/react-dom.html#browser-support)
-- [Ember browser support: Ember 3.0 release announcement](https://blog.emberjs.com/2018/02/14/ember-3-0-released.html)
+- [Ember browser support: Ember 3.0 Released](https://blog.emberjs.com/ember-3-0-released/)
 - [Ember templating language (official docs)](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/)
 
 ### Does the framework have a strong community?

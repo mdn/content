@@ -73,6 +73,10 @@ drawWindow(window, x, y, w, h, bgColor, flags)
     | `DRAWWINDOW_USE_WIDGET_LAYERS`   | `0x08` | Use the widget layer manager if available. This means hardware acceleration may be used, but it might actually be slower or lower quality than normal. It will, however, more accurately reflect the pixels rendered to the screen. |
     | `DRAWWINDOW_ASYNC_DECODE_IMAGES` | `0x10` | Do not synchronously decode images - draw what we have.                                                                                                                                                                             |
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This method draws a snapshot of the contents of a DOM `window` into the

@@ -1,7 +1,7 @@
 ---
 title: 'aria-rowindex'
 slug: Web/Accessibility/ARIA/Attributes/aria-rowindex
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -55,7 +55,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
     <div role="row" aria-rowindex="9">
       <span role="gridcell">Ashlyn</span>
       <span role="gridcell">Harris</span>
-      <span role="gridcell" aria-rowspan="2"      
+      <span role="gridcell" aria-rowspan="2"
             aria-rowindex="9">Goalkeeper</span>
     </div>
     <div role="row" aria-rowindex="10">
@@ -76,9 +76,9 @@ Note both  `aria-rowspan` and `aria-rowindex` are present on the Goalkeeper cell
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRowIndex")}}
-  - : The  [`ariaRowIndex`](/en-US/docs/Web/API/Element/ariaRowIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindex` attribute.
+  - : The [`ariaRowIndex`](/en-US/docs/Web/API/Element/ariaRowIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindex` attribute.
 - {{domxref("ElementInternals.ariaRowIndex")}}
-  - : The  [`ariaRowIndex`](/en-US/docs/Web/API/ElementInternals/ariaRowIndex) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindex` attribute.
+  - : The [`ariaRowIndex`](/en-US/docs/Web/API/ElementInternals/ariaRowIndex) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindex` attribute.
 
 ## Associated roles
 

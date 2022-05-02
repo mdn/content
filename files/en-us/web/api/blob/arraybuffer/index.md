@@ -21,6 +21,10 @@ binary data contained in an {{jsxref("ArrayBuffer")}}.
 arrayBuffer()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A promise that resolves with an {{jsxref("ArrayBuffer")}} that contains the blob's

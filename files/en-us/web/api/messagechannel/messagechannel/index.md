@@ -20,10 +20,10 @@ interface returns a new {{domxref("MessageChannel")}} object with two new
 ## Syntax
 
 ```js
-new MessageChannel();
+new MessageChannel()
 ```
 
-### Returns
+### Parameters
 
 A newly created {{domxref("MessageChannel")}} object.
 

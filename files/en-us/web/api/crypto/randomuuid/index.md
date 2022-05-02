@@ -22,6 +22,10 @@ The **`randomUUID()`** method of the {{domxref("Crypto")}} interface is used to 
 randomUUID()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string containing a randomly generated, 36 character long v4 UUID.

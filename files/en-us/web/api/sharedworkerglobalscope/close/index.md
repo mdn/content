@@ -21,6 +21,14 @@ The **`close()`** method of the {{domxref("SharedWorkerGlobalScope")}} interface
 close()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 If you want to close your worker instance from inside the worker itself, you can call the following:

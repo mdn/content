@@ -27,6 +27,14 @@ Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if
 getGamepads()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

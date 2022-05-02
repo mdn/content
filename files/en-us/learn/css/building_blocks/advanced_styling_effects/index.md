@@ -315,7 +315,7 @@ In the image below we have a pleasingly round balloon. The actual file is rectan
 
 {{EmbedGHLiveSample("css-examples/learn/images/shapes.html", '100%', 1000)}}
 
-The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its centre point from the centre of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
+The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its center point from the center of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
 
 > **Note:** In Firefox you can use the DevTools [Shapes Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) to inspect Shapes.
 

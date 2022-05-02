@@ -1,7 +1,7 @@
 ---
 title: 'aria-rowindextext'
 slug: Web/Accessibility/ARIA/Attributes/aria-rowindextext
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -28,9 +28,9 @@ The `aria-rowindextext` is added to each {{HTMLElement('row')}} or to elements w
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRowIndexText")}}
-  - : The  [`ariaRowIndexText`](/en-US/docs/Web/API/Element/ariaRowIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindextext` attribute.
+  - : The [`ariaRowIndexText`](/en-US/docs/Web/API/Element/ariaRowIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindextext` attribute.
 - {{domxref("ElementInternals.ariaRowIndexText")}}
-  - : The  [`ariaRowIndexText`](/en-US/docs/Web/API/ElementInternals/ariaRowIndexText) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindextext` attribute.
+  - : The [`ariaRowIndexText`](/en-US/docs/Web/API/ElementInternals/ariaRowIndexText) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindextext` attribute.
 
 ## Associated roles
 

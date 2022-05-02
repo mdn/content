@@ -17,7 +17,7 @@ The **`ariaRowIndexText`** property of the {{domxref("Element")}} interface refl
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

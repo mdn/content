@@ -20,6 +20,10 @@ currently being represented by the selection object, i.e. the currently selected
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the selection.

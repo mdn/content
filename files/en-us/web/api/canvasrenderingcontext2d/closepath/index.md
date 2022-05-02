@@ -27,6 +27,14 @@ the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} or
 closePath()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Closing a triangle

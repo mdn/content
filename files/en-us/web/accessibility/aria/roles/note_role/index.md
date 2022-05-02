@@ -26,7 +26,7 @@ The `note` role can be added to parenthetic or ancillary content if no other nat
 ```html
 <h1>Madam C. J. Walker</h1>
 <p>Madam C.J. Walker was an African American entrepreneur, philanthropist, and political and social activist.</p>
-<h2>Early Life</p>
+<h2>Early Life</h2>
 ....
 <h2>Career</h2>
 ....

@@ -189,7 +189,7 @@ This is accomplished by exposing more privileged XHR and fetch instances in the 
 >
 > For cross-browser extensions, the presence of these methods must be feature-detected.
 
-> **Note:** In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches).
+> **Note:** In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches/).
 
 ## Communicating with background scripts
 

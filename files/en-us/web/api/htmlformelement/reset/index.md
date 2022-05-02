@@ -32,6 +32,14 @@ whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call se
 reset()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

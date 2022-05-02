@@ -22,6 +22,14 @@ When the `close()` method is called on a {{domxref("PresentationConnection")}}, 
 close()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Browser compatibility
 
 {{Compat}}

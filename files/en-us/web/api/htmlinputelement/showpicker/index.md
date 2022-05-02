@@ -37,6 +37,10 @@ can also be prepopulated with items from a {{htmlelement("datalist")}} element o
 showPicker()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 Click the button in this example to show a color picker.

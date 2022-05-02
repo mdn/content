@@ -27,7 +27,7 @@ meaning varies depending on the type of candidate:
 
 - Local candidate
   - : A value of `true` means the candidate has been deleted as described by
-    {{RFC(5245, "8.3")}}.
+    {{RFC(5245, "", "8.3")}}.
 - Host candidate
   - : A value of `true` indicates that the candidate's network resources have
     been released. This generally mean that any associated socket(s) have been closed and

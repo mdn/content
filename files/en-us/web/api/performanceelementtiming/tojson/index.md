@@ -19,6 +19,10 @@ The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interfa
 toJSON()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 - json

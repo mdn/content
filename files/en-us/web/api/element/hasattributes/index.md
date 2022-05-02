@@ -21,6 +21,10 @@ attributes or not.
 hasAttributes()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A boolean.

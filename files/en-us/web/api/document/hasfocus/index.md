@@ -26,6 +26,10 @@ active element in a document has focus.
 hasFocus()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 `false` if the active element in the document has no focus;

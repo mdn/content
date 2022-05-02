@@ -25,6 +25,14 @@ events.
 click()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Simulate a mouse-click when moving the mouse pointer over a checkbox:

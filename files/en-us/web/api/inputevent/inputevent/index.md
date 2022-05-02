@@ -21,14 +21,15 @@ The **`InputEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new InputEvent(typeArg, inputEventInit);
+new InputEvent(typeArg)
+new InputEvent(typeArg, inputEventInit)
 ```
 
-### Values
+### Parameters
 
-- _typeArg_
+- `typeArg`
   - : Is a {{domxref("DOMString")}} representing the name of the event.
-- _inputEventInit_{{optional_inline}}
+- `inputEventInit` {{optional_inline}}
 
   - : Is a `InputEventInit` dictionary, having the following fields:
 

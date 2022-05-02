@@ -1,6 +1,6 @@
 ---
 title: ARIA guides
-slug: Web/Accessibility/ARIA/ARIA_Guides 
+slug: Web/Accessibility/ARIA/ARIA_Guides
 tags:
   - ARIA
 ---
