@@ -295,7 +295,6 @@ And that's a wrap — we hope you had fun playing with video and audio in web pa
 - [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
 - [Audio and Video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery): A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.
 - [Audio and Video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation): A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)
-- Automated options to [translate multimedia](https://www.inwhatlanguage.com/blog/translate-video-audio/).
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Event reference > Media](/en-US/docs/Web/Events#media)

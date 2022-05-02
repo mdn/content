@@ -64,7 +64,7 @@ The benefit of using an ORM is that programmers can continue to think in terms o
 
 ### What ORM/ODM should I use?
 
-There are many ODM/ORM solutions available on the NPM package manager site (check out the [odm](https://www.npmjs.com/browse/keyword/odm) and [orm](https://www.npmjs.com/browse/keyword/orm) tags for a subset!).
+There are many ODM/ORM solutions available on the NPM package manager site (check out the [odm](https://www.npmjs.com/search?q=keywords:odm) and [orm](https://www.npmjs.com/search?q=keywords:orm) tags for a subset!).
 
 A few solutions that were popular at the time of writing are:
 
@@ -124,7 +124,7 @@ Mongoose is installed in your project (**package.json**) like any other dependen
 npm install mongoose
 ```
 
-Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/download-center) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
+Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/try/download/community) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 
 > **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based *database as a service* free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
 
@@ -510,11 +510,11 @@ SomeModel.find(callback_function);
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) free cloud-hosted [sandbox](https://www.mongodb.com/cloud/atlas/pricing) database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/atlas/database) free cloud-hosted [sandbox](https://www.mongodb.com/atlas/database/pricing) database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [ObjectRocket](https://www.objectrocket.com/)).
 
-> **Note:** If you prefer you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial requires some form of remote database, since the free tier of the [Heroku](https://www.heroku.com/) service does not provide persistent storage. It is therefore highly recommended to use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+> **Note:** If you prefer you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/community). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial requires some form of remote database, since the free tier of the [Heroku](https://www.heroku.com/) service does not provide persistent storage. It is therefore highly recommended to use [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 
-You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
+You will first need to [create an account](https://www.mongodb.com/atlas/database/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 

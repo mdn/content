@@ -218,7 +218,7 @@ IE conditional comments are a modified proprietary HTML comment syntax, which ca
 
 This block will apply the IE-specific CSS and JavaScript only if the browser viewing the page is IE 8 or older. `lte` means "less than or equal to", but you can also use lt, gt, gte, `!` for NOT, and other logical syntax.
 
-> **Note:** Sitepoint's [Internet Explorer Conditional Comments](https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/) provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.
+> **Note:** Sitepoint's [Internet Explorer Conditional Comments](https://www.sitepoint.com/internet-explorer-conditional-comments/) provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.
 
 As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements stylable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:
 
