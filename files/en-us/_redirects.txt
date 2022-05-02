@@ -3589,6 +3589,8 @@
 /en-US/docs/Games/visual_typescript_game_engine	/en-US/docs/Games
 /en-US/docs/Getting_Started_With_NSS	https://firefox-source-docs.mozilla.org/security/nss/index.html
 /en-US/docs/Getting_started_on_MDN	/en-US/docs/MDN/Contribute/Getting_started
+/en-US/docs/Glossary/404	/en-US/docs/Web/HTTP/Status/404
+/en-US/docs/Glossary/502	/en-US/docs/Web/HTTP/Status/502
 /en-US/docs/Glossary/AOM	/en-US/docs/Glossary/Accessibility_tree
 /en-US/docs/Glossary/B2G	/en-US/docs/Glossary/Boot2Gecko
 /en-US/docs/Glossary/Block/Block_(CSS)	/en-US/docs/Glossary/Block/CSS
