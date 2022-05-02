@@ -24,7 +24,7 @@ When the opened database doesn't exist yet, the value of `oldVersion` is 0.
 
 ## Value
 
-A {{jsxref("Number")}} containing a 64-bit integer.
+A number containing a 64-bit integer.
 
 ## Examples
 
