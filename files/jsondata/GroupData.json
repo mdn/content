@@ -181,12 +181,14 @@
     },
     "CSS Painting API": {
       "overview": ["CSS Painting API"],
+      "guides": ["/docs/Web/API/CSS_Painting_API/Guide"],
       "interfaces": [
+        "PaintWorklet",
         "PaintWorkletGlobalScope",
         "PaintRenderingContext2D",
         "PaintSize"
       ],
-      "methods": ["PaintWorklet.registerPaint()"],
+      "methods": ["CSS.paintWorklet"],
       "properties": [],
       "events": []
     },
