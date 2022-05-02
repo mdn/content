@@ -50,7 +50,7 @@ value to the string `"null"`. If you wish to remove an attribute, call
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

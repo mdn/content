@@ -36,7 +36,7 @@ However, for clarity, you should avoid doing so.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

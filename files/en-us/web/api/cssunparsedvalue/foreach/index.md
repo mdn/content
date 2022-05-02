@@ -59,7 +59,7 @@ forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
