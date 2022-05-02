@@ -22,10 +22,10 @@ request.
 
 ## Value
 
-A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
-property returns a {{domxref("DOMException")}} because `DOMError` has been
-removed from the DOM standard. The following error codes are returned under certain
-conditions:
+A {{domxref("DOMError")}} containing the relevant error, or `null` if there was no error.
+In Chrome 48+/Firefox 58+ this property returns a {{domxref("DOMException")}} because 
+`DOMError` has been removed from the DOM standard. The following error codes are returned
+under certain conditions:
 
 <table class="no-markdown">
   <thead>
