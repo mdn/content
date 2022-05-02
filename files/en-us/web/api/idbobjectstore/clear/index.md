@@ -44,7 +44,7 @@ operation are fired.
 ### Exceptions
 
 - `ReadOnlyError` {{domxref("DOMException")}}
-  - : Thrown if the transaction associated with this operation is in read-only [mode](/en-US/docs/Web/API/IDBTransaction#mode_constants).
+  - : Thrown if the transaction associated with this operation is in read-only [mode](/en-US/docs/Web/API/IDBTransaction/mode).
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 
