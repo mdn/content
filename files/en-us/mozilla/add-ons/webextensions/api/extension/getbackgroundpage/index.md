@@ -15,11 +15,11 @@ browser-compat: webextensions.api.extension.getBackgroundPage
 ---
 {{AddonSidebar()}}
 
-> **Warning:** This function is deprecated.
+Returns the [Window](/en-US/docs/Web/API/Window) of the background page if the background script is running. If the script is not running, null is returned.
 
-Alias for {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
+This a synchronous function.
 
-> **Note:** This method cannot be used in Private Browsing mode — it always returns an empty array. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. For more info see {{bug(1329304)}}.
+> **Note:** This method cannot be used in Private Browsing mode — it always returns null. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. See {{bug(1329304)}} for more information.
 
 ## Syntax
 
@@ -33,7 +33,7 @@ None.
 
 ### Return value
 
-`object`. [Window](/en-US/docs/Web/API/Window) of the background page.
+`object`. [Window](/en-US/docs/Web/API/Window) of the background page or null.
 
 ## Examples
 

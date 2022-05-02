@@ -118,7 +118,7 @@ The `background` key can also contain this optional property:
       <td><code>persistent</code></td>
       <td>
         <p>A <code>Boolean</code> value.</p>
-        <p>This property is not required for manifest V3 extensions, as only the non-persistent option is supported. If provided, it is ignored in manifest V3 extensions.</p>
+        <p>If omitted, this property default to <code>true</code> in manifest V2 and <code>false</code> in manifest V3. Setting to <code>true</code> in manifest V3 results in an error.</p>
         <ul>
           <li>
             <code>true</code> indicates the background page is to be kept in

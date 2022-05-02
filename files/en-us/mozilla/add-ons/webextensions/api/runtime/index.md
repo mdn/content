@@ -49,7 +49,7 @@ It also provides messaging APIs enabling you to:
 
 ## Functions
 
-- {{WebExtAPIRef("runtime.getBackgroundPage()")}} {{deprecated_inline}}
+- {{WebExtAPIRef("runtime.getBackgroundPage()")}}
   - : Retrieves the [Window](/en-US/docs/Web/API/Window) object for the background page running inside the current extension.
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : Opens your extension's [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages).

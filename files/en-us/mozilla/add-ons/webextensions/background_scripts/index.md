@@ -15,7 +15,7 @@ Background scripts or a page are:
 
 In manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In manifest V3, only non-persistent background scripts or a page are supported.
 
-If you have persistent background scripts or a page in manifest V2, [Convert to non-persistent](#convert_to_non-persistent) provides advice on transitioning them to non-persistent.
+If you have persistent background scripts or a page in manifest V2 and want to prepare your extension for migration to manifest V3, [Convert to non-persistent](#convert_to_non-persistent) provides advice on transitioning the scripts or page to the non-persistent model.
 
 # Background script environment
 
@@ -49,7 +49,7 @@ This section describes how to implement a non-persistent background script.
 
 ## Specify the background scripts
 
-In your extension, you include a background script using the  [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for manifest V3 extensions as it is ignored.
+In your extension, you include a background script using the  [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for manifest V3 extensions or must be set to `false`.
 
 ```json
 "background": {
@@ -125,7 +125,7 @@ Do not register listeners asynchronously, as they will not be properly triggered
 
 ```
 brower.runtime.onInstalled.addListener(function() {
-  // ERROR! Events must be registered synchronously from the start of
+  // WARNING! Events must be registered synchronously from the start of
   // the page.
   brower.bookmarks.onCreated.addListener(function() {
     // do something
@@ -133,11 +133,11 @@ brower.runtime.onInstalled.addListener(function() {
 });
 ```
 
-Extensions can remove listeners from their background scripts by calling {{WebExtAPIRef("runtime.onMessage")}} `removeListener`. If all listeners for an event are removed, the browser no longer loads the extension's background script for that event.
+Extensions can remove listeners from their background scripts by calling `removeListener`, such as with {{WebExtAPIRef("runtime.onMessage")}} `removeListener`. If all listeners for an event are removed, the browser no longer loads the extension's background script for that event.
 
 ```
-brower.runtime.onMessage.addListener(function(message, sender, reply) {
-    brower.runtime.onMessage.removeListener(event);
+brower.runtime.onMessage.addListener(function messageListener(message, sender, reply) {
+    brower.runtime.onMessage.removeListener(messageListener);
 });
 ```
 
@@ -259,12 +259,11 @@ window.alarms.onAlarm.addListener(function() {
 
 ## Update calls for background script functions
 
-If using {{WebExtAPIRef("extension.getBackgroundPage")}} to call a function from the background page, update to {{WebExtAPIRef("runtime.getBackgroundPage")}} . The `runtime` method includes a callback function to ensure the background script has loaded.
+If using {{WebExtAPIRef("extension.getBackgroundPage")}} to call a function from the background page, update to {{WebExtAPIRef("runtime.getBackgroundPage")}} . The `runtime` method includes a callback function to ensure the background script has loaded, or you may await the result.
 
 ```
-document.getElementById('target').addEventListener('click', function() {
-  window.runtime.getBackgroundPage(function(backgroundPage){
-    backgroundPage.backgroundFunction()
-  })
+document.getElementById('target').addEventListener('click', async () => {
+  let backgroundPage = await window.runtime.getBackgroundPage();
+  backgroundPage.backgroundFunction();
 });
 ```
