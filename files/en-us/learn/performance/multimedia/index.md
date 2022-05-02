@@ -109,7 +109,7 @@ In image delivery the "one size fits all" approach will not yield the best resul
 
 Two interesting effects to keep in mind regarding high dpi screens is that:
 
-- with high DPI screen, [humans will spot compression artifacts a lot later](https://www.netvlies.nl/blogs/retina-revolution), meaning that for images meant for these screens you can crank up compression beyond usual.
+- with a high DPI screen, humans will spot compression artifacts a lot later, meaning that for images meant for these screens you can crank up compression beyond usual.
 - [Only a very few people can spot an increase in resolution beyond 2× DPI](https://observablehq.com/@eeeps/visual-acuity-and-device-pixel-ratio), which means you don't need to serve images resolving higher than 2×.
 
 #### Controlling the priority (and ordering) of downloading images

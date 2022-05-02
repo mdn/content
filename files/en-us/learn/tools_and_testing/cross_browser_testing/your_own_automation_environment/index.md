@@ -605,7 +605,7 @@ If you click on the link for your test, you'll get to a new screen where you wil
 
 > **Note:** The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.
 
-> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run tests on mobile browsers](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-tests-on-mobile) and [Run tests on desktop browsers](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#setting-os-and-browser).
+> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test).
 
 #### Filling in BrowserStack test details programmatically
 
