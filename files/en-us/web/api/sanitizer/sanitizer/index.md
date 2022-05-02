@@ -45,7 +45,6 @@ new Sanitizer(config)
       - : A {{jsxref('Boolean')}} value set to `false` (default) to remove HTML comments.
         Set to `true` in order to keep comments.
 
-
 ## Examples
 
 The examples below show a sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method.
@@ -54,7 +53,6 @@ To simplify the presentation the result that is shown is actually the _innerHTML
 
 > **Note:** The API _only_ sanitizes HTML in strings in the context of a particular element/tag.
 > For more information see {{domxref('HTML Sanitizer API')}} (and {{domxref("Sanitizer.sanitizeFor()")}}).
-
 
 ### Using the default sanitizer
 

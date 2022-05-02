@@ -25,7 +25,6 @@ You can also export a tag defined in a module and use it to inspect exceptions t
 > This ensures that WebAssembly modules can keep exception information internal if required.
 > Code can still catch and rethrow exceptions that it does not understand.
 
-
 ## Constructor
 
 - [`WebAssembly.Tag()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag)
@@ -35,7 +34,6 @@ You can also export a tag defined in a module and use it to inspect exceptions t
 
 - [`Tag.prototype.type()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/type)
   - : Returns the object defining the data-types array for the tag (as set in its constructor).
-
 
 ## Examples
 
@@ -65,8 +63,6 @@ The WebAssembly module might then import the tag as shown below:
 If the tag was used to throw an exception that propagated to JavaScript, we could use the tag to inspect its values.
 
 > **Note:** There are many alternatives. We could also use the tag to create a [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) and throw that from a function called by WebAssembly.
-
-
 
 ## Specifications
 

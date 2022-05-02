@@ -26,6 +26,7 @@ read-only, or do you want to write to the object stores?) The default value is
 
 A string defining the mode for isolating access to data in the current object stores.
 The following values are available:
+
 - `readonly`
   - : Allows data to be read but not changed.
 - `readwrite`

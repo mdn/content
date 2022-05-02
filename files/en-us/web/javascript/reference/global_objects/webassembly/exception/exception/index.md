@@ -20,7 +20,6 @@ The data types of each of the payload elements must match the corresponding data
 The constructor may also take an `options` object.
 The `options.traceStack` property can be set true (by default it is `false`) to indicate that WebAssembly code that throws the exception may populate the exception's [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property with a stack track.
 
-
 ## Syntax
 
 ```js
@@ -38,20 +37,19 @@ new Exception(tag, payload, options)
 - `options` {{optional_inline}}
   - : An object with the following optional fields:
 
-     - `traceStack` {{optional_inline}}
-       - : `true` if the `Exception` may have a stack trace attached to its [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property, otherwise `false`.
+    - `traceStack` {{optional_inline}}
+      - : `true` if the `Exception` may have a stack trace attached to its [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property, otherwise `false`.
          This is `false` by default (if `options` or `options.traceStack` are not provided).
-
 
 ### Exceptions
 
 - `TypeError`
   - : The `payload` and `tag` sequences do not have the same number of elements and/or the elements are not of matching types.
 
-
 ## Examples
 
 This example shows the creation of an exception using a simple tag.
+
 ```js
 // Create tag and use it to create an exception
 const tag = new WebAssembly.Tag({ parameters: ["i32", "f32"] });

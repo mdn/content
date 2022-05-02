@@ -47,7 +47,6 @@ The value of the argument at `index`.
 - {{jsxref("RangeError")}}
   - : The value of the `index` parameter is greater than or equal to the number of fields in the data.
 
-
 ## Examples
 
 In order to get the values of an exception, the tag must be "known" to the calling code;
@@ -104,7 +103,6 @@ example.js:41 getArg 0 : 1
 The code catches the exception and uses `getArg()` to print the value at the first index.
 In this case, it is just "1".
 
-
 ### Getting exception value from an exported tag
 
 The process for using an exported tag is very similar to that shown in the previous section.
@@ -116,12 +114,12 @@ Here is the same WebAssembly module, simply replacing the import with an export.
   ;; Export tag giving it external name: "exptag"
   (tag $tagname (export "exptag") (param i32) )
   (func $throwException (param i32)
-	local.get 0
-	throw $tagname
-  )
+     local.get 0
+     throw $tagname
+  ) 
   (func (export "run1")
-	i32.const 1
-	call $throwException
+     i32.const 1
+     call $throwException
   )
 )
 ```
@@ -147,7 +145,6 @@ WebAssembly.instantiateStreaming(fetch('example.wasm') )
   });
 
 ```
-
 
 ## Specifications
 

@@ -35,7 +35,6 @@ is(tag)
 
 A boolean `true` if the specified tag matches the exception, and `false` otherwise.
 
-
 ## Examples
 
 The code below shows how to use `is()` to verify that a tag matches an [`Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception).
@@ -53,6 +52,7 @@ console.log(`Tag1: ${ exception1.is(tag1) }`);
 ```
 
 We can also demonstrate that this exception will not match another tag even if the tag is created with the same parameters.
+
 ```js
 // Create a new tag (with same parameters) and verify it does not match the exception
 const tag2 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });

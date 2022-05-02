@@ -33,7 +33,6 @@ new WebAssembly.Tag(type)
 - `TypeError`
   - : The `type.parameters` argument is not supplied, does not contain at least one value, or contains an unsupported tag descriptor.
 
-
 ## Examples
 
 This creates a tag with two values.
@@ -41,7 +40,6 @@ This creates a tag with two values.
 ```js
 const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 ```
-
 
 ## Specifications
 

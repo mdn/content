@@ -23,7 +23,6 @@ The virtual machine can then attach a stack trace to the exception when it is th
 > **Note:** Stack traces are not normally sent from WebAssembly code to improve performance.
 > The ability to add stack traces to these exceptions is provided for developer tooling, and is not generally recommended for broader use.
 
-
 ## Value
 
 A {{domxref("DOMString")}} containing the stack trace, or {{jsxref("undefined")}} if no trace has been assigned.
@@ -35,7 +34,6 @@ It has approximately this format (see [stack trace conventions](https://webassem
 ```
 ${url}:wasm-function[${funcIndex}]:${pcOffset}
 ```
-
 
 ## Examples
 
@@ -54,9 +52,9 @@ It exports the method `run1` that can be called by external code to call `$throw
   (import "extmod" "throwExnWithStack" (func $throwExnWithStack (param i32) ) )
 
   ;; call $throwExnWithStack passing 42 as parameter
-  (func (export "run1")
-	i32.const 42
-	call $throwExnWithStack
+      (func (export "run1")
+     i32.const 42
+     call $throwExnWithStack
   )
 )
 ```
@@ -92,9 +90,11 @@ stack: throwExceptionWithStack@http://<url>/main.js:76:9
 ```
 
 The most "relevant" part of this code is the line where the Exception is created:
+
 ```js
 new WebAssembly.Exception(tag, [param], {traceStack: true});
 ```
+
 Passing in `{traceStack: true}` tells the WebAssembly virtual machine that it should attach the stack to the exception that it is throwing.
 Without this, the stack would be `undefined`.
 

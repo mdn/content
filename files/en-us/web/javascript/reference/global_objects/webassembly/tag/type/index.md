@@ -33,7 +33,6 @@ An object with a property named `parameters` that references the array of data t
 
 This is the same as the `type` object that was originally passed into the [`Tag()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag).
 
-
 ## Examples
 
 This code snippet creates a tag defining two data types and then exports them using `type()`.

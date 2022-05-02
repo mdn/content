@@ -28,7 +28,6 @@ Once the exception is available to the WebAssembly module, it can attach a stack
 
 {{AvailableInWorkers}}
 
-
 ## Constructor
 
 - [`WebAssembly.Exception()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception)
@@ -47,12 +46,12 @@ Once the exception is available to the WebAssembly module, it can attach a stack
 - [`Exception.prototype.stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack)
   - : Returns the stack trace for the exception, or `undefined`.
 
-
 ## Examples
 
 This example shows how to define a tag and import it into a module, then use it to throw an exception that is caught in JavaScript.
 
 Consider the following WebAssembly code, which is assumed to be compiled to a file **example.wasm**.
+
 - The module imports a tag that is referred to as `$tagname` internally and that has a single `i32` param.
   The tag expects the tag to be passed using module `extmod` and tag `exttag`.
 - The `$throwException` function throws an exception using the `throw` keyword, taking the `$tagname` and the parameter argument.
