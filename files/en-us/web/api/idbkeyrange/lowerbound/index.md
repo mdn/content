@@ -42,7 +42,7 @@ lowerBound(lower, open)
 ### Exceptions
 
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the `value` parameter was not a valid key.
+  - : Thrown if the key associated with the `lower` parameter is not a valid key.
 
 ## Examples
 
