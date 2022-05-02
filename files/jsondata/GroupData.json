@@ -87,7 +87,6 @@
         "CanvasRenderingContext2D",
         "HTMLCanvasElement",
         "ImageBitmap",
-        "ImageBitmapFactories",
         "ImageBitmapRenderingContext",
         "ImageData",
         "OffscreenCanvas",
@@ -101,7 +100,10 @@
     "Channel Messaging API": {
       "overview": ["Channel Messaging API"],
       "guides": ["/docs/Web/API/Channel_Messaging_API/Using_channel_messaging"],
-      "interfaces": ["MessageChannel", "MessagePort", "PortCollection"],
+      "interfaces": [
+        "MessageChannel",
+        "MessagePort"
+      ],
       "methods": [],
       "properties": [],
       "events": []
@@ -455,7 +457,6 @@
         "FileSystemDirectoryReader",
         "FileSystemEntry",
         "FileSystemFileEntry",
-        "FileSystemFlags",
         "FileSystem"
       ],
       "methods": [],
@@ -504,15 +505,10 @@
       "overview": ["Fullscreen API"],
       "guides": ["/docs/Web/API/Fullscreen_API/Guide"],
       "interfaces": [],
-      "dictionaries": ["FullscreenOptions"],
       "methods": ["Document.exitFullscreen()", "Element.requestFullscreen()"],
       "properties": [
         "Document.fullscreen",
-        "DocumentOrShadowRoot.fullscreenElement",
-        "Document.onfullscreenchange",
-        "Document.onfullscreenerror",
-        "Element.onfullscreenchange",
-        "Element.onfullscreenerror"
+        "Document.fullscreenElement"
       ],
       "events": [
         "Document: fullscreenchange",
