@@ -24,13 +24,13 @@ createAttributeNS(namespaceURI, qualifiedName)
 
 ### Parameters
 
-- _namespaceURI_
+- `namespaceURI`
   - : A string that specifies the [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) to associate with the attribute.
-    The {{DOMxRef("attribute.namespaceURI", "namespaceURI")}} property of the created attribute is initialized with the value of _namespaceURI_.
+    The {{DOMxRef("attribute.namespaceURI", "namespaceURI")}} property of the created attribute is initialized with the value of `namespaceURI`.
     See [Valid Namespace URIs](#important_namespace_uris).
-- _qualifiedName_
+- `qualifiedName`
   - : A string that specifies the name of attribute to be created.
-    The {{DOMxRef("attribute.name", "name")}} property of the created attribute is initialized with the value of _qualifiedName_.
+    The {{DOMxRef("attribute.name", "name")}} property of the created attribute is initialized with the value of `qualifiedName`.
 
 ### Return value
 
@@ -51,10 +51,6 @@ The new {{domxref("Attr")}} node.
   - : `http://www.w3.org/2000/svg`
 - [MathML](/en-US/docs/Web/MathML)
   - : `http://www.w3.org/1998/Math/MathML`
-- [XUL](/en-US/docs/Mozilla/Tech/XUL) {{Non-standard_Inline}}
-  - : `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
-- [XBL](/en-US/docs/Mozilla/Tech/XBL) {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : `http://www.mozilla.org/xbl`
 
 ## Examples
 
