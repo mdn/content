@@ -30,6 +30,10 @@ restore()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Restoring a saved state

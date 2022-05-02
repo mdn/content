@@ -27,6 +27,10 @@ removeAttributeNS(namespace, attrName)
 - `attrName` is a string that names the attribute to be removed from the
   current node.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

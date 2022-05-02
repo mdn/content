@@ -47,6 +47,10 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 An {{domxref("XPathResult")}} linking to the selected nodes. If `result` was `null`, it is a new object,
 if not, it is the same object as the one passed as the `result` parameter.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

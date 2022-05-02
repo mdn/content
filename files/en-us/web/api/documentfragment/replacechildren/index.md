@@ -32,6 +32,10 @@ replaceChildren(param1, param2, /* ... ,*/ paramN)
     `DocumentFragment`'s existing children with. If no replacement objects are
     specified, then the `DocumentFragment` is emptied of all child nodes.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
