@@ -535,17 +535,37 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
     - Click the **Collections** button. -->
 
-4. This will open the _Collections_ section.
-    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase2.png)
+4. This will open the _Security Quickstart_ section.
+    ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
 
-    - Click the **Add My Own Data** button.
+    - Enter a username and password. Remember to copy and store the crendentials safely as we will need them later on. Click the **Create User** button.
 
-5. This will open the _Create Database_ screen.
-    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
+      > **Note:** Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
 
-    - Enter the name for the new database as `local_library`.
+    - Enter `0.0.0.0/0` in the IP Address field. This basically tells MongoDB that we want to allow access from anywhere. Click the **Add Entry** button.
+
+      > **Note:** It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
+
+    - Click the **Finish and Close** button.
+
+5. This will open the following modal window. Click on the **Go to Databases** button.
+    ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
+
+6. You will return to the __Database Deployments__ screen.
+    ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
+
+      - Click the **Browse Collections** button.
+
+7. This will open the _Collections_ section.
+    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_adddata.jpg)
+
+      - Click the **Add My Own Data** button.
+
+
+    <!-- - Enter the name for the new database as `local_library`.
     - Enter the name of the collection as `Collection0`.
-    - Click the **Create** button to create the database.
+    - Click the **Create** button to create the database. -->
+
 
 6. You will return to the Collection screen with your database created.
     ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
