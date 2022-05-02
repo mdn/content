@@ -520,12 +520,13 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 1. Click **Build a Database** button in the Database Deployments section.
     ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
-2. This will open the _Create New Cluster_ screen.
-    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_chooseproviderregion.jpg)
+2. This will open the _Deploy a cloud database_ screen. Click on the **Create** button under the _Shared_ deployment option.
+    ![Choose a deployment option when using MongoDB Atlas.](mongodb_atlas_-_deploy.jpg)
 
-    - Select any provider from the *Cloud Provider & Region* section. Different providers offer different regions.
-    - Select any region marked "FREE TIER AVAILABLE".
-    - Click the **Create Cluster** button (creation of the cluster will take some minutes).
+    <!-- - Click on the **Create** button under the _Shared_ deployment option. -->
+    <!-- - Select any provider from the *Cloud Provider & Region* section. Different providers offer different regions. -->
+    <!-- - Select any region marked "FREE TIER AVAILABLE".
+    - Click the **Create Cluster** button (creation of the cluster will take some minutes). -->
 
 3. You will return to the _Cluster Overview_ screen.
     ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
