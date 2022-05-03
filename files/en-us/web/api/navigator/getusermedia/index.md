@@ -73,7 +73,7 @@ getUserMedia(constraints, successCallback, errorCallback)
 
 ### Return value
 
-{{domxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

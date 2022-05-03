@@ -21,7 +21,7 @@ can also be prepopulated with items from a {{htmlelement("datalist")}} element o
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

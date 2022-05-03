@@ -25,13 +25,13 @@ when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
 start()
 ```
 
-### Return value
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
