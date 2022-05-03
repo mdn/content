@@ -31,7 +31,7 @@ tags:
 - Support for the {{domxref("Comment.Comment", "Comment()")}} constructor has been added ({{bug(869006)}}).
 - Support for the {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} constructor has been added ({{bug(869002)}}).
 - The {{domxref("FocusEvent")}} interface has been implemented ({{bug(855741)}}).
-- Support for the {{domxref("ChildNode.remove()")}} method has been added ({{bug(856629)}}).
+- Support for the {{domxref("Element.remove")}} method has been added ({{bug(856629)}}).
 - The WebVTT interfaces related to the {{HTMLElement("track")}} element, {{domxref("HTMLTrackElement")}}, {{domxref("TextTrack")}}, {{domxref("TextTrackCue")}}, {{domxref("TextTrackList")}}, and {{domxref("TextTrackCueList")}} have been implemented behind the `media.webvtt.enabled` property, defaulting to `false` ({{bug(833385)}}).
 - The {{domxref("Gamepad")}} interface, and {{domxref("Navigator.getGamepads")}} have been implemented behind the `dom.gamepad.enabled` property, defaulting to `false` ({{bug(690935)}}).
 - On desktop Firefox only, `HTMLCanvasElement.getContext()` can now take the `webgl` value, in addition to `experimental-webgl` ({{bug(870232)}}).

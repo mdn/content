@@ -52,7 +52,7 @@ createTreeWalker(root, whatToShow, filter)
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{domxref("Text")}} nodes.                                                                                                                                                                                                                                                                                                                                                                      |
 
 - `filter` {{optional_inline}}
-  - : A {{domxref("NodeFilter")}}, that is an object with a method
+  - : A {{domxref("Document.createNodeIterator")}}, that is an object with a method
     `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine
     whether or not to accept a node that has passed the `whatToShow` check.
 

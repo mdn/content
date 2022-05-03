@@ -67,7 +67,7 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 - {{DOMxRef("msCaching")}}
 - {{DOMxRef("msCachingEnabled")}}
 - {{DOMxRef("msCapsLockWarningOff")}}
-- {{DOMxRef("Event.msConvertURL()")}}
+- {{DOMxRef("Event")}}
 - {{DOMxRef("mselementresize")}}
 - {{DOMxRef("msIsStaticHTML")}}
 - {{DOMxRef("Navigator.msLaunchUri()")}}

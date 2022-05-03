@@ -98,4 +98,4 @@ We've included a custom property in the selector block defining a boxColor. Cust
 - {{domxref('CSS Painting API')}}
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 - {{cssxref("&lt;image&gt;")}}
-- {{domxref("canvas")}}
+- {{domxref("Canvas_API")}}

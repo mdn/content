@@ -97,7 +97,7 @@ Object.isExtensible(p); // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Reflect.isExtensible()")}}
 - {{jsxref("Reflect.preventExtensions()")}}

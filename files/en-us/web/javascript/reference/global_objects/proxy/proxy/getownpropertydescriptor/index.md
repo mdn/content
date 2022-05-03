@@ -101,6 +101,6 @@ Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Reflect.getOwnPropertyDescriptor()")}}

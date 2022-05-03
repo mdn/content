@@ -47,7 +47,7 @@ _No changes._
 - The {{domxref("PerformanceTiming.secureConnectionStart")}} property has been implemented ({{bug(772589)}}).
 - Firefox used to accept `iso-2022-jp-2` sequences silently when an `iso-2022-jp` {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} was instantiated, however this has now been removed to simplify the API, as no other browsers support it and no pages seem to use it. ({{bug(715833)}}).
 - The 4ms clamping behavior of {{domxref("setTimeout()")}} and {{domxref("setInterval()")}} has been updated to be more in line with other browsers, as described in [Timeouts throttled to >=4ms](/en-US/docs/Web/API/setTimeout#timeouts_throttled_to_%3e4ms) ({{bug(1378586)}}).
-- The [Page Visibility API's](/en-US/docs/Web/API/Page_Visibility_API) {{domxref("Document.onvisibilitychange")}} handler has been added ({{bug("1333912")}}).
+- The [Page Visibility API's](/en-US/docs/Web/API/Page_Visibility_API) {{domxref("Document.visibilitychange_event")}} handler has been added ({{bug("1333912")}}).
 - The {{domxref("Window.showModalDialog()")}} method has been removed ({{bug(981796)}}).
 - The implementation of the {{domxref("HTMLFormElement.action")}}, {{domxref("HTMLInputElement.formAction")}}, and {{domxref("HTMLButtonElement.formAction")}} properties has been updated so that they return the correct form submission URL, as per spec ({{bug(1366361)}}).
 

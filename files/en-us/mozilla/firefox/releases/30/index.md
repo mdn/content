@@ -39,7 +39,7 @@ _No change._
 
 - {{domxref("Navigator.sendBeacon")}} has been implemented, easing telemetry collection ({{bug(936340)}}).
 - Added a `relList` property returning a {{domxref("DOMTokenList")}} to {{domxref("HTMLLinkElement")}}, {{domxref("HTMLAreaElement")}} and {{domxref("HTMLAnchorElement")}} ({{bug(968637)}}).
-- As per the latest specification, the first argument of {{domxref("OscillatorNode.start")}} and {{domxref("OscillatorNode.stop")}} is now optional and defaults to `0` ({{bug(982541)}}).
+- As per the latest specification, the first argument of {{domxref("AudioScheduledSourceNode.start")}} and {{domxref("AudioScheduledSourceNode.stop")}} is now optional and defaults to `0` ({{bug(982541)}}).
 - The method {{domxref("Navigator.requestWakeLock()")}} and the non-standard {{domxref("MozWakeLock")}} are no longer available from the Web on Desktop ({{bug(963366)}}).
 - The `DOM_VK_ENTER` constant has been removed from {{domxref("KeyboardEvent")}} ({{bug(969247)}}).
 - Web components' {{domxref("Document.register")}} has been adapted to follow the behavior described in the latest version of the specification ({{bug(856140)}}).

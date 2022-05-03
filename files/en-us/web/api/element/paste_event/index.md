@@ -28,7 +28,7 @@ The **`paste`** event is fired when the user has initiated a "paste" action thro
     </tr>
     <tr>
       <th scope="row">Event handler property</th>
-      <td>{{domxref("HTMLElement/onpaste", "onpaste")}}</td>
+      <td>{{domxref("HTMLElement/paste_event", "onpaste")}}</td>
     </tr>
   </tbody>
 </table>

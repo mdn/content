@@ -53,5 +53,5 @@ reference to the list that you've previously saved.
 ## See also
 
 - {{DOMxRef("XRInputSource")}}
-- {{DOMxRef("XRSession.oninputsourceschange")}}
+- {{DOMxRef("XRSession.inputsourceschange_event")}}
 - [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

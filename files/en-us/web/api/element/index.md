@@ -326,13 +326,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
+    Also available via the {{domxref("HTMLElement/copy_event", "oncopy")}} property.
 - {{domxref("Element/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
+    Also available via the {{domxref("HTMLElement/cut_event", "oncut")}} property.
 - {{domxref("Element/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
+    Also available via the {{domxref("HTMLElement/paste_event", "onpaste")}} property.
 
 ### Composition events
 

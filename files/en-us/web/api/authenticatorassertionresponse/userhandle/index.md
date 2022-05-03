@@ -19,7 +19,7 @@ by the relying party's server to link the user account with its corresponding
 credentials and other data.
 
 The same value may be found on the `id` property of the
-{{domxref("PublicKeyCredentialCreationOptions.user","options.user")}} object (used for
+{{domxref("CredentialsContainer/create","options.user")}} object (used for
 the creation of the `PublicKeyCredential` instance).
 
 > **Note:** An `AuthenticatorAssertionResponse` instance is
@@ -65,5 +65,5 @@ navigator.credentials.get({  publicKey: options })
 
 ## See also
 
-- {{domxref("PublicKeyCredentialCreationOptions.user")}} and its `id`
+- {{domxref("CredentialsContainer.create")}} and its `id`
   property which contains the same data

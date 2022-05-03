@@ -26,7 +26,7 @@ _No changes._
 ### CSS
 
 - The {{cssxref(":user-valid")}} and {{cssxref(":user-invalid")}} pseudo-classes have been implemented ({{bug(1694141)}}).
-- The {{cssxref("image-set", "image-set()")}} functional notation is now enabled ({{bug(1698133)}}), and was made available for {{cssxref("content")}} and {{cssxref("cursor")}} in {{bug(1695402)}} and {{bug(1695403)}}.
+- The {{cssxref("image/image-set", "image-set()")}} functional notation is now enabled ({{bug(1698133)}}), and was made available for {{cssxref("content")}} and {{cssxref("cursor")}} in {{bug(1695402)}} and {{bug(1695403)}}.
 - The default `monospace` font for MacOS has been changed to Menlo ({{bug(1342741)}}).
 - The `collapse` value of {{cssxref("visibility")}} is now implemented for ruby annotations ({{bug(1697529)}}).
 - The `alternate` value for {{cssxref("ruby-position")}} has been implemented, and is the new initial value for the property ({{bug(1694748)}}).
@@ -35,7 +35,7 @@ _No changes._
 #### Removals
 
 - The {{cssxref(":-moz-submit-invalid")}} pseudo-class has been hidden behind a preference, thereby removing it from web content ({{bug(1694129)}}).
-- Default styling for the non-standard {{cssxref(":-moz-ui-invalid")}} and {{cssxref(":-moz-ui-valid")}} has been removed ({{bug(1693969)}}).
+- Default styling for the non-standard {{cssxref(":user-invalid")}} and {{cssxref(":-moz-ui-valid")}} has been removed ({{bug(1693969)}}).
 
 ### JavaScript
 

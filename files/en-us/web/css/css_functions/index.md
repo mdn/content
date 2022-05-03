@@ -202,7 +202,7 @@ These functions may be used wherever an {{cssxref("&lt;image&gt;")}} is valid as
   - : Can be used to blend two or more images at a defined transparency.
 - {{cssxref("element", "element()")}}
   - : Defines an `<image>` value generated from an arbitrary HTML element.
-- {{cssxref("paint", "paint()")}}
+- {{cssxref("image/paint", "paint()")}}
   - : Defines an `<image>` value generated with a PaintWorklet.
 
 ## Counter functions

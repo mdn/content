@@ -37,8 +37,8 @@ After the `clientDataJSON` object is converted from an
   - : The [base64url](/en-US/docs/Glossary/Base64)
     encoded version of the cryptographic challenge sent from the relying party's server.
     The original value is passed via
-    {{domxref("PublicKeyCredentialRequestOptions.challenge")}} or
-    {{domxref("PublicKeyCredentialCreationOptions.challenge")}}.
+    {{domxref("CredentialsContainer.get")}} or
+    {{domxref("CredentialsContainer.create")}}.
 - `origin`
   - : The fully qualified origin of the requester which has been given by the
     client/browser to the authenticator. We should expect the [relying party's

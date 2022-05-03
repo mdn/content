@@ -14,7 +14,7 @@ browser-compat: api.Performance
 
 The **`Performance`** interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API), the [User Timing API](/en-US/docs/Web/API/User_Timing_API), and the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API).
 
-An object of this type can be obtained by calling the {{domxref("window.performance")}} read-only attribute.
+An object of this type can be obtained by calling the {{domxref("performance_property")}} read-only attribute.
 
 > **Note:** This interface and its members are available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/en-US/docs/Web/API/WorkerGlobalScope/performance) , except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
 

@@ -10,7 +10,7 @@ browser-compat: api.CookieChangeEvent
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The **`CookieChangeEvent`** interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("CookieStore.onchange()")}} when any cookie changes have occurred. A cookie change consists of a cookie and a type (either "changed" or "deleted").
+The **`CookieChangeEvent`** interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("CookieStore.change_event")}} when any cookie changes have occurred. A cookie change consists of a cookie and a type (either "changed" or "deleted").
 
 Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 

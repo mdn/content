@@ -19,8 +19,8 @@ with the given id that is associated with local or remote end of the connection.
 stream matches, it returns `null`.
 
 > **Warning:** This property has been replaced with the
-> {{domxref("RTCPeerConnection.getLocalStreams")}} and
-> {{domxref("RTCPeerConnection.getRemoteStreams")}} properties. If you have code that
+> {{domxref("RTCPeerConnection.getSenders")}} and
+> {{domxref("RTCPeerConnection.getReceivers")}} properties. If you have code that
 > uses `stream`, you will need to update, since browsers have begun to remove
 > support for `stream`.
 

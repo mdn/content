@@ -53,7 +53,7 @@ _No changes._
 
 #### DOM
 
-- In the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API), the `MakePublicKeyCredentialOptions` dictionary object has been renamed {{domxref("PublicKeyCredentialCreationOptions")}}; this change has been made in Firefox ({{bug(1436473)}}).
+- In the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API), the `MakePublicKeyCredentialOptions` dictionary object has been renamed {{domxref("CredentialsContainer.create")}}; this change has been made in Firefox ({{bug(1436473)}}).
 - The `dom.workers.enabled` pref has been removed, meaning workers can no longer be disabled since ({{bug(1434934)}}).
 - The {{domxref("Document.body","body")}} property is now implemented on the {{domxref("Document")}} interface, rather than the {{domxref("HTMLDocument")}} interface ({{bug(1276438)}}).
 - {{domxref("PerformanceResourceTiming")}} is now available in workers ({{bug(1425458)}}).
@@ -76,7 +76,7 @@ _No changes._
 
 - When recording or sharing media obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, muting the camera by setting the corresponding track's {{domxref("MediaStreamTrack.enabled")}} property to `false` now turns off the camera's "in use" indicator light, to help the user more easily see that the camera is not in use ({{bug(1299515)}}). See {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getUserMedia", "User privacy")}} for more details. See also [this blog post](https://blog.mozilla.org/webrtc/better-privacy-on-camera-mute-in-firefox-60/).
 - Removing a track from an {{domxref("RTCPeerConnection")}} using {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} no longer removes the track's {{domxref("RTCRtpSender")}} from the peer connection's list of senders as reported by {{domxref("RTCPeerConnection.getSenders", "getSenders()")}} ({{bug(1290949)}}).
-- The {{domxref("RTCRtpContributingSource")}} and {{domxref("RTCRtpSynchronizationSource")}} objects' timestamps were previously being reported based on values returned by {{jsxref("Date.getTime()")}}. In Firefox 60, these have been fixed to correctly use the [Performance Timing API](/en-US/docs/Web/API/Performance_API) instead ({{bug(1433576)}}).
+- The {{domxref("RTCRtpContributingSource")}} and {{domxref("RTCRtpReceiver.getSynchronizationSources")}} objects' timestamps were previously being reported based on values returned by {{jsxref("Date.getTime()")}}. In Firefox 60, these have been fixed to correctly use the [Performance Timing API](/en-US/docs/Web/API/Performance_API) instead ({{bug(1433576)}}).
 - As per spec, the {{domxref("ConvolverNode.ConvolverNode","ConvolverNode()")}} constructor now throws a `NotSupportedError` {{domxref("DOMException")}} if the referenced {{domxref("AudioBuffer")}} does not have 1, 2, or 4 channels ({{bug(1443228)}}).
 - The obsolete {{domxref("RTCPeerConnection")}} event handler {{domxref("RTCPeerConnection.removestream_event", "RTCPeerConnection.onremovestream")}} has been removed; by now you should be using {{event("removetrack")}} events instead ({{bug(1442385)}}).
 - The primary name for {{domxref("RTCDataChannel")}} is now in fact `RTCDataChannel`, instead of being an alias for `DataChannel`. The name `DataChannel` is no longer supported ({{bug(1173851)}}).
@@ -114,7 +114,7 @@ _No changes._
 ### CSS
 
 - The proprietary {{cssxref("-moz-user-input")}} property's `enabled` and `disabled` values are no longer available ({{bug("1405087")}}).
-- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("-moz-border-left-colors")}} properties have been removed from the platform completely ({{bug(1429723)}}).
+- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("Mozilla_Extensions#b")}} properties have been removed from the platform completely ({{bug(1429723)}}).
 
 ### JavaScript
 

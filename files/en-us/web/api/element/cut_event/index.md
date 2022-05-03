@@ -33,7 +33,7 @@ If the user attempts a cut action on uneditable content, the `cut` event still f
     </tr>
     <tr>
       <th scope="row">Event handler property</th>
-      <td>{{domxref("HTMLElement/oncut", "oncut")}}</td>
+      <td>{{domxref("HTMLElement/cut_event", "oncut")}}</td>
     </tr>
   </tbody>
 </table>

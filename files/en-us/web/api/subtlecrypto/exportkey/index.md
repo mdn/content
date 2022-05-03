@@ -16,7 +16,7 @@ The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
 interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
 and gives you the key in an external, portable format.
 
-To export a key, the key must have {{domxref("CryptoKey.extractable")}} set to
+To export a key, the key must have {{domxref("CryptoKey")}} set to
 `true`.
 
 Keys can be exported in several formats: see [Supported

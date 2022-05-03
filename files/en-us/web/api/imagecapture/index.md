@@ -34,7 +34,7 @@ The `ImageCapture` interface is based on {{domxref("EventTarget")}}, so it inclu
 - {{domxref("ImageCapture.takePhoto()")}}
   - : Takes a single exposure using the video capture device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} containing the data.
 - {{domxref("ImageCapture.getPhotoCapabilities()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of available configuration options.
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("ImageCapture.getPhotoCapabilities")}} object containing the ranges of available configuration options.
 - {{domxref("ImageCapture.getPhotoSettings()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object containing the current photo configuration settings.
 - {{domxref("ImageCapture.grabFrame()")}}

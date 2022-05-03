@@ -97,7 +97,7 @@ This article provides information about the changes in Firefox 69 that will affe
 - {{domxref("DOMMatrix.fromMatrix()")}} has been implemented ({{bug(1560462)}}).
 - We now support the six-parameter version of the {{domxref("DOMMatrix.scale()")}} method ({{bug(1397945)}}).
 - The arguments for {{domxref("DOMMatrix.translate()")}}, {{domxref("DOMMatrix.skewX()")}}, and {{domxref("DOMMatrix.skewY()")}} are now all optional, as per spec ({{bug(1397949)}}).
-- The {{domxref("NavigatorID/userAgent", "navigator.userAgent")}}, {{domxref("NavigatorID/platform", "navigator.platform")}}, and {{domxref("navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ({{bug(1559747)}}). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.
+- The {{domxref("Navigator/userAgent", "navigator.userAgent")}}, {{domxref("Navigator/platform", "navigator.platform")}}, and {{domxref("navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ({{bug(1559747)}}). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.
 - The remaining methods of {{domxref("HTMLDocument")}} have been moved to {{domxref("Document")}}. This should have no appreciable impact on your work in most cases. In particular, the {{domxref("document.close", "close()")}}, {{domxref("document.open", "open()")}}, and {{domxref("document.write", "write()")}} methods have been moved. So have the various editor related methods, including {{domxref("document.execCommand", "execCommand()")}} as well as various properties ({{bug(1549560)}}).
 - We have implemented {{domxref("AbstractRange")}} and {{domxref("StaticRange")}} ({{bug(1444847)}}).
 

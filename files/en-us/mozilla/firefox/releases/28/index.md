@@ -53,11 +53,11 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 - The {{domxref("DocumentFragment.getElementById()")}} method has been implemented. E.g. `document.createDocumentFragment().getElementById()` ({{bug("933193")}}).
 - The {{domxref("KeyboardEvent.repeat")}} attribute has been implemented ({{bug("600117")}}).
 - The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ({{bug("819900")}}).
-- The {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ({{bug(757726)}}).
+- The {{domxref("Navigator/plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ({{bug(757726)}}).
 - The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ({{bug(943668)}}).
 - The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D/drawFocusIfNeeded", "CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference `canvas.focusring.enabled` must be set to `true` to activate both ({{bug(540456)}}).
 - The `willReadFrequently` context attribute for "`2d`" canvas contexts has been implemented (see {{domxref("HTMLCanvasElement.getContext()")}}) ({{bug(884226)}}).
-- The following attributes and methods of {{domxref("NavigatorID")}} have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, and {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} ({{bug(925847)}}).
+- The following attributes and methods of {{domxref("Navigator")}} have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("Navigator/appCodeName", "appCodeName")}}, {{domxref("Navigator/product", "product")}}, and {{domxref("Navigator/taintEnabled", "taintEnabled()")}} ({{bug(925847)}}).
 - The {{domxref("Element/previousElementSibling" , "previousElementSibling")}} and {{domxref("Element/nextElementSibling" , "nextElementSibling")}} properties has been removed from {{domxref("DocumentType")}}, because of compatibility problems ({{bug(932501)}}).
 
 ### MathML

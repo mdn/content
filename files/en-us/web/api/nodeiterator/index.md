@@ -54,7 +54,7 @@ _This interface doesn't inherit any property._
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                                          |
 
 - {{domxref("NodeIterator.filter")}} {{readonlyInline}}
-  - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
+  - : Returns a {{domxref("Document.createNodeIterator")}} used to select the relevant nodes.
 - {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
   {{experimental_inline() }}
   - : Returns the {{domxref("Node")}} to which the iterator is anchored.
@@ -92,5 +92,5 @@ _This interface doesn't inherit any method._
 - The creator method: {{domxref("Document.createNodeIterator()")}}.
 - Related interfaces:
 
-  - {{domxref("NodeFilter")}}
+  - {{domxref("Document.createNodeIterator")}}
   - {{domxref("TreeWalker")}}

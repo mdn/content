@@ -84,7 +84,7 @@ _No changes_
   - {{domxref("Location.href")}}
   - {{domxref("MediaList.mediaText")}}
   - {{domxref("URL.href")}}
-  - {{domxref("URLUtilsReadOnly/href", "WorkerLocation.href")}}
+  - {{domxref("WorkerLocation/href", "WorkerLocation.href")}}
 
 #### DOM events
 

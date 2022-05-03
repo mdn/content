@@ -95,7 +95,7 @@ Improvement in our experimental Web Animations implementation, mostly to match l
 
 - When unable to parse the {{htmlattrxref("srcset", "image")}},  the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ({{bug(1139560)}}).
 - Like for images, Firefox now throttles {{domxref("Window.requestAnimationFrame()")}} for non-visible {{HTMLElement("iframe")}} ({{bug(1145439)}}).
-- {{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} is no longer available for Web workers ({{bug(1154878)}}).
+- {{domxref("Navigator/taintEnabled", "Navigator.taintEnabled")}} is no longer available for Web workers ({{bug(1154878)}}).
 
 #### Web Audio API
 

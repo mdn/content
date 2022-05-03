@@ -74,7 +74,7 @@ _No changes._
 
 #### DOM
 
-- The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with {{domxref("DOMPointInit")}}, which includes any {{domxref("DOMPoint")}} object. This function is also available on {{domxref("DOMPoint")}} ({{bug(1186265)}}).
+- The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with {{domxref("DOMPoint.fromPoint")}}, which includes any {{domxref("DOMPoint")}} object. This function is also available on {{domxref("DOMPoint")}} ({{bug(1186265)}}).
 - For compatibility purposes, the {{domxref("Event.srcElement")}} property is now supported. It is an alias for {{domxref("Event.target")}} ({{bug(453968)}}).
 - {{domxref("Navigator.registerProtocolHandler()")}} now must only be called from a secure context ({{bug(1460506)}}).
 - The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ({{bug(1460481)}}).

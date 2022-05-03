@@ -76,7 +76,7 @@ audioWorklet.addModule('modules/bypassFilter.js', {
 CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
 ```
 
-Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('image/paint()')}} function
+Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('image/paint')}} function
 can be used to include the image created by the worklet:
 
 ```css

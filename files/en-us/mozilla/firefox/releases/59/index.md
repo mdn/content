@@ -114,7 +114,7 @@ The non-standard `version` parameter of the {{htmlelement("script")}} element's 
 ### CSS
 
 - The proprietary `mozmm` {{cssxref("&lt;length&gt;")}} unit has been removed ({{bug(1416564)}}).
-- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("-moz-border-left-colors")}} properties have been limited to usage in chrome code only ({{bug(1417200)}}).
+- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("Mozilla_Extensions#b")}} properties have been limited to usage in chrome code only ({{bug(1417200)}}).
 
 ### JavaScript
 

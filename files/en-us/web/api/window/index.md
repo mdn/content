@@ -113,7 +113,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : An alias for {{domxref("window.scrollY")}}
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : Returns a reference to the parent of the current window or subframe.
-- {{domxref("Window.performance")}} {{readOnlyInline}}
+- {{domxref("performance_property")}} {{readOnlyInline}}
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Navigation_timing_API) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Returns the personalbar object, whose visibility can be toggled in the window.
@@ -309,7 +309,7 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
+- {{domxref("UserProximityEvent")}} {{deprecated_inline}}
   - : An event handler property for user proximity events (see {{domxref("UserProximityEvent")}}).
 
 ### Event handlers implemented from elsewhere
@@ -421,13 +421,13 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
+    Also available via the {{domxref("HTMLElement/copy_event", "oncopy")}} property.
 - {{domxref("Window/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
+    Also available via the {{domxref("HTMLElement/cut_event", "oncut")}} property.
 - {{domxref("Window/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
+    Also available via the {{domxref("HTMLElement/paste_event", "onpaste")}} property.
 
 ### Connection events
 
@@ -522,31 +522,31 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/vrdisplayactivate_event", "vrdisplayactivate")}}
   - : Fired when a VR display becomes available to be presented to, for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
-    Also available via the {{domxref("Window/onvrdisplayactivate", "onvrdisplayactivate")}} property.
+    Also available via the {{domxref("Window/vrdisplayactivate_event", "onvrdisplayactivate")}} property.
 - {{domxref("Window/vrdisplayblur_event", "vrdisplayblur")}}
   - : Fired when presentation to a VR display has been paused for some reason by the browser, OS, or VR hardware.
-    Also available via the {{domxref("Window/onvrdisplayblur", "onvrdisplayblur")}} property.
+    Also available via the {{domxref("Window/vrdisplayblur_event", "onvrdisplayblur")}} property.
 - {{domxref("Window/vrdisplayconnect_event", "vrdisplayconnect")}}
   - : Fired when a compatible VR display is connected to the computer.
-    Also available via the {{domxref("Window/onvrdisplayconnect", "onvrdisplayconnect")}} property.
+    Also available via the {{domxref("Window/vrdisplayconnect_event", "onvrdisplayconnect")}} property.
 - {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}}
   - : Fired when a VR display can no longer be presented to, for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
-    Also available via the {{domxref("Window/onvrdisplaydeactivate", "onvrdisplaydeactivate")}} property.
+    Also available via the {{domxref("Window/vrdisplaydeactivate_event", "onvrdisplaydeactivate")}} property.
 - {{domxref("Window/vrdisplaydisconnect_event", "vrdisplaydisconnect")}}
   - : Fired when a compatible VR display is disconnected from the computer.
-    Also available via the {{domxref("Window/onvrdisplaydisconnect", "onvrdisplaydisconnect")}} property.
+    Also available via the {{domxref("Window/vrdisplaydisconnect_event", "onvrdisplaydisconnect")}} property.
 - {{domxref("Window/vrdisplayfocus_event", "vrdisplayfocus")}}
   - : Fired when presentation to a VR display has resumed after being blurred.
-    Also available via the {{domxref("Window/onvrdisplayfocus", "onvrdisplayfocus")}} property.
+    Also available via the {{domxref("Window/vrdisplayfocus_event", "onvrdisplayfocus")}} property.
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}}
   - : Fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-    Also available via the {{domxref("Window/onvrdisplaypresentchange", "onvrdisplaypresentchange")}} property.
+    Also available via the {{domxref("Window/vrdisplaypresentchange_event", "onvrdisplaypresentchange")}} property.
 - {{domxref("Window/vrdisplaypointerrestricted_event", "vrdisplaypointerrestricted")}}
   - : Fired when the VR display's pointer input is restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).
-    Also available via the {{domxref("Window/onvrdisplaypointerrestricted", "onvrdisplaypointerrestricted")}} property.
+    Also available via the {{domxref("Window/vrdisplaypointerrestricted_event", "onvrdisplaypointerrestricted")}} property.
 - {{domxref("Window/vrdisplaypointerunrestricted_event", "vrdisplaypointerunrestricted")}}
   - : Fired when the VR display's pointer input is no longer restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).
-    Also available via the {{domxref("Window/onvrdisplaypointerunrestricted", "onvrdisplaypointerunrestricted")}} property.
+    Also available via the {{domxref("Window/vrdisplaypointerunrestricted_event", "onvrdisplaypointerunrestricted")}} property.
 
 ## Interfaces
 

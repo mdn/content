@@ -19,7 +19,7 @@ a particular stream of RTP packets.
 
 The value is the contributing source (CSRC)
 or synchronization source (SSRC) identifier, depending on whether the object is an
-`RTCRtpContributingSource` or {{domxref("RTCRtpSynchronizationSource")}},
+`RTCRtpContributingSource` or {{domxref("RTCRtpReceiver.getSynchronizationSources")}},
 which is based on the former.
 
 ## Value

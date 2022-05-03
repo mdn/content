@@ -10,7 +10,7 @@ browser-compat: api.CookieChangeEvent.CookieChangeEvent
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object which is the event type passed to {{domxref("CookieStore.onchange()")}}. This constructor is called by the browser when a change event occurs.
+The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object which is the event type passed to {{domxref("CookieStore.change_event")}}. This constructor is called by the browser when a change event occurs.
 
 > **Note:** This event constructor is generally not needed for production websites. It's primary use is for tests that require an instance of this event.
 

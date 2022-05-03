@@ -153,8 +153,8 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 // "￥7,￥500,￥8,123,￥12"
 ```
 
-For more examples, see also the {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, and
-{{jsxref("DateTimeFormat")}} pages.
+For more examples, see also the {{jsxref("Intl")}}, {{jsxref("Intl/NumberFormat")}}, and
+{{jsxref("Intl/DateTimeFormat")}} pages.
 
 ## Specifications
 

@@ -194,7 +194,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
   - : This property is non-standard and has been deprecated in favor of {{domxref("KeyboardEvent.key")}}. It was part of an old version of DOM Level 3 Events.
 - {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
   - : This is a non-standard deprecated alias for {{domxref("KeyboardEvent.location")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}
+- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}
 
   - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
 

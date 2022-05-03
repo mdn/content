@@ -140,6 +140,6 @@ console.log(obj.baz);
 - [Getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- {{jsxref("Object/__defineGetter__", "__defineGetter__")}}
+- {{jsxref("Object/__defineSetter__", "__defineSetter__")}}
 - [Defining getters and setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide

@@ -72,5 +72,5 @@ computer's monitor.
 
 ## See also
 
-- {{DOMxRef("XRSession.onvisibilitychange")}}
+- {{DOMxRef("XRSession.visibilitychange_event")}}
 - {{DOMxRef("XRSession.visibilitychange_event","visibilitychange")}} event

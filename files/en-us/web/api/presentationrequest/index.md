@@ -29,7 +29,7 @@ None
 
 ### Event handlers
 
-- {{domxref("PresentationRequest.onconnectionavailable")}}
+- {{domxref("PresentationRequest")}}
   - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
 
 ## Methods

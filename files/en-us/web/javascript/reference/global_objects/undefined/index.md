@@ -40,7 +40,7 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 
 > **Note:** While you can use `undefined` as an
 > {{Glossary("identifier")}} (variable name) in any scope other than the global scope
-> (because `undefined` is not a {{jsxref("Reserved_Words", "reserved word",
+> (because `undefined` is not a {{jsxref("Lexical_grammar#keywords", "reserved word",
     "", 1)}}), doing so is a very bad idea that will make your code difficult to maintain
 > and debug.
 >
@@ -83,7 +83,7 @@ else {
 > while strict equality doesn't. This is because `null` is not equivalent to
 > `undefined`.
 >
-> See {{jsxref("Operators/Comparison_Operators", "comparison operators", "", 1)}} for
+> See {{jsxref("Operators", "comparison operators", "", 1)}} for
 > details.
 
 ### typeof operator and undefined

@@ -21,15 +21,15 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 - {{CSSxRef("-moz-binding")}} {{Deprecated_Inline}}
 - {{CSSxRef("-moz-border-bottom-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-left-colors")}} {{deprecated_inline}}
+- {{CSSxRef("Mozilla_Extensions#b")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-border-right-colors")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-border-top-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-box-align")}}
-- {{CSSxRef("-moz-box-direction")}}
-- {{CSSxRef("-moz-box-flex")}}
-- {{CSSxRef("-moz-box-ordinal-group")}}
-- {{CSSxRef("-moz-box-orient")}}
-- {{CSSxRef("-moz-box-pack")}}
+- {{CSSxRef("box-align")}}
+- {{CSSxRef("box-direction")}}
+- {{CSSxRef("box-flex")}}
+- {{CSSxRef("box-ordinal-group")}}
+- {{CSSxRef("box-orient")}}
+- {{CSSxRef("box-pack")}}
 
 ### C–I
 
@@ -40,7 +40,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 ### O
 
 - {{CSSxRef("-moz-orient")}}
-- {{CSSxRef("-moz-osx-font-smoothing")}}
+- {{CSSxRef("font-smooth")}}
 - {{CSSxRef("-moz-outline-radius")}}
 - {{CSSxRef("-moz-outline-radius-bottomleft")}}
 - {{CSSxRef("-moz-outline-radius-bottomright")}}
@@ -64,7 +64,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
-- {{CSSxRef("-moz-user-modify")}}
+- {{CSSxRef("user-modify")}}
 - {{CSSxRef("-moz-window-dragging")}}
 - {{CSSxRef("-moz-window-shadow")}}
 
@@ -90,7 +90,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("background-clip", "-moz-background-clip")}}{{deprecated_inline}}
 - {{CSSxRef("background-origin", "-moz-background-origin")}}{{deprecated_inline}}
-- {{CSSxRef("-moz-background-inline-policy")}}{{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
+- {{CSSxRef("box-decoration-break")}}{{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
 - {{CSSxRef("background-size", "-moz-background-size")}}{{deprecated_inline}}
 - {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end")}}]
 - {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-color")}}]
@@ -167,7 +167,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 - {{CSSxRef("initial","-moz-initial")}}
 
-### {{CSSxRef("-moz-appearance")}}
+### {{CSSxRef("appearance")}}
 
 - `button`
 - `button-arrow-down`
@@ -258,8 +258,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 #### Gradients
 
-- {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
-- {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("gradient/linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("gradient/radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
 
 #### Elements
 
@@ -359,7 +359,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### {{CSSxRef("&lt;length&gt;")}}
 
-- {{CSSxRef("-moz-calc")}}
+- {{CSSxRef("calc")}}
 
 ### {{CSSxRef("list-style-type")}}
 
@@ -397,10 +397,10 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### {{CSSxRef("overflow")}}
 
-- {{CSSxRef("-moz-scrollbars-none")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-scrollbars-horizontal")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-scrollbars-vertical")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-hidden-unscrollable")}}
+- {{CSSxRef("overflow")}} {{deprecated_inline}}
+- {{CSSxRef("overflow")}} {{Deprecated_Inline}}
+- {{CSSxRef("overflow")}} {{Deprecated_Inline}}
+- {{CSSxRef("overflow")}}
 
 ### {{CSSxRef("text-align")}}
 
@@ -412,7 +412,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 - `-moz-anchor-decoration`
 
-### {{CSSxRef("-moz-user-select")}}
+### {{CSSxRef("user-select")}}
 
 - `-moz-all`
 - `-moz-none`
@@ -430,8 +430,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 - {{CSSxRef("::-moz-anonymous-block")}}
 - {{CSSxRef("::-moz-anonymous-positioned-block")}}
-- {{CSSxRef(":-moz-any")}}
-- {{CSSxRef(":-moz-any-link")}} \[Matches `:link` and `:visited`]
+- {{CSSxRef(":is")}}
+- {{CSSxRef(":any-link")}} \[Matches `:link` and `:visited`]
 - {{CSSxRef(":-moz-broken")}}
 - {{CSSxRef("::-moz-canvas")}}
 - {{CSSxRef("::-moz-color-swatch")}}
@@ -444,7 +444,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-focus-inner")}}
 - {{CSSxRef("::-moz-focus-outer")}}
 - {{CSSxRef(":-moz-focusring")}}
-- {{CSSxRef(":-moz-full-screen")}}
+- {{CSSxRef(":fullscreen")}}
 - {{CSSxRef(":-moz-full-screen-ancestor")}}
 - {{CSSxRef(":-moz-handler-blocked")}}
 - {{CSSxRef(":-moz-handler-crashed")}}
@@ -471,8 +471,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-page-sequence")}}
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
-- {{CSSxRef(":-moz-placeholder")}} {{deprecated_inline}}
-- {{CSSxRef("::-moz-placeholder")}} {{deprecated_inline}}
+- {{CSSxRef(":placeholder-shown")}} {{deprecated_inline}}
+- {{CSSxRef("::placeholder")}} {{deprecated_inline}}
 - {{CSSxRef("::-moz-progress-bar")}}
 - {{CSSxRef("::-moz-range-progress")}}
 - {{CSSxRef("::-moz-range-thumb")}}
@@ -516,7 +516,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### U – X
 
-- {{CSSxRef(":-moz-ui-invalid")}}
+- {{CSSxRef(":user-invalid")}}
 - {{CSSxRef(":-moz-ui-valid")}}
 - {{CSSxRef(":-moz-user-disabled")}}
 - {{CSSxRef("::-moz-viewport")}}
@@ -526,7 +526,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ## At-rules
 
-- {{CSSxRef("@-moz-document")}}
+- {{CSSxRef("@document")}}
 
 ## Media features
 

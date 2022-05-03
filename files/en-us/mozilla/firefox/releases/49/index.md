@@ -84,7 +84,7 @@ tags:
 - The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.origin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the `blob:` scheme is no longer incorrectly `null` but is instead the origin of the URL formed by removing the leading `blob:` ({{bug(1270451)}}).
 - In prerendering mode, the {{domxref('Document.visibilityState')}} property now returns `'prerender'` ({{bug(1069772)}}).
 - The {{domxref("isSecureContext")}} property has been implemented ({{bug(1162772)}}).
-- The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ({{bug(911477)}}).
+- The DOM4 {{domxref("Element.before")}}, {{domxref("Element.after")}}, {{domxref("Element.replaceWith")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ({{bug(911477)}}).
 - The `TouchList.identifiedTouch()` method has been removed ({{bug(1188539)}}).
 - By default, the `scrollbars` {{domxref("Window")}} feature is enabled when calling {{domxref("Window.open()")}}. In the past, while it was strongly recommended to enable it, it wasn't the default ({{bug(1257887)}}).
 - Added the _experimental_ and _non-standard_ {{domxref("HTMLMediaElement.seekToNextFrame()")}} method, which allows seeking frame-by-frame through video content ({{bug(1235301)}}). While you're encouraged to experiment with this method to help us understand how useful it is, _do not use it in production code!_

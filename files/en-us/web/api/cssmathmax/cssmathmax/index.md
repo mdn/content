@@ -14,7 +14,7 @@ browser-compat: api.CSSMathMax.CSSMathMax
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathMax()`** constructor creates a
-new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max()',
+new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max',
   'max()')}} function.
 
 ## Syntax

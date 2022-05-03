@@ -15,7 +15,7 @@ The FileHandle API allows for the manipulating of files, including creating file
 This API is based on the following interfaces:
 
 - {{domxref("IDBDatabase.createMutableFile")}} (was called {{domxref("IDBDatabase.mozCreateFileHandle")}}.)
-- {{domxref("IDBMutableFile")}} (was previously {{domxref("FileHandle")}}.)
+- {{domxref("IDBMutableFile")}} (was previously {{domxref("IDBMutableFile")}}.)
 - {{domxref("LockedFile")}}
 - {{domxref("FileRequest")}}
 
@@ -41,13 +41,13 @@ IDBReq.onsuccess = function(){
 };
 ```
 
-{{domxref("IDBDatabase.createMutableFile","createMutableFile()")}} takes two arguments: a name and an optional type. Both of these are just descriptive and are not used by the database. However, they are important for the {{domxref("FileHandle")}} object as it can generate {{domxref("File")}} objects which inherit their own {{domxref("File.name","name")}} and {{domxref("File.type","type")}} from those values. That said, as the name does not match any real filename it can be an empty string, for example, and it doesn't even have to be unique.
+{{domxref("IDBDatabase.createMutableFile","createMutableFile()")}} takes two arguments: a name and an optional type. Both of these are just descriptive and are not used by the database. However, they are important for the {{domxref("IDBMutableFile")}} object as it can generate {{domxref("File")}} objects which inherit their own {{domxref("File.name","name")}} and {{domxref("File.type","type")}} from those values. That said, as the name does not match any real filename it can be an empty string, for example, and it doesn't even have to be unique.
 
-> **Note:** the above code only creates a "temporary file" that exists only while you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a more permanent location, like the database itself. See [File storage](#file_storage) below to learn more about this.
+> **Note:** the above code only creates a "temporary file" that exists only while you hold the {{domxref("IDBMutableFile")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a more permanent location, like the database itself. See [File storage](#file_storage) below to learn more about this.
 
 ### Perform read and write operations
 
-To read or write within a handled file, it is required to get a {{domxref("LockedFile")}}. The {{domxref("FileHandle.open()")}} method provides such an object which can be `readonly` or `readwrite`. Any attempt to perform a write action on a `readonly` {{domxref("LockedFile")}} object will fail.
+To read or write within a handled file, it is required to get a {{domxref("LockedFile")}}. The {{domxref("IDBMutableFile.open")}} method provides such an object which can be `readonly` or `readwrite`. Any attempt to perform a write action on a `readonly` {{domxref("LockedFile")}} object will fail.
 
 #### Writing
 
@@ -112,7 +112,7 @@ getmeta.onsuccess = function () {
 
 In many cases it can be handy to get a snapshot of the file. For example, there are many APIs that expect {{domxref("Blob")}} or {{domxref("File")}} objects such as {{domxref("FileReader")}} (which can be easier to use to read the whole file) or {{domxref("XMLHttpRequest")}}.
 
-It's possible to get a {{domxref("File")}} object representing the current state of the file handled by the {{domxref("FileHandle")}} object by using the {{domxref("FileHandle.getFile","getFile")}} method. Such a {{domxref("File")}} object is completely desynchronized from the original file, which means any change made to that object will never be reflected to the handled file as well as any change made to the handled file will never be pushed to the {{domxref("File")}} object.
+It's possible to get a {{domxref("File")}} object representing the current state of the file handled by the {{domxref("IDBMutableFile")}} object by using the {{domxref("IDBMutableFile/getFile","getFile")}} method. Such a {{domxref("File")}} object is completely desynchronized from the original file, which means any change made to that object will never be reflected to the handled file as well as any change made to the handled file will never be pushed to the {{domxref("File")}} object.
 
 ```js
 var mySnapshot = null;
@@ -152,7 +152,7 @@ action.onerror = function () {
 
 ## File storage
 
-When a file handle is created, the associated file only exists as a "temporary file" as long as you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a database (not necessarily the one used to create the {{domxref("FileHandle")}} object).
+When a file handle is created, the associated file only exists as a "temporary file" as long as you hold the {{domxref("IDBMutableFile")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a database (not necessarily the one used to create the {{domxref("IDBMutableFile")}} object).
 
 ```js
 var IDBReq = window.indexedDB.open('myFileStorageDataBase');
@@ -183,7 +183,7 @@ IDBReq.onsuccess = function () {
 }
 ```
 
-A file stored that way is physically put on the device. The database itself only stores a pointer to that file. It means that if the {{domxref("FileHandle")}} object is stored several times in several DBs or several data stores, all those objects will reference the same unique file. This is not a problem because to access the file, a {{domxref("LockedFile")}} object is required and operations on such object are performed in [isolation](https://en.wikipedia.org/wiki/Isolation_%28database_systems%29), meaning that once a {{domxref("LockedFile")}} is active, all operations of this {{domxref("LockedFile")}} are guaranteed to happen sequentially on the underlying file without being interleaved with operations from other {{domxref("LockedFile")}}.
+A file stored that way is physically put on the device. The database itself only stores a pointer to that file. It means that if the {{domxref("IDBMutableFile")}} object is stored several times in several DBs or several data stores, all those objects will reference the same unique file. This is not a problem because to access the file, a {{domxref("LockedFile")}} object is required and operations on such object are performed in [isolation](https://en.wikipedia.org/wiki/Isolation_%28database_systems%29), meaning that once a {{domxref("LockedFile")}} is active, all operations of this {{domxref("LockedFile")}} are guaranteed to happen sequentially on the underlying file without being interleaved with operations from other {{domxref("LockedFile")}}.
 
 ### Secured write operation
 

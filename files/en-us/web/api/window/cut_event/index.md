@@ -31,7 +31,7 @@ The **`cut`** event is fired when the user has initiated a "cut" action through 
     </tr>
     <tr>
       <th scope="row">Event handler property</th>
-      <td>{{domxref("HTMLElement/oncut", "oncut")}}</td>
+      <td>{{domxref("HTMLElement/cut_event", "oncut")}}</td>
     </tr>
   </tbody>
 </table>

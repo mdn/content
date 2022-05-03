@@ -20,7 +20,7 @@ an unprotected network.
 
 As with {{DOMxRef("SubtleCrypto.exportKey()")}},
 you specify an [export format](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats)
-for the key. To export a key, it must have {{DOMxRef("CryptoKey.extractable")}}
+for the key. To export a key, it must have {{DOMxRef("CryptoKey")}}
 set to `true`.
 
 But because `wrapKey()` also encrypts the key to be imported, you also need

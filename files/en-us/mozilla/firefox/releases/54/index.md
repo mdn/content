@@ -47,7 +47,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 ### Web Workers and Service Workers
 
-- {{domxref("WorkerGlobalScope.close")}} is now available on {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope.close", "SharedWorkerGlobalScope")}} instead. This change was made to stop `close()` being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see {{bug(1336043)}}).
+- {{domxref("DedicatedWorkerGlobalScope.close")}} is now available on {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope.close", "SharedWorkerGlobalScope")}} instead. This change was made to stop `close()` being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see {{bug(1336043)}}).
 - The {{domxref("origin")}} property has been implemented (see {{bug(1306170)}}).
 - The {{domxref("Client.type")}} property has been implemented (see {{bug(1339844)}}).
 - {{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see {{bug(1266747)}}).

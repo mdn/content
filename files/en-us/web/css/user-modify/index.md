@@ -83,4 +83,4 @@ Not part of any standard. A similar property, `user-focus`, was proposed in [ear
 
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
-- {{CSSxRef("-moz-user-select")}}
+- {{CSSxRef("user-select")}}

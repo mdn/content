@@ -39,7 +39,7 @@ _This interface doesn't inherit any property._
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                              |
 
 - {{domxref("TreeWalker.filter")}} {{readonlyInline}}
-  - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
+  - : Returns a {{domxref("Document.createNodeIterator")}} used to select the relevant nodes.
 - {{domxref("TreeWalker.currentNode")}}
   - : Is the {{domxref("Node")}} on which the `TreeWalker` is currently pointing at.
 
@@ -95,4 +95,4 @@ _This interface doesn't inherit any method._
 ## See also
 
 - The creator method: {{domxref("Document.createTreeWalker()")}}.
-- Related interfaces: {{domxref("NodeFilter")}}, {{domxref("NodeIterator")}}.
+- Related interfaces: {{domxref("Document.createNodeIterator")}}, {{domxref("NodeIterator")}}.

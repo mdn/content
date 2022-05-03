@@ -11,16 +11,16 @@ browser-compat: api.TreeWalker.filter
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.filter`** read-only property returns a
-{{domxref("NodeFilter")}} that is the filtering object associated with the
+{{domxref("Document.createNodeIterator")}} that is the filtering object associated with the
 {{domxref("TreeWalker")}}.
 
 When creating the `TreeWalker`, the filter object is passed in as the third
-parameter, and its method {{domxref("NodeFilter.acceptNode()")}} is called on every
+parameter, and its method {{domxref("Document.createNodeIterator")}} is called on every
 single node to determine whether or not to accept it.
 
 ## Value
 
-A {{domxref("NodeFilter")}} object.
+A {{domxref("Document.createNodeIterator")}} object.
 
 ## Examples
 

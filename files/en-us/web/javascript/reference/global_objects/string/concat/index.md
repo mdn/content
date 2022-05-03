@@ -44,7 +44,7 @@ concatenating.
 
 ## Performance
 
-It is strongly recommended to use the {{jsxref("Operators/Assignment_Operators",
+It is strongly recommended to use the {{jsxref("Operators#assignment_operators",
   "assignment operators", "", 1)}} (`+`, `+=`) instead of
 the `concat()` method.
 
@@ -80,4 +80,4 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- {{jsxref("Operators#assignment_operators", "Assignment operators", "", 1)}}

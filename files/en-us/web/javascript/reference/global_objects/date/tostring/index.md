@@ -29,7 +29,7 @@ A string representing the given date.
 ## Description
 
 {{jsxref("Date")}} instances inherit their `toString()` method from
-{{jsxref("Date.prototype")}}, not {{jsxref("Object.prototype")}}.
+{{jsxref("Date")}}, not {{jsxref("Object")}}.
 `Date.prototype.toString()` returns a string representation of the Date in
 the format specified in ECMA-262 which can be summarized as:
 

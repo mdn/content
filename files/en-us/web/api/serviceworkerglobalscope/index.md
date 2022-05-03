@@ -26,7 +26,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 ## Properties
 
-- {{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}
+- {{domxref("caches")}} {{readonlyinline}}
   - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
 - {{domxref("ServiceWorkerGlobalScope.clients")}} {{readonlyinline}}
   - : Contains the {{domxref("Clients")}} object associated with the service worker.

@@ -108,7 +108,7 @@ navigator.credentials.create({ publicKey })
 
 ## See also
 
-- {{domxref("PublicKeyCredentialCreationOptions.challenge")}}: the cryptographic
+- {{domxref("CredentialsContainer.create")}}: the cryptographic
   challenge which signature by the authenticator is contained in `attStmt`
-- {{domxref("PublicKeyCredentialCreationOptions.attestation")}}: the attestation
+- {{domxref("CredentialsContainer.create")}}: the attestation
   statement transport option specified for the creation

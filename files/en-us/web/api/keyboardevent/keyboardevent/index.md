@@ -52,7 +52,7 @@ new KeyboardEvent(typeArg, keyboardEventInit)
     - `"keyCode"`, optional `unsigned long`, defaulting to `0`,
       that sets the value of the deprecated {{domxref("KeyboardEvent.keyCode")}}.
     - `"which"`, optional `unsigned long`, defaulting to `0`,
-      that sets the value of the deprecated {{domxref("KeyboardEvent.which")}}.
+      that sets the value of the deprecated {{domxref("UIEvent.which")}}.
 
     > **Note:** The `KeyboardEventInit` dictionary also accepts fields from
     > the {{domxref("UIEvent.UIEvent", "UIEventInit")}} and

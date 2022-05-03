@@ -26,7 +26,7 @@ createCylinderLayer(init)
   - : An object to configure the {{domxref("XRCylinderLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `aspectRatio`: Optional. A number indicating the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the `radius` with the `centralAngle`. The default value is `2.0`.
     - `centralAngle`: Optional. A number indicating the angle in radians of the visible section of the cylinder. Default value: `0.78539` (π / 4).
-    - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
+    - `colorFormat`: Optional. A {{domxref("WebGL_API.Types")}} defining the data type of the color texture data. Possible values:
       - `gl.RGB`
       - `gl.RGBA`
       Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
@@ -47,7 +47,7 @@ createCylinderLayer(init)
       Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
       - All of the formats the extension supports.
       The default value is `gl.RGBA`.
-    - `depthFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
+    - `depthFormat`: Optional. A {{domxref("WebGL_API.Types")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
       Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
       - `gl.DEPTH_COMPONENT`
       - `gl.DEPTH_STENCIL`

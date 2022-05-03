@@ -38,7 +38,7 @@ In order to understand how the create() and get() methods fit into the bigger pi
 
 ### Registration
 
-A typical registration process has six steps, as illustrated in Figure 1 and described further below. This is a simplification of the data required for the registration process that is only intended to provide an overview. The full set of required fields, optional fields, and their meanings for creating a registration request can be found in the {{domxref("PublicKeyCredentialCreationOptions")}} dictionary. Likewise, the full set of response fields can be found in the {{domxref("PublicKeyCredential")}} interface (where {{domxref("PublicKeyCredential.response")}} is the {{domxref("AuthenticatorAttestationResponse")}} interface). Note most JavaScript programmers that are creating an application will only really care about steps 1 and 5 where the create() function is called and subsequently returns; however, steps 2, 3, and 4 are essential to understanding the processing that takes place in the browser and authenticator and what the resulting data means.
+A typical registration process has six steps, as illustrated in Figure 1 and described further below. This is a simplification of the data required for the registration process that is only intended to provide an overview. The full set of required fields, optional fields, and their meanings for creating a registration request can be found in the {{domxref("CredentialsContainer.create")}} dictionary. Likewise, the full set of response fields can be found in the {{domxref("PublicKeyCredential")}} interface (where {{domxref("PublicKeyCredential.response")}} is the {{domxref("AuthenticatorAttestationResponse")}} interface). Note most JavaScript programmers that are creating an application will only really care about steps 1 and 5 where the create() function is called and subsequently returns; however, steps 2, 3, and 4 are essential to understanding the processing that takes place in the browser and authenticator and what the resulting data means.
 
 ![Web Authentication API registration component and dataflow diagram](webauthn_registration_r4.png)
 
@@ -103,7 +103,7 @@ After this, the registration steps are:
 
 ## Options
 
-- {{domxref("PublicKeyCredentialCreationOptions")}}
+- {{domxref("CredentialsContainer.create")}}
   - : The options passed to {{domxref('CredentialsContainer.create()')}}.
 - {{domxref("PublicKeyCredentialRequestOptions")}}
   - : The options passed to {{domxref('CredentialsContainer.get()')}}.

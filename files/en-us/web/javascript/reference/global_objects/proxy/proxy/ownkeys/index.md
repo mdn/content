@@ -114,6 +114,6 @@ console.log(Object.getOwnPropertyNames(p));
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Reflect.ownKeys()")}}

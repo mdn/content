@@ -58,7 +58,7 @@ of `obj` to the new value.
 
 `Object.setPrototypeOf()` is in the ECMAScript 2015 specification. It is
 generally considered the proper way to set the prototype of an object, vs. the more
-controversial {{jsxref("Object.prototype.__proto__")}} property.
+controversial {{jsxref("Object/proto")}} property.
 
 ## Appending Prototype Chains
 
@@ -182,7 +182,7 @@ var dict = Object.setPrototypeOf({}, null);
 
 ## Polyfill
 
-Using the older {{jsxref("Object.prototype.__proto__")}} property, we can easily define
+Using the older {{jsxref("Object/proto")}} property, we can easily define
 `Object.setPrototypeOf` if it isn't available already:
 
 ```js
@@ -221,4 +221,4 @@ if (!Object.setPrototypeOf) {
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- {{jsxref("Object/proto")}}

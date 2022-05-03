@@ -433,7 +433,7 @@ These tables have two columns: the first column is the header column and lists t
     <tr>
       <th scope="row">Event handler property</th>
       <td>
-        {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}
+        {{domxref("XMLHttpRequest/progress_event", "onprogress")}}
       </td>
     </tr>
   </tbody>

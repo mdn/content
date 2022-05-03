@@ -51,7 +51,7 @@ A string representing the date portion of the given {{jsxref("Global_Objects/Dat
 
 ## Performance
 
-When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.
+When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("Intl/DateTimeFormat/format", "format")}} property.
 
 ## Examples
 
@@ -155,7 +155,7 @@ console.log(date.toLocaleDateString('en-US', options));
 
 ## See also
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}

@@ -97,8 +97,8 @@ Some subtle distinctions between {{jsxref("Array.from()")}} and
 - `TypedArray.from()` uses `[[Put]]` where
   `Array.from()` uses `[[DefineProperty]]`. Hence, when
   working with {{jsxref("Proxy")}} objects, it calls
-  {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new
-  elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty",
+  {{jsxref("Global_Objects/Proxy/Proxy/set", "handler.set")}} to create new
+  elements rather than {{jsxref("Global_Objects/Proxy/Proxy/defineProperty",
         "handler.defineProperty()")}}.
 - When the `source` parameter is an iterator, the
   `TypedArray.from()` first collects all the values from the

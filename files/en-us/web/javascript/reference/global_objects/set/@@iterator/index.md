@@ -71,5 +71,5 @@ for (const v of mySet) {
 ## See also
 
 - {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set/values")}}
 - {{jsxref("Set.prototype.values()")}}

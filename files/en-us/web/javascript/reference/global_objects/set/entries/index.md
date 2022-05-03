@@ -60,5 +60,5 @@ console.log(setIter.next().value); // ["baz", "baz"]
 
 ## See also
 
-- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set/values")}}
 - {{jsxref("Set.prototype.values()")}}

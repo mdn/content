@@ -96,9 +96,9 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 
 ### Event handlers
 
-- {{domxref("HTMLMediaElement.onencrypted")}}
+- {{domxref("HTMLMediaElement")}}
   - : Sets the event handler called when the media is encrypted.
-- {{domxref("HTMLMediaElement.onwaitingforkey")}}
+- {{domxref("HTMLMediaElement")}}
   - : Sets the event handler called when playback is blocked while waiting for an encryption key.
 
 ## Obsolete properties

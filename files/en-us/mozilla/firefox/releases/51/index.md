@@ -83,12 +83,12 @@ tags:
 
 - Added {{SVGAttr("tabindex")}} attribute ({{bug(778654)}}).
 - Added {{SVGAttr("href")}} attribute, which renders {{SVGAttr("xlink:href")}} obsolete ({{bug(1245751)}}).
-- You can now use custom data attributes on SVG elements through the {{domxref("SVGElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ({{bug(921834)}}).
+- You can now use custom data attributes on SVG elements through the {{domxref("HTMLElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ({{bug(921834)}}).
 - CSS Animations used in an SVG image which is presented in an {{HTMLElement("img")}} element now work again; this was an old regression ({{bug(1190881)}}).
 
 ### Web Workers
 
-- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the {{event("close")}} event have been removed from Firefox.
+- The non-standard and obsolete {{domxref("DedicatedWorkerGlobalScope.close")}} event handler and {{domxref("Worker")}} use of the {{event("close")}} event have been removed from Firefox.
 
 ### Networking
 
@@ -122,7 +122,7 @@ tags:
 - The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the {{htmlattrxref("onerror")}} event handler, sending {{event("error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
 - You can now change a Web {{domxref("Animation")}}'s effect by setting the value of its {{domxref("Animation.effect", "effect")}} property. Previously, this property was read-only ({{bug(1049975)}}).
 - The Permissions API method {{domxref("Permissions.revoke()")}} has been put behind a preference (`dom.permissions.revoke.enable`) and disabled by default since its design and even its very existence is under discussion in the [Web Application Security Working Group](https://www.w3.org/2011/webappsec/).
-- The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("NavigatorStorage.storage", "navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See {{bug(1267941)}}.
+- The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("Navigator/storage", "navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See {{bug(1267941)}}.
 - For privacy reasons, both {{domxref("BatteryManager.chargingTime")}} and {{domxref("BatteryManager.dischargingTime")}} now round the returned value to the closest 15 minutes ({{bug(1292655)}}).
 
 ### Events

@@ -24,7 +24,7 @@ createQuadLayer(init)
 
 - `init`
   - : An object to configure the {{domxref("XRQuadLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
-    - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
+    - `colorFormat`: Optional. A {{domxref("WebGL_API.Types")}} defining the data type of the color texture data. Possible values:
       - `gl.RGB`
       - `gl.RGBA`
       Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
@@ -45,7 +45,7 @@ createQuadLayer(init)
       Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
       - All of the formats the extension supports.
       The default value is `gl.RGBA`.
-    - `depthFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
+    - `depthFormat`: Optional. A {{domxref("WebGL_API.Types")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
       Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
       - `gl.DEPTH_COMPONENT`
       - `gl.DEPTH_STENCIL`

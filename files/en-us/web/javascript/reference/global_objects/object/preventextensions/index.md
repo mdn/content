@@ -40,7 +40,7 @@ it will never have properties beyond the ones it had at the time it was marked a
 non-extensible. Note that the properties of a non-extensible object, in general, may
 still be _deleted_. Attempting to add new properties to a non-extensible object
 will fail, either silently or by throwing a {{jsxref("TypeError")}} (most commonly, but
-not exclusively, when in {{jsxref("Functions_and_function_scope/Strict_mode", "strict
+not exclusively, when in {{jsxref("Strict_mode", "strict
   mode", "", 1)}}).
 
 `Object.preventExtensions()` only prevents addition of own properties.

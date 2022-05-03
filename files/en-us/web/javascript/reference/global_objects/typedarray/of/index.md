@@ -60,9 +60,9 @@ Some subtle distinctions between {{jsxref("Array.of()")}} and
   {{jsxref("Array")}}.
 - `TypedArray.of()` uses `[[Put]]` where
   `Array.of()` uses `[[DefineProperty]]`. Hence, when working with
-  {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/handler/set",
+  {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/Proxy/set",
     "handler.set")}} to create new elements rather than
-  {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}.
+  {{jsxref("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}.
 
 ## Examples
 

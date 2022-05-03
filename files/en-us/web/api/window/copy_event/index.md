@@ -31,7 +31,7 @@ The **`copy`** event fires when the user initiates a copy action through the bro
     </tr>
     <tr>
       <th scope="row">Event handler property</th>
-      <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
+      <td>{{domxref("HTMLElement/copy_event", "oncopy")}}</td>
     </tr>
   </tbody>
 </table>

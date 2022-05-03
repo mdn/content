@@ -33,7 +33,7 @@ var leaveHandler = EventTarget.onpointerleave;
 ### Value
 
 - `leaveHandler`
-  - : The {{domxref("EventListener")}} which will be invoked to handle
+  - : The {{domxref("EventTarget.addEventListener")}} which will be invoked to handle
     {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events sent to the
     target.
 

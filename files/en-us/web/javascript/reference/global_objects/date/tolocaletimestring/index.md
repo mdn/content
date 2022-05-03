@@ -56,8 +56,8 @@ A string representing the time portion of the given {{jsxref("Global_Objects/Dat
 ## Performance
 
 When formatting large numbers of dates, it is better to create an
-{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the
-function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}}
+{{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the
+function provided by its {{jsxref("Intl/DateTimeFormat/format", "format")}}
 property.
 
 ## Examples
@@ -143,7 +143,7 @@ console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
 
 ## See also
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

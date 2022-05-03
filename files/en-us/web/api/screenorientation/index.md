@@ -27,7 +27,7 @@ A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("
 
 ### Event handlers
 
-- {{DOMxRef("ScreenOrientation.onchange")}}
+- {{DOMxRef("ScreenOrientation")}}
   - : The [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever the screen changes orientation.
 
 ## Methods
