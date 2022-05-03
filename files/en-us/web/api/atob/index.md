@@ -32,7 +32,7 @@ var decodedData = atob(encodedData);
 
 - `encodedData`
   - : A [binary string](/en-US/docs/Web/API/DOMString/Binary) containing
-    base64 encoded data.
+    base64-encoded data.
 
 ### Return value
 
