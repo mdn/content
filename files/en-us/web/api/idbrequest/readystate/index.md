@@ -27,7 +27,7 @@ occurs.
 
 The {{domxref("IDBRequestReadyState")}} of the request,
 which is `pending` if the request is still ongoing,
-or `done`if the request has completed.|
+or `done` if the request has completed.
 
 ## Examples
 
