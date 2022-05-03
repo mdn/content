@@ -544,7 +544,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
     - Click the **Finish and Close** button.
 
-5. This will open the following modal window. Click on the **Go to Databases** button.
+5. This will open the following screen. Click on the **Go to Databases** button.
     ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
 
 6. You will return to the __Database Deployments__ screen.
@@ -557,7 +557,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
     - Click the **Add My Own Data** button.
 
-8. This will open the _Create Database_ modal window.
+8. This will open the _Create Database_ screen.
     ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
 
     - Enter the name for the new database as `local_library`.
@@ -572,7 +572,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 10. From the Cluster0 Overview screen click the **Connect** button.
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
-11. This will open the _Connect to Cluster_ modal window. Click the **Connect your application** option.
+11. This will open the _Connect to Cluster_ screen. Click the **Connect your application** option.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
 12. This will open the _Connect_ screen.
