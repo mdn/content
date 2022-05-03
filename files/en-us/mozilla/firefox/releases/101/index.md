@@ -39,6 +39,8 @@ This article provides information about the changes in Firefox 101 that will aff
 
 #### DOM
 
+- [`HTMLInputElement.showPicker()`](/en-US/docs/Web/API/HTMLInputElement/showPicker) is now supported, allowing the picker for an input element to be displayed when a user interacts with some other element, such as a button ({{bug(1745005)}}).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
