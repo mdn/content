@@ -527,7 +527,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 3. This will open the _Create a Shared Cluster_ screen.
     ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
 
-    - Select any provider from the _Cloud Provider & Region_ section. Different providers offer different regions.
+    - Select any provider from the _Cloud Provider & Region_ section. Different regions offer different providers.
     - _Cluster Tier_ and _Additional Settings_ don't need to be changed. You can change the name of your Cluster under _Cluster Name_. We are naming it `Cluster0` for this tutorial.
     - Click the **Create Cluster** button (creation of the cluster will take some minutes).
 
