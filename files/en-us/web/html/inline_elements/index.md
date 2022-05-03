@@ -153,7 +153,6 @@ The following elements are inline by default (although block and inline elements
 - {{ HTMLElement("u") }}
 - {{ HTMLElement("tt") }}
 - {{ HTMLElement("var") }}
-- {{ HTMLElement("video") }}
 - {{ HTMLElement("wbr") }}
 
 ## See also
