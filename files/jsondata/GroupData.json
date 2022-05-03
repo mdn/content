@@ -525,10 +525,7 @@
       ],
       "interfaces": ["Gamepad", "GamepadButton", "GamepadEvent"],
       "methods": ["Navigator.getGamepads()"],
-      "properties": [
-        "Window.ongamepadconnected",
-        "Window.ongamepaddisconnected"
-      ],
+      "properties": [],
       "events": ["Window: gamepadconnected", "Window: gamepaddisconnected"]
     },
     "Geolocation API": {
@@ -768,7 +765,7 @@
     },
     "Image Capture API": {
       "overview": ["MediaStream Image Capture API"],
-      "interfaces": ["ImageCapture", "PhotoCapabilities"],
+      "interfaces": ["ImageCapture"],
       "methods": [],
       "properties": [],
       "events": []
@@ -853,7 +850,7 @@
       "guides": ["/docs/Web/API/Media_Streams_API/Constraints"],
       "interfaces": [
         "BlobEvent",
-        "CanvasCaptureMediaStream",
+        "CanvasCaptureMediaStreamTrack",
         "MediaDevices",
         "MediaStream",
         "MediaStreamTrack",
@@ -862,17 +859,11 @@
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints",
-        "VideoStreamTrack",
-        "DoubleRange",
-        "ConstrainDouble",
-        "LongRange",
-        "ConstrainLong",
-        "ConstrainBoolean",
-        "ConstrainDOMString"
+        "VideoStreamTrack"
       ],
       "methods": [
         "HTMLCanvasElement.captureStream()",
-        "navigator.mediaDevices.getUserMedia()"
+        "MediaDevices.getUserMedia()"
       ],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
@@ -927,7 +918,7 @@
         "PerformanceNavigationTiming"
       ],
       "methods": [],
-      "properties": ["Window.performance"],
+      "properties": ["performance_property"],
       "events": []
     },
     "Network Information API": {
@@ -996,7 +987,7 @@
         "PerformanceObserver",
         "PerformanceResourceTiming",
         "TaskAttributionTiming",
-        "Window.performance"
+        "performance_property"
       ],
       "methods": [],
       "properties": [],
@@ -1015,7 +1006,7 @@
         "PerformanceResourceTiming"
       ],
       "methods": [],
-      "properties": ["Window.performance"],
+      "properties": ["performance_property"],
       "events": []
     },
     "Periodic Background Sync": {
@@ -1047,11 +1038,8 @@
       "properties": [
         "HTMLVideoElement.autoPictureInPicture",
         "HTMLVideoElement.disablePictureInPicture",
-        "HTMLVideoElement.onenterpictureinpicture",
-        "HTMLVideoElement.onleavepictureinpicture",
         "Document.pictureInPictureEnabled",
-        "DocumentOrShadowRoot.pictureInPictureElement",
-        "PictureInPictureWindow.onresize"
+        "Document.pictureInPictureElement"
       ],
       "events": [
         "HTMLVideoElement: enterpictureinpicture",
@@ -1072,8 +1060,8 @@
         "Element.releasePointerCapture()"
       ],
       "properties": [
-        "Element.ongotpointercapture",
-        "Element.onlostpointercapture",
+        "GlobalEventHandlers.ongotpointercapture",
+        "GlobalEventHandlers.onlostpointercapture",
         "GlobalEventHandlers.onpointerdown",
         "GlobalEventHandlers.onpointermove",
         "GlobalEventHandlers.onpointerup",
@@ -1100,13 +1088,17 @@
     "Pointer Lock API": {
       "overview": ["Pointer Lock API"],
       "interfaces": [],
-      "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
-      "properties": [
-        "Document.pointerLockElement",
-        "Document.onpointerlockchange",
-        "Document.onpointerlockerror"
+      "methods": [
+        "Element.requestPointerLock()",
+        "Document.exitPointerLock()"
       ],
-      "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
+      "properties": [
+        "Document.pointerLockElement"
+      ],
+      "events": [
+        "Document: pointerlockchange",
+        "Document: pointerlockerror"
+      ]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1143,9 +1135,7 @@
       ],
       "methods": [],
       "properties": [
-        "ServiceWorkerRegistration.pushManager",
-        "ServiceWorkerGlobalScope.onpush",
-        "ServiceWorkerGlobalScope.onpushsubscriptionchange"
+        "ServiceWorkerRegistration.pushManager"
       ],
       "events": [
         "ServiceWorkerGlobalScope: push",
