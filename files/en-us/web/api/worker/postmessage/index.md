@@ -42,7 +42,7 @@ postMessage(message, transfer)
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

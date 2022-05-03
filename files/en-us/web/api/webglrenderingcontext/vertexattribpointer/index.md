@@ -72,7 +72,7 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

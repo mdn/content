@@ -36,7 +36,7 @@ lineWidth(width)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
