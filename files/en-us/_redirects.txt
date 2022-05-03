@@ -7263,7 +7263,7 @@
 /en-US/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /en-US/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
-/en-US/docs/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+/en-US/docs/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API
 /en-US/docs/Valid_Application_Versions_for_Add-on_Developers	https://addons.mozilla.org/en-US/firefox/pages/appversions
 /en-US/docs/Values,_Variables,_and_Literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
 /en-US/docs/View_source	https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html
