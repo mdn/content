@@ -43,7 +43,7 @@ vertexAttribIPointer(index, size, type, stride, offset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Description
 

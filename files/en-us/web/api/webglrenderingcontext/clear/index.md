@@ -39,7 +39,7 @@ clear(mask)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

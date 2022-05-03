@@ -29,7 +29,7 @@ deleteRenderbuffer(renderbuffer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

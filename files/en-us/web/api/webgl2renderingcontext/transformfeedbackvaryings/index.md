@@ -35,7 +35,7 @@ transformFeedbackVaryings(program, varyings, bufferMode)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
