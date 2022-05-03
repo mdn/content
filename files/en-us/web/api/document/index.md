@@ -181,7 +181,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.adoptNode()")}}
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -251,7 +251,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
   - : Replaces entities, normalizes text nodes, etc.
 - {{DOMxRef("Document.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
 - {{DOMxRef("Document.querySelectorAll()")}}

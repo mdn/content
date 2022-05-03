@@ -12,7 +12,7 @@ tags:
   - value
 browser-compat: api.BluetoothRemoteGATTCharacteristic.value
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.value`** read-only
 property returns currently cached characteristic value. This value gets updated when the

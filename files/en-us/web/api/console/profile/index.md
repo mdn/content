@@ -36,6 +36,10 @@ profile(profileName)
 - `profileName`
   - : The name to give the profile. Optional.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Browser compatibility
 
 {{Compat}}

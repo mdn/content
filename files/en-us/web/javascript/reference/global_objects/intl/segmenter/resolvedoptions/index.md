@@ -68,7 +68,7 @@ console.log(options.granularity); // "grapheme"
 ```js
 const banSegmenter = new Intl.Segmenter("ban");
 const options = banSegmenter.resolvedOptions();
-console.log(options.locale); 
+console.log(options.locale);
 // "fr" on a runtime where the Balinese locale
 // is not supported and French is the default locale
 console.log(options.granularity); // "grapheme"

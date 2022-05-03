@@ -39,6 +39,10 @@ trace(object1, /* ..., */ objectN)
     assembled and formatted the same way they would be if passed to the
     {{domxref("console.log()")}} method.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

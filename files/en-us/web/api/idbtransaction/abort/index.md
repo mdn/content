@@ -33,6 +33,10 @@ abort()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}

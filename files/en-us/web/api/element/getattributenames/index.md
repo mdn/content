@@ -33,6 +33,10 @@ getAttributeNames()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 The following example shows how:

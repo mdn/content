@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: status role'
 slug: Web/Accessibility/ARIA/Roles/status_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -19,7 +19,7 @@ A `status` is a type of [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Li
 
 Do not give focus to the status when its content updates. Live regions are meant to inform users of dynamic updates that have occurred in other areas of the current web page, but which do not necessitate interrupting the user's current activity with a change in context. If a situation requires that focus needs to be moved, then using a `status`, or other live region, are likely not appropriate.
 
-Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) value of `polite` and an implicit [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) value of `true`.  
+Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) value of `polite` and an implicit [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) value of `true`.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -33,7 +33,7 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 
-  - : Some screen readers announce the name of a status element before announcing the content of the status element. Including an `aria-label` provides a method for prefacing the visible content of a status element with text that is not displayed when a screen reader reads the content.  
+  - : Some screen readers announce the name of a status element before announcing the content of the status element. Including an `aria-label` provides a method for prefacing the visible content of a status element with text that is not displayed when a screen reader reads the content.
 
 ## Specifications
 

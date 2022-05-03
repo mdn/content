@@ -50,7 +50,7 @@ Caching directives follow the validation rules below:
 The following table lists the standard `Cache-Control` directives:
 
 | Request          | Response                 |
-| :--------------- | :----------------------- |
+| ---------------- | ------------------------ |
 | `max-age`        | `max-age`                |
 | `max-stale`      | -                        |
 | `min-fresh`      | -                        |

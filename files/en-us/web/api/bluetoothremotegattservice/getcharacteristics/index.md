@@ -12,7 +12,7 @@ tags:
   - getCharacteristics()
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristics
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.getCharacteristics()`** method
 returns a {{jsxref("Promise")}} to a list of {{domxref("BluetoothRemoteGATTCharacteristic")}}
@@ -31,7 +31,7 @@ A {{jsxref("Promise")}} to an
 
 ### Parameters
 
-- characteristic
+- characteristics
   - : The UUID of a characteristic, for
     example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate
     Measurement characteristic.

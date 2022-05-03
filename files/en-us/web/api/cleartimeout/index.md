@@ -33,6 +33,10 @@ means you can technically use `clearTimeout()` and
 {{domxref("clearInterval", "clearInterval()")}}
 interchangeably. However, for clarity, you should avoid doing so.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Run the script below in the context of a web page and click on the page once. You'll

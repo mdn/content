@@ -55,7 +55,7 @@ customElements.define('open-shadow',
       const shadowRoot = this.attachShadow({
         mode: 'open'
       });
-      
+
       shadowRoot.appendChild(pElem);
     }
   }

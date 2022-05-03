@@ -40,12 +40,8 @@ A promise that resolves either to an error or a list of dictionaries, each with 
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
-
-| Attribute                                | Description                                          |
-| ---------------------------------------- | ---------------------------------------------------- |
-| {{exception("SecurityError")}} | The method is called from an opaque origin.          |
-| Other error                              | Specification does not describe all possible errors. |
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the method is called from an [opaque origin](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802#42242802).
 
 ## Examples
 

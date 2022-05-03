@@ -103,7 +103,7 @@ The following example toggles the CSS `visibility` of the SVG image path.
   <span>
     click me
   </span>
-</button>  
+</button>
 ```
 
 ### CSS
@@ -129,7 +129,7 @@ button {
 document.querySelector("button").addEventListener("click", function (evt) {
   this.querySelector("svg > path:nth-of-type(1)").classList.toggle("invisible");
   this.querySelector("svg > path:nth-of-type(2)").classList.toggle("invisible");
-}); 
+});
 ```
 
 {{EmbedLiveSample("Example", "100%", "80")}}

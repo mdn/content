@@ -50,6 +50,10 @@ close()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Return value
 
 `undefined`.

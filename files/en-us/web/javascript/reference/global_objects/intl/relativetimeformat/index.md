@@ -57,7 +57,7 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 rtf.format(-1, "day");
 // > "1 day ago"
 
-// Format relative time using positive  value (1).
+// Format relative time using positive value (1).
 rtf.format(1, "day");
 // > "in 1 day"
 ```
@@ -91,4 +91,4 @@ rtf.formatToParts(100, "day");
 
 - {{jsxref("Intl")}}
 - [The Intl.RelativeTimeFormat API](https://v8.dev/features/intl-relativetimeformat)
-- [A polyfill of `Intl.RelativeTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-relativetimeformat)
+- [A polyfill of `Intl.RelativeTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-relativetimeformat/)

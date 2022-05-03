@@ -302,7 +302,7 @@ ASP.NET is used by Microsoft, Xbox.com, Stack Overflow, and many others.
 
 [Mojolicious](https://mojolicious.org/) is a next-generation web framework for the Perl programming language.
 
-Back in the early days of the web, many people learned Perl because of a wonderful Perl library called [CGI](https://metacpan.org/module/CGI). It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.
+Back in the early days of the web, many people learned Perl because of a wonderful Perl library called [CGI](https://metacpan.org/pod/CGI). It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.
 
 Some of the features provided by Mojolicious are:
 

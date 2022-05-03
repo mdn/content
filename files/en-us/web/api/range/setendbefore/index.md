@@ -26,6 +26,10 @@ setEndBefore(referenceNode)
 - _referenceNode_
   - : The {{domxref("Node")}} to end the `Range` before.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

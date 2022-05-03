@@ -14,22 +14,22 @@ The `radio` role is one of a group of checkable buttons, in a `radiogroup`, wher
 
 ## Description
 
-A radio element is a checkable input in a group of role elements, of which only one of which can be checked at a time. The radio elements must be grouped together in a ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) to indicate which ones affect the same value.  
+A radio element is a checkable input in a group of role elements, of which only one of which can be checked at a time. The radio elements must be grouped together in a ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) to indicate which ones affect the same value.
 
 ```html
-<div  role="radiogroup" aria-labelledby="legend25" id="radiogroup25">
+<div role="radiogroup" aria-labelledby="legend25" id="radiogroup25">
   <p id="legend25">Ipsum and lorem?</p>
   <ul>
     <li>
-      <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio1-label" data-value="True"></span> 
+      <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio1-label" data-value="True"></span>
       <label id="q25_radio1-label">True</label>
     </li>
     <li>
-      <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio2-label" data-value="False"></span> 
+      <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio2-label" data-value="False"></span>
       <label id="q25_radio2-label">False</label>
     </li>
     <li>
-      <span role="radio" aria-checked="true" tabindex="0" aria-labelledby="q25_radio3-label" data-value="huh?"></span> 
+      <span role="radio" aria-checked="true" tabindex="0" aria-labelledby="q25_radio3-label" data-value="huh?"></span>
       <label id="q25_radio3-label">What is the question?</label>
     </li>
   </ul>
@@ -45,15 +45,15 @@ The `role` attribute only adds semantics; all of the functionality that comes na
   <legend>Ipsum and lorem?</legend>
   <ul>
     <li>
-      <input type="radio" value="True" id="q25_radio1" name="q25" /> 
+      <input type="radio" value="True" id="q25_radio1" name="q25" />
       <label for="q25_radio1">True</label>
     </li>
     <li>
-      <input type="radio" value="False" id="q25_radio2" name="q25" /> 
+      <input type="radio" value="False" id="q25_radio2" name="q25" />
       <label for="q25_radio2">False</label>
     </li>
     <li>
-      <input type="radio" value="huh?" id="q25_radio3"  name="q25" checked /> 
+      <input type="radio" value="huh?" id="q25_radio3"  name="q25" checked />
       <label for="q25_radio3">What is the question?</label>
     </li>
   </ul>
@@ -145,7 +145,7 @@ The following example creates an otherwise non-semantic radio element using CSS 
 ### HTML
 
 ```html
-<div  role="radiogroup" aria-labelledby="legend" id="radiogroup">
+<div role="radiogroup" aria-labelledby="legend" id="radiogroup">
   <p id="legend">Should you be using the <code>radio</code> role or <code>&lt;input type="radio"><code>?</p>
   <ul>
     <li>
@@ -234,20 +234,20 @@ let handleKeydown = function (event) {
 
 };
 
-// when a radio is selected, give it focus, set checked to true; 
-// ensure all other radios in radio group are not checked 
+// when a radio is selected, give it focus, set checked to true;
+// ensure all other radios in radio group are not checked
 
 setChecked  = function () {
   // uncheck all the radios in group
   // iterated thru all the radios in radio group
     // eachRadio.tabIndex = -1;
     // eachRadio.setAttribute('aria-checked', 'false');
-  
+
   // set the selected radio to checked
     // thisRadio.setAttribute('aria-checked', 'true');
     // thisRadio.tabIndex = 0;
     // thisRadio.focus();
-    // set the value of the radioGroup to the value of the currently selected radio 
+    // set the value of the radioGroup to the value of the currently selected radio
 };
 
 ```

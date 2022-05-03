@@ -27,7 +27,7 @@ new ContentIndexEvent(type, ContentIndexEventInit);
 ### Parameters
 
 - _type_
-  - : A {{domxref("DOMString")}} indicating the event which occurred. For
+  - : A string indicating the event which occurred. For
     `ContentIndexEvent`, this is always `delete`.
 - _eventInitDict_ {{optional_inline}}
 

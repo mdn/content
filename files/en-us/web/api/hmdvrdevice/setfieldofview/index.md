@@ -36,7 +36,7 @@ setFieldOfView(leftFOV, rightFOV, zNear, zFar)
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

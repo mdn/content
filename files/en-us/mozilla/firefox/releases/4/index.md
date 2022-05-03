@@ -195,7 +195,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
       <td><code>-moz-calc</code></td>
       <td>
         Lets you specify
-        <code>{{cssxref("&lt;length&gt;")}}</code> values as
+        {{cssxref("&lt;length&gt;")}} values as
         mathematical expressions.
       </td>
     </tr>

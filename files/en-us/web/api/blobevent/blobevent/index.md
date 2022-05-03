@@ -20,17 +20,16 @@ The **`BlobEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
-new BlobEvent({data: aSpecificBlob});
-new BlobEvent({data: aSpecificBlob}, timecode);
+new BlobEvent(options)
+new BlobEvent(options, timecode)
 ```
 
-### Arguments
+### Parameters
 
-_The `BlobEvent()` constructor also inherits arguments from
-{{domxref("Event.Event", "Event()")}}._
-
-- `data`
-  - : Is a {{domxref("Blob")}} associated with the event.
+- `options`
+  - : An object containing the properties allowed as `options` in {{domxref("Event.Event", "Event()")}} and the following property:
+    - `data`
+      - : The {{domxref("Blob")}} associated with the event.
 - `timecode` {{optional_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} to be used in initializing the blob event.
 

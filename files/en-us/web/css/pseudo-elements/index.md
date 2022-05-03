@@ -46,7 +46,7 @@ A
 
 B
 
-- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
+- {{CSSxRef("::backdrop")}}
 - {{CSSxRef("::before", "::before (:before)")}}
 
 C
@@ -66,12 +66,12 @@ G
 
 M
 
-- {{CSSxRef("::marker")}} {{Experimental_Inline}}
+- {{CSSxRef("::marker")}}
 
 P
 
-- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
-- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+- {{CSSxRef("::part", "::part()")}}
+- {{CSSxRef("::placeholder")}}
 
 S
 

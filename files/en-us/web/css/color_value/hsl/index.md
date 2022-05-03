@@ -36,8 +36,8 @@ hsl(hue, saturation, lightness, alpha)
 
 - `saturation`
   - : A {{cssxref("&lt;percentage&gt;")}} where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
-  
-- `lightness`  
+
+- `lightness`
   - : A {{cssxref("&lt;percentage&gt;")}} where `100%` is white, `0%` is black, and `50%` is "normal".
 
 - `alpha` {{optional_inline}}

@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: menuitemcheckbox role'
 slug: Web/Accessibility/ARIA/Roles/menuitemcheckbox_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -23,7 +23,7 @@ Menu items containing the role of `menuitemcheckbox` must include the [`aria-che
 
 Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `checkbox`, the `aria-checked` attribute of a `menuitemcheckbox` indicates whether the menu item is checked (`true`), unchecked (`false`), or represents a sub-level menu of other menu items that have a mixture of checked and unchecked values (`mixed`). The `mixed` value is similar to the checkbox's [`indeterminate`](/en-US/docs/Web/HTML/Element/Input/checkbox#attr-indeterminate) attribute, which gives the appearance of a third, neither checked nor unchecked, state. If missing, the value defaults to `false`.
 
-An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using  `<input type="checkbox">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other  descendant content from assistive technologies.
+An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using  `<input type="checkbox">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemcheckbox`, set the value with respect to the total number of items in the menu, excluding any separators.
 

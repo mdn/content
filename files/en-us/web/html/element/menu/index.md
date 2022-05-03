@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.menu
 ---
 {{HTMLRef}}
-  
+
 The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is a semantic alternative to {{HTMLElement("ul")}}. It represents an unordered list of items (represented by {{HTMLElement("li")}} elements), each of which represents a link or other command that the user can activate.
 
 ## Attributes

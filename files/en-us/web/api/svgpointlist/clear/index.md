@@ -23,6 +23,10 @@ clear()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - {{domxref("DOMException")}} `NoModificationAllowedError`

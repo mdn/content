@@ -38,7 +38,7 @@ let enGB = new Intl.Locale("en-GB");
 console.log(enGB.weekInfo) // logs  {firstDay: 1, weekend: [6, 7], minimalDays: 4}
 
 let msBN = new Intl.Locale("ms-BN");
-console.log(msBN.weekInfo) // logs {firstDay: 7, weekend: [5, 7], minimalDays: 1}  // Brunei weekend is Friday and Sunday but not Saturday 
+console.log(msBN.weekInfo) // logs {firstDay: 7, weekend: [5, 7], minimalDays: 1}  // Brunei weekend is Friday and Sunday but not Saturday
 ```
 
 ## Specifications

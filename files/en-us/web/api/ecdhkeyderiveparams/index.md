@@ -19,7 +19,7 @@ The parameters for ECDH `deriveKey()` therefore include the other entity's publi
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `ECDH`.
+  - : A string. This should be set to `ECDH`.
 - `public`
   - : A {{domxref("CryptoKey")}} object representing the public key of the other entity.
 

@@ -31,6 +31,10 @@ addPath(path, transform)
   - : A {{domxref("DOMMatrix")}} to be used as the transformation matrix for the path that
     is added. (Technically a `DOMMatrixInit` object).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Adding a path to an existing path

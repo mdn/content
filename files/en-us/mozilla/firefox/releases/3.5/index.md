@@ -89,7 +89,7 @@ tags:
 
 - [localStorage](/en-US/docs/Web/API/Web_Storage_API#localstorage)
   - : Firefox 3.5 adds support for the Web Storage `localStorage` property, which provides a way for web applications to store data locally on the client's computer.
-- [Using web workers](/en-US/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
 - [Using geolocation](/en-US/Using_geolocation)
   - : Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.

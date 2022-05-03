@@ -11,8 +11,6 @@ tags:
 ---
 {{APIRef("File System API")}}{{ non-standard_header }}
 
-## Summary
-
 Specifies an event listener to receive {{event("abort")}} events. These events occur when the associated locked file has been aborted with the {{domxref("LockedFile.abort()")}} method.
 
 ## Value

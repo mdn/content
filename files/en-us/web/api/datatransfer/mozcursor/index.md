@@ -34,7 +34,7 @@ The possible values are:
 
 ## Value
 
-A {{domxref("DOMString")}} representing one of the values listed above.
+A string representing one of the values listed above.
 
 ## Examples
 

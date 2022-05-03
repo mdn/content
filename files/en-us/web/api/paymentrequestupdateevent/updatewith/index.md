@@ -60,7 +60,7 @@ updateWith(details)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

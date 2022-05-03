@@ -11,7 +11,7 @@ browser-compat: api.Document.createAttribute
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttribute()`** method creates a new
-attribute node, and returns it. The object created a node implementing the
+attribute node, and returns it. The object created is a node implementing the
 {{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be
 added to a particular element in this manner.
 
@@ -56,4 +56,7 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 ## See also
 
+- {{domxref("Document.createAttributeNS()")}}
 - {{domxref("Document.createElement()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.setAttributeNode()")}}

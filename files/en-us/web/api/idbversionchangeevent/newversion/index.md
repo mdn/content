@@ -22,8 +22,7 @@ database.
 
 ## Value
 
-A [64-bit
-integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
+A number that is a 64-bit integer.
 
 ## Examples
 
@@ -78,5 +77,5 @@ DBOpenRequest.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+  ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -12,7 +12,7 @@ tags:
   - connect()
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The
 **`BluetoothRemoteGATTServer.connect()`** method causes the

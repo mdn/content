@@ -27,7 +27,7 @@ appendRule(rule)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

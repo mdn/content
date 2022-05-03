@@ -28,7 +28,7 @@ If the fetch request is a subresource request or the request's
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

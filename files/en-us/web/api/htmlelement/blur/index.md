@@ -24,6 +24,10 @@ blur()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Remove focus from a text input

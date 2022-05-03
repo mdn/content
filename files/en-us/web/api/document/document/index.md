@@ -18,8 +18,12 @@ an entry point into the page's content.
 ## Syntax
 
 ```js
-new Document();
+new Document()
 ```
+
+### Parameters
+
+None.
 
 ## Specifications
 

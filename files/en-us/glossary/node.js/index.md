@@ -18,5 +18,5 @@ Node.js is a cross-platform {{Glossary("JavaScript")}} runtime environment that 
 - {{Interwiki("Wikipedia", "Node.js")}} on Wikipedia
 - [Node.js website](https://nodejs.org/)
 - [API reference documentation](https://nodejs.org/api/)
-- [Tutorials](https://nodejs.org/documentation/tutorials/)
+- [Guides](https://nodejs.org/en/docs/guides/)
 - [npm Documentation](https://docs.npmjs.com/)

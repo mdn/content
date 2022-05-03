@@ -150,7 +150,7 @@ The `indices` array defines each face like a pair of triangles, specifying each 
 
 ## Drawing the cube
 
-Next we need to add code to our `drawScene()` function to draw using the cube's index buffer, adding new  {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} and {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} calls:
+Next we need to add code to our `drawScene()` function to draw using the cube's index buffer, adding new {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} and {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} calls:
 
 ```js
   // Tell WebGL which indices to use to index the vertices
