@@ -37,7 +37,7 @@ getParent(successCallback)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 

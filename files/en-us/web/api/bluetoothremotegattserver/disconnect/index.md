@@ -23,13 +23,13 @@ the script execution environment to disconnect from `this.device`.
 disconnect()
 ```
 
-### Return value
-
-None.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

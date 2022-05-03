@@ -29,10 +29,10 @@ lowerBound(lower, open)
 
 ### Parameters
 
-- lower
-  - : specifies the lower bound of the new key range.
-- open {{optional_inline}}
-  - : indicates whether the lower bound excludes the endpoint value. The default is
+- `lower`
+  - : Specifies the lower bound of the new key range.
+- `open` {{optional_inline}}
+  - : Indicates whether the lower bound excludes the endpoint value. The default is
     false.
 
 ### Return value
@@ -41,11 +41,8 @@ lowerBound(lower, open)
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following type:
-
-| Exception   | Description                                     |
-| ----------- | ----------------------------------------------- |
-| `DataError` | The value parameter passed was not a valid key. |
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the key associated with the `lower` parameter is not a valid key.
 
 ## Examples
 

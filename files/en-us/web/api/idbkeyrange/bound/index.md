@@ -48,32 +48,11 @@ bound(lower, upper, lowerOpen, upperOpen)
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of
-the following type:
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>
-        <p>The following conditions raise an exception:</p>
-        <ul>
-          <li>The lower or upper parameters were not passed a valid key.</li>
-          <li>The lower key is greater than the upper key.</li>
-          <li>
-            The lower key and upper key match and either of the bounds are open.
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown when one of the following conditions is met:
+    - The lower or upper parameters were not passed a valid key.
+    - The lower key is greater than the upper key.
+    - The lower key and upper key match and either of the bounds are open.
 
 ## Examples
 

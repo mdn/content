@@ -74,7 +74,7 @@ framebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

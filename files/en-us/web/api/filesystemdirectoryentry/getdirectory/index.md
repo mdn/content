@@ -73,7 +73,7 @@ The table below describes the result of each possible combination of these flags
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
