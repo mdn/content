@@ -21,10 +21,6 @@ The **`disconnect()`** method of the {{ domxref("AudioNode") }} interface lets y
 disconnect()
 ```
 
-### Return value
-
-{{jsxref("undefined")}}
-
 ### Parameters
 
 There are several versions of the `disconnect()` method, which accept different combinations of parameters to control which nodes to disconnect from. If no parameters are provided, all outgoing connections are disconnected.
@@ -35,6 +31,10 @@ There are several versions of the `disconnect()` method, which accept different 
   - : An index describing which output from the current `AudioNode` is to be disconnected. The index numbers are defined according to the number of output channels (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)).
 - `input` {{optional_inline}}
   - : An index describing which input into the specified destination `AudioNode` is to be disconnected. The index numbers are defined according to the number of input channels (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

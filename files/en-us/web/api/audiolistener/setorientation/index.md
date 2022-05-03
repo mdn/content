@@ -44,7 +44,7 @@ setOrientation(x, y, z, xUp, yUp, zUp)
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

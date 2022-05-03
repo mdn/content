@@ -30,7 +30,7 @@ beginQueryEXT(target, query)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

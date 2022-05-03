@@ -30,6 +30,10 @@ resizeTo(width, height)
     {{domxref("window.outerHeight","outerHeight")}} in pixels (including scroll bars,
     title bars, etc).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This function resizes the window so that it takes up one quarter of the available

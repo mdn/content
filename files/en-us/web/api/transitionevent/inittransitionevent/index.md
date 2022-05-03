@@ -59,6 +59,10 @@ initTransitionEvent(typeArg, canBubbleArg, cancelableArg, transitionNameArg, ela
   - : Is `float` giving the amount of time the transition has been running, in
     seconds, when this event fired.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 _This method is non-standard and not part of any specification, though it was
