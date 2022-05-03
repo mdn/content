@@ -67,7 +67,7 @@ Below is a table with the available collation types, adapted from the [Unicode c
     </tr>
     <tr>
       <td>ducet</td>
-      <td>The default Unicode collation element table order</td>
+      <td>The default Unicode collation element table order
         <div class="notecard warning">
           <p>
             <strong>Warning:</strong> The `ducet` collation type is
@@ -76,6 +76,7 @@ Below is a table with the available collation types, adapted from the [Unicode c
             to DUCET.
           </p>
         </div>
+      </td>
     </tr>
     <tr>
       <td>emoji</td>
