@@ -24,14 +24,14 @@ Bluetooth device for a specified {{domxref("BluetoothServiceUUID")}}.
 getPrimaryService(bluetoothServiceUUID)
 ```
 
-### Return value
-
-A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTService")}} object.
-
 ### Parameters
 
 - `BluetoothServiceUUID`
   - : A Bluetooth service universally unique identifier for a specified device.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTService")}} object.
 
 ## Specifications
 

@@ -19,6 +19,16 @@ A browser picker is shown when the element is one of these types: `"date"`,
 `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, or `"file"`. It
 can also be prepopulated with items from a {{htmlelement("datalist")}} element or [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute.
 
+## Syntax
+
+```js
+showPicker()
+```
+
+### Parameters
+
+None.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).
@@ -30,16 +40,6 @@ None ({{jsxref("undefined")}}).
     or mouse click.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if called in a cross-origin iframe.
-
-## Syntax
-
-```js
-showPicker()
-```
-
-### Parameters
-
-None.
 
 ## Examples
 

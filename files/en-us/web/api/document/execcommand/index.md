@@ -33,16 +33,6 @@ The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `e
 execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 
-### Return value
-
-A boolean value that is `false` if the command is unsupported or
-disabled.
-
-> **Note:** `document.execCommand()` only returns
-> `true` if it is invoked as part of a user interaction. You can't use it to
-> verify browser support before calling a command. From Firefox 82, nested
-> `document.execCommand()` calls will always return `false`.
-
 ### Parameters
 
 - `aCommandName`
@@ -56,7 +46,7 @@ disabled.
     providing that information. For example, `insertImage` requires the URL of
     the image to insert. Specify `null` if no argument is needed.
 
-### Commands
+#### Commands
 
 - `backColor`
   - : Changes the document background color. In `styleWithCss` mode, it affects
@@ -217,6 +207,16 @@ disabled.
 
 - `AutoUrlDetect`
   - : Changes the browser auto-link behavior (Internet Explorer only)
+
+### Return value
+
+A boolean value that is `false` if the command is unsupported or
+disabled.
+
+> **Note:** `document.execCommand()` only returns
+> `true` if it is invoked as part of a user interaction. You can't use it to
+> verify browser support before calling a command. From Firefox 82, nested
+> `document.execCommand()` calls will always return `false`.
 
 ## Examples
 

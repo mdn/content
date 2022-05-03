@@ -26,10 +26,6 @@ createPeriodicWave(real, imag)
 createPeriodicWave(real, imag, constraints)
 ```
 
-### Return value
-
-A {{domxref("PeriodicWave")}}.
-
 ### Parameters
 
 - `real`
@@ -50,6 +46,10 @@ otherwise an error is thrown.
       `false`.
 
 > **Note:** If normalized, the resulting wave will have a maximum absolute peak value of 1.
+
+### Return value
+
+A {{domxref("PeriodicWave")}}.
 
 ## Examples
 
