@@ -336,7 +336,6 @@
     "DOM Events": {
       "interfaces": [
         "Event",
-        "EventListener",
         "EventTarget",
         "CompositionEvent",
         "FocusEvent",
@@ -1328,7 +1327,6 @@
         "SVGAnimatedNumber",
         "SVGAnimatedNumberList",
         "SVGAnimatedPathData",
-        "SVGAnimatedPoints",
         "SVGAnimatedPreserveAspectRatio",
         "SVGAnimatedRect",
         "SVGAnimatedString",
@@ -1434,7 +1432,6 @@
         "SVGSetElement",
         "SVGStopElement",
         "SVGStringList",
-        "SVGStylable",
         "SVGStyleElement",
         "SVGSVGElement",
         "SVGSwitchElement",
@@ -1451,7 +1448,6 @@
         "SVGTRefElement",
         "SVGTSpanElement",
         "SVGUnitTypes",
-        "SVGURIReference",
         "SVGUseElement",
         "SVGViewElement",
         "SVGVKernElement",
@@ -1636,8 +1632,7 @@
         "CustomElementRegistry",
         "HTMLSlotElement",
         "HTMLTemplateElement",
-        "ShadowRoot",
-        "Slotable"
+        "ShadowRoot"
       ],
       "methods": [
         "Document.createElement()",
