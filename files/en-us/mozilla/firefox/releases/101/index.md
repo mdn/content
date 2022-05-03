@@ -39,6 +39,11 @@ This article provides information about the changes in Firefox 101 that will aff
 
 #### DOM
 
+- [`HTMLMediaElement.preservesPitch`](/en-US/docs/Web/API/HTMLMediaElement/preservesPitch) is now supported without the `moz` prefix.
+  `mozPreservesPitch` is now an alias of `preservesPitch`, but is deprecated, and may be removed in future releases.
+  ({{bug(1652950)}}).
+  
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
