@@ -24,6 +24,8 @@ read-only, or do you want to write to the object stores?) The default value is
 
 ## Value
 
+An object defining the mode for isolating access to
+data in the current object stores:
 A string defining the mode for isolating access to data in the current object stores.
 The following values are available:
 
