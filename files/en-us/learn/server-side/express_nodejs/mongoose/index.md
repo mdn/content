@@ -518,7 +518,7 @@ You will first need to [create an account](https://www.mongodb.com/cloud/atlas/r
 
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
-1. Click **Build a Database** button in the Database Deployments section.
+1. Click the **Build a Database** button in the _Database Deployments_ section.
     ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
     
 2. This will open the _Deploy a cloud database_ screen. Click on the **Create** button under the _Shared_ deployment option.
@@ -527,18 +527,18 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 3. This will open the _Create a Shared Cluster_ screen.
     ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
 
-    - Select any provider from the *Cloud Provider & Region* section. Different providers offer different regions.
-    - **Cluster Tier** and **Additional Settings** don't need to be changed. You can change the name of your Cluster under **Cluster Name**. We are naming it Cluster0 for this tutorial.
+    - Select any provider from the _Cloud Provider & Region_ section. Different providers offer different regions.
+    - _Cluster Tier_ and _Additional Settings_ don't need to be changed. You can change the name of your Cluster under _Cluster Name_. We are naming it `Cluster0` for this tutorial.
     - Click the **Create Cluster** button (creation of the cluster will take some minutes).
 
 4. This will open the _Security Quickstart_ section.
     ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
 
-    - Enter a username and password. Remember to copy and store the crendentials safely as we will need them later on. Click the **Create User** button.
+    - Enter a username and password. Remember to copy and store the credentials safely as we will need them later on. Click the **Create User** button.
 
       > **Note:** Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
 
-    - Enter `0.0.0.0/0` in the IP Address field. This basically tells MongoDB that we want to allow access from anywhere. Click the **Add Entry** button.
+    - Enter `0.0.0.0/0` in the IP Address field. This tells MongoDB that we want to allow access from anywhere. Click the **Add Entry** button.
 
       > **Note:** It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
 
@@ -547,15 +547,11 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 5. This will open the following screen. Click on the **Go to Databases** button.
     ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
 
-6. You will return to the __Database Deployments__ screen.
+6. You will return to the _Database Deployments_ screen. Click the **Browse Collections** button.
     ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
-    - Click the **Browse Collections** button.
-
-7. This will open the _Collections_ section.
+7. This will open the _Collections_ section. Click the **Add My Own Data** button.
     ![Create a database on MongoDB Atlas.](mongodb_atlas_-_adddata.jpg)
-
-    - Click the **Add My Own Data** button.
 
 8. This will open the _Create Database_ screen.
     ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
@@ -569,20 +565,20 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
     - Click the _Overview_ tab to return to the cluster overview.
 
-10. From the Cluster0 Overview screen click the **Connect** button.
+10. From the Cluster0 _Overview_ screen click the **Connect** button.
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
 11. This will open the _Connect to Cluster_ screen. Click the **Connect your application** option.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
-12. This will open the _Connect_ screen.
+12. You will now be shown the _Connect_ screen.
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
-    - Click the **Copy** button to copy the connection string.
-    - Paste this in a local text editor.
+    - Click the **Copy** icon to copy the connection string.
+    - Paste this in your local text editor.
     - Update the password with your user's password.
     - Replace `myFirstDatabase` with `local_library`.
-    - Save this string somewhere safe.
+    - Save the file containing this string somewhere safe.
 
 You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.upbx7.mongodb.net/local_library?retryWrites=true&w=majority`
 
