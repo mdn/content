@@ -554,7 +554,8 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     ![Create a database on MongoDB Atlas.](mongodb_atlas_-_adddata.jpg)
 
 8. This will open the _Create Database_ screen.
-    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
+
+   ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
 
     - Enter the name for the new database as `local_library`.
     - Enter the name of the collection as `Collection0`.
