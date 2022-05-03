@@ -1170,7 +1170,7 @@
         "PerformanceResourceTiming"
       ],
       "methods": [],
-      "properties": ["Window.performance"],
+      "properties": ["performance_property"],
       "events": []
     },
     "Screen Capture API": {
@@ -1212,7 +1212,6 @@
       "overview": ["Selection API"],
       "interfaces": ["Selection"],
       "properties": [
-        "Document.onselectionchange",
         "GlobalEventHandlers.onselectstart"
       ],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
@@ -1310,7 +1309,7 @@
         "WritableStreamDefaultWriter"
       ],
       "methods": ["fetch()"],
-      "properties": ["Body.body"],
+      "properties": ["Response.body"],
       "events": []
     },
     "SVG": {
@@ -1569,11 +1568,9 @@
         "AudioBuffer",
         "AudioBufferSourceNode",
         "AudioContext",
-        "AudioContextOptions",
         "AudioDestinationNode",
         "AudioListener",
         "AudioNode",
-        "AudioNodeOptions",
         "AudioParam",
         "AudioProcessingEvent",
         "AudioScheduledSourceNode",
@@ -1710,7 +1707,7 @@
       ],
       "interfaces": ["Crypto", "CryptoKey", "SubtleCrypto"],
       "methods": [],
-      "properties": ["Window.crypto"],
+      "properties": ["crypto_property"],
       "events": [],
       "dictionaries": [
         "AesCbcParams",
@@ -1840,8 +1837,8 @@
         "ServiceWorkerRegistration.showNotification()",
         "ServiceWorkerRegistration.getNotifications()"
       ],
-      "properties": ["ServiceWorkerGlobalScope.onnotificationclick"],
-      "events": []
+      "properties": [],
+      "events": ["ServiceWorkerGlobalScope: notificationclick"]
     },
     "WebRTC": {
       "overview": ["WebRTC API"],
