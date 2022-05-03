@@ -4,7 +4,7 @@ slug: Web/CSS/offset-path
 tags:
   - CSS
   - CSS Motion Path
-  - Experimental
+  - CSS Property
   - Motion Path
   - Reference
   - motion-path
