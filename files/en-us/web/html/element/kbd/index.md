@@ -151,14 +151,6 @@ kbd>kbd {
 }
 ```
 
-##### HTML
-
-Then we update the HTML to use this class on the keys in the output to be presented:
-
-```html
-<p>You can also create a new document by pressing <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.</p>
-```
-
 ##### Result
 
 The result is just what we want!
