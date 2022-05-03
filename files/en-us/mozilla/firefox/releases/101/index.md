@@ -39,7 +39,12 @@ This article provides information about the changes in Firefox 101 that will aff
 
 #### DOM
 
+- [`HTMLMediaElement.preservesPitch`](/en-US/docs/Web/API/HTMLMediaElement/preservesPitch) is now supported without the `moz` prefix.
+  `mozPreservesPitch` is now an alias of `preservesPitch`, but is deprecated, and may be removed in future releases.
+  ({{bug(1652950)}}).
+  
 - [`HTMLInputElement.showPicker()`](/en-US/docs/Web/API/HTMLInputElement/showPicker) is now supported, allowing the picker for an input element to be displayed when a user interacts with some other element, such as a button ({{bug(1745005)}}).
+
 
 #### Media, WebRTC, and Web Audio
 
