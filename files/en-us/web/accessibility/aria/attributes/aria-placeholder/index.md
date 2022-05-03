@@ -19,7 +19,7 @@ A placeholder is text that appears in the form control when it has no value set.
 If you are creating a `textbox` using any other element, `placeholder` is not supported. That is where `aria-placeholder` comes into play. The `aria-placeholder` attribute can be used to defines a short hint to help the user understand what type of data is expected when a non-semantic form control has no value.
 
 ```html
-<p id="date-of-birth">Birthday</span>
+<span id="date-of-birth">Birthday</span>
 <div contenteditable role="textbox" aria-labelledby="date-of-birth" aria-placeholder="MM-DD-YYYY">MM-DD-YYYY</div>
 ```
 
