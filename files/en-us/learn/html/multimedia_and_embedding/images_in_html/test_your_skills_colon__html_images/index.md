@@ -11,15 +11,15 @@ tags:
 ---
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you've understood our [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) article.
+The aim of this skill test is to assess whether you understand [images and how to embed them in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-## HTML images 1
+## Task 1
 
-In this task we want you to embed a simple image of some Blueberries into the page. You need to:
+In this task, we want you to embed a simple image of some Blueberries into the page. You need to:
 
 - Add the path to the image to an appropriate attribute to embed it on the page. The image is called `blueberries.jpg`, and it is in a folder inside the current folder called `images`.
 - Add some alternative text to an appropriate attribute to describe the image, for people that cannot see it.
@@ -33,9 +33,9 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images1-download.html) to work in your own editor or in an online editor.
 
-## HTML images 2
+## Task 2
 
-In this task you already have a full-featured image, but we'd like you to add a tooltip that appears when the image is moused over. You should put some appropriate information into the tooltip.
+In this task, you already have a full-featured image, but we'd like you to add a tooltip that appears when the image is moused over. You should put some appropriate information into the tooltip.
 
 Try updating the live code below to recreate the finished example:
 
@@ -45,9 +45,9 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images2-download.html) to work in your own editor or in an online editor.
 
-## HTML images 3
+## Task 3
 
-In this final task you are provided with both a full-featured image and some caption text. What you need to do here is add elements that will associate the image with the caption.
+In this final task, you are provided with both a full-featured image and some caption text. What you need to do here is add elements that will associate the image with the caption.
 
 Try updating the live code below to recreate the finished example:
 

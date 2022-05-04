@@ -19,7 +19,7 @@ The aim of this skill test is to assess whether you understand [CSS backgrounds 
 
 ## Task 1
 
-In this task we want you to add a background, border, and some simple styling to a page header:
+In this task, we want you to add a background, border, and some simple styling to a page header:
 
 1. Give the box a 5px black solid border, with rounded corners of 10px.
 2. Add a background image (use the URL `balloons.jpg`) and size it so that it covers the box.
@@ -66,7 +66,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Backgrounds and borders 1 skill test".
+    - A descriptive title such as "Assessment wanted for Backgrounds and borders skill test 1".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.

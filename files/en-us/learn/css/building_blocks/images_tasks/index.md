@@ -11,7 +11,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you've understood our [Images, media and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements) article.
+The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements).
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
@@ -38,7 +38,7 @@ In this task, you have a simple form. Your task is to make the following changes
 - Use attribute selectors to target the search field and button inside `.myform`.
 - Make the form field and button use the same text size as the rest of the form.
 - Give the form field and button 10 px of padding.
-- Give the button a purple background (I used `rebeccapurple`), white foreground, no border and rounded corners of 5px.
+- Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
 ![A single line form](mdn-images-form.png)
 
@@ -59,7 +59,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Images and form elements 1 skill test".
+    - A descriptive title such as "Assessment wanted for Images and form elements skill test 1".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.

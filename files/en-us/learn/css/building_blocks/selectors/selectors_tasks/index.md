@@ -20,8 +20,8 @@ The aim of this skill test is to assess whether you understand [CSS selectors](/
 
 Without changing the HTML, use CSS to do the following things:
 
-- Make h1 headings blue.
-- Give h2 headings a blue background and white text.
+- Make `<h1>` headings blue.
+- Give `<h2>` headings a blue background and white text.
 - Cause text wrapped in a span to have a font-size of 200%.
 
 ![Text with the CSS applied for the solution to task 1.](selectors1.jpg)
@@ -55,7 +55,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 3
 
-In this example, try making the following changes without adding to the HTML.
+In this task, try making the following changes without adding to the HTML:
 
 - Style links, making the link-state orange, visited links green, and remove the underline on hover.
 - Make the first element inside the container font-size: 150% and the first line of that element red.
@@ -76,7 +76,7 @@ Try updating the live code below to recreate the finished example:
 In this task, try the following:
 
 - Make any paragraph that directly follows an h2 element red.
-- Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of list.
+- Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of `list`.
 
 ![Text with the CSS applied for the solution to task 4.](selectors4.jpg)
 
@@ -115,7 +115,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for selectors skill test 1".
+    - A descriptive title such as "Assessment wanted for Selectors skill test 1".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.

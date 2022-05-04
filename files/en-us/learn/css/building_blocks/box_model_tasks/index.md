@@ -10,7 +10,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you understand [CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
+The aim of this skill test is to assess whether you understand the [CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
@@ -18,7 +18,7 @@ The aim of this skill test is to assess whether you understand [CSS box model](/
 
 ## Task 1
 
-With the two boxes below, one is using the standard box model, the other the alternate box model. Change the width of the second box by adding rules to the .alternate class, so that it matches the visual width of the first box. Your final result will look like the image below.
+With the two boxes below, one is using the standard box model, the other the alternate box model. Change the width of the second box by adding declarations to the `.alternate` class, so that it matches the visual width of the first box. Your final result will look like the image below.
 
 ![Two boxes of the same size](mdn-box-model1.png)
 
@@ -53,7 +53,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 3
 
-In this example the inline element has a margin, padding and border however the lines above and below are overlapping it. What can you add to your CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline?
+In this example, the inline element has a margin, padding and border. However, the lines above and below are overlapping it. What can you add to your CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline?
 
 ![An inline box with space between it and the text around it.](mdn-box-model3.png)
 
@@ -74,7 +74,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for box model skill test 1".
+    - A descriptive title such as "Assessment wanted for The box model skill test 1".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.
