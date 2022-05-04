@@ -26,7 +26,7 @@ getPrimaryService(bluetoothServiceUUID)
 
 ### Parameters
 
-- `BluetoothServiceUUID`
+- `bluetoothServiceUUID`
   - : A Bluetooth service universally unique identifier for a specified device.
 
 ### Return value
