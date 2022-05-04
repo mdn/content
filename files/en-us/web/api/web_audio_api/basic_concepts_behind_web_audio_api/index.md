@@ -341,7 +341,7 @@ When the number of channels doesn't match between an input and an output, up- or
 
 In general, audio visualizations are achieved by accessing an output of audio data over time, usually gain or frequency data, and then using a graphical technology to turn that into a visual output, such as a graph. The Web Audio API has an {{domxref("AnalyserNode")}} available that doesn't alter the audio signal passing through it. Instead, it outputs audio data that can be passed to a visualization technology such as {{htmlelement("canvas")}}.
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using an FFT.](fttaudiodata_en.svg)
 
 You can grab data using the following methods:
 
@@ -358,13 +358,13 @@ You can grab data using the following methods:
 
 ## Spatializations
 
-An audio spatialization (handled by the {{domxref("PannerNode")}} and {{domxref("AudioListener")}} nodes in the Web Audio API) allows us to model the position and behavior of an audio signal at a certain point in physical space, simulating the listener hearing that audio.
+Audio spatialization allows us to model the position and behavior of an audio signal at a certain point in physical space, simulating the listener hearing that audio. In the Web Audio API, spatialization is handled by the {{domxref("PannerNode")}} and the {{domxref("AudioListener")}}.
 
-The panner's position is described with right-hand Cartesian coordinates; its _movement_ as a position vector (necessary for creating [Doppler effects](https://en.wikipedia.org/wiki/Doppler_effect)) and its _directionality_ as a directionality cone. The cone can be very large, e.g. for omnidirectional sources.
+The panner uses right-hand Cartesian coordinates to describe the audio source's _position_ as a vector and its _orientation_ as a 3D directional cone. The cone can be very large, e.g. for omnidirectional sources.
 
-![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](pannernode_en.svg)
+![The PannerNode defines a spatial position and orientation for a given signal.](pannernode_en.svg)
 
-The listener's position is similarly described using right-hand Cartesian coordinates; their _movement_ as a position vector (implicitly representing the "center" of their head), and their _orientation_ as two direction vectors: _up_ and _front_. Respectively, these vectors define the direction of the top of the listener's head, and the direction the listener's nose is pointing, and are at right angles to one another.
+The listener is similarly described using right-hand Cartesian coordinates, with their _position_ as a vector (implicitly representing the "center" of their head), and their _orientation_ as two direction vectors: _up_ and _front_. Respectively, these vectors define the direction of the top of the listener's head, and the direction the listener's nose is pointing. The vectors are perpendicular to one another.
 
 ![We see the position, up, and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](webaudiolistenerreduced.png)
 
@@ -372,10 +372,10 @@ The listener's position is similarly described using right-hand Cartesian coordi
 
 ## Fan-in and Fan-out
 
-In audio terms, **fan-in** describes the process by which a {{domxref("ChannelMergerNode")}} takes a series of mono input sources and outputs a single multi-channel signal:
+In audio terms, **fan-in** describes the process by which a {{domxref("ChannelMergerNode")}} takes a series of _mono_ input sources and outputs a single multi-channel signal:
 
 ![](fanin.svg)
 
-**Fan-out** describes the opposite process, whereby a {{domxref("ChannelSplitterNode")}} takes a multi-channel input source and outputs multiple mono output signals:
+**Fan-out** describes the opposite process, whereby a {{domxref("ChannelSplitterNode")}} takes a multi-channel input source and outputs multiple _mono_ output signals:
 
 ![](fanout.svg)
