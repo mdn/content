@@ -71,7 +71,7 @@ Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` 
 
 ## Aside: The inner display type
 
-You've learned above that boxes in CSS have an _outer_ display type. Boxes also have an _inner_ display type, which dictates how elements inside that box are laid out.
+Boxes also have an _inner_ display type, which dictates how elements inside that box are laid out.
 
 Block and inline layout is the default way things behave on the web. By default and without any other instruction, the elements inside a box are also laid out in **[normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)** and behave as block or inline boxes.
 
