@@ -11,7 +11,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you've understood writing modes and logical properties covered in our [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) article.
+The aim of this skill test is to assess whether you understood how to [handle different text directions using writing modes and logical properties ](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
