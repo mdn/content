@@ -20,7 +20,7 @@ The aim of this skill test is to assess whether you understand how to [style tab
 
 In the lesson we styled up a table in a rather garish manner. In this task we are going to style the same table, but using some good practices for table design as outlined in the external article [Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/).
 
-Our finished table will look like the image below. There are a number of ways that you can achieve this, but I suggest following similar patterns as used in the tutorial to do the following things:
+Our finished table will look like the image below. There are a number of ways that you can achieve this, but we suggest you follow similar patterns as used in the tutorial to do the following things:
 
 - Align headings and data for columns containing numbers right.
 - Align headings and data for columns containing text left.
