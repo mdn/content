@@ -49,6 +49,8 @@ Everything in CSS has a box around it, and understanding these boxes is key to b
 
 In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes have an **inner display type** and an **outer display type**. Let's start with the outer display type.
 
+## Outer display type
+
 You can set the values of the {{cssxref("display")}} property to `block` or `inline`. This defines the type of box applied to an element and relates to the outer display type.
 
 If a box has an outer display type of `block`, then:
@@ -69,7 +71,7 @@ If a box has an outer display type of `inline`, then:
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
-## Aside: The inner display type
+## Inner display type
 
 Boxes also have an _inner_ display type, which dictates how elements inside that box are laid out.
 
@@ -83,7 +85,7 @@ If you look more into CSS layout, you will also come across other inner values y
 
 ## Examples of different display types
 
-The example below has three different HTML elements, all of which have an outer display type of `block`. 
+The example below has three different HTML elements, all of which have an outer display type of `block`.
 
 - A paragraph with a border added in CSS. The browser renders this as a block box. The paragraph starts on a new line and uses the entire available width.
 
