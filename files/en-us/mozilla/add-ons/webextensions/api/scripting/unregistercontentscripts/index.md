@@ -6,7 +6,6 @@ tags:
   - Add-ons
   - Extensions
   - Method
-  - Non-standard
   - Reference
   - WebExtensions
   - unregisterContentScripts
@@ -32,15 +31,15 @@ let removing = browser.scripting.unregisterContentScripts(
 ### Parameters
 
 - `scripts`{{optional_inline}} 
-  - : `array` of {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter to identify the dynamic content scripts to unregistered. If not specified, all dynamic content scripts are unregistered.
+  - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter to identify the dynamic content scripts to unregistered. If not specified, all dynamic content scripts are unregistered.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the scripts are unregistered. If any error occurs, the promise fulfills with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the scripts are unregistered. If any error occurs, the promise is rejected.
 
 ## Examples
 
-This example unregisters a content script that was previously registered with ID `a-script`:
+This example unregisters a registered content script with ID `a-script`:
 
 ```js
 await browser.scripting.unregisterContentScripts({

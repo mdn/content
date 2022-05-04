@@ -6,7 +6,6 @@ tags:
   - Add-ons
   - Extensions
   - ContentScriptFilter
-  - Non-standard
   - Reference
   - Type
   - WebExtensions

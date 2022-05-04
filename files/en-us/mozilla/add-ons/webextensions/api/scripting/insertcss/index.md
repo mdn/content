@@ -6,7 +6,6 @@ tags:
   - Add-ons
   - Extensions
   - Method
-  - Non-standard
   - Reference
   - WebExtensions
   - insertCSS
@@ -54,7 +53,7 @@ await browser.scripting.insertCSS(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the CSS is inserted. If any error occurs, the promise fulfills with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the CSS is inserted. If any error occurs, the promise is rejected.
 
 ## Examples
 

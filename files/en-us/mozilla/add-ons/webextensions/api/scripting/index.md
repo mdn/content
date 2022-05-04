@@ -21,7 +21,7 @@ Inserts JavaScript and CSS into websites. The methods offer two approaches to in
 
 This API requires the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab into which JavaScript or CSS is injected.
 
-Alternatively, you can get these permissions temporarily, only for the active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+Alternatively, you can get permission temporarily in the active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). However,the `"scripting"` permission is still required.
 
 ## Types
 

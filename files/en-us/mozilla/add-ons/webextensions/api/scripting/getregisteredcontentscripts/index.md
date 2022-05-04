@@ -6,7 +6,6 @@ tags:
   - Add-ons
   - Extensions
   - Method
-  - Non-standard
   - Reference
   - WebExtensions
   - getRegisteredContentScripts
@@ -32,14 +31,20 @@ let scripts = await browser.scripting.getRegisteredContentScripts(
 ### Parameters
 
 
-- `filter`
+- `filter` {{optional_inline}}
   - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter for the registered script details to return.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If any error occurs, the promise fulfills with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If any error occurs, the promise is rejected.
 
 ## Examples
+
+This example returns all the registered content scripts:
+
+```js
+let scripts = await browser.scripting.registerContentScripts();
+````
 
 This example returns the registered scripts with the ID `a-script`:
 

@@ -6,7 +6,6 @@ tags:
   - Add-ons
   - Extensions
   - InjectionResult
-  - Non-standard
   - Reference
   - Type
   - WebExtensions
@@ -25,6 +24,10 @@ Values of this type are objects. They contain these properties:
   - : `number`. The frame ID associated with the injection.
 - `result`{{optional_inline}}
   - : `any`. The result of the script execution.
+- `error`{{optional_inline}}
+  - : `object`. When the injection fails, details of the failure errors.
+    - `message`
+      - : `string`. A message explaining why the injection failed.
 
 ## Browser compatibility
 

@@ -6,7 +6,6 @@ tags:
   - Add-ons
   - Extensions
   - Method
-  - Non-standard
   - Reference
   - WebExtensions
   - removeCSS
@@ -46,7 +45,7 @@ await browser.scripting.removeCSS(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the CSS is removed. If any error occurs, the promise fulfills with an error message. Attempts to remove non-existent stylesheets are ignored.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments when all the CSS is removed. If any error occurs, the promise is rejected. Attempts to remove non-existent stylesheets are ignored.
 
 ## Examples
 

@@ -6,7 +6,6 @@ tags:
   - Add-ons
   - Extensions
   - Method
-  - Non-standard
   - Reference
   - WebExtensions
   - updateContentScripts
@@ -32,21 +31,15 @@ await browser.scripting.updateContentScripts(
 ### Parameters
 
 - `scripts`
-
-  - : An object with these properties:  
-
-    - `persistAcrossSessions`
-      - : `boolean`. Whether the content script persists into future sessions. 
-    - `script`
-      - : `array` of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. Details of a script to update.
+  - : `array` of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. Details of a script to update. All the properties are optional except for `id`.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If any error occurs, the promise fulfills with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If any error occurs, the promise is rejected.
 
 ## Examples
 
-This example updates a content script that was previously registered with ID `a-script` by setting `allFrames` to `true`:
+This example updates a registered content script with ID `a-script` by setting `allFrames` to `true`:
 
 ```js
 await browser.scripting.updateContentScripts([

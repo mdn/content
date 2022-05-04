@@ -6,7 +6,6 @@ tags:
   - Add-ons
   - Extensions
   - InjectionTarget
-  - Non-standard
   - Reference
   - Type
   - WebExtensions
