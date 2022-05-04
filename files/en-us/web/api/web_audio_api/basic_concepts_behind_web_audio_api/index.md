@@ -12,9 +12,7 @@ tags:
   - concepts
   - sound
 ---
-This article explains some of the audio theory behind how the features of the Web Audio API work, to help you make informed decisions while designing how audio is routed through your app.
-
-It won't turn you into a master sound engineer, but it will give you enough background to understand why the Web Audio API works like it does.
+This article explains some of the audio theory behind how the features of the Web Audio API work, to help you make informed decisions while designing how audio is routed through your app. It won't turn you into a master sound engineer, but it will give you enough background to understand why the Web Audio API works like it does.
 
 ## Audio graphs
 
@@ -53,7 +51,7 @@ A lot more information can be found on the Wikipedia page [Sampling (signal proc
 
 An {{ domxref("AudioBuffer") }} takes as its parameters a number of channels (1 for mono, 2 for stereo, etc), a length, meaning the number of sample frames inside the buffer, and a sample rate, which is the number of sample frames played per second.
 
-A sample is a single float32 value that represents the value of the audio stream at each specific point in time, in a specific channel (left or right, if in the case of stereo). A frame, or sample frame, is the set of all values for all channels that will play at a specific point in time: all the samples of all the channels that play at the same time (two for a stereo sound, six for 5.1, etc.)
+A sample is a single 32-bit float value that represents the value of the audio stream at each specific point in time, in a specific channel (left or right, if in the case of stereo). A frame, or sample frame, is the set of all values for all channels that will play at a specific point in time: all the samples of all the channels that play at the same time (two for a stereo sound, six for 5.1, etc.)
 
 The sample rate is the number of those samples (or frames, since all samples of a frame play at the same time) that will play in one second, measured in Hz. The higher the sample rate, the better the sound quality.
 
@@ -64,7 +62,7 @@ Let's look at a Mono and a Stereo audio buffer, each is one second long, and pla
 
 ![A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo.](sampleframe-english.png)
 
-When a buffer plays, you will hear the left most sample frame, and then the one right next to it, etc. In the case of stereo, you will hear both channels at the same time. Sample frames are very useful, because they are independent of the number of channels, and represent time, in a useful way for doing precise audio manipulation.
+When a buffer plays, you will hear the leftmost sample frame, and then the one right next to it, etc. In the case of stereo, you will hear both channels at the same time. Sample frames are very useful, because they are independent of the number of channels, and represent time, in a useful way for doing precise audio manipulation.
 
 > **Note:** To get a time in seconds from a frame count, divide the number of frames by the sample rate. To get a number of frames from a number of samples, divide by the channel count.
 
@@ -81,14 +79,14 @@ var buffer = context.createBuffer(2, 22050, 44100);
 >
 > Secondly, signals must be [low-pass filtered](https://en.wikipedia.org/wiki/Low-pass_filter "Low-pass filter") before sampling, otherwise [aliasing](https://en.wikipedia.org/wiki/Aliasing) occurs. While an ideal low-pass filter would perfectly pass frequencies below 20 kHz (without attenuating them) and perfectly cut off frequencies above 20 kHz, in practice a [transition band](https://en.wikipedia.org/wiki/Transition_band) is necessary, where frequencies are partly attenuated. The wider this transition band is, the easier and more economical it is to make an [anti-aliasing filter](https://en.wikipedia.org/wiki/Anti-aliasing_filter). The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.
 
-If you use this call above, you will get a stereo buffer with two channels, that when played back on an AudioContext running at 44100Hz (very common, most normal sound cards run at this rate), will last for 0.5 seconds: 22050 frames/44100Hz = 0.5 seconds.
+If you use this call above, you will get a stereo buffer with two channels, that when played back on an `AudioContext` running at 44100Hz (very common, most normal sound cards run at this rate), will last for 0.5 seconds: 22050 frames/44100Hz = 0.5 seconds.
 
 ```js
 var context = new AudioContext();
 var buffer = context.createBuffer(1, 22050, 22050);
 ```
 
-If you use this call, you will get a mono buffer with just one channel), that when played back on an AudioContext running at 44100Hz, will be automatically _resampled_ to 44100Hz (and therefore yield 44100 frames), and last for 1.0 second: 44100 frames/44100Hz = 1 second.
+If you use this call, you will get a mono buffer with just one channel), that when played back on an `AudioContext` running at 44100Hz, will be automatically _resampled_ to 44100Hz (and therefore yield 44100 frames), and last for 1.0 second: 44100 frames/44100Hz = 1 second.
 
 > **Note:** Audio resampling is very similar to image resizing. Say you've got a 16 x 16 image, but you want it to fill a 32x32 area. You resize (or resample) it. The result has less quality (it can be blurry or edgy, depending on the resizing algorithm), but it works, with the resized image taking up less space. Resampled audio is exactly the same: you save space, but in practice you will be unable to properly reproduce high frequency content, or treble sound.
 
@@ -358,11 +356,11 @@ You can grab data using the following methods:
 
 > **Note:** For more information, see our [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) article.
 
-## Spatialisations
+## Spatializations
 
-An audio spatialisation (handled by the {{domxref("PannerNode")}} and {{domxref("AudioListener")}} nodes in the Web Audio API) allows us to model the position and behavior of an audio signal at a certain point in space, and the listener hearing that audio.
+An audio spatialization (handled by the {{domxref("PannerNode")}} and {{domxref("AudioListener")}} nodes in the Web Audio API) allows us to model the position and behavior of an audio signal at a certain point in space, and the listener hearing that audio.
 
-The panner's position is described with right-hand Cartesian coordinates; its movement using a velocity vector, necessary for creating Doppler effects, and its directionality using a directionality cone.The cone can be very large, e.g. for omnidirectional sources.
+The panner's position is described with right-hand Cartesian coordinates; its movement using a velocity vector, necessary for creating Doppler effects, and its directionality using a directionality cone. The cone can be very large, e.g. for omnidirectional sources.
 
 ![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](pannernode_en.svg)
 
