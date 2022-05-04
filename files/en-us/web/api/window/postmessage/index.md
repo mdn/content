@@ -62,7 +62,7 @@ postMessage(message, targetOrigin, transfer)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## The dispatched event
 

@@ -96,7 +96,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
