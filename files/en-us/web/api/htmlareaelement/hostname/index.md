@@ -25,7 +25,7 @@ It can be used as both a setter and getter.
     <area id="area1" shape="rect" coords="184,6,253,27"
           href="/en-US/docs/HTMLAreaElement"
           target="_blank" alt="Mozilla" />
-    <area  id="area2" shape="circle" coords="130,136,60"
+    <area id="area2" shape="circle" coords="130,136,60"
           href="https://coolexample.com/"
           target="_blank" alt="MDN" />
 </map>

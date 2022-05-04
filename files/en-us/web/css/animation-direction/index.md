@@ -61,7 +61,7 @@ animation-direction: unset;
 
 ## Examples
 
-### The animation is  playing reversed
+### The animation is playing reversed
 
 #### HTML
 

@@ -51,7 +51,7 @@ By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Cr
 <link href="print.css"    rel="stylesheet" media="print">
 ```
 
-It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS)  to achieve that.
+It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS) to achieve that.
 
 ### Fonts
 
