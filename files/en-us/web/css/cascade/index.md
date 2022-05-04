@@ -22,7 +22,7 @@ The cascade lies at the core of CSS, as emphasized by the name: _Cascading_ Styl
 
 ## Which CSS entities participate in the cascade
 
-Only CSS declarations, that is property/value pairs, participate in the cascade. This means that [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade. 
+Only CSS property/value pair declarations participate in the cascade. This means that [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade. 
 
 ### @-rules and the cascade 
 
@@ -30,7 +30,7 @@ For the most part, the properties and descriptors defined in at-rules don't part
 
 While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, declarations contained in {{cssxref("@keyframes")}} don't. As with `@font-face`, only the at-rule as a whole is selected via the cascade algorithm.
 
-When it comes to {{cssxref("@import")}}, the @import doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` includes a layer name, the contents of the imported stylesheet are placed into the specified layer. Any CSS imported with `@import` outside of a layer are placed in the same anonymous layer as all the CSS declared outside of a named layer. This anonymous layer takes precedence over all layered styles. This is discussed in more depth below.
+When it comes to {{cssxref("@import")}}, the @import doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](en-US/docs/Web/CSS/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is which is treated as the last declared layer. This is discussed in more depth below.
 
 Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by the cascade algorithm.
 
@@ -84,28 +84,27 @@ The cascade algorithm is applied before the specificity algorithm, meaning if `:
 
 ## Cascade order and Layers
 
-The [table in Cascade order](#Cascading_order) provided a precedence order overview. The table summarized user-agent, user, and author styles in two lines: "origin - normal" and "origin - !important". The precendence for origin styles is more nuanced. Styles can be contained within layers within their origin.
+The [table in Cascading order](#Cascading_order) above provided a precedence order overview. The table summarized user-agent, user, and author styles in two lines: "origin type - normal" and "origin type - !important". The precendence for styles in each origin type is more nuanced.
 
-Within each origin, the cascade precedence for layers is the order of declarations of those layers, with all the styles not in a layer taking precedence over layered styles. 
+Styles can be contained within layers within their origin type. Within each origin type - user, user-agent, or author styles - normal styles in latter declared layers take precedence over styles declared in previous layers; with normal styles declared outside of any layer taking precedence over layered styles. The layer order of precedence is inverted for styles declared as `!important`; with important styles declared outside of any layer taking precedence over important styles declared within a layer.
 
 The following is the cascade order for author styles, assuming the author included 3 CSS layers named A, B, and C, in that order:
 
 |     | Author style      | Importance   |
 | --- | ----------- | ------------ |
-| 1   | first layer - A | normal       |
-| 1   | in-between  layer - B | normal       |
-| 2   | last layer - C       | normal       |
-| 3   | unlayered styles       | normal       |
-| 4   | inline `style`        | normal       |
-| 5   | animations  |              |
-| 6   | unlayered styles      | `!important` |
-| 7   | last layer - C    | `!important` |
-| 1   | in-between  layer - B | `!important`       |
-| 8   | first layer  - A    | `!important` |
-| 9   | inline `style`      | `!important` |
-| 10   | transitions |              |
+| 1   | A - first layer | normal       |
+| 2   | B - second layer | normal       |
+| 3  | C - last layer      | normal       |
+| 4   | CSS not in a layer       | normal       |
+| 5   | inline `style`        | normal       |
+| 6   | animations  |         N/A     |
+| 7   | CSS not in a layer      | `!important` |
+| 8   | C - last layer   | `!important` |
+| 9   |  B - second layer | `!important`       |
+| 10   | A - first layer    | `!important` |
+| 11   | inline `style`      | `!important` |
+| 12   | transitions |              |
 
-For user, user-agent, and author styles, normal styles in latter declared layers take precedence over styles declared in previous layers; with normal styles declared outside of any layer taking precedence over layered styles. This layer order of precedence is inverted for styles declared as `!important`.
 
 Only relevant to author styles are inline styles. Normal styles declared with the `style` attribute take precedence over any other normal importance author styles no matter which layer they're declared in, unless the style is being altered by a CSS animation. All `!important` styles take precedence over any unimportant styles and animations within the same style origin type (user, user-agent, or author), animations, and normal inline styles.  The layer order for `!important` declarations is reversed; the styles from the first declared layer takes precendence over important declarations in later layers which takes precedence over unlayered styles. !important inline styles are within the author  takes precedence over !important layered and unlayered styles. Transitions take precendence over all important styles, no matter the origin type, including over inline important styles.
 
