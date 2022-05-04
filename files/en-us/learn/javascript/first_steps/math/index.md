@@ -122,7 +122,7 @@ let myNumber = '74';
 Number(myNumber) + 3;
 ```
 
-Note that the result is 746. Our script took the string we modified - 743, changed temporarily its type to number and added 3.
+The result is then 77, as initially expected.
 
 ## Arithmetic operators
 
