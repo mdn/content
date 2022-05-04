@@ -87,7 +87,7 @@ You cannot specify background scripts and a background page.
 
 ## Initialize the extension
 
-Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization, such as a context menu.
+Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization. For extensions with event pages, this is where stateful APIs, such as a context menu created using `browser.menus.create`, should be used.
 
 ```
 brower.runtime.onInstalled.addListener(function() {
@@ -121,15 +121,23 @@ brower.bookmarks.onCreated.addListener(function() {
 
 ```
 
-Do not register listeners asynchronously, as they will not be properly triggered.
+Do not register listeners asynchronously, as they will not be properly triggered. So, rather than:
 
 ```
-brower.runtime.onInstalled.addListener(function() {
-  // WARNING! Events must be registered synchronously from the start of
-  // the page.
-  brower.bookmarks.onCreated.addListener(function() {
+window.onload = () => {
+  // WARNING! This event is not peristed, and will not restart the event page.
+  browser.bookmarks.onCreated.addListener(function() {
     // do something
   });
+}
+```
+
+Do this:
+
+```
+browser.tabs.onUpdated.addListener(() => {
+  // This event is run in the top level scope of the event page, and will persist, allowing
+  // it to restart the event page if necessary.
 });
 ```
 
