@@ -10,7 +10,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you've understood our [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) article.
+The aim of this skill test is to assess whether you understand [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
