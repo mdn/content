@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-let removing = browser.scripting.getRegisteredContentScripts(
+let scripts = await browser.scripting.getRegisteredContentScripts(
   filter          // object
 )
 ```
@@ -44,11 +44,9 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example returns the registered scripts with the ID `a-script`:
 
 ```js
-const scriptFilter = {
-  id: "a-script"
-  };
-
-await browser.scripting.registerContentScripts([aScript]);
+let scripts = await browser.scripting.registerContentScripts({
+  ids: ["a-script-id"],
+});
 ```
 
 {{WebExtExamples}}

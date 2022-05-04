@@ -21,7 +21,7 @@ This type contains details of the result of a script injection.
 
 Values of this type are objects. They contain these properties:
 
-- `frameIds`
+- `frameId`
   - : `number`. The frame ID associated with the injection.
 - `result`{{optional_inline}}
   - : `any`. The result of the script execution.

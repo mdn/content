@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ### Syntax
 
 ```js
-let removing = browser.scripting.updateContentScripts(
+await browser.scripting.updateContentScripts(
   scripts         // object
 )
 ```
@@ -46,16 +46,15 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-This example updates a script file called `a-script.js`:
+This example updates a content script that was previously registered with ID `a-script` by setting `allFrames` to `true`:
 
 ```js
-const aScript = {
-  id: "a-script",
-  js: ["script.js"],
-  matches: ["<all_urls>"],
-  };
-
-await browser.scripting.updateContentScripts([aScript]);
+await browser.scripting.updateContentScripts([
+  {
+    id: "a-script",
+    allFrames: true,
+  },
+]);
 ```
 
 {{WebExtExamples}}

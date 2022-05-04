@@ -40,14 +40,12 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-This example unregisters a script the ID `a-script`:
+This example unregisters a content script that was previously registered with ID `a-script`:
 
 ```js
-const scriptFilter = {
-  id: "a-script"
-  };
-
-await browser.scripting.unregisterContentScripts([scriptFilter]);
+await browser.scripting.unregisterContentScripts({
+  ids: ["a-script"],
+});
 ```
 
 {{WebExtExamples}}

@@ -13,9 +13,9 @@ browser-compat: webextensions.api.scripting
 ---
 {{AddonSidebar}}
 
-Inserts JavaScript and CSS into tabs. The methods offer two approaches to inserting content:
-- {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}} that provide for one-off executions in the document loaded in a tab.
-- {{WebExtAPIRef("scripting.registerContentScripts()")}} that registers scripts that are loaded later using {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} and {{WebExtAPIRef("scripting.unregisterContentScripts()")}}.
+Inserts JavaScript and CSS into websites. The methods offer two approaches to inserting content:
+- {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}} that provide for one-off injections.
+- {{WebExtAPIRef("scripting.registerContentScripts()")}} that registers content scripts dynamically, which can then be retrieved with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} and unregistered with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}).
 
 > **Note:** This API is available in Manifest V3 or higher.
 
@@ -28,11 +28,11 @@ Alternatively, you can get these permissions temporarily, only for the active ta
 - {{WebExtAPIRef("scripting.ContentScriptFilter")}}
   - : Specifies the IDs of scripts to retrieve with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} or to unregister with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}.
 - {{WebExtAPIRef("scripting.InjectionResult")}}
-  - : Details of the result of CSS or script injection.
+  - : Details of the result of CSS or JavaScript injection.
 - {{WebExtAPIRef("scripting.InjectionTarget")}}
   - : Details of an injection target for CSS.
 - {{WebExtAPIRef("scripting.RegisteredContentScript")}}
-  - : Details of a script to be registered or that is registered.
+  - : Details of a content script to be registered or that is registered.
     
 ## Functions
 
@@ -47,9 +47,9 @@ Alternatively, you can get these permissions temporarily, only for the active ta
 - {{WebExtAPIRef("scripting.removeCSS()")}}
   - : Removes CSS which was previously injected into a page by a {{WebExtAPIRef("scripting.insertCSS()")}} call.
 - {{WebExtAPIRef("scripting.updateContentScripts()")}}
-  - : Updates a content script registration.
+  - : Updates one or more content scripts already registered.
 - {{WebExtAPIRef("scripting.unregisterContentScripts()")}}
-  - : Removes the registration of a content script.
+  - : Unregisters one or more content scripts.
   
 ## Browser compatibility
 

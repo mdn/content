@@ -32,7 +32,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-let inserting = browser.scripting.insertCSS(
+await browser.scripting.insertCSS(
   details     // object
 )
 ```
@@ -61,34 +61,30 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example inserts CSS taken from a string into the active tab.
 
 ```js
-browser.browserAction.onClicked.addListener(() => {
-
-  function onError(error) {
-    console.log(`Error: ${error}`);
+browser.action.onClicked.addListener(async tab => {
+  try {
+    await browser.scripting.insertCSS({
+      target: { tabId: tab.id },
+      css: `body { border: 20px dotted pink; }`,
+    });
+  } catch (err) {
+    console.error(`${err}`);
   }
-
-  let insertingCSS = browser.scripting.insertCSS({
-        target: { tabId: tabs[0].id },
-        css: `* body { border: 20px dotted pink; }`,
-      });
-  insertingCSS.then(null, onError);
 });
 ```
 
-This example inserts CSS loaded from a file packaged with the extension. The CSS is inserted into the tab whose ID is 2:
+This example inserts CSS loaded from a file packaged with the extension:
 
 ```js
-browser.action.onClicked.addListener(tab => {
-
-  function onError(error) {
-    console.log(`Error: ${error}`);
+browser.action.onClicked.addListener(async tab => {
+  try {
+    await browser.scripting.insertCSS({
+      target: { tabId: tab.id },
+      files: ["content-style.css"],
+    });
+  } catch (err) {
+    console.error(`${err}`);
   }
-
-  let insertingCSS = browser.scripting.insertCSS({
-        target: { tabId: tabs[0].id },
-        file: "content-style.css",
-      });
-  insertingCSS.then(null, onError);
 });
 ```
 

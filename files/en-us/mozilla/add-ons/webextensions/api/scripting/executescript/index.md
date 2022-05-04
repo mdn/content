@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-let executing = browser.scripting.executeScript(
+let result = await browser.scripting.executeScript(
   details             // object
 )
 ```
@@ -67,57 +67,33 @@ The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_
 This example executes a one-line code snippet in the active tab:
 
 ```js
-function onExecuted(result) {
-  console.log(`We made it green`);
-}
+const tabs = await browser.tabs.query({ active: true });
 
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-const makeItGreen = 'document.body.style.border = "5px solid green"';
-
-const executing = browser.tabs.executeScript({
-  code: makeItGreen
+await browser.scripting.executeScript({
+  target: {
+    // Execute function below in the first tab.
+    tabId: tabs[0].id,
+  },
+  func: () => {
+    document.body.style.border = "5px solid green";
+  },
 });
-executing.then(onExecuted, onError);
 ```
 
 This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the active tab. The script is executed in subframes and the main document:
 
 ```js
-function onExecuted(result) {
-  console.log(`We executed in all subframes`);
-}
+const tabs = await browser.tabs.query({ active: true });
 
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-const executing = browser.tabs.executeScript({
+await browser.scripting.executeScript({
+  target: {
+    tabId: tabs[0].id,
+    allFrames: true,
+  },
   files: ["content-script.js"],
-  allFrames: true
 });
-executing.then(onExecuted, onError);
 ```
 
-This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the tab with the ID of `2`:
-
-```js
-function onExecuted(result) {
-  console.log(`We executed in tab 2`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-const executing = browser.tabs.executeScript(
-  2, {
-    file: "/content-script.js"
-});
-executing.then(onExecuted, onError);
-```
 
 {{WebExtExamples}}
 

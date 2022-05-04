@@ -24,8 +24,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-let removing = browser.scripting.registerContentScripts(
-  scripts         // object
+await browser.scripting.registerContentScripts(
+  scripts         // array
 )
 ```
 
@@ -47,7 +47,8 @@ This example registers a script file called `script.js`:
 const aScript = {
   id: "a-script",
   js: ["script.js"],
-  matches: ["<all_urls>"],
+  matches: ["https://example.com/*"],
+  persistAcrossSessions: false,
 };
 
 await browser.scripting.registerContentScripts([aScript]);

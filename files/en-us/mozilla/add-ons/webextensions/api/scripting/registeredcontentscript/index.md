@@ -34,7 +34,7 @@ Values of this type are objects. They contain these properties:
 - `matches`{{optional_inline}}
   - : `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
 - `persistAcrossSessions`{{optional_inline}}
-  - : `boolean`. Specifies if this content script persists into future sessions. Defaults to `false`. This is NOT supported.
+  - : `boolean`. Specifies if this content script persists into future sessions. Defaults to `true`. Firefox does currently not support persistent scripts yet ({{bug("1751436")}}), so this flag must be set to false to register non-persistent scripts.
 - `runAt`{{optional_inline}}
   - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`.
 
