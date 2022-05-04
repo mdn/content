@@ -35,7 +35,7 @@ As an extra challenge, can you change the target to display underneath the text?
 
 ## Positioning 2
 
-In the below example if you scroll the box the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.
+In the example below, if you scroll the box the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.
 
 ![The content is scrolled but the sidebar has stayed in place.](position-task2.png)
 
