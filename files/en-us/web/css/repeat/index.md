@@ -19,6 +19,8 @@ The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS
 
 This function can be used in the CSS Grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.
 
+## Syntax
+
 ```css
 /* <track-repeat> values */
 repeat(4, 1fr)
@@ -49,8 +51,6 @@ repeat(4, [col-start] minmax(100px, 1fr) [col-end])
 repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ```
-
-## Syntax
 
 ### Values
 
