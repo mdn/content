@@ -47,7 +47,7 @@ Everything in CSS has a box around it, and understanding these boxes is key to b
 
 ## Block and inline boxes
 
-In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. The type affects the behavior of the box in terms of page flow and in relation to other boxes on the page. Boxes have an **inner display type** and an **outer display type**. Let's start with the outer type.
+In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes have an **inner display type** and an **outer display type**. Let's start with the outer display type.
 
 You can set the values of the {{cssxref("display")}} property to `block` or `inline`. This defines the type of box applied to an element and relates to the outer display type.
 
