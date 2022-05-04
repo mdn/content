@@ -21,6 +21,16 @@ It can also be prepopulated with items from a {{htmlelement("datalist")}} elemen
 More generally, this method should ideally display the picker for any input element on the platform that has a picker.
 
 
+## Syntax
+
+```js
+showPicker()
+```
+
+### Parameters
+
+None.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).
@@ -34,16 +44,6 @@ None ({{jsxref("undefined")}}).
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if called in a cross-origin iframe, except for file and color pickers (exempt for historical reasons).
 
-
-## Syntax
-
-```js
-showPicker()
-```
-
-### Parameters
-
-None.
 
 ## Examples
 

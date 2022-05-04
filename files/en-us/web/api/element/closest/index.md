@@ -26,19 +26,18 @@ closest(selectors)
 
 ### Parameters
 
-- `selectors` is a string containing a
-  selector list.
-  ex: `p:hover, .toto + q`
+- `selectors`
+  - : A string containing a selector list, e.g.: `p:hover, .toto + q`.
 
 ### Return value
 
-- `closestElement` is the {{domxref("Element")}} which is the
-  closest ancestor of the selected element. It may be `null`.
+The {{domxref("Element")}} which is the closest ancestor of the selected element,
+or `null` if there are no ancestors.
 
 ### Exceptions
 
-- {{exception("SyntaxError")}} is thrown if the `selectors` is
-  not a valid selector list string.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the `selectors` is not a valid selector list string.
 
 ## Examples
 

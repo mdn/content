@@ -63,7 +63,7 @@ copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

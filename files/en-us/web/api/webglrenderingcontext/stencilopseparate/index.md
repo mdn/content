@@ -48,7 +48,7 @@ constants listed below.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Constants
 

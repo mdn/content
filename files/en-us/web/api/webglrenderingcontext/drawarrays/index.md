@@ -42,7 +42,7 @@ drawArrays(mode, first, count)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -37,7 +37,7 @@ scissor(x, y, width, height)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

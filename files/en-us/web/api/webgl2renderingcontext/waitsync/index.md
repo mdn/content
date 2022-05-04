@@ -36,7 +36,7 @@ waitSync(sync, flags, timeout)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
