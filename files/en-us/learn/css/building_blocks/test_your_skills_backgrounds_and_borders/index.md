@@ -17,7 +17,7 @@ The aim of this skill test is to assess whether you understand [CSS backgrounds 
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-## Backgrounds and borders 1
+## Task 1
 
 In this task we want you to add a background, border, and some simple styling to a page header:
 
@@ -37,11 +37,11 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds1-download.html) to work in your own editor or in an online editor.
 
-## Backgrounds and borders 2
+## Task 2
 
-In this task we want you to add background images, a border, and some other styling to a decorative box:
+In this task, we want you to add background images, a border, and some other styling to a decorative box:
 
-- Give the box a 5px lightblue border, and round the top left corner 20px and the bottom right corner 40px.
+- Give the box a 5px lightblue border and round the top left corner 20px and the bottom right corner 40px.
 - The heading uses the `star.png` image as a background image, with a single centered star on the left and a repeating pattern of stars on the right.
 - Make sure that the heading text does not overlay the image, and that it is centered — you will need to use techniques learned in previous lessons to achieve this.
 

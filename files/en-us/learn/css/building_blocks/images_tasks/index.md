@@ -17,7 +17,7 @@ The aim of this skill test is to assess whether you've understood our [Images, m
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-## Images and form elements 1
+## Task 1
 
 In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped.
 
@@ -31,11 +31,11 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/images/object-fit-download.html) to work in your own editor or in an online editor.
 
-## Images and form elements 2
+## Task 2
 
 In this task, you have a simple form. Your task is to make the following changes to the way this form looks:
 
-- Use attribute selectors to target the search field and button inside ```.myform```.
+- Use attribute selectors to target the search field and button inside `.myform`.
 - Make the form field and button use the same text size as the rest of the form.
 - Give the form field and button 10 px of padding.
 - Give the button a purple background (I used `rebeccapurple`), white foreground, no border and rounded corners of 5px.

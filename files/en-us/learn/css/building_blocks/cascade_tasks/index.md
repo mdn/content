@@ -10,7 +10,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you've understood universal property values for controlling inheritance covered in our [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) article.
+The aim of this skill test is to assess whether you understand universal property values for [controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >

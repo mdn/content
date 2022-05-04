@@ -17,7 +17,7 @@ The aim of this skill test is to assess whether you understand the CSS {{CSSxRef
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-## Positioning 1
+## Task 1
 
 In this task you need to position the item with a class of target to the top and right of the container, which has the 5px grey border.
 
@@ -33,7 +33,7 @@ As an extra challenge, can you change the target to display underneath the text?
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position1-download.html) to work in your own editor or in an online editor.
 
-## Positioning 2
+## Task 2
 
 In the example below, if you scroll the box the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.
 
