@@ -11,7 +11,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you've understood how flex items behave covered in our [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) article. Below are four common design patterns which you might use Flexbox to create, your task is to build them.
+The aim of this skill test is to assess whether you understand how [flex items](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) behave. Below are four common design patterns that you might use Flexbox to create. Your task is to build them.
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
