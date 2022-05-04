@@ -37,8 +37,10 @@ getRandomValues(typedArray)
 ### Parameters
 
 - `typedArray`
-  - : An integer-based {{jsxref("TypedArray")}}, that is one of: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
-    {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, {{jsxref("BigUint64Array")}} (but **not** `Float32Array` nor `Float64Array`).
+  - : An integer-based {{jsxref("TypedArray")}}, that is one of: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, 
+    {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
+    {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, 
+    {{jsxref("BigUint64Array")}} (but **not** `Float32Array` nor `Float64Array`).
     All elements in the array are overwritten with random numbers.
 
 ### Return value
@@ -48,10 +50,8 @@ Note that `typedArray` is modified in-place, and no copy is made.
 
 ### Exceptions
 
-This method can throw an exception under error conditions.
-
-- {{domxref("DOMException")}} (name: {{exception("QuotaExceededError")}})
-  - : The requested length exceeds 65,536 bytes.
+- `QuotaExceededError`{{domxref("DOMException")}} 
+  - : Thrown if the requested length exceeds 65,536 bytes.
 
 ## Usage notes
 
