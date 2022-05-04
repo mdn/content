@@ -1,14 +1,17 @@
 ---
-title: Hexadecimal color syntax
-slug: Web/CSS/color_value/hexadecimal_rgb
+title: <hex-color>
+slug: Web/CSS/hex-color
 tags:
   - Reference
-  - color
+  - CSS
+  - CSS Data Type
 browser-compat: css.types.color.rgb_hexadecimal_notation
 ---
 {{CSSRef}}
 
-The **hexadecimal color syntax** is a notation for describing an [sRGB](/en-US/docs/Glossary/RGB) color using its primary color components (red, green, blue) written as hexadecimal numbers, as well as its transparency. It can be used everywhere a [`<color>`](/en-US/docs/Web/CSS/color_value) type is allowed.
+The **`<hex-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is a notation for describing the _hexadecimal color syntax_ of an [sRGB](/en-US/docs/Glossary/RGB) color using its primary color components (red, green, blue) written as hexadecimal numbers, as well as its transparency. It can be used everywhere a [`<color>`](/en-US/docs/Web/CSS/color_value) type is allowed.
+
+A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web/CSS/color_value) can be used.
 
 ## Syntax
 
@@ -62,5 +65,5 @@ div {width: 40px; height: 40px;}
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value) the data type these keywords belong to.
+- [`<color>`](/en-US/docs/Web/CSS/color_value) the data type these values belong to.
 - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), the function allowing to set the three components of the color, as well as its transparency, using decimal values.
