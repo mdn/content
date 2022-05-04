@@ -19,7 +19,7 @@ The aim of this skill test is to assess whether you've understood some of the CS
 
 ## Values and units 1
 
-In this task, the first list item has been given a background color using hex color codes. Your task is to complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque:
+In this task, the first list item has been given a background color using hex color codes. Your task is to complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.
 
 - The second list item should use RGB color.
 - The third should use HSL color.
