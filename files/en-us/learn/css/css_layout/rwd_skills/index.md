@@ -13,7 +13,7 @@ tags:
 
 The aim of this skill test is to get you working with responsive web design with a practical task. Everything you need to know to complete this task is covered in the [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries) and the other layout lessons in this section.
 
-> **Note:** Due to the need to test your design in multiple screen sizes we do not have an Interactive Editor for this task. Download the code and work locally, or use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** Due to the need to test your design in multiple screen sizes, we do not have an Interactive Editor for this task. Download the code and work locally, or use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
