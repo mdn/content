@@ -18,7 +18,7 @@ The aim of this skill test is to assess whether you've understood our [HTML text
 
 ## HTML text basics 1
 
-In this task we want you to mark up the provided HTML using semantic heading and paragraph elements.
+In this task, we want you to mark up the provided HTML using semantic heading and paragraph elements.
 
 Try updating the live code below to recreate the finished example:
 
