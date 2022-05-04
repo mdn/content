@@ -1395,6 +1395,19 @@ Additionally, this key accepts various properties that are aliases for one of th
     </tr>
   </thead>
   <tbody>
+        <tr>
+      <td><code>color_scheme</code></td>
+      <td>
+        <p><code>String</code></p>
+      </td>
+      <td>
+        <p>Optional.</p>
+        <p>
+          The color scheme to use for Firefox overlays like contextual menu and all other ones, if they're not overriden by the color settings.
+        </p>
+        <p>Possible values: <code>"light"</code> / <code>"dark"</code></p>
+      </td>
+    </tr>
     <tr>
       <td><code>additional_backgrounds_alignment</code></td>
       <td>
