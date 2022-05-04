@@ -58,7 +58,7 @@ These are the `manifest.json` keys and the manifest versions they are supported 
 - [storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) (Manifest V2 and above)
 - [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) (Manifest V2 and above)
 - [theme_experiment](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment) (Manifest V2 and above)
-- [user_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) (Manifest V2 and above)
+- [user_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) (Manifest V2)
 - [version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) (Manifest V2 and above)
 - [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) (Manifest V2 and above)
 - [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) (Manifest V2 and above)

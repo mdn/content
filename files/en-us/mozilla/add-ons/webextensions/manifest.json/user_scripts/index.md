@@ -23,7 +23,7 @@ browser-compat: webextensions.manifest.user_scripts
     </tr>
     <tr>
       <th scope="row">Manifest version</th>
-      <td>2 or higher</td>
+      <td>2</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
