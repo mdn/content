@@ -51,10 +51,11 @@ This type determines which of the {{domxref("RTCStats")}}-based dictionaries the
   - : The report is an {{domxref("RTCRemoteOutboundRtpStreamStats")}} object that contains statistics about your inbound RTP (`inbound-rtp`) stream, but from the perspective of the remote peer.
 - `sender`
   - : An object containing statistics about the {{domxref("RTCRtpSender")}} for a stream on the {{domxref("RTCPeerConnection")}}. If {{domxref("RTCStats.kind", "kind")}} is `"audio"`, this object is of type {{domxref("RTCAudioSenderStats")}}; if `kind` is `"video"`, this is an {{domxref("RTCVideoSenderStats")}} object.
-- `stream`
+- `stream` {{deprecated_inline}}
   - : An object of type {{domxref("RTCMediaStreamStats")}}, providing statistics and information about a {{domxref("MediaStream")}} which is part of the {{domxref("RTCPeerConnection")}}.
-- `track`
+- `track` {{deprecated_inline}}
   - : The object is one of the types based on {{domxref("RTCMediaHandlerStats")}}: for audio tracks, the type is {{domxref("RTCSenderAudioTrackAttachmentStats")}} and for video tracks, the type is {{domxref("RTCSenderVideoTrackAttachmentStats")}}. The data within provides statistics related to a particular {{domxref("MediaStreamTrack")}}'s attachment to an {{domxref("RTCRtpSender")}}; also included are the media level metrics that go along with the track.
+> **Note:** All "track" stats have been made obsolete. The relevant metrics have been moved to "media-source", "sender", "outbound-rtp", "receiver" and "inbound-rtp" stats.
 - `transport`
   - : An object that contains statistics related to a transport for an `RTCPeerConnection`. The object is of type {{domxref("RTCTransportStats")}}.
 
