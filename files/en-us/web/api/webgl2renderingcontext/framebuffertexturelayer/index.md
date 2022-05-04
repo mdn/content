@@ -57,7 +57,7 @@ framebufferTextureLayer(target, attachment, texture, level, layer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

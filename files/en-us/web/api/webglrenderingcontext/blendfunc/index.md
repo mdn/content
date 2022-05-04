@@ -31,7 +31,7 @@ blendFunc(sfactor, dfactor)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

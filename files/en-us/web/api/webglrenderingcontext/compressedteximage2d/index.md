@@ -170,7 +170,7 @@ compressedTexImage3D(target, level, internalformat, width, height, depth, border
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
