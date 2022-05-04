@@ -19,7 +19,7 @@ The **`ariaRoleDescription`** property of the {{domxref("Element")}} interface r
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

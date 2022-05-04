@@ -31,7 +31,7 @@ addTrack(track)
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

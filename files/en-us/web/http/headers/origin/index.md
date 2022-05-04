@@ -70,7 +70,7 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - iframes with a sandbox attribute that doesn't contain the value `allow-same-origin`.
 - Responses that are network errors.
 
-> **Note:** There is a more detailed listing of case that may return `null` on Stack Overflow here: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/).
+> **Note:** There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/)
 
 ## Examples
 

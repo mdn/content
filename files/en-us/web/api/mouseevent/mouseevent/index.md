@@ -18,10 +18,10 @@ The **`MouseEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new MouseEvent(typeArg, mouseEventInit);
+new MouseEvent(typeArg, mouseEventInit)
 ```
 
-### Values
+### Parameters
 
 - _typeArg_
   - : Is a {{domxref("DOMString")}} representing the name of the event.

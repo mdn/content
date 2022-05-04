@@ -57,6 +57,10 @@ The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
 - `f` (dy)
   - : Vertical translation (moving).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Skewing a shape

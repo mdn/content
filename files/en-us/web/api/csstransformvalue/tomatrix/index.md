@@ -25,7 +25,7 @@ toMatrix()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

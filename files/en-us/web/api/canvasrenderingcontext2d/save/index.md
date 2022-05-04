@@ -54,6 +54,10 @@ save()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Saving the drawing state

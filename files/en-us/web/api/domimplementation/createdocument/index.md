@@ -33,6 +33,10 @@ createDocument(namespaceURI, qualifiedNameStr, documentType)
   - : Is the {{domxref("DocumentType")}} of the document to be created. It defaults to
     `null`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

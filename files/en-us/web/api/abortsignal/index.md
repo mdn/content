@@ -136,7 +136,7 @@ catch (e) {
     }
 
 } finally {
-  clearTimeout(timeoutId); 
+  clearTimeout(timeoutId);
 }
 ```
 

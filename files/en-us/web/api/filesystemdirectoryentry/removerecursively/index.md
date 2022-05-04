@@ -43,7 +43,7 @@ removeRecursively(successCallback, errorCallback)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 

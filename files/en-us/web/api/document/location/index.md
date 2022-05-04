@@ -17,7 +17,7 @@ The **`Document.location`** read-only property returns a
 and provides methods for changing that URL and loading another URL.
 
 Though `Document.location` is a _read-only_ `Location`
-object, you can also assign a {{domxref("DOMString")}} to it. This means that you can
+object, you can also assign a string to it. This means that you can
 work with document.location as if it were a string in most cases:
 `document.location = 'http://www.example.com'` is a synonym of
 `document.location.href = 'http://www.example.com'`.If you assign another

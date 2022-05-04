@@ -19,7 +19,7 @@ The **`ariaValueText`** property of the {{domxref("ElementInternals")}} interfac
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

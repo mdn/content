@@ -26,6 +26,10 @@ resizeBy(xDelta, yDelta)
 - `xDelta` is the number of pixels to grow the window horizontally.
 - `yDelta` is the number of pixels to grow the window vertically.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

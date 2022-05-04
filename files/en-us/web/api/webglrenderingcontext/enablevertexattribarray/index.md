@@ -57,7 +57,7 @@ enableVertexAttribArray(index)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 

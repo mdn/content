@@ -59,7 +59,7 @@ configure(config)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

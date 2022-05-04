@@ -24,10 +24,6 @@ transfers ownership of objects to other browsing contexts.
 postMessage(message, transferList)
 ```
 
-### Return value
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 - message
@@ -37,6 +33,10 @@ postMessage(message, transferList)
   - : {{Glossary("Transferable Objects")}} to be transferred — these objects have their
     ownership transferred to the receiving browsing context, so are no longer usable by
     the sending browsing context.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -42,7 +42,7 @@ insertAdjacentHTML(position, text)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

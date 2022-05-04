@@ -12,7 +12,7 @@ tags:
   - startNotifications()
 browser-compat: api.BluetoothRemoteGATTCharacteristic.startNotifications
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.startNotifications()`** method
 returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when

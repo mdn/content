@@ -15,10 +15,10 @@ The **`EcdsaParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `ECDSA`.
+  - : A string. This should be set to `ECDSA`.
 - `hash`
 
-  - : A {{domxref("DOMString")}}. An identifier for the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest) to use. This should be one of the following:
+  - : A string. An identifier for the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest) to use. This should be one of the following:
 
     - `SHA-256`: selects the [SHA-256](/en-US/docs/Web/API/SubtleCrypto/digest#sha-256) algorithm.
     - `SHA-384`: selects the [SHA-384](/en-US/docs/Web/API/SubtleCrypto/digest#sha-384) algorithm.

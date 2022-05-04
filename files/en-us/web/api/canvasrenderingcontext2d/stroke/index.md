@@ -34,6 +34,10 @@ stroke(path)
 - `path`
   - : A {{domxref("Path2D")}} path to stroke.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### A simple stroked rectangle

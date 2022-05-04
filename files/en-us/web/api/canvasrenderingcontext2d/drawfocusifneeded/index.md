@@ -31,6 +31,10 @@ drawFocusIfNeeded(path, element)
 - `path`
   - : A {{domxref("Path2D")}} path to use.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Managing button focus

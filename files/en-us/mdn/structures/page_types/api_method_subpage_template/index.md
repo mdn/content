@@ -98,7 +98,7 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 - `parameter2`
   - : etc.
 
-> **Note:** This section is mandatory. If there aren't any parameter, put "None." instead of the definition list. 
+> **Note:** This section is mandatory. If there aren't any parameter, put "None." instead of the definition list.
 
 ### Return value
 

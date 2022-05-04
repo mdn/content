@@ -33,6 +33,10 @@ mozGetFileNameArray(aLength, aFileNames)
 - `aFileNames`
   - : Is an array into which the file names are placed.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

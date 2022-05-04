@@ -45,7 +45,7 @@ bindBufferRange(target, index, buffer, offset, size)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

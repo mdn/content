@@ -38,7 +38,7 @@ data being dragged should be removed from the source.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the drag operation effect. The possible values
+A string representing the drag operation effect. The possible values
 are:
 
 - `copy`

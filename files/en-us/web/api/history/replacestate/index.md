@@ -37,6 +37,10 @@ replaceState(stateObj, unused, url)
   - : The URL of the history entry. The new URL must be of the same origin as the current
     URL; otherwise replaceState throws an exception.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Suppose https\://www\.mozilla.org/foo.html executes the following JavaScript:

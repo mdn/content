@@ -94,7 +94,7 @@ In this example, look at the image (B1) right underneath the header. It's relate
 
 ### It's a trap
 
-**[MICA](https://www.mica.edu/About_MICA.html)**. This is a bit trickier. It looks like a three-column layout...
+**[MICA](https://www.mica.edu/about-mica/)**. This is a bit trickier. It looks like a three-column layout...
 
 ![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 

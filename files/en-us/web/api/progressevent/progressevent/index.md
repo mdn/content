@@ -16,10 +16,10 @@ The **`ProgressEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
-new ProgressEvent(type, {lengthComputable: aBooleanValue, loaded: aNumber, total: aNumber});
+new ProgressEvent(type, {lengthComputable: aBooleanValue, loaded: aNumber, total: aNumber})
 ```
 
-### Arguments
+### Parameters
 
 _The `ProgressEvent()` constructor also inherits arguments from
 {{domxref("Event.Event", "Event()")}}._

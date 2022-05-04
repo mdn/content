@@ -30,6 +30,10 @@ createShadowRoot()
 
 No parameters.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Result value
 
 Returns a {{DOMxRef("ShadowRoot")}}.

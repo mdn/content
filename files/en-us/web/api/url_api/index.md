@@ -42,18 +42,18 @@ Most of the properties of `URL` are settable; you can write new values to them t
 
 ```js
 let myUsername = "someguy";
-let addr = new URL("https://mysite.com/login");
+let addr = new URL("https://example.com/login");
 addr.username = myUsername;
 ```
 
-Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "addr.href")}} is `https://someguy@mysite.com/login`. This is true for any of the writable properties.
+Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "addr.href")}} is `https://someguy@example.com/login`. This is true for any of the writable properties.
 
 ### Queries
 
-The {{domxref("URL.search", "search")}} property on a `URL` contains the query string portion of the URL. For example, if the URL is `https://mysite.com/login?user=someguy&page=news`, then the value of the `search` property is `?user=someguy&page=news`. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:
+The {{domxref("URL.search", "search")}} property on a `URL` contains the query string portion of the URL. For example, if the URL is `https://example.com/login?user=someguy&page=news`, then the value of the `search` property is `?user=someguy&page=news`. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:
 
 ```js
-let addr = new URL("https://mysite.com/login?user=someguy&page=news");
+let addr = new URL("https://example.com/login?user=someguy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));

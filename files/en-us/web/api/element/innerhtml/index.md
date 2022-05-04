@@ -23,7 +23,7 @@ use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}
 
 ## Value
 
-A {{domxref("DOMString")}} containing the HTML serialization of the element's
+A string containing the HTML serialization of the element's
 descendants. Setting the value of `innerHTML` removes all of the element's
 descendants and replaces them with nodes constructed by parsing the HTML given in the
 string _htmlString_.
@@ -89,7 +89,7 @@ Doing so causes the user agent to follow these steps:
    then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
 3. For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
 
-### Appending HTML to an element  
+### Appending HTML to an element
 
 Setting the value of `innerHTML` lets you append new contents to the existing one of an element.
 

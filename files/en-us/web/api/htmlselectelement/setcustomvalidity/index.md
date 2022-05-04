@@ -27,6 +27,10 @@ setCustomValidity(string)
 
 - `string` is the string containing the error message.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

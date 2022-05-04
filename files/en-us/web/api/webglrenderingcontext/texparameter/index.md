@@ -152,7 +152,7 @@ texParameteri(target, GLenum pname, GLint param)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

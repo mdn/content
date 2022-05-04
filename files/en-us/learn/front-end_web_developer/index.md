@@ -143,7 +143,7 @@ The assessments in each module are designed to test your knowledge of the subjec
 
 ### Making the web work for everyone
 
-Time to complete: 60–75 hours
+Time to complete: 45–55 hours
 
 #### Prerequisites
 

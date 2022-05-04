@@ -38,6 +38,10 @@ registerElement(tag-name, options)
   - : An object with properties **prototype** to base the custom element on,
     and **extends**, an existing tag to extend. Both of these are optional.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Here is a very simple example:

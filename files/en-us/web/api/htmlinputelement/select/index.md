@@ -26,6 +26,10 @@ select()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Click the button in this example to select all the text in the

@@ -247,7 +247,7 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the `[SetterThrows]` annotation. When this happens, the Syntax section of the property page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{exception('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{jsxref('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
 
 It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the `[GetterThrows]` annotation is used. Here also, the Syntax section of the property page _must_ have an Exceptions subsection.
 
@@ -372,7 +372,7 @@ The keyword `void` means that there is no return value. It is not a return value
 
 Some methods can throw exceptions. This is marked using the `[Throws]` annotation. When this happens, the Syntax section of the method page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{exception('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{jsxref('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
 
 Have a look at one of these [_Exceptions_ sections](/en-US/docs/Web/API/SubtleCrypto/importKey#exceptions).
 

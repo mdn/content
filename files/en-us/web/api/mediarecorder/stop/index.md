@@ -38,6 +38,10 @@ stop()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Errors
 
 An `InvalidState` error is raised if the `stop()` method is

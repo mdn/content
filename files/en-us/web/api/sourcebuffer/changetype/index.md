@@ -41,7 +41,7 @@ changeType(type)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

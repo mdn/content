@@ -3589,6 +3589,8 @@
 /en-US/docs/Games/visual_typescript_game_engine	/en-US/docs/Games
 /en-US/docs/Getting_Started_With_NSS	https://firefox-source-docs.mozilla.org/security/nss/index.html
 /en-US/docs/Getting_started_on_MDN	/en-US/docs/MDN/Contribute/Getting_started
+/en-US/docs/Glossary/404	/en-US/docs/Web/HTTP/Status/404
+/en-US/docs/Glossary/502	/en-US/docs/Web/HTTP/Status/502
 /en-US/docs/Glossary/AOM	/en-US/docs/Glossary/Accessibility_tree
 /en-US/docs/Glossary/B2G	/en-US/docs/Glossary/Boot2Gecko
 /en-US/docs/Glossary/Block/Block_(CSS)	/en-US/docs/Glossary/Block/CSS
@@ -4344,8 +4346,8 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/Error/message	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /en-US/docs/JavaScript/Reference/Global_Objects/Error/name	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name
 /en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-/en-US/docs/JavaScript/Reference/Global_Objects/Error/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
-/en-US/docs/JavaScript/Reference/Global_Objects/Error/toSource-redirect-1	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/en-US/docs/JavaScript/Reference/Global_Objects/Error/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
+/en-US/docs/JavaScript/Reference/Global_Objects/Error/toSource-redirect-1	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /en-US/docs/JavaScript/Reference/Global_Objects/Error/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /en-US/docs/JavaScript/Reference/Global_Objects/EvalError	/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /en-US/docs/JavaScript/Reference/Global_Objects/EvalError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError
@@ -4934,7 +4936,7 @@
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/message	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/name	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-/en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/EvalError	/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/EvalError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError
@@ -11813,6 +11815,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/supportedLocalesOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function.displayName	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function

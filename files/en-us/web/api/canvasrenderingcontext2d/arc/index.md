@@ -45,6 +45,10 @@ at `endAngle`, and travels in the direction given by
     counter-clockwise between the start and end angles. The default is `false`
     (clockwise).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Drawing a full circle

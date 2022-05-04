@@ -20,12 +20,12 @@ The **`BroadcastChannel()`** constructor creates a new
 ## Syntax
 
 ```js
-new BroadcastChannel(channelName);
+new BroadcastChannel(channelName)
 ```
 
-### Values
+### Parameters
 
-- _channelName_
+- `channelName`
   - : Is a string representing the name of the channel; there is one
     single channel with this name for all {{glossary("browsing context", "browsing
     contexts")}} with the same {{glossary("origin")}}.

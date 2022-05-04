@@ -30,7 +30,7 @@ enqueue(chunk)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

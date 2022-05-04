@@ -31,7 +31,7 @@ remove(token1, token2, /* ... ,*/ tokenN)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

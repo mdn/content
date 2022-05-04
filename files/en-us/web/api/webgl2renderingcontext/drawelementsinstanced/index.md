@@ -65,7 +65,7 @@ drawElementsInstanced(mode, count, type, offset, instanceCount)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

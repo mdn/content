@@ -33,6 +33,10 @@ continue(key)
 - `key` {{optional_inline}}
   - : The key to position the cursor at.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:

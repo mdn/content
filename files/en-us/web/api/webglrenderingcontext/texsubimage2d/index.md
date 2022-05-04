@@ -154,7 +154,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

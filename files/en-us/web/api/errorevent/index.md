@@ -18,9 +18,9 @@ The **`ErrorEvent`** interface represents events providing information related t
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ErrorEvent.message")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMString")}} containing a human-readable error message describing the problem.
+  - : Is a string containing a human-readable error message describing the problem.
 - {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMString")}} containing the name of the script file in which the error occurred.
+  - : Is a string containing the name of the script file in which the error occurred.
 - {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
   - : Is an `integer` containing the line number of the script file on which the error occurred.
 - {{domxref("ErrorEvent.colno")}} {{readonlyInline}}

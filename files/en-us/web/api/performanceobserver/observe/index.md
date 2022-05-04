@@ -53,6 +53,10 @@ observe(options)
     message to the console to help developers debug their code. If no valid types are
     found, `observe()` has no effect.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example creates and configures two `PerformanceObservers`; one watches

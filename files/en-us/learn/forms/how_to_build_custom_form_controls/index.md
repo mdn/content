@@ -854,7 +854,6 @@ Here are a few libraries you should consider before coding your own:
 - [jQuery UI](https://jqueryui.com/)
 - [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
-- [Nice Forms](https://www.emblematiq.com/lab/niceforms/)
 
 If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
 

@@ -27,7 +27,7 @@ new FetchEvent(type, init);
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} object specifying which event the object represents. This
+  - : A string object specifying which event the object represents. This
     is always `fetch` for Fetch events.
 - `init` {{optional_inline}}
 
@@ -46,10 +46,10 @@ new FetchEvent(type, init);
       - : A {{jsxref("Promise")}} which returns a previously-loaded response to the
         client.
     - `replacesClientId` {{ReadOnlyInline}}
-      - : A {{domxref("DOMString")}} which identifies the client which is being replaced
+      - : A string which identifies the client which is being replaced
         by `resultingClientId`.
     - `resultingClientId` {{ReadOnlyInline}}
-      - : A {{domxref("DOMString")}} containing the new `clientId` if the
+      - : A string containing the new `clientId` if the
         client changes as a result of the page load.
     - `request` {{ReadOnlyInline}}
       - : The {{domxref("Request")}} object that would have triggered the event handler.

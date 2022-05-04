@@ -55,7 +55,7 @@ requestFileSystem(type, size, successCallback, errorCallback)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

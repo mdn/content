@@ -55,7 +55,7 @@ start(when, offset, duration)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -69,7 +69,7 @@ document.querySelector("output").textContent = tagNames.join(", ");
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

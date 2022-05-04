@@ -19,7 +19,7 @@ The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects th
 
 ## Value
 
-A {{domxref("DOMString")}} containing an integer.
+A string containing an integer.
 
 ## Examples
 

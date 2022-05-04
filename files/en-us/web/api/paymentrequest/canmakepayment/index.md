@@ -37,7 +37,7 @@ canMakePayment()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

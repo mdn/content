@@ -17,14 +17,15 @@ The **`KeyboardEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new KeyboardEvent(typeArg, KeyboardEventInit);
+new KeyboardEvent(typeArg)
+new KeyboardEvent(typeArg, keyboardEventInit)
 ```
 
-### Values
+### Parameters
 
-- _typeArg_
+- `typeArg`
   - : Is a {{domxref("DOMString")}} representing the name of the event.
-- _KeyboardEventInit_{{optional_inline}}
+- `keyboardEventInit` {{optional_inline}}
 
   - : Is a `KeyboardEventInit` dictionary, having the following fields:
 

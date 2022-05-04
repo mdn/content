@@ -13,8 +13,7 @@ browser-compat: api.BluetoothDevice
 ---
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The BluetoothDevice interface of the [Web Bluetooth
-API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a Bluetooth device inside a particular script execution
+The BluetoothDevice interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a Bluetooth device inside a particular script execution
 environment.
 
 {{InheritanceDiagram}}

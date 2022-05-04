@@ -1,6 +1,6 @@
 ---
 title: Perceivable
-slug: Web/Accessibility/Understanding_WCAG/Perceivable 
+slug: Web/Accessibility/Understanding_WCAG/Perceivable
 tags:
   - Accessibility
   - Principle 1

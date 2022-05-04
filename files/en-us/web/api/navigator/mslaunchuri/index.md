@@ -34,7 +34,7 @@ msLaunchUri(uri, successCallback, noHandlerCallback)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 

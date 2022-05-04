@@ -275,7 +275,7 @@ You should seriously consider the support matrix and DSLs of a framework when ma
 Citations for this table:
 
 - [React browser support: official docs](https://reactjs.org/docs/react-dom.html#browser-support)
-- [Ember browser support: Ember 3.0 release announcement](https://blog.emberjs.com/2018/02/14/ember-3-0-released.html)
+- [Ember browser support: Ember 3.0 Released](https://blog.emberjs.com/ember-3-0-released/)
 - [Ember templating language (official docs)](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/)
 
 ### Does the framework have a strong community?
