@@ -17,6 +17,8 @@ includes no files, the list is empty.
 
 This feature can be used to drag files from a user's _desktop_ to the browser.
 
+> **Note:** `DataTransfer.files` can only be accessed from within the `drop` event. For all other events `DataTransfer.files` will be empty because its underlying data store will be in a [protected mode](<https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store>).
+
 ## Value
 
 A {{domxref("FileList","list")}} of the files in a drag operation, one list item for
