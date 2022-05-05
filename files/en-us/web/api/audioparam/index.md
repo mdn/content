@@ -22,7 +22,7 @@ Each `AudioParam` has a list of events, initially empty, that define when and ho
 
 ## AudioParam types
 
-There are two kinds of `AudioParam`s: _a-rate_ and _k-rate_ parameters. Each {{domxref("AudioNode")}} defines which of its parameters are _a-rate_ or _k-rate_ in the spec.
+There are two `AudioParam` kinds: _a-rate_ and _k-rate_ parameters. Each {{domxref("AudioNode")}} defines which of its parameters are _a-rate_ or _k-rate_ in the spec.
 
 ### a-rate
 
