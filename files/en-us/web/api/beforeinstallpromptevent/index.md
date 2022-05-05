@@ -19,7 +19,7 @@ This interface inherits from the {{domxref("Event")}} interface.
 ## Constructor
 
 - {{domxref("BeforeInstallPromptEvent.BeforeInstallPromptEvent","BeforeInstallPromptEvent()")}}
-  - : Creates a new **`BeforeInstallPromptEvent`**.
+  - : Creates a new `BeforeInstallPromptEvent` object.
 
 ## Properties
 

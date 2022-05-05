@@ -1,36 +1,35 @@
 ---
 title: PictureInPictureEvent()
 slug: Web/API/PictureInPictureEvent/PictureInPictureEvent
+tags:
+  - Reference
+  - API
+  - Constructor 
 browser-compat: api.PictureInPictureEvent.PictureInPictureEvent
 ---
 {{APIRef("Picture-in-Picture API")}}
 
-The **`PictureInPictureEvent()`** constructor returns a newly
-created {{domxref("PictureInPictureEvent")}} object with an optional
-{{domxref("EventTarget")}}. When the event has both a source and a destination, the
-`relatedTarget` value must be set to the other target.
+The **`PictureInPictureEvent()`** constructor returns a new {{domxref("PictureInPictureEvent")}} object with an optional {{domxref("EventTarget")}}.
+When the event has both a source and a destination, the `relatedTarget` value must be set to the other target.
 
 ## Syntax
 
 ```js
-new PictureInPictureEvent(typeArg)
-new PictureInPictureEvent(typeArg, pictureInPictureInit);
+new PictureInPictureEvent(type, options)
 ```
 
 ### Properties
 
-_The `PictureInPictureEvent()` constructor also inherits arguments from
-{{domxref("Event.Event", "Event()")}}._
+- `type`
+  - : A string representing the name of the event.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `relatedTarget` {{optional_inline}}
+      - : The related {{domxref("EventTarget")}}, or `null` (its default value).
 
-- `typeArg`
-  - : A {{domxref("DOMString")}} representing the name of the event.
-- `focusEventInit` {{optional_inline}}
+### Return value
 
-  - : A `PictureInPictureEventInit` dictionary, having the following
-    fields:
-
-    - `"relatedTarget"`, optional and defaulting to
-      `null`, is an {{domxref("EventTarget")}}.
+A new {{domxref("PictureInPictureEvent")}} object.
 
 ## Specifications
 

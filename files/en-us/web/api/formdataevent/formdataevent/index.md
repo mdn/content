@@ -4,7 +4,6 @@ slug: Web/API/FormDataEvent/FormDataEvent
 tags:
   - API
   - Constructor
-  - Experimental
   - FormDataEvent
   - Forms
   - Reference
@@ -12,19 +11,23 @@ browser-compat: api.FormDataEvent.FormDataEvent
 ---
 {{APIRef("DOM")}}
 
-The **`FormDataEvent()`** constructor creates a new
-{{domxref("FormDataEvent")}} object instance.
+The **`FormDataEvent()`** constructor creates a new {{domxref("FormDataEvent")}} object.
 
 ## Syntax
 
 ```js
+<<<<<<< HEAD
 new FormDataEvent(type)
 new FormDataEvent(type, formEventInit)
+=======
+new FormDataEvent(type, options)
+>>>>>>> d1fdc27dad (Update Event constructors)
 ```
 
 ### Parameters
 
 - `type`
+<<<<<<< HEAD
   - : A string representing the name of the event.
 - `formEventInit` {{optional_inline}}
 
@@ -45,6 +48,19 @@ new FormDataEvent(type, formEventInit)
       - : A {{domxref("FormData")}} object to pre-populate the
         FormDataEvent with. This would then be accessed through the
         {{domxref("FormDataEvent.formData")}} property.
+=======
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `formdata`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `formData`
+      - : A {{domxref("FormData")}} object to pre-populate the {{domxref("FormDataEvent")}} with.
+        This would then be accessed through the {{domxref("FormDataEvent.formData")}} property.
+
+### Return value
+
+A new {{domxref("FormDataEvent")}} object.
+>>>>>>> d1fdc27dad (Update Event constructors)
 
 ## Examples
 

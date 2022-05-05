@@ -4,7 +4,6 @@ slug: Web/API/InputEvent/data
 tags:
   - API
   - DOM Events
-  - Experimental
   - Input
   - InputEvent
   - Property
