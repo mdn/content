@@ -217,17 +217,17 @@ const vpgscar = new Car('Mazda', 'Miata', 1990);
 An object can have a property that is itself another object. For example, suppose you define an object called `Person` as follows:
 
 ```js
-function Person(name, age, sex) {
+function Person(name, age, gender) {
   this.name = name;
   this.age = age;
-  this.sex = sex;
+  this.gender = gender;
 }
 ```
 
 and then instantiate two new `Person` objects as follows:
 
 ```js
-const rand = new Person('Rand McKinnon', 33, 'M');
+const rand = new Person('Alex McKinnon', 33, 'X');
 const ken = new Person('Ken Jones', 39, 'M');
 ```
 
