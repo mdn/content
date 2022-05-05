@@ -97,6 +97,8 @@ This animation will run 10 times.
 
 #### Result
 
+Hover over the rectangle to start the animation.
+
 {{EmbedLiveSample("Setting iteration count","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
