@@ -12,7 +12,7 @@ tags:
   - concepts
   - sound
 ---
-This article explains some of the audio theory behind how the features of the Web Audio API work, to help you make informed decisions while designing how audio is routed through your app. It won't turn you into a master sound engineer, but it will give you enough background to understand why the Web Audio API works like it does.
+This article explains some of the audio theory behind how the features of the Web Audio API work, to help you make informed decisions while designing how audio is routed through your app. If you are not already a sound engineer, it will give you enough background to understand why the Web Audio API works as it does.
 
 ## Audio graphs
 
