@@ -16,6 +16,8 @@ You can use this attribute with the following SVG elements:
 
 ## Example
 
+### Example 1
+
 ```css hidden
 html, body, svg {
   height: 100%;
@@ -42,31 +44,9 @@ html, body, svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "480", "200")}}
+{{EmbedLiveSample("Example 1", "480", "200")}}
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>{{cssxref("length")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td>
-        Coincides with the presentational value of {{SVGAttr("cy")}} for
-        the element whether the value for <code>cy</code> was inherited or not.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
-
-## Example
+### Example 2
 
 ```html
 <svg viewBox="0 0 120 120" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +69,29 @@ html, body, svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Example 2", "200", "250")}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("length")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>
+        Coincides with the presentational value of {{SVGAttr("cy")}} for
+        the element whether the value for <code>cy</code> was inherited or not.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
