@@ -13,7 +13,7 @@ browser-compat: webextensions.api.scripting
 ---
 {{AddonSidebar}}
 
-Inserts JavaScript and CSS into websites. The methods offer two approaches to inserting content:
+Inserts JavaScript and CSS into websites. This API offers two approaches to inserting content:
 - {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}} that provide for one-off injections.
 - {{WebExtAPIRef("scripting.registerContentScripts()")}} that registers content scripts dynamically, which can then be retrieved with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} and unregistered with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}).
 
@@ -21,7 +21,7 @@ Inserts JavaScript and CSS into websites. The methods offer two approaches to in
 
 This API requires the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab into which JavaScript or CSS is injected.
 
-Alternatively, you can get permission temporarily in the active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). However,the `"scripting"` permission is still required.
+Alternatively, you can get permission temporarily in the active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). However, the `"scripting"` permission is still required.
 
 ## Types
 
@@ -30,7 +30,7 @@ Alternatively, you can get permission temporarily in the active tab and only in 
 - {{WebExtAPIRef("scripting.InjectionResult")}}
   - : Details of the result of CSS or JavaScript injection.
 - {{WebExtAPIRef("scripting.InjectionTarget")}}
-  - : Details of an injection target for CSS.
+  - : Details of an injection target.
 - {{WebExtAPIRef("scripting.RegisteredContentScript")}}
   - : Details of a content script to be registered or that is registered.
     
