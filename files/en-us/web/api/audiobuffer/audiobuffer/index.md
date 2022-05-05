@@ -23,7 +23,7 @@ the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
 ## Syntax
 
 ```js
-new AudioBuffer(options);
+new AudioBuffer(options)
 ```
 
 ### Parameters
@@ -58,10 +58,6 @@ new AudioBuffer(options);
 - `context` {{Deprecated_Inline}}
   - : A reference to an {{domxref("AudioContext")}}. This parameter was removed from the
     spec.
-
-### Return value
-
-A new {{domxref("AudioBuffer")}} object instance.
 
 ### Exceptions
 

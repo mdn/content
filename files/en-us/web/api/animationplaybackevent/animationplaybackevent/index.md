@@ -20,7 +20,8 @@ The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-U
 ## Syntax
 
 ```js
-new AnimationPlaybackEvent(type, eventInitDict);
+new AnimationPlaybackEvent(type)
+new AnimationPlaybackEvent(type, eventInitDict)
 ```
 
 ### Parameters
