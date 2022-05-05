@@ -92,6 +92,8 @@ This animation has an animation-duration of 0.7 seconds.
 
 #### Result
 
+Hover over the rectangle to start the animation.
+
 {{EmbedLiveSample("Setting animation duration","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
