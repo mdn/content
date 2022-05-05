@@ -7,7 +7,7 @@ tags:
   - CSS Color Picker Tool
   - CSS Colors
   - Color Picker
-  - HTML Color  Picker
+  - HTML Color Picker
   - HTML Color Picker Tool
   - HTML Colors
   - Tools
