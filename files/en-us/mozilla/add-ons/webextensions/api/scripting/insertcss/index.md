@@ -63,7 +63,9 @@ This example inserts CSS taken from a string into the active tab.
 browser.action.onClicked.addListener(async tab => {
   try {
     await browser.scripting.insertCSS({
-      target: { tabId: tab.id },
+      target: {
+        tabId: tab.id,
+      },
       css: `body { border: 20px dotted pink; }`,
     });
   } catch (err) {
@@ -72,17 +74,19 @@ browser.action.onClicked.addListener(async tab => {
 });
 ```
 
-This example inserts CSS loaded from a file packaged with the extension:
+This example inserts CSS loaded from a file (packaged with the extension) called `"content-style.css"`:
 
 ```js
 browser.action.onClicked.addListener(async tab => {
   try {
     await browser.scripting.insertCSS({
-      target: { tabId: tab.id },
+      target: {
+        tabId: tab.id,
+      },
       files: ["content-style.css"],
     });
   } catch (err) {
-    console.error(`${err}`);
+    console.error(`failed to insert CSS: ${err}`);
   }
 });
 ```
