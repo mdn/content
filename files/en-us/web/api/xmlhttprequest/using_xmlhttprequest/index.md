@@ -574,11 +574,17 @@ var AJAXSubmit = (function () {
     <p>
       First name: <input type="text" name="firstname" /><br />
       Last name: <input type="text" name="lastname" /><br />
-      Sex:
-      <input id="sex_male" type="radio" name="sex" value="male" />
-      <label for="sex_male">Male</label>
-      <input id="sex_female" type="radio" name="sex" value="female" />
-      <label for="sex_female">Female</label><br />
+      Gender:
+      <input id="gender_man" type="radio" name="gender" value="man" />
+      <label for="gender_man">Man</label>
+      <input id="gender_woman" type="radio" name="gender" value="woman" />
+      <label for="gender_woman">Woman</label>
+      <input id="gender_nonbinary" type="radio" name="gender" value="nonbinary" />
+      <label for="gender_nonbinary">Non-binary</label>
+      <input id="gender_other" type="radio" name="gender" value="other" />
+      <label for="gender_other">Not listed</label>
+      <input id="gender_undisclosed" type="radio" name="gender" value="undisclosed" />
+      <label for="gender_undisclosed">Prefer not to state</label>
       Password: <input type="password" name="secret" /><br />
       What do you prefer:
       <select name="image_type">
@@ -768,11 +774,17 @@ function AJAXSubmit (oFormElement) {
     <p>
       First name: <input type="text" name="firstname" /><br />
       Last name: <input type="text" name="lastname" /><br />
-      Sex:
-      <input id="sex_male" type="radio" name="sex" value="male" />
-      <label for="sex_male">Male</label>
-      <input id="sex_female" type="radio" name="sex" value="female" />
-      <label for="sex_female">Female</label><br />
+      Gender:
+      <input id="gender_man" type="radio" name="gender" value="man" />
+      <label for="gender_man">Man</label>
+      <input id="gender_woman" type="radio" name="gender" value="woman" />
+      <label for="gender_woman">Woman</label>
+      <input id="gender_nonbinary" type="radio" name="gender" value="nonbinary" />
+      <label for="gender_nonbinary">Non-binary</label>
+      <input id="gender_other" type="radio" name="gender" value="other" />
+      <label for="gender_other">Not listed</label>
+      <input id="gender_undisclosed" type="radio" name="gender" value="undisclosed" />
+      <label for="gender_undisclosed">Prefer not to state</label>
       Password: <input type="password" name="secret" /><br />
       What do you prefer:
       <select name="image_type">
