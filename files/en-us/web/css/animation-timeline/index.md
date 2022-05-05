@@ -57,7 +57,7 @@ animation-timeline: unset;
 
 ## Examples
 
-### Simple example
+### Setting a scroll timeline
 
 A scroll timeline named `squareTimeline` is declared and applied to the `#square` element using `animation-timeline: squareTimeline`.
 
@@ -104,7 +104,7 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 
 #### Result
 
-{{EmbedLiveSample("Simple example")}}
+{{EmbedLiveSample("Setting a scroll timeline")}}
 
 ## Specifications
 
