@@ -254,12 +254,16 @@
       ]
     },
     "Device Orientation Events": {
-      "guides": ["/docs/Web/API/Detecting_device_orientation"],
+      "guides": [
+          "/docs/Web/Events/Detecting_device_orientation",
+          "/docs/Web/Events/Orientation_and_motion_data_explained",
+          "/docs/Web/Events/Using_device_orientation_with_3D_transforms"
+        ],
       "interfaces": [
-        "DeviceAcceleration",
         "DeviceMotionEvent",
-        "DeviceOrientationEvent",
-        "DeviceRotationRate"
+        "DeviceMotionEventAcceleration",
+        "DeviceMotionEventRotationRate",
+        "DeviceOrientationEvent"
       ],
       "methods": [],
       "properties": [],
