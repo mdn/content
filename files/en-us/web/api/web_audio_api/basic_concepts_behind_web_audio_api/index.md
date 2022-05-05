@@ -62,7 +62,7 @@ Let's look at a _mono_ and a _stereo_ audio buffer, each one second long at a ra
 
 ![A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo.](sampleframe-english.png)
 
-When a buffer plays, you will first hear the leftmost sample frame, then the one right next to it, then the next, _ad infinitum_ until the end of the buffer. In the case of stereo, you will hear both channels at the same time. Sample frames are very useful because they are independent of the number of channels and they represent time in a ideal way for doing precise audio manipulation.
+When a buffer plays, you will first hear the leftmost sample frame, then the one right next to it, then the next, _and so on_, until the end of the buffer. In the case of stereo, you will hear both channels at the same time. Sample frames are very useful because they are independent of the number of channels and they represent time in a ideal way for doing precise audio manipulation.
 
 > **Note:** To get a time in seconds from a frame count, divide the number of frames by the sample rate. To get a number of frames from a number of samples, divide by the channel count.
 
