@@ -72,7 +72,7 @@ var gainNode = audioCtx.createGain();
 gainNode.gain.value = 0;
 ```
 
-Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of _k-rate_ `AudioParam`s, as the values are set for the entire audio block at once.
+Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of _k-rate_ `AudioParam` types, as the values are set for the entire audio block at once.
 
 ```js
 var compressor = audioCtx.createDynamicsCompressor();
