@@ -24,7 +24,11 @@ script code.
 ## Syntax
 
 ```js
-new DOMPointReadOnly(x, y, z, w);
+new DOMPointReadOnly()
+new DOMPointReadOnly(x)
+new DOMPointReadOnly(x, y)
+new DOMPointReadOnly(x, y, z)
+new DOMPointReadOnly(x, y, z, w)
 ```
 
 ### Parameters
@@ -44,11 +48,6 @@ new DOMPointReadOnly(x, y, z, w);
 > **Note:** Each of these values is what's called an _unrestricted_
 > number. In addition to any finite floating-point value, you may use special values
 > such as ±{{jsxref("Infinity")}} and {{jsxref("NaN")}}.
-
-### Return value
-
-A new {{domxref("DOMPointReadOnly")}} object representing the specified location in
-space.
 
 ## Examples
 

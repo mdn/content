@@ -22,12 +22,12 @@ value of the individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-new CSSSkewX(ax);
+new CSSSkewX(ax)
 ```
 
 ### Parameters
 
-- {{domxref('CSSSkewx.ax','ax')}}
+- `{{domxref('CSSSkewx.ax','ax')}}`
   - : A value for the `ax` angle of the {{domxref('CSSSkewX')}} object to be
     constructed. This must be a {{domxref('CSSNumericValue')}}.
 

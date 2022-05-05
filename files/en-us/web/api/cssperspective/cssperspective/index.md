@@ -21,12 +21,12 @@ the individual {{CSSXref('transform')}} property in CSS.
 ## Syntax
 
 ```js
-new CSSPerspective(length);
+new CSSPerspective(length)
 ```
 
 ### Parameters
 
-- {{domxref('CSSPerspective.length','length')}}
+- `{{domxref('CSSPerspective.length','length')}}`
   - : A value for the distance from z=0 of the {{domxref('CSSPerspective')}} object to be
     constructed. This must be a {{cssxref('length')}}.
 

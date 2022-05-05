@@ -21,17 +21,13 @@ individual transform objects.
 ## Syntax
 
 ```js
-new CSSTransformValue(transforms);
+new CSSTransformValue(transforms)
 ```
 
 ### Parameters
 
-- transforms
+- `transforms`
   - : A list of {{domxref("CSSTransformComponent")}} objects to iterate over.
-
-### Returns
-
-A new {{domxref("CSSTransformValue")}}.
 
 ### Exceptions
 

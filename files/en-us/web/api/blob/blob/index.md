@@ -18,8 +18,8 @@ of the values given in the parameter `array`.
 ## Syntax
 
 ```js
-new Blob(array);
-new Blob(array, options);
+new Blob(array)
+new Blob(array, options)
 ```
 
 ### Parameters
@@ -42,10 +42,6 @@ new Blob(array, options);
         the data is text. The default value, `transparent`, copies newline
         characters into the blob without changing them. To convert newlines to the host
         system's native convention, specify the value `native`.
-
-### Return value
-
-A new {{domxref("Blob")}} object containing the specified data.
 
 ## Examples
 

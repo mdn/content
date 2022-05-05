@@ -21,7 +21,7 @@ when a version of the database has changed, as a result of the
 ## Syntax
 
 ```js
-new IDBVersionChangeEvent();
+new IDBVersionChangeEvent(type, eventInitDict)
 ```
 
 ### Parameters

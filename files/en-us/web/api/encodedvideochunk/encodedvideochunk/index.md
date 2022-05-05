@@ -15,7 +15,7 @@ The **`EncodedVideoChunk()`** constructor creates a new {{domxref("EncodedVideoC
 ## Syntax
 
 ```js
-new EncodedVideoChunk(init);
+new EncodedVideoChunk(init)
 ```
 
 ### Parameters

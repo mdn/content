@@ -21,13 +21,13 @@ individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-new CSSMatrixComponent(matrix);
-new CSSMatrixComponent(matrix, options);
+new CSSMatrixComponent(matrix)
+new CSSMatrixComponent(matrix, options)
 ```
 
 ### Parameters
 
-- {{domxref('CSSMatrixComponent.matrix','matrix')}}
+- `{{domxref('CSSMatrixComponent.matrix','matrix')}}`
   - : A 2d or 3d matrix.
 
 ## Examples

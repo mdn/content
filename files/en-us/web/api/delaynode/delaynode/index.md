@@ -22,15 +22,15 @@ its propagation to the output.
 ## Syntax
 
 ```js
-new DelayNode(context);
-new DelayNode(context, options);
+new DelayNode(context)
+new DelayNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object specifying the delay node options. Can contain the following members:
 
@@ -51,10 +51,6 @@ new DelayNode(context, options);
       The possible values are `"speakers"` or `"discrete"`. (See
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
-
-### Return value
-
-A new {{domxref("DelayNode")}} object instance.
 
 ## Examples
 

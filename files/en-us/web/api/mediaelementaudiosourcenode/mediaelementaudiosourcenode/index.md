@@ -17,14 +17,14 @@ The **`MediaElementAudioSourceNode()`** constructor creates a new {{domxref("Med
 ## Syntax
 
 ```js
-new MediaElementAudioSourceNode(context, options);
+new MediaElementAudioSourceNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
-- _options_
+- `options`
 
   - : A `MediaElementAudioSourceOptions` dictionary object defining the properties you want the `MediaElementAudioSourceNode` to have:
 
@@ -42,10 +42,6 @@ new MediaElementAudioSourceNode(context, options);
       The possible values are `"speakers"` or `"discrete"`. (See
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
-
-### Return value
-
-A new {{domxref("MediaElementAudioSourceNode")}} object instance.
 
 ## Examples
 

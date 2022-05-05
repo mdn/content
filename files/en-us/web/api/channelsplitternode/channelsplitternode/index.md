@@ -19,7 +19,8 @@ The **`ChannelSplitterNode()`** constructor of the [Web Audio API](/en-US/docs/W
 ## Syntax
 
 ```js
-new ChannelSpitterNode(context, options);
+new ChannelSpitterNode(context)
+new ChannelSpitterNode(context, options)
 ```
 
 ### Parameters
@@ -44,10 +45,6 @@ new ChannelSpitterNode(context, options);
       The possible values are `"speakers"` or `"discrete"`. (See
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
-
-### Return value
-
-A new {{domxref("ChannelSplitterNode")}} object instance.
 
 ## Examples
 
