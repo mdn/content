@@ -18,6 +18,8 @@ Injects a script into a target context. The script is run at `document_idle` by 
 
 > **Note:** This method is available in Manifest V3 or higher.
 
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+ 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -25,7 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-let result = await browser.scripting.executeScript(
+let results = await browser.scripting.executeScript(
   details             // object
 )
 ```
@@ -66,30 +68,37 @@ The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_
 This example executes a one-line code snippet in the active tab:
 
 ```js
-const tabs = await browser.tabs.query({ active: true });
-
-await browser.scripting.executeScript({
-  target: {
-    // Execute function below in the first tab.
-    tabId: tabs[0].id,
-  },
-  func: () => {
-    document.body.style.border = "5px solid green";
-  },
+browser.action.onClicked.addListener(async tab => {
+  try {
+    await browser.scripting.executeScript({
+      target: {
+        tabId: tab.id,
+      },
+      func: () => {
+        document.body.style.border = "5px solid green";
+      },
+    });
+  } catch (err) {
+    console.error(`failed to execute script: ${err}`);
+  }
 });
 ```
 
 This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the active tab. The script is executed in subframes and the main document:
 
 ```js
-const tabs = await browser.tabs.query({ active: true });
-
-await browser.scripting.executeScript({
-  target: {
-    tabId: tabs[0].id,
-    allFrames: true,
-  },
-  files: ["content-script.js"],
+browser.action.onClicked.addListener(async tab => {
+  try {
+    await browser.scripting.executeScript({
+      target: {
+        tabId: tab.id,
+        allFrames: true,
+      },
+      files: ["content-script.js"],
+    });
+  } catch (err) {
+    console.error(`failed to execute script: ${err}`);
+  }
 });
 ```
 
