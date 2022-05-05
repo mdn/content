@@ -20,7 +20,7 @@ There are differences between _arrow functions_ and _traditional functions_, as 
 
 - Arrow functions don't have their own bindings to
   [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
-  and should not be used as [`methods`](/en-US/docs/Glossary/Method).
+  and should not be used as [methods](/en-US/docs/Glossary/Method).
 - Arrow functions don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions aren't suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
