@@ -4,10 +4,8 @@ slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 tags:
   - API
   - Device Orientation
-  - Experimental
   - Mobile
   - Motion
-  - NeedsExample
   - Orientation
   - Property
   - Reference
@@ -58,7 +56,5 @@ property:
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent")}}
 - {{DOMxRef("Accelerometer")}}
-- [Detecting device
-  orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
-- [Orientation and motion data
-  explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
