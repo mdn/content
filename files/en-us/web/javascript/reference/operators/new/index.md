@@ -155,17 +155,17 @@ var kensCar = new Car('Nissan', '300ZX', 1992);
 Suppose you define an object called `Person` as follows:
 
 ```js
-function Person(name, age, sex) {
+function Person(name, age, gender) {
   this.name = name;
   this.age = age;
-  this.sex = sex;
+  this.gender = gender;
 }
 ```
 
 And then instantiate two new `Person` objects as follows:
 
 ```js
-var rand = new Person('Rand McNally', 33, 'M');
+var rand = new Person('Alex McNally', 33, 'X');
 var ken = new Person('Ken Jones', 39, 'M');
 ```
 
