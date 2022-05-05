@@ -104,6 +104,8 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 
 #### Result
 
+Scroll to see the animation.
+
 {{EmbedLiveSample("Setting a scroll timeline")}}
 
 ## Specifications
