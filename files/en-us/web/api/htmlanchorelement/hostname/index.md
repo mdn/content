@@ -11,7 +11,7 @@ browser-compat: api.HTMLAnchorElement.hostname
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.hostname`** property is a
-{{domxref("USVString")}} containing the domain of the URL.
+string containing the domain of the URL.
 
 ## Value
 
