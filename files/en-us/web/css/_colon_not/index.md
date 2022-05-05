@@ -65,7 +65,7 @@ There are several unusual effects and outcomes when using `:not()` that you shou
   text-shadow: 2px 2px 3px gold;
 }
 
-/* <p> elements that are not in the class `.fancy` */
+/* <p> elements that don't have a class `.fancy` */
 p:not(.fancy) {
   color: green;
 }
@@ -86,7 +86,7 @@ body :not(div, .fancy) {
   text-decoration: overline underline;
 }
 
-/* Elements inside an <h2> that aren't a <span> with a class of foo. */
+/* Elements inside an <h2> that aren't a <span> with a class of `.foo` */
 /* Complex selectors such as an element with a class are not well supported yet. */
 h2 :not(span.foo) {
   color: red;
