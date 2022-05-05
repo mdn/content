@@ -94,6 +94,8 @@ This animation has an `animation-name` of `rotate`.
 
 #### Result
 
+Hover over the rectangle to start the animation.
+
 {{EmbedLiveSample("Naming an animation","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
