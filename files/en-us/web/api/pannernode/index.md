@@ -93,7 +93,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("PannerNode.setOrientation()")}} {{deprecated_inline}}
   - : Defines the direction the audio source is playing in.
 - {{domxref("PannerNode.setVelocity()")}} {{deprecated_inline}}
-  - : Defines the velocity vector of the audio source — how fast it is moving and in what direction. In a previous version of the specification, the {{domxref("PannerNode")}} had a velocity vector that could pitch up or down {{domxref("AudioBufferSourceNode")}}s connected downstream. This feature was not clearly specified and had a number of issues, so it was removed from the specification.
+  - : Defines the velocity vector of the audio source — how fast it is moving and in what direction. In a previous version of the specification, the {{domxref("PannerNode")}} had a velocity vector that could pitch up or down {{domxref("AudioBufferSourceNode")}} objects connected downstream. This feature was not clearly specified and had a number of issues, so it was removed from the specification.
 
 ## Examples
 
