@@ -117,27 +117,37 @@ The `setTimeout` needs to wait for all the code for queued messages to complete 
 ```js
 (function() {
 
-  console.log('this is the start');
+    console.log('this is the start');
+  
+    setTimeout(function cb1() {
+      console.log('Callback 1: this is a msg from call back');
+    }); // has a default time value of 0
 
-  setTimeout(function cb() {
-    console.log('Callback 1: this is a msg from call back');
-  }); // has a default time value of 0
+    process.nextTick(function cb2() {
+      console.log('Callback 2: this is a msg from call back');
+    }); // only with nodejs 
 
-  console.log('this is just a message');
+    console.log('this is just a message');
+    
+    setTimeout(function cb3() {
+      console.log('Callback 3: this is a msg from call back');
+    }, 0);
 
-  setTimeout(function cb1() {
-    console.log('Callback 2: this is a msg from call back');
-  }, 0);
+    process.nextTick(function cb4() {
+      console.log('Callback 4: this is a msg from call back');
+    }); // only with nodejs 
 
-  console.log('this is the end');
-
+    console.log('this is the end');
+  
 })();
-
-// "this is the start"
-// "this is just a message"
-// "this is the end"
-// "Callback 1: this is a msg from call back"
-// "Callback 2: this is a msg from call back"
+  
+// this is the start
+// this is just a message
+// this is the end
+// Callback 2: this is a msg from call back
+// Callback 4: this is a msg from call back
+// Callback 1: this is a msg from call back
+// Callback 3: this is a msg from call back
 ```
 
 ### Several runtimes communicating together
