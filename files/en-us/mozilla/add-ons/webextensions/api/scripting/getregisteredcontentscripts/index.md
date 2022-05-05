@@ -14,10 +14,12 @@ browser-compat: webextensions.api.scripting.getRegisteredContentScripts
 ---
 {{AddonSidebar()}}
 
-Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} that match a filter.
+Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} or a subset of the registered scripts when using a filter.
 
 > **Note:** This method is available in Manifest V3 or higher.
 
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+ 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
@@ -43,13 +45,35 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example returns all the registered content scripts:
 
 ```js
-let scripts = await browser.scripting.registerContentScripts();
+// Register two content scripts.
+await browser.scripting.registerContentScripts([
+  {
+    id: "script-1",
+    js: ["script-1.js"],
+    matches: ["*://example.com/*"],
+  },
+  {
+    id: "script-2",
+    js: ["script-2.js"],
+    matches: ["*://example.com/*"],
+  },
+]);
+
+// Retrieve all content scripts.
+let scripts = await browser.scripting.getRegisteredContentScripts();
+console.log(scripts.map(script => script.id)); // ["script-1", "script-2"]
+
+// Only retrieve the second script.
+scripts = await browser.scripting.getRegisteredContentScripts({
+  ids: ["script-2"],
+});
+console.log(scripts.map(script => script.id)); // ["script-2"]
 ````
 
 This example returns the registered scripts with the ID `a-script`:
 
 ```js
-let scripts = await browser.scripting.registerContentScripts({
+let scripts = await browser.scripting.getRegisteredContentScripts({
   ids: ["a-script-id"],
 });
 ```
