@@ -13,7 +13,7 @@ browser-compat: api.DeviceMotionEvent.interval
 ---
 {{APIRef("Device Orientation Events")}}
 
-The **`DeviceMotionEvent.interval`** represents property returns the interval, in milliseconds, at which data is obtained from the underlying
+The **`DeviceMotionEvent.interval`** property returns the interval, in milliseconds, at which data is obtained from the underlying
 hardware. You can use this to determine the granularity of motion events.
 
 ## Value
