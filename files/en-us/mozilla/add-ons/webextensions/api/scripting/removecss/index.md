@@ -18,6 +18,8 @@ Removes a CSS stylesheet injected by a call to {{WebExtAPIRef("scripting.insertC
 
 > **Note:** This method is available in Manifest V3 or higher.
 
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
@@ -52,20 +54,27 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example adds some CSS using {{WebExtAPIRef("scripting.insertCSS")}}, then removes it again when the user clicks a browser action:
 
 ```js
-const tabs = await browser.tabs.query({ active: true });
-
-const style = "* { background: #c0ffee }";
-
-await browser.scripting.insertCSS({
-  target: { tabId: tabs[0].id },
-  css: style,
-});
-
-browser.action.onClicked.addListener(() => {
-  await browser.scripting.removeCSS({
-    target: { tabId: tabs[0].id },
-    css: style,
-  });
+// Assuming some style has been injected previously with the following code:
+//
+// await browser.scripting.insertCSS({
+//   target: {
+//     tabId: tab.id,
+//   },
+//   css: "* { background: #c0ffee }",
+// });
+//
+// We can remove it when a user clicked an extension button like this:
+browser.action.onClicked.addListener(async tab => {
+  try {
+    await browser.scripting.removeCSS({
+      target: {
+        tabId: tab.id,
+      },
+      css: "* { background: #c0ffee }",
+    });
+  } catch (err) {
+    console.error(`failed to remove CSS: ${err}`);
+  }
 });
 ```
 

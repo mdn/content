@@ -18,6 +18,8 @@ Updates registered content scripts. If there are errors during script parsing an
 
 > **Note:** This method is available in Manifest V3 or higher.
 
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ### Syntax
@@ -42,6 +44,15 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example updates a registered content script with ID `a-script` by setting `allFrames` to `true`:
 
 ```js
+await browser.scripting.registerContentScripts([
+  {
+    id: "a-script",
+    js: ["script.js"],
+    matches: ["*://example.org/*"],
+  },
+]);
+
+// Update content script registered before to allow execution in all frames:
 await browser.scripting.updateContentScripts([
   {
     id: "a-script",

@@ -69,7 +69,7 @@ browser.action.onClicked.addListener(async tab => {
       css: `body { border: 20px dotted pink; }`,
     });
   } catch (err) {
-    console.error(`${err}`);
+    console.error(`failed to insert CSS: ${err}`);
   }
 });
 ```
