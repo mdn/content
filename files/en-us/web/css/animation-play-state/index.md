@@ -94,6 +94,8 @@ This animation is paused, but runs when you hover over it.
 
 #### Result
 
+Hover over the rectangle to start the animation.
+
 {{EmbedLiveSample("Pausing an animation","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
