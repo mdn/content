@@ -96,6 +96,8 @@ This animation has a delay of 2 seconds.
 
 #### Result
 
+Hover over the rectangle to start the animation.
+
 {{EmbedLiveSample("Setting an animation delay","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
