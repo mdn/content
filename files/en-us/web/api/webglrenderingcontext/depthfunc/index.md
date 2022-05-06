@@ -44,7 +44,7 @@ depthFunc(func)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

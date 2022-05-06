@@ -21,7 +21,8 @@ when a version of the database has changed, as a result of the
 ## Syntax
 
 ```js
-new IDBVersionChangeEvent();
+new IDBVersionChangeEvent(type)
+new IDBVersionChangeEvent(type, eventInitDict)
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ new IDBVersionChangeEvent();
 - `type`
   - : A {{domxref("DOMString")}} indicating the event which occurred. For
     `IDBVersionChangeEvent` this is `versionchange`.
-- `eventInitDict`
+- `eventInitDict` {{optional_inline}}
 
   - : An optional dictionary of initial values for the event's properties. These are as
     follows:

@@ -14,24 +14,20 @@ browser-compat: api.IDBTransaction.error
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`IDBTransaction.error`** property of the
-{{domxref("IDBTransaction")}} interface returns one of several types of error when
-there is an unsuccessful transaction.
+The **`IDBTransaction.error`** property of the {{domxref("IDBTransaction")}} interface
+returns the type of error when there is an unsuccessful transaction.
 
 {{AvailableInWorkers}}
 
 ## Value
 
-A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
-property returns a {{domxref("DOMException")}} because `DOMError` has been
-removed from the DOM standard. The exact error is one of several possibilities. It can
-be a reference to the same error as the request object that raised it, or a transaction
-failure (for example {{exception("QuotaExceededError")}} or
-{{exception("UnknownError")}}).
+A {{domxref("DOMException")}} containing the relevant error, or `null` if there are none.
 
-This property is `null` if the transaction is not finished, is finished and
-successfully committed, or was aborted with the {{domxref("IDBTransaction.abort")}}
-method.
+It can be a reference to the same error as the request object that raised it, or a transaction
+failure (for example `QuotaExceededError`).
+
+This property is `null` if the transaction is not finished, or is finished and
+was successfully committed.
 
 ## Examples
 

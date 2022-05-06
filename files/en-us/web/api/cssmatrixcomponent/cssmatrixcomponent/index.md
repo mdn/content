@@ -21,8 +21,8 @@ individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-new CSSMatrixComponent(matrix);
-new CSSMatrixComponent(matrix, options);
+new CSSMatrixComponent(matrix)
+new CSSMatrixComponent(matrix, options)
 ```
 
 ### Parameters

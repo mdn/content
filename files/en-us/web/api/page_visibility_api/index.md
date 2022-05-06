@@ -149,7 +149,7 @@ The Page Visibility API adds the following events to the {{domxref("Document")}}
 function handleVisibilityChange() {
   if (document.visibilityState === "hidden") {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }

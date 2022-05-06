@@ -83,7 +83,7 @@ Highlights:
 - Constants of {{domxref("KeyboardEvent.location")}}, `DOM_KEY_LOCATION_MOBILE` and DOM_KEY_LOCATION_JOYSTICK, have been removed, since they were removed from the DOM Level 3 Spec ({{bug(936313)}}.
 - {{domxref("KeyboardEvent.code")}} is now available; previously it was only available in prerelease builds. ({{bug(1126673)}})
 - {{domxref("KeyboardEvent.code")}} now supports special keys on Sun keyboards on Linux, Android, and Firefox OS. ({{bug(1020139)}})
-- The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the {{exception("RangeError")}} exception is now raised, rather than the erroneous {{exception("TypeError")}} ({{bug(1125766)}}).
+- The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the `RangeError` {{domxref("DOMException")}} is now raised, rather than the erroneous {{jsxref("TypeError")}} ({{bug(1125766)}}).
 - The User Timing API, adding {{domxref("Performance.mark()")}}, {{domxref("Performance.clearMarks()")}}, {{domxref("Performance.measure()")}}, and {{domxref("Performance.clearMeasures()")}} has been implemented ({{bug(782751)}}).
 - The prefixed version of {{domxref("indexedDB")}}, `mozIndexedDB` has been removed ({{bug(975699)}}).
 - The {{event("DOMContentLoaded")}} event is no longer cancelable ({{bug(1134559)}}).

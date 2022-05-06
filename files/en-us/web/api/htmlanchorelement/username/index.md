@@ -11,7 +11,7 @@ browser-compat: api.HTMLAnchorElement.username
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.username`** property is a
-{{domxref("USVString")}} containing the username specified before the domain name.
+string containing the username specified before the domain name.
 
 ## Value
 

@@ -52,7 +52,7 @@ drawArraysInstanced(mode, first, count, instanceCount)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

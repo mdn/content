@@ -420,7 +420,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
 
 ```html
-<a  target="_blank" href="https://www.wikipedia.org">
+<a target="_blank" href="https://www.wikipedia.org">
   Wikipedia
   <img alt="(opens in new tab)" src="newtab.svg">
 </a>

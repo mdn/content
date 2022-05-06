@@ -41,8 +41,6 @@ If you are a complete beginner, web development can be challenging — we will h
 
 > **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
 
-{{LearnBox({"title":"Random glossary entry"})}}
-
 ## Topics covered
 
 The following is a list of all the topics we cover in the MDN learning area.

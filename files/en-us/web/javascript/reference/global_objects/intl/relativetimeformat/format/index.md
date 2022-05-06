@@ -56,7 +56,7 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 rtf.format(-1, "day");
 // > "1 day ago"
 
-// Format relative time using positive  value (1).
+// Format relative time using positive value (1).
 rtf.format(1, "day");
 // > "in 1 day"
 ```

@@ -23,7 +23,7 @@ new GamepadEvent(typeArg, options)
 ### Parameters
 
 - _typeArg_
-  - : A {{domxref("DOMString")}} that must be one of `gamepadconnected` or
+  - : A string that must be one of `gamepadconnected` or
     `gamepaddisconnected`.
 - _options_ {{optional_inline}}
 

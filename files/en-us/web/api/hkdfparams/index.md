@@ -13,10 +13,10 @@ tags:
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `HKDF`.
+  - : A string. This should be set to `HKDF`.
 - `hash`
 
-  - : A {{domxref("DOMString")}} representing the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. This may be one of:
+  - : A string representing the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. This may be one of:
 
     - `SHA-1`
     - `SHA-256`

@@ -35,7 +35,7 @@ below.)
 
 ## Value
 
-A {{domxref("CSSOMString")}} with one of the following values.
+A string with one of the following values.
 
 - `'auto'`: Use the font display strategy provided by the user agent.
 - `'block'`: Gives the font face a short block period and an infinite swap

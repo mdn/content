@@ -130146,24 +130146,6 @@
       "Waldo"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/toSource": {
-    "modified": "2020-10-30T10:49:16.284Z",
-    "contributors": [
-      "mfuji09",
-      "jangromko",
-      "fscholz",
-      "wbamberg",
-      "schlagi123",
-      "deecewan",
-      "eduardoboucas",
-      "Mingun",
-      "chridal",
-      "Sheppy",
-      "ethertank",
-      "evilpie",
-      "Sevenspade"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
     "modified": "2020-12-03T15:28:01.421Z",
     "contributors": [
