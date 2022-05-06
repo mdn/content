@@ -18,11 +18,11 @@ The aim of this skill test is to assess whether you understand [CSS selectors](/
 
 ## Task 1
 
-Without changing the HTML, use CSS to do the following things:
+In this task, use CSS to do the following things, without changing the HTML:
 
 - Make `<h1>` headings blue.
 - Give `<h2>` headings a blue background and white text.
-- Cause text wrapped in a span to have a font-size of 200%.
+- Cause text wrapped in a `<span>` to have a font-size of 200%.
 
 ![Text with the CSS applied for the solution to task 1.](selectors1.jpg)
 
@@ -36,7 +36,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 2
 
-Without changing the HTML, make the following changes to the look of the content in this example:
+In this task, we want you to make the following changes to the look of the content in this example, without changing the HTML:
 
 - Give the element with an id of `special` a yellow background.
 - Give the element with a class of `alert` a 1px grey border.
@@ -55,7 +55,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 3
 
-In this task, try making the following changes without adding to the HTML:
+In this task, we want you to make the following changes without adding to the HTML:
 
 - Style links, making the link-state orange, visited links green, and remove the underline on hover.
 - Make the first element inside the container font-size: 150% and the first line of that element red.
@@ -73,9 +73,9 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 4
 
-In this task, try the following:
+In this task, we want you to do the following:
 
-- Make any paragraph that directly follows an h2 element red.
+- Make any paragraph that directly follows an `<h2>` element red.
 - Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of `list`.
 
 ![Text with the CSS applied for the solution to task 4.](selectors4.jpg)
@@ -90,7 +90,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 5
 
-In this final task add CSS using attribute selectors to do the following:
+In this task, add CSS using attribute selectors to do the following:
 
 - Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
 - Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
@@ -115,7 +115,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Selectors skill test 1".
+    - A descriptive title such as "Assessment wanted for selectors skill test 1".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.

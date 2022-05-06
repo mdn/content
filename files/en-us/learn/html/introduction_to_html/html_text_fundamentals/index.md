@@ -32,7 +32,7 @@ One of HTML's main jobs is to give text structure so that a browser can display 
       <th scope="row">Objective:</th>
       <td>
         Learn how to mark up a basic page of text to give it structure and
-        meaning—including paragraphs, headings, lists, emphasis, and quotations.
+        meaning — including paragraphs, headings, lists, emphasis, and quotations.
       </td>
     </tr>
   </tbody>

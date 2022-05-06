@@ -10,7 +10,7 @@ tags:
 ---
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you understand [text fundamentals in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals).
+The aim of this skill test is to assess whether you understand how to [mark up text in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) to give it structure and meaning.
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >

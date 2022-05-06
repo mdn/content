@@ -18,7 +18,9 @@ The aim of this skill test is to assess whether you understand the [CSS box mode
 
 ## Task 1
 
-With the two boxes below, one is using the standard box model, the other the alternate box model. Change the width of the second box by adding declarations to the `.alternate` class, so that it matches the visual width of the first box. Your final result will look like the image below.
+In this task, there are two boxes below, one is using the standard box model, the other the alternate box model. Change the width of the second box by adding declarations to the `.alternate` class, so that it matches the visual width of the first box.
+
+Your final result should look like the image below:
 
 ![Two boxes of the same size](mdn-box-model1.png)
 
@@ -53,7 +55,9 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 3
 
-In this example, the inline element has a margin, padding and border. However, the lines above and below are overlapping it. What can you add to your CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline?
+In this task, the inline element has a margin, padding and border. However, the lines above and below are overlapping it. What can you add to your CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline?
+
+Your final result should look like the image below:
 
 ![An inline box with space between it and the text around it.](mdn-box-model3.png)
 

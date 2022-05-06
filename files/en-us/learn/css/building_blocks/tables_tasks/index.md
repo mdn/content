@@ -10,15 +10,15 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you understand how to [style tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
+The aim of this skill test is to assess whether you understand how to [style HTML tables in CSS](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-## Your task
+## Task
 
-In the lesson we styled up a table in a rather garish manner. In this task, we are going to style the same table, but using some good practices for table design as outlined in the external article [Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/).
+In the lesson on [styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables) we styled up a table in a rather garish manner. In this task, we are going to style the same table, but using some good practices for table design as outlined in the external article [Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/).
 
 Our finished table will look like the image below. There are a number of ways that you can achieve this, but we suggest you follow similar patterns as used in the tutorial to do the following things:
 

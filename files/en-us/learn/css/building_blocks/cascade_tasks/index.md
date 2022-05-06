@@ -16,9 +16,9 @@ The aim of this skill test is to assess whether you understand universal propert
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-## Your task
+## Task
 
-In this task, you need to use one of the special values we looked at in the [Controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance) section to write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
+In this task, you need to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance) section to write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
 
 ![Barely visible yellow links on a white background.](mdn-cascade.png)
 
