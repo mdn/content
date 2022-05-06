@@ -76,7 +76,12 @@ The cascading algorithm determines how to find the value to apply for each prope
 
 The cascade is in ascending order, meaning animations have precedence of normal values, whether those are declared in user, author, or user-agent styles, important values take precendence over animations, and transitions have precedence over important values.  
 
- > *Note:* Property values set by animation {{cssxref('@keyframes')}} are more important than all normal styles (those with no [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) set). Property values being set in a {{cssxref('transition')}} take precendence over all other values set, even those marked as `!important`. 
+ > **Note:**  **Transitions and animations**
+ >
+ > Property values set by animation {{cssxref('@keyframes')}} are more important than all normal styles (those with no [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) set). 
+ >
+ >Property values being set in a {{cssxref('transition')}} take precendence over all other values set, even those marked with `!important`. 
+
 
 The cascade algorithm is applied _before_ the specificity algorithm, meaning if `:root p { color: red;}` is declared in the user stylesheet (line 2) and a less specific `p {color: blue;}` is in the author stylesheet (line 3), the paragraphs will be blue.
 
@@ -210,25 +215,21 @@ and then in the body of the document we have inline styles:
 
 In all origin types, the non important styles contained in layers have the lowest precendence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precendence than all normal unlayered styles, which includes normal styles from `unlayeredStyles.css`, `moreUnlayeredStyles.css`, and the `color` of `p` in the `<style>` itself. 
 
-If any of the layered styles in A, B, or C, have code similar to `:root body p { color: black;`, those declarations are removed from consideration by the `p { color: red;` in the unlayered `<style>` because of _origin and importance_, as normal layered styles have less precedence than normal styles declared outside of any layers. If, however, the `:root body p { color: black;` was found in `unlayeredStyles.css`, as both origin and importance are the same, _specificity_ here matters!
+If any of the layered styles in A, B, or C, have code similar to `:root body p { color: black;}`, those declarations are removed from consideration because of _origin_ as normal layered styles have less precedence than normal unlayered styles . If, however, the `:root body p { color: black;}` was found in `unlayeredStyles.css`, as both origin and importance are the same, _specificity_ would mean the black declaration had precedence.
 
-The layer order of precedence is inverted for styles declared as `!important`. Important styles declared in a layer take precedence over important styles declared outside of a layer. Important styles in the first declared layer (A) take precedence over important declarations found in layer B or C, and over important declaration in the unlayered styles. 
+The layer order of precedence is inverted for styles declared as `!important`. Important styles declared in a layer take precedence over important styles declared outside of a layer. Important styles in the first declared layer (A) take precedence over important declarations found in layer B, which takes precedence over C, which have precedence over important declarations in the unlayered styles. 
 
 ### Inline styles
 
-Only relevant to author styles are inline styles, declared with the `style` attribute. Inline styles take precendence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`. 
+Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precendence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`. 
 
-Normal inline styles take precedence over any other normal author styles no matter which layer they're declared in, unless the propery is being altered by a CSS animation. 
+Normal inline styles take precedence over any other normal author styles unless the property is being altered by a CSS animation. 
 
-All `!important` inline styles take precedence over any normal styles, animations, and normal inline styles as well as over important layered and unlayered author styles. 
+All important inline styles take precedence over all author styles, important and not, inline and not, layered and now. Important styles also take precedence over animated properties, but not transitioning properties. Three things can override an important inline style: 1) an important user style, 2) an important user agent style, or 3) a property value being transitioned.  
 
-If A, B, and C all have an important padding declaration on a pargraph, the declaration in layer A will take precedence, overriding the later declared layers and the unlayered ` p { padding: 1em !important; }`, as layered important styles take precedence over unlayered important styles as well. If they all have important `text-decoration` styles declarations, they will all be overridden by the important inline style.
+### Importance and layers
 
-Important user and user-agent styles take precedence over important inline styles, as inline styles are all author styles. 
-
-### Importance and cascade layers
-
-The origin type precendence order is inverted for important styles. Important styes declared outside of any cascade layer have lower precendence than those declared as part of a layer. Important values that come in early layers have precedence over important styles declared in subsequent cascade layers. Inline important styles, however, still take precendence over any author layered or unlayered styles, important or not.
+The origin type precendence order is inverted for important styles. Important styles declared outside of any cascade layer have lower precendence than those declared as part of a layer. Important values that come in early layers have precedence over important styles declared in subsequent cascade layers. 
 
 Take for example the following CSS:
 
@@ -261,12 +262,6 @@ p {
 Now the paragraph will be blue. The `!important` in the earliest declared layer takes precendence of subsequent layers and unlayered important declarations. If the inline style contained !important, such as `<p style="color: black !important">`, again the paragraph would be black. Inline importance does take precedence over all other author declared !important declarations, no matter the specificity. 
 
 Styles that are transitioning take precendence over all important styles, no matter who or how they are declared.
-
-### Transitions and animations
-
-Animations take precedence over all normal styles, regardless of origin type. All `!important` styles take precedence over animations. 
-
-Transitions take precendence over all important styles, no matter the origin type, including over inline important styles.
 
 ## Complete cascade order
 
@@ -302,11 +297,6 @@ Now that we have a better understanding of origin type and cascade layer precede
 </tbody>
 </table>
 
-## Resetting styles
-
-After your content has finished altering styles, it may find itself in a situation where it needs to restore them to a known state. This may happen in cases of animations, theme changes, and so forth. The CSS property {{cssxref("all")}} lets you quickly set (almost) everything in CSS back to a known state.
-
-`all` lets you opt to immediately restore all properties to any of their initial (default) state, the state inherited from the previous level of the cascade, a specific origin (the user-agent stylesheet, the author stylesheet, or the user stylesheet), or even to clear the values of the properties entirely.
 
 
 ## Which CSS entities participate in the cascade
@@ -328,35 +318,42 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 [CSS animations](/en-US/docs/Web/CSS/CSS_Animations), using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single {{cssxref("@keyframes")}}, and never mixes multiple ones together.
 
-If the several keyframe animations are defined with the same name, the latest defined `@keyframes` will in the most important document be used. Only one @keyframes definition is used, even if the @keyframes animate different property. Same named @keyframes are never combined.
+If the several keyframe animations are defined with the same animation name, the last defined `@keyframes` in the origin and layer with the greatest precendence. Only one @keyframes definition is used, even if the @keyframes animate different property. Same named @keyframes are never combined.
 
 ```css
 
 p { 
-    animation: infinite 5s alternate foo;
+    animation: infinite 5s alternate repeatedName;
 }
-@keyframes foo {
+@keyframes repeatedName {
     from {font-size: 1rem;}
     to {font-size: 3rem;}
   }
 
 @layer A {
-  @keyframes foo {
+  @keyframes repeatedName {
     from {background-color: yellow;}
     to {background-color: orange;}
   }
 }
 @layer B {
-  @keyframes foo {
+  @keyframes repeatedName {
     from {color: white;}
     to {color: black;}
   }
 }
 ```
 
-In this example, the `foo` animation is declared 3 times. When `foo` is applied to the paragraph, the @keyframes animation defined in the unlayered CSS takes precedence and the element's font size will be animated. 
+In this example, there are three seperate animation declaration named `repeatedName`. When `animation: infinite 5s alternate repeatedName` is applied to the paragraph, only one animation is applied: the keyframe animation defined in the unlayered CSS takes precedence over the layered keyframe animation declarations based on origin and cascade layer precedence order. In this example, only the element's font size will be animated. 
 
-> **Note:** There are no `!important` animations as property declarations in a {{cssxref('@keyframes')}} block that contain `!important` as part of the value are ignored.
+> **Note:** There are no important animations as property declarations in a {{cssxref('@keyframes')}} block that contain `!important` as part of the value are ignored.
+
+
+## Resetting styles
+
+After your content has finished altering styles, it may find itself in a situation where it needs to restore them to a known state. This may happen in cases of animations, theme changes, and so forth. The CSS property {{cssxref("all")}} lets you quickly set (almost) everything in CSS back to a known state.
+
+`all` lets you opt to immediately restore all properties to any of their initial (default) state, the state inherited from the previous level of the cascade, a specific origin (the user-agent stylesheet, the author stylesheet, or the user stylesheet), or even to clear the values of the properties entirely.
 
 ## Specifications
 
