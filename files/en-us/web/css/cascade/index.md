@@ -225,7 +225,7 @@ Only relevant to author styles are inline styles, declared with the `style` attr
 
 Normal inline styles take precedence over any other normal author styles unless the property is being altered by a CSS animation. 
 
-All important inline styles take precedence over all author styles, important and not, inline and not, layered and now. Important styles also take precedence over animated properties, but not transitioning properties. Three things can override an important inline style: 1) an important user style, 2) an important user agent style, or 3) a property value being transitioned.  
+All important inline styles take precedence over all author styles, important and not, inline and not, layered and not. Important styles also take precedence over animated properties, but not transitioning properties. Three things can override an important inline style: 1) an important user style, 2) an important user agent style, or 3) a property value being transitioned.  
 
 ### Importance and layers
 
