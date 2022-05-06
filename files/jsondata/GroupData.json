@@ -394,7 +394,7 @@
     "Encrypted Media Extensions": {
       "overview": ["Encrypted Media Extensions API"],
       "interfaces": [
-        "MediaKeySessionEvent",
+        "MediaKeyMessageEvent",
         "MediaKeys",
         "MediaKeySession",
         "MediaKeyStatusMap",
@@ -405,10 +405,11 @@
         "HTMLMediaElement.setMediaKeys()"
       ],
       "properties": [
-        "HTMLMediaElement.mediaKeys",
-        "HTMLMediaElement.onencrypted"
+        "HTMLMediaElement.mediaKeys"
       ],
-      "events": []
+      "events": [
+        "HTMLMediaElement: encrypted"
+      ]
     },
     "EyeDropper API": {
       "overview": ["EyeDropper API"],
