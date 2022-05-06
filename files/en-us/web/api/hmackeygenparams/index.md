@@ -15,9 +15,9 @@ The **`HmacKeyGenParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/AP
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `HMAC`.
+  - : A string. This should be set to `HMAC`.
 - `hash`
-  - : A {{domxref("DOMString")}} representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. You can pass any of `SHA-1`, `SHA-256`, `SHA-384`, or `SHA-512` here.
+  - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. You can pass any of `SHA-1`, `SHA-256`, `SHA-384`, or `SHA-512` here.
 - `length` {{optional_inline}}
   - : A `Number` — the length in bits of the key. If this is omitted, the length of the key is equal to the block size of the hash function you have chosen. Unless you have a good reason to use a different length, omit this property and use the default.
 

@@ -21,7 +21,7 @@ descriptor of {{cssxref("@font-face")}}.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

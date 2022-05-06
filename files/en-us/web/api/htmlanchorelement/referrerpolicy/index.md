@@ -19,7 +19,7 @@ property reflect the HTML {{htmlattrxref("referrerpolicy","a")}} attribute of th
 
 ## Value
 
-A {{domxref("DOMString")}}; one of the following:
+A string; one of the following:
 
 - no-referrer
   - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer

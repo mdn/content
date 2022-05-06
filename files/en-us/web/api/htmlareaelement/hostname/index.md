@@ -10,11 +10,11 @@ browser-compat: api.HTMLAreaElement.hostname
 ---
 {{ApiRef("HTML DOM")}}
 
-The **`HTMLAreaElement.hostname`** property is a {{domxref("USVString")}} containing the domain of the URL.
+The **`HTMLAreaElement.hostname`** property is a string containing the domain of the URL.
 
 ## Value
 
-A {{domxref("USVString")}} containing the domain of the URL associated with the `area` element.
+A string containing the domain of the URL associated with the `area` element.
 It can be used as both a setter and getter.
 
 ## Examples

@@ -11,7 +11,7 @@ browser-compat: api.HTMLAnchorElement.host
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.host`** property is a
-{{domxref("USVString")}} containing the host, that is the _hostname_, and then,
+string containing the host, that is the _hostname_, and then,
 if the _port_ of the URL is nonempty, a `':'`, and the _port_
 of the URL.
 

@@ -12,7 +12,7 @@ browser-compat: api.HTMLAnchorElement.rel
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.rel`** property reflects the
-{{htmlattrxref("rel", "a")}} attribute. It is a {{domxref("DOMString")}} containing a
+{{htmlattrxref("rel", "a")}} attribute. It is a string containing a
 space-separated list of [link types](/en-US/docs/Web/HTML/Link_types)
 indicating the relationship between the resource represented by the {{HTMLElement("a")}}
 element and the current document.
