@@ -30,6 +30,10 @@ new DOMException(message, name)
 - `name` {{optional_inline}}
   - : A string. If the specified name is a [standard error name](/en-US/docs/Web/API/DOMException#error_names), then getting the [`code`](/en-US/docs/Web/API/DOMException/code) property of the `DOMException` object will return the code number corresponding to the specified name.
 
+### Return value
+
+A newly created {{domxref("DOMException")}} object.
+
 ## Examples
 
 In this example, pressing the button causes a custom `DOMException` to be thrown, which is then caught and the custom error message shown in an alert.

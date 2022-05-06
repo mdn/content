@@ -29,6 +29,10 @@ new CSSTransformValue(transforms)
 - `transforms`
   - : A list of {{domxref("CSSTransformComponent")}} objects to iterate over.
 
+### Return value
+
+A new {{domxref("CSSTransformValue")}}.
+
 ### Exceptions
 
 - {{jsxref("TypeError")}}

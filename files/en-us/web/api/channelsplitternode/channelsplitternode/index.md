@@ -46,6 +46,10 @@ new ChannelSpitterNode(context, options)
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
 
+### Return value
+
+A new {{domxref("ChannelSplitterNode")}} object instance.
+
 ## Examples
 
 ```js

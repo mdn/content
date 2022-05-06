@@ -43,6 +43,10 @@ new Blob(array, options)
         characters into the blob without changing them. To convert newlines to the host
         system's native convention, specify the value `native`.
 
+### Return value
+
+A new {{domxref("Blob")}} object containing the specified data.
+
 ## Examples
 
 ```js

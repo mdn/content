@@ -43,6 +43,10 @@ new ImageData(dataArray, width, height, settings)
 - `dataArray`
   - : An array containing the underlying pixel representation of the image, one of {{jsxref("Uint8ClampedArray")}}, {{jsxref("Uint16Array")}}, or {{jsxref("Float32Array")}}. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
 
+### Return value
+
+A new {{domxref('ImageData')}} object.
+
 ### Errors thrown
 
 - `IndexSizeError` {{domxref("DOMException")}}

@@ -44,6 +44,10 @@ new ChannelMergerNode(context, options)
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
 
+### Return value
+
+A new {{domxref("ChannelMergerNode")}} object instance.
+
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}

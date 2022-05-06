@@ -43,6 +43,10 @@ new MediaElementAudioSourceNode(context, options)
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
 
+### Return value
+
+A new {{domxref("MediaElementAudioSourceNode")}} object instance.
+
 ## Examples
 
 ```js

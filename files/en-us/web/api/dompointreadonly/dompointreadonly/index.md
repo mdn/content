@@ -49,6 +49,11 @@ new DOMPointReadOnly(x, y, z, w)
 > number. In addition to any finite floating-point value, you may use special values
 > such as ±{{jsxref("Infinity")}} and {{jsxref("NaN")}}.
 
+### Return value
+
+A new {{domxref("DOMPointReadOnly")}} object representing the specified location in
+space.
+
 ## Examples
 
 The following code demonstrates creating both 2D and 3D points.

@@ -31,6 +31,10 @@ new DOMRect(x, y, width, height)
 - `height`
   - : The height of the `DOMRect`.
 
+### Return value
+
+A new {{domxref("DOMRect")}} object.
+
 ## Specifications
 
 {{Specifications}}

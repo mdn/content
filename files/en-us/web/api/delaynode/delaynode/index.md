@@ -52,6 +52,10 @@ new DelayNode(context, options)
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
 
+### Return value
+
+A new {{domxref("DelayNode")}} object instance.
+
 ## Examples
 
 ```js

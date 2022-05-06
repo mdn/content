@@ -36,6 +36,10 @@ new SubmitEvent(type, eventInitDict)
 - `eventInitDict` {{optional_inline}}
   - : An optional dictionary of initial values for the event's properties.
 
+### Return value
+
+A {{domxref("SubmitEvent")}} object configured using the given inputs.
+
 ## Examples
 
 This code snippet locates a form in the current document, and then an HTML
