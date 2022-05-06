@@ -51,7 +51,7 @@ Each individual animation is specified as:
 - zero or one occurrences of the following values:
 
   - {{cssxref("&lt;single-transition-easing-function&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-coun")}}
+  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
   - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#single-animation-fill-mode")}}
   - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}
