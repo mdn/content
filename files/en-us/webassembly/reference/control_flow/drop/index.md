@@ -9,14 +9,14 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-The **`drop`** instruction, drops the top value from the stack.
+The **`drop`** instruction, pops a value from the stack, and discards it.
 
 {{EmbedInteractiveExample("pages/wat/drop.html", "tabbed-taller")}}
 
 ## Syntax
 
 ```wasm
-;; load multiple values onto the stack
+;; push multiple values onto the stack
 i32.const 1
 i32.const 2
 i32.const 3

@@ -22,7 +22,7 @@ WebAssembly control flow operators.
   - : Calls a function.
 
 - [`drop`](/en-US/docs/WebAssembly/Reference/Control_flow/drop)
-  - : Drops a value from the stack.
+  - : Pops a value from the stack, and discards it.
 
 - [`end`](/en-US/docs/WebAssembly/Reference/Control_flow/end)
   - : Can be used to end a `block`, `loop`, `if`, or `else`.
