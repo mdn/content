@@ -53,5 +53,5 @@ for (var i = 0; i < length; i++) {
 
 - The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("link")}},
   {{domxref("HTMLAnchorElement.relList")}} and {{domxref("HTMLLinkElement.relList")}}.
-- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+- The very same list but as a space-separated tokens in a string:
   {{domxref("HTMLAreaElement.rel")}}
