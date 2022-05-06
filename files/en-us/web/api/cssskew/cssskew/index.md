@@ -28,9 +28,9 @@ new CSSSkew(ax, ay)
 
 ### Parameters
 
-- `{{domxref('CSSSkew.ax','ax')}}`
+- {{domxref('CSSSkew.ax','ax')}}
   - : A value for the `ax` (x-axis) angle of the {{domxref('CSSSkew')}} object to be constructed. This must be a {{domxref('CSSNumericValue')}}.
-- `{{domxref('CSSSkew.ay','ay')}}`
+- {{domxref('CSSSkew.ay','ay')}}
   - : A value for the `ay` (y-axis) angle of the {{domxref('CSSSkew')}} object to be constructed. This must be a {{domxref('CSSNumericValue')}}.
 
 ## Examples

@@ -24,7 +24,8 @@ represent a {{domxref("HTMLFormElement.submit_event", "submit")}} event fired at
 ## Syntax
 
 ```js
-new SubmitEvent(type, eventInitDict);
+new SubmitEvent(type)
+new SubmitEvent(type, eventInitDict)
 ```
 
 ### Parameters
@@ -34,10 +35,6 @@ new SubmitEvent(type, eventInitDict);
     For `SubmitEvent`, this is always `submit`.
 - `eventInitDict` {{optional_inline}}
   - : An optional dictionary of initial values for the event's properties.
-
-### Return value
-
-A {{domxref("SubmitEvent")}} object configured using the given inputs.
 
 ## Examples
 

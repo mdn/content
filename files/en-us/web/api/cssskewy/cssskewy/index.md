@@ -27,7 +27,7 @@ new CSSSkewY(ay)
 
 ### Parameters
 
-- `{{domxref('CSSSkewY.ay','ay')}}`
+- {{domxref('CSSSkewY.ay','ay')}}
   - : A value for the `ay` angle of the {{domxref('CSSSkewY')}} object to be
     constructed. This must be a {{domxref('CSSNumericValue')}}.
 
