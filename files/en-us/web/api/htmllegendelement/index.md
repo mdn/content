@@ -22,9 +22,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLegendElement.form")}} {{readonlyInline}}
   - : Is a {{domxref("HTMLFormElement")}} representing the form that this legend belongs to. If the legend has a fieldset element as its parent, then this attribute returns the same value as the **form** attribute on the parent fieldset element. Otherwise, it returns null.
 - {{domxref("HTMLLegendElement.accessKey")}}
-  - : Is a {{domxref("DOMString")}} representing a single-character access key to give access to the element.
+  - : Is a string representing a single-character access key to give access to the element.
 - {{domxref("HTMLLegendElement.align")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the alignment relative to the form set
+  - : Is a string representing the alignment relative to the form set
 
 ## Methods
 
