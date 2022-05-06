@@ -21,6 +21,8 @@ The **`RTCDataChannel`** interface represents a network channel which can be use
 
 To create a data channel and ask a remote peer to join you, call the {{DOMxRef("RTCPeerConnection")}}'s {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method. The peer being invited to exchange data receives a {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event (which has type {{DOMxRef("RTCDataChannelEvent")}}) to let it know the data channel has been added to the connection.
 
+`RTCDataChannel` is a {{glossary("Transferable objects","transferable object")}}.
+
 {{InheritanceDiagram}}
 
 ## Properties
