@@ -21,7 +21,7 @@ new HIDConnectionEvent(type, hidConnectionEventInit)
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with one of `"connect"` or `"disconnect"`.
+  - : A string with one of `"connect"` or `"disconnect"`.
 - `hidConnectionEventInit`
 
   - : A dictionary including the following fields:
