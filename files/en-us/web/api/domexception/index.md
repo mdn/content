@@ -18,6 +18,8 @@ The **`DOMException`** interface represents an abnormal event (called an **excep
 
 Each exception has a **name**, which is a short "PascalCase"-style string identifying the error or abnormal condition.
 
+`DOMException` is a {{Glossary("Serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+
 ## Constructor
 
 - {{domxref("DOMException.DOMException()", "DOMException()")}} {{experimental_inline}}
