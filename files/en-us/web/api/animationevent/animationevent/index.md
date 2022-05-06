@@ -12,7 +12,7 @@ browser-compat: api.AnimationEvent.AnimationEvent
 ---
 {{APIRef("Web Animations API")}}
 
-The **`AnimationEvent()`** constructor returns a new {{domxref("AnimationEvent")}}, representing an event in relation with an animation.
+The **`AnimationEvent()`** constructor returns a new {{domxref("AnimationEvent")}} object, representing an event in relation with an animation.
 
 ## Syntax
 
