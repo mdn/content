@@ -11,7 +11,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you've understood how a grid and grid items behave covered in our [Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids) article. You will be working through three small tasks which use different elements of the material you have just covered.
+The aim of this skill test is to assess whether you understand how a [grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and grid items behave. You will be working through three small tasks that use different elements of the material you have just covered.
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
