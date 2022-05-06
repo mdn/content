@@ -17,14 +17,15 @@ The **`ChannelMergerNode()`** constructor creates a new {{domxref("ChannelMerger
 ## Syntax
 
 ```js
-new ChannelMergerNode(context, options);
+new ChannelMergerNode(context)
+new ChannelMergerNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : A [`ChannelMergerOptions`](https://webaudio.github.io/web-audio-api/#idl-def-ChannelMergerOptions) dictionary object defining the properties you want the `ChannelMergerNode` to have:
 

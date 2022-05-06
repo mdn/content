@@ -18,18 +18,20 @@ The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} o
 ## Syntax
 
 ```js
-new InstallEvent(type, init);
+new InstallEvent(type)
+new InstallEvent(type, init)
 ```
 
 ### Parameters
 
-- _type_
+- `type`
   - : The type of the event.
-- _init_ {{optional_inline}}
+- `init` {{optional_inline}}
 
   - : An options object containing any custom settings that you want to apply to the event object. Available options are as follows:
 
-    - `activeWorker`: The {{domxref("ServiceWorker")}} that is currently actively controlling the page.
+    - `activeWorker`
+      - : The {{domxref("ServiceWorker")}} that is currently actively controlling the page.
 
 ## Browser compatibility
 

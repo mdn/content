@@ -21,8 +21,8 @@ individual {{CSSXref('transform')}} property in CSS.
 ## Syntax
 
 ```js
-new CSSTranslate(x, y);
-new CSSTranslate(x, y, z);
+new CSSTranslate(x, y)
+new CSSTranslate(x, y, z)
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ new CSSTranslate(x, y, z);
 - {{domxref('CSSTranslate.y','y')}}
   - : A value for the y-axis of the {{domxref('CSSTranslate')}} object to be constructed.
     This must be a {{cssxref('length-percentage')}}.
-- {{domxref('CSSTranslate.z','z')}}{{optional_inline}}
+- {{domxref('CSSTranslate.z','z')}} {{optional_inline}}
 
   - : A value for the z-axis of the {{domxref('CSSTranslate')}} object to be constructed.
     This must be a {{cssxref('length')}}.

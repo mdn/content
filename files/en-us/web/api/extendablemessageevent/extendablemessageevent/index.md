@@ -19,14 +19,15 @@ constructor creates a new {{domxref("ExtendableMessageEvent")}} object instance.
 ## Syntax
 
 ```js
-new ExtendableMessageEvent(type, init);
+new ExtendableMessageEvent(type)
+new ExtendableMessageEvent(type, init)
 ```
 
 ### Parameters
 
-- type
+- `type`
   - : A string that defines the type of the message event being created.
-- init {{optional_inline}}
+- `init` {{optional_inline}}
 
   - : An initialization object, which should contain the following parameters:
 

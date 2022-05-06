@@ -23,7 +23,8 @@ offscreen to manage and play audio.
 ## Syntax
 
 ```js
-new Audio(url);
+new Audio()
+new Audio(url)
 ```
 
 ### Parameters
