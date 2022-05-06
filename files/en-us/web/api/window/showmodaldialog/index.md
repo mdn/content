@@ -33,7 +33,7 @@ showModalDialog(uri, arguments, options)
 - `arguments` {{optional_inline}}
   - : Values passed to the dialog; these are made available in the
     [`window`](/en-US/docs/Web/API/Window) object's
-    [`window.dialogArguments`](/en-US/docs/Web/API/Window/dialogArguments)
+    `window.dialogArguments`
     property.
 - `options` {{optional_inline}}
   - : A string specifying window ornamentation for the
