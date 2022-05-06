@@ -2149,12 +2149,6 @@
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
     },
-    "XDomain": {
-      "interfaces": ["XDomainRequest"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "XMLHttpRequest": {
       "overview": ["XMLHttpRequest"],
       "guides": [
