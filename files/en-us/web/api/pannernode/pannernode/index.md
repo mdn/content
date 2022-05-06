@@ -17,14 +17,15 @@ The **`PannerNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/We
 ## Syntax
 
 ```js
-new PannerNode(context, options);
+new PannerNode(context)
+new PannerNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : A [`PannerOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PannerOptions) dictionary object defining the properties you want the `PannerNode` to have:
 
@@ -55,10 +56,6 @@ new PannerNode(context, options);
       The possible values are `"speakers"` or `"discrete"`. (See
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
-
-### Return value
-
-A new {{domxref("PannerNode")}} object instance.
 
 ### Exceptions
 

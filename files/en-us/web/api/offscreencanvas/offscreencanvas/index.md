@@ -19,7 +19,7 @@ instantiated {{domxref("OffscreenCanvas")}} object.
 ## Syntax
 
 ```js
-new OffscreenCanvas(width, height);
+new OffscreenCanvas(width, height)
 ```
 
 ### Parameters

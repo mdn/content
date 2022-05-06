@@ -21,15 +21,16 @@ service worker context.
 ## Syntax
 
 ```js
-new PushEvent(type, eventInitDict);
+new PushEvent(type)
+new PushEvent(type, eventInitDict)
 ```
 
 ### Parameters
 
-- _type_
+- `type`
   - : A {{domxref("DOMString")}} defining the type of `PushEvent`. This can
     be {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} or {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "pushsubscriptionchange")}}.
-- _eventInitDict_ {{optional_inline}}
+- `eventInitDict` {{optional_inline}}
 
   - : An options object containing any initialization data you want to populate the
     `PushEvent` object with. The options are:

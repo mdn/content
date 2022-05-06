@@ -22,15 +22,15 @@ errors thrown by any of the interfaces based on {{domxref('Sensor')}}.
 ## Syntax
 
 ```js
-new SensorErrorEvent(type);
-new SensorErrorEvent(type, {error: domException});
+new SensorErrorEvent(type)
+new SensorErrorEvent(type, options)
 ```
 
 ### Parameters
 
-- _type_
+- `type`
   - : Will always be `'SensorErrorEvent'`.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Currently only one option is supported:
 

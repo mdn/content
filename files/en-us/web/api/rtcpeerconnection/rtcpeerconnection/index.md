@@ -18,8 +18,8 @@ a connection between the local device and a remote peer.
 ## Syntax
 
 ```js
-new RTCPeerConnection();
-new RTCPeerConnection(configuration);
+new RTCPeerConnection()
+new RTCPeerConnection(configuration)
 ```
 
 ### Parameters

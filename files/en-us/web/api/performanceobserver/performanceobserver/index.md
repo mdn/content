@@ -21,7 +21,7 @@ registered, via the {{domxref("PerformanceObserver.observe","observe()")}} metho
 ## Syntax
 
 ```js
-new PerformanceObserver(callback);
+new PerformanceObserver(callback)
 ```
 
 ### Parameters

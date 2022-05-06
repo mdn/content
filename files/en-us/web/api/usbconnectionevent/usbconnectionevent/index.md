@@ -15,7 +15,7 @@ The **`USBConnectionEvent()`** constructor creates a new {{domxref("USBConnectio
 ## Syntax
 
 ```js
-new USBConnectionEvent(type, USBConnectionEventInit);
+new USBConnectionEvent(type, usbConnectionEventInit)
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ new USBConnectionEvent(type, USBConnectionEventInit);
     - `connect`
     - `disconnect`
 
-- `USBConnectionEventInit`
+- `usbConnectionEventInit`
 
   - : An object including the following:
 

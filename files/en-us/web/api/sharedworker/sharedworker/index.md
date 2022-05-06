@@ -24,20 +24,21 @@ policy](/en-US/docs/Web/Security/Same-origin_policy).
 ## Syntax
 
 ```js
-new SharedWorker(aURL, name);
-new SharedWorker(aURL, options);
+new SharedWorker(aURL)
+new SharedWorker(aURL, name)
+new SharedWorker(aURL, options)
 ```
 
 ### Parameters
 
-- _aURL_
+- `aURL`
   - : A {{domxref("DOMString")}} representing the URL of the script the worker will
     execute. It must obey the same-origin policy.
-- name {{optional_inline}}
+- `name` {{optional_inline}}
   - : A {{domxref("DOMString")}} specifying an identifying name for the
     {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is
     mainly useful for debugging purposes.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing option properties that can set when creating the object
     instance. Available properties are as follows:
@@ -53,10 +54,6 @@ new SharedWorker(aURL, options);
     - `name`: A {{domxref("DOMString")}} specifying an
       identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
       scope of the worker, which is mainly useful for debugging purposes.
-
-### Return value
-
-The created worker.
 
 ### Exceptions
 

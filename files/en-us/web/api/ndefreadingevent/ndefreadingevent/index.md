@@ -15,7 +15,7 @@ The **`NDEFReadingEvent()`** constructor creates a new {{domxref("NDEFReadingEve
 ## Syntax
 
 ```js
-new NDEFReadingEvent(type, options);
+new NDEFReadingEvent(type, options)
 ```
 
 ### Parameters
