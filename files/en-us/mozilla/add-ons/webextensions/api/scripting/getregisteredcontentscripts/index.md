@@ -70,14 +70,6 @@ scripts = await browser.scripting.getRegisteredContentScripts({
 console.log(scripts.map(script => script.id)); // ["script-2"]
 ````
 
-This example returns the registered scripts with the ID `a-script`:
-
-```js
-let scripts = await browser.scripting.getRegisteredContentScripts({
-  ids: ["a-script-id"],
-});
-```
-
 {{WebExtExamples}}
 
 ## Browser compatibility

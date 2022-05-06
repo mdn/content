@@ -41,24 +41,28 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-This example updates a registered content script with ID `a-script` by setting `allFrames` to `true`:
+This example updates a content script registered with ID `a-script` by setting `allFrames` to `true`:
 
 ```js
-await browser.scripting.registerContentScripts([
-  {
-    id: "a-script",
-    js: ["script.js"],
-    matches: ["*://example.org/*"],
-  },
-]);
+try {
+  await browser.scripting.registerContentScripts([
+    {
+      id: "a-script",
+      js: ["script.js"],
+      matches: ["*://example.org/*"],
+    },
+  ]);
 
-// Update content script registered before to allow execution in all frames:
-await browser.scripting.updateContentScripts([
-  {
-    id: "a-script",
-    allFrames: true,
-  },
-]);
+  // Update content script registered before to allow execution in all frames:
+  await browser.scripting.updateContentScripts([
+    {
+      id: "a-script",
+      allFrames: true,
+    },
+  ]);
+} catch (err) {
+  console.error(`failed to register or update content scripts: ${err}`);
+}
 ```
 
 {{WebExtExamples}}

@@ -44,9 +44,13 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example unregisters a registered content script with ID `a-script`:
 
 ```js
-await browser.scripting.unregisterContentScripts({
-  ids: ["a-script"],
-});
+try {
+  await browser.scripting.unregisterContentScripts({
+    ids: ["a-script"],
+  });
+} catch (err) {
+  console.error(`failed to unregister content scripts: ${err}`);
+}
 ```
 
 {{WebExtExamples}}

@@ -51,7 +51,11 @@ const aScript = {
   matches: ["https://example.com/*"],
 };
 
-await browser.scripting.registerContentScripts([aScript]);
+try {
+  await browser.scripting.registerContentScripts([aScript]);
+} catch (err) {
+  console.error(`failed to register content scripts: ${err}`);
+}
 ```
 
 {{WebExtExamples}}
