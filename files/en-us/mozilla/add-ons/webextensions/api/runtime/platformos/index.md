@@ -33,6 +33,8 @@ Values of this type are strings. Possible values are:
   - : The underlying operating system is Linux.
 - `"openbsd"`
   - : The underlying operating system is Open/FreeBSD.
+- `"fuchsia"`
+  - : The underlying operating system is Fuchsia.
 
 ## Browser compatibility
 
