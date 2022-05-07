@@ -2,12 +2,12 @@
 title: MediaStreamTrackEvent()
 slug: Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent
 tags:
-  - API
-  - Constructor
-  - Media Streams API
-  - MediaStreamTrackEvent
-  - Reference
-browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
+- API
+- Constructor
+- Media Streams API
+- MediaStreamTrackEvent
+- Reference
+  browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
 ---
 {{APIRef("Media Streams API")}}
 
@@ -19,7 +19,7 @@ announcing that a {{domxref("MediaStreamTrack")}} has been added to or removed f
 ## Syntax
 
 ```js
-new MediaStreamTrackEvent(type, {track: aMediaStreamTrack})
+new MediaStreamTrackEvent(type, {track: aMediaStreamTrack});
 ```
 
 ### Parameters
