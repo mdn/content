@@ -11,7 +11,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you understand CSS {{CSSxRef("float")}} and {{CSSxRef("clear")}} properties. You will be working through three small tasks that use different elements of the material you have just covered.
+The aim of this skill test is to assess whether you understand [floats in CSS](/en-US/docs/Learn/CSS/CSS_layout/Floats) using the the {{CSSxRef("float")}} and {{CSSxRef("clear")}} properties and values as well as other methods for clearing floats. You will be working through three small tasks that use different elements of the material you have just covered.
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
@@ -19,7 +19,7 @@ The aim of this skill test is to assess whether you understand CSS {{CSSxRef("fl
 
 ## Task 1
 
-In this task, you need to float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes, as in the image below.
+In this task, you need to float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes, as in the image below:
 
 ![Two blocks displaying left and right of some text.](float-task1.png)
 
@@ -33,7 +33,9 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 2
 
-In this example, the element with a class of `float` should be floated left. Then we want the first line of text to display next to that element, but the following line of text (which has a class of `.below`) to display underneath it. You can see the desired result in this image.
+In this task, the element with a class of `float` should be floated left. Then we want the first line of text to display next to that element, but the following line of text (which has a class of `below`) to display underneath it.
+
+Your final result should look like the image below:
 
 ![A box displayed to the left of a line of text, with some more text below.](float-task2.png)
 
@@ -47,7 +49,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 3
 
-Finally, we have a floated element in this example. The box wrapping the float and text is displaying behind the float. Use the most up-to-date method available to cause the box background to extend to below the float, as in the image.
+In this task, we have a floated element. The box wrapping the float and text is displaying behind the float. Use the most up-to-date method available to cause the box background to extend to below the float, as in the image below:
 
 ![A block displayed to the right of some text both wrapped by a box with a background color.](float-task3.png)
 

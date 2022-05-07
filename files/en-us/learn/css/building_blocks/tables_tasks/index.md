@@ -22,16 +22,22 @@ In the lesson on [styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_
 
 Our finished table will look like the image below. There are a number of ways that you can achieve this, but we suggest you follow similar patterns as used in the tutorial to do the following things:
 
+- Add padding of `0.3em` to the table headings and data and align them at the top of their cells.
 - Align headings and data for columns containing numbers right.
 - Align headings and data for columns containing text left.
-- Add a top and bottom border, plus a border above the footer.
-- Stripe every odd row of the main table.
+- Add a 1px top and bottom solid border with the hex color `#999`, plus a 1px solid border of the same color above the footer.
+- Remove the default spacing between the table elements borders to get the expected result.
+- Stripe every odd row of the main table with the hex color `#eee`.
 
 ![A table with striped rows.](mdn-table-bands.png)
 
 Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/tables/table.html", '100%', 1000)}}
+
+Additional question:
+
+- What can you do to make the table layout behave a bit more predictably? Think of how table columns are sized by default and how we can change this behavior to size the columns according to the width of their headings.
 
 > **Callout:**
 >

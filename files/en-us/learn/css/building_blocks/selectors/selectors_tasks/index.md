@@ -24,6 +24,8 @@ In this task, use CSS to do the following things, without changing the HTML:
 - Give `<h2>` headings a blue background and white text.
 - Cause text wrapped in a `<span>` to have a font-size of 200%.
 
+Your final result should look like the image below:
+
 ![Text with the CSS applied for the solution to task 1.](selectors1.jpg)
 
 Try updating the live code below to recreate the finished example:
@@ -43,6 +45,8 @@ In this task, we want you to make the following changes to the look of the conte
 - If the element with a class of `alert` also has a class of `stop`, make the background red.
 - If the element with a class of `alert` also has a class of `go`, make the background green.
 
+Your final result should look like the image below:
+
 ![Text with the CSS applied for the solution to task 2.](selectors2.jpg)
 
 Try updating the live code below to recreate the finished example:
@@ -61,6 +65,8 @@ In this task, we want you to make the following changes without adding to the HT
 - Make the first element inside the container font-size: 150% and the first line of that element red.
 - Stripe every other row in the table by selecting these rows and giving them a background color of #333 and foreground of white.
 
+Your final result should look like the image below:
+
 ![Text with the CSS applied for the solution to task 3.](selectors3.jpg)
 
 Try updating the live code below to recreate the finished example:
@@ -77,6 +83,8 @@ In this task, we want you to do the following:
 
 - Make any paragraph that directly follows an `<h2>` element red.
 - Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of `list`.
+
+Your final result should look like the image below:
 
 ![Text with the CSS applied for the solution to task 4.](selectors4.jpg)
 
@@ -95,6 +103,8 @@ In this task, add CSS using attribute selectors to do the following:
 - Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
 - Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
 - Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
+
+Your final result should look like the image below:
 
 ![Four links with different color borders.](selectors-attribute.png)
 

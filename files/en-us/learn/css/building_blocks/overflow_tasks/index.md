@@ -34,6 +34,8 @@ Try updating the live code below to recreate the finished example:
 
 In this task, there is an image in the box that is bigger than the dimensions of the box so that it overflows visibly. Change it so that any image outside of the box is hidden.
 
+Your final result should look like the image below:
+
 ![A box with an image which fills the box but does not spill out the edges.](mdn-overflow2.png)
 
 Try updating the live code below to recreate the finished example:

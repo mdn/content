@@ -21,6 +21,8 @@ The aim of this skill test is to assess whether you understand how special eleme
 
 In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped.
 
+Your final result should look like the image below:
+
 ![An image in a box](mdn-images-object-fit.png)
 
 Try updating the live code below to recreate the finished example:
@@ -33,12 +35,14 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 2
 
-In this task, you have a simple form. Your task is to make the following changes to the way this form looks:
+In this task, you have a simple form. Your task is to make the following changes:
 
 - Use attribute selectors to target the search field and button inside `.myform`.
 - Make the form field and button use the same text size as the rest of the form.
 - Give the form field and button 10 px of padding.
 - Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
+
+Your final result should look like the image below:
 
 ![A single line form](mdn-images-form.png)
 

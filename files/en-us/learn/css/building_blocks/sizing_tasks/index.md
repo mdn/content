@@ -36,6 +36,8 @@ Try updating the live code below to recreate the finished example:
 
 In this task, you have a box, which contains another box. Your task is to make the inner box 60% of the width of the outer box. The value of the {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any padding and border. You should also give the inner box padding of 10% using the width (or inline size) as the size from which that percentage is calculated.
 
+Your final result should look like the image below:
+
 ![A box with another box nested inside](mdn-sizing-percentages.png)
 
 Try updating the live code below to recreate the finished example:
@@ -49,6 +51,8 @@ Try updating the live code below to recreate the finished example:
 ## Task 3
 
 In this task, you have two images in boxes. One image is smaller than the box, the other is larger and breaking out of the box. If you imagine that the box is responsive and therefore could grow and shrink, which property would you apply to the image so that the large image shrinks down into the box but the small image does not stretch.
+
+Your final result should look like the images below:
 
 ![Two boxes with images in](mdn-sizing-max-width.png)
 

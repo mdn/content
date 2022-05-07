@@ -23,9 +23,9 @@ In this task, the first list item has been given a background color using a hex 
 
 - The second list item should use RGB color.
 - The third should use HSL color.
-- The fourth should use RGB color but with the alpha channel set to `0.2`.
+- The fourth should use RGB color but with the alpha channel set to `0.6`.
 
-You can find conversions for the hex color at [this link](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS.
+You can find conversions for the hex color at [this link](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS. Your final result should look like the image below:
 
 ![Four list items. The first three with the same background color and the last with a lighter background.](mdn-value-color.png)
 
@@ -46,6 +46,8 @@ In this task, we want you to set the size of various items of text, as described
 - All `<p>` elements should be 16 pixels.
 - A `<p>` element that is directly after an `<h1>` should be 120%.
 
+Your final result should look like the image below:
+
 ![Some text at varying sizes.](mdn-value-length.png)
 
 Try updating the live code below to recreate the finished example:
@@ -59,6 +61,8 @@ Try updating the live code below to recreate the finished example:
 ## Task 3
 
 In this task, we want you to move the background image so that it is centered horizontally and is 20% from the top of the box.
+
+Your final result should look like the image below:
 
 ![A stat centered horizontally in a box and a short distance from the top of the box.](mdn-value-position.png)
 

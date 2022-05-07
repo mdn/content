@@ -20,7 +20,9 @@ The aim of this skill test is to assess whether you understand [CSS multiple-col
 
 ## Task 1
 
-In this task you need to create three columns, with a 50px gap between each column.
+In this task, we want you to create three columns, with a 50px gap between each column.
+
+Your final result should look like the image below:
 
 ![Three columns of text](multicol-task1.png)
 
@@ -34,9 +36,9 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 2
 
-Create columns which have a minimum width of 200px.
+In this task, we want you to create columns which have a minimum width of 200px. Then, add a 5px grey rule between each column, ensuring there is 10px of space between the edge of the rule and the column content.
 
-Then, add a 5px, grey rule between each column, ensuring there is 10px of space between the edge of the rule and the column content.
+Your final result should look like the image below:
 
 ![Three columns of text with a grey rule between them.](multicol-task2.png)
 
@@ -50,7 +52,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 3
 
-Cause the element containing the heading and subheading to span across all columns so it looks like the image.
+In this task, we want you to cause the element containing the heading and subheading to span across all columns so it looks like the image below:
 
 ![Three columns of text with a heading and subheading spanning all three in the middle.](multicol-task3.png)
 

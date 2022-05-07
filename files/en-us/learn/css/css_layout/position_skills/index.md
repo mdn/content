@@ -11,7 +11,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you understand the CSS {{CSSxRef("position")}} property and values. You will be working through two small tasks that use different elements of the material you have just covered.
+The aim of this skill test is to assess whether you understand [positioning in CSS](/en-US/docs/Learn/CSS/CSS_layout/Positioning) using the CSS {{CSSxRef("position")}} property and values. You will be working through two small tasks that use different elements of the material you have just covered.
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
@@ -19,7 +19,9 @@ The aim of this skill test is to assess whether you understand the CSS {{CSSxRef
 
 ## Task 1
 
-In this task you need to position the item with a class of target to the top and right of the container, which has the 5px grey border.
+In this task, we want you to position the item with a class of `target` to the top and right of the container, which has the 5px grey border.
+
+Your final result should look like the image below:
 
 ![The green box is at the top right of a container with a grey border.](position-task1.png)
 
@@ -27,7 +29,9 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/position/position1.html", '100%', 1000)}}
 
-As an extra challenge, can you change the target to display underneath the text?
+Additional question:
+
+- As an extra challenge, can you change the target to display underneath the text?
 
 > **Callout:**
 >
@@ -35,7 +39,7 @@ As an extra challenge, can you change the target to display underneath the text?
 
 ## Task 2
 
-In the example below, if you scroll the box the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.
+In this taks, if you scroll the box in the example below, the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.
 
 ![The content is scrolled but the sidebar has stayed in place.](position-task2.png)
 

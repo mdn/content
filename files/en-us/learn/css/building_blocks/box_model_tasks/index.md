@@ -43,6 +43,8 @@ In this task, add to the box:
 - A left margin of 2em.
 - Padding on all sides of 1em.
 
+Your final result should look like the image below:
+
 ![A box with a dotted border](mdn-box-model2.png)
 
 Try updating the live code below to recreate the finished example:
