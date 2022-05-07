@@ -19,15 +19,14 @@ The **`NotificationEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new NotificationEvent(type)
-new NotificationEvent(type, notificationEventInit)
+new NotificationEvent(type, NotificationEventInit);
 ```
 
 ### Parameters
 
 - `type`
   - : TBD
-- `notificationEventInit` {{optional_inline}}
+- `NotificationEventInit` {{optional_inline}}
   - : A dictionary object containing a {{domxref("Notification")}} object to be used as
     the notification the event is dispatched on. In later drafts of the specification,
     this parameter is not optional.
