@@ -18,14 +18,15 @@ The **`Worker()`** constructor creates a {{domxref("Worker")}} object that execu
 ## Syntax
 
 ```js
-new Worker(aURL, options);
+new Worker(aURL)
+new Worker(aURL, options)
 ```
 
 ### Parameters
 
-- _aURL_
+- `aURL`
   - : A {{domxref("USVString")}} representing the URL of the script the worker will execute. It must obey the same-origin policy.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
 

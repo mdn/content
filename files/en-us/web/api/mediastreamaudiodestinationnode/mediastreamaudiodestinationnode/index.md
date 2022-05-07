@@ -17,14 +17,15 @@ The **`MediaStreamAudioDestinationNode()`** constructor of the [Web Audio API](/
 ## Syntax
 
 ```js
-new MediaStreamAudioDestinationNode(context, options);
+new MediaStreamAudioDestinationNode(context)
+new MediaStreamAudioDestinationNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
-- _options {{optional_inline}}_
+- `options` {{optional_inline}}
 
   - : An object defining the properties you want the `MediaStreamAudioDestinationNode` to have:
 
@@ -41,10 +42,6 @@ new MediaStreamAudioDestinationNode(context, options);
       The possible values are `"speakers"` or `"discrete"`. (See
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
-
-### Return value
-
-A new {{domxref("MediaStreamAudioDestinationNode")}} object instance.
 
 ## Examples
 
