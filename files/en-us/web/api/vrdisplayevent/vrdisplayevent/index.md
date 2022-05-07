@@ -21,14 +21,14 @@ The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} o
 ## Syntax
 
 ```js
-new VRDisplayEvent(type, eventInitDict)
+new VRDisplayEvent(type, eventInitDict);
 ```
 
 ### Parameters
 
-- `type`
+- _type_
   - : A {{domxref("DOMString")}} describing the type of event object you want to create.
-- `eventInitDict`
+- _eventInitDict_
 
   - : A object containing initialization options to use when creating the constructor. These are:
 
