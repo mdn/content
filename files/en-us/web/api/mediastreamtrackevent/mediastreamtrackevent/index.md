@@ -2,11 +2,11 @@
 title: MediaStreamTrackEvent()
 slug: Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent
 tags:
- - API
- - Constructor
- - Media Streams API
- - MediaStreamTrackEvent
- - Reference
+  - API
+  - Constructor
+  - Media Streams API
+  - MediaStreamTrackEvent
+  - Reference
 browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
 ---
 {{APIRef("Media Streams API")}}
