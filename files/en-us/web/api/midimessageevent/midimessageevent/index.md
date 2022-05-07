@@ -15,15 +15,15 @@ The **`MIDIMessageEvent()`** constructor creates a new {{domxref("MIDIMessageEve
 ## Syntax
 
 ```js
-new MIDIMessageEvent(type)
-new MIDIMessageEvent(type, midiMessageEventInit)
+new MIDIMessageEvent(type);
+new MIDIMessageEvent(type, MIDIMessageEventInit);
 ```
 
 ### Parameters
 
 - `type`
   - : Will always be `'MIDIMessageEvent'`.
-- `midiMessageEventInit`{{optional_inline}}
+- `MIDIMessageEventInit`{{optional_inline}}
 
   - : A dictionary including the following fields:
 
