@@ -432,7 +432,7 @@ As shorthand, it is acceptable to write this as follows:
 <input type="text">
 ```
 
-For reference, the example above also includes a non-disabled form input element.The HTML from the example above produces this result:
+For reference, the example above also includes a non-disabled form input element. The HTML from the example above produces this result:
 
 {{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "") }}
 
@@ -749,7 +749,7 @@ At this point, you should understand what HTML looks like, and how it works at a
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 

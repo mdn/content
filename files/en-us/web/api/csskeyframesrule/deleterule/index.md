@@ -33,7 +33,7 @@ deleteRule(select)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -18,15 +18,15 @@ The **`AnalyserNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/
 ## Syntax
 
 ```js
-new AnalyserNode(context, options);
+new AnalyserNode(context)
+new AnalyserNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
-- _options_ {{optional_inline}}
-
+- `options` {{optional_inline}}
   - : An object with the following properties, all optional:
 
     - **`fftSize`**: The desired initial size of the [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) for [frequency-domain](https://en.wikipedia.org/wiki/Frequency_domain) analysis.
@@ -49,10 +49,6 @@ new AnalyserNode(context, options);
       The possible values are `"speakers"` or `"discrete"`. (See
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
-
-### Return value
-
-A new {{domxref("AnalyserNode")}} object instance.
 
 ## Specifications
 

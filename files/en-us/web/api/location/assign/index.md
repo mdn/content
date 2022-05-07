@@ -36,6 +36,10 @@ assign(url)
 - `url`
   - : Is a string containing the URL of the page to navigate to.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

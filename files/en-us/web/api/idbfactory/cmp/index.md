@@ -53,11 +53,8 @@ possible values and their meanings:
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
-
-| Attribute                                   | Description                                   |
-| ------------------------------------------- | --------------------------------------------- |
-| [`DataError`](/en-US/docs/Web/API/DOMError) | One of the supplied keys was not a valid key. |
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if one of the supplied keys was not a valid key.
 
 ## Examples
 

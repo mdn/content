@@ -21,7 +21,7 @@ instance.
 ## Syntax
 
 ```js
-new SpeechGrammar();
+new SpeechGrammar()
 ```
 
 ### Parameters

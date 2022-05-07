@@ -25,7 +25,7 @@ provide optional added details beyond the short description provided in the
 
 ## Value
 
-A {{domxref("DOMString")}} which may be either an empty string (indicating that no long
+A string which may be either an empty string (indicating that no long
 description is available) or the URL of a file containing a long form description of the
 image's contents.
 

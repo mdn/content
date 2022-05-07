@@ -34,7 +34,7 @@ releasePointerCapture(pointerId)
 
 ### Return value
 
-This method returns `undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

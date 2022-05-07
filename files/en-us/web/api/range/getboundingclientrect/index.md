@@ -30,6 +30,10 @@ getBoundingClientRect()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML

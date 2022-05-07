@@ -17,7 +17,7 @@ browser-compat: api.TransitionEvent.initTransitionEvent
 
 The **`TransitionEvent.initTransitionEvent()`** method
 Initializes a transition event created using the deprecated
-{{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}}
+{{domxref("Document.createEvent()", "Document.createEvent('TransitionEvent')")}}
 method.
 
 `TransitionEvent` created that way are untrusted.
@@ -58,6 +58,10 @@ initTransitionEvent(typeArg, canBubbleArg, cancelableArg, transitionNameArg, ela
 - _elapsedTimeArg_
   - : Is `float` giving the amount of time the transition has been running, in
     seconds, when this event fired.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

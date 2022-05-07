@@ -51,7 +51,7 @@ Notice we didn't mention price. Obviously, that matters too, but a product's cos
 
 Here are some popular editors:
 
-<table class="standard-table" &#x22;="">
+<table class="standard-table">
   <thead>
     <tr>
       <th scope="col">Editor</th>

@@ -4,7 +4,7 @@ slug: Web/CSS/offset-anchor
 tags:
   - CSS
   - CSS Motion Path
-  - Experimental
+  - CSS Property
   - Motion Path
   - Reference
   - offset-anchor

@@ -1021,25 +1021,6 @@
       "cbiesinger"
     ]
   },
-  "Glossary/404": {
-    "modified": "2020-09-03T07:10:41.617Z",
-    "contributors": [
-      "SphinxKnight",
-      "xiaohuoni",
-      "Andrew_Pfeiffer",
-      "klez",
-      "vernvernvern",
-      "LauraHilliger"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-23T23:16:56.389Z",
-    "contributors": [
-      "Andrew_Pfeiffer",
-      "klez",
-      "ajinkya_p"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2020-05-13T02:58:53.186Z",
     "contributors": [
@@ -82679,20 +82660,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Window/dialogArguments": {
-    "modified": "2020-10-15T21:14:36.218Z",
-    "contributors": [
-      "fscholz",
-      "david_ross",
-      "sarafec",
-      "cesarandreu",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "Matej Lednar"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2020-12-02T10:36:56.203Z",
     "contributors": [
@@ -130163,24 +130130,6 @@
       "evilpie",
       "Sevenspade",
       "Waldo"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Error/toSource": {
-    "modified": "2020-10-30T10:49:16.284Z",
-    "contributors": [
-      "mfuji09",
-      "jangromko",
-      "fscholz",
-      "wbamberg",
-      "schlagi123",
-      "deecewan",
-      "eduardoboucas",
-      "Mingun",
-      "chridal",
-      "Sheppy",
-      "ethertank",
-      "evilpie",
-      "Sevenspade"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {

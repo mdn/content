@@ -28,6 +28,10 @@ escape(str)
 - _str_
   - : The string to be escaped.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Basic results

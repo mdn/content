@@ -91,7 +91,7 @@ Other formats improve on JPEG's capabilities in regards to compression, but are 
 
 Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG today is WebP. Which is why you could consider offering your images in that flavor, too, for the browsers that support it. This can be done via the `<picture>` element with the help of a `<source>` element equipped with a [type attribute](/en-US/docs/Web/HTML/Element/picture#the_type_attribute).
 
-If all of this sounds a bit complicated or feels like too much work for your team then there is also online services that you can use as image CDNs that will automate the serving of the correct image format on-the-fly, according to the type of device or browser requesting the image. The biggest ones are [Cloudinary](https://cloudinary.com/features/responsive_images) and [Image Engine](https://imageengine.io/).
+If all of this sounds a bit complicated or feels like too much work for your team then there is also online services that you can use as image CDNs that will automate the serving of the correct image format on-the-fly, according to the type of device or browser requesting the image. The biggest ones are [Cloudinary](https://cloudinary.com/blog/make_all_images_on_your_website_responsive_in_3_easy_steps) and [Image Engine](https://imageengine.io/).
 
 And finally, should you want to include animated images into your page, then know that Safari allows using video files within `<img>` and `<picture>` elements. These also allow you to add in an **Animated WebP** for all other modern browsers.
 
@@ -109,7 +109,7 @@ In image delivery the "one size fits all" approach will not yield the best resul
 
 Two interesting effects to keep in mind regarding high dpi screens is that:
 
-- with high DPI screen, [humans will spot compression artifacts a lot later](https://www.netvlies.nl/tips-updates/algemeen/design-interactie/retina-revolution/), meaning that for images meant for these screens you can crank up compression beyond usual.
+- with a high DPI screen, humans will spot compression artifacts a lot later, meaning that for images meant for these screens you can crank up compression beyond usual.
 - [Only a very few people can spot an increase in resolution beyond 2× DPI](https://observablehq.com/@eeeps/visual-acuity-and-device-pixel-ratio), which means you don't need to serve images resolving higher than 2×.
 
 #### Controlling the priority (and ordering) of downloading images

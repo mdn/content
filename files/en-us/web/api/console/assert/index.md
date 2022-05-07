@@ -45,6 +45,10 @@ assert(assertion, msg, subst1, /* ... ,*/ substN)
     `msg`. This parameter gives you additional control over the format of the
     output.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 The following code example demonstrates the use of a JavaScript object following the

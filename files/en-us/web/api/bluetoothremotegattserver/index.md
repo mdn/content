@@ -16,10 +16,6 @@ browser-compat: api.BluetoothRemoteGATTServer
 The **`BluetoothRemoteGATTServer`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT
 Server on a remote device.
 
-> **Note:** This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
-> Bluetooth API, see [`BluetoothGattServer`
-> (Firefox OS)](/en-US/docs/Archive/B2G_OS/API/BluetoothGattServer).
-
 ## Properties
 
 - {{DOMxRef("BluetoothRemoteGATTServer.connected")}}{{ReadOnlyInline}}

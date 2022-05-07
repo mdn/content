@@ -24,7 +24,7 @@ retrieving the image.
 
 ## Value
 
-A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
+A string of a keyword specifying the CORS mode to use when fetching
 the image resource. If you don't specify `crossOrigin`, the image is fetched
 without CORS (the fetch `no-cors` mode).
 

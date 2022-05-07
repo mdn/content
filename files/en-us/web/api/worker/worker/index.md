@@ -18,14 +18,15 @@ The **`Worker()`** constructor creates a {{domxref("Worker")}} object that execu
 ## Syntax
 
 ```js
-new Worker(aURL, options);
+new Worker(aURL)
+new Worker(aURL, options)
 ```
 
 ### Parameters
 
-- _aURL_
+- `aURL`
   - : A {{domxref("USVString")}} representing the URL of the script the worker will execute. It must obey the same-origin policy.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
 
@@ -38,7 +39,7 @@ new Worker(aURL, options);
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.
 - `NetworkError` {{domxref("DOMException")}}
-  - : Thrown if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript` 
+  - : Thrown if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript`
     (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) may be accepted).
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if _aURL_ cannot be parsed.

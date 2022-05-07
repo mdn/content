@@ -19,7 +19,8 @@ The **`ExtendableEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new ExtendableEvent(type, init);
+new ExtendableEvent(type)
+new ExtendableEvent(type, init)
 ```
 
 ### Parameters

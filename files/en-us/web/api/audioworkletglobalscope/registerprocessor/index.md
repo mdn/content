@@ -38,7 +38,7 @@ registerProcessor(name, processorCtor)
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

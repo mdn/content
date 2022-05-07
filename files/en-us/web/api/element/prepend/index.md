@@ -33,7 +33,7 @@ prepend(param1, param2, /* ... ,*/ paramN)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

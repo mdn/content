@@ -11,8 +11,6 @@ tags:
 ---
 {{APIRef("File System API")}}{{ non-standard_header }}
 
-## Summary
-
 Specifies an event listener to receive {{event("error")}} events. These events occur when something goes wrong.
 
 ## Value

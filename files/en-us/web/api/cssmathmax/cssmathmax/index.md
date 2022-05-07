@@ -20,12 +20,12 @@ new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max()',
 ## Syntax
 
 ```js
-new CSSMathMax(args);
+new CSSMathMax(args)
 ```
 
 ### Parameters
 
-- args
+- `args`
   - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
     integer or a {{domxref('CSSNumericValue')}}.
 

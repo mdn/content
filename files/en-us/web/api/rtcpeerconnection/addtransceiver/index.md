@@ -48,6 +48,10 @@ addTransceiver(trackOrKind, init)
     - `streams` {{optional_inline}}
       - : A list of {{domxref("MediaStream")}} objects to add to the transceiver's {{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.track_event", "track")}} event occurs, these are the streams that will be specified by that event.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - {{jsxref("TypeError")}}

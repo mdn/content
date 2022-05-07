@@ -66,7 +66,7 @@ selection.addRange(range);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples", 400, 210)}}
 
 ## Specifications
 

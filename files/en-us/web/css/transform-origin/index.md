@@ -293,7 +293,7 @@ transform-origin: 100% -30%;
   transform: scale(1.7);
 }
 
-.box7  {
+.box7 {
   transform: scale(1.7);
   transform-origin: 0 0;
 }

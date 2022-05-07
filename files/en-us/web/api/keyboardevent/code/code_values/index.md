@@ -2,6 +2,7 @@
 title: 'KeyboardEvent: code values'
 slug: Web/API/KeyboardEvent/code/code_values
 ---
+{{APIRef("DOM Events")}}
 The following tables show what code values are used for each native scancode or virtual keycode on major platforms. The reason is that some browsers choose to interpret physical keys differently, there are some differences in which keys map to which codes. These tables show those variations when known.
 
 ## Code values on Windows
@@ -1418,7 +1419,7 @@ In the cells,
       <th scope="row"><code>kVK_VolumeUp (0x48)</code></th>
       <td><code>"VolumeUp"</code> (⚠️ Not the same on Chromium)</td>
       <td>
-        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Chromium
+        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Chromium
         1)  (⚠️ Not the same on Gecko)
       </td>
     </tr>
@@ -1426,7 +1427,7 @@ In the cells,
       <th scope="row"><code>kVK_VolumeDown (0x49)</code></th>
       <td><code>"VolumeDown"</code> (⚠️ Not the same on Chromium)</td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
         Chromium 52) (⚠️ Not the same on Gecko)
       </td>
     </tr>
@@ -1434,7 +1435,7 @@ In the cells,
       <th scope="row"><code>kVK_Mute (0x4A)</code></th>
       <td><code>"VolumeMute"</code> (⚠️ Not the same on Chromium)</td>
       <td>
-        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
+        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
         Chromium 52) (⚠️ Not the same on Gecko)
       </td>
     </tr>
@@ -2265,7 +2266,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <th scope="row"><code>0x0079</code></th>
       <td><code>"VolumeMute"</code> (⚠️ Not the same on Chromium)</td>
       <td>
-        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
+        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
         Chromium 52) (⚠️ Not the same on Gecko)
       </td>
     </tr>
@@ -2273,7 +2274,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <th scope="row"><code>0x007A</code></th>
       <td><code>"VolumeDown"</code> (⚠️ Not the same on Chromium)</td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
         Chromium 52) (⚠️ Not the same on Gecko)
       </td>
     </tr>
@@ -2281,7 +2282,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <th scope="row"><code>0x007B</code></th>
       <td><code>"VolumeUp"</code> (⚠️ Not the same on Chromium)</td>
       <td>
-        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chromium
+        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chromium
         52) (⚠️ Not the same on Gecko)
       </td>
     </tr>

@@ -30,7 +30,7 @@ delete(name)
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

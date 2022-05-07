@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.WebAssembly.Tag.Tag
 ---
 {{JSRef}}
 
-The **`WebAssembly.Tag()`** constructor creates a new [`WebAssembly.Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) object.    
+The **`WebAssembly.Tag()`** constructor creates a new [`WebAssembly.Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) object.
 
 ## Syntax
 
@@ -33,7 +33,6 @@ new WebAssembly.Tag(type)
 - `TypeError`
   - : The `type.parameters` argument is not supplied, does not contain at least one value, or contains an unsupported tag descriptor.
 
-
 ## Examples
 
 This creates a tag with two values.
@@ -41,7 +40,6 @@ This creates a tag with two values.
 ```js
 const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 ```
-
 
 ## Specifications
 

@@ -503,7 +503,6 @@ As we've mentioned above a few times, if you want to gain full control over the 
 
 - [Uni-form](https://github.com/draganbabic/uni-form) is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.
 - [Formalize](https://formalize.me/) is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.
-- [Niceforms](https://www.emblematiq.com/lab/niceforms/) is a standalone JavaScript method that provides complete customization of web forms. You can use some of the built in themes, or create your own.
 
 The following libraries aren't just about forms, but they have very interesting features for dealing with HTML forms:
 

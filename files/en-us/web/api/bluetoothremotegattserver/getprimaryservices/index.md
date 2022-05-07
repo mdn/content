@@ -12,7 +12,7 @@ tags:
   - getPrimaryServices()
 browser-compat: api.BluetoothRemoteGATTServer.getPrimaryServices
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **BluetoothRemoteGATTServer.getPrimaryServices()** method returns a
 promise to a list of primary {{domxref("BluetoothRemoteGATTService")}} objects offered by the
@@ -24,15 +24,15 @@ Bluetooth device for a specified `BluetoothServiceUUID`.
 getPrimaryServices(bluetoothServiceUUID)
 ```
 
+### Parameters
+
+- `bluetoothServiceUUID`
+  - : A Bluetooth service universally unique identifier for a specified device.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a list of {{domxref("BluetoothRemoteGATTService")}}
 objects.
-
-### Parameters
-
-- `BluetoothServiceUUID`
-  - : A Bluetooth service universally unique identifier for a specified device.
 
 ## Specifications
 

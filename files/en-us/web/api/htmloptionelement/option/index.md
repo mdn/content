@@ -20,7 +20,11 @@ The **`Option()`** constructor creates a new
 ## Syntax
 
 ```js
-new Option(text, value, defaultSelected, selected);
+new Option()
+new Option(text)
+new Option(text, value)
+new Option(text, value, defaultSelected)
+new Option(text, value, defaultSelected, selected)
 ```
 
 ### Parameters

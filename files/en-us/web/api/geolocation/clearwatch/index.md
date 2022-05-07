@@ -29,6 +29,10 @@ clearWatch(id)
   - : The ID number returned by the {{domxref("Geolocation.watchPosition()")}} method when
     installing the handler you wish to remove.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

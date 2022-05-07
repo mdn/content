@@ -40,6 +40,10 @@ bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
 - `y`
   - : The y-axis coordinate of the end point.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### How bezierCurveTo works

@@ -18,7 +18,8 @@ The **`Notification()`** constructor creates a new
 ## Syntax
 
 ```js
-new Notification(title, options);
+new Notification(title)
+new Notification(title, options)
 ```
 
 ### Parameters

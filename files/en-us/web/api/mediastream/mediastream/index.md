@@ -30,18 +30,18 @@ the stream has no tracks.
 ## Syntax
 
 ```js
-new MediaStream();
-new MediaStream(stream);
-new MediaStream(tracks);
+new MediaStream()
+new MediaStream(stream)
+new MediaStream(tracks)
 ```
 
 ### Parameters
 
-- `stream`
+- `stream` {{optional_inline}}
   - : A different {{domxref("MediaStream")}} object whose tracks are added to the
     newly-created stream automatically. The tracks are not removed from the original
     stream, so they're shared by the two streams.
-- `tracks`
+- `tracks` {{optional_inline}}
   - : An {{jsxref("Array")}} of {{domxref("MediaStreamTrack")}} objects, one for each
     track to add to the stream.
 

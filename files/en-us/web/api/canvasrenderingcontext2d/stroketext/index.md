@@ -62,7 +62,7 @@ strokeText(text, x, y, maxWidth)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

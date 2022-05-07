@@ -57,7 +57,7 @@ setValidity(flags, message, anchor)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

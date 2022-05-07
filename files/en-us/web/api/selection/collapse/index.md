@@ -33,6 +33,10 @@ collapse(node, offset)
   - : The offset in `node` to which the selection will be collapsed. If not
     specified, the default value `0` is used.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

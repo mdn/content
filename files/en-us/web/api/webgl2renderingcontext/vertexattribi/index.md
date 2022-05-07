@@ -38,7 +38,7 @@ vertexAttribI4uiv(index, value)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

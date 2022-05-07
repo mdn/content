@@ -45,7 +45,7 @@ mozClearDataAt(type, index)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

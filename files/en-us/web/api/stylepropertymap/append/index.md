@@ -33,7 +33,7 @@ append(property, value)
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -71,7 +71,7 @@ observe(target, options)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -43,7 +43,7 @@ navigator.getVRDisplays().then(function(displays) {
       }
     });
   }
-}); 
+});
 ```
 
 ## Specifications

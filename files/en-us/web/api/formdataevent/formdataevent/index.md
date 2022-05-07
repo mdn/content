@@ -24,7 +24,7 @@ new FormDataEvent(type, formEventInit);
 ### Values
 
 - `type`
-  - : A {{domxref("DOMString")}} representing the name of the event.
+  - : A string representing the name of the event.
 - `formEventInit` {{optional_inline}}
 
   - : A `FormEventInit` dictionary, which can take the following optional

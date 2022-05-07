@@ -31,6 +31,10 @@ replaceChildren(param1, param2, /* ... ,*/ paramN)
     `Document`'s existing children with. If no replacement objects are
     specified, then the `Document` is emptied of all child nodes.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}

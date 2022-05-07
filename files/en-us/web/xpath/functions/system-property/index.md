@@ -32,7 +32,7 @@ An object representing the given system-property.
 
 ### Defined
 
-[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-system-property)
+[XSLT 1.0 12.4](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-system-property)
 
 ### Gecko support
 

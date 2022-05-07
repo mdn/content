@@ -34,6 +34,10 @@ drawWidgetAsOnScreen(window)
 - `window`
   - : The {{domxref("Window")}} to render.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 Not part of any current specification or draft. This is a non-standard and internal

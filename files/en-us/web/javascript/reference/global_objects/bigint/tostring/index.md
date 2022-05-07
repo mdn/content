@@ -75,7 +75,7 @@ complement of the `bigIntObj`.
 
 There is no negative-zero `BigInt` as there are no negative zeros in
 integers. `-0.0` is an IEEE floating-point concept that only appears in the
-JavaScript {{jsxref("Number")}} type.
+JavaScript [`Number`](/en-US/docs/Web/JavaScript/Data_structures#number_type) type.
 
 ```js
 (-0n).toString();      // '0'

@@ -29,7 +29,7 @@ deleteFramebuffer(framebuffer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -45,6 +45,10 @@ profileEnd(profileName)
 - `profileName`
   - : The name to give the profile. This parameter is optional.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Browser compatibility
 
 {{Compat}}

@@ -13,7 +13,7 @@ browser-compat: api.ProgressEvent.initProgressEvent
 
 The **`ProgressEvent.initProgressEvent()`** method Initializes
 an animation event created using the deprecated {{domxref("Document.createEvent()",
-  "Document.createEvent(\"ProgressEvent\")")}} method.
+  "Document.createEvent('ProgressEvent')")}} method.
 
 `ProgressEvent` created that way are untrusted.
 
@@ -63,6 +63,10 @@ initProgressEvent(typeArg, canBubbleArg, cancelableArg, lengthComputable, loaded
   - : Is an `unsigned long long` representing the total amount of work that the
     underlying process is in the progress of performing. When downloading a resource using
     HTTP, this only represent the content itself, not headers and other overhead.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

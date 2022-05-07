@@ -31,6 +31,10 @@ moveBy(deltaX, deltaY)
 - `deltaY` is the amount of pixels to move the window vertically. Positive
   values are down, while negative values are up.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example moves the window 10 pixels to the right and 10 pixels up.

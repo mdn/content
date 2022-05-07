@@ -22,18 +22,18 @@ load(font)
 load(font, text)
 ```
 
-### Return value
-
-A {{jsxref("Promise")}} of an {{jsxref("Array")}} of {{jsxref("FontFace")}} loaded. The
-promise is fulfilled when all the fonts are loaded; it is rejected if one of the fonts
-failed to load.
-
 ### Parameters
 
 - `font`
   - : a font specification using the [CSS value syntax](/en-US/docs/), e.g. "italic bold 16px Roboto"
 - `text`
   - : limit the font faces to those whose Unicode range contains at least one of the characters in text. This [does not check for individual glyph coverage](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html).
+
+### Return value
+
+A {{jsxref("Promise")}} of an {{jsxref("Array")}} of {{jsxref("FontFace")}} loaded. The
+promise is fulfilled when all the fonts are loaded; it is rejected if one of the fonts
+failed to load.
 
 ## Examples
 

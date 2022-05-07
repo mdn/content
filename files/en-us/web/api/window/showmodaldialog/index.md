@@ -31,9 +31,7 @@ showModalDialog(uri, arguments, options)
 - `uri`
   - : Is the URL of the document to display in the dialog.
 - `arguments` {{optional_inline}}
-  - : Values passed to the dialog; these are made available in the
-    [`window`](/en-US/docs/Web/API/Window) object's
-    [`window.dialogArguments`](/en-US/docs/Web/API/Window/dialogArguments)
+  - : Values passed to the dialog.
     property.
 - `options` {{optional_inline}}
   - : A string specifying window ornamentation for the

@@ -21,7 +21,7 @@ As a setter this will replace the element's children with the given value, conve
 
 ## Value
 
-A {{domxref("DOMString")}} representing the rendered text content of an element.
+A string representing the rendered text content of an element.
 
 If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 

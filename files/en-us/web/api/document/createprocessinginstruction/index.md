@@ -28,6 +28,10 @@ createProcessingInstruction(target, data)
 - `target` is a string containing the first part of the processing instruction (i.e., `<?target … ?>`)
 - `data` is a string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}

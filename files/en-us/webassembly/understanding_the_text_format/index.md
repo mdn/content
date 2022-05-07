@@ -575,7 +575,6 @@ The new operations are:
 
 > **Note:** You can find more information in the [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) proposal.
 
-
 ## Types
 
 ### Number types

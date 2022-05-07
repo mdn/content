@@ -27,6 +27,10 @@ exitPointerLock()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

@@ -15,14 +15,15 @@ The **`TextDecoderStream()`** constructor creates a new {{domxref("TextDecoderSt
 ## Syntax
 
 ```js
-new TextDecoderStream(label,options);
+new TextDecoderStream(label)
+new TextDecoderStream(label, options)
 ```
 
 ### Parameters
 
-- label
+- `label`
   - : A {{domxref("DOMString")}} defaulting to `utf-8`. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : A `TextDecoderOptions` dictionary with the property:
 

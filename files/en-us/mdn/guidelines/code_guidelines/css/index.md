@@ -49,7 +49,7 @@ Don't use preprocessor syntax, e.g. [Sass](https://sass-lang.com/), [Less](https
 
 ### Don't use specific CSS methodologies
 
-In the same spirit as the previous guideline, don't write MDN example code using a specific CSS methodology such as [BEM](http://getbem.com/naming/) or [SMACSS](https://smacss.com/). Even though they are valid CSS syntax, the naming conventions can be confusing to people not familiar with those methodologies.
+In the same spirit as the previous guideline, don't write MDN example code using a specific CSS methodology such as [BEM](http://getbem.com/naming/) or [SMACSS](http://smacss.com/). Even though they are valid CSS syntax, the naming conventions can be confusing to people not familiar with those methodologies.
 
 ### Use flexible/relative units
 

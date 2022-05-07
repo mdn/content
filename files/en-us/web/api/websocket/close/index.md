@@ -40,6 +40,10 @@ close(code, reason)
 
     If you specify a `reason` value, you should also specify a [`code`](#code) value.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}

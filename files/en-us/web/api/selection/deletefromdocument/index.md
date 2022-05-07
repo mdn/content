@@ -25,6 +25,10 @@ deleteFromDocument()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example lets you delete selected text by clicking a button. Upon clicking the

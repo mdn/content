@@ -11,8 +11,6 @@ tags:
 ---
 {{APIRef("File System API")}}{{non-standard_header}}
 
-## Summary
-
 Provides the name of the file.
 
 ## Value

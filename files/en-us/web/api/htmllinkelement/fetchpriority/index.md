@@ -21,7 +21,7 @@ resources of the same type.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the priority hint. Possible values are:
+A string representing the priority hint. Possible values are:
 
 - **`high`**: Fetch the preload at a high priority relative to other resources
   of the same type.

@@ -61,7 +61,7 @@ drawElements(mode, count, type, offset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

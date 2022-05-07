@@ -126,7 +126,7 @@ fullscreen_btn.addEventListener('click', () => {
 To test the example, first press the Fullscreen button.
 Once the example is full screen, press the Lock button to switch the orientation, and Unlock to return to the natural orientation.
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

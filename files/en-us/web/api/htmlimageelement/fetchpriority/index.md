@@ -18,7 +18,7 @@ it should prioritize the fetch of the image relative to other images.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the priority hint. Possible values are:
+A string representing the priority hint. Possible values are:
 
 - **`high`**: Fetch the image at a high priority relative to other images.
 - **`low`**: Fetch the image at a low priority relative to other images.

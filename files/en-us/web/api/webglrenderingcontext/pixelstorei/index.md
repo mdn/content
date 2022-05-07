@@ -30,7 +30,7 @@ pixelStorei(pname, param)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Pixel storage parameters
 
