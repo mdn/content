@@ -22,7 +22,7 @@ close it.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the `returnValue` of the dialog.
+A string representing the `returnValue` of the dialog.
 
 ## Examples
 
