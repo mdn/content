@@ -19,7 +19,7 @@ The **`RTCPeerConnectionIceEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new RTCPeerConnectionIceEvent(type, options)
+new RTCPeerConnectionIceEvent(type, options);
 ```
 
 ### Parameters
