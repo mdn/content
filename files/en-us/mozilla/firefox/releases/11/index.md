@@ -121,7 +121,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Preference changes
 
-- {{Pref("ui.tooltipDelay")}}
+- `ui.tooltipDelay`
   - : Specifies the delay, in milliseconds, between the mouse cursor beginning to hover and the display of a tooltip.
 
 ### Build system changes
