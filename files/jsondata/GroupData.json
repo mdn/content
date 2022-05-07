@@ -80,7 +80,6 @@
         "/docs/Web/API/Canvas_API/Manipulating_video_using_canvas"
       ],
       "interfaces": [
-        "Canvas",
         "CanvasGradient",
         "CanvasImageSource",
         "CanvasPattern",
