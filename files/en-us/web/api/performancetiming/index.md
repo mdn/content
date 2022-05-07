@@ -64,7 +64,7 @@ These properties are listed in the order in which they occur during the navigati
 - {{domxref("PerformanceTiming.domInteractive")}} {{readonlyInline}} {{deprecated_inline}}
   - : When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to `'interactive'` and the corresponding {{event("readystatechange")}} event is thrown.
 - {{domxref("PerformanceTiming.domContentLoadedEventStart")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Right before the parser sent the {{event("DOMContentLoaded")}} event, that is right after all the scripts that need to be executed right after parsing have been executed.
+  - : Right before the parser sent the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event, that is right after all the scripts that need to be executed right after parsing have been executed.
 - {{domxref("PerformanceTiming.domContentLoadedEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
   - : Right after all the scripts that need to be executed as soon as possible, in order or not, have been executed.
 - {{domxref("PerformanceTiming.domComplete")}} {{readonlyInline}} {{deprecated_inline}}
