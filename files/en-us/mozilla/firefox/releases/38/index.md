@@ -31,7 +31,7 @@ Highlights:
 - The {{cssxref(":unresolved")}} pseudo-class has been implemented for custom elements ({{bug(1111633)}}).
 - The predefined style {{cssxref("list-style-type", "ethiopic-numeric")}} now uses a space, instead of a dot, as the suffix to match a recent change to the spec ({{bug(1120721)}}).
 - CSS transitions on generated content (with {{cssxref("::before")}} and {{cssxref("::after")}}) on both an inline and the block that splits them now start as expected by the specification ({{bug(1110277)}}).
-- The implementation of CSS Logical Properties made big progress. The following properties are available behind the {{pref("layout.css.vertical-text.enabled")}} flag (`false` by default):
+- The implementation of CSS Logical Properties made big progress. The following properties are available behind the `layout.css.vertical-text.enabled` flag (`false` by default):
 
   - Direction-independent equivalents of {{cssxref("width")}} and {{cssxref("height")}}: {{cssxref("block-size")}} and {{cssxref("inline-size")}} ({{bug(1117983)}}).
   - Direction-independent equivalents of {{cssxref("min-width")}} and {{cssxref("min-height")}}: {{cssxref("min-block-size")}} and {{cssxref("min-inline-size")}} ({{bug(1117983)}}).
@@ -110,7 +110,7 @@ _No change._
 
 - In Firefox, the {{htmlattrxref("autocomplete", "input")}}`=false` attribute is now ignored when dealing with a login form ({{bug(1025703)}}). This is intended to encourage the use of more secure passwords by allowing password manager tools to work more reliably.
 - RC4 is now disabled when using TLS, except for a few specifically whitelisted Web sites. This whitelist is an interim measure until those sites are fixed ({{bug(1124039)}}). This fallback is controlled by the `security.tls.unrestricted_rc4_fallback` preference, `true` by default for the moment ({{bug(1138882)}}).
-- Web sites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ({{bug(1114816)}}). The whitelist can be disabled by setting {{pref("security.tls.insecure_fallback_hosts.use_static_list")}}  to `false`.
+- Web sites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ({{bug(1114816)}}). The whitelist can be disabled by setting `security.tls.insecure_fallback_hosts.use_static_list` to `false`.
 
 ## Changes for add-on and Mozilla developers
 
