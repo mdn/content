@@ -2112,7 +2112,6 @@
 /en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/DOM/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/DOM/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
-/en-US/docs/DOM/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
 /en-US/docs/DOM/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/DOM/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/DOM/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3294,7 +3293,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Document_Object_Model_(DOM)/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
-/en-US/docs/Document_Object_Model_(DOM)/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
 /en-US/docs/Document_Object_Model_(DOM)/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Document_Object_Model_(DOM)/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/Document_Object_Model_(DOM)/window.forward	/en-US/docs/Web/API/Window/forward
@@ -10293,7 +10291,6 @@
 /en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Web/API/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Web/API/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
-/en-US/docs/Web/API/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
 /en-US/docs/Web/API/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Web/API/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/Web/API/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape

@@ -82660,20 +82660,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Window/dialogArguments": {
-    "modified": "2020-10-15T21:14:36.218Z",
-    "contributors": [
-      "fscholz",
-      "david_ross",
-      "sarafec",
-      "cesarandreu",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "Matej Lednar"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2020-12-02T10:36:56.203Z",
     "contributors": [
