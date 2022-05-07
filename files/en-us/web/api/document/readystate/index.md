@@ -98,5 +98,5 @@ document.addEventListener('readystatechange', event => {
 ## See also
 
 - {{event("readystatechange")}} event
-- {{event("DOMContentLoaded")}} event
+- {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event
 - {{event("load")}} event

@@ -86,7 +86,7 @@ Highlights:
 - The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the `RangeError` {{domxref("DOMException")}} is now raised, rather than the erroneous {{jsxref("TypeError")}} ({{bug(1125766)}}).
 - The User Timing API, adding {{domxref("Performance.mark()")}}, {{domxref("Performance.clearMarks()")}}, {{domxref("Performance.measure()")}}, and {{domxref("Performance.clearMeasures()")}} has been implemented ({{bug(782751)}}).
 - The prefixed version of {{domxref("indexedDB")}}, `mozIndexedDB` has been removed ({{bug(975699)}}).
-- The {{event("DOMContentLoaded")}} event is no longer cancelable ({{bug(1134559)}}).
+- The {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is no longer cancelable ({{bug(1134559)}}).
 - You can now use [WebSockets](/en-US/docs/Web/API/WebSockets_API) in [Workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(504553)}}).
 - The {{domxref("XMLHttpRequest.responseType")}} and {{domxref("XMLHttpRequest.withCredentials")}} properties can now be set before calling {{domxref("XMLHttpRequest.open()")}} ({{bug(707484)}}).
 
