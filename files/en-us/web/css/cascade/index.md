@@ -132,8 +132,8 @@ li { margin-left: 0 } /* This is a reset */
 
 ```html
 <ul>
-  <li class="specific">1<sup>st</sup></li>
-  <li>2<sup>nd</sup></li>
+<li class="specific">1<sup>st</sup></li>
+<li>2<sup>nd</sup></li>
 </ul>
 ```
 
@@ -192,7 +192,7 @@ In this example, the author used CSS's {{CSSXref('@import')}} rule to import fiv
 and then in the body of the document we have inline styles:
 
 ```html
-  <p style="line-height: 1.6em; text-decoration: overline !important;">Hello</p>
+<p style="line-height: 1.6em; text-decoration: overline !important;">Hello</p>
 ```
 
  Three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer. The "All unlayered styles" in the list of normal author style precendence order includes styles from these two stylesheets and the additional unlayered CSS style blocks. In addition, there are two inline styles, a normal `line-height` declaration and an important `text-decoration` declaration:
@@ -270,32 +270,32 @@ Styles that are transitioning take precendence over all important styles, no mat
 Now that we have a better understanding of origin type and cascade layer precedence, we realize the table in [Cascading order](#cascading-order) could have more accurately been represented by the following table: 
 
 <table>
-  <thead>
+<thead>
   <tr><th>Precedence</th><th>Style Origin</th><th>Importance</th></tr>
-  </thead>
-  <tbody>
-<tr><td rowspan="3">1</td><td> user-agent - first declared layer</td><td rowspan="3"> normal</td></tr>
-<tr><td> user-agent - last declared layer</td></tr>
-<tr><td> user-agent - unlayered styles</td></tr>
-<tr><td rowspan="3"> 2   </td><td> user - first declared layer</td><td rowspan="3"> normal</td></tr>
-<tr><td> user - last declared layer</td></tr>
-<tr><td> user - unlayered styles</td></tr>
-<tr><td rowspan="4"> 3 </td><td> author - first declared layer     </td><td rowspan="4"> normal</td></tr>
-<tr><td> author - last declared layer</td></tr>
-<tr><td> author - unlayered styles</td></tr>
-<tr><td> inline <code>style</code></td></tr>
-<tr><td> 4   </td><td> animations  </td><td>              </td></tr>
-<tr><td rowspan="4"> 5   </td><td> author - unlayered styles      </td><td rowspan="4"> `!important` </td></tr>
-<tr><td> author - last declared layer</td></tr>
-<tr><td> author - first declared layer</td></tr>
-<tr><td> inline <code>style</code></td></tr>
-<tr><td rowspan="3"> 6</td><td> user - unlayered styles</td><td rowspan="3"> `!important` </td></tr>
-<tr><td> user - last declared layer</td></tr>
-<tr><td> user - first declared styles</td></tr>
-<tr><td rowspan="3"> 7   </td><td> user-agent  - unlayered styles</td><td rowspan="3"> `!important` </td></tr>
-<tr><td> user-agent - last declared layer</td></tr>
-<tr><td> user-agent - first declared styles</td></tr>
-<tr><td> 8   </td><td> transitions </td><td></td></tr>
+</thead>
+<tbody>
+  <tr><td rowspan="3">1</td><td>user-agent - first declared layer</td><td rowspan="3">normal</td></tr>
+  <tr><td>user-agent - last declared layer</td></tr>
+  <tr><td>user-agent - unlayered styles</td></tr>
+  <tr><td rowspan="3">2</td><td>user - first declared layer</td><td rowspan="3">normal</td></tr>
+  <tr><td>user - last declared layer</td></tr>
+  <tr><td>user - unlayered styles</td></tr>
+  <tr><td rowspan="4">3</td><td>author - first declared layer</td><td rowspan="4">normal</td></tr>
+  <tr><td>author - last declared layer</td></tr>
+  <tr><td>author - unlayered styles</td></tr>
+  <tr><td>inline<code>style</code></td></tr>
+  <tr><td>4</td><td>animations</td><td></td></tr>
+  <tr><td rowspan="4">5</td><td>author - unlayered styles</td><td rowspan="4">`!important`</td></tr>
+  <tr><td>author - last declared layer</td></tr>
+  <tr><td>author - first declared layer</td></tr>
+  <tr><td>inline<code>style</code></td></tr>
+  <tr><td rowspan="3">6</td><td>user - unlayered styles</td><td rowspan="3">`!important`</td></tr>
+  <tr><td>user - last declared layer</td></tr>
+  <tr><td>user - first declared styles</td></tr>
+  <tr><td rowspan="3">7</td><td>user-agent  - unlayered styles</td><td rowspan="3">`!important`</td></tr>
+  <tr><td>user-agent - last declared layer</td></tr>
+  <tr><td>user-agent - first declared styles</td></tr>
+  <tr><td>8</td><td>transitions</td><td></td></tr>
 </tbody>
 </table>
 
