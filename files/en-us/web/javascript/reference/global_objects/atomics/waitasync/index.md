@@ -71,7 +71,7 @@ Atomics.notify(int32, 0);
 // { async: false, value: "ok" }
 ```
 
-If it isn't resolving to "ok", the value in the shared memory location wasn't the expected on (the promise will resolve to "not-equal") or the timeout was reached (the promise will resolve to "time-out"). 
+If it isn't resolving to `"ok"`, the value in the shared memory location wasn't the expected  (the promise will resolve to `"not-equal"`) or the timeout was reached (the promise will resolve to `"time-out"`). 
 
 ## Specifications
 
