@@ -67,5 +67,4 @@ As this method was removed from the [File and Directory Entries API](https://wic
 
 ## See also
 
-- [File
-  and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
+- [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)

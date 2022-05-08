@@ -68,7 +68,7 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
 
 ## Client hints
 
-HTTP {{Glossary("Client_hints", "Client hints")}} are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.
+HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.
 
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 

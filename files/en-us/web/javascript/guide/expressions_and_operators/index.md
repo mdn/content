@@ -1081,24 +1081,25 @@ You can override operator precedence by using parentheses.
 
 The following table describes the precedence of operators, from highest to lowest.
 
-| Operator type          | Individual operators                                    |
-| ---------------------- | ------------------------------------------------------- |
-| member                 | `. []`                                                  |
-| call / create instance | `() new`                                                |
-| negation/increment     | `! ~ - + ++ -- typeof void delete`                      |
-| multiply/divide        | `* / %`                                                 |
-| addition/subtraction   | `+ -`                                                   |
-| bitwise shift          | `<< >> >>>`                                             |
-| relational             | `< <= > >= in instanceof`                               |
-| equality               | `== != === !==`                                         |
-| bitwise-and            | `&`                                                     |
-| bitwise-xor            | `^`                                                     |
-| bitwise-or             | `\|`                                                    |
-| logical-and            | `&&`                                                    |
-| logical-or             | `\|\|`                                                  |
-| conditional            | `?:`                                                    |
-| assignment             | `= += -= *= /= %= <<= >>= >>>= &= ^= \|= &&= \|\|= ??=` |
-| comma                  | `,`                                                     |
+| Operator type          | Individual operators                                                                      |
+| ---------------------- | ----------------------------------------------------------------------------------------- |
+| member                 | `.` `[]`                                                                                  |
+| call / create instance | `()` `new`                                                                                |
+| negation/increment     | `!` `~` `-` `+` `++` `--` `typeof` `void` `delete`                                        |
+| exponentiate           | `**`                                                                                      |
+| multiply/divide        | `*` `/` `%`                                                                               |
+| addition/subtraction   | `+` `-`                                                                                   |
+| bitwise shift          | `<<` `>>` `>>>`                                                                           |
+| relational             | `<` `<=` `>` `>=` `in` `instanceof`                                                       |
+| equality               | `==` `!=` `===` `!==`                                                                     |
+| bitwise-and            | `&`                                                                                       |
+| bitwise-xor            | `^`                                                                                       |
+| bitwise-or             | `\|`                                                                                      |
+| logical-and            | `&&`                                                                                      |
+| logical-or             | `\|\|`                                                                                    |
+| conditional            | `?:`                                                                                      |
+| assignment             | `=` `+=` `-=` `**=` `*=` `/=` `%=` `<<=` `>>=` `>>>=` `&=` `^=` `\|=` `&&=` `\|\|=` `??=` |
+| comma                  | `,`                                                                                       |
 
 A more detailed version of this table, complete with links to additional details about
 each operator, may be found in the

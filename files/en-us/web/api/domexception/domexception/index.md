@@ -12,7 +12,7 @@ browser-compat: api.DOMException.DOMException
 {{ APIRef("DOM") }}
 
 The **`DOMException()`** constructor returns a
-`{{domxref("DOMException")}}` object with a specified message and name.
+{{domxref("DOMException")}} object with a specified message and name.
 
 ## Syntax
 
