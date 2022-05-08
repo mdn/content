@@ -91,7 +91,7 @@ console.log(target.innerHTML);
 The example below shows the same sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method, with the intent of later inserting the returned element into a `<div>` element:
 
 ```js
-8const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Sanitize the string
