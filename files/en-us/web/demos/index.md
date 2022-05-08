@@ -55,7 +55,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ## CSS
 
-- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVG/pen/OXkOWj/)
+- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVGdesignS/pen/OXZOWj)
 - [CSS Blockout](https://ondras.github.io/blockout/)
 - [Rubik's cube](https://ondras.github.io/rubik/)
 - [Loader with blend modes](https://codepen.io/equinusocio/full/qjyXPP/)
