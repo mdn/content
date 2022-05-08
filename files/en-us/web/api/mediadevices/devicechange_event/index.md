@@ -207,7 +207,7 @@ parentheses, it's appended to the appropriate list by calling
 We call `updateDeviceList()` in two places. The first is in the
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} promise's fulfillment
 handler, to initially fill out the list when the stream is opened. The second is in the
-event handler for {{domxref("MediaDevices/devicechange_event", "devicechange")}}:
+event handler for this `devicechange` event:
 
 ```js
 navigator.mediaDevices.ondevicechange = event => {
