@@ -12,7 +12,7 @@ browser-compat: api.Geolocation
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`Geolocation`** interface represents an object able to programmatically obtain the position of the device. It gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
+The **`Geolocation`** interface represents an object able to programmatically obtain the position of the device. It gives Web content access to the location of the device. This allows a Website or app to offer customized results based on the user's location.
 
 An object with this interface is obtained using the {{domxref("navigator.geolocation")}} property implemented by the {{domxref("Navigator")}} object.
 

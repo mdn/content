@@ -60,7 +60,7 @@ document.body.appendChild(header);
 
 Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/). The page should look like this:
 
-![developer.mozilla.org page "eaten" by the script](eaten_page.png )
+![developer.mozilla.org page "eaten" by the script](eaten_page.png)
 
 ## Modifying pages programmatically
 
