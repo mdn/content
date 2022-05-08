@@ -22,13 +22,13 @@ The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µ
 
 ## Methods
 
-The `{{domxref("Performance")}}` interface has two methods. The {{domxref("Performance.now","now()")}} method returns a {{domxref("DOMHighResTimeStamp")}} whose value that depends on the {{domxref("PerformanceTiming.navigationStart","navigation start")}} and scope. If the scope is a window, the value is the time the browser context was created and if the scope is a {{domxref("Worker","worker")}}, the value is the time the worker was created.
+The {{domxref("Performance")}} interface has two methods. The {{domxref("Performance.now","now()")}} method returns a {{domxref("DOMHighResTimeStamp")}} whose value that depends on the {{domxref("PerformanceTiming.navigationStart","navigation start")}} and scope. If the scope is a window, the value is the time the browser context was created and if the scope is a {{domxref("Worker","worker")}}, the value is the time the worker was created.
 
 The {{domxref("Performance.toJSON","toJSON()")}} method returns a serialization of the {{domxref("Performance")}} object, for those attributes that can be serialized.
 
 ## Properties
 
-The `{{domxref("Performance")}}` interface has two properties. The {{domxref("Performance.timing","timing")}} property returns a {{domxref("PerformanceTiming")}} object containing latency-related performance information such as the start of navigation time, start and end times for redirects, start and end times for responses, etc.
+The {{domxref("Performance")}} interface has two properties. The {{domxref("Performance.timing","timing")}} property returns a {{domxref("PerformanceTiming")}} object containing latency-related performance information such as the start of navigation time, start and end times for redirects, start and end times for responses, etc.
 
 The `{{domxref("Performance.navigation","navigation")}}` property returns a {{domxref("PerformanceNavigation")}} object representing the type of navigation that occurs in the given browsing context, such as the page was navigated to from history, the page was navigated to by following a link, etc.
 

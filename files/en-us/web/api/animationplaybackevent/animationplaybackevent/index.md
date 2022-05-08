@@ -15,7 +15,7 @@ browser-compat: api.AnimationPlaybackEvent.AnimationPlaybackEvent
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new `{{domxref("AnimationPlaybackEvent")}}` object instance.
+The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("AnimationPlaybackEvent")}} object instance.
 
 ## Syntax
 
