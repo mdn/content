@@ -5,10 +5,7 @@ tags:
   - API
   - Deprecated
   - File
-  - File System
-  - File System API
-  - File and Directory Entry API
-  - Files
+  - File and Directory Entries API
   - Method
   - Non-standard
   - Reference
@@ -17,7 +14,7 @@ tags:
   - requestFileSystem
 browser-compat: api.Window.requestFileSystem
 ---
-{{APIRef("File System API")}} {{Deprecated_Header}} {{non-standard_header()}}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}} {{non-standard_header()}}
 
 The non-standard {{domxref("Window")}} method
 **`requestFileSystem()`** method is a Google Chrome-specific
@@ -51,7 +48,7 @@ requestFileSystem(type, size, successCallback, errorCallback)
   - : An optional parameter specifying a function which is called if an error occurs while
     attempting to obtain the file system, or if the user denies permission to create or
     access the file system. The callback receives as input a single parameter: a
-    {{domxref("FileError")}} object describing the error.
+    `FileError` object describing the error.
 
 ### Return value
 

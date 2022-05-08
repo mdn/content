@@ -4,8 +4,6 @@ slug: Web/API/FileSystemEntrySync
 tags:
   - API
   - EntrySync
-  - File API
-  - File System API
   - File and Directory Entries API
   - FileSystemEntrySync
   - Interface
@@ -15,7 +13,7 @@ tags:
   - filesystem
 browser-compat: api.FileSystemEntrySync
 ---
-{{APIRef("File System API")}}{{Non-standard_header()}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header()}}
 
 The `FileSystemEntrySync` interface of the File and Directory Entries API represents an entry in a file system; it can be either a {{domxref("FileEntrySync")}} or {{domxref("FileSystemDirectoryEntry")}}.
 
@@ -339,7 +337,7 @@ None.
 
 #### Returns
 
-A `DOMString` object.
+A string.
 
 #### Exceptions
 
@@ -422,14 +420,15 @@ None
 
 None.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
-
-Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Basic Concepts About the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

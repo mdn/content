@@ -6,9 +6,9 @@ tags:
   - Reference
 browser-compat: api.DirectoryReaderSync
 ---
-{{APIRef("File System API")}}{{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
 
-The `DirectoryReaderSync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) lets you read the entries in a directory.
+The `DirectoryReaderSync` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) lets you read the entries in a directory.
 
 > **Note:** This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.
 
@@ -138,14 +138,15 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 | `INVALID_STATE_ERR` | The directory has been modified since the first call to readEntries was processed. |
 | `SECURITY_ERR`      | The browser determined that it was not safe to look up the metadata.               |
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
-
-Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

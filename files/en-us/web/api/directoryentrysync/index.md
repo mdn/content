@@ -4,15 +4,15 @@ slug: Web/API/DirectoryEntrySync
 tags:
   - API
   - File API
-  - File System API
+  - File and Directory Entries API
   - Offline
   - Reference
   - filesystem
 browser-compat: api.DirectoryEntrySync
 ---
-{{APIRef("File System API")}}{{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
 
-The `DirectoryEntrySync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
+The `DirectoryEntrySync` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
 
 > **Note:** This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.
 
@@ -338,14 +338,15 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
   </tbody>
 </table>
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
-
-Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

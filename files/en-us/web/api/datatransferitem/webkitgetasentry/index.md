@@ -4,7 +4,6 @@ slug: Web/API/DataTransferItem/webkitGetAsEntry
 tags:
   - API
   - DataTransferItem
-  - File System API
   - File and Directory Entries API
   - Files
   - Method
@@ -15,7 +14,7 @@ tags:
   - getAsEntry
 browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
-{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Non-standard_header}}
 
 If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitGetAsEntry()` returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, `null` is returned.
 
@@ -181,8 +180,6 @@ You can see how this works by trying it out below. Find some files and directori
 
 ## Specifications
 
-{{Specifications}}
-
 This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
@@ -192,7 +189,7 @@ This API has no official W3C or WHATWG specification.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
 - Events: {{event("dragover")}} and {{event("drop")}}

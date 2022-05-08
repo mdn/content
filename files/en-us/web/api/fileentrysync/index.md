@@ -4,15 +4,15 @@ slug: Web/API/FileEntrySync
 tags:
   - API
   - File
-  - File System API
+  - File and Directory Entries API
   - Interface
   - Non-standard
   - Reference
 browser-compat: api.FileEntrySync
 ---
-{{APIRef("File System API")}} {{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}} {{Non-standard_header}}
 
-The `FileEntrySync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a file in a file system. It lets you write content to a file.
+The `FileEntrySync` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a file in a file system. It lets you write content to a file.
 
 Inherits from: [EntrySync](/en-US/docs/Web/API/FileSystemEntrySync)
 
@@ -107,14 +107,15 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 | `NOT_FOUND_ERR`     | The file does not exist.                                                       |
 | `INVALID_STATE_ERR` | The file is no longer valid for some reason other than it having been deleted. |
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
-
-Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Basic Concepts About the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

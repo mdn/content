@@ -3,7 +3,6 @@ title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - Files
   - HTML DOM
@@ -15,7 +14,7 @@ tags:
   - webkitdirectory
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
-{{APIRef("HTML DOM")}}{{non-standard_header}}
+{{APIRef("File and Directory Entries API")}}{{non-standard_header}}
 
 The
 **`HTMLInputElement.webkitdirectory`** is a property that

@@ -4,7 +4,6 @@ slug: Web/API/File/webkitRelativePath
 tags:
   - File
   - File API
-  - File System API
   - File and Directory Entries API
   - Non-standard
   - Property
@@ -70,7 +69,6 @@ This API has no official W3C or WHATWG specification.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
 - {{domxref("HTMLInputElement.webkitEntries")}}
 - {{domxref("HTMLInputElement.webkitdirectory")}}

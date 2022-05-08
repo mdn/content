@@ -3,7 +3,6 @@ title: FileSystemEntry.copyTo()
 slug: Web/API/FileSystemEntry/copyTo
 tags:
   - API
-  - File System API
   - File and Directory Entries APIs
   - FileSystemEntry
   - Files
@@ -14,7 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.copyTo
 ---
-{{APIRef("File System API")}}{{deprecated_header}}
+{{APIRef("File and Directory Entries API")}}{{deprecated_header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`copyTo()`** copies the file
@@ -86,7 +85,5 @@ workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
