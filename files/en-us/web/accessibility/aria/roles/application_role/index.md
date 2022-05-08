@@ -100,7 +100,7 @@ Applying the `application` role will cause this and all of the descendant elemen
 
 ## See also
 
-- [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
+- [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
 - [Using the ARIA `application` role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson
 
 <section id="Quick_links">

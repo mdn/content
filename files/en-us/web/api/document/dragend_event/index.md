@@ -46,7 +46,7 @@ The `dragend` event is fired when a drag operation is being ended (by releasing 
 
 ## Examples
 
-See the [drag](/en-US/docs/Web/API/Document/drag_event) event for example code or this [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/).
+See the [drag](/en-US/docs/Web/API/Document/drag_event) event for example code or this [JSFiddle demo](https://jsfiddle.net/radonirinamaminiaina/zfnj5rv4/).
 
 {{EmbedLiveSample('Examples', '300', '200', '', 'Web/API/Document/drag_event')}}
 
