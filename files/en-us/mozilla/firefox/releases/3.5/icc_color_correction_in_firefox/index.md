@@ -8,7 +8,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it.  Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with [International Color Consortium](https://www.color.org/index.xalterindex.xalter) (ICC) tagging are, by default, color corrected.
+Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it.  Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with [International Color Consortium](https://www.color.org/index.xalter) (ICC) tagging are, by default, color corrected.
 
 The image below is split into three sections. The top left corner shows the image as rendered by Firefox 2. The top right corner shows how the image renders in Firefox 3. The bottom shows the image rendered in Photoshop.
 
@@ -115,11 +115,11 @@ The following table lists the possible values.
 
 ### Caveats
 
-The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See [bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) and the [ICC version 4 profile test](https://www.color.org/index.xalterindex.xalterversion4html.xalter).
+The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See [bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) and the [ICC version 4 profile test](https://www.color.org/version4html.xalter).
 
 ## See also
 
 - [So Many Colors](https://bholley.wordpress.com/2008/09/12/so-many-colors/) (blog post)
 - [Firefox 3: Color profile support](http://dria.org/wordpress/archives/2008/04/29/633/) (blog post)
 - [Color Profiles in Firefox 3](https://johnresig.com/blog/color-profiles/) (blog post)
-- [International Color Consortium](https://www.color.org/index.xalterindex.xalter)
+- [International Color Consortium](https://www.color.org/index.xalter)

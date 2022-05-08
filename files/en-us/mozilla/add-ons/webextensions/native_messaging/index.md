@@ -448,7 +448,7 @@ If you haven't managed to run the application, you should see an error message g
 - Check that the extension has the `"nativeMessaging"` permission.
 
   ```
-  "[object Object] NativeMessaging.jsm:218"
+  "[object Object]       NativeMessaging.jsm:218"
   ```
 
 - There was a problem starting the application.
