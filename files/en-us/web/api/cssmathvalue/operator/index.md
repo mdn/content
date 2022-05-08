@@ -30,7 +30,7 @@ A {{jsxref('String')}}.
 | {{domxref('CSSMathProduct')}}     | `"product"` |
 | {{domxref('CSSMathMin')}}         | `"min"`     |
 | {{domxref('CSSMathMax')}}         | `"max"`     |
-| `{{domxref('CSSMathClamp')}}`     | `"clamp"`   |
+| {{domxref('CSSMathClamp')}}     | `"clamp"`   |
 | {{domxref('CSSMathNegate')}}      | `"negate"`  |
 | {{domxref('CSSMathInvert')}}      | `"invert"`  |
 
