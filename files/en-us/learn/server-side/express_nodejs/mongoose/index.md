@@ -520,7 +520,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 1. Click the **Build a Database** button in the _Database Deployments_ section.
     ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
-    
+
 2. This will open the _Deploy a cloud database_ screen. Click on the **Create** button under the _Shared_ deployment option.
     ![Choose a deployment option when using MongoDB Atlas.](mongodb_atlas_-_deploy.jpg)
 

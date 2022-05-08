@@ -57,7 +57,7 @@ pitch.addEventListener('change', () => {
   }
   else if ('mozPreservesPitch' in audio) { //deprecated
     audio.mozPreservesPitch = pitch.checked;
-  } 
+  }
 });
 ```
 

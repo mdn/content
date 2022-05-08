@@ -59,7 +59,7 @@ if ('showPicker' in HTMLInputElement.prototype) {
 
 ### Showing the normal pickers
 
-This example shows how the picker can be launched for each of the inputs that normally support this feature. 
+This example shows how the picker can be launched for each of the inputs that normally support this feature.
 
 #### HTML
 
