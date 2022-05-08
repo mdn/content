@@ -74,7 +74,7 @@ function print_PerformanceEntries() {
 
 ## PerformanceEntry interface
 
-The `{{domxref("PerformanceEntry")}}` interface encapsulates a single _performance entry_ i.e. a single performance metric. This interface has four properties and a JSON _serializer_ ({{domxref("Performance.toJSON","toJSON()")}}. The following example shows the use of these properties.
+The {{domxref("PerformanceEntry")}} interface encapsulates a single _performance entry_ i.e. a single performance metric. This interface has four properties and a JSON _serializer_ ({{domxref("Performance.toJSON","toJSON()")}}. The following example shows the use of these properties.
 
 ```js
 function print_PerformanceEntry(ev) {
