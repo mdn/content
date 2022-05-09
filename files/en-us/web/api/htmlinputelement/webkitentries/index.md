@@ -7,12 +7,11 @@ tags:
   - Files
   - HTML DOM
   - HTMLInputElement
-  - Non-standard
   - Property
   - webkitEntries
 browser-compat: api.HTMLInputElement.webkitEntries
 ---
-{{APIRef("File and Directory Entries API")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}}
 
 The read-only **`webkitEntries`**
 property of the {{domxref("HTMLInputElement")}} interface contains an array of file
@@ -63,8 +62,6 @@ files, obtaining their {{domxref("FileSystemEntry")}}-based objects and acting o
 ## Specifications
 
 {{Specifications}}
-
-This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
 
