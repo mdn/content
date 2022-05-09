@@ -29,7 +29,7 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## Browser compatibility
 
-{{Compat}
+{{Compat}}
 
 ## See also
 
