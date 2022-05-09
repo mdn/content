@@ -12,15 +12,10 @@ browser-compat: api.DirectoryEntrySync
 ---
 {{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
 
-The `DirectoryEntrySync` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
+The `DirectoryEntrySync` interface represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
 
-> **Note:** This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.
-
-## About this document
-
-This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
-
-This specification is pretty much abandoned, having failed to reach any substantial traction.
+> **Note:** This interface has been abandoned: it was on a standard track.
+> _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries API) instead.
 
 ## Basic concepts
 
@@ -46,44 +41,31 @@ var dirEntry = fs.root.getDirectory('superseekrit', {create: true});
   <tbody>
     <tr>
       <td>
-        <code
-          >DirectoryReaderSync <a href="#createreader">createReader</a> ()
-          raises (<a href="/en-US/docs/Web/API/FileException">FileException</a
-          >);</code
-        >
+        <code>DirectoryReaderSync <a href="#createreader">createReader</a> ();</code>
       </td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/API/FileEntrySync">FileEntrySync</a>
+        <code>
+          <a href="/en-US/docs/Web/API/FileEntrySync">FileEntrySync</a>
           <a href="#getfile">getFile</a> (in DOMString <em>path</em>, in
-          optional Flags <em>options</em>) raises (<a
-            href="/en-US/docs/Web/API/FileException"
-            >FileException</a
-          >);</code
-        >
+          optional Flags <em>options</em>);
+        </code>
       </td>
     </tr>
     <tr>
       <td>
-        <code
-          >DirectoryEntrySync <a href="#getdirectory">getDirectory</a> (in
-          DOMString path, in optional Flags <em>options</em>) raises (<a
-            href="/en-US/docs/Web/API/FileException"
-            >FileException</a
-          >);</code
-        >
+        <code>
+          DirectoryEntrySync <a href="#getdirectory">getDirectory</a> (in
+          DOMString path, in optional Flags <em>options</em>);
+        </code>
       </td>
     </tr>
     <tr>
       <td>
-        <code
-          >void <a href="#removerecursively">removeRecursively</a> () raises (<a
-            href="/en-US/docs/Web/API/FileException"
-            >FileException</a
-          >);</code
-        >
+        <code>
+          void <a href="#removerecursively">removeRecursively</a> ();
+        </code>
       </td>
     </tr>
   </tbody>
@@ -96,8 +78,7 @@ var dirEntry = fs.root.getDirectory('superseekrit', {create: true});
 Creates a new `DirectoryReaderSync` to read entries from this directory.
 
 ```
-DirectoryReaderSync createReader (
-) raises (FileException);
+DirectoryReaderSync createReader ();
 ```
 
 ##### Returns
@@ -111,7 +92,7 @@ None
 
 ##### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a {{domxref("DOMException")}} with the following codes:
 
 | Exception       | Description                                                                                |
 | --------------- | ------------------------------------------------------------------------------------------ |
@@ -125,7 +106,7 @@ Depending on how you've set the `options` parameter, the method either creates a
 ```
 void getFile (
   in DOMString path, in optional Flags options
-) raises (FileException);
+);
 ```
 
 ##### Parameter
@@ -185,7 +166,7 @@ void getFile (
 
 ##### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a {{domxref("DOMException")}} with the following codes:
 
 | Exception                     | Description                                                                                               |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -204,7 +185,7 @@ Creates or looks up a directory. The method is similar to `getFile()` with Direc
 ```
 void getDirectory (
   in DOMString path, in optional Flags options
-) raises (FileException);
+);
 ```
 
 ##### Parameter
@@ -266,7 +247,7 @@ void getDirectory (
 
 ##### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a {{domxref("DOMException")}} with the following codes:
 
 | Exception                     | Description                                                                                               |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -285,8 +266,7 @@ Deletes a directory and all of its contents. You cannot delete the root director
 If you delete a directory that contains a file that cannot be removed or if an error occurs while the deletion is in progress, some of the contents might not be deleted. Catch these cases with error callbacks and retry the deletion.
 
 ```
-void removeRecursively (
-)  raises (FileException);
+void removeRecursively ();
 ```
 
 ##### Parameter
@@ -299,7 +279,7 @@ None
 
 ##### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a {{domxref("DOMException")}} with the following codes:
 
 <table class="no-markdown">
   <thead>
@@ -340,7 +320,8 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ## Specifications
 
-{{Specifications}}
+This feature is not part of any current specification. It is no longer on track to become a standard.
+Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries API) instead.
 
 ## Browser compatibility
 
