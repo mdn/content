@@ -91,7 +91,7 @@ The next task is to actually add the keyframes to the page's CSS. The first thin
 
 If there isn't already a style sheet, a new {{HTMLElement("style")}} element is created, and its content is set to the value of keyframes. Then the new {{HTMLElement("style")}} element is inserted into the document's {{HTMLElement("head")}}, thereby adding the new style sheet to the document.
 
-[View on JSFiddle](https://jsfiddle.net/codepo8/ATS2S/8/embedded/result)
+[View on JSFiddle](https://jsfiddle.net/codepo8/ATS2S/8/)
 
 ## See also
 

@@ -118,7 +118,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 ## Data format
 
-The underlying data format is defined by the IEEE draft specification [`draft-ietf-mmusic-sctp-sdp`](https://datatracker.ietf.org/doc/draft-ietf-mmusic-sctp-sdp). The current format specifies its protocol as either `"UDP/DTLS/SCTP"` (UDP carrying DTLS carrying SCTP) or `"TCP/DTLS/SCTP"` (TCP carrying DTLS carrying SCTP). Older browsers may only specify `"DTLS/SCTP"`.
+The underlying data format is defined by the IEEE specification [SDP Offer/Answer Procedures for SCTP over DTLS Transport(RFC 8841)](https://datatracker.ietf.org/doc/rfc8841/). The current format specifies its protocol as either `"UDP/DTLS/SCTP"` (UDP carrying DTLS carrying SCTP) or `"TCP/DTLS/SCTP"` (TCP carrying DTLS carrying SCTP). Older browsers may only specify `"DTLS/SCTP"`.
 
 ## Example
 

@@ -41,7 +41,7 @@ The `dragstart` event is fired when the user starts dragging an element or text 
 
 ## Examples
 
-See the [drag event](/en-US/docs/Web/API/Document/drag_event) for example code or this [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/).
+See the [drag event](/en-US/docs/Web/API/Document/drag_event) for example code or this [JSFiddle demo](https://jsfiddle.net/radonirinamaminiaina/zfnj5rv4/).
 
 {{EmbedLiveSample('Examples', '300', '200', '', 'Web/API/Document/drag_event')}}
 
