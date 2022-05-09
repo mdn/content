@@ -23,6 +23,6 @@ Objects that can be transfered are called {{Glossary("Transferable objects")}}.
 ## Supported objects
 
 Not all objects are serializable objects.
-The objects that can be serialized are listed in: [The structured clone algorithm > Supported types](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)
+The objects that can be serialized are listed in: [The structured clone algorithm > Supported types](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)
 
 > **Note:** Serializable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Serializable]`.
