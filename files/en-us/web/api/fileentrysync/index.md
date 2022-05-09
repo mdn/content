@@ -12,13 +12,10 @@ browser-compat: api.FileEntrySync
 ---
 {{APIRef("File and Directory Entries API")}} {{Non-standard_header}}
 
-The `FileEntrySync` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a file in a file system. It lets you write content to a file.
+The `FileEntrySync` interface represents a file in a file system. It lets you write content to a file.
 
-## About this document
-
-This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
-
-This specification is more or less abandoned as it didn't get significant traction among browser makers.
+> **Warning:** This interface is deprecated and is no more on the standard track.
+> _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
 
