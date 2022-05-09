@@ -13,7 +13,7 @@ tags:
   - webkitRelativePath
 browser-compat: api.File.webkitRelativePath
 ---
-{{APIRef("File API")}}{{non-standard_header}}
+{{APIRef("File API")}}
 
 The **`File.webkitRelativePath`** is a read-only property that
 contains a string which specifies the file's path relative to the
@@ -60,8 +60,6 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 ## Specifications
 
 {{Specifications}}
-
-This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
 
