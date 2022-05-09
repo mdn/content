@@ -8,7 +8,7 @@ tags:
   - Interface
   - Non-standard
   - Reference
-compat-data: api.IDBFileRequest
+browser-compat: api.IDBFileRequest
 ---
 {{APIRef("IndexedDB")}} {{non-standard_header}}
 
