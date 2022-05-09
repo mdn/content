@@ -28,13 +28,14 @@ new SensorErrorEvent(type, {error: domException});
 
 ### Parameters
 
-- _type_
+- `type`
   - : Will always be `'SensorErrorEvent'`.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Currently only one option is supported:
 
-    - `error`: An instance of {{jsxref('DOMException')}}.
+    - `error`
+      - : An instance of {{jsxref('DOMException')}}.
 
 ## Specifications
 

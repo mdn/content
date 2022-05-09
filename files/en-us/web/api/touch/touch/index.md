@@ -21,7 +21,7 @@ new Touch(touchInit)
 
 ### Parameters
 
-- _touchInit_
+- `touchInit`
 
   - : A `TouchInit` dictionary, having the following fields:
 

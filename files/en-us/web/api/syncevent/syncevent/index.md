@@ -19,22 +19,24 @@ The **`SyncEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new SyncEvent(type, init)
+new SyncEvent(type, options)
 ```
 
 ### Parameters
 
-- _type_
+- `type`
   - : The type of the Event.
-- _init_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options object containing any custom settings that you want to apply to the event
     object. Options are as follows:
 
-    - `tag`: A developer-defined unique identifier for
-      this `SyncEvent`.
-    - `lastChance`: A boolean value indicating that the user agent
-      will not make further synchronization attempts after the current attempt.
+    - `tag`
+      - : A developer-defined unique identifier for
+        this `SyncEvent`.
+    - `lastChance`
+      - : A boolean value indicating that the user agent
+        will not make further synchronization attempts after the current attempt.
 
 ## Browser compatibility
 

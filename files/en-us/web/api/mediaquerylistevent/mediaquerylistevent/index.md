@@ -32,9 +32,11 @@ new MediaQueryListEvent(typeArg, init)
   - : An init object that defines features of the new object instance. The available
     properties are:
 
-    - media: A {{DOMxRef("DOMString")}} representing a serialized media query.
-    - matches: A {{JSxRef("Boolean")}} representing the media query status —
-      `true` if it matches, `false` if not.
+    - `media`
+      - : A string representing a serialized media query.
+    - `matches`
+      - : A {{JSxRef("Boolean")}} representing the media query status —
+        `true` if it matches, `false` if not.
 
 ## Examples
 

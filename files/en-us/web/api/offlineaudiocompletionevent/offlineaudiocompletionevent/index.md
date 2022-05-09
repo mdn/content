@@ -27,14 +27,15 @@ new OfflineAudioCompletionEvent(type, init)
 
 ### Parameters
 
-- _type_ {{optional_inline}}
+- `type` {{optional_inline}}
   - : A {{domxref("DOMString")}} representing the type of object to create.
-- _init_ {{optional_inline}}
+- `init` {{optional_inline}}
 
   - : Options are as follows:
 
-    - `renderedBuffer`: The rendered {{domxref("AudioBuffer")}}
-      containing the audio data.
+    - `renderedBuffer`
+      - : The rendered {{domxref("AudioBuffer")}}
+        containing the audio data.
 
 ### Return value
 

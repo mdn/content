@@ -26,9 +26,9 @@ new VRDisplayEvent(type, eventInitDict);
 
 ### Parameters
 
-- _type_
+- `type`
   - : A {{domxref("DOMString")}} describing the type of event object you want to create.
-- _eventInitDict_
+- `eventInitDict`
 
   - : A object containing initialization options to use when creating the constructor. These are:
 
