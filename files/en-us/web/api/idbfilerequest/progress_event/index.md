@@ -62,5 +62,5 @@ Not part of any current specification.
 
 ## See also
 
-- {{ domxref("DOMRequest") }}
+- {{ domxref("FileRequest") }}
 - {{ domxref("IDBMutableFile") }}
