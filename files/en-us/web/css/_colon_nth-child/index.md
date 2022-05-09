@@ -15,7 +15,7 @@ browser-compat: css.selectors.nth-child
 The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings.
 
 ```css
-/* Selects the second element in a list IF that element is a <li> */
+/* Selects the second element in a list if that element is a <li> */
 li:nth-child(2) {
   color: lime;
 }
