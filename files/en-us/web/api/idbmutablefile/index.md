@@ -17,7 +17,7 @@ The **`IDBMutableFile`** interface provides access in read or write mode to a fi
 As `IDBMutableFile` objects are bound to a fake file system built using IndexedDB, such an object is created using the {{domxref("IDBDatabase.createMutableFile()")}} method.
 
 > **Note:** The three interfaces `IDBMutableFile`, `IDBFileHandle`, and `IDBFileRequest` are deprecated and only implemented
-> for backwards compatibility in Firefox. _Do not use them anymore_:
+> for backward compatibility in Firefox. _Do not use them anymore_:
 > consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Properties

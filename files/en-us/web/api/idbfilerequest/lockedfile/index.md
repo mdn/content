@@ -16,7 +16,7 @@ The **`lockedFile`** read-only property returns the {{domxref("IDBFileHandle")}}
 from which the request was started.
 
 > **Note:** The three interfaces `IDBMutableFile`, `IDBFileHandle`, and `IDBFileRequest` are deprecated and only implemented
-> for backwards compatibility in Firefox. _Do not use them anymore_:
+> for backward compatibility in Firefox. _Do not use them anymore_:
 > consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Value
