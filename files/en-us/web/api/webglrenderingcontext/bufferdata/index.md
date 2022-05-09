@@ -108,7 +108,7 @@ bufferData(target, srcData, usage, srcOffset, length)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

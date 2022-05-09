@@ -42,7 +42,7 @@ The `{{htmlattrxref("draggable")}}` attribute may be used on any element, includ
 
 ## Starting a Drag Operation
 
-In this example, a listener is added for the {{event("dragstart")}} event by using the `{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}` attribute.
+In this example, a listener is added for the {{event("dragstart")}} event by using the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} attribute.
 
 ```html
 <p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
@@ -64,7 +64,7 @@ When a drag occurs, data must be associated with the drag which identifies _what
 
 The {{domxref("DataTransfer","drag data")}} contains two pieces of information, the **type** (or format) of the data, and the data's **value**. The format is a type string (such as [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) for text data), and the value is a string of text. When the drag begins, you add data by providing a type and the data. During the drag, in an event listener for the `{{event("dragenter")}}` and `{{event("dragover")}}` events, you use the data types of the data being dragged to check whether a drop is allowed. For instance, a drop target that accepts links would check for the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link). During a drop event, a listener would retrieve the data being dragged and insert it at the drop location.
 
-The {{domxref("DataTransfer","drag data's")}} {{domxref("DataTransfer.types","types")}} property returns a list of MIME-type like {{domxref("DOMString")}}s, such as [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) or [`image/jpeg`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image). You can also create your own types. The most commonly used types are listed in the article [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
+The {{domxref("DataTransfer","drag data's")}} {{domxref("DataTransfer.types","types")}} property returns a list of MIME-type like strings, such as [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) or [`image/jpeg`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image). You can also create your own types. The most commonly used types are listed in the article [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
 
 A drag may include data items of several different types. This allows data to be provided in more specific types, often custom types, yet still provide fallback data for drop targets that do not support more specific types. It is usually the case that the least specific type will be normal text data using the type [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text). This data will be a simple textual representation.
 
@@ -247,7 +247,7 @@ If the mouse is released over an element that is a valid drop target, that is, o
 
 During the `{{event("drop")}}` event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drag operation was desired.
 
-As with all drag-related events, the event's `{{domxref("DataTransfer","dataTransfer")}}` property will hold the data that is being dragged. The {{domxref("DataTransfer.getData","getData()")}} method may be used to retrieve the data again.
+As with all drag-related events, the event's {{domxref("DataTransfer","dataTransfer")}} property will hold the data that is being dragged. The {{domxref("DataTransfer.getData","getData()")}} method may be used to retrieve the data again.
 
 ```js
 function onDrop(event) {

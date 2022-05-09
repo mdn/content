@@ -167,9 +167,9 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onselect")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("select")}} event is raised.
 - {{domxref("GlobalEventHandlers.onselectstart")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised, i.e. when the user starts to make a new text selection on a web page.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectstart_event", "selectstart")}} event is raised, i.e. when the user starts to make a new text selection on a web page.
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised, i.e. when the text selected on a web page changes.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `selectionchange` event is raised, i.e. when the text selected on a web page changes.
 - {{domxref("GlobalEventHandlers.onshow")}} {{Deprecated_Inline}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("show")}} event is raised.
 - {{domxref("GlobalEventHandlers.onslotchange")}}

@@ -11,7 +11,7 @@ browser-compat: api.LayoutShiftAttribution.currentRect
 ---
 {{APIRef("Layout Instability API")}}
 
-The **`currentRect`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
+The **`currentRect`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element after the shift.
 
 ## Value
 

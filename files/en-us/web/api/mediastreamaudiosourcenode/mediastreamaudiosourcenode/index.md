@@ -25,7 +25,7 @@ the first audio track of a given {{domxref("MediaStream")}} as its source.
 ## Syntax
 
 ```js
-new MediaStreamAudioSourceNode(context, options);
+new MediaStreamAudioSourceNode(context, options)
 ```
 
 ### Parameters

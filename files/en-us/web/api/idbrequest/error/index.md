@@ -38,7 +38,7 @@ in the exception object:
     A failure due to disk IO errors is such an example.
 - `VersionError`
   - : If you try to open a database with a version lower than the one it already has.
-  
+
 In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
 asynchronous operations can also raise exceptions. The list describes problems that
 could occur when the request is being executed, but you might also encounter other

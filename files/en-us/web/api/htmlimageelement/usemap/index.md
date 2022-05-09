@@ -25,7 +25,7 @@ providing the name of the client-side image map to apply to the image.
 
 ## Value
 
-A {{domxref("USVString")}} providing the page-local URL (that is, a URL that begins
+A string providing the page-local URL (that is, a URL that begins
 with the hash or pound symbol, "`#`") of the {{HTMLElement("map")}} element
 which defines the image map to apply to the image.
 

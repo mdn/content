@@ -54,7 +54,7 @@ The majority of `icecandidate` events are fired to indicate that a new candidate
 
 ```js
 rtcPeerConnection.onicecandidate = (event) => {
-  if (event.candidate) {
+  if (event.candidate !== null) {
     sendCandidateToRemotePeer(event.candidate)
   } else {
     /* there are no more candidates coming during this negotiation */

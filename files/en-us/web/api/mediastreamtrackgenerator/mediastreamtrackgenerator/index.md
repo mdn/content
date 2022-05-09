@@ -15,7 +15,7 @@ The **`MediaStreamTrackGenerator()`** constructor creates a new {{domxref("Media
 ## Syntax
 
 ```js
-new MediaStreamTrackGenerator(options);
+new MediaStreamTrackGenerator(options)
 ```
 
 ### Parameters

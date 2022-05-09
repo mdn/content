@@ -49,7 +49,7 @@ blitFramebuffer(srcX0, srcY0, srcX1, srcY1,
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

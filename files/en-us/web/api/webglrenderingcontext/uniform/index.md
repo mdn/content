@@ -65,7 +65,7 @@ uniform4iv(location, value)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -28,7 +28,7 @@ A comma-separated list of string objects representing the scripts to be imported
 
 ### Return value
 
-_None._
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

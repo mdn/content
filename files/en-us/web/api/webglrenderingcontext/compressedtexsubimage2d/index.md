@@ -150,7 +150,7 @@ compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, 
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

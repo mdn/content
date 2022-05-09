@@ -18,7 +18,7 @@ Native applications and browser extensions use idle detection base user experien
 
 ## Interfaces
 
-- `{{domxref("IdleDetector")}}`
+- {{domxref("IdleDetector")}}
   - : Provides methods and events for detecting user activity on a device or screen.
 
 ## Examples

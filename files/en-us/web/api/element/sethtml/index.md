@@ -50,7 +50,7 @@ None.
 The code below demonstrates how to sanitize a string of HTML and insert it into the `Element` with an id of `target`.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 const sanitizer1 = new Sanitizer();  // Default sanitizer;
 
 // Get the Element with id "target" and set it with the sanitized string.

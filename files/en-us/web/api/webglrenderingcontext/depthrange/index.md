@@ -33,7 +33,7 @@ depthRange(zNear, zFar)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

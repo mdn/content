@@ -16,7 +16,8 @@ given value and if so sleeps, awaiting a wakeup or a timeout. It returns a strin
 is either "`ok`", "`not-equal`", or "`timed-out`".
 
 > **Note:** This operation only works with a shared
-> {{jsxref("Int32Array")}} and may not be allowed on the main thread.
+> {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} and may not be allowed on the main thread.
+> For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
 
 ## Syntax
 
@@ -28,7 +29,7 @@ Atomics.wait(typedArray, index, value, timeout)
 ### Parameters
 
 - `typedArray`
-  - : A shared {{jsxref("Int32Array")}}.
+  - : A shared {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
 - `index`
   - : The position in the `typedArray` to wait on.
 - `value`
@@ -88,4 +89,5 @@ Atomics.notify(int32, 0, 1);
 ## See also
 
 - {{jsxref("Atomics")}}
+- {{jsxref("Atomics.waitAsync()")}}
 - {{jsxref("Atomics.notify()")}}

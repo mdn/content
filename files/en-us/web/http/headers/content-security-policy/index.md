@@ -176,7 +176,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 - {{CSP("upgrade-insecure-requests")}}
   - : Instructs user agents to treat all of a site's insecure URLs (those served over
     HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
-    This directive is intended for web sites with large numbers of insecure legacy URLs
+    This directive is intended for websites with large numbers of insecure legacy URLs
     that need to be rewritten.
 
 ### Deprecated directives

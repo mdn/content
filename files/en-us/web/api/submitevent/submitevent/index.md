@@ -24,7 +24,8 @@ represent a {{domxref("HTMLFormElement.submit_event", "submit")}} event fired at
 ## Syntax
 
 ```js
-new SubmitEvent(type, eventInitDict);
+new SubmitEvent(type)
+new SubmitEvent(type, eventInitDict)
 ```
 
 ### Parameters

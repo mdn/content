@@ -15,7 +15,7 @@ The **`EncodedAudioChunk()`** constructor creates a new {{domxref("EncodedAudioC
 ## Syntax
 
 ```js
-new EncodedAudioChunk(init);
+new EncodedAudioChunk(init)
 ```
 
 ### Parameters

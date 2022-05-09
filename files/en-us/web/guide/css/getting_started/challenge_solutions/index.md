@@ -236,7 +236,7 @@ The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
   - : The following rule achieves the desired result:
 
     ```css
-    #fixed-pin  {
+    #fixed-pin {
       position:fixed;
       top: 3px;
       right: 3px;

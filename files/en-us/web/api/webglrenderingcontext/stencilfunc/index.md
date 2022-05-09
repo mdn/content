@@ -55,7 +55,7 @@ stencilFunc(func, ref, mask)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

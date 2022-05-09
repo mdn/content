@@ -112,7 +112,7 @@ _No change._
 
 ## HTTP
 
-- The `jar:` protocol has been disabled by default when accessed from Web content; you may enable this if necessary by setting the {{pref("network.jar.block-remote-files")}} preference to `false` ({{bug(1215235)}}).
+- The `jar:` protocol has been disabled by default when accessed from Web content; you may enable this if necessary by setting the `network.jar.block-remote-files` preference to `false` ({{bug(1215235)}}).
 
 ## Security
 

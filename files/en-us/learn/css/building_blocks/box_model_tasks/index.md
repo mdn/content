@@ -50,7 +50,7 @@ Try updating the live code below to recreate the example as displayed in the ima
 
 ## The Box Model Three
 
-In this example the inline element has a margin, padding and border however the lines above and below are overlapping it. What can you add to your CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline?
+In this example the inline element has a margin, padding and border; however, the lines above and below are overlapping it. What can you add to your CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline?
 
 ![An inline box with space between it and the text around it.](mdn-box-model3.png)
 

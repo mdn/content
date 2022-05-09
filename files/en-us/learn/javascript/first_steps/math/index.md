@@ -118,8 +118,11 @@ typeof myNumber;
 To fix the calculation, you can do this:
 
 ```js
+let myNumber = '74';
 Number(myNumber) + 3;
 ```
+
+The result is then 77, as initially expected.
 
 ## Arithmetic operators
 

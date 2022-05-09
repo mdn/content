@@ -13,7 +13,7 @@ tags:
 
 2. [<dfn>Web Content Accessibility Guidelines (WCAG)</dfn> 1.0](https://www.w3.org/TR/WAI-WEBCONTENT/)
 
-    Another important set of guidelines from the W3C _Web Accessibility Initiative (WAI)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr title="Web Accessibility Initiative">WAI</abbr> interest group discussion list](https://www.w3.org/WAI/IG/).
+    Another important set of guidelines from the W3C _Web Accessibility Initiative (WAI)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr title="Web Accessibility Initiative">WAI</abbr> interest group discussion list](https://www.w3.org/WAI/about/groups/waiig/#mailinglist).
 
 ## How-to's
 
@@ -59,10 +59,10 @@ tags:
 
     The HTML advanced validator may also be downloaded from [Firefox Add-ons: HTML Validator](https://addons.mozilla.org/en-US/firefox/addon/html-validator/).
 
-5. [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast)
+5. [Luminosity Color Contrast Ratio Analyser](https://juicystudio.com/services/luminositycontrastratio.php)
 
     by Juicy Studio
-    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](https://lighthouseguild.org/effective-color-contrast-and-making-text-legible/) by Lighthouse International).
+    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Luminosity Color Contrast Ratio Analyser](https://juicystudio.com/services/luminositycontrastratio.php) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](https://lighthouseguild.org/effective-color-contrast-and-making-text-legible/) by Lighthouse International).
 
     The [Juicy Studio CSS analyzer](https://juicystudio.com/services/csstest.php) will also analyze and report the color contrast and color brightness differences involved in your stylesheets.
 

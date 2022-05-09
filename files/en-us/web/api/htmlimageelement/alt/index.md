@@ -40,7 +40,7 @@ to take the place of the image _without altering the meaning of the page_.
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the alternate text to display when the image
+A string which contains the alternate text to display when the image
 is not loaded or for use by assistive devices.
 
 The `alt` attribute is officially mandatory; it's meant to always be

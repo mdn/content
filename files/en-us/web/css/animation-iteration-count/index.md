@@ -59,7 +59,9 @@ The **`animation-iteration-count`** property is specified as one or more comma-s
 
 ## Examples
 
-### The animation will run 10 times.
+### Setting iteration count
+
+This animation will run 10 times.
 
 #### HTML
 
@@ -75,6 +77,9 @@ The **`animation-iteration-count`** property is specified as one or more comma-s
   border-radius: 10px;
   width: 100px;
   height: 100px;
+}
+
+.box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-iteration-count: 10;
@@ -92,7 +97,9 @@ The **`animation-iteration-count`** property is specified as one or more comma-s
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+Hover over the rectangle to start the animation.
+
+{{EmbedLiveSample("Setting iteration count","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 

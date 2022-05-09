@@ -93,10 +93,10 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 
 ### Parameters
 
-- parameter1 {{optional_inline}}
+- `parameter1` {{optional_inline}}
   - : Include a brief description of the parameter and what it does here. Include one term and definition for each parameter.
     If the parameter is not optional, remove the \\{{optional_inline}} macro call.
-- parameter2
+- `parameter2`
   - : etc.
 
 ### Return value

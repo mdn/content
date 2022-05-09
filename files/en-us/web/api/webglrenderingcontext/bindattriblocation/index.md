@@ -34,7 +34,7 @@ bindAttribLocation(program, index, name)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -58,7 +58,7 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {

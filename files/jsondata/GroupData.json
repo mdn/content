@@ -80,7 +80,6 @@
         "/docs/Web/API/Canvas_API/Manipulating_video_using_canvas"
       ],
       "interfaces": [
-        "Canvas",
         "CanvasGradient",
         "CanvasImageSource",
         "CanvasPattern",
@@ -254,12 +253,16 @@
       ]
     },
     "Device Orientation Events": {
-      "guides": ["/docs/Web/API/Detecting_device_orientation"],
+      "guides": [
+          "/docs/Web/Events/Detecting_device_orientation",
+          "/docs/Web/Events/Orientation_and_motion_data_explained",
+          "/docs/Web/Events/Using_device_orientation_with_3D_transforms"
+        ],
       "interfaces": [
-        "DeviceAcceleration",
         "DeviceMotionEvent",
-        "DeviceOrientationEvent",
-        "DeviceRotationRate"
+        "DeviceMotionEventAcceleration",
+        "DeviceMotionEventRotationRate",
+        "DeviceOrientationEvent"
       ],
       "methods": [],
       "properties": [],
@@ -286,7 +289,6 @@
         "AbortSignal",
         "AbstractRange",
         "Attr",
-        "ByteString",
         "CDATASection",
         "CharacterData",
         "Comment",
@@ -310,7 +312,6 @@
         "MutationObserver",
         "NamedNodeMap",
         "Node",
-        "NodeFilter",
         "NodeIterator",
         "NodeList",
         "ProcessingInstruction",
@@ -336,7 +337,6 @@
     "DOM Events": {
       "interfaces": [
         "Event",
-        "EventListener",
         "EventTarget",
         "CompositionEvent",
         "FocusEvent",
@@ -393,7 +393,7 @@
     "Encrypted Media Extensions": {
       "overview": ["Encrypted Media Extensions API"],
       "interfaces": [
-        "MediaKeySessionEvent",
+        "MediaKeyMessageEvent",
         "MediaKeys",
         "MediaKeySession",
         "MediaKeyStatusMap",
@@ -404,10 +404,11 @@
         "HTMLMediaElement.setMediaKeys()"
       ],
       "properties": [
-        "HTMLMediaElement.mediaKeys",
-        "HTMLMediaElement.onencrypted"
+        "HTMLMediaElement.mediaKeys"
       ],
-      "events": []
+      "events": [
+        "HTMLMediaElement: encrypted"
+      ]
     },
     "EyeDropper API": {
       "overview": ["EyeDropper API"],
@@ -525,10 +526,7 @@
       ],
       "interfaces": ["Gamepad", "GamepadButton", "GamepadEvent"],
       "methods": ["Navigator.getGamepads()"],
-      "properties": [
-        "Window.ongamepadconnected",
-        "Window.ongamepaddisconnected"
-      ],
+      "properties": [],
       "events": ["Window: gamepadconnected", "Window: gamepaddisconnected"]
     },
     "Geolocation API": {
@@ -645,9 +643,7 @@
         "HTMLTableCaptionElement",
         "HTMLTableCellElement",
         "HTMLTableColElement",
-        "HTMLTableDataCellElement",
         "HTMLTableElement",
-        "HTMLTableHeaderCellElement",
         "HTMLTableRowElement",
         "HTMLTableSectionElement",
         "HTMLTextAreaElement",
@@ -768,7 +764,7 @@
     },
     "Image Capture API": {
       "overview": ["MediaStream Image Capture API"],
-      "interfaces": ["ImageCapture", "PhotoCapabilities"],
+      "interfaces": ["ImageCapture"],
       "methods": [],
       "properties": [],
       "events": []
@@ -853,7 +849,7 @@
       "guides": ["/docs/Web/API/Media_Streams_API/Constraints"],
       "interfaces": [
         "BlobEvent",
-        "CanvasCaptureMediaStream",
+        "CanvasCaptureMediaStreamTrack",
         "MediaDevices",
         "MediaStream",
         "MediaStreamTrack",
@@ -862,17 +858,11 @@
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints",
-        "VideoStreamTrack",
-        "DoubleRange",
-        "ConstrainDouble",
-        "LongRange",
-        "ConstrainLong",
-        "ConstrainBoolean",
-        "ConstrainDOMString"
+        "VideoStreamTrack"
       ],
       "methods": [
         "HTMLCanvasElement.captureStream()",
-        "navigator.mediaDevices.getUserMedia()"
+        "MediaDevices.getUserMedia()"
       ],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
@@ -927,7 +917,7 @@
         "PerformanceNavigationTiming"
       ],
       "methods": [],
-      "properties": ["Window.performance"],
+      "properties": ["performance_property"],
       "events": []
     },
     "Network Information API": {
@@ -996,7 +986,7 @@
         "PerformanceObserver",
         "PerformanceResourceTiming",
         "TaskAttributionTiming",
-        "Window.performance"
+        "performance_property"
       ],
       "methods": [],
       "properties": [],
@@ -1015,7 +1005,7 @@
         "PerformanceResourceTiming"
       ],
       "methods": [],
-      "properties": ["Window.performance"],
+      "properties": ["performance_property"],
       "events": []
     },
     "Periodic Background Sync": {
@@ -1047,11 +1037,8 @@
       "properties": [
         "HTMLVideoElement.autoPictureInPicture",
         "HTMLVideoElement.disablePictureInPicture",
-        "HTMLVideoElement.onenterpictureinpicture",
-        "HTMLVideoElement.onleavepictureinpicture",
         "Document.pictureInPictureEnabled",
-        "DocumentOrShadowRoot.pictureInPictureElement",
-        "PictureInPictureWindow.onresize"
+        "Document.pictureInPictureElement"
       ],
       "events": [
         "HTMLVideoElement: enterpictureinpicture",
@@ -1072,8 +1059,8 @@
         "Element.releasePointerCapture()"
       ],
       "properties": [
-        "Element.ongotpointercapture",
-        "Element.onlostpointercapture",
+        "GlobalEventHandlers.ongotpointercapture",
+        "GlobalEventHandlers.onlostpointercapture",
         "GlobalEventHandlers.onpointerdown",
         "GlobalEventHandlers.onpointermove",
         "GlobalEventHandlers.onpointerup",
@@ -1100,13 +1087,17 @@
     "Pointer Lock API": {
       "overview": ["Pointer Lock API"],
       "interfaces": [],
-      "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
-      "properties": [
-        "Document.pointerLockElement",
-        "Document.onpointerlockchange",
-        "Document.onpointerlockerror"
+      "methods": [
+        "Element.requestPointerLock()",
+        "Document.exitPointerLock()"
       ],
-      "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
+      "properties": [
+        "Document.pointerLockElement"
+      ],
+      "events": [
+        "Document: pointerlockchange",
+        "Document: pointerlockerror"
+      ]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1143,9 +1134,7 @@
       ],
       "methods": [],
       "properties": [
-        "ServiceWorkerRegistration.pushManager",
-        "ServiceWorkerGlobalScope.onpush",
-        "ServiceWorkerGlobalScope.onpushsubscriptionchange"
+        "ServiceWorkerRegistration.pushManager"
       ],
       "events": [
         "ServiceWorkerGlobalScope: push",
@@ -1170,7 +1159,7 @@
         "PerformanceResourceTiming"
       ],
       "methods": [],
-      "properties": ["Window.performance"],
+      "properties": ["performance_property"],
       "events": []
     },
     "Screen Capture API": {
@@ -1212,7 +1201,6 @@
       "overview": ["Selection API"],
       "interfaces": ["Selection"],
       "properties": [
-        "Document.onselectionchange",
         "GlobalEventHandlers.onselectstart"
       ],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
@@ -1310,7 +1298,7 @@
         "WritableStreamDefaultWriter"
       ],
       "methods": ["fetch()"],
-      "properties": ["Body.body"],
+      "properties": ["Response.body"],
       "events": []
     },
     "SVG": {
@@ -1328,7 +1316,6 @@
         "SVGAnimatedNumber",
         "SVGAnimatedNumberList",
         "SVGAnimatedPathData",
-        "SVGAnimatedPoints",
         "SVGAnimatedPreserveAspectRatio",
         "SVGAnimatedRect",
         "SVGAnimatedString",
@@ -1434,7 +1421,6 @@
         "SVGSetElement",
         "SVGStopElement",
         "SVGStringList",
-        "SVGStylable",
         "SVGStyleElement",
         "SVGSVGElement",
         "SVGSwitchElement",
@@ -1451,7 +1437,6 @@
         "SVGTRefElement",
         "SVGTSpanElement",
         "SVGUnitTypes",
-        "SVGURIReference",
         "SVGUseElement",
         "SVGViewElement",
         "SVGVKernElement",
@@ -1569,11 +1554,9 @@
         "AudioBuffer",
         "AudioBufferSourceNode",
         "AudioContext",
-        "AudioContextOptions",
         "AudioDestinationNode",
         "AudioListener",
         "AudioNode",
-        "AudioNodeOptions",
         "AudioParam",
         "AudioProcessingEvent",
         "AudioScheduledSourceNode",
@@ -1636,8 +1619,7 @@
         "CustomElementRegistry",
         "HTMLSlotElement",
         "HTMLTemplateElement",
-        "ShadowRoot",
-        "Slotable"
+        "ShadowRoot"
       ],
       "methods": [
         "Document.createElement()",
@@ -1710,7 +1692,7 @@
       ],
       "interfaces": ["Crypto", "CryptoKey", "SubtleCrypto"],
       "methods": [],
-      "properties": ["Window.crypto"],
+      "properties": ["crypto_property"],
       "events": [],
       "dictionaries": [
         "AesCbcParams",
@@ -1840,8 +1822,8 @@
         "ServiceWorkerRegistration.showNotification()",
         "ServiceWorkerRegistration.getNotifications()"
       ],
-      "properties": ["ServiceWorkerGlobalScope.onnotificationclick"],
-      "events": []
+      "properties": [],
+      "events": ["ServiceWorkerGlobalScope: notificationclick"]
     },
     "WebRTC": {
       "overview": ["WebRTC API"],
@@ -2164,12 +2146,6 @@
       ],
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
-      "events": []
-    },
-    "XDomain": {
-      "interfaces": ["XDomainRequest"],
-      "methods": [],
-      "properties": [],
       "events": []
     },
     "XMLHttpRequest": {

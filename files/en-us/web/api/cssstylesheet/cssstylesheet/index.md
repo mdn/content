@@ -17,8 +17,8 @@ After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}} or {{
 ## Syntax
 
 ```js
-new CSSStyleSheet();
-new CSSStyleSheet(options);
+new CSSStyleSheet()
+new CSSStyleSheet(options)
 ```
 
 ### Parameters

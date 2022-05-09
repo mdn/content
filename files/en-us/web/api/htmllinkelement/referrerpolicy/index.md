@@ -21,7 +21,7 @@ See the HTTP {{HTTPHeader("Referrer-Policy")}} header for details.
 
 ## Value
 
-A {{domxref("DOMString")}}; one of the following:
+A string; one of the following:
 
 - no-referrer
   - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer

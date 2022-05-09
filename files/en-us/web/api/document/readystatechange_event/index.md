@@ -50,7 +50,7 @@ A generic {{domxref("Event")}}.
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {

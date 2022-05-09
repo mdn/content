@@ -21,8 +21,8 @@ process of generating, validating, and submitting a payment request.
 ## Syntax
 
 ```js
-new PaymentRequest(methodData, details);
-new PaymentRequest(methodData, details, options);
+new PaymentRequest(methodData, details)
+new PaymentRequest(methodData, details, options)
 ```
 
 ### Parameters

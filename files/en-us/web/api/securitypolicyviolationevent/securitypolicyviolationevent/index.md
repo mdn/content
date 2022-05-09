@@ -5,14 +5,13 @@ tags:
   - API
   - CSP
   - Constructor
-  - Experimental
   - HTTP
   - Reference
   - Security
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+{{HTTPSidebar}}
 
 The **`SecurityPolicyViolationEvent`** constructor creates a
 new `SecurityPolicyViolationEvent` object instance.
