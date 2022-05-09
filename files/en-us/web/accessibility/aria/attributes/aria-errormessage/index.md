@@ -46,6 +46,7 @@ We use `aria-invalid="true"` to identify invalid objects:
 [aria-invalid="true"] ~ .errormessage {
   visibility: visible;
 }
+```
 
 When an object is invalid, we use JavaScript to add `aria-invalid="true"`. The above CSS makes the `.errormessage` following an invalid object become visible.
 

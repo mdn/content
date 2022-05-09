@@ -63,9 +63,9 @@ However, getting comfortable with JavaScript is more challenging than getting co
 
 ### What happened?
 
-The heading text changed to _Hello world!_ using JavaScript. You did this by using a function called `{{domxref("Document.querySelector", "querySelector()")}}` to grab a reference to your heading, and then store it in a variable called `myHeading`. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
+The heading text changed to _Hello world!_ using JavaScript. You did this by using a function called {{domxref("Document.querySelector", "querySelector()")}} to grab a reference to your heading, and then store it in a variable called `myHeading`. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
 
-Following that, the code set the value of the `myHeading` variable's `{{domxref("Node.textContent", "textContent")}}` property (which represents the content of the heading) to _Hello world!_.
+Following that, the code set the value of the `myHeading` variable's {{domxref("Node.textContent", "textContent")}} property (which represents the content of the heading) to _Hello world!_.
 
 > **Note:** Both of the features you used in this exercise are parts of the [Document Object Model (DOM) API](/en-US/docs/Web/API/Document_Object_Model), which has the capability to manipulate documents.
 

@@ -60,7 +60,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
   - : Indicates automatic sizing, based on the flex item's content.
 
-    > **Note:** This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using `auto` together with a main size ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) or [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) of `auto`.
+    > **Note:** This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using `auto` together with a main size ([width](https://drafts.csswg.org/css2/#the-width-property) or [height](https://drafts.csswg.org/css2/#the-height-property)) of `auto`.
     >
     > - Originally, `flex-basis:auto` meant "look at my `width` or `height` property".
     > - Then, `flex-basis:auto` was changed to mean automatic sizing, and "main-size" was introduced as the "look at my `width` or `height` property" keyword. It was implemented in {{bug("1032922")}}.
