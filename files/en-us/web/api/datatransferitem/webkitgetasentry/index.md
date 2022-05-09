@@ -166,7 +166,7 @@ This fetches the list of {{domxref("DataTransferItem")}} objects representing th
 Then we call {{domxref("Event.preventDefault()")}} to prevent the event from being handled further after we're done.
 
 Now it's time to start building the list. First, the list is emptied by setting {{domxref("Node.textContent", "listing.textContent")}} to be empty.
-That leaves us with an empty {{domxref("ul")}} to begin inserting directory entries into.
+That leaves us with an empty {{HTMLElement("ul")}} to begin inserting directory entries into.
 
 Then we iterate over the items in the list of dropped items.
 For each one, we call its {{domxref("DataTransferItem.webkitGetAsEntry", "webkitGetAsEntry()")}} method to obtain a {{domxref("FileSystemEntry")}} representing the file.
