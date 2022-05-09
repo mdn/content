@@ -9542,6 +9542,7 @@
 /en-US/docs/Web/API/ValidityState/ValidityState.patternMismatch	/en-US/docs/Web/API/ValidityState/patternMismatch
 /en-US/docs/Web/API/ValidityState/pattern	/en-US/docs/Web/HTML/Attributes/pattern
 /en-US/docs/Web/API/ValidityState/underUnderflow	/en-US/docs/Web/API/ValidityState/rangeUnderflow
+/en-US/docs/Web/API/VideoConfiguration	/en-US/docs/Web/API/Media_Capabilities_API
 /en-US/docs/Web/API/VideoPlaybackQuality.corruptedVideoFrames	/en-US/docs/Web/API/VideoPlaybackQuality/corruptedVideoFrames
 /en-US/docs/Web/API/VideoPlaybackQuality.creationTime	/en-US/docs/Web/API/VideoPlaybackQuality/creationTime
 /en-US/docs/Web/API/VideoPlaybackQuality.droppedVideoFrames	/en-US/docs/Web/API/VideoPlaybackQuality/droppedVideoFrames

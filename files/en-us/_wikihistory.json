@@ -77701,15 +77701,6 @@
       "FredB"
     ]
   },
-  "Web/API/VideoConfiguration": {
-    "modified": "2020-10-15T22:07:16.179Z",
-    "contributors": [
-      "Sheppy",
-      "gmarty",
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
   "Web/API/VideoPlaybackQuality": {
     "modified": "2020-10-15T21:24:25.545Z",
     "contributors": [
