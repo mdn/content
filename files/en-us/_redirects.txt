@@ -1313,7 +1313,6 @@
 /en-US/docs/DOM/File_API/File_System_API/DirectoryReader	/en-US/docs/Web/API/FileSystemDirectoryReader
 /en-US/docs/DOM/File_API/File_System_API/DirectoryReaderSync	/en-US/docs/Web/API/DirectoryReaderSync
 /en-US/docs/DOM/File_API/File_System_API/Entry	/en-US/docs/Web/API/FileSystemEntry
-/en-US/docs/DOM/File_API/File_System_API/EntrySync	/en-US/docs/Web/API/FileSystemEntrySync
 /en-US/docs/DOM/File_API/File_System_API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/DOM/File_API/File_System_API/FileEntrySync	/en-US/docs/Web/API/FileEntrySync
 /en-US/docs/DOM/File_API/File_System_API/FileException	/en-US/docs/Web/API/File_and_Directory_Entries_API
@@ -2806,7 +2805,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/DirectoryReader	/en-US/docs/Web/API/FileSystemDirectoryReader
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/DirectoryReaderSync	/en-US/docs/Web/API/DirectoryReaderSync
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/Entry	/en-US/docs/Web/API/FileSystemEntry
-/en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/EntrySync	/en-US/docs/Web/API/FileSystemEntrySync
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileEntrySync	/en-US/docs/Web/API/FileEntrySync
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileException	/en-US/docs/Web/API/File_and_Directory_Entries_API
@@ -7961,7 +7959,6 @@
 /en-US/docs/Web/API/EncryptedMediaExtensions	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/EncryptedMediaExtensions_API	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/Entry	/en-US/docs/Web/API/FileSystemEntry
-/en-US/docs/Web/API/EntrySync	/en-US/docs/Web/API/FileSystemEntrySync
 /en-US/docs/Web/API/ErrorEvent.error	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 /en-US/docs/Web/API/Event.Event	/en-US/docs/Web/API/Event/Event
 /en-US/docs/Web/API/Event.initEvent()	/en-US/docs/Web/API/Event/initEvent
@@ -8033,6 +8030,7 @@
 /en-US/docs/Web/API/FileReader/onload	/en-US/docs/Web/API/FileReader/load_event
 /en-US/docs/Web/API/FileRequest.locked	/en-US/docs/Web/API/IDBFileRequest/lockedFile
 /en-US/docs/Web/API/FileRequest/lockedFile	/en-US/docs/Web/API/IDBFileRequest/lockedFile
+/en-US/docs/Web/API/FileSystemEntrySync	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter()	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
 /en-US/docs/Web/API/FileSystemFlags	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile

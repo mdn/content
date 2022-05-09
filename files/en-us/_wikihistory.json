@@ -42866,20 +42866,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/FileSystemEntrySync": {
-    "modified": "2020-10-15T21:07:56.937Z",
-    "contributors": [
-      "Sheppy",
-      "squall890",
-      "connorshea",
-      "tocretpa",
-      "teoli",
-      "jwhitlock",
-      "fscholz",
-      "kscarfone",
-      "grendel"
-    ]
-  },
   "Web/API/FileSystemFileEntry": {
     "modified": "2020-10-15T21:08:18.074Z",
     "contributors": [
