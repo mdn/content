@@ -23,14 +23,18 @@ _`IDBFileRequest` also inherits properties from the {{domxref("EventTarget")}} i
 as well as the `then()` method from the defunct `DOMRequest`interface described below_.
 
 - {{domxref("IDBFileRequest.lockedFile")}} {{readonlyinline}}
-  - : The {{domxref("LockedFile")}} object from which the request was started.
-- {{domxref("IDBFileRequest.onprogress")}}
-  - : A callback handler called repeatedly while the operation represented by the `IDBFileRequest` is in progress.
+  - : The {{domxref("IDBMutableFile")}} object from which the request was started.
+
 
 ## Methods
 
 - `DOMRequest.then()`
   - : Returns a `DOMRequest` and takes two callback functions, one for its success and one for its failure cases, as parameters.
+
+## Events
+
+- {{domxref("IDBFileRequest.progress_event", "progress)}}
+  - : Fired periodically while the operation is in progress.
 
 ## Specifications
 
