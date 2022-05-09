@@ -31,7 +31,7 @@ new ConvolverNode(context, options)
 
     - `audioBuffer`
       - : A mono, stereo, or
-        4-channel _{{domxref("AudioBuffer")}}_containing the
+        4-channel {{domxref("AudioBuffer")}} containing the
         (possibly multichannel) impulse response used by the `ConvolverNode`
         to create the reverb effect.
     - `disableNormalization`
@@ -48,7 +48,7 @@ new ConvolverNode(context, options)
         (See {{domxref("AudioNode.channelCountMode")}} for more information including default values.)
     - `channelInterpretation`
       - : Represents an enumerated value describing the meaning of the channels.
-        This interpretation will define how audio [up- `mixing`    and down- `mixing`    ](/en- `US`    /docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up- `mixing`    and_down- `mixing`    ) will happen.
+        This interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
         The possible values are `"speakers"` or `"discrete"`.
         (See {{domxref("AudioNode.channelCountMode")}} for more information including default values.)
 
