@@ -28,19 +28,21 @@ new GravitySensor(options)
 
 ### Parameters
 
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Options are as follows:
 
-    - `frequency`: The desired number of times per second a sample should
-      be taken, meaning the number of times per second that the
-      {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be
-      used, the latter for frequencies less than a second. The actual reading frequency
-      depends on device hardware and consequently may be less than requested. The default
-      frequency is the one defined by the underlying platform.
-    - `referenceFrame`: The local coordinate system representing
-      the reference frame. It can be either `'device'` or
-      `'screen'`. The default is `'device'`.
+    - `frequency`
+      - : The desired number of times per second a sample should
+        be taken, meaning the number of times per second that the
+        {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be
+        used, the latter for frequencies less than a second. The actual reading frequency
+        depends on device hardware and consequently may be less than requested. The default
+        frequency is the one defined by the underlying platform.
+    - `referenceFrame`
+      - : The local coordinate system representing
+        the reference frame. It can be either `'device'` or
+        `'screen'`. The default is `'device'`.
 
 ### Exceptions
 

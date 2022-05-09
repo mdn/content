@@ -28,7 +28,7 @@ new CSSMathSum(values)
 
 ### Parameters
 
-- values
+- `values`
   - : One or more double integers or {{domxref('CSSNumericValue')}} objects.
 
 ## Specifications
