@@ -32,22 +32,14 @@ To write content to file, create a FileWriter object by calling [`createWriter()
   <tbody>
     <tr>
       <td>
-        <code
-          >FileWriterSync
-          <a href="#createreader" title="#createWriter">createWriter</a> ()
-          raises (<a href="/en-US/docs/Web/API/FileException">FileException</a
-          >);</code
-        >
+        <code>FileWriterSync
+          <a href="#createreader" title="#createWriter">createWriter</a> ());
+        </code>
       </td>
     </tr>
     <tr>
       <td>
-        <code
-          >File <a href="#file">file</a> () raises (<a
-            href="/en-US/docs/Web/API/FileException"
-            >FileException</a
-          >);</code
-        >
+        <code>File <a href="#file">file</a> ());</code>
       </td>
     </tr>
   </tbody>
@@ -60,8 +52,7 @@ To write content to file, create a FileWriter object by calling [`createWriter()
 Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
 
 ```
-void createWriter (
-) raises (FileException);
+void createWriter ();
 ```
 
 #### Parameter
@@ -74,7 +65,7 @@ A `FileWriterSync` object.
 
 #### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
 
 | Exception           | Description                                                                    |
 | ------------------- | ------------------------------------------------------------------------------ |
@@ -86,8 +77,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 Returns a File that represents the current state of the file that this `FileEntry` represents.
 
 ```
-void file (
-) raises (FileException);
+void file ();
 ```
 
 ##### Parameter
@@ -100,7 +90,7 @@ A `File` object.
 
 ##### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a [DOMException](/en-US/docs/Web/API/SOMException) with the following codes:
 
 | Exception           | Description                                                                    |
 | ------------------- | ------------------------------------------------------------------------------ |
@@ -109,7 +99,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ## Specifications
 
-{{Specifications}}
+This feature is not part of any specification anymore. It is no longer on track to become a standard.
 
 ## Browser compatibility
 

@@ -65,7 +65,7 @@ object to be written to the file.
 
 ## Specifications
 
-{{Specifications}}
+This feature is not part of any specification anymore. It is no longer on track to become a standard.
 
 ## Browser compatibility
 
