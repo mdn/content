@@ -14,8 +14,8 @@ browser-compat: api.DirectoryEntrySync
 
 The `DirectoryEntrySync` interface represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
 
-> **Note:** This interface has been abandoned: it was on a standard track.
-> _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries API) instead.
+> **Warning:** This interface is deprecated and is no more on the standard track.
+> _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
 
