@@ -18,7 +18,7 @@ fetches made by that script, defining which referrer is sent when fetching the r
 
 ## Value
 
-A {{domxref("DOMString")}}; one of the following:
+A string; one of the following:
 
 - no-referrer
   - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer

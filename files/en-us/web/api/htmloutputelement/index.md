@@ -19,7 +19,7 @@ The **`HTMLOutputElement`** interface provides properties and methods (beyond th
 _This interface also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLOutputElement.defaultValue")}}
-  - : A {{domxref("DOMString")}} representing the default value of the element, initially the empty string.
+  - : A string representing the default value of the element, initially the empty string.
 - {{domxref("HTMLOutputElement.form")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLFormElement")}} indicating the form associated with the control, reflecting the {{htmlattrxref("form", "output")}} HTML attribute if it is defined.
 - {{domxref("HTMLOutputElement.htmlFor")}}{{ReadOnlyInline}}
@@ -27,15 +27,15 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLOutputElement.labels")}}{{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements associated with the element.
 - {{domxref("HTMLOutputElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "output")}} HTML attribute, containing the name for the control that is submitted with form data.
+  - : A string reflecting the {{htmlattrxref("name", "output")}} HTML attribute, containing the name for the control that is submitted with form data.
 - {{domxref("HTMLOutputElement.type")}}{{ReadOnlyInline}}
-  - : The {{domxref("DOMString")}} "`output`".
+  - : The string "`output`".
 - {{domxref("HTMLOutputElement.validationMessage")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
+  - : A string representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
 - {{domxref("HTMLOutputElement.validity")}}{{ReadOnlyInline}}
   - : A {{domxref("ValidityState")}} representing the validity states that this element is in.
 - {{domxref("HTMLOutputElement.value")}}
-  - : A {{domxref("DOMString")}} representing the value of the contents of the elements. Behaves like the {{domxref("Node.textContent")}} property.
+  - : A string representing the value of the contents of the elements. Behaves like the {{domxref("Node.textContent")}} property.
 - {{domxref("HTMLOutputElement.willValidate")}}{{ReadOnlyInline}}
   - : A boolean value indicating whether the element is a candidate for constraint validation.
 

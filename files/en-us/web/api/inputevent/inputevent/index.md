@@ -16,7 +16,7 @@ browser-compat: api.InputEvent.InputEvent
 {{APIRef("DOM Events")}}
 
 The **`InputEvent()`** constructor creates a new
-{{domxref("InputEvent")}}.
+{{domxref("InputEvent")}}. 
 
 ## Syntax
 
@@ -28,7 +28,7 @@ new InputEvent(typeArg, inputEventInit)
 ### Parameters
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : Is a string representing the name of the event.
 - `inputEventInit` {{optional_inline}}
 
   - : Is a `InputEventInit` dictionary, having the following fields:

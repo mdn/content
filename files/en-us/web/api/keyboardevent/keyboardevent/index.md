@@ -12,7 +12,7 @@ browser-compat: api.KeyboardEvent.KeyboardEvent
 {{APIRef("DOM Events")}}
 
 The **`KeyboardEvent()`** constructor creates a new
-{{domxref("KeyboardEvent")}}.
+{{domxref("KeyboardEvent")}}. 
 
 ## Syntax
 
@@ -24,14 +24,14 @@ new KeyboardEvent(typeArg, keyboardEventInit)
 ### Parameters
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : Is a string representing the name of the event.
 - `keyboardEventInit` {{optional_inline}}
 
   - : Is a `KeyboardEventInit` dictionary, having the following fields:
 
-    - `"key"`, optional {{domxref("DOMString")}}, defaulting to `""`,
+    - `"key"`, optional string, defaulting to `""`,
       that sets the value of {{domxref("KeyboardEvent.key")}}.
-    - `"code"`, optional {{domxref("DOMString")}}, defaulting to `""`,
+    - `"code"`, optional string, defaulting to `""`,
       that sets the value of {{domxref("KeyboardEvent.code")}}.
     - `"location"`, optional `unsigned long`, defaulting to `0`,
       that sets the value of {{domxref("KeyboardEvent.location")}}.

@@ -20,17 +20,17 @@ The **`HTMLTableColElement`** interface provides properties for manipulating sin
 _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
 - {{domxref("HTMLTableColElement.align")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} that indicates the horizontal alignment of the cell data in the column.
+  - : Is a string that indicates the horizontal alignment of the cell data in the column.
 - {{domxref("HTMLTableColElement.ch")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the alignment character for cell data.
+  - : Is a string representing the alignment character for cell data.
 - {{domxref("HTMLTableColElement.chOff")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the offset for the alignment character.
+  - : Is a string representing the offset for the alignment character.
 - {{domxref("HTMLTableColElement.span")}}
   - : Is an `unsigned long` that reflects the {{htmlattrxref("span", "col")}} HTML attribute, indicating the number of columns to apply this object's attributes to. Must be a positive integer.
 - {{domxref("HTMLTableColElement.vAlign")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} that indicates the vertical alignment of the cell data in the column.
+  - : Is a string that indicates the vertical alignment of the cell data in the column.
 - {{domxref("HTMLTableColElement.width")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the default column width.
+  - : Is a string representing the default column width.
 
 ## Methods
 

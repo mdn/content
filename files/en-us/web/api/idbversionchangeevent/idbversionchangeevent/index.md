@@ -28,7 +28,7 @@ new IDBVersionChangeEvent(type, eventInitDict)
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} indicating the event which occurred. For
+  - : A string indicating the event which occurred. For
     `IDBVersionChangeEvent` this is `versionchange`.
 - `eventInitDict` {{optional_inline}}
 
