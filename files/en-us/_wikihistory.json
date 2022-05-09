@@ -25110,14 +25110,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioConfiguration": {
-    "modified": "2020-10-15T22:07:16.234Z",
-    "contributors": [
-      "Sheppy",
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
   "Web/API/AudioContext": {
     "modified": "2020-10-15T21:22:06.092Z",
     "contributors": [
