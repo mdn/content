@@ -20,7 +20,7 @@ The **`VideoConfiguration`** dictionary of the [Media Capabilities API](/en-US/d
 
 The `VideoConfiguration` dictionary is made up of five video properties, including:
 
-- **contentType**: A valid video MIME type. See our [web video codec guide](/en-US/docs/Web/Media/Formats/Video_codecs) for types which may be supported.
+- **contentType**: A valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
 - **width**: The width of the video.
 - **height**: The height of the video.
 - **bitrate**: The number of bits used to encode one second of the video file.
@@ -52,6 +52,7 @@ const mediaConfig = {
 
 ## See also
 
+- [Web video codec guide](/en-US/docs/Web/Media/Formats/Video_codecs).
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)

@@ -32,7 +32,7 @@ decodingInfo(MediaDecodingConfiguration)
 
 A {{jsxref('Promise')}} fulfilling with an object containing three Boolean attributes:
 
-- `supported`: Given the properties defined in the {{domxref("MediaConfiguration")}}, can the specified piece of media content be encoded (if {{domxref("MediaEncodingConfiguration")}} is set) or decode (if {{domxref("MediaDecodingConfiguration")}} is set) at all? If yes, `supported` is _true_. Otherwise, it is _false_.
+- `supported`: Given the properties defined in the {{domxref("MediaConfiguration")}}, can the specified piece of media content be encoded (if {{domxref("MediaEncodingConfiguration")}} is set) or decoded (if {{domxref("MediaDecodingConfiguration")}} is set) at all? If yes, `supported` is _true_. Otherwise, it is _false_.
 - `smooth`: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be high quality? Will it be smooth?  If `supported` is `true`, and playback will be smooth, `smooth` is _true_, Otherwise, is it _false._
 - `powerEfficient`: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be power efficient? If `supported` is `true`, and playback will be power efficient, `powerEfficient` is _true_, Otherwise, is it _false._
 
@@ -42,6 +42,7 @@ Browsers will report a supported media configuration as `smooth` and `powerEffic
 
 - {{jsxref("TypeError")}}
   - : Thrown if the `MediaConfiguration` passed to the `decodingInfo()` method is invalid, either because the type is not video or audio, the `contentType` is not a valid codec MIME type, the media decoding configuration is not a valid value for the [media decoding type](/en-US/docs/Web/API/MediaDecodingType), or any other error in the media configuration passed to the method, including omitting values required in the [media decoding configuration](/en-US/docs/Web/API/MediaDecodingConfiguration).
+
 
 ## Examples
 
