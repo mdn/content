@@ -57,7 +57,7 @@ split(separator, limit)
     > characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries))
     > or unicode characters (codepoints), but by UTF-16 codeunits.
     > This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2).
-    > See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/a/34717402).
+    > See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402).
 
 - `limit` {{optional_inline}}
 

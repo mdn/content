@@ -483,7 +483,7 @@ Text-only links in prose content are exempt from this requirement, but it's stil
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets](https://www.a11yproject.com/posts/2018-11-21-large-touch-targets/)
+- [Quick test: Large touch targets](https://www.a11yproject.com/posts/large-touch-targets/)
 
 #### Proximity
 
