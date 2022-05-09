@@ -55402,13 +55402,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/MediaEncodingConfiguration": {
-    "modified": "2020-10-15T22:07:16.193Z",
-    "contributors": [
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
   "Web/API/MediaError": {
     "modified": "2020-10-15T21:46:24.127Z",
     "contributors": [
