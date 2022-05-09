@@ -58,7 +58,7 @@ bar = bar.toUpperCase();
 console.log(bar);               // BAZ
 
 // By contrast, using an array method mutates the array
-var foo = [];
+let foo = [];
 console.log(foo);               // []
 foo.push("plugh");
 console.log(foo);               // ["plugh"]
