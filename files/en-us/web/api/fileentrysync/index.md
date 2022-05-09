@@ -14,8 +14,6 @@ browser-compat: api.FileEntrySync
 
 The `FileEntrySync` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a file in a file system. It lets you write content to a file.
 
-Inherits from: [EntrySync](/en-US/docs/Web/API/FileSystemEntrySync)
-
 ## About this document
 
 This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
@@ -90,7 +88,7 @@ A `File` object.
 
 ##### Exceptions
 
-This method can raise a [DOMException](/en-US/docs/Web/API/SOMException) with the following codes:
+This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
 
 | Exception           | Description                                                                    |
 | ------------------- | ------------------------------------------------------------------------------ |

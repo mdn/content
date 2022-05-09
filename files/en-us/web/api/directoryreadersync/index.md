@@ -10,13 +10,8 @@ browser-compat: api.DirectoryReaderSync
 
 The `DirectoryReaderSync` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) lets you read the entries in a directory.
 
-> **Note:** This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.
-
-## About this document
-
-This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
-
-This specification is pretty much abandoned, having failed to reach any substantial traction.
+> **Warning:** This interface is deprecated and is no more on the standard track.
+> _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
 
@@ -101,11 +96,9 @@ self.onmessage = function(e) {
   <tbody>
     <tr>
       <td>
-        <code
-          >EntrySync
-          <a href="#createreader" title="#readEntries">readEntries</a> () raises
-          (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code
-        >
+        <code>
+          EntrySync <a href="#createreader" title="#readEntries">readEntries</a> ();
+        </code>
       </td>
     </tr>
   </tbody>
@@ -118,8 +111,7 @@ self.onmessage = function(e) {
 Returns a lost of entries from a specific directory. Call this method until an empty array is returned.
 
 ```
-EntrySync readEntries (
-) raises (FileException);
+EntrySync readEntries ();
 ```
 
 ##### Returns
@@ -130,7 +122,7 @@ None
 
 ##### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
 
 | Exception           | Description                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------- |
@@ -140,7 +132,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ## Specifications
 
-{{Specifications}}
+This feature is not part of any specification anymore. It is no longer on track to become a standard.
 
 ## Browser compatibility
 
