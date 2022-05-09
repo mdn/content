@@ -42,7 +42,7 @@ The `{{htmlattrxref("draggable")}}` attribute may be used on any element, includ
 
 ## Starting a Drag Operation
 
-In this example, a listener is added for the {{event("dragstart")}} event by using the `{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}` attribute.
+In this example, a listener is added for the {{event("dragstart")}} event by using the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} attribute.
 
 ```html
 <p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
@@ -247,7 +247,7 @@ If the mouse is released over an element that is a valid drop target, that is, o
 
 During the `{{event("drop")}}` event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drag operation was desired.
 
-As with all drag-related events, the event's `{{domxref("DataTransfer","dataTransfer")}}` property will hold the data that is being dragged. The {{domxref("DataTransfer.getData","getData()")}} method may be used to retrieve the data again.
+As with all drag-related events, the event's {{domxref("DataTransfer","dataTransfer")}} property will hold the data that is being dragged. The {{domxref("DataTransfer.getData","getData()")}} method may be used to retrieve the data again.
 
 ```js
 function onDrop(event) {
