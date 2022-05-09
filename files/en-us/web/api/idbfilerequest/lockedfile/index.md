@@ -9,6 +9,7 @@ tags:
   - Property
   - Reference
   - WebAPI
+browser-compat: api.IDBFileRequest.lockedFile
 ---
 {{APIRef("IndexedDB")}} {{non-standard_header}}
 
