@@ -32,7 +32,7 @@ When creating a multi-selectable tablist, include [`aria-multiselectable="true"`
 
 The `tab` elements not the `tablist`, have the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute. Set to `aria-selected="true"` for the tabs associated with each visible tabpanel. The tabs associated with hidden tabpanel elements have their `aria-selected` attributes set to `false`.
 
-If the tab list has a visible label, set [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the `id` of the labelling element. If now, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) to provide a label.
+If the tab list has a visible label, set [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the `id` of the labelling element. If not, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) to provide a label.
 
 To be keyboard accessible, focus must be managed for the descendants of this role.
 
