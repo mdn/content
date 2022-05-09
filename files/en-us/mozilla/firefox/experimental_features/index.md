@@ -945,7 +945,7 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
 
 #### Streams API: TransformStreams
 
-Firefox support for the [Streams API](/en-US/docs/Web/API/Streams_API) transform streams, including classes and methods: [`TransformStream`](/en-US/docs/Web/API/TransformStream), [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController), and [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough).
+Support for [transform streams](/en-US/docs/Web/API/Streams_API#transform_streams), including the classes [`TransformStream`](/en-US/docs/Web/API/TransformStream) and [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController), and the method [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough).
 
 <table>
   <thead>
