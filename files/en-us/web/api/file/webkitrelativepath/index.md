@@ -5,7 +5,6 @@ tags:
   - File
   - File API
   - File and Directory Entries API
-  - Non-standard
   - Property
   - Read-only
   - Reference
