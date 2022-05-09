@@ -137,3 +137,5 @@ const mediaConfig = {
 ## See also
 
 - {{domxref("MediaCapabilities.encodingInfo()")}}
+- {{domxref("HTMLMediaElement.canPlayType()")}} for file
+- {{domxref("MediaSource.isTypeSupported()")}} for media-source
