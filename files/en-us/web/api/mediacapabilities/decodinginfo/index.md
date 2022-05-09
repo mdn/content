@@ -15,7 +15,8 @@ browser-compat: api.MediaCapabilities.decodingInfo
 ---
 {{APIRef("MediaCapabilities")}}
 
-The **`MediaCapabilities.decodingInfo()`** method, part of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's capabilities info; this contains the three Boolean properties `supported`, `smooth`, and `powerefficient`, which describe whether decoding the media described would be supported, smooth, and powerefficient.
+The **`MediaCapabilities.decodingInfo()`** method, part of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's capabilities info.
+This contains the three boolean properties `supported`, `smooth`, and `powerefficient`, which describe whether decoding the media described would be supported, smooth, and powerefficient.
 
 ## Syntax
 
@@ -29,14 +30,14 @@ decodingInfo(configuration)
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaDecodingConfiguration in the spec -->
   
     - `type`
-      - : The type of media being tested. This takes one of two values:
+      - : The type of media being tested. This takes one of three values:
 
         - `file`: Represents a configuration that is meant to be used for a plain file playback.
         - `media-source`: Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
         - `webrtc`: Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
     
     - `video`
-      - : Configuration object for an video media source.
+      - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
         - `contentType`
