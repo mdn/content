@@ -107,7 +107,7 @@ It clones by recursing through the input object while maintaining a map of previ
     </tr>
     <tr>
       <td>{{domxref("DOMException")}}</td>
-      <td>Most browsers only clone the propertes {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}} (in theory stack traces and other attributes may also be cloned).</td>
+      <td>Most browsers only clone the properties {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}} (in theory stack traces and other attributes may also be cloned).</td>
     </tr>
   </tbody>
 </table>
