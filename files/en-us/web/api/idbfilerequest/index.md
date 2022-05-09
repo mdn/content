@@ -33,7 +33,7 @@ as well as the `then()` method from the defunct `DOMRequest`interface described 
 
 ## Events
 
-- {{domxref("IDBFileRequest.progress_event", "progress)}}
+- {{domxref("IDBFileRequest.progress_event", "progress")}}
   - : Fired periodically while the operation is in progress.
 
 ## Specifications
