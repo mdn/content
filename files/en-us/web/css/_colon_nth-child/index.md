@@ -27,7 +27,7 @@ li:nth-child(2) {
 }
 ```
 
-Note that, in the `element:nth-child()` syntax, the child count includes children of any element type; but it is only considered a match if the element *at that child position* is the type of element specified.
+Note that, in the `element:nth-child()` syntax, the child count includes children of any element type; but it is considered a match only if the element *at that child position* is of the specified element type.
 
 ## Syntax
 
