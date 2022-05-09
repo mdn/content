@@ -8633,7 +8633,6 @@
 /en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor	/en-US/docs/Web/API/MediaTrackSupportedConstraints
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilities	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
-/en-US/docs/Web/API/Media_Capabilities_API/MediaConfiguration	/en-US/docs/Web/API/MediaConfiguration
 /en-US/docs/Web/API/Media_Capabilities_API_	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/Media_Streams_API/ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/MessageChannel.MessageChannel	/en-US/docs/Web/API/MessageChannel/MessageChannel
