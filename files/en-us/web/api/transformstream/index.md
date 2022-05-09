@@ -9,6 +9,8 @@ browser-compat: api.TransformStream
 
 The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a set of transformable data.
 
+`TransformStream` is a {{glossary("Transferable objects","transferable object")}}.
+
 ## Constructor
 
 - {{domxref("TransformStream.TransformStream", "TransformStream()")}}
