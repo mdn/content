@@ -455,7 +455,7 @@ If you like _lots_ of features and your editor is slowing down because of all yo
 - [Aptana Studio](http://www.aptana.com/)
 - [Eclipse](https://www.eclipse.org/)
 - [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
-- [NetBeans IDE](https://netbeans.org/)
+- [NetBeans IDE](https://netbeans.apache.org//)
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
@@ -485,7 +485,7 @@ When you install a new text editor, your OS will probably continue to open text 
 - Windows
 
   - [Windows 8](https://support.microsoft.com/en-us/windows?ui=en-US&rs=en-US&ad=US)
-  - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
+  - [Windows 7](https://support.microsoft.com/en-gb/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495)
   - [older systems](https://www.lifewire.com/how-to-change-file-associations-in-windows-2624477)
 
 - [macOS](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
