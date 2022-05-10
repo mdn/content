@@ -50,10 +50,6 @@ Note that browsers determine which screen to report as current by detecting whic
 - {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
-_Methods inherited from {{DOMxRef("EventTarget")}}:_
-
-{{Page("/en-US/docs/Web/API/EventTarget", "Methods")}}
-
 ### Events
 
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
