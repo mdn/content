@@ -16,14 +16,14 @@ browser-compat: api.MediaError.message
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.message`** returns a
-{{domxref("DOMString")}} which contains a human-readable string offering specific
+string which contains a human-readable string offering specific
 diagnostic details related to the error described by the `MediaError` object,
 or an empty string (`""`) if no diagnostic information can be determined or
 provided.
 
 ## Value
 
-A {{domxref("DOMString")}} providing a detailed, specific explanation of what went
+A string providing a detailed, specific explanation of what went
 wrong and possibly how it might be fixed. This is _not_ a generic description of
 the {{domxref("MediaError.code")}} property's value, but instead goes deeper into the
 specifics of this particular error and its circumstances. If no specific details are
