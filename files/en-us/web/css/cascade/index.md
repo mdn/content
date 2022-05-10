@@ -267,7 +267,7 @@ Styles that are transitioning take precendence over all important styles, no mat
 
 ## Complete cascade order
 
-Now that we have a better understanding of origin type and cascade layer precedence, we realize the table in [Cascading order](#cascading-order) could have more accurately been represented by the following table: 
+Now that we have a better understanding of origin type and cascade layer precedence, we realize the table in [Cascading order](#cascading_order) could have more accurately been represented by the following table: 
 
 <table>
 <thead>
