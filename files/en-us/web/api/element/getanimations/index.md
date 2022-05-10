@@ -37,7 +37,7 @@ getAnimations(options)
 
 ### Parameters
 
-- `options {{optional_inline}}`
+- `options`{{optional_inline}}
 
   - : An options object containing the following property:
 
