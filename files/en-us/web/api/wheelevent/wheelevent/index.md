@@ -23,10 +23,10 @@ new WheelEvent(typeArg, wheelEventInit);
 ### Properties
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : A {{domxref("DOMString")}} representing the name of the event.
 - `wheelEventInit` {{optional_inline}}
 
-  - : Is a `WheelEventInit` dictionary, having the following fields:
+  - : A `WheelEventInit` dictionary, having the following fields:
 
     - `"deltaX"`, optional and defaulting to `0.0`, is a
       `double` representing the horizontal scroll amount in the

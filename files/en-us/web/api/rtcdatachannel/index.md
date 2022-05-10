@@ -30,7 +30,7 @@ To create a data channel and ask a remote peer to join you, call the {{DOMxRef("
 _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.binaryType", "binaryType")}}
-  - : Is a string specifying the type of object
+  - : A string specifying the type of object
     that should be used to represent binary data received on the `RTCDataChannel`.
     Values are the same as allowed on the {{DOMxRef("WebSocket.binaryType")}} property:
     `blob` if {{DOMxRef("Blob")}} objects are being used,

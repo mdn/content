@@ -23,11 +23,11 @@ The **`MediaStreamEvent()`** constructor creates a new
 ### Values
 
 - _type_
-  - : Is a {{domxref("DOMString")}} containing the name of the event, like
+  - : A {{domxref("DOMString")}} containing the name of the event, like
     `addstream` or `removestream`.
 - _mediaStreamEventInit_
 
-  - : Is a `MediaStreamEventInit` dictionary, having the following fields:
+  - : A `MediaStreamEventInit` dictionary, having the following fields:
 
     - `"stream"` of type {{domxref("MediaStream")}} representing the stream
       being concerned by the event.

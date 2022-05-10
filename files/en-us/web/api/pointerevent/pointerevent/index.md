@@ -23,11 +23,11 @@ new PointerEvent(type, pointerEventInit)
 ### Parameters
 
 - `type`
-  - : Is a {{domxref("DOMString")}} representing the name of the event (see [PointerEvent event
+  - : A {{domxref("DOMString")}} representing the name of the event (see [PointerEvent event
     types](/en-US/docs/Web/API/PointerEvent#pointer_event_types)).
 - `pointerEventInit` {{optional_inline}}
 
-  - : Is a `PointerEventInit` dictionary, having the following fields:
+  - : A `PointerEventInit` dictionary, having the following fields:
 
     - `pointerId` — optional `long`, defaulting to `0`,
       sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.

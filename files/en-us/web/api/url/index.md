@@ -49,7 +49,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 - {{domxref("URL.password", "password")}}
   - : A {{domxref("USVString")}} containing the password specified before the domain name.
 - {{domxref("URL.pathname", "pathname")}}
-  - : Is a {{domxref("USVString")}} containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+  - : A {{domxref("USVString")}} containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("URL.port", "port")}}
   - : A {{domxref("USVString")}} containing the port number of the URL.
 - {{domxref("URL.protocol", "protocol")}}

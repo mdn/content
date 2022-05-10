@@ -24,10 +24,10 @@ new KeyboardEvent(typeArg, keyboardEventInit)
 ### Parameters
 
 - `typeArg`
-  - : Is a string representing the name of the event.
+  - : A string representing the name of the event.
 - `keyboardEventInit` {{optional_inline}}
 
-  - : Is a `KeyboardEventInit` dictionary, having the following fields:
+  - : A `KeyboardEventInit` dictionary, having the following fields:
 
     - `"key"`, optional string, defaulting to `""`,
       that sets the value of {{domxref("KeyboardEvent.key")}}.

@@ -30,10 +30,10 @@ _The `FocusEvent()` constructor also inherits arguments from
     "Event()")}}._
 
 - `typeArg`
-  - : Is a string representing the name of the event.
+  - : A string representing the name of the event.
 - `focusEventInit` {{optional_inline}}
 
-  - : Is a `FocusEventInit` dictionary, having the following fields:
+  - : A `FocusEventInit` dictionary, having the following fields:
 
     - `"relatedTarget"`, optional and defaulting to `null`, is
       an {{domxref("EventTarget")}} representing the secondary target of a

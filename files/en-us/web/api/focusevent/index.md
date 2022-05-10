@@ -25,7 +25,7 @@ The **`FocusEvent`** interface represents focus-related events, including {{domx
 _This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}_.
 
 - {{domxref("FocusEvent.relatedTarget")}}
-  - : Is an {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
+  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
 
 ## Methods
 

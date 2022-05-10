@@ -31,11 +31,11 @@ _The `TransitionEvent()` constructor also inherits arguments from
 {{domxref("Event.Event", "Event()")}}._
 
 - _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the type of the
+  - : A {{domxref("DOMString")}} representing the name of the type of the
     `TransitionEvent`. It is case-sensitive and can only be:
     `'transitionend'`.
 - `propertyName` {{optional_inline}}
-  - : Is a {{domxref("DOMString")}} containing the value of the
+  - : A {{domxref("DOMString")}} containing the value of the
     {{cssxref("property-name")}} CSS property associated with the transition. It defaults
     to `""`.
 - `elapsedTime` {{optional_inline}}
@@ -47,7 +47,7 @@ _The `TransitionEvent()` constructor also inherits arguments from
     in which case the event will be fired with `elapsedTime` containing
     `(-1 * delay)`. It defaults to `0.0`.
 - `pseudoElement` {{optional_inline}}
-  - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name
+  - : A {{domxref("DOMString")}}, starting with `"::"`, containing the name
     of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation
     runs on. If the animation doesn't run on a pseudo-element but on the element, an empty
     string: ` ""``. ` It defaults to `""`.

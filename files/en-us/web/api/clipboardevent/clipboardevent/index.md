@@ -32,7 +32,7 @@ new ClipboardEvent(type, options)
 _The `ClipboardEvent()` constructor also inherits arguments from {{domxref("Event.Event", "Event()")}}._
 
 - `type`
-  - : Is a string representing the name of the type of the `ClipboardEvent`.
+  - : A string representing the name of the type of the `ClipboardEvent`.
     It is case-sensitive and can be: `'copy'`, `'cut'`, or `'paste'`.
 - `options` {{optional_inline}}
 
