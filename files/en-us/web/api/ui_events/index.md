@@ -201,7 +201,7 @@ clear.addEventListener('click', () => {
 
 ### Keyboard and input events
 
-This example logs {{domxref("Element.keydown_event", "keydown")}} and {{domxref("Element.input_event", "input")}} events. Try typing into the text area. Note that keys like <kbd>Shift</kbd> produce `keydown` events but not `input` events.
+This example logs {{domxref("Element.keydown_event", "keydown")}}, {{domxref("Element.beforeinput_event", "beforeinput")}} and, {{domxref("Element.input_event", "input")}} events. Try typing into the text area. Note that keys like <kbd>Shift</kbd> produce `keydown` events but not `input` events.
 
 #### HTML
 
