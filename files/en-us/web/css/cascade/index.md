@@ -142,33 +142,48 @@ li { margin-left: 0 } /* This is a reset */
 
 In this case, declarations inside `li` and `.specific` rules should apply.
 
+Once again, there are four steps in the cascade algorithm, in order:
+
+  1. Relevance
+  2. Origin and importance
+  3. Specificity
+  4. Order of appearance 
+
 The `1px` is for print media. Due to lack of _relevance_ based on it's media type. It is removed from consideration. 
 
-No declaration is marked as `!important`, so the precedence order is author style sheets before user style sheets or user-agent stylesheet. Based on _origin and importance_,  the `1em` and the `10px` are removed from consideration as they are from the user and user-agent stylesheets, resepectively. Both origins have lower precedence for normal styles than author styles, so even though the `1em` had higher specificity, it gets removed by the algorithm before specificity comes into play. 
+No declaration is marked as `!important`, so the precedence order is author style sheets over user style sheets over user-agent stylesheet. Based on _origin and importance_,  the `1em` and the `10px` are removed from consideration as they are from the user and user-agent stylesheets, resepectively. Both origins have lower precedence for normal styles than author styles, so even though the user style on `.specific` of `1em` had higher specificity, is it a normal declaration in a user style sheet thus has less precedence than any author styles, so it gets removed by the origin and importance step of the algorithm before specificity even comes into play. 
 
 There are three declarations in user stylesheets:
 
 ```css
-margin-left: 0
+li { margin-left: 0 } /* from author css 1 */
 ```
+
+```css
+@media screen {
+  li { margin-left: 3px }
+}
+```
+
+```css
+@layer namedLayer {
+  li {
+    margin-left: 5px ;
+  }
+}
+```
+
+The last one, the `5px` is part of a cascade layer. Declarations in layers have less precendence than styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
+
+This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_. 
+
+We then look at _order of appearance_. The second one, the last of the two unlayered author styles, wins. 
 
 ```css
 margin-left: 3px
 ```
 
-```css
-margin-left: 5px
-```
-
-The last one, the `5px` was declared as part of a cascade layer. Declarations in layers have less precendence than styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
-
-This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_. We then look at _order of appearance_. The second one, the last of the two unlayered author styles, wins. 
-
-```css
-margin-left: 3px
-```
-
-Note that the declaration defined in the user CSS, while having a greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though coming later in the code, is not chosen either. Cascade layers have less precedence that unlayered styles.  _Order of appearance_ only matters when both origin and importance and specificity are equal. 
+> **Note:** The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as cascade layers have less precedence that unlayered styles.  _Order of appearance_ only matters when both origin, importance, and specificity are equal. 
 
 
 ## Author styles: inline styles, layers, and precedence
