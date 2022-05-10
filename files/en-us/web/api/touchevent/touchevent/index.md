@@ -10,7 +10,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.TouchEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("Touch Events")}}
 
 The **Touch`Event()`** constructor creates a new {{domxref("TouchEvent")}}.
 

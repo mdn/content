@@ -2,7 +2,7 @@
 title: 'KeyboardEvent: code values'
 slug: Web/API/KeyboardEvent/code/code_values
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 The following tables show what code values are used for each native scancode or virtual keycode on major platforms. The reason is that some browsers choose to interpret physical keys differently, there are some differences in which keys map to which codes. These tables show those variations when known.
 
 ## Code values on Windows

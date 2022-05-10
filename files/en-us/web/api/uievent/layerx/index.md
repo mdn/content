@@ -10,7 +10,7 @@ tags:
   - UIEvent
 browser-compat: api.UIEvent.layerX
 ---
-{{APIRef("DOM Events")}} {{Non-standard_header}}
+{{APIRef("UI Events")}} {{Non-standard_header}}
 
 The **`UIEvent.layerX`** read-only property returns the
 horizontal coordinate of the event relative to the current layer.

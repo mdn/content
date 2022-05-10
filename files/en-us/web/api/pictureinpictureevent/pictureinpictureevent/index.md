@@ -3,7 +3,7 @@ title: PictureInPictureEvent()
 slug: Web/API/PictureInPictureEvent/PictureInPictureEvent
 browser-compat: api.PictureInPictureEvent.PictureInPictureEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("Picture-in-Picture API")}}
 
 The **`PictureInPictureEvent()`** constructor returns a newly
 created {{domxref("PictureInPictureEvent")}} object with an optional

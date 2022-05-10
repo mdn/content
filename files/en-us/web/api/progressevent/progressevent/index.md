@@ -8,7 +8,7 @@ tags:
   - ProgressEvent
 browser-compat: api.ProgressEvent.ProgressEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("XMLHttpRequest")}}
 
 The **`ProgressEvent()`** constructor returns a newly created
 {{domxref("ProgressEvent")}}, representing the current completion of a long process.

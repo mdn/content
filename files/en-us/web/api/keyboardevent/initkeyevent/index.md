@@ -10,7 +10,7 @@ tags:
   - Reference
   - Non Standard
 ---
-{{ ApiRef("DOM Events") }}
+{{APIRef("UI Events")}}
 
 > **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
 >

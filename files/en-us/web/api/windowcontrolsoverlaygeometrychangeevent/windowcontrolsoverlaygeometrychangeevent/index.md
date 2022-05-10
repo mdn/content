@@ -8,7 +8,7 @@ tags:
   - WindowControlsOverlayGeometryChangeEvent
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("Window Controls Overlay API")}}
 
 The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly created
 {{domxref("WindowControlsOverlayGeometryChangeEvent")}}, representing the current geometry of a desktop Progressive Web App's title bar area.

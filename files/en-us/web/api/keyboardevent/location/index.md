@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.location
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.location`** read-only property returns an
 `unsigned long` representing the location of the key on the keyboard or other

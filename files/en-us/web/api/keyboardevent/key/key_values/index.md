@@ -20,7 +20,7 @@ tags:
   - keyboard
   - keys
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 The tables below list the standard key values in various categories of key, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.
 
 > **Callout:**
