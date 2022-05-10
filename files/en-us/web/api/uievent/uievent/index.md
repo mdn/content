@@ -36,9 +36,8 @@ new UIEvent(typeArg, options)
       - : optional and defaulting to
         `null`, of type {{domxref("WindowProxy")}}, that is the
         {{domxref("Window")}} associated with the event .
-    - `sourceCapabilities`
-      - : {{non- `standard`    inline}} An
-        instance of the {{domxref("InputDeviceCapabilities")}} interface which provides
+    - `sourceCapabilities` {{non-standard_inline}}
+      - : An instance of the {{domxref("InputDeviceCapabilities")}} interface which provides
         information about the physical device responsible for generating a touch event.
 
     > **Note:** The `UIEventInit` dictionary also accepts fields from the
