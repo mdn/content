@@ -1,5 +1,5 @@
 ---
-title: disabled
+title: 'HTML attribute: disabled'
 slug: Web/HTML/Attributes/disabled
 tags:
   - Attribute
