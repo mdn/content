@@ -376,7 +376,7 @@ Now we need to define this function too! Add the following code, again to the bo
 function resetGame() {
   guessCount = 1;
 
-  const resetParas = document.querySelectorAll('.resultParas p');
+  const resetParas = document.querySelectorAll('.resultParas');
   for (const resetPara of resetParas) {
     resetPara.textContent = '';
   }
