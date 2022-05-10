@@ -54271,13 +54271,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/KeyboardEvent/code/code_values": {
-    "modified": "2019-11-18T13:07:24.231Z",
-    "contributors": [
-      "LeonFrempong",
-      "irenesmith"
-    ]
-  },
   "Web/API/KeyboardEvent/ctrlKey": {
     "modified": "2020-10-15T21:31:53.854Z",
     "contributors": [
@@ -54381,27 +54374,6 @@
       "jscape",
       "johndrinkwater",
       "ishita"
-    ]
-  },
-  "Web/API/KeyboardEvent/key/Key_Values": {
-    "modified": "2020-10-27T11:23:58.174Z",
-    "contributors": [
-      "ksam",
-      "Zearin_Galaurum",
-      "wbamberg",
-      "HiEv",
-      "mwallnoefer",
-      "SphinxKnight",
-      "Sheppy",
-      "tuespetre",
-      "nikparo",
-      "chrisdavidmills",
-      "CaptainJKoB",
-      "darkfrog26",
-      "Speich",
-      "cactus1",
-      "Nimelrian",
-      "stephaniehobson"
     ]
   },
   "Web/API/KeyboardEvent/keyCode": {
@@ -75996,6 +75968,34 @@
       "Shaver",
       "JesseW",
       "cbiesinger"
+    ]
+  },
+  "Web/API/UI_Events/Keyboard_event_code_values": {
+    "modified": "2019-11-18T13:07:24.231Z",
+    "contributors": [
+      "LeonFrempong",
+      "irenesmith"
+    ]
+  },
+  "Web/API/UI_Events/Keyboard_event_key_values": {
+    "modified": "2020-10-27T11:23:58.174Z",
+    "contributors": [
+      "ksam",
+      "Zearin_Galaurum",
+      "wbamberg",
+      "HiEv",
+      "mwallnoefer",
+      "SphinxKnight",
+      "Sheppy",
+      "tuespetre",
+      "nikparo",
+      "chrisdavidmills",
+      "CaptainJKoB",
+      "darkfrog26",
+      "Speich",
+      "cactus1",
+      "Nimelrian",
+      "stephaniehobson"
     ]
   },
   "Web/API/URL": {
