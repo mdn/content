@@ -14,7 +14,11 @@ The `Screen` interface represents a screen, usually the one on which the current
 
 Note that browsers determine which screen to report as current by detecting which screen has the center of the browser window.
 
+{{InheritanceDiagram}}
+
 ## Properties
+
+_Also inherits properties from its parent {{domxref("EventTarget")}}_.
 
 - {{DOMxRef("Screen.availTop")}} {{Non-standard_Inline}}
   - : Specifies the y-coordinate of the first pixel that is not allocated to permanent or semipermanent user interface features.
@@ -44,6 +48,8 @@ Note that browsers determine which screen to report as current by detecting whic
   - : Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.
 
 ## Methods
+
+_Also inherits methods from its parent {{domxref("EventTarget")}}_.
 
 - {{DOMxRef("Screen.lockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Lock the screen orientation (only works in fullscreen or for installed apps)
