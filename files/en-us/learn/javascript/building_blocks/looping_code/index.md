@@ -975,7 +975,7 @@ You've reached the end of this article, but can you remember the most important 
 ## Conclusion
 
 This article has revealed to you the basic concepts behind, and different options available when looping code in JavaScript.
-You should now be clear on why loops are a good mechanism for dealing with repetitive code and are raring to use them in your own examples!
+You should now be clear on why loops are a good mechanism for dealing with repetitive code and raring to use them in your own examples!
 
 If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/Learn#contact_us) to ask for help.
 
