@@ -1698,7 +1698,7 @@
 /en-US/docs/DOM/StorageEvent	/en-US/docs/Web/API/StorageEvent
 /en-US/docs/DOM/StyleSheetList	/en-US/docs/Web/API/StyleSheetList
 /en-US/docs/DOM/Text	/en-US/docs/Web/API/Text
-/en-US/docs/DOM/Text.replaceWholeText	/en-US/docs/Web/API/Text/replaceWholeText
+/en-US/docs/DOM/Text.replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/DOM/Text.splitText	/en-US/docs/Web/API/Text/splitText
 /en-US/docs/DOM/Text.wholeText	/en-US/docs/Web/API/Text/wholeText
 /en-US/docs/DOM/TextMetrics	/en-US/docs/Web/API/TextMetrics
@@ -3006,7 +3006,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/StyleSheet/title	/en-US/docs/Web/API/StyleSheet/title
 /en-US/docs/Document_Object_Model_(DOM)/StyleSheet/type	/en-US/docs/Web/API/StyleSheet/type
 /en-US/docs/Document_Object_Model_(DOM)/Text	/en-US/docs/Web/API/Text
-/en-US/docs/Document_Object_Model_(DOM)/Text.replaceWholeText	/en-US/docs/Web/API/Text/replaceWholeText
+/en-US/docs/Document_Object_Model_(DOM)/Text.replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/Document_Object_Model_(DOM)/Text.splitText	/en-US/docs/Web/API/Text/splitText
 /en-US/docs/Document_Object_Model_(DOM)/Text.wholeText	/en-US/docs/Web/API/Text/wholeText
 /en-US/docs/Document_Object_Model_(DOM)/TextMetrics	/en-US/docs/Web/API/TextMetrics
@@ -9409,9 +9409,10 @@
 /en-US/docs/Web/API/SubtleCrypto.verify	/en-US/docs/Web/API/SubtleCrypto/verify
 /en-US/docs/Web/API/SubtleCrypto.wrapKey	/en-US/docs/Web/API/SubtleCrypto/wrapKey
 /en-US/docs/Web/API/Text.Text	/en-US/docs/Web/API/Text/Text
-/en-US/docs/Web/API/Text.replaceWholeText	/en-US/docs/Web/API/Text/replaceWholeText
+/en-US/docs/Web/API/Text.replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/Web/API/Text.splitText	/en-US/docs/Web/API/Text/splitText
 /en-US/docs/Web/API/Text.wholeText	/en-US/docs/Web/API/Text/wholeText
+/en-US/docs/Web/API/Text/replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/Web/API/TextDecoder.TextDecoder	/en-US/docs/Web/API/TextDecoder/TextDecoder
 /en-US/docs/Web/API/TextDecoder.decode	/en-US/docs/Web/API/TextDecoder/decode
 /en-US/docs/Web/API/TextDecoder.encoding	/en-US/docs/Web/API/TextDecoder/encoding
