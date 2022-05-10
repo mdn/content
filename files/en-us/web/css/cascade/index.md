@@ -323,11 +323,11 @@ Now that we have a better understanding of origin type and cascade layer precede
 
 Only CSS property/value pair declarations participate in the cascade. This means that [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade. 
 
-### @-rules and the cascade 
+For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participates in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules). 
 
-For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participates in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered.
+While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, the at-rule may make an entire selector not relevant, as we saw with the print style in the [basic example](#basic-example). 
 
-While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, declarations contained in {{cssxref("@keyframes")}} don't. As with `@font-face`, only the at-rule as a whole is selected via the cascade algorithm.
+Declarations in {{cssxref("@keyframes")}} don't participate in the cascade.  As with `@font-face`, only the `@keyframes` as a whole is selected via the cascade algorithm. The [precedence order of animation is described below](#css-animations-and-the-cascade). 
 
 When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](en-US/docs/Web/CSS/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is which is treated as the last declared layer. This was discussed above.
 
