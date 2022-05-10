@@ -40,7 +40,7 @@ Some browsers let users modify the user-agent stylesheet, but this is rare and n
 
 Although some constraints on user-agent stylesheets are set by the HTML specification, browsers have a lot of latitude: that means some differences exist between browsers. To simplify the development process, Web developers may use a CSS reset stylesheet, such as [normalize.css](https://github.com/necolas/normalize.css), which sets common properties values to a known state for all browsers before beginning to make alterations to suit their specific needs. 
 
-Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) next to a property, making it "important", styles declared by author styles, including a reset style sheet, take precendence over the user-agent styles, regardless of the specificity of the associated selector.
+Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) next to a property, making it "important", styles declared by author styles, including a reset style sheet, take precedence over the user-agent styles, regardless of the specificity of the associated selector.
 
 ### Author stylesheets
 
@@ -83,7 +83,7 @@ The cascade is in ascending order, meaning animations have precedence of normal 
  >
  > Property values set by animation {{cssxref('@keyframes')}} are more important than all normal styles (those with no [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) set). 
  >
- >Property values being set in a {{cssxref('transition')}} take precendence over all other values set, even those marked with `!important`. 
+ >Property values being set in a {{cssxref('transition')}} take precedence over all other values set, even those marked with `!important`. 
 
 
 The cascade algorithm is applied _before_ the specificity algorithm, meaning if `:root p { color: red;}` is declared in the user stylesheet (line 2) and a less specific `p {color: blue;}` is in the author stylesheet (line 3), the paragraphs will be blue.
@@ -173,7 +173,7 @@ li { margin-left: 0 } /* from author css 1 */
 }
 ```
 
-The last one, the `5px` is part of a cascade layer. Declarations in layers have less precendence than styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
+The last one, the `5px` is part of a cascade layer. Declarations in layers have less precedence than styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
 
 This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_. 
 
@@ -188,7 +188,7 @@ margin-left: 3px
 
 ## Author styles: inline styles, layers, and precedence
 
-The [table in Cascading order](#cascading_order) provided a precedence order overview. The table summarized the user-agent, user, and author origin type styles in two lines each with "origin type - normal" and "origin type - !important". The precendence in each origin type is more nuanced. Styles can be contained within layers within their origin type, and, with author styles, there is also the issue of where inline styles land in the cascade order. 
+The [table in Cascading order](#cascading_order) provided a precedence order overview. The table summarized the user-agent, user, and author origin type styles in two lines each with "origin type - normal" and "origin type - !important". The precedence in each origin type is more nuanced. Styles can be contained within layers within their origin type, and, with author styles, there is also the issue of where inline styles land in the cascade order. 
 
 The order in which layers are declared is important in determining precedence. Normal styles in a layer take precedence over styles declared in prior layers; with normal styles declared outside of any layer taking precedence over normal layered styles regardless of specificity. 
 
@@ -231,7 +231,7 @@ and then in the body of the document we have inline styles:
 | 11   | inline `style`      | `!important` |
 | 12   | transitions |              |
 
-In all origin types, the non important styles contained in layers have the lowest precendence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precendence than all normal unlayered styles, which includes normal styles from `unlayeredStyles.css`, `moreUnlayeredStyles.css`, and the `color` of `p` in the `<style>` itself. 
+In all origin types, the non important styles contained in layers have the lowest precedence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precedence than all normal unlayered styles, which includes normal styles from `unlayeredStyles.css`, `moreUnlayeredStyles.css`, and the `color` of `p` in the `<style>` itself. 
 
 If any of the layered styles in A, B, or C, have code similar to `:root body p { color: black;}`, those declarations are removed from consideration because of _origin_ as normal layered styles have less precedence than normal unlayered styles . If, however, the `:root body p { color: black;}` was found in `unlayeredStyles.css`, as both origin and importance are the same, _specificity_ would mean the black declaration had precedence.
 
@@ -239,7 +239,7 @@ The layer order of precedence is inverted for styles declared as `!important`. I
 
 ### Inline styles
 
-Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precendence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`. 
+Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`. 
 
 Normal inline styles take precedence over any other normal author styles unless the property is being altered by a CSS animation. 
 
