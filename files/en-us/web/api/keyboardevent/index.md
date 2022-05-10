@@ -17,7 +17,7 @@ tags:
   - user input
 browser-compat: api.KeyboardEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ({{event('keydown')}}, {{event('keypress')}}, or {{event('keyup')}}) identifies what kind of keyboard activity occurred.
 
