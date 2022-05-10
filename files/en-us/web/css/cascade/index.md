@@ -165,7 +165,7 @@ This leaves the `0` and the `3px`, which both have the same selector, hence the 
 margin-left: 3px
 ```
 
-Note that the declaration defined in the user CSS, while having a greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though coming later in the code, is not chosed either. Cascade layers have less precendence that unlayered styles.  _Order of appearance_ only matters when both origin and importance and specifity are equal. 
+Note that the declaration defined in the user CSS, while having a greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though coming later in the code, is not chosen either. Cascade layers have less precedence that unlayered styles.  _Order of appearance_ only matters when both origin and importance and specificity are equal. 
 
 
 ## Author styles: inline styles, layers, and precedence
