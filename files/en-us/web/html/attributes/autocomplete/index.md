@@ -1,5 +1,5 @@
 ---
-title: The HTML autocomplete attribute
+title: 'HTML attribute: autocomplete'
 slug: Web/HTML/Attributes/autocomplete
 tags:
   - Addresses
