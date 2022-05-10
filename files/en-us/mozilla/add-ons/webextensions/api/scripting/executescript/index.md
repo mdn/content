@@ -36,7 +36,7 @@ let results = await browser.scripting.executeScript(
 
 - `details`
 
-  - : An object describing the script to inject.  It contains the following properties:
+  - : An object describing the script to inject. It contains these properties:
 
     - `args`
       - : `any`. An array of arguments to carry into the function. This is only valid if the `func` parameter is specified. The arguments must be JSON-serializable.
@@ -53,7 +53,7 @@ let results = await browser.scripting.executeScript(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame. If any error occurs, the promise is rejected.
 
-Each `InjectionResult` object has the following properties:
+Each `InjectionResult` object has these properties:
 
 - `frameId`
   - : `number`. The frame ID associated with the injection.
@@ -64,7 +64,7 @@ Each `InjectionResult` object has the following properties:
     - `message`
       - : `string`. A message explaining why the injection failed.
 
-The result of the script is the last evaluated statement, which is similar to the results that would be seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
+The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
 
 ```js
 let foo='my result'; foo;
