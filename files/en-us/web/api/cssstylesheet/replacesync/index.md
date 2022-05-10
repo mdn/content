@@ -44,7 +44,7 @@ In the following example a new stylesheet is created and two CSS rules are added
 ```js
 let stylesheet = new CSSStyleSheet();
 
-stylesheet.replaceSync('body { font-size: 1.4em };p { color: red; }');
+stylesheet.replaceSync('body { font-size: 1.4em } p { color: red; }');
 ```
 
 ## Specifications
