@@ -65,7 +65,7 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 ### DOM
 
 - Web workers can now self-terminate
-  - : [Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) now support the `nsIWorkerScope.close` method, which allows them to terminate themselves.
+  - : [Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) now support the `nsIWorkerScope.close()` method, which allows them to terminate themselves.
 - Drag and drop now supports files
   - : The [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object provided to drag listeners now includes a list of files that were dragged.
 - Checking to see if an element matches a specified CSS selector
@@ -109,7 +109,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 ### Places
 
 - Places queries can now use the `redirectsMode` attribute on the `nsINavHistoryQueryOptions` interface to specify whether or not to include redirected pages in results.
-- Added the new `nsIFaviconService.expireAllFavicons` method to the `nsIFaviconService` interface.
+- Added the new `nsIFaviconService.expireAllFavicons()` method to the `nsIFaviconService` interface.
 
 ### Storage
 
@@ -124,7 +124,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ### Preferences
 
-- The `nsIContentPrefService` interface has two new methods: `nsIContentPrefService.getPrefsByName` and `nsIContentPrefService.removePrefsByName`.
+- The `nsIContentPrefService` interface has two new methods: `nsIContentPrefService.getPrefsByName()` and `nsIContentPrefService.removePrefsByName()`.
 
 ### Themes
 
@@ -141,7 +141,7 @@ See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/U
 - Added support for the `container-live-role` attribute to objects. See {{bug(391829)}}.
 - The `tabs-closebutton` binding has been removed. See {{bug(500971)}}.
 - Added support to `nsISound` for playing sounds based on events that have occurred. See {{bug(502799)}}.
-- The syntax for the `nsITreeView` methods `nsITreeView.canDrop` and `nsITreeView.drop` has changed to support the new drag & drop API introduced in Gecko 1.9. See {{bug(455590)}}.
+- The syntax for the `nsITreeView` methods `nsITreeView.canDrop()` and `nsITreeView.drop()` has changed to support the new drag & drop API introduced in Gecko 1.9. See {{bug(455590)}}.
 - Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see {{bug(76053)}}. This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the `window` element and it has a default button, it needs to call `nsIDOMChromeWindow.notifyDefaultButtonLoaded` during the window's `onload` event handler.
 - The `nsILocalFileMac` interface has had two methods removed: `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
 - The new [`NetUtils.jsm`](/en-US/docs/JavaScript_code_modules/NetUtil.jsm) code module provides an easy-to-use method for asynchronously copying data from an input stream to an output stream.
@@ -151,7 +151,7 @@ See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/U
 - The [`loadOneTab`](/en-US/docs/Mozilla/Tech/XUL/Method/loadOneTab) and [`addTab`](/en-US/docs/Mozilla/Tech/XUL/Method/addTab) methods now accept a new `relatedToCurrent` parameter and, in addition, allow the parameters to be specified by name, since nearly all of the parameters are optional.
 - The "[hidden](/en-US/docs/Install_Manifests#hidden)" property is no longer supported in install manifests; it's no longer possible to prevent the user from seeing add-ons in the add-on manager window.
 - The `@mozilla.org/webshell;1` component no longer exists; you need to use `@mozilla.org/docshell;1` instead.
-- You can now register with the update-timer category to schedule timer events without having to instantiate the object that the timer will eventually call into; it will instead be instantiated when it's needed. See `nsIUpdateTimerManager.registerTimer` for details.
+- You can now register with the update-timer category to schedule timer events without having to instantiate the object that the timer will eventually call into; it will instead be instantiated when it's needed. See `nsIUpdateTimerManager.registerTimer()` for details.
 - The [`NPN_GetValue()`](/en-US/docs/NPN_GetValue) function no longer provides access to XPCOM through the variable values `NPNVserviceManager`, `NPNVDOMelement`, and `NPNVDOMWindow`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
 - Plugins are no longer scriptable through XPCOM (IDL) interfaces, [NPRuntime](/en-US/docs/Gecko_Plugin_API_Reference/Scripting_plugins) is the API to use for making plugins scriptable, and [`NPP_GetValue()`](/en-US/docs/NPP_GetValue) is no longer called to with the value `NPPVpluginScriptableInstance` or `NPPVpluginScriptableIID`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
 
@@ -206,7 +206,7 @@ The following assorted changes have been made:
 ### Changes in accessibility code
 
 - The `EVENT_REORDER`[accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See {{bug(420845)}}.
-- The `nsIAccessibleTable.selectRow` now correctly removes any current selection before selecting the specified row.
+- The `nsIAccessibleTable.selectRow()` now correctly removes any current selection before selecting the specified row.
 
 ## See also
 
