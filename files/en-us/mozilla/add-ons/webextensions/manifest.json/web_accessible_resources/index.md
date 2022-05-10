@@ -54,7 +54,7 @@ In Manifest V2, web accessible resources are added as an array under the key, li
 ]
 ```
 
-### Manifest V2 syntax
+### Manifest V3 syntax
 
 In Manifest V3, the `web_accessible_resources` key is an array of objects like this:
 
