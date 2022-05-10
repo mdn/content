@@ -51,7 +51,18 @@ let results = await browser.scripting.executeScript(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.InjectionResult")}}. The array's values represent the result of the script in every injected frame. If any error occurs, the promise is rejected.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame. If any error occurs, the promise is rejected.
+
+Each `InjectionResult` object has the following properties:
+
+- `frameId`
+  - : `number`. The frame ID associated with the injection.
+- `result`{{optional_inline}}
+  - : `any`. The result of the script execution.
+- `error`{{optional_inline}}
+  - : `object`. When the injection fails, details of the failure errors.
+    - `message`
+      - : `string`. A message explaining why the injection failed.
 
 The result of the script is the last evaluated statement, which is similar to the results that would be seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
 
