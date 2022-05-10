@@ -433,26 +433,6 @@
       "properties": [],
       "events": []
     },
-    "File System API": {
-      "interfaces": [
-        "FileError",
-        "FileException",
-        "FileHandle",
-        "FileRequest",
-        "HTMLInputElement",
-        "LocalFileSystem",
-        "LocalFileSystemSync",
-        "LockedFile",
-        "Metadata"
-      ],
-      "methods": [
-        "Window.requestFileSystem()",
-        "Window.resolveLocalFileSystemURL()",
-        "WorkerGlobalScope.requestFileSystemSync()"
-      ],
-      "properties": [],
-      "events": []
-    },
     "Fullscreen API": {
       "overview": ["Fullscreen API"],
       "guides": ["/docs/Web/API/Fullscreen_API/Guide"],
