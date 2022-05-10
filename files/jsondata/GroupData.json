@@ -1443,7 +1443,6 @@
       "methods": [],
       "properties": [],
       "events": [
-        "Window: abort",
         "Element: beforeinput",
         "Element: blur",
         "Element: click",
@@ -1451,7 +1450,6 @@
         "Element: compositionupdate",
         "Element: compositionend",
         "Element: dblclick",
-        "Window: error",
         "Element: focus",
         "Element: focusin",
         "Element: focusout",
@@ -1459,7 +1457,6 @@
         "Element: keydown",
         "Element: keypress",
         "Element: keyup",
-        "Window: load",
         "Element: mousedown",
         "Element: mouseenter",
         "Element: mouseleave",
@@ -1467,11 +1464,12 @@
         "Element: mouseout",
         "Element: mouseover",
         "Element: mouseup",
-        "Window: resize",
-        "Document: scroll",
         "Element: select",
-        "Window: unload",
-        "Element: wheel"
+        "Element: wheel",
+        "Window: abort",
+        "Window: error",
+        "Window: load",
+        "Window: unload"
       ]
     },
     "URL API": {
