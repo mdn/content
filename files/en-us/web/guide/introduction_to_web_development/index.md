@@ -39,7 +39,7 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 - [Getting started with JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) — what is JavaScript and how can it help you?
 - [JavaScript reference guide](/en-US/docs/Web/JavaScript/Guide) — a comprehensive, regularly updated guide to JavaScript for all levels of learning from beginner to advanced.
 - [Crockford on JavaScript](https://www.youtube.com/playlist?list=PL7664379246A246CB) — an in-depth video series on the JavaScript language.
-- [Eloquent JavaScript](https://eloquentjavascript.net/1st_edition/contents.html) — a comprehensive guide to intermediate and advanced JavaScript methodologies
+- [Eloquent JavaScript](https://eloquentjavascript.net/) — a comprehensive guide to intermediate and advanced JavaScript methodologies
 
 #### Intermediate
 
