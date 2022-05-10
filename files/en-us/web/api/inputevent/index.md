@@ -11,7 +11,7 @@ tags:
   - events
 browser-compat: api.InputEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`InputEvent`** interface represents an event notifying the user of editable content changes.
 
