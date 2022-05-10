@@ -781,7 +781,6 @@
         "IDBCursor",
         "IDBCursorWithValue",
         "IDBDatabase",
-        "IDBEnvironment",
         "IDBFactory",
         "IDBIndex",
         "IDBKeyRange",
@@ -789,8 +788,7 @@
         "IDBOpenDBRequest",
         "IDBRequest",
         "IDBTransaction",
-        "IDBVersionChangeEvent",
-        "IDBVersionChangeRequest"
+        "IDBVersionChangeEvent"
       ],
       "methods": [],
       "properties": [],
