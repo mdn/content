@@ -106,7 +106,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 - Parsing of the `Content-Disposition` header has been fixed to properly interpret backslash-escaped ASCII characters as just that character itself. Previously it was incorrectly replacing that character with an underscore ("\_").
 - The value of the path field on `Set-Cookie` headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. **This change may affect compatibility with some web sites**, so authors should check their code.
-- The [`Upgrade`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) request header is now supported; you can request an upgrade of an HTTP channel to another protocol by calling `nsIHttpChannelInternal.HTTPUpgrade`.
+- The [`Upgrade`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) request header is now supported; you can request an upgrade of an HTTP channel to another protocol by calling `nsIHttpChannelInternal.HTTPUpgrade()`.
 
 ### Other changes
 
@@ -145,10 +145,10 @@ For an overview of the changes you may need to make in order to make your add-on
 - `nsINavHistoryQueryOptions` now supports sorting in frequency order using the new `SORT_BY_FREQUENCY_ASCENDING` and `SORT_BY_FREQUENCY_DESCENDING` constants.
 - `nsIFilePicker` has a new `nsIFilePicker.addToRecentDocs` attribute, which lets you indicate that the selected file should be added to the user's "recent documents" list if there is one. This attribute has no effect when in private browsing mode.
 - `nsINavBookmarkObserver` methods with item ID parameters now require a GUID as well.
-- `nsIPrefBranch.clearUserPref` no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it does nothing.
+- `nsIPrefBranch.clearUserPref()` no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it does nothing.
 - The `nsIMemoryReporter` interface now provides support for indicating the kind of memory being described (mapped, heap, or other).
 - The `nsISHEntry` `stateData` attribute now returns a `nsIStructuredCloneContainer`.
-- `nsIURI` has a new `nsIURI.ref` attribute, which returns the reference portion (the part after the "#") of the URI. It also has new methods `nsIURI.cloneIgnoringRef` which clones the `nsIURI` without the ref member and `nsIURI.equalsExceptRef` which compares to another `nsIURI` ignoring the ref member.
+- `nsIURI` has a new `nsIURI.ref` attribute, which returns the reference portion (the part after the "#") of the URI. It also has new methods `nsIURI.cloneIgnoringRef()` which clones the `nsIURI` without the ref member and `nsIURI.equalsExceptRef()` which compares to another `nsIURI` ignoring the ref member.
 
 #### New interfaces
 
@@ -161,7 +161,7 @@ For an overview of the changes you may need to make in order to make your add-on
 - `nsIGSettingsService`
   - : _Details forthcoming._
 - `nsIHttpUpgradeListener`
-  - : The callback interface for handling HTTP upgrade requests via the `nsIHttpChannelInternal.HTTPUpgrade` method.
+  - : The callback interface for handling HTTP upgrade requests via the `nsIHttpChannelInternal.HTTPUpgrade()` method.
 - `nsIStructuredCloneContainer`
   - : A container for objects that have been serialized using the [structured clone algorithm](/en-US/docs/HTML/Structured_clones).
 - `nsITelemetry`
