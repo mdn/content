@@ -311,7 +311,7 @@ For the most part, the properties and descriptors defined in at-rules don't part
 
 While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, declarations contained in {{cssxref("@keyframes")}} don't. As with `@font-face`, only the at-rule as a whole is selected via the cascade algorithm.
 
-When it comes to {{cssxref("@import")}}, the @import doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](en-US/docs/Web/CSS/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is which is treated as the last declared layer. This was discussed above
+When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](en-US/docs/Web/CSS/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is which is treated as the last declared layer. This was discussed above.
 
 Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by the cascade algorithm.
 
