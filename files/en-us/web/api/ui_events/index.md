@@ -24,11 +24,11 @@ The UI Events API defines a system for handling user interactions such as mouse 
 - {{domxref("FocusEvent")}}
   - : Passed into handlers for focus events, which are associated with elements receiving or losing focus.
 - {{domxref("InputEvent")}}
-  - : Passed into handlers for input events, which are associated with the user entering some input, for example using an {{HTMLElement("input")}} element.
+  - : Passed into handlers for input events, which are associated with the user entering some input; for example, using an {{HTMLElement("input")}} element.
 - {{domxref("KeyboardEvent")}}
   - : Passed into handlers for keyboard up/down events.
 - {{domxref("MouseEvent")}}
-  - : Passed into event handler for mouse events, including mouse move, mousing over and out, and mouse button up or down. Note that {{domxref("Element.auxclick_event", "auxclick")}}, {{domxref("Element.click_event", "click")}}, and {{domxref("Element.dblclick_event", "dblclick")}} events are passed {{domxref("PointerEvent")}} objects.
+  - : Passed into event handlers for mouse events, including mouse move, mousing over and out, and mouse button up or down. Note that {{domxref("Element.auxclick_event", "auxclick")}}, {{domxref("Element.click_event", "click")}}, and {{domxref("Element.dblclick_event", "dblclick")}} events are passed {{domxref("PointerEvent")}} objects.
 - {{domxref("MouseScrollEvent")}} {{deprecated_inline}}
   - : Deprecated, Firefox-only, non-standard interface for scroll events. Use {{domxref("WheelEvent")}} instead.
 - {{domxref("MutationEvent")}} {{deprecated_inline}}
@@ -51,7 +51,7 @@ The UI Events API defines a system for handling user interactions such as mouse 
 - {{domxref("Element.click_event", "click")}}
   - : Fired when the user clicks the primary pointer button.
 - {{domxref("Element.compositionend_event", "compositionend")}}
-  - : Fired when a text composition system (such as a speech-to-text processor) has finished its session, for example because the user has closed it.
+  - : Fired when a text composition system (such as a speech-to-text processor) has finished its session; for example, because the user has closed it.
 - {{domxref("Element.compositionstart_event", "compositionstart")}}
   - : Fired when the user has started a new session with a text composition system.
 - {{domxref("Element.compositionupdate_event", "compositionupdate")}}
@@ -61,7 +61,7 @@ The UI Events API defines a system for handling user interactions such as mouse 
 - {{domxref("Element.dblclick_event", "dblclick")}}
   - : Fired when the user double-clicks the primary pointer button.
 - {{domxref("Element.error_event", "error")}}
-  - : Fired when the a resource fails to load or can't be processed (for example, if an image is invalid or a script has an error).
+  - : Fired when a resource fails to load or can't be processed (for example, if an image is invalid or a script has an error).
 - {{domxref("Element.focus_event", "focus")}}
   - : Fired when an element has received focus.
 - {{domxref("Element.focusin_event", "focusin")}}
