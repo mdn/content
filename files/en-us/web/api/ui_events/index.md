@@ -29,6 +29,8 @@ The UI Events API defines a system for handling user interactions such as mouse 
   - : Passed into handlers for keyboard up/down events.
 - {{domxref("MouseEvent")}}
   - : Passed into event handler for mouse events, including mouse move, mousing over and out, and mouse button up or down. Note that {{domxref("Element.auxclick_event", "auxclick")}}, {{domxref("Element.click_event", "click")}}, and {{domxref("Element.dblclick_event", "dblclick")}} events are passed {{domxref("PointerEvent")}} objects.
+- {{domxref("MouseScrollEvent")}} {{deprecated_inline}}
+  - : Deprecated, Firefox-only, non-standard interface for scroll events. Use {{domxref("WheelEvent")}} instead.
 - {{domxref("MutationEvent")}} {{deprecated_inline}}
   - : Passed into mutation event handlers, which were designed to allow notifications of changes to the DOM. Now deprecated: use {{domxref("MutationObserver")}} instead.
 - {{domxref("UIEvent")}}
