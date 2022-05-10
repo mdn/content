@@ -11,7 +11,7 @@ Background scripts or a background page enable you to monitor and react to event
 Background scripts or a page are:
 
 - Persistent – loaded when the extension starts and unloaded when the extension is disabled or uninstalled.
-- Non-persistent – loaded only when needed to respond to an event and unloaded when they become idle. However, a background page does not unload until all visible views and message ports are closed. Opening a view does not cause the background page to load but does prevent it from closing. These background pages are also known as event pages.
+- Non-persistent (which are also known as event pages) – loaded only when needed to respond to an event and unloaded when they become idle. However, a background page does not unload until all visible views and message ports are closed. Opening a view does not cause the background page to load but does prevent it from closing.
 
 In manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In manifest V3, only non-persistent background scripts or a page are supported.
 
@@ -196,7 +196,7 @@ brower.runtime.onMessage.addListener(function(message, callback) {
 });
 ```
 
-Background scripts unload after a few seconds of inactivity. If any cleanup is required, listen to {{WebExtAPIRef("runtime.onSuspend")}}.
+Background scripts unload after a few seconds of inactivity. However, if during the suspension of a background script another event wakes the background script, {{WebExtAPIRef("runtime.onSuspendCanceled")}} is called and the background script continues running. If any cleanup is required, listen to {{WebExtAPIRef("runtime.onSuspend")}}.
 
 ```
 brower.runtime.onSuspend.addListener(function() {
@@ -251,23 +251,23 @@ browser.storage.local.get(['variable'], function(result) {
 
 ## Change timers into alarms
 
-DOM-based timers, such as `window.setTimeout()` or `window.setInterval()`, are not honored in non-persistent background scripts if they trigger when the background page is dormant. Instead, use the alarms API.
+DOM-based timers do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
 
 ```
-window.alarms.create({delayInMinutes: 3.0})
+browser.alarms.create({delayInMinutes: 3.0})
 ```
 
 Then add a listener.
 
 ```
-window.alarms.onAlarm.addListener(function() {
+browser.alarms.onAlarm.addListener(function() {
   alert("Hello, world!")
 });
 ```
 
 ## Update calls for background script functions
 
-If using {{WebExtAPIRef("extension.getBackgroundPage")}} to call a function from the background page, update to {{WebExtAPIRef("runtime.getBackgroundPage")}} . The `runtime` method includes a callback function to ensure the background script has loaded, or you may await the result.
+If a content script or action must call a function, use {{WebExtAPIRef("runtime.getBackgroundPage")}} to ensure the event page is running. If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("extension.getBackgroundPage")}}, which return `null` if the page is not running.
 
 ```
 document.getElementById('target').addEventListener('click', async () => {
