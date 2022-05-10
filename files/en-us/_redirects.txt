@@ -10965,6 +10965,8 @@
 /en-US/docs/Web/CSS/color_value/hwb()	/en-US/docs/Web/CSS/color_value/hwb
 /en-US/docs/Web/CSS/color_value/lab()	/en-US/docs/Web/CSS/color_value/lab
 /en-US/docs/Web/CSS/color_value/lch()	/en-US/docs/Web/CSS/color_value/lch
+/en-US/docs/Web/CSS/color_value/oklab()	/en-US/docs/Web/CSS/color_value/oklab
+/en-US/docs/Web/CSS/color_value/oklch()	/en-US/docs/Web/CSS/color_value/oklch
 /en-US/docs/Web/CSS/color_value/rgb()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgba
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient
