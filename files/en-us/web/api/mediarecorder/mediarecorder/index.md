@@ -41,21 +41,25 @@ new MediaRecorder(stream, options)
 
   - : A dictionary object that can contain the following properties:
 
-    - `mimeType`: A MIME type specifying the format for the resulting
-      media; you may specify the container format (the browser will select its preferred
-      codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
-      provide detailed information about which codecs to use and how to configure them.
-      Applications can check in advance if a `mimeType` is supported by the
-      {{Glossary("user agent")}} by calling
-      {{domxref("MediaRecorder.isTypeSupported()")}}.
-    - `audioBitsPerSecond`: The chosen bitrate for the audio component of
-      the media.
-    - `videoBitsPerSecond`: The chosen bitrate for the video component of
-      the media.
-    - `bitsPerSecond`: The chosen bitrate for the audio and video
-      components of the media. This can be specified instead of the above two
-      properties. If this is specified along with one or the other of the above
-      properties, this will be used for the one that isn't specified.
+    - `mimeType`
+      - : A MIME type specifying the format for the resulting
+        media; you may specify the container format (the browser will select its preferred
+        codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
+        provide detailed information about which codecs to use and how to configure them.
+        Applications can check in advance if a `mimeType` is supported by the
+        {{Glossary("user agent")}} by calling
+        {{domxref("MediaRecorder.isTypeSupported()")}}.
+    - `audioBitsPerSecond`
+      - : The chosen bitrate for the audio component of
+        the media.
+    - `videoBitsPerSecond`
+      - : The chosen bitrate for the video component of
+        the media.
+    - `bitsPerSecond`
+      - : The chosen bitrate for the audio and video
+        components of the media. This can be specified instead of the above two
+        properties. If this is specified along with one or the other of the above
+        properties, this will be used for the one that isn't specified.
 
     > **Note:** If bits per second values are not specified for video and/or audio, the default
     > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon

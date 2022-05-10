@@ -17,26 +17,28 @@ The **`UIEvent()`** constructor creates a new
 
 ```js
 new UIEvent(typeArg)
-new UIEvent(typeArg, uiEventInit)
+new UIEvent(typeArg, options)
 ```
 
 ### Parameters
 
 - `typeArg`
   - : Is a {{domxref("DOMString")}} representing the name of the event.
-- `uiEventInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Is a `UIEventInit` dictionary, having the following fields:
 
-    - **`detail`**: optional and defaulting to `0`,
-      of type `long`, that is a event-dependent value associated with the
-      event. {{domxref("UIEvent.detail")}} lists the semantic for standard events.
-    - **`view`**: optional and defaulting to
-      `null`, of type {{domxref("WindowProxy")}}, that is the
-      {{domxref("Window")}} associated with the event .
-    - **`sourceCapabilities`**: {{non-standard_inline}} An
-      instance of the {{domxref("InputDeviceCapabilities")}} interface which provides
-      information about the physical device responsible for generating a touch event.
+    - `detail`
+      - : optional and defaulting to `0`,
+        of type `long`, that is a event-dependent value associated with the
+        event. {{domxref("UIEvent.detail")}} lists the semantic for standard events.
+    - `view`
+      - : optional and defaulting to
+        `null`, of type {{domxref("WindowProxy")}}, that is the
+        {{domxref("Window")}} associated with the event .
+    - `sourceCapabilities` {{non-standard_inline}}
+      - : An instance of the {{domxref("InputDeviceCapabilities")}} interface which provides
+        information about the physical device responsible for generating a touch event.
 
     > **Note:** The `UIEventInit` dictionary also accepts fields from the
     > {{domxref("Event.Event", "EventInit")}} dictionary.
