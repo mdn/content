@@ -41,7 +41,8 @@ new XRSessionEvent(type, eventInitDict)
 
   - : An object with the following values:
 
-    - `session`: The {{domxref("XRSession")}} to which the event is to be delivered.
+    - `session`
+      - : The {{domxref("XRSession")}} to which the event is to be delivered.
 
 ### Return value
 

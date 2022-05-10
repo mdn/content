@@ -45,8 +45,10 @@ new XRInputSourceEvent(type, eventInitDict)
 
   - : An object to configure the event with the following properties:
 
-    - `frame`: An {{domxref("XRFrame")}} object representing the event frame during which the event took place. This event is _not_ associated with the animation process, and has no viewer information contained within it.
-    - `inputSource`: An {{domxref("XRInputSource")}} object representing the input device from which the event is being sent.
+    - `frame`
+      - : An {{domxref("XRFrame")}} object representing the event frame during which the event took place. This event is _not_ associated with the animation process, and has no viewer information contained within it.
+    - `inputSource`
+      - : An {{domxref("XRInputSource")}} object representing the input device from which the event is being sent.
 
 ### Return value
 
