@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.String.codePointAt
 
 The **`codePointAt()`** method returns a non-negative integer
 that is the Unicode code point value at the given position. 
-Note that function does not give the n'th code point in a string,
+Note that this function does not give the nth code point in a string,
 but the code point starting at the specified string index.
 
 {{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
