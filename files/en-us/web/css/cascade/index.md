@@ -49,7 +49,7 @@ In most browsers, the user (or reader) of the web site can choose to override st
 
 ### Cascade layers
 
-The cascade order is based on origin type. The cascade within each origin type is based on the declaration order of cascade layers within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of [named or anonymous layers](en-US/docs/Web/CSS/@layer). When declared within a layer, the styles are placed into the specified layer. Styles declared outside of a layer are treated as being part of an anonymous last declared layer. 
+The cascade order is based on origin type. The cascade within each origin type is based on the declaration order of [cascade layers](en-US/docs/Web/CSS/@layer) within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of named or anonymous layers. When declared within a layer, the styles are placed into the specified layer. Styles declared outside of a layer are treated as being part of an anonymous last declared layer. 
 
 Let's take a look at cascading origin type before diving into cascade layers within each origin type.
 
