@@ -213,7 +213,7 @@ and then in the body of the document we have inline styles:
 <p style="line-height: 1.6em; text-decoration: overline !important;">Hello</p>
 ```
 
- Three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer. The "All unlayered styles" in the list of normal author style precedence order includes styles from these two stylesheets and the additional unlayered CSS style blocks. In addition, there are two inline styles, a normal `line-height` declaration and an important `text-decoration` declaration:
+ In the CSS code block above, three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer. The "All unlayered styles" in the list of normal author style precedence order includes styles from these two stylesheets and the additional unlayered CSS style blocks. In addition, there are two inline styles, a normal `line-height` declaration and an important `text-decoration` declaration:
  
 
 |  Order (low to high)    | Author style      | Importance   |
