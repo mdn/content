@@ -307,7 +307,7 @@ Only CSS property/value pair declarations participate in the cascade. This means
 
 ### @-rules and the cascade 
 
-For the most part, the properties and descriptors defined in at-rules don't participate in the cascade.  Only at-rule as a whole participates in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered.
+For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participates in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered.
 
 While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, declarations contained in {{cssxref("@keyframes")}} don't. As with `@font-face`, only the at-rule as a whole is selected via the cascade algorithm.
 
