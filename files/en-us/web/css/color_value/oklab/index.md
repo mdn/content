@@ -46,3 +46,5 @@ oklab(59.69% 0.1007 0.1191 / .5);
 ## See also
 
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
+- [Safari Technology Preview 137 release notes](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/): includes `oklab()` and {{cssxref("color_value/oklch",'oklch()')}} colors.
+
