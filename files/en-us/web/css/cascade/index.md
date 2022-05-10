@@ -285,7 +285,7 @@ Now that we have a better understanding of origin type and cascade layer precede
   <tr><td>author - unlayered styles</td></tr>
   <tr><td>inline<code>style</code></td></tr>
   <tr><td>4</td><td>animations</td><td></td></tr>
-  <tr><td rowspan="4">5</td><td>author - unlayered styles</td><td rowspan="4">`!important`</td></tr>
+  <tr><td rowspan="4">5</td><td>author - unlayered styles</td><td rowspan="4"><code>!important</code></td></tr>
   <tr><td>author - last declared layer</td></tr>
   <tr><td>author - first declared layer</td></tr>
   <tr><td>inline<code>style</code></td></tr>
