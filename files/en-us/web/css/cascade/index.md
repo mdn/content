@@ -229,7 +229,7 @@ All important inline styles take precedence over all author styles, important an
 
 ### Importance and layers
 
-The origin type precendence order is inverted for important styles. Important styles declared outside of any cascade layer have lower precendence than those declared as part of a layer. Important values that come in early layers have precedence over important styles declared in subsequent cascade layers. 
+The origin type precedence order is inverted for important styles. Important styles declared outside of any cascade layer have lower precedence than those declared as part of a layer. Important values that come in early layers have precedence over important styles declared in subsequent cascade layers. 
 
 Take for example the following CSS:
 
