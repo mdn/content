@@ -9,7 +9,7 @@ tags:
   - ProgressEvent
 browser-compat: api.ProgressEvent.initProgressEvent
 ---
-{{apiref("DOM Events")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("XMLHttpRequest")}} {{deprecated_header}}{{non-standard_header}}
 
 The **`ProgressEvent.initProgressEvent()`** method Initializes
 an animation event created using the deprecated {{domxref("Document.createEvent()",

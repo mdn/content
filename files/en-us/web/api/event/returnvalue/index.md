@@ -7,7 +7,7 @@ tags:
   - Deprecated
 browser-compat: api.Event.returnValue
 ---
-{{APIRef("DOM Events")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{domxref("Event")}} property
 **`returnValue`** indicates whether the default action for

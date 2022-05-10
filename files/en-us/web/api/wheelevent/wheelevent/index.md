@@ -9,7 +9,7 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.WheelEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`WheelEvent()`** constructor returns a newly created
 {{domxref("WheelEvent")}} object.

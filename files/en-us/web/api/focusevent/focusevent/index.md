@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.FocusEvent.FocusEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`FocusEvent()`** constructor returns a newly created
 {{domxref("FocusEvent")}} object with an optional {{domxref("EventTarget")}}. When the

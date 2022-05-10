@@ -14,7 +14,7 @@ tags:
   - pointer lock
 browser-compat: api.MouseEvent.movementX
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`movementX`** read-only property of the {{domxref("MouseEvent")}} interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous {{domxref("Element/mousemove_event", "mousemove")}} event.
 In other words, the value of the property is computed like this: `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX`.

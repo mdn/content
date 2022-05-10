@@ -9,10 +9,10 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.KeyboardEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent()`** constructor creates a new
-{{domxref("KeyboardEvent")}}. 
+{{domxref("KeyboardEvent")}}.
 
 ## Syntax
 

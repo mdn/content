@@ -13,7 +13,7 @@ tags:
   - events
 browser-compat: api.InputEvent.data
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`data`** read-only property of the
 {{domxref("InputEvent")}} interface returns a string with inserted

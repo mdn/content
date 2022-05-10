@@ -13,7 +13,7 @@ tags:
   - inputType
 browser-compat: api.InputEvent.inputType
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`inputType`** read-only property of the
 {{domxref("InputEvent")}} interface returns the type of change made to editable content.
