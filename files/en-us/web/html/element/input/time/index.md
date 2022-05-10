@@ -288,7 +288,7 @@ The result here is that:
 
 #### Making min and max cross midnight
 
-By setting a {{htmlattrxref("min", "input")}} attribute greater than the {{htmlattrxref("max", "input")}} attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is [in the HTML spec](https://html.spec.whatwg.org/C/#has-a-reversed-range), it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. Safari as of version 14.1 does not support this. Be prepared for this situation to arise:
+By setting a {{htmlattrxref("min", "input")}} attribute greater than the {{htmlattrxref("max", "input")}} attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is [in the HTML spec](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range), it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. Safari as of version 14.1 does not support this. Be prepared for this situation to arise:
 
 ```js
 const input = document.createElement('input');

@@ -22,9 +22,9 @@ This interface doesn't allow to manipulate the CSS it contains (in most case). T
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLStyleElement.media")}}
-  - : Is a {{domxref("DOMString")}} reflecting the HTML attribute representing the intended destination medium for style information.
+  - : Is a string reflecting the HTML attribute representing the intended destination medium for style information.
 - {{domxref("HTMLStyleElement.type")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} reflecting the HTML attribute representing the type of style being applied by this statement.
+  - : Is a string reflecting the HTML attribute representing the type of style being applied by this statement.
 - {{domxref("HTMLStyleElement.disabled")}}
   - : Is a boolean value reflecting the HTML attribute representing whether or not the stylesheet is disabled (true) or not (false).
 - {{domxref("HTMLStyleElement.sheet")}} {{readonlyInline}}

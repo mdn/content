@@ -185,7 +185,7 @@ self.addEventListener('fetch', (event) => {
 
 Let's look at a few other options we have when defining our magic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
 
-1. The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
+1. The {{domxref("Response.Response","Response()")}} constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
     ```js
     new Response('Hello from your friendly neighborhood service worker!');

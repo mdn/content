@@ -73,7 +73,7 @@ gives a few [Usage](#usage) examples.
 - {{domxref("console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/devtools/docs/timeline) or [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) tool.
+  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) tool.
 - {{domxref("console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console.warn()")}}

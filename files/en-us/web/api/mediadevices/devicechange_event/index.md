@@ -17,7 +17,7 @@ browser-compat: api.MediaDevices.devicechange_event
 
 A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
 
-This device is not cancelable and does not bubble.
+This event is not cancelable and does not bubble.
 
 ## Syntax
 
@@ -207,7 +207,7 @@ parentheses, it's appended to the appropriate list by calling
 We call `updateDeviceList()` in two places. The first is in the
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} promise's fulfillment
 handler, to initially fill out the list when the stream is opened. The second is in the
-event handler for {{event("devicechange")}}:
+event handler for this `devicechange` event:
 
 ```js
 navigator.mediaDevices.ondevicechange = event => {

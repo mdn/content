@@ -23,7 +23,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLOptGroupElement.disabled")}}
   - : Is a boolean value representing whether or not the whole list of children {{HTMLElement("option")}} is disabled (true) or not (false).
 - {{domxref("HTMLOptGroupElement.label")}}
-  - : Is a {{domxref("DOMString")}} representing the label for the group.
+  - : Is a string representing the label for the group.
 
 ## Methods
 

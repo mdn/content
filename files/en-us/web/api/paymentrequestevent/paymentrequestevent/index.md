@@ -25,27 +25,34 @@ new PaymentRequestEvent(type, options)
 
 ### Parameters
 
-- _type_
+- `type`
   - : Must always be `'PaymentRequest'`.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Options are as follows:
 
-    - `instrumentKey`: A {{domxref("PaymentInstrument")}} object reflecting
-      the payment instrument selected by the user or an empty string if the user has not
-      registered or chosen a payment instrument.
-    - `methodData`: An array of {{domxref("PaymentMethodData")}} objects
-      containing payment method identifiers for the payment methods that the web site
-      accepts and any associated payment method specific data.
-    - `modifiers`: An array of objects containing changes to payment
-      details.
-    - `paymentRequestId`: The ID of the {{domxref("PaymentRequest")}}
-      object.
-    - `paymentRequestOrigin`: The origin where the
-      {{domxref("PaymentRequest")}} object was initialized.
-    - `topLevelOrigin`: The top-level origin where the
-      {{domxref("PaymentRequest")}} object was initialized.
-    - `total`: The total amount being requested for payment.
+    - `instrumentKey`
+      - : A {{domxref("PaymentInstrument")}} object reflecting
+        the payment instrument selected by the user or an empty string if the user has not
+        registered or chosen a payment instrument.
+    - `methodData`
+      - : An array of {{domxref("PaymentMethodData")}} objects
+        containing payment method identifiers for the payment methods that the web site
+        accepts and any associated payment method specific data.
+    - `modifiers`
+      - : An array of objects containing changes to payment
+        details.
+    - `paymentRequestId`
+      - : The ID of the {{domxref("PaymentRequest")}}
+        object.
+    - `paymentRequestOrigin`
+      - : The origin where the
+        {{domxref("PaymentRequest")}} object was initialized.
+    - `topLevelOrigin`
+      - : The top-level origin where the
+        {{domxref("PaymentRequest")}} object was initialized.
+    - `total`
+      - : The total amount being requested for payment.
 
 ## Browser compatibility
 

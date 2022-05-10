@@ -14,7 +14,7 @@ browser-compat: api.HTMLObjectElement.name
 {{APIRef("HTML DOM")}}
 
 The **`name`** property of the
-{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+{{domxref("HTMLObjectElement")}} interface returns a string that
 reflects the {{htmlattrxref("name", "object")}} HTML attribute, specifying the name of
 the browsing context.
 

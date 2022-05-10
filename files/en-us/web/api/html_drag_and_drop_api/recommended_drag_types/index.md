@@ -70,7 +70,7 @@ Example
 
 ## Dragging HTML and XML
 
-HTML content may use the `text/html` type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the `{{domxref("Element.innerHTML","innerHTML")}}` property of an element.
+HTML content may use the `text/html` type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the {{domxref("Element.innerHTML","innerHTML")}} property of an element.
 
 XML content may use the `text/xml` type, but ensure that the data is well-formed XML.
 

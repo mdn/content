@@ -74,7 +74,7 @@ The code below demonstrates how {{domxref('Element/setHTML','Element.setHTML()')
 The `script` element is disallowed by the default sanitizer so the alert is removed.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
@@ -91,7 +91,7 @@ console.log(target.innerHTML);
 The example below shows the same sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method, with the intent of later inserting the returned element into a `<div>` element:
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Sanitize the string
@@ -114,7 +114,7 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > but you must remember to use the correct context when the string is applied:
 >
 > ```js
-> const unsanitized_string = "abc <script>alert(1)</script> def";
+> const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
 > let sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
 > ```
 

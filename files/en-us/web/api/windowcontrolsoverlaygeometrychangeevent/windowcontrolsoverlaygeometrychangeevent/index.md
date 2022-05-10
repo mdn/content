@@ -16,7 +16,7 @@ The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly
 ## Syntax
 
 ```js
-new WindowControlsOverlayGeometryChangeEvent(type, {visible: aBooleanValue, titlebarAreaRect: aDOMRectValue})
+new WindowControlsOverlayGeometryChangeEvent(type, options)
 ```
 
 ### Parameters
@@ -24,14 +24,14 @@ new WindowControlsOverlayGeometryChangeEvent(type, {visible: aBooleanValue, titl
 _The `WindowControlsOverlayGeometryChangeEvent()` constructor also inherits arguments from
 {{domxref("Event.Event", "Event()")}}._
 
-- _type_
+- `type`
   - : A {{domxref("DOMString")}} indicating the event type. Its value must be `geometrychange` and is case-sensitive.
 - `options`
   - : An object with the following properties:
-  - `visible`
-    - : A boolean flag that's true when the `titleBarAreaRect` object's values are not 0.
-  - `titleBarAreaRect`
-    - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
+    - `visible`
+      - : A boolean flag that's true when the `titleBarAreaRect` object's values are not 0.
+    - `titleBarAreaRect`
+      - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
 
 ## Specifications
 

@@ -21,7 +21,7 @@ Possible changes include for example inserting, deleting, and formatting text.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the type of input that was made. There are many
+A string containing the type of input that was made. There are many
 possible values, such as `insertText`, `deleteContentBackward`,
 `insertFromPaste`, and `formatBold`. For a complete list of the
 available input types, see the [Attributes

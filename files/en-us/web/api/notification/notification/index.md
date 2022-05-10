@@ -40,7 +40,7 @@ new Notification(title, options)
       {{domxref("DOMString")}} representing a language tag
       according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
       See the Sitepoint [ISO
-      2 letter language codes](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) page for a simple reference.
+      2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
     - `badge`: A {{domxref("USVString")}} containing the URL of the image
       used to represent the notification when there isn't enough space to display the
       notification itself.

@@ -25,7 +25,7 @@ new CSSKeywordValue(val)
 
 ### Parameters
 
-- value
+- `value`
   - : Sets or returns the value of the new `CSSKeywordValue`.
 
 ### Exceptions

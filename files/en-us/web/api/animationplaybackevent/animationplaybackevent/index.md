@@ -26,7 +26,7 @@ new AnimationPlaybackEvent(type, eventInitDict)
 
 ### Parameters
 
-- `{{domxref("Event.type", "type")}}`
+- {{domxref("Event.type", "type")}}
   - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing the name of the event.
 - `eventInitDict` {{optional_inline}}
 

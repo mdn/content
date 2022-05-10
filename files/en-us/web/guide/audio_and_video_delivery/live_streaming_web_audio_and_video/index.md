@@ -145,7 +145,7 @@ In order to stream live audio and video, you will need to run specific streaming
 
 [GStreamer](https://gstreamer.freedesktop.org/) is an open source cross-platform multimedia framework that allows you to create a variety of media-handling components, including streaming components. Through its plugin system, GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, and FLV.)
 
-GStreamer plugins such as [souphttpclientsink](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) and [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) exist to stream media over HTTP or you can also integrate with Python's Twisted framework.
+GStreamer plugins such as [souphttpclientsink](https://gstreamer.freedesktop.org/documentation/soup/souphttpclientsink.html?gi-language=c) and [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) exist to stream media over HTTP or you can also integrate with Python's Twisted framework.
 
 For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/nginx-rtmp-module).
 
@@ -177,7 +177,7 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 - [DASH Reference Client](https://dashif.org/reference/players/javascript/1.0.0/index.html)
 - [Dynamic Streaming over HTTP](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [The State of MPEG-DASH Deployment](https://www.streamingmediaglobal.com/Articles/Editorial/Featured-Articles/The-State-of-MPEG-DASH-Deployment-96144.aspx)
-- [Look, no plugins: Live streaming to the browser using Media Source Extensions and MPEG-DASH](https://www.bbc.co.uk/rd/blog/2014/03/media-source-extensions)
+- [Look, no plugins: Live streaming to the browser using Media Source Extensions and MPEG-DASH](https://www.bbc.co.uk/rd/blog/2014-03-media-source-extensions)
 - [Media Source Extensions (W3C)](https://w3c.github.io/media-source/)
 - [Icecast](https://en.wikipedia.org/wiki/Icecast)
 - [SHOUTcast](https://en.wikipedia.org/wiki/Shoutcast)

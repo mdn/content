@@ -24,7 +24,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Is a `long` value reflecting the {{htmlattrxref("start", "ol")}} and defining the value of the first number of the first element of the list.
 - {{domxref("HTMLOListElement.type")}}
 
-  - : Is a {{domxref("DOMString")}} value reflecting the {{htmlattrxref("type", "ol")}} and defining the kind of marker to be used to display. It can have the following values:
+  - : Is a string value reflecting the {{htmlattrxref("type", "ol")}} and defining the kind of marker to be used to display. It can have the following values:
 
     - `'1'` meaning that decimal numbers are used: `1`, `2`, `3`, `4`, `5`, …
     - `'a'` meaning that the lowercase latin alphabet is used:  `a`, `b`, `c`, `d`, `e`, …

@@ -23,9 +23,9 @@ new MouseEvent(typeArg, mouseEventInit)
 
 ### Parameters
 
-- _typeArg_
+- `typeArg`
   - : Is a {{domxref("DOMString")}} representing the name of the event.
-- _mouseEventInit_ {{optional_inline}}
+- `mouseEventInit` {{optional_inline}}
 
   - : Is a `MouseEventInit` dictionary, having the following fields:
 
