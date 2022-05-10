@@ -40,7 +40,7 @@ Some browsers let users modify the user-agent stylesheet, but this is rare and n
 
 Although some constraints on user-agent stylesheets are set by the HTML specification, browsers have a lot of latitude: that means some differences exist between browsers. To simplify the development process, Web developers may use a CSS reset stylesheet, such as [normalize.css](https://github.com/necolas/normalize.css), which sets common properties values to a known state for all browsers before beginning to make alterations to suit their specific needs. 
 
-Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) next to a property, making it important, styles declared by author styles, including a reset style sheet, take precendence over the user-agent styles, regardless of the specificity of the associated selector.
+Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) next to a property, making it "important", styles declared by author styles, including a reset style sheet, take precendence over the user-agent styles, regardless of the specificity of the associated selector.
 
 ### Author stylesheets
 
