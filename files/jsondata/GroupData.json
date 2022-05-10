@@ -1406,6 +1406,10 @@
     },
     "UI Events": {
       "overview": ["UI Events"],
+      "guides": [
+        "/docs/Web/API/UI_Events/Keyboard_event_code_values",
+        "/docs/Web/API/UI_Events/Keyboard_event_key_values"
+      ],
       "interfaces": [
         "CompositionEvent",
         "FocusEvent",
