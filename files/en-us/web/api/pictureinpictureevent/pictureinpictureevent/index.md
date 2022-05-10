@@ -23,10 +23,10 @@ _The `PictureInPictureEvent()` constructor also inherits arguments from
 {{domxref("Event.Event", "Event()")}}._
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : A {{domxref("DOMString")}} representing the name of the event.
 - `focusEventInit` {{optional_inline}}
 
-  - : Is a `PictureInPictureEventInit` dictionary, having the following
+  - : A `PictureInPictureEventInit` dictionary, having the following
     fields:
 
     - `"relatedTarget"`, optional and defaulting to

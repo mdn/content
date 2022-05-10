@@ -24,10 +24,10 @@ new MouseEvent(typeArg, mouseEventInit)
 ### Parameters
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : A {{domxref("DOMString")}} representing the name of the event.
 - `mouseEventInit` {{optional_inline}}
 
-  - : Is a `MouseEventInit` dictionary, having the following fields:
+  - : A `MouseEventInit` dictionary, having the following fields:
 
     - `"screenX"`, optional `long`, defaulting to `0`,
       that is the horizontal position of the mouse event on the user's screen;

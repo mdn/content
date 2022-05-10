@@ -23,7 +23,7 @@ new CompositionEvent(typeArg, compositionEventInit)
 ### Parameters
 
 - `typeArg`
-  - : Is a string representing the name of the event.
+  - : A string representing the name of the event.
 
 - `CompositionEventInit` {{optional_inline}}
   - : A `CompositionEventInit` dictionary object, which can contain the

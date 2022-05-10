@@ -28,10 +28,10 @@ new InputEvent(typeArg, inputEventInit)
 ### Parameters
 
 - `typeArg`
-  - : Is a string representing the name of the event.
+  - : A string representing the name of the event.
 - `inputEventInit` {{optional_inline}}
 
-  - : Is a `InputEventInit` dictionary, having the following fields:
+  - : A `InputEventInit` dictionary, having the following fields:
 
     - `inputType`: (Optional) A string specifying the type of change for
       editable content such as, for example, inserting, deleting, or formatting text.

@@ -24,10 +24,10 @@ new TouchEvent(typeArg, touchEventInit)
 ### Parameters
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : A {{domxref("DOMString")}} representing the name of the event.
 - `touchEventInit` {{optional_inline}}
 
-  - : Is a Touch`EventInit` dictionary, having the following fields:
+  - : A Touch`EventInit` dictionary, having the following fields:
 
     - `"touches"`, optional and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact currently touching the surface.
     - `"targetTouches"`, optional and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact that is touching the surface _and_ started on the element that is the target of the current event.

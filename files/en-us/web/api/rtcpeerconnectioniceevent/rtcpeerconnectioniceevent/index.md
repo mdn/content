@@ -25,7 +25,7 @@ new RTCPeerConnectionIceEvent(type, options);
 ### Parameters
 
 - `type`
-  - : Is a {{domxref("DOMString")}} containing the name of the event, like
+  - : A {{domxref("DOMString")}} containing the name of the event, like
     `"icecandidate"`.
 - `options`
 

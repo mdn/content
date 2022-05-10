@@ -37,11 +37,11 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 ### Event handlers
 
 - {{DOMxRef("RTCDtlsTransport.onerror", "onerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers)
     which specifies a function the browser calls
     when the{{DOMxRef("RTCDtlsTransport.error_event", "error")}} event is received.
 - {{DOMxRef("RTCDtlsTransport.onstatechange", "onstatechange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers)
     which specifies a function the browser calls
     when the{{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}} event is received.
 

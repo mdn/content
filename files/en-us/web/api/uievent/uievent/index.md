@@ -23,10 +23,10 @@ new UIEvent(typeArg, options)
 ### Parameters
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : A {{domxref("DOMString")}} representing the name of the event.
 - `options` {{optional_inline}}
 
-  - : Is a `UIEventInit` dictionary, having the following fields:
+  - : A `UIEventInit` dictionary, having the following fields:
 
     - `detail`
       - : optional and defaulting to `0`,

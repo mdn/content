@@ -57,7 +57,7 @@ postMessage(message, targetOrigin, transfer)
     window's document should be located. Failing to provide a specific target discloses
     the data you send to any interested malicious site.**
 - `transfer` {{optional_Inline}}
-  - : Is a sequence of {{Glossary("transferable objects")}} that are transferred with the message.
+  - : A sequence of {{Glossary("transferable objects")}} that are transferred with the message.
     The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value

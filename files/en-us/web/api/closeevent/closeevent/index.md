@@ -23,10 +23,10 @@ new CloseEvent(typeArg, closeEventInit)
 ### Parameters
 
 - `typeArg`
-  - : Is a string representing the name of the event.
+  - : A string representing the name of the event.
 - `closeEventInit` {{optional_inline}}
 
-  - : Is a `CloseEventInit` dictionary, having the following fields:
+  - : A `CloseEventInit` dictionary, having the following fields:
 
     - `"wasClean"`, optional and defaulting to `false`, of type
       `boolean`, indicates if the connection has been closed cleanly or not.

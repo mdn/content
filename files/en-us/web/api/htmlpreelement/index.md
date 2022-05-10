@@ -19,7 +19,7 @@ The **`HTMLPreElement`** interface exposes specific properties and methods (beyo
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLPreElement.width")}} {{deprecated_inline}}
-  - : Is a `long` value reflecting the obsolete {{htmlattrxref("width", "pre")}} attribute, containing a fixed-size length for the {{HTMLElement("pre")}} element.
+  - : A `long` value reflecting the obsolete {{htmlattrxref("width", "pre")}} attribute, containing a fixed-size length for the {{HTMLElement("pre")}} element.
 
 ## Methods
 
