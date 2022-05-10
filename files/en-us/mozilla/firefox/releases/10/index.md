@@ -38,7 +38,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 - The attribute {{ domxref("document.xmlStandalone") }} has been removed as it has been deprecated in the DOM4 specification.
 - The attribute {{ domxref("document.xmlEncoding") }} has been removed as it has been deprecated in the DOM4 specification.
 - The attribute {{ domxref("text.isElementContentWhiteSpace") }} has been removed as it has been deprecated in the DOM4 specification.
-- The method {{ domxref("text.replaceWholeText") }} has been removed as it has been deprecated in the DOM4 specification.
+- The method `text.replaceWholeText` has been removed as it has been deprecated in the DOM4 specification.
 - The method {{ domxref("node.isSameNode") }} has been removed as it has been deprecated in the DOM4 specification. Instead of `node1.isSameNode(node2)`, you can use the `===` operator, like this: `node1 === node2`.
 
 #### Page Visibility API

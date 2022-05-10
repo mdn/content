@@ -74698,19 +74698,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Text/replaceWholeText": {
-    "modified": "2020-10-15T21:10:09.962Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jwhitlock",
-      "teoli",
-      "ziyunfei",
-      "jsx",
-      "Reachmeatshivam",
-      "Sheppy"
-    ]
-  },
   "Web/API/Text/splitText": {
     "modified": "2020-10-15T21:04:54.653Z",
     "contributors": [
