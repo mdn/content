@@ -105,7 +105,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 - `nsIDownloadManager.addDownload` is now handled asynchronously rather than synchronously.
 - The `imgIContainerObserver.frameChanged` method now receives as its first parameter an `imgIRequest` object identifying the corresponding request.
 - The `nsIDOMWindowUtils.sendTouchEvent` method has been added to allow synthesizing touch events.
-- You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.
+- You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling `nsISelectionController.scrollSelectionIntoView`.
 - The new `nsIMemoryMultiReporter.explicitNonHeap` attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" **and** are of the kind `KIND_NONHEAP`.
 - The `nsIDOMWindowUtils.paintingSuppressed` attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.
 - The `nsIDocCharset` and `nsIDocumentCharsetInfo` interfaces have been merged into `nsIDocShell`. As part of this work, the old `forcedDetector` attribute has been removed; it never did anything.
