@@ -18,13 +18,13 @@ spec-urls: https://drafts.csswg.org/css-cascade/
 
 The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one origin or cascade layer set a value for a property on an element.
 
-The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_Selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence orgin or layer has greater [specificity](/en-US/docs/Web/CSS/Specificity).  
+The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_Selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Specificity).  
 
 This article explains what the cascade is and the order in which {{Glossary("CSS")}} [declarations](/en-US/docs/Web/API/CSSStyleDeclaration) cascade, covering cascade layers and origin type. Understanding origin precedence is key to understanding the cascade.
 
 ## Origin types
 
-The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations originate from different origin types: **[User-agent stylesheets](#user-agent_stylesheets)**,  **[Author stylesheets](#author_stylesheets)**, and **[User stylesheets](#user_stylesheets)**.
+The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations come from different origin types: **[User-agent stylesheets](#user-agent_stylesheets)**,  **[Author stylesheets](#author_stylesheets)**, and **[User stylesheets](#user_stylesheets)**.
 
 Though style sheets come from these different origins and can be within different [layers](en-US/docs/Web/CSS/@layer) in each of these origins, they overlap in scope; to make this work, the cascade algorithm defines how they interact. 
 
@@ -74,7 +74,7 @@ The cascading algorithm determines how to find the value to apply for each prope
   3. **Specificity:** In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
   4. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity, the last declaration in the style order is applied  
 
-The cascade is in ascending order, meaning animations have precedence of normal values, whether those are declared in user, author, or user-agent styles, important values take precendence over animations, and transitions have precedence over important values.  
+The cascade is in ascending order, meaning animations have precedence of normal values, whether those are declared in user, author, or user-agent styles, important values take precedence over animations, and transitions have precedence over important values.  
 
  > **Note:**  **Transitions and animations**
  >
@@ -172,7 +172,7 @@ Note that the declaration defined in the user CSS, while having a greater specif
 
 The [table in Cascading order](#cascading_order) provided a precedence order overview. The table summarized the user-agent, user, and author origin type styles in two lines each with "origin type - normal" and "origin type - !important". The precendence in each origin type is more nuanced. Styles can be contained within layers within their origin type, and, with author styles, there is also the issue of where inline styles land in the cascade order. 
 
-The order in which layers are declared is important in determinining precedence. Normal styles in a layer take precedence over styles declared in prior layers; with normal styles declared outside of any layer taking precedence over normal layered styles regardless of specificity. 
+The order in which layers are declared is important in determining precedence. Normal styles in a layer take precedence over styles declared in prior layers; with normal styles declared outside of any layer taking precedence over normal layered styles regardless of specificity. 
 
 In this example, the author used CSS's {{CSSXref('@import')}} rule to import five external style sheets within a {{HTMLElement('style')}} information element.
 
@@ -246,7 +246,7 @@ p {
 
 Even though the red is declared first and has a less specific selector, because unlayered CSS takes precendence over layered CSS, the paragraph will be red. Had we included an inline style on the paragraph setting it to a different color, such as `<p style="color: black">`, the paragraph would be black.
 
-When we add `!important` to this bit of CSS, the presedence order is reversed with the stylesheet:
+When we add `!important` to this bit of CSS, the precedence order is reversed with the stylesheet:
 
 ```css
 p {
@@ -346,7 +346,7 @@ p {
 }
 ```
 
-In this example, there are three seperate animation declaration named `repeatedName`. When `animation: infinite 5s alternate repeatedName` is applied to the paragraph, only one animation is applied: the keyframe animation defined in the unlayered CSS takes precedence over the layered keyframe animation declarations based on origin and cascade layer precedence order. In this example, only the element's font size will be animated. 
+In this example, there are three separate animation declaration named `repeatedName`. When `animation: infinite 5s alternate repeatedName` is applied to the paragraph, only one animation is applied: the keyframe animation defined in the unlayered CSS takes precedence over the layered keyframe animation declarations based on origin and cascade layer precedence order. In this example, only the element's font size will be animated. 
 
 > **Note:** There are no important animations as property declarations in a {{cssxref('@keyframes')}} block that contain `!important` as part of the value are ignored.
 
