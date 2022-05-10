@@ -63,7 +63,7 @@ The cascading algorithm determines how to find the value to apply for each prope
   1. **Relevance**: It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
   
   2.  **Origin and importance**: Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. Ignoring layers for the moment, the cascade order is as follows:
-  |     | Origin      | Importance   |
+  |   Order (low to high)  | Origin      | Importance   |
   | - | ----------- | ------------ |
   | 1   | user-agent (browser) | normal       |
   | 2   | user        | normal       |
@@ -201,7 +201,7 @@ and then in the body of the document we have inline styles:
  Three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer. The "All unlayered styles" in the list of normal author style precedence order includes styles from these two stylesheets and the additional unlayered CSS style blocks. In addition, there are two inline styles, a normal `line-height` declaration and an important `text-decoration` declaration:
  
 
-|     | Author style      | Importance   |
+|  Order (low to high)    | Author style      | Importance   |
 | --- | ----------- | ------------ |
 | 1   | A - first layer | normal       |
 | 2   | B - second layer | normal       |
@@ -274,7 +274,7 @@ Now that we have a better understanding of origin type and cascade layer precede
 
 <table>
 <thead>
-  <tr><th>Precedence</th><th>Style Origin</th><th>Importance</th></tr>
+  <tr><th>Precedence Order <br/>(low to high)</th><th>Style Origin</th><th>Importance</th></tr>
 </thead>
 <tbody>
   <tr><td rowspan="3">1</td><td>user-agent - first declared layer</td><td rowspan="3">normal</td></tr>
@@ -292,10 +292,10 @@ Now that we have a better understanding of origin type and cascade layer precede
   <tr><td>author - last declared layer</td></tr>
   <tr><td>author - first declared layer</td></tr>
   <tr><td>inline<code>style</code></td></tr>
-  <tr><td rowspan="3">6</td><td>user - unlayered styles</td><td rowspan="3">`!important`</td></tr>
+  <tr><td rowspan="3">6</td><td>user - unlayered styles</td><td rowspan="3"><code>!important</td></tr>
   <tr><td>user - last declared layer</td></tr>
   <tr><td>user - first declared styles</td></tr>
-  <tr><td rowspan="3">7</td><td>user-agent  - unlayered styles</td><td rowspan="3">`!important`</td></tr>
+  <tr><td rowspan="3">7</td><td>user-agent  - unlayered styles</td><td rowspan="3"><code>!important</code></td></tr>
   <tr><td>user-agent - last declared layer</td></tr>
   <tr><td>user-agent - first declared styles</td></tr>
   <tr><td>8</td><td>transitions</td><td></td></tr>
