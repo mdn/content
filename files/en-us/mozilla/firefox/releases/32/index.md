@@ -120,7 +120,7 @@ A [`getDataDirectory()`](</en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon#getda
 
 ### XPCOM
 
-- The `nsIUDPSocket` interface now provides multicast support through the addition of the new {{ifattribute("nsIUDPSocket", "multicastLoopback")}}, {{ifattribute("nsIUDPSocket", "multicastInterface")}}, and {{ifattribute("nsIUDPSocket", "multicastInterfaceAddr")}} attributes, as well as the {{ifmethod("nsIUDPSocket", "joinMulticast")}} and {{ifmethod("nsIUDPSocket", "leaveMulticast")}} methods.
+- The `nsIUDPSocket` interface now provides multicast support through the addition of the new `nsIUDPSocket.multicastLoopback`, `nsIUDPSocket.multicastInterface`, and `nsIUDPSocket.multicastInterfaceAddr` attributes, as well as the `nsIUDPSocket.joinMulticast` and `nsIUDPSocket.leaveMulticast` methods.
 
 ### Older versions
 

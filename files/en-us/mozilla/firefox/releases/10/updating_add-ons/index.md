@@ -57,7 +57,7 @@ The following interfaces have been removed:
 
 - `nsNavHistory` no longer implements the `nsICharsetResolver` interface. **Note that `nsICharsetResolver` is no longer used and is being removed in Gecko 11.0 {{ geckoRelease("11.0") }}**.
 - The `mozISpellCheckingEngine` and `nsIEditorSpellCheck` interfaces have been updated to let restartless add-ons add dictionaries to the spell checker. See [Using an external spell checker](/en-US/Using_an_External_Spell-checker) for details (note this article has not yet been updated, but will be soon).
-- The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed, as it hasn't been supported for some time.
+- The `nsIBrowserHistory.lastPageVisited` attribute has been removed, as it hasn't been supported for some time.
 - Several [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) internal interfaces have changed to support revised APIs. This shouldn't affect you but is worth noting on the off chance you were doing something unusual.
 
 ## Other changes worth noting
