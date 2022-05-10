@@ -348,7 +348,7 @@ p {
 
 In this example, there are three separate animation declaration named `repeatedName`. When `animation: infinite 5s alternate repeatedName` is applied to the paragraph, only one animation is applied: the keyframe animation defined in the unlayered CSS takes precedence over the layered keyframe animation declarations based on origin and cascade layer precedence order. In this example, only the element's font size will be animated. 
 
-> **Note:** There are no important animations as property declarations in a {{cssxref('@keyframes')}} block that contain `!important` as part of the value are ignored.
+> **Note:** There are no important animations, as property declarations in a {{cssxref('@keyframes')}} block that contain `!important` as part of the value are ignored.
 
 
 ## Resetting styles
