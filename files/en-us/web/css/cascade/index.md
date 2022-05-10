@@ -263,7 +263,7 @@ Now the paragraph will be blue. The `!important` in the earliest declared layer 
 
 > **Note:** `!important` reverses the precedence of cascade layers. For this reason, rather than using `!important` to override external styles, import frameworks, third party styles, widget stylesheets, etc., into layers, demoting their precedence. `!important` should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
 
-Styles that are transitioning take precendence over all important styles, no matter who or how they are declared.
+Styles that are transitioning take precedence over all important styles, no matter who or how they are declared.
 
 ## Complete cascade order
 
