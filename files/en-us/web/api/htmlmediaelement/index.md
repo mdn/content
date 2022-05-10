@@ -40,9 +40,9 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : Returns a {{domxref("DOMTokenList")}} that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The `DOMTokenList` takes one or more of three possible values: `nodownload`, `nofullscreen`, and `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
-  - : A {{domxref("DOMString")}} indicating the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for this media element.
+  - : A string indicating the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for this media element.
 - {{domxref("HTMLMediaElement.currentSrc")}} {{readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} with the absolute URL of the chosen media resource.
+  - : Returns a string with the absolute URL of the chosen media resource.
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : A double-precision floating-point value indicating the current playback time in seconds; if the media has not started to play and has not been seeked, this value is the media's initial playback time. Setting this value seeks the media to the new time. The time is specified relative to the media's timeline.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
@@ -72,7 +72,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.played")}} {{readonlyinline}}
   - : Returns a {{domxref('TimeRanges')}} object that contains the ranges of the media source that the browser has played, if any.
 - {{domxref("HTMLMediaElement.preload")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("preload", "video")}} HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
+  - : Is a string that reflects the {{htmlattrxref("preload", "video")}} HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
 - {{domxref("HTMLMediaElement.preservesPitch")}}
   - : Is a boolean value that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio.
 - {{domxref("HTMLMediaElement.readyState")}} {{readonlyinline}}
@@ -82,9 +82,9 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.seeking")}} {{readonlyinline}}
   - : Returns a {{jsxref('Boolean')}} that indicates whether the media is in the process of seeking to a new position.
 - {{domxref("HTMLMediaElement.sinkId")}} {{readonlyinline}} {{experimental_inline}}
-  - : Returns a {{domxref("DOMString")}} that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
+  - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
 - {{domxref("HTMLMediaElement.src")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "video")}} HTML attribute, which contains the URL of a media resource to use.
+  - : Is a string that reflects the {{htmlattrxref("src", "video")}} HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : Is a {{domxref('MediaStream')}} representing the media to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
@@ -108,7 +108,7 @@ These properties are obsolete and should not be used, even if a browser still su
 - {{domxref("HTMLMediaElement.controller")}} {{deprecated_inline}}
   - : Is a {{domxref("MediaController")}} object that represents the media controller assigned to the element, or `null` if none is assigned.
 - {{domxref("HTMLMediaElement.mediaGroup")}} {{deprecated_inline}}
-  - : A {{domxref("DOMString")}} that reflects the {{ htmlattrxref("mediagroup", "video")}} HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
+  - : A string that reflects the {{ htmlattrxref("mediagroup", "video")}} HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns a {{jsxref('Boolean')}}. Related to audio stream capture.
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}} {{deprecated_inline}}

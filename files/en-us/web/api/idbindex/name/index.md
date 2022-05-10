@@ -21,7 +21,7 @@ interface contains a string which names the index.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying a name for the index.
+A string specifying a name for the index.
 
 ### Exceptions
 
