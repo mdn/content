@@ -490,7 +490,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - Only the root chrome.manifest file is loaded
   - : Only the root `chrome.manifest` file is loaded now; if you need secondary manifest files to be loaded, you can use the [`manifest`](/en-US/docs/Chrome_Registration#manifest) command in your root `chrome.manifest` to load them.
 - Gopher support removed
-  - : The Gopher protocol is no longer supported natively. Continued support is available via the [OverbiteFF](https://addons.mozilla.org/addon/7685/) extension.
+  - : The Gopher protocol is no longer supported natively. Continued support is available via the [OverbiteFF](https://addons.mozilla.org/en-US/firefox/addon/7685/) extension.
 - [Content process event handling](/en-US/docs/The_message_manager)
   - : In order to support out-of-process plugins and other multiple-process features, a new API has been introduced to support sending messages across processes.
 - [Bootstrapped extensions](/en-US/docs/Extensions/Bootstrapped_extensions)

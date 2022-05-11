@@ -522,7 +522,7 @@ initially positioned offscreen. This is by default in all Mozilla-based browser
 releases.**
 
 [MSIE 6 SP2
-has a similar error correction mechanism](https://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5) but it is not activated by default in all
+has a similar error correction mechanism](https://docs.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5) but it is not activated by default in all
 security levels: a security setting can disable such error correction mechanism.
 
 ## Specifications

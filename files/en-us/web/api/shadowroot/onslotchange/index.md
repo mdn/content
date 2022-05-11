@@ -22,7 +22,7 @@ The `slotchange` event is fired on {{DOMxRef("HTMLSlotElement")}} instances ({{H
 
 ## Examples
 
-The following snippet is a slightly modified version of our [slotchange example](https://github.com/mdn/web-components-examples/tree/master/slotchange) which uses the `ShadowRoot.onslotchange` property rather than adding a listener for the `slotchange` event.
+The following snippet is a slightly modified version of our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) which uses the `ShadowRoot.onslotchange` property rather than adding a listener for the `slotchange` event.
 
 Every time the element in any slot changes, we log a report to the console saying which slot has changed, and what the new node inside the slot is.
 

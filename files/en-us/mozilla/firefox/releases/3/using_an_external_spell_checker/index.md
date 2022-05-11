@@ -12,7 +12,7 @@ Starting with Firefox 3 (as well as Thunderbird 3 and SeaMonkey 2), you can now 
 
 This is _not_ for extensions who wants to add a dictionary to the built in Hunspell spell checker.
 
-An [example](https://voikko.svn.sourceforge.net/viewvc/voikko/trunk/mozvoikko/) of a spell checker extension can be found as part of the [Voikko](https://voikko.puimula.org/) project.
+An [example](https://sourceforge.net/projects/voikko/) of a spell checker extension can be found as part of the [Voikko](https://voikko.puimula.org/) project.
 
 ## Implementing spell checker support
 
