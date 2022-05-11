@@ -21,7 +21,7 @@ returns the MIME type of the file.
 
 ## Value
 
-A string containint the MIME type of the file.
+A string containing the MIME type of the file.
 
 ## Specifications
 

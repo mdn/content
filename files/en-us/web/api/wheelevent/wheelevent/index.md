@@ -40,7 +40,7 @@ new WheelEvent(type, options)
       - : A floating number  representing the scroll amount for the z-axis scroll amount in the `deltaMode` unit.
         It defaults to `0.0`.
     - `deltaMode` {{optional_inline}}
-      - : An integer epresenting the unit of the delta values scroll amount. It defaults to `0x00`. Permitted values are:
+      - : An integer representing the unit of the delta values scroll amount. It defaults to `0x00`. Permitted values are:
         | Constant          | Value  | Description                               |
         | ----------------- | ------ | ----------------------------------------- |
         | `DOM_DELTA_PIXEL` | `0x00` | The delta values are specified in pixels. |

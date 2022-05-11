@@ -55,7 +55,7 @@ The **`IDBFileHandle`** interface provides tools to deal with a given file with 
 - {{domxref("IDBFileHandle.abort_event", "abort")}}
   - : Fired when the {{domxref("IDBFileHandle.abort()", "abort()")}} method is called.
 - {{domxref("IDBFileHandle.error_event", "error")}}
-  - : Firend when something goes wrong.
+  - : Fired when something goes wrong.
 
 ## Specifications
 

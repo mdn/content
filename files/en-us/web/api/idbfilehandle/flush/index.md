@@ -12,7 +12,7 @@ browser-compat: api.IDBFileHandle.flush
 ---
 {{APIRef("IndexedDB")}}{{non-standard_header}}
 
-The **`flush()`** method of the {{domxref("IDBFileHandle")}} interfaceis¨
+The **`flush()`** method of the {{domxref("IDBFileHandle")}} interface
 ensures any change made to a file is properly written on disk.
 
 For performance reasons, a {{domxref("IDBFileHandle")}} object buffers all its operation in memory.

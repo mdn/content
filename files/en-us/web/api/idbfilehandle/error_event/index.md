@@ -12,7 +12,7 @@ browser-compat: api.IDBFileHandle.error_event
 ---
 {{APIRef("IndexedDB")}}{{ non-standard_header }}
 
-The **`error`** is fired when something goes wrong witht he {{domxref("IDBFileHandle")}} object.
+The **`error`** is fired when something goes wrong with the {{domxref("IDBFileHandle")}} object.
 
 This event is not cancelable and does not bubble.
 

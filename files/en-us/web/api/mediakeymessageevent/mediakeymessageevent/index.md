@@ -38,7 +38,7 @@ new MediaKeyMessageEvent(type, options)
 
 A new {{domxref("MediaKeyMessageEvent")}} object.
 
-## Specificiations
+## Specifications
 
 {{Specifications}}
 

@@ -21,7 +21,7 @@ details about a {{domxref("PaymentRequest.paymentmethodchange_event", "paymentme
 ## Syntax
 
 ```js
-new PaymentmethodChangeEvent(type)
+new PaymentMethodChangeEvent(type)
 new PaymentMethodChangeEvent(type, options)
 ```
 
