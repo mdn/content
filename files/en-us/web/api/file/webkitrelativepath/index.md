@@ -2,14 +2,11 @@
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 tags:
-  - File
+  - API
   - File API
-  - File and Directory Entries API
   - Property
   - Read-only
   - Reference
-  - Web
-  - webkitRelativePath
 browser-compat: api.File.webkitRelativePath
 ---
 {{APIRef("File API")}}
@@ -30,31 +27,37 @@ In this example, a directory picker is presented which lets the user choose one 
 directories. When the {{event("change")}} event occurs, a list of all files contained
 within the selected directory hierarchies is generated and displayed.
 
-### HTML content
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
-<ul id="listing"></ul>
+<output id="output"></output>
 ```
 
-### JavaScript content
+```css hidden
+output {
+  display: block;
+  white-space: pre-wrap;
+}
+```
+
+### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
+const output = document.getElementById('output');
 
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+document.getElementById('filepicker').addEventListener('change', (event) => {
+  const files = event.target.files;
+
+  for (const file of files) {
+    output.textContent += `${file.webkitRelativePath}\n`;
+  }
+});
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{EmbedLiveSample('Example')}}
 
 ## Specifications
 

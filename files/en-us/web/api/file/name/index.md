@@ -4,8 +4,8 @@ slug: Web/API/File/name
 tags:
   - API
   - File API
-  - Files
   - Property
+  - Read-only
   - Reference
 browser-compat: api.File.name
 ---
@@ -20,34 +20,36 @@ A string, containing the name of the file without path, such as "My Resume.rtf".
 
 ## Examples
 
-```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+### HTML
 
-<div id="output"></div>
+```html
+<input type="file" id="filepicker" multiple>
+<div>
+  <p>List of selected files:</p>
+  <ul id="output"></ul>
+</div>
 ```
+
+### JavaScript
 
 ```js
-const output = document.querySelector("#output");
-function processSelectedFiles(fileInput) {
-  let files = fileInput.files;
-  output.textContent = "List of Selected Files:";
+const output = document.getElementById('output');
 
-  for (let i = 0; i < files.length; i++) {
-    output.textContent += `\nFilename: ${files[i].name}`;
+document.getElementById('filepicker').addEventListener('change', (event) => {
+  const files = event.target.files;
+  output.textContent = '';
+
+  for (const file of files) {
+    const li = document.createElement('li');
+    li.textContent = file.name;
+    output.appendChild(li);
   }
-}
+})
 ```
 
-```css hidden
-#output{
-  padding: 0.5em 0;
-  white-space: pre;
-}
-```
+### Result
 
-#### Result
-
-{{ EmbedLiveSample('Example', 300, 100) }}
+{{EmbedLiveSample('Example')}}
 
 ## Specifications
 

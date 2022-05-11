@@ -45,7 +45,7 @@ new File(bits, name, options)
 ## Examples
 
 ```js
-var file = new File(["foo"], "foo.txt", {
+const file = new File(["foo"], "foo.txt", {
   type: "text/plain",
 });
 ```
