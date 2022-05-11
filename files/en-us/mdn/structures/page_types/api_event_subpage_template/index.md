@@ -142,7 +142,7 @@ which can provide more information.
 
 ## Examples
 
-### Listening for key presses
+### A descriptive heading
 
 Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing - don't put "A simple example". The heading should be concise: for a longer description use a paragraph after the heading.
 
