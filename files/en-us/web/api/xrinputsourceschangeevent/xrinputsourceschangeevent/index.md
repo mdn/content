@@ -44,9 +44,12 @@ new XRInputSourcesChangeEvent(type, eventInitDict)
 
   - : An object that provides options to configure the event. It may contain the following properties:
 
-    - `added`: An array of zero or more {{domxref("XRInputSource")}} objects, each representing one input device which is newly available to use.
-    - `removed`: An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices which are no longer available.
-    - `session`: The {{domxref("XRSession")}} to which the event applies.
+    - `added`
+      - : An array of zero or more {{domxref("XRInputSource")}} objects, each representing one input device which is newly available to use.
+    - `removed`
+      - : An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices which are no longer available.
+    - `session`
+      - : The {{domxref("XRSession")}} to which the event applies.
 
 ### Return value
 

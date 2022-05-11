@@ -35,11 +35,13 @@ new IDBVersionChangeEvent(type, eventInitDict)
   - : An optional dictionary of initial values for the event's properties. These are as
     follows:
 
-    - `oldVersion`: An unsigned long representing the previous version of
-      the database. Default is `0`.
-    - `newVersion`: An unsigned long representing the new version of the
-      database, or `null` if the database is being deleted. Default is
-      `null`.
+    - `oldVersion`
+      - : An unsigned long representing the previous version of
+        the database. Default is `0`.
+    - `newVersion`
+      - : An unsigned long representing the new version of the
+        database, or `null` if the database is being deleted. Default is
+        `null`.
 
 ## Examples
 
