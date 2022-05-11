@@ -30,20 +30,25 @@ new MessageEvent(type, init)
 
   - : A dictionary object that can contain the following properties:
 
-    - `data`: The data you want contained in the MessageEvent.
-      This can be of any data type, and will default to `null` if not specified.
-    - `origin`: A {{domxref("USVString")}} representing the origin of the
-      message emitter. This defaults to an empty string ("") if not specified.
-    - `lastEventId`: A {{domxref("DOMString")}} representing a unique ID
-      for the event. This defaults to an empty string ("") if not specified.
-    - `source`: An `MessageEventSource` (which can be a
-      {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or
-      {{domxref("ServiceWorker")}} object) representing the message emitter. This
-      defaults to `null` if not set.
-    - `ports`: An array of {{domxref("MessagePort")}} objects representing
-      the ports associated with the channel the message is being sent through (where
-      appropriate, e.g. in channel messaging or when sending a message to a shared
-      worker). This defaults to an empty array (`[]`) if not specified.
+    - `data`
+      - : The data you want contained in the MessageEvent.
+        This can be of any data type, and will default to `null` if not specified.
+    - `origin`
+      - : A {{domxref("USVString")}} representing the origin of the
+        message emitter. This defaults to an empty string ("") if not specified.
+    - `lastEventId`
+      - : A {{domxref("DOMString")}} representing a unique ID
+        for the event. This defaults to an empty string ("") if not specified.
+    - `source`
+      - : An `MessageEventSource` (which can be a
+        {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or
+        {{domxref("ServiceWorker")}} object) representing the message emitter. This
+        defaults to `null` if not set.
+    - `ports`
+      - : An array of {{domxref("MessagePort")}} objects representing
+        the ports associated with the channel the message is being sent through (where
+        appropriate, e.g. in channel messaging or when sending a message to a shared
+        worker). This defaults to an empty array (`[]`) if not specified.
 
 ## Examples
 

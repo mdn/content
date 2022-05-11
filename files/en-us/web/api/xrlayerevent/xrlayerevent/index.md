@@ -29,7 +29,8 @@ new XRLayerEvent(type, eventInitDict)
     type `XRLayerEvent` this particular object represents. See [`Event types`](/en-US/docs/Web/API/XRLayerEvent#event_types) for a list of the permitted values.
 - `eventInitDict`
   - : An object with the following values:
-    - `layer`: Required. The {{domxref("XRLayer")}} to which the event is to be delivered.
+    - `layer`
+      - : Required. The {{domxref("XRLayer")}} to which the event is to be delivered.
 
 ### Return value
 

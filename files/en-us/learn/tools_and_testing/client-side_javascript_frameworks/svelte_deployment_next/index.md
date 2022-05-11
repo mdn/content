@@ -330,7 +330,7 @@ There are other projects related to Svelte that are worth checking out:
 
 There are a number of different ways to get support and interact with the Svelte community:
 
-- [svelte.dev/chat](https://svelte.dev/chat): Svelte's Discord server.
+- [svelte.dev/chat](https://discord.com/invite/yy75DKs): Svelte's Discord server.
 - [@sveltejs](https://twitter.com/sveltejs): The official Twitter account.
 - [@sveltesociety](https://twitter.com/sveltesociety): Svelte community Twitter account.
 - [Svelte Recipes](https://github.com/svelte-society/recipes-mvp#recipes-mvp): Community-driven repository of recipes, tips, and best practices to solve common problems.

@@ -33,7 +33,8 @@ new FontFaceSetLoadEvent(type, options)
 
   - : Options are as follows:
 
-    - `fontfaces`: An array of {{domxref("FontFace")}} instances.
+    - `fontfaces`
+      - : An array of {{domxref("FontFace")}} instances.
 
 ## Specifications
 

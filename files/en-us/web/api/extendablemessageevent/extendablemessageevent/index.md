@@ -31,15 +31,20 @@ new ExtendableMessageEvent(type, init)
 
   - : An initialization object, which should contain the following parameters:
 
-    - `data`: The event's data — this can be any data type.
-    - `origin`: A string that defines the origin of the
-      corresponding service worker's environment settings object.
-    - `lastEventId`: A string that defines the last event
-      ID of the event source.
-    - `source`: The {{domxref("Client")}}, {{domxref("ServiceWorker")}} or
-      {{domxref("MessagePort")}} that sent the message.
-    - `ports`: An array containing the {{domxref("MessagePort")}} objects
-      connected to the channel sending the message.
+    - `data`
+      - : The event's data — this can be any data type.
+    - `origin`
+      - : A string that defines the origin of the
+        corresponding service worker's environment settings object.
+    - `lastEventId`
+      - : A string that defines the last event
+        ID of the event source.
+    - `source`
+      - : The {{domxref("Client")}}, {{domxref("ServiceWorker")}} or
+        {{domxref("MessagePort")}} that sent the message.
+    - `ports`
+      - : An array containing the {{domxref("MessagePort")}} objects
+        connected to the channel sending the message.
 
 ## Examples
 

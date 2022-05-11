@@ -1698,7 +1698,7 @@
 /en-US/docs/DOM/StorageEvent	/en-US/docs/Web/API/StorageEvent
 /en-US/docs/DOM/StyleSheetList	/en-US/docs/Web/API/StyleSheetList
 /en-US/docs/DOM/Text	/en-US/docs/Web/API/Text
-/en-US/docs/DOM/Text.replaceWholeText	/en-US/docs/Web/API/Text/replaceWholeText
+/en-US/docs/DOM/Text.replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/DOM/Text.splitText	/en-US/docs/Web/API/Text/splitText
 /en-US/docs/DOM/Text.wholeText	/en-US/docs/Web/API/Text/wholeText
 /en-US/docs/DOM/TextMetrics	/en-US/docs/Web/API/TextMetrics
@@ -3006,7 +3006,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/StyleSheet/title	/en-US/docs/Web/API/StyleSheet/title
 /en-US/docs/Document_Object_Model_(DOM)/StyleSheet/type	/en-US/docs/Web/API/StyleSheet/type
 /en-US/docs/Document_Object_Model_(DOM)/Text	/en-US/docs/Web/API/Text
-/en-US/docs/Document_Object_Model_(DOM)/Text.replaceWholeText	/en-US/docs/Web/API/Text/replaceWholeText
+/en-US/docs/Document_Object_Model_(DOM)/Text.replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/Document_Object_Model_(DOM)/Text.splitText	/en-US/docs/Web/API/Text/splitText
 /en-US/docs/Document_Object_Model_(DOM)/Text.wholeText	/en-US/docs/Web/API/Text/wholeText
 /en-US/docs/Document_Object_Model_(DOM)/TextMetrics	/en-US/docs/Web/API/TextMetrics
@@ -8499,6 +8499,8 @@
 /en-US/docs/Web/API/KeyboardEvent.metaKey	/en-US/docs/Web/API/KeyboardEvent/metaKey
 /en-US/docs/Web/API/KeyboardEvent.shiftKey	/en-US/docs/Web/API/KeyboardEvent/shiftKey
 /en-US/docs/Web/API/KeyboardEvent.which	/en-US/docs/Web/API/UIEvent/which
+/en-US/docs/Web/API/KeyboardEvent/code/code_values	/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values
+/en-US/docs/Web/API/KeyboardEvent/key/Key_Values	/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values
 /en-US/docs/Web/API/KeyboardEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/KeyframeEffect/KeyframeEffect.getKeyframes()	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
 /en-US/docs/Web/API/KeyframeEffect/getFrames	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
@@ -8942,6 +8944,7 @@
 /en-US/docs/Web/API/PaymentRequestEvent/topLevelOrigin	/en-US/docs/Web/API/PaymentRequestEvent/topOrigin
 /en-US/docs/Web/API/PaymentResponse/onpayerdetailchange	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/API/PaymentResponse/payerdetail_event	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
+/en-US/docs/Web/API/PaymentValidationErrors	/en-US/docs/Web/API/PaymentResponse/retry
 /en-US/docs/Web/API/Performance.navigation	/en-US/docs/Web/API/Performance/navigation
 /en-US/docs/Web/API/Performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/Performance.now()	/en-US/docs/Web/API/Performance/now
@@ -9409,9 +9412,10 @@
 /en-US/docs/Web/API/SubtleCrypto.verify	/en-US/docs/Web/API/SubtleCrypto/verify
 /en-US/docs/Web/API/SubtleCrypto.wrapKey	/en-US/docs/Web/API/SubtleCrypto/wrapKey
 /en-US/docs/Web/API/Text.Text	/en-US/docs/Web/API/Text/Text
-/en-US/docs/Web/API/Text.replaceWholeText	/en-US/docs/Web/API/Text/replaceWholeText
+/en-US/docs/Web/API/Text.replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/Web/API/Text.splitText	/en-US/docs/Web/API/Text/splitText
 /en-US/docs/Web/API/Text.wholeText	/en-US/docs/Web/API/Text/wholeText
+/en-US/docs/Web/API/Text/replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/Web/API/TextDecoder.TextDecoder	/en-US/docs/Web/API/TextDecoder/TextDecoder
 /en-US/docs/Web/API/TextDecoder.decode	/en-US/docs/Web/API/TextDecoder/decode
 /en-US/docs/Web/API/TextDecoder.encoding	/en-US/docs/Web/API/TextDecoder/encoding
@@ -11954,7 +11958,7 @@
 /en-US/docs/Web/JavaScript/Reference/Operators/extends	/en-US/docs/Web/JavaScript/Reference/Classes/extends
 /en-US/docs/Web/JavaScript/Reference/Operators/get	/en-US/docs/Web/JavaScript/Reference/Functions/get
 /en-US/docs/Web/JavaScript/Reference/Operators/set	/en-US/docs/Web/JavaScript/Reference/Functions/set
-/en-US/docs/Web/JavaScript/Reference/PaymentValidationErrors	/en-US/docs/Web/API/PaymentValidationErrors
+/en-US/docs/Web/JavaScript/Reference/PaymentValidationErrors	/en-US/docs/Web/API/PaymentResponse/retry
 /en-US/docs/Web/JavaScript/Reference/Properties_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Reserved_Words	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /en-US/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
