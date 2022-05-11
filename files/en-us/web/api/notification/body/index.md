@@ -20,7 +20,7 @@ specified in the `body` option of the
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

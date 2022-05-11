@@ -31,7 +31,7 @@ in India.
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the postal code portion of the address. A
+A string which contains the postal code portion of the address. A
 postal code is a string (either numeric or alphanumeric) which is used by a postal
 service to optimize mail routing and delivery.
 

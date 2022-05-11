@@ -19,7 +19,7 @@ recipient, purchaser, or contact person at the payment address.
 
 ## Value
 
-A {{domxref("DOMString")}} giving the name of the person receiving or paying for the
+A string giving the name of the person receiving or paying for the
 purchase, or the name of a contact person in other contexts. If no name is available,
 this string is empty.
 
