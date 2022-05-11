@@ -294,7 +294,7 @@ The required steps are:
 
 ### Forcing https
 
-These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://wiki.apache.org/httpd/RewriteHTTPToHTTPS).
+These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS).
 
 ```bash
 <IfModule mod_rewrite.c>
@@ -511,7 +511,7 @@ Use services like the ones below to check your Referrer Policy:
 
 ## Disable TRACE HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://www.owasp.org/index.php/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](<https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)>)
+The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](<https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)>)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 
