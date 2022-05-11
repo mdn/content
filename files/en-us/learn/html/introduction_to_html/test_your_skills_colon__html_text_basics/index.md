@@ -22,9 +22,7 @@ In this task we want you to mark up the provided HTML using semantic heading and
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
 
-> **Callout:**
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) to work in your own editor or in an online editor.
+Open the assessment [Codepen](https://codepen.io/mdnwebdocs/pen/jOZrRvQ) or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) to work in your own editor.
 
 ## HTML text basics 2
 
@@ -34,9 +32,7 @@ Try updating the live code below to create the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2.html", '100%', 700)}}
 
-> **Callout:**
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) to work in your own editor or in an online editor.
+Open the assessment [Codepen](https://codepen.io/mdnwebdocs/pen/RwQROeZ) or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) to work in your own editor.
 
 ## HTML text basics 3
 
@@ -46,9 +42,7 @@ Try updating the live code below to create the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3.html", '100%', 700)}}
 
-> **Callout:**
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) to work in your own editor or in an online editor.
+Open the assessment [Codepen](https://codepen.io/mdnwebdocs/pen/VwQjNVp) or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) to work in your own editor.
 
 ## Assessment or further help
 
