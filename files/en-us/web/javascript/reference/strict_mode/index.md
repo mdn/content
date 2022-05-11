@@ -84,7 +84,7 @@ let mistypeVariable;
                       
 mistypeVarible = 17;  // Assuming no global variable mistypeVarible exists
                       // this line throws a ReferenceError due to the
-                      // misspelling of "Variable" word
+                      // misspelling of "mistypeVariable" (lack of an "a")
 ```
 
 Second, strict mode makes assignments which would otherwise silently fail to throw an exception. For example, `NaN` is a non-writable global variable. In normal code assigning to `NaN` does nothing; the developer receives no failure feedback. In strict mode assigning to `NaN` throws an exception. Any assignment that silently fails in normal code (assignment to a non-writable global or property, assignment to a getter-only property, assignment to a new property on a [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) object) will throw in strict mode:
