@@ -106,7 +106,7 @@ Modern layout methods (described in [CSS layout](/en-US/docs/Learn/CSS/CSS_layou
 
 This has not always been the norm. In the past, some sites were built with fixed-height containers to align bottoms of boxes. These boxes may otherwise have no relationship to each other. This was fragile. In a legacy application, you may encounter a box where content is overlaying other content on the page. Now you can recognize that this happens with overflow. Ideally, you will refactor the layout to not rely on fixed-height containers.
 
-When developing a site, always keep overflow in mind. Test designs with large and small amounts of content. Increase the font sizes of text. Generally ensure that your CSS works in a robust way. Changing the value of overflow to hide content, or to add scrollbars, is likely to be reserved for a few select use cases. (for example, where you intend to have a scrolling box)
+When developing a site, always keep overflow in mind. Test designs with large and small amounts of content. Increase the font sizes of text. Generally ensure that your CSS works in a robust way. Changing the value of overflow to hide content, or to add scrollbars, is likely to be reserved for a few select use cases (for example, where you intend to have a scrolling box).
 
 ## Test your skills!
 
