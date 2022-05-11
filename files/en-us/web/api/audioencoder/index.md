@@ -8,7 +8,8 @@ tags:
   - AudioEncoder
 browser-compat: api.AudioEncoder
 ---
-The **`AudioEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} encodes {{domxref("AudioData")}} objects.
+{{APIRef("WebCodecs API")}}
+The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) encodes {{domxref("AudioData")}} objects.
 
 ## Constructor
 
