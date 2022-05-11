@@ -11,10 +11,9 @@ tags:
   - SyncEvent
 browser-compat: api.SyncEvent.SyncEvent
 ---
-{{APIRef("Service Workers API")}}{{Non-standard_header}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-The **`SyncEvent()`** constructor creates a new
-{{domxref("SyncEvent")}} object.
+The **`SyncEvent()`** constructor creates a new {{domxref("SyncEvent")}} object.
 
 ## Syntax
 
@@ -25,18 +24,23 @@ new SyncEvent(type, options)
 ### Parameters
 
 - `type`
-  - : The type of the Event.
-- `options` {{optional_inline}}
-
-  - : An options object containing any custom settings that you want to apply to the event
-    object. Options are as follows:
-
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `sync`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
     - `tag`
-      - : A developer-defined unique identifier for
-        this `SyncEvent`.
-    - `lastChance`
-      - : A boolean value indicating that the user agent
-        will not make further synchronization attempts after the current attempt.
+      - : A developer-defined unique identifier for this `SyncEvent`.
+    - `lastChance` {{optional_inline}}
+      - : A boolean value indicating that the user agent will not make further synchronization attempts after the current attempt.
+        It defaults to `false`.
+
+### Return value
+
+A new {{domxref("SyncEvent")}} object.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

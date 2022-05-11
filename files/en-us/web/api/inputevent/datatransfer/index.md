@@ -5,7 +5,6 @@ tags:
   - API
   - DOM Events
   - DataTransfer
-  - Experimental
   - Input
   - InputEvent
   - Property

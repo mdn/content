@@ -21,25 +21,25 @@ service worker context.
 ## Syntax
 
 ```js
-new PushEvent(type, options);
+new PushEvent(type)
+new PushEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} defining the type of `PushEvent`. This can
-    be {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} or {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "pushsubscriptionchange")}}.
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to `push` or `pushsubscriptionchange`.
 - `options` {{optional_inline}}
-
-  - : An object containing any initialization data you want to populate the
-    `PushEvent` object with. The options are:
-
+  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
     - `data`
-      - : The data you want the `PushEvent` to
-        contain, if any. When the constructor is invoked, the
-        {{domxref("PushEvent.data")}} property of the resulting object will be set
-        to a new {{domxref("PushMessageData")}} object containing bytes extracted
-        from the `eventInitDict data` member.
+      - : The data you want the `PushEvent` to contain, if any.
+        When the constructor is invoked, the {{domxref("PushEvent.data")}} property of the resulting object will be set
+        to a new {{domxref("PushMessageData")}} object containing these bytes.
+
+### Return value
+
+A new {{domxref("PushEvent")}} object.
 
 ## Examples
 
@@ -52,6 +52,10 @@ var myPushEvent = new PushEvent('push', dataInit);
 
 myPushEvent.data.text(); // should return 'Some sample text'
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
