@@ -38,7 +38,7 @@ Cookies will only be sent in a first-party context and not be sent along with re
 
 ### `None`
 
-Cookies will be sent in all contexts, i.e. in responses to both first-party and cross-origin requests. If `SameSite=None` is set, the cookie [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute must also be set (or the cookie will be blocked).
+Cookies will be sent in all contexts, i.e. in responses to both first-party and cross-site requests. If `SameSite=None` is set, the cookie [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute must also be set (or the cookie will be blocked).
 
 ## Fixing common warnings
 
