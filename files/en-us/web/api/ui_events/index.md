@@ -34,7 +34,7 @@ The UI Events API defines a system for handling user interactions such as mouse 
 - {{domxref("MutationEvent")}} {{deprecated_inline}}
   - : Passed into mutation event handlers, which were designed to allow notifications of changes to the DOM. Now deprecated: use {{domxref("MutationObserver")}} instead.
 - {{domxref("UIEvent")}}
-  - : A base from which other UI events inherit, and also the event interface passed into somes events such as {{domxref("Window.load_event", "load")}} and {{domxref("Window.unload_event", "unload")}}.
+  - : A base from which other UI events inherit, and also the event interface passed into some events such as {{domxref("Window.load_event", "load")}} and {{domxref("Window.unload_event", "unload")}}.
 - {{domxref("WheelEvent")}}
   - : Passed into the handler for the {{domxref("Element.wheel_event", "wheel")}} event, which fires when the user rotates a mouse wheel or similar user interface component such as a touchpad.
 
