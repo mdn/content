@@ -83,9 +83,10 @@ new Notification(title, options)
         Appropriate responses are built using `event.action` within the
         {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
-    - `silent`:  A boolean value specifying whether the
-      notification is silent (no sounds or vibrations issued), regardless of the device
-      settings. The default is `false`, which means it won't be silent.
+    - `silent`
+      - :  A boolean value specifying whether the
+        notification is silent (no sounds or vibrations issued), regardless of the device
+        settings. The default is `false`, which means it won't be silent.
 
 ## Examples
 

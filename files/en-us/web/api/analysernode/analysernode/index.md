@@ -29,13 +29,17 @@ new AnalyserNode(context, options)
 - `options` {{optional_inline}}
   - : An object with the following properties, all optional:
 
-    - **`fftSize`**: The desired initial size of the [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) for [frequency-domain](https://en.wikipedia.org/wiki/Frequency_domain) analysis.
-      The default is `2048`.
-    - **`maxDecibels`**: The desired initial maximum power in [dB](https://en.wikipedia.org/wiki/Decibel) for FFT analysis.
-      The default is `-30`.
-    - **`minDecibels`**: The desired initial minimum power in dB for FFT analysis.
-      The default is `-100`.
-    - **`smoothingTimeConstant`**: The desired initial smoothing constant for the FFT analysis. The default is `0.8`.
+    - `fftSize`
+      - : The desired initial size of the [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) for [frequency-domain](https://en.wikipedia.org/wiki/Frequency_domain) analysis.
+        The default is `2048`.
+    - `maxDecibels`
+      - : The desired initial maximum power in [dB](https://en.wikipedia.org/wiki/Decibel) for FFT analysis.
+        The default is `-30`.
+    - `minDecibels`
+      - : The desired initial minimum power in dB for FFT analysis.
+        The default is `-100`.
+    - `smoothingTimeConstant`
+      - : The desired initial smoothing constant for the FFT analysis. The default is `0.8`.
     - `channelCount`
       - : Represents an integer used to determine how many channels are used when [up-mixing
         and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
