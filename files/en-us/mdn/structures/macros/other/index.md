@@ -35,23 +35,6 @@ We have macros specifically designed to create [quicklinks](/en-US/docs/MDN/Stru
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given).
 Up to two total levels of depth are generated.
 
-### Transclusion
-
-**Transclusion** is the embedding of part or all of one page into another.
-
-> **Warning:** Do not use this feature/macro.
-> We are in the process of removing it from MDN.
-
-Exercise caution when using this macro, to ensure that the transcluded content makes sense in the context of the page it is embedded into.
-
-[`page`](https://github.com/mdn/yari/blob/main/kumascript/macros/page.ejs) lets you embed some or all of a specific page into a document. It accepts five parameters:
-
-1. The URI of the page to transclude. For example, "/en-US/docs/MDN/About".
-2. The name of the section within the page to transclude. This can be specified either as the title string or as the ID of a block to copy over. If not specified, the entire article is transcluded. {{optional_inline}}
-3. The revision number of the page version to transclude. This feature is not currently implemented, but would allow including text from specific versions of an article. {{unimplemented_inline}}
-4. A Boolean value indicating whether or not to show the heading of the top-level section being transcluded. This is useful if you wish to specify your own heading. The default value is false, meaning the heading is not included by default. {{optional_inline}}
-5. The heading level to use as the top heading level. This adjusts the outermost first-discovered level of the transcluded content to the specified number, and all other headings correspondingly. This lets you include content that has its own headings but adjust them to match the heading level at which you're including them. If you don't specify this value, the headings are not adjusted. {{unimplemented_inline}}
-
 #### Example without heading
 
 \\{{Page("/en-US/docs/MDN/About", "How you can help")}}
