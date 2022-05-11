@@ -102,17 +102,12 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the interfaces, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+### A descriptive heading
 
-```js
-my code block
-```
+Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing - don't put "A simple example". The heading should be concise: for a longer description use a paragraph after the heading.
 
-And/or include a list of links to useful code samples that live elsewhere:
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
-- x
-- y
-- z
 
 ## Specifications
 

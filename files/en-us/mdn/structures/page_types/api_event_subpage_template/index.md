@@ -142,17 +142,11 @@ which can provide more information.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the event, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information). You should show how to use the event with both, {{domxref("EventTarget.addEventListener", "addEventListener()")}} and with the event handler property.
+### Listening for key presses
 
-```js
-my code block
-```
+Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing - don't put "A simple example". The heading should be concise: for a longer description use a paragraph after the heading.
 
-And/or include a list of links to useful code samples that live elsewhere:
-
-- x
-- y
-- z
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
 ## Specifications
 

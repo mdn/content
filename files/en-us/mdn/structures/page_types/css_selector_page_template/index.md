@@ -93,17 +93,11 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the selector, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+### Selecting every third child
 
-```css
-my code block
-```
+Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing - don't put "A simple example". The heading should be concise: for a longer description use a paragraph after the heading.
 
-And/or include a list of links to useful code samples that live elsewhere:
-
-- x
-- y
-- z
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
 ## Accessibility concerns
 

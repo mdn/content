@@ -65,6 +65,49 @@ Optionally, you might want to show a static image of the code's resulting output
 
 Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
 
+### Formatting live samples
+
+If you write a live sample, you should give it a descriptive heading, then optionally a short prose description of the example, then the following subheadings, in the following order:
+
+- **HTML** containing HTML code blocks
+- **CSS** containing CSS code blocks
+- **JavaScript** containing JavaScript code blocks
+- **Result** containing the `EmbedLiveSample` macro call itself.
+
+If you're not using a particular language type (for example if you are not using JavaScript), or if you are hiding it, then you should omit the corresponding heading.
+
+For example:
+
+````
+
+### Styling a paragraph
+
+In this example we're using CSS to style paragraphs which have the `fancy` class set.
+
+#### HTML
+
+```html
+<p>I'm not fancy.</p>
+
+<p class="fancy">But I am!</p>
+```
+
+#### CSS
+
+```css
+p.fancy {
+  color: red;
+}
+```
+
+#### Result
+
+\{{EmbedLiveSample("Styling a paragraph")}}
+
+Optionally, you can include some more prose here describing the result.
+
+````
+
 ## GitHub live samples
 
 GitHub live samples are inserted into the page using the [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) macro. An \\{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the **mdn** GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.
