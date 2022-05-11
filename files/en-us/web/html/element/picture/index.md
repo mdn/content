@@ -140,9 +140,9 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP
 
 ```html
 <picture>
-  <source srcset="logo.avif" type="image/avif">
-  <source srcset="logo.webp" type="image/webp">
-  <img src="logo.png" alt="logo">
+  <source srcset="photo.avif" type="image/avif">
+  <source srcset="photo.webp" type="image/webp">
+  <img src="photo.jpg" alt="photo">
 </picture>
 ```
 
