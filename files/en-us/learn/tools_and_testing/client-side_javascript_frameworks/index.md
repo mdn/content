@@ -138,8 +138,6 @@ Your code will be richer and more professional as a result, and you'll be able t
 ## Angular tutorials
 
 > **Note:** Angular tutorials last tested in April 2021, with Angular CLI (NG) 11.2.5.
->
-> If you need to check your code against our version, you can find a finished version of the sample Angular app code at [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src).
 
 - [1. Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
