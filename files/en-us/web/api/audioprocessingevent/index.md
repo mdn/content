@@ -22,7 +22,7 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` re
 
 _Also implements the properties inherited from its parent, {{domxref("Event")}}_.
 
-- `playbackTime` {{ReadOnlyInline}}</td>
+- `playbackTime` {{ReadOnlyInline}}
   - : A double representing the time when the audio will be played,
      as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 - `inputBuffer` {{ReadOnlyInline}}
