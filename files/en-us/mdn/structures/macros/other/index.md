@@ -35,22 +35,6 @@ We have macros specifically designed to create [quicklinks](/en-US/docs/MDN/Stru
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given).
 Up to two total levels of depth are generated.
 
-#### Example without heading
-
-\\{{Page("/en-US/docs/MDN/About", "How you can help")}}
-
-Result:
-
-{{Page("/en-US/docs/MDN/About", "How you can help")}}
-
-#### Example with heading
-
-\\{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}
-
-Result:
-
-{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}
-
 ## Deprecated
 
 These macros have been replace by other ways of doing the same thing, and should no longer be used. If you find them in existing articles, please replace them.
