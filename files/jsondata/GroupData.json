@@ -92,7 +92,9 @@
         "Path2D",
         "TextMetrics"
       ],
-      "methods": [],
+      "methods": [
+        "createImageBitmap"
+      ],
       "properties": [],
       "events": []
     },
