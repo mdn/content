@@ -62796,12 +62796,6 @@
       "dgashmdn"
     ]
   },
-  "Web/API/PaymentValidationErrors": {
-    "modified": "2020-10-15T22:11:52.851Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/Payment_Request_API": {
     "modified": "2020-10-15T21:48:26.818Z",
     "contributors": [

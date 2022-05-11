@@ -8944,6 +8944,7 @@
 /en-US/docs/Web/API/PaymentRequestEvent/topLevelOrigin	/en-US/docs/Web/API/PaymentRequestEvent/topOrigin
 /en-US/docs/Web/API/PaymentResponse/onpayerdetailchange	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/API/PaymentResponse/payerdetail_event	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
+/en-US/docs/Web/API/PaymentValidationErrors	/en-US/docs/Web/API/PaymentResponse/retry
 /en-US/docs/Web/API/Performance.navigation	/en-US/docs/Web/API/Performance/navigation
 /en-US/docs/Web/API/Performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/Performance.now()	/en-US/docs/Web/API/Performance/now
@@ -11957,7 +11958,7 @@
 /en-US/docs/Web/JavaScript/Reference/Operators/extends	/en-US/docs/Web/JavaScript/Reference/Classes/extends
 /en-US/docs/Web/JavaScript/Reference/Operators/get	/en-US/docs/Web/JavaScript/Reference/Functions/get
 /en-US/docs/Web/JavaScript/Reference/Operators/set	/en-US/docs/Web/JavaScript/Reference/Functions/set
-/en-US/docs/Web/JavaScript/Reference/PaymentValidationErrors	/en-US/docs/Web/API/PaymentValidationErrors
+/en-US/docs/Web/JavaScript/Reference/PaymentValidationErrors	/en-US/docs/Web/API/PaymentResponse/retry
 /en-US/docs/Web/JavaScript/Reference/Properties_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Reserved_Words	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /en-US/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
