@@ -42,9 +42,9 @@ Undefined.
 In the following example a new stylesheet is created and two CSS rules are added using `replaceSync`.
 
 ```js
-let stylesheet = new CSSStyleSheet();
+const stylesheet = new CSSStyleSheet();
 
-stylesheet.replaceSync('body { font-size: 1.4em } p { color: red; }');
+stylesheet.replaceSync('body { font-size: 1.4em; } p { color: red; }');
 ```
 
 ## Specifications
