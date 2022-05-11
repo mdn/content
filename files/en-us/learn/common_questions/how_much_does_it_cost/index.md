@@ -48,7 +48,7 @@ When launching a website, you may spend nothing, or your costs may go through th
 
 You likely have a text editor: such as, Notepad on Windows, Gedit on Linux, TextEdit on Mac. You'll have an easier time writing code if you choose an editor that color-codes, checks your syntax, and assists you with code structure.
 
-Many editors are free, for example [Atom](https://atom.io/), [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://www.eclipse.org/), [Netbeans](https://netbeans.org/), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://visualstudio.microsoft.com/), can cost hundreds, or thousands of dollars; though Visual Studio Express is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
+Many editors are free, for example [Atom](https://atom.io/), [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/index.html), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://www.eclipse.org/), [Netbeans](https://netbeans.apache.org//), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://visualstudio.microsoft.com/), can cost hundreds, or thousands of dollars; though Visual Studio Express is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
 
 To start, we suggest trying out several editors, to get a sense of which works best for you. If you're only writing simple {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("Javascript")}}, go with a simple editor.
 
@@ -66,7 +66,7 @@ You can use any of them, as they will have similar functionality, though some ar
 
 If you want to include video or audio into your website, you can either embed online services (for example YouTube, Vimeo, or Dailymotion), or include your own videos (see below for bandwidth costs).
 
-For audio files, you can find free software ([Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sony Sound Forge](https://www.sonycreativesoftware.com/soundforge), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/imovie/) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
+For audio files, you can find free software ([Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sound Forge](https://www.magix.com/us/music-editing/sound-forge/), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/imovie/) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
 
 ### Publishing tools
 
@@ -74,7 +74,7 @@ You also need a way to upload files: from your hard drive to a distant web serve
 
 Each operating system includes an (S)FTP client, as part of its file manager. Windows Explorer, Nautilus (a common Linux file manager), and the Mac Finder all include this functionality. However, people often choose dedicated (S)FTP clients to display local or remote directories side-by-side and store server passwords.
 
-If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows, [and more](https://en.wikipedia.org/wiki/List_of_FTP_server_software).
+If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/eng/index.php) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows, [and more](https://en.wikipedia.org/wiki/List_of_FTP_server_software).
 
 Because FTP is inherently insecure, you should make sure to use SFTP — the secure, encrypted version of FTP that most hosting sites you'll deal with these days will offer by default — or another secure solution like Rsync over SSH.
 
@@ -109,7 +109,7 @@ Hosting providers charge you according to how much {{Glossary("Bandwidth", "band
 
 ### Domain names
 
-Your domain name has to be purchased through a domain name provider (a registrar). Your hosting provider may also be a registrar ([1&1](https://www.1and1.com/), [Gandi](https://www.gandi.net/?lang=en) for instance are at the same time registrars and hosting providers). The domain name usually costs $5-15 per year. This cost varies depending on:
+Your domain name has to be purchased through a domain name provider (a registrar). Your hosting provider may also be a registrar ([Ionos](https://www.ionos.com/), [Gandi](https://www.gandi.net/en-US) for instance are at the same time registrars and hosting providers). The domain name usually costs $5-15 per year. This cost varies depending on:
 
 - Local obligations: some country top-level domain names are more costly, as different countries set different prices.
 - Services associated with the domain name: some registrars provide spam protection by hiding your postal address and email address behind their own addresses: the postal address can be provided in care of the registrar, and your email address can be obscured via your registrar's alias.

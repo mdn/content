@@ -45,7 +45,7 @@ The toolchain that we are creating in this article will be used to build and dep
 
 ![screenshot of the sample will it miss website](will-it-miss-screenshot.png)
 
-You can see a live version of the site at [near-misses.netlify.com](https://near-misses.netlify.com/).
+You can see a live version of the site at [near-misses.netlify.com](https://near-misses.netlify.app/).
 
 ## Tools used in our toolchain
 
@@ -437,7 +437,7 @@ Another clever trick Parcel has up its sleeve is that any changes to your source
 
 1. Load up the file `src/components/App.js` in your favorite text editor.
 2. Search for the text "near misses", and replace it with something silly like "flying pigs".
-3. Save the file, then go straight back to the app running in your browser. You'll notice that the browser has automatically refreshed, and the line "\<date> there will be \<number> near misses" at the top of the page has been changed! 
+3. Save the file, then go straight back to the app running in your browser. You'll notice that the browser has automatically refreshed, and the line "\<date> there will be \<number> near misses" at the top of the page has been changed!
 
 You could also try using ESLint and Prettier too — try deliberately removing a load of the whitespace from one of your files and try put Prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors ESLint gives you when you try to use Parcel to build it again.
 

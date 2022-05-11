@@ -70,7 +70,7 @@ Example
 
 ## Dragging HTML and XML
 
-HTML content may use the `text/html` type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the `{{domxref("Element.innerHTML","innerHTML")}}` property of an element.
+HTML content may use the `text/html` type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the {{domxref("Element.innerHTML","innerHTML")}} property of an element.
 
 XML content may use the `text/xml` type, but ensure that the data is well-formed XML.
 
@@ -121,7 +121,7 @@ In this example, the event returns false only if the data transfer contains the 
 
 ### Updates to DataTransfer.types
 
-The latest spec dictates that {{domxref("DataTransfer.types")}} should return a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
+The latest spec dictates that {{domxref("DataTransfer.types")}} should return a frozen array of strings rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
 
 As a result, the [contains](/en-US/docs/Web/API/Node/contains) method no longer works; the [includes](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 

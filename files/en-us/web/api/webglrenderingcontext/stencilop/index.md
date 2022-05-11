@@ -37,7 +37,7 @@ All three parameters accept all constants listed below.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Constants
 

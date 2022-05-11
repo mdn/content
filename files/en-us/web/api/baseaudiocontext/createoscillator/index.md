@@ -27,6 +27,10 @@ waveform. It basically generates a constant tone.
 createOscillator()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("OscillatorNode")}}.

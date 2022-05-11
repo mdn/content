@@ -37,7 +37,7 @@ drawBuffers(buffers)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

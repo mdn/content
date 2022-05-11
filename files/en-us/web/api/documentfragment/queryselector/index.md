@@ -30,8 +30,12 @@ querySelector(selectors)
 ### Parameters
 
 - _selectors_
-  - : Is a string containing one or more CSS selectors separated by
+  - : A string containing one or more CSS selectors separated by
     commas.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

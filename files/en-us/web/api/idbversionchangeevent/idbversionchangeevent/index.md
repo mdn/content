@@ -21,24 +21,27 @@ when a version of the database has changed, as a result of the
 ## Syntax
 
 ```js
-new IDBVersionChangeEvent();
+new IDBVersionChangeEvent(type)
+new IDBVersionChangeEvent(type, eventInitDict)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} indicating the event which occurred. For
+  - : A string indicating the event which occurred. For
     `IDBVersionChangeEvent` this is `versionchange`.
-- `eventInitDict`
+- `eventInitDict` {{optional_inline}}
 
   - : An optional dictionary of initial values for the event's properties. These are as
     follows:
 
-    - `oldVersion`: An unsigned long representing the previous version of
-      the database. Default is `0`.
-    - `newVersion`: An unsigned long representing the new version of the
-      database, or `null` if the database is being deleted. Default is
-      `null`.
+    - `oldVersion`
+      - : An unsigned long representing the previous version of
+        the database. Default is `0`.
+    - `newVersion`
+      - : An unsigned long representing the new version of the
+        database, or `null` if the database is being deleted. Default is
+        `null`.
 
 ## Examples
 

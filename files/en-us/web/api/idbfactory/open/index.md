@@ -70,13 +70,10 @@ request are fired.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- {{jsxref("TypeError")}}
+  - : Thrown if the value of `version` is not a number greater than zero.
 
-| Exception   | Description                                                        |
-| ----------- | ------------------------------------------------------------------ |
-| `TypeError` | The value of version is zero or a negative number or not a number. |
-
-## Example
+## Examples
 
 Example of calling `open` with the current specification's
 `version` parameter:

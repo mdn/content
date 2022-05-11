@@ -93,22 +93,24 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 
 ### Parameters
 
-- parameter1{{Optional_Inline}}
+- `parameter1` {{Optional_Inline}}
   - : Include a brief description of the parameter and what it does here. Include one term and definition for each parameter. If the parameter is not optional, remove the \\{{optional_inline}} macro call.
-- parameter2
+- `parameter2`
   - : etc.
+
+> **Note:** This section is mandatory. If there aren't any parameter, put "None." instead of the definition list.
 
 ### Return value
 
 Include a description of the method's return value, including data type and what it represents.
 
-If the method doesn't return anything, just put "{{jsxref('undefined')}}.".
+If the method doesn't return anything, just put "None {{jsxref('undefined')}}.".
 
 ### Exceptions
 
-- Exception1
+- `Exception1`
   - : Include a list of all the exceptions that the method can raise, along with descriptions of how that exception is raised. Include one term and definition for each exception.
-- Exception2
+- `Exception2`
   - : etc.
 
 Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects and regular JavaScript exceptions, like {{jsxref("TypeError")}} and {{jsxref("RangeError")}}. A web developer needs to know:
@@ -116,14 +118,14 @@ Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects a
 - which object is thrown
 - for exceptions that are `DOMException` objects, the `name` of the exception.
 
-Here is an example where a method can raise a `DOMException` with a name of `IndexSizeError`, a `DOMException` with a name of `SyntaxError` and a JavaScript exception of type `TypeError`:
+Here is an example where a method can raise a `DOMException` with a name of `IndexSizeError`, a second `DOMException` with a name of `InvalidNodeTypeError` and a JavaScript exception of type `TypeError`:
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown …
-- `SyntaxError` {{domxref("DOMException")}}
+- `InvalidNodeTypeError` {{domxref("DOMException")}}
   - : Thrown …
 - {{jsxref("TypeError")}}
-  - : Thrown …  
+  - : Thrown …
 
 Fill in a simple example that nicely shows a typical usage of the method, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
 

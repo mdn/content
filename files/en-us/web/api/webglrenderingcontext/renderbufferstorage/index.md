@@ -102,7 +102,7 @@ renderbufferStorage(target, internalFormat, width, height)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

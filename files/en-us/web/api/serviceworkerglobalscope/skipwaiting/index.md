@@ -23,6 +23,10 @@ Use this method with {{domxref("Clients.claim()")}} to ensure that updates to th
 skipWaiting()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that immediately resolves with `undefined`.

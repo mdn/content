@@ -56,7 +56,7 @@ insertDTMF(tones, duration, interToneGap)
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

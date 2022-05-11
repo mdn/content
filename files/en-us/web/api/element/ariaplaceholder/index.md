@@ -19,7 +19,7 @@ The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface refle
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -324,7 +324,7 @@ We can't use the default SQLite database on Heroku because it is file-based, and
 
 The Heroku mechanism for handling this situation is to use a [database add-on](https://elements.heroku.com/addons#data-stores) and configure the web application using information from an environment [configuration variable](https://devcenter.heroku.com/articles/config-vars), set by the add-on. There are quite a lot of database options, but we'll use the [hobby tier](https://devcenter.heroku.com/articles/heroku-postgres-plans#plan-tiers) of the _Heroku postgres_ database as this is free, supported by Django, and automatically added to our new Heroku apps when using the free hobby dyno plan tier.
 
-The database connection information is supplied to the web dyno using a configuration variable named `DATABASE_URL`. Rather than hard-coding this information into Django, Heroku recommends that developers use the [dj-database-url](https://warehouse.python.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format. In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](https://www.psycopg.org/), as Django needs this to interact with Postgres databases.
+The database connection information is supplied to the web dyno using a configuration variable named `DATABASE_URL`. Rather than hard-coding this information into Django, Heroku recommends that developers use the [dj-database-url](https://pypi.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format. In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](https://www.psycopg.org/), as Django needs this to interact with Postgres databases.
 
 ##### dj-database-url (Django database configuration from environment variable)
 
@@ -394,15 +394,15 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
 ```
 
-We'll actually do the file serving using a library called [WhiteNoise](https://warehouse.python.org/project/whitenoise/), which we install and configure in the next section.
+We'll actually do the file serving using a library called [WhiteNoise](https://pypi.org/project/whitenoise/), which we install and configure in the next section.
 
 For more information, see [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs).
 
 #### Whitenoise
 
-There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the [WhiteNoise](https://warehouse.python.org/project/whitenoise/) project for serving of static assets directly from Gunicorn in production.
+There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the [WhiteNoise](https://pypi.org/project/whitenoise/) project for serving of static assets directly from Gunicorn in production.
 
-> **Note:** Heroku automatically calls _collectstatic_ and prepares your static files for use by WhiteNoise after it uploads your application. Check out [WhiteNoise](https://warehouse.python.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
+> **Note:** Heroku automatically calls _collectstatic_ and prepares your static files for use by WhiteNoise after it uploads your application. Check out [WhiteNoise](https://pypi.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
 
 The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
 
@@ -435,7 +435,7 @@ Optionally, you can reduce the size of the static files when they are served (th
 
 ```python
 # Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
+# https://pypi.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ```
 

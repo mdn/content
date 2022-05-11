@@ -49,10 +49,10 @@ The element that was inserted, or `null`, if the insertion failed.
 
 ### Exceptions
 
-| Exception     | Explanation                                         |
-| ------------- | --------------------------------------------------- |
-| `SyntaxError` | The `position` specified is not a recognized value. |
-| `TypeError`   | The `element` specified is not a valid element.     |
+- `SyntaxError` {{domxref("DOMException")}}
+  - Thrown if the `position` specified is not a recognized value.
+- {{jsxref("TypeError")}}
+  - Thrown if the `element` specified is not a valid element.
 
 ### Visualization of position names
 

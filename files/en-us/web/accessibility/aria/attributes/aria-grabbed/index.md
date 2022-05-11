@@ -1,7 +1,7 @@
 ---
 title: 'aria-grabbed'
 slug: Web/Accessibility/ARIA/Attributes/aria-grabbed
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute

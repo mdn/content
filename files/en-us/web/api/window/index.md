@@ -171,8 +171,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
 - {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
   - : Gets/sets the status bar text for the given window.
-- {{domxref("Window.dialogArguments")}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
 - {{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}
@@ -363,7 +361,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onselect")}}
   - : Called after text in an input field is selected
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `selectionchange` event is raised.
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
 

@@ -15,7 +15,7 @@ The **`prefix`** property of the {{domxref("CSSCounterStyleRule")}} interface ge
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

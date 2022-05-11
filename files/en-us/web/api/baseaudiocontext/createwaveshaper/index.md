@@ -27,6 +27,10 @@ distortion. It is used to apply distortion effects to your audio.
 createWaveShaper()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("WaveShaperNode")}}.

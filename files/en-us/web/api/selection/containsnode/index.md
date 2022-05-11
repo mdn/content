@@ -32,6 +32,10 @@ containsNode(node, partialContainment)
     `containsNode()` only returns `true` when the entire node is
     part of the selection. If not specified, the default value `false` is used.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Check for selection

@@ -27,32 +27,32 @@ See the [examples below](#examples) to see how this works.
 ## Properties
 
 - {{domxref("AddressErrors.addressLine", "addressLine")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.addressLine", "addressLine")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.addressLine", "addressLine")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.city", "city")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.city", "city")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.city", "city")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.country", "country")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.country", "country")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.country", "country")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.dependentLocality", "dependentLocality")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.organization", "organization")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.organization", "organization")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.organization", "organization")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.phone", "phone")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.phone", "phone")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.phone", "phone")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.postalCode", "postalCode")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.postalCode", "postalCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.postalCode", "postalCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.recipient", "recipient")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.recipient", "recipient")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.recipient", "recipient")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.region", "region")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.region", "region")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.region", "region")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.sortingCode", "sortingCode")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 
 ### Obsolete properties
 
 These properties have been removed from the specification and should no longer be used.
 
 - {{domxref("AddressErrors.languageCode", "languageCode")}} {{deprecated_inline}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.languageCode", "languageCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.languageCode", "languageCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 
 ## Usage notes
 

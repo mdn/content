@@ -28,6 +28,10 @@ updateCommands("sCommandName")
 
 - `sCommandName` is a particular string which describes what kind of update event this is (e.g. whether we are in bold right now).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Notes
 
 This enables or disables items (setting or clearing the "disabled" attribute on the command node as appropriate), or ensures that the command state reflects the state of the selection by setting current state information in the "state" attribute of the XUL command nodes.

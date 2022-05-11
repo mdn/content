@@ -3,6 +3,8 @@ title: Transferable objects
 slug: Glossary/Transferable_objects
 tags:
   - Transferable
+  - Serializable
+  - Structured clone
   - Workers
 ---
 
@@ -43,7 +45,7 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength);  // 0
 ```
 
-> **Note:** [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are serializable, but not transferable.
+> **Note:** [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are {{Glossary("serializable object","serializable")}}, but not transferable.
 > However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
 > We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer array.
 
@@ -61,7 +63,7 @@ original[0] = 1;
 console.log(clone[0]);  // 0
 
 // Transferring the Uint8Array would throw an exception as it is not a transferrable object
-// const transferred = structuredClone(original, {transfer: [original]}); 
+// const transferred = structuredClone(original, {transfer: [original]});
 
 // We can transfer Uint8Array.buffer.
 const transferred = structuredClone(original, {transfer: [original.buffer]});
@@ -87,7 +89,7 @@ The items that can be _transferred_ are:
 - {{domxref("OffscreenCanvas")}}
 - {{domxref("RTCDataChannel")}}
 
-> **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `Transferrable`.
+> **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Transferrable]`.
 
 ## See also
 

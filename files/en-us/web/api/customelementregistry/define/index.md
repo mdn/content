@@ -31,17 +31,18 @@ define(name, constructor, options)
 
 ### Parameters
 
-- name
+- `name`
   - : Name for the new custom element. Note that custom element names must contain a
     hyphen.
-- constructor
+- `constructor`
   - : Constructor for the new custom element.
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Object that controls how the element is defined. One option is currently supported:
 
-    - `extends`: String specifying the name of a built-in element to
-      extend. Used to create a _customized built-in element_.
+    - `extends`
+      - : String specifying the name of a built-in element to
+        extend. Used to create a _customized built-in element_.
 
 ### Return value
 
@@ -57,7 +58,7 @@ Void.
     or <code>extends</code> is specified but the element it is trying to extend is an unknown element.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the provided name is not a [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the referenced constructor is not a constructor.
 
 > **Note:** You'll often get `NotSupportedError`s thrown that

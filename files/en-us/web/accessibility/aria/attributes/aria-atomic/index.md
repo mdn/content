@@ -1,7 +1,7 @@
 ---
 title: 'aria-atomic'
 slug: Web/Accessibility/ARIA/Attributes/aria-atomic
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -26,7 +26,7 @@ If no ancestor has explicitly set `aria-atomic`, only the node or nodes of live 
   - : present only the changed node or nodes.
 - `true`
   - : present the entire changed region as a whole, including the author-defined label if one exists.
-  
+
 ## Associated roles
 
 Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).

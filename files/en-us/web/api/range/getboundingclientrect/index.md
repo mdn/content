@@ -26,6 +26,14 @@ details on the returned value.
 getBoundingClientRect()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML
@@ -66,7 +74,7 @@ highlight.style.height = `${clientRect.height}px`;
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

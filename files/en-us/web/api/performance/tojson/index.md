@@ -22,6 +22,10 @@ object's properties.
 toJSON()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A JSON object that is the serialization of the {{domxref("Performance")}} object.

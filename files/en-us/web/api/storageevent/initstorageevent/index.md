@@ -48,6 +48,10 @@ initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue, url, stor
   - : The {{DOMxRef("Storage")}} object representing the storage area on which this event
     occurred.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

@@ -55,11 +55,11 @@ setPositionState(stateDict)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : This error can occur in an array of circumstances:
 

@@ -24,6 +24,10 @@ on context creation.
 getContextAttributes()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A `CanvasRenderingContext2DSettings` object that contains the actual context

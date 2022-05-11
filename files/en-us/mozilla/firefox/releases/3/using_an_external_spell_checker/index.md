@@ -19,7 +19,7 @@ An [example](https://voikko.svn.sourceforge.net/viewvc/voikko/trunk/mozvoikko/) 
 Implementing a spell checker requires the following steps be taken:
 
 1. Implement a class derived from `mozISpellCheckingEngine` that implements the required functionality or accesses an external spell checker.
-2. The `mozISpellCheckingEngine` method {{ ifmethod("mozISpellCheckingEngine", "getDictionaryList") }} should be implemented to return a list of dictionaries supported by the spell checker.
+2. The `mozISpellCheckingEngine` method `mozISpellCheckingEngine.getDictionaryList()` should be implemented to return a list of dictionaries supported by the spell checker.
 3. The extension needs to provide a registration callback. The registration callback must use `nsICategoryManager` to install into the category "spell-check-engine" an entry with a name equal to the contract ID of the class implementing the spell check functionality.
 4. The extension also needs to provide an unregistration callback, which must remove the category entry.
 

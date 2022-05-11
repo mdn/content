@@ -68,7 +68,7 @@ When a new {{domxref("Headers")}} object is created using the {{domxref("Headers
   </tbody>
 </table>
 
-A header's guard affects the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods which change the header's contents. A `TypeError` is thrown if you try to modify a {{domxref("Headers")}} object whose guard is `immutable`. However, the operation will work if
+A header's guard affects the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods which change the header's contents. A {{jsxref("TypeError")}} is thrown if you try to modify a {{domxref("Headers")}} object whose guard is `immutable`. However, the operation will work if
 
 - guard is `request` and the header _name_ isn't a {{Glossary("forbidden header name")}} .
 - guard is `request-no-cors` and the header _name_/_value_ is a {{Glossary("simple header")}} .

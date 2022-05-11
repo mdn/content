@@ -10,7 +10,7 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.deltaY
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaY`** read-only property is a
 `double` representing the vertical scroll amount in the

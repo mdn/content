@@ -45,7 +45,7 @@ The example below shows an image that has been floated left, and the `shape-outs
 ## External Resources
 
 - [A list of CSS Shapes resources](https://codepen.io/KristopherVanSant/post/css-shapes-resources)
-- [CSS Shapes 101](https://alistapart.com/article/css-shapes-101)
+- [CSS Shapes 101](https://alistapart.com/article/css-shapes-101/)
 - [Creating non-rectangular layouts with CSS Shapes](https://www.sarasoueidan.com/blog/css-shapes/)
 - [How To Use CSS Shapes In Your Web Design](https://webdesign.tutsplus.com/tutorials/how-to-use-css-shapes-in-your-web-design--cms-27498)
 - [How To Get Started With CSS Shapes](https://www.webdesignerdepot.com/2015/03/how-to-get-started-with-css-shapes/)

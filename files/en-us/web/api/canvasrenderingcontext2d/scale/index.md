@@ -37,6 +37,10 @@ scale(x, y)
   - : Scaling factor in the vertical direction. A negative value flips pixels across the
     horizontal axis. A value of `1` results in no vertical scaling.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Scaling a shape

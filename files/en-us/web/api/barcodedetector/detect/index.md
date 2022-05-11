@@ -42,11 +42,11 @@ Returns a {{jsxref('Promise')}} which fulfills with an array of
   clockwise. This may not be square due to perspective distortions within the image.
 - `format`: The detected barcode format. (For a full list of formats see
   the {{domxref('Barcode Detection API', 'Barcode Detection API overview page')}}).
-- `rawValue`: A {{jsxref('String')}} decoded from the barcode data.
+- `rawValue`: A string decoded from the barcode data.
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : No parameter is specified or the `type` is not that of an
     `ImageBitmapSource`.
 

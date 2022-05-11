@@ -121,7 +121,7 @@ A **unique file type specifier** is a string that describes a type of file that 
 - The string `video/*` meaning "any video file".
 - The string `image/*` meaning "any image file".
 
-The `accept` attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
+The `accept` attribute takes a string containing one or more of these unique file type specifiers as its value, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
 ```html
 <input type="file" accept="image/*,.pdf">
@@ -233,7 +233,7 @@ Because of this, you should make sure that the `accept` attribute is backed up b
     input.value = "foo";
     ```
 
-2. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+2. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` prepended to it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ## Examples
 

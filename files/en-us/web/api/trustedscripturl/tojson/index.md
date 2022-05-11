@@ -19,6 +19,10 @@ The **`toJSON()`** method of the {{domxref("TrustedScriptURL")}} interface retur
 toJSON()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.

@@ -84,7 +84,7 @@ respondWith(response)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

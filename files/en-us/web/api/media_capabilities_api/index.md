@@ -57,7 +57,7 @@ Media capabilities information enables websites to enable adaptive streaming to 
 ## Media Capabilities Interfaces
 
 - {{DOMxRef("MediaCapabilities")}}
-  - : Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The  information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient .
+  - : Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient .
 - ScreenColorGamut
   - : Will describe the color {{glossary("gamut")}}, or the range of color, the screen can display (not currently supported anywhere).
 - ScreenLuminance

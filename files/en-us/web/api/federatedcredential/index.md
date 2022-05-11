@@ -28,9 +28,9 @@ In browsers that support it, an instance of this interface may be passed in the 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 - {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
-  - : Returns a {{domxref("USVString")}} containing a credential's federated identity provider.
+  - : Returns a string containing a credential's federated identity provider.
 - {{domxref("FederatedCredential.protocol")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} containing a credential's federated identity protocol.
+  - : Returns a string containing a credential's federated identity protocol.
 
 ### Event handlers
 

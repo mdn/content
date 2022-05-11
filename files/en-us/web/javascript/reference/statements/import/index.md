@@ -15,7 +15,7 @@ browser-compat: javascript.statements.import
 {{jsSidebar("Statements")}}
 
 The static **`import`** statement is
-used to import read only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by
+used to import read-only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by
 another module.
 
 Imported modules are in {{JSxRef("Strict_mode","strict mode")}}

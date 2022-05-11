@@ -128,6 +128,10 @@ stepUp(stepIncrement)
 - _`stepIncrement`_ {{optional_inline}}
   - : A numeric value.  If no parameter is passed, `stepIncrement` defaults to `1`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Click the button in this example to increment the {{HTMLElement("input/number",
@@ -180,7 +184,7 @@ input:invalid {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 Note if you don't pass a parameter to the `stepUp` method, it defaults to
 `1`. Any other value is a multiplier of the `step` attribute

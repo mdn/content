@@ -22,6 +22,10 @@ next node from it or `null` if there are no more nodes.
 iterateNext()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The next {{domxref("Node")}} within the node set of the `XPathResult`.
@@ -65,7 +69,7 @@ document.querySelector("output").textContent = tagNames.join(", ");
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

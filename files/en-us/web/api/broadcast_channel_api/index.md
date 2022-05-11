@@ -44,7 +44,7 @@ The API doesn't associate any semantics to messages, so it is up to the code to 
 
 ### Receiving a message
 
-When a message is posted, a [`message`](/en-us/docs/Web/API/BroadcastChannel/message_event) event is dispatched to each {{domxref("BroadcastChannel")}} object connected to this channel. A function can be run for this event using the {{domxref("BroadcastChannel/message_event", "onmessage")}} event handler:
+When a message is posted, a [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event) event is dispatched to each {{domxref("BroadcastChannel")}} object connected to this channel. A function can be run for this event using the {{domxref("BroadcastChannel/message_event", "onmessage")}} event handler:
 
 ```js
 // A handler that only logs the event to the console:

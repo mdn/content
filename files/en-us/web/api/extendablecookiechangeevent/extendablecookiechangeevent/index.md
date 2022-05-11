@@ -17,14 +17,14 @@ The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("Ext
 ## Syntax
 
 ```js
-new ExtendableCookieChangeEvent(type);
-new ExtendableCookieChangeEvent(type, eventInitDict);
+new ExtendableCookieChangeEvent(type)
+new ExtendableCookieChangeEvent(type, eventInitDict)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with the value `"changed"` or `"deleted"`.
+  - : A string with the value `"changed"` or `"deleted"`.
 - `eventInitDict`{{Optional_Inline}}
 
   - : An object containing:

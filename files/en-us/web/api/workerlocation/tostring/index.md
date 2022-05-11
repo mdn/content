@@ -19,6 +19,14 @@ The **`toString()`** {{Glossary("stringifier")}} method of a {{domxref("WorkerLo
 toString()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

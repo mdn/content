@@ -25,7 +25,7 @@ getAsFile()
 
 ### Parameters
 
-_None._
+None.
 
 ### Return value
 

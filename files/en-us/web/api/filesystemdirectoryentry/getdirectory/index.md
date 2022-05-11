@@ -73,7 +73,7 @@ The table below describes the result of each possible combination of these flags
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -137,5 +137,5 @@ the contents of the file. When that is loaded successfully (as indicated by the
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}

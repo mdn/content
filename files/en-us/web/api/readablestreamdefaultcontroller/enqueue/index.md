@@ -29,12 +29,12 @@ enqueue(chunk)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 

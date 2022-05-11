@@ -32,7 +32,7 @@ scrollIntoView(scrollIntoViewOptions)
 
 - `alignToTop` {{optional_inline}}
 
-  - : Is a boolean value:
+  - : A boolean value:
 
     - If `true`, the top of the element will be aligned to the top of the
       visible area of the scrollable ancestor. Corresponds to
@@ -45,7 +45,7 @@ scrollIntoView(scrollIntoViewOptions)
 - `scrollIntoViewOptions` {{optional_inline}}
   {{experimental_inline}}
 
-  - : Is an Object with the following properties:
+  - : An Object with the following properties:
 
     - `behavior` {{optional_inline}}
       - : Defines the transition animation.
@@ -58,6 +58,10 @@ scrollIntoView(scrollIntoViewOptions)
       - : Defines horizontal alignment.
         One of `start`, `center`, `end`, or
         `nearest`. Defaults to `nearest`.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

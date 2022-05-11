@@ -20,7 +20,7 @@ There are differences between _arrow functions_ and _traditional functions_, as 
 
 - Arrow functions don't have their own bindings to
   [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
-  and should not be used as [`methods`](/en-US/docs/Glossary/Method).
+  and should not be used as [methods](/en-US/docs/Glossary/Method).
 - Arrow functions don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions aren't suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
@@ -301,9 +301,7 @@ const bound = add.bind(obj)
 console.log(bound(1, 2, 3)) // result 2026
 ```
 
-Perhaps the greatest benefit of using Arrow functions is with DOM-level methods
-(`setTimeout`, `setInterval`, `addEventListener`) that usually required some kind of closure,
-call, apply or bind to ensure the function executed in the proper scope.
+Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
 
 #### Traditional function example
 

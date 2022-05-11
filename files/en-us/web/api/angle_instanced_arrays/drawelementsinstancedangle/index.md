@@ -55,7 +55,7 @@ drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

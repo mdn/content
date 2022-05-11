@@ -80,7 +80,7 @@ audio track.
 - `OverconstrainedError` {{domxref("DOMException")}}
   - : Returned if, after creating the stream, applying the specified `constraints` fails
     because no compatible stream could be generated.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the specified `constraints` include constraints which are not permitted
     when calling `getDisplayMedia()`. These unsupported constraints are
     `advanced` and any constraints which in turn have a member named

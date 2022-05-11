@@ -139,9 +139,9 @@ function dragend_handler(ev) {
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 300)}}
+{{EmbedLiveSample('Examples', 400, 300)}}
 
-{{LiveSampleLink('Example', 'Result link')}}
+{{LiveSampleLink('Examples', 'Result link')}}
 
 ## Specifications
 

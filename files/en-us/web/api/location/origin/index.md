@@ -20,7 +20,7 @@ That is:
   `'://'`, followed by the domain, followed by `':'`, followed by
   the port (the default port, `80` and `443` respectively, if
   explicitly specified);
-- for URL using `file:` scheme, the value is browser dependant;
+- for URL using `file:` scheme, the value is browser dependent;
 - for URL using the `blob:` scheme, the origin of the URL following
   `blob:`. E.g `"blob:https://mozilla.org"` will have
   `"https://mozilla.org".`

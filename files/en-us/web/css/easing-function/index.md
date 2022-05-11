@@ -19,7 +19,7 @@ The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/W
 
 This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. It may also be used to interpolate between two colors in a color gradient.
 
-The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the interpolation. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
+The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the {{Glossary("interpolation")}}. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
 
 Depending on the specific function used, the calculated output can sometimes grow to be greater than `1.0` or smaller than `0.0` during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
 

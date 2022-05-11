@@ -33,7 +33,7 @@ cancelIdleCallback(handle)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

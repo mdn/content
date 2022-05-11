@@ -28,7 +28,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

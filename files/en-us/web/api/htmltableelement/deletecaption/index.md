@@ -23,6 +23,14 @@ nothing.
 deleteCaption()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example uses JavaScript to delete a table's caption.
@@ -46,7 +54,7 @@ table.deleteCaption();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

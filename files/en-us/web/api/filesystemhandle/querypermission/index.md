@@ -44,8 +44,8 @@ the user revoking permission, a handle retrieved from IndexedDB is also likely t
 
 ### Exceptions
 
-- `TypeError`
-  - : If `mode` is specified with a value other than
+- {{jsxref("TypeError")}}
+  - : Thrown if `mode` is specified with a value other than
     `'read'` or `'readwrite'`
 
 ## Examples

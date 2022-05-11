@@ -66,10 +66,10 @@ Expect-CT: report-uri="<uri>",
 
 ## Example
 
-The following example specifies enforcement of Certificate Transparency for 24 hours and reports violations to `foo.example`.
+The following example specifies enforcement of Certificate Transparency for 24 hours and reports violations to `foo.example.com`.
 
 ```
-Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
+Expect-CT: max-age=86400, enforce, report-uri="https://foo.example.com/report"
 ```
 
 ## Notes

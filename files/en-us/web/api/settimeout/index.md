@@ -6,9 +6,7 @@ tags:
   - HTML DOM
   - Intervals
   - JavaScript timers
-  - MakeBrowserAgnostic
   - Method
-  - NeedsMarkupWork
   - Reference
   - Timers
   - setTimeout
@@ -28,9 +26,9 @@ setTimeout(code, delay)
 
 setTimeout(functionRef)
 setTimeout(functionRef, delay)
-setTimeout(functionRef, delay, arg0)
-setTimeout(functionRef, delay, arg0, arg1)
-setTimeout(functionRef, delay, arg0, arg1, /* ... ,*/ argN)
+setTimeout(functionRef, delay, arg1)
+setTimeout(functionRef, delay, arg1, arg2)
+setTimeout(functionRef, delay, arg1, arg2, /* ... ,*/ argN)
 ```
 
 ### Parameters
@@ -51,7 +49,8 @@ setTimeout(functionRef, delay, arg0, arg1, /* ... ,*/ argN)
 
     Also note that if the value isn’t a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
-- `arg1, ..., argN` {{optional_inline}}
+- `arg1`, …, argN` {{optional_inline}}
+
   - : Additional arguments which are passed through to the function specified by
     `function`.
 
@@ -226,7 +225,7 @@ setTimeout(function() {
 }, 500);
 ```
 
-A string passed to `{{domxref("setTimeout()")}}` is evaluated in the global context, so local symbols in the context where `{{domxref("setTimeout()")}}` was called will not be available when the string is evaluated as code.
+A string passed to {{domxref("setTimeout()")}} is evaluated in the global context, so local symbols in the context where {{domxref("setTimeout()")}} was called will not be available when the string is evaluated as code.
 
 ### Reasons for delays longer than specified
 

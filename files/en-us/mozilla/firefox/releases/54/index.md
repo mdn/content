@@ -40,7 +40,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 ### DOM & HTML DOM
 
 - The {{domxref("URL.toJSON()")}} method has been implemented ({{bug(1337702)}}).
-- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a record containing {{domxref("USVString")}}s as an init object ({{bug("1331580")}}).
+- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a record containing strings as an init object ({{bug("1331580")}}).
 - Values returned in {{domxref("KeyboardEvent.key")}} for printable keys when the control key is also pressed have been corrected on macOS (except when the Command key is pressed) ({{bug(1342865)}}).
 - The `dom.workers.latestJSVersion` preference, which was mainly implemented to work around problems using [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) in workers (due to {{bug(855665)}}, which has since been fixed) has been removed (see {{bug(1219523)}}).
 - The {{domxref("event.timeStamp")}} property now returns a high-resolution monotonic time ({{domxref("DOMHighResTimeStamp")}}) instead of an epoch time ({{domxref("DOMTimeStamp")}}).

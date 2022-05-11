@@ -63,7 +63,7 @@ console.log('Point at 40,30:', circle.isPointInFill(new DOMPoint(40, 30)));
 
 ### Result
 
-{{EmbedLiveSample("Example", "150", "150")}}
+{{EmbedLiveSample("Examples", "150", "150")}}
 
 ## Specifications
 

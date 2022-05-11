@@ -49,9 +49,13 @@ registerProtocolHandler(scheme, url, title)
     > The `title` should still be set because some browsers **still require it** (see the [compatibility table below](#browser_compatibility)).
     > Browsers that support the updated spec most likely will be accept but ignore the title.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
-- {{Exception("SecurityError")}}
+- `SecurityError` {{domxref("DOMException")}}
   - : The user agent blocked the registration.
     This might happen if:
 
@@ -60,7 +64,7 @@ registerProtocolHandler(scheme, url, title)
     - The browser requires that this function is called from a secure context.
     - The browser requires that the handler's URL be over HTTPS.
 
-- {{Exception("SyntaxError")}}
+- `SyntaxError`{{domxref("DOMException")}}
   - : The `%s` placeholder is missing from the handler URL.
 
 ## Permitted schemes

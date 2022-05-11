@@ -34,7 +34,7 @@ blendColor(red, green, blue, alpha)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -35,7 +35,7 @@ uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

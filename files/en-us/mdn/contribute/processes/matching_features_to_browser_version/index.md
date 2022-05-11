@@ -40,10 +40,10 @@ The following sites and tools are helpful when trying to track down history info
 - [Chromium source code](https://chromium.googlesource.com/chromium)
 - [Chromium source code by release version number](https://chromium.googlesource.com/chromium/src.git/+refs)
 - [Google Chrome Platform Status](https://chromestatus.com/features)
-- [Chromium Code Search](https://cs.chromium.org/)
+- [Chromium Code Search](https://source.chromium.org/chromium)
 - [Find Releases Tool](https://storage.googleapis.com/chromium-find-releases-static/index.html)
-- [List of everything exposed to the Web in Chrome](https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/global-interface-listing-expected.txt?g=0)
-- [Interfaces not exposed to WebView](https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt)
+- [List of everything exposed to the Web in Chrome](https://source.chromium.org/chromiumchromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/global-interface-listing-expected.txt?g=0)
+- [Interfaces not exposed to WebView](https://source.chromium.org/chromiumchromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt)
 - [WebKit bugs](https://bugs.webkit.org/)
 
 ### Getting the Chrome version for a changeset or revision
@@ -74,7 +74,7 @@ If a feature is added to WebView prior to the Chrome 37 time period, and its ver
 
 #### Features excluded from WebView
 
-One useful resource is [this file which lists the interfaces and/or interface members](https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt) which are not available in a WebView.
+One useful resource is [this file which lists the interfaces and/or interface members](https://source.chromium.org/chromiumchromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt) which are not available in a WebView.
 
 ```js
 interface HTMLIFrameElement : HTMLElement

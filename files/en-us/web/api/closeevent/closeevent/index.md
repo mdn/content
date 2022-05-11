@@ -16,24 +16,24 @@ The **`CloseEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new CloseEvent(typeArg);
-new CloseEvent(typeArg, closeEventInit);
+new CloseEvent(typeArg)
+new CloseEvent(typeArg, closeEventInit)
 ```
 
-### Values
+### Parameters
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : A string representing the name of the event.
 - `closeEventInit` {{optional_inline}}
 
-  - : Is a `CloseEventInit` dictionary, having the following fields:
+  - : A `CloseEventInit` dictionary, having the following fields:
 
     - `"wasClean"`, optional and defaulting to `false`, of type
       `boolean`, indicates if the connection has been closed cleanly or not.
     - `"code"`, optional and defaulting to `0`, of type
       `unsigned short`, that is the connection close code sent by the server.
     - `"reason"`, optional and defaulting to `''`, of type
-      {{domxref("DOMString")}}, that is a human-readable reason why the server closed
+      string, that is a human-readable reason why the server closed
       the connection.
 
     > **Note:** The `CloseEventInit` dictionary also accepts fields from the

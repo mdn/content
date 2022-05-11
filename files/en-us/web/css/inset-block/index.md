@@ -13,6 +13,17 @@ browser-compat: css.properties.inset-block
 
 The **`inset-block`** [CSS](/en-US/docs/Web/CSS) property defines the logical block start and end offsets of an element, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}} and {{cssxref("bottom")}}, or {{cssxref("right")}} and {{cssxref("left")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
+{{EmbedInteractiveExample("pages/css/inset-block.html")}}
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("inset-block-end")}}
+- {{cssxref("inset-block-start")}}
+
+## Syntax
+
 ```css
 /* <length> values */
 inset-block: 3px 10px;
@@ -32,15 +43,6 @@ inset-block: revert;
 inset-block: revert-layer;
 inset-block: unset;
 ```
-
-## Constituent properties
-
-This property is a shorthand for the following CSS properties:
-
-- {{cssxref("inset-block-end")}}
-- {{cssxref("inset-block-start")}}
-
-## Syntax
 
 ### Values
 

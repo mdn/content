@@ -53,6 +53,10 @@ clip(path, fillRule)
 - `path`
   - : A {{domxref("Path2D")}} path to use as the clipping region.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### A simple clipping region

@@ -146,7 +146,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - {{domxref("MediaTrackConstraints.width", "width")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the video width or range of widths which are acceptable and/or required.
 - resizeMode
-  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.
+  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output in order to satisfy other constraints that affect the resolution.
 
 ### Properties of shared screen tracks
 

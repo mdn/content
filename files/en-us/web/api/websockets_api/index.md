@@ -55,7 +55,7 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [PHP WebSocket Server](https://github.com/napengam/phpWebSocketServer): Server written in PHP to handle connections via websockets wss\:// or ws\://and normal sockets over ssl:// ,tcp\://
 - [Channels](https://channels.readthedocs.io/en/stable/index.html): Django library that adds support for WebSockets (and other protocols that require long running asynchronous connections).
 - [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/): gives Flask applications access to low latency bi-directional communications between the clients and the server.
-- [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket): Gorilla WebSocket is a [Go](https://golang.org/) implementation of the WebSocket protocol.
+- [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket): Gorilla WebSocket is a [Go](https://go.dev/) implementation of the WebSocket protocol.
 
 ## Related Topics
 
@@ -76,5 +76,5 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 ## See also
 
 - [RFC 6455 — The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)
-- [WebSocket API Specification](https://websockets.spec.whatwg.org//)
+- [WebSocket API Specification](https://websockets.spec.whatwg.org/)
 - [Server-Sent Events](/en-US/docs/Web/API/Server-sent_events)

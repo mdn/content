@@ -22,7 +22,7 @@ The **`EyeDropper`** interface represents an instance of an eyedropper tool that
 
 _The `EyeDropper` interface doesn't inherit any methods_.
 
-- {{DOMxRef("EyeDropper.prototype.open()")}}
+- {{DOMxRef("EyeDropper.open()")}}
   - : Returns a promise that resolves to an object that gives access to the selected color.
 
 ## Examples

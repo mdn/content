@@ -33,9 +33,9 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} object.
 
 ### Exceptions
 
-- `DOMException`
+- `NotFoundError` {{domxref("DOMException")}}
   - : The `type` does not match a known {{Glossary("MIME type")}}.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : No parameter is specified or the `type` is not that of the
     {{domxref("ClipboardItem")}}.
 

@@ -40,7 +40,7 @@ blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -45,7 +45,7 @@ For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("ani
 The `<begin-value-list>` is a semicolon-separated list of values. Each value can be one of the following:
 
 - `<offset-value>`
-  - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#Clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{event("load")}} or {{event("DOMContentLoaded")}} event). Negative values are valid.
+  - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#Clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{event("load")}} or {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event). Negative values are valid.
 - `<syncbase-value>`
   - : This value defines a *syncbase* and an optional offset from that *syncbase*. The element's animation start time is defined relative to the begin or active end of another animation.
 

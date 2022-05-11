@@ -38,6 +38,10 @@ groupCollapsed(label)
 - `label`
   - : Label for the group. Optional.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

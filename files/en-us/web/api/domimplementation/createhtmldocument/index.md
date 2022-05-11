@@ -28,6 +28,10 @@ createHTMLDocument(title)
 - `title`  {{optional_inline}} (except in IE)
   - : A string containing the title to give the new HTML document.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example creates a new HTML document and inserts it into an {{

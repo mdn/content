@@ -32,10 +32,14 @@ add(item, before)
     parameter is `null` (or the index does not exist), the new element is
     appended to the end of the collection.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Thrown if the _item_ passed to the method is an ancestor of the`{{domxref("HTMLSelectElement")}}`.
+  - : Thrown if the _item_ passed to the method is an ancestor of the {{domxref("HTMLSelectElement")}}.
 
 ## Examples
 

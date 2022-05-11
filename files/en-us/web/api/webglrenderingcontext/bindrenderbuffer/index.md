@@ -36,7 +36,7 @@ bindRenderbuffer(target, renderbuffer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

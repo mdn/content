@@ -299,7 +299,7 @@ JavaScript libraries tend to come in a few main varieties (some libraries will s
 - Convenience libraries: Make difficult things easier to do. For example, the [WebGL API](/en-US/docs/Web/API/WebGL_API) is really complex and challenging to use when you write it directly, so the [Three.js](https://threejs.org/) library (and others) is built on top of WebGL and provides a much easier API for creating common 3D objects, lighting, textures, etc.
   The [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) for several useful code samples).
 - Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when “DHTML” was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS3 features and APIs to implementing effects more easily.
-- UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example [Foundation](https://foundation.zurb.com/), [Bootstrap](https://getbootstrap.com/), and [Material-UI](https://material-ui.com/) (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.
+- UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example [Foundation](https://get.foundation/), [Bootstrap](https://getbootstrap.com/), and [Material-UI](https://mui.com/) (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.
 - Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, [LocalForage](https://github.com/localForage/localForage) is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), or even WebSQL (which is now deprecated, but is still supported in some older versions of Safari/IE). As another example, jQuery
 
 When choosing a library to use, make sure that it works across the set of browsers you want to support, and test your implementation thoroughly. Also make sure that the library is popular and well-supported, and isn't likely to just become obsolete next week. Talk to other developers to find out what they recommend, see how much activity and how many contributors the library has on GitHub (or wherever else it is stored), etc.
@@ -392,7 +392,7 @@ Note that polyfills.js is basically the two polyfills we are using put together 
 
 You can see this code in action in [fetch-polyfill-only-when-needed.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) (see the [source code also](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton. Check out his article [Loading Polyfills Only When Needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) for the original code, plus a lot of useful explanation around the wider subject).
 
-> **Note:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/v2/docs/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
+> **Note:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/v3/api/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
 
 #### JavaScript transpiling
 
@@ -416,7 +416,7 @@ The recommended tool for JavaScript transpiling is currently [Babel](https://bab
 
 The easiest way to give Babel a try is to use the [online version](https://babeljs.io/repl/), which allows you to enter your source code on the left, and outputs a transpiled version on the right.
 
-> **Note:** There are many ways to use Babel (task runners, automation tools, etc.), as you'll see on the [setup page](https://babeljs.io/docs/setup/).
+> **Note:** There are many ways to use Babel (task runners, automation tools, etc.), as you'll see on the [setup page](https://babeljs.io/en/setup/).
 
 ### Using bad browser sniffing code
 

@@ -450,8 +450,8 @@ ol.shortcut {
     <input type="radio" id="tamil" name="type" value="tamil">tamil
   </label>
 
-  <label for="telegu">
-    <input type="radio" id="telegu" name="type" value="telegu">telegu
+  <label for="telugu">
+    <input type="radio" id="telugu" name="type" value="telugu">telugu
   </label>
 
   <label for="thai">

@@ -30,6 +30,10 @@ cancelAnimationFrame(requestID)
   - : The ID value returned by the call to {{domxref("window.requestAnimationFrame()")}}
     that requested the callback.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

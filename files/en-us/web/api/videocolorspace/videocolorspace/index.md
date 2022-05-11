@@ -15,8 +15,8 @@ The **`VideoColorSpace()`** constructor creates a new {{domxref("VideoColorSpace
 ## Syntax
 
 ```js
-new VideoColorSpace();
-new VideoColorSpace(init);
+new VideoColorSpace()
+new VideoColorSpace(init)
 ```
 
 ### Parameters

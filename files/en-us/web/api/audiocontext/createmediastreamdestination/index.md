@@ -24,6 +24,10 @@ For more details about media stream destination nodes, check out the {{domxref("
 createMediaStreamDestination()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("MediaStreamAudioDestinationNode")}}.

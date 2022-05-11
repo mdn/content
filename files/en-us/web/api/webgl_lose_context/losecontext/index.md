@@ -24,6 +24,14 @@ called.
 loseContext()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 With this method, you can simulate the

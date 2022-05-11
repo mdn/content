@@ -50,6 +50,14 @@ The drawing state that gets saved onto a stack consists of:
 save()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Saving the drawing state

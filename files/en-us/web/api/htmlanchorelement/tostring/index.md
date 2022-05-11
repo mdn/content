@@ -20,6 +20,14 @@ version of {{domxref("HTMLAnchorElement.href")}}.
 toString()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Calling toString on an anchor element

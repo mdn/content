@@ -116,7 +116,7 @@ Generally you will need to check the relevant specifications for these (keys for
   - : Nonce count. The hexadecimal count of requests in which the client has sent the current `cnonce` value (including the current request).
     The server can use duplicate `nc` values to recognize replay requests.
 - **`userhash`** {{optional_inline}}
-  - : `"true` if the username has been hashed. `"false"` by default.
+  - : `"true"` if the username has been hashed. `"false"` by default.
 
 ## Examples
 

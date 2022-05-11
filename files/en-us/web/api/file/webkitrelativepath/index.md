@@ -4,9 +4,7 @@ slug: Web/API/File/webkitRelativePath
 tags:
   - File
   - File API
-  - File System API
   - File and Directory Entries API
-  - Non-standard
   - Property
   - Read-only
   - Reference
@@ -14,16 +12,16 @@ tags:
   - webkitRelativePath
 browser-compat: api.File.webkitRelativePath
 ---
-{{APIRef("File API")}}{{non-standard_header}}
+{{APIRef("File API")}}
 
 The **`File.webkitRelativePath`** is a read-only property that
-contains a {{domxref("USVString")}} which specifies the file's path relative to the
+contains a string which specifies the file's path relative to the
 directory selected by the user in an {{HTMLElement("input")}} element with its
 {{htmlattrxref("webkitdirectory", "input")}} attribute set.
 
 ## Value
 
-A {{domxref("USVString")}} containing the path of the file relative to the ancestor
+A string containing the path of the file relative to the ancestor
 directory the user selected.
 
 ## Example
@@ -62,15 +60,12 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 {{Specifications}}
 
-This API has no official W3C or WHATWG specification.
-
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
 - {{domxref("HTMLInputElement.webkitEntries")}}
 - {{domxref("HTMLInputElement.webkitdirectory")}}

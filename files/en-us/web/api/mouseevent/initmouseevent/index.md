@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.initMouseEvent
 ---
-{{APIRef("DOM Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`MouseEvent.initMouseEvent()`** method initializes the
 value of a mouse event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).
@@ -90,6 +90,10 @@ initMouseEvent(type, canBubble, cancelable, view,
     with some event types (e.g., `mouseover` and `mouseout`). In
     other cases, pass `null`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML
@@ -121,7 +125,7 @@ simulateClick();
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

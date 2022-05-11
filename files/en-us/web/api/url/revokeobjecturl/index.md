@@ -39,7 +39,7 @@ revokeObjectURL(objectURL)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

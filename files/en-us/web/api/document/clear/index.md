@@ -20,6 +20,14 @@ The **`Document.clear()`** method does nothing, but doesn't raise any error.
 clear()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

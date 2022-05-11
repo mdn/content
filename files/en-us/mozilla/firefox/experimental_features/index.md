@@ -904,7 +904,7 @@ This feature allows Firefox on Android to use [AV1 format media](/en-US/docs/Web
 
 #### JPEG XL support
 
-With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see {{bug(1539075)}} for more details. This feature is available in nightly builds effective in Firefox 90 or later.
+With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see {{bug(1539075)}} for more details.
 
 <table>
   <thead>
@@ -937,10 +937,52 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2">image.jxl.enabled</td>
+      <td colspan="2"><code>image.jxl.enabled</code></td>
     </tr>
   </tbody>
 </table>
+
+
+#### Streams API: TransformStreams
+
+Support for [transform streams](/en-US/docs/Web/API/Streams_API#transform_streams), including the classes [`TransformStream`](/en-US/docs/Web/API/TransformStream) and [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController), and the method [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>101</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>101</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>101</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.streams.transform_streams.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Service Workers
 

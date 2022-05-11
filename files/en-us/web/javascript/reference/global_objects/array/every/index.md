@@ -42,7 +42,7 @@ every(function(element, index, array) { /* ... */ }, thisArg)
 - `callbackFn`
 
   - : A function to test for each element.
-  
+
     The function is called with the following arguments:
 
     - `element`

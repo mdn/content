@@ -25,7 +25,8 @@ Creating a {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} with a custom confi
 
 The API has three main methods for sanitizing data:
 
-1. {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element. This is essentially a "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
+1. {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element.
+   This is essentially a "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
 2. {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM. This might be used when the target element for the string is not always ready/available for update.
 3. {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}. It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
 
@@ -73,13 +74,13 @@ The code below demonstrates how {{domxref('Element/setHTML','Element.setHTML()')
 The `script` element is disallowed by the default sanitizer so the alert is removed.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Get the Element with id "target" and set it with the sanitized string.
 const target = document.getElementById("target");
-target.setHTML(unsanitized_string, sanitizer);
+target.setHTML(unsanitized_string, {sanitizer: sanitizer});
 
 console.log(target.innerHTML);
 // "abc  def"
@@ -90,7 +91,7 @@ console.log(target.innerHTML);
 The example below shows the same sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method, with the intent of later inserting the returned element into a `<div>` element:
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Sanitize the string
@@ -113,7 +114,7 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > but you must remember to use the correct context when the string is applied:
 >
 > ```js
-> const unsanitized_string = "abc <script>alert(1)</script> def";
+> const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
 > let sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
 > ```
 

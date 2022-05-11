@@ -34,6 +34,10 @@ createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels)
 - `numOutputChannels`
   - : The number of output channels in the audio stream.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 The following script illustrates the use of `createJavaScriptNode()`:

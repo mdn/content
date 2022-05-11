@@ -239,7 +239,7 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 
 ### App manifest location
 
-- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location) in the Chrome docs.
+- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location) in the Chrome docs.
 
 ## Data cloning algorithm
 

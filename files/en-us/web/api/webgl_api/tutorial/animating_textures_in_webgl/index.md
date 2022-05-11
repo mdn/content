@@ -88,7 +88,7 @@ function initTexture(gl) {
                 width, height, border, srcFormat, srcType,
                 pixel);
 
-  // Turn off mips and set  wrapping to clamp to edge so it
+  // Turn off mips and set wrapping to clamp to edge so it
   // will work regardless of the dimensions of the video.
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);

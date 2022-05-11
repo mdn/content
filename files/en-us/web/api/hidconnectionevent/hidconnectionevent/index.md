@@ -15,14 +15,14 @@ The **`HIDConnectionEvent()`** constructor creates a new {{domxref("HIDConnectio
 ## Syntax
 
 ```js
-new HIDConnectionEvent(type, HIDConnectionEventInit);
+new HIDConnectionEvent(type, hidConnectionEventInit)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with one of `"connect"` or `"disconnect"`.
-- `HIDConnectionEventInit`
+  - : A string with one of `"connect"` or `"disconnect"`.
+- `hidConnectionEventInit`
 
   - : A dictionary including the following fields:
 

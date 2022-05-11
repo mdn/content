@@ -52,6 +52,3 @@ _No inherited static methods_.
 
 {{Compat}}
 
-## See also
-
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)

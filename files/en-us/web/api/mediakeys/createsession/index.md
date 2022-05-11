@@ -25,6 +25,15 @@ createSession()
 createSession(mediaKeySessionType)
 ```
 
+### Parameters
+
+- `mediaKeySessionType`  {{optional_inline}}
+  - : A string. Either "temporary" or "persistent-license". The default value is "temporary".
+
+### Return value
+
+A new {{domxref("MediaKeySession")}} object.
+
 ## Specifications
 
 {{Specifications}}

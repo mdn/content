@@ -26,14 +26,14 @@ This interface inherits from the {{domxref("Event")}} interface.
 _Inherits properties from its parent, {{domxref("Event")}}._
 
 - {{domxref("BeforeInstallPromptEvent.platforms")}} {{readonlyinline}}
-  - : Returns an array of {{domxref("DOMString")}} items containing the platforms on which the event was dispatched. This is provided for user agents that want to present a choice of versions to the user such as, for example, "web" or "play" which would allow the user to choose between a web version or an Android version.
+  - : Returns an array of string items containing the platforms on which the event was dispatched. This is provided for user agents that want to present a choice of versions to the user such as, for example, "web" or "play" which would allow the user to choose between a web version or an Android version.
 - {{domxref("BeforeInstallPromptEvent.userChoice")}} {{readonlyinline}}
-  - : Returns a {{jsxref("Promise")}} that resolves to a {{domxref("DOMString")}} containing either "accepted" or "dismissed".
+  - : Returns a {{jsxref("Promise")}} that resolves to a string containing either "accepted" or "dismissed".
 
 ## Methods
 
 - {{domxref("BeforeInstallPromptEvent.prompt()")}}
-  - : Allows a developer to show the install prompt at a time of their own choosing. This method returns a  {{jsxref("Promise")}}.
+  - : Allows a developer to show the install prompt at a time of their own choosing. This method returns a {{jsxref("Promise")}}.
 
 ## Example
 

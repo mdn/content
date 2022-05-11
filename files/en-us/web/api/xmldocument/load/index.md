@@ -21,6 +21,14 @@ browser-compat: api.XMLDocument.load
 load()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

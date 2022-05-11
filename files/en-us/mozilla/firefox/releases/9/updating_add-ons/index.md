@@ -22,9 +22,9 @@ Once you've confirmed that you need to make changes, come on back to this page a
 
 ## Bootstrapped add-ons can remove delayed-load scripts
 
-If your add-on uses {{ ifmethod("nsIChromeFrameMessageManager", "loadFrameScript") }} with the delayed-load flag set, the script gets loaded into every frame created from that point on. This is great, except that until Firefox 9, there was no way to stop loading the script, so it would keep happening even after your add-on was shut down.
+If your add-on uses `nsIChromeFrameMessageManager.loadFrameScript()` with the delayed-load flag set, the script gets loaded into every frame created from that point on. This is great, except that until Firefox 9, there was no way to stop loading the script, so it would keep happening even after your add-on was shut down.
 
-Starting in Firefox 9, you should call the new {{ ifmethod("nsIChromeFrameMessageManager", "removeDelayedFrameScript") }} method to stop loading your script in newly-created frames. You do this like this, for example:
+Starting in Firefox 9, you should call the new `nsIChromeFrameMessageManager.removeDelayedFrameScript()` method to stop loading your script in newly-created frames. You do this like this, for example:
 
 ```js
 browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/somescript.js");
@@ -32,9 +32,9 @@ browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/so
 
 ## Interface changes
 
-- The `nsIURL` interface has been changed a bit. The {{ ifattribute("nsIURL", "param") }} attribute was removed, and the {{ ifmethod("nsIURLParser", "parsePath") }} method has two fewer arguments than it did previously.
+- The `nsIURL` interface has been changed a bit. The `nsIURL.param` attribute was removed, and the `nsIURLParser.parsePath()` method has two fewer arguments than it did previously.
 - Two methods have been removed from `nsIBrowserHistory`: `registerOpenPage()` and `unregisterOpenPage()`. These methods had been deprecated.
-- The {{ ifmethod("nsIEditorSpellCheck", "saveDefaultDictionary") }} method has been removed as part of supporting per-site spell check settings. Also, {{ ifmethod("nsIEditorSpellCheck", "updateCurrentDictionary") }} no longer takes a parameter.
+- The `nsIEditorSpellCheck.saveDefaultDictionary()` method has been removed as part of supporting per-site spell check settings. Also, `nsIEditorSpellCheck.updateCurrentDictionary()` no longer takes a parameter.
 - The `nsIGlobalHistory3` interface has been removed. Its functionality was of limited (if any) use to add-ons, so this shouldn't affect anyone.
 - Several specialized channels' properties attributes have been merged into the base `nsIChannel` interface. This shouldn't affect compatibility at all, since those interfaces inherit from `nsIChannel` anyway.
 
@@ -56,7 +56,7 @@ The `geo.wifi.*` preferences no longer have default values, although they're hon
 These changes are notable in that they may affect binary XPCOM components. These will need rebuilding anyway, since that's required for every major release of Firefox, but could introduce compile-time errors, so they're worth noting in particular.
 
 - The `nsIDOMHTMLDocument` interface now has a new `scripts` attribute, which implements the {{ domxref("Document.scripts") }} attribute.
-- The {{ ifmethod("nsIJumpListShortcut", "iconImageUri") }} method has been added, to make it possible to establish favicons on jump list URI entries on Windows.
+- The `nsIJumpListShortcut.iconImageUri()` method has been added, to make it possible to establish favicons on jump list URI entries on Windows.
 
 ## Theme changes
 

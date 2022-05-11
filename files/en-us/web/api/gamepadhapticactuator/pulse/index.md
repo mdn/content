@@ -19,7 +19,7 @@ The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface m
 ## Syntax
 
 ```js
-gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { /* ... */ });
+pulse(value, duration)
 ```
 
 ### Parameters

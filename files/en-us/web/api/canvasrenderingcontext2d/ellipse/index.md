@@ -50,6 +50,10 @@ the direction given by `counterclockwise` (defaulting to clockwise).
     counterclockwise (anticlockwise). The default value is `false`
     (clockwise).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Drawing a full ellipse

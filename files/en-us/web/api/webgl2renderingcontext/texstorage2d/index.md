@@ -84,7 +84,7 @@ texStorage2D(target, levels, internalformat, width, height)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

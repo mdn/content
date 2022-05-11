@@ -32,7 +32,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

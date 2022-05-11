@@ -42,6 +42,10 @@ The primary uses for the `WebAssembly` object are:
   - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/spec/core/exec/index.html).
 - [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
   - : An array-like structure representing a WebAssembly Table, which stores function references.
+- [`WebAssembly.Tag()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag)
+  - : An object that represents a type of WebAssembly exception.
+- [`WebAssembly.Exception()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception)
+  - : A WebAssembly exception object that can be thrown, caught, and rethrown both within and across WebAssembly/JavaScript boundaries.
 
 ## Static methods
 

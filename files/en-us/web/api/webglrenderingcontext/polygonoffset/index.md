@@ -36,7 +36,7 @@ polygonOffset(factor, units)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

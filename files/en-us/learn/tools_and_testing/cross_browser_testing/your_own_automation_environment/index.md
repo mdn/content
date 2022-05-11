@@ -49,9 +49,9 @@ In this article, we will teach you how to install your own automation environmen
 
 ## Selenium
 
-[Selenium](https://www.seleniumhq.org/) is the most popular browser automation tool. There are other ways, but the best way to use Selenium is via WebDriver, a powerful API that builds on top of Selenium and makes calls to a browser to automate it, carrying out actions such as "open this web page", "move over this element on the page", "click this link", "see whether the link opens this URL", etc. This is ideal for running automated tests.
+[Selenium](https://www.selenium.dev/) is the most popular browser automation tool. There are other ways, but the best way to use Selenium is via WebDriver, a powerful API that builds on top of Selenium and makes calls to a browser to automate it, carrying out actions such as "open this web page", "move over this element on the page", "click this link", "see whether the link opens this URL", etc. This is ideal for running automated tests.
 
-How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See [Setting Up a Selenium-WebDriver Project](https://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project) for more details of Selenium setups for different languages.
+How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See [Setting Up a Selenium-WebDriver Project](https://www.selenium.dev/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project) for more details of Selenium setups for different languages.
 
 Different browsers require different drivers to allow WebDriver to communicate with and control them. See [Platforms Supported by Selenium](https://www.selenium.dev/downloads/) for more information on where to get browser drivers from, etc.
 
@@ -86,7 +86,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
     exec bash
     ```
 
-2. Open your `.bash_profile` (or `.bashrc`) file (if you can't see hidden files, you'll need to display them, see [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) or [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04)).
+2. Open your `.bash_profile` (or `.bashrc`) file (if you can't see hidden files, you'll need to display them, see [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) or [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu)).
 3. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
     ```bash
@@ -211,7 +211,7 @@ Fun huh? Let's move on, look at the basics of WebDriver syntax, in a bit more de
 
 ## WebDriver syntax crash course
 
-Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference, and the Selenium main documentation's [Selenium WebDriver](https://www.seleniumhq.org/docs/03_webdriver.jsp) and [WebDriver: Advanced Usage](https://www.seleniumhq.org/docs/04_webdriver_advanced.jsp) pages, which contain multiple examples to learn from written in different languages.
+Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference, and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/docs/03_webdriver.jsp) and [WebDriver: Advanced Usage](https://www.selenium.dev/docs/04_webdriver_advanced.jsp) pages, which contain multiple examples to learn from written in different languages.
 
 ### Starting a new test
 
@@ -289,7 +289,7 @@ driver.get('https://mdn.github.io/learning-area/tools-testing/cross-browser-test
 
 ### Interacting with the document
 
-Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can [select UI elements in many ways](https://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements) in WebDriver, including by ID, class, element name, etc. The actual selection is done by the `findElement()` method, which accepts as a parameter a selection method. For example, to select an element by ID:
+Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can [select UI elements in many ways](https://www.selenium.dev/docs/03_webdriver.jsp#locating-ui-elements-webelements) in WebDriver, including by ID, class, element name, etc. The actual selection is done by the `findElement()` method, which accepts as a parameter a selection method. For example, to select an element by ID:
 
 ```js
 const element = driver.findElement(By.id('myElementId'));
@@ -305,7 +305,7 @@ const button = driver.findElement(By.css('button:nth-of-type(1)'));
 
 ### Testing your element
 
-There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at [Getting text values](https://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values) on the WebDriver docs.
+There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at [Getting text values](https://www.selenium.dev/docs/03_webdriver.jsp#getting-text-values) on the WebDriver docs.
 
 If we wanted to get the text inside our button, we could do this:
 
@@ -395,7 +395,7 @@ driver.sleep(2000).then(function() {
 
 WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve it's `value` attribute value, and print a message to the console if it is not empty.
 
-> **Note:** There is also a method called [`wait()`](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), which defines common conditions to use along with `wait()`.
+> **Note:** There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), which defines common conditions to use along with `wait()`.
 
 ### Shutting down drivers after use
 
@@ -409,7 +409,7 @@ When you run it, you should now see the test execute and the browser instance sh
 
 ## Test best practices
 
-There has been a lot written about best practices for writing tests. You can find some good background information at [Test Design Considerations](https://www.seleniumhq.org/docs/06_test_design_considerations.jsp). In general, you should make sure that your tests are:
+There has been a lot written about best practices for writing tests. You can find some good background information at [Test Design Considerations](https://www.selenium.dev/docs/06_test_design_considerations.jsp). In general, you should make sure that your tests are:
 
 1. Using good locator strategies: When you are [Interacting with the document](#interacting_with_the_document), make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.
 2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the `google_test.js` test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps `results_page_title_set_correctly.js` would be slightly better?
@@ -603,9 +603,9 @@ Let's write an example:
 
 If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.
 
-> **Note:** The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/automate/node) for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.
+> **Note:** The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.
 
-> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run tests on mobile browsers](https://www.browserstack.com/automate/node#run-tests-on-mobile) and [Run tests on desktop browsers](https://www.browserstack.com/automate/node#setting-os-and-browser).
+> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test).
 
 #### Filling in BrowserStack test details programmatically
 
@@ -708,7 +708,7 @@ Let's write an example:
     driver.quit();
     ```
 
-3. From your [Sauce Labs user settings](https://saucelabs.com/beta/user-settings), get your user name and access key. Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
+3. From your [Sauce Labs user settings](https://app.saucelabs.com/user-settings), get your user name and access key. Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
 4. Run your test with the following command:
 
     ```bash
@@ -717,12 +717,12 @@ Let's write an example:
 
     The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
-5. Now if you go to your [Sauce Labs Automated Test dashboard](https://saucelabs.com/beta/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
+5. Now if you go to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
     ![](sauce_labs_automated_test.png)
 
-> **Note:** Sauce Labs' [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
+> **Note:** Sauce Labs' [Platform Configurator](https://saucelabs.com/platform/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
 
-> **Note:** for more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Selenium+for+Automated+Website+Testing), and [Instant Selenium Node.js Tests](https://wiki.saucelabs.com/display/DOCS/Instant+Selenium+Node.js+Tests).
+> **Note:** for more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/), and [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs).
 
 #### Filling in Sauce Labs test details programmatically
 
@@ -784,7 +784,7 @@ To do this, you need to:
 
 Here we've set a `testPassed` variable to `true` or `false` depending on whether the test passed or fails, then we've used the `saucelabs.updateJob()` method to update the details.
 
-If you now go back to your [Sauce Labs Automated Test dashboard](https://saucelabs.com/beta/dashboard/tests) page, you should see your new job now has the updated data attached to it:
+If you now go back to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you should see your new job now has the updated data attached to it:
 
 ![](sauce_labs_updated_job_info.png)
 
@@ -792,7 +792,7 @@ If you now go back to your [Sauce Labs Automated Test dashboard](https://saucela
 
 If you don't want to use a service like Sauce Labs or BrowserStack, you can always set up your own remote testing server. Let's look at how to do this.
 
-1. The Selenium remote server requires Java to run. Download the latest JDK for your platform from the [Java SE downloads page](https://www.oracle.com/technetwork/java/javase/downloads/index.html). Install it when it is downloaded.
+1. The Selenium remote server requires Java to run. Download the latest JDK for your platform from the [Java SE downloads page](https://www.oracle.com/java/technologies/downloads/). Install it when it is downloaded.
 2. Next, download the latest [Selenium standalone server](https://selenium-release.storage.googleapis.com/index.html) — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your `PATH`, do so now (see the [Setting up Selenium in Node](#setting_up_selenium_in_node) section).
 3. Run the standalone server by entering the following into a terminal on your server computer
 

@@ -525,7 +525,6 @@ a = b;
 - `break`
 - `return`
 - `yield`, `yield*`
-- `module`
 
 ```js
 return

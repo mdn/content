@@ -837,7 +837,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

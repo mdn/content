@@ -28,7 +28,7 @@ depthMask(flag)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

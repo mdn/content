@@ -26,11 +26,11 @@ forward()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

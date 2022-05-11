@@ -8,7 +8,7 @@ tags:
   - Reference
 browser-compat: api.CompositionEvent.CompositionEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`CompositionEvent()`**
 constructor creates a new {{domxref("CompositionEvent")}} object instance.
@@ -17,15 +17,15 @@ constructor creates a new {{domxref("CompositionEvent")}} object instance.
 
 ```js
 new CompositionEvent(typeArg)
-new CompositionEvent(typeArg, CompositionEventInit)
+new CompositionEvent(typeArg, compositionEventInit)
 ```
 
-### Values
+### Parameters
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
-- `CompositionEventInit` {{optional_inline}}
+  - : A string representing the name of the event.
 
+- `CompositionEventInit` {{optional_inline}}
   - : A `CompositionEventInit` dictionary object, which can contain the
     following members:
 

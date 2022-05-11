@@ -10,23 +10,24 @@ tags:
   - touch
 browser-compat: api.TouchEvent.TouchEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("Touch Events")}}
 
 The **Touch`Event()`** constructor creates a new {{domxref("TouchEvent")}}.
 
 ## Syntax
 
 ```js
-new TouchEvent(typeArg, touchEventInit);
+new TouchEvent(typeArg)
+new TouchEvent(typeArg, touchEventInit)
 ```
 
-### Values
+### Parameters
 
-- _typeArg_
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
-- _touchEventInit_ {{optional_inline}}
+- `typeArg`
+  - : A {{domxref("DOMString")}} representing the name of the event.
+- `touchEventInit` {{optional_inline}}
 
-  - : Is a Touch`EventInit` dictionary, having the following fields:
+  - : A Touch`EventInit` dictionary, having the following fields:
 
     - `"touches"`, optional and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact currently touching the surface.
     - `"targetTouches"`, optional and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact that is touching the surface _and_ started on the element that is the target of the current event.

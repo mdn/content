@@ -37,7 +37,7 @@ readBuffer(src)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

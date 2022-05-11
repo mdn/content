@@ -41,7 +41,7 @@ vertexAttrib4fv(index, value)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Description
 

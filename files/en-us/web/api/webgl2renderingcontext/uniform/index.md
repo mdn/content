@@ -94,7 +94,7 @@ uniform4uiv(location, data, srcOffset, srcLength)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -26,7 +26,7 @@ You can use this attribute with the following SVG elements:
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><code>{{csssyntax("unicode-bidi")}}</code></td>
+      <td>{{csssyntax("unicode-bidi")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

@@ -8,7 +8,7 @@ tags:
   - Property
 browser-compat: api.ProgressEvent.lengthComputable
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("XMLHttpRequest")}}
 
 The
 **`ProgressEvent.lengthComputable`** read-only property is a

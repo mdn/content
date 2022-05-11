@@ -145,7 +145,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
     }
     ```
 
-2. Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://vuejs.org/v2/api/#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://vuejs.org/v2/api/#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there's also a shorthand syntax: `@event="method"`.
+2. Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://v2.vuejs.org/v2/api/#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://v2.vuejs.org/v2/api/#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there's also a shorthand syntax: `@event="method"`.
 
     We'll use the shorthand syntax here for consistency. Add the `submit` handler to your `<form>` element like so:
 
@@ -201,7 +201,7 @@ The first thing we need is a `data` property in our form to track the value of t
     };
     ```
 
-2. We now need some way to attach the value of the `new-todo-input` `<input>` field to the `label` field. Vue has a special directive for this: [`v-model`](https://vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including check boxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
+2. We now need some way to attach the value of the `new-todo-input` `<input>` field to the `label` field. Vue has a special directive for this: [`v-model`](https://v2.vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including check boxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
 
     So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
 

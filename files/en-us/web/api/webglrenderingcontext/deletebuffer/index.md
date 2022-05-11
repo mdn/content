@@ -28,7 +28,7 @@ deleteBuffer(buffer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

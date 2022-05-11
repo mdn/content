@@ -1,6 +1,6 @@
 ---
 title: An overview of accessible web applications and widgets
-slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets 
+slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 tags:
   - ARIA
   - Accessibility

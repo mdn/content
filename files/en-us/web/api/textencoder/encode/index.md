@@ -26,7 +26,7 @@ encode(string)
 ### Parameters
 
 - `string`
-  - : Is a string containing the text to encode.
+  - : A string containing the text to encode.
 
 ### Return value
 

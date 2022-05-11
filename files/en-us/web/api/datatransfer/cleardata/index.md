@@ -41,6 +41,10 @@ clearData(format)
     this parameter is an empty string or is not provided, the data for all types is
     removed.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example shows the use of the {{domxref("DataTransfer")}} object's
@@ -166,7 +170,7 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 ```
 
-{{EmbedLiveSample('Example', 300, 250)}}
+{{EmbedLiveSample('Examples', 300, 300)}}
 
 ## Specifications
 

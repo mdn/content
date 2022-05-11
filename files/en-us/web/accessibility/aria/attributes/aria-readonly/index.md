@@ -1,7 +1,7 @@
 ---
 title: 'aria-readonly'
 slug: Web/Accessibility/ARIA/Attributes/aria-readonly
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -40,9 +40,9 @@ If the non-changeable value shouldn't be able to receive focus, use [`aria-disab
 ## ARIAMixin API
 
 - {{domxref("Element.ariaReadOnly")}}
-  - : The  [`ariaReadOnly`](/en-US/docs/Web/API/Element/ariaReadOnly) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-readonly` attribute.
+  - : The [`ariaReadOnly`](/en-US/docs/Web/API/Element/ariaReadOnly) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-readonly` attribute.
 - {{domxref("ElementInternals.ariaReadOnly")}}
-  - : The  [`ariaReadOnly`](/en-US/docs/Web/API/ElementInternals/ariaReadOnly) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-readonly` attribute.
+  - : The [`ariaReadOnly`](/en-US/docs/Web/API/ElementInternals/ariaReadOnly) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-readonly` attribute.
 
 ## Associated roles
 

@@ -50,7 +50,7 @@ copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

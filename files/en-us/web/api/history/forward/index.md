@@ -25,6 +25,14 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 forward()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 The following examples create a button that moves forward one step in the session

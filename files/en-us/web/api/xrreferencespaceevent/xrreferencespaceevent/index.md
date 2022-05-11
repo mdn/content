@@ -46,8 +46,10 @@ new XRReferenceSpaceEvent(type, eventInitDict)
 
   - : An object to configure the event. The properties are:
 
-    - `referenceSpace`: The {{domxref("XRReferenceSpace")}} from which the event originates.
-    - `transform`: An {{domxref("XRRigidTransform")}} which maps the old coordinate system (from before the changes indicated by this event) to the new coordinate system.
+    - `referenceSpace`
+      - : The {{domxref("XRReferenceSpace")}} from which the event originates.
+    - `transform`
+      - : An {{domxref("XRRigidTransform")}} which maps the old coordinate system (from before the changes indicated by this event) to the new coordinate system.
 
 ### Return value
 

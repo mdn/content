@@ -19,7 +19,7 @@ interface rolls back all the changes to objects in the database associated with 
 transaction.
 
 All pending {{domxref("IDBRequest")}} objects created during this transaction have
-their {{domxref("IDBRequest.error")}} attribute set to {{exception("AbortError")}}.
+their {{domxref("IDBRequest.error")}} attribute set to an `AbortError` {{domxref("DOMException")}}.
 
 {{AvailableInWorkers}}
 
@@ -28,6 +28,14 @@ their {{domxref("IDBRequest.error")}} attribute set to {{exception("AbortError")
 ```js
 abort()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

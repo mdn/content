@@ -20,7 +20,7 @@ For more details about the motivation for and usage of this API, see the documen
 
 This API defines a single method: {{domxref("navigator.sendBeacon()")}}.
 
-The method takes two arguments, the URL and the data to send in the request. The data argument is optional and its type may be an {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, or {{domxref("FormData")}}. If the browser successfully queues the request for delivery, the method returns "`true`"; otherwise, it returns "`false`".
+The method takes two arguments, the URL and the data to send in the request. The data argument is optional and its type may be an {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, string, or {{domxref("FormData")}}. If the browser successfully queues the request for delivery, the method returns "`true`"; otherwise, it returns "`false`".
 
 ## Specifications
 
@@ -34,6 +34,6 @@ The method takes two arguments, the URL and the data to send in the request. The
 
 - [Beacon standard](https://w3c.github.io/beacon/)
 - [Beacon CanIUse data](https://caniuse.com/#search=beacon)
-- [Intercepting beacons through service workers](https://ehsanakhgari.org/blog/2015-04-08/intercepting-beacons-through-service-workers); Ehsan Akhgari; 2015-Apr-08
+- [Intercepting beacons through service workers](https://ehsanakhgari.org/blog/2015-04-08/intercepting-beacons-through-service-workers/); Ehsan Akhgari; 2015-Apr-08
 - <https://webkit.org/blog/8821/link-click-analytics-and-privacy/>
 - [Beaconing in Practice](https://calendar.perfplanet.com/2020/beaconing-in-practice/)

@@ -16,17 +16,18 @@ and untrusted {{domxref("PointerEvent")}} object instance.
 ## Syntax
 
 ```js
-new PointerEvent(type, PointerEventInit);
+new PointerEvent(type)
+new PointerEvent(type, pointerEventInit)
 ```
 
-### Arguments
+### Parameters
 
-- _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the event (see [PointerEvent event
+- `type`
+  - : A {{domxref("DOMString")}} representing the name of the event (see [PointerEvent event
     types](/en-US/docs/Web/API/PointerEvent#pointer_event_types)).
-- _PointerEventInit_{{optional_inline}}
+- `pointerEventInit` {{optional_inline}}
 
-  - : Is a `PointerEventInit` dictionary, having the following fields:
+  - : A `PointerEventInit` dictionary, having the following fields:
 
     - `pointerId` — optional `long`, defaulting to `0`,
       sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.

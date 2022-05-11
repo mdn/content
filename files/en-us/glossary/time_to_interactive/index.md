@@ -18,5 +18,5 @@ TTI is derived by leveraging information from the {{domxref("Long Tasks API")}}.
 ## See also
 
 - [Definition of TTI](https://github.com/WICG/time-to-interactive) from Web Incubator Community Group
-- [Time to Interactive — focusing on human-centric metrics](https://building.calibreapp.com/time-to-interactive-focusing-on-the-human-centric-metrics-22eb7e64dd23) by Radimir Bitsov
+- [Time to Interactive — focusing on human-centric metrics](https://calibreapp.com/blog/time-to-interactive) by Radimir Bitsov
 - [Tracking TTI](https://web.dev/user-centric-performance-metrics/#tracking_tti)

@@ -22,6 +22,14 @@ that includes a text field.
 select()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Click the button in this example to select all the text in the
@@ -46,7 +54,7 @@ function selectText() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Notes
 

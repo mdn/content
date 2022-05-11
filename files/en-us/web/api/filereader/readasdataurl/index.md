@@ -34,6 +34,10 @@ readAsDataURL(blob)
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML
@@ -64,7 +68,7 @@ function previewFile() {
 
 ### Live Result
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+{{EmbedLiveSample("Examples", "100%", 240)}}
 
 ## Example reading multiple files
 

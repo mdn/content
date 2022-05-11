@@ -391,7 +391,7 @@ Even when a table could be written in GFM it is sometimes better to use HTML, be
       <td>Something shortish</td>
       <td>Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
       <td>Something shortish</td>
-      <td>Another cell  with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
+      <td>Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
       <td>Something shortish</td>
       <td>Something shortish</td>
     </tr>

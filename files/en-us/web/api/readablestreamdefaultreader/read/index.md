@@ -39,7 +39,7 @@ the stream. The different possibilities are as follows:
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The source object is not a `ReadableStreamDefaultReader`, or the stream
     has no owner.
 

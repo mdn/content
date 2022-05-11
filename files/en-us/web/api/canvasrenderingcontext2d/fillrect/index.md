@@ -43,6 +43,10 @@ attribute.
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### A simple filled rectangle

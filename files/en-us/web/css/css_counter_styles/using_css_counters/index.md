@@ -79,7 +79,7 @@ For example, here each nested level restarts from one:
 1 One
   1 Nested one
   2 Nested two
-2 Two 
+2 Two
   1 Nested one
   2 Nested two
   3 Nested three
@@ -93,7 +93,7 @@ For example, you might use this to lay out sections as shown:
 1 One
   1.1 Nested one
   2.1 Nested two
-2 Two 
+2 Two
   1.1 Nested one
   2.1 Nested two
   3.1 Nested three
@@ -122,7 +122,7 @@ This makes it easy to implement a counter that counts from the number of element
 For example, to create a reversed counter named `section` with a default initial value, you would use the following syntax:
 
 ```css
-counter-reset: reversed(section); 
+counter-reset: reversed(section);
 ```
 
 You can of course specify any initial value that you like.

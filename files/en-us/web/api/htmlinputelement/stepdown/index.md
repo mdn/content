@@ -122,6 +122,10 @@ stepDown(stepDecrement)
     was passed. If the value is negative, the value will be incremented instead of
     decremented.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 Click the button in this example to decrement the {{HTMLElement("input/number",
@@ -174,7 +178,7 @@ input:invalid {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 Note if you don't pass a parameter to the `stepDown()` method, it defaults
 to 1. Any other value is a multiplier of the `step` attribute value, which in

@@ -27,13 +27,14 @@ new FontFaceSetLoadEvent(type, options)
 
 ### Parameters
 
-- _type_
+- `type`
   - : The literal value `'Type'` (quotation marks included).
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Options are as follows:
 
-    - `fontfaces`: An array of {{domxref("FontFace")}} instances.
+    - `fontfaces`
+      - : An array of {{domxref("FontFace")}} instances.
 
 ## Specifications
 

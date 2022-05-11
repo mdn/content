@@ -34,7 +34,7 @@ When reusing MDN content, you need to ensure two things:
 
     > [About MDN](/en-US/docs/MDN/About) by [Mozilla Contributors](/en-US/docs/MDN/About/contributors.txt) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
 
-    Note that in the example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/Marking/Users) for further explanation.
+    Note that in the example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/wiki/Marking/Users) for further explanation.
 
 2. Your reuse is published under the same license as the original content—CC-BY-SA v2.5 or any later version.
 

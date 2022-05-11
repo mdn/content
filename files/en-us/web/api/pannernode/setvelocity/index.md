@@ -42,7 +42,7 @@ setVelocity(x, y, z)
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

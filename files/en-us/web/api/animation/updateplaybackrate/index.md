@@ -49,7 +49,7 @@ updatePlaybackRate(playbackRate)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

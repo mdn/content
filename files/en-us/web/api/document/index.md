@@ -127,7 +127,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 _The `Document` interface is extended with additional event handlers defined in [GlobalEventHandlers](/en-US/docs/Web/API/GlobalEventHandlers#event_handlers)._
 
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
 
 ### Deprecated properties
 
@@ -181,7 +181,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.adoptNode()")}}
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -251,7 +251,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
   - : Replaces entities, normalizes text nodes, etc.
 - {{DOMxRef("Document.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
 - {{DOMxRef("Document.querySelectorAll()")}}

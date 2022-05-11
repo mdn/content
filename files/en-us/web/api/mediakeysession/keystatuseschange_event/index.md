@@ -31,7 +31,7 @@ An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-{{page("/en-US/docs/Web/API/ExtendableEvent", "Properties")}}
+_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
 ## Specifications
 

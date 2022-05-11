@@ -26,6 +26,10 @@ setStartAfter(referenceNode)
 - _referenceNode_
   - : The {{domxref("Node")}} to start the {{domxref("Range")}} after.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

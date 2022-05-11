@@ -71,7 +71,7 @@ for (let constraint in supportedConstraints) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 350) }}
+{{ EmbedLiveSample('Examples', 600, 350) }}
 
 ## Specifications
 

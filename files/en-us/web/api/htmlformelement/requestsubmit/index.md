@@ -40,11 +40,11 @@ requestSubmit(submitter)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified `submitter` is not a submit button.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` isn't a member of the form on

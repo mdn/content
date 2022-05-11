@@ -16,7 +16,7 @@ This article provides information on getting started with service workers, inclu
 
 One overriding problem that web users have suffered with for years is loss of connectivity. The best web app in the world will provide a terrible user experience if you can't download it. There have been various attempts to create technologies to solve this problem, and some of the issues have been solved. But the overriding problem is that there still isn't a good overall control mechanism for asset caching and custom network requests.
 
-The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) for more details.
+The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) for more details.
 
 > **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chromium 90, and is deprecated in Safari.
 
@@ -185,7 +185,7 @@ self.addEventListener('fetch', (event) => {
 
 Let's look at a few other options we have when defining our magic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
 
-1. The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
+1. The {{domxref("Response.Response","Response()")}} constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
     ```js
     new Response('Hello from your friendly neighborhood service worker!');

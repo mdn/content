@@ -21,7 +21,7 @@ The `option` role is for identifying selectable choices of a `listbox`. Options 
 
 Authors can also explicitly provide an accessible name by specifying [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the element with the `option` role. If using `aria-label` or `aria-labelledby`, and the option also displays a visible text label, authors must ensure they adhere to <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG Success Criterion 2.5.3 Label in Name</a>.
 
-It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
+It is highly recommended to use a {{HTMLElement('select')}} element or an {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
 
 ### All descendants are presentational
 

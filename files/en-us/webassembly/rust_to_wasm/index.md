@@ -28,7 +28,7 @@ Let's go through all the required steps to get our environment set up.
 
 ### Install Rust
 
-Install Rust by going to the [Install Rust](https://www.rust-lang.org/install.html) page and following the instructions. This installs a tool called "rustup", which lets you manage multiple versions of Rust. By default, it installs the latest stable Rust release, which you can use for general Rust development. Rustup installs `rustc`, the Rust compiler, as well as `cargo`, Rust's package manager, `rust-std`, Rust's standard libraries, and some helpful docs — `rust-docs`.
+Install Rust by going to the [Install Rust](https://www.rust-lang.org/tools/install) page and following the instructions. This installs a tool called "rustup", which lets you manage multiple versions of Rust. By default, it installs the latest stable Rust release, which you can use for general Rust development. Rustup installs `rustc`, the Rust compiler, as well as `cargo`, Rust's package manager, `rust-std`, Rust's standard libraries, and some helpful docs — `rust-docs`.
 
 > **Note:** Pay attention to the post-install note about needing cargo's `bin` directory in your system `PATH`. This is added automatically, but you must restart your terminal for it to take effect.
 

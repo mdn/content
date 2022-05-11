@@ -24,6 +24,10 @@ in this object. The keys are string objects.
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.

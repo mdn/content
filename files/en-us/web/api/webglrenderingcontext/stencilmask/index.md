@@ -31,7 +31,7 @@ stencilMask(mask)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

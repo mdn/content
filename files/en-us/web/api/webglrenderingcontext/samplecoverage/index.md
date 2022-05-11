@@ -32,7 +32,7 @@ sampleCoverage(value, invert)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

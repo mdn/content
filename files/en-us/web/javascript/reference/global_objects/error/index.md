@@ -54,10 +54,6 @@ Besides the generic `Error` constructor, there are other core error constructors
   - : Error message.
 - {{jsxref("Error.prototype.name")}}
   - : Error name.
-- {{jsxref("Error.prototype.description")}} {{non-standard_inline}}
-  - : A non-standard Microsoft property for the error description. Similar to {{jsxref("Error.prototype.message", "message")}}.
-- {{jsxref("Error.prototype.number")}} {{non-standard_inline}}
-  - : A non-standard Microsoft property for an error number.
 - {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
@@ -151,7 +147,7 @@ You can also use the `cause` property in [custom error types](#custom_error_type
 ```js
 class MyError extends Error {
   constructor(/* some arguments */) {
-    // Needs to pass both `message` and `options` to install the "cause" property. 
+    // Needs to pass both `message` and `options` to install the "cause" property.
     super(message, options);
   }
 }

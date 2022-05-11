@@ -15,6 +15,8 @@ browser-compat: css.properties.scroll-margin-inline
 
 The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
 
+{{EmbedInteractiveExample("pages/css/scroll-margin-inline.html")}}
+
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:

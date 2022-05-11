@@ -24,8 +24,8 @@ A {{domxref('USVString')}}.
 
 ### Exceptions
 
-- `TypeError`
-  - : If the `value` property is an empty {{jsxref('String')}} when being set.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `value` property is an empty {{jsxref('String')}} when being set.
 
 ## Examples
 

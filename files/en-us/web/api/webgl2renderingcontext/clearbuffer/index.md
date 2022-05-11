@@ -56,7 +56,7 @@ clearBufferfi(buffer, drawbuffer, depth, stencil)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

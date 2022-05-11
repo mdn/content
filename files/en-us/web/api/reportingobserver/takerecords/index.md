@@ -22,6 +22,10 @@ in the observer's report queue, and empties the queue.
 takeRecords()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An array of {{domxref("Report")}} objects.

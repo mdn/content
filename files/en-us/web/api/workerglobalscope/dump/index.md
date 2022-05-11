@@ -27,6 +27,10 @@ dump(message)
 - `message`
   - : A string containing the message to log.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 This feature is not part of any specification.

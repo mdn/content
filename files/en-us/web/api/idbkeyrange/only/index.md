@@ -27,7 +27,8 @@ only(value)
 
 ### Parameters
 
-*value* is the value for the new key range.
+- `value`
+  - : The value for the new key range.
 
 ### Return value
 
@@ -35,11 +36,8 @@ only(value)
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
-
-| Exception   | Description                                     |
-| ----------- | ----------------------------------------------- |
-| `DataError` | The value parameter passed was not a valid key. |
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the `value` parameter was not a valid key.
 
 ## Examples
 

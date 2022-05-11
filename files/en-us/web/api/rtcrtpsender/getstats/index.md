@@ -27,6 +27,10 @@ available.
 getStats()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A JavaScript {{jsxref("Promise")}} which is fulfilled once the statistics are

@@ -38,7 +38,7 @@ cancelAnimationFrame(handle)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 

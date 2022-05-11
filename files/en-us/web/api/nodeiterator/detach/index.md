@@ -25,6 +25,14 @@ iterates, releasing any resources used by the set and setting the iterator's sta
 detach()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

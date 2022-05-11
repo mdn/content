@@ -45,7 +45,7 @@ That same article continues that many factors must combine to trigger the photos
 
 You don't even need an image or video to cause harm. A {{HTMLElement('div')}} element set to change color and luminosity at high frequency, easily done via JavaScript, can cause real harm. And, flickering can occur everywhere. For example, "spinners" commonly used to display while pages load can easily "flicker" while spinning.
 
-Additional concerns exist for individuals with motor-skill problems. For example, the page for Trace Research & Development Center's [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat) notes that _"Photosensitive seizures can be provoked by certain types of flashing in web or computer content, including mouse-overs that cause large areas of the screen to rapidly flash on and off repeatedly"_.
+Additional concerns exist for individuals with motor-skill problems. For example, the page for Trace Research & Development Center's [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat/) notes that _"Photosensitive seizures can be provoked by certain types of flashing in web or computer content, including mouse-overs that cause large areas of the screen to rapidly flash on and off repeatedly"_.
 
 ### Other physical reactions
 
@@ -59,7 +59,7 @@ Nausea, vertigo (or dizziness), and disorientation are very nonspecific symptoms
 
 ## Flashing, blinking, & flickering
 
-Although "flashing" and "blinking" are sometimes used interchangeably, they are not the same. According to the W3C, blinking is a distraction problem, whereas flashing refers to content that occurs more than 3 times per second, and which is sufficiently large and bright. [Section 508](https://www.section508.gov/content/guide-accessible-web-design-development#flashing) prohibits flickering effects with a frequency greater than 3 Hz (flickers per second) and lower than 55 Hz. The Epilepsy Foundation's article ["Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions"](https://www.epilepsy.com/article/2014/3/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) notes that _"Generally, flashing lights between the frequencies of five to 30 flashes per second (Hertz) are most likely to trigger seizures. In order to be safe, the consensus recommends that photosensitive individuals should not be exposed to flashes greater than three per second."_ For some people, however, flashing/blinking can cause symptoms at less than 3 Hz.
+Although "flashing" and "blinking" are sometimes used interchangeably, they are not the same. According to the W3C, blinking is a distraction problem, whereas flashing refers to content that occurs more than 3 times per second, and which is sufficiently large and bright. [Section 508](https://www.section508.gov/content/guide-accessible-web-design-development/#flashing) prohibits flickering effects with a frequency greater than 3 Hz (flickers per second) and lower than 55 Hz. The Epilepsy Foundation's article ["Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions"](https://www.epilepsy.com/article/2014/3/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) notes that _"Generally, flashing lights between the frequencies of five to 30 flashes per second (Hertz) are most likely to trigger seizures. In order to be safe, the consensus recommends that photosensitive individuals should not be exposed to flashes greater than three per second."_ For some people, however, flashing/blinking can cause symptoms at less than 3 Hz.
 
 It's important to note that not all flashing and blinking is bad. NASA, in its document titled, ["Blinking, Flashing, and Temporal Response"](https://colorusage.arc.nasa.gov/flashing.php) notes that blinking and flashing can be powerful tools for drawing attention—as is necessary for warning buttons (this assumes that users can still see the screen while elements are flashing, which is not always true). For some users, blinking buttons also caution that they must be used sparingly, and with care. As it applies to web design, systems that alert company employees to danger by "hijacking" the screen to provide a flashing warning of emergency need to take into consideration the rate, size, and luminosity changes on the screen as these warnings are flashed.
 
@@ -84,7 +84,7 @@ These standards are based on earlier research. In 2004, The Epilepsy Foundation 
 
 #### How big? It depends.
 
-"Relative" size and distance both matter. According to [PEAT](https://trace.umd.edu/peat), _"The combined area of flashes occurring concurrently occupies no more than a total of one quarter of any 341 x 256 pixel rectangle anywhere on the displayed screen area when the content is viewed at 1024 by 768 pixels."_
+"Relative" size and distance both matter. According to [PEAT](https://trace.umd.edu/peat/), _"The combined area of flashes occurring concurrently occupies no more than a total of one quarter of any 341 x 256 pixel rectangle anywhere on the displayed screen area when the content is viewed at 1024 by 768 pixels."_
 
 The point that the field of vision is an important consideration arises in the article addressing WCAG 2.3.1 continues: "_The 1024 x 768 screen is used as the reference screen resolution for the evaluation. The 341 x 256 pixel block represents a 10 degree viewport at a typical viewing distance. (The 10 degree field is taken from the original specifications and represents the central vision portion of the eye, where people are most susceptible to photo stimuli.)_"
 
@@ -155,7 +155,7 @@ Even age and sex can play a role. According to the Epilepsy Foundation's article
 
 ### Photosensitive Epilepsy Analysis Tool (PEAT)
 
-The [Trace Research and Development Center](https://trace.umd.edu/) has set a gold standard for a [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat), and they've made a point to make it **_free_** to download. PEAT can help authors determine whether animations or video in their content are likely to cause seizures. Please note the restriction on its use: **_Use of PEAT to assess material commercially produced for television broadcast, film, home entertainment, or gaming industries is prohibited. Use the Harding Test or other tools for commercial purposes._**
+The [Trace Research and Development Center](https://trace.umd.edu/) has set a gold standard for a [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat/), and they've made a point to make it **_free_** to download. PEAT can help authors determine whether animations or video in their content are likely to cause seizures. Please note the restriction on its use: **_Use of PEAT to assess material commercially produced for television broadcast, film, home entertainment, or gaming industries is prohibited. Use the Harding Test or other tools for commercial purposes._**
 
 To get a free copy of the University of Maryland's Photosensitive Epilepsy Analysis Tool, visit the [Trace Research & Development Center](https://trace.umd.edu/).
 
@@ -619,7 +619,7 @@ Along with the PEAT tool, is generally recognized to be one of the two "gold sta
 
 Along with the Harding tool, is generally recognized to be one of the two "gold standards" for analyzing flashes.
 
-- [Trace Research and Development Center](https://trace.umd.edu/peat)
+- [Trace Research and Development Center](https://trace.umd.edu/peat/)
 - [Using PEAT To Create Seizureless Web Animations](https://www.useragentman.com/blog/2017/04/02/using-peat-to-create-seizureless-web-animations/)
 
 #### W3C
@@ -639,4 +639,4 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 
 Heartfelt thanks to Teal; Wayne Dick of the [Low Vision Task Force of the W3C](https://www.w3.org/WAI/GL/low-vision-a11y-tf/); Tom Jewett and Eric Eggert from [Knowbility](https://knowbility.org/); Jim Allan of the [Diagram Center](https://diagramcenter.org/); and Dr. Selim R. Benbadis, Director, [Comprehensive Epilepsy Program and Clinical Neurophysiology Laboratory at USF and TGH in Tampa, Florida](https://health.usf.edu/medicine/neurology/epilepsy) for their great, great assistance and discussions on this topic.
 
-We are _all_ in tremendous gratitude to the Trace Research & Development Center for making their amazing tool, the [Photosensitive Epilepsy Analysis Tool (PEAT)](https://trace.umd.edu/peat) for free.
+We are _all_ in tremendous gratitude to the Trace Research & Development Center for making their amazing tool, the [Photosensitive Epilepsy Analysis Tool (PEAT)](https://trace.umd.edu/peat/) for free.

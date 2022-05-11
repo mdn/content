@@ -34,6 +34,10 @@ timeStamp(label)
 - `label`
   - : Label for the timestamp. Optional.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Browser compatibility
 
 {{Compat}}

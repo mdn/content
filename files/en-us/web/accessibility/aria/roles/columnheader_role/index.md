@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: columnheader role'
 slug: Web/Accessibility/ARIA/Roles/columnheader_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -76,7 +76,7 @@ The `aria-sort` attribute can be added to a `<th scope="col">`  even when the AR
 
 ### Prefer HTML
 
-Columnheader has the same semantics `<th scope="col">`.  
+Columnheader has the same semantics `<th scope="col">`.
 
 ## Specifications
 
@@ -95,7 +95,7 @@ Columnheader has the same semantics `<th scope="col">`.
 - [The `<th>` element](/en-US/docs/Web/HTML/Element/th)
 - [The `<table>` element](/en-US/docs/Web/HTML/Element/table)
 - [The `<tr>` element](/en-US/docs/Web/HTML/Element/tr)
-- [The `<td>` element](/en-US/docs/Web/HTML/Element/td)  
+- [The `<td>` element](/en-US/docs/Web/HTML/Element/td)
 
 <section id="Quick_links">
 

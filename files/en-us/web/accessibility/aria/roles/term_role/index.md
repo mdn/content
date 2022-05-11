@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: term role'
 slug: Web/Accessibility/ARIA/Roles/term_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -37,7 +37,7 @@ None.
 
 ```html
 <p>
-  <span role="term">Mansplaining</span>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. 
+  <span role="term">Mansplaining</span>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>.
 </p>
 ```
 
@@ -45,7 +45,7 @@ Including better semantics, the above could also be written:
 
 ```html
 <p>
-  <dfn role="term">Mansplaining</dfn>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. 
+  <dfn role="term">Mansplaining</dfn>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>.
 </p>
 ```
 
@@ -54,7 +54,7 @@ or without any ARIA (but possibly not how you want it presented)
 ```html
 <dl>
   <dt>Mansplaining</dt>
-  <dd>A portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it.</dd> 
+  <dd>A portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it.</dd>
 </dl>
 ```
 

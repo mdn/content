@@ -32,8 +32,6 @@ Find out more about how to use this API in [Using channel messaging](/en-US/docs
   - : Creates a new message channel to send messages across.
 - {{domxref("MessagePort")}}
   - : Controls the ports on the message channel, allowing sending of messages from one port and listening out for them arriving at the other.
-- {{domxref("PortCollection")}}
-  - : An array of `MessagePort`s; an experimental solution to allow broadcasting of a message to multiple ports simultaneously.
 
 ## Examples
 

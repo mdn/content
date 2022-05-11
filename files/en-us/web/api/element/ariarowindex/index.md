@@ -17,7 +17,7 @@ The **`ariaRowIndex`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 

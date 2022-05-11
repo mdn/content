@@ -25,6 +25,10 @@ contained in this object. The values are string or
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.

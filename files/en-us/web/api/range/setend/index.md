@@ -34,7 +34,7 @@ setEnd(endNode, endOffset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

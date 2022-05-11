@@ -23,7 +23,7 @@ Some example types are: `text/plain` and `text/html`.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the drag data item's type.
+A string representing the drag data item's type.
 
 ## Examples
 

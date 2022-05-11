@@ -24,7 +24,7 @@ the left side of the screen.
 ## Value
 
 A number equal to the number of CSS pixels from the left edge of the browser viewport
-to the  left edge of the screen.
+to the left edge of the screen.
 
 ## Examples
 

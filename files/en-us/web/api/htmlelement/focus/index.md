@@ -41,6 +41,10 @@ focus(options)
         `preventScroll` is set to `true`, no scrolling will
         occur.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Focus on a text field

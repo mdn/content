@@ -245,7 +245,7 @@ Express is extremely popular, partially because it eases the migration of client
 
 Because Express is a minimalist web framework it does not incorporate every component that you might want to use (for example, database access and support for users and sessions are provided through independent libraries). There are many excellent independent components, but sometimes it can be hard to work out which is the best for a particular purpose!
 
-Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://mean.io/), and [Sails](https://sailsjs.org/).
+Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://github.com/linnovate/mean), and [Sails](https://sailsjs.com/).
 
 A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc. (a list is provided [here](https://expressjs.com/en/resources/companies-using-express.html)).
 
@@ -302,7 +302,7 @@ ASP.NET is used by Microsoft, Xbox.com, Stack Overflow, and many others.
 
 [Mojolicious](https://mojolicious.org/) is a next-generation web framework for the Perl programming language.
 
-Back in the early days of the web, many people learned Perl because of a wonderful Perl library called [CGI](https://metacpan.org/module/CGI). It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.
+Back in the early days of the web, many people learned Perl because of a wonderful Perl library called [CGI](https://metacpan.org/pod/CGI). It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.
 
 Some of the features provided by Mojolicious are:
 

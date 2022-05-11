@@ -48,6 +48,10 @@ send(data)
         the buffer, increasing the value of `bufferedAmount` by the requisite
         number of bytes.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidStateError`  {{domxref("DOMException")}}

@@ -39,7 +39,7 @@ Make sure you put the DOCTYPE right at the beginning of your HTML document. Anyt
 
 In HTML5, the only purpose of the DOCTYPE is to activate full standards mode. Older versions of the HTML standard gave additional meaning to the DOCTYPE, but no browser has ever used the DOCTYPE for anything other than switching between quirks mode and standards mode.
 
-See also a detailed description of [when different browsers choose various modes](https://hsivonen.iki.fi/doctype/).
+See also a detailed description of [when different browsers choose various modes](https://hsivonen.fi/doctype/).
 
 ### XHTML
 

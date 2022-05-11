@@ -33,8 +33,8 @@ Void.
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamBYOBRequest`, or there is no
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no
     associated controller, or the associated internal array buffer is detached.
 
 ## Examples

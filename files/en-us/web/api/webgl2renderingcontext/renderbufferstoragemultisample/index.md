@@ -83,7 +83,7 @@ renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

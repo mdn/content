@@ -3,7 +3,6 @@ title: FileSystemEntry.getMetadata()
 slug: Web/API/FileSystemEntry/getMetadata
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - FileSystemEntry
   - Files
@@ -14,7 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.getMetadata
 ---
-{{APIRef("File System API")}}{{deprecated_header}}
+{{APIRef("File and Directory Entries API")}}{{deprecated_header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`getMetadata()`** obtains a
@@ -41,7 +40,7 @@ getMetadata(successCallback, errorCallback)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -73,7 +72,5 @@ workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

@@ -222,9 +222,9 @@ module.exports = {
 };
 ```
 
-> **Note:** You can think of `exports` as a [shortcut](https://nodejs.org/api/modules.html#modules_exports_shortcut) to `module.exports` within a given module. In fact, `exports` is just a variable that gets initialized to the value of `module.exports` before the module is evaluated. That value is a reference to an object (empty object in this case). This means that `exports` holds a reference to the same object referenced by `module.exports`. It also means that by assigning another value to `exports` it's no longer bound to `module.exports`.
+> **Note:** You can think of `exports` as a [shortcut](https://nodejs.org/en/api/modules.html#modules_exports_shortcut) to `module.exports` within a given module. In fact, `exports` is just a variable that gets initialized to the value of `module.exports` before the module is evaluated. That value is a reference to an object (empty object in this case). This means that `exports` holds a reference to the same object referenced by `module.exports`. It also means that by assigning another value to `exports` it's no longer bound to `module.exports`.
 
-For a lot more information about modules see [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs).
+For a lot more information about modules see [Modules](https://nodejs.org/en/api/modules.html#modules_modules) (Node API docs).
 
 ### Using asynchronous APIs
 
@@ -250,7 +250,7 @@ There are a number of ways for an asynchronous API to notify your application th
 
 > **Note:** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or even moving to ES6 features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Note:** A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
+> **Note:** A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (fredkschott.com).
 
 ### Creating route handlers
 
@@ -270,7 +270,7 @@ The _Express application_ object also provides methods to define route handlers 
 
 `checkout()`, `copy()`, **`delete()`**, **`get()`**, `head()`, `lock()`, `merge()`, `mkactivity()`, `mkcol()`, `move()`, `m-search()`, `notify()`, `options()`, `patch()`, **`post()`**, `purge()`, **`put()`**, `report()`, `search()`, `subscribe()`, `trace()`, `unlock()`, `unsubscribe()`.
 
-There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/api/http.html#http_http_methods)).
+There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/en/api/http.html#http_http_methods)).
 
 ```js
 app.all('/secret', function(req, res, next) {
@@ -447,7 +447,7 @@ $ npm install mongodb
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
 
 ```js
-//this works with older versions of  mongodb version ~ 2.2.33
+//this works with older versions of mongodb version ~ 2.2.33
 const MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
@@ -521,7 +521,7 @@ Of course Express is deliberately a very lightweight web application framework, 
 ## See also
 
 - [Venkat.R - Manage Multiple Node versions](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)
-- [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
+- [Modules](https://nodejs.org/en/api/modules.html#modules_modules) (Node API docs)
 - [Express](https://expressjs.com/) (home page)
 - [Basic routing](https://expressjs.com/en/starter/basic-routing.html) (Express docs)
 - [Routing guide](https://expressjs.com/en/guide/routing.html) (Express docs)

@@ -7,6 +7,7 @@ tags:
   - Dictionary
   - Reference
   - Web Crypto API
+spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -31,7 +32,7 @@ Essentially: the nonce should ensure that counter blocks are not reused from one
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `AES-CTR`.
+  - : A string. This should be set to `AES-CTR`.
 - `counter`
   - : A {{domxref("BufferSource")}} — the initial value of the counter block. This must be 16 bytes long (the AES block size). The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce. For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
 - `length`
@@ -43,22 +44,7 @@ See the examples for {{domxref("SubtleCrypto.encrypt()")}} and {{domxref("Subtle
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-AesCtrParams', 'SubtleCrypto.AesCtrParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

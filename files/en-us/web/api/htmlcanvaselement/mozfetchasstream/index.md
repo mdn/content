@@ -33,7 +33,7 @@ mozFetchAsStream(callback, type)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

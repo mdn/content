@@ -54,7 +54,7 @@ Our final Ember article provides you with a list of resources that you can use t
   - [Tutorial: Super Rentals](https://guides.emberjs.com/release/tutorial/part-1/)
 
 - [Ember.JS API Documentation](https://api.emberjs.com/ember/release)
-- [Ember.JS Discord Server](https://discord.gg/emberjs) — a forum/chat server where you can meet the Ember community, ask for help, and help others!
+- [Ember.JS Discord Server](https://discord.com/invite/emberjs) — a forum/chat server where you can meet the Ember community, ask for help, and help others!
 
 ## General troubleshooting, gotchas, and misconceptions
 
@@ -85,7 +85,7 @@ Not at all. While `ember-data` solves _the most common problems_ that any app de
 data will run in to, it is possible to roll your own front-end data client. A common
 alternative is to any fully-featured front-end data client is [The Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-Using the design patterns provided by the framework, a `Route` using `fetch()` would look something  like this:
+Using the design patterns provided by the framework, a `Route` using `fetch()` would look something like this:
 
 ```js
 import Route from '@ember/routing/route';

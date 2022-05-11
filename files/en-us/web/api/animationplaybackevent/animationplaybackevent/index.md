@@ -15,17 +15,18 @@ browser-compat: api.AnimationPlaybackEvent.AnimationPlaybackEvent
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new `{{domxref("AnimationPlaybackEvent")}}` object instance.
+The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("AnimationPlaybackEvent")}} object instance.
 
 ## Syntax
 
 ```js
-new AnimationPlaybackEvent(type, eventInitDict);
+new AnimationPlaybackEvent(type)
+new AnimationPlaybackEvent(type, eventInitDict)
 ```
 
 ### Parameters
 
-- `{{domxref("Event.type", "type")}}`
+- {{domxref("Event.type", "type")}}
   - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing the name of the event.
 - `eventInitDict` {{optional_inline}}
 

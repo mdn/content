@@ -29,6 +29,10 @@ moveTo(x, y)
 - `x` is the horizontal coordinate to be moved to.
 - `y` is the vertical coordinate to be moved to.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example moves the window to the top-left corner of the screen.

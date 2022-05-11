@@ -30,7 +30,7 @@ bindSampler(unit, sampler)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

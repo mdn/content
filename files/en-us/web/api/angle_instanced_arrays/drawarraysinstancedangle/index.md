@@ -45,7 +45,7 @@ drawArraysInstancedANGLE(mode, first, count, primcount)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

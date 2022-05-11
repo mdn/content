@@ -22,7 +22,7 @@ The **`VTTCue()`** constructor creates and returns a new
 ## Syntax
 
 ```js
-new VTTCue(startTime, endTime, text);
+new VTTCue(startTime, endTime, text)
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ new VTTCue(startTime, endTime, text);
     seconds and fractions thereof. Given the example cue mentioned under
     `startTime`, the value of `endTime` would be 65.5.
 - `text`
-  - : A {{domxref("DOMString")}} providing the text that will be shown during the time
+  - : A string providing the text that will be shown during the time
     span indicated by `startTime` and `endTime`.
 
 ### Return value

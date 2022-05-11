@@ -17,7 +17,7 @@ browser-compat: api.GlobalEventHandlers.onselectstart
 
 The **`onselectstart`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("selectstart")}} events.
+processes {{domxref("Document/selectstart_event", "selectstart")}} events.
 
 The `selectstart` event fires when the user starts to make a new text
 selection on a webpage.
@@ -61,5 +61,5 @@ document.onselectstart = () => {
 
 ## See also
 
-- {{event("selectstart")}} event
+- {{domxref("Document/selectstart_event", "selectstart")}} event
 - Related event handler: {{domxref("GlobalEventHandlers.onselectionchange")}}

@@ -34,7 +34,7 @@ it's expected to be needed, rather than immediately during the initial page load
 
 ## Value
 
-A {{domxref("DOMString")}} providing a hint to the user agent as to how to best
+A string providing a hint to the user agent as to how to best
 schedule the loading of the image to optimize page performance. The possible values are:
 
 - `eager`

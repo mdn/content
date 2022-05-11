@@ -120,7 +120,7 @@ The example below illustrates `includes()` method called on the function's
 (function() {
   console.log(Array.prototype.includes.call(arguments, 'a'))  // true
   console.log(Array.prototype.includes.call(arguments, 'd'))  // false
-})('a','b','c') 
+})('a','b','c')
 ```
 
 ## Specifications

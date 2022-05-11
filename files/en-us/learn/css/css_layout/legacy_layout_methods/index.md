@@ -119,7 +119,7 @@ You'll notice here that we are using percentages for all the widths — this is 
 
 The majority of legacy frameworks use the behavior of the {{cssxref("float")}} property to float one column up next to another in order to create something that looks like a grid. Working through the process of creating a grid with floats shows you how this works and also introduces some more advanced concepts to build on the things you learned in the lesson on [floats and clearing](/en-US/docs/Learn/CSS/CSS_layout/Floats).
 
-The easiest type of grid framework to create is a fixed width one — we just need to work out how much total width we want our design to be, how many columns we want, and how wide the gutters and columns should be. If we instead decided to lay out our design on a grid with columns that grow and shrink according to browser width, we would need to calculate percentage widths for the columns and  gutters between them.
+The easiest type of grid framework to create is a fixed width one — we just need to work out how much total width we want our design to be, how many columns we want, and how wide the gutters and columns should be. If we instead decided to lay out our design on a grid with columns that grow and shrink according to browser width, we would need to calculate percentage widths for the columns and gutters between them.
 
 In the next sections we will look at how to create both. We will create a 12 column grid — a very common choice that is seen to be very adaptable to different situations given that 12 is nicely divisible by 6, 4, 3, and 2.
 
@@ -370,7 +370,7 @@ These are not the only approach. You could instead decide on your grid and then 
 
 ### Enabling offset containers in our grid
 
-The grid we have created works well as long as we want to start all of the containers flush with the left-hand side of the grid. If we wanted to leave an empty column space  before the first container — or between containers — we would need to create an offset class to add a left margin to our site to push it across the grid visually. More math!
+The grid we have created works well as long as we want to start all of the containers flush with the left-hand side of the grid. If we wanted to leave an empty column space before the first container — or between containers — we would need to create an offset class to add a left margin to our site to push it across the grid visually. More math!
 
 Let's try this out.
 
@@ -470,7 +470,7 @@ In your project you might still choose to use a flexbox 'grid' due to the additi
 
 ## Third party grid systems
 
-Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS Grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://foundation.zurb.com/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
+Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS Grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://get.foundation/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
 
 Let's take a look at one of these standalone systems as it demonstrates common techniques for working with a grid framework. The grid we will be using is part of Skeleton, a simple CSS framework.
 

@@ -21,6 +21,10 @@ which upon reading returns the data contained within the `Blob`.
 stream()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("ReadableStream")}} which, upon reading, returns the contents of the

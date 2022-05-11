@@ -160,7 +160,7 @@ as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/W
 
 ## Interpolation
 
-In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
+In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are {{Glossary("interpolation", "interpolated")}} on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
 
 ## Accessibility considerations
 

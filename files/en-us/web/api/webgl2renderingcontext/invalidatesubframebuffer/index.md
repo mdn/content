@@ -58,7 +58,7 @@ invalidateSubFramebuffer(target, attachments, x, y, width, height)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

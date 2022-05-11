@@ -31,16 +31,19 @@ new ClipboardEvent(type, options)
 
 _The `ClipboardEvent()` constructor also inherits arguments from {{domxref("Event.Event", "Event()")}}._
 
-- _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the type of the `ClipboardEvent`.
+- `type`
+  - : A string representing the name of the type of the `ClipboardEvent`.
     It is case-sensitive and can be: `'copy'`, `'cut'`, or `'paste'`.
-- *options* {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Options are as follows:
 
-    - `clipboardData`: A {{domxref("DataTransfer")}} containing the data concerned by the clipboard event.
-    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the MIME-type of the data contained in the `data` argument.
-    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the data concerned by the clipboard event.
+    - `clipboardData`
+      - : A {{domxref("DataTransfer")}} containing the data concerned by the clipboard event.
+    - `dataType` {{non-standard_inline}}
+      - : A string containing the MIME-type of the data contained in the `data` argument.
+    - `data` {{non-standard_inline}}
+      - : A string containing the data concerned by the clipboard event.
 
 ## Specifications
 

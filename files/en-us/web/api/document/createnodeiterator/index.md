@@ -21,14 +21,18 @@ createNodeIterator(root, whatToShow)
 createNodeIterator(root, whatToShow, filter)
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 - `root`
   - : The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.
- 
+
 - `whatToShow` {{optional_inline}}
 
-  - : Is an optional `unsigned long` representing a bitmask created by
+  - : An optional `unsigned long` representing a bitmask created by
     combining the constant properties of
     [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter).
     It is a convenient way of filtering for certain types of node. It defaults to

@@ -12,7 +12,7 @@ tags:
   - Video
   - streaming
 ---
-{{DefaultAPISidebar("Media Source Extensions")}}{{ Draft}}
+{{DefaultAPISidebar("Media Source Extensions")}}
 
 The **Media Source API**, formally known as **Media Source Extensions** (**MSE**), provides functionality enabling plugin-free web-based streaming media. Using MSE, media streams can be created via JavaScript, and played using {{htmlelement("audio")}} and {{htmlelement("video")}} elements.
 

@@ -139,7 +139,7 @@ The required styles are those necessary to handle the three states of our contro
 We need an extra class `active` to define the look and feel of our control when it is in its active state. Because our control is focusable, we double this custom style with the {{cssxref(":focus")}} pseudo-class in order to be sure they will behave the same.
 
 ```css
-.select .active,
+.select.active,
 .select:focus {
   outline: none;
 
@@ -852,9 +852,8 @@ We have seen all the basics of building a custom form control, but as you can se
 Here are a few libraries you should consider before coding your own:
 
 - [jQuery UI](https://jqueryui.com/)
-- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns)
+- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
-- [Nice Forms](https://www.emblematiq.com/lab/niceforms/)
 
 If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
 

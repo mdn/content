@@ -21,24 +21,25 @@ service worker context.
 ## Syntax
 
 ```js
-new PushEvent(type, eventInitDict);
+new PushEvent(type, options);
 ```
 
 ### Parameters
 
-- _type_
+- `type`
   - : A {{domxref("DOMString")}} defining the type of `PushEvent`. This can
     be {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} or {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "pushsubscriptionchange")}}.
-- _eventInitDict_ {{optional_inline}}
+- `options` {{optional_inline}}
 
-  - : An options object containing any initialization data you want to populate the
+  - : An object containing any initialization data you want to populate the
     `PushEvent` object with. The options are:
 
-    - `data`: The data you want the `PushEvent` to
-      contain, if any. When the constructor is invoked, the
-      {{domxref("PushEvent.data")}} property of the resulting object will be set
-      to a new {{domxref("PushMessageData")}} object containing bytes extracted
-      from the `eventInitDict data` member.
+    - `data`
+      - : The data you want the `PushEvent` to
+        contain, if any. When the constructor is invoked, the
+        {{domxref("PushEvent.data")}} property of the resulting object will be set
+        to a new {{domxref("PushMessageData")}} object containing bytes extracted
+        from the `eventInitDict data` member.
 
 ## Examples
 

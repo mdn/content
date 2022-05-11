@@ -159,7 +159,7 @@ Working directly with the DOM, as in this example, requires understanding many t
 
 JavaScript frameworks were created to make this kind of work a lot easier — they exist to provide a better _developer experience_. They don't bring brand-new powers to JavaScript; they give you easier access to JavaScript's powers so you can build for today's web.
 
-If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/dengeist/pen/XWbPNmw), which also allows users to add and delete new tasks.
+If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/mxmason/pen/XWbPNmw), which also allows users to add and delete new tasks.
 
 Read more about the JavaScript used in this section:
 
@@ -275,7 +275,7 @@ You should seriously consider the support matrix and DSLs of a framework when ma
 Citations for this table:
 
 - [React browser support: official docs](https://reactjs.org/docs/react-dom.html#browser-support)
-- [Ember browser support: Ember 3.0 release announcement](https://blog.emberjs.com/2018/02/14/ember-3-0-released.html)
+- [Ember browser support: Ember 3.0 Released](https://blog.emberjs.com/ember-3-0-released/)
 - [Ember templating language (official docs)](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/)
 
 ### Does the framework have a strong community?
@@ -288,7 +288,7 @@ Don't just take our word on this matter — there are discussions all over the w
 
 The [State of JavaScript survey](https://stateofjs.com/) is a helpful collection of feedback from JavaScript developers. It covers many topics related to JavaScript, including data about both the use of frameworks and developer sentiment toward them. Currently, there are several years of data available, allowing you to get a sense of a framework's popularity.
 
-The Vue team has [exhaustively compared Vue to other popular frameworks](https://vuejs.org/v2/guide/comparison.html). There may be some bias in this comparison (which they note), but it's a valuable resource nonetheless.
+The Vue team has [exhaustively compared Vue to other popular frameworks](https://v2.vuejs.org/v2/guide/comparison.html). There may be some bias in this comparison (which they note), but it's a valuable resource nonetheless.
 
 ## Alternatives to client-side frameworks
 
@@ -318,7 +318,7 @@ Static site generators are programs that dynamically generate all the webpages o
 
 Static sites can have as few or as many unique pages as you want. Just as frameworks empower you to quickly write client-side JavaScript applications, static site generators allow you a way to quickly create HTML files you would otherwise have written individually. Like frameworks, static site generators allow developers to write components that define common pieces of your web pages, and to compose those components together to create a final page. In the context of static site generators, these components are called **templates**. Web pages built by static site generators can even be home to framework applications: if you want one specific page of your statically-generated website to boot up a React application when your user visits it for example, you can do that.
 
-Static site generators have been around for quite a long time, and they have seen a bit of a revival in the recent history of the web. A handful of powerful options are now available, such as [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/), [Eleventy](https://www.11ty.dev/), and [Gatsby](https://www.gatsbyjs.org/).
+Static site generators have been around for quite a long time, and they have seen a bit of a revival in the recent history of the web. A handful of powerful options are now available, such as [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/), [Eleventy](https://www.11ty.dev/), and [Gatsby](https://www.gatsbyjs.com/).
 
 If you'd like to learn more about static site generators on the whole, check out Tatiana Mac's [Beginner's guide to Eleventy](https://www.tatianamac.com/posts/beginner-eleventy-tutorial-parti/). In the first article of the series, she explains what a static site generator is, and how it relates to other means of publishing web content.
 

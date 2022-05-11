@@ -257,7 +257,7 @@ If you view these checkboxes in a browser that doesn't support {{cssxref("appear
 
 ## What can be done about the "ugly" elements?
 
-Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly  style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
 The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.
 
@@ -503,7 +503,6 @@ As we've mentioned above a few times, if you want to gain full control over the 
 
 - [Uni-form](https://github.com/draganbabic/uni-form) is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.
 - [Formalize](https://formalize.me/) is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.
-- [Niceforms](https://www.emblematiq.com/lab/niceforms/) is a standalone JavaScript method that provides complete customization of web forms. You can use some of the built in themes, or create your own.
 
 The following libraries aren't just about forms, but they have very interesting features for dealing with HTML forms:
 

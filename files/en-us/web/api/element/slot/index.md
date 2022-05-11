@@ -21,7 +21,7 @@ slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots) for more inform
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

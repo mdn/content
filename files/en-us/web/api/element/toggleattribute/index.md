@@ -69,7 +69,7 @@ button.addEventListener("click", function(){
 
 ### Result
 
-{{ EmbedLiveSample('Example', '300', '50') }}
+{{ EmbedLiveSample('Examples', '300', '50') }}
 
 {{DOMAttributeMethods}}
 

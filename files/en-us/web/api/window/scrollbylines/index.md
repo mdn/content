@@ -26,6 +26,10 @@ scrollByLines(lines)
 - `lines` is the number of lines to scroll the document by. It may be a
   positive or negative integer.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```html

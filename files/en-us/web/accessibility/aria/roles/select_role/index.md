@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: select role'
 slug: Web/Accessibility/ARIA/Roles/select_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles

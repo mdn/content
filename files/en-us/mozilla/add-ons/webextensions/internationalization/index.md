@@ -115,7 +115,7 @@ To internationalize strings, specify them like this:
 "description": "__MSG_extensionDescription__",
 ```
 
-Here, we are retrieving message strings dependant on the browser's locale, rather than just including static strings.
+Here, we are retrieving message strings dependent on the browser's locale, rather than just including static strings.
 
 To call a message string like this, you need to specify it like this:
 

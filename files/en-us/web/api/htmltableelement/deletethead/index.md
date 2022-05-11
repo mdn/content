@@ -21,6 +21,14 @@ The **`HTMLTableElement.deleteTHead()`** removes the
 deleteTHead()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example uses JavaScript to delete a table's header.
@@ -44,7 +52,7 @@ table.deleteTHead();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

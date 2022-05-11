@@ -75,7 +75,7 @@ new Intl.NumberFormat(locales, options)
       - : The currency to use in currency formatting. Possible values are the ISO
         4217 currency codes, such as "`USD`" for the US dollar,
         "`EUR`" for the euro, or "`CNY`" for the Chinese RMB
-        — see the [Current currency & funds code list](https://www.currency-iso.org/en/home/tables/table-a1.html).
+        — see the [Current currency & funds code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes).
         There is no default value; if the `style` is "`currency`", the `currency`
         property must be provided.
     - `currencyDisplay`

@@ -35,6 +35,10 @@ addColorStop(offset, color)
     representing the color of the stop. A `SYNTAX_ERR` is raised if the value
     cannot be parsed as a CSS `<color>` value.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Adding stops to a gradient

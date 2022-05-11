@@ -27,6 +27,10 @@ a {{domxref("ImageBitmap")}} containing the snapshot.
 grabFrame()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.

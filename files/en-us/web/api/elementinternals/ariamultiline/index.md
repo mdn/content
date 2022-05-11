@@ -19,7 +19,7 @@ The **`ariaMultiline`** property of the {{domxref("ElementInternals")}} interfac
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : This is a multi-line text box.
