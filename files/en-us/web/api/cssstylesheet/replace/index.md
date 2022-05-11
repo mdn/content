@@ -47,11 +47,12 @@ In the following example a new stylesheet is created and two CSS rules are added
 const stylesheet = new CSSStyleSheet();
 
 stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
-  .then(() => { console.log(stylesheet.cssRules[0].cssText);
-})
-.catch(err => {
-  console.error('Failed to replace styles:', err);
-});
+  .then(() => {
+    console.log(stylesheet.cssRules[0].cssText);
+  })
+  .catch(err => {
+    console.error('Failed to replace styles:', err);
+  });
 ```
 
 ## Specifications
