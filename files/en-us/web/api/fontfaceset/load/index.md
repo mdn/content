@@ -31,7 +31,7 @@ load(font, text)
 
 ### Return value
 
-A {{jsxref("Promise")}} of an {{jsxref("Array")}} of {{jsxref("FontFace")}} loaded. The
+A {{jsxref("Promise")}} of an {{jsxref("Array")}} of {{domxref("FontFace")}} loaded. The
 promise is fulfilled when all the fonts are loaded; it is rejected if one of the fonts
 failed to load.
 
