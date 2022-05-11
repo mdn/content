@@ -22,13 +22,7 @@ tags:
 ---
 {{DefaultAPISidebar("UI Events")}}
 
-The tables below list the standard key values in various categories of key, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.
-
-> **Callout:**
->
-> Learn how to use these key values in JavaScript using [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key).
-
-[Special Values](#special_values) | [Modifier Keys](#modifier_keys) | [Whitespace Keys](#whitespace_keys) | [Navigation Keys](#navigation_keys) | [Editing Keys](#editing_keys) | [UI Keys](#ui_keys) | [Device Keys](#device_keys) | [IME and Composition Keys](#ime_and_composition_keys) | [Function Keys](#function_keys) | [Phone Keys](#phone_keys) | [Multimedia Keys](#multimedia_keys) | [Audio Control Keys](#audio_control_keys) | [TV Control Keys](#tv_control_keys) | [Media Controller Keys](#media_controller_keys) | [Speech Recognition Keys](#speech_recognition_keys) | [Document Keys](#document_keys) | [Application Selector Keys](#application_selector_keys) | [Browser Control Keys](#browser_control_keys) | [Numeric Keypad Keys](#numeric_keypad_keys)
+The tables below list the standard values for the [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key) property, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.
 
 ## Special values
 
@@ -2787,7 +2781,7 @@ These media keys are used specifically for controlling audio.
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/en-US/docs/Mozilla/B2G_OS).
+\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification.
 
 ## TV control keys
 
