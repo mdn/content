@@ -205,8 +205,6 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 {{Compat("html.elements.area.rel")}}
 
-## Accessibility concerns
-
 ## See also
 
 - {{domxref("HTMLLinkElement.relList")}}
