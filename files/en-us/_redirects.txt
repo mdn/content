@@ -8499,6 +8499,8 @@
 /en-US/docs/Web/API/KeyboardEvent.metaKey	/en-US/docs/Web/API/KeyboardEvent/metaKey
 /en-US/docs/Web/API/KeyboardEvent.shiftKey	/en-US/docs/Web/API/KeyboardEvent/shiftKey
 /en-US/docs/Web/API/KeyboardEvent.which	/en-US/docs/Web/API/UIEvent/which
+/en-US/docs/Web/API/KeyboardEvent/code/code_values	/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values
+/en-US/docs/Web/API/KeyboardEvent/key/Key_Values	/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values
 /en-US/docs/Web/API/KeyboardEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/KeyframeEffect/KeyframeEffect.getKeyframes()	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
 /en-US/docs/Web/API/KeyframeEffect/getFrames	/en-US/docs/Web/API/KeyframeEffect/getKeyframes

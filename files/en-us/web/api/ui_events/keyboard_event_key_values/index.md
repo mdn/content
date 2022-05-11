@@ -1,6 +1,6 @@
 ---
-title: Key Values
-slug: Web/API/KeyboardEvent/key/Key_Values
+title: Key values for keyboard events
+slug: Web/API/UI_Events/Keyboard_event_key_values
 tags:
   - Characters
   - DOM
@@ -20,7 +20,8 @@ tags:
   - keyboard
   - keys
 ---
-{{APIRef("UI Events")}}
+{{DefaultAPISidebar("UI Events")}}
+
 The tables below list the standard key values in various categories of key, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.
 
 > **Callout:**
