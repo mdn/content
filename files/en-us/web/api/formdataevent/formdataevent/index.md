@@ -16,39 +16,12 @@ The **`FormDataEvent()`** constructor creates a new {{domxref("FormDataEvent")}}
 ## Syntax
 
 ```js
-<<<<<<< HEAD
-new FormDataEvent(type)
 new FormDataEvent(type, formEventInit)
-=======
-new FormDataEvent(type, options)
->>>>>>> d1fdc27dad (Update Event constructors)
 ```
 
 ### Parameters
 
 - `type`
-<<<<<<< HEAD
-  - : A string representing the name of the event.
-- `formEventInit` {{optional_inline}}
-
-  - : A `FormEventInit` dictionary, which can take the following optional
-    fields:
-
-    - `bubbles`
-      - : a `true` or `false` value indicating whether the event
-        bubbles. The default is `false`.
-    - `cancelable`
-      - : a `true` or `false` value indicating whether the event
-        can be cancelled. The default is `false`.
-    - `composed`
-      - : a `true` or `false` value indicating whether the event will
-        trigger listeners outside of a shadow root (see {{domxref("Event.composed")}} for
-        more details). The default is `false`.
-    - `formData`
-      - : A {{domxref("FormData")}} object to pre-populate the
-        FormDataEvent with. This would then be accessed through the
-        {{domxref("FormDataEvent.formData")}} property.
-=======
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `formdata`.
 - `options`
@@ -60,7 +33,6 @@ new FormDataEvent(type, options)
 ### Return value
 
 A new {{domxref("FormDataEvent")}} object.
->>>>>>> d1fdc27dad (Update Event constructors)
 
 ## Examples
 
