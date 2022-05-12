@@ -7,10 +7,11 @@ tags:
   - Property
   - Read-only
   - Reference
+  - Deprecated
   - primitiveValue
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`primitiveType`** read-only property of the
 {{domxref("CSSPrimitiveValue")}} interface represents the type of a CSS value.
