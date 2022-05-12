@@ -77,7 +77,7 @@ We'd like you to style the provided {{htmlelement("div")}}, giving it the follow
 
 The following screenshot shows an example of what the finished design could look like:
 
-![](fancy-box.png)
+![](fancy-box2.png)
 
 ## Assessment or further help
 
