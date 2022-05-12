@@ -14,7 +14,7 @@ browser-compat: api.MediaStreamTrack.label
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaStreamTrack.label`**
-read-only property returns a {{domxref("DOMString")}} containing a {{glossary("user
+read-only property returns a string containing a {{glossary("user
     agent")}}-assigned label that identifies the track source, as in
 `"internal microphone"`.
 
