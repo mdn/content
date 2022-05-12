@@ -32,22 +32,18 @@ The available types are as follows:
       <dd>
         A push button with no default behavior displaying the value of the <a href="#value"><code>value</code></a> attribute, empty by default.
       </dd>
-
       <dt>{{HTMLElement("input/checkbox", "checkbox")}}</dt>
       <dd>A check box allowing single values to be selected/deselected.</dd>
-
       <dt>{{HTMLElement("input/color", "color")}}</dt>
       <dd>
         A control for specifying a color; opening a color picker when active in supporting browsers.
       </dd>
-
       <dt>{{HTMLElement("input/date", "date")}}</dt>
       <dd>
         A control for entering a date (year, month, and day, with no time).
         Opens a date picker or numeric wheels for year, month, day when active
         in supporting browsers.
       </dd>
-
       <dt>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </dt>
@@ -55,65 +51,54 @@ The available types are as follows:
         A control for entering a date and time, with no time zone. Opens a date
         picker or numeric wheels for date- and time-components when active in supporting browsers.
       </dd>
-
       <dt>{{HTMLElement("input/email", "email")}}</dt>
       <dd>
         A field for editing an email address. Looks like a
         <code>text</code> input, but has validation parameters and relevant
         keyboard in supporting browsers and devices with dynamic keyboards.
       </dd>
-
       <dt>{{HTMLElement("input/file", "file")}}</dt>
       <dd>
         A control that lets the user select a file.
         Use the <a href="#accept"><code>accept</code></a> attribute to define the types of files that the control can select.
       </dd>
-
       <dt>{{HTMLElement("input/hidden", "hidden")}}</dt>
       <dd>
         A control that is not displayed but whose value is submitted to the
         server. There is an example in the next column, but it's hidden!
       </dd>
-
       <dt>{{HTMLElement("input/image", "image")}}</dt>
       <dd>
         A graphical <code>submit</code> button. Displays an image defined by the <code>src</code> attribute.
         The <a href="#alt"><code>alt</code></a> attribute displays if the image <a href="#src"><code>src</code></a> is missing.
       </dd>
-
       <dt>{{HTMLElement("input/month", "month")}}</dt>
       <dd>A control for entering a month and year, with no time zone.</dd>
-
       <dt>{{HTMLElement("input/number", "number")}}</dt>
       <dd>
         A control for entering a number. Displays a spinner and adds default
         validation when supported. Displays a numeric keypad in some devices
         with dynamic keypads.
       </dd>
-
       <dt>{{HTMLElement("input/password", "password")}}</dt>
       <dd>
         A single-line text field whose value is obscured.
         Will alert user if site is not secure.
       </dd>
-
       <dt>{{HTMLElement("input/radio", "radio")}}</dt>
       <dd>
         A radio button, allowing a single value to be selected out of multiple choices with the same <a href="#name"><code>name</code></a> value.
       </dd>
-
       <dt>{{HTMLElement("input/range", "range")}}</dt>
       <dd>
         A control for entering a number whose exact value is not important.
         Displays as a range widget defaulting to the middle value.
         Used in conjunction <a href="#min"><code>min</code></a> and <a href="#max"><code>max</code></a> to define the range of acceptable values.
       </dd>
-
       <dt>{{HTMLElement("input/reset", "reset")}}</dt>
       <dd>
         A button that resets the contents of the form to default values. Not recommended.
       </dd>
-
       <dt>{{HTMLElement("input/search", "search")}}</dt>
       <dd>
         A single-line text field for entering search strings. Line-breaks are
@@ -121,39 +106,33 @@ The available types are as follows:
         supporting browsers that can be used to clear the field. Displays a
         search icon instead of enter key on some devices with dynamic keypads.
       </dd>
-
       <dt>{{HTMLElement("input/submit", "submit")}}</dt>
       <dd>A button that submits the form.</dd>
-
       <dt>{{HTMLElement("input/tel", "tel")}}</dt>
       <dd>
         A control for entering a telephone number. Displays a telephone keypad
         in some devices with dynamic keypads.
       </dd>
-
       <dt>{{HTMLElement("input/text", "text")}}</dt>
       <dd>
         The default value. A single-line text field. Line-breaks are
         automatically removed from the input value.
       </dd>
-
       <dt>{{HTMLElement("input/time", "time")}}</dt>
       <dd>A control for entering a time value with no time zone.</dd>
-
       <dt>{{HTMLElement("input/url", "url")}}</dt>
       <dd>
         A field for entering a URL. Looks like a <code>text</code> input, but
         has validation parameters and relevant keyboard in supporting browsers
         and devices with dynamic keyboards.
       </dd>
-
       <dt>{{HTMLElement("input/week", "week")}}</dt>
       <dd>
         A control for entering a date consisting of a week-year number and a week number with no time zone.
       </dd>
-
-      #### Obsolete values
-
+</dl>
+      <p><b>Obsolete values</b><p>
+<dl>
       <dt>{{HTMLElement("input/datetime", "datetime")}}</dt>
       <dd>
         {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
