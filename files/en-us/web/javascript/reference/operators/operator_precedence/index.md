@@ -232,7 +232,7 @@ a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` 
 
 The following table lists operators in order from highest precedence (19) to lowest precedence (1).
 
-Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is intentionally not included in the table — because, to quote an [answer at Stack Overflow](https://stackoverflow.com/a/48656377), "[Spread syntax is not an operator](https://stackoverflow.com/q/44934828/1048572) and therefore does not have a precedence. It is part of the array literal and function call (and object literal) syntax."
+Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is intentionally not included in the table — because, to quote an [answer at Stack Overflow](https://stackoverflow.com/questions/48656338/operator-precedence-for-js-spread-and-rest-operators/48656377), "[Spread syntax is not an operator](https://stackoverflow.com/questions/44934828/is-it-spread-syntax-or-the-spread-operator) and therefore does not have a precedence. It is part of the array literal and function call (and object literal) syntax."
 
 <table class="fullwidth-table">
   <tbody>

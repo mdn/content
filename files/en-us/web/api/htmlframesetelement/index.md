@@ -21,9 +21,9 @@ The **`HTMLFrameSetElement`** interface provides special properties (beyond thos
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFrameSetElement.cols")}} {{deprecated_inline}}
-  - : Is a string structured as a comma-separated list specifying the width of each column inside a frameset.
+  - : A string structured as a comma-separated list specifying the width of each column inside a frameset.
 - {{domxref("HTMLFrameSetElement.rows")}} {{deprecated_inline}}
-  - : Is a string structured as a comma-separated list specifying the height of each column inside a frameset.
+  - : A string structured as a comma-separated list specifying the height of each column inside a frameset.
 
 ## Methods
 

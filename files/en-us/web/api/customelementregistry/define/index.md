@@ -69,7 +69,7 @@ Void.
 
 ### Autonomous custom element
 
-The following code is taken from our [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component)
+The following code is taken from our [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component)
 example ([see it live also](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)).
 
 ```js
@@ -161,7 +161,7 @@ customElements.define('popup-info', PopUpInfo);
 
 ### Customized built-in element
 
-The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component)
+The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component)
 example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 
 ```js

@@ -220,11 +220,3 @@ navigator.credentials.create(createCredentialDefaultArgs)
 ### AuthenticatorAssertionResponse
 
 {{Compat("api.AuthenticatorAssertionResponse")}}
-
-### PublicKeyCredentialCreationOptions
-
-{{Compat("api.PublicKeyCredentialCreationOptions")}}
-
-### PublicKeyCredentialRequestOptions
-
-{{Compat("api.PublicKeyCredentialRequestOptions")}}

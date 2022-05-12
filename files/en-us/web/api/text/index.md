@@ -46,8 +46,6 @@ _Inherits properties from its parents, {{domxref("CharacterData")}}, {{domxref("
 
 _Inherits methods from its parent, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("Text.replaceWholeText")}} {{deprecated_inline}}
-  - : Replaces the text of the current node and all logically adjacent nodes with the specified text.
 - {{domxref("Text.splitText")}}
   - : Breaks the node into two nodes at a specified offset.
 

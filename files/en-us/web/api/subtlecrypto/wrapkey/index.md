@@ -45,7 +45,7 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
     - `pkcs8`: [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
     - `spki`: [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) format.
     - `jwk`: [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key) format.
-- `key`¨
+- `key`
   - : The {{domxref("CryptoKey")}} to wrap.
 - `wrappingkey`
   - : The {{domxref("CryptoKey")}} used to encrypt the exported key. The key must have the `wrapKey` usage set.

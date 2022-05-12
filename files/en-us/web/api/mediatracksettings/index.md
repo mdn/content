@@ -29,9 +29,9 @@ Some or all of the following will be included in the object, either because it's
 ### Properties of all media tracks
 
 - {{domxref("MediaTrackSettings.deviceId", "deviceId")}}
-  - : A {{domxref("DOMString")}} indicating the current value of the {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} property. The device ID is a origin-unique string identifying the source of the track; this is usually a {{Glossary("GUID")}}. This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
+  - : A string indicating the current value of the {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} property. The device ID is a origin-unique string identifying the source of the track; this is usually a {{Glossary("GUID")}}. This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
 - {{domxref("MediaTrackSettings.groupId", "groupId")}}
-  - : A {{domxref("DOMString")}} indicating the current value of the {{domxref("MediaTrackConstraints.groupId", "groupId")}} property. The group ID is a browsing session-unique string identifying the source group of the track. Two devices (as identified by the {{domxref("MediaTrackSettings.deviceId", "deviceId")}}) are considered part of the same group if they are from the same physical device. For instance, the audio input and output devices for the speaker and microphone built into a phone would share the same group ID, since they're part of the same physical device. The microphone on a headset would have a different ID, though. This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
+  - : A string indicating the current value of the {{domxref("MediaTrackConstraints.groupId", "groupId")}} property. The group ID is a browsing session-unique string identifying the source group of the track. Two devices (as identified by the {{domxref("MediaTrackSettings.deviceId", "deviceId")}}) are considered part of the same group if they are from the same physical device. For instance, the audio input and output devices for the speaker and microphone built into a phone would share the same group ID, since they're part of the same physical device. The microphone on a headset would have a different ID, though. This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
 
 ### Properties of audio tracks
 
@@ -58,7 +58,7 @@ Some or all of the following will be included in the object, either because it's
   - : A double-precision floating point value indicating the current value of the {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}} property, specified precisely to 10 decimal places. This is the width of the image in pixels divided by its height in pixels. Common values include 1.3333333333 (for the classic television 4:3 "standard" aspect ratio, also used on tablets such as Apple's iPad), 1.7777777778 (for the 16:9 high-definition widescreen aspect ratio), and 1.6 (for the 16:10 aspect ratio common among widescreen computers and tablets).
 - {{domxref("MediaTrackSettings.facingMode", "facingMode")}}
 
-  - : A {{domxref("DOMString")}} indicating the current value of the {{domxref("MediaTrackConstraints.facingMode", "facingMode")}} property, specifying the direction the camera is facing. The value will be one of:
+  - : A string indicating the current value of the {{domxref("MediaTrackConstraints.facingMode", "facingMode")}} property, specifying the direction the camera is facing. The value will be one of:
 
     - `"user"`
       - : A camera facing the user (commonly known as a "selfie cam"), used for self-portraiture and video calling.
@@ -77,7 +77,7 @@ Some or all of the following will be included in the object, either because it's
   - : A long integer value indicating the current value of the {{domxref("MediaTrackSettings.width", "width")}} property, specifying the width of the track's video data in pixels.
 - {{domxref("MediaTrackSettings.resizeMode", "resizeMode")}}
 
-  - : A {{domxref("DOMString")}} indicating the current value of the {{domxref("MediaTrackConstraints.resizeMode", "resizeMode")}} property, specifying the mode used by the user agent to derive the resolution of the track. The value will be one of:
+  - : A string indicating the current value of the {{domxref("MediaTrackConstraints.resizeMode", "resizeMode")}} property, specifying the mode used by the user agent to derive the resolution of the track. The value will be one of:
 
     - `"none"`
       - : The track has the resolution offered by the camera, its driver or the OS.
@@ -90,7 +90,7 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 
 - {{domxref("MediaTrackSettings.cursor", "cursor")}}
 
-  - : A {{domxref("DOMString")}} which indicates whether or not the mouse cursor is being included in the generated stream and under what conditions. Possible values are:
+  - : A string which indicates whether or not the mouse cursor is being included in the generated stream and under what conditions. Possible values are:
 
     - `always`
       - : The mouse is always visible in the video content of the {domxref("MediaStream"), unless the mouse has moved outside the area of the content.
@@ -101,7 +101,7 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 
 - {{domxref("MediaTrackSettings.displaySurface", "displaySurface")}}
 
-  - : A {{domxref("DOMString")}} which specifies the type of source the track contains; one of:
+  - : A string which specifies the type of source the track contains; one of:
 
     - `application`
       - : The stream contains all of the windows of the application chosen by the user rendered into the one video track.

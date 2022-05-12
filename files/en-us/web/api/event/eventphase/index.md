@@ -132,16 +132,17 @@ function onDivClick(e) {
     clearDivs();
     clear = false;
   }
-  if (e.eventPhase == 2)
+  if (e.eventPhase == 2) {
     e.currentTarget.style.backgroundColor = 'red';
-    const level =
-        e.eventPhase == 0 ? 'none' :
-        e.eventPhase == 1 ? 'capturing' :
-        e.eventPhase == 2 ? 'target' :
-        e.eventPhase == 3 ? 'bubbling' : 'error';
-    const para = document.createElement('p');
-    para.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
-    divInfo.appendChild(para);
+  }
+  const level =
+      e.eventPhase == 0 ? 'none' :
+      e.eventPhase == 1 ? 'capturing' :
+      e.eventPhase == 2 ? 'target' :
+      e.eventPhase == 3 ? 'bubbling' : 'error';
+  const para = document.createElement('p');
+  para.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
+  divInfo.appendChild(para);
 }
 
 function clearDivs() {

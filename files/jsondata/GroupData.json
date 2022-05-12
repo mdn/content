@@ -92,7 +92,9 @@
         "Path2D",
         "TextMetrics"
       ],
-      "methods": [],
+      "methods": [
+        "createImageBitmap"
+      ],
       "properties": [],
       "events": []
     },
@@ -334,55 +336,6 @@
       "properties": [],
       "events": []
     },
-    "DOM Events": {
-      "interfaces": [
-        "Event",
-        "EventTarget",
-        "CompositionEvent",
-        "FocusEvent",
-        "InputEvent",
-        "KeyboardEvent",
-        "MouseEvent",
-        "MouseScrollEvent",
-        "MutationEvent",
-        "ProgressEvent",
-        "UIEvent",
-        "WheelEvent"
-      ],
-      "methods": [],
-      "properties": [],
-      "events": [
-        "HTMLMediaElement: abort",
-        "HTMLElement: beforeinput",
-        "Element: blur",
-        "Element: click",
-        "Element: compositionstart",
-        "Element: compositionupdate",
-        "Element: compositionend",
-        "Element: dblclick",
-        "HTMLMediaElement: error",
-        "Element: focus",
-        "Element: focusin",
-        "Element: focusout",
-        "HTMLElement: input",
-        "Element: keydown",
-        "Element: keypress",
-        "Element: keyup",
-        "Window: load",
-        "Element: mousedown",
-        "Element: mouseenter",
-        "Element: mouseleave",
-        "Element: mousemove",
-        "Element: mouseout",
-        "Element: mouseover",
-        "Element: mouseup",
-        "Window: resize",
-        "Document: scroll",
-        "Element: select",
-        "Window: unload",
-        "Element: wheel"
-      ]
-    },
     "Encoding API": {
       "overview": ["Encoding API"],
       "interfaces": ["TextDecoder", "TextEncoder", "TextDecoderStream", "TextEncoderStream"],
@@ -478,26 +431,6 @@
         "window.showSaveFilePicker()",
         "window.showDirectoryPicker()",
         "DataTransferItem.getAsFileSystemHandle()"
-      ],
-      "properties": [],
-      "events": []
-    },
-    "File System API": {
-      "interfaces": [
-        "FileError",
-        "FileException",
-        "FileHandle",
-        "FileRequest",
-        "HTMLInputElement",
-        "LocalFileSystem",
-        "LocalFileSystemSync",
-        "LockedFile",
-        "Metadata"
-      ],
-      "methods": [
-        "Window.requestFileSystem()",
-        "Window.resolveLocalFileSystemURL()",
-        "WorkerGlobalScope.requestFileSystemSync()"
       ],
       "properties": [],
       "events": []
@@ -781,7 +714,6 @@
         "IDBCursor",
         "IDBCursorWithValue",
         "IDBDatabase",
-        "IDBEnvironment",
         "IDBFactory",
         "IDBIndex",
         "IDBKeyRange",
@@ -789,8 +721,7 @@
         "IDBOpenDBRequest",
         "IDBRequest",
         "IDBTransaction",
-        "IDBVersionChangeEvent",
-        "IDBVersionChangeRequest"
+        "IDBVersionChangeEvent"
       ],
       "methods": [],
       "properties": [],
@@ -1473,6 +1404,55 @@
         "Element: touchend",
         "Element: touchmove",
         "Element: touchcancel"
+      ]
+    },
+    "UI Events": {
+      "overview": ["UI Events"],
+      "guides": [
+        "/docs/Web/API/UI_Events/Keyboard_event_code_values",
+        "/docs/Web/API/UI_Events/Keyboard_event_key_values"
+      ],
+      "interfaces": [
+        "CompositionEvent",
+        "FocusEvent",
+        "InputEvent",
+        "KeyboardEvent",
+        "MouseEvent",
+        "MouseScrollEvent",
+        "MutationEvent",
+        "UIEvent",
+        "WheelEvent"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": [
+        "Element: beforeinput",
+        "Element: blur",
+        "Element: click",
+        "Element: compositionstart",
+        "Element: compositionupdate",
+        "Element: compositionend",
+        "Element: dblclick",
+        "Element: focus",
+        "Element: focusin",
+        "Element: focusout",
+        "Element: input",
+        "Element: keydown",
+        "Element: keypress",
+        "Element: keyup",
+        "Element: mousedown",
+        "Element: mouseenter",
+        "Element: mouseleave",
+        "Element: mousemove",
+        "Element: mouseout",
+        "Element: mouseover",
+        "Element: mouseup",
+        "Element: select",
+        "Element: wheel",
+        "Window: abort",
+        "Window: error",
+        "Window: load",
+        "Window: unload"
       ]
     },
     "URL API": {
@@ -2158,6 +2138,7 @@
       ],
       "interfaces": [
         "FormData",
+        "ProgressEvent",
         "XMLHttpRequest",
         "XMLHttpRequestEventTarget",
         "XMLHttpRequestUpload"

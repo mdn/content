@@ -33,7 +33,7 @@ This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing th
 - {{domxref("RTCRtpEncodingParameters.maxBitrate", "maxBitrate")}}
   - : An unsigned long integer indicating the maximum number of bits per second to allow for this encoding. Other parameters may further constrain the bit rate, such as the value of `maxFramerate` or transport or physical network limitations.
 - {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}}
-  - : A double-precision floating-point value specifying the maximum number of frames per second to allow for this encoding.
+  - : A value specifying the maximum number of frames per second to allow for this encoding.
 - {{domxref("RTCRtpEncodingParameters.ptime", "ptime")}}
   - : An unsigned long integer value indicating the preferred duration of a media packet in milliseconds. This is typically only relevant for audio encodings. The user agent will try to match this as well as it can, but there is no guarantee.
 - {{domxref("RTCRtpEncodingParameters.rid", "rid")}}

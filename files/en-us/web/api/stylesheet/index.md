@@ -18,7 +18,7 @@ An object implementing the `StyleSheet` interface represents a single style shee
 ## Properties
 
 - {{domxref("StyleSheet.disabled")}}
-  - : Is a boolean value representing whether the current stylesheet has been applied or not.
+  - : A boolean value representing whether the current stylesheet has been applied or not.
 - {{domxref("StyleSheet.href")}} {{readonlyInline}}
   - : Returns a {{domxref("DOMString")}} representing the location of the stylesheet.
 - {{domxref("StyleSheet.media")}} {{readonlyInline}}

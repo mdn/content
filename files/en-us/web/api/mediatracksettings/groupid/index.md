@@ -18,7 +18,7 @@ browser-compat: api.MediaTrackSettings.groupId
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`groupId`** property is a browsing-session unique
-{{domxref("DOMString")}} which identifies the group of devices which includes the source
+string which identifies the group of devices which includes the source
 for the {{domxref("MediaStreamTrack")}}. This lets you determine what value was selected
 to comply with your specified constraints for this property's value as described in the
 {{domxref("MediaTrackConstraints.groupId")}} property you provided when calling either
@@ -35,7 +35,7 @@ will never include this property.
 
 ## Value
 
-A {{domxref("DOMString")}} whose value is a browsing-session unique identifier for a
+A string whose value is a browsing-session unique identifier for a
 group of devices which includes the source of the track's contents. Two devices share
 the same group ID if they belong to the same physical hardware device. For example, a
 headset has two devices on it: a microphone which can serve as a source for audio tracks

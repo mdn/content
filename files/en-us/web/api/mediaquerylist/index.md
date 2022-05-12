@@ -30,7 +30,7 @@ _The `MediaQueryList` interface inherits properties from its parent interface, {
 - {{DOMxRef("MediaQueryList.matches", "matches")}}{{ReadOnlyInline}}
   - : A boolean value that returns `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
 - {{DOMxRef("MediaQueryList.media", "media")}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} representing a serialized media query.
+  - : A string representing a serialized media query.
 
 ## Methods
 

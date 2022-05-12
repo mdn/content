@@ -17,7 +17,7 @@ browser-compat: api.MediaTrackSettings.deviceId
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
-**`deviceId`** property is a {{domxref("DOMString")}} which
+**`deviceId`** property is a string which
 uniquely identifies the source for the corresponding {{domxref("MediaStreamTrack")}} for
 the origin corresponding to the browsing session. This lets you determine what value was
 selected to comply with your specified constraints for this property's value as
@@ -35,7 +35,7 @@ will never include this property.
 
 ## Value
 
-A {{domxref("DOMString")}} whose value is an origin-unique identifier for the track's
+A string whose value is an origin-unique identifier for the track's
 source. This ID is valid across multiple browsing sessions for the same origin and is
 guaranteed to be different for all other origins, so you can safely use it to request
 the same source be used for multiple sessions, for example.

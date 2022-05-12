@@ -79,7 +79,7 @@ These might be:
 
 A page should be deleted if it fits the above description.
 To delete a page, you should use the "Delete this page feature" (_Advanced > Delete this page_) to delete the page.
-You will probably not have the permissions to use this feature, and when thinking about deleting pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
+You will probably not have the permissions to use this feature, and when thinking about deleting pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### When to document new technologies
 
@@ -167,7 +167,7 @@ Here are some guidelines to help you decide what to do.
 
 Please use common sense with wording of warning messages and other changes to text suggested by the guidelines above.
 Different items will require different wording and handling of the situation.
-When in doubt, feel free to ask for advice on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix), or on the [MDN Web Docs discussion forum](https://discourse.mozilla.org/c/mdn).
+When in doubt, feel free to ask for advice on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix), or on the [MDN Web Docs discussion forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Copying content within MDN
 

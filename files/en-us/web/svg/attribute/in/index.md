@@ -125,14 +125,14 @@ You can use this attribute with the following SVG elements:
   <tbody>
     <tr>
       <td>
-        {{SpecName("Filters 1.0", "filters.html#FilterPrimitiveInAttribute", "in")}}
+        {{SpecName("Filters 1.0", "#element-attrdef-filter-primitive-in", "in")}}
       </td>
       <td>{{Spec2("Filters 1.0")}}</td>
       <td>No change</td>
     </tr>
     <tr>
       <td>
-        {{SpecName("SVG1.1", "#element-attrdef-filter-primitive-in", "in")}}
+        {{SpecName("SVG1.1", "filters.html#FilterPrimitiveInAttribute", "in")}}
       </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>Initial definition</td>

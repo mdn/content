@@ -91,7 +91,7 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 ## Examples
 
-The following example is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) demo ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+The following example is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) demo ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 You can see that we use `attachShadow()` in the middle of the code to create a shadow root, which we then attach our custom element's contents to.
 
 ```js

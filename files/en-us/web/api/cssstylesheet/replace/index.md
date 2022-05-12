@@ -41,17 +41,18 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("CSSStyleSheet")}}.
 
 ## Examples
 
-In the following example a new stylesheet is created and two CSS rules are added using `replace()`. The first rule is then printed to the console, which will return: `body { font-size: 1.4em };`
+In the following example a new stylesheet is created and two CSS rules are added using `replace()`. The first rule is then printed to the console, which will return: `body { font-size: 1.4em; }`
 
 ```js
-let stylesheet = new CSSStyleSheet();
+const stylesheet = new CSSStyleSheet();
 
-stylesheet.replace('body { font-size: 1.4em };p { color: red; }')
-  .then(() => {   console.log(stylesheet.cssRules[0].cssText);
-})
-.catch(err => {
-  console.error('Failed to replace styles:', err);
-});
+stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
+  .then(() => {
+    console.log(stylesheet.cssRules[0].cssText);
+  })
+  .catch(err => {
+    console.error('Failed to replace styles:', err);
+  });
 ```
 
 ## Specifications

@@ -10,7 +10,7 @@ tags:
   - UIEvent
 browser-compat: api.UIEvent.layerY
 ---
-{{APIRef("DOM Events")}}{{Non-standard_header}}
+{{APIRef("UI Events")}}{{Non-standard_header}}
 
 The **`UIEvent.layerY`** read-only property returns the
 vertical coordinate of the event relative to the current layer.

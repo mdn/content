@@ -11,7 +11,7 @@ tags:
   - events
 browser-compat: api.InputEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`InputEvent`** interface represents an event notifying the user of editable content changes.
 
@@ -27,7 +27,7 @@ The **`InputEvent`** interface represents an event notifying the user of editabl
 _This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and {{DOMxRef("Event")}}._
 
 - {{DOMxRef("InputEvent.data")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} with the inserted characters. This may be an empty string if the change doesn't insert text (such as when deleting characters, for example).
+  - : Returns a string with the inserted characters. This may be an empty string if the change doesn't insert text (such as when deleting characters, for example).
 - {{DOMxRef("InputEvent.dataTransfer")}}{{ReadOnlyInline}}
   - : Returns a {{DOMxRef("DataTransfer")}} object containing information about richtext or plaintext data being added to or removed from editable content.
 - {{DOMxRef("InputEvent.inputType")}}{{ReadOnlyInline}}

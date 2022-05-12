@@ -31,7 +31,7 @@ mozGetFileNameArray(aLength, aFileNames)
 - `aLength`
   - : If specified, will receive the number of file names in the returned array.
 - `aFileNames`
-  - : Is an array into which the file names are placed.
+  - : An array into which the file names are placed.
 
 ### Return value
 

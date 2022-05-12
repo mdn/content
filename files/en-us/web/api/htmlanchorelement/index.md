@@ -19,64 +19,64 @@ The **`HTMLAnchorElement`** interface represents hyperlink elements and provides
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLElement.accessKey")}}
-  - : Is a string representing a single character that switches input focus to the hyperlink.
+  - : A string representing a single character that switches input focus to the hyperlink.
 - {{domxref("HTMLAnchorElement.download")}} {{experimental_inline}}
-  - : Is a string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
+  - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
 - {{domxref("HTMLAnchorElement.hash")}}
-  - : Is a string representing the fragment identifier, including the leading hash mark ('`#`'), if any, in the referenced URL.
+  - : A string representing the fragment identifier, including the leading hash mark ('`#`'), if any, in the referenced URL.
 - {{domxref("HTMLAnchorElement.host")}}
-  - : Is a string representing the hostname and port (if it's not the default port) in the referenced URL.
+  - : A string representing the hostname and port (if it's not the default port) in the referenced URL.
 - {{domxref("HTMLAnchorElement.hostname")}}
-  - : Is a string representing the hostname in the referenced URL.
+  - : A string representing the hostname in the referenced URL.
 - {{domxref("HTMLAnchorElement.href")}}
-  - : Is a string that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.
+  - : A string that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.
 - {{domxref("HTMLAnchorElement.hreflang")}}
-  - : Is a string that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.
+  - : A string that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.
 - {{domxref("HTMLAnchorElement.origin")}} {{readonlyInline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("HTMLAnchorElement.password")}}
-  - : Is a string containing the password specified before the domain name.
+  - : A string containing the password specified before the domain name.
 - {{domxref("HTMLAnchorElement.pathname")}}
-  - : Is a string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+  - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("HTMLAnchorElement.port")}}
-  - : Is a string representing the port component, if any, of the referenced URL.
+  - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("HTMLAnchorElement.protocol")}}
-  - : Is a string representing the protocol component, including trailing colon ('`:`'), of the referenced URL.
+  - : A string representing the protocol component, including trailing colon ('`:`'), of the referenced URL.
 - {{domxref("HTMLAnchorElement.referrerPolicy")}} {{experimental_inline}}
-  - : Is a string that reflects the {{htmlattrxref("referrerpolicy", "a")}} HTML attribute indicating which referrer to use.
+  - : A string that reflects the {{htmlattrxref("referrerpolicy", "a")}} HTML attribute indicating which referrer to use.
 - {{domxref("HTMLAnchorElement.rel")}}
-  - : Is a string that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, specifying the relationship of the target object to the linked object.
+  - : A string that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, specifying the relationship of the target object to the linked object.
 - {{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}
   - : Returns a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, as a list of tokens.
 - {{domxref("HTMLAnchorElement.search")}}
-  - : Is a string representing the search element, including leading question mark ('`?`'), if any, of the referenced URL.
+  - : A string representing the search element, including leading question mark ('`?`'), if any, of the referenced URL.
 - {{domxref("HTMLElement.tabIndex")}}
-  - : Is a `long` containing the position of the element in the tabbing navigation order for the current document.
+  - : A `long` containing the position of the element in the tabbing navigation order for the current document.
 - {{domxref("HTMLAnchorElement.target")}}
-  - : Is a string that reflects the {{htmlattrxref("target", "a")}} HTML attribute, indicating where to display the linked resource.
+  - : A string that reflects the {{htmlattrxref("target", "a")}} HTML attribute, indicating where to display the linked resource.
 - {{domxref("HTMLAnchorElement.text")}}
-  - : Is a string being a synonym for the {{domxref("Node.textContent")}} property.
+  - : A string being a synonym for the {{domxref("Node.textContent")}} property.
 - {{domxref("HTMLAnchorElement.type")}}
-  - : Is a string that reflects the {{htmlattrxref("type", "a")}} HTML attribute, indicating the MIME type of the linked resource.
+  - : A string that reflects the {{htmlattrxref("type", "a")}} HTML attribute, indicating the MIME type of the linked resource.
 - {{domxref("HTMLAnchorElement.username")}}
-  - : Is a string containing the username specified before the domain name.
+  - : A string containing the username specified before the domain name.
 
 ### Obsolete properties
 
 - {{domxref("HTMLAnchorElement.charset")}} {{deprecated_inline}}
-  - : Is a string representing the character encoding of the linked resource.
+  - : A string representing the character encoding of the linked resource.
 - {{domxref("HTMLAnchorElement.coords")}} {{deprecated_inline}}
-  - : Is a string representing a comma-separated list of coordinates.
+  - : A string representing a comma-separated list of coordinates.
 - {{domxref("HTMLAnchorElement.name")}} {{deprecated_inline}}
-  - : Is a string representing the anchor name.
+  - : A string representing the anchor name.
 - {{domxref("HTMLAnchorElement.rev")}} {{deprecated_inline}}
 
-  - : Is a string representing that the {{htmlattrxref("rev", "a")}} HTML attribute, specifying the relationship of the link object to the target object.
+  - : A string representing that the {{htmlattrxref("rev", "a")}} HTML attribute, specifying the relationship of the link object to the target object.
 
     > **Note:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
 
 - {{domxref("HTMLAnchorElement.shape")}} {{deprecated_inline}}
-  - : Is a string representing the shape of the active area.
+  - : A string representing the shape of the active area.
 
 ## Methods
 
