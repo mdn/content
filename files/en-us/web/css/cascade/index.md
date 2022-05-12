@@ -74,7 +74,7 @@ The cascading algorithm determines how to find the value to apply for each prope
   | 7   | user-agent (browser) | `!important` |
   | 8   | CSS transitions |              |
 
-  3. **Specificity:** In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
+  3. **Specificity:** In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
   4. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity, the last declaration in the style order is applied  
 
 The cascade is in ascending order, meaning animations have precedence of normal values, whether those are declared in user, author, or user-agent styles, important values take precedence over animations, and transitions have precedence over important values.  
