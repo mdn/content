@@ -50,7 +50,7 @@ Highlights:
 - The {{domxref("KeyboardEvent.getModifierState()")}} and {{domxref("MouseEvent.getModifierState()")}} methods have been extended to support the `Accel` virtual modifier ({{Bug(1009388)}}).
 - The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ({{Bug(865649)}}).
 - Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ({{Bug(528456)}}).
-- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](https://dev.w3.org/fxtf/web-animations/), has been added ({{bug("998246")}}). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
+- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](https://drafts.fxtf.org/web-animations/), has been added ({{bug("998246")}}). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
 - The [Data Store API](/en-US/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) ({{bug("949325")}}). It still is only activated for certified applications.
 - The [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ({{ Bug("967264") }}).
 - The [MSISDN Verification API](/en-US/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ({{ Bug("988469") }}).

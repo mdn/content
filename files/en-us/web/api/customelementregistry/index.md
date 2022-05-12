@@ -28,7 +28,7 @@ The **`CustomElementRegistry`** interface provides methods for registering custo
 
 ## Examples
 
-The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)). Note how we use the {{domxref("CustomElementRegistry.define()")}} method to define the custom element after creating its class.
+The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)). Note how we use the {{domxref("CustomElementRegistry.define()")}} method to define the custom element after creating its class.
 
 ```js
 // Create a class for the element

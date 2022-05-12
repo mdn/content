@@ -155,7 +155,7 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
 
 General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).
 
-The Paciello Group has some [information about the state of the support of Live Regions](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/) (2014). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
+The Paciello Group has some [information about the state of the support of Live Regions](https://www.tpgi.com/screen-reader-support-aria-live-regions/) (2014). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
 
 1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
 2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
