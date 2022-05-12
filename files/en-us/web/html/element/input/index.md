@@ -36,7 +36,6 @@ The available types are as follows:
     <tr>
       <th>Type</th>
       <th>Description</th>
-      <th>Basic Examples</th>
     </tr>
   </thead>
   <tbody>
