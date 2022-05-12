@@ -17,7 +17,7 @@ Inserts JavaScript and CSS into websites. This API offers two approaches to inse
 - {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}} that provide for one-off injections.
 - {{WebExtAPIRef("scripting.registerContentScripts()")}} that registers content scripts dynamically, which can then be retrieved with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} and unregistered with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}).
 
-> **Note:** This API is available in Manifest V3 or higher. It's also available in Manifest V2 from Firefox version 102.
+> **Note:** **Note:** This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
 
 This API requires the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the target in the tab into which JavaScript or CSS is injected.
 
