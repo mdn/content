@@ -130,10 +130,10 @@ The following keywords are currently available:
 
 In most cases the permission just grants access to the API, with the following exceptions:
 
-- `tabs` gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
+- `tabs` gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for [host permissions](#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
 
   - In Firefox 85 and earlier, you also need `tabs` if you want to include `url` in the `queryInfo` parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the `tabs` API can be used without requesting any permission.
-  - As of Firefox 86 and Chrome 50, matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) can also be used instead of the "tabs" permission.
+  - As of Firefox 86 and Chrome 50, matching [host permissions](#host_permissions) can also be used instead of the "tabs" permission.
 
 - `webRequestBlocking` enables you to use the `"blocking"` argument, so you can {{webextAPIref("WebRequest", "modify and cancel requests")}}.
 - `downloads.open` lets you use the {{WebExtAPIRef("downloads.open()")}} API.

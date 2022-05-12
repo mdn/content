@@ -43,7 +43,7 @@ browser-compat: webextensions.manifest.host_permissions
 
 Use the `host_permissions` key to request access for the APIs in your extension that read or modify host data, such as {{WebExtAPIRef("cookies")}}, {{WebExtAPIRef("webRequest")}}, and {{WebExtAPIRef("tabs")}}. This key is an array of strings, and each string is a request for a permission.
 
-If you request permissions using this key, the browser may (or may not) prompt the user at install time to grant extension access to this host data. In either case, the browser will provide the user with ability to control extension's host permissions after installation, to grant or revoke them at any time as needed.
+If you request permissions using this key, the browser may prompt the user to grant the extension access to this host data at install time. Whether the user is prompted or not, the browser allows the user to control the extension's host permissions after installation: grant or revoke them as needed.
 
 As the request to grant host permissions may impact users' willingness to install your extension, requesting host permissions is worth careful consideration. For example, you want to avoid requesting unnecessary host permissions and may want to provide information about why you are requesting host permissions in your extension's store description. The article [Request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) provides more information on the issues you should consider.
 
@@ -53,12 +53,12 @@ Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/W
 
 The extra privileges include:
 
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (even for requests made from content scripts)
-- the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects
-- the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}}) into pages served from those origins
-- the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts
+- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (though not for requests from content scripts, as was the case in Manifest V2).
+- the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects.
+- the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}}) into pages served from those origins.
+- the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts.e
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
-- bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
+- bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards.
 
 In Firefox extensions get host permissions for their origin, which is of the form:
 
