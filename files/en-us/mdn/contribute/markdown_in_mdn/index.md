@@ -249,11 +249,11 @@ Each of these top-level GFM `<li>` elements will be transformed into a
 For example, this is a `<dl>`:
 
 ````plain
-* term1
-    * : My description of term1
+- term1
+    - : My description of term1
 
-* `term2`
-    * : My description of term2
+- `term2`
+    - : My description of term2
 
       It can have multiple paragraphs, and code blocks too:
 
@@ -313,8 +313,8 @@ Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>
 As a workaround for cases where an author needs to associate multiple `<dt>` items with a single `<dd>`, consider providing them as a single `<dt>` that holds multiple terms, separated by commas, like this:
 
 ```plain
-* `param1`, `param2`, `param3`
-    * : My description of params 1, 2, and 3
+- `param1`, `param2`, `param3`
+    - : My description of params 1, 2, and 3
 ```
 
 The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.
