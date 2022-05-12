@@ -120,7 +120,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </template>
 ```
 
-> **Note:** You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots).
+> **Note:** You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots).
 
 ## Specifications
 

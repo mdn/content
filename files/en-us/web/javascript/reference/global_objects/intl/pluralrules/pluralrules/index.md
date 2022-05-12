@@ -63,14 +63,14 @@ new Intl.PluralRules(locales, options)
       - : The minimum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number and percent formatting is 0; the
         default for currency formatting is the number of minor unit digits
-        provided by the [ISO 4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html)
+        provided by the [ISO 4217 currency code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html)
         (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number formatting is the larger of
         `minimumFractionDigits` and 3; the default for currency
         formatting is the larger of `minimumFractionDigits` and the
-        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html)
+        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html)
         (2 if the list doesn't provide that information); the default for percent formatting is the larger of
         `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
