@@ -7369,7 +7369,7 @@
 /en-US/docs/Web/API/AudioContext.createDelay	/en-US/docs/Web/API/BaseAudioContext/createDelay
 /en-US/docs/Web/API/AudioContext.createDynamicsCompressor	/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor
 /en-US/docs/Web/API/AudioContext.createGain	/en-US/docs/Web/API/BaseAudioContext/createGain
-/en-US/docs/Web/API/AudioContext.createJavaScriptNode	/en-US/docs/Web/API/AudioContext/createJavaScriptNode
+/en-US/docs/Web/API/AudioContext.createJavaScriptNode	/en-US/docs//en-US/docs/Web/API/BaseAudioContext/createScriptProcessor
 /en-US/docs/Web/API/AudioContext.createMediaElementSource	/en-US/docs/Web/API/AudioContext/createMediaElementSource
 /en-US/docs/Web/API/AudioContext.createMediaStreamDestination	/en-US/docs/Web/API/AudioContext/createMediaStreamDestination
 /en-US/docs/Web/API/AudioContext.createMediaStreamSource	/en-US/docs/Web/API/AudioContext/createMediaStreamSource
@@ -7399,6 +7399,7 @@
 /en-US/docs/Web/API/AudioContext/createDynamicsCompressor	/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor
 /en-US/docs/Web/API/AudioContext/createGain	/en-US/docs/Web/API/BaseAudioContext/createGain
 /en-US/docs/Web/API/AudioContext/createIIRFilter	/en-US/docs/Web/API/BaseAudioContext/createIIRFilter
+/en-US/docs/Web/API/AudioContext/createJavaScriptNode	/en-US/docs//en-US/docs/Web/API/BaseAudioContext/createScriptProcessor
 /en-US/docs/Web/API/AudioContext/createOscillator	/en-US/docs/Web/API/BaseAudioContext/createOscillator
 /en-US/docs/Web/API/AudioContext/createPanner	/en-US/docs/Web/API/BaseAudioContext/createPanner
 /en-US/docs/Web/API/AudioContext/createPeriodicWave	/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave
