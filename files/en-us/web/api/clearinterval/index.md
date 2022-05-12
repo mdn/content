@@ -14,6 +14,8 @@ browser-compat: api.clearInterval
 
 The global **`clearInterval()`** method cancels a timed, repeating action which
 was previously established by a call to {{domxref("setInterval", "setInterval()")}}.
+If the identifier passed in parameter has not been previous set,
+this method does nothing.
 
 ## Syntax
 
