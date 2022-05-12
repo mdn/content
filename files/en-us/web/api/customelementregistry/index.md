@@ -4,11 +4,9 @@ slug: Web/API/CustomElementRegistry
 tags:
   - API
   - CustomElementRegistry
-  - Experimental
   - Interface
   - Reference
   - Web Components
-  - custom elements
 browser-compat: api.CustomElementRegistry
 ---
 {{DefaultAPISidebar("Web Components")}}
@@ -24,7 +22,7 @@ The **`CustomElementRegistry`** interface provides methods for registering custo
 - {{domxref("CustomElementRegistry.upgrade()")}}
   - : Upgrades a custom element directly, even before it is connected to its shadow root.
 - {{domxref("CustomElementRegistry.whenDefined()")}}
-  - : Returns an empty {{jsxref("Promise", "promise")}} that resolves when a custom element becomes defined with the given name. If such a custom element is already defined, the returned promise is immediately fulfilled.
+  - : Returns an empty {{jsxref("Promise")}} that resolves when a custom element becomes defined with the given name. If such a custom element is already defined, the returned promise is immediately fulfilled.
 
 ## Examples
 
