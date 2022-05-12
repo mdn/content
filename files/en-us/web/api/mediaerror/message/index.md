@@ -16,7 +16,7 @@ browser-compat: api.MediaError.message
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.message`** returns a
-string which contains a human-readable string offering specific
+human-readable string offering specific
 diagnostic details related to the error described by the `MediaError` object,
 or an empty string (`""`) if no diagnostic information can be determined or
 provided.

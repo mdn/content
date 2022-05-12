@@ -17,7 +17,7 @@ browser-compat: api.MediaDeviceInfo.label
 
 The **`label`** readonlyinline
 property of the {{domxref("MediaDeviceInfo")}} interface returns a
-string, that is a label describing this device (for example
+string describing this device (for example
 "External USB Webcam").
 
 Only available during active `MediaStream`

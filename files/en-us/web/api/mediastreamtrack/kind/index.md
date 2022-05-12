@@ -26,7 +26,7 @@ const type = track.kind
 
 ### Value
 
-The possible values are a string with on of the following values:
+The possible values are a string with one of the following values:
 
 - `"audio"`: the track is an audio track.
 - `"video"`: the track is a video track.
