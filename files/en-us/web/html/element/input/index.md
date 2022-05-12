@@ -30,8 +30,7 @@ The available types are as follows:
 <table class="no-markdown">
   <colgroup>
     <col />
-    <col style="width: 50%" />
-    <col />
+    <col style="width: 60%" />
   </colgroup>
   <thead>
     <tr>
