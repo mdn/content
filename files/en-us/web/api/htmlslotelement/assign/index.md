@@ -8,7 +8,7 @@ tags:
   - Reference
   - Web Components
   - assign
-  - shadow dom
+  - shadow DOM
 browser-compat: api.HTMLSlotElement.assign
 ---
 {{APIRef("Shadow DOM API")}}

@@ -106,7 +106,7 @@ class PopUpInfo extends HTMLElement {
     img.src = imgUrl;
     icon.appendChild(img);
 
-    // Create some CSS to apply to the shadow dom
+    // Create some CSS to apply to the shadow DOM
     var style = document.createElement('style');
 
     style.textContent = '.wrapper {' +
@@ -137,7 +137,7 @@ class PopUpInfo extends HTMLElement {
                             'opacity: 1;' +
                           '}';
 
-    // attach the created elements to the shadow dom
+    // attach the created elements to the shadow DOM
 
     shadow.appendChild(style);
     shadow.appendChild(wrapper);
