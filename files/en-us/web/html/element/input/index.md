@@ -1,5 +1,5 @@
 ---
-title: '<input>: The Input (Form Input) element'
+title: "<input>: The Input (Form Input) element"
 slug: Web/HTML/Element/input
 tags:
   - Data entry
@@ -27,175 +27,138 @@ How an `<input>` works varies considerably depending on the value of its [`type`
 
 The available types are as follows:
 
-<table class="no-markdown">
-  <colgroup>
-    <col />
-    <col style="width: 60%" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{HTMLElement("input/button", "button")}}</td>
-      <td>
+<dl>
+      <dt>{{HTMLElement("input/button", "button")}}</dt>
+      <dd>
         A push button with no default behavior displaying the value of the <a href="#value"><code>value</code></a> attribute, empty by default.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/checkbox", "checkbox")}}</td>
-      <td>A check box allowing single values to be selected/deselected.</td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/color", "color")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/checkbox", "checkbox")}}</dt>
+      <dd>A check box allowing single values to be selected/deselected.</dd>
+
+      <dt>{{HTMLElement("input/color", "color")}}</dt>
+      <dd>
         A control for specifying a color; opening a color picker when active in supporting browsers.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/date", "date")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/date", "date")}}</dt>
+      <dd>
         A control for entering a date (year, month, and day, with no time).
         Opens a date picker or numeric wheels for year, month, day when active
         in supporting browsers.
-      </td>
-    </tr>
-    <tr>
-      <td>
+      </dd>
+
+      <dt>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
-      </td>
-      <td>
+      </dt>
+      <dd>
         A control for entering a date and time, with no time zone. Opens a date
         picker or numeric wheels for date- and time-components when active in supporting browsers.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/email", "email")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/email", "email")}}</dt>
+      <dd>
         A field for editing an email address. Looks like a
         <code>text</code> input, but has validation parameters and relevant
         keyboard in supporting browsers and devices with dynamic keyboards.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/file", "file")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/file", "file")}}</dt>
+      <dd>
         A control that lets the user select a file.
         Use the <a href="#accept"><code>accept</code></a> attribute to define the types of files that the control can select.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/hidden", "hidden")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/hidden", "hidden")}}</dt>
+      <dd>
         A control that is not displayed but whose value is submitted to the
         server. There is an example in the next column, but it's hidden!
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/image", "image")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/image", "image")}}</dt>
+      <dd>
         A graphical <code>submit</code> button. Displays an image defined by the <code>src</code> attribute.
         The <a href="#alt"><code>alt</code></a> attribute displays if the image <a href="#src"><code>src</code></a> is missing.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/month", "month")}}</td>
-      <td>A control for entering a month and year, with no time zone.</td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/number", "number")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/month", "month")}}</dt>
+      <dd>A control for entering a month and year, with no time zone.</dd>
+
+      <dt>{{HTMLElement("input/number", "number")}}</dt>
+      <dd>
         A control for entering a number. Displays a spinner and adds default
         validation when supported. Displays a numeric keypad in some devices
         with dynamic keypads.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/password", "password")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/password", "password")}}</dt>
+      <dd>
         A single-line text field whose value is obscured.
         Will alert user if site is not secure.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/radio", "radio")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/radio", "radio")}}</dt>
+      <dd>
         A radio button, allowing a single value to be selected out of multiple choices with the same <a href="#name"><code>name</code></a> value.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/range", "range")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/range", "range")}}</dt>
+      <dd>
         A control for entering a number whose exact value is not important.
         Displays as a range widget defaulting to the middle value.
         Used in conjunction <a href="#min"><code>min</code></a> and <a href="#max"><code>max</code></a> to define the range of acceptable values.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/reset", "reset")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/reset", "reset")}}</dt>
+      <dd>
         A button that resets the contents of the form to default values. Not recommended.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/search", "search")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/search", "search")}}</dt>
+      <dd>
         A single-line text field for entering search strings. Line-breaks are
         automatically removed from the input value. May include a delete icon in
         supporting browsers that can be used to clear the field. Displays a
         search icon instead of enter key on some devices with dynamic keypads.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/submit", "submit")}}</td>
-      <td>A button that submits the form.</td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/tel", "tel")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/submit", "submit")}}</dt>
+      <dd>A button that submits the form.</dd>
+
+      <dt>{{HTMLElement("input/tel", "tel")}}</dt>
+      <dd>
         A control for entering a telephone number. Displays a telephone keypad
         in some devices with dynamic keypads.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/text", "text")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/text", "text")}}</dt>
+      <dd>
         The default value. A single-line text field. Line-breaks are
         automatically removed from the input value.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/time", "time")}}</td>
-      <td>A control for entering a time value with no time zone.</td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/url", "url")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/time", "time")}}</dt>
+      <dd>A control for entering a time value with no time zone.</dd>
+
+      <dt>{{HTMLElement("input/url", "url")}}</dt>
+      <dd>
         A field for entering a URL. Looks like a <code>text</code> input, but
         has validation parameters and relevant keyboard in supporting browsers
         and devices with dynamic keyboards.
-      </td>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/week", "week")}}</td>
-      <td>
+      </dd>
+
+      <dt>{{HTMLElement("input/week", "week")}}</dt>
+      <dd>
         A control for entering a date consisting of a week-year number and a week number with no time zone.
-      </td>
-    </tr>
-    <tr>
-      <th colspan="3">Obsolete values</th>
-    </tr>
-    <tr>
-      <td>{{HTMLElement("input/datetime", "datetime")}}</td>
-      <td>
+      </dd>
+
+      #### Obsolete values
+
+      <dt>{{HTMLElement("input/datetime", "datetime")}}</dt>
+      <dd>
         {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
-      </td>
-    </tr>
-  </tbody>
-</table>
+      </dd>
+</dl>
 
 ## Attributes
 
@@ -237,7 +200,7 @@ Attributes for the `<input`> element include the [global HTML attributes](/en-US
 | [`step`](#step)                     | numeric types                    | Incremental values that are valid                                                     |
 | [`type`](#type)                     | all                              | Type of form control                                                                  |
 | [`value`](#value)                   | all                              | The initial value of the control                                                      |
-| [`width`](#width)                   | image                            | Same as `width` attribute for {{htmlelement('img')}}
+| [`width`](#width)                   | image                            | Same as `width` attribute for {{htmlelement('img')}}                                  |
 
 A few additional non-standard attributes are listed following the descriptions of the standard attributes.
 
@@ -289,8 +252,11 @@ A few additional non-standard attributes are listed following the descriptions o
 
     ```html
     <form action="page.html" method="post">
-      <label>Fruit: <input type="text" name="fruit" dirname="fruit.dir" value="cherry"></label>
-      <input type="submit"/>
+      <label
+        >Fruit:
+        <input type="text" name="fruit" dirname="fruit.dir" value="cherry"
+      /></label>
+      <input type="submit" />
     </form>
     <!-- page.html?fruit=cherry&fruit.dir=ltr -->
     ```
@@ -436,6 +402,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for `email`, `password`, `tel`, `url` and `text` `input` types only. Specifies how much of the input is shown. Basically creates same result as setting CSS `width` property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is `pixel`s. CSS width takes precedence over size attribute.
 
 - `src`
+
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 
 - `step`
@@ -556,6 +523,7 @@ The following non-standard attributes are also available on some browsers. As a 
     The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 
 - `orient` {{non-standard_inline}}
+
   - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
 
 - `results` {{non-standard_inline}}
@@ -742,7 +710,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the {{cssxref('color')}} and {{cssxref('font-weight')}} of the {{htmlelement('label')}} that comes immediately after a checked input. We haven't applied any styles if the `input` is not checked.
 
 ```html hidden
-<input id="checkboxInput" type="checkbox">
+<input id="checkboxInput" type="checkbox" />
 <label for="checkboxInput">Toggle the checkbox on and off</label>
 ```
 
@@ -761,13 +729,16 @@ It is possible to target different types of form controls based on their [`type`
 
 ```css
 /* matches a password input */
-input[type="password"] {}
+input[type="password"] {
+}
 
 /* matches a form control whose valid values are limited to a range of values*/
-input[min][max] {}
+input[min][max] {
+}
 
 /* matches a form control with a pattern attribute */
- input[pattern] {}
+input[pattern] {
+}
 ```
 
 ### ::placeholder
@@ -798,7 +769,7 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 
 ```html
 <label for="textInput">Note the red caret:</label>
-<input id="textInput" class="custom" size="32">
+<input id="textInput" class="custom" size="32" />
 ```
 
 #### CSS
@@ -806,7 +777,7 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif"
+  font: 16px "Helvetica", "Arial", "sans-serif";
 }
 ```
 
@@ -844,13 +815,18 @@ It does not suffice to have plain text adjacent to the `<input>` element. Rather
 
 ```html
 <!-- inaccessible -->
-<p>Enter your name: <input id="name" type="text" size="30"></p>
+<p>Enter your name: <input id="name" type="text" size="30" /></p>
 
 <!-- implicit label -->
-<p><label>Enter your name: <input id="name" type="text" size="30"></label></p>
+<p>
+  <label>Enter your name: <input id="name" type="text" size="30" /></label>
+</p>
 
 <!-- explicit label -->
-<p><label for="name">Enter your name: </label><input id="name" type="text" size="30"></p>
+<p>
+  <label for="name">Enter your name: </label
+  ><input id="name" type="text" size="30" />
+</p>
 ```
 
 The first example is inaccessible: no relationship exists between the prompt and the `<input>` element.
@@ -878,7 +854,7 @@ Some input types and other attributes place limits on what values are valid for 
 For the input types whose domain of possible values is periodic (that is, at the highest possible value, the values wrap back around to the beginning rather than ending), it's possible for the values of the [`max`](#max) and [`min`](#min) properties to be reversed, which indicates that the range of permitted values starts at `min`, wraps around to the lowest possible value, then continues on until `max` is reached. This is particularly useful for dates and times, such as when you want to allow the range to be from 8 PM to 8 AM:
 
 ```html
-<input type="time" min="20:00" max="08:00" name="overnight">
+<input type="time" min="20:00" max="08:00" name="overnight" />
 ```
 
 Specific attributes and their values can lead to a specific error {{domxref('ValidityState')}}:
@@ -982,14 +958,14 @@ If there is an error, supporting browsers will both alert the user and prevent t
 ```js
 function validate(input) {
   let validityState_object = input.validity;
-  if(validityState_object.valueMissing) {
-     input.setCustomValidity('A value is required');
+  if (validityState_object.valueMissing) {
+    input.setCustomValidity("A value is required");
   } else if (validityState_object.rangeUnderflow) {
-    input.setCustomValidity('Your value is too low');
+    input.setCustomValidity("Your value is too low");
   } else if (validityState_object.rangeOverflow) {
-    input.setCustomValidity('Your value is too high');
+    input.setCustomValidity("Your value is too high");
   } else {
-    input.setCustomValidity('');
+    input.setCustomValidity("");
   }
 }
 ```
@@ -1003,7 +979,7 @@ If you want to present a custom error message when a field fails to validate, yo
 ```html
 <form>
   <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```
@@ -1013,18 +989,20 @@ The basic HTML form validation features will cause this to produce a default err
 If you wanted to instead display custom error messages, you could use JavaScript like the following:
 
 ```js
-const nameInput = document.querySelector('input');
+const nameInput = document.querySelector("input");
 
-nameInput.addEventListener('input', () => {
-  nameInput.setCustomValidity('');
+nameInput.addEventListener("input", () => {
+  nameInput.setCustomValidity("");
   nameInput.checkValidity();
 });
 
-nameInput.addEventListener('invalid', () => {
-  if(nameInput.value === '') {
-    nameInput.setCustomValidity('Enter your username!');
+nameInput.addEventListener("invalid", () => {
+  if (nameInput.value === "") {
+    nameInput.setCustomValidity("Enter your username!");
   } else {
-    nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+    nameInput.setCustomValidity(
+      "Usernames can only contain upper and lowercase letters. Try again!"
+    );
   }
 });
 ```
@@ -1243,7 +1221,7 @@ The following is an example of how to associate the `<label>` with an `<input>` 
 
 ```html
 <label for="peas">Do you like peas?</label>
-<input type="checkbox" name="peas" id="peas">
+<input type="checkbox" name="peas" id="peas" />
 ```
 
 ### Size
