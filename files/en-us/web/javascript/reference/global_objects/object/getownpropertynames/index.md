@@ -51,12 +51,12 @@ Object.getOwnPropertyNames('foo');
 ### Using Object.getOwnPropertyNames()
 
 ```js
-var arr = ['a', 'b', 'c'];
+const arr = ['a', 'b', 'c'];
 console.log(Object.getOwnPropertyNames(arr).sort()); // .sort() is an array method.
 // logs ["0", "1", "2", "length"]
 
 // Array-like object
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+const obj = { 0: 'a', 1: 'b', 2: 'c' };
 console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() is an array method.
 // logs ["0", "1", "2"]
 
@@ -72,7 +72,7 @@ Object.getOwnPropertyNames(obj).forEach(
 // 2 -> c
 
 // non-enumerable property
-var my_obj = Object.create({}, {
+const my_obj = Object.create({}, {
   getFoo: {
     value: function() { return this.foo; },
     enumerable: false
@@ -111,12 +111,12 @@ console.log(
 This uses the {{jsxref("Array.prototype.filter()")}} function to remove the enumerable keys (obtained with {{jsxref("Object.keys()")}}) from a list of all keys (obtained with `Object.getOwnPropertyNames()`) thus giving only the non-enumerable keys as output.
 
 ```js
-var target = myObject;
-var enum_and_nonenum = Object.getOwnPropertyNames(target);
-var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function(key) {
-  var indexInEnum = enum_only.indexOf(key);
-  if (indexInEnum == -1) {
+const target = myObject;
+const enum_and_nonenum = Object.getOwnPropertyNames(target);
+const enum_only = Object.keys(target);
+const nonenum_only = enum_and_nonenum.filter(function(key) {
+  const indexInEnum = enum_only.indexOf(key);
+  if (indexInEnum === -1) {
     // Not found in enum_only keys,
     // meaning that the key is non-enumerable,
     // so return true so we keep this in the filter
