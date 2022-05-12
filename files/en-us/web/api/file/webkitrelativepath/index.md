@@ -45,8 +45,9 @@ output {
 
 ```js
 const output = document.getElementById('output');
+const filepicker = document.getElementById('filepicker');
 
-document.getElementById('filepicker').addEventListener('change', (event) => {
+filepicker.addEventListener('change', (event) => {
   const files = event.target.files;
 
   for (const file of files) {

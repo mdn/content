@@ -34,8 +34,9 @@ A string, containing the name of the file without path, such as "My Resume.rtf".
 
 ```js
 const output = document.getElementById('output');
+const filepicker = document.getElementById('filepicker');
 
-document.getElementById('filepicker').addEventListener('change', (event) => {
+filepicker.addEventListener('change', (event) => {
   const files = event.target.files;
   output.textContent = '';
 
