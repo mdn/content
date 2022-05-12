@@ -18,7 +18,7 @@ Injects CSS into a page.
 
 > **Note:** This method is available in Manifest V3 or higher.  It's also available in Manifest V2 from Firefox version 102.
 
-To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
 You can only inject CSS into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
 
@@ -45,7 +45,7 @@ await browser.scripting.insertCSS(
     - `css`{{optional_inline}} 
       - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified. 
     - `files`{{optional_inline}}
-      - : `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified. 
+      - : `array` of `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified. 
     - `origin`{{optional_inline}} 
       - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. 
     - `target` 

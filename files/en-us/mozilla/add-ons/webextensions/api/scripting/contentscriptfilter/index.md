@@ -21,7 +21,7 @@ This object contains a list of IDs of scripts to retrieve with {{WebExtAPIRef("s
 Values of this type are objects. They contain these properties:
 
 - `ids`
-  - : `string`. Array of scripts IDs.
+  - : `array` of `string`. Array of scripts IDs.
 
 ## Browser compatibility
 

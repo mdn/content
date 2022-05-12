@@ -25,17 +25,17 @@ Values of this type are objects. They contain these properties:
 - `css`{{optional_inline}}
   - : `array` of `string`. The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array.
 - `excludeMatches`{{optional_inline}}
-  - : `string`. Array of pages that this content script is excluded from but would otherwise be injected into.
+  - : `array` of `string`. Array of pages that this content script is excluded from but would otherwise be injected into.
 - `id`
   - : `string`. The ID of the content script, specified in the API call.
 - `js`{{optional_inline}}
-  - : `string`. Array of path to JavaScript files in the extension package to inject into matching pages. Scripts are injected in the order they appear in this array.
+  - : `array` of `string`. Array of path to JavaScript files in the extension package to inject into matching pages. Scripts are injected in the order they appear in this array.
 - `matches`{{optional_inline}}
-  - : `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
+  - : `array` of `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
 - `persistAcrossSessions`{{optional_inline}}
   - : `boolean`. Specifies if this content script persists into future sessions. Defaults to `true`. Firefox does not support registering persistent scripts, see ({{bug("1751436")}}), so this flag must be set to `false` to register non-persistent scripts.
 - `runAt`{{optional_inline}}
-  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`.
+  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`. In Firefox, `runAt` also affects the point where the CSS is inserted. In Chrome, `runAt` does not affect the CSS insertion point.
 
 ## Browser compatibility
 

@@ -19,7 +19,7 @@ Inserts JavaScript and CSS into websites. This API offers two approaches to inse
 
 > **Note:** This API is available in Manifest V3 or higher. It's also available in Manifest V2 from Firefox version 102.
 
-This API requires the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab into which JavaScript or CSS is injected.
+This API requires the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the target in the tab into which JavaScript or CSS is injected.
 
 Alternatively, you can get permission temporarily in the active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). However, the `"scripting"` permission is still required.
 

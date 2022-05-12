@@ -21,9 +21,9 @@ This object contains details specifying the injection target for CSS and JavaScr
 Values of this type are objects. They contain these properties:
 
 - `allFrames`{{optional_inline}} 
-  - : `boolean`. Whether the CSS is inject into all frames within the tab. Defaults to `false`. Cannot be `true` if `frameIds` is specified.
+  - : `boolean`. Whether the script or CSS is injected into all frames within the tab. Defaults to `false`. Cannot be `true` if `frameIds` is specified.
 - `frameIds`{{optional_inline}} 
-  - : `string`. Array of the IDs of the frames to inject into. 
+  - : `array` of `string`. Array of the IDs of the frames to inject into. 
 - `tabId`
   - : `number`. The ID of the tab to inject into. 
 
