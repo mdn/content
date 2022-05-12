@@ -22,20 +22,22 @@ errors thrown by any of the interfaces based on {{domxref('Sensor')}}.
 ## Syntax
 
 ```js
-new SensorErrorEvent(type);
-new SensorErrorEvent(type, {error: domException});
+new SensorErrorEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : Will always be `'SensorErrorEvent'`.
-- `options` {{optional_inline}}
-
-  - : Currently only one option is supported:
-
+  - :A string with the name of the event.
+    It is case-sensitive and browsers always set it to `error`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `error`
-      - : An instance of {{jsxref('DOMException')}}.
+      - : A {{domxref('DOMException')}} object describing the error.
+
+### Return value
+
+A new {{domxref("SensorErrorEvent")}} object.
 
 ## Specifications
 

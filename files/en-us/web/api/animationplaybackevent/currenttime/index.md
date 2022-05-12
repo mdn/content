@@ -6,7 +6,6 @@ tags:
   - Animation
   - AnimationPlaybackEvent
   - Attribute
-  - Experimental
   - Property
   - Reference
   - currentTime
@@ -14,7 +13,7 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent.currentTime
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations API") }}
 
 The **`currentTime`** read-only property of the {{domxref("AnimationPlaybackEvent")}} interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was `idle` at the time the event was generated.
 

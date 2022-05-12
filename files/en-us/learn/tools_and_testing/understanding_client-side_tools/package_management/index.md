@@ -470,7 +470,7 @@ This brings us to the end of our tour of package managers. Our next move is to b
 ## See also
 
 - [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
-- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
 
 ## In this module
 

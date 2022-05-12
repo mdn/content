@@ -273,4 +273,4 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 - [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
 - {{domxref("Navigator.getUserMedia()")}}
-- [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)
+- [MediaRecorder API now supported by 65% of your website users](https://blog.addpipe.com/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

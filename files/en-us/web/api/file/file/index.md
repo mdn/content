@@ -34,11 +34,13 @@ new File(bits, name, options)
   - : An options object containing optional attributes for the file. Available options are
     as follows:
 
-    - `type`: A string representing the MIME type of the
-      content that will be put into the file. Defaults to a value of `"".`
-    - `lastModified`: A number representing the number of milliseconds
-      between the Unix time epoch and when the file was last modified. Defaults to a
-      value of {{jsxref("Date.now()")}}.
+    - `type`
+      - : A string representing the MIME type of the
+        content that will be put into the file. Defaults to a value of `"".`
+    - `lastModified`
+      - : A number representing the number of milliseconds
+        between the Unix time epoch and when the file was last modified. Defaults to a
+        value of {{jsxref("Date.now()")}}.
 
 ## Examples
 

@@ -11,7 +11,7 @@ browser-compat: api.Location.search
 
 The **`search`** property of the {{domxref("Location")}}
 interface is a search string, also called a _query string_; that is, a
-{{domxref("USVString")}} containing a `'?'` followed by the parameters of the
+string containing a `'?'` followed by the parameters of the
 URL.
 
 Modern browsers provide

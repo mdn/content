@@ -49,15 +49,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 ### Obsolete properties
 
 - {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
-  - : Is a string representing the character encoding for the target resource.
+  - : A string representing the character encoding for the target resource.
 - {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
 
-  - : Is a string representing the reverse relationship of the linked resource from the resource to the document.
+  - : A string representing the reverse relationship of the linked resource from the resource to the document.
 
     > **Note:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
 
 - {{domxref("HTMLLinkElement.target")}} {{deprecated_inline}}
-  - : Is a string representing the name of the target frame to which the resource applies.
+  - : A string representing the name of the target frame to which the resource applies.
 
 ## Methods
 

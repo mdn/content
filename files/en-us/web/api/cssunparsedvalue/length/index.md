@@ -5,7 +5,6 @@ tags:
   - API
   - CSS Typed Object Model API
   - CSSUnparsedValue
-  - Constructor
   - Experimental
   - Houdini
   - NeedsExample

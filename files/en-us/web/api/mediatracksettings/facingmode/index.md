@@ -18,7 +18,7 @@ browser-compat: api.MediaTrackSettings.facingMode
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
-**`facingMode`** property is a {{domxref("DOMString")}}
+**`facingMode`** property is a string
 indicating the direction in which the camera producing the video track represented by
 the {{domxref("MediaStreamTrack")}} is currently facing. This lets you determine what
 value was selected to comply with your specified constraints for this property's value
@@ -37,7 +37,7 @@ will never include this property.
 
 ## Value
 
-A {{domxref("DOMString")}} whose value is one of the strings in
+A string whose value is one of the strings in
 [`VideoFacingModeEnum`](#videofacingmodeenum).
 
 ### VideoFacingModeEnum

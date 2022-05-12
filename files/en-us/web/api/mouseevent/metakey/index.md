@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.metaKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.metaKey`** read-only property is a boolean value that indicates whether the <kbd>meta</kbd> key was pressed or not when a given mouse event occurs.
 

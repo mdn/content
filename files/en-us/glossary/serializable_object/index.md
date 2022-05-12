@@ -22,6 +22,7 @@ Objects that can be transferred are called {{Glossary("Transferable objects")}}.
 
 ## Supported objects
 
+All primitive values are serializable.
 Not all objects are serializable objects.
 The objects that can be serialized are listed in: [The structured clone algorithm > Supported types](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)
 

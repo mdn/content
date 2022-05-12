@@ -430,10 +430,10 @@ Remote XUL is no longer supported; this affects XUL documents being served throu
 #### Miscellaneous storage API changes
 
 - The `mozIStorageBindingParamsArray` interface now has a length attribute that indicates the number of `mozIStorageBindingParams` objects in the array.
-- The {{ifmethod("mozIStorageStatement", "bindParameters")}} now returns an error if the specified `mozIStorageBindingParamsArray` is empty.
-- Added the {{ifmethod("mozIStorageConnection", "clone")}} method, which lets you clone an existing database connection.
-- Added the {{ifmethod("mozIStorageConnection", "asyncClose")}} method, which lets you close a database connection asynchronously; you specify a callback to be notified when the close operation is complete.
-- Added the {{ifmethod("mozIStorageConnection", "setGrowthIncrement")}} method, which lets you specify the amount by which a database file is grown at a time, in order to help SQLite reduce fragmentation.
+- The `mozIStorageStatement.bindParameters()` method now returns an error if the specified `mozIStorageBindingParamsArray` is empty.
+- Added the `mozIStorageConnection.clone()` method, which lets you clone an existing database connection.
+- Added the `mozIStorageConnection.asyncClose()` method, which lets you close a database connection asynchronously; you specify a callback to be notified when the close operation is complete.
+- Added the `mozIStorageConnection.setGrowthIncrement()` method, which lets you specify the amount by which a database file is grown at a time, in order to help SQLite reduce fragmentation.
 - The `SQLITE_CONSTRAINT` error is now reported as `NS_ERROR_STORAGE_CONSTRAINT` instead of as `NS_ERROR_FAILURE`.
 
 ### XPCOM
@@ -455,15 +455,15 @@ In addition to the specific changes referenced below, it's important to note tha
 ### Interface changes
 
 - The `nsIDocShell` and `nsIWebBrowser` interfaces now have a new `isActive` attribute, which is used to allow optimization of code paths for documents that aren't currently visible.
-- The `nsIMemory` method {{ifmethod("nsIMemory","isLowMemory")}} has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) to watch for low memory situations instead.
-- The API for handling redirects on HTTP channels has changed to let them be processed asynchronously. Any code that implements redirect handling using {{ifmethod("nsIChannelEventSink", "onChannelRedirect")}} needs to be updated to use {{ifmethod("nsIChannelEventSink", "asyncOnChannelRedirect")}} instead. This accepts a callback handler that must be called when a redirect is successfully completed.
-- The {{ifmethod("nsINavHistoryResultObserver", "batching")}} method has been added, providing a way to group Places operations into batches, reducing the number of update notifications delivered, which can improve performance when observers are performing relatively involved tasks (such as refreshing views).
+- The `nsIMemory` method `nsIMemory.isLowMemory()` has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) to watch for low memory situations instead.
+- The API for handling redirects on HTTP channels has changed to let them be processed asynchronously. Any code that implements redirect handling using `nsIChannelEventSink.onChannelRedirect()` needs to be updated to use `nsIChannelEventSink.asyncOnChannelRedirect()` instead. This accepts a callback handler that must be called when a redirect is successfully completed.
+- The `nsINavHistoryResultObserver.batching()` method has been added, providing a way to group Places operations into batches, reducing the number of update notifications delivered, which can improve performance when observers are performing relatively involved tasks (such as refreshing views).
 - The long-obsolete `nsIPref` interface has finally been removed. If you haven't already switched to `nsIPrefService`, now is the time.
-- The `nsISessionStore` and `nsISessionStartup` interfaces received changes to support on-demand session restore. See the {{ifmethod("nsISessionStore", "restoreLastSession")}} method.
-- The `nsIPrincipal` methods {{ifmethod("nsIPrincipal", "subsumes")}} and {{ifmethod("nsIPrincipal", "checkMayLoad")}}, as well as its `origin`, `csp`, and `URI` attributes, are now available from script; previously they were only available from native code.
+- The `nsISessionStore` and `nsISessionStartup` interfaces received changes to support on-demand session restore. See the `nsISessionStore.restoreLastSession()` method.
+- The `nsIPrincipal` methods `nsIPrincipal.subsumes()` and `nsIPrincipal.checkMayLoad()`, as well as its `origin`, `csp`, and `URI` attributes, are now available from script; previously they were only available from native code.
 - The `nsIPrompt` interface now supports tab-modal alerts; see [Using tab-modal prompts](/en-US/docs/Using_tab-modal_prompts) for details.
-- The {{ifmethod("nsIEffectiveTLDService", "getPublicSuffixFromHost")}} method now correctly rejects host name starting with a period (".").
-- The {{ifmethod("mozIJSSubScriptLoader", "loadSubScript")}} method now has an optional argument allowing you to specify the character set of the script; if one is not provided, ASCII is assumed (as was always assumed previously).
+- The `nsIEffectiveTLDService.getPublicSuffixFromHost()` method now correctly rejects host name starting with a period (".").
+- The `mozIJSSubScriptLoader.loadSubScript()` method now has an optional argument allowing you to specify the character set of the script; if one is not provided, ASCII is assumed (as was always assumed previously).
 - The `nsIAccessProxy` interface has been removed. It was an implementation detail that has outlived its usefulness.
 - The `nsIContentView` and `nsIContentViewManager` interfaces have been added for Firefox Mobile. It represents a scrollable content view whose contents are actually drawn by a separate process.
 - The `nsIDiskCacheStreamInternal` interface has been added.
@@ -490,7 +490,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - Only the root chrome.manifest file is loaded
   - : Only the root `chrome.manifest` file is loaded now; if you need secondary manifest files to be loaded, you can use the [`manifest`](/en-US/docs/Chrome_Registration#manifest) command in your root `chrome.manifest` to load them.
 - Gopher support removed
-  - : The Gopher protocol is no longer supported natively. Continued support is available via the [OverbiteFF](https://addons.mozilla.org/addon/7685/) extension.
+  - : The Gopher protocol is no longer supported natively. Continued support is available via the [OverbiteFF](https://addons.mozilla.org/en-US/firefox/addon/overbitenx/) extension.
 - [Content process event handling](/en-US/docs/The_message_manager)
   - : In order to support out-of-process plugins and other multiple-process features, a new API has been introduced to support sending messages across processes.
 - [Bootstrapped extensions](/en-US/docs/Extensions/Bootstrapped_extensions)

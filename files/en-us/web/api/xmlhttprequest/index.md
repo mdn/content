@@ -67,11 +67,11 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
   - : The channel used by the object when performing the request.
 - {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
-  - : Is a boolean. If true, the request will be sent without cookie and authentication headers.
+  - : A boolean. If true, the request will be sent without cookie and authentication headers.
 - {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
-  - : Is a boolean. If true, the same origin policy will not be enforced on the request.
+  - : A boolean. If true, the same origin policy will not be enforced on the request.
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
-  - : Is a boolean. It indicates whether or not the object represents a background service request.
+  - : A boolean. It indicates whether or not the object represents a background service request.
 
 ## Methods
 

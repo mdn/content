@@ -36,7 +36,7 @@ animate(keyframes, options)
   - : Either an **integer representing the animation's duration** (in
     milliseconds), **or** an Object containing one or more timing properties described in the [`KeyframeEffect()` options parameter](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#parameters) and/or the following options:
 
-    - `id {{optional_inline}}`
+    - `id`{{optional_inline}}
       - : A property unique to `animate()`: a [`DOMString`](/en-US/docs/Web/API/DOMString)
         with which to reference the animation.
 

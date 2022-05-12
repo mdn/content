@@ -48,7 +48,7 @@ gives a few [Usage](#usage) examples.
   - : Displays an XML/HTML Element representation of the specified object if possible or the JavaScript Object view if it is not possible.
 - {{domxref("console.error()")}}
   - : Outputs an error message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
-- {{domxref("console.exception()")}} {{Non-standard_inline}} {{deprecated_inline}}
+- `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : An alias for `error()`.
 - {{domxref("console.group()")}}
   - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `groupEnd()`.
@@ -83,7 +83,7 @@ gives a few [Usage](#usage) examples.
 
 ### Outputting text to the console
 
-The most frequently-used feature of the console is logging of text and other data. There are four categories of output you can generate, using the {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, and {{domxref("console.error()")}} methods respectively. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.
+The most frequently-used feature of the console is logging of text and other data. There are several categories of output you can generate, using the {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}}, or {{domxref("console.debug()")}} methods. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.
 
 There are two ways to use each of the output methods; you can pass in a list of objects whose string representations get concatenated into one string, then output to the console, or you can pass in a string containing zero or more substitution strings followed by a list of objects to replace them.
 

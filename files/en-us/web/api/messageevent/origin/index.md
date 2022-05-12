@@ -14,12 +14,12 @@ browser-compat: api.MessageEvent.origin
 {{APIRef("HTML DOM")}}
 
 The **`origin`** read-only property of the
-{{domxref("MessageEvent")}} interface is a {{domxref("USVString")}} representing the
+{{domxref("MessageEvent")}} interface is a string representing the
 origin of the message emitter.
 
 ## Value
 
-A {{domxref("USVString")}} representing the origin.
+A string representing the origin.
 
 ## Examples
 

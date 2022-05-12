@@ -72,7 +72,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - The {{event("touchenter")}} and {{event("touchleave")}} events, removed from the specification, have been removed ({{bug(1036444)}}).
 - The formerly called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{event("load")}} to match the specification ({{bug(1035505)}}).
 - The IndexedDB interface `FileHandle` has been renamed in {{domxref("IDBMutableFile")}} ({{bug(1006485)}}).
-- The IndexedDB interface {{domxref("LockedFile")}} has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).
+- The IndexedDB interface `LockedFile` has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).
 - The {{domxref("ServiceWorker")}} interface has been implemented, behind the `dom.serviceWorkers.enabled` flag ({{bug(903441)}}).
 - The {{domxref("NetworkInformation.type")}} now also support the `"unknown"` value ({{bug(1023029)}}).
 

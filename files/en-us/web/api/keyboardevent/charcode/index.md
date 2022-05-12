@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.charCode
 ---
-{{ ApiRef("DOM Events") }} {{non-standard_header}} {{deprecated_header}}
+{{APIRef("UI Events")}} {{non-standard_header}} {{deprecated_header}}
 
 The **`charCode`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key

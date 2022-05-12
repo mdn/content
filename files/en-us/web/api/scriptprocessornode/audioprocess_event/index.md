@@ -26,9 +26,9 @@ An {{domxref("AudioProcessingEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also implements the properties inherited from its parent, {{domxref("Event")}}._
 
-- `playbackTime` {{ReadOnlyInline}}</td>
-- : A double representing the time when the audio will be played,
-   as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+- `playbackTime` {{ReadOnlyInline}}
+  - : A double representing the time when the audio will be played,
+     as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 - `inputBuffer` {{ReadOnlyInline}}
   - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed.
     The number of channels is defined as a parameter `numberOfInputChannels`,
@@ -77,7 +77,7 @@ scriptNode.onaudioprocess = audioProcessingEvent => {
 
 ## Specifications
 
-Since the August 29 2014 [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
+Since the August 29, 2014, [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
 
 It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 

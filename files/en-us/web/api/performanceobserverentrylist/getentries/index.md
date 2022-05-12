@@ -33,7 +33,7 @@ getEntries(performanceEntryFilterOptions)
 
 - `performanceEntryFilterOptions` {{optional_inline}}
 
-  - : Is a `PerformanceEntryFilterOptions` object, having the following
+  - : A `PerformanceEntryFilterOptions` object, having the following
     fields:
 
     - `"name"`, the name of a performance entry.

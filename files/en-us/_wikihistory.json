@@ -25191,18 +25191,6 @@
       "rralian"
     ]
   },
-  "Web/API/AudioContext/createJavaScriptNode": {
-    "modified": "2019-03-23T23:25:22.171Z",
-    "contributors": [
-      "Jedipedia",
-      "JDrone_",
-      "teoli",
-      "chrisdavidmills",
-      "kevincennis",
-      "progysm",
-      "Btipling"
-    ]
-  },
   "Web/API/AudioContext/createMediaElementSource": {
     "modified": "2020-10-15T21:28:13.345Z",
     "contributors": [
@@ -42292,19 +42280,6 @@
       "grendel"
     ]
   },
-  "Web/API/FileException": {
-    "modified": "2020-10-15T21:08:18.736Z",
-    "contributors": [
-      "ExE-Boss",
-      "tocretpa",
-      "fscholz",
-      "Cobra",
-      "ethertank",
-      "teoli",
-      "Sheppy",
-      "grendel"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2020-10-15T21:07:20.367Z",
     "contributors": [
@@ -42604,31 +42579,6 @@
       "bershanskiy"
     ]
   },
-  "Web/API/FileRequest": {
-    "modified": "2019-03-23T23:25:09.648Z",
-    "contributors": [
-      "tocretpa",
-      "Jeremie",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
-  "Web/API/FileRequest/lockedFile": {
-    "modified": "2019-03-23T23:25:04.735Z",
-    "contributors": [
-      "Jeremie",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
-  "Web/API/FileRequest/onprogress": {
-    "modified": "2019-03-23T23:25:14.590Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
   "Web/API/FileSystem": {
     "modified": "2020-10-15T21:07:59.122Z",
     "contributors": [
@@ -42904,20 +42854,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/FileSystemEntrySync": {
-    "modified": "2020-10-15T21:07:56.937Z",
-    "contributors": [
-      "Sheppy",
-      "squall890",
-      "connorshea",
-      "tocretpa",
-      "teoli",
-      "jwhitlock",
-      "fscholz",
-      "kscarfone",
-      "grendel"
-    ]
-  },
   "Web/API/FileSystemFileEntry": {
     "modified": "2020-10-15T21:08:18.074Z",
     "contributors": [
@@ -43040,29 +42976,6 @@
     "modified": "2020-12-12T15:02:24.440Z",
     "contributors": [
       "Rumyra"
-    ]
-  },
-  "Web/API/File_Handle_API": {
-    "modified": "2019-03-23T23:36:13.396Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "duncancumming",
-      "chrisdavidmills",
-      "Sebastianz",
-      "mrbrc",
-      "tangxiaobaobao",
-      "mxtbcca",
-      "SpencerG",
-      "Nickolay",
-      "sizvix",
-      "kscarfone",
-      "Jeremie",
-      "dron",
-      "Sheppy",
-      "ethertank",
-      "zombie",
-      "dbruant"
     ]
   },
   "Web/API/File_System_Access_API": {
@@ -52250,6 +52163,124 @@
       "teoli"
     ]
   },
+  "Web/API/IDBFileHandle/abort": {
+    "modified": "2019-03-23T23:24:57.219Z",
+    "contributors": [
+      "fscholz",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/IDBFileHandle/active": {
+    "modified": "2019-03-23T23:24:54.005Z",
+    "contributors": [
+      "mfluehr",
+      "SphinxKnight",
+      "Abusado",
+      "Jeremie",
+      "fscholz",
+      "kscarfone"
+    ]
+  },
+  "Web/API/IDBFileHandle/append": {
+    "modified": "2019-03-23T23:24:49.325Z",
+    "contributors": [
+      "fscholz",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/IDBFileHandle/fileHandle": {
+    "modified": "2019-03-23T23:24:55.252Z",
+    "contributors": [
+      "Jeremie",
+      "fscholz",
+      "kscarfone"
+    ]
+  },
+  "Web/API/IDBFileHandle/flush": {
+    "modified": "2019-03-23T23:24:58.476Z",
+    "contributors": [
+      "fscholz",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/IDBFileHandle/getMetaData": {
+    "modified": "2019-03-23T23:24:54.436Z",
+    "contributors": [
+      "fscholz",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/IDBFileHandle/location": {
+    "modified": "2020-09-09T03:11:40.725Z",
+    "contributors": [
+      "SphinxKnight",
+      "sami6671",
+      "Jeremie",
+      "fscholz",
+      "kscarfone"
+    ]
+  },
+  "Web/API/IDBFileHandle/mode": {
+    "modified": "2019-03-23T23:24:52.481Z",
+    "contributors": [
+      "Jeremie",
+      "fscholz",
+      "kscarfone"
+    ]
+  },
+  "Web/API/IDBFileHandle/readAsArrayBuffer": {
+    "modified": "2019-03-23T23:24:55.375Z",
+    "contributors": [
+      "fscholz",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/IDBFileHandle/readAsText": {
+    "modified": "2019-03-23T23:24:59.611Z",
+    "contributors": [
+      "fscholz",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/IDBFileHandle/truncate": {
+    "modified": "2019-03-23T23:24:51.598Z",
+    "contributors": [
+      "fscholz",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/IDBFileHandle/write": {
+    "modified": "2019-03-23T23:24:52.606Z",
+    "contributors": [
+      "fscholz",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/IDBFileRequest": {
+    "modified": "2019-03-23T23:25:09.648Z",
+    "contributors": [
+      "tocretpa",
+      "Jeremie",
+      "fscholz",
+      "kscarfone"
+    ]
+  },
+  "Web/API/IDBFileRequest/lockedFile": {
+    "modified": "2019-03-23T23:25:04.735Z",
+    "contributors": [
+      "Jeremie",
+      "fscholz",
+      "kscarfone"
+    ]
+  },
   "Web/API/IDBIndex": {
     "modified": "2020-10-15T21:04:30.835Z",
     "contributors": [
@@ -52599,15 +52630,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/IDBMutableFile/getFile": {
-    "modified": "2019-03-23T23:24:50.801Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
   "Web/API/IDBMutableFile/name": {
     "modified": "2019-03-23T23:24:53.695Z",
     "contributors": [
@@ -52617,24 +52639,6 @@
       "Jeremie",
       "fscholz",
       "kscarfone"
-    ]
-  },
-  "Web/API/IDBMutableFile/onabort": {
-    "modified": "2019-03-23T23:24:56.600Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/IDBMutableFile/onerror": {
-    "modified": "2019-03-23T23:24:53.814Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
     ]
   },
   "Web/API/IDBMutableFile/open": {
@@ -54255,13 +54259,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/KeyboardEvent/code/code_values": {
-    "modified": "2019-11-18T13:07:24.231Z",
-    "contributors": [
-      "LeonFrempong",
-      "irenesmith"
-    ]
-  },
   "Web/API/KeyboardEvent/ctrlKey": {
     "modified": "2020-10-15T21:31:53.854Z",
     "contributors": [
@@ -54365,27 +54362,6 @@
       "jscape",
       "johndrinkwater",
       "ishita"
-    ]
-  },
-  "Web/API/KeyboardEvent/key/Key_Values": {
-    "modified": "2020-10-27T11:23:58.174Z",
-    "contributors": [
-      "ksam",
-      "Zearin_Galaurum",
-      "wbamberg",
-      "HiEv",
-      "mwallnoefer",
-      "SphinxKnight",
-      "Sheppy",
-      "tuespetre",
-      "nikparo",
-      "chrisdavidmills",
-      "CaptainJKoB",
-      "darkfrog26",
-      "Speich",
-      "cactus1",
-      "Nimelrian",
-      "stephaniehobson"
     ]
   },
   "Web/API/KeyboardEvent/keyCode": {
@@ -54638,34 +54614,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/LocalFileSystem": {
-    "modified": "2020-10-15T21:07:55.186Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "Dorumin",
-      "paul.irish",
-      "kscarfone",
-      "teoli",
-      "grendel"
-    ]
-  },
-  "Web/API/LocalFileSystemSync": {
-    "modified": "2020-10-15T21:07:55.901Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "teoli",
-      "Sheppy",
-      "grendel"
-    ]
-  },
-  "Web/API/LocalFileSystemSync/requestFileSystemSync": {
-    "modified": "2020-10-15T22:29:46.550Z",
-    "contributors": [
-      "bershanskiy"
-    ]
-  },
   "Web/API/Location": {
     "modified": "2020-11-13T08:30:24.008Z",
     "contributors": [
@@ -54884,140 +54832,6 @@
       "sideshowbarker",
       "Wuzzel",
       "jpmedley"
-    ]
-  },
-  "Web/API/LockedFile": {
-    "modified": "2019-03-23T23:25:11.984Z",
-    "contributors": [
-      "Jeremie",
-      "teoli",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
-  "Web/API/LockedFile/abort": {
-    "modified": "2019-03-23T23:24:57.219Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/active": {
-    "modified": "2019-03-23T23:24:54.005Z",
-    "contributors": [
-      "mfluehr",
-      "SphinxKnight",
-      "Abusado",
-      "Jeremie",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
-  "Web/API/LockedFile/append": {
-    "modified": "2019-03-23T23:24:49.325Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/fileHandle": {
-    "modified": "2019-03-23T23:24:55.252Z",
-    "contributors": [
-      "Jeremie",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
-  "Web/API/LockedFile/flush": {
-    "modified": "2019-03-23T23:24:58.476Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/getMetaData": {
-    "modified": "2019-03-23T23:24:54.436Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/location": {
-    "modified": "2020-09-09T03:11:40.725Z",
-    "contributors": [
-      "SphinxKnight",
-      "sami6671",
-      "Jeremie",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
-  "Web/API/LockedFile/mode": {
-    "modified": "2019-03-23T23:24:52.481Z",
-    "contributors": [
-      "Jeremie",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
-  "Web/API/LockedFile/onabort": {
-    "modified": "2019-03-23T23:24:55.803Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/oncomplete": {
-    "modified": "2019-03-23T23:24:55.132Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/onerror": {
-    "modified": "2019-03-23T23:24:51.468Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/readAsArrayBuffer": {
-    "modified": "2019-03-23T23:24:55.375Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/readAsText": {
-    "modified": "2019-03-23T23:24:59.611Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/truncate": {
-    "modified": "2019-03-23T23:24:51.598Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/LockedFile/write": {
-    "modified": "2019-03-23T23:24:52.606Z",
-    "contributors": [
-      "fscholz",
-      "kscarfone",
-      "Jeremie"
     ]
   },
   "Web/API/Long_Tasks_API": {
@@ -62968,12 +62782,6 @@
       "chrisdavidmills",
       "libbymc",
       "dgashmdn"
-    ]
-  },
-  "Web/API/PaymentValidationErrors": {
-    "modified": "2020-10-15T22:11:52.851Z",
-    "contributors": [
-      "Sheppy"
     ]
   },
   "Web/API/Payment_Request_API": {
@@ -74844,19 +74652,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Text/replaceWholeText": {
-    "modified": "2020-10-15T21:10:09.962Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jwhitlock",
-      "teoli",
-      "ziyunfei",
-      "jsx",
-      "Reachmeatshivam",
-      "Sheppy"
-    ]
-  },
   "Web/API/Text/splitText": {
     "modified": "2020-10-15T21:04:54.653Z",
     "contributors": [
@@ -76142,6 +75937,34 @@
       "Shaver",
       "JesseW",
       "cbiesinger"
+    ]
+  },
+  "Web/API/UI_Events/Keyboard_event_code_values": {
+    "modified": "2019-11-18T13:07:24.231Z",
+    "contributors": [
+      "LeonFrempong",
+      "irenesmith"
+    ]
+  },
+  "Web/API/UI_Events/Keyboard_event_key_values": {
+    "modified": "2020-10-27T11:23:58.174Z",
+    "contributors": [
+      "ksam",
+      "Zearin_Galaurum",
+      "wbamberg",
+      "HiEv",
+      "mwallnoefer",
+      "SphinxKnight",
+      "Sheppy",
+      "tuespetre",
+      "nikparo",
+      "chrisdavidmills",
+      "CaptainJKoB",
+      "darkfrog26",
+      "Speich",
+      "cactus1",
+      "Nimelrian",
+      "stephaniehobson"
     ]
   },
   "Web/API/URL": {
