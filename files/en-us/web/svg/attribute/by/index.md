@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/by
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.by
+browser-compat: svg.elements.animateTransform.by
 ---
 {{SVGRef}}
 
@@ -62,31 +62,7 @@ When a list of values is defined via the {{SVGAttr("values")}} attribute, the `b
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#ByAttribute", "by")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#ByAttribute", "by")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
