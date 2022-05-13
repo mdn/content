@@ -31,7 +31,7 @@ get(name)
 
 ### Return value
 
-The constructor for the named custom element, or {{jsxref("undefined")}} if there is no custom element were defined with the name.
+The constructor for the named custom element, or {{jsxref("undefined")}} if there is no custom element defined with the name.
 
 ## Examples
 
