@@ -87,7 +87,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ### XUL
 
-- The definition of the values for the {{XULAttr("chromemargin")}} attribute has changed slightly, to make it easier to make cross-platform XUL code look good on platforms with different default window border widths.
+- The definition of the values for the `chromemargin` attribute has changed slightly, to make it easier to make cross-platform XUL code look good on platforms with different default window border widths.
 
 ### XPCOM
 

@@ -104,8 +104,8 @@ These changes affect add-on developers as well as developers working on or with 
 
 ### XUL
 
-- {{ xulelem("tree") }} elements can now persist the state of disclosure triangles if the nodes referenced by {{ XULAttr("datasources") }} all have unique IDs specified by "id" attributes.
-- {{ xulelem("panel") }} elements can now be configured to [let the user drag them by clicking anywhere on their background](/en-US/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) by using the new {{ XULAttr("backdrag") }} attribute.
+- `<tree>` elements can now persist the state of disclosure triangles if the nodes referenced by `datasources` all have unique IDs specified by "id" attributes.
+- `<panel>` elements can now be configured to [let the user drag them by clicking anywhere on their background](/en-US/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) by using the new `backdrag` attribute.
 
 ### XPCOM
 

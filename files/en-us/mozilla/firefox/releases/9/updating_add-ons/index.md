@@ -60,6 +60,6 @@ These changes are notable in that they may affect binary XPCOM components. These
 
 ## Theme changes
 
-The {{ XULAttr("pending") }} attribute has been added to the {{ XULElem("tab") }} element. If this attribute is present, the tab is in the process of being restored by the session store service. You can use that to style the tab during the restore process. It's worth noting that if the user has turned on the "Don't load tabs until selected" preference, the {{ XULAttr("pending") }} attribute is set on tabs until they get loaded.
+The `pending` attribute has been added to the `<tab>` element. If this attribute is present, the tab is in the process of being restored by the session store service. You can use that to style the tab during the restore process. It's worth noting that if the user has turned on the "Don't load tabs until selected" preference, the `pending` attribute is set on tabs until they get loaded.
 
-Similarly, tabs also now have an {{ XULAttr("unread") }} attribute; this property, if present, indicates that the tab has changed since the last time it was the active tab. You can use this to style tabs differently when they have changed since the last time the user looked at them. This is also present on tabs that have not yet been looked at during the current session.
+Similarly, tabs also now have an `unread` attribute; this property, if present, indicates that the tab has changed since the last time it was the active tab. You can use this to style tabs differently when they have changed since the last time the user looked at them. This is also present on tabs that have not yet been looked at during the current session.
