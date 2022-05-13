@@ -25,7 +25,7 @@ notifications.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -18,7 +18,7 @@ display web notifications.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the current permission. The value can be:
+A string representing the current permission. The value can be:
 
 - `granted`: The user has explicitly granted permission for the current
   origin to display system notifications.

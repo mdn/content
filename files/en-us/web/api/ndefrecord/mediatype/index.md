@@ -20,7 +20,7 @@ NDEFRecord.mediaType
 
 ### Value
 
-A {{DOMxRef("USVString")}}, containing the {{Glossary("MIME type")}} of the record
+A string, containing the {{Glossary("MIME type")}} of the record
 payload.
 
 ## Examples
