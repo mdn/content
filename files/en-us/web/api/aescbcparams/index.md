@@ -7,7 +7,7 @@ tags:
   - Dictionary
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCbcParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCbcParams
 ---
 {{ APIRef("Web Crypto API") }}
 
