@@ -8,6 +8,7 @@ tags:
   - PointerEvent
   - events
   - touch
+spec-urls: https://w3c.github.io/pointerevents/
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
@@ -228,29 +229,7 @@ function log(msg) {
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Pointer Events 2','#pointerevent-interface', 'PointerEvent')}}
-      </td>
-      <td>{{Spec2('Pointer Events 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Pointer Events', '#pointerevent-interface', 'PointerEvent')}}
-      </td>
-      <td>{{Spec2('Pointer Events')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

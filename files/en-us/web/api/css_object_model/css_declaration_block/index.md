@@ -7,6 +7,7 @@ tags:
   - CSS Declaration Block
   - CSS Declarations
   - Reference
+spec-urls: https://drafts.csswg.org/cssom/#css-declaration-blocks
 ---
 {{ APIRef("CSSOM") }}
 
@@ -50,6 +51,4 @@ console.log(rule.style); // a CSSStyleDeclaration object
 
 ## Specifications
 
-| Specification                                                                                        | Status                   | Comment |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('CSSOM', '#css-declaration-blocks', 'CSS Declaration Blocks')}} | {{Spec2('CSSOM')}} |         |
+{{Specifications}}

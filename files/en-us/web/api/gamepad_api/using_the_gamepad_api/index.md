@@ -7,6 +7,7 @@ tags:
   - Gamepad API
   - Games
   - Guide
+browser-compat: api.Gamepad
 ---
 {{DefaultAPISidebar("Gamepad API")}}
 
@@ -330,10 +331,8 @@ if (!haveEvents) {
 
 ## Specifications
 
-| Specification                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}} | {{Spec2("Gamepad")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Gamepad")}}
+{{Compat}}

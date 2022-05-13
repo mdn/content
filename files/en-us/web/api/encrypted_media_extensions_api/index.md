@@ -10,6 +10,7 @@ tags:
   - NeedsContent
   - Overview
   - Reference
+spec-urls: https://w3c.github.io/encrypted-media/
 ---
 {{DefaultAPISidebar("Encrypted Media Extensions")}}
 
@@ -30,9 +31,7 @@ The Encrypted Media Extensions API provides interfaces for controlling the playb
 
 ## Specifications
 
-| Specification            | Status               | Comment            |
-| ------------------------ | -------------------- | ------------------ |
-| {{SpecName('EME')}} | {{Spec2('EME')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
