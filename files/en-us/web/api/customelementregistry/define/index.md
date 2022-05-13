@@ -26,6 +26,7 @@ There are two types of custom elements you can create:
 ## Syntax
 
 ```js
+define(name, constructor)
 define(name, constructor, options)
 ```
 
@@ -46,7 +47,7 @@ define(name, constructor, options)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
