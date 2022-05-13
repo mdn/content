@@ -7,6 +7,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.11
 ---
 {{HTTPSidebar}}
 
@@ -20,9 +21,7 @@ The HTTP **`413 Payload Too Large`** response status code indicates that the req
 
 ## Specifications
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

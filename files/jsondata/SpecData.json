@@ -1394,6 +1394,61 @@
     "url": "https://w3c.github.io/resource-timing/",
     "status": "ED"
   },
+  "RFC 2295": {
+    "name": "Transparent Content Negotiation in HTTP",
+    "url": "https://www.rfc-editor.org/rfc/rfc2295",
+    "status": "RFC"
+  },
+  "RFC 2324": {
+    "name": "Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)",
+    "url": "https://www.rfc-editor.org/rfc/rfc2324",
+    "status": "RFC"
+  },
+  "RFC 2774": {
+    "name": "An HTTP Extension Framework",
+    "url": "https://www.rfc-editor.org/rfc/rfc2774",
+    "status": "RFC"
+  },
+  "RFC 2965": {
+    "name": "HTTP State Management Mechanism",
+    "url": "https://www.rfc-editor.org/rfc/rfc2965",
+    "status": "RFC"
+  },
+  "RFC 4918": {
+    "name": "HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)",
+    "url": "https://www.rfc-editor.org/rfc/rfc4918",
+    "status": "RFC"
+  },
+  "RFC 5789": {
+    "name": "PATCH Method for HTTP",
+    "url": "https://www.rfc-editor.org/rfc/rfc5789",
+    "status": "RFC"
+  },
+  "RFC 5842": {
+    "name": "Binding Extensions to Web Distributed Authoring and Versioning (WebDAV)",
+    "url": "https://www.rfc-editor.org/rfc/rfc5842",
+    "status": "RFC"
+  },
+  "RFC 6585": {
+    "name": "Additional HTTP Status Codes",
+    "url": "https://www.rfc-editor.org/rfc/rfc6585",
+    "status": "RFC"
+  },
+  "RFC 7168": {
+    "name": "The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA)",
+    "url": "https://www.rfc-editor.org/rfc/rfc7168",
+    "status": "RFC"
+  },
+  "RFC 8288": {
+    "name": "Web Linking",
+    "url": "https://www.rfc-editor.org/rfc/rfc8288",
+    "status": "RFC"
+  },
+  "RFC 8297": {
+    "name": "An HTTP Status Code for Indicating Hints",
+    "url": "https://www.rfc-editor.org/rfc/rfc8297",
+    "status": "RFC"
+  },
   "Screen Capture": {
     "name": "Screen Capture",
     "url": "https://w3c.github.io/mediacapture-screen-share/",

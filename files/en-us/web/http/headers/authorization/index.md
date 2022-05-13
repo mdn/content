@@ -135,11 +135,7 @@ See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples
 
 ## Specifications
 
-| Specification                                        | Title                                  |
-| ---------------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                 | The 'Basic' HTTP Authentication Scheme |
-| {{RFC("7616")}}                                 | HTTP Digest Access Authentication |
+{{Specifications}}
 
 <!-- {{Specifications}} -->
 

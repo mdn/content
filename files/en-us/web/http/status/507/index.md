@@ -5,6 +5,7 @@ tags:
   - HTTP
   - Server error
   - Status code
+spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.5
 ---
 {{HTTPSidebar}}
 
@@ -20,6 +21,4 @@ It indicates that a method could not be performed because the server cannot stor
 
 ## Specifications
 
-| Specification                                                        | Title                                    |
-| -------------------------------------------------------------------- | ---------------------------------------- |
-| {{RFC("4918", "507 Insufficient Storage" , "11.5")}} | Web Distributed Authoring and Versioning |
+{{Specifications}}
