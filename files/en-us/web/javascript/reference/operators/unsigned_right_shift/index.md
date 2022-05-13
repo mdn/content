@@ -13,10 +13,7 @@ browser-compat: javascript.operators.unsigned_right_shift
 
 The **unsigned right shift operator (`>>>`)**
 (zero-fill right shift) shifts the first operand the specified number of bits to the
-right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from
-the left. The sign bit becomes `0`, so the result is always non-negative.
-Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit
-integer.
+right.
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
 
