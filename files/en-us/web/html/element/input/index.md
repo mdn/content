@@ -1340,7 +1340,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
             {{ARIARole("spinbutton")}}
           </li>
           <li>
-            <code>type=color|date|datetime|datetime-local|email|file|hidden|</code>
+            <code>type=color|date|datetime-local|email|file|hidden|</code>
               <code>month|number|password|range|reset|search|submit|tel|url|week</code>
             or <code>text</code> with <code>list</code> attribute: no
             <code>role</code> permitted

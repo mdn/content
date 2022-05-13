@@ -11588,8 +11588,9 @@
 /en-US/docs/Web/HTML/Element/<rb>:_The_Ruby_Base_element	/en-US/docs/Web/HTML/Element/rb
 /en-US/docs/Web/HTML/Element/Input/<input_type=_checkbox_>	/en-US/docs/Web/HTML/Element/Input/checkbox
 /en-US/docs/Web/HTML/Element/Input/<input_type=_color_>	/en-US/docs/Web/HTML/Element/Input/color
-/en-US/docs/Web/HTML/Element/Input/<input_type=_datetime_>	/en-US/docs/Web/HTML/Element/Input/datetime
+/en-US/docs/Web/HTML/Element/Input/<input_type=_datetime_>	/en-US/docs/Web/HTML/Element/input/datetime-local
 /en-US/docs/Web/HTML/Element/Input/<input_type=_image_>	/en-US/docs/Web/HTML/Element/Input/image
+/en-US/docs/Web/HTML/Element/Input/datetime	/en-US/docs/Web/HTML/Element/input/datetime-local
 /en-US/docs/Web/HTML/Element/The_<noembed>_element	/en-US/docs/Web/HTML/Element/noembed
 /en-US/docs/Web/HTML/Element/Video/emptied_event	/en-US/docs/Web/API/HTMLMediaElement/emptied_event
 /en-US/docs/Web/HTML/Element/Video/ended_event	/en-US/docs/Web/API/HTMLMediaElement/ended_event
