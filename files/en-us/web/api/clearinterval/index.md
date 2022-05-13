@@ -55,9 +55,7 @@ examples](/en-US/docs/Web/API/setInterval#Examples).
 
 ## See also
 
-- [JavaScript timers](/en-US/docs/JavaScript/Timers)
 - {{domxref("setTimeout")}}
 - {{domxref("setInterval")}}
 - {{domxref("clearTimeout")}}
 - {{domxref("Window.requestAnimationFrame")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)
