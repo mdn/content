@@ -30,7 +30,7 @@ _Inherits properties from its ancestor, {{domxref("Credential")}}._
 - {{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}{{securecontext_inline}}
   - : A string containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
 - {{domxref("PasswordCredential.name")}} {{readonlyinline}}{{securecontext_inline}}
-  - : A string containing a human-readable public name for display in a credential chooser.
+  - : A human-readable string that provides public name for display in a credential chooser.
 - {{domxref("PasswordCredential.password")}}{{readonlyinline}}{{securecontext_inline}}
   - : A string containing the password of the credential.
 

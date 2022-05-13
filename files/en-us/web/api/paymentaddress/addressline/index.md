@@ -18,7 +18,7 @@ browser-compat: api.PaymentAddress.addressLine
 
 The **`addressLine`** read-only
 property of the {{domxref('PaymentAddress')}} interface is an array of
-string objects, each specifying a line of the address that is not
+strings, each specifying a line of the address that is not
 covered by one of the other properties of `PaymentAddress`.
 
 These
@@ -27,7 +27,7 @@ descriptive instructions, or post office box.
 
 ## Value
 
-An array of string objects, each containing one line of the address.
+An array of strings, each containing one line of the address.
 For example, the `addressLine` array for the Mozilla Space in London would
 have the following entries:
 
