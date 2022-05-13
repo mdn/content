@@ -9022,15 +9022,6 @@
       "icyfenix"
     ]
   },
-  "Learn/Forms/Your_first_form/Example": {
-    "modified": "2020-07-16T22:21:08.101Z",
-    "contributors": [
-      "chrisdavidmills",
-      "abt8601",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
   "Learn/Front-end_web_developer": {
     "modified": "2020-11-18T06:45:07.853Z",
     "contributors": [
@@ -13448,13 +13439,6 @@
       "jswisher",
       "markg",
       "hbloomer",
-      "Jeremie"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example": {
-    "modified": "2019-01-16T20:06:55.332Z",
-    "contributors": [
-      "wbamberg",
       "Jeremie"
     ]
   },

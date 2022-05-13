@@ -3891,7 +3891,7 @@
 /en-US/docs/HTML/Forms/How_to_structure_an_HTML_form	/en-US/docs/Learn/Forms/How_to_structure_a_web_form
 /en-US/docs/HTML/Forms/How_to_structure_an_HTML_form/Example	/en-US/docs/Learn/Forms/How_to_structure_a_web_form/Example
 /en-US/docs/HTML/Forms/My_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
-/en-US/docs/HTML/Forms/My_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form/Example
+/en-US/docs/HTML/Forms/My_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/HTML/Forms/Sending_and_retrieving_form_data	/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data
 /en-US/docs/HTML/Forms/Sending_forms_through_JavaScript	/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript
 /en-US/docs/HTML/Forms/Styling_HTML_forms	/en-US/docs/Learn/Forms/Styling_web_forms
@@ -5241,7 +5241,8 @@
 /en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /en-US/docs/Learn/Forms/Styling_HTML_forms	/en-US/docs/Learn/Forms/Styling_web_forms
 /en-US/docs/Learn/Forms/Your_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
-/en-US/docs/Learn/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form/Example
+/en-US/docs/Learn/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
+/en-US/docs/Learn/Forms/Your_first_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Getting_started_with_the_web/How_to_set_up_your_work_environment	/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_web_site	/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like	/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like
@@ -5265,7 +5266,7 @@
 /en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form	/en-US/docs/Learn/Forms/How_to_structure_a_web_form
 /en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form/Example	/en-US/docs/Learn/Forms/How_to_structure_a_web_form/Example
 /en-US/docs/Learn/HTML/Forms/My_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
-/en-US/docs/Learn/HTML/Forms/My_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form/Example
+/en-US/docs/Learn/HTML/Forms/My_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/HTML/Forms/Other_form_controls	/en-US/docs/Learn/Forms/Other_form_controls
 /en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data	/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data
@@ -5274,7 +5275,7 @@
 /en-US/docs/Learn/HTML/Forms/The_native_form_widgets	/en-US/docs/Learn/Forms/Basic_native_form_controls
 /en-US/docs/Learn/HTML/Forms/UI_pseudo-classes	/en-US/docs/Learn/Forms/UI_pseudo-classes
 /en-US/docs/Learn/HTML/Forms/Your_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
-/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form/Example
+/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/HTML/HTML_tags	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/Learn/HTML/Howto/Add_Flash_content_within_a_webpage	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_<embed>_and_<object>_elements
 /en-US/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
@@ -5438,6 +5439,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Contribute/Howto/Document_a_CSS_property
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Structures/Compatibility_tables
+/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/en-US/docs/mdn/contribute/howto/create_an_interactive_exercise_to_help_learning_the_web
 /en-US/docs/MDN/Contribute/Howto/How_to_document_a_CSS_property	/en-US/docs/MDN/Contribute/Howto/Document_a_CSS_property
 /en-US/docs/MDN/Contribute/Howto/Notices	/en-US/docs/MDN/Structures/Banners_and_notices
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version
@@ -11542,7 +11544,7 @@
 /en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/en-US/docs/Learn/Forms/How_to_structure_a_web_form
 /en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form/Example	/en-US/docs/Learn/Forms/How_to_structure_a_web_form/Example
 /en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
-/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form/Example
+/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data
 /en-US/docs/Web/Guide/HTML/Forms/Sending_forms_through_JavaScript	/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript
 /en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms	/en-US/docs/Learn/Forms/Styling_web_forms
