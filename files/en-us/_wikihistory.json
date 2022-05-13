@@ -113956,20 +113956,6 @@
       "hbloomer"
     ]
   },
-  "Web/HTML/Element/input/datetime": {
-    "modified": "2019-09-09T05:22:18.276Z",
-    "contributors": [
-      "inad9300",
-      "Sheppy",
-      "chrisdavidmills",
-      "Sebastianz",
-      "mrenty",
-      "teoli",
-      "Jeremie",
-      "kscarfone",
-      "sidgan"
-    ]
-  },
   "Web/HTML/Element/input/datetime-local": {
     "modified": "2020-10-15T21:53:48.461Z",
     "contributors": [
