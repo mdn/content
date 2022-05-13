@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 101 that will aff
 
 
 - [`RTCRtpEncodingParameters.maxFramerate`](/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) is now supported for setting the maximum framerate that can be used to send an encoding (in {{domxref("RTCPeerConnection.addTransceiver()")}} and {{domxref("RTCRtpSender.setParameters()")}}).
-  Note that zero if a valid value, but is interpreted by Firefox as "no frame rate limit".
+  Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information see {{bug(1611957)}}.
   
 
