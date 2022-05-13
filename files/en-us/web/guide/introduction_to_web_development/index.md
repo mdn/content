@@ -62,13 +62,11 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
   - : A reliable reference site for learning HTML, CSS and JavaScript which also mentions feature support across different browsers and known browser bugs.
 - [HTMLDog](https://htmldog.com/)
   - : An excellent and comprehensive reference site on HTML and CSS for beginners.
-- [Google's HTML, CSS, and Javascript from the Ground Up](https://code.google.com/edu/submissions/html-css-javascript/)
-  - : These easily digestible video tutorials from Google's expert web developers cover the basics of HTML, CSS and JavaScript.
 - [CSSTutorial.net Beginner Tutorials](https://www.csstutorial.net/)
   - : A broad range of useful text and video tutorials that cover the basics through to intermediate aspects of CSS.
 - [Tizag CSS Tutorials](http://www.tizag.com/cssT/)
   - : An easy-to-follow reference for those wishing to learn CSS through short, concise tutorials.
 - [jQuery Fundamentals](http://jqfundamentals.com/)
   - : An open-source reference book featuring detailed introductions to both JavaScript and JQuery for beginners.
-- [JavaScript From Null: A Video Series](https://net.tutsplus.com/tutorials/javascript-ajax/javascript-from-null-video-series/)
+- [JavaScript From Null: A Video Series](https://code.tutsplus.com/tutorials/javascript-from-null-video-series--net-8066)
   - : A video series on JavaScript for absolute beginners looking for more 'visual'-based learning
