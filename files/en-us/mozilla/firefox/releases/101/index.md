@@ -48,6 +48,11 @@ This article provides information about the changes in Firefox 101 that will aff
 - [`DOMException`](/en-US/docs/Web/API/DOMException) is now a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}} ({{bug(1561357)}}).
 
 
+- [`RTCRtpEncodingParameters.maxFramerate`](/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) is now supported for setting the maximum framerate that can be used to send an encoding (in {{domxref("RTCPeerConnection.addTransceiver()")}} and {{domxref("RTCRtpSender.setParameters()")}}).
+  Note that zero if a valid value, but is interpreted by Firefox as "no frame rate limit".
+  For more information see {{bug(1611957)}}.
+  
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
