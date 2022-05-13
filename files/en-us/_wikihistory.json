@@ -57871,6 +57871,45 @@
       "JesseW"
     ]
   },
+  "Web/API/MouseEvent/layerX": {
+    "modified": "2020-10-15T21:11:16.143Z",
+    "contributors": [
+      "nakhodkiin",
+      "mfluehr",
+      "fscholz",
+      "cvrebert",
+      "teoli",
+      "jsx",
+      "kscarfone",
+      "Shraddha_Magdum",
+      "Sheppy",
+      "trevorh",
+      "Matej Lednar",
+      "Federico",
+      "Jabez",
+      "Ptak82",
+      "Dria",
+      "JesseW"
+    ]
+  },
+  "Web/API/MouseEvent/layerY": {
+    "modified": "2020-10-15T21:14:32.868Z",
+    "contributors": [
+      "mfluehr",
+      "fscholz",
+      "cvrebert",
+      "teoli",
+      "kosvrouvas",
+      "kscarfone",
+      "Shraddha_Magdum",
+      "Sheppy",
+      "Matej Lednar",
+      "Jabez",
+      "Ptak82",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/MouseEvent/metaKey": {
     "modified": "2020-10-15T21:25:13.971Z",
     "contributors": [
@@ -75866,45 +75905,6 @@
       "Dbloom",
       "Ptak82",
       "Maian",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/UIEvent/layerX": {
-    "modified": "2020-10-15T21:11:16.143Z",
-    "contributors": [
-      "nakhodkiin",
-      "mfluehr",
-      "fscholz",
-      "cvrebert",
-      "teoli",
-      "jsx",
-      "kscarfone",
-      "Shraddha_Magdum",
-      "Sheppy",
-      "trevorh",
-      "Matej Lednar",
-      "Federico",
-      "Jabez",
-      "Ptak82",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/UIEvent/layerY": {
-    "modified": "2020-10-15T21:14:32.868Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "cvrebert",
-      "teoli",
-      "kosvrouvas",
-      "kscarfone",
-      "Shraddha_Magdum",
-      "Sheppy",
-      "Matej Lednar",
-      "Jabez",
-      "Ptak82",
       "Dria",
       "JesseW"
     ]

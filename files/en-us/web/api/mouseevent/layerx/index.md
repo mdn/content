@@ -1,18 +1,18 @@
 ---
-title: UIEvent.layerX
-slug: Web/API/UIEvent/layerX
+title: MouseEvent.layerX
+slug: Web/API/MouseEvent/layerX
 tags:
   - API
   - DOM
   - Property
   - Read-only
   - Reference
-  - UIEvent
-browser-compat: api.UIEvent.layerX
+  - MouseEvent
+browser-compat: api.MouseEvent.layerX
 ---
 {{APIRef("UI Events")}} {{Non-standard_header}}
 
-The **`UIEvent.layerX`** read-only property returns the
+The **`MouseEvent.layerX`** read-only property returns the
 horizontal coordinate of the event relative to the current layer.
 
 This property takes scrolling of the page into account and returns a value relative to
