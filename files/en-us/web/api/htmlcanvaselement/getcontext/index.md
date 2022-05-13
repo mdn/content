@@ -77,16 +77,11 @@ getContext(contextType, contextAttributes)
     - **`desynchronized`**: Boolean that hints the user agent
       to reduce the latency by desynchronizing the canvas paint cycle from the event
       loop
-    - {{non-standard_inline}} (Gecko only)
-      **`willReadFrequently`**: Boolean that indicates whether
+    - **`willReadFrequently`**: Boolean that indicates whether
       or not a lot of read-back operations are planned. This will force the use of a
       software (instead of hardware accelerated) 2D canvas and can save memory when
       calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}
-      frequently. This option is only available, if the flag
-      `gfx.canvas.willReadFrequently.enable` is set to `true`
-      (which, by default, is only the case for B2G/Firefox OS).
-    - {{non-standard_inline}} (Blink only) **`storage`**:
-      String that indicates which storage is used ("persistent" by default).
+      frequently.
 
     WebGL context attributes:
 
