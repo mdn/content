@@ -112,7 +112,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ### Result
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}
+{{ EmbedLiveSample('Example', '', '300px') }}
 
 ## See also
 
