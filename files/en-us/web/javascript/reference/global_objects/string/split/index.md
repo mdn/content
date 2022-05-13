@@ -235,8 +235,7 @@ This script displays the following:
 > // => "anãnam anañam" // notice how the first word has an ã rather ñ
 > ```
 >
-> **Bonus:** use {{jsxref("Operators", "===",
-    "#Identity_strict_equality_(===)")}} operator to test if the original string was a
+> **Bonus:** use {{JSxRef("Operators/Strict_equality", "===")}} operator to test if the original string was a
 > palindrome.
 
 ## Specifications
