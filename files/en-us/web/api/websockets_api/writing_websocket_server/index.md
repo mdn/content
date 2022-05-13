@@ -285,13 +285,14 @@ class Server {
                 ulong msglen = bytes[1] & 0b01111111;
 
                 if (msglen == 126) {
-                    // bytes are reversed because websocket will print them in Big-Endian, whereas BitConverter will want them arranged in little-endian on windows
+                    // bytes are reversed because websocket will print them in Big-Endian, whereas
+                    // BitConverter will want them arranged in little-endian on windows
                     msglen = BitConverter.ToUInt16(new byte[] { bytes[3], bytes[2] }, 0);
                     offset = 4;
                 } else if (msglen == 127) {
-                    // To test the below code, we need to manually buffer larger messages since the NIC's autobuffering 
-                    // may be too latency friendly for this code to run (ie, we may have only some of the bytes in this websocket
-                    // frame available through client.Available).  
+                    // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering 
+                    // may be too latency-friendly for this code to run (that is, we may have only some of the bytes in this
+                    // websocket frame available through client.Available).  
                     msglen = BitConverter.ToUInt64(new byte[] { data[9], data[8], data[7], data[6], data[5], data[4], data[3], data[2] });
                     offset = 10;
                 }
