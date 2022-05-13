@@ -1,7 +1,7 @@
 ---
 title: 'aria-invalid'
 slug: Web/Accessibility/ARIA/Attributes/aria-invalid
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -34,7 +34,7 @@ If there is a {{htmlattrxref("required")}} attribute on a form control that isn'
 <input type="number" step="2" min="0" max="100" required>
 ```
 
-If the user had entered a value in the preceding input example above the maximum, below the minimum, or that doesn't match the step value, an error message would appear. If the user had entered "3", the native error message would be similar to "Please enter a valid value."  
+If the user had entered a value in the preceding input example above the maximum, below the minimum, or that doesn't match the step value, an error message would appear. If the user had entered "3", the native error message would be similar to "Please enter a valid value."
 
 If you are creating your own form validation scripts, make sure to include `aria-invalid` on invalid form controls, along with styling (use the `[aria-invalid="true"]` attribute selector) and messaging (with [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)) to help users understand where the mistake is and how they can fix it.
 
@@ -59,13 +59,13 @@ The following snippet shows a simplified version of two form fields with a valid
 <ul>
   <li>
     <label for="name">Full Name</label>
-   <input type="text" name="name" id="name" 
+   <input type="text" name="name" id="name"
       aria-required="true" aria-invalid="false"
       onblur="checkValidity('name', ' ', 'Invalid name entered (requires both first and last name)');"/>
  </li>
  <li>
    <label for="email">Email Address</label>
-   <input type="email" name="email" id="email" 
+   <input type="email" name="email" id="email"
       aria-required="true" aria-invalid="false"
       onblur="checkValidity('email', '@', 'Invalid e-mail address');"/>
   </li>

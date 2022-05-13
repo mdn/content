@@ -19,6 +19,10 @@ The **`toString()`** method of the {{domxref("TrustedHTML")}} interface returns 
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMString","string")}} containing the sanitized HTML.

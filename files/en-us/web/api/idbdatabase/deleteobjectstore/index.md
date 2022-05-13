@@ -35,6 +35,10 @@ deleteObjectStore(name)
   - : The name of the object store you want to delete. Names are
         case sensitive.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}

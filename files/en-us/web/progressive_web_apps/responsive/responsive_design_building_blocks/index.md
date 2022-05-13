@@ -179,7 +179,7 @@ We then have a narrow screen layout, designed to fit the bill for a mobile app/o
   }
 ```
 
-This first block resets a number of different things from the widescreen layouts that were't required for the mobile app.
+This first block resets a number of different things from the widescreen layouts that weren't required for the mobile app.
 
 ```css
   x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
@@ -419,14 +419,12 @@ This allows your site to serve different video files based on the available spac
 
 ### \<img>
 
-HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C [responsive images community group](https://www.w3.org/community/respimg/) discussed this problem for ages and arrived at the [\<picture>](https://www.w3.org/TR/html-picture-element/) element, which provides a similar markup structure to {{HTMLElement("video")}}[,](/en-US/docs/Web/HTML/Element/video) with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, [srcset](https://www.w3.org/html/wg/drafts/srcset/w3c-srcset/), was put forward by Apple and takes a slightly different approach, instead providing a new `srcset` attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.
+HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C [responsive images community group](https://www.w3.org/community/respimg/) discussed this problem for ages and arrived at the [\<picture>](https://www.w3.org/TR/html-picture-element/) element, which provides a similar markup structure to {{HTMLElement("video")}}[,](/en-US/docs/Web/HTML/Element/video) with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, [srcset](https://html.spec.whatwg.org/srcset/w3c-srcset/), was put forward by Apple and takes a slightly different approach, instead providing a new `srcset` attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.
 
 This all sounds good. But those solutions are definitely not ready for production yet — both are in a very early stage of standardization, and have no support across browsers. Currently we have to rely on various polyfills and other solutions, none of which are perfect for all situations, so you need to decide which one is right for your particular situation. Some available solutions are as follows:
 
 - [HiSRC](https://github.com/teleject/hisrc)
   - : A [jQuery](https://jquery.com/) plugin that allows you to create small, medium, and large versions of an image, and then serves the appropriate one according to the browser's resolution and available network speed.
-- [Mobify.js capturing](https://www.salesforce.com/products/commerce-cloud/headless-commerce/?sfdc-redirect=340)
-  - : A very clever technique from Mozilla that allows you to capture the source of the page before it's parsed. This way, you can swap out image `src` values with JavaScript depending on browser features, circumventing browser preloading issues. This is promising, but doesn't work very well across older browsers.
 - [Picturefill](https://github.com/scottjehl/picturefill)
   - : A JavaScript-based polyfill for `<picture>`, which works nicely, but it does require a lot of custom markup.
 - [Adaptive images](http://adaptive-images.com/)

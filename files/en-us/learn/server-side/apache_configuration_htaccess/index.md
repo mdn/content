@@ -56,7 +56,7 @@ The possible values for the first parameter are listed below. If the first param
 
 ## Cross-origin resources
 
-The first set of directives control [CORS](https://www.w3.org/TR/cors/) (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.
+The first set of directives control [CORS](https://fetch.spec.whatwg.org/) (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. A web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the appropriate CORS headers.
 
@@ -294,7 +294,7 @@ The required steps are:
 
 ### Forcing https
 
-These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://wiki.apache.org/httpd/RewriteHTTPToHTTPS).
+These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS).
 
 ```bash
 <IfModule mod_rewrite.c>
@@ -511,7 +511,7 @@ Use services like the ones below to check your Referrer Policy:
 
 ## Disable TRACE HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://www.owasp.org/index.php/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](<https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)>)
+The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](<https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)>)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 

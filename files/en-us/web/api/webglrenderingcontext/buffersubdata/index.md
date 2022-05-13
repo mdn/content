@@ -68,7 +68,7 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

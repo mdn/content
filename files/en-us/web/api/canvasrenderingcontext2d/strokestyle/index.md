@@ -24,7 +24,7 @@ Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
 One of the followings:
 
 - `color`
-  - : A {{domxref("DOMString")}} parsed as [CSS](/en-US/docs/Web/CSS)
+  - : A string parsed as [CSS](/en-US/docs/Web/CSS)
     {{cssxref("&lt;color&gt;")}} value.
 - `gradient`
   - : A {{domxref("CanvasGradient")}} object (a linear or radial gradient).

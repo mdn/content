@@ -17,7 +17,7 @@ The **`ariaValueMax`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}} which contains a number.
+A string which contains a number.
 
 ## Examples
 

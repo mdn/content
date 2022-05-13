@@ -30,6 +30,10 @@ clearImmediate(immediateID)
 
   - : The ID returned by {{DOMxRef("window.setImmediate")}}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

@@ -21,6 +21,14 @@ method disposes of all graphical resources associated with an `ImageBitmap`.
 close()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

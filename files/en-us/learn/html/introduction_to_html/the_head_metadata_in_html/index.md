@@ -77,7 +77,7 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 1. To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html). To do this, either
 
     1. Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
-    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *File > Save Page As...* menu and choose a sensible place to save the file.
+    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *Save Page As...* menu and choose a sensible place to save the file.
 
 2. Now open the file in your browser. You should see something like this:
 
@@ -180,7 +180,7 @@ One effect of this is that when you link to MDN Web Docs on facebook, the link a
 
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)
 
-Twitter also has its own similar proprietary metadata called [Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards), which has a similar effect when the site's URL is displayed on twitter.com. For example:
+Twitter also has its own similar proprietary metadata called [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards), which has a similar effect when the site's URL is displayed on twitter.com. For example:
 
 ```html
 <meta name="twitter:title" content="Mozilla Developer Network">

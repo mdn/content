@@ -54,7 +54,7 @@ Highlights:
 
 ### Interfaces/APIs/DOM
 
-- {{domxref("WorkerNavigator.language", "navigator.language")}} and  {{domxref("WorkerNavigator.languages", "navigator.languages")}} are now available to workers on {{domxref("WorkerNavigator")}} ({{bug(925849)}}).
+- {{domxref("WorkerNavigator.language", "navigator.language")}} and {{domxref("WorkerNavigator.languages", "navigator.languages")}} are now available to workers on {{domxref("WorkerNavigator")}} ({{bug(925849)}}).
 - The {{domxref("Element.closest()")}} method returns the closest ancestor of the current element ({{bug(1055533)}}).
 - Experimental support for the {{domxref("CanvasRenderingContext2D.filter")}} property has been added behind the `canvas.filters.enabled` flag ({{bug(927892)}}).
 - Our experimental implementation of Web Animations progresses with the landing of the `Animation.target` property. This always is behind the `dom.animations-api.core.enabled` pref, off by default ({{bug(1067701)}}).

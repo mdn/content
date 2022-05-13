@@ -24,6 +24,10 @@ createComment(data)
 - _data_
   - : A string containing the data to be added to the Comment.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

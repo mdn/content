@@ -18,7 +18,7 @@ the {{domxref("ShadowRoot")}} returns a reference to the DOM element the
 
 ## Value
 
-A  DOM {{domxref('Element')}}.
+A DOM {{domxref('Element')}}.
 
 ## Examples
 

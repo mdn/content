@@ -19,9 +19,7 @@ The response is *always* decoded using UTF-8.
 ## Syntax
 
 ```js
-request.text().then(function (text) {
-  // do something with the text sent in the request
-});
+text()
 ```
 
 ### Parameters

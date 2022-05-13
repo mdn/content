@@ -33,6 +33,10 @@ enableStyleSheetsForSet(name)
     preferred style sheets (but not the persistent style sheets; that is, those with no
     `title` attribute).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Notes
 
 - Title matches are case-sensitive.

@@ -36,7 +36,7 @@ These resources are created by forward-thinking companies and web developers who
 
 <!---->
 
-- [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners)
+- [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners/)
   - : An HTML guide for beginners that includes explanations of common tags, including HTML5 tags. Also includes a step-by-step guide to creating a basic web page with code examples.
 - [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)
   - : Use these challenges to hone your HTML skills (for example, "Should I use an \<h2> element or a \<strong> element?"), focusing on meaningful markup.
@@ -92,7 +92,7 @@ These resources are created by forward-thinking companies and web developers who
 
 <!---->
 
-- [Fluid Grids](https://www.alistapart.com/articles/fluidgrids/)
+- [Fluid Grids](https://alistapart.com/article/fluidgrids/)
   - : Design layouts that fluidly resize with the browser window, while still using a typographic grid.
 - [CSS Challenges](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges)
   - : Flex your CSS skills, and see where you need more practice.
@@ -133,8 +133,8 @@ These resources are created by forward-thinking companies and web developers who
   - : What is JavaScript and how can it help you?
 - [Codecademy](https://www.codecademy.com/)
   - : Codecademy is an easy way to learn how to code JavaScript. It's interactive and you can do it with your friends.
-- [freeCodeCamp](https://freecodecamp.org/learn/)
-  - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://freecodecamp.org/forum), an [internet radio station](https://coderadio.freecodecamp.org), and a [blog](https://freecodecamp.org/news).
+- [freeCodeCamp](https://www.freecodecamp.org/learn)
+  - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://forum.freecodecamp.org/), an [internet radio station](https://coderadio.freecodecamp.org), and a [blog](https://www.freecodecamp.org/news).
 
 ### Intermediate level
 
@@ -151,7 +151,7 @@ These resources are created by forward-thinking companies and web developers who
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.
 - [Speaking JavaScript](http://speakingjs.com/es5/)
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
-- [Essential JavaScript Design Patterns](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/)
+- [Essential JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : An introduction to essential JavaScript design patterns.
 - [JavaScript.info - The Modern JavaScript Tutorial](https://javascript.info/)
   - : Part 1: The Language. Part 2: Working with Browsers.

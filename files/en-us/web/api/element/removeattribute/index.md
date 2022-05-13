@@ -32,7 +32,7 @@ removeAttribute(attrName)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 

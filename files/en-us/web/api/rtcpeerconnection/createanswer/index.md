@@ -27,9 +27,11 @@ the negotiation process.
 ## Syntax
 
 ```js
-aPromise = RTCPeerConnection.createAnswer([options]);
+createAnswer()
+createAnswer(options)
 
-RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]); {{deprecated_inline}}
+createAnswer(successCallback, failureCallback)
+createAnswer(successCallback, failureCallback, options)
 ```
 
 ### Parameters
@@ -69,7 +71,7 @@ A {{jsxref("Promise")}} whose fulfillment handler is called with an object confo
 to the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP answer
 to be delivered to the other peer.
 
-## Example
+## Examples
 
 Here is a segment of code taken from the code that goes with the article [Signaling and video
 calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling). This code comes from the handler for the message sent to carry an offer

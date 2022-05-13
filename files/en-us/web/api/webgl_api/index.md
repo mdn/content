@@ -155,7 +155,7 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 
 - [three.js](https://threejs.org/) is an open-source, fully featured 3D WebGL library.
 - [Babylon.js](https://www.babylonjs.com) is a powerful, simple, and open game and 3D rendering engine packed into a friendly JavaScript framework.
-- [Pixi.js](https://www.pixijs.com/) is a fast, open-source 2D WebGL renderer.
+- [Pixi.js](https://pixijs.com/) is a fast, open-source 2D WebGL renderer.
 - [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games.
 - [PlayCanvas](https://playcanvas.com/) is an open-source game engine.
 - [glMatrix](https://github.com/toji/gl-matrix) is a JavaScript matrix and vector library for high-performance WebGL apps.

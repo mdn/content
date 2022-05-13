@@ -116,7 +116,7 @@ Generally you will need to check the relevant specifications for these (keys for
   - : Nonce count. The hexadecimal count of requests in which the client has sent the current `cnonce` value (including the current request).
     The server can use duplicate `nc` values to recognize replay requests.
 - **`userhash`** {{optional_inline}}
-  - : `"true` if the username has been hashed. `"false"` by default.
+  - : `"true"` if the username has been hashed. `"false"` by default.
 
 ## Examples
 
@@ -135,11 +135,7 @@ See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples
 
 ## Specifications
 
-| Specification                                        | Title                                  |
-| ---------------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                 | The 'Basic' HTTP Authentication Scheme |
-| {{RFC("7616")}}                                 | HTTP Digest Access Authentication |
+{{Specifications}}
 
 <!-- {{Specifications}} -->
 

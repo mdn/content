@@ -269,7 +269,7 @@ function openRequestedSinglePopup(url) {
 
   - : You cannot reliably because the users can prevent the window from being resized by
     setting `dom.disable_window_move_resize` to `true` in
-    `about:config` or by editing accordingly their [user.js file](https://www.mozilla.org/support/firefox/edit#user).
+    `about:config` or by editing accordingly their [user.js file](http://kb.mozillazine.org/User.js_file).
 
     In general, users usually disable moving and resizing of existing windows because
     allowing authors' scripts to do so has been abused overwhelmingly in the past and the
@@ -370,7 +370,7 @@ recommendable usability and accessibility guidelines:
 - [Top Ten Web-Design Mistakes of
   2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
 - [Links
-  & JavaScript Living Together in Harmony](https://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
+  & JavaScript Living Together in Harmony](https://evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
 - [comp.lang.javascript newsgroup
   discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
 
@@ -492,7 +492,7 @@ authors:
 - web author is not aware of default margin (and/or border and/or padding) values
   applying to root element or body node in various browsers and various browser versions
 - user uses an user stylesheet ([userContent.css in
-  Mozilla-based browsers](https://www.mozilla.org/support/firefox/edit#content)) for his viewing habits that increases document box
+  Mozilla-based browsers](https://kb.mozillazine.org/index.php?title=UserContent.css)) for his viewing habits that increases document box
   dimensions (margin, padding, default font size)
 - user can customize individually the size (height or width) of most toolbars via
   operating system settings. E.g. window resizing borders, height of browser titlebar,
@@ -508,7 +508,7 @@ authors:
   area for applications: e.g. user resizes the Windows taskbar, user positions the
   Windows taskbar on the left side (arabic language based) or right side (Hebrew
   language), user has a permanent MS-Office quick launch toolbar, etc.
-- some operating system (Mac OS X) forces presence of toolbars that can then fool the
+- some operating system (macOS) forces presence of toolbars that can then fool the
   web author's anticipations, calculations of the effective dimensions of the browser
   window
 
@@ -520,10 +520,6 @@ does not allow the entire browser window to be rendered within the work area for
 applications of the user's operating system. **No part of the new window can be
 initially positioned offscreen. This is by default in all Mozilla-based browser
 releases.**
-
-[MSIE 6 SP2
-has a similar error correction mechanism](https://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5) but it is not activated by default in all
-security levels: a security setting can disable such error correction mechanism.
 
 ## Specifications
 

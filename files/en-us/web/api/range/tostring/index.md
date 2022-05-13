@@ -24,6 +24,10 @@ ineffective.
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string.
@@ -49,7 +53,7 @@ document.getElementById('log').textContent = range.toString();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

@@ -39,6 +39,14 @@ submitted when you do it with original HTML form submit.
 submit()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

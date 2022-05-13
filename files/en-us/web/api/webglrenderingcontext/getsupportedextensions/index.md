@@ -21,6 +21,10 @@ extensions.
 getSupportedExtensions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{jsxref("Array")}} of strings with all the supported WebGL extensions.

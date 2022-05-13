@@ -23,9 +23,13 @@ context is not directly fixed to a specific canvas.
 commit()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

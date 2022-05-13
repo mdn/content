@@ -31,6 +31,10 @@ collapse(toStart)
     to its start, `false` to its end. If omitted, it defaults to
     `false` {{experimental_inline}}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

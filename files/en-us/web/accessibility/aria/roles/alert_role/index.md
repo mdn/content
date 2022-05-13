@@ -116,7 +116,7 @@ If an element already has `role="alert"` and is initially hidden using CSS, maki
 
 ```js
 // removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:
-document.getElementById("expirationWarning").classList.remove('hidden'); 
+document.getElementById("expirationWarning").classList.remove('hidden');
 ```
 
 ## Specifications
@@ -136,7 +136,7 @@ document.getElementById("expirationWarning").classList.remove('hidden');
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-- [ARIA alert support - The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/)
+- [ARIA alert support - The Paciello Group](https://www.tpgi.com/aria-alert-support/)
 - [ARIA Practices alert example](https://w3c.github.io/aria-practices/examples/alert/alert.html)
 
 <section id="Quick_links">

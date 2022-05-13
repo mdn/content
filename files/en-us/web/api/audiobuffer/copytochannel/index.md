@@ -35,6 +35,10 @@ copyToChannel(source, channelNumber, startInChannel)
   - : An optional offset to copy the data to. If _startInChannel_ is greater than
     {{domxref("AudioBuffer.length")}}, an `INDEX_SIZE_ERR` will be thrown.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

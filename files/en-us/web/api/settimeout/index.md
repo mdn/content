@@ -6,9 +6,7 @@ tags:
   - HTML DOM
   - Intervals
   - JavaScript timers
-  - MakeBrowserAgnostic
   - Method
-  - NeedsMarkupWork
   - Reference
   - Timers
   - setTimeout
@@ -23,14 +21,19 @@ piece of code once the timer expires.
 ## Syntax
 
 ```js
-var timeoutID = setTimeout(function[, delay, arg1, arg2, ...]);
-var timeoutID = setTimeout(function[, delay]);
-var timeoutID = setTimeout(code[, delay]);
+setTimeout(code)
+setTimeout(code, delay)
+
+setTimeout(functionRef)
+setTimeout(functionRef, delay)
+setTimeout(functionRef, delay, arg1)
+setTimeout(functionRef, delay, arg1, arg2)
+setTimeout(functionRef, delay, arg1, arg2, /* ... ,*/ argN)
 ```
 
 ### Parameters
 
-- `function`
+- `functionRef`
   - : A {{jsxref("function")}} to be executed after the timer expires.
 - `code`
   - : An alternative syntax that allows you to include a string instead of a function,
@@ -46,7 +49,8 @@ var timeoutID = setTimeout(code[, delay]);
 
     Also note that if the value isn’t a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
-- `arg1, ..., argN` {{optional_inline}}
+- `arg1`, …, argN` {{optional_inline}}
+
   - : Additional arguments which are passed through to the function specified by
     `function`.
 
@@ -221,7 +225,7 @@ setTimeout(function() {
 }, 500);
 ```
 
-A string passed to `{{domxref("setTimeout()")}}` is evaluated in the global context, so local symbols in the context where `{{domxref("setTimeout()")}}` was called will not be available when the string is evaluated as code.
+A string passed to {{domxref("setTimeout()")}} is evaluated in the global context, so local symbols in the context where {{domxref("setTimeout()")}} was called will not be available when the string is evaluated as code.
 
 ### Reasons for delays longer than specified
 
@@ -230,7 +234,7 @@ This section describes the most common reasons.
 
 #### Nested timeouts
 
-As specified in the [HTML standard](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers),
+As specified in the [HTML standard](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers),
 browsers will enforce a minimum timeout of 4 milliseconds once a nested call to `setTimeout` has been scheduled 5 times.
 
 This can be seen in the following example, in which we nest a call to `setTimeout` with a delay of `0` milliseconds,

@@ -23,6 +23,14 @@ element, and then returns `false`.
 checkValidity()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

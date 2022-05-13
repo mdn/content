@@ -39,7 +39,7 @@ A {{jsxref('Promise')}} which resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the name is not a valid string or contains characters not allowed on the file
     system
 - `NotAllowedError` {{domxref("DOMException")}}

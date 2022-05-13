@@ -66,7 +66,7 @@ blendEquationSeparate(modeRGB, modeAlpha)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

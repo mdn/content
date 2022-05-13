@@ -19,9 +19,9 @@ The **`HTMLMapElement`** interface provides special properties and methods (beyo
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLMapElement.name")}}
-  - : Is a {{domxref("DOMString")}} representing the {{HTMLElement("map")}} element for referencing it other context. If the `id` attribute is set, this must have the same value; and it cannot be `null` or empty.
+  - : A string representing the {{HTMLElement("map")}} element for referencing it other context. If the `id` attribute is set, this must have the same value; and it cannot be `null` or empty.
 - {{domxref("HTMLMapElement.areas")}} {{readonlyInline}}
-  - : Is a live {{domxref("HTMLCollection")}} representing the {{HTMLElement("area")}} elements associated to this {{HTMLElement("map")}}.
+  - : A live {{domxref("HTMLCollection")}} representing the {{HTMLElement("area")}} elements associated to this {{HTMLElement("map")}}.
 
 ## Methods
 

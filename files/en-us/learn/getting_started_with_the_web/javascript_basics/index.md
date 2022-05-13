@@ -63,9 +63,9 @@ However, getting comfortable with JavaScript is more challenging than getting co
 
 ### What happened?
 
-The heading text changed to _Hello world!_ using JavaScript. You did this by using a function called `{{domxref("Document.querySelector", "querySelector()")}}` to grab a reference to your heading, and then store it in a variable called `myHeading`. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
+The heading text changed to _Hello world!_ using JavaScript. You did this by using a function called {{domxref("Document.querySelector", "querySelector()")}} to grab a reference to your heading, and then store it in a variable called `myHeading`. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
 
-Following that, the code set the value of the `myHeading` variable's `{{domxref("Node.textContent", "textContent")}}` property (which represents the content of the heading) to _Hello world!_.
+Following that, the code set the value of the `myHeading` variable's {{domxref("Node.textContent", "textContent")}} property (which represents the content of the heading) to _Hello world!_.
 
 > **Note:** Both of the features you used in this exercise are parts of the [Document Object Model (DOM) API](/en-US/docs/Web/API/Document_Object_Model), which has the capability to manipulate documents.
 
@@ -83,7 +83,7 @@ To give you a better understanding of how JavaScript works, let's explain some o
 let myVariable;
 ```
 
-A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see [Your Guide to Semicolons in JavaScript](https://news.codecademy.com/your-guide-to-semicolons-in-javascript/).
+A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/).
 
 You can name a variable nearly anything, but there are some restrictions. (See [this section about naming rules](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables).) If you are unsure, you can [check your variable name](https://mothereff.in/js-variables) to see if it's valid.
 
@@ -501,6 +501,6 @@ We have just scratched the surface of JavaScript. If you enjoyed playing, and wi
 - [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
 - [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- **JavaScript basics**
+- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
 - [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

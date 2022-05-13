@@ -9,7 +9,7 @@ In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of func
 
 ## Worker Contexts & Functions
 
-**Workers run in a different global context than the current window!** While  {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (`WindowOrWorkerGlobalScope`), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts:
+**Workers run in a different global context than the current window!** While {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (`WindowOrWorkerGlobalScope`), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts:
 
 - {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers
 - {{domxref("SharedWorkerGlobalScope")}} for shared workers

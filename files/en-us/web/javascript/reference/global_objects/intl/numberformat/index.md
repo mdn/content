@@ -132,4 +132,4 @@ console.log((16).toLocaleString('en-GB', {
 ## See also
 
 - {{jsxref("Intl")}}
-- [A polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat)
+- [A polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat/)

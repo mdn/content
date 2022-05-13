@@ -40,7 +40,7 @@ bindTexture(target, texture)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

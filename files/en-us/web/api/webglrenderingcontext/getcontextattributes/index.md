@@ -21,6 +21,10 @@ parameters. Might return {{jsxref("null")}}, if the context is lost.
 getContextAttributes()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A `WebGLContextAttributes` object that contains the actual context

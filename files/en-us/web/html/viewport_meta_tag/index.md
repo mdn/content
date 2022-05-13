@@ -55,7 +55,7 @@ The default pixel ratio depends on the display density. On a display with densit
 
 ## Viewport width and screen width
 
-Sites can set their viewport to a specific size. For example, the definition `"width=320, initial-scale=1"` can be used to fit precisely onto a small phone display in portrait mode. This can cause [problems](http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/) when the browser doesn't render a page at a larger size. To fix this, browsers will expand the viewport width if necessary to fill the screen at the requested scale. This is especially useful on large-screen devices like the iPad. (Allen Pike's [Choosing a viewport for iPad sites](https://allenpike.com/2010/choosing-a-viewport-for-ipad-sites) has a good explanation for web developers.)
+Sites can set their viewport to a specific size. For example, the definition `"width=320, initial-scale=1"` can be used to fit precisely onto a small phone display in portrait mode. This can cause [problems](https://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/) when the browser doesn't render a page at a larger size. To fix this, browsers will expand the viewport width if necessary to fill the screen at the requested scale. This is especially useful on large-screen devices like the iPad. (Allen Pike's [Choosing a viewport for iPad sites](https://allenpike.com/2010/choosing-a-viewport-for-ipad-sites) has a good explanation for web developers.)
 
 For pages that set an initial or maximum scale, this means the `width` property actually translates into a _minimum_ viewport width. For example, if your layout needs at least 500 pixels of width then you can use the following markup. When the screen is more than 500 pixels wide, the browser will expand the viewport (rather than zoom in) to fit the screen:
 
@@ -79,7 +79,7 @@ Suppress the small zoom applied by many smartphones by setting the initial scale
 
 ## Common viewport sizes for mobile and tablet devices
 
-If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://docs.adobe.com/content/help/en/target/using/experiences/vec/mobile-viewports.html). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
+If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://experienceleague.adobe.com/docs/target/using/experiences/vec/mobile-viewports.html). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
 
 ## Specifications
 

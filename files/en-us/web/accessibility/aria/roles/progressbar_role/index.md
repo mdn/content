@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: progressbar role'
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -25,7 +25,7 @@ Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and 
 - The `aria-valuemin` and `aria-valuemax` properties only need to be set for the `progressbar` role when the progress bar's minimum is not `0` or the maximum value is not `100`.
 - The read-only [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) should be provided and updated unless the value is `indeterminate`, in which case don't include the attribute. If set, make sure the `aria-valuenow` value is between the minimum and maximum values.
 
-If the `progressbar` role is applied to an HTML {{HTMLElement('progress')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
+If the `progressbar` role is applied to an HTML {{HTMLElement('progress')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
 ### All descendants are presentational
 

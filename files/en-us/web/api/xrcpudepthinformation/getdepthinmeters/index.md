@@ -30,6 +30,10 @@ getDepthInMeters(x, y)
 - `y`
   - : Y coordinate (origin at the top, grows downward).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - A {{jsxref("RangeError")}} is thrown if `x` or `y` are greater than 1.0 or less than 0.0.

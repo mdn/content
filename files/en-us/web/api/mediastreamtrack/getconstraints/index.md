@@ -33,6 +33,10 @@ and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on 
 getConstraints()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref('MediaTrackConstraints')}} object which indicates the constrainable

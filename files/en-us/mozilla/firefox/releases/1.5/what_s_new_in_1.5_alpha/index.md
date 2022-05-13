@@ -50,7 +50,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 <!---->
 
 - CSS3 cursors
-  - : More [mouse cursor names](https://www.w3.org/TR/css3-ui/#cursor) are now supported.
+  - : More [mouse cursor names](https://www.w3.org/TR/css-ui-3/#cursor) are now supported.
 
 <!---->
 
@@ -68,7 +68,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 <!---->
 
 - CSS `outline` property
-  - : [CSS outlines](https://www.w3.org/TR/css3-ui/#outline1) can now be used. These differ from borders in that they don't affect the page layout.
+  - : [CSS outlines](https://www.w3.org/TR/css-ui-3/#outline1) can now be used. These differ from borders in that they don't affect the page layout.
 
 <!---->
 

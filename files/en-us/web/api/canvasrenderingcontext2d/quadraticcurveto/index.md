@@ -36,6 +36,10 @@ quadraticCurveTo(cpx, cpy, x, y)
 - `y`
   - : The y-axis coordinate of the end point.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### How quadraticCurveTo works

@@ -1,7 +1,7 @@
 ---
 title: 'aria-owns'
 slug: Web/Accessibility/ARIA/Attributes/aria-owns
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute

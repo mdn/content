@@ -20,6 +20,10 @@ browser-compat: webextensions.manifest.browser_action
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -48,6 +52,8 @@ browser-compat: webextensions.manifest.browser_action
 </table>
 
 A browser action is a button that your extension adds to the browser's toolbar. The button has an icon, and may optionally have a popup whose content is specified using HTML, CSS, and JavaScript.
+
+This key is replaced by [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) in Manifest V3 extensions.
 
 If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) when the user clicks the button.
 
@@ -89,7 +95,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>
           In Firefox, the stylesheet can be seen at
           chrome://browser/content/extension.css, or
-          chrome://browser/content/extension-mac.css on OS X. When setting
+          chrome://browser/content/extension-mac.css on macOS. When setting
           dimensions, be aware that this style sheet currently sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).

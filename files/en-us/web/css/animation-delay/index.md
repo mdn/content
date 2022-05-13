@@ -58,7 +58,9 @@ animation-delay: unset;
 
 ## Examples
 
-### The animation has a delay of 2 seconds
+### Setting an animation delay
+
+This animation has a delay of 2 seconds.
 
 #### HTML
 
@@ -74,6 +76,9 @@ animation-delay: unset;
   border-radius: 10px;
   width: 100px;
   height: 100px;
+}
+
+.box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-delay: 2s;
@@ -91,7 +96,9 @@ animation-delay: unset;
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+Hover over the rectangle to start the animation.
+
+{{EmbedLiveSample("Setting an animation delay","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 

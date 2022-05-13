@@ -213,7 +213,6 @@ This is because Ember extends Javascript's Array prototype by default, giving us
 There are dozens of these methods, including `pushObjects()`, `insertAt()`, or `popObject()`, which can be used with any type (not just Objects).
 Ember's [ArrayProxy](https://api.emberjs.com/ember/4.2/classes/ArrayProxy) also gives us more handy methods, like `isAny()`, `findBy()`, and `filterBy()` to make life easier.
 
-
 ## Using the service from our header component
 
 Now that we've defined a way to add todos, we can interact with this service from the `header.js` input component to actually start adding them.

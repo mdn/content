@@ -75,7 +75,7 @@ For array literals:
 For object literals (new in ECMAScript 2018):
 
 ```js
-let objClone = { ...obj }; // pass all key:value pairs from an object 
+let objClone = { ...obj }; // pass all key:value pairs from an object
 ```
 
 ## Rest syntax (parameters)

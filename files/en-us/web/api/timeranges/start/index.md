@@ -23,7 +23,7 @@ start(index)
 ### Parameters
 
 - `index`
-  - :The range number to return the starting time for.
+  - : The range number to return the starting time for.
 
 ### Return value
 

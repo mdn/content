@@ -19,7 +19,7 @@ of the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
 ## Syntax
 
 ```js
-void ext.deleteVertexArrayOES(arrayObject);
+deleteVertexArrayOES(arrayObject)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ void ext.deleteVertexArrayOES(arrayObject);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

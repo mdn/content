@@ -18,9 +18,13 @@ Shifts focus away from the window.
 blur()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

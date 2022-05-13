@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.offsetY
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`offsetY`** read-only property of the {{domxref("MouseEvent")}} interface provides the offset in the Y coordinate of the mouse pointer between that event and the padding edge of the target node.
 

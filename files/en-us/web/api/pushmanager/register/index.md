@@ -22,6 +22,10 @@ a new endpoint for notifications.
 register()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.

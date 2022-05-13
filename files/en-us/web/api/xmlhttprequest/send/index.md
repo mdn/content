@@ -62,7 +62,7 @@ The best way to send binary content (e.g. in file uploads) is by using an
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

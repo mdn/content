@@ -35,11 +35,11 @@ error(e)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The stream you are trying to error is not a {{domxref("WritableStream")}}.
 
 ## Examples

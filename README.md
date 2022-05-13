@@ -128,7 +128,7 @@ document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs
 If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
 a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
-you can sign into GitHub, go to <https://github.com/mdn/content>,
+you can sign in to GitHub, go to <https://github.com/mdn/content>,
 navigate to the source file `files/en-us/web/javascript/index.md`,
 and then click on the edit (pencil) button.
 
@@ -369,7 +369,7 @@ There are only a few things to keep in mind:
   the site to Markdown one section at a time, and don't want to mix authoring
   formats within a section. At this point we have only converted the JavaScript
   documentation. So if you are adding a new document under
-  `files/en-us/web/javascript`, make it a Markdown file. Otherwise make it an
+  `files/en-us/web/javascript`, make it a Markdown file. Otherwise, make it an
   HTML file.
 - Remember that a document is represented by an `index.html` or `index.md` file
   within its own folder.

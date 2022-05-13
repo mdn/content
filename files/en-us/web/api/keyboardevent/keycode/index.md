@@ -13,7 +13,7 @@ tags:
   - keyCode
 browser-compat: api.KeyboardEvent.keyCode
 ---
-{{APIRef("DOM Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The deprecated **`KeyboardEvent.keyCode`** read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 

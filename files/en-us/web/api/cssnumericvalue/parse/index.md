@@ -35,7 +35,7 @@ A {{domxref('CSSNumericValue')}}.
 
 ### Exceptions
 
-- SyntaxError
+- `SyntaxError` {{domxref("DOMException")}}
   - : TBD
 
 ## Examples

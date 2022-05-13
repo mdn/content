@@ -36,6 +36,10 @@ releaseEvents(eventType)
 `Event.RESET`, `Event.RESIZE`, `Event.SELECT`,
 `Event.SUBMIT`, `Event.UNLOAD`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

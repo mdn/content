@@ -22,9 +22,7 @@ The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops t
 ## Syntax
 
 ```js
-vrDisplayInstance.exitPresent().then(function() {
-  // Do something after the presentation has ended
-});
+exitPresent()
 ```
 
 ### Parameters

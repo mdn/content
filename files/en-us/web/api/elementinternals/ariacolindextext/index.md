@@ -19,7 +19,7 @@ The **`ariaColIndexText`** property of the {{domxref("ElementInternals")}} inter
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

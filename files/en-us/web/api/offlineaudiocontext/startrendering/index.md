@@ -26,32 +26,19 @@ eventually be removed, but currently both mechanisms are provided for legacy rea
 
 ## Syntax
 
-Event-based version:
-
 ```js
-offlineAudioCtx.startRendering();
-offlineAudioCtx.oncomplete = function(e) {
-  // e.renderedBuffer contains the output buffer
-}
-```
-
-Promise-based version:
-
-```js
-offlineAudioCtx.startRendering().then(function(buffer) {
-  // buffer contains the output buffer
-});
+startRendering()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 In this simple example, we declare both an {{domxref("AudioContext")}} and an
 `OfflineAudioContext` object. We use the `AudioContext` to load an

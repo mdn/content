@@ -35,9 +35,9 @@ Here you'll find links to documentation, examples, and tools to help you work wi
 ## Tools
 
 - [W3C Validator](https://validator.w3.org)
-- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
+- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/en-US/firefox/collections/5509895/mathzilla/)
 - [TeXZilla](https://github.com/fred-wang/TeXZilla) — Javascript LaTeX to MathML converter ([live demo](https://fred-wang.github.io/TeXZilla/), [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [using in a Web Page, JS program etc](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](https://dlmf.nist.gov/LaTeXML/) - Convert LaTeX documents into HTML+MathML Web pages
+- [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) - Convert LaTeX documents into HTML+MathML Web pages
 - [MathJax](https://www.mathjax.org/) - Cross-browser JavaScript display engine for mathematics. To force MathJax to use native MathML, try [this Mozilla add-on](https://addons.mozilla.org/en-US/firefox/addon/native-mathml/), this [Safari extension](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz) or this [GreaseMonkey script](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
 
 ## Related topics

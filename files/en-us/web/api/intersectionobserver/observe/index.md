@@ -43,7 +43,7 @@ observe(targetElement)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

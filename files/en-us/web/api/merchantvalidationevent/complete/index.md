@@ -35,7 +35,7 @@ complete(merchantSessionPromise)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

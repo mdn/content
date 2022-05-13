@@ -24,6 +24,14 @@ The **`MediaStreamTrack.stop()`** method stops the track.
 stop()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Description
 
 Calling `stop()` tells the {{glossary("user agent")}} that the track's

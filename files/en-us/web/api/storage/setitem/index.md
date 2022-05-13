@@ -31,7 +31,7 @@ setItem(keyName, keyValue)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

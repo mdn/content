@@ -19,7 +19,7 @@ However, the umbrella term "JavaScript" as understood in a web browser context c
 
 The core language of JavaScript is standardized by the ECMA TC39 committee as a language named [ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources).
 
-This core language is also used in non-browser environments, for example in [node.js](http://nodejs.org/).
+This core language is also used in non-browser environments, for example in [node.js](https://nodejs.org).
 
 ### What falls under the ECMAScript scope?
 
@@ -49,7 +49,7 @@ The [ECMAScript Internationalization API Specification](https://402.ecma-interna
 
 ### WebIDL
 
-The [WebIDL specification](https://www.w3.org/TR/WebIDL/) provides the glue between the DOM technologies and ECMAScript.
+The [WebIDL specification](https://webidl.spec.whatwg.org/) provides the glue between the DOM technologies and ECMAScript.
 
 ### The Core of the DOM
 
@@ -63,7 +63,7 @@ From the ECMAScript point of view, objects defined in the DOM specification are 
 
 ### HTML DOM
 
-[HTML](https://www.whatwg.org/html), the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes such things as the `className` property on HTML elements, or APIs such as [`document.body`](/en-US/docs/Web/API/Document/body).
+[HTML](https://html.spec.whatwg.org/multipage/), the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes such things as the `className` property on HTML elements, or APIs such as [`document.body`](/en-US/docs/Web/API/Document/body).
 
 The HTML specification also defines restrictions on documents; for example, it requires all children of a [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element, which represents an unordered list, to be [`<li>`](/en-US/docs/Web/HTML/Element/li) elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.
 
@@ -72,8 +72,8 @@ Looking for the [`Document`](/en-US/docs/Web/API/Document) object, [`Window`](/e
 ## Other notable APIs
 
 - The [`setTimeout`](/en-US/docs/Web/API/setTimeout) and [`setInterval`](/en-US/docs/Web/API/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
-- [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) makes it possible to send asynchronous HTTP requests.
+- [XMLHttpRequest](https://xhr.spec.whatwg.org/) makes it possible to send asynchronous HTTP requests.
 - The [CSS Object Model](https://drafts.csswg.org/cssom/) abstract CSS rules as objects.
-- [WebWorkers](https://www.whatwg.org/specs/web-workers/current-work/) allows parallel computation.
-- [WebSockets](https://www.whatwg.org/C/#network) allows low-level bidirectional communication.
-- [Canvas 2D Context](https://www.whatwg.org/html/#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).
+- [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) allows parallel computation.
+- [WebSockets](https://html.spec.whatwg.org/multipage/#network) allows low-level bidirectional communication.
+- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).

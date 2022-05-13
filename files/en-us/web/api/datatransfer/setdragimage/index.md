@@ -53,7 +53,7 @@ setDragImage(imgElement, xOffset, yOffset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

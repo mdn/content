@@ -19,7 +19,7 @@ The **`ANGLE_instanced_arrays.drawElementsInstancedANGLE()`** method of the [Web
 ## Syntax
 
 ```js
-void ext.drawElementsInstancedANGLE(mode, count, type, offset, primcount);
+drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 ```
 
 ### Parameters
@@ -55,7 +55,7 @@ void ext.drawElementsInstancedANGLE(mode, count, type, offset, primcount);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

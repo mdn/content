@@ -417,7 +417,7 @@ The first step is to choose your **base color**. This is the color that in some 
 - A color that comes from imagery associated with what your content is about. If you're creating a website about a given item or product, choose a color that's physically present on that item.
 - Browse websites that let you look at lots of existing color palettes and images to find inspiration.
 
-When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the website [ColorZilla](http://www.colorzilla.com/) offers an extension ([Chrome](http://www.colorzilla.com/chrome) / [Firefox](https://www.colorzilla.com/firefox/)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
+When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the website [ColorZilla](https://www.colorzilla.com/) offers an extension ([Chrome](https://www.colorzilla.com/chrome/) / [Firefox](https://www.colorzilla.com/firefox/)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
 
 > **Note:** The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
 
@@ -428,7 +428,7 @@ Once you have decided on your base color, there are plenty of online tools that 
 A few examples (all free to use as of the time this list was last revised):
 
 - [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
-- [Paletton](http://paletton.com)
+- [Paletton](https://paletton.com/)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 
 When designing your palette, be sure to keep in mind that in addition to the colors these tools typically generate, you'll probably also need to add some core neutral colors such as white (or nearly white), black (or nearly black), and some number of shades of gray.
@@ -439,7 +439,7 @@ When designing your palette, be sure to keep in mind that in addition to the col
 
 A full review of color theory is beyond the scope of this article, but there are plenty of articles about color theory available, as well as courses you can find at nearby schools and universities. A couple of useful resources about color theory:
 
-- [Color Science](https://www.khanacademy.org/partner-content/pixar/color) ([Khan Academy](https://www.khanacademy.org/) in association with [Pixar](https://www.pixar.com/))
+- [Color Science](https://www.khanacademy.org/computing/pixar/color) ([Khan Academy](https://www.khanacademy.org/) in association with [Pixar](https://www.pixar.com/))
   - : An online course which introduces concepts such as what color is, how it's perceived, and how to use colors to express ideas. Presented by Pixar artists and designers.
 - {{interwiki("wikipedia", "Color theory")}} on Wikipedia
   - : Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color selection process, but is still full of useful information.
@@ -464,7 +464,7 @@ Let's consider a quick example of selecting an appropriate color palette for a s
 
 Using an eyedropper tool, we identify a color we like and determine that the color in question is `#D79C7A`, which is an appropriate rusty orange-red color that's so stereotypical of the Martian surface.
 
-Having selected our base color, we need to build out our palette. We decide to use [Paletton](http://www.paletton.com/) to come up with the other colors we need. Upon opening Paletton, we see:
+Having selected our base color, we need to build out our palette. We decide to use [Paletton](https://www.paletton.com/) to come up with the other colors we need. Upon opening Paletton, we see:
 
 ![Right after loading Paletton.](paletton1.png)
 

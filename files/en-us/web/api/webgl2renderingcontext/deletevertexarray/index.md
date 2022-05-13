@@ -28,7 +28,7 @@ deleteVertexArray(vertexArray)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

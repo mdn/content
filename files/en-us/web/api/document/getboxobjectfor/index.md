@@ -22,8 +22,13 @@ Returns a `boxObject` (x, y, width, height) for a specified element.
 getBoxObjectFor(element)
 ```
 
-- _boxObject_ is an `nsIBoxObject`.
+### Parameters
+
 - _element_ is a {{domxref("element","DOMElement")}}.
+
+### Return value
+
+A `nsIBoxObject`.
 
 ## Examples
 

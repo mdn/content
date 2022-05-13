@@ -21,9 +21,13 @@ feedback operation.
 pauseTransformFeedback()
 ```
 
-### Return value
+### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -75,12 +75,11 @@ function clon(integer){
 }
 ```
 
-Further, this technique could be extended to create jumpless "Count Trailing Zeros" and
-"Count Trailing Ones" functions as seen below. The `ctrz` function below
+Further, this technique could be extended to create a jumpless "Count Trailing Zeros" function, as seen below. The `ctrz` function below
 fills in all the high bits with the lowest filled bit, then negates the bits to erase
-all higher set bits so that clz can then be used.
+all higher set bits so that `clz` can then be used.
 
-```js
+```js example-bad
 var clz = Math.clz32;
 function ctrz(integer){ // count trailing zeros
     // 1. fill in all the higher bits after the first one
@@ -92,6 +91,22 @@ function ctrz(integer){ // count trailing zeros
     // 2. Now, inversing the bits reveals the lowest bits
     return 32 - clz(~integer) |0; // `|0` ensures integer coercion
 }
+```
+
+However, a simpler and possibly more efficient algorithm is the following:
+
+```js example-good
+function ctrz(integer){
+    integer >>>= 0 // ensures coercion to Uint32
+    if (integer === 0) return 32; // skipping this step would make it return -1
+    integer &= -integer; // equivalent to `int = int & (~int + 1)`
+    return 31 - clz(x);
+}
+```
+
+Then we can define a "Count Trailing Ones" function like so:
+
+```js
 function ctron(integer){ // count trailing ones
     // No shift-filling-in-with-ones operator is available in
     // JavaScript, so the below code is the fastest

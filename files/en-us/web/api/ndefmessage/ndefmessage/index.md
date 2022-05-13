@@ -15,7 +15,7 @@ The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} obj
 ## Syntax
 
 ```js
-new NDEFMessage(records);
+new NDEFMessage(records)
 ```
 
 ### Parameters

@@ -36,6 +36,10 @@ scrollBy(options)
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 To scroll down one page:

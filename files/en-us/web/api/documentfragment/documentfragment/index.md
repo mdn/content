@@ -20,6 +20,10 @@ The **`DocumentFragment()`** constructor returns a new, empty
 new DocumentFragment()
 ```
 
+### Parameters
+
+None.
+
 ## Examples
 
 ```js

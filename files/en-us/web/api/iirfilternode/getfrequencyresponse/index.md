@@ -43,7 +43,7 @@ getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -22,6 +22,10 @@ the `OffscreenCanvas`.
 transferToImageBitmap()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("ImageBitmap")}}.

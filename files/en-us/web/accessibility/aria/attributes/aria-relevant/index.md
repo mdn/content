@@ -1,7 +1,7 @@
 ---
 title: 'aria-relevant'
 slug: Web/Accessibility/ARIA/Attributes/aria-relevant
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -42,9 +42,9 @@ The values of `removals` and `all` should be used sparingly. For example, when a
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRelevant")}}
-  - : The  [`ariaRelevant`](/en-US/docs/Web/API/Element/ariaRelevant) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-relevant` attribute.
+  - : The [`ariaRelevant`](/en-US/docs/Web/API/Element/ariaRelevant) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-relevant` attribute.
 - {{domxref("ElementInternals.ariaRelevant")}}
-  - : The  [`ariaRelevant`](/en-US/docs/Web/API/ElementInternals/ariaRelevant) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-relevant` attribute.
+  - : The [`ariaRelevant`](/en-US/docs/Web/API/ElementInternals/ariaRelevant) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-relevant` attribute.
 
 ## Associated roles
 

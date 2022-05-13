@@ -38,7 +38,7 @@ updateRenderState(state)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -53,7 +53,7 @@ None.
     - The `layers` option is used in a session that has been created without the `layers` feature.
     - Both the `baseLayer` and `layers` options are specified.
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the `layers` option contains duplicate instances.
 
 ## Examples

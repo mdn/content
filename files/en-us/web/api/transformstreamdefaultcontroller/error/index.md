@@ -24,6 +24,10 @@ error(reason)
 - `reason`
   - : A string containing the error message to be returned on any further interaction with the stream.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 In this example the `error()` method is used when a chunk contains a symbol.

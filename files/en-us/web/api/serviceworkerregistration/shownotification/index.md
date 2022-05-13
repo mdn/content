@@ -24,7 +24,8 @@ service worker.
 ## Syntax
 
 ```js
-serviceWorkerRegistration.showNotification(title, [options]);
+showNotification(title)
+showNotification(title, options)
 ```
 
 ### Parameters
@@ -38,14 +39,14 @@ serviceWorkerRegistration.showNotification(title, [options]);
 
     - `actions`: An array of actions to display in the notification. Each element in the array is an object with the following members:
 
-      - `action`: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
-      - `title`: A {{domxref("DOMString")}} containing action text to be shown to the user.
-      - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
+      - `action`: A string identifying a user action to be displayed on the notification.
+      - `title`: A string containing action text to be shown to the user.
+      - `icon`: A string containing the URL of an icon to display with the action.
 
       Appropriate responses are built using `event.action` within the
       {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
-    - `badge`: a {{domxref("USVString")}} containing the URL of an image
+    - `badge`: a string containing the URL of an image
       to represent the notification when there is not enough space to display the
       notification itself such as for example, the Android Notification Bar. On Android
       devices, the badge should accommodate devices up to 4x resolution, about 96 by 96
@@ -56,9 +57,9 @@ serviceWorkerRegistration.showNotification(title, [options]);
       notification. This can be of any data type.
     - `dir` : The direction of the notification; it can
       be `auto`,  `ltr` or `rtl`
-    - `icon`: a {{domxref("USVString")}} containing the URL of an image to
+    - `icon`: a string containing the URL of an image to
       be used as an icon by the notification.
-    - `image`: a {{domxref("USVString")}} containing the URL of an image to
+    - `image`: a string containing the URL of an image to
       be displayed in the notification.
     - `lang`: Specify the lang used within the notification. This string
       must be a valid language tag according to

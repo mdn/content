@@ -31,7 +31,7 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : Use this attribute to label the region. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the section. If no visible appropriate header is present, `aria-label` should be used.
 
 ## Examples
@@ -53,7 +53,7 @@ Only use the `region` role if no other relevant [content sectioning](/en-US/docs
 
 ### Prefer HTML
 
-Using the  {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using  {{HTMLElement('section')}}  instead.
+Using the {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using {{HTMLElement('section')}}  instead.
 
 ### Labeling landmarks
 
@@ -81,7 +81,7 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 
 ### SVG
 
-`role="region"` can be declared on areas of  {{HTMLElement('svg')}}  along with an `aria-label` to allow individual sections of the SVG to be described.
+`role="region"` can be declared on areas of {{HTMLElement('svg')}}  along with an `aria-label` to allow individual sections of the SVG to be described.
 
 ## Specifications
 
@@ -100,7 +100,7 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 - [ARIA: `complementary` role](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)
 - [ARIA: `navigation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
 - [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
+- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 
 <section id="Quick_links">

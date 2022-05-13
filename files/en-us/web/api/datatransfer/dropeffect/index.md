@@ -38,7 +38,7 @@ data being dragged should be removed from the source.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the drag operation effect. The possible values
+A string representing the drag operation effect. The possible values
 are:
 
 - `copy`
@@ -53,12 +53,12 @@ are:
 Assigning any other value to `dropEffect` has no effect and the old value is
 retained.
 
-## Examples
+## Example
 
 This example shows the use of the `dropEffect` and
 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} properties.
 
-### HTML Content
+### HTML
 
 ```html
 <div>
@@ -69,7 +69,7 @@ This example shows the use of the `dropEffect` and
 <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 div {
@@ -87,7 +87,7 @@ div {
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 function dragstart_handler(ev) {

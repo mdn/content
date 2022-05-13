@@ -7,6 +7,7 @@ tags:
   - Media Capabilities
   - Overview
   - Reference
+spec-urls: https://w3c.github.io/media-capabilities/
 ---
 {{DefaultAPISidebar("Media Capabilities API")}}
 
@@ -57,7 +58,7 @@ Media capabilities information enables websites to enable adaptive streaming to 
 ## Media Capabilities Interfaces
 
 - {{DOMxRef("MediaCapabilities")}}
-  - : Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The  information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient .
+  - : Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient .
 - ScreenColorGamut
   - : Will describe the color {{glossary("gamut")}}, or the range of color, the screen can display (not currently supported anywhere).
 - ScreenLuminance
@@ -78,9 +79,7 @@ Media capabilities information enables websites to enable adaptive streaming to 
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment            |
-| -------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('Media Capabilities')}} | {{Spec2('Media Capabilities')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

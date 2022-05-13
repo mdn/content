@@ -102,7 +102,7 @@ info.setAttribute('class','info');
 // Take attribute content and put it inside the info span
 info.textContent = this.getAttribute('data-text');
 
-// Create some CSS to apply to the shadow dom
+// Create some CSS to apply to the shadow DOM
 const style = document.createElement('style');
 style.textContent = '.wrapper {' +
 // CSS truncated for brevity
@@ -134,12 +134,12 @@ In the above example we apply style to the Shadow DOM using a {{htmlelement("sty
 For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)):
 
 ```js
-// Apply external styles to the shadow dom
+// Apply external styles to the shadow DOM
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
 
-// Attach the created element to the shadow dom
+// Attach the created element to the shadow DOM
 shadow.appendChild(linkElem);
 ```
 
@@ -278,4 +278,4 @@ Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or Type
 
 ## Libraries
 
-There are several libraries that are built on Web Components with the aim of increasing the level of abstraction when creating custom elements. Some of these libraries are [FASTElement](https://www.fast.design/docs/fast-element/getting-started), [snuggsi](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](https://slimjs.com/), [Lit](https://lit.dev/), [Smart](https://www.htmlelements.com/), [Stencil](https://stenciljs.com), [hyperHTML-Element](https://github.com/WebReflection/hyperHTML-Element), [DataFormsJS](https://www.dataformsjs.com/), and [Custom-Element-Builder](https://tmorin.github.io/ceb/).
+There are several libraries that are built on Web Components with the aim of increasing the level of abstraction when creating custom elements. Some of these libraries are [FASTElement](https://www.fast.design/docs/fast-element/getting-started/), [snuggsi](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](https://slimjs.com/), [Lit](https://lit.dev/), [Smart](https://www.htmlelements.com/), [Stencil](https://stenciljs.com), [hyperHTML-Element](https://github.com/WebReflection/hyperHTML-Element), [DataFormsJS](https://www.dataformsjs.com/), and [Custom-Element-Builder](https://tmorin.github.io/ceb/).

@@ -59,7 +59,7 @@ function addTextNode(text) {
 </html>
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

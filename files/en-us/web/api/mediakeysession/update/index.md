@@ -20,7 +20,7 @@ CDM, and then returns a {{jsxref('Promise')}} .
 ## Syntax
 
 ```js
-mediaKeySession.update(response).then(function() { /* ... */ });
+update(response)
 ```
 
 ### Parameters

@@ -22,6 +22,10 @@ browser-compat: webextensions.manifest.background
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -102,7 +106,7 @@ The `background` key is an object that must have one of these properties:
         </p>
         <p>
           If you use this property, you can not specify background scripts using
-          <code>scripts</code>, but you can  include your own scripts from the
+          <code>scripts</code>, but you can include your own scripts from the
           page, just like in a normal web page.
         </p>
       </td>

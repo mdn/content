@@ -129,7 +129,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

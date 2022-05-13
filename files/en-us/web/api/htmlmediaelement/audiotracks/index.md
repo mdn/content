@@ -19,7 +19,7 @@ browser-compat: api.HTMLMediaElement.audioTracks
 
 The read-only **`audioTracks`**
 property on {{domxref("HTMLMediaElement")}} objects returns
-an {{domxref("AudioTrackList")}} object listing all of the  {{domxref("AudioTrack")}}
+an {{domxref("AudioTrackList")}} object listing all of the {{domxref("AudioTrack")}}
 objects representing the media element's audio tracks.
 
 The media element may be

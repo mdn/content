@@ -39,7 +39,7 @@ parameter.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The source object is not a `ReadableStreamBYOBReader`, or the stream has
     no owner.
 

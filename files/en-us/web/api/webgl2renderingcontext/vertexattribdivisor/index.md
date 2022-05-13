@@ -39,7 +39,7 @@ vertexAttribDivisor(index, divisor)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

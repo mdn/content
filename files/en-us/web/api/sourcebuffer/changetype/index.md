@@ -41,11 +41,11 @@ changeType(type)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified string is empty, rather than indicating a valid MIME type.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("SourceBuffer")}} is not a member of the parent media source's

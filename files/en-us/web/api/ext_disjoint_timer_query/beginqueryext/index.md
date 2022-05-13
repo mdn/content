@@ -17,7 +17,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) starts a timer query.
 ## Syntax
 
 ```js
-void ext.beginQueryEXT(target, query);
+beginQueryEXT(target, query)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ void ext.beginQueryEXT(target, query);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

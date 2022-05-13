@@ -55,7 +55,7 @@ Although X in Ajax stands for XML, {{glossary("JSON")}} is preferred over XML no
 
 ## See also
 
-- [Ajax: A New Approach to Web Applications](https://pdfs.semanticscholar.org/c440/ae765ff19ddd3deda24a92ac39cef9570f1e.pdf)
+- [Ajax: A New Approach to Web Applications](https://www.semanticscholar.org/paper/Ajax%3A-A-New-Approach-to-Web-Applications-Garrett/c440ae765ff19ddd3deda24a92ac39cef9570f1e?p2df)
   - : Jesse James Garrett, of Adaptive Path, wrote this article in February 2005, introducing Ajax and its related concepts.
 - [XMLHttpRequest Specification](https://xhr.spec.whatwg.org/)
   - : WHATWG Living Standard

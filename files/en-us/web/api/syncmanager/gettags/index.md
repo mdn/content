@@ -20,17 +20,17 @@ The **`SyncManager.getTags`** method of the
 ## Syntax
 
 ```js
-SyncManager.getTags().then(function(tags[]) { /* ... */ })
+getTags()
 ```
-
-### Returns
-
-A {{jsxref("Promise")}} that resolves to an array of strings
-containing developer-defined identifiers for `SyncManager` registrations.
 
 ### Parameters
 
 None.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to an array of strings
+containing developer-defined identifiers for `SyncManager` registrations.
 
 ## Browser compatibility
 

@@ -107,7 +107,7 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 ### Prefer HTML
 
-Using the {{HTMLElement('form')}} element  will automatically communicate a section has a role of `form`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('form')}} element will automatically communicate a section has a role of `form`. If at all possible, prefer using it instead.
 
 ## Specifications
 

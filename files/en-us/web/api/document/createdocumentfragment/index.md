@@ -21,6 +21,10 @@ DOM nodes can be added to build an offscreen DOM tree.
 createDocumentFragment()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A newly created, empty, {{domxref("DocumentFragment")}} object, which is ready to have
@@ -77,7 +81,7 @@ element.appendChild(fragment);
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{EmbedLiveSample("Examples", 600, 140)}}
 
 ## Specifications
 

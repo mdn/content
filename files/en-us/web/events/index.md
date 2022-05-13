@@ -1412,4 +1412,8 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 | {{SpecName('HTML WHATWG', 'webappapis.html#event-handler-attributes', 'event handlers')}} | {{Spec2('HTML WHATWG')}} |         |
 | {{SpecName('HTML5 W3C', 'webappapis.html#event-handler-attributes', 'event handlers')}}     | {{Spec2('HTML5 W3C')}}     |         |
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li></ul>{{ListSubpages}}</section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+  </ol>{{ListSubpages}}
+</section>

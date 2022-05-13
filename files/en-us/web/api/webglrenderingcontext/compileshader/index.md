@@ -25,6 +25,10 @@ compileShader(shader)
 - `shader`
   - : A fragment or vertex {{domxref("WebGLShader")}}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

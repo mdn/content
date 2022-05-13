@@ -27,6 +27,10 @@ configuration settings.
 getPhotoSettings()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object

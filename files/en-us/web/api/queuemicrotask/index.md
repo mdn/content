@@ -61,7 +61,7 @@ queueMicrotask(function)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

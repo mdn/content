@@ -27,6 +27,10 @@ A stringified version of the object can then be obtained by calling {{jsxref("JS
 toJSON()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 <!-- RTCIceCandidateInit in spec -->

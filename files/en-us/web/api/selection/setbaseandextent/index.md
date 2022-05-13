@@ -44,7 +44,7 @@ setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

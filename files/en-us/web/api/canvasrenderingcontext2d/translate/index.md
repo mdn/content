@@ -36,6 +36,10 @@ matrix by moving the canvas and its origin `x` units horizontally and
   - : Distance to move in the vertical direction. Positive values are down, and negative
     are up.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Moving a shape

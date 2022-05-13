@@ -15,7 +15,7 @@ The **`MediaStreamTrackGenerator()`** constructor creates a new {{domxref("Media
 ## Syntax
 
 ```js
-new MediaStreamTrackGenerator(options);
+new MediaStreamTrackGenerator(options)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ new MediaStreamTrackGenerator(options);
 
 ## Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `init.kind` is not `"video"` or `"audio"`.
 
 ## Examples

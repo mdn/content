@@ -93,8 +93,6 @@ new RTCIceCandidate(candidateInfo)
 
         Additional information can be found in {{domxref("RTCIceCandidate.usernameFragment")}}.
 
-    The method will throw a `TypeError` exception if both `sdpMid` and `sdpMLineIndex` are `null`.
-
 ### Return value
 
 A newly-created {{domxref("RTCIceCandidate")}} object.
@@ -117,8 +115,8 @@ If `candidateInfo` is provided, the new `RTCIceCandidate` is initialized as foll
 
 ### Exceptions
 
-- `TypeError`
-  - : The specified `candidateInfo` has values of `null` in **both** the `sdpMid` and `sdpMLineIndex` properties.
+- {{jsxref("TypeError")}}
+  - : Thrown if the specified `candidateInfo` has values of `null` in **both** the `sdpMid` and `sdpMLineIndex` properties.
 
 ## Usage notes
 

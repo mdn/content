@@ -17,7 +17,7 @@ The **`EXT_disjoint_timer_query.endQueryEXT()`** method of the
 ## Syntax
 
 ```js
-void ext.endQueryEXT(target);
+endQueryEXT(target)
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ void ext.endQueryEXT(target);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

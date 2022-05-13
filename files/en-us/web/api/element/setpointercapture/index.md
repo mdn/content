@@ -49,7 +49,7 @@ setPointerCapture(pointerId)
 
 ### Return value
 
-This method returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -106,7 +106,7 @@ slider.onpointerup = stopSliding;
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

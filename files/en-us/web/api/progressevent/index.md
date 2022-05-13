@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.ProgressEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("XMLHttpRequest")}}
 
 The **`ProgressEvent`** interface represents events measuring progress of an underlying process, like an HTTP request (for an `XMLHttpRequest`, or the loading of the underlying resource of an {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}}).
 
@@ -36,7 +36,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 _Also inherits methods from its parent {{domxref("Event")}}._
 
 - {{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}}{{non-Standard_inline}}
-  - : Initializes a `ProgressEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"ProgressEvent\")")}} method.
+  - : Initializes a `ProgressEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent('ProgressEvent')")}} method.
 
 ## Examples
 

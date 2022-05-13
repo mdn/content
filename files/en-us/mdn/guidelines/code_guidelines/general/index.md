@@ -89,7 +89,7 @@ The MDN main content pane is about 700px wide on desktop, so embedded MDN exampl
 
 For height, we'd recommend keeping the rendered example at below 700px in height if at all possible, for maximum onscreen legibility.
 
-You should also think about making your examples responsive to  some degree, so they are also useful on mobile devices.
+You should also think about making your examples responsive to some degree, so they are also useful on mobile devices.
 
 ### Use of images and other media
 

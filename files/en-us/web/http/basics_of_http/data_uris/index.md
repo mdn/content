@@ -50,7 +50,7 @@ The Web APIs have native methods to encode or decode to base64: [Base64 encoding
 
 ### Encoding on a Unix system
 
-Base64 encoding of a file or string on Linux and Mac OS X systems can be achieved using the command-line `base64` (or, as an alternative, the `uuencode` utility with `-m` argument).
+Base64 encoding of a file or string on Linux and macOS systems can be achieved using the command-line `base64` (or, as an alternative, the `uuencode` utility with `-m` argument).
 
 ```bash
 echo -n hello|base64
@@ -66,7 +66,7 @@ base64 a.txt>b.txt
 
 ### Encoding on Microsoft Windows
 
-On Windows, [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
+On Windows, [Convert.ToBase64String](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
 
 ```bash
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
@@ -109,9 +109,7 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 
 ## Specifications
 
-| Specification        | Title                 |
-| -------------------- | --------------------- |
-| {{RFC("2397")}} | The "data" URL scheme |
+{{Specifications}}
 
 ## Browser compatibility
 

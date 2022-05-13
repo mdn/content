@@ -52,8 +52,12 @@ rate.addEventListener('input', () => audio.playbackRate = rate.value );
 
 const pitch = document.querySelector('#pitch');
 pitch.addEventListener('change', () => {
-  audio.mozPreservesPitch = pitch.checked;
-  audio.preservesPitch = pitch.checked;
+  if ('preservesPitch' in audio) {
+    audio.preservesPitch = pitch.checked;
+  }
+  else if ('mozPreservesPitch' in audio) { //deprecated
+    audio.mozPreservesPitch = pitch.checked;
+  }
 });
 ```
 

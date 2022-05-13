@@ -107,7 +107,7 @@ You may also consider using open source and privacy focussed analytics platforms
 #### Setting up Google analytics
 
 1. First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://marketingplatform.google.com/about/analytics/).
-2. Choose the [Google Analytics](https://analytics.google.com/analytics/web//) (web) option, and click the _Sign Up_ button.
+2. Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
 3. Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
 4. Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
 5. The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could place the snippets below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
@@ -217,7 +217,7 @@ More often than not though, you'll have to install some kind of emulator. The mo
 
 You can often find simulators for other mobile device environments too, for example:
 
-- [Blackberry](https://developer.blackberry.com/develop/simulator/) (emulator available for Windows, Mac OSX and Linux).
+- [Blackberry](https://swdownloads.blackberry.com/Downloads/entry.do) (emulator available for Windows, Mac OSX and Linux).
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
 - There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 
@@ -270,7 +270,7 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 
 ### Automation and commercial apps
 
-As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system ([Selenium](https://www.seleniumhq.org/) being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.
+As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system ([Selenium](https://www.selenium.dev/) being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.
 
 There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/) and [LambdaTest](https://www.lambdatest.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 

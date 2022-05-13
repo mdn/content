@@ -18,7 +18,7 @@ target.
 ## Syntax
 
 ```js
-any ext.getQueryEXT(target, pname);
+getQueryEXT(target, pname)
 ```
 
 ### Parameters

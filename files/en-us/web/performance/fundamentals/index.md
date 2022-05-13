@@ -26,19 +26,19 @@ Responsiveness sometimes involves multiple stages of feedback. Application launc
 
 Responsiveness is important because people get frustrated and angry when they're ignored. Your app is ignoring the user every second that it fails to respond to the user's input.
 
-### Framerate
+### Frame rate
 
-Framerate is the rate at which the system changes pixels displayed to the user. This is a familiar concept: everyone prefers, say, games that display 60 frames per second over ones that display 10 frames per second, even if they can't explain why.
+Frame rate is the rate at which the system changes pixels displayed to the user. This is a familiar concept: everyone prefers, say, games that display 60 frames per second over ones that display 10 frames per second, even if they can't explain why.
 
-Framerate is important as a "quality of service" metric. Computer displays are designed to "fool" user's eyes, by delivering photons to them that mimic reality. For example, paper covered with printed text reflects photons to the user's eyes in some pattern. By manipulating pixels, a reader app emits photons in a similar pattern to "fool" the user's eyes.
+Frame rate is important as a "quality of service" metric. Computer displays are designed to "fool" user's eyes, by delivering photons to them that mimic reality. For example, paper covered with printed text reflects photons to the user's eyes in some pattern. By manipulating pixels, a reader app emits photons in a similar pattern to "fool" the user's eyes.
 
-As your brain infers, motion is not jerky and discrete, but rather "updates" smoothly and continuously. (Strobe lights are fun because they turn that upside down, starving your brain of inputs to create the illusion of discrete reality). On a computer display, a higher framerate makes for a more faithful imitation of reality.
+As your brain infers, motion is not jerky and discrete, but rather "updates" smoothly and continuously. (Strobe lights are fun because they turn that upside down, starving your brain of inputs to create the illusion of discrete reality). On a computer display, a higher frame rate makes for a more faithful imitation of reality.
 
-> **Note:** Humans usually cannot perceive differences in framerate above 60Hz. That's why most modern electronic displays are designed to refresh at that rate. A television probably looks choppy and unrealistic to a hummingbird, for example.
+> **Note:** Humans usually cannot perceive differences in frame rate above 60Hz. That's why most modern electronic displays are designed to refresh at that rate. A television probably looks choppy and unrealistic to a hummingbird, for example.
 
 ### Memory usage
 
-**Memory usage** is another key metric. Unlike responsiveness and framerate, users don't directly perceive memory usage, but memory usage closely approximates "user state". An ideal system would maintain 100% of user state at all times: all applications in the system would run simultaneously, and all applications would retain the state created by the user the last time the user interacted with the application (application state is stored in computer memory, which is why the approximation is close).
+**Memory usage** is another key metric. Unlike responsiveness and frame rate, users don't directly perceive memory usage, but memory usage closely approximates "user state". An ideal system would maintain 100% of user state at all times: all applications in the system would run simultaneously, and all applications would retain the state created by the user the last time the user interacted with the application (application state is stored in computer memory, which is why the approximation is close).
 
 From this comes an important but counter-intuitive corollary: a well-designed system does not maximize the amount of **free** memory. Memory is a resource, and free memory is an unused resource. Rather, a well-designed system has been optimized to **use** as much memory as possible to maintain user state, while meeting other UPP goals.
 
@@ -58,9 +58,9 @@ This section provides a brief overview of how Firefox/Gecko contributes to perfo
 
 The Web platform provides many tools, some better suited for particular jobs than others. All application logic is written in JavaScript. To display graphics, developers can use HTML or CSS (i.e. high-level declarative languages), or use low-level imperative interfaces offered by the {{ htmlelement("canvas") }} element (which includes [WebGL](/en-US/docs/Web/API/WebGL_API)). Somewhere "in between" HTML/CSS and Canvas is [SVG](/en-US/docs/Web/SVG), which offers some benefits of both.
 
-HTML and CSS greatly increase productivity, sometimes at the expense of framerate or pixel-level control over rendering. Text and images reflow automatically, UI elements automatically receive the system theme, and the system provides "built-in" support for some use cases developers may not think of initially, like different-resolution displays or right-to-left languages.
+HTML and CSS greatly increase productivity, sometimes at the expense of frame rate or pixel-level control over rendering. Text and images reflow automatically, UI elements automatically receive the system theme, and the system provides "built-in" support for some use cases developers may not think of initially, like different-resolution displays or right-to-left languages.
 
-The `canvas` element offers a pixel buffer directly for developers to draw on. This gives developers pixel-level control over rendering and precise control of framerate, but now the developers need to deal with multiple resolutions and orientations, right-to-left languages, and so forth. Developers draw to canvases using either a familiar 2D drawing API, or WebGL, a "close to the metal" binding that mostly follows OpenGL ES 2.0.
+The `canvas` element offers a pixel buffer directly for developers to draw on. This gives developers pixel-level control over rendering and precise control of frame rate, but now the developers need to deal with multiple resolutions and orientations, right-to-left languages, and so forth. Developers draw to canvases using either a familiar 2D drawing API, or WebGL, a "close to the metal" binding that mostly follows OpenGL ES 2.0.
 
 ### Gecko rendering
 
@@ -106,13 +106,13 @@ Another problem that can delay startup is idle time, caused by waiting for respo
 
 On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) for a guide as to how.
 
-### Framerate
+### Frame rate
 
-The first important thing for high framerate is to choose the right tool. Use HTML and CSS to implement content that's mostly static, scrolled, and infrequently animated. Use Canvas to implement highly dynamic content, like games that need tight control over rendering and don't need theming.
+The first important thing for high frame rate is to choose the right tool. Use HTML and CSS to implement content that's mostly static, scrolled, and infrequently animated. Use Canvas to implement highly dynamic content, like games that need tight control over rendering and don't need theming.
 
-For content drawn using Canvas, it's up to the developer to hit framerate targets: they have direct control over what's drawn.
+For content drawn using Canvas, it's up to the developer to hit frame rate targets: they have direct control over what's drawn.
 
-For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
+For HTML and CSS content, the path to high frame rate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling frame rate over a target. CSS [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
 
 Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:
 
@@ -145,7 +145,7 @@ If you want to create animations on the fly or modify them in [JavaScript](/en-U
 
 Instead of tweaking absolute positioning and fiddling with all that math yourself, use the {{cssxref("transform")}} CSS property to adjust the position, scale, and so forth of your content. The reason is, once again, hardware acceleration. The browser can do these tasks on your GPU, letting the CPU handle other things.
 
-In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](https://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
+In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](https://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
 
 > **Note:** You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance, but can also have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
 

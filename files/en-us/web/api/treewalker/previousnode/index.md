@@ -23,6 +23,10 @@ construction, returns `null` and the current node is not changed.
 previousNode()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Node")}} object or `null`.

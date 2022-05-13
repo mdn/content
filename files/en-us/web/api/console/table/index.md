@@ -143,6 +143,10 @@ table(data, columns)
 - `columns`
   - : An array containing the names of columns to include in the output.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

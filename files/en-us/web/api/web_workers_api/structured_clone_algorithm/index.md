@@ -24,7 +24,8 @@ It clones by recursing through the input object while maintaining a map of previ
     For example, if an object is marked readonly with a [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor), it will be read/write in the duplicate, since that's the default.
   - The prototype chain is not walked or duplicated.
 
-> **Note:** Native {{jsxref("Error")}} types can be cloned in Chrome, and Firefox is [working on it](https://bugzilla.mozilla.org/show_bug.cgi?id=1556604).
+> **Note:** Native {{jsxref("Error")}} types can be cloned in Chrome.
+> Firefox can clone {{domxref("DOMException")}}, and is [working on the other error types](https://bugzilla.mozilla.org/show_bug.cgi?id=1556604).
 
 ## Supported types
 
@@ -104,12 +105,16 @@ It clones by recursing through the input object while maintaining a map of previ
       <td>{{jsxref("Set")}}</td>
       <td></td>
     </tr>
+    <tr>
+      <td>{{domxref("DOMException")}}</td>
+      <td>Most browsers only clone the properties {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}} (in theory stack traces and other attributes may also be cloned).</td>
+    </tr>
   </tbody>
 </table>
 
 ## See also
 
-- [HTML Specification: Safe passing of structured data](https://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
+- [HTML Specification: Safe passing of structured data](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
 - {{Glossary("Transferable objects")}}
 - {{domxref("structuredClone()")}}
 - {{domxref("window.history")}}

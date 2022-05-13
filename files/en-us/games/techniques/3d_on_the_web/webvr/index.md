@@ -29,7 +29,7 @@ The [WebVR API](/en-US/docs/Web/API/WebVR_API) is the central API for capturing 
 
 ### Browser support and spec status
 
-Currently browser support for the WebVR API is still experimental — it works in [nightly builds of Firefox](https://nightly.mozilla.org/) and [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&usp=sharing#list) (Mozilla and Google teamed up to work on the implementation together), but sooner rather than later we'll see it in regular builds.
+Currently browser support for the WebVR API is still experimental — it works in [nightly builds of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/) and [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&usp=sharing#list) (Mozilla and Google teamed up to work on the implementation together), but sooner rather than later we'll see it in regular builds.
 
 The [WebVR spec](https://mozvr.github.io/webvr-spec/webvr.html) is in Editor's Draft status which means it is still subject to change. The development is led by [Vladimir Vukicevic](https://twitter.com/vvuk) from Mozilla and [Brandon Jones](https://twitter.com/tojiro) from Google. For more info be sure to visit the <https://mixedreality.mozilla.org/> and [WebVR.info](https://webvr.info/) websites.
 
@@ -107,7 +107,7 @@ Boris Smus has written about the concept of [Responsive WebVR](https://smus.com/
 
 There's also a markup framework called [A-Frame](https://aframe.io/) that offers simple building blocks for WebVR, so you can rapidly build and experiment with VR websites and games: read the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) tutorial for more details.
 
-Immersion is more important than gameplay or graphics - you have to feel you're "inside" the experience. It's not easy to achieve, but it doesn't require realistic images. Quite the contrary as having a basic shapes flying around in high framerate can make a lot. Remember: experimenting is key - see what works for your game in particular.
+Immersion is more important than gameplay or graphics - you have to feel you're "inside" the experience. It's not easy to achieve, but it doesn't require realistic images. Quite the contrary as having a basic shapes flying around in high frame rate can make a lot. Remember: experimenting is key - see what works for your game in particular.
 
 ## The future of WebVR
 

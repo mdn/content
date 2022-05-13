@@ -33,6 +33,10 @@ The rotation center point is always the canvas origin. To change the center poin
 will need to move the canvas by using the
 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} method.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Rotating a shape

@@ -51,7 +51,7 @@ uniformMatrix4fv(location, transpose, value)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

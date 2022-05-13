@@ -28,6 +28,10 @@ scrollByPages(pages)
 - `pages` is the number of pages to scroll. It may be a positive or
   negative integer.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

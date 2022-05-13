@@ -14,6 +14,9 @@ browser-compat: api.clearTimeout
 The global **`clearTimeout()`** method cancels a timeout previously established
 by calling {{domxref("setTimeout()")}}.
 
+If the parameter provided does not identify a previously established action,
+this method does nothing.
+
 ## Syntax
 
 ```js
@@ -32,6 +35,10 @@ It's worth noting that the pool of IDs used by
 means you can technically use `clearTimeout()` and
 {{domxref("clearInterval", "clearInterval()")}}
 interchangeably. However, for clarity, you should avoid doing so.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -82,4 +89,3 @@ exception is thrown.
 - {{domxref("setInterval()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)

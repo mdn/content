@@ -128,7 +128,7 @@ Edge versions below 17 and Internet Explorer do not reliably fire
 - [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html)
   \- Blog post
 - [requestAnimationFrame
-  for smart animating](https://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
+  for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating
   with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web

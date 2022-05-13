@@ -39,11 +39,11 @@ The following sites and tools are helpful when trying to track down history info
 - [Chromium bug database](https://bugs.chromium.org/)
 - [Chromium source code](https://chromium.googlesource.com/chromium)
 - [Chromium source code by release version number](https://chromium.googlesource.com/chromium/src.git/+refs)
-- [Google Chrome Platform Status](https://www.chromestatus.com/)
-- [Chromium Code Search](https://cs.chromium.org/)
+- [Google Chrome Platform Status](https://chromestatus.com/features)
+- [Chromium Code Search](https://source.chromium.org/chromium)
 - [Find Releases Tool](https://storage.googleapis.com/chromium-find-releases-static/index.html)
-- [List of everything exposed to the Web in Chrome](https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/global-interface-listing-expected.txt?g=0)
-- [Interfaces not exposed to WebView](https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt)
+- [List of everything exposed to the Web in Chrome](https://source.chromium.org/chromiumchromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/global-interface-listing-expected.txt?g=0)
+- [Interfaces not exposed to WebView](https://source.chromium.org/chromiumchromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt)
 - [WebKit bugs](https://bugs.webkit.org/)
 
 ### Getting the Chrome version for a changeset or revision
@@ -74,7 +74,7 @@ If a feature is added to WebView prior to the Chrome 37 time period, and its ver
 
 #### Features excluded from WebView
 
-One useful resource is [this file which lists the interfaces and/or interface members](https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt) which are not available in a WebView.
+One useful resource is [this file which lists the interfaces and/or interface members](https://source.chromium.org/chromiumchromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt) which are not available in a WebView.
 
 ```js
 interface HTMLIFrameElement : HTMLElement
@@ -304,7 +304,7 @@ Most of the time, APIs and other features are present in both the desktop and An
 
 ### Searchfox
 
-The [Searchfox](https://searchfox.org/) web site provides another method you can use to search Firefox source code. Searchfox is a tool that indexes the Firefox repositories (most usefully, the main [mozilla-central source code](https://searchfox.org/mozilla-central/source) and, interesting, the [WHATWG HTML specification is indexed](https://searchfox.org/whatwg-html/source) as well).
+The [Searchfox](https://searchfox.org/) website provides another method you can use to search Firefox source code. Searchfox is a tool that indexes the Firefox repositories (most usefully, the main [mozilla-central source code](https://searchfox.org/mozilla-central/source) and, interesting, the [WHATWG HTML specification is indexed](https://searchfox.org/whatwg-html/source) as well).
 
 ## Opera
 
@@ -334,7 +334,7 @@ You can then compare the WebKit version number to the Safari version history fou
 - [Trac revision timeline](https://trac.webkit.org/)
 - [Browse WebKit source](https://trac.webkit.org/browser)
 
-  - [By Apple product release number](https://trac.webkit.org/browser/webkit/releases/Apple) (Safari, iOS, Safari Technology Preview, watchOS, some older Mac OS X releases). This is how we number Safari in our [Browser Compatibility Database](https://github.com/mdn/browser-compat-data).
+  - [By Apple product release number](https://trac.webkit.org/browser/webkit/releases/Apple) (Safari, iOS, Safari Technology Preview, watchOS, some older macOS releases). This is how we number Safari in our [Browser Compatibility Database](https://github.com/mdn/browser-compat-data).
   - [By Safari build number](https://trac.webkit.org/browser/webkit/tags) (SVN tags)
   - [By WebKit build number](https://trac.webkit.org/browser/webkit/branches) (SVN branches)
   - {{interwiki("wikipedia", "Safari version history")}} (list of Safari versions with feature summaries and the corresponding WebKit build number for each)

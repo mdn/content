@@ -20,6 +20,8 @@ You can use this attribute with the following SVG elements:
 
 ## Example
 
+### Example 1
+
 ```css hidden
 html, body, svg {
   height: 100%;
@@ -40,7 +42,26 @@ html, body, svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "420", "200")}}
+{{EmbedLiveSample("Example 1", "420", "200")}}
+
+### Example 2
+
+```html
+<svg width="200" height="200" viewBox="0 0 220 220"
+     xmlns="http://www.w3.org/2000/svg">
+  <filter id="displacementFilter">
+    <feTurbulence baseFrequency="0.05"
+        numOctaves="3" result="turbulence"/>
+    <feDisplacementMap in2="turbulence" in="SourceGraphic"
+        scale="50" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+
+  <circle cx="100" cy="100" r="100"
+      style="filter: url(#displacementFilter)"/>
+</svg>
+```
+
+{{EmbedLiveSample("Example 2", "220", "250")}}
 
 ## Usage notes
 
@@ -63,25 +84,6 @@ html, body, svg {
 
 - `<integer>`
   - : Defines the number of octaves. Negative values are forbidden.
-
-## Example
-
-```html
-<svg width="200" height="200" viewBox="0 0 220 220"
-     xmlns="http://www.w3.org/2000/svg">
-  <filter id="displacementFilter">
-    <feTurbulence baseFrequency="0.05"
-        numOctaves="3" result="turbulence"/>
-    <feDisplacementMap in2="turbulence" in="SourceGraphic"
-        scale="50" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
-
-  <circle cx="100" cy="100" r="100"
-      style="filter: url(#displacementFilter)"/>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "220", "220")}}
 
 ## Specifications
 
@@ -117,5 +119,5 @@ html, body, svg {
 
 ## See also
 
-- [Understanding Perlin Noise](http://adrianb.io/2014/08/09/perlinnoise.html)
+- [Understanding Perlin Noise](https://adrianb.io/2014/08/09/perlinnoise.html)
 - {{SVGAttr("baseFrequency")}}

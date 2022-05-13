@@ -12,7 +12,7 @@ browser-compat: api.Document.pointercancel_event
 ---
 {{APIRef}}
 
-The **`pointercancel`** event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the {{event("pointerdown")}} event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.
+The **`pointercancel`** event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the {{domxref("Document/pointerdown_event", "pointerdown")}} event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.
 
 <table class="properties">
   <tbody>
@@ -44,7 +44,7 @@ Some examples of situations that will trigger a `pointercancel` event:
 - The browser decides that the user started pointer input accidentally. This can happen if, for example, the hardware supports palm rejection to prevent a hand resting on the display while using a stylus from accidentally triggering events.
 - The {{cssxref("touch-action")}} CSS property prevents the input from continuing.
 
-> **Note:** After the `pointercancel` event is fired, the browser will also send {{event("pointerout")}} followed by {{event("pointerleave")}}.
+> **Note:** After the `pointercancel` event is fired, the browser will also send {{domxref("Document/pointerout_event", "pointerout")}} followed by {{domxref("Document/pointerleave_event", "pointerleave")}}.
 
 ## Examples
 

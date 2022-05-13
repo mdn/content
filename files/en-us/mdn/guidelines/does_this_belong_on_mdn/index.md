@@ -12,7 +12,7 @@ In this article, you'll find information describing how to decide whether or not
 
 ## The question
 
-If you're preparing to document something, you may be trying to decide whether to put the information on MDN Web Docs. In addition, you may be considering maintaining documentation in your source code, putting the document on the [Mozilla wiki](https://wiki.mozilla.org/), or in readme files in a Git repository. This article's purpose is to help you decide which of these options is right for your content.
+If you're preparing to document something, you may be trying to decide whether to put the information on MDN Web Docs. In addition, you may be considering maintaining documentation in your source code, putting the document on the [Mozilla wiki](https://wiki.mozilla.org/Main_Page), or in readme files in a Git repository. This article's purpose is to help you decide which of these options is right for your content.
 
 The two main considerations for whether a document belongs on MDN are:
 

@@ -31,8 +31,8 @@ atob(encodedData)
 ### Parameters
 
 - `encodedData`
-  - : A [binary string](/en-US/docs/Web/API/DOMString/Binary) contains an
-    base64 encoded data.
+  - : A [binary string](/en-US/docs/Web/API/DOMString/Binary) containing
+    base64-encoded data.
 
 ### Return value
 

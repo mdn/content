@@ -177,7 +177,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>width</code></td>
       <td>A positive integer number, or the text <code>device-width</code></td>
       <td>
-        Defines the pixel width of the viewport that you want the web site to be
+        Defines the pixel width of the viewport that you want the website to be
         rendered at.
       </td>
     </tr>

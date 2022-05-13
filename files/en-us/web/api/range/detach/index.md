@@ -20,6 +20,14 @@ resources. The method has been kept for compatibility.
 detach()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

@@ -55,9 +55,9 @@ The `ConstrainDouble` constraint type is used to specify a constraint for a prop
 The `ConstrainDOMString` constraint type is used to specify a constraint for a property whose value is a string. Its value may either be set to a string, an array of strings, or an object containing the following properties:
 
 - `exact`
-  - : A {{domxref("DOMString")}}, or an array of `DOMString`s, one of which must be the value of the property. If the property can't be set to one of the listed values, matching will fail.
+  - : A string or an array of strings, one of which must be the value of the property. If the property can't be set to one of the listed values, matching will fail.
 - `ideal`
-  - : A {{domxref("DOMString")}}, or an array of `DOMString`s, specifying ideal values for the property. If possible, one of the listed values will be used, but if it's not possible, the user agent will use the closest possible match.
+  - : A string or an array of strings, specifying ideal values for the property. If possible, one of the listed values will be used, but if it's not possible, the user agent will use the closest possible match.
 
 ### ConstrainULong
 
@@ -146,7 +146,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - {{domxref("MediaTrackConstraints.width", "width")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the video width or range of widths which are acceptable and/or required.
 - resizeMode
-  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.
+  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output in order to satisfy other constraints that affect the resolution.
 
 ### Properties of shared screen tracks
 

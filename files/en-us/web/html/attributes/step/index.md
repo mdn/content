@@ -19,7 +19,7 @@ The `step` sets the _stepping interval_ when clicking up and down spinner button
 
 The default stepping value for `number` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer. The default stepping value for `time` is 1 second, with 900 being equal to 15 minutes.
 
-### Syntax
+## Syntax
 
 <table class="no-markdown">
   <caption>

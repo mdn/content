@@ -29,7 +29,7 @@ When we have a set of items that we want to display horizontally, we may well en
 
 To distribute the space between or around the items we use the alignment properties in flexbox, and the {{cssxref("justify-content")}} property. You can read more about this property in [Aligning Items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container), which deals with aligning items on the main axis.
 
-In the below live example we display the items at their natural size and by using `justify-content: space-between` make equal amounts of space between the items. You can change how the space is distributed using the `space-around` value, or where supported, `space-evenly`. You could also use `flex-start` to place the space at the end of the items, `flex-end` to place it before them, or `center` to centre the navigation items.
+In the below live example we display the items at their natural size and by using `justify-content: space-between` make equal amounts of space between the items. You can change how the space is distributed using the `space-around` value, or where supported, `space-evenly`. You could also use `flex-start` to place the space at the end of the items, `flex-end` to place it before them, or `center` to center the navigation items.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation.html", '100%', 550)}}
 
@@ -61,7 +61,7 @@ You can play with the alignment, aligning the item to the start with `flex-start
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/center.html", '100%', 700)}}
 
-In the future we may not need to make a container a flex container just to centre a single item, as the Box Alignment properties will ultimately be implemented in Block layout. For now however, if you need to properly centre one thing inside another, flexbox is the way to do it. As in the example above, make a container into a flex container, and then use either `align-items` on the parent element or target the flex item itself with `align-self`.
+In the future we may not need to make a container a flex container just to center a single item, as the Box Alignment properties will ultimately be implemented in Block layout. For now however, if you need to properly center one thing inside another, flexbox is the way to do it. As in the example above, make a container into a flex container, and then use either `align-items` on the parent element or target the flex item itself with `align-self`.
 
 ## Card layout pushing footer down
 

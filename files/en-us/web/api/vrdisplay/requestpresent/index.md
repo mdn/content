@@ -22,9 +22,7 @@ The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface star
 ## Syntax
 
 ```js
-vrDisplayInstance.requestPresent(layers).then(function() {
-  // Do something after the presentation has begun
-});
+requestPresent(layers)
 ```
 
 ### Parameters

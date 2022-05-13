@@ -213,7 +213,9 @@ new WeakSet(function* () {
 #### See also
 
 - {{jsxref("Promise.all()", "Promise.all(<var>iterable</var>)")}}
+- {{jsxref("Promise.allSettled()", "Promise.allSettled(<var>iterable</var>)")}}
 - {{jsxref("Promise.race()", "Promise.race(<var>iterable</var>)")}}
+- {{jsxref("Promise.any()", "Promise.any(<var>iterable</var>)")}}
 - {{jsxref("Array.from()", "Array.from(<var>iterable</var>)")}}
 
 ### Syntaxes expecting iterables

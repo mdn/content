@@ -14,7 +14,7 @@ JavaScript is a bit confusing for developers experienced in class-based language
 
 When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its **prototype**. That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype. By definition, `null` has no prototype, and acts as the final link in this **prototype chain**.
 
-Nearly all objects in JavaScript are instances of {{jsxref("Object")}} which sits just below `null` on the top of a prototype chain.
+Nearly all objects in JavaScript are instances of {{jsxref("Object")}}, which has `null` as its prototype.
 
 While this confusion is often considered to be one of JavaScript's weaknesses, the prototypal inheritance model itself is, in fact, more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model.
 
@@ -73,7 +73,7 @@ console.log(o.d); // undefined
 // no property found, return undefined.
 ```
 
-[Code Link](https://repl.it/@khaled_hossain_code/prototype)
+[Code Link](https://replit.com/@khaled_hossain_code/prototype)
 
 Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a [getter or a setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
 

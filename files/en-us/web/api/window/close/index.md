@@ -30,6 +30,14 @@ objects returned by
 close()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Closing a window opened with `window.open()`

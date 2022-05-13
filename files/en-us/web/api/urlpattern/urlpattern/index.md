@@ -22,8 +22,8 @@ object representing the url pattern defined by the parameters.
 ## Syntax
 
 ```js
-new URLPattern(input);
-new URLPattern(input, baseURL);
+new URLPattern(input)
+new URLPattern(input, baseURL)
 ```
 
 ### Parameters

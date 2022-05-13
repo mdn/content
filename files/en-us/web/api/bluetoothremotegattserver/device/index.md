@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.BluetoothRemoteGATTServer.device
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.device`** read-only property
 returns a reference to the {{domxref("BluetoothDevice")}} running the server.

@@ -17,7 +17,7 @@ To update or check the content of the CSS JSON DB, you will need to gather infor
 1. **Latest spec**
     Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specifies that cover) that feature. To find it, you can usually do a web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
 2. **Latest web browsers**
-    These should be experimental/alpha builds such as [Firefox Nightly](https://nightly.mozilla.org/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
+    These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
 3. **Additional info**
     Find as much info as you can to better understand how the specific feature works. E.g. blog posts or demos are good resources.
 4. **Engineering contacts**

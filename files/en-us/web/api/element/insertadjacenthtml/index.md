@@ -42,7 +42,7 @@ insertAdjacentHTML(position, text)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -126,7 +126,7 @@ reset.addEventListener('click', () => {
 
 #### Result
 
-{{EmbedLiveSample("Example", 100, 100)}}
+{{EmbedLiveSample("Examples", 100, 100)}}
 
 ## Specifications
 

@@ -60,7 +60,7 @@ drawRangeElements(mode, start, end, count, type, offset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

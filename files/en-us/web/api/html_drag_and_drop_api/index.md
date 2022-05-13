@@ -9,6 +9,7 @@ tags:
   - XUL
   - drag and drop
   - events
+spec-urls: https://html.spec.whatwg.org/multipage/#dnd
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
@@ -16,7 +17,7 @@ tags:
 
 The user may select _draggable_ elements with a mouse, drag those elements to a _droppable_ element, and drop them by releasing the mouse button. A translucent representation of the _draggable_ elements follows the pointer during the drag operation.
 
-For web sites, extensions, and XUL applications, you can customize which elements can become _draggable_, the type of feedback the _draggable_ elements produce, and the _droppable_ elements.
+You can customize which elements can become _draggable_, the type of feedback the _draggable_ elements produce, and the _droppable_ elements.
 
 This overview of HTML Drag and Drop includes a description of the interfaces, basic steps to add drag-and-drop support to an application, and an interoperability summary of the interfaces.
 
@@ -333,9 +334,7 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 
 ## Specifications
 
-| **Specification**                                | **Status**                       | **Comment** |
-| ------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dnd")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## See also
 

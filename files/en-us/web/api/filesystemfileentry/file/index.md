@@ -21,7 +21,8 @@ the directory entry.
 ## Syntax
 
 ```js
-FileSystemFileEntry.file(successCallback[, errorCallback]);
+file(successCallback)
+file(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -36,9 +37,9 @@ FileSystemFileEntry.file(successCallback[, errorCallback]);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example establishes a method, `readFile()`, reads a text file and calls
 a specified callback function with the received text (in a {{jsxref("String")}} object)
@@ -80,7 +81,5 @@ called; similarly, its {{event("error")}} handler is set up to call the
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

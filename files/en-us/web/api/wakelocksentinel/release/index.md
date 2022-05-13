@@ -21,7 +21,7 @@ once the sentinel has been successfully released.
 ## Syntax
 
 ```js
-WakeLockSentinel.release().then(...);
+release()
 ```
 
 ### Parameters

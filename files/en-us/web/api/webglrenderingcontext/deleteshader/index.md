@@ -30,7 +30,7 @@ deleteShader(shader)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

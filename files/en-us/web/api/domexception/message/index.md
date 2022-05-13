@@ -17,7 +17,7 @@ a message or description associated with the given [error name](/en-US/docs/Web/
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

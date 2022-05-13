@@ -31,6 +31,10 @@ track.
 createBufferSource()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("AudioBufferSourceNode")}}.

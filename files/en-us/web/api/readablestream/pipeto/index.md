@@ -49,7 +49,7 @@ A {{jsxref("Promise")}} that resolves when the piping process has completed.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The `writableStream` and/or `readableStream` objects are not a writable stream/readable stream, or one or both of the streams are locked.
 
 ## Examples

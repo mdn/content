@@ -25,7 +25,7 @@ The `navigation` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#L
 
 It is preferable to use the HTML5 [`<nav>` element](/en-US/docs/Web/HTML/Element/nav) to define a navigation landmark. If the HTML5 nav element technique is not being used, use a `role="navigation"` attribute to define a navigation landmark.
 
-> **Note:** Using the  {{HTMLElement('nav')}} element will automatically communicate a section has a role of `navigation`. Developers should always prefer using the correct semantic HTML element over using ARIA
+> **Note:** Using the {{HTMLElement('nav')}} element will automatically communicate a section has a role of `navigation`. Developers should always prefer using the correct semantic HTML element over using ARIA
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -63,13 +63,13 @@ None.
 
 ### Prefer HTML
 
-Using the  {{HTMLElement('nav')}} element will automatically communicate a section has a role of `navigation`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('nav')}} element will automatically communicate a section has a role of `navigation`. If at all possible, prefer using it instead.
 
 ### Labeling landmarks
 
 #### Multiple landmarks
 
-If there is more than one `navigation` landmark role or  {{HTMLElement('nav')}} element in a document, provide a label for each landmark. This label will allow an assistive technology user to be able to quickly understand the purpose of each landmark.
+If there is more than one `navigation` landmark role or {{HTMLElement('nav')}} element in a document, provide a label for each landmark. This label will allow an assistive technology user to be able to quickly understand the purpose of each landmark.
 
 ```html
 <div id="main-nav" role="navigation" aria-label="Main">
@@ -118,7 +118,7 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 - The {{HTMLElement('nav')}} element
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
+- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Semantic navigation with the nav element | HTML5 Doctor](https://html5doctor.com/nav-element/)
 

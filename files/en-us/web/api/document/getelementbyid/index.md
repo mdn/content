@@ -62,7 +62,7 @@ function changeColor(newColor) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 250, 100) }}
+{{ EmbedLiveSample('Examples', 250, 120) }}
 
 ## Usage notes
 
@@ -70,7 +70,7 @@ The capitalization of `"Id"` in the name of this method _must_ be correct for th
 
 Unlike some other element-lookup methods such as {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, `getElementById()` is only available as a method of the global `document` object, and _not_ available as a method on all element objects in the DOM. Because ID values must be unique throughout the entire document, there is no need for "local" versions of the function.
 
-## Example
+### Example
 
 ```html
 <!doctype html>

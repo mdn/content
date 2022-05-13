@@ -10,7 +10,7 @@ tags:
   - initCompositionEvent
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
-{{deprecated_header}}{{APIRef("DOM Events")}}
+{{deprecated_header}}{{APIRef("UI Events")}}
 
 The **`initCompositionEvent()`**
 method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a

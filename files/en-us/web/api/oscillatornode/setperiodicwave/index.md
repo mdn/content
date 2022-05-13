@@ -31,7 +31,7 @@ setPeriodicWave(wave)
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -23,6 +23,14 @@ To track the success or failure of the request, it is necessary to listen for th
 exitPointerLock()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

@@ -23,6 +23,14 @@ collecting reports in its report queue.
 observe()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

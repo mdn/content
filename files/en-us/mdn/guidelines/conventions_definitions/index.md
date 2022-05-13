@@ -37,7 +37,7 @@ One or both of these will be true:
 - Its defining spec is likely to change significantly, in backwards-incompatible ways (i.e. it may break existing code that relies on the feature).
 
 If one or both of these definitions is true, then you should think carefully before you start using that technology in any kind of production project (i.e. not just a demo or experiment).
-See also the definition of experimental in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md).
+See also the definition of experimental in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
 
 Conversely, an item is no longer experimental when:
 
@@ -60,7 +60,7 @@ A good example is the [B2G (Firefox OS) project](/en-US/docs/Archive/B2G_OS).
 
 A page should be archived if it fits the above description.
 To archive a page, you should use the "Move page feature" (_Advanced > Move this article_) to move the page into the Archive page tree (/en-US/docs/Archive).
-You might not have the permissions to use this feature, and before you start archiving pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
+You might not have the permissions to use this feature, and before you start archiving pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Deleted pages
 
@@ -79,7 +79,7 @@ These might be:
 
 A page should be deleted if it fits the above description.
 To delete a page, you should use the "Delete this page feature" (_Advanced > Delete this page_) to delete the page.
-You will probably not have the permissions to use this feature, and when thinking about deleting pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
+You will probably not have the permissions to use this feature, and when thinking about deleting pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### When to document new technologies
 
@@ -167,7 +167,7 @@ Here are some guidelines to help you decide what to do.
 
 Please use common sense with wording of warning messages and other changes to text suggested by the guidelines above.
 Different items will require different wording and handling of the situation.
-When in doubt, feel free to ask for advice on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix), or on the [MDN Web Docs discussion forum](https://discourse.mozilla.org/c/mdn).
+When in doubt, feel free to ask for advice on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix), or on the [MDN Web Docs discussion forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Copying content within MDN
 
@@ -223,5 +223,5 @@ In such cases, consider what the reality is — i.e. what browsers are actually 
 For example, as of Jan 2019 the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute has a conflict, which was summarized like so:
 
 > **Warning:** Spec conflict: The [WHATWG spec lists `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode), and modern browsers are working towards supporting it.
-> The [W3C HTML 5.2 spec](https://www.w3.org/TR/html52/index.html#contents) however no longer lists it (i.e. marks it as obsolete).
+> The [W3C HTML 5.2 spec](https://html.spec.whatwg.org/multipage/index.html#contents) however no longer lists it (i.e. marks it as obsolete).
 > You should consider the WHATWG definition as correct, until a consensus is reached.=

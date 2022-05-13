@@ -38,7 +38,7 @@ Cookies will only be sent in a first-party context and not be sent along with re
 
 ### `None`
 
-Cookies will be sent in all contexts, i.e. in responses to both first-party and cross-origin requests. If `SameSite=None` is set, the cookie [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute must also be set (or the cookie will be blocked).
+Cookies will be sent in all contexts, i.e. in responses to both first-party and cross-site requests. If `SameSite=None` is set, the cookie [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute must also be set (or the cookie will be blocked).
 
 ## Fixing common warnings
 
@@ -108,10 +108,7 @@ RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRul
 
 ## Specifications
 
-| Specification                                                                                              | Title                                                         |
-| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                           | HTTP State Management Mechanism                               |
-| [draft-ietf-httpbis-rfc6265bis-09](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-09) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+{{Specifications}}
 
 ## Browser compatibility
 

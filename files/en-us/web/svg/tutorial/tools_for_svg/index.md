@@ -7,7 +7,7 @@ tags:
   - SVG
   - Tools
 ---
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
+{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
 
 Now that we covered the basics of the SVG internals, we will take a look at some tools to work with SVG files.
 
@@ -41,7 +41,7 @@ Together with [Apache FOP](https://xmlgraphics.apache.org/fop/) Batik can transf
 
 ### Other renderers
 
-Several projects exist that can create a raster image from an SVG source. [ImageMagick](https://imagemagick.org/) is one of the most famous command-line image processing tools. The Gnome library [rsvg](https://developer.gnome.org/rsvg/) is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
+Several projects exist that can create a raster image from an SVG source. [ImageMagick](https://imagemagick.org/) is one of the most famous command-line image processing tools. The Gnome library [rsvg](https://wiki.gnome.org/Projects/LibRsvg) is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
 
 ## Raphael JS
 
@@ -63,7 +63,7 @@ Drawings from Google Docs can be exported as SVG.
 
 ## Science
 
-The well-known plotting tools xfig and gnuplot both support exporting as SVG. To render graphs on the web [JSXGraph](http://jsxgraph.uni-bayreuth.de/wp/) supports VML, SVG and canvas, automatically deciding which technology to use based on browser capabilities.
+The well-known plotting tools xfig and gnuplot both support exporting as SVG. To render graphs on the web [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/) supports VML, SVG and canvas, automatically deciding which technology to use based on browser capabilities.
 
 In GIS (Geographic Information System) applications SVG is often used as both storage and rendering format. See [carto.net](https://carto.net/) for details.
 
@@ -71,4 +71,4 @@ In GIS (Geographic Information System) applications SVG is often used as both st
 
 The W3C offers a [list of programs](https://www.w3.org/Graphics/SVG/WG/wiki/Implementations) that support SVG.
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
+{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}

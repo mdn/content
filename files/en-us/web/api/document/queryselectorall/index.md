@@ -54,8 +54,8 @@ each element that matches at least one of the specified selectors or an empty
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified `selectors` string is not valid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified `selectors` string is not valid.
 
 ## Examples
 

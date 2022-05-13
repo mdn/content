@@ -49,7 +49,7 @@ bindBuffer(target, buffer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

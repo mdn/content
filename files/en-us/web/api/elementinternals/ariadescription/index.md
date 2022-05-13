@@ -19,7 +19,7 @@ The **`ariaDescription`** property of the {{domxref("ElementInternals")}} interf
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

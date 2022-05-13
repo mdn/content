@@ -33,6 +33,10 @@ countReset(label)
     that label to 0. If omitted, `countReset()` resets the default counter to
     0\.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 For example, given code like this:

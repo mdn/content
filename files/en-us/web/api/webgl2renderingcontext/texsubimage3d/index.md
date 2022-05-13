@@ -141,7 +141,7 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

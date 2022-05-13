@@ -61,8 +61,10 @@ put(request, response)
 
 A {{jsxref("Promise")}} that resolves with `undefined`.
 
-> **Note:** The promise will reject with a `TypeError` if the
-> URL scheme is not `http` or `https`.
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Returned if the URL scheme is not `http` or `https`.
 
 ## Examples
 

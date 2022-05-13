@@ -80,7 +80,7 @@ It is best not to invent new user interactions. For any interaction you do add, 
 
 - [UXMatters.com](https://www.uxmatters.com/)
 - [UXDesign.com](http://uxdesign.com/)
-- [The UX Design section of SmashingMagazine](https://uxdesign.smashingmagazine.com/)
+- [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
 > **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
 
@@ -139,7 +139,7 @@ The required styles are those necessary to handle the three states of our contro
 We need an extra class `active` to define the look and feel of our control when it is in its active state. Because our control is focusable, we double this custom style with the {{cssxref(":focus")}} pseudo-class in order to be sure they will behave the same.
 
 ```css
-.select .active,
+.select.active,
 .select:focus {
   outline: none;
 
@@ -852,9 +852,8 @@ We have seen all the basics of building a custom form control, but as you can se
 Here are a few libraries you should consider before coding your own:
 
 - [jQuery UI](https://jqueryui.com/)
-- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns)
+- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
-- [Nice Forms](https://www.emblematiq.com/lab/niceforms/)
 
 If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
 

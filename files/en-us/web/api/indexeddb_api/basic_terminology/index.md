@@ -154,7 +154,7 @@ Each record has a value, which could include anything that can be expressed in J
 
 When an object or array is stored, the properties and values in that object or array can also be anything that is a valid value.
 
-[Blobs](/en-US/docs/Web/API/Blob) and files can be stored, cf. [specification](https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html).
+[Blobs](/en-US/docs/Web/API/Blob) and files can be stored, cf. [specification](https://w3c.github.io/IndexedDB/).
 
 ### Range and scope
 

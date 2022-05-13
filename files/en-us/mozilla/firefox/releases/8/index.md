@@ -128,11 +128,11 @@ It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect h
 
 ### Interface changes
 
-- The {{ ifmethod("mozIJSSubScriptLoader", "loadSubScript") }} method now loads scripts from the startup cache when possible.
+- The `mozIJSSubScriptLoader.loadSubScript()` method now loads scripts from the startup cache when possible.
 - The `ownerWindow` attribute has been removed from the `nsIAccessNode` interface.
 - The `nsIDOMStorageWindow` interface has been merged into the `nsIDOMWindow` interface.
 - All members of the `nsIDOMWindowInternal` interface have been moved into the `nsIDOMWindow` interface. The interface itself (with no members) remains available for compatibility until Firefox 9.
-- In order to improve performance, callback handling for asynchronous Places database updates has been changed. See the new {{ ifmethod("mozIVisitInfoCallback", "handleResult") }} and {{ ifmethod("mozIVisitInfoCallback", "handleError") }} methods, which replace the old single method for both error and success condition handling.
+- In order to improve performance, callback handling for asynchronous Places database updates has been changed. See the new `mozIVisitInfoCallback.handleResult()` and `mozIVisitInfoCallback.handleError()` methods, which replace the old single method for both error and success condition handling.
 - The `nsIMemoryReporter` `KIND_MAPPED` attribute has been deprecated in favor of `KIND_NONHEAP`, new unit types `UNITS_COUNT_CUMULATIVE` and `UNITS_PERCENTAGE` have been added.
 - The `nsIMemoryReporterManager` interface has a new `explicit` attribute, which reports the total size of explicit memory allocations.
 - The `nsIMemoryReporterManager` interface has a new `resident` attribute, which reports the amount of physical memory used.
@@ -141,7 +141,7 @@ It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect h
 - The `nsISelection3` interface has been merged into the `nsISelection` interface.
 - The `nsISessionStartup` attribute state is now a [`jsval`](/en-US/SpiderMonkey/JSAPI_Reference/Jsval) instead of a string, for performance reasons.
 - The `nsIDocShell` attribute `isActive` is now `false` for minimized windows.
-- The {{ ifmethod("nsIDownloadHistory", "addDownload") }} method now saves the target where the download is saved on the local file system.
+- The `nsIDownloadHistory.addDownload()` method now saves the target where the download is saved on the local file system.
 
 #### Removed interfaces
 

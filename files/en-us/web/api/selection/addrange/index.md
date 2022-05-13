@@ -26,6 +26,10 @@ addRange(range)
   - : A {{ domxref("Range") }} object that will be added to the {{ domxref("Selection")
     }}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 > **Note:** Currently only Firefox supports multiple selection ranges, other browsers will not
@@ -61,7 +65,7 @@ button.addEventListener('click', function () {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

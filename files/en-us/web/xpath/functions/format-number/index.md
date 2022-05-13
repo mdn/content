@@ -35,7 +35,7 @@ This function is an XSLT-specific addition to XPath. It is not a part of the cor
 
 ### Defined
 
-[XSLT 1.0 12.3](https://www.w3.org/TR/xslt#function-format-number)
+[XSLT 1.0 12.3](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-format-number)
 
 ### Gecko support
 

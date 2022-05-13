@@ -24,13 +24,13 @@ messages to that port.
 close()
 ```
 
-### Return value
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

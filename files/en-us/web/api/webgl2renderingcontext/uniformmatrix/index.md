@@ -72,7 +72,7 @@ uniformMatrix4fv(location, transpose, data, srcOffset, srcLength)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

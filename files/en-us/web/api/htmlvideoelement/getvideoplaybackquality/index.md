@@ -34,6 +34,10 @@ The data returned can be used to evaluate the quality of the video stream.
 getVideoPlaybackQuality()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("VideoPlaybackQuality")}} object providing information about the video

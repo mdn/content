@@ -72,7 +72,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 - `keyword`
 
   - : A keyword value _must_ be specified, indicating either the type of cursor to use, or the fallback cursor to use if all specified icons fail to load.
-  
+
     The available keywords are listed in the table below.
     You can hover your mouse over the table rows to see the effect of the different cursor keyword values on your browser.
 
@@ -189,7 +189,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           </td>
           <td>
             An item may not be dropped at the current location.<br />{{bug("275173")}}:
-            On Windows and Mac OS X, <code>no-drop</code> is the same as <code>not-allowed</code>.
+            On Windows and macOS, <code>no-drop</code> is the same as <code>not-allowed</code>.
           </td>
         </tr>
         <tr style="cursor: not-allowed">

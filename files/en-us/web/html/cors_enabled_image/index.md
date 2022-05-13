@@ -116,7 +116,7 @@ Now it's time to actually save the image locally. To do this, we use the Web Sto
 ## See also
 
 - [Using Cross-domain images in WebGL and Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
-- [HTML Specification - the `crossorigin` attribute](https://www.whatwg.org/html#attr-img-crossorigin)
+- [HTML Specification - the `crossorigin` attribute](https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin)
 - [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

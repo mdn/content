@@ -25,6 +25,10 @@ object; the value either a string, or a {{domxref("Blob")}}.
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.

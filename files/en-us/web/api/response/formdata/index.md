@@ -26,10 +26,7 @@ that resolves with a {{domxref("FormData")}} object.
 ## Syntax
 
 ```js
-response.formData()
-.then(function(formdata) {
-  // do something with your formdata
-});
+formData()
 ```
 
 ### Parameters
@@ -40,7 +37,7 @@ None.
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.
 
-## Example
+## Examples
 
 TBD.
 

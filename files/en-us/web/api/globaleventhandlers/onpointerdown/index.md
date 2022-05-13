@@ -19,7 +19,7 @@ browser-compat: api.GlobalEventHandlers.onpointerdown
 
 The {{domxref("GlobalEventHandlers")}} event handler
 **`onpointerdown`** is used to specify the event handler for the
-{{event("pointerdown")}} event, which is fired when the pointing device is initially
+{{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event, which is fired when the pointing device is initially
 pressed. This event can be sent to {{domxref("Window")}}, {{domxref("Document")}}, and
 {{domxref("Element")}} objects.
 
@@ -124,7 +124,7 @@ called to ensure that the `mousedown` event isn't triggered, potentially
 causing events to be handled twice if we had a handler for those events in case Pointer
 Event support is missing.
 
-We also have a handler for {{event("pointerup")}} events:
+We also have a handler for {{domxref("HTMLElement/pointerup_event", "pointerup")}} events:
 
 ```js
 targetBox.onpointerup = handleUp;

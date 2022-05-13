@@ -21,9 +21,13 @@ transform feedback operation.
 resumeTransformFeedback()
 ```
 
-### Return value
+### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

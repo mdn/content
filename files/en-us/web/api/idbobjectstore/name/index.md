@@ -21,7 +21,7 @@ interface indicates the name of this object store.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the object
+A string containing the object
 store's name.
 
 ### Exceptions

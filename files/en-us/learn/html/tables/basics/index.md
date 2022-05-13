@@ -60,7 +60,7 @@ The point of a table is that it is rigid. Information is easily interpreted by m
 ```html hidden
 
 <table>
- <caption>Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>.</caption>
+ <caption>Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
  <thead>
   <tr>
    <td colspan="2"></td>

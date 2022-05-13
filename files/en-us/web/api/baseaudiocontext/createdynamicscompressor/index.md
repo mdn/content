@@ -34,6 +34,10 @@ help avoid clipping (distorting) of the audio output.
 createDynamicsCompressor()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DynamicsCompressorNode")}}.

@@ -15,7 +15,7 @@ The **`additiveSymbols`** property of the {{domxref("CSSCounterStyleRule")}} int
 
 ## Value
 
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

@@ -75,7 +75,7 @@ new Intl.NumberFormat(locales, options)
       - : The currency to use in currency formatting. Possible values are the ISO
         4217 currency codes, such as "`USD`" for the US dollar,
         "`EUR`" for the euro, or "`CNY`" for the Chinese RMB
-        — see the [Current currency & funds code list](https://www.currency-iso.org/en/home/tables/table-a1.html).
+        — see the [Current currency & funds code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes).
         There is no default value; if the `style` is "`currency`", the `currency`
         property must be provided.
     - `currencyDisplay`
@@ -237,14 +237,14 @@ new Intl.NumberFormat(locales, options)
       - : The minimum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number and percent formatting is 0; the
         default for currency formatting is the number of minor unit digits
-        provided by the [ISO 4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html)
+        provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
         (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number formatting is the larger of
         `minimumFractionDigits` and 3; the default for currency
         formatting is the larger of `minimumFractionDigits` and the
-        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html)
+        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
         (2 if the list doesn't provide that information); the default for percent formatting is the larger of
         `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
