@@ -259,7 +259,7 @@ This example registers a handler for every event type for the given element.
 
 ### Event properties
 
-This example illustrates accessing all of a touch event's properties.
+This example illustrates accessing all of a pointer event's properties.
 
 ```html
 <html>
