@@ -67,7 +67,7 @@ We'll keep track of the touches in-progress.
 var ongoingTouches = new Array();
 ```
 
-When a {{event("pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
+When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
 
 ```js
 function handleStart(evt) {
@@ -90,7 +90,7 @@ After storing some of the event's processing in the `ongoingTouches` for later p
 
 #### Drawing as the pointers move
 
-Each time one or more pointers moves, a {{event("pointermove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
+Each time one or more pointers moves, a {{domxref("HTMLElement/pointermove_event", "pointermove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
 
 ```js
 function handleMove(evt) {
@@ -126,7 +126,7 @@ After drawing the line, we call [`Array.splice()`](/en-US/docs/Web/JavaScript/Re
 
 #### Handling the end of a touch
 
-When the user lifts a finger off the surface, a {{event("pointerup")}} event is sent. We handle this event by calling the `handleEnd()` function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.
+When the user lifts a finger off the surface, a {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is sent. We handle this event by calling the `handleEnd()` function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.
 
 ```js
 function handleEnd(evt) {
@@ -154,7 +154,7 @@ This is very similar to the previous function; the only real differences are tha
 
 #### Handling canceled touches
 
-If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{event("pointercancel")}} event is sent, and we call the `handleCancel()` function below.
+If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event is sent, and we call the `handleCancel()` function below.
 
 ```js
 function handleCancel(evt) {

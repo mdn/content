@@ -81,7 +81,7 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onformdata")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) for processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the form's data is constructed.
 - {{domxref("GlobalEventHandlers.ongotpointercapture")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("gotpointercapture")}} event type is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} event type is raised.
 - {{domxref("GlobalEventHandlers.oninput")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("input")}} event is raised.
 - {{domxref("GlobalEventHandlers.oninvalid")}}
@@ -103,7 +103,7 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onloadstart")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("loadstart")}} event is raised (when progress has begun on the loading of a resource.)
 - {{domxref("GlobalEventHandlers.onlostpointercapture")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("lostpointercapture")}} event type is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}} event type is raised.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mousedown")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmouseenter")}}
@@ -129,21 +129,21 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onplaying")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("playing")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointerdown")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointerdown")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointermove")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointermove")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/pointermove_event", "pointermove")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointerup")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointerup")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointercancel")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointercancel")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointerover")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointerover")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/pointerover_event", "pointerover")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointerout")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointerout")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/pointerout_event", "pointerout")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointerenter")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointerenter")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointerleave")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointerleave")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointerlockchange")}} {{experimental_inline}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pointerlockchange")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpointerlockerror")}} {{experimental_inline}}

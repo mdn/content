@@ -15,7 +15,7 @@ browser-compat: api.PointerEvent.getCoalescedEvents
 The **`getCoalescedEvents()`** method of the
 {{domxref("PointerEvent")}} interface returns a sequence of all
 `PointerEvent` instances that were coalesced into the dispatched
-{{event('pointermove')}} event.
+{{domxref('HTMLElement/pointermove_event', 'pointermove')}} event.
 
 ## Syntax
 
