@@ -16,7 +16,6 @@ The **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represen
 
 ```css
 /* Selects any <a>, as long as it has an <img> element directly inside it  */
-/* Note that this is not supported in any browser yet */
 let test = document.querySelector('a:has(> img)');
 ```
 
