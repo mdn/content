@@ -27,7 +27,7 @@ multiple {{domxref("RTCIceTransport")}} objects
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the candidate across all
+A string which uniquely identifies the candidate across all
 `RTCIceTransport`s on which it is available.
 
 > **Note:** If `port` is `null` — and

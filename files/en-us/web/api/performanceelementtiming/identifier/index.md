@@ -15,7 +15,7 @@ The **`identifier`** read-only property of the {{domxref("PerformanceElementTimi
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

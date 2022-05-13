@@ -68,7 +68,7 @@ The interface also supports the following properties:
 ## Methods
 
 - {{domxref("PerformanceNavigationTiming.toJSON()")}}
-  - : Returns a {{domxref("DOMString")}} that is the JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.
+  - : Returns a string that is the JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.
 
 ## Specifications
 
