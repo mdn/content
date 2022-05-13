@@ -109,5 +109,4 @@ For a full example, see our [Basic dedicated worker example](https://github.com/
 - {{domxref("WorkerGlobalScope")}}
 - Related events: [`messageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
 - [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
