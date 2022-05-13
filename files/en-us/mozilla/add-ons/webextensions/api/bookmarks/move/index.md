@@ -62,7 +62,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let bookmarkId = "abcdefghilkl";
+let bookmarkId = "abcdefghiljkl";
 
 let movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
 movingBookmark.then(onMoved, onRejected);
