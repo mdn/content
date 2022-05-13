@@ -139,6 +139,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object reference to the window object itself.
 - {{domxref("Window.sessionStorage")}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
+- {{domxref("Window.scheduler")}} {{readOnlyInline}}
+  - : Returns a reference to the {{domxref("Scheduler")}} object, which is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("Window.sidebar")}} {{deprecated_inline}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : Returns a reference to the window object of the sidebar.
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}

@@ -1039,6 +1039,14 @@
       ],
       "events": []
     },
+    "Prioritized Task Scheduling API": {
+      "overview": ["Prioritized Task Scheduling API"],
+      "guides": [],
+      "interfaces": ["Scheduler", "TaskController", "TaskSignal", "AbortSignal", "TaskPriorityChangeEvent"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Proximity Events": {
       "overview": ["Proximity Events"],
       "interfaces": ["DeviceProximityEvent", "UserProximityEvent"],
