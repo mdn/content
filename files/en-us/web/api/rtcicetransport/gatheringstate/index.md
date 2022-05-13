@@ -16,11 +16,11 @@ browser-compat: api.RTCIceTransport.gatheringState
 ---
 {{APIRef("WebRTC")}}
 
-The read-only **{{domxref("RTCIceTransport")}}** property **`gatheringState`** returns a {{domxref("DOMString")}} that indicates the current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
+The read-only **{{domxref("RTCIceTransport")}}** property **`gatheringState`** returns a string that indicates the current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
 
 ## Value
 
-A {{domxref("DOMString")}} that indicates the current state of the ICE agent's candidate gathering process:
+A string that indicates the current state of the ICE agent's candidate gathering process:
 
 <!-- RTCIceGathererState enum-->
 

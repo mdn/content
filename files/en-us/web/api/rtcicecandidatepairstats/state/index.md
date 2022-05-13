@@ -27,7 +27,7 @@ of which the candidate pair is a member.
 
 ## Value
 
-A {{domxref("DOMString")}} whose value is one of those found in the
+A string whose value is one of those found in the
 {{domxref("RTCStatsIceCandidatePairState")}} enumerated type.
 
 ## ICE check lists

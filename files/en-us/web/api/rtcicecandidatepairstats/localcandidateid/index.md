@@ -29,7 +29,7 @@ candidates.
 
 ## Value
 
-A {{domxref("DOMString")}} giving a unique identifier for the local
+A string giving a unique identifier for the local
 {{domxref("RTCIceCandidate")}} for the connection described by this
 `RTCIceCandidatePairStats` object.
 

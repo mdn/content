@@ -28,7 +28,7 @@ Note that 24 bits of the username fragment are required to be randomized by the 
 
 ## Value
 
-A {{domxref("DOMString")}} containing the username fragment (usually referred to in
+A string containing the username fragment (usually referred to in
 shorthand as "ufrag" or "ice-ufrag") that, along with the ICE password ("ice-pwd"),
 uniquely identifies a single ongoing ICE interaction, including for any communication
 with the {{Glossary("STUN")}} server. The string may be up to 256 characters long, and
