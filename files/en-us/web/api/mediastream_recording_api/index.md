@@ -134,7 +134,7 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 
 ### `MediaRecorder`
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

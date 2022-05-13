@@ -37,4 +37,4 @@ myButton.addEventListener('mousedown', function(e) {
 
 ## Browser compatibility
 
-{{Compat("api.InputDeviceCapabilities")}}
+{{Compat}}

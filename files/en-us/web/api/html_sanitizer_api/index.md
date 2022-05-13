@@ -141,4 +141,4 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 ## Browser compatibility
 
-{{Compat("api.Sanitizer")}}
+{{Compat}}

@@ -335,4 +335,4 @@ if (!haveEvents) {
 
 ## Browser compatibility
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
