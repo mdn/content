@@ -79,7 +79,7 @@ Suppress the small zoom applied by many smartphones by setting the initial scale
 
 ## Common viewport sizes for mobile and tablet devices
 
-If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://experienceleague.adobe.com/docs/target/using/experiences/vec/mobile-viewports.html?lang=en). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
+If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://experienceleague.adobe.com/docs/target/using/experiences/vec/mobile-viewports.html). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
 
 ## Specifications
 

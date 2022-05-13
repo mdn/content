@@ -184,6 +184,5 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 - [GStreamer](https://en.wikipedia.org/wiki/GStreamer)
 - [Streaming GStreamer Pipelines Via HTTP](https://coaxion.net/blog/2013/10/streaming-gstreamer-pipelines-via-http/)
 - [GStreamer and Raspberry Pi](https://nginx-rtmp.blogspot.com/2013/07/gstreamer-and-raspberry-pi.html)
-- [Acceptance of Media Source Extensions as W3C Candidate Recommendation will accelerate adoption of dash.js](https://opensource.microsoft.com/)
 - [Comparison of Streaming Media Systems](https://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems)
 - [Mozilla Hacks - Streaming Media on demand with Media Source Extensions](https://hacks.mozilla.org/2015/07/streaming-media-on-demand-with-media-source-extensions/)

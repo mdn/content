@@ -110,7 +110,7 @@ it might be wise to provide a fallback for browsers that don't yet support MPEG-
 
 ### LIVE Profile
 
-A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://github.com/gpac/gpac/wiki/MP4Box) to encode media into MPEG-DASH format.
+A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://github.com/gpac/gpac/wiki/mp4box-dash-opts) to encode media into MPEG-DASH format.
 
 > **Note:** You will need to be comfortable with make files and installing dependencies to get this software up and running.
 

@@ -62,8 +62,6 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
   - : A reliable reference site for learning HTML, CSS and JavaScript which also mentions feature support across different browsers and known browser bugs.
 - [HTMLDog](https://htmldog.com/)
   - : An excellent and comprehensive reference site on HTML and CSS for beginners.
-- [Google's HTML, CSS, and Javascript from the Ground Up](https://developers.google.com/university)
-  - : These easily digestible video tutorials from Google's expert web developers cover the basics of HTML, CSS and JavaScript.
 - [CSSTutorial.net Beginner Tutorials](https://www.csstutorial.net/)
   - : A broad range of useful text and video tutorials that cover the basics through to intermediate aspects of CSS.
 - [Tizag CSS Tutorials](http://www.tizag.com/cssT/)
