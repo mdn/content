@@ -83,7 +83,6 @@ const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('...')
   canvas.width = document.documentElement.clientWidth;
   canvas.height = document.documentElement.clientHeight;
 })
