@@ -63,7 +63,7 @@ We'd like you to style the provided {{htmlelement("div")}}, giving it the follow
 - Horizontally Centered box.
 - A slight increase in font size, to around 17-18 pixel computed style. Use rems. Write a comment about how you worked out the value.
 - A base color for the design. Give the box this color as its background color.
-- A Contrasting color for the text; a black text shadow. Make it readable.
+- A contrasting color for the text and a black text shadow.
 - A fairly subtle border radius.
 - A 1-pixel solid border with a color similar to the base color, but a slightly darker shade.
 - A linear semi-transparent black gradient that goes toward the bottom right corner. Make it completely transparent at the start, grading to around 0.2 opacity by 30% along, and remaining at the same color until the end.
