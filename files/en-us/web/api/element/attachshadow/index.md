@@ -7,7 +7,7 @@ tags:
   - Method
   - Reference
   - attachShadow
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.attachShadow
 ---
 {{APIRef('Shadow DOM')}}

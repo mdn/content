@@ -152,7 +152,7 @@ iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseRespons
 We can use this data to draw a filter frequency plot. We'll do so on a 2d canvas context.
 
 ```js
-// create a canvas element and append it to our dom
+// create a canvas element and append it to our DOM
 const canvasContainer = document.querySelector('.filter-graph');
 const canvasEl = document.createElement('canvas');
 canvasContainer.appendChild(canvasEl);

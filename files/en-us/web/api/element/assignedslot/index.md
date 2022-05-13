@@ -8,7 +8,7 @@ tags:
   - Slottable
   - Web Components
   - assignedSlot
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.assignedSlot
 ---
 {{APIRef("Shadow DOM")}}
