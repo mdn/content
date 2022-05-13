@@ -116,6 +116,7 @@ The following keywords are currently available:
 - `pkcs11`
 - `privacy`
 - `proxy`
+- `scripting`
 - `search`
 - `sessions`
 - `storage`

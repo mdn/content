@@ -67,6 +67,8 @@ This article provides information about the changes in Firefox 101 that will aff
 
 ## Changes for add-on developers
 
+- Addition of the {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts ({{bug(1687764)}}). This API is available to Manifest V3 extensions and takes over the execute script and insert and remove CSS features from the {{WebExtAPIRef("tabs")}} API.
+
 #### Removals
 
 ### Other
