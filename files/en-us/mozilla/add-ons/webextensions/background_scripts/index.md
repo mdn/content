@@ -184,7 +184,7 @@ Data should be persisted periodically to not lose important information if an ex
 brower.storage.local.set({variable: variableInformation});
 ```
 
-If an extension uses message passing, ensure all ports are closed. The background script does not unload until all message ports have shut. Listening to the {{WebExtAPIRef("runtime.Port")}} `onDisconnect` lets you discover when open ports are closing. Manually close them with {{WebExtAPIRef("runtime.Port")}} `disconnect`.
+Message ports cannot prevent an event page from shutting down. If an extension uses message passing, the ports are closed when the event page idles. Listening to the {{WebExtAPIRef("runtime.Port")}} `onDisconnect` lets you discover when open ports are closing, however the listener will be under the same time constraints as {{WebExtAPIRef("runtime.onSuspend")}}.
 
 ```
 brower.runtime.onMessage.addListener(function(message, callback) {
