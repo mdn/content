@@ -80,66 +80,69 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // Create a shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({mode: 'open'});
 
     // Create spans
-    var wrapper = document.createElement('span');
-    wrapper.setAttribute('class','wrapper');
-    var icon = document.createElement('span');
-    icon.setAttribute('class','icon');
+    const wrapper = document.createElement('span');
+    wrapper.setAttribute('class', 'wrapper');
+
+    const icon = document.createElement('span');
+    icon.setAttribute('class', 'icon');
     icon.setAttribute('tabindex', 0);
-    var info = document.createElement('span');
-    info.setAttribute('class','info');
+
+    const info = document.createElement('span');
+    info.setAttribute('class', 'info');
 
     // Take attribute content and put it inside the info span
-    var text = this.getAttribute('text');
+    const text = this.getAttribute('data-text');
     info.textContent = text;
 
     // Insert icon
-    var imgUrl;
+    let imgUrl;
     if(this.hasAttribute('img')) {
       imgUrl = this.getAttribute('img');
     } else {
       imgUrl = 'img/default.png';
     }
-    var img = document.createElement('img');
+
+    const img = document.createElement('img');
     img.src = imgUrl;
     icon.appendChild(img);
 
-    // Create some CSS to apply to the shadow DOM
-    var style = document.createElement('style');
+    // Create some CSS to apply to the shadow dom
+    const style = document.createElement('style');
+    console.log(style.isConnected);
 
-    style.textContent = '.wrapper {' +
-                           'position: relative;' +
-                        '}' +
+    style.textContent = `
+      .wrapper {
+        position: relative;
+      }
+      .info {
+        font-size: 0.8rem;
+        width: 200px;
+        display: inline-block;
+        border: 1px solid black;
+        padding: 10px;
+        background: white;
+        border-radius: 10px;
+        opacity: 0;
+        transition: 0.6s all;
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        z-index: 3;
+      }
+      img {
+        width: 1.2rem;
+      }
+      .icon:hover + .info, .icon:focus + .info {
+        opacity: 1;
+      }
+    `;
 
-                         '.info {' +
-                            'font-size: 0.8rem;' +
-                            'width: 200px;' +
-                            'display: inline-block;' +
-                            'border: 1px solid black;' +
-                            'padding: 10px;' +
-                            'background: white;' +
-                            'border-radius: 10px;' +
-                            'opacity: 0;' +
-                            'transition: 0.6s all;' +
-                            'position: absolute;' +
-                            'bottom: 20px;' +
-                            'left: 10px;' +
-                            'z-index: 3;' +
-                          '}' +
-
-                          'img {' +
-                            'width: 1.2rem' +
-                          '}' +
-
-                          '.icon:hover + .info, .icon:focus + .info {' +
-                            'opacity: 1;' +
-                          '}';
-
-    // attach the created elements to the shadow DOM
-
+    // Attach the created elements to the shadow dom
     shadow.appendChild(style);
+    console.log(style.isConnected);
     shadow.appendChild(wrapper);
     wrapper.appendChild(icon);
     wrapper.appendChild(info);
@@ -218,7 +221,7 @@ class PopUpInfo extends HTMLElement {
   constructor() {
     super();
 
-    var shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({mode: 'open'});
     // this will cause an error to be thrown when the element is defined.
   }
 }
