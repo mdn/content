@@ -2018,7 +2018,6 @@
         "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm"
       ],
       "interfaces": [
-        "ChromeWorker",
         "DedicatedWorkerGlobalScope",
         "ServiceWorker",
         "SharedWorker",
