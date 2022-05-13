@@ -9,7 +9,7 @@ tags:
   - MediaStream Recording API
   - NeedsUpdate
   - Tutorial
-spec-urls: https://w3c.github.io/mediacapture-record/#MediaRecorderAPI
+browser-compat: api.MediaRecorder
 ---
 {{DefaultAPISidebar("MediaStream Recording")}}
 

@@ -6,7 +6,7 @@ tags:
   - InputDeviceCapabilities
   - Overview
   - Reference
-spec-urls: https://wicg.github.io/input-device-capabilities/
+browser-compat: api.InputDeviceCapabilities
 ---
 {{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}
 

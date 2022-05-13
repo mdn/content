@@ -7,7 +7,7 @@ tags:
   - Dictionary
   - Reference
   - Web Crypto API
-spec-urls: https://w3c.github.io/webcrypto/
+spec-urls: https://w3c.github.io/webcrypto/#keypair
 ---
 {{APIRef("Web Crypto API")}}
 

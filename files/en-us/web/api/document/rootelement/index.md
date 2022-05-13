@@ -10,7 +10,7 @@ tags:
   - Reference
   - SVG
   - root
-spec-urls: https://svgwg.org/svg2-draft/struct.html#__svg__SVGDocument__rootElement
+browser-compat: api.Document.rootElement
 ---
 {{ApiRef("DOM")}}{{Deprecated_header}}
 
@@ -30,3 +30,7 @@ an {{domxref("SVGSVGElement")}}, identical to the `documentElement`.
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

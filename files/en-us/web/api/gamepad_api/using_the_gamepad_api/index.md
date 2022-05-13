@@ -7,7 +7,7 @@ tags:
   - Gamepad API
   - Games
   - Guide
-spec-urls: https://w3c.github.io/gamepad/#gamepad-interface
+browser-compat: api.Gamepad
 ---
 {{DefaultAPISidebar("Gamepad API")}}
 
