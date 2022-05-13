@@ -67,7 +67,11 @@ This article provides information about the changes in Firefox 101 that will aff
 
 ## Changes for add-on developers
 
-- Addition of the {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts ({{bug(1687764)}}). This API is available to Manifest V3 extensions and takes over the execute script and insert and remove CSS features from the {{WebExtAPIRef("tabs")}} API.
+- Addition of the {{WebExtAPIRef("scripting")}} API, which provides features to execute a script, insert and remove CSS, and manage the registration of content scripts ({{bug(1687764)}}). This API is available to Manifest V3 extensions and takes over the execute script and insert and remove CSS features from the {{WebExtAPIRef("tabs")}} API.
+- Addition of the {{WebExtAPIRef("action")}} API, which takes over the features of the {{WebExtAPIRef("browserAction")}} API in Manifest V3 extensions. Corresponding addition of the [`"action"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key. Note that the {{WebExtAPIRef("browserAction")}} API and [`"action"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key are only available in Manifest V2 extensions.
+- Addition of `"matches"` and `"resources"` to the [`"web_accessible_resources"`)](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) in Manifest V3 extensions.
+- The [`"background"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false` under the control of preferences: for Manifest V2, the <code>extensions.eventPages.enabled</code> preference, and in Manifest V3, the <code>extensions.manifestV3.enabled</code> preference.
+- Addition of the [`"host_permissions"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key, which is available for Manifest V3 extensions.
 
 #### Removals
 
