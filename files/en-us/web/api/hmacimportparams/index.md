@@ -7,7 +7,7 @@ tags:
   - HmacImportParams
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacImportParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacImportParams
 ---
 {{ APIRef("Web Crypto API") }}
 

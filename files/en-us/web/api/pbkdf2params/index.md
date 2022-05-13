@@ -7,7 +7,7 @@ tags:
   - Pbkdf2Params
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-Pbkdf2Params
+spec-urls: https://w3c.github.io/webcrypto/#dfn-Pbkdf2Params
 ---
 {{ APIRef("Web Crypto API") }}
 

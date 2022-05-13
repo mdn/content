@@ -7,7 +7,7 @@ tags:
   - Reference
   - RsaHashedImportParams
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaHashedImportParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaHashedImportParams
 ---
 {{ APIRef("Web Crypto API") }}
 

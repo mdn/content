@@ -7,7 +7,7 @@ tags:
   - EcdhKeyDeriveParams
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-EcdhKeyDeriveParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-EcdhKeyDeriveParams
 ---
 {{ APIRef("Web Crypto API") }}
 

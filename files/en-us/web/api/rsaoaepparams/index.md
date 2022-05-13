@@ -7,7 +7,7 @@ tags:
   - Reference
   - RsaOaepParams
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaOaepParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaOaepParams
 ---
 {{ APIRef("Web Crypto API") }}
 

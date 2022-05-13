@@ -7,7 +7,7 @@ tags:
   - Reference
   - RsaHashedKeyGenParams
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaHashedKeyGenParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaHashedKeyGenParams
 ---
 {{ APIRef("Web Crypto API") }}
 

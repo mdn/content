@@ -7,7 +7,7 @@ tags:
   - Reference
   - RsaPssParams
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaPssParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaPssParams
 ---
 {{ APIRef("Web Crypto API") }}
 

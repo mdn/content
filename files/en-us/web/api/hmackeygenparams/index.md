@@ -7,7 +7,7 @@ tags:
   - HmacKeyGenParams
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacKeyGenParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacKeyGenParams
 ---
 {{ APIRef("Web Crypto API") }}
 

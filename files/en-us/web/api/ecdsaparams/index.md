@@ -7,7 +7,7 @@ tags:
   - EcdsaParams
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-EcdsaParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-EcdsaParams
 ---
 {{ APIRef("Web Crypto API") }}
 
