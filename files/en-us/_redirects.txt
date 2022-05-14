@@ -6762,7 +6762,7 @@
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Resources	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /en-US/docs/The_add-on_bar	/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar
-/en-US/docs/The_data_URL_scheme	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/en-US/docs/The_data_URL_scheme	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /en-US/docs/Thunderbird/Autoconfiguration	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration
 /en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/definition
 /en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/howto
@@ -11642,6 +11642,7 @@
 /en-US/docs/Web/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /en-US/docs/Web/HTTP/Access_control_CORS	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/Web/HTTP/Basic_access_authentication	/en-US/docs/Web/HTTP/Authentication
+/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /en-US/docs/Web/HTTP/Basics_of_HTTP/Introduction_to_www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /en-US/docs/Web/HTTP/CORS/Errors/Reason:_CORS_header_‘Origin’_cannot_be_added	/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
@@ -11671,7 +11672,7 @@
 /en-US/docs/Web/HTTP/Status/506_Variant_Also_Negotiates	/en-US/docs/Web/HTTP/Status/506
 /en-US/docs/Web/HTTP/Status/510_Not_Extended	/en-US/docs/Web/HTTP/Status/510
 /en-US/docs/Web/HTTP/X-Frame-Options	/en-US/docs/Web/HTTP/Headers/X-Frame-Options
-/en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /en-US/docs/Web/HTTP/www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Web/Houdini	/en-US/docs/Web/Guide/Houdini
 /en-US/docs/Web/Houdini/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
@@ -12653,7 +12654,7 @@
 /en-US/docs/cssText	/en-US/docs/Web/API/CSSRule/cssText
 /en-US/docs/ctrlKey	/en-US/docs/Web/API/MouseEvent/ctrlKey
 /en-US/docs/currentTarget	/en-US/docs/Web/API/Event/currentTarget
-/en-US/docs/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/en-US/docs/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /en-US/docs/de_temp	/en-US/docs/Web/API/document/documentElement
 /en-US/docs/defineGetter	/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 /en-US/docs/defineSetter	/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
