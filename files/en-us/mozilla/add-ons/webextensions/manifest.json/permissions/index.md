@@ -47,7 +47,7 @@ For information on how to test and preview permission requests, see [Test permis
 
 The key can contain three kinds of permissions:
 
-- host permissions (manifest V2 only, host permissions are specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for manifest V3 or higher.)
+- host permissions (Manifest V2 only, host permissions are specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for Manifest V3 or higher.)
 - API permissions
 - the `activeTab` permission
 
@@ -188,7 +188,7 @@ The `unlimitedStorage` permission:
  "permissions": ["*://developer.mozilla.org/*"]
 ```
 
-In manifest V2 only, request privileged access to pages under `developer.mozilla.org`.
+In Manifest V2 only, request privileged access to pages under `developer.mozilla.org`.
 
 ```json
   "permissions": ["tabs"]
@@ -200,7 +200,7 @@ Request access to the privileged pieces of the `tabs` API.
   "permissions": ["*://developer.mozilla.org/*", "tabs"]
 ```
 
-In manifest V2 only, request both of the above permissions.
+In Manifest V2 only, request both of the above permissions.
 
 ## Browser compatibility
 

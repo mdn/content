@@ -13,9 +13,9 @@ Background scripts or a page are:
 - Persistent – loaded when the extension starts and unloaded when the extension is disabled or uninstalled.
 - Non-persistent (which are also known as event pages) – loaded only when needed to respond to an event and unloaded when they become idle. However, a background page does not unload until all visible views and message ports are closed. Opening a view does not cause the background page to load but does prevent it from closing.
 
-In manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In manifest V3, only non-persistent background scripts or a page are supported.
+In Manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In Manifest V3, only non-persistent background scripts or a page are supported.
 
-If you have persistent background scripts or a page in manifest V2 and want to prepare your extension for migration to manifest V3, [Convert to non-persistent](#convert_to_non-persistent) provides advice on transitioning the scripts or page to the non-persistent model.
+If you have persistent background scripts or a page in Manifest V2 and want to prepare your extension for migration to Manifest V3, [Convert to non-persistent](#convert_to_non-persistent) provides advice on transitioning the scripts or page to the non-persistent model.
 
 # Background script environment
 
@@ -49,7 +49,7 @@ This section describes how to implement a non-persistent background script.
 
 ## Specify the background scripts
 
-In your extension, you include a background script using the  [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for manifest V3 extensions or must be set to `false`.
+In your extension, you include a background script using the  [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For Manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for Manifest V3 extensions or must be set to `false`.
 
 ```json
 "background": {
