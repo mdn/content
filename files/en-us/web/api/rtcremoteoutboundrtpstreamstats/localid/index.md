@@ -32,7 +32,7 @@ sides of the same synchronization source (SSRC).
 
 ## Value
 
-A {{domxref("DOMString")}} which can be compared to the value of an
+A string which can be compared to the value of an
 {{domxref("RTCInboundRtpStreamStats")}} object's
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} property to see if the two
 represent statistics for each of the two sides of the same set of data received by the

@@ -25,7 +25,7 @@ duration.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the password that corresponds to the transport's
+A string containing the password that corresponds to the transport's
 `usernameFragment` string
 
 ## Specifications
