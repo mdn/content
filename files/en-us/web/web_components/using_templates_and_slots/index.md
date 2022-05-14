@@ -47,11 +47,11 @@ customElements.define('my-paragraph',
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('my-paragraph');
-      let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.appendChild(templateContent.cloneNode(true));
+      this.attachShadow({mode: 'open'});
+      this.shadowRoot.appendChild(
+        document.getElementById('my-paragraph').content.cloneNode(true)
+      );
     }
   }
 );
@@ -67,6 +67,9 @@ So for example:
 ```html
 <template id="my-paragraph">
   <style>
+    /* import global styles */
+    @import url("/assets/css/common.css");
+    
     p {
       color: white;
       background-color: #666;
@@ -84,6 +87,28 @@ Now we can use it by just adding it to our HTML document:
 ```
 
 > **Note:** Templates are well-supported in browsers; the Shadow DOM API is supported by default in Firefox (version 63 onwards), Chrome, Opera, Safari, and Edge (starting with version 79).
+
+Also, you can import styles:
+
+```html
+<template id="my-paragraph">
+  <style>
+    @import url("/assets/common.css");
+    /* self styles */
+  </style>
+  <p>My paragraph</p>
+</template>
+```
+or
+```html
+<template id="my-paragraph">
+  <link rel="stylesheet" href="/assets/common.css">
+  <style>
+    /* self styles */
+  </style>
+  <p>My paragraph</p>
+</template>
+```
 
 ## Adding flexibility with slots
 
@@ -150,14 +175,32 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 ```html
 <template id="element-details-template">
   <style>
-  details {font-family: "Open Sans Light",Helvetica,Arial}
-  .name {font-weight: bold; color: #217ac0; font-size: 120%}
-  h4 { margin: 10px 0 -8px 0; }
-  h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-  h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-  h4 span { color: white }
-  .attributes { margin-left: 22px; font-size: 90% }
-  .attributes p { margin-left: 16px; font-style: italic }
+  details {
+    font-family: "Open Sans Light",Helvetica,Arial;
+  }
+  .name {
+    font-weight: bold;
+    color: #217ac0;
+    font-size: 120%;
+  }
+  h4 {
+    margin: 10px 0 -8px 0;
+  }
+  h4 span {
+    background: #217ac0;
+    padding: 2px 6px 2px 6px;
+    border: 1px solid #cee9f9;
+    border-radius: 4px;
+    color: white;
+  }
+  .attributes {
+    margin-left: 22px;
+    font-size: 90%;
+  }
+  .attributes p {
+    margin-left: 16px;
+    font-style: italic;
+  }
   </style>
   <details>
     <summary>
