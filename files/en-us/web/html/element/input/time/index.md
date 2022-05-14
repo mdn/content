@@ -54,7 +54,7 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
   <tbody>
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
-      <td>A {{domxref("DOMString")}} representing a time, or empty.</td>
+      <td>A string representing a time, or empty.</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>

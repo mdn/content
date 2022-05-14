@@ -14,7 +14,7 @@ browser-compat: api.WorkerNavigator.languages
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`WorkerNavigator.languages`** read-only property
-returns an array of {{domxref("DOMString")}}s representing the user's preferred
+returns an array of strings representing the user's preferred
 languages. The language is described using language tags according to
 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned
 array they are ordered by preference with the most preferred language first.

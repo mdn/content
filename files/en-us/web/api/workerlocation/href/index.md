@@ -11,7 +11,7 @@ browser-compat: api.WorkerLocation.href
 ---
 {{ApiRef("WorkerLocation")}}
 
-The **`href`** property of a {{domxref("WorkerLocation")}} object returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker's location.
+The **`href`** property of a {{domxref("WorkerLocation")}} object returns a string containing the serialized {{domxref("URL")}} for the worker's location.
 
 ## Value
 

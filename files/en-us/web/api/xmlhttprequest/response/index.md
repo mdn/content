@@ -20,8 +20,8 @@ browser-compat: api.XMLHttpRequest.response
 
 The {{domxref("XMLHttpRequest")}}
 **`response`** property returns the response's body content as
-an {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}},
-JavaScript {{jsxref("Object")}}, or {{domxref("DOMString")}}, depending on the value
+an {{jsxref("ArrayBuffer")}}, a {{domxref("Blob")}}, a {{domxref("Document")}},
+an JavaScript {{jsxref("Object")}}, or a string, depending on the value
 of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}}
 property.
 
