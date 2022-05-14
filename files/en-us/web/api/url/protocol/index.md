@@ -12,14 +12,14 @@ browser-compat: api.URL.protocol
 {{ApiRef("URL API")}}
 
 The **`protocol`** property of the {{domxref("URL")}} interface
-is a {{domxref("USVString")}} representing the protocol scheme of the URL, including the
+is a string representing the protocol scheme of the URL, including the
 final `':'`.
 
 {{AvailableInWorkers}}
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 
