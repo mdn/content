@@ -9,7 +9,7 @@ tags:
   - Report
   - Reporting API
   - Type
-browser-compat: api.Report.type
+spec-urls: https://w3c.github.io/reporting/#dom-report-type
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -43,7 +43,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default on any released browser. It can be activated on Firefox by setting `dom_reporting_enabled` to `true` and Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools) in it.
 
 ## See also
 

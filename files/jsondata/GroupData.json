@@ -1072,6 +1072,22 @@
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
       ]
     },
+    "Reporting API": {
+      "overview": ["Reporting_API"],
+      "guides": [],
+      "interfaces": [
+        "CrashReportBody",
+        "DeprecationReportBody",
+        "InterventionReportBody",
+        "Report",
+        "ReportBody",
+        "ReportError",
+        "ReportingObserver"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Resize Observer API": {
       "overview": ["Resize Observer API"],
       "interfaces": ["ResizeObserver", "ResizeObserverEntry"],

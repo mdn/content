@@ -5,11 +5,12 @@ tags:
   - API
   - Property
   - Reference
+  - Experimental
   - sourceFile
   - DeprecationReportBody
-browser-compat: api.DeprecationReportBody.sourceFile
+spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-sourcefile
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`sourceFile`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the path to the source file where the deprecated feature was used.
 
