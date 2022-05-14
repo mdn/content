@@ -33,7 +33,8 @@ new Response(body, options)
     - {{domxref("FormData")}}
     - {{domxref("ReadableStream")}}
     - {{domxref("URLSearchParams")}}
-    - string
+    - {{jsxref("String")}}
+    - string literal
 
 - `options` {{optional_inline}}
 
