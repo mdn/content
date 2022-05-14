@@ -25,7 +25,7 @@ _The `WindowControlsOverlayGeometryChangeEvent()` constructor also inherits argu
 {{domxref("Event.Event", "Event()")}}._
 
 - `type`
-  - : A {{domxref("DOMString")}} indicating the event type. Its value must be `geometrychange` and is case-sensitive.
+  - : A string indicating the event type. Its value must be `geometrychange` and is case-sensitive.
 - `options`
   - : An object with the following properties:
     - `visible`

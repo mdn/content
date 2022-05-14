@@ -39,25 +39,25 @@ new Notification(title, options)
         and `rtl` (although most browsers seem to ignore these settings.)
     - `lang`
       - : The notification's language, as specified using a
-        {{domxref("DOMString")}} representing a language tag
+        string representing a language tag
         according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
         See the Sitepoint [ISO
         2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
     - `badge`
-      - : A {{domxref("USVString")}} containing the URL of the image
+      - : A string containing the URL of the image
         used to represent the notification when there isn't enough space to display the
         notification itself.
     - `body`
-      - : A {{domxref("DOMString")}} representing the body text of the
+      - : A string representing the body text of the
         notification, which is displayed below the title.
     - `tag`
-      - : A {{domxref("DOMString")}} representing an identifying tag for
+      - : A string representing an identifying tag for
         the notification.
     - `icon`
-      - : A {{domxref("USVString")}} containing the URL of an icon to
+      - : A string containing the URL of an icon to
         be displayed in the notification.
     - `image`
-      - : a {{domxref("USVString")}} containing the URL of an image to
+      - : a string containing the URL of an image to
         be displayed in the notification.
     - `data`
       - : Arbitrary data that you want associated with the
@@ -76,9 +76,9 @@ new Notification(title, options)
     - `actions`
       - : An array of actions to display in the notification. Each element in the array is an object with the following members:
 
-        - `action`:  A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
-        - `title`:  A {{domxref("DOMString")}} containing action text to be shown to the user.
-        - `icon`:  A {{domxref("USVString")}} containing the URL of an icon to display with the action.
+        - `action`:  A string identifying a user action to be displayed on the notification.
+        - `title`:  A string containing action text to be shown to the user.
+        - `icon`:  A string containing the URL of an icon to display with the action.
 
         Appropriate responses are built using `event.action` within the
         {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
