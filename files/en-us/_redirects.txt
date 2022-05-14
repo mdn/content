@@ -8450,7 +8450,8 @@
 /en-US/docs/Web/API/IDBTransation	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/IDBVersionChangeEvent.newVersion	/en-US/docs/Web/API/IDBVersionChangeEvent/newVersion
 /en-US/docs/Web/API/IDBVersionChangeEvent.oldVersion	/en-US/docs/Web/API/IDBVersionChangeEvent/oldVersion
-/en-US/docs/Web/API/IDBVersionChangeEvent.version	/en-US/docs/Web/API/IDBVersionChangeEvent/version
+/en-US/docs/Web/API/IDBVersionChangeEvent.version	/en-US/docs/Web/API/IDBVersionChangeEvent
+/en-US/docs/Web/API/IDBVersionChangeEvent/version	/en-US/docs/Web/API/IDBVersionChangeEvent
 /en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse()	/en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse
 /en-US/docs/Web/API/IdleDetector/onchange	/en-US/docs/Web/API/IdleDetector/change_event
 /en-US/docs/Web/API/Image	/en-US/docs/Web/API/HTMLImageElement/Image

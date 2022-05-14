@@ -53213,14 +53213,6 @@
       "libbymc"
     ]
   },
-  "Web/API/IDBVersionChangeEvent/version": {
-    "modified": "2020-10-15T21:25:27.286Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/IIRFilterNode": {
     "modified": "2020-10-15T21:44:15.411Z",
     "contributors": [
