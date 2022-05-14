@@ -29,6 +29,11 @@
     "url": "https://www.w3.org/TR/wai-aria-1.2/",
     "status": "CR"
   },
+  "ARIA Authoring Practices": {
+    "name": "WAI-ARIA Authoring Practices",
+    "url": "https://w3c.github.io/aria-practices/",
+    "status": "Living"
+  },
   "ARIA Authoring Practices 1.1": {
     "name": "WAI-ARIA Authoring Practices 1.1",
     "url": "https://www.w3.org/TR/wai-aria-practices-1.1/",

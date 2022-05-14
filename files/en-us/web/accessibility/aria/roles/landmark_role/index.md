@@ -10,6 +10,7 @@ tags:
   - Abstract Role
   - ARIA landmark
   - Reference
+spec-urls: https://w3c.github.io/aria/#landmark
 ---
 
 A landmark is an important subsection of a page. The `landmark` role is an abstract superclass for the aria role values for sections of content that are important enough that users will likely want to be able to navigate directly to them.
@@ -34,9 +35,7 @@ Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} fo
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#landmark","ARIA: landmark role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

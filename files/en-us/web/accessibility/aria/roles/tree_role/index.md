@@ -10,6 +10,9 @@ tags:
   - Tree role
   - composite widget role
   - needs example
+spec-urls:
+  - https://w3c.github.io/aria/#tree
+  - https://w3c.github.io/aria-practices/#TreeView
 ---
 
 A `tree` is a widget that allows the user to select one or more items from a hierarchically organized collection.
@@ -238,10 +241,7 @@ The alternative multi-selection model is a modifier key model in which moving fo
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tree","ARIA: tree role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#TreeView","tree view")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

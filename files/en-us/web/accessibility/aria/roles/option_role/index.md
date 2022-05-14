@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - option role
+spec-urls:
+  - https://w3c.github.io/aria/#option
+  - https://w3c.github.io/aria-practices/#Listbox
 ---
 The `option` role is used for selectable items in a `listbox`.
 
@@ -88,22 +91,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Specifications
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("ARIA","#option","ARIA option role")}}</td>
-      <td>{{Spec2('ARIA')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("ARIA Authoring Practices 1.2","#Listbox","option in a Listbox example")}}</td>
-      <td>{{Spec2('ARIA Authoring Practices 1.2')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

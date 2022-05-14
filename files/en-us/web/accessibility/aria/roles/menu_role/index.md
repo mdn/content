@@ -9,6 +9,9 @@ tags:
   - ARIA roles
   - Menu role
   - composite widget role
+spec-urls:
+  - https://w3c.github.io/aria/#menu
+  - https://w3c.github.io/aria-practices/#menu
 ---
 
 The `menu` role is a type of composite widget that offers a list of choices to the user.
@@ -172,10 +175,7 @@ The navigation example has a static button. In submenu example has a button that
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menu","ARIA: menu role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#menu","menu role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

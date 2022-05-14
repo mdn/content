@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-orientation
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-orientation
 ---
 
 The `aria-orientation` attribute indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
@@ -78,9 +79,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-orientation","ARIA: aria-orientation Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

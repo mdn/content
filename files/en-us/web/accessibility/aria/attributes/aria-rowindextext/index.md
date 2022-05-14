@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-rowindextext
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-rowindextext
 ---
 
 The `aria-rowindextext` attribute defines a human-readable text alternative of `aria-rowindex`.
@@ -47,9 +48,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-rowindextext","ARIA: aria-rowindextext Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

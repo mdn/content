@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-disabled
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-disabled
 ---
 
 The `aria-disabled` state indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
@@ -135,9 +136,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-disabled","ARIA: aria-disabled Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

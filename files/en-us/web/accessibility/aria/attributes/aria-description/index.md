@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-description
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-description
 ---
 
 The global `aria-description` attribute defines a string value that describes or annotates the current element.
@@ -50,9 +51,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-description","ARIA: aria-description Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

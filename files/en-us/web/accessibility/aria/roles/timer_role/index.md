@@ -8,6 +8,7 @@ tags:
   - Reference
   - Role Timer
   - timer
+spec-urls: https://w3c.github.io/aria/#timer
 ---
 
 The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. Assistive technologies will not announce updates to a timer as it has an implicit [aria-live](https://www.w3.org/TR/wai-aria/#aria-live) value of `off`. 
@@ -40,9 +41,7 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log
 
 ## Specifications
 
-| Specification                                    | Status                   |
-| ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#timer","timer")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 

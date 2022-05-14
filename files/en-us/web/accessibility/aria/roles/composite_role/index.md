@@ -9,6 +9,7 @@ tags:
   - Abstract Role
   - Reference
   - NeedsContent
+spec-urls: https://w3c.github.io/aria/#composite
 ---
 
 The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles) indicates a widget that may contain navigable descendants or owned children.
@@ -25,9 +26,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#composite","ARIA: composite role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

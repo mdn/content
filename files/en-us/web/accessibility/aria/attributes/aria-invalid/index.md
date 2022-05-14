@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-invalid
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
 
 The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
@@ -137,9 +138,7 @@ Inherited into role:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-invalid","ARIA: aria-invalid Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 
