@@ -4,6 +4,9 @@ slug: Web/SVG/Attribute/path
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/svg2-draft/text.html#TextPathElementPathAttribute
+  - https://svgwg.org/specs/animations/#AnimateMotionElementPathAttribute
 ---
 {{SVGRef}}
 
@@ -87,35 +90,4 @@ For {{SVGElement("textPath")}}, `path` defines the path onto which the {{Glossar
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "text.html#TextPathElementPathAttribute", "path for &lt;textPath&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Initial definition for <code>&#x3C;textPath></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#AnimateMotionElementPathAttribute", "path for &lt;animateMotion&gt;")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#PathAttribute", "path for &lt;animateMotion&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;animateMotion></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

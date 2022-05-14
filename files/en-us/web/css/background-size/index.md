@@ -123,7 +123,7 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
 ### Working with gradients
 
 If you use a `<gradient>` as the background and specify a `background-size` to go with it, it's best not to specify a size that uses a single `auto` component, or is specified using only a width value (for example, `background-size: 50%`).
-Rendering of `<gradient>`s in such cases changed in Firefox 8, and at present is generally inconsistent across browsers, which do not all implement rendering in full accordance with [the CSS3 `background-size` specification](https://www.w3.org/TR/css3-background/#the-background-size) and with [the CSS3 Image Values gradient specification](https://drafts.csswg.org/css-images-3/#gradients).
+Rendering of `<gradient>`s in such cases changed in Firefox 8, and at present is generally inconsistent across browsers, which do not all implement rendering in full accordance with [the CSS3 `background-size` specification](https://www.w3.org/TR/css-backgrounds-3/#the-background-size) and with [the CSS3 Image Values gradient specification](https://drafts.csswg.org/css-images-3/#gradients).
 
 ```css
 .gradient-example {

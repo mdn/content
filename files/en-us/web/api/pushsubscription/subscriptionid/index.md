@@ -17,7 +17,7 @@ browser-compat: api.PushSubscription.subscriptionId
 {{APIRef("Push API")}}{{Deprecated_header}}
 
 The **`subscriptionId`** read-only property of the
-{{domxref("PushSubscription")}} interface returns a {{domxref("DOMString")}} containing
+{{domxref("PushSubscription")}} interface returns a string containing
 the subscription ID associated with the push subscription.
 
 > **Warning:** Instead of this feature, use the {{domxref("PushSubscription.endPoint")}} property on the same interface.

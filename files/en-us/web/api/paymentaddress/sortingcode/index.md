@@ -23,7 +23,7 @@ code such as is used in France.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the sorting code portion of the address.
+A string containing the sorting code portion of the address.
 
 ## Browser compatibility
 

@@ -119,7 +119,7 @@ The Page Visibility API adds the following properties to the {{domxref("Document
   - : Returns `true` if the page is in a state considered to be hidden to the user, and `false` otherwise.
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
 
-  - : A {{domxref("DOMString")}} indicating the document's current visibility state. Possible values are:
+  - : A string indicating the document's current visibility state. Possible values are:
 
     - `visible`
       - : The page content may be at least partially visible. In practice this means that the page is the foreground tab of a non-minimized window.

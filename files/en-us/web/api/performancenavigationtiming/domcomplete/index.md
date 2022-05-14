@@ -33,7 +33,7 @@ function print_nav_timing_data() {
   for (var i=0; i < perfEntries.length; i++) {
     console.log("= Navigation entry[" + i + "]");
     var p = perfEntries[i];
-    // dom Properties
+    // DOM Properties
     console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
     console.log("DOM complete = " + p.domComplete);
     console.log("DOM interactive = " + p.interactive);

@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.ProgressEvent.total
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("XMLHttpRequest")}}
 
 The **`ProgressEvent.total`** read-only property is an unsigned
 64-bit integer value indicating the total size of the data being processed or

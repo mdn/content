@@ -20,7 +20,7 @@ value, or the user agent's language setting if that isn't set either.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the BCP 47 language tag for the current `SpeechRecognition`.
+A string representing the BCP 47 language tag for the current `SpeechRecognition`.
 
 ## Examples
 

@@ -20,35 +20,28 @@ The **`VRFieldOfView()`** constructor creates a new {{domxref("VRFieldOFView")}}
 
 ## Syntax
 
-There are two forms of this constructor, which take their information in slightly different ways. The first one accepts four separate arguments — the {{domxref("VRFieldOfView.upDegrees")}}, {{domxref("VRFieldOfView.rightDegrees")}}, {{domxref("VRFieldOfView.downDegrees")}}, and {{domxref("VRFieldOfView.leftDegrees")}} values you want the field of view to have
-
 ```js
-var myFOV = new VRFieldOfView(upDegrees, rightDegrees, downDegrees, leftDegrees);
-```
+new VRFieldOfView(upDegrees, rightDegrees, downDegrees, leftDegrees)
 
-The second one takes a `VRFieldOfViewInit` object as a single argument, which is just a dictionary containing the four degree values mentioned above:
-
-```js
-var init = {upDegrees:up,rightDegrees:right,downDegrees:down,leftDegrees:left}
-var myFOV = new VRFieldOfView(init);
+new VRFieldOfView(options)
 ```
 
 ### Parameters
 
 - Four argument version:
 
-  - upDegrees
+  - `upDegrees`
     - : The number of degrees upwards that the field of view will extend in.
-  - rightDegrees
+  - `rightDegrees`
     - : The number of degrees to the right that the field of view will extend in.
-  - downDegrees
+  - `downDegrees`
     - : The number of degrees downwards that the field of view will extend in.
-  - leftDegrees
+  - `leftDegrees`
     - : The number of degrees to the left that the field of view will extend in.
 
 - One argument version:
 
-  - init
+  - `options`
     - : A dictionary object containing the four degree values specified above.
 
 ## Examples

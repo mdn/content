@@ -10,6 +10,9 @@ tags:
   - menubar role
   - composite widget role
   - menubar
+spec-urls:
+  - https://w3c.github.io/aria/#menubar
+  - https://w3c.github.io/aria-practices/#menu
 ---
 
 A `menubar` is a presentation of `menu` that usually remains visible and is usually presented horizontally. 
@@ -90,10 +93,7 @@ Note: The above interactions assumed the `menubar` is horizontal. If the `menuba
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menubar","ARIA: menubar role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#menu","menubar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

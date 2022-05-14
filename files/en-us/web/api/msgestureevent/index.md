@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.MSGestureEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 {{Non-standard_header()}}
 

@@ -161,7 +161,7 @@ o === o                    // true
 
 ### Conditionals
 
-A BigInt value behaves like a Number value in cases where:
+A BigInt value behaves like a Boolean value in cases where:
 
 - it is converted to a [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean): via the [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) function;
 - when used with [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators) `||`, `&&`, and `!`; or

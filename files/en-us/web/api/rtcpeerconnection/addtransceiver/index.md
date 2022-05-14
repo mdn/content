@@ -57,6 +57,9 @@ None ({{jsxref("undefined")}}).
 - {{jsxref("TypeError")}}
   - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
 
+- {{jsxref("RangeError")}}
+  - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0.
+
 ## Specifications
 
 {{Specifications}}

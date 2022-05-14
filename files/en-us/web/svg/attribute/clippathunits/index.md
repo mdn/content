@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/clipPathUnits
 tags:
   - SVG
   - SVG Attribute
+spec-urls: https://drafts.fxtf.org/css-masking-1/#element-attrdef-clippath-clippathunits
 ---
 {{SVGRef}}
 
@@ -75,28 +76,4 @@ For {{SVGElement('clipPath')}}, `clipPathUnits` define the coordinate system in 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS Masks", "#element-attrdef-clippath-clippathunits", "clipPathUnits")}}
-      </td>
-      <td>{{Spec2("CSS Masks")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "masking.html#ClipPathElementClipPathUnitsAttribute", "clipPathUnits")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

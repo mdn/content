@@ -16,7 +16,7 @@ browser-compat: api.SVGAltGlyphElement.glyphRef
 {{Deprecated_header}}
 
 The **`SVGAltGlyphElement.glyphRef`** property is a
-{{domxref("DOMString")}} representing a glyph identifier. It has the same meaning as the
+string representing a glyph identifier. It has the same meaning as the
 'glyphRef' property on the {{domxref("SVGGlyphRefElement")}} interface of the
 {{SVGElement("glyphRef")}} element.
 

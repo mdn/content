@@ -57,5 +57,5 @@ Vary: <header-name>, <header-name>, ...
 ## See also
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-using-vary-header)
 - [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)

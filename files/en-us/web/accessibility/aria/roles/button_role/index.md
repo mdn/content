@@ -8,6 +8,9 @@ tags:
   - Accessibility
   - Button Role
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#button
+  - https://w3c.github.io/aria-practices/#button
 ---
 
 The `button` role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead.
@@ -259,10 +262,7 @@ If a link performs the action of a button, giving the element `role="button"` he
 
 ## Specifications
 
-| Specification                                                                    | Status                                           |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#button","button")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#button","button")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

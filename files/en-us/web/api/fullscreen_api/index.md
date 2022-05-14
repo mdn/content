@@ -16,6 +16,7 @@ tags:
   - View
   - fullscreen
   - screen
+spec-urls: https://fullscreen.spec.whatwg.org/
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 
@@ -123,9 +124,7 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 
 ## Specifications
 
-| Specification                        | Status                           |
-| ------------------------------------ | -------------------------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} |
+{{Specifications}}
 
 ## Browser compatibility
 

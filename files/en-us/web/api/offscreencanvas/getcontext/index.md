@@ -30,7 +30,7 @@ getContext(contextType, contextAttributes)
 
 - `contextType`
 
-  - : Is a string containing the context identifier defining the drawing
+  - : A string containing the context identifier defining the drawing
     context associated to the canvas. Possible values are:
 
     - **`"2d"`** creates a

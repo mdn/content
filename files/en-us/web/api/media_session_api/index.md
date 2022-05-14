@@ -10,6 +10,7 @@ tags:
   - Overview
   - Reference
   - Video
+spec-urls: https://w3c.github.io/mediasession/
 ---
 {{DefaultAPISidebar("Media Session API")}}
 
@@ -92,9 +93,7 @@ playButton.addEventListener('pointerup', function(event) {
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Media Session')}} | {{Spec2('Media Session')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

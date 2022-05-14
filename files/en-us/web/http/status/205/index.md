@@ -6,6 +6,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.3.6
 ---
 {{HTTPSidebar}}
 
@@ -21,9 +22,7 @@ a canvas state, or to refresh the UI.
 
 ## Specifications
 
-| Specification                                                | Title                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "205 Reset Content" , "6.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibility notes
 

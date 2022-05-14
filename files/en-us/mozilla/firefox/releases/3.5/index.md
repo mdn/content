@@ -151,7 +151,7 @@ tags:
 
 ### Other improvements
 
-- The Text node's [`wholeText`](/en-US/docs/Web/API/Text/wholeText) property and [`replaceWholeText()`](/en-US/docs/Web/API/Text/replaceWholeText) method have been implemented.
+- The Text node's [`wholeText`](/en-US/docs/Web/API/Text/wholeText) property and `Text.replaceWholeText()` method have been implemented.
 - The property [`element.children`](/en-US/docs/Web/API/Element/children) has been added. It returns a _collection_ of child elements of the given element.
 - The property {{ domxref("element.contentEditable") }} is now supported, to support editable elements.
 - The Element Traversal API is now supported by the DOM [Element](/en-US/docs/Web/API/Element) object.

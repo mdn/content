@@ -7,6 +7,7 @@ tags:
   - Landing
   - Web API
   - sanitize
+browser-compat: api.Sanitizer
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
@@ -136,23 +137,8 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML Sanitizer API','#sanitizer-api')}}
-      </td>
-      <td>{{Spec2('HTML Sanitizer API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Sanitizer")}}
+{{Compat}}

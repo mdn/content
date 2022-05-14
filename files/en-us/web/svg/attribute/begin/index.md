@@ -5,6 +5,9 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/specs/animations/#DiscardElementBeginAttribute
+  - https://svgwg.org/specs/animations/#BeginAttribute
 ---
 {{SVGRef}}
 
@@ -322,40 +325,4 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#DiscardElementBeginAttribute", "begin for &lt;discard&gt;")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>
-        Adds the definition for the {{SVGElement("discard")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#BeginAttribute", "begin")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>
-        Refers to the specifications in DOM UI events and HTML for the
-        <code>&#x3C;event-value></code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#BeginAttribute", "begin")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

@@ -55,7 +55,7 @@ The {{domxref("StereoPannerNode.pan", "pan")}} property takes a unitless value b
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("StereoPannerNode.pan")}} {{readonlyinline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of panning to apply.
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of panning to apply.
 
 ## Methods
 

@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-roledescription
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-roledescription
 ---
 
 The `aria-roledescription` attribute defines a human-readable, author-localized description for the role of an element.
@@ -67,9 +68,7 @@ Supported by all roles and by all base markup elements except for `role="generic
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-roledescription","ARIA: aria-roledescription Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

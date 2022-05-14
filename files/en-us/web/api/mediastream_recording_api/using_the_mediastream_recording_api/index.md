@@ -9,6 +9,7 @@ tags:
   - MediaStream Recording API
   - NeedsUpdate
   - Tutorial
+browser-compat: api.MediaRecorder
 ---
 {{DefaultAPISidebar("MediaStream Recording")}}
 
@@ -259,9 +260,7 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 ## Specifications
 
-| Specification                                                                | Status                                       | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#MediaRecorderAPI")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -272,5 +271,5 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 ## See also
 
 - [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
-- `{{domxref("Navigator.getUserMedia()")}}`
-- [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)
+- {{domxref("Navigator.getUserMedia()")}}
+- [MediaRecorder API now supported by 65% of your website users](https://blog.addpipe.com/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

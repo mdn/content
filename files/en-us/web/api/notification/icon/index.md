@@ -20,7 +20,7 @@ part of the notification, as specified in the `icon` option of the
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

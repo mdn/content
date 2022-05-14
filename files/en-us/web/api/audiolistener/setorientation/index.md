@@ -29,17 +29,17 @@ setOrientation(x, y, z, xUp, yUp, zUp)
 
 ### Parameters
 
-- x
+- `x`
   - : The x value of the front vector of the listener.
-- y
+- `y`
   - : The y value of the front vector of the listener.
-- z
+- `z`
   - : The z value of the front vector of the listener.
-- xUp
+- `xUp`
   - : The x value of the up vector of the listener.
-- yUp
+- `yUp`
   - : The y value of the up vector of the listener.
-- zUp
+- `zUp`
   - : The z value of the up vector of the listener.
 
 ### Return value
@@ -49,6 +49,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -64,7 +64,7 @@ _No change._
 
 ### XUL
 
-- Added the new {{XULAttr("fullscreenbutton")}} attribute to the {{XULElem("window")}} element; setting this to `true` adds a button to the window's chrome to enable full screen mode.
+- Added the new `fullscreenbutton` attribute to the `<window>` element; setting this to `true` adds a button to the window's chrome to enable full screen mode.
 
 ### Interfaces
 

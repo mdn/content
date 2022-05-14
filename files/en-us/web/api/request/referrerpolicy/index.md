@@ -19,7 +19,7 @@ with the request.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the request's `referrerPolicy`. For
+A string representing the request's `referrerPolicy`. For
 more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
 header page.
 

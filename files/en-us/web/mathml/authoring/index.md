@@ -41,7 +41,7 @@ You can use Presentation MathML inside HTML5 documents:
 </html>
 ```
 
-Content MathML is not supported by browsers. It's recommended to convert your Content MathML markup into Presentation MathML before publishing it, for example with the help of the [ctop.xsl](https://code.google.com/p/web-xslt/source/browse/trunk/#trunk/ctop) stylesheet. Tools mentioned on this page generates Presentation MathML.
+Content MathML is not supported by browsers. It's recommended to convert your Content MathML markup into Presentation MathML before publishing it, for example with the help of the [ctop.xsl](https://code.google.com/archive/p/web-xslt/source#trunk/ctop) stylesheet. Tools mentioned on this page generates Presentation MathML.
 
 #### Fallback for Browsers without MathML support
 
@@ -287,7 +287,7 @@ mzlatex foo.tex       # Windows platform
 
 Note that [tex4ebook](https://github.com/michal-h21/tex4ebook) relies on TeX4ht to generate EPUB documents.
 
-[LaTeXML](https://dlmf.nist.gov/LaTeXML/) is another tool that can generate HTML5 and EPUB documents. Windows users can watch this [video tutorial](https://www.youtube.com/watch?v=Dg881w2e-lI). Given a foo.tex LaTeX file, you can use these simple commands:
+[LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) is another tool that can generate HTML5 and EPUB documents. Windows users can watch this [video tutorial](https://www.youtube.com/watch?v=Dg881w2e-lI). Given a foo.tex LaTeX file, you can use these simple commands:
 
 ```bash
 latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
@@ -317,13 +317,13 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
   - This might be a bit more difficult to set up, since you need some admin right on your server.
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) and [Mathoid](https://github.com/wikimedia/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
+[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) and [Mathoid](https://github.com/wikimedia/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
 
 ## Graphical Interface
 
 ### Input Box
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) has several interfaces, including a [CKEditor plugin](https://ckeditor.com/addon/texzilla) used on MDN, an [online demo](https://fred-wang.github.io/TeXZilla/), a [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) or a [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). It has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.thunderbird.net/en-US/) since version 31.[Abiword](http://abisource.org/) contains a small equation editor, based on itex2MML. Finally, [Bluegriffon](http://www.bluegriffon.com/) has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.
+[TeXZilla](https://github.com/fred-wang/TeXZilla) has several interfaces, including a [CKEditor plugin](https://ckeditor.com/cke4/addon/texzilla) used on MDN, an [online demo](https://fred-wang.github.io/TeXZilla/), a [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) or a [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). It has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.thunderbird.net/en-US/) since version 31.[Abiword](http://abisource.org/) contains a small equation editor, based on itex2MML. Finally, [Bluegriffon](http://www.bluegriffon.com/) has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.
 
 ![BlueGriffon](mathml-shot1.png)
 
@@ -333,7 +333,7 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
 [LyX](https://www.lyx.org/) is a graphical LaTeX editor, which has built-in support for XHTML+MathML export and can be configured to use similar LaTeX-to-(X)HTML converters. You can for example, you can configure it to [use LaTeXML HTML5/EPUB export](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx).
 
-[TeXmacs](https://www.texmacs.org/) is a free structured editor with special facilities for mathematics, graphics and interactive sessions. TeXmacs documents can be exported in XHTML+MathML.
+[TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html) is a free structured editor with special facilities for mathematics, graphics and interactive sessions. TeXmacs documents can be exported in XHTML+MathML.
 
 ![TeXmacs MathML example](tm-mathml-collage.png)
 

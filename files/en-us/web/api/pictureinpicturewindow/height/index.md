@@ -11,7 +11,7 @@ tags:
   - pip
 browser-compat: api.PictureInPictureWindow.height
 ---
-{{APIRef}}
+{{APIRef("Picture-in-Picture API")}}
 
 The read-only {{domxref("PictureInPictureWindow")}} property
 **`height`** returns the height of the floating video window

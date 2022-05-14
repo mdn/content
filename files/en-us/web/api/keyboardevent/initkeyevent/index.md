@@ -10,7 +10,7 @@ tags:
   - Reference
   - Non Standard
 ---
-{{ ApiRef("DOM Events") }}
+{{APIRef("UI Events")}}
 
 > **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
 >
@@ -37,17 +37,17 @@ initKeyEvent (type, bubbles, cancelable, viewArg,
 ### Parameters
 
 - _`type`_
-  - : Is a string representing the type of event.
+  - : A string representing the type of event.
 - _`bubbles`_
-  - : Is a boolean value indicating whether the event should bubble up through the
+  - : A boolean value indicating whether the event should bubble up through the
     event chain or not (see [bubbles](/en-US/docs/Web/API/Event/bubbles)).
 - _`cancelable`_
-  - : Is a boolean value indicating whether the event can be canceled (see [cancelable](/en-US/docs/Web/API/Event/cancelable)).
+  - : A boolean value indicating whether the event can be canceled (see [cancelable](/en-US/docs/Web/API/Event/cancelable)).
 - _`viewArg`_
   - : Specifies the {{domxref("UIEvent.view")}}; this value may be `null`.
 - _`ctrlKeyArg`_
 
-  - : Is a boolean value that is `true` if the virtual key to be
+  - : A boolean value that is `true` if the virtual key to be
     generated is a combination of keys containing the
 
     <kbd>Ctrl</kbd>
@@ -56,7 +56,7 @@ initKeyEvent (type, bubbles, cancelable, viewArg,
 
 - _`altKeyArg`_
 
-  - : Is a boolean value that is `true` if the virtual key to be
+  - : A boolean value that is `true` if the virtual key to be
     generated is a combination of keys containing the
 
     <kbd>Alt</kbd>
@@ -74,7 +74,7 @@ initKeyEvent (type, bubbles, cancelable, viewArg,
 
 - _`metaKeyArg`_
 
-  - : Is a boolean value that is `true` if the virtual key to be
+  - : A boolean value that is `true` if the virtual key to be
     generated is a combination of keys containing the
 
     <kbd>Meta</kbd>
@@ -82,11 +82,11 @@ initKeyEvent (type, bubbles, cancelable, viewArg,
     key.
 
 - _`keyCodeArg`_
-  - : Is a `unsigned long` representing the virtual key code value of the key
+  - : A `unsigned long` representing the virtual key code value of the key
     which was depressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
     }} for the list of key codes.
 - _`charCodeArg`_
-  - : Is a `unsigned long` representing the Unicode character associated with
+  - : A `unsigned long` representing the Unicode character associated with
     the depressed key otherwise `0`.
 
 ### Return value

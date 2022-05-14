@@ -15,7 +15,7 @@ The **`url`** read-only property of the {{domxref("PerformanceElementTiming")}} 
 
 ## Value
 
-A {{domxref("DOMString")}} which is the initial URL of the resources request for images or 0 for text.
+A string which is the initial URL of the resources request for images or 0 for text.
 
 ## Examples
 

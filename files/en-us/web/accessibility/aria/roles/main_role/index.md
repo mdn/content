@@ -8,6 +8,9 @@ tags:
   - Accessibility
   - main role
   - landmark role
+spec-urls:
+  - https://w3c.github.io/aria/#main
+  - https://w3c.github.io/aria-practices/#aria_lh_main
 ---
 The `main` landmark role is used to indicate the primary content of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the main function of an application.
 
@@ -119,10 +122,7 @@ Which is the equivalent of:
 
 ## Specifications
 
-| Specification                                                                                                    | Status                                           |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#main","ARIA Navigation Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_main","Navigation Landmark Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

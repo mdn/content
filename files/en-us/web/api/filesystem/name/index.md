@@ -5,7 +5,6 @@ tags:
   - API
   - File and Directory Entries API
   - Files
-  - NeedsExample
   - Property
   - Reference
   - filesystem
@@ -39,8 +38,6 @@ A string representing the file system's name.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystem")}}

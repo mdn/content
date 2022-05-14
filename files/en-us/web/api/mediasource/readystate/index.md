@@ -28,7 +28,7 @@ current `MediaSource`. The three possible values are:
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

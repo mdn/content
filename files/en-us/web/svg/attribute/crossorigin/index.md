@@ -54,24 +54,7 @@ It follows the same processing rules as the HTML attribute {{htmlattrxref("cross
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('SVG2', 'embedded.html#ImageElementCrossoriginAttribute', 'crossorigin attribute')}}
-      </td>
-      <td>{{Spec2('SVG2')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

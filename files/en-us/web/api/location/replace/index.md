@@ -36,7 +36,7 @@ replace(url)
 ### Parameters
 
 - `url`
-  - : Is a string containing the URL of the page to navigate to.
+  - : A string containing the URL of the page to navigate to.
 
 ### Return value
 

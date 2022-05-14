@@ -4,6 +4,9 @@ slug: Web/SVG/Attribute/preserveAspectRatio
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
+  - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
 ---
 {{SVGRef}}
 
@@ -370,35 +373,4 @@ For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}}
-      </td>
-      <td>{{Spec2('Filters 1.0')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

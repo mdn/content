@@ -26,7 +26,7 @@ Some examples of valid `country` values: `"US"`,
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the ISO3166-1 alpha-2 code identifying the
+A string which contains the ISO3166-1 alpha-2 code identifying the
 country in which the address is located, or an empty string if no country is available,
 which frequently can be assumed to mean "same country as the site owner."
 

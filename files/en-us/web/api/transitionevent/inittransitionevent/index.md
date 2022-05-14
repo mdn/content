@@ -38,7 +38,7 @@ initTransitionEvent(typeArg, canBubbleArg, cancelableArg, transitionNameArg, ela
 
 - _typeArg_
 
-  - : Is a string identifying the specific type of transition event that
+  - : A string identifying the specific type of transition event that
     occurred. The following value is allowed:
 
     | Value           | Meaning                   |
@@ -46,13 +46,13 @@ initTransitionEvent(typeArg, canBubbleArg, cancelableArg, transitionNameArg, ela
     | `transitionend` | The transition completed. |
 
 - _canBubbleArg_
-  - : Is a boolean flag indicating if the event can bubble
+  - : A boolean flag indicating if the event can bubble
     (`true`) or not (`false)`.
 - _cancelableArg_
-  - : Is a boolean flag indicating if the event associated action can be
+  - : A boolean flag indicating if the event associated action can be
     avoided (`true`) or not (`false)`.
 - _transitionNameArg_
-  - : Is a string containing the name of the CSS property associated
+  - : A string containing the name of the CSS property associated
     with the transition. This value is not affected by the {{cssxref("transition-delay")}}
     property.
 - _elapsedTimeArg_

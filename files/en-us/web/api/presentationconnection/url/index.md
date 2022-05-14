@@ -20,7 +20,7 @@ reconnect to the presentation.
 
 ## Value
 
-A {{domxref("USVString")}} containing a URL.
+A string containing a URL.
 
 ## Specifications
 

@@ -21,7 +21,7 @@ town_.
 
 ## Value
 
-A {{domxref("DOMString")}} indicating the sublocality portion of the address. This may
+A string indicating the sublocality portion of the address. This may
 be an empty string if no sublocality is available or required. It's used to provide
 disambiguation when a city may include areas that duplicate street names
 

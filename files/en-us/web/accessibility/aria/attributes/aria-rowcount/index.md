@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-rowcount
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-rowcount
 ---
 
 The `aria-rowcount` attribute defines the total number of rows in a table, grid, or treegrid.
@@ -78,9 +79,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-rowcount","ARIA: aria-rowcount Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

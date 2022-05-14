@@ -90,7 +90,7 @@ This is not an easy question to answer. It is difficult to find a conclusive res
 1. There are a lot of features in the WAI-ARIA spec.
 2. There are many combinations of operating system, browser, and screenreader to consider.
 
-This last point is key — To use a screenreader in the first place, your operating system needs to run browsers that have the necessary accessibility APIs in place to expose the information screenreaders need to do their job. Most popular OSes have one or two browsers in place that screenreaders can work with. The Paciello Group has a fairly up-to-date post that provides data for this — see [Rough Guide: browsers, operating systems and screen reader support updated](https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
+This last point is key — To use a screenreader in the first place, your operating system needs to run browsers that have the necessary accessibility APIs in place to expose the information screenreaders need to do their job. Most popular OSes have one or two browsers in place that screenreaders can work with. The Paciello Group has a fairly up-to-date post that provides data for this — see [Rough Guide: browsers, operating systems and screen reader support updated](https://www.tpgi.com/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
 
 Next, you need to worry about whether the browsers in question support ARIA features and expose them via their APIs, but also whether screenreaders recognize that information and present it to their users in a useful way.
 

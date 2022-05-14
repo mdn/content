@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - menuitem
+spec-urls:
+  - https://w3c.github.io/aria/#menuitem
+  - https://w3c.github.io/aria-practices/#menu
 ---
 
 The `menuitem` role indicates the element is an option in a set of choices contained by a `menu` or `menubar`.
@@ -24,7 +27,7 @@ If a `menuitem` has a submenu, program it to display a new sub-level menu when t
 
 A common convention for indicating that a `menuitem` launches a dialog box is to append "…" (ellipsis) to the menu item label, e.g., "Save as …".
 
-Every `menuitem` must have an accessible name. This name comes from the element's contents by default. If the contents don't provide for a useful accessible name, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) can be used to reference visible label. If no visible content is availabe to provide the accessible name, an accessible name can be provided with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+Every `menuitem` must have an accessible name. This name comes from the element's contents by default. If the contents don't provide for a useful accessible name, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) can be used to reference visible label. If no visible content is available to provide the accessible name, an accessible name can be provided with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 ## Associated WAI-ARIA roles, states, and properties
 
@@ -115,10 +118,7 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menuitem","ARIA: menuitem role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#menu","menuitem role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

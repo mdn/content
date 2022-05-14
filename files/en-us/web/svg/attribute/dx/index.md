@@ -4,6 +4,10 @@ slug: Web/SVG/Attribute/dx
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dx
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dx
+  - https://svgwg.org/svg2-draft/text.html#TextElementDXAttribute
 ---
 {{SVGRef}}
 
@@ -280,75 +284,4 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{ SpecName('Filters 1.0', '#element-attrdef-fedropshadow-dx', 'dx') }}
-      </td>
-      <td>{{Spec2('Filters 1.0')}}</td>
-      <td>Initial definition for <code>&#x3C;feDropShadow></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Filters 1.0', '#element-attrdef-feoffset-dx', 'dx') }}
-      </td>
-      <td>{{Spec2('Filters 1.0')}}</td>
-      <td>Definition for <code>&#x3C;feOffset></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "text.html#TextElementDXAttribute", "dx")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Definition for <code>&#x3C;text></code> and <code>&#x3C;tspan></code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feOffsetDxAttribute", "dx")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feOffset></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#AltGlyphElementDXAttribute", "dx")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;altGlyph></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#GlyphRefElementDXAttribute", "dx")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;glyphRef></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#TextElementDXAttribute", "dx")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;text></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#TSpanElementDXAttribute", "dx")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Initial definition for <code>&#x3C;tref></code> and
-        <code>&#x3C;tspan></code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onpointerup
 
 The **`onpointerup`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("pointerup")}} events.
+processes {{domxref("HTMLElement/pointerup_event", "pointerup")}} events.
 
 ## Syntax
 

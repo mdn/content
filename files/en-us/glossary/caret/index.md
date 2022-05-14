@@ -33,7 +33,7 @@ These elements provide text entry fields or boxes and therefore make use of the 
 - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
 - [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
-- [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), [`<input type="datetime">`](/en-US/docs/Web/HTML/Element/input/datetime), and [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number), [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
 - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel), and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
 - {{HTMLElement("textarea")}}

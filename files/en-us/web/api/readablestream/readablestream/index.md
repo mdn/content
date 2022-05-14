@@ -54,7 +54,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
         is called). The contents should do whatever is necessary to release access to the
         stream source. If this process is asynchronous, it can return a promise to signal
         success or failure. The `reason` parameter contains a
-        {{domxref("DOMString")}} describing why the stream was cancelled.
+        string describing why the stream was cancelled.
     - `type` {{optional_inline}}
       - : This property controls what type of readable stream is being dealt with. If it
         is included with a value set to `"bytes"`, the passed controller object

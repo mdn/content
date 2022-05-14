@@ -69,7 +69,7 @@ If a marker representation is smaller than the specified pad length, then the ma
 
 #### Result
 
-{{ EmbedLiveSample('Padding_a_counter', '', '', '', 'Web/CSS/@counter-style/pad') }}
+{{ EmbedLiveSample('Padding a counter') }}
 
 ## Specifications
 

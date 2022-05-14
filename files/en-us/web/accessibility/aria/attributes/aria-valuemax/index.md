@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-valuemax
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-valuemax
 ---
 
 The `aria-valuemax` attribute defines the maximum allowed value for a range widget.
@@ -63,9 +64,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-valuemax","ARIA: aria-valuemax Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -11,6 +11,7 @@ tags:
   - Performance
   - Web Performance
   - rendering
+spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
 **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), which translates into reduced page load times.
 
@@ -92,9 +93,7 @@ When browser compatibility is crucial, there are a few options:
 
 ## Specifications
 
-| **Specification**                                                        | **Status**                       | **Comment** |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#lazy-loading-attributes")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## See also
 
