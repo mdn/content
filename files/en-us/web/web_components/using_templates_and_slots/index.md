@@ -67,9 +67,6 @@ So for example:
 ```html
 <template id="my-paragraph">
   <style>
-    /* import global styles */
-    @import url("/assets/css/common.css");
-    
     p {
       color: white;
       background-color: #666;
