@@ -19,7 +19,7 @@ The **`error`** property of the
 
 ## Value
 
-A {{domxref("DOMString")}} containing an error code. Possible codes are:
+A string containing an error code. Possible codes are:
 
 - `canceled`
   - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the

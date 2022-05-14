@@ -35,7 +35,7 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 - {{domxref("SpeechGrammarList.addFromURI()")}}
   - : Takes a grammar present at a specific URI and adds it to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 - {{domxref("SpeechGrammarList.addFromString()")}}
-  - : Takes a grammar present in a specific {{domxref("DOMString")}} within the code base (e.g. stored in a variable) and adds it to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
+  - : Adds a grammar in a string to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 
 ## Examples
 
