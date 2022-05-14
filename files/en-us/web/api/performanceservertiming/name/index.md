@@ -11,7 +11,7 @@ browser-compat: api.PerformanceServerTiming.name
 {{APIRef("Resource Timing API")}}
 
 The **`name`** read-only property returns a
-{{domxref("DOMString")}} value of the server-specified metric name.
+string value of the server-specified metric name.
 
 ## Value
 

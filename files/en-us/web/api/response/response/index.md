@@ -16,6 +16,8 @@ The **`Response()`** constructor creates a new {{domxref("Response")}} object.
 ## Syntax
 
 ```js
+new Response()
+new Response(body)
 new Response(body, options)
 ```
 
@@ -31,7 +33,8 @@ new Response(body, options)
     - {{domxref("FormData")}}
     - {{domxref("ReadableStream")}}
     - {{domxref("URLSearchParams")}}
-    - {{domxref("USVString")}}
+    - {{jsxref("String")}}
+    - string literal
 
 - `options` {{optional_inline}}
 

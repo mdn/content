@@ -16,7 +16,7 @@ The **`RsaPssParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `RSA-PSS`.
+  - : A string. This should be set to `RSA-PSS`.
 - `saltLength`
 
   - : A `long` integer representing the length of the random salt to use, in bytes.
