@@ -112,7 +112,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ### Result
 
-{{ EmbedLiveSample('Example', '', '300px') }}
+{{ EmbedLiveSample('Example', '', '300') }}
 
 ## See also
 

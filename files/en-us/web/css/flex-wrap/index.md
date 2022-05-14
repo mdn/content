@@ -127,7 +127,7 @@ The following values are accepted:
 
 #### Results
 
-{{ EmbedLiveSample('Setting flex container wrap values', '', '700px') }}
+{{ EmbedLiveSample('Setting flex container wrap values', '', '700') }}
 
 ## Specifications
 
