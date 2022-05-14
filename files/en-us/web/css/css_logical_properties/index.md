@@ -98,7 +98,6 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 
 ### Other properties
 
-- {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-inline")}}
 - {{CSSxRef("overscroll-behavior-block")}}
