@@ -14,8 +14,8 @@ This is the only file that must be present in every extension. It contains basic
 
 The manifest can also contain pointers to several other types of files:
 
-- [Background scripts](#background_scripts)
-  - : Implement long-running logic.
+- [Background scripts](#background_scripts_2)
+  - : Scripts that respond to browser events.
 - Icons
   - : For the extension and any buttons it might define.
 - [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages)
@@ -33,73 +33,13 @@ Along with those already listed in the manifest, an extension may also include a
 
 ## Background scripts
 
-Extensions often need to maintain long-term state or perform long-term operations independently of the lifetime of any particular web page or browser window. That is what background scripts are for.
+Extensions often need to respond to events that occur in the browser independently of the lifetime of any particular web page or browser window. That is what background scripts are for.
 
-Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled. You can use any of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) in the script, as long as you have requested the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+Background scripts can be persistent or non-persistent. Persistent background scripts load as soon as the extension loads and stay loaded until the extension is disabled or uninstalled. This background script behavior is only available in Manifest V2. Non-persistent background scripts load when needed to respond to an event and unload when they become idle. This background script behavior is an option in Manifest V2 and the only background script behavior available in Manifest V3.
 
-### Specifying background scripts
+You can use any of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) in the script, if you have requested the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-You can include a background script using the `"background"` key in `manifest.json`:
-
-```json
-// manifest.json
-
-"background": {
-  "scripts": ["background-script.js"]
-}
-```
-
-You can specify multiple background scripts. If you do, they run in the same context, just like multiple scripts that are loaded into a single web page.
-
-Instead of specifying background scripts, you can specify a background page which has the added advantage of supporting ES6 modules:
-
-**manifest.json**
-
-```json
-// manifest.json
-
-"background": {
-  "page": "background-page.html"
-}
-```
-
-**background-page.html**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script type="module" src="background-script.js"></script>
-  </head>
-</html>
-```
-
-### Background script environment
-
-#### DOM APIs
-
-Background scripts run in the context of a special page called a background page. This gives them a [`window`](/en-US/docs/Web/API/Window) global, along with all the standard DOM APIs provided by that object.
-
-> **Warning:** In Firefox, background pages do not support the use of [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), or [`prompt()`](/en-US/docs/Web/API/Window/prompt).
-
-#### WebExtension APIs
-
-Background scripts can use any of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) in the script, as long as their extension has the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-
-#### Cross-origin access
-
-Background scripts can make XHR requests to any hosts for which they have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-
-#### Web content
-
-Background scripts do not get direct access to web pages. However, they can load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into web pages and can [communicate with these content scripts using a message-passing API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
-
-#### Content security policy
-
-Background scripts are restricted from certain potentially dangerous operations, like the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), through a Content Security Policy.
-
-See [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for more details on this.
+See the [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) article to learn more.
 
 ## Sidebars, popups, and options pages
 

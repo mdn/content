@@ -104,7 +104,7 @@ Of this set, the following permissions are granted silently, without a user prom
  "optional_permissions": ["*://developer.mozilla.org/*"]
 ```
 
-In manifest V2 only, enable the extension to ask for privileged access to pages under developer.mozilla.org.
+In Manifest V2 only, enable the extension to ask for privileged access to pages under developer.mozilla.org.
 
 ```json
   "optional_permissions": ["tabs"]
@@ -116,7 +116,7 @@ Enable the extension to ask for access to the privileged pieces of the `tabs` AP
   "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]
 ```
 
-In manifest V2 only, enable the extension to ask for both of the above permissions.
+In Manifest V2 only, enable the extension to ask for both of the above permissions.
 
 ## Browser compatibility
 
