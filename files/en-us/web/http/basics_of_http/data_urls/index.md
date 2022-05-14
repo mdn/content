@@ -1,6 +1,6 @@
 ---
 title: Data URLs
-slug: Web/HTTP/Basics_of_HTTP/Data_URIs
+slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 tags:
   - Base64
   - Guide
