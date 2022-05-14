@@ -9,6 +9,7 @@ tags:
   - ARIA command
   - ARIA widget
   - Reference
+spec-urls: https://w3c.github.io/aria/#command
 ---
 
 The `command` role defines a widget that performs an action but does not receive input data.
@@ -25,9 +26,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#command","ARIA: command role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

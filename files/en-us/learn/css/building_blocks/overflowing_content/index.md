@@ -60,7 +60,7 @@ You might wonder why CSS works in such a messy way, displaying content outside o
 
 Wherever possible, CSS does not hide content. This would cause data loss. The problem with data loss is that you might not notice. Website visitors may not notice. If the submit button on a form disappears and no one can complete the form, this could be a big problem! Instead, CSS overflows in visible ways. You are more likely to see there is a problem. At worst, a site visitor will let you know that content is overlapping.
 
-If you restrict a box with a `width` or a `height`, CSS trusts you to know what you are doing. CSS assumes that you are managing the potential for overflow. In general, restricting the block dimension is problematic when the box contains text. There may be more text than you expected when designing the site, or the text may be larger. (for example, if the user has increased their font size)
+If you restrict a box with a `width` or a `height`, CSS trusts you to know what you are doing. CSS assumes that you are managing the potential for overflow. In general, restricting the block dimension is problematic when the box contains text. There may be more text than you expected when designing the site, or the text may be larger (for example, if the user has increased their font size).
 
 The next two lessons explain different approaches to control sizing in ways that are less prone to overflow. However, if you need a fixed size, you can also control how the overflow behaves. Let's read on!
 
@@ -106,7 +106,7 @@ Modern layout methods (described in [CSS layout](/en-US/docs/Learn/CSS/CSS_layou
 
 This has not always been the norm. In the past, some sites were built with fixed-height containers to align bottoms of boxes. These boxes may otherwise have no relationship to each other. This was fragile. In a legacy application, you may encounter a box where content is overlaying other content on the page. Now you can recognize that this happens with overflow. Ideally, you will refactor the layout to not rely on fixed-height containers.
 
-When developing a site, always keep overflow in mind. Test designs with large and small amounts of content. Increase the font sizes of text. Generally ensure that your CSS works in a robust way. Changing the value of overflow to hide content, or to add scrollbars, is likely to be reserved for a few select use cases. (for example, where you intend to have a scrolling box)
+When developing a site, always keep overflow in mind. Test designs with large and small amounts of content. Increase the font sizes of text. Generally ensure that your CSS works in a robust way. Changing the value of overflow to hide content, or to add scrollbars, is likely to be reserved for a few select use cases (for example, where you intend to have a scrolling box).
 
 ## Test your skills!
 

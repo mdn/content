@@ -219,7 +219,7 @@ Refresh the page and you'll see that the buttons are now nicely centered horizon
 
 {{cssxref("align-items")}} controls where the flex items sit on the cross axis.
 
-- By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed width in the cross axis direction, then all flex items will become as long as the longest flex item. This is how our first example had columns of equal height by default.
+- By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed height in the cross axis direction, then all flex items will become as tall as the tallest flex item. This is how our first example had columns of equal height by default.
 - The `center` value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.
 - You can also have values like `flex-start` and `flex-end`, which will align all items at the start and end of the cross axis respectively. See {{cssxref("align-items")}} for the full details.
 

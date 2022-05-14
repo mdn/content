@@ -21,7 +21,7 @@ The **`PublicKeyCredentialRequestOptions`** dictionary of the [Web Authenticatio
 - {{domxref("PublicKeyCredentialRequestOptions.timeout")}} {{optional_inline}}
   - : A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the retrieval operation to complete. This hint may be overridden by the browser.
 - {{domxref("PublicKeyCredentialRequestOptions.rpId")}} {{optional_inline}}
-  - : A {{domxref("USVString")}} which indicates the relying party's identifier (ex. `"login.example.org"`). If this option is not provided, the client will use the current origin's domain.
+  - : A string which indicates the relying party's identifier (ex. `"login.example.org"`). If this option is not provided, the client will use the current origin's domain.
 - {{domxref("PublicKeyCredentialRequestOptions.allowCredentials")}} {{optional_inline}}
   - : An {{jsxref("Array")}} of credentials descriptor which restricts the acceptable existing credentials for retrieval.
 - {{domxref("PublicKeyCredentialRequestOptions.userVerification")}} {{optional_inline}}

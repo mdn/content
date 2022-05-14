@@ -6,6 +6,9 @@ tags:
   - aria
   - roles
   - radiogroup
+spec-urls:
+  - https://w3c.github.io/aria/#radiogroup
+  - https://w3c.github.io/aria-practices/#radiobutton
 ---
 
 The `radiogroup` role is a group of `radio` buttons.
@@ -125,10 +128,7 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#radiogroup","ARIA: radiogroup role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_radiogroup","radiogroup role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 

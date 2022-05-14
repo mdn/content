@@ -9,6 +9,7 @@ tags:
   - ARIA roles
   - select
   - select role
+spec-urls: https://w3c.github.io/aria/#select
 ---
 
 The **`select` role**, an abstract role, is superclass role for form widgets that allows the user to make selections from a set of choices.
@@ -25,9 +26,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#select","ARIA: select role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

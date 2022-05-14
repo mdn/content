@@ -8,6 +8,7 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
+spec-urls: https://w3c.github.io/aria/#note
 ---
 
 A `note` role suggests a section whose content is parenthetic or ancillary to the main content.
@@ -39,9 +40,7 @@ If the above Wikipedia style entry for Madam C.J. Walker, the hilite box `note` 
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#note","ARIA: note role")}}                                             | {{Spec2('ARIA')}}
+{{Specifications}}
 
 ## See Also
 

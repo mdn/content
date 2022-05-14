@@ -19,7 +19,7 @@ to other iframe documents.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the priority hint. Possible values are:
+A string representing the priority hint. Possible values are:
 
 - **`high`**: Fetch the iframe document at a high priority relative to other
   iframe documents.

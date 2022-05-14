@@ -63,41 +63,7 @@ For a description of the values, please refer to the [CSS `font-weight`](/en-US/
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS4 Fonts", "#font-weight-prop", "font-weight")}}
-      </td>
-      <td>{{Spec2("CSS4 Fonts")}}</td>
-      <td>
-        Defines <code>font-weight</code> to accept any numbers between 1 and
-        1000.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Fonts", "#font-weight-prop", "font-weight")}}
-      </td>
-      <td>{{Spec2("CSS3 Fonts")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#FontWeightProperty", "font-weight")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

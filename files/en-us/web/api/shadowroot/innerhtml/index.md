@@ -18,7 +18,7 @@ interface sets or returns a reference to the DOM tree inside the
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

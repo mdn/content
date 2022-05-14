@@ -480,7 +480,7 @@ When an array is the result of a match between a regular expression and a string
 
 ### Working with array-like objects
 
-Some JavaScript objects, such as the [`NodeList`](/en-US/docs/Web/API/NodeList) returned by [`document.getElementsByTagName()`](/en-US/docs/Web/API/Document/getElementsByTagName ) or the {{jsxref("Functions/arguments","arguments")}} object made available within the body of a function, look and behave like arrays on the surface but do not share all of their methods. The `arguments` object provides a {{jsxref("Global_Objects/Function/length","length")}} attribute but does not implement the {{jsxref("Array.forEach", "forEach()")}} method, for example.
+Some JavaScript objects, such as the [`NodeList`](/en-US/docs/Web/API/NodeList) returned by [`document.getElementsByTagName()`](/en-US/docs/Web/API/Document/getElementsByTagName) or the {{jsxref("Functions/arguments","arguments")}} object made available within the body of a function, look and behave like arrays on the surface but do not share all of their methods. The `arguments` object provides a {{jsxref("Global_Objects/Function/length","length")}} attribute but does not implement the {{jsxref("Array.forEach", "forEach()")}} method, for example.
 
 Array methods cannot be called directly on array-like objects.
 

@@ -1056,38 +1056,7 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "paths.html#DProperty", "d")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;path></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementDAttribute", "d")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Initial definition for <code>&#x3C;glyph></code> and <code>&#x3C;missing-glyph></code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;path></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

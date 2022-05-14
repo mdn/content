@@ -28,7 +28,7 @@ requires merchant validation.
 
 ## Value
 
-A read-only {{domxref("DOMString")}} which uniquely identifies the payment handler
+A read-only string which uniquely identifies the payment handler
 which is requesting merchant validation. See
 {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
   validation")}} for more information on the process.

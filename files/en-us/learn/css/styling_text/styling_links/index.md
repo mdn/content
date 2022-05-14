@@ -96,7 +96,7 @@ You'll notice a few things as you explore the default styles:
 
   <kbd>tab</kbd>
 
-  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/mchlp1399/mac) option by pressing
+  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/en-us/guide/mac-help/mchlp1399/mac) option by pressing
 
   <kbd>Ctrl</kbd>
 
@@ -309,7 +309,7 @@ window.addEventListener("load", drawOutput);
 
 ## Including icons on links
 
-A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites.) Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [this great example from icons8.com](https://icons8.com/web-app/741/external-link).
+A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites.) Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [this great example from icons8.com](https://icons8.com/icon/741/external-link).
 
 Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
 
@@ -387,7 +387,11 @@ First, some HTML:
 
 ```html
 <ul>
-  <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Pizza</a></li>
+  <li><a href="#">Music</a></li>
+  <li><a href="#">Wombats</a></li>
+  <li><a href="#">Finland</a></li>
 </ul>
 ```
 

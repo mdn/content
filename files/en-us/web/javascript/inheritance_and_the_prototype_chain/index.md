@@ -73,7 +73,7 @@ console.log(o.d); // undefined
 // no property found, return undefined.
 ```
 
-[Code Link](https://repl.it/@khaled_hossain_code/prototype)
+[Code Link](https://replit.com/@khaled_hossain_code/prototype)
 
 Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a [getter or a setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
 

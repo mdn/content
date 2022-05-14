@@ -577,7 +577,7 @@ While Ogg has been around for a long time, it has never gained the wide support 
 You are typically better off using WebM, though there are times when Ogg is useful to offer, such as when you wish to support older versions of Firefox and Chrome which don't yet support WebM.
 For example, Firefox 3.5 and 3.6 support Ogg, but not WebM.
 
-You can get more information about Ogg and its codecs in the [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/).
+You can get more information about Ogg and its codecs in the [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/).
 
 | Audio       | Video       |
 | ----------- | ----------- |
@@ -1134,7 +1134,7 @@ If neither of those can be played, the text "This browser does not support the H
 | [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | The closest thing to an official WAVE specification                                                             |
 | [Resource Interchange File Format](https://docs.microsoft.com/windows/desktop/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
 | [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | Guide for adapting Matroska for WebM                                                                            |
-| [Matroska Specifications](https://matroska.org/technical/specs/index.html)                                                                                   | The specification for the Matroska container format upon which WebM is based                                    |
+| [Matroska Specifications](https://matroska.org/index.html)                                                                                   | The specification for the Matroska container format upon which WebM is based                                    |
 | [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | WebM byte stream format for use with [Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) |
 
 ## Browser compatibility

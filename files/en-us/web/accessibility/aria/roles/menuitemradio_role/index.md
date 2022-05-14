@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - menuitemradio
+spec-urls:
+  - https://w3c.github.io/aria/#menuitemradio
+  - https://w3c.github.io/aria-practices/#menu
 ---
 
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
@@ -143,10 +146,7 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menuitemradio","ARIA: menuitemradio role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#menu","Menu or Menu bar")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

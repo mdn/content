@@ -33,7 +33,7 @@ var mediaStream = pc.getStream(id);
 ### Parameters
 
 - _id_
-  - : Is a {{domxref("DOMString")}} corresponding to the stream to return.
+  - : A {{domxref("DOMString")}} corresponding to the stream to return.
 
 ## Example
 

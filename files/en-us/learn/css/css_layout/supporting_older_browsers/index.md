@@ -231,7 +231,7 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 - [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
 - [Using CSS Grid: Supporting Browsers Without Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [A tutorial which uses the IE10 and 11 version of Grid](https://24ways.org/2012/css3-grid-layout/)
-- [Should I try to use the IE10 implementation of Grid Layout](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)?
+- [Should I try to use the IE10 implementation of Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)
 - [Cascading Web Design with Feature Queries](https://24ways.org/2017/cascading-web-design/)
 - [Using Feature Queries (Video)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)
 

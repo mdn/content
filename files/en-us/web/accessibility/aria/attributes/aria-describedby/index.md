@@ -8,6 +8,9 @@ tags:
   - ARIA property
   - aria-describedby
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#aria-describedby
+  - https://w3c.github.io/aria-practices/#describing_with_aria-describedby
 ---
 
 The global `aria-describedby` attribute identifies the element (or elements) that describes the element on which the attribute is set.
@@ -47,10 +50,7 @@ Used in **ALL** roles. Usable in all HTML elements as well.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-describedby","ARIA: aria-describedby Attribute")}}  | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#describing_with_aria-describedby","describing with aria-describedby")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 

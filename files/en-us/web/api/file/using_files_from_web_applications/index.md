@@ -8,6 +8,9 @@ tags:
   - NeedsUpdate
   - ajax upload
   - upload
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/number-state.html#concept-input-type-file-selected
+  - https://w3c.github.io/FileAPI/
 ---
 {{APIRef("File API")}}
 
@@ -56,7 +59,7 @@ const numFiles = fileList.length;
 Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array:
 
 ```js
-for (let i = 0; numFiles = fileList.length; i < numFiles; i++) {
+for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
   const file = fileList[i];
   // ...
 }
@@ -525,29 +528,7 @@ URL.revokeObjectURL(obj_url);
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'number-state.html#concept-input-type-file-selected', 'File upload state')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('File API')}}</td>
-      <td>{{Spec2('File API')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

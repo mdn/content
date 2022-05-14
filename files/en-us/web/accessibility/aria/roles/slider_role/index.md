@@ -10,6 +10,7 @@ tags:
   - widget role
   - widget
   - slider role
+spec-urls: https://w3c.github.io/aria/#slider
 ---
 
 The `slider` role defines an input where the user selects a value from within a given range.
@@ -194,9 +195,7 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#slider","ARIA: slider role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See also
 

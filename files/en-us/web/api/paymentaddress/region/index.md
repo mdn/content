@@ -28,7 +28,7 @@ this may be a state, province, oblast, or prefecture.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the top-level administrative subdivision within
+A string specifying the top-level administrative subdivision within
 the country in which the address is located. This region has different names in
 different countries, such as: state, province, oblast, prefecture, or county.
 

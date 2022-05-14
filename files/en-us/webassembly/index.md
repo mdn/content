@@ -5,6 +5,7 @@ tags:
   - Landing
   - WebAssembly
   - wasm
+spec-urls: https://webassembly.github.io/spec/js-api/
 ---
 {{WebAssemblySidebar}}
 
@@ -71,9 +72,7 @@ And what's even better is that it is being developed as a web standard via the [
 
 ## Specifications
 
-| Specification                            | Status                               | Comment                                         |
-| ---------------------------------------- | ------------------------------------ | ----------------------------------------------- |
-| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Initial draft definition of the JavaScript API. |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -85,4 +84,4 @@ And what's even better is that it is being developed as a web standard via the [
 - [webassembly.org](https://webassembly.org/)
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
-- [Emscripting a C Library to Wasm](https://developers.google.com/web/updates/2018/03/emscripting-a-c-library)
+- [Emscripting a C Library to Wasm](https://web.dev/emscripting-a-c-library/)

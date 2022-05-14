@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-rowindex
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-rowindex
 ---
 
 The `aria-rowindex` attribute defines an element's position with respect to the total number of rows within a table, grid, or treegrid.
@@ -95,9 +96,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------ |
-| {{SpecName("ARIA","#aria-rowindex","ARIA: aria-rowindex Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

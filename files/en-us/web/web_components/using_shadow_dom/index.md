@@ -149,7 +149,7 @@ icon.appendChild(img);
 After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:
 
 ```js
-// Create some CSS to apply to the shadow dom
+// Create some CSS to apply to the shadow DOM
 let style = document.createElement('style');
 
 style.textContent = `
@@ -187,7 +187,7 @@ img {
 The final step is to attach all the created elements to the shadow root:
 
 ```js
-// attach the created elements to the shadow dom
+// attach the created elements to the shadow DOM
 shadow.appendChild(style);
 shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
@@ -216,12 +216,12 @@ In the above example we apply style to the Shadow DOM using a {{htmlelement("sty
 For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)):
 
 ```js
-// Apply external styles to the shadow dom
+// Apply external styles to the shadow DOM
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
 
-// Attach the created element to the shadow dom
+// Attach the created element to the shadow DOM
 shadow.appendChild(linkElem);
 ```
 

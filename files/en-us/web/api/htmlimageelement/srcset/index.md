@@ -35,7 +35,7 @@ situation.
 
 ## Value
 
-A {{domxref("USVString")}} containing a comma-separated list of one or more image
+A string containing a comma-separated list of one or more image
 candidate strings to be used when determining which image resource to present inside the
 {{HTMLElement("img")}} element represented by the
 `HTMLImageElement`.

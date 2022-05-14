@@ -26,7 +26,7 @@ The string can be used to determine which of the
 
 ## Value
 
-A {{domxref("DOMString")}} which specifies which type of statistic is represented by
+A string which specifies which type of statistic is represented by
 the object. The string comes from the {{domxref("RTCStatsType")}} enum and corresponds to
 one of the {{domxref("RTCStats")}}-based statistic object types.
 

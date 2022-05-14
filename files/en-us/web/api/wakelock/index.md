@@ -18,7 +18,7 @@ The system wake lock is exposed through the global {{domxref('Navigator.wakeLock
 
 ## Methods
 
-- `{{domxref("WakeLock.request", "request()")}}`
+- {{domxref("WakeLock.request", "request()")}}
   - : Requests a {{domxref("WakeLockSentinel")}} object, which returns a {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.
 
 ## Examples

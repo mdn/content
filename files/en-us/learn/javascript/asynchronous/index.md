@@ -18,7 +18,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-In this module we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
+In this module, we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.
 
 > **Callout:**
 >

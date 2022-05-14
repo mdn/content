@@ -121,7 +121,7 @@ A **unique file type specifier** is a string that describes a type of file that 
 - The string `video/*` meaning "any video file".
 - The string `image/*` meaning "any image file".
 
-The `accept` attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
+The `accept` attribute takes a string containing one or more of these unique file type specifiers as its value, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
 ```html
 <input type="file" accept="image/*,.pdf">

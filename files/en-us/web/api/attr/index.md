@@ -10,6 +10,8 @@ browser-compat: api.Attr
 
 The **`Attr`** interface represents one of an element's attributes as an object. In most situations, you will directly retrieve the attribute value as a string (e.g., {{domxref("Element.getAttribute()")}}), but certain functions (e.g., {{domxref("Element.getAttributeNode()")}}) or means of iterating return `Attr` instances.
 
+{{InheritanceDiagram}}
+
 The core idea of an object of type `Attr` is the association between a _name_ and a _value_. An attribute may also be part of a _namespace_ and, in this case, it also has a URI identifying the namespace, and a prefix that is an abbreviation for the namespace.
 
 The name is deemed _local_ when it ignores the eventual namespace prefix and deemed _qualified_ when it includes the prefix of the namespace, if any, separated from the local name by a colon (`:`). We have three cases: an attribute outside of a namespace, an attribute inside a namespace without a prefix defined, an attribute inside a namespace with a prefix:
@@ -19,8 +21,6 @@ The name is deemed _local_ when it ignores the eventual namespace prefix and dee
 | `myAttr`  | _none_         | _none_           | `myAttr`             | `myAttr`                 |
 | `myAttr`  | `mynamespace`  | _none_           | `myAttr`             | `myAttr`                 |
 | `myAttr`  | `mynamespace`  | `myns`           | `myAttr`             | `myns:myAttr`            |
-
-{{InheritanceDiagram}}
 
 > **Note:** This interface represents only attributes present in the tree representation of the {{domxref("Element")}}, being a SVG, an HTML or a MathML element. It doesn't represent the _property_ of an interface associated with such element, such as {{domxref("HTMLTableElement")}} for a {{HTMLElement("table")}} element. (See {{Glossary("Attribute", "this article")}} for more information about attributes and how they are _reflected_ into properties.)
 

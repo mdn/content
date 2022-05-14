@@ -11,7 +11,7 @@ browser-compat: api.Location.origin
 {{APIRef("Location")}}
 
 The **`origin`** read-only property of
-the {{domxref("Location")}} interface is a {{domxref("USVString")}} containing the
+the {{domxref("Location")}} interface is a string containing the
 Unicode serialization of the origin of the represented URL.
 
 That is:

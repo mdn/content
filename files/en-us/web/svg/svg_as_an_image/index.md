@@ -5,6 +5,7 @@ tags:
   - Images
   - NeedsContent
   - SVG
+spec-urls: https://drafts.csswg.org/css-backgrounds/#the-background-image
 ---
 SVG images can be used as an image format, in a number of contexts. Many browsers support SVG images in:
 
@@ -34,36 +35,7 @@ Note that the above restrictions are specific to image contexts; they don't appl
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("HTML5 W3C", "semantics-embedded-content.html#the-img-element", "SVG within &lt;img&gt; element")}}
-      </td>
-      <td>{{Spec2("HTML5 W3C")}}</td>
-      <td>
-        Defines the usage of SVG within {{HTMLElement("img")}} elements.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Backgrounds", "#the-background-image", "SVG within 'background-image' CSS property")}}
-      </td>
-      <td>{{Spec2("CSS3 Backgrounds")}}</td>
-      <td>
-        Defines the usage of SVG within the
-        {{cssxref("background-image")}} property.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

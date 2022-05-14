@@ -55,23 +55,23 @@ document.body.addEventListener('click', function (evt) {
 ## Properties
 
 - {{domxref("Location.ancestorOrigins")}}
-  - : Is a static {{domxref("DOMStringList")}} containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given `Location` object.
+  - : A static {{domxref("DOMStringList")}} containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given `Location` object.
 - {{domxref("Location.href")}}
-  - : Is a {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the entire URL. If changed, the associated document navigates to the new page. It can be set from a different origin than the associated document.
+  - : A {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the entire URL. If changed, the associated document navigates to the new page. It can be set from a different origin than the associated document.
 - {{domxref("Location.protocol")}}
-  - : Is a {{domxref("USVString")}} containing the protocol scheme of the URL, including the final `':'`.
+  - : A {{domxref("USVString")}} containing the protocol scheme of the URL, including the final `':'`.
 - {{domxref("Location.host")}}
-  - : Is a {{domxref("USVString")}} containing the host, that is the _hostname_, a `':'`, and the _port_ of the URL.
+  - : A {{domxref("USVString")}} containing the host, that is the _hostname_, a `':'`, and the _port_ of the URL.
 - {{domxref("Location.hostname")}}
-  - : Is a {{domxref("USVString")}} containing the domain of the URL.
+  - : A {{domxref("USVString")}} containing the domain of the URL.
 - {{domxref("Location.port")}}
-  - : Is a {{domxref("USVString")}} containing the port number of the URL.
+  - : A {{domxref("USVString")}} containing the port number of the URL.
 - {{domxref("Location.pathname")}}
-  - : Is a {{domxref("USVString")}} containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+  - : A {{domxref("USVString")}} containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("Location.search")}}
-  - : Is a {{domxref("USVString")}} containing a `'?'` followed by the parameters or "querystring" of the URL. Modern browsers provide [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#example) and [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#example) to make it easy to parse out the parameters from the querystring.
+  - : A {{domxref("USVString")}} containing a `'?'` followed by the parameters or "querystring" of the URL. Modern browsers provide [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#example) and [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#example) to make it easy to parse out the parameters from the querystring.
 - {{domxref("Location.hash")}}
-  - : Is a {{domxref("USVString")}} containing a `'#'` followed by the fragment identifier of the URL.
+  - : A {{domxref("USVString")}} containing a `'#'` followed by the fragment identifier of the URL.
 - {{domxref("Location.origin")}} {{readOnlyInline}}
   - : Returns a {{domxref("USVString")}} containing the canonical form of the origin of the specific location.
 

@@ -7,6 +7,9 @@ tags:
   - Reference
   - String
   - WebIDL
+spec-urls:
+  - https://webidl.spec.whatwg.org/#idl-USVString
+  - https://webidl.spec.whatwg.org/#es-USVString
 ---
 {{APIRef("DOM")}}
 
@@ -18,30 +21,7 @@ When a Web API accepts a `USVString`, the JavaScript value provided is first str
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("WebIDL", "#idl-USVString", "USVString")}}
-      </td>
-      <td>{{Spec2("WebIDL")}}</td>
-      <td>Initial definition of the <code>USVString</code> type itself.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("WebIDL", "#es-USVString")}}</td>
-      <td>{{Spec2("WebIDL")}}</td>
-      <td>
-        This defines how JavaScript values are converted to
-        <code>USVString</code> and vice versa.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

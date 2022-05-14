@@ -36,7 +36,7 @@ getAsString(function(data) { /* ... */ })
 
 - `callbackFn`
   - : A callback function that receives following arguments:
-    - `data` 
+    - `data`
       - : The {{domxref("DataTransferItem", "data transfer item's")}} string data.
 
 ### Return value

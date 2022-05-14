@@ -32,7 +32,7 @@ content attribute.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying one of the following strings which set the
+A string specifying one of the following strings which set the
 alignment mode for the image.
 
 #### Baseline alignment

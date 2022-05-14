@@ -32,7 +32,7 @@ Find out more about how to use this API in [Using channel messaging](/en-US/docs
   - : Creates a new message channel to send messages across.
 - {{domxref("MessagePort")}}
   - : Controls the ports on the message channel, allowing sending of messages from one port and listening out for them arriving at the other.
-  
+
 ## Examples
 
 - We have published a [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.

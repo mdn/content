@@ -28,9 +28,9 @@ encodeInto(string, uint8Array)
 ### Parameters
 
 - `string`
-  - : Is a string containing the text to encode.
+  - : A string containing the text to encode.
 - `uint8Array`
-  - : Is a {{jsxref("Uint8Array")}} object instance to place the resulting UTF-8
+  - : A {{jsxref("Uint8Array")}} object instance to place the resulting UTF-8
     encoded text into.
 
 ### Return value

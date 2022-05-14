@@ -432,7 +432,7 @@ As shorthand, it is acceptable to write this as follows:
 <input type="text">
 ```
 
-For reference, the example above also includes a non-disabled form input element.The HTML from the example above produces this result:
+For reference, the example above also includes a non-disabled form input element. The HTML from the example above produces this result:
 
 {{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "") }}
 

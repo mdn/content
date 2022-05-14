@@ -24,7 +24,7 @@ in more detail.
 
 ## Value
 
-A {{domxref("DOMString")}} containing more details about the error that was raised.
+A string containing more details about the error that was raised.
 Note that the spec does not define the exact wording of these messages — this is up to
 the implementors to decide upon.
 

@@ -14,7 +14,7 @@ In other articles we looked at how to [build a cross browser video player](/en-U
 
 ## Captioned video example
 
-In this article, we will refer to the Video player with captions example. This example uses an excerpt from the [Sintel open movie](https://durian.blender.org/), created by the [Blender Foundation](https://www.blender.org/foundation/).
+In this article, we will refer to the Video player with captions example. This example uses an excerpt from the [Sintel open movie](https://durian.blender.org/), created by the [Blender Foundation](https://www.blender.org/about/foundation/).
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
@@ -38,7 +38,7 @@ HTML5 allows us to specify subtitles for a video using the {{ htmlelement("track
 
 The files that contain the actual subtitle data are simple text files that follow a specified format, in this case the [Web Video Text Tracks](/en-US/docs/Web/API/WebVTT_API) (WebVTT) format. The [WebVTT specification](https://w3c.github.io/webvtt/) is still being worked on, but major parts of it are stable so we can use it today.
 
-Video providers (such as the [Blender Foundation](https://www.blender.org/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter such as [srt2vtt](https://atelier.u-sub.net/srt2vtt/).
+Video providers (such as the [Blender Foundation](https://www.blender.org/about/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter such as [srt2vtt](https://atelier.u-sub.net/srt2vtt/).
 
 ## Modifications to the HTML and CSS
 
@@ -329,4 +329,4 @@ If, after reading through this article you decide that you can't be bothered to 
 - [AblePlayer](https://ableplayer.github.io/ableplayer/)
   - : Supports multi-languages WebVTT closed captions along with a clickable, interactive transcript for audio and video
 
-> **Note:** You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](https://praegnanz.de/html5video/).
+> **Note:** You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](https://videosws.praegnanz.de/).

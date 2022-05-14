@@ -8,6 +8,7 @@ tags:
   - Reference
   - ARIA roles
   - scrollbar
+spec-urls: https://w3c.github.io/aria/#scrollbar
 ---
 
 A `scrollbar` is a graphical object that controls the scrolling of content within a viewing area.
@@ -157,9 +158,7 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#scrollbar","ARIA: scrollbar role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

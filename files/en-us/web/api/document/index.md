@@ -127,7 +127,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 _The `Document` interface is extended with additional event handlers defined in [GlobalEventHandlers](/en-US/docs/Web/API/GlobalEventHandlers#event_handlers)._
 
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
 
 ### Deprecated properties
 

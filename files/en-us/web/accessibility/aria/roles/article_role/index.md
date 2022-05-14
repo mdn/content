@@ -9,6 +9,9 @@ tags:
   - Article role
   - document structure role
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#article
+  - https://w3c.github.io/aria-practices/#feed
 ---
 
 The `article` role indicates a section of a page that could easily stand on its own on a page, in a document, or on a website. It is usually set on related content items such as comments, forum posts, newspaper articles or other items grouped together on one page.
@@ -79,10 +82,7 @@ This role does not support any specific keyboard interaction.
 
 ## Specifications
 
-| Specification                                                            | Status                                           |
-| ------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#article","article")}}                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#feed","feed")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## Precedence order
 

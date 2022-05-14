@@ -36,7 +36,7 @@ Every property used in CSS has a value type defining the set of values that are 
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>).
       </td>
     </tr>
     <tr>
@@ -140,7 +140,7 @@ There are various numeric value types that you might find yourself using in CSS.
 
 ### Lengths
 
-The numeric type you will come across most frequently is `<length>`. For example `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
+The numeric type you will come across most frequently is `<length>`. For example, `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
 
 #### Absolute length units
 

@@ -14,8 +14,6 @@ tags:
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
 
-{{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
-
 ## Develop web games
 
 Welcome to the MDN game development center! In this area of the site, we provide resources for web developers wanting to develop games. You will find many useful tutorials and technique articles in the main menu on the left, so feel free to explore.

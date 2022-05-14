@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.ctrlKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.ctrlKey`** read-only property returns a
 boolean value that indicates if the <kbd>control</kbd> key was pressed

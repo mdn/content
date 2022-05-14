@@ -159,7 +159,7 @@ This makes documenting code incredibly powerful and flexible.
 #### Overly-short articles are hard to find
 
 If an article is "thin"—that is, too short—it may not be indexed properly (or at all) by search engines.
-As a rule of thumb, the article's body text should be at least 250–300 words.
+As a guiding principle, the article's body text should be at least 250–300 words.
 Don't artificially inflate a page, but treat this guideline as a minimum target length when possible.
 
 ### Headings
@@ -560,7 +560,7 @@ Try to be consistent, though.
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Preferred dictionary

@@ -14,6 +14,7 @@ tags:
   - Web
   - Windows
   - hierarchy
+spec-urls: https://html.spec.whatwg.org/multipage/
 ---
 {{DefaultAPISidebar("HTML DOM")}}
 
@@ -272,7 +273,7 @@ Several interfaces are technically defined in the HTML specification while actua
 
 #### Web storage interfaces
 
-The {{DOMxRef("Web_Storage_API", "", "", "1")}} provides the ability for web sites to store data either temporarily or permanently on the user's device for later re-use.
+The {{DOMxRef("Web_Storage_API", "", "", "1")}} provides the ability for websites to store data either temporarily or permanently on the user's device for later re-use.
 
 - {{DOMxRef("Storage")}}
 - {{DOMxRef("StorageEvent")}}
@@ -365,12 +366,7 @@ The HTML for the form looks like this:
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                                         |
-| ------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG')}} | {{Spec2('HTML WHATWG')}} | WHATWG HTML Specification                       |
-| {{SpecName('HTML5 W3C')}}     | {{Spec2('HTML5 W3C')}}     | No change from {{SpecName("DOM2 HTML")}} |
-| {{SpecName('DOM2 HTML')}}     | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName("DOM1")}}.    |
-| {{SpecName('DOM1')}}         | {{Spec2('DOM1')}}         | Initial definition.                             |
+{{Specifications}}
 
 ## Browser compatibility
 

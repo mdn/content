@@ -21,12 +21,12 @@ instance.
 ## Syntax
 
 ```js
-new ReadableStreamDefaultReader(stream);
+new ReadableStreamDefaultReader(stream)
 ```
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("ReadableStream")}} to be read.
 
 ### Return value

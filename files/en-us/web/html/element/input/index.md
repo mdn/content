@@ -48,7 +48,7 @@ The available types are as follows:
       </td>
       <td id="examplebutton">
         <pre class="brush: html hidden">
-&#x3C;input  type="button" name="button" value="Button" /></pre>
+&#x3C;input type="button" name="button" value="Button" /></pre>
         {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -57,7 +57,7 @@ The available types are as follows:
       <td>A check box allowing single values to be selected/deselected.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
-&#x3C;input  type="checkbox" name="checkbox"/></pre>
+&#x3C;input type="checkbox" name="checkbox"/></pre>
         {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -68,7 +68,7 @@ The available types are as follows:
       </td>
       <td id="examplecolor">
         <pre class="brush: html hidden">
-&#x3C;input  type="color" name="color"/></pre>
+&#x3C;input type="color" name="color"/></pre>
         {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -81,7 +81,7 @@ The available types are as follows:
       </td>
       <td id="exampledate">
         <pre class="brush: html hidden">
-&#x3C;input  type="date" name="date"/></pre>
+&#x3C;input type="date" name="date"/></pre>
         {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -95,7 +95,7 @@ The available types are as follows:
       </td>
       <td id="exampledtl">
         <pre class="brush: html hidden">
-&#x3C;input  type="datetime-local" name="datetime-local"/></pre>
+&#x3C;input type="datetime-local" name="datetime-local"/></pre>
         {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -167,7 +167,7 @@ The available types are as follows:
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden">
-&#x3C;input  type="number" name="number"/></pre>
+&#x3C;input type="number" name="number"/></pre>
         {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -179,7 +179,7 @@ The available types are as follows:
       </td>
       <td id="examplepassword">
         <pre class="brush: html hidden">
-&#x3C;input  type="password" name="password"/></pre>
+&#x3C;input type="password" name="password"/></pre>
         {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -215,7 +215,7 @@ The available types are as follows:
       </td>
       <td id="examplereset">
         <pre class="brush: html hidden">
-&#x3C;input  type="reset" name="reset"/></pre
+&#x3C;input type="reset" name="reset"/></pre
         >
         {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
       </td>
@@ -230,7 +230,7 @@ The available types are as follows:
       </td>
       <td id="examplesearch">
         <pre class="brush: html hidden">
-&#x3C;input  type="search" name="search"/></pre>
+&#x3C;input type="search" name="search"/></pre>
         {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -251,7 +251,7 @@ The available types are as follows:
       </td>
       <td id="exampletel">
         <pre class="brush: html hidden">
-&#x3C;input  type="tel" name="tel"/></pre>
+&#x3C;input type="tel" name="tel"/></pre>
         {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -273,7 +273,7 @@ The available types are as follows:
       <td>A control for entering a time value with no time zone.</td>
       <td id="exampletime">
         <pre class="brush: html hidden">
-&#x3C;input  type="time" name="time"/></pre>
+&#x3C;input type="time" name="time"/></pre>
         {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
       </td>
     </tr>
@@ -1340,7 +1340,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
             {{ARIARole("spinbutton")}}
           </li>
           <li>
-            <code>type=color|date|datetime|datetime-local|email|file|hidden|</code>
+            <code>type=color|date|datetime-local|email|file|hidden|</code>
               <code>month|number|password|range|reset|search|submit|tel|url|week</code>
             or <code>text</code> with <code>list</code> attribute: no
             <code>role</code> permitted
@@ -1374,7 +1374,7 @@ Interactive elements such as form input should provide an area large enough that
 
 - [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/2018-11-21-large-touch-targets/)
+- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
 
 ## Specifications
 

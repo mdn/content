@@ -189,7 +189,7 @@ function escapeRegExp(string) {
 The "g" after the regular expression is an option or flag that performs a global search, looking in the whole string and returning all matches.
 It is explained in detail below in [Advanced Searching With Flags](#advanced_searching_with_flags).
 
-_Why isn't this built into JavaScript?_ There is a proposal to add such a function to RegExp, but it was [rejected by TC39.](https://github.com/tc39/proposal-regex-escaping/issues/37)
+_Why isn't this built into JavaScript?_ There is a [proposal](https://github.com/tc39/proposal-regex-escaping) to add such a function to RegExp.
 
 ### Using parentheses
 

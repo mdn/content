@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-errormessage
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-errormessage
 ---
 
 The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object.
@@ -46,6 +47,7 @@ We use `aria-invalid="true"` to identify invalid objects:
 [aria-invalid="true"] ~ .errormessage {
   visibility: visible;
 }
+```
 
 When an object is invalid, we use JavaScript to add `aria-invalid="true"`. The above CSS makes the `.errormessage` following an invalid object become visible.
 
@@ -90,9 +92,7 @@ Inherits from roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-errormessage","ARIA: aria-errormessage Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

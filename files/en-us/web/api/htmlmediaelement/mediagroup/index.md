@@ -16,7 +16,7 @@ The **`HTMLMediaElement.mediaGroup`** property reflects the {{htmlattrxref("medi
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -11,7 +11,7 @@ tags:
   - UIEvent
 browser-compat: api.UIEvent.view
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`UIEvent.view`** read-only property returns the
 {{domxref("WindowProxy")}} object from which the event was generated. In browsers, this

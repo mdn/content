@@ -26,10 +26,10 @@ new CSSUnitValue()
 
 ### Parameters
 
-- value
+- `value`
   - : Returns a double indicating the number of units.
-- unit
-  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
+- `unit`
+  - : Returns a string indicating the type of unit.
 
 ## Examples
 

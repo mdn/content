@@ -21,12 +21,12 @@ constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object inst
 ## Syntax
 
 ```js
-new WritableStreamDefaultWriter(stream);
+new WritableStreamDefaultWriter(stream)
 ```
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("WritableStream")}} to be written to.
 
 ### Return value

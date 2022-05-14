@@ -31,7 +31,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.rangeCount")}}{{ReadOnlyInline}}
   - : Returns the number of ranges in the selection.
 - {{DOMxRef("Selection.type")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} describing the type of the current selection.
+  - : Returns a string describing the type of the current selection.
 
 ## Methods
 
@@ -160,6 +160,6 @@ Other key terms used in this section.
 ## See also
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: {{Event("selectionchange")}} and {{Event("selectstart")}}
+- Selection-related events: {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Document/selectstart_event", "selectstart")}}
 - HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus")}}, and {{DOMxRef("HTMLElement.blur")}}

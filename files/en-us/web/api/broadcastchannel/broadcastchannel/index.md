@@ -26,7 +26,7 @@ new BroadcastChannel(channelName)
 ### Parameters
 
 - `channelName`
-  - : Is a string representing the name of the channel; there is one
+  - : A string representing the name of the channel; there is one
     single channel with this name for all {{glossary("browsing context", "browsing
     contexts")}} with the same {{glossary("origin")}}.
 

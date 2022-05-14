@@ -17,7 +17,7 @@ with their device or the screen has locked.
 ## Syntax
 
 ```js
-new IdleDetector();
+new IdleDetector()
 ```
 
 ### Parameters

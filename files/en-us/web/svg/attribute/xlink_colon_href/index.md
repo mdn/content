@@ -5,6 +5,24 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://www.w3.org/TR/SVG11/linking.html#AElementXLinkHrefAttribute
+  - https://www.w3.org/TR/SVG11/text.html#AltGlyphElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/animate.html#HrefAttribute
+  - https://www.w3.org/TR/SVG11/interact.html#CursorElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/filters.html#feImageElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/filters.html#FilterElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/fonts.html#FontFaceUriElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/text.html#GlyphRefElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/struct.html#ImageElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/pservers.html#LinearGradientElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/animate.html#MPathElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/pservers.html#PatternElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/pservers.html#RadialGradientElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/script.html#ScriptElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/text.html#TextPathElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/struct.html#UseElementHrefAttribute
+  - https://www.w3.org/TR/SVG11/text.html#TRefElementHrefAttribute
 ---
 {{SVGRef}}{{Deprecated_Header}}
 
@@ -493,181 +511,7 @@ For {{SVGElement("tref")}}, `xlink:href` defines a reference to an element whose
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "linking.html#AElementXLinkHrefAttribute", "href for &lt;a&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("a")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#AltGlyphElementHrefAttribute", "href for &lt;altGlyph&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("altGlyph")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#HrefAttribute", "href for &lt;animate&gt;, &lt;animateColor&gt;, &lt;animateMotion&gt;, &lt;animateTransform&gt;, and &lt;set&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Defines <code>href</code> for animation elements.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "interact.html#CursorElementHrefAttribute", "href for &lt;cursor&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("cursor")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feImageElementHrefAttribute", "href for &lt;feImage&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("feImage")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#FilterElementHrefAttribute", "href for &lt;filter&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("filter")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontFaceUriElementHrefAttribute", "href for &lt;font-face-uri&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the
-        {{SVGElement("font-face-uri")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#GlyphRefElementHrefAttribute", "href for &lt;glyphRef&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("glyphRef")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#ImageElementHrefAttribute", "href for &lt;image&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("image")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#LinearGradientElementHrefAttribute", "href for &lt;linearGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the
-        {{SVGElement("linearGradient")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#MPathElementHrefAttribute", "href for &lt;mpath&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("mpath")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#PatternElementHrefAttribute", "href for &lt;pattern&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("pattern")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#RadialGradientElementHrefAttribute", "href for &lt;radialGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the
-        {{SVGElement("radialGradient")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "script.html#ScriptElementHrefAttribute", "href for &lt;script&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("script")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#TextPathElementHrefAttribute", "href for &lt;textPath&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("textPath")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#UseElementHrefAttribute", "href for &lt;use&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("use")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#TRefElementHrefAttribute", "href for &lt;tref&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("tref")}} element.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

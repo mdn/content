@@ -27,7 +27,7 @@ NDEFRecord.id
 
 ### Value
 
-A {{DOMxRef("USVString")}}.
+A string.
 
 ## Specifications
 

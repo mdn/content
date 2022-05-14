@@ -194,7 +194,7 @@ Document</samp></kbd></kbd>.</p>
 to confirm once you've entered the name of the new file.</p>
 ```
 
-This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are  contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
+This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
 
 #### Result
 

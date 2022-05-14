@@ -42,9 +42,9 @@ _Doesn't inherit any properties._
 - {{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 - {{domxref("Navigator.language")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
+  - : Returns a string representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
 - {{domxref("Navigator.languages")}} {{readonlyInline}} {{experimental_inline}}
-  - : Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.
+  - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{domxref("Navigator.locks")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
 - {{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}
@@ -100,7 +100,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.appName")}} {{readonlyInline}} {{deprecated_inline}}
   - : Always returns `'Netscape'`, in any browser.
 - {{domxref("Navigator.appVersion")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns the version of the browser as a {{domxref("DOMString")}}. Do not rely on this property to return the correct value.
+  - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
 - {{domxref("Navigator.battery")}} {{readonlyInline}} {{deprecated_inline}}

@@ -13,7 +13,7 @@ browser-compat: api.HTMLAnchorElement.origin
 
 The
 **`HTMLAnchorElement.origin`** read-only property is a
-{{domxref("USVString")}} containing the Unicode serialization of the origin of the
+string containing the Unicode serialization of the origin of the
 represented URL.
 
 That is:

@@ -18,7 +18,7 @@ requests.
 
 ## Value
 
-A {{domxref("USVString")}} indicating the hinted priority of the request.
+A string indicating the hinted priority of the request.
 Possible values are:
 
 - **`high`**: Fetch the request at a high priority relative to other

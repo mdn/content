@@ -15,7 +15,7 @@ The **`AudioData()`** constructor creates a new {{domxref("AudioData")}} object 
 ## Syntax
 
 ```js
-new AudioData(init);
+new AudioData(init)
 ```
 
 ### Parameters

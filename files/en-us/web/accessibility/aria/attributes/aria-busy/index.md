@@ -8,6 +8,9 @@ tags:
   - aria-busy
   - aria live regions
   - aria state
+spec-urls:
+  - https://w3c.github.io/aria/#aria-busy
+  - https://w3c.github.io/aria-practices/#feed
 ---
 
 Used in [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), the global `aria-busy` state indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update.
@@ -63,10 +66,7 @@ Used in **ALL** roles
 
 ## Specifications
 
-| Specification         | Status            |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-busy","ARIA: aria-busy Attribute")}}              | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#feed","`aria-busy` within a `feed` role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 

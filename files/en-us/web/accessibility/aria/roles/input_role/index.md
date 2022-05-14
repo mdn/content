@@ -8,6 +8,7 @@ tags:
   - Reference
   - ARIA roles
   - ARIA input role
+spec-urls: https://w3c.github.io/aria/#input
 ---
 
 
@@ -25,9 +26,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#input","ARIA: input role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

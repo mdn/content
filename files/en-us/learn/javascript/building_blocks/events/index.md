@@ -802,7 +802,7 @@ The output is as follows (try clicking around on it):
 
 {{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
 
-> **Note:** In this example we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that fired this event (in this case the container) we could use `event.currentTarget`.
+> **Note:** In this example we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
 
 > **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
 

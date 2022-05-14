@@ -70,7 +70,7 @@ window.addEventListener("beforeunload", function (e) {
 
 ## See also
 
-- {{Event("DOMContentLoaded")}}
+- {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
 - {{Event("readystatechange")}}
 - {{Event("load")}}
 - {{Event("beforeunload")}}

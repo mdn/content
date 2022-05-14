@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-label
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
 The `aria-label` attribute defines a string value that labels an interactive element.
@@ -68,9 +69,7 @@ The `aria-label` attribute is **NOT** supported in [`code`](/en-US/docs/Web/Acce
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-label","ARIA: aria-label Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -28,7 +28,7 @@ for the {{Glossary("RTP")}} stream.
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the object from which the contents
+A string which uniquely identifies the object from which the contents
 of the stream's {{domxref("RTCCodecStats")}} are derived.
 
 ## Specifications

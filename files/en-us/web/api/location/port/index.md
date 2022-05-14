@@ -11,7 +11,7 @@ browser-compat: api.Location.port
 {{ApiRef("Location")}}
 
 The **`port`** property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} containing the port number of the URL. If the
+interface is a string containing the port number of the URL. If the
 URL does not contain an explicit port number, it will be set to `''`.
 
 ## Syntax

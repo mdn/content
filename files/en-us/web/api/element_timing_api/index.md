@@ -7,6 +7,7 @@ tags:
   - Performance
   - Overview
   - Reference
+spec-urls: https://wicg.github.io/element-timing/
 ---
 {{DefaultAPISidebar("Element Timing")}}
 
@@ -47,9 +48,7 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Element Timing API')}} | {{Spec2('Element Timing API')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

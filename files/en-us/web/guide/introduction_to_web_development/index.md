@@ -39,14 +39,14 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 - [Getting started with JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) — what is JavaScript and how can it help you?
 - [JavaScript reference guide](/en-US/docs/Web/JavaScript/Guide) — a comprehensive, regularly updated guide to JavaScript for all levels of learning from beginner to advanced.
 - [Crockford on JavaScript](https://www.youtube.com/playlist?list=PL7664379246A246CB) — an in-depth video series on the JavaScript language.
-- [Eloquent JavaScript](https://eloquentjavascript.net/contents.html) — a comprehensive guide to intermediate and advanced JavaScript methodologies
+- [Eloquent JavaScript](https://eloquentjavascript.net/) — a comprehensive guide to intermediate and advanced JavaScript methodologies
 
 #### Intermediate
 
 - [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) — a recap on the JavaScript programming language aimed at intermediate-level developers
 - [Essential JavaScript design patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) — an introduction to essential JavaScript design patterns
 - [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects) — learn about the JavaScript object model.
-- [Christian Heilmann's JavaScript best practices](https://dev.opera.com/articles/view/javascript-best-practices/) — learn about some of the obvious and (not so) obvious best practices when writing JavaScript.
+- [Christian Heilmann's JavaScript best practices](https://dev.opera.com/articles/javascript-best-practices/) — learn about some of the obvious and (not so) obvious best practices when writing JavaScript.
 
 #### Advanced
 
@@ -62,13 +62,11 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
   - : A reliable reference site for learning HTML, CSS and JavaScript which also mentions feature support across different browsers and known browser bugs.
 - [HTMLDog](https://htmldog.com/)
   - : An excellent and comprehensive reference site on HTML and CSS for beginners.
-- [Google's HTML, CSS, and Javascript from the Ground Up](https://code.google.com/edu/submissions/html-css-javascript/)
-  - : These easily digestible video tutorials from Google's expert web developers cover the basics of HTML, CSS and JavaScript.
 - [CSSTutorial.net Beginner Tutorials](https://www.csstutorial.net/)
   - : A broad range of useful text and video tutorials that cover the basics through to intermediate aspects of CSS.
 - [Tizag CSS Tutorials](http://www.tizag.com/cssT/)
   - : An easy-to-follow reference for those wishing to learn CSS through short, concise tutorials.
 - [jQuery Fundamentals](http://jqfundamentals.com/)
   - : An open-source reference book featuring detailed introductions to both JavaScript and JQuery for beginners.
-- [JavaScript From Null: A Video Series](https://net.tutsplus.com/tutorials/javascript-ajax/javascript-from-null-video-series/)
+- [JavaScript From Null: A Video Series](https://code.tutsplus.com/tutorials/javascript-from-null-video-series--net-8066)
   - : A video series on JavaScript for absolute beginners looking for more 'visual'-based learning

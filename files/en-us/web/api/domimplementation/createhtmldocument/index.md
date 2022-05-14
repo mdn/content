@@ -30,7 +30,7 @@ createHTMLDocument(title)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new HTML {{domxref("Document")}} object.
 
 ## Examples
 

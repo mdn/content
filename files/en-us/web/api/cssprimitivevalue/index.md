@@ -30,7 +30,7 @@ Conversions are allowed between absolute values (from millimeters to centimeters
 
 ## Properties
 
-_Inherits properties from its parent, `{{DOMxRef("CSSValue")}}`_.
+_Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
 - {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{readonlyInline}}
 

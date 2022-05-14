@@ -29,9 +29,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Specifications
 
-| Specification                                                    | Title                           |
-| ---------------------------------------------------------------- | ------------------------------- |
-| {{RFC("7231", "402 Payment Required" , "6.5.2")}} | HTTP/1.1: Semantics and Content |
+{{Specifications}}
 
 ## Browser compatibility
 
