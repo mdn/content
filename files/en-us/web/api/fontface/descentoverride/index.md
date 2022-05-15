@@ -15,7 +15,7 @@ The **`descentOverride`** property of the {{domxref("FontFace")}} interface retu
 
 ## Value
 
-A {{domxref("CSSOMString","string")}}.
+A string.
 
 ## Examples
 

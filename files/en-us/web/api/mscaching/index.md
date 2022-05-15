@@ -20,7 +20,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ### Values
 
-Type: DOMString
+Type: string
 
 | Property value | Description                                    |
 | -------------- | ---------------------------------------------- |

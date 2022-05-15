@@ -25,7 +25,7 @@ file contains.
 ## Syntax
 
 ```js
-FileSystemWritableFileStream.write(data).then(...);
+write(data)
 ```
 
 ### Parameters
@@ -33,14 +33,14 @@ FileSystemWritableFileStream.write(data).then(...);
 - `data`
 
   - : Can be either the file data to write, in the form of a {{domxref('BufferSource')}},
-    {{domxref('Blob')}} or {{domxref('USVString')}}. Or an object containing the following
+    {{domxref('Blob')}} or string. Or an object containing the following
     properties:
 
     - **`type`**: One of `'write'`,
       `'seek'` or `'truncate'`. This is required if the object is
       passed into the `write()` method.
     - **`data`**: The file data to write. Can be a
-      {{domxref('BufferSource')}}, {{domxref('Blob')}} or {{domxref('USVString')}}. This
+      {{domxref('BufferSource')}}, a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal. This
       is required if the `type` is set to `'write'`.
     - **`position`**: The byte position the current file
       cursor should move to if type `'seek'` is used. Can also be set with

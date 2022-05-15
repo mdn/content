@@ -47,7 +47,7 @@ configure(config)
         - `"discard"` (default)
         - `"keep"`
     - `scalabilityMode`
-      - : A {{domxref("DOMString", "string")}} containing an encoding scalability mode identifier as defined in [WebRTC](https://w3c.github.io/webrtc-svc/#scalabilitymodes*).
+      - : A string containing an encoding scalability mode identifier as defined in [WebRTC](https://w3c.github.io/webrtc-svc/#scalabilitymodes*).
     - `bitrateMode`
       - : A string containing a bitrate mode. One of:
         - `"constant"`

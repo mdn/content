@@ -20,7 +20,7 @@ to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
 
 ## Value
 
-A {{domxref('CSSOMString')}} containing the descriptors defined in the style sheet's
+A string containing the descriptors defined in the style sheet's
 `@font-face` rule.
 
 ## Specifications

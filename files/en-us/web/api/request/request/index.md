@@ -52,9 +52,9 @@ new Request(input, options)
         {{jsxref("String")}} values.
     - `body`
       - : Any body that you want to add to your request: this can be a
-        {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
-        {{domxref("ReadableStream")}} object. Note that a request using the
+        {{domxref("Blob")}}, a {{domxref("BufferSource")}}, a {{domxref("FormData")}},
+        a {{domxref("URLSearchParams")}}, a string, or
+        a {{domxref("ReadableStream")}} object. Note that a request using the
         `GET` or `HEAD` method cannot have a body.
     - `mode`
       - : The mode you want to use for the request, e.g.,

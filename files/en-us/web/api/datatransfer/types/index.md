@@ -12,7 +12,7 @@ browser-compat: api.DataTransfer.types
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.types`** read-only property returns an
-array of the drag data formats (as {{domxref("DOMString","strings")}}) that were set in
+array of the drag data formats (as strings) that were set in
 the {{event("dragstart")}} event. The order of the formats is the same order as the data
 included in the drag operation.
 

@@ -17,7 +17,7 @@ The **`sourceFile`** read-only property of the {{domxref("DeprecationReportBody"
 
 ## Value
 
-A {{domxref("DOMString","string")}}, or `null` if the path is not known.
+A string, or `null` if the path is not known.
 
 ## Examples
 

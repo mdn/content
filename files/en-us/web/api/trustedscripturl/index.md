@@ -19,7 +19,7 @@ The value of a **TrustedScriptURL** object is set when the object is created and
 - {{domxref("TrustedScriptURL.toJSON()")}}
   - : Returns a JSON representation of the stored data.
 - {{domxref("TrustedScriptURL.toString()")}}
-  - : A {{domxref("USVString","string")}} containing the sanitized URL.
+  - : A string containing the sanitized URL.
 
 ## Examples
 

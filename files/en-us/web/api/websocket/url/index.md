@@ -16,7 +16,7 @@ URL of the {{domxref("WebSocket")}} as resolved by the constructor.
 
 ## Value
 
-A [`DOMString`](/en-US/docs/Web/API/DOMString).
+A string.
 
 ## Specifications
 

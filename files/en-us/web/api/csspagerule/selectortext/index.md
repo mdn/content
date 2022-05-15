@@ -15,7 +15,7 @@ The **`selectorText`** property of the {{domxref("CSSPageRule")}} interface gets
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Examples
 

@@ -20,7 +20,7 @@ device.
 
 ## Value
 
-A {{jsxref("DOMString")}}.
+A string.
 
 ## Specifications
 
