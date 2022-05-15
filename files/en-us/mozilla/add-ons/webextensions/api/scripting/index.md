@@ -14,6 +14,7 @@ browser-compat: webextensions.api.scripting
 {{AddonSidebar}}
 
 Inserts JavaScript and CSS into websites. This API offers two approaches to inserting content:
+
 - {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}} that provide for one-off injections.
 - {{WebExtAPIRef("scripting.registerContentScripts()")}} that registers content scripts dynamically, which can then be retrieved with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} and unregistered with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}).
 
@@ -31,7 +32,7 @@ Alternatively, you can get permission temporarily in the active tab and only in 
   - : Details of an injection target.
 - {{WebExtAPIRef("scripting.RegisteredContentScript")}}
   - : Details of a content script to be registered or that is registered.
-    
+
 ## Functions
 
 - {{WebExtAPIRef("scripting.executeScript()")}}

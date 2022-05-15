@@ -52,6 +52,7 @@ drawWindow(window, x, y, w, h, bgColor, flags)
     the window is rendered into it. This color may be transparent/translucent. It is given
     as a CSS color string (for example, `rgb()` or `rgba()`).
     > **Note:**
+    >
     > - If "`rgba(0,0,0,0)`" is used for the background color, the drawing
     >   will be transparent wherever the window is transparent.
     > - Top-level browsed documents are usually not transparent because the user's

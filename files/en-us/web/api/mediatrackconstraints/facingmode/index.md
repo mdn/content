@@ -65,6 +65,7 @@ pointed.
 - `"right"`
   - : The video source is facing toward the user but to their right, such as a camera
     aimed toward the user but over their right shoulder.
+
 ## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:

@@ -123,8 +123,6 @@ Each object must include a `"resources"` property and either a `"matches"` or `"
   </tbody>
 </table>
 
-
-
 ### Using web_accessible_resources
 
 Suppose your extension includes an image file at `images/my-image.png`, like this:

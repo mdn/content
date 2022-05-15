@@ -106,7 +106,6 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
 
 Require that all types of content should be packaged with the extension:
 
-
 **Manifest V2**
 
 ```json
