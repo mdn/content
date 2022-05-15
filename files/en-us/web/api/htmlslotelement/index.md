@@ -18,7 +18,7 @@ The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_
 ## Properties
 
 - {{domxref('HTMLSlotElement.name')}}
-  - : A {{domxref("DOMString","string")}} used to get and set the slot's name.
+  - : A string used to get and set the slot's name.
 
 ## Methods
 

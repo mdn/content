@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing the sanitized script.
+A string containing the sanitized script.
 
 ## Examples
 
