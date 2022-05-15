@@ -19,7 +19,7 @@ The value of a **TrustedScript** object is set when the object is created and ca
 - {{domxref("TrustedScript.toJSON()")}}
   - : Returns a JSON representation of the stored data.
 - {{domxref("TrustedScript.toString()")}}
-  - : A {{domxref("DOMString","string")}} containing the sanitized script.
+  - : A string containing the sanitized script.
 
 ## Examples
 

@@ -15,7 +15,7 @@ The **`type`** read-only property of the {{domxref("MIDIPort")}} interface retur
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the type of the port, one of:
+A string containing the type of the port, one of:
 
 - `"input"`
   - : The `MIDIPort` is an input port.

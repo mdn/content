@@ -15,7 +15,7 @@ The **`message`** read-only property of the {{domxref("InterventionReportBody")}
 
 ## Value
 
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 
