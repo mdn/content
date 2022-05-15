@@ -137,8 +137,7 @@
       "interfaces": ["ContentIndex", "ContentIndexEvent"],
       "methods": [],
       "properties": [
-        "ServiceWorkerRegistration.index",
-        "ServiceWorkerGlobalScope.oncontentdelete"
+        "ServiceWorkerRegistration.index"
       ],
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
