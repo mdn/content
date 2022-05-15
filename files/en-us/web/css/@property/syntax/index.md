@@ -11,7 +11,7 @@ browser-compat: css.at-rules.property.syntax
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and describes the allowable syntax for the property.
+The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and describes the allowable syntax for the property.
 
 ## Syntax
 
