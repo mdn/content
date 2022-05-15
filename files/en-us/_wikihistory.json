@@ -74528,14 +74528,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/SyncEvent/registration": {
-    "modified": "2020-10-15T21:34:40.038Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "rolfedh"
-    ]
-  },
   "Web/API/SyncEvent/tag": {
     "modified": "2020-10-15T21:42:27.511Z",
     "contributors": [
