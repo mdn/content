@@ -17,7 +17,7 @@ The **`Window.location`** read-only property returns a
 document.
 
 Though `Window.location` is a _read-only_ `Location`
-object, you can also assign a {{domxref("DOMString")}} to it. This means that you can
+object, you can also assign a string to it. This means that you can
 work with `location` as if it were a string in most cases:
 `location = 'http://www.example.com'` is a synonym of
 `location.href = 'http://www.example.com'`.
