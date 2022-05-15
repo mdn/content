@@ -1988,7 +1988,7 @@
         "SpeechGrammarList",
         "SpeechRecognition",
         "SpeechRecognitionAlternative",
-        "SpeechRecognitionError",
+        "SpeechRecognitionErrorEvent",
         "SpeechRecognitionEvent",
         "SpeechRecognitionResult",
         "SpeechRecognitionResultList",
