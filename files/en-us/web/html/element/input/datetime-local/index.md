@@ -14,7 +14,7 @@ tags:
   - Reference
   - Time
   - datetime-local
-browser-compat: html.elements.input.input-datetime-local
+browser-compat: html.elements.input.type_datetime-local
 ---
 
 {{HTMLRef("Input_types")}}

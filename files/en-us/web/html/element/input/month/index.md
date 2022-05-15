@@ -15,7 +15,7 @@ tags:
   - Number
   - Reference
   - month
-browser-compat: html.elements.input.input-month
+browser-compat: html.elements.input.type_month
 ---
 
 {{HTMLRef("Input_types")}}

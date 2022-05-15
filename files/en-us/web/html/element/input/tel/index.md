@@ -13,7 +13,7 @@ tags:
   - Input Type
   - Phone Numbers
   - Reference
-browser-compat: html.elements.input.input-tel
+browser-compat: html.elements.input.type_tel
 ---
 
 {{HTMLRef("Input_types")}}

@@ -14,7 +14,7 @@ tags:
   - Reference
   - Web
   - password
-browser-compat: html.elements.input.input-password
+browser-compat: html.elements.input.type_password
 ---
 
 {{HTMLRef("Input_types")}}

@@ -12,7 +12,7 @@ tags:
   - Reference
   - Web
   - slider
-browser-compat: html.elements.input.input-range
+browser-compat: html.elements.input.type_range
 ---
 
 {{HTMLRef("Input_types")}}

@@ -15,7 +15,7 @@ tags:
   - Text
   - URL
   - control
-browser-compat: html.elements.input.input-url
+browser-compat: html.elements.input.type_url
 ---
 
 {{HTMLRef("Input_types")}}

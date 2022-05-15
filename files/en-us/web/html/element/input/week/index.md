@@ -15,7 +15,7 @@ tags:
   - Reference
   - Week
   - Weeks
-browser-compat: html.elements.input.input-week
+browser-compat: html.elements.input.type_week
 ---
 
 {{HTMLRef("Input_types")}}

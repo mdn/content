@@ -8,7 +8,7 @@ tags:
   - HTML forms
   - Input Type
   - Reference
-browser-compat: html.elements.input.input-email
+browser-compat: html.elements.input.type_email
 ---
 
 {{HTMLRef}}

@@ -10,7 +10,7 @@ tags:
   - Input Types
   - Reference
   - hidden
-browser-compat: html.elements.input.input-hidden
+browser-compat: html.elements.input.type_hidden
 ---
 
 {{HTMLRef}}

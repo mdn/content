@@ -18,7 +18,7 @@ tags:
   - form
   - radio
   - radio button
-browser-compat: html.elements.input.input-radio
+browser-compat: html.elements.input.type_radio
 ---
 
 {{HTMLRef("Input_types")}}

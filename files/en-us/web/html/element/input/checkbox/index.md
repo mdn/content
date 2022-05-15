@@ -10,7 +10,7 @@ tags:
   - Reference
   - checkbox
   - form
-browser-compat: html.elements.input.input-checkbox
+browser-compat: html.elements.input.type_checkbox
 ---
 
 {{HTMLRef}}

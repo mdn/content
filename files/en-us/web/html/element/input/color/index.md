@@ -12,7 +12,7 @@ tags:
   - Input
   - Reference
   - color
-browser-compat: html.elements.input.input-color
+browser-compat: html.elements.input.type_color
 ---
 
 {{HTMLRef}}
