@@ -61,5 +61,5 @@ const decodedData = atob(encodedData); // decode the string
 ## See also
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("btoa","btoa()")}}
