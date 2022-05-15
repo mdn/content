@@ -137,8 +137,7 @@
       "interfaces": ["ContentIndex", "ContentIndexEvent"],
       "methods": [],
       "properties": [
-        "ServiceWorkerRegistration.index",
-        "ServiceWorkerGlobalScope.oncontentdelete"
+        "ServiceWorkerRegistration.index"
       ],
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
@@ -758,7 +757,6 @@
       ],
       "interfaces": [
         "MediaCapabilities",
-        "ScreenLuminance",
         "Screen"
       ],
       "methods": [
@@ -2004,7 +2002,7 @@
         "SpeechGrammarList",
         "SpeechRecognition",
         "SpeechRecognitionAlternative",
-        "SpeechRecognitionError",
+        "SpeechRecognitionErrorEvent",
         "SpeechRecognitionEvent",
         "SpeechRecognitionResult",
         "SpeechRecognitionResultList",

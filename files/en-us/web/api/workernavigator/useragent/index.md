@@ -39,7 +39,7 @@ string is user configurable. For example:
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the complete user agent string the browser
+A string specifying the complete user agent string the browser
 provides both in {{Glossary("HTTP")}} headers and in response to this and other related
 methods on the {{domxref("WorkerNavigator")}} object.
 

@@ -25,7 +25,7 @@ new WebAssembly.Global(descriptor, value)
 
   - : A `GlobalDescriptor` dictionary object, which contains two properties:
 
-    - `value`: A [`USVString`](/en-US/docs/Web/API/USVString) representing the
+    - `value`: A string representing the
       data type of the global. This can be any one of:
       - `i32`: A 32-bit integer.
       - `i64`: A 64-bit integer.

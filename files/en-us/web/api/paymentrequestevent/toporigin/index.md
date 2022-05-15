@@ -19,7 +19,7 @@ the {{domxref("PaymentRequest")}} object was initialized.
 
 ## Value
 
-A USVString
+A string
 
 ## Specifications
 

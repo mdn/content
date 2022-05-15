@@ -16,7 +16,7 @@ The **`id`** read-only property of the {{domxref("InterventionReportBody")}} int
 
 ## Value
 
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 

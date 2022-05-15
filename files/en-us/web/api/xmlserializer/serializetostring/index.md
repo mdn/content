@@ -36,7 +36,7 @@ xmlString = anXMLSerializer.serializeToString(rootNode);
 
 ### Return value
 
-A {{domxref("DOMString")}} containing the XML representation of the specified DOM tree.
+A string containing the XML representation of the specified DOM tree.
 
 ### Exceptions
 

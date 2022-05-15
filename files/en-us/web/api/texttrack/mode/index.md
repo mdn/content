@@ -32,7 +32,7 @@ textTrack.mode = a;
 
 ### Value
 
-A {{domxref("DOMString")}} which indicates the track's current mode. One of:
+A string which indicates the track's current mode. One of:
 
 - `disabled`
   - : The text track is currently disabled. While the track's presence is exposed in the

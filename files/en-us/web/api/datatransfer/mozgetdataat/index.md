@@ -32,7 +32,7 @@ mozGetDataAt(type, index)
 ### Parameters
 
 - _type_
-  - : A {{domxref("DOMString","string")}} representing the type of the drag data to
+  - : A string representing the type of the drag data to
     retrieve from the {{domxref("DataTransfer","drag data object")}}.
 - _index_
   - : A `unsigned long` representing the index of the data to retrieve.

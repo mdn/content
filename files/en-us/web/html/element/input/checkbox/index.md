@@ -26,7 +26,7 @@ browser-compat: html.elements.input.input-checkbox
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the value of the
+        A string representing the value of the
         checkbox.
       </td>
     </tr>
@@ -61,7 +61,7 @@ browser-compat: html.elements.input.input-checkbox
 
 ## Value
 
-A {{domxref("DOMString")}} representing the value of the checkbox. This is not displayed on the client-side, but on the server this is the `value` given to the data submitted with the checkbox's `name`. Take the following example:
+A string representing the value of the checkbox. This is not displayed on the client-side, but on the server this is the `value` given to the data submitted with the checkbox's `name`. Take the following example:
 
 ```html
 <form>

@@ -27,7 +27,7 @@ new Request(input, options)
 
   - : Defines the resource that you wish to fetch. This can either be:
 
-    - A {{domxref("USVString")}} containing the direct URL of the resource you want to
+    - A string containing the direct URL of the resource you want to
       fetch.
     - A {{domxref("Request")}} object, effectively creating a copy. Note the following
       behavioral updates to retain security while making the constructor less likely to
@@ -52,9 +52,9 @@ new Request(input, options)
         {{jsxref("String")}} values.
     - `body`
       - : Any body that you want to add to your request: this can be a
-        {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
-        {{domxref("ReadableStream")}} object. Note that a request using the
+        {{domxref("Blob")}}, a {{domxref("BufferSource")}}, a {{domxref("FormData")}},
+        a {{domxref("URLSearchParams")}}, a string, or
+        a {{domxref("ReadableStream")}} object. Note that a request using the
         `GET` or `HEAD` method cannot have a body.
     - `mode`
       - : The mode you want to use for the request, e.g.,
@@ -71,7 +71,7 @@ new Request(input, options)
       - : The redirect mode to use: `follow`,
         `error`, or `manual`. The default is `follow`.
     - `referrer`
-      - : A {{domxref("USVString")}} specifying
+      - : A string specifying
         `no-referrer`, `client`, or a URL. The default is
         `about:client`.
     - `integrity`

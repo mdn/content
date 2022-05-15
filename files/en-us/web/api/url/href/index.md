@@ -12,13 +12,13 @@ browser-compat: api.URL.href
 {{ApiRef("URL API")}}
 
 The **`href`** property of the {{domxref("URL")}} interface is
-a {{domxref("USVString")}} containing the whole URL.
+a string containing the whole URL.
 
 {{AvailableInWorkers}}
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

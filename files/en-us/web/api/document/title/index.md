@@ -14,7 +14,7 @@ browser-compat: api.Document.title
 {{APIRef("DOM")}}
 
 The **`document.title`** property gets or sets the current title of the document.
-When present, it defaults to the value of the [<title>](/en-US/docs/Web/HTML/Element/title).
+When present, it defaults to the value of the [`<title>`](/en-US/docs/Web/HTML/Element/title).
 
 ## Value
 

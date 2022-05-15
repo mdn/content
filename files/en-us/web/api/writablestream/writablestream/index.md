@@ -61,7 +61,7 @@ new WritableStream(underlyingSink, queuingStrategy)
         `abort()` will be called even if writes are queued up — those chunks
         will be thrown away. If this process is asynchronous, it can return a promise to
         signal success or failure. The `reason` parameter contains a
-        {{domxref("DOMString")}} describing why the stream was aborted.
+        string describing why the stream was aborted.
 
 - `queuingStrategy` {{optional_inline}}
 
