@@ -61,7 +61,7 @@ The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic st
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role"
             >region</a
           ></code
         >
