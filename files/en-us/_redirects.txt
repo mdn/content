@@ -9413,6 +9413,7 @@
 /en-US/docs/Web/API/SubtleCrypto.unwrapKey	/en-US/docs/Web/API/SubtleCrypto/unwrapKey
 /en-US/docs/Web/API/SubtleCrypto.verify	/en-US/docs/Web/API/SubtleCrypto/verify
 /en-US/docs/Web/API/SubtleCrypto.wrapKey	/en-US/docs/Web/API/SubtleCrypto/wrapKey
+/en-US/docs/Web/API/SyncEvent/registration	/en-US/docs/Web/API/SyncEvent
 /en-US/docs/Web/API/Text.Text	/en-US/docs/Web/API/Text/Text
 /en-US/docs/Web/API/Text.replaceWholeText	/en-US/docs/Web/API/Text
 /en-US/docs/Web/API/Text.splitText	/en-US/docs/Web/API/Text/splitText
