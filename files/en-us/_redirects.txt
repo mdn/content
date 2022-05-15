@@ -1384,7 +1384,7 @@
 /en-US/docs/DOM/HTMLTrackElement	/en-US/docs/Web/API/HTMLTrackElement
 /en-US/docs/DOM/Image	/en-US/docs/Web/API/HTMLImageElement/Image
 /en-US/docs/DOM/ImageData	/en-US/docs/Web/API/ImageData
-/en-US/docs/DOM/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray
+/en-US/docs/DOM/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/DOM/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/DOM/Input.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
 /en-US/docs/DOM/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
@@ -2857,7 +2857,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/HTMLTextAreaElement1	/en-US/docs/Web/API/HTMLTextAreaElement
 /en-US/docs/Document_Object_Model_(DOM)/HTMLTitleElement	/en-US/docs/Web/API/HTMLTitleElement
 /en-US/docs/Document_Object_Model_(DOM)/ImageData	/en-US/docs/Web/API/ImageData
-/en-US/docs/Document_Object_Model_(DOM)/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray
+/en-US/docs/Document_Object_Model_(DOM)/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Document_Object_Model_(DOM)/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Document_Object_Model_(DOM)/Input.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
 /en-US/docs/Document_Object_Model_(DOM)/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
@@ -8254,7 +8254,7 @@
 /en-US/docs/Web/API/HTMLIFrameElement/setNfcFocus	/en-US/docs/Web/API/HTMLIFrameElement
 /en-US/docs/Web/API/HTMLImageElement.Image	/en-US/docs/Web/API/HTMLImageElement/Image
 /en-US/docs/Web/API/HTMLImageElement/referrer	/en-US/docs/Web/API/HTMLImageElement/referrerPolicy
-/en-US/docs/Web/API/HTMLInputElement.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray
+/en-US/docs/Web/API/HTMLInputElement.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/HTMLInputElement.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/HTMLInputElement.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
 /en-US/docs/Web/API/HTMLInputElement.select	/en-US/docs/Web/API/HTMLInputElement/select
@@ -8262,6 +8262,7 @@
 /en-US/docs/Web/API/HTMLInputElement/HTMLInputElement.setRangeText()	/en-US/docs/Web/API/HTMLInputElement/setRangeText
 /en-US/docs/Web/API/HTMLInputElement/change_event	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/HTMLInputElement/click	/en-US/docs/Web/API/HTMLElement/click
+/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/HTMLInputElement/mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/HTMLInputElement/stepUp()	/en-US/docs/Web/API/HTMLInputElement/stepUp
 /en-US/docs/Web/API/HTMLLinkElement.rel	/en-US/docs/Web/API/HTMLLinkElement/rel
@@ -8470,7 +8471,7 @@
 /en-US/docs/Web/API/IndexedDB_API/Synchronous_API	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IndexedDB_API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/InitMSManipulationEvent	/en-US/docs/Web/API/MSManipulationEvent/initMSManipulationEvent
-/en-US/docs/Web/API/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray
+/en-US/docs/Web/API/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/Input.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
 /en-US/docs/Web/API/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
