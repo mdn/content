@@ -73113,31 +73113,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/SpeechRecognitionError": {
-    "modified": "2020-10-15T21:40:27.082Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognitionError/error": {
-    "modified": "2020-10-15T21:40:28.674Z",
-    "contributors": [
-      "sideshowbarker",
-      "genezx",
-      "ExE-Boss",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognitionError/message": {
-    "modified": "2020-10-15T21:40:28.756Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/SpeechRecognitionErrorEvent": {
     "modified": "2020-10-15T22:26:44.489Z",
     "contributors": [

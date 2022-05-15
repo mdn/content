@@ -9370,6 +9370,9 @@
 /en-US/docs/Web/API/SpeechRecognition/onspeechstart	/en-US/docs/Web/API/SpeechRecognition/speechstart_event
 /en-US/docs/Web/API/SpeechRecognition/onstart	/en-US/docs/Web/API/SpeechRecognition/start_event
 /en-US/docs/Web/API/SpeechRecognition/start()	/en-US/docs/Web/API/SpeechRecognition/start
+/en-US/docs/Web/API/SpeechRecognitionError	/en-US/docs/Web/API/SpeechRecognitionErrorEvent
+/en-US/docs/Web/API/SpeechRecognitionError/error	/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error
+/en-US/docs/Web/API/SpeechRecognitionError/message	/en-US/docs/Web/API/SpeechRecognitionErrorEvent/message
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.resultIndex	/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.results	/en-US/docs/Web/API/SpeechRecognitionEvent/results
 /en-US/docs/Web/API/SpeechSynthesis/SpeechSynthesis.cancel	/en-US/docs/Web/API/SpeechSynthesis/cancel
