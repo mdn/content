@@ -60,7 +60,7 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 
-```bat
+```bash
 @echo off
 set bits=384
 openssl dgst -sha%bits% -binary %1% | openssl base64 -A > tmp
