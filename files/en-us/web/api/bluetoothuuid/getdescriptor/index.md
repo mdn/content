@@ -23,7 +23,7 @@ getDescriptor(name)
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString","string")}} containing the name of the descriptor.
+  - : A string containing the name of the descriptor.
 
 ### Return value
 
