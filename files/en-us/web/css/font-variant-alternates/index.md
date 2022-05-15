@@ -77,7 +77,7 @@ This property may take one of two forms:
 
 ## Examples
 
-### Enabling swash gyphs
+### Enabling swash glyphs
 
 #### HTML
 
@@ -107,7 +107,7 @@ p {
 
 > **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
 
-{{ EmbedLiveSample('Enabling swash gyphs') }}
+{{ EmbedLiveSample('Enabling swash glyphs') }}
 
 ## Specifications
 
