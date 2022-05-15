@@ -32,10 +32,10 @@ new SharedWorker(aURL, options)
 ### Parameters
 
 - `aURL`
-  - : A {{domxref("DOMString")}} representing the URL of the script the worker will
+  - : A string representing the URL of the script the worker will
     execute. It must obey the same-origin policy.
 - `name` {{optional_inline}}
-  - : A {{domxref("DOMString")}} specifying an identifying name for the
+  - : A string specifying an identifying name for the
     {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is
     mainly useful for debugging purposes.
 - `options` {{optional_inline}}
@@ -44,17 +44,17 @@ new SharedWorker(aURL, options)
     instance. Available properties are as follows:
 
     - `type`
-      - : A {{domxref("DOMString")}} specifying the type of worker to
+      - : A string specifying the type of worker to
         create. The value can be `classic` or `module`. If not
         specified, the default used is `classic`.
     - `credentials`
-      - : A {{domxref("DOMString")}} specifying the type of
+      - : A string specifying the type of
         credentials to use for the worker. The value can be `omit`,
         `same-origin`, or _`include`. If not
         specified, or if type is `classic`, the default used is
         `omit` (no credentials required)._
     - `name`
-      - : A {{domxref("DOMString")}} specifying an
+      - : A string specifying an
         identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
         scope of the worker, which is mainly useful for debugging purposes.
 

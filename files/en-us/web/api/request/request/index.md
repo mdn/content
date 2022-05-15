@@ -27,7 +27,7 @@ new Request(input, options)
 
   - : Defines the resource that you wish to fetch. This can either be:
 
-    - A {{domxref("USVString")}} containing the direct URL of the resource you want to
+    - A string containing the direct URL of the resource you want to
       fetch.
     - A {{domxref("Request")}} object, effectively creating a copy. Note the following
       behavioral updates to retain security while making the constructor less likely to
@@ -71,7 +71,7 @@ new Request(input, options)
       - : The redirect mode to use: `follow`,
         `error`, or `manual`. The default is `follow`.
     - `referrer`
-      - : A {{domxref("USVString")}} specifying
+      - : A string specifying
         `no-referrer`, `client`, or a URL. The default is
         `about:client`.
     - `integrity`

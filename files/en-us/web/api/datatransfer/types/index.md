@@ -22,8 +22,8 @@ by a MIME type. Some values that are not MIME types are special-cased for legacy
 
 ## Value
 
-An array of the data formats used in the drag operation. Each format is
-{{domxref("DOMString","string")}}. If the drag operation included no data, this list
+An array of the data formats used in the drag operation. Each format is a 
+string. If the drag operation included no data, this list
 will be empty. If any files are included in the drag operation, then one of the types
 will be the string `Files`.
 
