@@ -15,7 +15,7 @@ The **`productName`** read-only property of the {{domxref("HIDDevice")}} interfa
 
 ## Value
 
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 
