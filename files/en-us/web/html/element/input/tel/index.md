@@ -31,7 +31,7 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a telephone number, or
+        A string representing a telephone number, or
         empty
       </td>
     </tr>
@@ -80,7 +80,7 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that either represents a telephone number or is an empty string (`""`).
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string that either represents a telephone number or is an empty string (`""`).
 
 ## Additional attributes
 
