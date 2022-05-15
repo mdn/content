@@ -30,7 +30,7 @@ This interface has no constructor. An `ElementInternals` object is returned when
 - {{domxref("ElementInternals.validity")}}{{ReadOnlyInline}}
   - : Returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
 - {{domxref("ElementInternals.validationMessage")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} containing the validation message of this element.
+  - : A string containing the validation message of this element.
 - {{domxref("ElementInternals.labels")}}{{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of all of the label elements associated with this element.
 
