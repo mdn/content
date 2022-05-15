@@ -11,7 +11,7 @@ browser-compat: css.at-rules.property.inherits
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and controls whether the custom property registration specified by `@property` inherits by default.
+The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and controls whether the custom property registration specified by `@property` inherits by default.
 
 ## Syntax
 
