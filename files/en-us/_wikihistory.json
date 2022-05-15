@@ -48467,21 +48467,6 @@
       "Sebastianz"
     ]
   },
-  "Web/API/HTMLInputElement/mozGetFileNameArray": {
-    "modified": "2020-10-15T21:14:30.979Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "teoli",
-      "kscarfone",
-      "nehasharma",
-      "Sheppy",
-      "kohei.yoshino",
-      "Ms2ger",
-      "ethertank"
-    ]
-  },
   "Web/API/HTMLInputElement/multiple": {
     "modified": "2020-10-15T21:13:50.438Z",
     "contributors": [
