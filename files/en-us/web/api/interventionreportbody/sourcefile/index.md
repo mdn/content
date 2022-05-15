@@ -5,11 +5,12 @@ tags:
   - API
   - Property
   - Reference
+  - Experimental
   - sourceFile
   - InterventionReportBody
-browser-compat: api.InterventionReportBody.sourceFile
+spec-urls: https://wicg.github.io/intervention-reporting/#dom-interventionreportbody-sourcefile
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`sourceFile`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the path to the source file where the intervention occurred.
 
@@ -42,4 +43,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
