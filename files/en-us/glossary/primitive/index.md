@@ -12,7 +12,6 @@ Most of the time, a primitive value is represented directly at the lowest level 
 
 All primitives are **immutable**, i.e., they cannot be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned a new value, but the existing value can not be changed in the ways that objects, arrays, and functions can be altered.
 
-
 ## Example
 
 ### Autoboxing: primitive wrapper objects in JavaScript
@@ -29,7 +28,7 @@ console.log(mystring.length)
 // 17
 ```
 
-What actually happens is that a wrapper object associated with the primitive is automatically accessed instead. 
+What actually happens is that a wrapper object associated with the primitive is automatically accessed instead.
 Except for `null` and `undefined`, all primitive values have object equivalents that wrap around the primitive values:
 
 - {{jsxref("String")}} for the string primitive.
@@ -39,7 +38,6 @@ Except for `null` and `undefined`, all primitive values have object equivalents 
 - {{jsxref("Symbol")}} for the symbol primitive.
 
 The wrapper's [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method returns the primitive value.
-
 
 ### Primitives are immutable
 
@@ -63,7 +61,6 @@ console.log(foo);               // []
 foo.push("plugh");
 console.log(foo);               // ["plugh"]
 ```
-
 
 ## See also
 

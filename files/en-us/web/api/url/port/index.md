@@ -19,7 +19,7 @@ a string containing the port number of the URL.
 
 {{AvailableInWorkers}}
 
-## Value 
+## Value
 
 A string.
 
