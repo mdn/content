@@ -85,7 +85,7 @@ However, you need to be careful here — in this case, the second block of code 
 
 As a final point, while not recommended, you may sometimes see `if...else` statements written without the curly braces:
 
-```example-bad
+```js example-bad
 if (condition) code to run if condition is true
 else run some other code instead
 ```
