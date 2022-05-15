@@ -43,7 +43,7 @@ var a = [1, null, 'abra'];
 
 function f(a) {
   return a + 2;
-} // allocates a function (which is a callable object)
+} // allocates memory for a function (which is a callable object)
 
 // function expressions also allocate an object
 someElement.addEventListener('click', function() {
