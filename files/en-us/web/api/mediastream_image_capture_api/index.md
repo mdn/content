@@ -56,8 +56,6 @@ let imageCapture = new ImageCapture(track);
 
 - {{domxref("ImageCapture")}}
   - : An interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
-- {{domxref("PhotoCapabilities")}}
-  - : Provides available configuration options for an attached photographic device. Retrieve a `PhotoCapabilities` object by calling {{domxref("ImageCapture.getPhotoCapabilities()")}}.
 
 ## Specifications
 
@@ -65,13 +63,7 @@ let imageCapture = new ImageCapture(track);
 
 ## Browser compatibility
 
-### `ImageCapture`
-
 {{Compat("api.ImageCapture")}}
-
-### `PhotoCapabilities`
-
-{{Compat("api.PhotoCapabilities")}}
 
 ## See also
 
