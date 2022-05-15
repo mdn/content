@@ -8,7 +8,7 @@ tags:
   - Experimental
   - Reference
   - image-resolution
-spec-url: https://drafts.csswg.org/css-images-4/#the-image-resolution
+spec-urls: https://drafts.csswg.org/css-images-4/#the-image-resolution
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
