@@ -86,7 +86,7 @@ The following sections describe what you need to do.
 
 ## Declare an array of image filenames
 
-You need to create an array listing the filenames of all the image to include in the gallery. The array should be declared as a constant.
+You need to create an array listing the filenames of all the images to include in the gallery. The array should be declared as a constant.
 
 ### Looping through the images
 
