@@ -12,7 +12,7 @@ tags:
   - Input Element
   - Input Type
   - Reference
-browser-compat: html.elements.input.input-date
+browser-compat: html.elements.input.type_date
 ---
 
 {{HTMLRef}}

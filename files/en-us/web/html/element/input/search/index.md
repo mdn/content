@@ -9,7 +9,7 @@ tags:
   - Input Type
   - Reference
   - Search
-browser-compat: html.elements.input.input-search
+browser-compat: html.elements.input.type_search
 ---
 
 {{HTMLRef("Input_types")}}

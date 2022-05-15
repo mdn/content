@@ -12,7 +12,7 @@ tags:
   - Text
   - text entry
   - text input
-browser-compat: html.elements.input.input-text
+browser-compat: html.elements.input.type_text
 ---
 {{HTMLRef("Input_types")}}
 

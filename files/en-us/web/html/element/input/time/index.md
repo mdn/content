@@ -13,7 +13,7 @@ tags:
   - Input Type
   - Reference
   - Time
-browser-compat: html.elements.input.input-time
+browser-compat: html.elements.input.type_time
 ---
 
 {{HTMLRef("Input_types")}}

@@ -12,7 +12,7 @@ tags:
   - Input Type
   - Reference
   - Type
-browser-compat: html.elements.input.input-file
+browser-compat: html.elements.input.type_file
 ---
 
 {{HTMLRef("Input_types")}}
