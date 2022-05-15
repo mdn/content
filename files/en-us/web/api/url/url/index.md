@@ -41,7 +41,7 @@ new URL(url, base)
 
 > **Note:** The `url` and `base` arguments will
 > each be stringified from whatever value you pass, just like with other Web APIs
-> that accept {{domxref("USVString")}}. In particular, you can use an existing
+> that accept a string. In particular, you can use an existing
 > {{domxref("URL")}} object for either argument, and it will stringify to the
 > object's {{domxref("URL.href", "href")}} property.
 
