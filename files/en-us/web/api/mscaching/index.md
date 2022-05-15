@@ -26,7 +26,7 @@ One of the following strings:
 - `enabled`
   - : The caching for stream or ms-stream data is _enabled_.
 - `disabled`
-  - : The caching for _any_ data is _disabled_.                 |
+  - : The caching for _any_ data is _disabled_.
 
 ## See also
 
