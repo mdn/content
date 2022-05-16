@@ -21,8 +21,7 @@ The **`add()`** method of the
 ## Syntax
 
 ```js
-add(double)
-add(CSSNumericValue)
+add(number)
 ```
 
 ### Parameters

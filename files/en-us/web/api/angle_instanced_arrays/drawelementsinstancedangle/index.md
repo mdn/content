@@ -44,9 +44,7 @@ drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
-    - When using the {{domxref("OES_element_index_uint")}} extension:
-
-      - `gl.UNSIGNED_INT`
+    - `gl.UNSIGNED_INT` when using the {{domxref("OES_element_index_uint")}} extension.
 
 - `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in the element array buffer. Must be a valid multiple of the size of the given `type`.
