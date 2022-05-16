@@ -342,7 +342,7 @@ If the server does not support conditional requests, you can force the client to
 
 ### Dealing with outdated implementations
 
-As a workaround to outdated implementations that ignore `no-store`, you may see kitchen-sink headers such as the following being used.
+As a workaround for outdated implementations that ignore `no-store`, you may see kitchen-sink headers such as the following being used.
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
