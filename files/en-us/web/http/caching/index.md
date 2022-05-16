@@ -102,7 +102,7 @@ Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 
 It is heuristically known that content whih has not been updated for a full year will not be updated for some time after that. Therefore, the client stores this response (despite the lack of `max-age`) and reuses it for a while. How long to reuse is up to the implementation, but the specification recommends about 10% (in this case 0.1 year) of the time after storing.
 
-It is commonn misunderstanding to assume that if you do not give a `Cache-Control`, it will not be stored. If you do not want such a store, you must explicitly deny it with a `Cache-Control`. Rather, the Heuristic Cache is a work around to make content cacheable before `Cache-Control` became popular, and basically all responses should explicitly specify a `Cache-Control` header.
+Heuristic caching is a workaround that came in being before `Cache-Control` support became widely, and basically all responses should explicitly specify a `Cache-Control` header.
 
 ## Fresh and stale based on age
 
