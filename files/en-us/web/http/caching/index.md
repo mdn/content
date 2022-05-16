@@ -475,7 +475,7 @@ If the response is personalized to a particular user and you do not want it to b
 
 ![Request Collapse](request-collapse.png)
 
-## Caching pattern
+## Common caching patterns
 
 There are many directives in the `Cache-Control` spec, and it may be difficult to understand all of them. But most web sites can be covered by a combination of a handful of patterns.
 
