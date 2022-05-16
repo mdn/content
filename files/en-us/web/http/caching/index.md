@@ -658,7 +658,7 @@ The same can be used for `favicon.ico`, `manifest.json`, `.well-known`, and API 
 
 Most web content can be covered by a combination of the two patterns described above.
 
-### Additional managed cache
+### More about managed caches
 
 With the method described in previous sections, subresources can be cached for a long time by using cache busting, but primary resources (which are usually HTML documents) can’t be.
 
