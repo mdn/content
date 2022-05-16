@@ -37,7 +37,7 @@ write(data)
     properties:
 
     - `type`
-      - : A string that is `write`, `seek` or `truncate`.
+      - : A string that is one of the following: `"write"`, `"seek"`, or `"truncate"`.
     - `data`
       - : The file data to write. Can be a {{domxref('BufferSource')}}, a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal.
         This property is required if `type` is set to `write`.
