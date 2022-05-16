@@ -257,7 +257,7 @@ The server will return `304 Not Modified` if the value of the `ETag` header it d
 
 But if the server determines the requested resource should now have a different `ETag` value, the server will instead respond with a `200 OK` and the latest version of the resource.
 
-> **Note:** The choose between `ETag` and `Last-Modified`, consider the following:
+> **Note:** When evaluating how to use `ETag` and `Last-Modified`, consider the following:
 > During cache revalidation, if both `ETag` and `Last-Modified` are present, `ETag` takes precedence.
 > Therefore, if you are only considering caching, you may think that `Last-Modified` is unnecessary.
 > However, `Last-Modified` is not just useful for caching; instead, it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
