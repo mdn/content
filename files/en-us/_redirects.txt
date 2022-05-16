@@ -2144,7 +2144,7 @@
 /en-US/docs/DOM/window.navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
 /en-US/docs/DOM/window.navigator.appName	/en-US/docs/Web/API/Navigator/appName
 /en-US/docs/DOM/window.navigator.appVersion	/en-US/docs/Web/API/Navigator/appVersion
-/en-US/docs/DOM/window.navigator.battery	/en-US/docs/Web/API/Navigator/battery
+/en-US/docs/DOM/window.navigator.battery	/en-US/docs/Web/API/Navigator/getBattery
 /en-US/docs/DOM/window.navigator.battery.charging	/en-US/docs/Web/API/BatteryManager/charging
 /en-US/docs/DOM/window.navigator.battery.chargingTime	/en-US/docs/Web/API/BatteryManager/chargingTime
 /en-US/docs/DOM/window.navigator.battery.dischargingTime	/en-US/docs/Web/API/BatteryManager/dischargingTime
@@ -2161,7 +2161,7 @@
 /en-US/docs/DOM/window.navigator.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
 /en-US/docs/DOM/window.navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/DOM/window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
-/en-US/docs/DOM/window.navigator.mozBattery	/en-US/docs/Web/API/Navigator/battery
+/en-US/docs/DOM/window.navigator.mozBattery	/en-US/docs/Web/API/Navigator/getBattery
 /en-US/docs/DOM/window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
 /en-US/docs/DOM/window.navigator.mozVibrate	/en-US/docs/Web/API/Navigator/vibrate
 /en-US/docs/DOM/window.navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
@@ -3323,7 +3323,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
-/en-US/docs/Document_Object_Model_(DOM)/window.navigator.mozBattery	/en-US/docs/Web/API/Navigator/battery
+/en-US/docs/Document_Object_Model_(DOM)/window.navigator.mozBattery	/en-US/docs/Web/API/Navigator/getBattery
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.oscpu	/en-US/docs/Web/API/Navigator/oscpu
@@ -8718,7 +8718,7 @@
 /en-US/docs/Web/API/Navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
 /en-US/docs/Web/API/Navigator.appName	/en-US/docs/Web/API/Navigator/appName
 /en-US/docs/Web/API/Navigator.appVersion	/en-US/docs/Web/API/Navigator/appVersion
-/en-US/docs/Web/API/Navigator.battery	/en-US/docs/Web/API/Navigator/battery
+/en-US/docs/Web/API/Navigator.battery	/en-US/docs/Web/API/Navigator/getBattery
 /en-US/docs/Web/API/Navigator.buildID	/en-US/docs/Web/API/Navigator/buildID
 /en-US/docs/Web/API/Navigator.connection	/en-US/docs/Web/API/Navigator/connection
 /en-US/docs/Web/API/Navigator.connection.bandwidth	/en-US/docs/Web/API/NetworkInformation
@@ -8747,6 +8747,7 @@
 /en-US/docs/Web/API/Navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
 /en-US/docs/Web/API/Navigator.vibrate	/en-US/docs/Web/API/Navigator/vibrate
 /en-US/docs/Web/API/Navigator/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
+/en-US/docs/Web/API/Navigator/battery	/en-US/docs/Web/API/Navigator/getBattery
 /en-US/docs/Web/API/Navigator/getVRDevices	/en-US/docs/Web/API/Navigator/getVRDisplays
 /en-US/docs/Web/API/Navigator/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/Navigator/mediaDevices/enumerateDevices	/en-US/docs/Web/API/MediaDevices/enumerateDevices
@@ -10348,7 +10349,7 @@
 /en-US/docs/Web/API/window.navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
 /en-US/docs/Web/API/window.navigator.appName	/en-US/docs/Web/API/Navigator/appName
 /en-US/docs/Web/API/window.navigator.appVersion	/en-US/docs/Web/API/Navigator/appVersion
-/en-US/docs/Web/API/window.navigator.battery	/en-US/docs/Web/API/Navigator/battery
+/en-US/docs/Web/API/window.navigator.battery	/en-US/docs/Web/API/Navigator/getBattery
 /en-US/docs/Web/API/window.navigator.battery.charging	/en-US/docs/Web/API/BatteryManager/charging
 /en-US/docs/Web/API/window.navigator.battery.chargingTime	/en-US/docs/Web/API/BatteryManager/chargingTime
 /en-US/docs/Web/API/window.navigator.battery.dischargingTime	/en-US/docs/Web/API/BatteryManager/dischargingTime
