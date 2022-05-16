@@ -83,7 +83,7 @@ Note that some CDNs provide their own headers that are effective only for that C
 
 ![Type of Cache](type-of-cache.png)
 
-## Heuristic cache
+## Heuristic caching
 
 HTTP is designed to cache as much as possible, so even if no `Cache-Control` is given, responses will get stored and reused if certain conditions are met. This is called **heuristic caching**.
 
