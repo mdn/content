@@ -298,7 +298,7 @@ let obj3 = {['__prot' + 'o__']: 17}
 assert(obj3.__proto__ === 17)
 ```
 
-Note that the `__proto__` key is a standardized syntax, contrary to the non-standard and non-performant {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors.
+Note that the `__proto__` key is a standardized syntax, contrary to the non-standard and non-performant {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}}, instead of mutating the prototype chain.
 
 ## Specifications
 
