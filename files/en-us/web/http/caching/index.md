@@ -662,7 +662,7 @@ Most web content can be covered by a combination of the two patterns described a
 
 With the method described in previous sections, subresources can be cached for a long time by using cache busting, but primary resources (which are usually HTML documents) can’t be.
 
-Caching primary resources is difficult because, using standard directives from the HTTP Caching spec, there’s no way to actively delete cache contents when content is updated on the server.
+Caching primary resources is difficult because, using just standard directives from the HTTP Caching specification, there’s no way to actively delete cache contents when content is updated on the server.
 
 However, it is possible by deploying a managed cache such as a CDN or service worker.
 
