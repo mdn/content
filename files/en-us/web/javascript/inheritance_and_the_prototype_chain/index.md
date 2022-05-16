@@ -566,12 +566,13 @@ console.log(inst.bar_prop);
     <tr>
       <th scope="row">Con(s)</th>
       <td>
-        Ill-performing. Should be deprecated. Many browsers optimize the
-        prototype and try to guess the location of the method in memory when
-        calling an instance in advance; but setting the prototype dynamically
-        disrupts all those optimizations. It might cause some browsers to
-        recompile your code for de-optimization, to make it work according to
-        the specs. Not supported in IE8 and below.
+        Ill-performing. Should be avoided if it's possible to set the prototype
+        at object creation time. Many browsers optimize the prototype and try to
+        guess the location of the method in memory when calling an instance in
+        advance; but setting the prototype dynamically disrupts all those
+        optimizations. It might cause some browsers to recompile your code for
+        de-optimization, to make it work according to the specs. Not supported
+        in IE8 and below.
       </td>
     </tr>
   </tbody>
@@ -623,7 +624,10 @@ console.log(inst.bar_prop);
         instance in advance; but setting the prototype dynamically disrupts all
         those optimizations and can even force some browsers to recompile for
         de-optimization of your code, to make it work according to the specs.
-        Not supported in IE10 and below.
+        Not supported in IE10 and below. The {{jsxref("Object/proto","__proto__")}}
+        setter is normative optional, so it may not work across all platforms.
+        You should almost always use {{jsxref("Object.setPrototypeOf")}}
+        instead.
       </td>
     </tr>
   </tbody>
@@ -657,10 +661,11 @@ console.log(inst.bar_prop);
         Supported in all modern browsers. Pointing the <code>__proto__</code>
         key to something that is not an object only fails silently without
         throwing an exception. Contrary to the
-        {{jsxref("Object/proto", "Object.prototype.__proto__")}} setter, <code>__proto__</code>
-        in object literal initializers is standardized and optimized, and can
-        even be more performant than {{jsxref("Object.create")}}. Declaring
-        extra own properties on the object at creation is more ergonomic than
+        {{jsxref("Object/proto", "Object.prototype.__proto__")}} setter,
+        <code>__proto__</code> in object literal initializers is standardized
+        and optimized, and can even be more performant than
+        {{jsxref("Object.create")}}. Declaring extra own properties on the
+        object at creation is more ergonomic than
         {{jsxref("Object.create")}}.
       </td>
     </tr>
