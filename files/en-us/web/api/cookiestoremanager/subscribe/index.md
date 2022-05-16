@@ -21,7 +21,7 @@ subscribe(subscriptions)
 
 ### Parameters
 
-- subscriptions
+- `subscriptions`
 
   - : An object containing:
 

@@ -26,7 +26,7 @@ toSum(units)
 
 ### Parameters
 
-- units
+- `units`
   - : The units to convert to.
 
 ### Return value

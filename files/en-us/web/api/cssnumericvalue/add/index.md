@@ -27,7 +27,7 @@ add(CSSNumericValue)
 
 ### Parameters
 
-- number
+- `number`
   - : either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
 ### Return value

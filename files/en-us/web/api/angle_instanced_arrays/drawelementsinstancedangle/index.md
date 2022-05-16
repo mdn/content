@@ -36,9 +36,9 @@ drawElementsInstancedANGLE(mode, count, type, offset, primcount)
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.
-- type
+- `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array buffer. Possible values are:
 
@@ -48,9 +48,9 @@ drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 
       - `gl.UNSIGNED_INT`
 
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in the element array buffer. Must be a valid multiple of the size of the given `type`.
-- primcount
+- `primcount`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the set of elements to execute.
 
 ### Return value
