@@ -21,6 +21,8 @@ This article provides information about the changes in Firefox 101 that will aff
 
 ### CSS
 
+The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (or lower) contrast in the presentation of web content is now available by default ({{bug(1656363)}}).
+
 #### Removals
 
 ### JavaScript
