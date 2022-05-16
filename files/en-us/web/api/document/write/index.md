@@ -24,7 +24,7 @@ write(markup)
 
 ### Parameters
 
-- _markup_
+- `markup`
   - : A string containing the text to be written to the document.
 
 ### Return value

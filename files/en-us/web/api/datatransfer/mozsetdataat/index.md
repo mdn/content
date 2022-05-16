@@ -43,13 +43,13 @@ mozSetDataAt(type, data, index)
 
 ### Parameters
 
-- _type_
+- `type`
   - : A string representing the type of the drag data to add to
     the {{domxref("DataTransfer","drag data object")}}.
-- _data_
+- `data`
   - : A `nsIVariant` representing the data to add to the
     {{domxref("DataTransfer","drag data object")}}.
-- _index_
+- `index`
   - : A `unsigned long` representing the index of the data to add.
 
 ### Return value

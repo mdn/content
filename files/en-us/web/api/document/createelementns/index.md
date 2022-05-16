@@ -24,14 +24,14 @@ createElementNS(namespaceURI, qualifiedName, options)
 
 ### Parameters
 
-- _namespaceURI_
+- `namespaceURI`
   - : A string that specifies the [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) to associate with the element.
     The {{DOMxRef("element.namespaceURI", "namespaceURI")}} property of the created element is initialized with the value of _namespaceURI_.
     See [Valid Namespace URIs](#important_namespace_uris).
-- _qualifiedName_
+- `qualifiedName`
   - : A string that specifies the type of element to be created.
     The {{DOMxRef("node.nodeName", "nodeName")}} property of the created element is initialized with the value of _qualifiedName_.
-- _options_{{Optional_Inline}}
+- `options` {{Optional_Inline}}
 
   - : An optional `ElementCreationOptions` object containing a single property named `is`, whose value is the tag name for a custom element previously defined using `customElements.define()`.
     For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/),

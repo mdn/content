@@ -24,9 +24,9 @@ msFrameStep(forward)
 
 ### Parameters
 
-- forward
-  - : A [Boolean](/en-US/docs/Glossary/Boolean) which if set to _true_
-    steps the video forward by one frame, if _false_ steps the video backwards by
+- `forward`
+  - : A [Boolean](/en-US/docs/Glossary/Boolean) which if set to `true`
+    steps the video forward by one frame, if `false` steps the video backwards by
     one frame.
 
 ### Return value

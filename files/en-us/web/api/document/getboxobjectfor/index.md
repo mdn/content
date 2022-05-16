@@ -24,11 +24,12 @@ getBoxObjectFor(element)
 
 ### Parameters
 
-- _element_ is a {{domxref("element","DOMElement")}}.
+- `element`
+  - : A {{domxref("element","DOMElement")}}.
 
 ### Return value
 
-A `nsIBoxObject`.
+A `BoxObject`.
 
 ## Examples
 

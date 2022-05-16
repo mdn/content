@@ -93,12 +93,13 @@ transaction(storeNames, mode, options)
 
   - : Dictionary of other options. Available options are:
 
-    - `durability`: `"default"`, `"strict"`, or
-      `"relaxed"`. The default is `"default"`. Using
-      `"relaxed"` provides better performance, but with fewer guarantees. Web
-      applications are encouraged to use `"relaxed"` for ephemeral data such
-      as caches or quickly changing records, and `"strict"` in cases where
-      reducing the risk of data loss outweighs the impact to performance and power.
+    - `durability`
+      - : `"default"`, `"strict"`, or
+        `"relaxed"`. The default is `"default"`. Using
+        `"relaxed"` provides better performance, but with fewer guarantees. Web
+        applications are encouraged to use `"relaxed"` for ephemeral data such
+        as caches or quickly changing records, and `"strict"` in cases where
+        reducing the risk of data loss outweighs the impact to performance and power.
 
 ### Return value
 

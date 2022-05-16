@@ -47,13 +47,16 @@ requestFullscreen(options)
     - `navigationUI` {{optional_inline}}
       - : Controls whether or not to show navigation UI while the element is in fullscreen mode.
         The default value is "auto", which indicates that the browser should decide what to do.
-        - `"hide"`: The browser's navigation interface will be hidden
-          and the entire dimensions of the screen will be allocated to the display of the element.
-        - `"show"`: The browser will present page navigation controls and possibly other
-          user interface; the dimensions of the element (and the perceived size of the screen) will be clamped
-          to leave room for this user interface.
-        - `"auto"`: The browser will choose which of the above settings to apply.
-          This is the default value.
+        - `"hide"`
+          - : The browser's navigation interface will be hidden
+            and the entire dimensions of the screen will be allocated to the display of the element.
+        - `"show"`
+          - : The browser will present page navigation controls and possibly other
+            user interface; the dimensions of the element (and the perceived size of the screen) will be clamped
+            to leave room for this user interface.
+        - `"auto"`
+          - : The browser will choose which of the above settings to apply.
+            This is the default value.
 
 ### Return value
 

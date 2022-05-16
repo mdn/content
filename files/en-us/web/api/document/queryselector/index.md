@@ -32,7 +32,7 @@ querySelector(selectors)
 
 ### Parameters
 
-- _selectors_
+- `selectors`
   - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown. See [Locating

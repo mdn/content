@@ -28,7 +28,7 @@ close(returnValue)
 
 ### Parameters
 
-- returnValue {{optional_inline}}
+- `returnValue` {{optional_inline}}
   - : A string representing an updated value for the
     {{domxref("HTMLDialogElement.returnValue")}} of the dialog.
 

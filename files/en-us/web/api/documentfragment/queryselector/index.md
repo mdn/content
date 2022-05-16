@@ -29,7 +29,7 @@ querySelector(selectors)
 
 ### Parameters
 
-- _selectors_
+- `selectors`
   - : A string containing one or more CSS selectors separated by
     commas.
 

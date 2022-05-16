@@ -27,8 +27,9 @@ getElementsByTagName(name)
 
 ### Parameters
 
-- _name_ is a string representing the name of the elements. The special
-  string "\*" represents all elements.
+- `name`
+  - : A string representing the name of the elements. The special
+    string "\*" represents all elements.
 
 ### Return value
 

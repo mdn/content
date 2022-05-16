@@ -35,7 +35,7 @@ item(index)
 
 ### Parameters
 
-- index
+- `index`
   - : An `unsigned long` representing the index of the CSS value within the
     collection.
 
