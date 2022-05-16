@@ -21,7 +21,7 @@ Also, when a response is reusable, the origin server does not need to process th
 
 Proper operation of the cache is critical to the health of the system.
 
-## Type of caches
+## Types of caches
 
 In the [HTTP Caching](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cache) spec, there are two main types of caches: **private caches** and **shared caches**.
 
