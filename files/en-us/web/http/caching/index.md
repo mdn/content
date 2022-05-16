@@ -606,7 +606,7 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 Making a response cacheable over a long period of time by changing the URL when the content changes is called **cache busting**. That technique can be applied to all subresources, such as images.
 
-> **Note:** immutable and QPACK
+> **Note:** When consider the use of `immutable` and QPACK: 
 > If you’re concerned that `immutable` changes the predefined value provided by QPACK, consider that
 > in this case, the `immutable` part can be encoded separately by splitting the `Cache-Control` value into two lines — though this is dependent on the encoding algorithm a particular QPACK implementation uses.
 
