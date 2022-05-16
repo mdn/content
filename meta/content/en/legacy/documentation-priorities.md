@@ -147,6 +147,8 @@ The following API interface reference documents (and their child pages) are curr
 - [`HTMLTextAreaElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement) (2)
 - [`Location`](https://developer.mozilla.org/en-US/docs/Web/API/Location) (17)
 - [`Navigator`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) (45)
+- [`NavigatorLanguage`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) (3)
+- [`NavigatorOnLine`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine) (3)
 - [`Window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) (182)
 
 ### URL API (43)
