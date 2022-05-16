@@ -46,7 +46,7 @@ requestFullscreen(options)
   - : An object that controls the behavior of the transition to fullscreen mode. The available options are:
     - `navigationUI` {{optional_inline}}
       - : Controls whether or not to show navigation UI while the element is in fullscreen mode.
-        The default value is "auto", which indicates that the browser should decide what to do.
+        The default value is `"auto"`, which indicates that the browser should decide what to do.
         - `"hide"`
           - : The browser's navigation interface will be hidden
             and the entire dimensions of the screen will be allocated to the display of the element.
