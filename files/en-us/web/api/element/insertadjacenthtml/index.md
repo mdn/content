@@ -32,7 +32,7 @@ insertAdjacentHTML(position, text)
       - : Before the element. Only valid if the element is in the DOM tree and has a parent element.
     - `"afterbegin"`
       - : Just inside the element, before its first child.
-    - `"beforeend"`:
+    - `"beforeend"`
       - : Just inside the element, after its last child.
     - `"afterend"`
       - : After the element. Only valid if the element is in the DOM tree and has a parent element.

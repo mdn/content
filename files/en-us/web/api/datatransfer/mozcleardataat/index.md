@@ -37,10 +37,10 @@ mozClearDataAt(type, index)
 
 ### Parameters
 
-- _type_
+- `type`
   - : A string representing the type of the drag data to remove
     from the {{domxref("DataTransfer","drag data object")}}.
-- _index_
+- `index`
   - : A `unsigned long` representing the index of the data to remove.
 
 ### Return value

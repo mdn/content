@@ -26,9 +26,9 @@ caretRangeFromPoint(x, y)
 
 ### Parameters
 
-- _x_
+- `x`
   - : A horizontal position within the current viewport.
-- _y_
+- `y`
   - : A vertical position within the current viewport.
 
 ### Return value

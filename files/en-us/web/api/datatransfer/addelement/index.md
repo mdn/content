@@ -23,12 +23,12 @@ dragged).
 ## Syntax
 
 ```js
-addElement(el)
+addElement(element)
 ```
 
 ### Parameters
 
-- _el_
+- `element`
   - : The {{domxref("Element")}} to set as the drag source.
 
 ### Return value
