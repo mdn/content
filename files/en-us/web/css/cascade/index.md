@@ -181,7 +181,7 @@ We then look at _order of appearance_. The second one, the last of the two unlay
 margin-left: 3px
 ```
 
-> **Note:** The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as cascade layers have less precedence that unlayered styles.  _Order of appearance_ only matters when both origin, importance, and specificity are equal.
+> **Note:** The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as normal styles in cascade layers have less precedence than normal unlayered styles.  _Order of appearance_ only matters when both origin, importance, and specificity are equal.
 
 ## Author styles: inline styles, layers, and precedence
 
