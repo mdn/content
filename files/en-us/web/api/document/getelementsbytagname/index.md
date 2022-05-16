@@ -29,7 +29,7 @@ getElementsByTagName(name)
 
 - `name`
   - : A string representing the name of the elements. The special
-    string "\*" represents all elements.
+    string `*` represents all elements.
 
 ### Return value
 

@@ -25,7 +25,7 @@ getElementsByName(name)
 ### Parameters
 
 - `name`
-  - : The value of the `name` attribute of the element(s).
+  - : The value of the `name` attribute of the element(s) we are looking for.
 
 ### Return value
 
