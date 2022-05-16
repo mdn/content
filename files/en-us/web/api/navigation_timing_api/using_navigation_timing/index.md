@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
 }, false);
 ```
 
-This code, executed when the {{event("load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.
+This code, executed when the {{domxref("Window/load_event", "load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.
 
 ```html hidden
 <div class="output">
