@@ -57,7 +57,7 @@ We use three event handlers here:
 - in the `dragover` event handler for the target container we call `event.preventDefault()`, which enables it to receive `drop` events.
 - in the `drop` event handler for the drop zone we handle moving the draggable element from the original container to the drop zone.
 
-For a more complete example of drag and drop, see the page for the [drag](/en-US/docs/Web/API/Document/drag_event) event.
+For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/Document/drag_event) event.
 
 #### HTML
 
@@ -117,6 +117,10 @@ document.addEventListener("drop", event => {
   }
 });
 ```
+
+#### Result
+
+{{EmbedLiveSample('A minimal drag and drop example')}}
 
 ## Specifications
 

@@ -52,7 +52,7 @@ In this example we have a draggable element inside a container. Try grabbing the
 
 We make the element half transparent while it is being dragged, and listen for the `dragend` event to reset the element's opacity when it is released.
 
-For a more complete example of drag and drop, see the page for the [drag](/en-US/docs/Web/API/Document/drag_event) event.
+For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/Document/drag_event) event.
 
 #### HTML
 

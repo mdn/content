@@ -52,7 +52,7 @@ In this example we have a draggable element inside a container. Try grabbing the
 
 We give the other container a purple background while the draggable element is over it, to signal that the draggable element could be dropped on to the container. We listen for the `dragleave` event to reset the container background when the draggable element is dragged off the container.
 
-Note though that in this partial example we haven't implemented dropping: for a complete example of drag and drop, see the page for the [drag](/en-US/docs/Web/API/Document/drag_event) event.
+Note though that in this partial example we haven't implemented dropping: for a complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/Document/drag_event) event.
 
 #### HTML
 

@@ -47,7 +47,7 @@ In this example we have a draggable element inside a container. Try grabbing the
 
 We listen for the `dragstart` event to make the element half transparent while it is being dragged.
 
-For a more complete example of drag and drop, see the page for the [drag](/en-US/docs/Web/API/Document/drag_event) event.
+For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/Document/drag_event) event.
 
 #### HTML
 
