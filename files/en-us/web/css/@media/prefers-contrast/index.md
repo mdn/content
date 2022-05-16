@@ -7,9 +7,9 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.prefers-contrast
 ---
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-The **`prefers-contrast`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the web content is presented with a higher (or lower) contrast.
+The **`prefers-contrast`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect whether the user has requested the web content to be presented with a lower or higher contrast.
 
 ## Syntax
 
