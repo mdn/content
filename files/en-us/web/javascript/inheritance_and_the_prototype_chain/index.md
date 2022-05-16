@@ -657,7 +657,7 @@ console.log(inst.bar_prop);
         Supported in all modern browsers. Pointing the <code>__proto__</code>
         key to something that is not an object only fails silently without
         throwing an exception. Contrary to the
-        {{jsxref("Object/proto")}} setter, <code>__proto__</code>
+        {{jsxref("Object/proto", "Object.prototype.__proto__")}} setter, <code>__proto__</code>
         in object literal initializers is standardized and optimized, and can
         even be more performant than {{jsxref("Object.create")}}. Declaring
         extra own properties on the object at creation is more ergonomic than
@@ -668,7 +668,8 @@ console.log(inst.bar_prop);
       <th scope="row">Con(s)</th>
       <td>
         Not supported in IE10 and below. Likely to be confused with
-        {{jsxref("Object/proto")}} for people unaware of the difference.
+        {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors for
+        people unaware of the difference.
       </td>
     </tr>
   </tbody>
