@@ -153,7 +153,7 @@ Expires: Tue, 28 Feb 2022 22:22:22 GMT
 
 However, the time format is difficult to parse, many implementation bugs were found, and it is possible to induce problems by intentionally shifting the system clock; therefore,`max-age` — for specifying an elapsed time — was adopted for `Cache-Control` in HTTP/1.1.
 
-If both `Expires` and `Cache-Contro: max-age` are available, `max-age` is defined to be preferred. So it is not necessary to provide `Expires` now that HTTP/1.1 is widely used.
+If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defined to be preferred. So it is not necessary to provide `Expires` now that HTTP/1.1 is widely used.
 
 ## Vary
 
