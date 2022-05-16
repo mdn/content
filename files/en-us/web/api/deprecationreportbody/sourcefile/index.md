@@ -8,7 +8,7 @@ tags:
   - Experimental
   - sourceFile
   - DeprecationReportBody
-spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-sourcefile
+browser-compat: api.DeprecationReportBody.sourceFile
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -43,4 +43,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

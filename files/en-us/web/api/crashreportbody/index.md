@@ -8,7 +8,7 @@ tags:
   - Interface
   - Reference
   - Reporting API
-spec-urls: https://wicg.github.io/crash-reporting/#crashreportbody
+browser-compat: api.CrashReportBody 
 ---
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
@@ -53,7 +53,7 @@ Some sample JSON might look like this:
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 
