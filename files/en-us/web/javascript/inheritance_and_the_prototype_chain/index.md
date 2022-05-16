@@ -629,7 +629,7 @@ console.log(inst.bar_prop);
   </tbody>
 </table>
 
-#### #5: Using the __proto__ key in an object initializer
+#### #5: Using the __proto__ key in object initializers
 
 ```js
 const inst = {
@@ -648,7 +648,7 @@ console.log(inst.bar_prop);
 
 <table class="standard-table">
   <caption>
-    Pros and cons of using the <code>__proto__</code> key in {{jsxref("Object_initializer")}}
+    Pros and cons of using the <code>__proto__</code> key in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
   </caption>
   <tbody>
     <tr>
