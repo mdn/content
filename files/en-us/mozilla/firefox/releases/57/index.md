@@ -103,7 +103,7 @@ _No changes._
 ### Security
 
 - `resource://` URLs no longer leak information ({{bug(863246)}})
-- Data URIs are now treated as unique opaque origins, rather than inheriting the origin of the settings object responsible for the navigation ({{bug(1324406)}}).
+- Data URLs are now treated as unique opaque origins, rather than inheriting the origin of the settings object responsible for the navigation ({{bug(1324406)}}).
 
 ### Plugins
 

@@ -61,9 +61,9 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 ## Functions
 
 - {{WebExtAPIRef("tabs.captureTab()")}}
-  - : Creates a data URI encoding an image of the visible area of the given tab.
+  - : Creates a data URL encoding an image of the visible area of the given tab.
 - {{WebExtAPIRef("tabs.captureVisibleTab()")}}
-  - : Creates a data URI encoding an image of the visible area of the currently active tab in the specified window.
+  - : Creates a data URL encoding an image of the visible area of the currently active tab in the specified window.
 - {{WebExtAPIRef("tabs.connect()")}}
   - : Sets up a messaging connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) running in the specified tab.
 - {{WebExtAPIRef("tabs.create()")}}
