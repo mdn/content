@@ -642,7 +642,7 @@ If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
 ```
 
-That setting is appropriate for non-personalized HTML — but for response which get personalized using cookies (for example, after a login), don’t forget to also specify `private`:
+That setting is appropriate for non-personalized HTML — but for a response which gets personalized using cookies (for example, after a login), don’t forget to also specify `private`:
 
 ```http
 200 OK HTTP/1.1
