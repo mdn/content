@@ -29,7 +29,7 @@ msInsertVideoEffect(activatableClassId, effectRequired, config)
   - : A string defining the video effects class.
 - `effectRequired`
   - : A {{JSxRef("Boolean")}} which if set to
-    _true_ requires a video effect to be defined.
+    `true` requires a video effect to be defined.
 - `config` {{Optional_Inline}}
   - : An optional {{JSxRef("Object")}} to help with defining any additional configuration
     needed.
