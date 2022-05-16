@@ -580,6 +580,7 @@ console.log(inst.bar_prop);
 #### #4: Setting the {{jsxref("Object/proto","__proto__")}} property
 
 ```js
+// Technique 1
 function A() {}
 A.prototype.foo_prop = 'foo val';
 function bar() {}
@@ -587,6 +588,15 @@ const proto = { bar_prop: 'bar val' };
 proto.__proto__ = A.prototype;
 bar.prototype = proto;
 const inst = new bar();
+console.log(inst.foo_prop);
+console.log(inst.bar_prop);
+```
+
+```js
+// Technique 2
+const inst = {};
+inst.__proto__ = { bar_prop: 'bar val' };
+inst.__proto__.__proto__ = { foo_prop: 'foo val' };
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 ```
