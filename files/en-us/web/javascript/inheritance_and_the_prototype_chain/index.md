@@ -262,9 +262,9 @@ function f() {
 
 const p = { b: 2, __proto__: o };
 
-// It is possible to point the newly created object's [[Prototype]] to another
-// object via the __proto__ literal property. (Not to be confused with
-// Object.prototype.__proto__ accessors)
+// It is possible to point the newly created object's [[Prototype]] to
+// another object via the __proto__ literal property. (Not to be confused
+// with Object.prototype.__proto__ accessors)
 // p ---> o ---> Object.prototype ---> null
 ```
 
@@ -648,7 +648,7 @@ console.log(inst.bar_prop);
 
 <table class="standard-table">
   <caption>
-    Pros and cons of using the <code>__proto__</code> key in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+    Pros and cons of using the <code>__proto__</code> key in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializers</a>
   </caption>
   <tbody>
     <tr>
@@ -657,7 +657,7 @@ console.log(inst.bar_prop);
         Supported in all modern browsers. Pointing the <code>__proto__</code>
         key to something that is not an object only fails silently without
         throwing an exception. Contrary to the
-        {{jsxref("Object/proto","__proto__")}} setter, <code>__proto__</code>
+        {{jsxref("Object/proto")}} setter, <code>__proto__</code>
         in object literal initializers is standardized and optimized, and can
         even be more performant than {{jsxref("Object.create")}}. Declaring
         extra own properties on the object at creation is more ergonomic than
@@ -668,8 +668,7 @@ console.log(inst.bar_prop);
       <th scope="row">Con(s)</th>
       <td>
         Not supported in IE10 and below. Likely to be confused with
-        {{jsxref("Object/proto","__proto__")}} for people unaware of the
-        difference.
+        {{jsxref("Object/proto")}} for people unaware of the difference.
       </td>
     </tr>
   </tbody>
