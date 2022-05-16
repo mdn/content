@@ -629,7 +629,7 @@ console.log(inst.bar_prop);
   </tbody>
 </table>
 
-#### #5: Using the __proto__ key in {{jsxref("Object_initializer")}}
+#### #5: Using the __proto__ key in an object initializer
 
 ```js
 const inst = {
