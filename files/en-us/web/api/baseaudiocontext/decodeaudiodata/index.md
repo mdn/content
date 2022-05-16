@@ -38,17 +38,17 @@ decodeAudioData(arrayBuffer)
 
 ### Parameters
 
-- _arrayBuffer_
+- `arrayBuffer`
   - : An ArrayBuffer containing the audio data to be decoded, usually grabbed from
     {{domxref("XMLHttpRequest")}}, {{domxref("fetch()")}} or
     {{domxref("FileReader")}}.
-- _successCallback_
+- `successCallback`
   - : A callback function to be invoked when the decoding successfully finishes. The
     single argument to this callback is an {{domxref("AudioBuffer")}} representing the
     _decodedData_ (the decoded PCM audio data). Usually you'll want to put the
     decoded data into an {{domxref("AudioBufferSourceNode")}}, from which it can be played
     and manipulated how you want.
-- _errorCallback_ {{optional_inline}}
+- `errorCallback` {{optional_inline}}
   - : An optional error callback, to be invoked if an error occurs when the audio data is
     being decoded.
 

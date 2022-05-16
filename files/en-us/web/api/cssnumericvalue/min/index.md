@@ -21,12 +21,12 @@ values passed. The passed values must be of the same type.
 ## Syntax
 
 ```js
-min(number1 numberN)
+min(number1, /* ..., */ numberN)
 ```
 
 ### Parameters
 
-- number
+- `number1`, …, `numberN`
   - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
 ### Return value

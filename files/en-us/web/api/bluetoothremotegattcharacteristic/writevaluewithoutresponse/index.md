@@ -24,7 +24,7 @@ writeValueWithoutResponse(value)
 
 ### Parameters
 
-- value
+- `value`
   - : An {{jsxref("ArrayBuffer")}}.
 
 ### Return value

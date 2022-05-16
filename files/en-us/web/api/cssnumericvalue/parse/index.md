@@ -26,7 +26,7 @@ parse(cssText)
 
 ### Parameters
 
-- cssText
+- `cssText`
   - : a string containing numeric and unit parts.
 
 ### Return value

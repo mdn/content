@@ -21,14 +21,13 @@ The **`add()`** method of the
 ## Syntax
 
 ```js
-add(double)
-add(CSSNumericValue)
+add(number)
 ```
 
 ### Parameters
 
-- number
-  - : either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number`
+  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 

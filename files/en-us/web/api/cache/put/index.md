@@ -52,9 +52,9 @@ put(request, response)
 
 ### Parameters
 
-- request
+- `request`
   - : The {{domxref("Request")}} object or URL that you want to add to the cache.
-- response
+- `response`
   - : The {{domxref("Response")}} you want to match up to the request.
 
 ### Return value

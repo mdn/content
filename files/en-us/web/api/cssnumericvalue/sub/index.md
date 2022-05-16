@@ -26,7 +26,7 @@ sub(number)
 
 ### Parameters
 
-- number
+- `number`
   - : Either a {{jsxref('Number')}} or a {{domxref('CSSMathSum')}}.
 
 ### Return value
