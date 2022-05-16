@@ -181,7 +181,7 @@ For applications that employ cookies to prevent others from reusing cached perso
 
 Stale responses are not immediately discarded. HTTP has a mechanism to transform a stale response to a fresh one by asking the origin server. This is called **validation**, or sometimes, **revalidation**.
 
-Validation is done by using conditional request that includes an `If-Modified-Since` or `If-None-Match` request header.
+Validation is done by using a **conditional request** that includes an `If-Modified-Since` or `If-None-Match` request header.
 
 ### If-Modified-Since
 
