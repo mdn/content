@@ -615,7 +615,7 @@ Cache-Control: public, max-age=31536000
 Cache-Control: immutable
 ```
 
-### HTML Main resources
+### Primary resources
 
 Unlike subresources, primary resources cannot be cache busted because their URLs can't be decorated in the same way that subresource URLs can be.
 
