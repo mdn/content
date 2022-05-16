@@ -259,6 +259,13 @@ function f() {
 // Functions inherit from Function.prototype
 // (which has methods call, bind, etc.)
 // f ---> Function.prototype ---> Object.prototype ---> null
+
+const p = { b: 2, __proto__: o };
+
+// It is possible to point the newly created object's [[Prototype]] to another
+// object via the __proto__ literal property. (Not to be confused with
+// Object.prototype.__proto__ accessors)
+// p ---> o ---> Object.prototype ---> null
 ```
 
 ### With a constructor
@@ -396,7 +403,7 @@ Note: It is **not** enough to check whether a property is [`undefined`](/en-US/d
 
 ### Summary of methods for extending the prototype chain
 
-Here are all 4 ways and their pros/cons. All of the examples listed below create exactly the same resulting `inst` object (thus logging the same results to the console), except in different ways.
+Here are all 5 ways and their pros/cons. All of the examples listed below create exactly the same resulting `inst` object (thus logging the same results to the console), except in different ways.
 
 #### #1: New initialization
 
@@ -480,7 +487,7 @@ const proto = Object.create(
 bar.prototype = proto;
 const inst = new bar();
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -540,7 +547,7 @@ const proto = Object.setPrototypeOf(
 bar.prototype = proto;
 const inst = new bar();
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -573,33 +580,15 @@ console.log(inst.bar_prop)
 #### #4: Setting the {{jsxref("Object/proto","__proto__")}} property
 
 ```js
-// Technique 1
 function A() {}
 A.prototype.foo_prop = 'foo val';
 function bar() {}
-const proto = {
-  bar_prop: 'bar val',
-  __proto__: A.prototype
-};
+const proto = { bar_prop: 'bar val' };
+proto.__proto__ = A.prototype;
 bar.prototype = proto;
 const inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
-```
-
-```js
-// Technique 2
-const inst = {
-  __proto__: {
-    bar_prop: 'bar val',
-    __proto__: {
-      foo_prop: 'foo val',
-      __proto__: Object.prototype
-    }
-  }
-};
-console.log(inst.foo_prop);
-console.log(inst.bar_prop)
 ```
 
 <table class="standard-table">
@@ -625,6 +614,52 @@ console.log(inst.bar_prop)
         those optimizations and can even force some browsers to recompile for
         de-optimization of your code, to make it work according to the specs.
         Not supported in IE10 and below.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### #5: Using the __proto__ key in {{jsxref("Object_initializer")}}
+
+```js
+const inst = {
+  __proto__: {
+    bar_prop: 'bar val',
+    __proto__: {
+      foo_prop: 'foo val',
+      // This can be omitted
+      __proto__: Object.prototype
+    }
+  }
+};
+console.log(inst.foo_prop);
+console.log(inst.bar_prop);
+```
+
+<table class="standard-table">
+  <caption>
+    Pros and cons of using the <code>__proto__</code> key in {{jsxref("Object_initializer")}}
+  </caption>
+  <tbody>
+    <tr>
+      <th scope="row">Pro(s)</th>
+      <td>
+        Supported in all modern browsers. Pointing the <code>__proto__</code>
+        key to something that is not an object only fails silently without
+        throwing an exception. Contrary to the
+        {{jsxref("Object/proto","__proto__")}} setter, <code>__proto__</code>
+        in object literal initializers is standardized and optimized, and can
+        even be more performant than {{jsxref("Object.create")}}. Declaring
+        extra own properties on the object at creation is more ergonomic than
+        {{jsxref("Object.create")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Con(s)</th>
+      <td>
+        Not supported in IE10 and below. Likely to be confused with
+        {{jsxref("Object/proto","__proto__")}} for people unaware of the
+        difference.
       </td>
     </tr>
   </tbody>
