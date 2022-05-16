@@ -1819,7 +1819,7 @@
 /en-US/docs/DOM/document.firstChild	/en-US/docs/Web/API/Node/firstChild
 /en-US/docs/DOM/document.forms	/en-US/docs/Web/API/Document/forms
 /en-US/docs/DOM/document.fullScreen	/en-US/docs/Web/API/Document/fullscreen
-/en-US/docs/DOM/document.getBoxObjectFor	/en-US/docs/Web/API/Document/getBoxObjectFor
+/en-US/docs/DOM/document.getBoxObjectFor	/en-US/docs/Web/API/Element/getBoundingClientRect
 /en-US/docs/DOM/document.getElementById	/en-US/docs/Web/API/Document/getElementById
 /en-US/docs/DOM/document.getElementsByClassName	/en-US/docs/Web/API/Document/getElementsByClassName
 /en-US/docs/DOM/document.getElementsByName	/en-US/docs/Web/API/Document/getElementsByName
@@ -3081,7 +3081,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.fgColor	/en-US/docs/Web/API/Document/fgColor
 /en-US/docs/Document_Object_Model_(DOM)/document.firstChild	/en-US/docs/Web/API/Node/firstChild
 /en-US/docs/Document_Object_Model_(DOM)/document.forms	/en-US/docs/Web/API/Document/forms
-/en-US/docs/Document_Object_Model_(DOM)/document.getBoxObjectFor	/en-US/docs/Web/API/Document/getBoxObjectFor
+/en-US/docs/Document_Object_Model_(DOM)/document.getBoxObjectFor	/en-US/docs/Web/API/Element/getBoundingClientRect
 /en-US/docs/Document_Object_Model_(DOM)/document.getElementById	/en-US/docs/Web/API/Document/getElementById
 /en-US/docs/Document_Object_Model_(DOM)/document.getElementsByClassName	/en-US/docs/Web/API/Document/getElementsByClassName
 /en-US/docs/Document_Object_Model_(DOM)/document.getElementsByName	/en-US/docs/Web/API/Document/getElementsByName
@@ -7813,6 +7813,7 @@
 /en-US/docs/Web/API/Document/defaultView/resize_event	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/Document/defaultView/storage_event	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Web/API/Document/domConfig	/en-US/docs/Web/API/Document
+/en-US/docs/Web/API/Document/getBoxObjectFor	/en-US/docs/Web/API/Element/getBoundingClientRect
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/document/characterSet
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
@@ -10014,7 +10015,7 @@
 /en-US/docs/Web/API/document.fgColor	/en-US/docs/Web/API/Document/fgColor
 /en-US/docs/Web/API/document.firstChild	/en-US/docs/Web/API/Node/firstChild
 /en-US/docs/Web/API/document.forms	/en-US/docs/Web/API/Document/forms
-/en-US/docs/Web/API/document.getBoxObjectFor	/en-US/docs/Web/API/Document/getBoxObjectFor
+/en-US/docs/Web/API/document.getBoxObjectFor	/en-US/docs/Web/API/Element/getBoundingClientRect
 /en-US/docs/Web/API/document.getElementById	/en-US/docs/Web/API/Document/getElementById
 /en-US/docs/Web/API/document.getElementsByClassName	/en-US/docs/Web/API/Document/getElementsByClassName
 /en-US/docs/Web/API/document.getElementsByName	/en-US/docs/Web/API/Document/getElementsByName

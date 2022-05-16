@@ -35160,23 +35160,6 @@
       "rachelnabors"
     ]
   },
-  "Web/API/Document/getBoxObjectFor": {
-    "modified": "2020-10-15T21:13:56.382Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "Khodaidad_Basharmand",
-      "Sheppy",
-      "ethertank",
-      "Dolske",
-      "Yanmorin"
-    ]
-  },
   "Web/API/Document/getElementById": {
     "modified": "2020-10-15T21:10:10.063Z",
     "contributors": [
