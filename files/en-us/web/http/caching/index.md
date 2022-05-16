@@ -566,7 +566,7 @@ Because the cache removes old entries when new entries are saved, the probabilit
 
 Note that number `41` has the longest `max-age` (1 year), but with `public`.
 
-`public` has the effect of making the response storable even if the `Authorization` header is present. So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second -longest value, `37` (1 month).
+`public` has the effect of making the response storable even if the `Authorization` header is present. So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `37` (1 month).
 
 ```http
 # response for bundle.v123.js
