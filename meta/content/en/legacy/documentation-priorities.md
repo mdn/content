@@ -56,7 +56,7 @@ Tier 1 content is the most important content on MDN — it has the most users, a
 
 Tier 2 content is less commonly-used, but useful nonetheless.
 
-- [CSS Houdini](https://developer.mozilla.org/en-US/docs/Web/Houdini) (1)
+- [CSS Houdini](https://developer.mozilla.org/en-US/docs/Web/Guide/Houdini) (1)
 - [Game development docs](https://developer.mozilla.org/en-US/docs/Games) (73)
 - [Guides](https://developer.mozilla.org/en-US/docs/Web/Guide) (56)
 - [MathML](https://developer.mozilla.org/en-US/docs/Web/MathML) (38)
@@ -117,7 +117,7 @@ The following API interface reference documents (and their child pages) are curr
 
 > **Note:** "DOM Events" is only a partial group — we only included the interface docs with the highest page views, to keep the size of Tier 1 down to a manageable number. Other DOM Events interfaces not in this list are in Tier 2.
 
-- [`EventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventListener) (2)
+- [`EventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) (2)
 - [`KeyboardEvent`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent) (20)
 
 ### Fetch API (39)
@@ -147,15 +147,15 @@ The following API interface reference documents (and their child pages) are curr
 - [`HTMLTextAreaElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement) (2)
 - [`Location`](https://developer.mozilla.org/en-US/docs/Web/API/Location) (17)
 - [`Navigator`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) (45)
-- [`NavigatorLanguage`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage) (3)
-- [`NavigatorOnLine`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine) (3)
+- [`NavigatorLanguage`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) (3)
+- [`NavigatorOnLine`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) (3)
 - [`Window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) (182)
 
 ### URL API (43)
 
 - [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) (18)
 - [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) (14)
-- [`URLUtilsReadOnly`](https://developer.mozilla.org/en-US/docs/Web/API/URLUtilsReadOnly) (11)
+- [`URLUtilsReadOnly`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation) (11)
 
 ### Web Storage API (8)
 
