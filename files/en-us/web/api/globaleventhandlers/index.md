@@ -93,7 +93,7 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("keyup")}} event is raised.
 - {{domxref("GlobalEventHandlers.onload")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("load")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window/load_event", "load")}} event is raised.
 - {{domxref("GlobalEventHandlers.onloadeddata")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("loadeddata")}} event is raised.
 - {{domxref("GlobalEventHandlers.onloadedmetadata")}}
