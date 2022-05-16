@@ -34,7 +34,7 @@ close(returnValue)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

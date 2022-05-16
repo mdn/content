@@ -37,11 +37,7 @@ getElementsByClassName(names)
 ### Parameters
 
 - `names`
-  - : A string representing the class name(s) to match; multiple class
-    names are separated by whitespace
-- {{domxref("Element.getElementsByClassName", "getElementsByClassName")}} can be
-  called on any element, not only on the {{domxref("document")}}. The element on which
-  it is called will be used as the root of the search.
+  - : A string representing the class name(s) to match; multiple class names are separated by whitespace.
 
 ### Return value
 

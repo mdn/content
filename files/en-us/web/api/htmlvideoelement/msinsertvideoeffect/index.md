@@ -36,7 +36,7 @@ msInsertVideoEffect(activatableClassId, effectRequired, config)
 
 ### Return value
 
-This method does not return a value.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
