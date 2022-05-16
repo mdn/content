@@ -67,7 +67,7 @@ Managed caches are explicitly deployed by service developers to offload the orig
 
 The characteristics of managed caches vary depending on the product deployed, but in most cases you can control its behavior not only through the `Cache-Control` header, but also through your own configuration files and dashboards.
 
-For example, the HTTP Caching specification normally does not have way to explicitly delete a cache — but with a managed cache, the stored response can be deleted at any time through dashboard operations, API calls, restarts,  and so on. That allows for a more proactive caching strategy.
+For example, the HTTP Caching specification essentially does not define a way to explicitly delete a cache — but with a managed cache, the stored response can be deleted at any time through dashboard operations, API calls, restarts,  and so on. That allows for a more proactive caching strategy.
 
 It is also possible to ignore the standard HTTP Caching spec protocols in favor of explicit manipulation. For example, the following can be specified to opt-out of a private cache or proxy cache, while using your own strategy to cache only in a managed cache.
 
