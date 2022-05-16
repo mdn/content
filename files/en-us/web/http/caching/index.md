@@ -45,7 +45,7 @@ If the response has an `Authorization` header, it cannot be stored in either the
 
 ### Shared cache
 
-The shared cache is located between the client and the server and can store responses that can be shared among users. And shared caches can be further sub-classified into proxy caches and managed caches.
+The shared cache is located between the client and the server and can store responses that can be shared among users. And shared caches can be further sub-classified into **proxy caches** and **managed caches**.
 
 #### Proxy cache
 
