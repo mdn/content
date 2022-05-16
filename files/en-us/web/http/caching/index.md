@@ -244,7 +244,7 @@ Cache-Control: max-age=3600
 ...
 ```
 
-If that response is stale, the client takes the value of `ETag` response header for the cached response, and puts it into the `If-None-Match` request header, to ask the server if the resource has been modified:
+If that response is stale, the client takes the value of the `ETag` response header for the cached response, and puts it into the `If-None-Match` request header, to ask the server if the resource has been modified:
 
 ```http
 GET /index.html HTTP/1.1
