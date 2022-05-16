@@ -91,7 +91,7 @@ _No changes._
 
 ### Security
 
-- Top-level navigation to `data:` URIs has been blocked {{bug(1401895)}}. See [Blocking Top-Level Navigations to data URLs for Firefox 59](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/) for more details.
+- Top-level navigation to `data:` URLs has been blocked {{bug(1401895)}}. See [Blocking Top-Level Navigations to data URLs for Firefox 59](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/) for more details.
 - The `SAMEORIGIN` directive of the {{httpheader("X-Frame-Options")}} header has been changed so that it checks not only the top-level IFrame is in the same origin, but all its ancestors as well ({{bug(725490)}}).
 - Image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}).
 - HTTP authentication now uses `utf-8` encoding for usernames and passwords (rather than `ISO-8859-1`) for parity with other browsers, and to avoid potential problems as described in {{bug(1419658)}}.

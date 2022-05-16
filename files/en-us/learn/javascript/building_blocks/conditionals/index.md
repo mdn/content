@@ -51,13 +51,13 @@ Let's look at by far the most common type of conditional statement you'll use in
 
 ### Basic if ... else syntax
 
-Basic `if...else` syntax looks like the following in {{glossary("pseudocode")}}:
+Basic `if...else` syntax looks like this:
 
-```
+```js
 if (condition) {
-  code to run if condition is true
+  /* code to run if condition is true */
 } else {
-  run some other code instead
+  /* run some other code instead */
 }
 ```
 
@@ -73,21 +73,21 @@ This code is pretty human-readable — it is saying "**if** the **condition** re
 
 You should note that you don't have to include the `else` and the second curly brace block — the following is also perfectly legal code:
 
-```
+```js
 if (condition) {
-  code to run if condition is true
+  /* code to run if condition is true */
 }
 
-run some other code
+/* run some other code */
 ```
 
 However, you need to be careful here — in this case, the second block of code is not controlled by the conditional statement, so it **always** runs, regardless of whether the condition returns `true` or `false`. This is not necessarily a bad thing, but it might not be what you want — often you want to run one block of code _or_ the other, not both.
 
 As a final point, while not recommended, you may sometimes see `if...else` statements written without the curly braces:
 
-```example-bad
-if (condition) code to run if condition is true
-else run some other code instead
+```js example-bad
+if (condition) /* code to run if condition is true */
+else /* run some other code instead */
 ```
 
 This syntax is perfectly valid, but is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.

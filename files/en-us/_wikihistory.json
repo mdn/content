@@ -35160,23 +35160,6 @@
       "rachelnabors"
     ]
   },
-  "Web/API/Document/getBoxObjectFor": {
-    "modified": "2020-10-15T21:13:56.382Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "Khodaidad_Basharmand",
-      "Sheppy",
-      "ethertank",
-      "Dolske",
-      "Yanmorin"
-    ]
-  },
   "Web/API/Document/getElementById": {
     "modified": "2020-10-15T21:10:10.063Z",
     "contributors": [
@@ -58606,35 +58589,6 @@
       "Diablownik",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/Navigator/battery": {
-    "modified": "2020-10-15T21:05:14.001Z",
-    "contributors": [
-      "alattalatta",
-      "mfuji09",
-      "Harmonickey",
-      "bershanskiy",
-      "sideshowbarker",
-      "connorshea",
-      "saldor",
-      "Sheppy",
-      "teoli",
-      "Sebastianz",
-      "samboe",
-      "franciov",
-      "MHasan",
-      "kscarfone",
-      "Prachi_Dighe",
-      "Jeremie",
-      "mkato",
-      "pstadler",
-      "dbruant",
-      "fscholz",
-      "ziyunfei",
-      "pimvdb",
-      "designaholic",
-      "evilpie"
     ]
   },
   "Web/API/Navigator/buildID": {
