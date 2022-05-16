@@ -27,7 +27,7 @@ add(number)
 ### Parameters
 
 - `number`
-  - : either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
