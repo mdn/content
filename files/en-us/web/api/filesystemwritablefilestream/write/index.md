@@ -33,25 +33,24 @@ write(data)
 - `data`
 
   - : Can be either the file data to write, in the form of a {{domxref('BufferSource')}},
-    {{domxref('Blob')}} or string. Or an object containing the following
+    a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal. Or an object containing the following
     properties:
 
-    - **`type`**: One of `'write'`,
-      `'seek'` or `'truncate'`. This is required if the object is
-      passed into the `write()` method.
-    - **`data`**: The file data to write. Can be a
-      {{domxref('BufferSource')}}, a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal. This
-      is required if the `type` is set to `'write'`.
-    - **`position`**: The byte position the current file
-      cursor should move to if type `'seek'` is used. Can also be set with
-      `'write'` in which case the write will start at the position.
-    - **`size`**: An unsigned long value representing the
-      amount of bytes the stream should contain. This is required if the
-      `type` is set to `'truncate'`
+    - `type`
+      - : A string that is one of the following: `"write"`, `"seek"`, or `"truncate"`.
+    - `data`
+      - : The file data to write. Can be a {{domxref('BufferSource')}}, a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal.
+        This property is required if `type` is set to `write`.
+    - `position`
+      - : The byte position the current file cursor should move to if type `seek` is used.
+        Can also be set with if `type` is `write`, in which case the write will start at the position.
+    - `size`
+      - : An unsigned long value representing the amount of bytes the stream should contain.
+        This property is required if `type` is set to `truncate`.
 
 ### Return value
 
-{{jsxref('Promise')}} which returns undefined
+{{jsxref('Promise')}} which returns undefined.
 
 ### Exceptions
 
