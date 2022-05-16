@@ -15,7 +15,7 @@ tags:
 
 The HTTP cache stores a response associated with a request, and reuses the stored response for subsequent requests.
 
-There are several advantages to reusability. First, since there is no need to deliver the request to the origin server, then the closer the client and cache are, the faster the response will be. The most typical example is when the browser itself stores a cache for browser requests.
+There are several advantages to reusability. First, since there is no need to deliver the request to the origin server, then the closer the client and cache are, the faster the response will be. The most-typical example is when the browser itself stores a cache for browser requests.
 
 Also, when a response is reusable, the origin server does not need to process the request — so it does not need to parse and route the request, restore the session based on the cookie, query the DB for results, or render the template engine. That reduces the load on the server.
 
@@ -39,7 +39,7 @@ Cache-Control: private
 
 Personalized contents are usually controlled by cookies, but the presence of a cookie does not always indicate that it is private, and thus a cookie alone does not make the response private.
 
-Also, since Private Cache requires `private`, you may think that Shared Cache requires `public`, but this is not quite true. Shared Cache will store a response without `public` as long as `max-age` is given.
+Also, since the private cache requires `private`, you may think that the shared cache requires `public` — but that is not quite true. A shared cache will store a response without needing `public` as long as `max-age` is given.
 
 If the response has an `Authorization` header, it cannot be stored in either the private cache or the shared cache, even if it has `max-age` — and `public` can be used to allow such a case). But if you are not using basic authentication and do not have an `Authorization` header, then there is no need to add `public`; it’s just a waste of bytes in that case.
 
