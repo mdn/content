@@ -1,18 +1,8 @@
 name: 'Lock old issues and pull requests'
 on:
   schedule:
-    - cron: '0 * * * *'
-  workflow_dispatch:
-
-permissions:
-  issues: write
-  pull-requests: write
-
-concurrency:
-  group: lock
+    - cron: '49 11,23 * * *'
 
 jobs:
-  action:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: dessant/lock-threads@v3
+  lock:
+    uses: mdn/workflows/.github/workflows/lock-closed.yml@main
