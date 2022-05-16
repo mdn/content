@@ -214,30 +214,6 @@ This script displays the following:
 
 > **Note:** `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) for digits between 0 and 9.
 
-### Reversing a String using `split()`
-
-> **Warning:** This is not a robust way to reverse a string:
->
-> ```js example-bad
-> const str = 'asdfghjkl'
-> const strReverse = str.split('').reverse().join('')
-> // 'lkjhgfdsa'
->
-> // split() returns an array on which reverse() and join() can be applied
-> ```
->
-> It doesn't work if the string contains grapheme clusters, even when using a
-> unicode-aware split. (Use, for example, [esrever](https://github.com/mathiasbynens/esrever) instead.)
->
-> ```js example-bad
-> const str = 'mañana mañana'
-> const strReverse = str.split('').reverse().join('')
-> // => "anãnam anañam" // notice how the first word has an ã rather ñ
-> ```
->
-> **Bonus:** use {{JSxRef("Operators/Strict_equality", "===")}} operator to test if the original string was a
-> palindrome.
-
 ## Specifications
 
 {{Specifications}}
