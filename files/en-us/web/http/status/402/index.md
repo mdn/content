@@ -6,7 +6,7 @@ tags:
   - Client error
   - HTTP
   - Status code
-browser-compat: http.status.402
+spec-urls: https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.2
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 
@@ -33,7 +33,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Browser compatibility
 
-{{Compat}}
+This status code is _reserved_ but not defined. No browser actually supports it and the error will be displayed as a generic `4xx` status code.
 
 ## See also
 
