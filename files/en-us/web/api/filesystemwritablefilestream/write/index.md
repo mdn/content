@@ -33,7 +33,7 @@ write(data)
 - `data`
 
   - : Can be either the file data to write, in the form of a {{domxref('BufferSource')}},
-    {{domxref('Blob')}} or string. Or an object containing the following
+    a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal. Or an object containing the following
     properties:
 
     - `type`
