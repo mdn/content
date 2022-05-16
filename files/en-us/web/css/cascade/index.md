@@ -171,7 +171,7 @@ li { margin-left: 0 } /* from author css 1 */
 }
 ```
 
-The last one, the `5px` is part of a cascade layer. Declarations in layers have lower precedence than styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
+The last one, the `5px` is part of a cascade layer. Normal declarations in layers have lower precedence than normal styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
 
 This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_.
 
