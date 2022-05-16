@@ -146,7 +146,7 @@ Once again, there are four steps in the cascade algorithm, in order:
   3. Specificity
   4. Order of appearance
 
-The `1px` is for print media. Due to lack of _relevance_ based on it's media type. It is removed from consideration.
+The `1px` is for print media. Due to lack of _relevance_ based on it's media type, it is removed from consideration.
 
 No declaration is marked as `!important`, so the precedence order is author style sheets over user style sheets over user-agent stylesheet. Based on _origin and importance_,  the `1em` from the user stylesheet and the `10px` from the user-agent stylesheet are removed from consideration.
 Note that even though the user style on `.specific` of `1em` has a higher specificity, is it a normal declaration in a user style sheet. As such it is a lower precedence than any author styles, and gets removed by the origin and importance step of the algorithm before specificity even comes into play.
