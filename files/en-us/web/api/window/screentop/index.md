@@ -24,7 +24,7 @@ the top side of the screen.
 ## Value
 
 A number equal to the number of CSS pixels from the top edge of the browser viewport to
-the  top edge of the screen.
+the top edge of the screen.
 
 ## Examples
 

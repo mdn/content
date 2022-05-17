@@ -61,7 +61,7 @@ animation-direction: unset;
 
 ## Examples
 
-### The animation is  playing reversed
+### Reversing the animation direction
 
 #### HTML
 
@@ -77,6 +77,9 @@ animation-direction: unset;
   border-radius: 10px;
   width: 100px;
   height: 100px;
+}
+
+.box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-direction: reverse;
@@ -94,7 +97,7 @@ animation-direction: unset;
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+{{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 

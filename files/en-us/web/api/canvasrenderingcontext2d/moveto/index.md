@@ -29,6 +29,10 @@ moveTo(x, y)
 - `y`
   - : The y-axis (vertical) coordinate of the point.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Creating multiple sub-paths

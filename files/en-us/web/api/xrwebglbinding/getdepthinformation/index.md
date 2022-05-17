@@ -47,7 +47,7 @@ const canvasElement = document.querySelector(".output-canvas");
 const gl = canvasElement.getContext("webgl");
 await gl.makeXRCompatible();
 
-// Make sure  to request a session with depth-sensing enabled
+// Make sure to request a session with depth-sensing enabled
 const session = navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {

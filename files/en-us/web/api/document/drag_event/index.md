@@ -46,7 +46,7 @@ The `drag` event is fired every few hundred milliseconds as an element or text s
 
 ## Examples
 
-See this code in a [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/) or interact with it below.
+See this code in a [JSFiddle demo](https://jsfiddle.net/radonirinamaminiaina/zfnj5rv4/) or interact with it below.
 
 ### HTML
 

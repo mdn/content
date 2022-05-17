@@ -19,7 +19,7 @@ The **`HTMLBRElement`** interface represents an HTML line break element ({{htmle
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} indicating the flow of text around floating objects.
+  - : A string indicating the flow of text around floating objects.
 
 ## Methods
 

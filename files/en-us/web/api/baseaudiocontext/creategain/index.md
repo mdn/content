@@ -30,6 +30,10 @@ overall gain (or volume) of the audio graph.
 createGain()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("GainNode")}} which takes as input one or more audio sources and outputs

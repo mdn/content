@@ -28,6 +28,10 @@ method creates it, and then returns it.
 createTHead()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}

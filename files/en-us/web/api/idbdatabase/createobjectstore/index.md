@@ -42,44 +42,15 @@ createObjectStore(name, options)
 
   - : An options object whose attributes are optional parameters to the method. It
     includes the following properties:
-
-    <table class="no-markdown">
-      <thead>
-        <tr>
-          <th scope="col">Attribute</th>
-          <th scope="col">Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>keyPath</code></td>
-          <td>
-            The
-            <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path"
-              >key path</a
-            >
-            to be used by the new object store. If empty or not specified, the
-            object store is created without a key path and uses
-            <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key"
-              >out-of-line keys</a
-            >. You can also pass in an array as a <code>keyPath</code>.
-          </td>
-        </tr>
-        <tr>
-          <td><code>autoIncrement</code></td>
-          <td>
-            If <code>true</code>, the object store has a
-            <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator"
-              >key generator</a
-            >. Defaults to <code>false</code>.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    Unknown parameters are ignored.
+    - `keyPath` {{optional_inline}}
+      - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path)
+        to be used by the new object store. If empty or not specified, the
+        object store is created without a key path and uses
+        [out-of-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key").
+        You can also pass in an array as a `keyPath`.
+    - `autoIncrement` {{optional_inline}}
+      - : If `true`, the object store has a [key generator](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator).
+        Defaults to <code>false</code>.
 
 ### Return value
 

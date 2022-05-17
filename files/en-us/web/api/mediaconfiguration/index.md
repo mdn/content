@@ -22,7 +22,7 @@ A valid configuration includes a valid encoding configuration type or decoding c
 
 For [decoding](/en-US/docs/Web/API/MediaDecodingConfiguration), set the type to `file` or `media-source`.
 
-If the media is an audio file, the [audio configuration](/en-US/docs/Web/API/AudioConfiguration) must include a valid audio MIME type as `contentType`, the number of channels, the bitrate, and the sample rate. [Video configurations](/en-US/docs/Web/API/VideoConfiguration) mush include a valid video MIME type as contentType, the bitrate, and framerate, along with the width and the height of the video file. All of these must be present, as in the examples below, or a TypeError will occur.
+If the media is an audio file, the [audio configuration](/en-US/docs/Web/API/AudioConfiguration) must include a valid audio MIME type as `contentType`, the number of channels, the bitrate, and the sample rate. [Video configurations](/en-US/docs/Web/API/VideoConfiguration) mush include a valid video MIME type as contentType, the bitrate, and frame rate, along with the width and the height of the video file. All of these must be present, as in the examples below, or a TypeError will occur.
 
 A valid media decoding configuration, to be submitted as the parameter for {{domxref("mediaCapabilities.decodingInfo", "mediaCapabilities.decodingInfo()")}} method, has it's \`type\` set as:
 

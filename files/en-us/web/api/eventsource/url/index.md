@@ -13,12 +13,12 @@ browser-compat: api.EventSource.url
 {{APIRef('WebSockets API')}}
 
 The **`url`** read-only property of the
-{{domxref("EventSource")}} interface returns a {{domxref("DOMString")}} representing the
+{{domxref("EventSource")}} interface returns a string representing the
 URL of the source.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the URL of the source.
+A string representing the URL of the source.
 
 ## Examples
 

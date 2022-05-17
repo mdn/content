@@ -20,7 +20,7 @@ or some file.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the drag data item's kind. It must be one of
+A string representing the drag data item's kind. It must be one of
 the following values:
 
 - `'file'`

@@ -27,6 +27,10 @@ send(data, timestamp)
 - `timestamp`{{Optional_Inline}}
   - : A {{domxref("DOMHighResTimestamp")}} with the time in milliseconds, which is the delay before sending the message.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - {{jsxref("TypeError")}}

@@ -34,7 +34,7 @@ addAll(requests)
 
 ### Parameters
 
-- requests
+- `requests`
   - : An array of string URLs that you want to be fetched and added to the cache. You can
     specify the {{domxref("Request")}} object instead of the URL.
 
@@ -44,7 +44,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : The URL scheme is not `http` or `https`.
 

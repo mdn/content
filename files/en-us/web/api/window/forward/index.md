@@ -21,18 +21,18 @@ Moves the window one document forward in history. This was a Firefox-specific me
 ## Syntax
 
 ```js
-window.forward();
+forward()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 function goForward() {

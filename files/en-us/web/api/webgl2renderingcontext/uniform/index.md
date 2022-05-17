@@ -40,7 +40,7 @@ uniform3fv(location, data)
 uniform3fv(location, data, srcOffset)
 uniform3fv(location, data, srcOffset, srcLength)
 
-uniform4fv(location, datad)
+uniform4fv(location, data)
 uniform4fv(location, data, srcOffset)
 uniform4fv(location, data, srcOffset, srcLength)
 
@@ -94,7 +94,7 @@ uniform4uiv(location, data, srcOffset, srcLength)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

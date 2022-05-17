@@ -21,10 +21,7 @@ Some websites use this response for requests they do not wish to handle, such as
 
 ## Specifications
 
-| Specification                                                | Title                                                                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content                        |
-| {{RFC("7168", "418 I'm a teapot" , "2.3.3")}} | The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA): Response Codes |
+{{Specifications}}
 
 ## Browser compatibility
 

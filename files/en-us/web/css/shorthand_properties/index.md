@@ -40,8 +40,9 @@ Only the individual properties values can inherit. As missing values are replace
 Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values.
 
 Two important cases here are:
-* properties related to the edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}
-* properties related to the corners of a box, like {{cssxref("border-radius")}}
+
+- properties related to the edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}
+- properties related to the corners of a box, like {{cssxref("border-radius")}}
 
 #### Edges of a box
 

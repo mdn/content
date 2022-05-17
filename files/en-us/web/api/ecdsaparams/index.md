@@ -7,6 +7,7 @@ tags:
   - EcdsaParams
   - Reference
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#dfn-EcdsaParams
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -15,10 +16,10 @@ The **`EcdsaParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `ECDSA`.
+  - : A string. This should be set to `ECDSA`.
 - `hash`
 
-  - : A {{domxref("DOMString")}}. An identifier for the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest) to use. This should be one of the following:
+  - : A string. An identifier for the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest) to use. This should be one of the following:
 
     - `SHA-256`: selects the [SHA-256](/en-US/docs/Web/API/SubtleCrypto/digest#sha-256) algorithm.
     - `SHA-384`: selects the [SHA-384](/en-US/docs/Web/API/SubtleCrypto/digest#sha-384) algorithm.
@@ -32,22 +33,7 @@ See the examples for {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCryp
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-EcdsaParams', 'SubtleCrypto.EcdsaParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

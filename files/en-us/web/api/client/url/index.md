@@ -18,7 +18,7 @@ interface returns the URL of the current service worker client.
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

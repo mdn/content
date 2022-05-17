@@ -19,9 +19,7 @@ The response is *always* decoded using UTF-8.
 ## Syntax
 
 ```js
-response.text().then(function (text) {
-  // do something with the text response
-});
+text()
 ```
 
 ### Parameters
@@ -32,13 +30,13 @@ None.
 
 A Promise that resolves with a {{jsxref("String")}}.
 
-## Example
+## Examples
 
 In our [fetch text example](https://github.com/mdn/fetch-examples/tree/master/fetch-text) (run [fetch text live](https://mdn.github.io/fetch-examples/fetch-text/)), we have an {{htmlelement("article")}} element and three links (stored in the `myLinks` array.)
 First, we loop through all of these and give each one an `onclick` event handler so that the `getData()` function is run — with the link's `data-page` identifier passed to it as an argument — when one of the links is clicked.
 
 When `getData()` is run, we create a new request using the {{domxref("Request.Request","Request()")}} constructor, then use it to fetch a specific `.txt` file.
-When the fetch is successful, we read a {{domxref("USVString")}} (text) object out of the response using `text()`, then set the {{domxref("Element.innerHTML","innerHTML")}} of the {{htmlelement("article")}} element equal to the text object.
+When the fetch is successful, we read a string out of the response using `text()`, then set the {{domxref("Element.innerHTML","innerHTML")}} of the {{htmlelement("article")}} element equal to the text object.
 
 ```js
 let myArticle = document.querySelector('article');

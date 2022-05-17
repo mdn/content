@@ -122,7 +122,6 @@ you can use `hasOwn()` method to check whether a particular index exists:
 let fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
 Object.hasOwn(fruits, 3);   // true ('Orange')
 Object.hasOwn(fruits, 4);   // false - not defined
-    
 ```
 
 ### Problematic cases for hasOwnProperty

@@ -24,27 +24,28 @@ requestDevice()
 requestDevice(options)
 ```
 
+### Parameters
+
+- `options` {{optional_inline}}
+  - : An object that sets options for the device request. The available options are:
+    - `filters[]`
+      - : An array of `BluetoothScanFilters`. This
+        filter consists of an array of `BluetoothServiceUUID`s, a
+        `name` parameter, and a `namePrefix` parameter.
+    - `optionalServices[]`
+      - : An array of `BluetoothServiceUUID`s.
+    - `acceptAllDevices`
+      - : A boolean value indicating that the
+        requesting script can accept all Bluetooth devices. The default is
+        `false`.
+
 ### Return value
 
 A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 
-### Parameters
-
-- options {{optional_inline}}
-
-  - : An object that sets options for the device request. The available options are:
-
-    - `filters[]`: An array of `BluetoothScanFilters`. This
-      filter consists of an array of `BluetoothServiceUUID`s, a
-      `name` parameter, and a `namePrefix` parameter.
-    - `optionalServices[]`: An array of `BluetoothServiceUUID`s.
-    - `acceptAllDevices`: A boolean value indicating that the
-      requesting script can accept all Bluetooth devices. The default is
-      `false`.
-
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `options` do not make sense. For example,
     `options.filters` is present and `options.acceptAllDevices` is
     `true`, or if `options.filters` is not present and

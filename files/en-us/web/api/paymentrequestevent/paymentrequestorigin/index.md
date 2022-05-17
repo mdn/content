@@ -19,7 +19,7 @@ The **`paymentRequestOrigin`** read-only property of the
 
 ## Value
 
-A USVString.
+A string.
 
 ## Specifications
 

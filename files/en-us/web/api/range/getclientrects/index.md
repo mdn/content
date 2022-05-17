@@ -22,6 +22,14 @@ The **`Range.getClientRects()`** method returns a list of {{
 getClientRects()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

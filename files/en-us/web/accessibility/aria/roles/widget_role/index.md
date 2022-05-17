@@ -1,13 +1,14 @@
 ---
 title: 'ARIA: widget role'
 slug: Web/Accessibility/ARIA/Roles/widget_role
-tags: 
+tags:
   - widget
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
+spec-urls: https://w3c.github.io/aria/#widget
 ---
 
 
@@ -30,9 +31,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#widget","ARIA: widget role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

@@ -22,7 +22,7 @@ NDEFRecord.encoding
 
 ### Value
 
-A {{DOMxRef("USVString")}} which can be one of the following: `"utf-8"`,
+A string which can be one of the following: `"utf-8"`,
 `"utf-16"`, `"utf-16le"`, or `"utf-16be"`.
 
 ## Specifications

@@ -24,6 +24,10 @@ contained in this object. The both the key and value of each pairs are
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.

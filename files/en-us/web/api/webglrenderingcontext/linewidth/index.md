@@ -26,7 +26,7 @@ lines.
 ## Syntax
 
 ```js
-void gl.lineWidth(width);
+lineWidth(width)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ void gl.lineWidth(width);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

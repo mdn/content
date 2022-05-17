@@ -21,6 +21,10 @@ The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} i
 getTiming()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An object.

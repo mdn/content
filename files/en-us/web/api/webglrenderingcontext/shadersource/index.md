@@ -17,7 +17,7 @@ The **`WebGLRenderingContext.shaderSource()`** method of the [WebGL API](/en-US/
 ## Syntax
 
 ```js
-void gl.shaderSource(shader, source);
+shaderSource(shader, source)
 ```
 
 ### Parameters
@@ -25,11 +25,11 @@ void gl.shaderSource(shader, source);
 - shader
   - : A {{domxref("WebGLShader")}} object in which to set the source code.
 - source
-  - : A {{domxref("DOMString")}} containing the GLSL source code to set.
+  - : A string containing the GLSL source code to set.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

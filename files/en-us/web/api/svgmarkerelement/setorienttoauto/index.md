@@ -23,6 +23,10 @@ setOrientToAuto()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 In the following example the value of the `orient` attribute is updated using `setOrientToAuto()`.

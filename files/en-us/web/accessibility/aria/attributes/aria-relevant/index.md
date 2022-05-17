@@ -1,13 +1,14 @@
 ---
 title: 'aria-relevant'
 slug: Web/Accessibility/ARIA/Attributes/aria-relevant
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-relevant
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-relevant
 ---
 
 Used in ARIA live regions, the global `aria-relevant` attribute indicates what notifications the user agent will trigger when the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree) within a live region is modified.
@@ -42,9 +43,9 @@ The values of `removals` and `all` should be used sparingly. For example, when a
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRelevant")}}
-  - : The  [`ariaRelevant`](/en-US/docs/Web/API/Element/ariaRelevant) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-relevant` attribute.
+  - : The [`ariaRelevant`](/en-US/docs/Web/API/Element/ariaRelevant) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-relevant` attribute.
 - {{domxref("ElementInternals.ariaRelevant")}}
-  - : The  [`ariaRelevant`](/en-US/docs/Web/API/ElementInternals/ariaRelevant) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-relevant` attribute.
+  - : The [`ariaRelevant`](/en-US/docs/Web/API/ElementInternals/ariaRelevant) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-relevant` attribute.
 
 ## Associated roles
 
@@ -52,9 +53,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-relevant","ARIA: aria-relevant Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

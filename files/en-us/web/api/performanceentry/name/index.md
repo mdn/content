@@ -50,7 +50,7 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
       </td>
     </tr>
     <tr>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>{{domxref('PerformanceMark')}}</td>
       <td><code>mark</code></td>
       <td>
@@ -59,7 +59,7 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
       </td>
     </tr>
     <tr>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>{{domxref('PerformanceMeasure')}}</td>
       <td><code>measure</code></td>
       <td>
@@ -68,7 +68,7 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
       </td>
     </tr>
     <tr>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>{{domxref('PerformancePaintTiming')}}</td>
       <td><code>paint</code></td>
       <td>

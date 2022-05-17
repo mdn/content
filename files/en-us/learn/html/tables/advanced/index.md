@@ -60,7 +60,7 @@ As you can infer from the brief example above, the caption is meant to contain a
 
 A caption is placed directly beneath the `<table>` tag.
 
-> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screenreaders. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page.)
+> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screenreaders. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page).
 
 ### Active learning: Adding a caption
 
@@ -345,7 +345,7 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
 
 But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screenreader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.
 
-> **Note:** There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/mediacentre/factsheets/fs282/en/).
+> **Note:** There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment).
 
 This section of the article provides further techniques for making tables as accessible as possible.
 

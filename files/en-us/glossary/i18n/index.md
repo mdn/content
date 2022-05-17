@@ -15,7 +15,7 @@ i18n (from "internationalization", a 20-letter word) is the best practice that e
 
 Among other things, i18n requires support for multiple
 
-- character sets (usually via [Unicode](https://searchcio-midmarket.techtarget.com/definition/Unicode))
+- character sets (usually via [Unicode](https://www.techtarget.com/whatis/definition/Unicode))
 - units of measure (currency, °C/°F, km/miles, etc.)
 - time and date formats
 - keyboard layouts

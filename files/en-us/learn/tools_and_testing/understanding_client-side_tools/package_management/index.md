@@ -41,7 +41,7 @@ A **dependency** is a third-party bit of software that was probably written by s
 
 A simple example of a useful dependency that your project might need is some code to calculate relative dates as human-readable text. You could certainly code this yourself, but there's a strong chance that someone else has already solved this problem — why waste time reinventing the wheel? Moreover, a reliable third-party dependency will likely have been tested in a lot of different situations, making it more robust and cross-browser compatible than your own solution.
 
-A project dependency can be an entire JavaScript library or framework — such as React or Vue — or a very small utility like our human-readable date library, or it can be a command line tool such as Prettier or eslint, which we talked about in previous articles.
+A project dependency can be an entire JavaScript library or framework — such as React or Vue — or a very small utility like our human-readable date library, or it can be a command line tool such as Prettier or ESLint, which we talked about in previous articles.
 
 Without modern build tools, dependencies like this might be included in your project using a simple [`<script>`](/en-US/docs/Web/HTML/Element/script) element, but this might not work right out of the box and you will likely need some modern tooling to bundle your code and dependencies together when they are released on the web. A bundle is the term that's generally used to refer to a single file on your web server that contains all the JavaScript for your software — typically compressed as much as possible to help reduce the time it takes to get your software downloaded and displayed in your visitors' browser.
 
@@ -335,7 +335,7 @@ The list will grow over time, but at the time of writing, the following main pac
 
 - npm at [npmjs.org](https://www.npmjs.com/)
 - pnpm at [pnpm.js.org](https://pnpm.js.org/)
-- yarn at [yarnpkg.com](https://yarnpkg.com/)
+- Yarn at [yarnpkg.com](https://yarnpkg.com/)
 
 npm and pnpm are similar from a command line point of view — in fact pnpm aims to have full parity over the argument options that npm offers. It differs in that it uses a different method for downloading and storing the packages on your computer, aiming to reduce the overall disk space required.
 
@@ -406,7 +406,7 @@ Although the package manager will do it's best to deduplicate packages you may w
 
 ### More commands
 
-You can find out more about the individual commands for [npm](https://docs.npmjs.com/cli-documentation/) and [yarn](https://yarnpkg.com/en/docs/cli/) online. Again, [pnpm](https://pnpm.js.org/en/cli/add) commands will have parity with npm, with a handful of additions.
+You can find out more about the individual commands for [npm](https://docs.npmjs.com/cli-documentation/) and [yarn](https://classic.yarnpkg.com/en/docs/cli/) online. Again, [pnpm](https://pnpm.js.org/en/cli/add) commands will have parity with npm, with a handful of additions.
 
 ## Making your own commands
 
@@ -419,7 +419,7 @@ npm run dev
 
 This would run a custom script for starting our project in "development mode". In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
 
-If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
+If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, Yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
 
 Parcel can run a development server using the command `parcel serve filename.html`, and we'd like to use that often during our development.
 
@@ -457,7 +457,7 @@ Server running at http://localhost:1234
 ✨  Built in 5.48s.
 ```
 
-In addition, the npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script), although in most cases your own scripts will run just fine.
+In addition, the npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script/), although in most cases your own scripts will run just fine.
 
 You can add all kinds of things to the `scripts` property that help you do your job. We certainly have, and [others have too](https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6).
 
@@ -469,8 +469,8 @@ This brings us to the end of our tour of package managers. Our next move is to b
 
 ## See also
 
-- [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts)
-- [package.json reference](https://docs.npmjs.com/files/package.json)
+- [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
+- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
 
 ## In this module
 

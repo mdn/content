@@ -30,8 +30,8 @@ service worker can't have a scope broader than its own location, only use the
 ## Syntax
 
 ```js
-serviceWorkerContainer.register(scriptURL, options)
-  .then(function(serviceWorkerRegistration) { /* ... */ });
+register(scriptURL)
+register(scriptURL, options)
 ```
 
 ### Parameters
@@ -44,14 +44,14 @@ serviceWorkerContainer.register(scriptURL, options)
 
   - : An object containing registration options. Currently available options are:
 
-    - `scope`: A {{domxref("USVString")}} representing a URL that defines a
+    - `scope`: A string representing a URL that defines a
       service worker's registration scope; that is, what range of URLs a service worker
       can control. This is usually a relative URL. It is relative to the base URL of the
       application. By default, the `scope` value for a service worker
       registration is set to the directory where the service worker script is located.
       See the [Examples](#examples) section for more information on how it
       works.
-    - `type`: A {{domxref("DOMString")}}
+    - `type`: A string
       specifying the type of worker to create. Valid values are:
 
       - `'classic'`: The loaded service worker is in a standard script. This is the default.

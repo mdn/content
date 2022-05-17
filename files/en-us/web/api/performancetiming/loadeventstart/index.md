@@ -21,7 +21,7 @@ browser-compat: api.PerformanceTiming.loadEventStart
 The legacy
 **`PerformanceTiming.loadEventStart`**
 read-only property returns an `unsigned long long` representing the moment,
-in milliseconds since the UNIX epoch, when the {{event("load")}} event was sent for the
+in milliseconds since the UNIX epoch, when the {{domxref("Window/load_event", "load")}} event was sent for the
 current document. If this event has not yet been sent, it returns `0.`
 
 ## Value

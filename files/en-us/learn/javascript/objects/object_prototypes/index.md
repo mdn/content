@@ -216,7 +216,7 @@ The objects we create using the `Person` constructor above have two properties:
 
 It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor. That's because methods are usually the same for every object we create, while we often want each object to have its own value for its data properties (just as here where every person has a different name).
 
-Properties that are defined directly in the object, like `name` here, are called **own properties**, and you can check whether a property is an own property using the static  {{jsxref("Object/hasOwn", "Object.hasOwn()")}} method:
+Properties that are defined directly in the object, like `name` here, are called **own properties**, and you can check whether a property is an own property using the static {{jsxref("Object/hasOwn", "Object.hasOwn()")}} method:
 
 ```js
 const irma = new Person('Irma');

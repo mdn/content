@@ -11,7 +11,7 @@ browser-compat: api.Location.protocol
 {{ApiRef("Location")}}
 
 The **`protocol`** property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} representing the protocol scheme of the URL,
+interface is a string representing the protocol scheme of the URL,
 including the final `':'`.
 
 ## Syntax

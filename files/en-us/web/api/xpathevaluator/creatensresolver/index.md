@@ -26,7 +26,7 @@ called, also correctly resolving the implicit `xml` prefix.
 ## Syntax
 
 ```js
-XPathNSResolver XPathEvaluator.createNSResolver(nodeResolver);
+createNSResolver(nodeResolver)
 ```
 
 ### Parameters

@@ -1,12 +1,13 @@
 ---
 title: 'aria-controls'
 slug: Web/Accessibility/ARIA/Attributes/aria-controls
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-controls
+spec-urls: https://w3c.github.io/aria/#aria-controls
 ---
 
 The global `aria-controls` property identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
@@ -30,15 +31,15 @@ In this tabs example, each tab controls one tabpanel:
 ```html
 <div class="tab-interface">
   <div role="tablist" aria-label="Sample Tabs">
-    <span role="tab" aria-selected="true" aria-controls="panel-1" 
+    <span role="tab" aria-selected="true" aria-controls="panel-1"
       id="tab-1" tabindex="0">
           First Tab
         </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-2" 
+    <span role="tab" aria-selected="false" aria-controls="panel-2"
       id="tab-2" tabindex="-1">
           Second Tab
         </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-3" 
+    <span role="tab" aria-selected="false" aria-controls="panel-3"
       id="tab-3" tabindex="-1">
           Third Tab
         </span>
@@ -65,7 +66,7 @@ In this tabs example, each tab controls one tabpanel:
 ## ARIAMixin API
 
 - {{domxref("Element.ariaBusy")}}
-  - : The  [`ariaControls`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-controls` attribute, which indicates whether an element is being modified.
+  - : The [`ariaControls`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-controls` attribute, which indicates whether an element is being modified.
 
 ## Associated roles
 
@@ -73,9 +74,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-controls","ARIA: aria-controls Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

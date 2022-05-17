@@ -20,17 +20,17 @@ element.
 ## Syntax
 
 ```js
-setCustomValidity(message)
+setCustomValidity(errorMessage)
 ```
 
 ### Parameters
 
-- error
+- `errorMessage` 
   - : The message to use for validity errors.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

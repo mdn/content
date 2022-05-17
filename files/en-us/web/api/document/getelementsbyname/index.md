@@ -24,12 +24,12 @@ getElementsByName(name)
 
 ### Parameters
 
-- _name_ is the value of the `name` attribute of the element(s).
+- `name`
+  - : The value of the `name` attribute of the element(s) we are looking for.
 
 ### Return value
 
 A live {{domxref("NodeList")}} collection, meaning it automatically updates as new elements with the same `name` are added to, or removed from, the document.
-
 
 ## Examples
 

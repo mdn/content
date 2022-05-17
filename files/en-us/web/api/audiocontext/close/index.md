@@ -23,6 +23,10 @@ This function does not automatically release all `AudioContext`-created objects,
 close()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.

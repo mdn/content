@@ -26,6 +26,10 @@ selectNode(referenceNode)
 - _referenceNode_
   - : The {{domxref("Node")}} to select within a {{domxref("Range")}}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

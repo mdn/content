@@ -27,6 +27,10 @@ method should be used instead.
 unlockOrientation()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns `true` if the orientation was successfully unlocked or

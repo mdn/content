@@ -100,7 +100,7 @@ A unary operation is an operation with only one operand.
 
 Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value.
 
-- {{JSxRef("Operators/Addition", "+")}}
+- {{JSxRef("Operators/Addition", "+")}} (Plus)
   - : Addition operator.
 - {{JSxRef("Operators/Subtraction", "-")}}
   - : Subtraction operator.
@@ -121,9 +121,9 @@ A comparison operator compares its operands and returns a boolean value based on
   - : The `in` operator determines whether an object has a given property.
 - {{JSxRef("Operators/instanceof", "instanceof")}}
   - : The `instanceof` operator determines whether an object is an instance of another object.
-- {{JSxRef("Operators/Less_than", "&lt;")}}
+- {{JSxRef("Operators/Less_than", "&lt;")}} (Less than)
   - : Less than operator.
-- {{JSxRef("Operators/Greater_than", "&gt;")}}
+- {{JSxRef("Operators/Greater_than", "&gt;")}} (Greater than)
   - : Greater than operator.
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
   - : Less than or equal operator.

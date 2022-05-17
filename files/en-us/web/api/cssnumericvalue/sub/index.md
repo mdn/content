@@ -26,7 +26,7 @@ sub(number)
 
 ### Parameters
 
-- number
+- `number`
   - : Either a {{jsxref('Number')}} or a {{domxref('CSSMathSum')}}.
 
 ### Return value
@@ -35,8 +35,8 @@ A {{domxref('CSSMathSum')}}
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

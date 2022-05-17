@@ -52,7 +52,7 @@ No, only `<link>` tags with a relation type of `next` or `prefetch` are prefetch
 
 Yes, link prefetching as outlined in this document does not violate any existing web standards. In fact, the HTML 4.01 specification explicitly allows for the definition of new link relation types ([see Section 6.12: Link types](https://www.w3.org/TR/html4/types.html#type-links)). However, the exact mechanism employed by Mozilla is not yet standardized. An Internet-Draft is in the works.
 
-Standardization of this technique is part of the scope of HTML 5, see the current working draft, [section §5.11.3.13. Link type "prefetch"](https://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) .
+Standardization of this technique is part of the scope of HTML 5, see the current working draft, [section §5.11.3.13. Link type "prefetch"](https://html.spec.whatwg.org/#link-type-prefetch) .
 
 ### How is browser idle time determined?
 
@@ -108,7 +108,7 @@ It is important that websites adopt `<link>` tag based prefetching instead of tr
 
 ### Which browsers support link prefetching?
 
-Browsers based on Mozilla 1.2 (or later) as well as browsers based on Mozilla 1.0.2 (or later) support prefetching. This includes Firefox and Netscape 7.01+. Camino builds as of March 2003 are based on Mozilla 1.0.1, and therefore do not support prefetching. [Test](https://gemal.dk/browserspy/prefetch.php) your browser to see if it supports Link Prefetching.
+Browsers based on Mozilla 1.2 (or later), as well as browsers based on Mozilla 1.0.2 (or later), support prefetching. This includes Firefox and Netscape 7.01+. Camino builds as of March 2003 are based on Mozilla 1.0.1, and therefore do not support prefetching. [Test](https://browserspy.dk/prefetch.php) your browser to see if it supports Link Prefetching.
 
 ### Privacy implications
 

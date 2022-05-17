@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-haspopup
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-haspopup
 ---
 
 The `aria-haspopup` attribute indicates the availability and type of interactive popup element that can be triggered by the element on which the attribute is set.
@@ -50,7 +51,7 @@ When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menubar_rol
 ## ARIAMixin API
 
 - {{domxref("Element.ariaHasPopup")}}
-  - : The  [`ariaHasPopup`](/en-US/docs/Web/API/Element/ariaHasPopup) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
+  - : The [`ariaHasPopup`](/en-US/docs/Web/API/Element/ariaHasPopup) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 - {{domxref("ElementInternals.ariaHasPopup")}}
   - : The [`ariaHasPopup`](/en-US/docs/Web/API/ElementInternals/ariaHasPopup) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-haspopup` attribute.
 
@@ -79,9 +80,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------ |
-| {{SpecName("ARIA","#aria-haspopup","ARIA: aria-haspopup Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

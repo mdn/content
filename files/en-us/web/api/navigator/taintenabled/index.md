@@ -24,6 +24,14 @@ method only stays for maintaining compatibility with very old scripts.
 taintEnabled()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

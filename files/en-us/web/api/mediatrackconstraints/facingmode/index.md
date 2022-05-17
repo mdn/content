@@ -49,7 +49,22 @@ var constraints = {
 This indicates that only a user-facing camera is acceptable; if there is no user-facing
 camera, or the user declines permission to use that camera, the media request will fail.
 
-{{page("/en-US/docs/Web/API/MediaTrackSettings/facingMode", "VideoFacingModeEnum")}}
+The following strings are permitted values for the facing mode. These may represent
+separate cameras, or they may represent directions in which an adjustable camera can be
+pointed.
+
+- `"user"`
+  - : The video source is facing toward the user; this includes, for example, the
+    front-facing camera on a smartphone.
+- `"environment"`
+  - : The video source is facing away from the user, thereby viewing their environment.
+    This is the back camera on a smartphone.
+- `"left"`
+  - : The video source is facing toward the user but to their left, such as a camera aimed
+    toward the user but over their left shoulder.
+- `"right"`
+  - : The video source is facing toward the user but to their right, such as a camera
+    aimed toward the user but over their right shoulder.
 
 ## Examples
 

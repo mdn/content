@@ -34,7 +34,7 @@ When reusing MDN content, you need to ensure two things:
 
     > [About MDN](/en-US/docs/MDN/About) by [Mozilla Contributors](/en-US/docs/MDN/About/contributors.txt) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
 
-    Note that in the example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/Marking/Users) for further explanation.
+    Note that in the example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/wiki/Marking/Users) for further explanation.
 
 2. Your reuse is published under the same license as the original content—CC-BY-SA v2.5 or any later version.
 
@@ -60,7 +60,7 @@ If you have any questions or concerns about anything discussed here, please cont
 
 #### Logos, trademarks, service marks and wordmarks
 
-The rights in the trademarks, logos, and service marks of the Mozilla Foundation, as well as the look and feel of this web site, are not licensed under the Creative Commons license, and to the extent they are works of authorship (like logos and graphic design), they are not included in the work that is licensed under those terms. If you use the text of documents, and wish to also use any of these rights, or if you have any other questions about complying with our licensing terms for this collection, you should contact the Mozilla Foundation here: [licensing@mozilla.org](mailto:licensing@mozilla.org "mailto:licensing@mozilla.org").
+The rights in the trademarks, logos, and service marks of the Mozilla Foundation, as well as the look and feel of this website, are not licensed under the Creative Commons license, and to the extent they are works of authorship (like logos and graphic design), they are not included in the work that is licensed under those terms. If you use the text of documents, and wish to also use any of these rights, or if you have any other questions about complying with our licensing terms for this collection, you should contact the Mozilla Foundation here: [licensing@mozilla.org](mailto:licensing@mozilla.org "mailto:licensing@mozilla.org").
 
 ### Linking to MDN
 

@@ -22,7 +22,7 @@ appear in the parameter string multiple times for each value.
 ## Syntax
 
 ```js
-URLSearchParams.append(name, value)
+append(name, value)
 ```
 
 ### Parameters

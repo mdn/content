@@ -1,13 +1,14 @@
 ---
 title: 'ARIA: roletype role'
 slug: Web/Accessibility/ARIA/Roles/roletype_role
-tags: 
+tags:
   - roletype
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
+spec-urls: https://w3c.github.io/aria/#roletype
 ---
 
 
@@ -27,9 +28,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#roletype","ARIA: roletype role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

@@ -29,9 +29,14 @@ can remove it later by calling {{domxref("clearInterval",
 ## Syntax
 
 ```js
-var intervalID = setInterval(func, [delay, arg1, arg2, ...]);
-var intervalID = setInterval(function[, delay]);
-var intervalID = setInterval(code, [delay]);
+setInterval(code)
+setInterval(code, delay)
+
+setInterval(func)
+setInterval(func, delay)
+setInterval(func, delay, arg0)
+setInterval(func, delay, arg0, arg1)
+setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
 ```
 
 ### Parameters
@@ -47,7 +52,7 @@ var intervalID = setInterval(code, [delay]);
   - : The time, in milliseconds (thousandths of a second), the timer should delay in
     between executions of the specified function or code. Defaults to 0 if not specified. See [Delay restrictions](#delay_restrictions)
     below for details on the permitted range of `delay` values.
-- `arg1, ..., argN` {{optional_inline}}
+- `arg0, ..., argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by
     _func_ once the timer expires.
 
@@ -137,7 +142,7 @@ function flashText() {
 function stopTextColor() {
   clearInterval(nIntervId);
   // release our intervalID from the variable
-  nIntervId = null; 
+  nIntervId = null;
 }
 
 document.getElementById("start").addEventListener("click", changeColor);

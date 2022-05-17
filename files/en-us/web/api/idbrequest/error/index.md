@@ -22,62 +22,22 @@ request.
 
 ## Value
 
-A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
-property returns a {{domxref("DOMException")}} because `DOMError` has been
-removed from the DOM standard. The following error codes are returned under certain
-conditions:
+A {{domxref("DOMException")}} or `null` if there is no error. The following error names are returned
+in the exception object:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Error</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>AbortError</code></td>
-      <td>
-        If you abort the transaction, then all requests still in progress
-        receive this error.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ConstraintError</code></td>
-      <td>
-        If you insert data that doesn't conform to a constraint. It's
-        an exception type for creating stores and indexes. You get this error,
-        for example, if you try to add a new key that already exists in the
-        record.
-      </td>
-    </tr>
-    <tr>
-      <td><code>QuotaExceededError</code></td>
-      <td>
-        If you run out of disk quota and the user declined to grant you more
-        space.
-      </td>
-    </tr>
-    <tr>
-      <td><code>UnknownError</code></td>
-      <td>
-        If the operation failed for reasons unrelated to the database itself. A
-        failure due to disk IO errors is such an example.
-      </td>
-    </tr>
-    <tr>
-      <td><code>NoError</code></td>
-      <td>If the request succeeds.</td>
-    </tr>
-    <tr>
-      <td><code>VersionError</code></td>
-      <td>
-        If you try to open a database with a version lower than the one it
-        already has.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `AbortError`
+  - : If you abort the transaction, then all requests still in progress receive this error.
+- `ConstraintError`
+  - : If you insert data that doesn't conform to a constraint.
+    It's an exception type for creating stores and indexes.
+    You get this error, for example, if you try to add a new key that already exists in the record.
+- `QuotaExceededError`
+  - : If you run out of disk quota and the user declined to grant you more space.
+- `UnknownError`
+  - : If the operation failed for reasons unrelated to the database itself.
+    A failure due to disk IO errors is such an example.
+- `VersionError`
+  - : If you try to open a database with a version lower than the one it already has.
 
 In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
 asynchronous operations can also raise exceptions. The list describes problems that

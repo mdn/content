@@ -1,5 +1,5 @@
 ---
-title: TextDecoder.prototype.decode()
+title: TextDecoder.decode()
 slug: Web/API/TextDecoder/decode
 tags:
   - API
@@ -11,9 +11,9 @@ browser-compat: api.TextDecoder.decode
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
-The **`TextDecoder.prototype.decode()`** method returns a
+The **`TextDecode.decode()`** method returns a
 string containing the text, given in parameters, decoded with the
-specific method for that `TextDecoder` object.
+specific method for that {{domxref("TextDecoder")}}> object.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ decode(buffer, options)
     containing the text to decode.
 - `options` {{Optional_Inline}}
 
-  - : Is a `TextDecodeOptions` dictionary with the property:
+  - : An object with the property:
 
     - `stream`
       - : A boolean flag indicating that additional data will follow in
@@ -68,7 +68,7 @@ document.getElementById('decoded-value').textContent = str;
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

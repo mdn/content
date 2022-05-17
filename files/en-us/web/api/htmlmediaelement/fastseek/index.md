@@ -27,12 +27,12 @@ fastSeek(time)
 
 ### Parameters
 
-- time
+- `time`
   - : A double.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

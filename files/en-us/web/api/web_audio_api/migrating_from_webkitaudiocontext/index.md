@@ -14,7 +14,7 @@ tags:
 ---
 In this article, we cover the differences in Web Audio API since it was first implemented in WebKit and how to update your code to use the modern Web Audio API.
 
-The Web Audio standard was first implemented in [WebKit](http://webkit.org/), and the implementation was built in parallel with the work on the [specification](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) of the API. As the specification evolved and changes were made to the spec, some of the old implementation pieces were not removed from the WebKit (and Blink) implementations due to backwards compatibility reasons.
+The Web Audio standard was first implemented in [WebKit](https://webkit.org/), and the implementation was built in parallel with the work on the [specification](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) of the API. As the specification evolved and changes were made to the spec, some of the old implementation pieces were not removed from the WebKit (and Blink) implementations due to backwards compatibility reasons.
 
 New engines implementing the Web Audio spec (such as Gecko) will only implement the official, final version of the specification, which means that code using `webkitAudioContext` or old naming conventions in the Web Audio specification may not immediately work out of the box in a compliant Web Audio implementation.  This article attempts to summarize the areas where developers are likely to encounter these problems and provide examples on how to port such code to standards based {{domxref("AudioContext")}}, which will work across different browser engines.
 
@@ -50,7 +50,7 @@ The semantics of these methods remain the same in the renamed versions.
 
 ## Changes to starting and stopping nodes
 
-In `webkitAudioContext`, there are two ways to start and stop {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}: the `noteOn()` and `noteOff()` methods, and the `start()` and `stop()` methods.  ({{domxref("AudioBufferSourceNode ")}}has yet another way of starting output: the `noteGrainOn()` method.)  The `noteOn()`/`noteGrainOn()`/`noteOff()` methods were the original way to start/stop output in these nodes, and in the newer versions of the specification, the `noteOn()` and `noteGrainOn()` methods were consolidated into a single `start()` method, and the `noteOff()` method was renamed to the `stop()` method.
+In `webkitAudioContext`, there are two ways to start and stop {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}: the `noteOn()` and `noteOff()` methods, and the `start()` and `stop()` methods.  ({{domxref("AudioBufferSourceNode ")}}has yet another way of starting output: the `noteGrainOn()` method.) The `noteOn()`/`noteGrainOn()`/`noteOff()` methods were the original way to start/stop output in these nodes, and in the newer versions of the specification, the `noteOn()` and `noteGrainOn()` methods were consolidated into a single `start()` method, and the `noteOff()` method was renamed to the `stop()` method.
 
 In order to port your code, you can just rename the method that you're using.  For example, if you have code like the below:
 

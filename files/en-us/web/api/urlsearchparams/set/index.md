@@ -21,7 +21,7 @@ parameter doesn't exist, this method creates it.
 ## Syntax
 
 ```js
-URLSearchParams.set(name, value)
+set(name, value)
 ```
 
 ### Parameters

@@ -21,7 +21,7 @@ event's `state` property contains a copy of the history entry's state object.
 
 ## Constructor
 
-- {{domxref("PopStateEvent.PopStateEvent", "PopStateEvent()")}} 
+- {{domxref("PopStateEvent.PopStateEvent", "PopStateEvent()")}}
   - : Creates a new `PopStateEvent` object.
 
 ## Properties

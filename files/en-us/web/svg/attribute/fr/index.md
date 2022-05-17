@@ -48,7 +48,6 @@ The following example presents two circles: the first one has `fr` set to `5%` w
 
 {{EmbedLiveSample("Changing the gradient's radius", "480", "200")}}
 
-
 ### The focal point's relationship to `(fx, fy)`
 
 This example has `fr` equal to `5%` and is representing how the attributes `fx` and `fy` (the points labeled as such in the SVG) act as the origin for the focal point of the radial gradient. This focal point is a circle whose radius (the value of `fr`) defines when the first color stop, in this case the color red, should start transitioning into the other color stop, which in this case is the color blue.
@@ -97,24 +96,7 @@ This example has `fr` equal to `5%` and is representing how the attributes `fx` 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#RadialGradientElementFRAttribute", "fr")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

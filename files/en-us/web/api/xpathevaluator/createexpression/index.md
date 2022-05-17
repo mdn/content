@@ -19,13 +19,14 @@ This method compiles an {{domxref("XPathExpression")}} which can then be used fo
 ## Syntax
 
 ```js
-XPathExpression XPathEvaluator.createExpression(expression, resolver);
+createExpression(expression)
+createExpression(expression, resolver)
 ```
 
 ### Parameters
 
 - expression
-  - : A {{domxref("DOMString")}} representing the XPath expression to be created.
+  - : A string representing the XPath expression to be created.
 - resolver {{optional_inline}}
   - : Permits translation of all prefixes, including the `xml` namespace
     prefix, within the XPath expression into appropriate namespace URIs.
@@ -49,7 +50,7 @@ If the expression contains namespace prefixes which cannot be resolved by the sp
 {{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
 `NAMESPACE_ERROR` is raised.
 
-## Example
+## Examples
 
 The following example shows the use of the `evaluate()` method.
 
@@ -72,7 +73,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

@@ -1,5 +1,5 @@
 ---
-title: TextEncoder.prototype.encodeInto()
+title: TextEncoder.encodeInto()
 slug: Web/API/TextEncoder/encodeInto
 tags:
   - API
@@ -12,7 +12,7 @@ browser-compat: api.TextEncoder.encodeInto
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
-The **`TextEncoder.prototype.encodeInto()`** method takes a
+The **`TextEncoder.encodeInto()`** method takes a
 string to encode and a destination {{jsxref("Uint8Array")}} to put
 resulting UTF-8 encoded text into, and returns a dictionary object indicating the
 progress of the encoding. This is potentially more performant than the older
@@ -28,14 +28,14 @@ encodeInto(string, uint8Array)
 ### Parameters
 
 - `string`
-  - : Is a string containing the text to encode.
+  - : A string containing the text to encode.
 - `uint8Array`
-  - : Is a {{jsxref("Uint8Array")}} object instance to place the resulting UTF-8
+  - : A {{jsxref("Uint8Array")}} object instance to place the resulting UTF-8
     encoded text into.
 
 ### Return value
 
-A `TextEncoderEncodeIntoResult` dictionary, which contains two members:
+An object, which contains two members:
 
 - `read`
   - : The number of UTF-16 units of code from the source that has been converted over to

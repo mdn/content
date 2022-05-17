@@ -44,7 +44,7 @@ groupBy(function(element, index, array) { /* ... */ }, thisArg)
 - `callbackFn`
 
   - : Function to execute on each element in the array
-  
+
     The function is called with the following arguments:
 
     - `element`
@@ -125,18 +125,18 @@ The code below groups the elements by the value of their `type` property.
 let result = inventory.groupBy( ({ type }) => type );
 
 /* Result is:
-{ 
+{
   vegetables: [
-    { name: 'asparagus', type: 'vegetables', quantity: 5 }, 
+    { name: 'asparagus', type: 'vegetables', quantity: 5 },
   ],
   fruit: [
     { name: "bananas", type: "fruit", quantity: 0 },
     { name: "cherries", type: "fruit", quantity: 5 }
-  ], 
+  ],
   meat: [
     { name: "goat", type: "meat", quantity: 23 },
     { name: "fish", type: "meat", quantity: 22 }
-  ] 
+  ]
 }
 */
 ```
@@ -157,16 +157,16 @@ function myCallback( { quantity } ) {
 result = inventory.groupBy( myCallback );
 
 /* Result is:
-{ 
+{
   restock: [
     { name: "asparagus", type: "vegetables", quantity: 5 },
     { name: "bananas", type: "fruit", quantity: 0 },
     { name: "cherries", type: "fruit", quantity: 5 }
-  ], 
+  ],
   ok: [
     { name: "goat", type: "meat", quantity: 23 },
     { name: "fish", type: "meat", quantity: 22 }
-  ] 
+  ]
 }
 */
 ```

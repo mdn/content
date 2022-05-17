@@ -146,7 +146,7 @@ The code fragment below demonstrates a static function that checks whether a spe
     }
   }
   ClassWithPrivateFeatures.f(new ClassWithPrivateFeatures()) // returns true
-  ClassWithPrivateFeatures.f({}) // returns false  
+  ClassWithPrivateFeatures.f({}) // returns false
 ```
 
 ## Specifications

@@ -22,6 +22,10 @@ the user agent's computed value for the total length of the path in user units.
 getTotalLength()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A float indicating the total length of the path in user units.

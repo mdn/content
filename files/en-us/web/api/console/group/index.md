@@ -27,9 +27,12 @@ group(label)
 
 ### Parameters
 
-- `label`
-  - : Label for the group. Optional. (Chrome 59 tested) Does not work with
-    `console.groupEnd()`.
+- `label` {{optional_inline}}
+  - : Label for the group.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -67,3 +70,7 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console.groupEnd()")}}

@@ -30,6 +30,10 @@ extend(node, offset)
   - : The offset position within `node` where the focus will be moved to. If
     not specified, the default value `0` is used.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

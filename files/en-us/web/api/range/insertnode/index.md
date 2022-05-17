@@ -31,6 +31,10 @@ insertNode(newNode)
 - _newNode_
   - : The {{domxref("Node")}} to insert at the start of the `range`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

@@ -19,14 +19,25 @@ The **`CSSTransformValue.forEach()`** method executes a provided function once f
 ## Syntax
 
 ```js
-CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
-    // your iterator
-}[, thisArg]);
+// Arrow function
+forEach((currentValue) => { /* ... */ } )
+forEach((currentValue, index) => { /* ... */ } )
+forEach((currentValue, index, array) => { /* ... */ } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function(currentValue) { /* ... */ })
+forEach(function(currentValue, index) { /* ... */ })
+forEach(function(currentValue, index, array){ /* ... */ })
+forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : The function to execute for each element, taking three arguments:
 
@@ -42,7 +53,7 @@ CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

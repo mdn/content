@@ -21,7 +21,7 @@ createCDATASection(data)
 
 ### Parameters
 
-- _data_ 
+- `data`
   - : A string containing the data to be added to the CDATA Section.
 
 ### Return value

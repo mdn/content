@@ -26,7 +26,7 @@ parse(cssText)
 
 ### Parameters
 
-- cssText
+- `cssText`
   - : a string containing numeric and unit parts.
 
 ### Return value
@@ -35,7 +35,7 @@ A {{domxref('CSSNumericValue')}}.
 
 ### Exceptions
 
-- SyntaxError
+- `SyntaxError` {{domxref("DOMException")}}
   - : TBD
 
 ## Examples

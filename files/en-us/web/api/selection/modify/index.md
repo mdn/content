@@ -50,6 +50,10 @@ modify(alter, direction, granularity)
 > behavior. This makes the behavior more consistent, as well as making it work the same
 > way WebKit used to work, but unfortunately they have recently changed their behavior.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 This example demonstrates the various `granularity` options for modifying a
@@ -96,7 +100,7 @@ function modify() {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 200)}}
+{{EmbedLiveSample("Examples", 700, 200)}}
 
 ## Specifications
 

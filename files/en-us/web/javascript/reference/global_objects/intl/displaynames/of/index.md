@@ -35,7 +35,7 @@ of(code)
   - : The `code` to provide depends on the `type`:
 
     - If the type is "region", code should be either an [ISO-3166 two letters region code](https://www.iso.org/iso-3166-country-codes.html), or a [three digits UN M49 Geographic Regions](https://unstats.un.org/unsd/methodology/m49/).
-    - If the type is "script", code should be an [ISO-15924 four letters script code](http://unicode.org/iso15924/iso15924-codes.html).
+    - If the type is "script", code should be an [ISO-15924 four letters script code](https://unicode.org/iso15924/iso15924-codes.html).
     - If the type is "language", code should be a _languageCode_ \["-"
       _scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ )
       subsequence of the unicode_language_id grammar in

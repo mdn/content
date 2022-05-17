@@ -75,7 +75,7 @@ The key features of the library are:
 
 The [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain) example illustrates how to use most of these features. (IDBMutableFile is not included, but you can find examples in the [idb-file-storage examples](https://rpl.github.io/idb-file-storage/examples/) along with a number of other examples of the library in action).
 
-The Store Collected Images example lets users add images to a collection using an option on the image context menu. Selected images are collected in a popup and can be saved to a named collection. A toolbar button ({{WebExtAPIRef("browserAction")}}) opens a navigate collection page, on which the user can view and delete saved images, with a filter option to narrow choices. [See the example in action](https://youtu.be/t6aVqMMe2Rc).
+The Store Collected Images example lets users add images to a collection using an option on the image context menu. Selected images are collected in a popup and can be saved to a named collection. A toolbar button ({{WebExtAPIRef("browserAction")}}) opens a navigate collection page, on which the user can view and delete saved images, with a filter option to narrow choices. [See the example in action](https://www.youtube.com/watch?v=t6aVqMMe2Rc&ab_channel=LucaGreco).
 
 The workings of the library can be understood by viewing [image-store.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/utils/image-store.js) in /utils/:
 

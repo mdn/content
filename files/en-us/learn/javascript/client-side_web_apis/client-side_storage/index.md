@@ -738,7 +738,7 @@ Many thanks to Paul Kinlan for his article [Adding a Service Worker and Offline 
 
 To test our [service worker example](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/), you'll need to load it a couple of times to make sure it is installed. Once this is done, you can:
 
-- Try unplugging your network/turning your Wifi off.
+- Try unplugging your network/turning your Wi-Fi off.
 - Select _File > Work Offline_ if you are using Firefox.
 - Go to the devtools, then choose _Application > Service Workers_, then check the _Offline_ checkbox if you are using Chrome.
 

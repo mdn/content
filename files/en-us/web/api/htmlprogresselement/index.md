@@ -19,11 +19,11 @@ The **`HTMLProgressElement`** interface provides special properties and methods 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLProgressElement.max")}}
-  - : Is a `double` value reflecting the content attribute of the same name, limited to numbers greater than zero. Its default value is `1.0`.
+  - : A `double` value reflecting the content attribute of the same name, limited to numbers greater than zero. Its default value is `1.0`.
 - {{domxref("HTMLProgressElement.position")}}{{readonlyInline}}
   - : Returns a `double` value returning the result of dividing the current value (`value`) by the maximum value (`max`); if the progress bar is an indeterminate progress bar, it returns `-1`.
 - {{domxref("HTMLProgressElement.value")}}
-  - : Is a `double` value that reflects the current value; if the progress bar is an indeterminate progress bar, it returns `0`.
+  - : A `double` value that reflects the current value; if the progress bar is an indeterminate progress bar, it returns `0`.
 - {{domxref("HTMLProgressElement.labels")}}{{readonlyInline}}
   - : Returns {{domxref("NodeList")}} containing the list of {{HTMLElement("label")}} elements that are labels for this element.
 

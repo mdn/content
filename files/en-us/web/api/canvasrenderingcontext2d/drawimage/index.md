@@ -64,6 +64,10 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
     scaling of the drawn image. If not specified, the image is not scaled in height when
     drawn. Note that this argument is not included in the 3-argument syntax.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidStateError`

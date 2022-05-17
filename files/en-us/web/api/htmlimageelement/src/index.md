@@ -33,7 +33,7 @@ let src = htmlImageElement.src;
 
 When providing only a single image, rather than a set of images from which the browser
 selects the best match for the viewport size and display pixel density, the
-`src` attribute is a {{domxref("USVString")}} specifying the URL of the
+`src` attribute is a string specifying the URL of the
 desired image. This can be set either within the HTML itself using the
 {{htmlattrxref("src", "img")}} content attribute, or programmatically by setting the
 element's `src` property.

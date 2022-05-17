@@ -64,7 +64,7 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : This exception is thrown in the following conditions:
 

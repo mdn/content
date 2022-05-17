@@ -308,4 +308,4 @@ The following values may be operational on historical browser versions using **`
 ## See also
 
 - [Definition of `appearance` in CSS 3 Basic User Interface](https://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidate Recommendation from 2004-05-11).
-- [Dropped CSS3 features from the UI spec.4](http://wiki.csswg.org/spec/css4-ui#dropped-css3-features)
+- [Dropped CSS3 features from the UI spec.4](https://wiki.csswg.org/spec/css4-ui#dropped-css3-features)

@@ -19,7 +19,7 @@ The **`ariaSort`** property of the {{domxref("ElementInternals")}} interface ref
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"ascending"`
   - : Items are sorted in ascending order by this column.

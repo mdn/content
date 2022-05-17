@@ -13,7 +13,7 @@ browser-compat: api.URL.password
 {{ApiRef("URL API")}}
 
 The **`password`** property of the {{domxref("URL")}} interface
-is a {{domxref("USVString")}} containing the password specified before the domain name.
+is a string containing the password specified before the domain name.
 
 If it is set without first setting the {{domxref("URL.username", "username")}}
 property, it silently fails.
@@ -22,7 +22,7 @@ property, it silently fails.
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

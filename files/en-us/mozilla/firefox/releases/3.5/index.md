@@ -89,7 +89,7 @@ tags:
 
 - [localStorage](/en-US/docs/Web/API/Web_Storage_API#localstorage)
   - : Firefox 3.5 adds support for the Web Storage `localStorage` property, which provides a way for web applications to store data locally on the client's computer.
-- [Using web workers](/en-US/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
 - [Using geolocation](/en-US/Using_geolocation)
   - : Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.
@@ -151,7 +151,7 @@ tags:
 
 ### Other improvements
 
-- The Text node's [`wholeText`](/en-US/docs/Web/API/Text/wholeText) property and [`replaceWholeText()`](/en-US/docs/Web/API/Text/replaceWholeText) method have been implemented.
+- The Text node's [`wholeText`](/en-US/docs/Web/API/Text/wholeText) property and `Text.replaceWholeText()` method have been implemented.
 - The property [`element.children`](/en-US/docs/Web/API/Element/children) has been added. It returns a _collection_ of child elements of the given element.
 - The property {{ domxref("element.contentEditable") }} is now supported, to support editable elements.
 - The Element Traversal API is now supported by the DOM [Element](/en-US/docs/Web/API/Element) object.
@@ -180,8 +180,8 @@ If you're an extension developer, you should start by reading [Updating extensio
   - : This article covers security-related changes in Firefox 3.5.
 - [Theme changes in Firefox 3.5](/en-US/Theme_changes_in_Firefox_3.5)
   - : This article covers theme-related changes in Firefox 3.5.
-- [Monitoring WiFi access points](/en-US/Monitoring_WiFi_access_points)
-  - : Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength.  This can be used in tandem with Geolocation to offer WiFi-based location service.
+- [Monitoring Wi-Fi access points](/en-US/Monitoring_WiFi_access_points)
+  - : Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength.  This can be used in tandem with Geolocation to offer Wi-Fi-based location service.
 
 #### Notable changes and improvements
 

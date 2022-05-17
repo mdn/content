@@ -26,6 +26,10 @@ setStartBefore(referenceNode)
 - _referenceNode_
   - : The {{domxref("Node")}} before which the {{domxref("Range")}} should start.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

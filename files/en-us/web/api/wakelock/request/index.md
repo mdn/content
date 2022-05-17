@@ -19,7 +19,7 @@ locking.
 ## Syntax
 
 ```js
-var wakeLock = navigator.wakeLock.request(type);
+request(type)
 ```
 
 ### Parameters

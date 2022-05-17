@@ -148,7 +148,7 @@ let identityMatrix = [
 let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
-> **Warning:** These matrix functions are written for clarity of explanation, not for speed or memory management. These functions create a lot of new arrays, which can be particularly expensive for real-time operations due to garbage collection. In real production code it would be best to use optimized functions. [glMatrix](http://glmatrix.net/) is an example of a library that has a focus on speed and performance. The focus in the glMatrix library is to have target arrays that are allocated before the update loop.
+> **Warning:** These matrix functions are written for clarity of explanation, not for speed or memory management. These functions create a lot of new arrays, which can be particularly expensive for real-time operations due to garbage collection. In real production code it would be best to use optimized functions. [glMatrix](https://glmatrix.net/) is an example of a library that has a focus on speed and performance. The focus in the glMatrix library is to have target arrays that are allocated before the update loop.
 
 ## Translation matrix
 
@@ -200,7 +200,7 @@ let matrix3dRule = matrixArrayToCssMatrix(translationMatrix);
 moveMe.style.transform = matrix3dRule;
 ```
 
-[View on JSFiddle](https://jsfiddle.net/g24mgw6y)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/g24mgw6y/)
 
 ![An example of matrix translation](matrix-translation.jpg)
 
@@ -223,13 +223,13 @@ let scaleMatrix = [
 ];
 ```
 
-[View on JSFiddle](https://jsfiddle.net/fndd6e1b)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/fndd6e1b/)
 
 ![An example of matrix scaling](matrix-scale.jpg)
 
 ## Rotation matrix
 
-A **rotation matrix** is used to rotate a point or object. Rotation matrices look a little bit more complicated than scaling and transform matrices. They use trigonometric functions to perform the rotation. While this section won't break the steps down into exhaustive detail (check out [this article on Wolfram MathWorld](http://mathworld.wolfram.com/RotationMatrix.html) for that), take this example for illustration.
+A **rotation matrix** is used to rotate a point or object. Rotation matrices look a little bit more complicated than scaling and transform matrices. They use trigonometric functions to perform the rotation. While this section won't break the steps down into exhaustive detail (check out [this article on Wolfram MathWorld](https://mathworld.wolfram.com/RotationMatrix.html) for that), take this example for illustration.
 
 First, here's code that rotates a point around the origin without using matrices.
 
@@ -269,7 +269,7 @@ let rotateZMatrix = [
 ];
 ```
 
-[View on JSFiddle](https://jsfiddle.net/9vr2dorz)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/9vr2dorz/)
 
 ![](matrix-rotation.jpg)
 
@@ -304,7 +304,7 @@ function rotateAroundZAxis(a) {
 }
 ```
 
-[View on JSFiddle](https://jsfiddle.net/tk072doc)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/tk072doc/)
 
 ## Matrix composition
 
@@ -330,7 +330,7 @@ let transformMatrix = MDN.multiplyArrayOfMatrices([
 ]);
 ```
 
-[View on JSFiddle](https://jsfiddle.net/qxxg3yvc)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/qxxg3yvc/)
 
 ![An example of matrix composition](matrix-composition.jpg)
 

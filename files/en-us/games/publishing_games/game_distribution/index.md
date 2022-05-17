@@ -116,8 +116,8 @@ There are various tools to choose from depending on your skills, preferred frame
 
 Other alternative tools are:
 
-- [Intel XDK](https://software.intel.com/en-us/intel-xdk) — an exciting alternative, similar to CocoonIO.
-- [Electron](https://electron.atom.io/) — known as Atom Shell — is an open-sourced and cross-platform tool from GitHub.
+- [Intel XDK](https://www.intel.com/content/www/us/en/developer/tools/overview.html) — an exciting alternative, similar to CocoonIO.
+- [Electron](https://www.electronjs.org/) — known as Atom Shell — is an open-sourced and cross-platform tool from GitHub.
 - [Manifold.js](https://manifoldjs.com/) — this tool from the Microsoft team can create native distributions of HTML5 games from iOS, Android, and Windows.
 
 ## Summary

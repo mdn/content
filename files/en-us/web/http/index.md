@@ -51,7 +51,7 @@ Browse through detailed HTTP reference documentation.
 - [HTTP Status Response Codes](/en-US/docs/Web/HTTP/Status)
   - : HTTP response codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes: informational responses, successful responses, redirections, client errors, and servers errors.
 - [CSP directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
-  - : The {{HTTPHeader("Content-Security-Policy")}} response header fields allows web site administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
+  - : The {{HTTPHeader("Content-Security-Policy")}} response header fields allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
 
 ## Tools & resources
 

@@ -18,7 +18,7 @@ The **`ariaLive`** property of the {{domxref("ElementInternals")}} interface ref
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"assertive"`
   - : Indicates that updates to the region have the highest priority and should be presented the user immediately.

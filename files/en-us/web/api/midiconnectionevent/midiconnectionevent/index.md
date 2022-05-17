@@ -15,15 +15,15 @@ The **`MIDIConnectionEvent()`** constructor creates a new {{domxref("MIDIConnect
 ## Syntax
 
 ```js
-new MIDIConnectionEvent(type);
-new MIDIConnectionEvent(type, MIDIConnectionEventInit);
+new MIDIConnectionEvent(type)
+new MIDIConnectionEvent(type, midiConnectionEventInit)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with one of `"connect"` or `"disconnect"`.
-- `MIDIConnectionEventInit`{{Optional_Inline}}
+  - : A string with one of `"connect"` or `"disconnect"`.
+- `midiConnectionEventInit`{{Optional_Inline}}
 
   - : A dictionary including the following fields:
 

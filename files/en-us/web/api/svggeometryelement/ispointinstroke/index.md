@@ -68,7 +68,7 @@ console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));
 
 ### Result
 
-{{EmbedLiveSample("Example", "150", "150")}}
+{{EmbedLiveSample("Examples", "150", "150")}}
 
 ## Specifications
 

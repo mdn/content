@@ -20,7 +20,7 @@ The **`sqrt`** instructions, short for *square root*, are used to get the square
 ;; load a number onto the stack
 f32.const 289
 
-;; get the square root of 289 
+;; get the square root of 289
 f32.sqrt
 
 ;; the top item on the stack will now be 17

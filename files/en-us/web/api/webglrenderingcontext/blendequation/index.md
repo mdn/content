@@ -54,7 +54,7 @@ If _mode_ is not one of the three possible values, a
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

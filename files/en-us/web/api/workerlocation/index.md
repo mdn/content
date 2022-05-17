@@ -16,7 +16,7 @@ This interface is only visible from inside a JavaScript script executed in the c
 ## Properties
 
 - {{domxref("WorkerLocation.href")}} {{readOnlyInline}}
-  - : Returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker's location.
+  - : Returns a string containing the serialized {{domxref("URL")}} for the worker's location.
 - {{domxref("WorkerLocation.protocol")}} {{readOnlyInline}}
   - : Returns the {{domxref("URL.protocol", "protocol")}} part of the worker's location.
 - {{domxref("WorkerLocation.host")}} {{readOnlyInline}}
@@ -37,7 +37,7 @@ This interface is only visible from inside a JavaScript script executed in the c
 ## Methods
 
 - {{domxref("WorkerLocation.toString()")}}
-  - : Returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker's location. It is a synonym for {{domxref("WorkerLocation.href")}}.
+  - : Returns a string containing the serialized {{domxref("URL")}} for the worker's location. It is a synonym for {{domxref("WorkerLocation.href")}}.
 
 ## Specifications
 

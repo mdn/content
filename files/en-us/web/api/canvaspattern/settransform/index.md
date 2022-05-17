@@ -29,6 +29,10 @@ setTransform(matrix)
   - : An {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} to use as the pattern's
     transformation matrix.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Using the `setTransform` method

@@ -31,10 +31,10 @@ exponentialRampToValueAtTime(value, endTime)
 
 ### Parameters
 
-- value
+- `value`
   - : A floating point number representing the value the `AudioParam` will ramp
     to by the given time.
-- endTime
+- `endTime`
   - : A double representing the exact time (in seconds) after the ramping starts that the
     changing of the value will stop.
 

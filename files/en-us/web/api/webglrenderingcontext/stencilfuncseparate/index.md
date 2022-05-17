@@ -21,7 +21,7 @@ multipass rendering to achieve special effects.
 ## Syntax
 
 ```js
-void gl.stencilFuncSeparate(face, func, ref, mask);
+stencilFuncSeparate(face, func, ref, mask)
 ```
 
 ### Parameters
@@ -65,7 +65,7 @@ void gl.stencilFuncSeparate(face, func, ref, mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -71,7 +71,7 @@ framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

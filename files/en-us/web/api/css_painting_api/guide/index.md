@@ -8,7 +8,8 @@ tags:
   - Houdini
   - Learn
 ---
-The CSS Paint API is designed to enable developers to programmatically define images which can then be used anywhere a CSS image can be invoked, such as CSS [`background-image`](/en-US/docs/Web/CSS/background-image), [`border-image`](/en-US/docs/Web/CSS/border-image-source), [`mask-image`](/en-US/docs/Web/CSS/mask-image), etc.
+{{DefaultAPISidebar("CSS Painting API")}}
+The [CSS Paint API](/en-US/docs/Web/API/CSS_Painting_API) is designed to enable developers to programmatically define images which can then be used anywhere a CSS image can be invoked, such as CSS [`background-image`](/en-US/docs/Web/CSS/background-image), [`border-image`](/en-US/docs/Web/CSS/border-image-source), [`mask-image`](/en-US/docs/Web/CSS/mask-image), etc.
 
 To programmatically create an image used by a CSS stylesheet we need to work through a few steps:
 
@@ -28,7 +29,7 @@ In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/AP
 registerPaint('headerHighlight', class {
 
   /*
-       define if alphatransparency  is allowed alpha
+       define if alphatransparency is allowed alpha
        is set to true by default. If set to false, all
        colors used on the canvas will be fully opaque
     */

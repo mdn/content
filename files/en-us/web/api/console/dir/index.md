@@ -37,6 +37,10 @@ dir(object)
 - `object`
   - : A JavaScript object whose properties should be output.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

@@ -176,7 +176,7 @@ This marks the next step in the journey toward a plugin-free future. HTML is ver
 
 ## HTTP
 
-- The [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Headers/Cache-Control) directive has been implemented ({{bug(1267474)}}). See also this [blog post](https://bitsup.blogspot.de/2016/05/cache-control-immutable.html) for more information.
+- The [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Headers/Cache-Control) directive has been implemented ({{bug(1267474)}}). See also this [blog post](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html) for more information.
 - The {{CSP("require-sri-for")}} {{HTTPHeader("Content-Security-Policy")}} has been implemented ({{bug(1265318)}}).
 
 ## Networking

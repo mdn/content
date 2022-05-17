@@ -24,6 +24,10 @@ setOrientToAngle(angle)
 - `angle`
   - : An {{domxref("SVGAngle")}}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 In the following example the value of the `orient` attribute is updated using `setOrientToAngle()` using an {{domxref("SVGAngle")}} created using {{domxref("SVGSVGElement.createSVGAngle()")}}.

@@ -35,7 +35,7 @@ setDragImage(imgElement, xOffset, yOffset)
 
 ### Parameters
 
-- imgElement
+- `imgElement`
 
   - : An image {{domxref("Element")}} element to use for the drag feedback image.
 
@@ -46,14 +46,14 @@ setDragImage(imgElement, xOffset, yOffset)
 
     Note: If the {{domxref("Element")}} is an existing {{domxref("HTMLElement")}} it needs to be visible in the viewport in order to be shown as a drag feedback image. Alternatively, you can create a new DOM element that might be off-screen specifically for this purpose.
 
-- xOffset
+- `xOffset`
   - : A `long` indicating the horizontal offset within the image.
-- yOffset
+- `yOffset`
   - : A `long` indicating the vertical offset within the image.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

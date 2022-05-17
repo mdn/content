@@ -11,8 +11,9 @@ tags:
   - Reference
   - Video
   - streaming
+spec-urls: https://w3c.github.io/media-source/
 ---
-{{DefaultAPISidebar("Media Source Extensions")}}{{ Draft}}
+{{DefaultAPISidebar("Media Source Extensions")}}
 
 The **Media Source API**, formally known as **Media Source Extensions** (**MSE**), provides functionality enabling plugin-free web-based streaming media. Using MSE, media streams can be created via JavaScript, and played using {{htmlelement("audio")}} and {{htmlelement("video")}} elements.
 
@@ -64,9 +65,7 @@ There are numerous available free and open source tools for transcoding content 
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment             |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName('Media Source Extensions')}} | {{Spec2('Media Source Extensions')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -42,7 +42,8 @@ rather than the directive of the resources it's retrieving.
 ## Syntax
 
 ```js
-const fetchResponsePromise = fetch(resource [, init])
+fetch(resource)
+fetch(resource, init)
 ```
 
 ### Parameters
@@ -72,7 +73,7 @@ const fetchResponsePromise = fetch(resource [, init])
     - `body`
       - : Any body that you want to add to your request: this can be a
         {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
+        {{domxref("URLSearchParams")}}, string, or
         {{domxref("ReadableStream")}} object. Note that a request using the
         `GET` or `HEAD` method cannot have a body.
     - `mode`
@@ -104,7 +105,7 @@ const fetchResponsePromise = fetch(resource [, init])
           See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) for more information.
 
     - `referrer`
-      - : A {{domxref("USVString")}} specifying the referrer of the request. This can be a
+      - : A string specifying the referrer of the request. This can be a
         same-origin URL, `about:client`, or an empty string.
     - `referrerPolicy`
       - : Specifies the [referrer
@@ -131,10 +132,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
 
 ### Exceptions
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
 
 <table>
@@ -282,7 +283,7 @@ fetch(myRequest)
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${ response.status }`);
     }
-    
+
     return response.blob();
   })
   .then((response) => {

@@ -21,11 +21,11 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.download")}}
   - : See {{domxref("HTMLAnchorElement.download")}}.
 - {{domxref("SVGAElement.href")}} {{ReadOnlyInline}}
-  - : Is an {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute.
+  - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute.
 - {{domxref("SVGAElement.hreflang")}}
-  - : Is a {{domxref("DOMString")}} that reflects the `hreflang` attribute, indicating the language of the linked resource.
+  - : A string that reflects the `hreflang` attribute, indicating the language of the linked resource.
 - {{domxref("SVGAElement.ping")}}
-  - : Is a {{domxref("DOMString")}} that reflects the ping attribute, containing a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking.
+  - : A string that reflects the ping attribute, containing a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking.
 - {{domxref("SVGAElement.referrerPolicy")}}
   - : See {{domxref("HTMLAnchorElement.referrerPolicy")}}.
 - {{domxref("SVGAElement.rel")}}
@@ -35,9 +35,9 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.target")}} {{readonlyInline}}
   - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 - {{domxref("SVGAElement.text")}}
-  - : Is a {{domxref("DOMString")}} being a synonym for the {{domxref("Node.textContent")}} property.
+  - : A string being a synonym for the {{domxref("Node.textContent")}} property.
 - {{domxref("SVGAElement.type")}}
-  - : Is a {{domxref("DOMString")}} that reflects the `type` attribute, indicating the MIME type of the linked resource.
+  - : A string that reflects the `type` attribute, indicating the MIME type of the linked resource.
 
 ## Methods
 

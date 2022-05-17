@@ -16,6 +16,20 @@ browser-compat: api.MediaKeySession.remove
 
 The `MediaKeySession.remove()` method returns a {{jsxref('Promise')}} after removing any session data associated with the current object.
 
+## Syntax
+
+```js
+remove()
+```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Return value
 
 A {{jsxref('Promise')}} that resolves to a boolean indicating whether the load succeeded or failed.

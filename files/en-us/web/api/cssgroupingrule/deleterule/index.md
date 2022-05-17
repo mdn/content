@@ -23,12 +23,12 @@ deleteRule(index)
 
 ### Parameters
 
-- index
+- `index`
   - : The index of the rule to delete.
 
 ### Return value
 
-undefined
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -2,10 +2,12 @@
 title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
 tags:
-  - Beginner
   - CSS
-  - Example
+  - CSS Property
+  - Reference
+  - Web
   - recipe:css-property
+  - scroll-margin-block
   - scroll-margin-block-start
 browser-compat: css.properties.scroll-margin-block-start
 ---

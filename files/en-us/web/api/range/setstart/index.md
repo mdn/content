@@ -36,6 +36,10 @@ setStart(startNode, startOffset)
   - : An integer greater than or equal to zero representing the offset for the start of
     the {{ domxref("Range") }} from the start of `startNode`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Highlight part of an element

@@ -22,7 +22,7 @@ device.
 ## Syntax
 
 ```js
-var promise = USBDevice.transferIn(endpointNumber, length)
+transferIn(endpointNumber, length)
 ```
 
 ### Parameters

@@ -195,7 +195,7 @@ box.draw({
 
 #### The results
 
-[View on JSFiddle](https://jsfiddle.net/mff99yu5)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/mff99yu5/)
 
 ![The results of drawing to clip space using WebGL.](part1.png)
 
@@ -391,7 +391,7 @@ gl_Position = model * vec4(position, 1.0);
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/5jofzgsh)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/5jofzgsh/)
 
 ![Using a model matrix](part3.png)
 
@@ -427,7 +427,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/vk9r8h2c)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/vk9r8h2c/)
 
 ![Filling the W component and creating some projection.](part4.png)
 
@@ -530,7 +530,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/zwyLLcbw)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/zwyLLcbw/)
 
 ![A simple projection matrix](part5.png)
 
@@ -562,9 +562,9 @@ Up to this point, we've built up our own 3D rendering setup, step by step. Howev
 
 The **perspective projection matrix** is a type of projection matrix that accomplishes all of these requirements. The math also starts to get a bit more involved and won't be fully explained in these examples. In short, it combines dividing by w (as done with the previous examples) with some ingenious manipulations based on [similar triangles](https://en.wikipedia.org/wiki/Similarity_%28geometry%29). If you want to read a full explanation of the math behind it check out some of the following links:
 
-- [OpenGL Projection Matrix](http://www.songho.ca/opengl/gl_projectionmatrix.html)
-- [Perspective Projection](http://ogldev.atspace.co.uk/www/tutorial12/tutorial12.html)
-- [Trying to understand the math behind the perspective projection matrix in WebGL](http://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
+- [OpenGL Projection Matrix](https://www.songho.ca/opengl/gl_projectionmatrix.html)
+- [Perspective Projection](https://ogldev.org/)
+- [Trying to understand the math behind the perspective projection matrix in WebGL](https://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
 
 One important thing to note about the perspective projection matrix used below is that it flips the z axis. In clip space the z+ goes away from the viewer, while with this matrix it comes towards the viewer.
 
@@ -625,7 +625,7 @@ Additionally (not shown), the position and scale matrices of the model have been
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/Lzxw7e1q)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/Lzxw7e1q/)
 
 ![A true perspective matrix](part6.png)
 
@@ -688,7 +688,7 @@ After this step, the GPU pipeline will clip the out of range vertices, and send 
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/86fd797g)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/86fd797g/)
 
 ![The view matrix](part7.png)
 

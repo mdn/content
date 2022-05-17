@@ -24,7 +24,7 @@ of elements.
 ## Syntax
 
 ```js
-void gl.drawElementsInstanced(mode, count, type, offset, instanceCount);
+drawElementsInstanced(mode, count, type, offset, instanceCount)
 ```
 
 ### Parameters
@@ -65,7 +65,7 @@ void gl.drawElementsInstanced(mode, count, type, offset, instanceCount);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

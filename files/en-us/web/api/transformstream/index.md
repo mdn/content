@@ -2,12 +2,17 @@
 title: TransformStream
 slug: Web/API/TransformStream
 tags:
+  - API
+  - Interface
+  - Reference
   - Streams API
 browser-compat: api.TransformStream
 ---
 {{APIRef("Streams")}}
 
 The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a set of transformable data.
+
+`TransformStream` is a {{glossary("Transferable objects","transferable object")}}.
 
 ## Constructor
 

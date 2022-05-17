@@ -13,7 +13,7 @@ Hoisting allows functions to be safely used in code before they are declared.
 Variable and class _declarations_ are also hoisted, so they too can be referenced before they are declared.
 Note that doing so can lead to unexpected errors, and is not generally recommended.
 
-> **Note:** The term hoisting is not used in any normative specification prose prior to [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html).
+> **Note:** The term hoisting is not used in any normative specification prose prior to [ECMAScript® 2015 Language Specification](https://262.ecma-international.org/6.0/).
 > Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.
 
 ## Function hoisting

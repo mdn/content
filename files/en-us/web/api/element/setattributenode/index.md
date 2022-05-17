@@ -23,7 +23,7 @@ setAttributeNode(attribute)
 ### Parameters
 
 - `attribute` is the `Attr` node to set on the element.
-- 
+
 ### Return value
 
 The replaced attribute node, if any, returned by this function.
@@ -69,3 +69,7 @@ used to change element's attributes.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}

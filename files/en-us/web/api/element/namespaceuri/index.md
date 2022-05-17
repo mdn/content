@@ -41,7 +41,7 @@ frozen at the node creation time.
 
 In Firefox 3.5 and earlier, the namespace URI for HTML elements in HTML documents is
 `null`. In later versions, in compliance with HTML5, it is
-[`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml)
+[`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/)
 as in XHTML.
 
 You can create an element with the specified `namespaceURI` using the DOM

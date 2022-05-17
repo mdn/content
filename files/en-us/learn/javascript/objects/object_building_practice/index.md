@@ -111,7 +111,7 @@ class Ball {
 
 So far this class only contains a constructor, in which we can initialize the properties each ball needs in order to function in our program:
 
-- `x` and `y` coordinates — the horizontal and vertical coordinates where the ball starts on the screen. This can range between 0 (top left hand corner) to the width and height of the browser viewport (bottom right hand corner).
+- `x` and `y` coordinates — the horizontal and vertical coordinates where the ball starts on the screen. This can range between 0 (top left hand corner) to the width and height of the browser viewport (bottom right-hand corner).
 - horizontal and vertical velocity (`velX` and `velY`) — each ball is given a horizontal and vertical velocity; in real terms these values are regularly added to the `x`/`y` coordinate values when we animate the balls, to move them by this much on each frame.
 - `color` — each ball gets a color.
 - `size` — each ball gets a size — this is its radius, in pixels.

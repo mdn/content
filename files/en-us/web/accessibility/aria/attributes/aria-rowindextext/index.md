@@ -1,13 +1,14 @@
 ---
 title: 'aria-rowindextext'
 slug: Web/Accessibility/ARIA/Attributes/aria-rowindextext
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-rowindextext
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-rowindextext
 ---
 
 The `aria-rowindextext` attribute defines a human-readable text alternative of `aria-rowindex`.
@@ -28,9 +29,9 @@ The `aria-rowindextext` is added to each {{HTMLElement('row')}} or to elements w
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRowIndexText")}}
-  - : The  [`ariaRowIndexText`](/en-US/docs/Web/API/Element/ariaRowIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindextext` attribute.
+  - : The [`ariaRowIndexText`](/en-US/docs/Web/API/Element/ariaRowIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindextext` attribute.
 - {{domxref("ElementInternals.ariaRowIndexText")}}
-  - : The  [`ariaRowIndexText`](/en-US/docs/Web/API/ElementInternals/ariaRowIndexText) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindextext` attribute.
+  - : The [`ariaRowIndexText`](/en-US/docs/Web/API/ElementInternals/ariaRowIndexText) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindextext` attribute.
 
 ## Associated roles
 
@@ -47,9 +48,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-rowindextext","ARIA: aria-rowindextext Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -1,13 +1,14 @@
 ---
 title: 'ARIA: group role'
 slug: Web/Accessibility/ARIA/Roles/group_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
   - document structure role
+spec-urls: https://w3c.github.io/aria/#group
 ---
 
 The `group` role identifies a set of user interface objects that is not intended to be included in a page summary or table of contents by assistive technologies.
@@ -82,10 +83,7 @@ This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#group","ARIA: group role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_group_role","group role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

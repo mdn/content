@@ -19,22 +19,14 @@ current texture.
 ## Syntax
 
 ```js
-// WebGL 1:
-void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, ArrayBufferView? pixels);
-void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, ImageData? pixels);
-void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, HTMLImageElement? pixels);
-void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, HTMLCanvasElement? pixels);
-void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, HTMLVideoElement? pixels);
-void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, ImageBitmap? pixels);
+// WebGL1
+texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels) // pixels is instance of ArrayBufferView
+texSubImage2D(target, level, xoffset, yoffset, format, type, pixels)
 
-// WebGL 2:
-void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, GLintptr offset);
-void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, HTMLCanvasElement source);
-void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, HTMLImageElement source);
-void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, HTMLVideoElement source);
-void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, ImageBitmap source);
-void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, ImageData source);
-void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, ArrayBufferView srcData, srcOffset);
+// WebGL2
+texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, offset)
+texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, source)
+texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels, srcOffset)
 ```
 
 ### Parameters
@@ -162,7 +154,7 @@ void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, ty
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

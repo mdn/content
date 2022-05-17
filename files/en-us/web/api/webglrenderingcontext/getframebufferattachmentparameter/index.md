@@ -19,7 +19,7 @@ about a framebuffer's attachment.
 ## Syntax
 
 ```js
-any gl.getFramebufferAttachmentParameter(target, attachment, pname);
+getFramebufferAttachmentParameter(target, attachment, pname)
 ```
 
 ### Parameters

@@ -16,7 +16,7 @@ browser-compat: api.URL.createObjectURL
 {{APIRef("URL API")}}
 
 The **`URL.createObjectURL()`** static
-method creates a {{domxref("DOMString")}} containing a URL representing the object
+method creates a string containing a URL representing the object
 given in the parameter.
 
 The URL lifetime is tied to the {{domxref("document")}}
@@ -33,7 +33,7 @@ To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL
 ## Syntax
 
 ```js
-const objectURL = URL.createObjectURL(object)
+createObjectURL(object)
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ const objectURL = URL.createObjectURL(object)
 
 ### Return value
 
-A {{domxref("DOMString")}} containing an object URL that can be used to reference the
+A string containing an object URL that can be used to reference the
 contents of the specified source `object`.
 
 ## Examples

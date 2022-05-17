@@ -19,7 +19,7 @@ the whole, for a long task.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the container's `src` attribute.
+A string containing the container's `src` attribute.
 
 ## Specifications
 

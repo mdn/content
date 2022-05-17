@@ -25,10 +25,10 @@ setValueAtTime(value, startTime)
 
 ### Parameters
 
-- value
+- `value`
   - : A floating point number representing the value the AudioParam will change to at the
     given time.
-- startTime
+- `startTime`
   - : A double representing the time (in seconds) after the {{domxref("AudioContext")}}
     was first created that the change in value will happen. A {{jsxref("TypeError")}} is
     thrown if this value is negative.

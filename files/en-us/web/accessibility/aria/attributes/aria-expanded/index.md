@@ -1,12 +1,13 @@
 ---
 title: 'aria-expanded'
 slug: Web/Accessibility/ARIA/Attributes/aria-expanded
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-expanded
+spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
 
 The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not its child elements are displayed or hidden.
@@ -78,9 +79,9 @@ A parent row is a row that can be expanded or collapsed to show or hide a set of
 ## ARIAMixin API
 
 - {{domxref("Element.ariaExpanded")}}
-  - : The  [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-expanded` attribute.
+  - : The [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-expanded` attribute.
 - {{domxref("ElementInternals.ariaExpanded")}}
-  - : The  [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-expanded` attribute.
+  - : The [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-expanded` attribute.
 
 ## Associated roles
 
@@ -109,9 +110,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-expanded","ARIA: aria-expanded Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

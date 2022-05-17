@@ -8,6 +8,9 @@ tags:
   - ARIA Tabpanel
   - ARIA widget
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#tabpanel
+  - https://w3c.github.io/aria-practices/#tabpanel
 ---
 
 The ARIA `tabpanel` is a container for the resources of layered content associated with a `tab`.
@@ -22,7 +25,7 @@ Only the `tabpanel` associated with the currently selected `tab` is displayed. T
 
 Selecting a different `tab` changes the currently visible tab panel. The content area changes by making visible a new panel while hiding the previously visible panel and making the newly selected tab more prominent than the other tabs. User focus, however, does not change on tab selection.
 
-Tabs do not act as anchor links to individual panels. While semantic HTML may be coded with the tabs being anchor links navigating to the tab's associated tabpanel, when JavaScript is used to progressively enhance the content to a tabbed interface, the link's default behavior should be prevented.  
+Tabs do not act as anchor links to individual panels. While semantic HTML may be coded with the tabs being anchor links navigating to the tab's associated tabpanel, when JavaScript is used to progressively enhance the content to a tabbed interface, the link's default behavior should be prevented.
 
 In a tab interface, selecting a `tab` makes the associated `tabpanel` visible but does not move user focus. Tab selection only reveals the content of the associated panel visually and unhides them from assistive technologies. The <kbd>Tab</kbd> key should be programmed to move from the focused tab to the tab's associated tabpanel.
 
@@ -67,10 +70,7 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 ## Specifications
 
-| Specification                                                                        | Status                                           |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#tabpanel","tabpanel")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#tabpanel","tabpanel")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

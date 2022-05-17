@@ -19,7 +19,7 @@ Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API
 
 The complete source code for this project is [available on GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2).
 
-> **Note:** This project uses the [glMatrix](http://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.
+> **Note:** This project uses the [glMatrix](https://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
 ## Drawing the scene
 
@@ -305,12 +305,12 @@ Then we establish the position of the square plane by loading the identity posit
 
 ## Matrix utility operations
 
-Matrix operations might seem complicated but [they are actually pretty simple if you take them one step at a time](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generally people use a matrix library rather than writing their own. In our case we're using the popular [glMatrix library](http://glmatrix.net/).
+Matrix operations might seem complicated but [they are actually pretty simple if you take them one step at a time](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generally people use a matrix library rather than writing their own. In our case we're using the popular [glMatrix library](https://glmatrix.net/).
 
 ### See also
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) on WebGLFundamentals
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
 - [Matrix](<https://en.wikipedia.org/wiki/Matrix_(mathematics)>) on Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

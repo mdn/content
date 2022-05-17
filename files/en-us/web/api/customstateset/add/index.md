@@ -30,7 +30,7 @@ Undefined.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the string is not a `<dashed-ident>`.
 
 ## Examples

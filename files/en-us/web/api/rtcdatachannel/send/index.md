@@ -47,7 +47,7 @@ send(data)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -58,7 +58,7 @@ send(data)
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown when the specified `data` would need to be buffered, and there isn't room for
     it in the buffer. In this scenario, the underlying transport is immediately closed.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified `data` is too large for the other peer to receive. Since
     there are multiple techniques for breaking up large data into smaller pieces for
     transfer, it's possible to encounter scenarios in which the other peer does not

@@ -19,9 +19,7 @@ resolves with a {{domxref("Blob")}}.
 ## Syntax
 
 ```js
-response.blob().then(function(myBlob) {
-  // do something with myBlob
-});
+blob()
 ```
 
 ### Parameters
@@ -38,7 +36,7 @@ None.
 
 A promise that resolves with a {{domxref("Blob")}}.
 
-## Example
+## Examples
 
 In our [fetch
 request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)), we

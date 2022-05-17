@@ -22,6 +22,10 @@ The **`reportValidity()`** method of the {{domxref('HTMLInputElement')}} interfa
 reportValidity()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns `true` if the element's value has no validity problems; otherwise, returns `false`.

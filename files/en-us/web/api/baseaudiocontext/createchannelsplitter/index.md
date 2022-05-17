@@ -28,7 +28,7 @@ createChannelSplitter(numberOfOutputs)
 
 ### Parameters
 
-- numberOfOutputs
+- `numberOfOutputs`
   - : The number of channels in the input audio stream that you want to output separately;
     the default is 6 if this parameter is not specified.
 

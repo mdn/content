@@ -19,7 +19,7 @@ This article provides an interesting real-world example of using the {{HTMLEleme
 
 ## Why?
 
-After realizing, to my delight, that the nifty `<canvas>` element I'd been [reading about](https://www.whatwg.org/specs/web-apps/current-work/#dynamic) was not only soon to be supported in Firefox, but was **already** supported in the current version of Safari, I had to try a little experiment.
+After realizing, to my delight, that the nifty `<canvas>` element I'd been [reading about](https://html.spec.whatwg.org/#dynamic) was not only soon to be supported in Firefox, but was **already** supported in the current version of Safari, I had to try a little experiment.
 
 The canvas [overview](/en-US/docs/Web/API/Canvas_API) and [tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) I found here at MDN are great, but nobody had written about animation yet, so I thought I'd try a port of a basic raycaster I'd worked on a while ago, and see what sort of performance we can expect from a JavaScript-controlled pixel buffer.
 

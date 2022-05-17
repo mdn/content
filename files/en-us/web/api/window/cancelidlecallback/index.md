@@ -22,7 +22,7 @@ previously scheduled with {{domxref("window.requestIdleCallback()")}}.
 ## Syntax
 
 ```js
-window.cancelIdleCallback(handle);
+cancelIdleCallback(handle)
 ```
 
 ### Parameters
@@ -33,9 +33,9 @@ window.cancelIdleCallback(handle);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
 in the article [Cooperative Scheduling

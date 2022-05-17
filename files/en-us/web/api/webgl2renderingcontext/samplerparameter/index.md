@@ -55,7 +55,7 @@ samplerParameterf(sampler, pname, param)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

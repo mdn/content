@@ -18,7 +18,7 @@ handle.
 
 ## Value
 
-{{domxref('USVString')}}
+A string.
 
 ## Examples
 

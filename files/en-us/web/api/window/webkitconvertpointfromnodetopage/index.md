@@ -29,7 +29,7 @@ non-standard and _should not be used_.
 ## Syntax
 
 ```js
-Point = Window.convertPointFromNodeToPage(node, nodePoint);
+convertPointFromNodeToPage(node, nodePoint)
 ```
 
 ### Parameters

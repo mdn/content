@@ -26,6 +26,10 @@ browser-compat: webextensions.manifest.theme
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -241,7 +245,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
 
 ### colors
 
-These properties define the colors used for different parts of the browser. They are all optional (but note that `"accentcolor"` and `"textcolor"` were mandatory in Firefox before version 63).  How these properties affect the Firefox UI  is shown here:
+These properties define the colors used for different parts of the browser. They are all optional (but note that `"accentcolor"` and `"textcolor"` were mandatory in Firefox before version 63).  How these properties affect the Firefox UI is shown here:
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -1173,7 +1177,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>
           Here, the <code>toolbar_field_highlight_text</code> field is used to
           set the text color to a dark medium-dark green, while the highlight
-          color is  a light green.
+          color is a light green.
         </p>
       </td>
     </tr>
@@ -1277,7 +1281,7 @@ All these properties can be specified as either a string containing any valid [C
       <td><code>toolbar_text</code></td>
       <td>
         <p>
-          The color of toolbar text. This also sets the color of  text in the
+          The color of toolbar text. This also sets the color of text in the
           "Find" bar.
         </p>
         <div class="notecard note">

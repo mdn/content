@@ -10,7 +10,7 @@ tags:
   - getModifierState
 browser-compat: api.KeyboardEvent.getModifierState
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.getModifierState()`** method returns the
 current state of the specified modifier key: `true` if the modifier is active
@@ -22,16 +22,16 @@ current state of the specified modifier key: `true` if the modifier is active
 getModifierState(keyArg)
 ```
 
-### Return value
-
-A boolean value
-
 ### Parameters
 
 - _`keyArg`_
   - : A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}}
     values which represent modifier keys, or the string `"Accel"`
     {{deprecated_inline}}. This is case-sensitive.
+
+### Return value
+
+A boolean.
 
 ## Modifier keys on Internet Explorer
 

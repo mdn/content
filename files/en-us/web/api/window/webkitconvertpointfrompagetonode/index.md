@@ -1,5 +1,5 @@
 ---
-title: Window.convertPointFromPageToNode
+title: Window.convertPointFromPageToNode()
 slug: Web/API/Window/webkitConvertPointFromPageToNode
 tags:
   - API
@@ -28,7 +28,7 @@ system of the specified DOM {{domxref("Node")}}.
 ## Syntax
 
 ```js
-Point = Window.convertPointFromPageToNode(node, pagePoint);
+convertPointFromPageToNode(node, pagePoint)
 ```
 
 ### Parameters

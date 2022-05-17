@@ -32,6 +32,10 @@ Be aware that you can't call `delete()` (or
 delete()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this

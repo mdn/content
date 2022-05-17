@@ -15,16 +15,16 @@ The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface
 ## Syntax
 
 ```js
-navigator.permissions.query(PermissionDescriptor).then(function(permissionStatus) { /* ... */ })
+query(permissionDescriptor)
 ```
 
 ### Parameters
 
-- `PermissionDescriptor`
+- `permissionDescriptor`
 
   - : An object that sets options for the `query` operation consisting of a comma-separated list of name-value pairs. The available options are:
 
-    - `name`: The name of the API whose permissions you want to query. An up-to-date list of permission names can be found in the spec under the [PermissionName enum](https://w3c.github.io/permissions/#enumdef-permissionname), but bear in mind that the actual permissions supported by browsers is currently much smaller than this. Firefox for example currently supports `geolocation`, `notifications`, `push`, and `persistent-storage` (see our [`Permissions.webidl` file](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)).
+    - `name`: The name of the API whose permissions you want to query. An up-to-date list of permission names can be found in the spec under the [PermissionName enum](https://w3c.github.io/permissions/#enumdef-permissionname), but bear in mind that the actual permissions supported by browsers is currently much smaller than this. Firefox for example currently supports `geolocation`, `notifications`, `push`, and `persistent-storage` (see our [`Permissions.webidl` file](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)).
     - `userVisibleOnly`: (Push only, not supported in Firefox — see the Browser Support section below) Indicates whether you want to show a notification for every message or be able to send silent push notifications. The default is `false`.
     - `sysex`: (Midi only) Indicates whether you need and/or receive system exclusive messages. The default is `false`.
 
@@ -32,7 +32,7 @@ navigator.permissions.query(PermissionDescriptor).then(function(permissionStatus
 
 > **Note:** The `persistent-storage` permission allows an origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
 
@@ -58,7 +58,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 navigator.permissions.query({name:'geolocation'}).then(function(result) {

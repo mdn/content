@@ -34,7 +34,6 @@ In addition to the `Window` interface, the event handler property `onoffline` is
 - {{domxref("HTMLFrameSetElement")}}
 - {{domxref("SVGSVGElement")}}
 
-
 ## Examples
 
 ```js

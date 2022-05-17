@@ -30,7 +30,7 @@ Assigning a value to `effectAllowed` in events other than
 
 ## Value
 
-A {{domxref("DOMString")}} representing the drag operation that is allowed. The
+A string representing the drag operation that is allowed. The
 possible values are:
 
 - none

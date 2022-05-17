@@ -18,6 +18,14 @@ The **`Element.remove()`** method removes the element from the DOM.
 remove()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Using `remove()`

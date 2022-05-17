@@ -1,12 +1,13 @@
 ---
 title: 'aria-colindextext'
 slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-colindextext
+spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
 
 The `aria-colindextext` attribute defines a human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
@@ -63,7 +64,7 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 ## ARIAMixin API
 
 - {{domxref("Element.ariaColIndexText")}}
-  - : The  [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex.
+  - : The [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex.
 
 ## Associated roles
 
@@ -78,9 +79,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-colindextext","ARIA: aria-colindextext Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

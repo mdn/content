@@ -12,6 +12,8 @@ browser-compat: api.VideoFrame
 
 The **`VideoFrame`** interface of the {{domxref('Web Codecs API','','',' ')}} represents a frame of a video.
 
+`VideoFrame` is a {{glossary("Transferable objects","transferable object")}}.
+
 ## Description
 
 A `VideoFrame` object can be created or accessed in a number of ways. The {{domxref("MediaStreamTrackProcessor")}} breaks a media track into individual `VideoFrame` objects.

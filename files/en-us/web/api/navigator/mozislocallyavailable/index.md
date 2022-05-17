@@ -30,6 +30,10 @@ mozIsLocallyAvailable(uri, ifOffline)
   - : Allows you to specify whether or not the offline resources cache should be checked;
     specify `true` to consider the offline resources cache.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

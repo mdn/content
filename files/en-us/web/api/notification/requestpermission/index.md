@@ -18,16 +18,12 @@ The **`requestPermission()`** method of the {{domxref("Notification")}} interfac
 
 ## Syntax
 
-The latest spec has updated this method to a promise-based syntax that works like this:
-
 ```js
-Notification.requestPermission().then(function(permission) { /* ... */ });
-```
+// The latest spec has updated this method to a promise-based syntax that works like this:
+requestPermission()
 
-Previously, the syntax was based on a simple callback; this version is now deprecated:
-
-```js
-Notification.requestPermission(callback);
+// Previously, the syntax was based on a simple callback; this version is now deprecated:
+requestPermission(callback)
 ```
 
 ### Parameters
@@ -35,9 +31,9 @@ Notification.requestPermission(callback);
 - `callback` {{optional_inline}} {{deprecated_inline}}
   - : An optional callback function that is called with the permission value. Deprecated in favor of the promise return value.
 
-### Returns
+### Return value
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("DOMString")}} with the permission picked by the user. Possible values for this string are:
+A {{jsxref("Promise")}} that resolves to a string with the permission picked by the user. Possible values for this string are:
 
 - `granted`
 - `denied`

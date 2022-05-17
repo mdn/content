@@ -1,5 +1,5 @@
 ---
-title: 'NDEFReader: readingerror_event'
+title: 'NDEFReader: readingerror event'
 slug: Web/API/NDEFReader/readingerror_event
 tags:
   - Event

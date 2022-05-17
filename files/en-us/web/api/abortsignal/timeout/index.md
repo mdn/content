@@ -24,7 +24,7 @@ The timeout is based on active rather than elapsed time, and will effectively be
 ## Syntax
 
 ```js
-AbortSignal.timeout(time)
+timeout(time)
 ```
 
 ### Parameters
@@ -63,7 +63,6 @@ try {
     }
 }
 ```
-
 
 ## Specifications
 

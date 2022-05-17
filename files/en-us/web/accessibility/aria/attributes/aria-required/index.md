@@ -1,13 +1,14 @@
 ---
 title: 'aria-required'
 slug: Web/Accessibility/ARIA/Attributes/aria-required
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-required
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-required
 ---
 
 The `aria-required` attribute indicates that user input is required on the element before a form may be submitted.
@@ -56,9 +57,9 @@ This could be written semantically, without the need for JavaScript:
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRequired")}}
-  - : The  [`ariaRequired`](/en-US/docs/Web/API/Element/ariaRequired) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-required` attribute.
+  - : The [`ariaRequired`](/en-US/docs/Web/API/Element/ariaRequired) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-required` attribute.
 - {{domxref("ElementInternals.ariaRequired")}}
-  - : The  [`ariaRequired`](/en-US/docs/Web/API/ElementInternals/ariaRequired) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-required` attribute.
+  - : The [`ariaRequired`](/en-US/docs/Web/API/ElementInternals/ariaRequired) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-required` attribute.
 
 ## Associated roles
 
@@ -83,9 +84,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-required","ARIA: aria-required Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

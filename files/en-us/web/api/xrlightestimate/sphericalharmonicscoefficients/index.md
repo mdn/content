@@ -17,7 +17,7 @@ browser-compat: api.XRLightEstimate.sphericalHarmonicsCoefficients
 
 The _read-only_ **`sphericalHarmonicsCoefficients`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.
 
-Spheral harmonic lighting is a technique that uses spherical functions instead of standard lighting equations. See [Wikipedia](https://en.wikipedia.org/wiki/Spherical_harmonic_lighting) for more information.
+Spherical harmonic lighting is a technique that uses spherical functions instead of standard lighting equations. See [Wikipedia](https://en.wikipedia.org/wiki/Spherical_harmonic_lighting) for more information.
 
 ## Value
 

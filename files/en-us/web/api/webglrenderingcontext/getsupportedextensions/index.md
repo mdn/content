@@ -18,8 +18,12 @@ extensions.
 ## Syntax
 
 ```js
-gl.getSupportedExtensions();
+getSupportedExtensions()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -86,7 +86,6 @@ function fetchVideo() {
 
 You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
-
 ### Aborting a fetch operation with a timeout
 
 If you need to abort the operation on timeout then you can use the static {{domxref("AbortSignal.timeout()")}} method.
@@ -113,7 +112,6 @@ try {
 }
 ```
 
-
 ### Aborting a fetch with timeout or explicit abort
 
 `fetch()` isn't designed to combine multiple signals, so you can't abort a download "directly" due to either of {{domxref("AbortController.abort()")}} being called or an `AbortSignal` timeout (though as in the preceding example, a timeout signal will abort if triggered by _inbuilt_ browser mechanisms like a stop button).
@@ -138,7 +136,7 @@ catch (e) {
     }
 
 } finally {
-  clearTimeout(timeoutId); 
+  clearTimeout(timeoutId);
 }
 ```
 
@@ -155,4 +153,4 @@ catch (e) {
 ## See also
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald

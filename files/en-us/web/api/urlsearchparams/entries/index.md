@@ -15,14 +15,14 @@ The **`entries()`** method of the
 {{domxref("URLSearchParams")}} interface returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing iteration through all key/value
 pairs contained in this object. The iterator returns key/value pairs in the same order as they appear in the query string. The key and value of each pair are
-{{domxref("USVString")}} objects.
+string objects.
 
 {{availableinworkers}}
 
 ## Syntax
 
 ```js
-searchParams.entries();
+entries()
 ```
 
 ### Parameters

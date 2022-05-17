@@ -19,6 +19,10 @@ The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{j
 getPorts()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects.

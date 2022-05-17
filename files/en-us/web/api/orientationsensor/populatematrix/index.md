@@ -51,7 +51,7 @@ may only be read from one of its derived classes.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

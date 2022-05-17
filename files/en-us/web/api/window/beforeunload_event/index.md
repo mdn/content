@@ -87,7 +87,6 @@ nameInput.addEventListener("input", (event) => {
 
 {{Compat}}
 
-
 ## Compatibility notes
 
 The HTML specification states that authors should use the
@@ -106,20 +105,20 @@ string. For example:
   leave - data you have entered may not be saved." (see {{bug("588292")}}).
 - Chrome displays the string, "Do you want to leave this site? Changes you made may
   not be saved." (see [Chrome Platform
-  Status](https://www.chromestatus.com/feature/5349061406228480)).
+  Status](https://chromestatus.com/feature/5349061406228480)).
 
 Internet Explorer does not respect the `null` return value and will display
 this to users as "null" text. You have to use `undefined` to skip the prompt.
 
 In some browsers, calls to {{domxref("window.alert()")}},
 {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} may be ignored
-during this event. See the [HTML specification](https://www.w3.org/TR/html5/webappapis.html#user-prompts)
+during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#user-prompts)
 for more details.
 
 Note also, that various browsers ignore the result of the event and do not ask the user
 for confirmation at all. In such cases, the document will always be unloaded
 automatically. Firefox has a switch named `dom.disable_beforeunload` in
-_about:config_ to enable this behavior. As of Chrome 60, the confirmation [will be skipped](https://www.chromestatus.com/feature/5082396709879808) if
+_about:config_ to enable this behavior. As of Chrome 60, the confirmation [will be skipped](https://chromestatus.com/feature/5082396709879808) if
 the user has not performed a gesture in the frame or page since it was loaded. Pressing
 F5 in the page seems to count as user interaction, whereas mouse-clicking the refresh
 arrow or pressing F5 with Chrome DevTools focused does not count as user interaction (as

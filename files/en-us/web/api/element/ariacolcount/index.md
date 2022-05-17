@@ -17,7 +17,7 @@ The **`ariaColCount`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

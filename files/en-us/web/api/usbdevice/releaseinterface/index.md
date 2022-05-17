@@ -21,7 +21,7 @@ claimed interface is released from exclusive access.
 ## Syntax
 
 ```js
-var promise = USBDevice.releaseInterface(interfaceNumber)
+releaseInterface(interfaceNumber)
 ```
 
 ### Parameters

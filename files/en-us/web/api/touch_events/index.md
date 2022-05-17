@@ -285,7 +285,7 @@ This section provides additional tips on how to handle touch events in your web 
 
 ### Handling clicks
 
-Since calling `preventDefault()` on a {{domxref("Element/touchstart_event", "touchstart")}} or the first {{domxref("Element/touchmove_event", "touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call `preventDefault()` on `touchmove` rather than `touchstart`. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to refiring touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)
+Since calling `preventDefault()` on a {{domxref("Element/touchstart_event", "touchstart")}} or the first {{domxref("Element/touchmove_event", "touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call `preventDefault()` on `touchmove` rather than `touchstart`. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to re-firing touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)
 
 ```js
 function onTouch(evt) {
@@ -329,8 +329,6 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 
 ## Browser compatibility
 
-### Touch
-
 Touch events are typically available on devices with a touch screen, but many browsers make the touch events API unavailable on all desktop devices, even those with touch screens.
 
 The reason for this is that some websites use the availability of parts of the touch events API as an indicator that the browser is running on a mobile device. If the touch events API is available, these websites will assume a mobile device and serve mobile-optimized content. This may then provide a poor experience for users of desktop devices that have touch screens.
@@ -338,11 +336,3 @@ The reason for this is that some websites use the availability of parts of the t
 To support both touch and mouse across all types of devices, use [pointer events](/en-US/docs/Web/API/Pointer_events) instead.
 
 {{Compat}}
-
-### Firefox, touch events, and multiprocess (e10s)
-
-In Firefox, touch events are disabled when e10s (electrolysis; [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox)) is disabled. e10s is on by default in Firefox but can end up becoming disabled in certain situations, for example when certain accessibility tools or Firefox add-ons are installed that require e10s to be disabled to work. This means that even on a touchscreen-enabled desktop/laptop, touch events won't be enabled.
-
-You can test whether e10s is disabled by going to `about:support` and looking at the "Multiprocess Windows" entry in the "Application Basics" section. 1/1 means it is enabled, 0/1 means disabled.
-
-If you want to force e10s to be on — to explicitly re-enable touch events support — you need to go to `about:config` and create a new Boolean preference `browser.tabs.remote.force-enable`. Set it to `true`, restart the browser, and e10s will be enabled regardless of any other settings.

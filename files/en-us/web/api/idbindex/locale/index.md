@@ -19,7 +19,7 @@ The **`locale`** read-only property of the {{domxref("IDBIndex")}} interface ret
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

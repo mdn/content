@@ -24,7 +24,7 @@ FileSystemDirectoryHandle.removeEntry(name).then...
 ### Parameters
 
 - _name_
-  - : A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
+  - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the entry you wish to remove.
 - _options_ {{optional_inline}}
 
@@ -39,7 +39,7 @@ A {{jsxref('Promise')}} which resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the name is not a valid string or contains characters not allowed on the file
     system
 - `NotAllowedError` {{domxref("DOMException")}}

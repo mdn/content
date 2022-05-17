@@ -108,7 +108,7 @@ try {
 // @file:///C:/example.html:7:6
 ```
 
-You can also use the `//# sourceURL` directive to name an eval source. See also [Debug eval sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) in the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) docs and this [blog post](http://fitzgeraldnick.com/weblog/59/).
+You can also use the `//# sourceURL` directive to name an eval source. See also [Debug eval sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) in the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) docs and this [blog post](https://fitzgeraldnick.com/2014/12/05/name-eval-scripts.html).
 
 ## Specifications
 
@@ -120,7 +120,6 @@ Not part of any standard.
 
 ## See also
 
-- [Components.stack](/en-US/docs/Components.stack)
 - External projects: [TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/stacktracejs/stacktrace.js)
 - MSDN: [archived error.stack docs](https://web.archive.org/web/20220312071445/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-- [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)
+- [Overview of the V8 JavaScript stack trace API](https://v8.dev/docs/stack-trace-api)

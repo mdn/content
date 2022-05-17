@@ -61,7 +61,7 @@ This article provides information about the changes in Firefox 65 that will affe
 
     The `<div>` with `none` set on it is now non-selectable. Previously this value would have been overridden by the `all` value set on the parent element.
 
-  - non-`contenteditable` elements nested inside `contenteditable` elements  are now selectable.
+  - non-`contenteditable` elements nested inside `contenteditable` elements are now selectable.
   - `user-select` now behaves consistently inside and outside shadow DOM.
   - The proprietary `-moz-text` value has been removed.
 
@@ -121,7 +121,7 @@ _No changes._
 
 #### Canvas and WebGL
 
-- The  {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} and {{domxref("EXT_texture_compression_rgtc")}} texture compression extensions have been exposed to WebGL1 and WebGL2 contexts ({{bug(1507263)}}).
+- The {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} and {{domxref("EXT_texture_compression_rgtc")}} texture compression extensions have been exposed to WebGL1 and WebGL2 contexts ({{bug(1507263)}}).
 
 #### Removals
 

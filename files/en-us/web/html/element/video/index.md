@@ -336,11 +336,33 @@ This code watches for audio tracks to be added to and removed from the element, 
 
 You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{event("removetrack")}} events.
 
+### Server support for video
+
+If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).
+
+If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
+
+```
+AddType video/ogg .ogm
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+```
+
+If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in `httpd.conf`.
+
+```
+AddType video/webm .webm
+```
+
+Your web host may provide an easy interface to MIME type configuration changes for new technologies until a global update naturally occurs.
+
 ## Examples
 
-### Simple video example
+### Single source
 
 This example plays a video when activated, providing the user with the browser's default video controls to control playback.
+
+#### HTML
 
 ```html
 <!-- Simple video example -->
@@ -358,13 +380,17 @@ and watch it with your favorite video player!
 </video>
 ```
 
-{{EmbedLiveSample('Simple_video_example', '640', '370', '', 'Web/HTML/Element/video')}}
+#### Result
+
+{{EmbedLiveSample('Single source', '', '400')}}
 
 Until the video starts playing, the image provided in the `poster` attribute is displayed in its place. If the browser doesn't support video playback, the fallback text is displayed.
 
-### Multiple sources example
+### Multiple sources
 
 This example builds on the last one, offering three different sources for the media; this allows the video to be watched regardless of which video codecs are supported by the browser.
+
+#### HTML
 
 ```html
 <!-- Using multiple sources as fallbacks for a video tag -->
@@ -386,31 +412,13 @@ This example builds on the last one, offering three different sources for the me
 </video>
 ```
 
-{{EmbedLiveSample('Multiple_sources_example', '640', '370')}}
+#### Result
+
+{{EmbedLiveSample('Multiple sources', '', '400')}}
 
 First [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) is tried. If that can't be played, then [MP4](/en-US/docs/Web/Media/Formats/Containers#mp4) is tried. Finally, [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
 Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) for audio.
-
-### Server support for video
-
-If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).
-
-If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
-
-```
-AddType video/ogg .ogm
-AddType video/ogg .ogv
-AddType video/ogg .ogg
-```
-
-If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in `httpd.conf`.
-
-```
-AddType video/webm .webm
-```
-
-Your web host may provide an easy interface to MIME type configuration changes for new technologies until a global update naturally occurs.
 
 ## Accessibility concerns
 

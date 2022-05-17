@@ -18,7 +18,7 @@ passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
 ## Syntax
 
 ```js
-void gl.bindVertexArray(vertexArray);
+bindVertexArray(vertexArray)
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ void gl.bindVertexArray(vertexArray);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

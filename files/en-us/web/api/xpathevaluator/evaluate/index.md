@@ -20,13 +20,16 @@ executes an XPath expression on the given node or document and returns an
 ## Syntax
 
 ```js
-XPathResult XPathEvaluator.evaluate(expression, contextNode, resolver, type, result);
+evaluate(expression, contextNode)
+evaluate(expression, contextNode, resolver)
+evaluate(expression, contextNode, resolver, type)
+evaluate(expression, contextNode, resolver, type, result)
 ```
 
 ### Parameters
 
 - expression
-  - : A {{domxref("DOMString")}} representing the XPath expression to be parsed and
+  - : A string representing the XPath expression to be parsed and
     evaluated.
 - contextNode
   - : A {{domxref("Node")}} representing the context to use for evaluating the expression.
@@ -77,7 +80,7 @@ If the provided context node is not a type permitted as an XPath context node or
 request type is not permitted by the {{domxref("XPathEvaluator")}}, a
 {{domxref("DOMException")}} of type `NOT_SUPPORTED_ERR` is raised.
 
-## Example
+## Examples
 
 The following example shows the use of the `evaluate()` method.
 
@@ -98,7 +101,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

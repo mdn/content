@@ -141,10 +141,10 @@ We can make more sense of this by adding some CSS:
 
 ##### CSS
 
-We add a new style for `<kbd>` elements, `key`, which we can apply when rendering keyboard keys:
+We add a new selector for nested `<kbd>` elements, `kbd>kbd`, which we can apply when rendering keyboard keys:
 
 ```css
-kbd.key {
+kbd>kbd {
   border-radius: 3px;
   padding: 1px 2px 0;
   border: 1px solid black;
@@ -156,7 +156,7 @@ kbd.key {
 Then we update the HTML to use this class on the keys in the output to be presented:
 
 ```html
-<p>You can also create a new document by pressing <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd>.</p>
+<p>You can also create a new document by pressing <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.</p>
 ```
 
 ##### Result
@@ -194,7 +194,7 @@ Document</samp></kbd></kbd>.</p>
 to confirm once you've entered the name of the new file.</p>
 ```
 
-This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are  contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
+This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
 
 #### Result
 

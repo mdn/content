@@ -12,7 +12,7 @@ tags:
   - Text
   - text entry
   - text input
-browser-compat: html.elements.input.input-text
+browser-compat: html.elements.input.type_text
 ---
 {{HTMLRef("Input_types")}}
 
@@ -25,7 +25,7 @@ browser-compat: html.elements.input.input-text
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the text contained in
+        A string representing the text contained in
         the text field.
       </td>
     </tr>
@@ -72,7 +72,7 @@ browser-compat: html.elements.input.input-text
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
+The {{htmlattrxref("value", "input")}} attribute is a string that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
 
 ```js
 let theText = myTextInput.value;

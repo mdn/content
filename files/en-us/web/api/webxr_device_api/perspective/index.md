@@ -69,7 +69,7 @@ function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
 
 The values of `near` and `far` are obtained directly from the frustum; they're the distance from the origin to the closest point on the near clipping plane and the far clipping plane, respectively. The aspect ratio is the value obtained by dividing the width of the field of view by its height. If the target display uses a 16:9 aspect ratio, the value used for `aspectRatio` should be `16/9`, or 1.7777777778.
 
-If you're using a library or framework that provides matrix math functions, it will almost certainly have a similar function include. For example, in the popular [glMatrix](http://glmatrix.net/) library, you'll find this in the function [`mat4.perspective()`](http://glmatrix.net/docs/module-mat4.html#.perspective).
+If you're using a library or framework that provides matrix math functions, it will almost certainly have a similar function include. For example, in the popular [glMatrix](https://glmatrix.net/) library, you'll find this in the function [`mat4.perspective()`](https://glmatrix.net/docs/module-mat4.html#.perspective).
 
 Regardless of where it comes from, once you have the projection matrix, you can use it when calling WebGL to render your scene.
 

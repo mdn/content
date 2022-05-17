@@ -27,31 +27,28 @@ data.
 
 ## Syntax
 
-Older callback syntax:
-
 ```js
-baseAudioContext.decodeAudioData(ArrayBuffer, successCallback, errorCallback);
-```
+// Older callback syntax:
+decodeAudioData(arrayBuffer, successCallback)
+decodeAudioData(arrayBuffer, successCallback, errorCallback)
 
-Newer promise-based syntax:
-
-```js
-Promise<decodedData> baseAudioContext.decodeAudioData(ArrayBuffer);
+// Newer promise-based syntax:
+decodeAudioData(arrayBuffer)
 ```
 
 ### Parameters
 
-- _ArrayBuffer_
+- `arrayBuffer`
   - : An ArrayBuffer containing the audio data to be decoded, usually grabbed from
     {{domxref("XMLHttpRequest")}}, {{domxref("fetch()")}} or
     {{domxref("FileReader")}}.
-- _successCallback_
+- `successCallback`
   - : A callback function to be invoked when the decoding successfully finishes. The
     single argument to this callback is an {{domxref("AudioBuffer")}} representing the
     _decodedData_ (the decoded PCM audio data). Usually you'll want to put the
     decoded data into an {{domxref("AudioBufferSourceNode")}}, from which it can be played
     and manipulated how you want.
-- _errorCallback_
+- `errorCallback` {{optional_inline}}
   - : An optional error callback, to be invoked if an error occurs when the audio data is
     being decoded.
 
@@ -60,7 +57,7 @@ Promise<decodedData> baseAudioContext.decodeAudioData(ArrayBuffer);
 Void, or a {{jsxref("Promise") }} object that fulfills with the
 _decodedData_.
 
-## Example
+## Examples
 
 In this section we will first cover the older callback-based system and then the newer
 promise-based syntax.

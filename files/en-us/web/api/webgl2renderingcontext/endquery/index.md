@@ -17,7 +17,7 @@ target.
 ## Syntax
 
 ```js
-void gl.endQuery(target);
+endQuery(target)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ void gl.endQuery(target);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

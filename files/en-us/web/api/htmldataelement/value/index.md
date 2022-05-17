@@ -14,12 +14,12 @@ browser-compat: api.HTMLDataElement.value
 {{APIRef("HTML DOM")}}
 
 The **`value`** property of the {{domxref("HTMLDataElement")}}
-interface returns a {{domxref("DOMString")}} reflecting the {{htmlattrxref("value",
+interface returns a string reflecting the {{htmlattrxref("value",
   "data")}} HTML attribute.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

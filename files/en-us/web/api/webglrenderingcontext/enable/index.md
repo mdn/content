@@ -48,7 +48,7 @@ enable(cap)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -389,28 +389,9 @@ And the following
 </div>
 ```
 
-## Other examples
+### Representing structured data for a book
 
-### HTML
-
-```html
-<dl itemscope
-  itemtype="https://schema.org/Book"
-  itemid="urn:isbn:0-374-22848-5<">
- <dt>Title
-   <dd
-    itemprop="title">Owls of the Eastern Ice
- <dt>Author
-   <dd
-     itemprop="author">Jonathan C Slaght
- <dt>Publication date
- <dd><time
-   itemprop="datePublished"
-   datetime="2020-08-04">August 4 2020</time>
-</dl>
-```
-
-### Structured data
+This example uses microdata attributes to represent the following structured data:
 
 <table class="standard-table">
   <tbody>
@@ -437,9 +418,28 @@ And the following
   </tbody>
 </table>
 
-### Result
+#### HTML
 
-{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}
+```html
+<dl itemscope
+  itemtype="https://schema.org/Book"
+  itemid="urn:isbn:0-374-22848-5<">
+ <dt>Title
+   <dd
+    itemprop="title">Owls of the Eastern Ice
+ <dt>Author
+   <dd
+     itemprop="author">Jonathan C Slaght
+ <dt>Publication date
+ <dd><time
+   itemprop="datePublished"
+   datetime="2020-08-04">August 4 2020</time>
+</dl>
+```
+
+#### Result
+
+{{EmbedLiveSample('Representing structured data for a book')}}
 
 ## Specifications
 

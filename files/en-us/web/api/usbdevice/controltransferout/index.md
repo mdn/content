@@ -22,7 +22,7 @@ transmitted to the USB device.
 ## Syntax
 
 ```js
-var promise = USBDevice.controlTransferOut(setup, data)
+controlTransferOut(setup, data)
 ```
 
 ### Parameters

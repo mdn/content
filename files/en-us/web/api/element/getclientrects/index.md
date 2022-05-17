@@ -30,6 +30,10 @@ Most elements only have one border box each, but a multiline [inline element](/e
 getClientRects()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The returned value is a collection of {{DOMxRef("DOMRect")}} objects, one for each CSS

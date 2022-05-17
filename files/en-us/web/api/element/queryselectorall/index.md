@@ -53,8 +53,8 @@ each descendant node that matches at least one of the specified selectors.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified `selectors` string is not valid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified `selectors` string is not valid.
 
 ## Examples
 

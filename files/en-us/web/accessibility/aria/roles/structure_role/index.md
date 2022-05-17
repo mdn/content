@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: structure role'
 slug: Web/Accessibility/ARIA/Roles/structure_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -10,6 +10,7 @@ tags:
   - Abstract Role
   - ARIA structure
   - Reference
+spec-urls: https://w3c.github.io/aria/#structure
 ---
 
 The `structure` role is for document structural elements.
@@ -30,9 +31,7 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#structure","ARIA: structure role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 
@@ -44,7 +43,7 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 - [ARIA: `sectionhead` role](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)
 
 <div class="hidden">
-<!-- these shouldn't be used so we shouldn't link to them 
+<!-- these shouldn't be used so we shouldn't link to them
 - [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
 - [ARIA: `document` role](/en-US/docs/Web/Accessibility/ARIA/
 "Roles/document_role)

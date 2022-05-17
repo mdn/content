@@ -93,7 +93,7 @@ function drop(dropevent) {
 
 ### Result
 
-{{EmbedLiveSample('Example', 600) }}
+{{EmbedLiveSample('Examples', 600) }}
 
 ## Specifications
 

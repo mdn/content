@@ -1,5 +1,5 @@
 ---
-title: TextEncoder.prototype.encode()
+title: TextEncode.encode()
 slug: Web/API/TextEncoder/encode
 tags:
   - API
@@ -12,10 +12,10 @@ browser-compat: api.TextEncoder.encode
 ---
 {{APIRef("Encoding API")}}
 
-The **`TextEncoder.prototype.encode()`** method takes a
+The **`TextEncoder.encode()`** method takes a
 string as input, and returns a {{jsxref("Global_Objects/Uint8Array",
   "Uint8Array")}} containing the text given in parameters encoded with the specific method
-for that `TextEncoder` object.
+for that {{domxref("TextEncoder")}} object.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ encode(string)
 ### Parameters
 
 - `string`
-  - : Is a string containing the text to encode.
+  - : A string containing the text to encode.
 
 ### Return value
 

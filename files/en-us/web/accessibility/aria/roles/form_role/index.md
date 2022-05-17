@@ -9,6 +9,9 @@ tags:
   - Reference
   - Role
   - form
+spec-urls:
+  - https://w3c.github.io/aria/#form
+  - https://w3c.github.io/aria-practices/#aria_lh_form
 ---
 The `form` role can be used to identify a group of elements on a page that provide equivalent functionality to an HTML form.
 
@@ -107,14 +110,11 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 ### Prefer HTML
 
-Using the {{HTMLElement('form')}} element  will automatically communicate a section has a role of `form`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('form')}} element will automatically communicate a section has a role of `form`. If at all possible, prefer using it instead.
 
 ## Specifications
 
-| Specification                                                                    | Status                                           |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#form","ARIA Form Role")}}                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#form","Role Form")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

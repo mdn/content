@@ -24,20 +24,20 @@ equivalent to `collection.namedItem("value")`.
 ## Syntax
 
 ```js
-var item = collection.namedItem(str);
-var item = collection[str];
+namedItem(str)
+// or collection[str]
 ```
 
 ### Parameters
 
-- `str` is a {{domxref("DOMString")}}
+- `str` is a string
 
 ### Return value
 
 - `item` is a {{domxref("RadioNodeList")}} , {{domxref("Element")}}, or
   {{jsxref("null")}}.
 
-## Example
+## Examples
 
 ### HTML
 

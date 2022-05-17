@@ -11,9 +11,9 @@ Blink is an open-source browser layout engine developed by Google as part of Chr
 
 ## See also
 
-- Blink project [home page](https://www.chromium.org/blink)
+- Blink project [home page](https://www.chromium.org/blink/)
 - [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) on Wikipedia
-- [FAQ](https://www.chromium.org/blink/developer-faq) on Blink
+- [FAQ](https://www.chromium.org/blink/developer-faq/) on Blink
 - [Glossary](/en-US/docs/Glossary)
 
   - {{glossary("Google Chrome")}}

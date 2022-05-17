@@ -32,6 +32,10 @@ video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
 requestPictureInPicture()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} that will resolve to a {{domxref("PictureInPictureWindow")}}

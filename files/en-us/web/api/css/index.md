@@ -51,7 +51,3 @@ _No inherited static methods_.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)

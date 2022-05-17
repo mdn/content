@@ -35,35 +35,40 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
+match(request)
 match(request, options)
 ```
 
 ### Parameters
 
-- request
+- `request`
   - : The {{domxref("Request")}} you want to match. This can be a {{domxref("Request")}}
     object or a URL string.
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object whose properties control how matching is done in the `match`
     operation. The available options are:
 
-    - `ignoreSearch`: A boolean value that specifies whether the
-      matching process should ignore the query string in the URL. For example, if set
-      to `true`, the `?value=bar` part of
-      `http://foo.com/?value=bar` would be ignored when performing a match.
-      It defaults to `false`.
-    - `ignoreMethod`: A boolean value that, when set to
-      `true`, prevents matching operations from validating the
-      {{domxref("Request")}} `http` method (normally only `GET`
-      and `HEAD` are allowed.) It defaults to `false`.
-    - `ignoreVary`: A boolean value that, when set to
-      `true,` tells the matching operation not to perform `VARY`
-      header matching. In other words, if the URL matches you will get a match
-      regardless of whether the {{domxref("Response")}} object has a `VARY`
-      header or not. It defaults to `false`.
-    - `cacheName`: A string that represents a specific
-      cache to search within.
+    - `ignoreSearch`
+      - : A boolean value that specifies whether the
+        matching process should ignore the query string in the URL. For example, if set
+        to `true`, the `?value=bar` part of
+        `http://foo.com/?value=bar` would be ignored when performing a match.
+        It defaults to `false`.
+    - `ignoreMethod`
+      - : A boolean value that, when set to
+        `true`, prevents matching operations from validating the
+        {{domxref("Request")}} `http` method (normally only `GET`
+        and `HEAD` are allowed.) It defaults to `false`.
+    - `ignoreVary`
+      - : A boolean value that, when set to
+        `true,` tells the matching operation not to perform `VARY`
+        header matching. In other words, if the URL matches you will get a match
+        regardless of whether the {{domxref("Response")}} object has a `VARY`
+        header or not. It defaults to `false`.
+    - `cacheName`
+      - : A string that represents a specific
+        cache to search within.
 
 ### Return value
 

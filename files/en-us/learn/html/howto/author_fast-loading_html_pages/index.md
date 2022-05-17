@@ -12,7 +12,7 @@ tags:
 ---
 These tips are based on common knowledge and experimentation.
 
-An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and Internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
+An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
 
 Optimizing page load performance is not just for content which will be viewed by narrowband dial-up or mobile device visitors. It is just as important for broadband content and can lead to dramatic improvements even for your visitors with the fastest connections.
 
@@ -42,7 +42,7 @@ A CDN is a geographically distributed network of servers that work together to s
 
 Further reading:
 
-- [Understanding CDNs](https://www.incapsula.com/cdn-guide/what-is-cdn-how-it-works.html)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works)
 
 ### Reduce domain lookups
 
@@ -61,7 +61,7 @@ So, in particular, for pages which are generated dynamically, a little research 
 More information:
 
 1. [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2. [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/2005/05/http-304)
 3. [HTTP ETag on Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag)
 4. [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 

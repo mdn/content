@@ -28,6 +28,14 @@ document fragment valid.
 extractContents()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Basic example

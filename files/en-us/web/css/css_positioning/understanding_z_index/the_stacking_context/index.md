@@ -23,7 +23,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with a {{cssxref("position")}} value `fixed` or `sticky` (sticky for all mobile browsers, but not older desktop).
 - Element that is a child of a [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) container, with {{cssxref("z-index")}} value other than `auto`.
 - Element that is a child of a {{cssxref("grid")}} container, with {{cssxref("z-index")}} value other than `auto`.
-- Element with a {{cssxref("opacity")}} value less than `1` (See [the specification for opacity](https://www.w3.org/TR/css3-color/#transparency)).
+- Element with a {{cssxref("opacity")}} value less than `1` (See [the specification for opacity](https://www.w3.org/TR/css-color-3/#transparency)).
 - Element with a {{cssxref("mix-blend-mode")}} value other than `normal`.
 - Element with any of the following properties with value other than `none`:
 

@@ -18,7 +18,7 @@ string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/CSS_Sele
 
 ## Value
 
-A {{DOMxRef('CSSOMString')}} containing one of the following values:
+A string containing one of the following values:
 
 - {{CSSxRef('::before', '"::before"')}}
 - {{CSSxRef('::after', '"::after"')}}

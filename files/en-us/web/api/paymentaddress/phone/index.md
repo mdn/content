@@ -25,7 +25,7 @@ of the recipient or contact person.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the telephone number for the recipient of the
+A string containing the telephone number for the recipient of the
 shipment or of the responsible party for payment. If no phone number is available, this
 value is an empty string.
 

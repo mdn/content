@@ -119,7 +119,7 @@ There are two multipart types:
     [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#message)
 - `multipart`
   - : Data that consists of multiple components which may individually have different MIME types.
-    Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
+    Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "", "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
     "Partial Content" response returned when the fetched data is only part of the content, such as is delivered using the {{HTTPHeader("Range")}} header).
     [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
 
@@ -198,7 +198,7 @@ The following image types are used commonly enough to be considered _safe_ for u
 - [`image/svg+xml`](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
 - [`image/webp`](/en-US/docs/Web/Media/Formats/Image_types#webp_image): Web Picture format (WEBP)
 
-The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types##common_image_file_types) provides information and recommendations about when to use the different image formats.
+The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types#common_image_file_types) provides information and recommendations about when to use the different image formats.
 
 ### Audio and video types
 

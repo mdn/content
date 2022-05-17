@@ -49,6 +49,10 @@ log(msg, subst1, /* ..., */ substN])
 See [Outputting text to
 the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Difference between log() and dir()
 
 You might ask yourself what's the difference between {{domxref("console.dir()")}} and

@@ -60,7 +60,7 @@ getBufferSubData(target, srcByteOffset, dstData, dstOffset, length)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -88,7 +88,7 @@ The returned _measure_ will have the following property values:
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : This can be thrown in any case where the start, end or duration might be ambiguous:
 
     - Both `endMark` and `MeasureOptions` are specified.
@@ -106,7 +106,7 @@ The returned _measure_ will have the following property values:
 - `DataCloneError` {{domxref("DOMException")}}
   - : The `MeasureOptions.detail` value is non-`null` and cannot be serialized using the HTML "StructuredSerialize" algorithm.
 
-- `RangeError`
+- {{jsxref("RangeError")}}
   - : The `MeasureOptions.detail` value is non-`null` and memory cannot be allocated during serialization using the HTML "StructuredSerialize" algorithm.
 
 ## Examples

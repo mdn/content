@@ -14,7 +14,7 @@ browser-compat: api.HTMLObjectElement.type
 {{APIRef("HTML DOM")}}
 
 The **`type`** property of the
-{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+{{domxref("HTMLObjectElement")}} interface returns a string that
 reflects the {{htmlattrxref("type", "object")}} HTML attribute, specifying the MIME type
 of the resource.
 

@@ -12,7 +12,7 @@ browser-compat: api.URL.pathname
 {{ApiRef("URL API")}}
 
 The **`pathname`** property of the {{domxref("URL")}} interface
-is a {{domxref("USVString")}} containing an initial `'/'` followed by the
+is a string containing an initial `'/'` followed by the
 path of the URL not including the query string or fragment (or the empty string if there
 is no path).
 
@@ -20,7 +20,7 @@ is no path).
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

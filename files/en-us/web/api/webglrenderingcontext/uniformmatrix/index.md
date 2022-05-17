@@ -31,9 +31,9 @@ expected to have 4, 9 or 16 floats.
 ## Syntax
 
 ```js
-WebGLRenderingContext.uniformMatrix2fv(location, transpose, value);
-WebGLRenderingContext.uniformMatrix3fv(location, transpose, value);
-WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
+uniformMatrix2fv(location, transpose, value)
+uniformMatrix3fv(location, transpose, value)
+uniformMatrix4fv(location, transpose, value)
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

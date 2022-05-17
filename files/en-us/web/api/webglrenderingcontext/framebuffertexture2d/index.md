@@ -95,7 +95,7 @@ framebufferTexture2D(target, attachment, textarget, texture, level)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

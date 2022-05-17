@@ -32,8 +32,8 @@ In the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), this is exposed as `"
 ## Syntax
 
 ```js
-LockManager.request(name, callback)
-LockManager.request(name, {options}, callback)
+request(name, callback)
+request(name, options, callback)
 ```
 
 ### Parameters

@@ -20,9 +20,13 @@ interface clears all keys stored in a given `Storage` object.
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

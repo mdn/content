@@ -37,6 +37,10 @@ hasFeature(feature, version)
   - : A string representing the version of the specification defining
     the feature.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}

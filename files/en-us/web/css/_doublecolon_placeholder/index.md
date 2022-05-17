@@ -38,7 +38,7 @@ Placeholder text typically has a lighter color treatment to indicate that it is 
 
 It is important to ensure that the contrast ratio between the color of the placeholder text and the background of the input is high enough that people experiencing low vision conditions will be able to read it while also making sure there is enough of a difference between the placeholder text and input text color that users do not mistake the placeholder for inputted data.
 
-Color contrast ratio is determined by comparing the luminosity of the placeholder text and the input background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and bold or larger, or 24px or larger.
+Color contrast ratio is determined by comparing the luminosity of the placeholder text and the input background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and bold or larger, or 24px or larger.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
@@ -64,7 +64,7 @@ With this implementation, the hint content is available even if information is e
 
 Placeholder text will appear with the same styling as user-entered text content when rendered in [Windows High Contrast Mode](/en-US/docs/Web/CSS/@media/-ms-high-contrast). This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.
 
-- [Greg Whitworth — How to use -ms-high-contrast](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
+- [Greg Whitworth — How to use -ms-high-contrast](https://www.gwhitworth.com/posts/2017/how-to-use-ms-high-contrast/)
 
 ### Labels
 

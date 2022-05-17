@@ -137,7 +137,7 @@ inputElem.addEventListener('change', changeGridAutoFlow);
 
 #### Result
 
-{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "230px")}}
+{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "260px")}}
 
 ## Specifications
 
@@ -151,4 +151,4 @@ inputElem.addEventListener('change', changeGridAutoFlow);
 
 - Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
 - Grid Layout Guide: _[Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
+- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

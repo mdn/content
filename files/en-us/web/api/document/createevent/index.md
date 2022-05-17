@@ -22,9 +22,10 @@ returned object should be first initialized and can then be passed to
 ```js
 createEvent(type)
 ```
+
 ### Parameters
 
-- `type` 
+- `type`
   - : A string that represents the type of event to be
   created. Possible event types include `"UIEvents"`,
   `"MouseEvents"`, `"MutationEvents"`, and

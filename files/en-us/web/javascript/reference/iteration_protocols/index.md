@@ -164,7 +164,7 @@ console.log(someString + ''); // "hi"
 
 ### Built-in iterables
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, and {{jsxref("Set")}} are all built-in iterables, because each of their prototype objects implements an `@@iterator` method.
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and {{jsxref("Intl.Segments")}} are all built-in iterables, because each of their prototype objects implements an `@@iterator` method. In addition, the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object and some DOM collection types such as {{domxref("NodeList")}} are also iterables.
 
 ### User-defined iterables
 
@@ -213,7 +213,9 @@ new WeakSet(function* () {
 #### See also
 
 - {{jsxref("Promise.all()", "Promise.all(<var>iterable</var>)")}}
+- {{jsxref("Promise.allSettled()", "Promise.allSettled(<var>iterable</var>)")}}
 - {{jsxref("Promise.race()", "Promise.race(<var>iterable</var>)")}}
+- {{jsxref("Promise.any()", "Promise.any(<var>iterable</var>)")}}
 - {{jsxref("Array.from()", "Array.from(<var>iterable</var>)")}}
 
 ### Syntaxes expecting iterables

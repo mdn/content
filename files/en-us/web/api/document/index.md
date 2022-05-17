@@ -127,7 +127,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 _The `Document` interface is extended with additional event handlers defined in [GlobalEventHandlers](/en-US/docs/Web/API/GlobalEventHandlers#event_handlers)._
 
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
 
 ### Deprecated properties
 
@@ -181,7 +181,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.adoptNode()")}}
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -251,7 +251,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
   - : Replaces entities, normalizes text nodes, etc.
 - {{DOMxRef("Document.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
 - {{DOMxRef("Document.querySelectorAll()")}}
@@ -475,30 +475,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
     Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.
-
-## Non-standard extensions {{Non-standard_Inline}}
-
-{{non-standard_header}}
-
-### Firefox notes
-
-Firefox defines some non-standard methods:
-
-- {{DOMxRef("Document.execCommandShowHelp()")}} {{deprecated_inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
-- {{DOMxRef("Document.getBoxObjectFor()")}} {{deprecated_inline}}
-  - : Use the {{DOMxRef("Element.getBoundingClientRect()")}} method instead.
-- {{DOMxRef("Document.loadOverlay()")}} {{deprecated_inline}}
-  - : Loads a [XUL overlay](/en-US/docs/XUL_Overlays) dynamically. This only works in XUL documents.
-- {{DOMxRef("Document.queryCommandText()")}} {{deprecated_inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14 {{GeckoRelease("14")}}.
-
-### Internet Explorer notes
-
-Microsoft defines some non-standard properties:
-
-- {{DOMxRef("Document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](https://developer.mozilla.org/en-US/docs/Web/API/Document).
 
 ## Specifications
 

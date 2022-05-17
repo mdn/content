@@ -111,7 +111,6 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
       {{jsxref("null")}})
 
 - `source`
-
   - : One of the following objects can be used as a pixel source for the texture:
 
     - {{domxref("ImageBitmap")}},
@@ -121,9 +120,8 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - {{domxref("HTMLVideoElement")}}.
 
 - `srcData`
-
 - :{{domxref("ArrayBufferView")}}
-- 
+
 - offset
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
     store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the
@@ -131,7 +129,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

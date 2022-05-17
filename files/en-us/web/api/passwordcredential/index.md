@@ -28,11 +28,11 @@ The interface of the [Credential Management API](/en-US/docs/Web/API/Credential_
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 - {{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}{{securecontext_inline}}
-  - : A {{domxref("USVString")}} containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
+  - : A string containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
 - {{domxref("PasswordCredential.name")}} {{readonlyinline}}{{securecontext_inline}}
-  - : A {{domxref("USVString")}} containing a human-readable public name for display in a credential chooser.
+  - : A human-readable string that provides public name for display in a credential chooser.
 - {{domxref("PasswordCredential.password")}}{{readonlyinline}}{{securecontext_inline}}
-  - : A {{domxref("USVString")}} containing the password of the credential.
+  - : A string containing the password of the credential.
 
 ### Event handlers
 

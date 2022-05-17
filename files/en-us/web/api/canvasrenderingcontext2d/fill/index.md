@@ -41,6 +41,10 @@ fill(path, fillRule)
 - `path`
   - : A {{domxref("Path2D")}} path to fill.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Filling a rectangle

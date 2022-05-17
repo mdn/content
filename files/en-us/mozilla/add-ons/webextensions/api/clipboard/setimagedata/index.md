@@ -38,7 +38,7 @@ browser.clipboard.setImageData(imageData, imageType)
 - `imageData`
   - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the encoded image data to copy to the clipboard.
 - `imageType`
-  - : A {{domxref("DOMString")}} indicating the type of image contained in `imageData`: `"png"` or `"jpeg"`.
+  - : A string indicating the type of image contained in `imageData`: `"png"` or `"jpeg"`.
 
 ### Return value
 

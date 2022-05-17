@@ -1,12 +1,13 @@
 ---
 title: 'aria-colspan'
 slug: Web/Accessibility/ARIA/Attributes/aria-colspan
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-colspan
+spec-urls: https://w3c.github.io/aria/#aria-colspan
 ---
 
 The `aria-colspan` attribute defines the number of columns spanned by a cell or gridcell within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
@@ -120,7 +121,7 @@ The following is an example of part of a bowling tournament league scoring sprea
         <span role="cell">7</span>
         <span role="cell">/</span>
         ...
-      </div> 
+      </div>
       <div role="row" aria-rowindex="11">
         <span role="cell">McPherson</span>
         <span role="cell">Leslie</span>
@@ -129,7 +130,7 @@ The following is an example of part of a bowling tournament league scoring sprea
         <span role="cell">9</span>
         <span role="cell">8</span>
         <span role="cell">1</span>
-        <span role="cell">18</span>  
+        <span role="cell">18</span>
       ...
 ```
 
@@ -143,7 +144,7 @@ If we had used a {{HTMLElement('table')}} and semantic table elements our markup
 ## ARIAMixin API
 
 - {{domxref("Element.ariaColSpan")}}
-  - : The  [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+  - : The [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 
 ## Associated roles
 
@@ -158,9 +159,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-colspan","ARIA: aria-colspan Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

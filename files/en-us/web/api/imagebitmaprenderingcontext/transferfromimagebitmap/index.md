@@ -32,6 +32,10 @@ transferFromImageBitmap(bitmap)
 - `bitmap`
   - : An {{domxref("ImageBitmap")}} object to transfer.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### HTML

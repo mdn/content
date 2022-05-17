@@ -50,7 +50,7 @@ scene, in order to potentially improve the quality or the output as well as the 
 level for the viewer.
 
 The depth buffer is {{domxref("XRWebGLLayer.framebufferWidth", "framebufferWidth")}}
-entires wide and {{domxref("XRWebGLLayer.framebufferHeight", "framebuffer")}} entries
+entries wide and {{domxref("XRWebGLLayer.framebufferHeight", "framebuffer")}} entries
 tall. Each entry in the buffer specifies the depth at which the corresponding pixel is
 located, and has a value between 0.0 and 1.0.
 

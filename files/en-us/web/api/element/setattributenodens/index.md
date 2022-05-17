@@ -20,6 +20,7 @@ setAttributeNodeNS(attributeNode)
 ```
 
 ### Parameters
+
 - `attributeNode` is an `Attr` node.
 
 ### Return value
@@ -56,3 +57,8 @@ Note that if you try to set without cloning the node, Mozilla gives an NS_ERROR_
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}

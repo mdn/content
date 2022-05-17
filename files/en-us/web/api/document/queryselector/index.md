@@ -32,7 +32,7 @@ querySelector(selectors)
 
 ### Parameters
 
-- _selectors_
+- `selectors`
   - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown. See [Locating
@@ -54,8 +54,8 @@ If you need a list of all elements matching the specified selectors, you should 
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified _selectors_ is invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified _selectors_ is invalid.
 
 ## Usage notes
 

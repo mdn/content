@@ -21,7 +21,7 @@ the program will terminate.
 ## Syntax
 
 ```js
-throw expression; 
+throw expression;
 ```
 
 - `expression`

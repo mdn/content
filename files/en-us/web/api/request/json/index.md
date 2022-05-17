@@ -20,9 +20,7 @@ Note that despite the method being named `json()`, the result is not JSON but is
 ## Syntax
 
 ```js
-request.json().then(data => {
-  // do something with your data
-});
+json()
 ```
 
 ### Parameters

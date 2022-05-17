@@ -21,9 +21,7 @@ object yourself.
 ## Syntax
 
 ```js
-paymentRequestEvent.respondWith(
-  // Promise that resolves with a PaymentResponse.
-)
+respondWith(promise)
 ```
 
 ### Parameters

@@ -10,6 +10,9 @@ tags:
   - ARIA alert
   - ARIA widget
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#alert
+  - https://w3c.github.io/aria-practices/#log
 ---
 
 The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) processed as an atomic live region.
@@ -116,15 +119,12 @@ If an element already has `role="alert"` and is initially hidden using CSS, maki
 
 ```js
 // removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:
-document.getElementById("expirationWarning").classList.remove('hidden'); 
+document.getElementById("expirationWarning").classList.remove('hidden');
 ```
 
 ## Specifications
 
-| Specification                                                                    | Status                                           |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#alert","Alert")}}                                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#log","Log")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -136,7 +136,7 @@ document.getElementById("expirationWarning").classList.remove('hidden');
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-- [ARIA alert support - The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/)
+- [ARIA alert support - The Paciello Group](https://www.tpgi.com/aria-alert-support/)
 - [ARIA Practices alert example](https://w3c.github.io/aria-practices/examples/alert/alert.html)
 
 <section id="Quick_links">

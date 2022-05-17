@@ -19,6 +19,10 @@ The **`keys()`** method of the {{domxref("CustomStateSet")}} interface is an ali
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new iterator object containing the values for each element in the given `CustomStateSet`, in insertion order.

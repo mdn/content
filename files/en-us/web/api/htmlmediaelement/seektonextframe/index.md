@@ -43,6 +43,10 @@ happens.
 seekToNextFrame()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Promise")}} which is fulfilled once the seek operation has completed.

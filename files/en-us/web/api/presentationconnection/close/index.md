@@ -16,6 +16,20 @@ browser-compat: api.PresentationConnection.close
 
 When the `close()` method is called on a {{domxref("PresentationConnection")}}, the {{Glossary("user agent")}} begins the process of closing the connection by sending an empty `closeMessage` with the `closeReason` set to `closed`.
 
+## Syntax
+
+```js
+close()
+```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Browser compatibility
 
 {{Compat}}
