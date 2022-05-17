@@ -18,7 +18,7 @@ browser-compat: api.MediaTrackConstraints.deviceId
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
-**`deviceId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString)
+**`deviceId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring)
 describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.deviceId", "deviceId")}} constrainable property.
 
@@ -33,7 +33,7 @@ will never include this property.
 
 ## Value
 
-An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
+An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) specifying one or more acceptable,
 ideal, and/or exact (mandatory) device IDs which are acceptable as the source of media
 content.
 

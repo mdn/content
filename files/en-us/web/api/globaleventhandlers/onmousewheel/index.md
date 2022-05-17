@@ -7,7 +7,7 @@ browser-compat: api.GlobalEventHandlers.onmousewheel
 ---
 {{ ApiRef("HTML DOM") }}{{Deprecated_Header}}{{ Non-standard_header() }}
 
-The **onmousewheel** property sets and returns the [event handler](/en-US/docs/Web/Guide/Events/Event_handlers) for the
+The **onmousewheel** property sets and returns the [event handler](/en-US/docs/Web/Events/Event_handlers) for the
 {{event("mousewheel")}} event.
 
 Instead of using this event, use the standard {{event("wheel")}} event.
@@ -24,7 +24,7 @@ specifying the handler for the event.
 
 ## Notes
 
-See the [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+See the [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)
 page for information on working with `on...` handlers.
 
 The `mousewheel` event is fired asynchronously when a mouse wheel or similar

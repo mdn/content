@@ -10,7 +10,6 @@ tags:
   - document structure role
 spec-urls: https://w3c.github.io/aria/#group
 ---
-
 The `group` role identifies a set of user interface objects that is not intended to be included in a page summary or table of contents by assistive technologies.
 
 ## Description
@@ -25,7 +24,7 @@ When used in the context of a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Rol
 
 `Group` elements may be nested.
 
-The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles).
+The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles).
 
 When the role is added to an element, the browser will send out an accessible group event to assistive technology products, which can then notify the user about it.
 

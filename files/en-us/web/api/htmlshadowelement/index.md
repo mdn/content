@@ -11,7 +11,7 @@ browser-compat: api.HTMLShadowElement
 ---
 {{APIRef("Web Components")}}{{Deprecated_header}}
 
-The **`HTMLShadowElement`** interface represents a {{HTMLElement("shadow")}} HTML Element, which is used in [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM).
+The **`HTMLShadowElement`** interface represents a {{HTMLElement("shadow")}} HTML Element, which is used in [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 
 {{InheritanceDiagram}}
 
@@ -37,4 +37,4 @@ This feature is no longer defined by any specifications.
 ## See also
 
 - The {{HTMLElement("shadow")}} HTML element, implementing this interface.
-- [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM)
+- [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
