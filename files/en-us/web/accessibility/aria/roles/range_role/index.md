@@ -8,6 +8,7 @@ tags:
   - Reference
   - ARIA roles
   - Abstract role
+spec-urls: https://w3c.github.io/aria/#range
 ---
 
 
@@ -25,9 +26,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#range","ARIA: range role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

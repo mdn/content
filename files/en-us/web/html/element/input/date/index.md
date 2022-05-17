@@ -12,7 +12,7 @@ tags:
   - Input Element
   - Input Type
   - Reference
-browser-compat: html.elements.input.input-date
+browser-compat: html.elements.input.type_date
 ---
 
 {{HTMLRef}}
@@ -30,7 +30,7 @@ The input UI generally varies from browser to browser; see [Browser compatibilit
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a date in YYYY-MM-DD
+        A string representing a date in YYYY-MM-DD
         format, or empty
       </td>
     </tr>
@@ -74,7 +74,7 @@ The input UI generally varies from browser to browser; see [Browser compatibilit
 
 ## Value
 
-A {{domxref("DOMString")}} representing the date entered in the input. The date is formatted according to ISO8601, described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid date string")}}.
+A string representing the date entered in the input. The date is formatted according to ISO8601, described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid date string")}}.
 
 You can set a default value for the input with a date inside the {{htmlattrxref("value", "input")}} attribute, like so:
 

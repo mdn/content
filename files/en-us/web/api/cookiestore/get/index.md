@@ -26,7 +26,7 @@ This method requires one of the following:
 
 - `name`
   - : A string with the name of a cookie.
-- options
+- `options`
 
   - : An object containing:
 

@@ -23,7 +23,7 @@ CSSStyleDeclaration.cssFloat = "right"
 
 ### Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Example
 

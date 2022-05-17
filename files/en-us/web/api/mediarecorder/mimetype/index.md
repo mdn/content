@@ -34,7 +34,7 @@ about container and codec support across browsers.
 ## Value
 
 The MIME media type which describes the format of the recorded media, as a
-{{domxref("DOMString")}}. This string _may_ include the [`codecs`
+string. This string _may_ include the [`codecs`
 parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by
 the media recorder.
 

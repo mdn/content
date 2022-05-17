@@ -19,9 +19,9 @@ The **`PerformanceElementTiming`** interface of the {{domxref('Element Timing AP
 - {{domxref("PerformanceElementTiming.element")}}{{ReadOnlyInline}}
   - : An {{domxref("Element")}} representing the element we are returning information about.
 - {{domxref("PerformanceElementTiming.id")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} which is the {{htmlattrxref("id")}} of the element.
+  - : A string which is the {{htmlattrxref("id")}} of the element.
 - {{domxref("PerformanceElementTiming.identifier")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
+  - : A string which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
 - {{domxref("PerformanceElementTiming.intersectionRect")}}{{ReadOnlyInline}}
   - : A {{domxref("DOMRectReadOnly")}} which is the rectangle of the element within the viewport.
 - {{domxref("PerformanceElementTiming.loadTime")}}{{ReadOnlyInline}}
@@ -33,7 +33,7 @@ The **`PerformanceElementTiming`** interface of the {{domxref('Element Timing AP
 - {{domxref("PerformanceElementTiming.renderTime")}}{{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} with the renderTime of the element.
 - {{domxref("PerformanceElementTiming.url")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} which is the initial URL of the resources request for images, 0 for text.
+  - : A string which is the initial URL of the resources request for images, 0 for text.
 
 ## Methods
 

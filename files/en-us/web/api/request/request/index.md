@@ -18,16 +18,16 @@ The **`Request()`** constructor creates a new
 
 ```js
 new Request(input)
-new Request(input, init)
+new Request(input, options)
 ```
 
 ### Parameters
 
-- _input_
+- `input`
 
   - : Defines the resource that you wish to fetch. This can either be:
 
-    - A {{domxref("USVString")}} containing the direct URL of the resource you want to
+    - A string containing the direct URL of the resource you want to
       fetch.
     - A {{domxref("Request")}} object, effectively creating a copy. Note the following
       behavioral updates to retain security while making the constructor less likely to
@@ -38,37 +38,46 @@ new Request(input, init)
       - If this object has a {{domxref("Request.mode")}} of `navigate`,
         the `mode` value is converted to `same-origin`.
 
-- _init_ {{optional_inline}}
+- `options` {{optional_inline}}
 
-  - : An options object containing any custom settings that you want to apply to the
+  - : An object containing any custom settings that you want to apply to the
     request. The possible options are:
 
-    - `method`: The request method, e.g., `GET`,
-      `POST`. The default is `GET`.
-    - `headers`: Any headers you want to add to your request, contained
-      within a {{domxref("Headers")}} object or an object literal with
-      {{jsxref("String")}} values.
-    - `body`: Any body that you want to add to your request: this can be a
-      {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-      {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
-      {{domxref("ReadableStream")}} object. Note that a request using the
-      `GET` or `HEAD` method cannot have a body.
-    - `mode`: The mode you want to use for the request, e.g.,
-      `cors`, `no-cors`, `same-origin`, or
-      `navigate`. The default is `cors`.
-    - `credentials`: The request credentials you want to use for the
-      request: `omit`, `same-origin`, or `include`. The
-      default is `same-origin`.
-    - `cache`: The [cache
-      mode](/en-US/docs/Web/API/Request/cache) you want to use for the request.
-    - `redirect`: The redirect mode to use: `follow`,
-      `error`, or `manual`. The default is `follow`.
-    - `referrer`: A {{domxref("USVString")}} specifying
-      `no-referrer`, `client`, or a URL. The default is
-      `about:client`.
-    - `integrity`: Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
-      value of the request (e.g.,
-      `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `method`
+      - : The request method, e.g., `GET`,
+        `POST`. The default is `GET`.
+    - `headers`
+      - : Any headers you want to add to your request, contained
+        within a {{domxref("Headers")}} object or an object literal with
+        {{jsxref("String")}} values.
+    - `body`
+      - : Any body that you want to add to your request: this can be a
+        {{domxref("Blob")}}, a {{domxref("BufferSource")}}, a {{domxref("FormData")}},
+        a {{domxref("URLSearchParams")}}, a string, or
+        a {{domxref("ReadableStream")}} object. Note that a request using the
+        `GET` or `HEAD` method cannot have a body.
+    - `mode`
+      - : The mode you want to use for the request, e.g.,
+        `cors`, `no-cors`, `same-origin`, or
+        `navigate`. The default is `cors`.
+    - `credentials`
+      - : The request credentials you want to use for the
+        request: `omit`, `same-origin`, or `include`. The
+        default is `same-origin`.
+    - `cache`
+      - : The [cache
+        mode](/en-US/docs/Web/API/Request/cache) you want to use for the request.
+    - `redirect`
+      - : The redirect mode to use: `follow`,
+        `error`, or `manual`. The default is `follow`.
+    - `referrer`
+      - : A string specifying
+        `no-referrer`, `client`, or a URL. The default is
+        `about:client`.
+    - `integrity`
+      - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+        value of the request (e.g.,
+        `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
     If you construct a new `Request` from an existing `Request`, any options you set in the _init_ object for the new request replace any corresponding options set in the original `Request`. For example:
 

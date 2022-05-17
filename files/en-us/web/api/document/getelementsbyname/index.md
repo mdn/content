@@ -24,7 +24,8 @@ getElementsByName(name)
 
 ### Parameters
 
-- _name_ is the value of the `name` attribute of the element(s).
+- `name`
+  - : The value of the `name` attribute of the element(s) we are looking for.
 
 ### Return value
 

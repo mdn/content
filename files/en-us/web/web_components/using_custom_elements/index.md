@@ -20,7 +20,7 @@ The controller of custom elements on a web document is the {{domxref("CustomElem
 
 To register a custom element on the page, you use the {{domxref("CustomElementRegistry.define()")}} method. This takes as its arguments:
 
-- A {{domxref("DOMString")}} representing the name you are giving to the element. Note that custom element names [require a dash to be used in them](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case); they can't be single words.
+- A string representing the name you are giving to the element. Note that custom element names [require a dash to be used in them](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case); they can't be single words.
 - A [class](/en-US/docs/Web/JavaScript/Reference/Classes) object that defines the behavior of the element.
 - {{optional_inline}} An options object containing an `extends` property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).
 
@@ -102,7 +102,7 @@ info.setAttribute('class','info');
 // Take attribute content and put it inside the info span
 info.textContent = this.getAttribute('data-text');
 
-// Create some CSS to apply to the shadow dom
+// Create some CSS to apply to the shadow DOM
 const style = document.createElement('style');
 style.textContent = '.wrapper {' +
 // CSS truncated for brevity
@@ -134,12 +134,12 @@ In the above example we apply style to the Shadow DOM using a {{htmlelement("sty
 For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)):
 
 ```js
-// Apply external styles to the shadow dom
+// Apply external styles to the shadow DOM
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
 
-// Attach the created element to the shadow dom
+// Attach the created element to the shadow DOM
 shadow.appendChild(linkElem);
 ```
 

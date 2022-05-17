@@ -20,7 +20,7 @@ The **`value`** property of the
 
 ## Value
 
-A {{domxref('USVString')}}.
+A string.
 
 ### Exceptions
 

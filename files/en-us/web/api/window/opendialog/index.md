@@ -21,7 +21,7 @@ differently.
 The optional parameters, if present, are bundled up in a JavaScript {{jsxref("Array")}}
 object and added to the newly created window as a property named
 {{domxref("window.arguments")}}. They may be referenced in the JavaScript of the window
-at any time, including during the execution of a {{event("load")}} handler. These
+at any time, including during the execution of a {{domxref("Window/load_event", "load")}} handler. These
 parameters may be used, then, to pass arguments to and from the dialog window.
 
 The call to `openDialog()` returns immediately. If you want the call to

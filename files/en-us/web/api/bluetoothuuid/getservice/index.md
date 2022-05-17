@@ -23,7 +23,7 @@ getService(name)
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString","string")}} containing the name of the service.
+  - : A string containing the name of the service.
 
 ### Return value
 

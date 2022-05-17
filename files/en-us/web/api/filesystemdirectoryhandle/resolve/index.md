@@ -31,7 +31,7 @@ var pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
 ### Return value
 
 A {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of
-{{jsxref('USVString','strings')}}, or `null` if `possibleDescendant` is not a descendant of this {{domxref('FileSystemDirectoryHandle')}}.
+strings, or `null` if `possibleDescendant` is not a descendant of this {{domxref('FileSystemDirectoryHandle')}}.
 
 ### Exceptions
 

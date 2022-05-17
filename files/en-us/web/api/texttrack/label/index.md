@@ -15,7 +15,7 @@ The **`label`** read-only property of the {{domxref("TextTrack")}} interface ret
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the `label`, or an empty string.
+A string containing the `label`, or an empty string.
 
 ## Examples
 

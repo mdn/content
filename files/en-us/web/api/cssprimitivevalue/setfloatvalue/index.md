@@ -33,7 +33,7 @@ setFloatValue(unitType, floatValue)
 
 ### Parameters
 
-- unitType
+- `unitType`
 
   - : An `unsigned short` representing the code for the unit type, in which the
     value should be returned. Valid values are:
@@ -59,12 +59,12 @@ setFloatValue(unitType, floatValue)
     | `CSS_RAD`        | The value is an {{cssxref("&lt;angle&gt;")}} in radians.                                                                   |
     | `CSS_S`          | The value is a {{cssxref("&lt;time&gt;")}} in seconds.                                                                    |
 
-- floatValue
+- `floatValue`
   - : A `float` representing the new float value.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

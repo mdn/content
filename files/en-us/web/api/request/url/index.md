@@ -17,7 +17,7 @@ interface contains the URL of the request.
 
 ## Value
 
-A {{domxref("USVString")}} indicating the URL of the request.
+A string indicating the URL of the request.
 
 ## Examples
 

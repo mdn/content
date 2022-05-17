@@ -7,6 +7,7 @@ tags:
   - Dictionary
   - Reference
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCbcParams
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -25,22 +26,7 @@ See the examples for {{domxref("SubtleCrypto.encrypt()")}} and {{domxref("Subtle
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-AesCbcParams', 'SubtleCrypto.AesCbcParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -20,7 +20,7 @@ represents the voice.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the name of the voice.
+A string representing the name of the voice.
 
 ## Examples
 

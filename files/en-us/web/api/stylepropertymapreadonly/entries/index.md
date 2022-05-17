@@ -41,7 +41,7 @@ Here shows an example of using `StylePropertyMapReadOnly.entries()` method
 on an elements computed styles.
 
 ```js
-// grab a dom element
+// grab a DOM element
 const buttonEl = document.querySelector('button');
 
 // we can retrieve all computed styles with `computedStyleMap`

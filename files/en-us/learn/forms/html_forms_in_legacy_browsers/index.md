@@ -31,7 +31,7 @@ To understand common patterns, it helps to read browser documentation. If you ar
 
 ## Make things simple
 
-Because [HTML forms](/en-US/docs/Learn/Forms) involves complex interaction, there is one rule of thumb: keep it simple, also known as the "[KISS principal](https://en.wikipedia.org/wiki/KISS_principle)". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, [forms usability on UX For The Masses,](https://www.uxforthemasses.com/forms-usability/) explains it well.
+Because [HTML forms](/en-US/docs/Learn/Forms) involves complex interaction, there is one important rule: keep it simple, also known as the "[KISS principal](https://en.wikipedia.org/wiki/KISS_principle)". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, [forms usability on UX For The Masses,](https://www.uxforthemasses.com/forms-usability/) explains it well.
 
 ### Graceful degradation is web developer's best friend
 

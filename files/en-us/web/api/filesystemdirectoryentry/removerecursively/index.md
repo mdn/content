@@ -3,7 +3,6 @@ title: FileSystemDirectoryEntry.removeRecursively()
 slug: Web/API/FileSystemDirectoryEntry/removeRecursively
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - FileSystemDirectoryEntry
   - Files
@@ -14,7 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
-{{APIRef("File System API")}}{{deprecated_header}}{{SeeCompatTable}}
+{{APIRef("File and Directory Entries API")}}{{deprecated_header}}{{SeeCompatTable}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
 **`removeRecursively()`** removes
@@ -91,9 +90,7 @@ directory.removeRecursively(function() {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystemEntry.remove()")}}

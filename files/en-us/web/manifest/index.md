@@ -93,7 +93,7 @@ In some browsers (Chrome 47 and later, for example), a splash screen is displaye
 
 | Specification                                      |
 | -------------------------------------------------- |
-| [Web App Manifest](https://w3c.github.io/manifest) |
+| [Web App Manifest](https://w3c.github.io/manifest/) |
 
 ## Browser compatibility
 

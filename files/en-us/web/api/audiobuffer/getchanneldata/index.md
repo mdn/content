@@ -21,7 +21,7 @@ getChannelData(channel)
 
 ### Parameters
 
-- channel
+- `channel`
   - : The channel property is an index representing the particular channel to get data for. An index value of 0 represents the first channel. If the `channel` index value is greater than of equal to {{domxref("AudioBuffer.numberOfChannels")}}, an `INDEX_SIZE_ERR` exception will be thrown.
 
 ### Return value

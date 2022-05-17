@@ -23,9 +23,9 @@ insertRule(rule, index)
 
 ### Parameters
 
-- rule
+- `rule`
   - : A string
-- index{{optional_inline}}
+- `index` {{optional_inline}}
   - : An optional index at which to insert the rule; defaults to 0.
 
 ### Return value

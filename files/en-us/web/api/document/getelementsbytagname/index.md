@@ -27,15 +27,16 @@ getElementsByTagName(name)
 
 ### Parameters
 
-- _name_ is a string representing the name of the elements. The special
-  string "\*" represents all elements.
+- `name`
+  - : A string representing the name of the elements. The special
+    string `*` represents all elements.
 
 ### Return value
 
 A live {{domxref("HTMLCollection")}} of found elements in the order they appear in the tree.
 
 > **Note:** [The
-> latest W3C specification](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) says returned value is an
+> latest W3C specification](https://dom.spec.whatwg.org/#interface-document) says returned value is an
 > `HTMLCollection`; however, this method returns a {{domxref("NodeList")}} in
 > WebKit browsers. See {{bug(14869)}} for details.
 

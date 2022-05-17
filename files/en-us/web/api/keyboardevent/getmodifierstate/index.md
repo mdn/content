@@ -10,7 +10,7 @@ tags:
   - getModifierState
 browser-compat: api.KeyboardEvent.getModifierState
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.getModifierState()`** method returns the
 current state of the specified modifier key: `true` if the modifier is active

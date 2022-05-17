@@ -21,7 +21,7 @@ The *read-only* **`domOverlayState`** property of an `immersive-ar`
 
 ## Value
 
-Returns {{jsxref("null")}} if the DOM overlay feature is not supported or not enabled or an object containing information about the dom overlay state with the following properties:
+Returns {{jsxref("null")}} if the DOM overlay feature is not supported or not enabled or an object containing information about the DOM overlay state with the following properties:
 
 - `type`
 

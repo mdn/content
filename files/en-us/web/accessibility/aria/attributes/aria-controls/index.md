@@ -7,6 +7,7 @@ tags:
   - ARIA attribute
   - ARIA property
   - aria-controls
+spec-urls: https://w3c.github.io/aria/#aria-controls
 ---
 
 The global `aria-controls` property identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
@@ -73,9 +74,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-controls","ARIA: aria-controls Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

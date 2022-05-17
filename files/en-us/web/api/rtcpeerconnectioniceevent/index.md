@@ -29,7 +29,7 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 ## Constructors
 
 - {{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}
-  - : Returns a new `RTCPeerConnectionIceEvent`. It takes two parameters, the first being a {{domxref("DOMString")}} representing the type of the event; the second a dictionary containing the {{domxref("RTCIceCandidate")}} it refers to.
+  - : Returns a new `RTCPeerConnectionIceEvent`. It takes two parameters, the first being a string representing the type of the event; the second a dictionary containing the {{domxref("RTCIceCandidate")}} it refers to.
 
 ## Methods
 

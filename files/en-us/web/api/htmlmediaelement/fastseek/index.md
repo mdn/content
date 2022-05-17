@@ -27,7 +27,7 @@ fastSeek(time)
 
 ### Parameters
 
-- time
+- `time`
   - : A double.
 
 ### Return value

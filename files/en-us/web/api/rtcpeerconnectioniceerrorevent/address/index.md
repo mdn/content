@@ -25,7 +25,7 @@ during negotiations. The error which occurred involved this address.
 
 ## Value
 
-A {{domxref("DOMString")}} which specifies the local IP address of the network
+A string which specifies the local IP address of the network
 connection to the ICE server with which negotiations were occurring when the error
 occurred. This address identifies the network interface on the local device which is
 being used to attempt to establish the connection to the remote peer.

@@ -147,7 +147,7 @@ _No change._
 ### XPCOM
 
 - `"@mozilla.org/network/atomic-file-output-stream;1"` and `"@mozilla.org/network/safe-file-output-stream;1"` now throw an exception if `PR_APPEND` is passed without `PR_TRUNCATE` ({{bug(1117580)}}).
-- `nsICompositionStringSynthesizer` and {{ifmethod("nsIDOMWindowUtils", "sendCompositionEvent")}} have been removed. Instead, use `nsITextInputProcessor`. ({{bug(917322)}})
+- `nsICompositionStringSynthesizer` and `nsIDOMWindowUtils.sendCompositionEvent()` have been removed. Instead, use `nsITextInputProcessor`. ({{bug(917322)}})
 - `nsIDOMWindowUtils.sendKeyEvent()` is now deprecated. Instead, use `nsITextInputProcessor` ({{bug(1119609)}}).
 
 ## Older versions

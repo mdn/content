@@ -35,14 +35,6 @@ _Also inherits properties from its parent, {{domxref("Event")}} interface._
 - {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
   - : Returns the new version of the database.
 
-### Deprecated properties
-
-- {{ domxref("IDBVersionChangeEvent.version") }} {{readonlyInline}} {{deprecated_inline}}
-
-  - : The new version of the database in a {{domxref("IDBDatabase.versionchange_event", "versionchange")}} transaction.
-
-    > **Warning:** While this property is still implemented in older browsers, the latest specification replaces it with the `oldVersion` and `newVersion` attributes. See the compatibility table to know what browsers support them.
-
 ### Methods
 
 _No specific method, but inherits properties from its parent, {{domxref("Event")}} interface._

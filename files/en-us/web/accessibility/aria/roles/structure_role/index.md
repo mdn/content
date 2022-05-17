@@ -10,6 +10,7 @@ tags:
   - Abstract Role
   - ARIA structure
   - Reference
+spec-urls: https://w3c.github.io/aria/#structure
 ---
 
 The `structure` role is for document structural elements.
@@ -30,9 +31,7 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#structure","ARIA: structure role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

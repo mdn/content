@@ -7,6 +7,7 @@ tags:
   - HkdfParams
   - Reference
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#dfn-HkdfParams
 ---
 {{ APIRef("Web Crypto API") }}The **`HkdfParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf) algorithm.
 
@@ -34,22 +35,7 @@ See the examples for {{domxref("SubtleCrypto.deriveKey()")}}.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-HkdfParams', 'SubtleCrypto.HkdfParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

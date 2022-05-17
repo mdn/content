@@ -100,7 +100,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
     z-index: 2;
     position: absolute;
     width: 200px;
-    height: 70px;
+    height: 80px;
     top: 65px;
     left: 50px;
     border: 1px dashed #000099;
@@ -112,7 +112,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ### Result
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}
+{{ EmbedLiveSample('Example', '', '300') }}
 
 ## See also
 

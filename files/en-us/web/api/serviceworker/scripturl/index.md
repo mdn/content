@@ -18,8 +18,7 @@ Must be on the same origin as the document that registers the
 
 ## Value
 
-A {{domxref("USVString")}} (see the [WebIDL definition of
-USVString](https://heycam.github.io/webidl/#idl-USVString).)
+A string.
 
 ## Examples
 

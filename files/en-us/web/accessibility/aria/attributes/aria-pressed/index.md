@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-pressed
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-pressed
 ---
 
 The `aria-pressed` attribute indicates the current "pressed" state of a toggle button.
@@ -58,9 +59,7 @@ Used in roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-pressed","ARIA: aria-pressed Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

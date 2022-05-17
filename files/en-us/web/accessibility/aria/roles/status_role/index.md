@@ -9,6 +9,7 @@ tags:
   - ARIA roles
   - ARIA status
   - status role
+spec-urls: https://w3c.github.io/aria/#status
 ---
 
 The `status` role defines a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) containing advisory information for the user that is not important enough to be an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
@@ -37,9 +38,7 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#status","ARIA: status role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

@@ -32,7 +32,7 @@ textTrack.mode = a;
 
 ### Value
 
-A {{domxref("DOMString")}} which indicates the track's current mode. One of:
+A string which indicates the track's current mode. One of:
 
 - `disabled`
   - : The text track is currently disabled. While the track's presence is exposed in the
@@ -65,7 +65,7 @@ changes to either `showing` or `hidden`. This way, the resource
 fetch and memory usage are avoided unless the cues are actually needed.
 
 However, that means that if you wish to perform any actions involving the track's cues
-while handling, for example, the {{event("load")}} event—in order to process some aspect
+while handling, for example, the {{domxref("Window/load_event", "load")}} event—in order to process some aspect
 of the cues upon page load—and the track mode was initially `disabled`,
 you'll have to change the `mode` to either `hidden` or
 `showing` in order to trigger loading of the cues.

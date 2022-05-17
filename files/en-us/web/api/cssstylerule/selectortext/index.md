@@ -15,7 +15,7 @@ The **`selectorText`** property of the {{domxref("CSSStyleRule")}} interface get
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Examples
 

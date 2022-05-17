@@ -6,6 +6,9 @@ tags:
   - DOM
   - Reference
   - String
+spec-urls:
+  - https://webidl.spec.whatwg.org/#idl-DOMString
+  - https://webidl.spec.whatwg.org/#es-DOMString
 ---
 {{APIRef("DOM")}}
 
@@ -17,32 +20,7 @@ Certain Web APIs accepting a `DOMString` have an additional legacy behavior, whe
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('WebIDL', '#idl-DOMString', 'DOMString')}}
-      </td>
-      <td>{{Spec2('WebIDL')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebIDL', '#es-DOMString')}}</td>
-      <td>{{Spec2('WebIDL')}}</td>
-      <td>
-        This defines how JavaScript values are converted
-        to <code>DOMString</code> and vice versa.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

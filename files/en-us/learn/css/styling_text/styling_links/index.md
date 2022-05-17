@@ -65,7 +65,7 @@ The first thing to understand is the concept of link states — different states
 
 ### Default styles
 
-The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more.)
+The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more).
 
 ```html
 <p><a href="#">A simple link</a></p>
@@ -80,7 +80,7 @@ p {
 
 {{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
-> **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from.) `#` just links to the current page.
+> **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from). `#` just links to the current page.
 
 You'll notice a few things as you explore the default styles:
 
@@ -88,7 +88,7 @@ You'll notice a few things as you explore the default styles:
 - Unvisited links are blue.
 - Visited links are purple.
 - Hovering a link makes the mouse pointer change to a little hand icon.
-- Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key (On Mac, you'll need to use
+- Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key. (On Mac, you'll need to use
 
   <kbd>option</kbd>
 
@@ -96,7 +96,7 @@ You'll notice a few things as you explore the default styles:
 
   <kbd>tab</kbd>
 
-  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/mchlp1399/mac) option by pressing
+  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/en-us/guide/mac-help/mchlp1399/mac) option by pressing
 
   <kbd>Ctrl</kbd>
 
@@ -309,7 +309,7 @@ window.addEventListener("load", drawOutput);
 
 ## Including icons on links
 
-A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites.) Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [this great example from icons8.com](https://icons8.com/web-app/741/external-link).
+A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites). Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [this great example from icons8.com](https://icons8.com/icon/741/external-link).
 
 Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
 
@@ -387,7 +387,11 @@ First, some HTML:
 
 ```html
 <ul>
-  <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Pizza</a></li>
+  <li><a href="#">Music</a></li>
+  <li><a href="#">Wombats</a></li>
+  <li><a href="#">Finland</a></li>
 </ul>
 ```
 

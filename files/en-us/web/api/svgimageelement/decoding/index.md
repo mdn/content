@@ -20,7 +20,7 @@ it should decode the image.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the decoding hint. Possible values are:
+A string representing the decoding hint. Possible values are:
 
 - **`sync`**: Decode the image synchronously for atomic
   presentation with other content.

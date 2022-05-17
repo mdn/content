@@ -24,7 +24,7 @@ NDEFRecord.lang
 
 ### Value
 
-A {{DOMxRef("USVString")}}.
+A string.
 
 ## Specifications
 

@@ -19,5 +19,5 @@ For network layer context:
 For SPA in application layer context, most of the popular SPA frameworks has its routing library:
 
 - [Angular router](https://angular.io/guide/router)
-- [React router](https://reacttraining.com/react-router)
+- [React router](https://reactrouter.com/)
 - [Vue router](https://router.vuejs.org)

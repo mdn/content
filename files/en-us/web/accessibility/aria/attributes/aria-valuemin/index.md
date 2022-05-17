@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-valuemin
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-valuemin
 ---
 
 The `aria-valuemin` attribute defines the minimum allowed value for a range widget.
@@ -56,9 +57,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-valuemin","ARIA: aria-valuemin Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

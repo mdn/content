@@ -19,7 +19,7 @@ scope, serialized as a string.
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

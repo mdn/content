@@ -20,6 +20,10 @@ browser-compat: webextensions.manifest.content_security_policy
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -50,6 +54,49 @@ There are restrictions on the policy you can specify here:
 - The only permitted schemes for sources are: `blob:`, `filesystem:`, `moz-extension:`, `https:`, and `wss:`.
 - The only permitted [keywords](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#sources) are: `'none'`, `'self'`, and `'unsafe-eval'`.
 
+## Manifest V2 syntax
+
+In Manifest V2 there is one content security policy specified against the key, like this:
+
+```json
+"content_security_policy": "default-src 'self'"
+```
+
+## Manifest V2 syntax
+
+In Manifest V3, the `content_security_policy` key is an object that may have any of the following properties, all optional:
+
+<table class="fullwidth-table standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>extension_pages</code></td>
+      <td><code>String</code></td>
+      <td>
+        The content security policy used for extension pages. The <code>script-src</code>, <code>object-src</code>, and <code>worker-src</code> directives may only have these values:
+        <ul>
+          <li><code>self</code></li>
+          <li><code>none</code></li>
+          <li>Any localhost source, (<code>http://localhost</code>, <code>http://127.0.0.1</code>, or any port on those domains.)</li>
+        </ul>
+      </td>
+    </tr>
+   <tr>
+      <td><code>sandbox</code></td>
+      <td><code>String</code></td>
+      <td>
+        The content security policy used for sandboxed extension pages.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Example
 
 ### Valid examples
@@ -59,38 +106,98 @@ There are restrictions on the policy you can specify here:
 
 Require that all types of content should be packaged with the extension:
 
+**Manifest V2**
+
 ```json
 "content_security_policy": "default-src 'self'"
 ```
 
-Allow remote scripts from "https\://example.com":
+**Manifest V3**
+
+```json
+"content_security_policy": {
+  "extension_page": "default-src 'self'"
+} 
+```
+
+Allow remote scripts from "https://example.com":
+
+**Manifest V2**
 
 ```json
 "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
 ```
 
+**Manifest V3**
+
+```json
+"content_security_policy": {
+  "extension_page": "script-src 'self' https://example.com; object-src 'self'"
+} 
+```
+
 Allow remote scripts from any subdomain of "jquery.com":
+
+**Manifest V2**
 
 ```json
 "content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
 ```
 
+**Manifest V3**
+
+```json
+"content_security_policy": {
+  "extension_page": "script-src 'self' https://*.jquery.com; object-src 'self'"
+} 
+```
+
 Allow [`eval()` and friends](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval%28%29_and_friends):
+
+**Manifest V2**
 
 ```json
 "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
 ```
 
+**Manifest V3**
+
+```json
+"content_security_policy": {
+  "extension_page": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+} 
+```
+
 Allow the inline script: `"<script>alert('Hello, world.');</script>"`:
+
+**Manifest V2**
 
 ```json
 "content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
 ```
 
+**Manifest V3**
+
+```json
+"content_security_policy": {
+  "extension_page": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
+} 
+```
+
 Keep the rest of the policy, but also require that images should be packaged with the extension:
+
+**Manifest V2**
 
 ```json
 "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"
+```
+
+**Manifest V3**
+
+```json
+"content_security_policy": {
+  "extension_page": "script-src 'self'; object-src 'self'; img-src 'self'"
+} 
 ```
 
 ### Invalid examples

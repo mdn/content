@@ -19,7 +19,7 @@ The **`HTMLTitleElement`** interface contains the title for a document. This ele
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTitleElement.text")}}
-  - : Is a {{domxref("DOMString")}} representing the text of the document's title, and only the text part. For example, consider this:
+  - : A string representing the text of the document's title, and only the text part. For example, consider this:
 
 ```html
 <!doctype html>

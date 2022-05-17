@@ -20,7 +20,7 @@ to get a reference to the {{domxref("SharedWorkerGlobalScope")}}.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

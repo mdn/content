@@ -53,6 +53,8 @@ This article provides information about the changes in Firefox 102 that will aff
 
 ## Changes for add-on developers
 
+- The {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts is now available to Manifest V2 extensions ({{bug(1766615)}}).
+
 #### Removals
 
 ### Other

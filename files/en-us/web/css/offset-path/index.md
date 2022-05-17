@@ -168,6 +168,6 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 Other demos:
 
 - [Examples of the various values](https://codepen.io/team/css-tricks/pen/WZdKMq)
-- [Triangle](https://codepen.io/ericwilligers/pen/jrbJPp)
-- [Scissors](https://codepen.io/ericwilligers/pen/bwVkNa)
+- [Triangle](https://codepen.io/ericwilligers/pen/jMbJPp)
+- [Scissors](https://codepen.io/ericwilligers/pen/bwVZNa)
 - [Eyes](https://jsfiddle.net/ericwilligers/r1snqdan/)

@@ -23,8 +23,8 @@ createTextNode(data)
 
 ### Parameters
 
-- _data_ is a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-  containing the data to be put in the text node.
+- `data`
+  - : A string containing the data to be put in the text node.
 
 ### Return value
 

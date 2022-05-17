@@ -42,7 +42,7 @@ A CDN is a geographically distributed network of servers that work together to s
 
 Further reading:
 
-- [Understanding CDNs](https://www.incapsula.com/cdn-guide/what-is-cdn-how-it-works.html)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works)
 
 ### Reduce domain lookups
 

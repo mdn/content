@@ -7,6 +7,7 @@ tags:
   - Intro
   - Networking
   - Security
+spec-urls: https://w3c.github.io/webappsec-subresource-integrity/
 ---
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
@@ -112,10 +113,7 @@ Browsers handle SRI by doing the following:
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |         |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |         |
+{{Specifications}}
 
 ## Browser compatibility
 

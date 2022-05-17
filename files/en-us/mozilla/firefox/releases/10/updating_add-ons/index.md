@@ -26,7 +26,7 @@ Some obsolete APIs have been removed from the DOM:
   - : This is the removal that has the most likelihood to affect add-on developers, as it was fairly commonly used. You can now use the JavaScript `===` operator to compare nodes instead of this obsolete method. This method was made obsolete by the DOM4 specification.
 - {{ domxref("text.isElementContentWhitespace") }}
 
-  {{ domxref("text.replaceWholeText()") }}
+  `text.replaceWholeText()`
 
   - : These APIs were rendered obsolete by the DOM4 specification.
 
@@ -57,7 +57,7 @@ The following interfaces have been removed:
 
 - `nsNavHistory` no longer implements the `nsICharsetResolver` interface. **Note that `nsICharsetResolver` is no longer used and is being removed in Gecko 11.0 {{ geckoRelease("11.0") }}**.
 - The `mozISpellCheckingEngine` and `nsIEditorSpellCheck` interfaces have been updated to let restartless add-ons add dictionaries to the spell checker. See [Using an external spell checker](/en-US/Using_an_External_Spell-checker) for details (note this article has not yet been updated, but will be soon).
-- The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed, as it hasn't been supported for some time.
+- The `nsIBrowserHistory.lastPageVisited` attribute has been removed, as it hasn't been supported for some time.
 - Several [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) internal interfaces have changed to support revised APIs. This shouldn't affect you but is worth noting on the off chance you were doing something unusual.
 
 ## Other changes worth noting

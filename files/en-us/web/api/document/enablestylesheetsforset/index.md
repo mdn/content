@@ -26,7 +26,7 @@ enableStyleSheetsForSet(name)
 
 ### Parameters
 
-- _name_
+- `name`
   - : The name of the style sheets to enable. All style sheets with a title that match
     this name will be enabled, while all others that have a title will be disabled.
     Specify an empty string for the _name_ parameter to disable all alternate and

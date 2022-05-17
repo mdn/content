@@ -6,6 +6,7 @@ tags:
   - CSS Object Model
   - CSS Declaration
   - Reference
+spec-urls: https://drafts.csswg.org/cssom/#css-declarations
 ---
 {{ APIRef("CSSOM") }}
 
@@ -35,6 +36,4 @@ h1 {
 
 ## Specifications
 
-| Specification                                                                        | Status                   | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------- |
-| {{SpecName('CSSOM', '#css-declarations', 'CSS Declarations')}} | {{Spec2('CSSOM')}} |         |
+{{Specifications}}

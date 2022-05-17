@@ -11,7 +11,7 @@ tags:
   - pip
 browser-compat: api.PictureInPictureWindow.width
 ---
-{{APIRef}}
+{{APIRef("Picture-in-Picture API")}}
 
 The read-only {{domxref("PictureInPictureWindow")}} property
 **`width`** returns the width of the floating video window in

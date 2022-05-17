@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Reference
   - Typed Arrays
+spec-urls: https://webidl.spec.whatwg.org/#ArrayBufferView
 ---
 {{APIRef}}
 
@@ -31,6 +32,4 @@ This is a helper type to simplify the specification; it isn't an interface, and 
 
 ## Specifications
 
-| Specification                                                                    | Status                   | Comment             |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('WebIDL', "#ArrayBufferView", "ArrayBufferView")}} | {{Spec2('WebIDL')}} | Initial definition. |
+{{Specifications}}

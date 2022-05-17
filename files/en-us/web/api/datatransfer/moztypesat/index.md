@@ -28,14 +28,13 @@ mozTypesAt(index)
 
 ### Parameters
 
-- _index_
+- `index`
   - : A `unsigned long` that is the index of the data for which to retrieve the
     types.
 
 ### Return value
 
-- `nsIVariant`
-  - : A list of data formats (which are {{domxref("DOMString","strings")}}). If the index
+A list of data formats (which are strings). If the index
     is not in the range from 0 to the number of items minus one, an empty string list is
     returned.
 

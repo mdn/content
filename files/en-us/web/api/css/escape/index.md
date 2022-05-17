@@ -25,7 +25,7 @@ escape(str)
 
 ### Parameters
 
-- _str_
+- `str`
   - : The string to be escaped.
 
 ### Return value

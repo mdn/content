@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-readonly
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-readonly
 ---
 
 The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable.
@@ -68,9 +69,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-readonly","ARIA: aria-readonly Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -23,7 +23,7 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, when the parser finished its work on the main
 document, that is when its {{domxref("Document.readyState")}} changes to
-`'interactive'` and the corresponding {{event("readystatechange")}} event is
+`'interactive'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is
 thrown.
 
 This property can be used to measure the speed of loading Web sites that users

@@ -40,14 +40,12 @@ _Inherits properties from its parents, {{domxref("CharacterData")}}, {{domxref("
 - {{domxref("Text.assignedSlot")}} {{readonlyInline}}
   - : Returns a {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
 - {{domxref("Text.wholeText")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} containing the text of all `Text` nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.
+  - : Returns a string containing the text of all `Text` nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.
 
 ## Methods
 
 _Inherits methods from its parent, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("Text.replaceWholeText")}} {{deprecated_inline}}
-  - : Replaces the text of the current node and all logically adjacent nodes with the specified text.
 - {{domxref("Text.splitText")}}
   - : Breaks the node into two nodes at a specified offset.
 

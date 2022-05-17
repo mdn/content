@@ -7,6 +7,7 @@ tags:
   - Media Capabilities
   - Overview
   - Reference
+spec-urls: https://w3c.github.io/media-capabilities/
 ---
 {{DefaultAPISidebar("Media Capabilities API")}}
 
@@ -67,7 +68,6 @@ Media capabilities information enables websites to enable adaptive streaming to 
 ## Specifications
 
 {{Specifications("api.MediaCapabilities")}}
-
 
 ## Browser compatibility
 

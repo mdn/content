@@ -15,14 +15,14 @@ browser-compat: api.IDBDatabase.name
 {{ APIRef("IndexedDB") }}
 
 The **`name`** read-only property of the
-`IDBDatabase` interface is a {{ domxref("DOMString")}} that contains the
+`IDBDatabase` interface is a string that contains the
 name of the connected database.
 
 {{AvailableInWorkers}}
 
 ## Value
 
-A {{ domxref("DOMString")}} containing the name of the connected database.
+A string containing the name of the connected database.
 
 ## Examples
 

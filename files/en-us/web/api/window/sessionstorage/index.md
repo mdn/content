@@ -41,7 +41,7 @@ page**. In particular, data stored by a script on a site accessed with HTTP
 put in a different `sessionStorage` object from the same site accessed with
 HTTPS (e.g., <https://example.com>).
 
-The keys and the values are _always_ in the UTF-16 {{domxref("DOMString")}}
+The keys and the values are _always_ in the UTF-16 string
 format, which uses two bytes per character. As with objects, integer keys are
 automatically converted to strings.
 

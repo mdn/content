@@ -31,11 +31,11 @@ new DragEvent(type, dragEventInit)
 ### Parameters
 
 - `type`
-  - : Is a string representing the name of the event (see [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
+  - : A string representing the name of the event (see [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
 
 - `dragEventInit` {{optional_inline}}
 
-  - : Is a `DragEventInit` dictionary, having the following fields:
+  - : A `DragEventInit` dictionary, having the following fields:
 
     - `"dataTransfer"`, optional and defaults to `"null"`. The
       type is {{domxref("DataTransfer")}}.

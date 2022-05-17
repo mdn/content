@@ -35,9 +35,9 @@ navigator.share(data)
 
     Possible values are:
 
-    - `url`: A {{domxref("USVString")}} representing a URL to be shared.
-    - `text`: A {{domxref("USVString")}} representing text to be shared.
-    - `title`: A {{domxref("USVString")}} representing a title to be shared. May be ignored by the target.
+    - `url`: A string representing a URL to be shared.
+    - `text`: A string representing text to be shared.
+    - `title`: A string representing a title to be shared. May be ignored by the target.
     - `files`: An array of {{domxref("File")}} objects representing files to be shared. See [below](#shareable_file_types) for shareable file types.
 
 ### Return value

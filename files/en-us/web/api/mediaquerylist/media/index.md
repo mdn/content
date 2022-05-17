@@ -14,12 +14,12 @@ browser-compat: api.MediaQueryList.media
 {{APIRef("CSSOM")}}
 
 The **`media`** read-only property of the
-{{DOMxRef("MediaQueryList")}} interface is a {{DOMxRef("DOMString")}} representing a
+{{DOMxRef("MediaQueryList")}} interface is a string representing a
 serialized media query.
 
 ## Value
 
-A {{DOMxRef("DOMString")}} representing a serialized media query.
+A string representing a serialized media query.
 
 ## Examples
 

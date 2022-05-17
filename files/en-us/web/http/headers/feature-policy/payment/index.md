@@ -31,10 +31,7 @@ The `payment` feature's default allowlist value is `'self'`.
 
 ## Specifications
 
-| Specification                            | Status                               | Comment                                                                                              |
-| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('Payment')}}         | {{Spec2('Payment')}}         | See [Section 16. Feature Policy integration](https://w3c.github.io/payment-request/#feature-policy). |
-| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | Initial definition.                                                                                  |
+{{Specifications}}
 
 ## Browser compatibility
 

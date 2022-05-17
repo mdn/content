@@ -33,11 +33,11 @@ This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing th
 - {{domxref("RTCRtpEncodingParameters.maxBitrate", "maxBitrate")}}
   - : An unsigned long integer indicating the maximum number of bits per second to allow for this encoding. Other parameters may further constrain the bit rate, such as the value of `maxFramerate` or transport or physical network limitations.
 - {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}}
-  - : A double-precision floating-point value specifying the maximum number of frames per second to allow for this encoding.
+  - : A value specifying the maximum number of frames per second to allow for this encoding.
 - {{domxref("RTCRtpEncodingParameters.ptime", "ptime")}}
   - : An unsigned long integer value indicating the preferred duration of a media packet in milliseconds. This is typically only relevant for audio encodings. The user agent will try to match this as well as it can, but there is no guarantee.
 - {{domxref("RTCRtpEncodingParameters.rid", "rid")}}
-  - : A {{domxref("DOMString")}} which, if set, specifies an **RTP stream ID** (**RID**) to be sent using the RID header extension. This parameter cannot be modified using {{domxref("RTCRtpSender.setParameters", "setParameters()")}}. Its value can only be set when the transceiver is first created.
+  - : A string which, if set, specifies an **RTP stream ID** (**RID**) to be sent using the RID header extension. This parameter cannot be modified using {{domxref("RTCRtpSender.setParameters", "setParameters()")}}. Its value can only be set when the transceiver is first created.
 - {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}}
   - : Only used for senders whose track's {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, this is a double-precision floating-point value specifying a factor by which to scale down the video during encoding. The default value, 1.0, means that the sent video's size will be the same as the original. A value of 2.0 scales the video frames down by a factor of 2 in each dimension, resulting in a video 1/4 the size of the original. The value must not be less than 1.0 (you can't use this to scale the video up).
 

@@ -14,6 +14,7 @@ tags:
   - Web
   - Windows
   - hierarchy
+spec-urls: https://html.spec.whatwg.org/multipage/
 ---
 {{DefaultAPISidebar("HTML DOM")}}
 
@@ -365,12 +366,7 @@ The HTML for the form looks like this:
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                                         |
-| ------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG')}} | {{Spec2('HTML WHATWG')}} | WHATWG HTML Specification                       |
-| {{SpecName('HTML5 W3C')}}     | {{Spec2('HTML5 W3C')}}     | No change from {{SpecName("DOM2 HTML")}} |
-| {{SpecName('DOM2 HTML')}}     | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName("DOM1")}}.    |
-| {{SpecName('DOM1')}}         | {{Spec2('DOM1')}}         | Initial definition.                             |
+{{Specifications}}
 
 ## Browser compatibility
 
