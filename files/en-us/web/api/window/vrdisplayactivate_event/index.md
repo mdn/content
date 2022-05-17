@@ -53,7 +53,7 @@ window.addEventListener('vrdisplayactivate', function() {
 });
 ```
 
-Or use the [`onvrdisplayactivate`](/en-US/docs/Web/API/Window/onvrdisplayactivate) event handler property:
+Or use the `onvrdisplayactivate` event handler property:
 
 ```js
 window.onvrdisplayactivate = function() {

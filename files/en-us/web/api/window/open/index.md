@@ -310,7 +310,7 @@ function openRequestedSinglePopup(url) {
     window, the browser in the main window will verify that the secondary window has the
     same domain name.
 
-    More reading on the cross-domain script security restriction: [http://www.mozilla.org/projects/secu...me-origin.html](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
+    More reading on the cross-domain script security restriction in the [Same-orgin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
 
 ## Usability issues
 

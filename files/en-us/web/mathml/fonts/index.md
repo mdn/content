@@ -94,11 +94,11 @@ You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/
 
 You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
-> **Note:** We [plan to bundle](https://bugzilla.mozilla.org/show_bug.cgi?id=775060) a [MATH font](#Fonts_with_a_MATH_table) in the default installation.
+> **Note:** We [plan to bundle](https://bugzilla.mozilla.org/show_bug.cgi?id=775060) a [MATH font](#fonts_with_a_math_table) in the default installation.
 
 ### Other systems
 
-On other systems, consider installing a [MATH font](#Fonts_with_a_MATH_table) using your package manager. Note that these fonts are generally delivered with TeX distributions such as [TeX Live](https://www.tug.org/texlive/), but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the [MathML fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
+On other systems, consider installing a [MATH font](#fonts_with_a_math_table) using your package manager. Note that these fonts are generally delivered with TeX distributions such as [TeX Live](https://www.tug.org/texlive/), but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the [MathML fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
 ## Advanced setup
 

@@ -53,7 +53,7 @@ window.addEventListener('vrdisplaydeactivate', function() {
 });
 ```
 
-Or use the [`onvrdisplaydeactivate`](/en-US/docs/Web/API/Window/onvrdisplaydeactivate) event handler property:
+Or use the `onvrdisplaydeactivate` event handler property:
 
 ```js
 window.onvrdisplaydeactivate = function() {

@@ -13,7 +13,7 @@ browser-compat: api.SVGLength
 
 ## SVG length interface
 
-The `SVGLength` interface correspond to the [\<length>](/en-US/docs/Web/SVG/Content_type#Length) basic data type.
+The `SVGLength` interface correspond to the [\<length>](/en-US/docs/Web/SVG/Content_type#length) basic data type.
 
 An `SVGLength` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 

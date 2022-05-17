@@ -10,7 +10,6 @@ tags:
   - Web
 browser-compat: html.elements.section
 ---
-
 {{HTMLRef}}
 
 The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
@@ -196,5 +195,5 @@ Depending on the content, including a heading could also be good for SEO, so it 
 
 - Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Region role](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- [ARIA: Region role](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/), by Bruce Lawson

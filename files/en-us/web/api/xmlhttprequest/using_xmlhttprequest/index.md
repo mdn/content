@@ -928,14 +928,9 @@ Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
 
 ## See also
 
-1. [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
-1. [HTML in
-    XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-1. [HTTP access control](/en-US/docs/Web/HTTP/CORS)
-1. [XMLHttpRequest -
-    REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-1. [Microsoft documentation](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
-1. ["Using the XMLHttpRequest
-    Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-1. [The `XMLHttpRequest` object:
-    WHATWG specification](https://xhr.spec.whatwg.org/)
+- [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

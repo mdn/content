@@ -1112,9 +1112,9 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 - {{DOMxRef("IDBDatabase")}}
 
-  - [abort event](/en-US/docs/Web/API/IDBDatabase/abort_event)
+  - [abort event](/en-US/docs/Web/API/IDBTransaction/abort_event)
   - [close event](/en-US/docs/Web/API/IDBDatabase/close_event)
-  - [error event](/en-US/docs/Web/API/IDBDatabase/error_event)
+  - [error event](/en-US/docs/Web/API/IDBTransaction/error_event)
   - [versionchange event](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
 
 - {{DOMxRef("IDBOpenDBRequest")}}

@@ -125,7 +125,7 @@ console.log(iterator.next()); // {value: 'foo', done: true}
 
 ## See also
 
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

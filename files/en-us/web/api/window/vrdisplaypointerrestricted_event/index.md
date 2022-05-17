@@ -53,7 +53,7 @@ window.addEventListener('vrdisplaypointerrestricted', function() {
 });
 ```
 
-Or use the [`onvrdisplaypointerrestricted`](/en-US/docs/Web/API/Window/onvrdisplaypointerrestricted) event handler property:
+Or use the `onvrdisplaypointerrestricted` event handler property:
 
 ```js
 window.onvrdisplaypointerrestricted = function() {

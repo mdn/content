@@ -8,7 +8,7 @@ browser-compat: svg.attributes.href
 ---
 {{SVGRef}}
 
-The **`href`** attribute defines a link to a resource as a reference [URL](/en-US/docs/Web/SVG/Content_type#URL). The exact meaning of that link depends on the context of each element using it.
+The **`href`** attribute defines a link to a resource as a reference [URL](/en-US/docs/Web/SVG/Content_type#url). The exact meaning of that link depends on the context of each element using it.
 
 > **Note:** Specifications before SVG 2 defined an {{SVGAttr("xlink:href")}} attribute, which is now rendered obsolete by the `href` attribute.
 

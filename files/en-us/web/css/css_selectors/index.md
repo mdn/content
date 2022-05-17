@@ -90,7 +90,7 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{Specifications}}
 
-See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#Specifications) and [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#Specifications) specification tables for details on those.
+See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#specifications) specification tables for details on those.
 
 ## See also
 

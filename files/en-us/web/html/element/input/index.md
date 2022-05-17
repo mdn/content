@@ -14,7 +14,6 @@ tags:
   - Web
 browser-compat: html.elements.input
 ---
-
 {{HTMLRef}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
@@ -944,7 +943,7 @@ In certain cases (typically involving non-textual inputs and specialized interfa
 
 For more information about adding color to elements in HTML, see:
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color).
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
 
 Also see:
 
