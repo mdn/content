@@ -48,7 +48,7 @@ The `dragend` event is fired when a drag operation is being ended (by releasing 
 
 ### Resetting opacity on drag end
 
-In this example we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
+In this example, we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
 
 We make the element half transparent while it is being dragged, and listen for the `dragend` event to reset the element's opacity when it is released.
 
