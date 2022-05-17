@@ -50,9 +50,9 @@ In this example, we have a draggable element inside a container. Try grabbing th
 
 We use three event handlers here:
 
-- in the `dragstart` event handler we get a reference to the element that the user dragged
-- in the `dragover` event handler for the target container we call `event.preventDefault()`, which enables it to receive `drop` events.
-- in the `drop` event handler for the drop zone we handle moving the draggable element from the original container to the drop zone.
+- in the `dragstart` event handler, we get a reference to the element that the user dragged
+- in the `dragover` event handler for the target container, we call `event.preventDefault()`, which enables it to receive `drop` events.
+- in the `drop` event handler for the drop zone, we handle moving the draggable element from the original container to the drop zone.
 
 For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/Document/drag_event) event.
 
