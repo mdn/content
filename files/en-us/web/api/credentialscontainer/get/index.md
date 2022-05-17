@@ -81,8 +81,8 @@ get(options)
       - : A {{jsxref("String")}} indicating whether the user will
         be required to log on for every visit to the website. Valid values are
         `"silent"`, `"optional"`, or `"required"`.
-    - `unmediated`
-      - : {{deprecated_inline}} A boolean value
+    - `unmediated` {{deprecated_inline}}
+      - : A boolean value
         indicating the returned {{domxref("Credential")}} instance should not require user
         mediation.
     - `signal`
