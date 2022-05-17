@@ -30,7 +30,7 @@ removeListener(func)
 
 ### Parameters
 
-- func
+- `func`
   - : A function or function reference representing the callback function you want to
     remove.
 

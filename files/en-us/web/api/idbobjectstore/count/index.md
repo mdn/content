@@ -31,7 +31,7 @@ count(query)
 
 ### Parameters
 
-- query {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} object that specifies a range of records you
     want to count.
 

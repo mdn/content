@@ -25,7 +25,7 @@ decodingInfo(MediaDecodingConfiguration)
 
 ### Parameters
 
-- MediaDecodingConfiguration
+- `MediaDecodingConfiguration`
   - : A valid {{domxref("MediaDecodingConfiguration")}} dictionary containing a valid media decoding `type` of `file` or `media-source` and a valid media configuration: either an {{domxref("AudioConfiguration")}} or a {{domxref("VideoConfiguration")}}.
 
 ### Return value

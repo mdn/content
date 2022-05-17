@@ -25,10 +25,10 @@ getAllKeys(query, count)
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the keys to retrieve. If this
     value is null or missing, the browser will use an unbound key range.
-- _count_ {{optional_inline}}
+- `count` {{optional_inline}}
   - : The number records to return. If this value exceeds the number of records in the
     query, the browser will only retrieve the first item. If it is lower than
     `0` or greater than `2^32 - 1` a {{jsxref("TypeError")}}

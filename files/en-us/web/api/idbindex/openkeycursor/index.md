@@ -40,11 +40,11 @@ openKeyCursor(range, direction)
 
 ### Parameters
 
-- range {{optional_inline}}
+- `range` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is
     passed, this will default to a key range that selects all the records in this object
     store.
-- direction {{optional_inline}}
+- `direction` {{optional_inline}}
   - : The cursor's [direction](/en-US/docs/Web/API/IDBCursor#constants). See [IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants) for possible
     values.
 
