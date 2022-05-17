@@ -93,7 +93,7 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - {{cssxref("&lt;length&gt;")}}
   - : A positive integer length.
 - `<line-names>`
-  - : Zero or more {{cssxref("&lt;custom-ident&gt;")}} values, space-separated and enclosed in square brackets, like this `[first header-start]`.
+  - : Zero or more {{cssxref("&lt;custom-ident&gt;")}} values, space-separated and enclosed in square brackets, like this: `[first header-start]`.
 - {{cssxref("&lt;percentage&gt;")}}
   - : A non-negative percentage relative to the inline size of the grid container in column grid tracks, and the block size of the grid container in row grid tracks. If the size of the grid container depends on the size of its tracks, then the `<percentage>` must be treated as `auto`. The user-agent may adjust the intrinsic size contributions of the track to the size of the grid container and increase the final size of the track by the minimum amount that would result in honoring the percentage.
 - `<track-size>`
