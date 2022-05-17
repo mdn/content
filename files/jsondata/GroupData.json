@@ -30,7 +30,7 @@
       ],
       "interfaces": ["BatteryManager"],
       "methods": ["Navigator.getBattery()"],
-      "properties": ["Navigator.battery"],
+      "properties": [],
       "events": []
     },
     "Barcode Detection API": {
