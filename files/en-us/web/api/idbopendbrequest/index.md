@@ -37,9 +37,9 @@ Listen to these generic and specific events using `addEventListener()` or by ass
 Events specific to this interface are:
 
 - [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event)
-  - : Fired when an open connection to a database is blocking a `versionchange` transaction on the same database. Also available via the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/onblocked) property.
+  - : Fired when an open connection to a database is blocking a `versionchange` transaction on the same database. Also available via the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) property.
 - [`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
-  - : Fired when an attempt was made to open a database with a version number higher than its current version. Also available via the [`onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded) property.
+  - : Fired when an attempt was made to open a database with a version number higher than its current version. Also available via the [`onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) property.
 
 ## Example
 

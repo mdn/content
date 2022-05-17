@@ -36,4 +36,4 @@ This method does not return a value.
 ## See also
 
 - {{DOMxRef("HTMLMediaElement")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

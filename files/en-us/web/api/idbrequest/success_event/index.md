@@ -90,4 +90,3 @@ openRequest.onsuccess = (event) => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [`onsuccess`](/en-US/docs/Web/API/IDBRequest/onsuccess) event handler property
