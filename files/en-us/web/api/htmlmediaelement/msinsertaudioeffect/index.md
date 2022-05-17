@@ -36,7 +36,7 @@ msInsertAudioEffect(activatableClassId, effectRequired, config)
 
 ### Return value
 
-None ({{jsxref("undefined")}}). 
+None ({{jsxref("undefined")}}).
 
 ## See also
 

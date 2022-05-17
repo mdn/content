@@ -25,7 +25,7 @@ setCustomValidity(errorMessage)
 
 ### Parameters
 
-- `errorMessage` 
+- `errorMessage`
   - : The message to use for validity errors.
 
 ### Return value

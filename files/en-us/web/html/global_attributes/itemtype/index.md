@@ -33,7 +33,6 @@ Google and other major search engines support the [schema.org](https://schema.or
 
 This example uses microdata attributes to represent structured data for a product, as follows:
 
-
 <table class="standard-table">
   <tbody>
     <tr>
