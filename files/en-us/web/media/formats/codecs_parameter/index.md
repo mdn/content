@@ -72,7 +72,7 @@ The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media
 av01.P.LLT.DD[.M.CCC.cp.tc.mc.F]
 ```
 
-> **Note:** Chromium browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
+> **Note:** Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
 
 This codec parameter string's components are described in more detail in the table below. Each component is a fixed number of characters long; if the value is less than that length, it must be padded with leading zeros.
 
