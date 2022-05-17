@@ -48,7 +48,7 @@ The `dragleave` event is fired when a dragged element or text selection leaves a
 
 ### Resetting drop zone styles on dragleave
 
-In this example we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
+In this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
 
 We give the other container a purple background while the draggable element is over it, to signal that the draggable element could be dropped on to the container. We listen for the `dragleave` event to reset the container background when the draggable element is dragged off the container.
 
