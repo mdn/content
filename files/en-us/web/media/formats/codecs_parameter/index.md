@@ -69,8 +69,10 @@ Several of the links above go to the same section; that's because those media ty
 The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff/) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
 
 ```plain
-av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
+av01.P.LLT.DD[.M.CCC.cp.tc.mc.F]
 ```
+
+> **Note:** Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
 
 This codec parameter string's components are described in more detail in the table below. Each component is a fixed number of characters long; if the value is less than that length, it must be padded with leading zeros.
 
@@ -125,21 +127,14 @@ This codec parameter string's components are described in more detail in the tab
     <tr>
       <td><code>LL</code></td>
       <td>
-        The two-digit level number, which is converted to the X.Y format level
-        format, where <code>X = 2 + (LL >> 2)</code> and
-        <code>Y = LL &#x26; 3</code>. See
-        <a href="https://aomediacodec.github.io/av1-spec/#levels"
-          >Appendix A, section 3</a
-        >
-        in the AV1 Specification for details.
+        The two-digit level number, which is converted to the X.Y format level format, where <code>X = 2 + (LL >> 2)</code> and <code>Y = LL &#x26; 3</code>.
+        See <a href="https://aomediacodec.github.io/av1-spec/#levels">Appendix A, section 3</a> in the AV1 Specification for details.
       </td>
     </tr>
     <tr>
       <td><code>T</code></td>
       <td>
-        The one-character tier indicator. For the Main tier (<code
-          >seq_tier</code
-        >
+        The one-character tier indicator. For the Main tier (<code>seq_tier</code>
         equals 0), this character is the letter <code>M</code>. For the High
         tier (<code>seq_tier</code> is 1), this character is the letter
         <code>H</code>. The High tier is only available for level 4.0 and up.
