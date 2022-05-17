@@ -43,12 +43,12 @@ deleteDatabase(name, options)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the database you want to delete. Note that attempting to delete a
     database that doesn't exist does not throw an exception, in contrast to
     {{DOMxRef("IDBDatabase.deleteObjectStore()")}}, which does throw an exception if the
     named object store does not exist.
-- options {{optional_inline}} {{NonStandardBadge}}
+- `options` {{optional_inline}} {{NonStandardBadge}}
   - : In Gecko, since [version 26](/en-US/docs/Mozilla/Firefox/Releases/26), you can include
     a non-standard optional storage parameter that specifies whether you want to delete a
     `permanent` (the default value) IndexedDB, or an indexedDB in

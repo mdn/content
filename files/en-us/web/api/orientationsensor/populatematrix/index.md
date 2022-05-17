@@ -46,7 +46,7 @@ may only be read from one of its derived classes.
 
 ### Parameters
 
-- _targetMatrix_
+- `targetMatrix`
   - : TBD
 
 ### Return value

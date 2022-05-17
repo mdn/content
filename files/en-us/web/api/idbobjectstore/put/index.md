@@ -37,9 +37,9 @@ put(item, key)
 
 ### Parameters
 
-- item
+- `item`
   - : The item you wish to update (or insert).
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : The primary key of the record you want to update (e.g. from
     {{domxref("IDBCursor.primaryKey")}}). This is only needed for object stores that have
     an `autoIncrement` primary key, therefore the key is not in a field on the

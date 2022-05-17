@@ -31,7 +31,7 @@ has(key)
 
 ### Parameters
 
-- key
+- `key`
   - : The key of an element to search for in the map.
 
 ### Return value

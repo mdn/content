@@ -37,9 +37,9 @@ open(name, version)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the database.
-- version {{optional_inline}}
+- `version` {{optional_inline}}
   - : Optional. The version to open the database with. If the version is not provided and
     the database exists, then a connection to the database will be opened without changing
     its version. If the version is not provided and the database does not exist, then it

@@ -65,7 +65,6 @@ decodingInfo(configuration)
         - `samplerate`
           - : The number of audio samples making up one second of the audio file.
 
-
 ### Return value
 
 A {{jsxref('Promise')}} fulfilling with an object containing three Boolean attributes:

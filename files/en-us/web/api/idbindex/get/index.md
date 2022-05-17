@@ -34,7 +34,7 @@ get(key)
 
 ### Parameters
 
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} that identifies the record to be retrieved. If
     this value is null or missing, the browser will use an unbound key range.
 

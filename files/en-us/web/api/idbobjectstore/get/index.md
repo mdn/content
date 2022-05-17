@@ -35,7 +35,7 @@ get(key)
 
 ### Parameters
 
-- key
+- `key`
   - : The key or key range that identifies the record to be retrieved.
 
 ### Return value

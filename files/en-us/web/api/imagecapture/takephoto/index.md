@@ -33,16 +33,20 @@ takePhoto(photoSettings)
 
   - : An object that sets options for the photo to be taken. The available options are:
 
-    - `fillLightMode`:  The flash setting of the capture device, one of
-      `"auto"`, `"off"`, or `"flash"`.
-    - `imageHeight`: The desired image height as an integer. The user agent
-      selects the closest height value to this setting if it only supports discrete
-      heights.
-    - `imageWidth`: The desired image width as an integer. The user agent
-      selects the closest width value to this setting if it only supports discrete
-      widths.
-    - `redEyeReduction`: A boolean indicating whether the red-eye reduction
-      should be used if it is available.
+    - `fillLightMode`
+      - : The flash setting of the capture device, one of
+        `"auto"`, `"off"`, or `"flash"`.
+    - `imageHeight`
+      - : The desired image height as an integer. The user agent
+        selects the closest height value to this setting if it only supports discrete
+        heights.
+    - `imageWidth`
+      - : The desired image width as an integer. The user agent
+        selects the closest width value to this setting if it only supports discrete
+        widths.
+    - `redEyeReduction`
+      - : A boolean indicating whether the red-eye reduction
+        should be used if it is available.
 
 ### Return value
 

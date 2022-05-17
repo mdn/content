@@ -29,7 +29,7 @@ count(key)
 
 ### Parameters
 
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : The key or key range that identifies the record to be counted.
 
 ### Return value

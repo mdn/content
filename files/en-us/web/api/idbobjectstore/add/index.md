@@ -38,9 +38,9 @@ add(value, key)
 
 ### Parameters
 
-- value
+- `value`
   - : The value to be stored.
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : The key to use to identify the record. If unspecified, it results to null.
 
 ### Return value

@@ -30,7 +30,7 @@ get(key)
 
 ### Parameters
 
-- key
+- `key`
   - : The key of the item to return from the map.
 
 ### Return value
