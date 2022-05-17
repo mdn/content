@@ -1,5 +1,5 @@
 ---
-title: important
+title: '!important'
 slug: Web/CSS/important
 tags:
   - CSS
@@ -10,7 +10,7 @@ tags:
 # browser-compat: css.flag.important
 ---
 
-The important flag, comprised of a `!` delimeter and `important` keyword, when added to a declaration in a selector block, makes the declaration an important declaration. 
+The important flag, comprised of a `!` delimiter and `important` keyword, when added to a declaration in a selector block, makes the declaration an important declaration. 
 
 ## Description
 
@@ -28,7 +28,7 @@ The important flag must come after the property value pair declaration value, pr
 
 ## Impact on the cascade
 
-When it comes to important declarations, the [cascade origin and layer orders](/en-US/docs/Web/CSS/Cascade) are reversed.  By default, declarations in an author (web developer) style sheets override declarations in a user’s style sheet, which override declarations in the user-agent’s default style sheet. 
+When it comes to important declarations, the [cascade origin and layer orders](/en-US/docs/Web/CSS/Cascade) are reversed. By default, declarations in a website author's style sheets override declarations in a user’s style sheet, which override declarations in the user-agent’s default style sheet.
 
 When a declaration is important, the order of precedence is reversed. The user-agent important declarations override all user important declarations. All user important declarations override all important author declarations. And all important declarations take precedence over all animations.  
 
