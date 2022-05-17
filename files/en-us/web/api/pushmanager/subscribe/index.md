@@ -33,17 +33,19 @@ subscribe(options)
   - : An object containing optional configuration parameters. It can have the following
     properties:
 
-    - `userVisibleOnly`: A boolean indicating that the returned push
-      subscription will only be used for messages whose effect is made visible to the
-      user.
-    - `applicationServerKey`: A Base64-encoded string or
-      {{jsxref("ArrayBuffer")}} containing an [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
-      P-256 public key that the push server will use to authenticate your application
-      server. If specified, all messages from your application server must use the [VAPID](https://datatracker.ietf.org/doc/html/rfc8292) authentication scheme, and
-      include a JWT signed with the corresponding private key. This key **_IS
-      NOT_** the same ECDH key that you use to encrypt the data. For more
-      information, see "[Using
-      VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)".
+    - `userVisibleOnly`
+      - : A boolean indicating that the returned push
+        subscription will only be used for messages whose effect is made visible to the
+        user.
+    - `applicationServerKey`
+      - : A Base64-encoded string or
+        {{jsxref("ArrayBuffer")}} containing an [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
+        P-256 public key that the push server will use to authenticate your application
+        server. If specified, all messages from your application server must use the [VAPID](https://datatracker.ietf.org/doc/html/rfc8292) authentication scheme, and
+        include a JWT signed with the corresponding private key. This key **_IS
+        NOT_** the same ECDH key that you use to encrypt the data. For more
+        information, see "[Using
+        VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)".
 
     > **Note:** This parameter is required in some browsers like
     > Chrome and Edge.

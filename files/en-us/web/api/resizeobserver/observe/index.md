@@ -29,7 +29,7 @@ observe(target, options)
 - `target`
   - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
     observed.
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options object allowing you to set options for the observation. Currently this
     only has one possible option that can be set:
@@ -38,9 +38,12 @@ observe(target, options)
 
       - : Sets which box model the observer will observe changes to. Possible values are:
 
-        - `content-box` (the default): Size of the content area as defined in CSS.
-        - `border-box`: Size of the box border area as defined in CSS.
-        - `device-pixel-content-box`: The size of the content area as defined in CSS, in device pixels, before applying any CSS transforms on the element or its ancestors.
+        - `content-box` (the default)
+          - : Size of the content area as defined in CSS.
+        - `border-box`
+          - : Size of the box border area as defined in CSS.
+        - `device-pixel-content-box`
+          - : The size of the content area as defined in CSS, in device pixels, before applying any CSS transforms on the element or its ancestors.
 
 ### Return value
 

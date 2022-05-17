@@ -25,7 +25,7 @@ enqueue(chunk)
 
 ### Parameters
 
-- _chunk_
+- `chunk`
   - : The chunk to enqueue.
 
 ### Return value

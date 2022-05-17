@@ -26,7 +26,7 @@ getAll(property)
 
 ### Parameters
 
-- property
+- `property`
   - : The name of the property to retrieve all values of.
 
 ### Return value

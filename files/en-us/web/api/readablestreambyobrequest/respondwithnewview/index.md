@@ -24,7 +24,7 @@ respondWithNewView(view)
 
 ### Parameters
 
-- _view_
+- `view`
   - : xxx
 
 ### Return value

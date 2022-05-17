@@ -20,13 +20,13 @@ with the associated stream to error.
 ## Syntax
 
 ```js
-error(e)
+error(errorObject)
 ```
 
 ### Parameters
 
-- _e_
-  - : The error you want future interactions to fail with.
+- `errorObject`
+  - : Any object that you want future interactions to fail with.
 
 ### Return value
 

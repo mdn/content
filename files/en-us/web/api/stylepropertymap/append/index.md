@@ -25,10 +25,10 @@ append(property, value)
 
 ### Parameters
 
-- property
+- `property`
   - : An identifier indicating the stylistic feature (e.g. font, width, background
     color) to add.
-- value
+- `value`
   - : The value the given property should have.
 
 ### Return value

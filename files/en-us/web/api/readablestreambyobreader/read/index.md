@@ -24,7 +24,7 @@ read(view)
 
 ### Parameters
 
-- view
+- `view`
   - : The view to be read into.
 
 ### Return value

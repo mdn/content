@@ -25,7 +25,7 @@ get(property)
 
 ### Parameters
 
-- property
+- `property`
   - : The name of the property to retrieve the value of.
 
 ### Return value
