@@ -1,5 +1,5 @@
 ---
-title: 'aria-brailleroledescription'
+title: aria-brailleroledescription
 slug: Web/Accessibility/ARIA/Attributes/aria-brailleroledescription
 tags:
   - Accessibility
@@ -9,7 +9,6 @@ tags:
   - aria-brailleroledescription
 spec-urls: https://w3c.github.io/aria/#aria-brailleroledescription
 ---
-
 The global `aria-brailleroledescription` attribute defines a human-readable, author-localized abbreviated description for the role of an element intended to be converted into Braille.
 
 ## Description
@@ -61,7 +60,7 @@ The `aria-brailleroledescription` value will not be exposed to the braille user 
 
 ## Associated roles
 
-Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/roles/generic_role)).
+Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)).
 
 ## Specifications
 

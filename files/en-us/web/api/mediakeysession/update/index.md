@@ -25,7 +25,7 @@ update(response)
 
 ### Parameters
 
-- response
+- `response`
   - : An instance of type BufferSource.
 
 ### Return value

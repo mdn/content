@@ -20,7 +20,6 @@ tags:
   - Web
 browser-compat: html.elements.video
 ---
-
 {{HTMLRef}}
 
 The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player which supports video playback into the document. You can use `<video>` for audio content as well, but the {{HTMLElement("audio")}} element may provide a more appropriate user experience.
@@ -450,7 +449,6 @@ It's… it's a…
 
 Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
 
-- [MDN Subtitles and closed caption — Plugins](/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)

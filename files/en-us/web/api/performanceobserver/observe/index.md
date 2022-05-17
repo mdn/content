@@ -38,15 +38,18 @@ observe(options)
   - : A `PerformanceObserverInit` dictionary with the following possible
     members:
 
-    - `entryTypes`: An array of string objects, each
-      specifying one performance entry type to observe. May not be used together with
-      the "`type`" or "`buffered`" options.
-    - `type`: A single string specifying exactly one
-      performance entry type to observe. May not be used together with the
-      `entryTypes` option.
-    - `buffered`: A boolean flag to indicate whether buffered
-      entries should be queued into the observer's buffer. Must be used only with the
-      "`type`" option.
+    - `entryTypes`
+      - : An array of string objects, each
+        specifying one performance entry type to observe. May not be used together with
+        the "`type`" or "`buffered`" options.
+    - `type`
+      - : A single string specifying exactly one
+        performance entry type to observe. May not be used together with the
+        `entryTypes` option.
+    - `buffered`
+      - : A boolean flag to indicate whether buffered
+        entries should be queued into the observer's buffer. Must be used only with the
+        "`type`" option.
 
     See {{domxref("PerformanceEntry.entryType")}} for a list of valid performance entry
     type names. Unrecognized types are ignored, though the browser may output a warning

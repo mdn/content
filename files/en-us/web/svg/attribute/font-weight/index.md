@@ -59,7 +59,7 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-weight`](/en-US/docs/Web/CSS/font-weight#Values) property.
+For a description of the values, please refer to the [CSS `font-weight`](/en-US/docs/Web/CSS/font-weight#values) property.
 
 ## Specifications
 

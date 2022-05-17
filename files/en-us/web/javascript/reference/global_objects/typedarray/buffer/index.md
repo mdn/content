@@ -17,7 +17,7 @@ The **`buffer`** accessor property represents the {{jsxref("ArrayBuffer")}} refe
 
 ## Description
 
-The `buffer` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the _TypedArray_ is constructed and cannot be changed. _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
+The `buffer` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the _TypedArray_ is constructed and cannot be changed. _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 ## Examples
 

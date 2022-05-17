@@ -30,10 +30,10 @@ The SVG core attributes are all the common attributes that can be specified on a
     *Value*: Any valid language ID; *Animatable*: **No**
 - {{SVGAttr('tabindex')}}
   - : The tabindex SVG attribute allows you to control whether an element is focusable and to define the relative order of the element for the purposes of sequential focus navigation.
-    *Value type*: [\<integer>](/docs/Web/SVG/Content_type#Integer); *Animatable*: **No**
+    *Value type*: [\<integer>](/en-US/docs/Web/SVG/Content_type#integer); *Animatable*: **No**
 - {{SVGAttr('xml:base')}}
   - : Specifies a base IRI other than the base IRI of the document.
-    *Value type*: [\<IRI>](/docs/Web/SVG/Content_type#IRI); *Animatable*: **No**
+    *Value type*: [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri); *Animatable*: **No**
 - {{SVGAttr('xml:lang')}}
   - : It is a universal attribute allowed in all XML dialects to mark up the natural human language that an element contains. It's almost identical in usage to HTML's [lang](/en-US/docs/Web/HTML/Global_attributes/lang), but in conforming XML 1.0 documents, it does not allow the use of a null attribute value (`xml:lang=""`) to indicate an unknown language. Instead, use `xml:lang="und"`.
 

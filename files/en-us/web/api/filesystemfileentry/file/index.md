@@ -66,7 +66,7 @@ function readFile(entry, successCallback, errorCallback) {
 
 This function calls `file()`, specifying as its success callback a method
 which proceeds to use a {{domxref("FileReader")}} to read the file as text. The
-FileReader's {{event("load")}} event handler is set up to deliver the loaded string to
+FileReader's {{domxref("Window/load_event", "load")}} event handler is set up to deliver the loaded string to
 the `successCallback` specified when the `readFile()` method was
 called; similarly, its {{event("error")}} handler is set up to call the
 `errorCallback` specified.

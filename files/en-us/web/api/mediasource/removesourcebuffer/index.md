@@ -29,7 +29,7 @@ removeSourceBuffer(sourceBuffer)
 
 ### Parameters
 
-- sourceBuffer
+- `sourceBuffer`
   - : The {{domxref("SourceBuffer")}} object to be removed.
 
 ### Return value

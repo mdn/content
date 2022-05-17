@@ -26,7 +26,7 @@ has(property)
 
 ### Parameters
 
-- property
+- `property`
   - : The name of a property.
 
 ### Return value

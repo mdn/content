@@ -37,4 +37,4 @@ this.internals_.ariaColCount = "3";
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

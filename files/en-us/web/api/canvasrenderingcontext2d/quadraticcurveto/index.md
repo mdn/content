@@ -13,7 +13,7 @@ browser-compat: api.CanvasRenderingContext2D.quadraticCurveTo
 
 The
 **`CanvasRenderingContext2D.quadraticCurveTo()`**
-method of the Canvas 2D API adds a quadratic [Bézier curve](/en-US/docs/Glossary/Bézier_curve) to the current
+method of the Canvas 2D API adds a quadratic [Bézier curve](/en-US/docs/Glossary/Bezier_curve) to the current
 sub-path. It requires two points: the first one is a control point and the second one is
 the end point. The starting point is the latest point in the current path, which can be
 changed using {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} before creating
@@ -126,4 +126,4 @@ ctx.stroke();
 ## See also
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
-- [Bézier curve](/en-US/docs/Glossary/Bézier_curve)
+- [Bézier curve](/en-US/docs/Glossary/Bezier_curve)

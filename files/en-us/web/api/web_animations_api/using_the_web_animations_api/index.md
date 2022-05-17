@@ -361,8 +361,8 @@ var endGame = function() {
 
 CSS Animations and Transitions have their own event listeners, and these are also possible with the Web Animations API:
 
-- [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/en-US/docs/Web/API/Animation/finish).
-- [`oncancel`](/en-US/docs/Web/API/Animation/oncancel) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
+- [`onfinish`](/en-US/docs/Web/API/Animation/finish_event) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/en-US/docs/Web/API/Animation/finish).
+- [`oncancel`](/en-US/docs/Web/API/Animation/cancel_event) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
 
 Here we set the callbacks for the cake, bottle, and Alice to fire the `endGame` function:
 

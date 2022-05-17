@@ -7360,6 +7360,7 @@
 /en-US/docs/Web/API/AudioBufferSourceNode.stop	/en-US/docs/Web/API/AudioScheduledSourceNode/stop
 /en-US/docs/Web/API/AudioBufferSourceNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/AudioBufferSourceNode/stop	/en-US/docs/Web/API/AudioScheduledSourceNode/stop
+/en-US/docs/Web/API/AudioConfiguration	/en-US/docs/Web/API/Media_Capabilities_API
 /en-US/docs/Web/API/AudioContext.createAnalyser	/en-US/docs/Web/API/BaseAudioContext/createAnalyser
 /en-US/docs/Web/API/AudioContext.createBiquadFilter	/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter
 /en-US/docs/Web/API/AudioContext.createBuffer	/en-US/docs/Web/API/BaseAudioContext/createBuffer
@@ -8564,8 +8565,10 @@
 /en-US/docs/Web/API/MediaCapabilities/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
 /en-US/docs/Web/API/MediaCapabilities_API	/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
+/en-US/docs/Web/API/MediaDecodingConfiguration	/en-US/docs/Web/API/MediaCapabilities/decodingInfo
 /en-US/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/MediaDevices/ondevicechange	/en-US/docs/Web/API/MediaDevices/devicechange_event
+/en-US/docs/Web/API/MediaEncodingConfiguration	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
 /en-US/docs/Web/API/MediaKeySession/onkeystatuseschange	/en-US/docs/Web/API/MediaKeySession/keystatuseschange_event
 /en-US/docs/Web/API/MediaKeySession/onmessage	/en-US/docs/Web/API/MediaKeySession/message_event
 /en-US/docs/Web/API/MediaKeySystemConfiguration	/en-US/docs/Web/API/MediaKeySystemAccess/getConfiguration
@@ -8649,7 +8652,6 @@
 /en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor	/en-US/docs/Web/API/MediaTrackSupportedConstraints
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilities	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
-/en-US/docs/Web/API/Media_Capabilities_API/MediaConfiguration	/en-US/docs/Web/API/MediaConfiguration
 /en-US/docs/Web/API/Media_Capabilities_API_	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/Media_Streams_API/ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/MessageChannel.MessageChannel	/en-US/docs/Web/API/MessageChannel/MessageChannel
@@ -9567,6 +9569,7 @@
 /en-US/docs/Web/API/ValidityState/ValidityState.patternMismatch	/en-US/docs/Web/API/ValidityState/patternMismatch
 /en-US/docs/Web/API/ValidityState/pattern	/en-US/docs/Web/HTML/Attributes/pattern
 /en-US/docs/Web/API/ValidityState/underUnderflow	/en-US/docs/Web/API/ValidityState/rangeUnderflow
+/en-US/docs/Web/API/VideoConfiguration	/en-US/docs/Web/API/Media_Capabilities_API
 /en-US/docs/Web/API/VideoPlaybackQuality.corruptedVideoFrames	/en-US/docs/Web/API/VideoPlaybackQuality/corruptedVideoFrames
 /en-US/docs/Web/API/VideoPlaybackQuality.creationTime	/en-US/docs/Web/API/VideoPlaybackQuality/creationTime
 /en-US/docs/Web/API/VideoPlaybackQuality.droppedVideoFrames	/en-US/docs/Web/API/VideoPlaybackQuality/droppedVideoFrames

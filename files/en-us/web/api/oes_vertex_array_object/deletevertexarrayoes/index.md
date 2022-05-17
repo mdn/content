@@ -24,7 +24,7 @@ deleteVertexArrayOES(arrayObject)
 
 ### Parameters
 
-- arrayObject
+- `arrayObject`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to delete.
 
 ### Return value

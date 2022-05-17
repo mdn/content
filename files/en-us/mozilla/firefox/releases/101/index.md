@@ -21,6 +21,8 @@ This article provides information about the changes in Firefox 101 that will aff
 
 ### CSS
 
+The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`)  or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ({{bug(1656363)}}).
+
 #### Removals
 
 ### JavaScript
@@ -44,6 +46,11 @@ This article provides information about the changes in Firefox 101 that will aff
   ({{bug(1652950)}}).
 
 - [`HTMLInputElement.showPicker()`](/en-US/docs/Web/API/HTMLInputElement/showPicker) is now supported, allowing the picker for an input element to be displayed when a user interacts with some other element, such as a button ({{bug(1745005)}}).
+
+- [AV1 codec parameters](/en-US/docs/Web/Media/Formats/codecs_parameter#av1) are now properly parsed in media support queries.
+  This means that [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo), [`HTMLMediaElement.canPlayType()`](/en-US/docs/Web/API/HTMLMediaElement/canPlayType), and [`MediaSource.isTypeSupported()`](/en-US/docs/Web/API/MediaSource/isTypeSupported) will now accurately report support for playback for AV1 sources based on the provided codec parameters.
+  [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo) will also use the information to accurately report on "efficient decoding" of AV1 videos.
+  For more information, see {{bug(1757861)}}.
 
 - [`DOMException`](/en-US/docs/Web/API/DOMException) is now a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}} ({{bug(1561357)}}).
 

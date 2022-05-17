@@ -26,7 +26,7 @@ respondWith(promise)
 
 ### Parameters
 
-- promise
+- `promise`
   - : A {{jsxref('Promise')}} that resolves with a {{domxref("PaymentResponse")}} object.
 
 ### Return value

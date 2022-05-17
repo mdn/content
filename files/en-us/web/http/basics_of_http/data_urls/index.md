@@ -121,5 +121,5 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 - [Percent encoding](/en-US/docs/Glossary/percent-encoding)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}
-- [CSS `url()`](/en-US/docs/Web/CSS/url())
+- [CSS `url()`](/en-US/docs/Web/CSS/url)
 - [URI](/en-US/docs/Glossary/URI)

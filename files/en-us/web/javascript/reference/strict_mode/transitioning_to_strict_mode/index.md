@@ -8,7 +8,7 @@ tags:
 ---
 {{jsSidebar("More")}}
 
-ECMAScript 5 introduced [strict mode](/en-US/docs/JavaScript/Strict_mode) which is now implemented in all major browsers (including IE10). While making web browsers interpret code as strict is easy (just add `'use strict';` at the top of your source code), transitioning an existing code base to strict mode requires a bit more work.
+ECMAScript 5 introduced [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) which is now implemented in all major browsers (including IE10). While making web browsers interpret code as strict is easy (just add `'use strict';` at the top of your source code), transitioning an existing code base to strict mode requires a bit more work.
 
 This article aims at providing guidance for developers.
 
@@ -26,7 +26,7 @@ When adding `'use strict';`, the following cases will throw a {{jsxref("SyntaxEr
 - [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement
 - Using [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) on a variable name `delete myVariable`;
 - Using [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) or [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) as variable or function argument name
-- Using one of the newly [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) (in prevision for ECMAScript 2015): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`
+- Using one of the newly [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) (in prevision for ECMAScript 2015): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`
 - Obvious errors
 
   - Declaring twice the same name for a property name in an object literal `{a: 1, b: 3, a: 7}` This is no longer the case in ECMAScript 2015 ([bug 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).

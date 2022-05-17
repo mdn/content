@@ -232,4 +232,4 @@ For example, the following query tests for devices that have a monochrome displa
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [Extended WebKit media features](/en-US/docs/Web/CSS/Webkit_Extensions#media_features)
+- [Extended WebKit media features](/en-US/docs/Web/CSS/WebKit_Extensions#media_features)

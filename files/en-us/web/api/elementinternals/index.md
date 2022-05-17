@@ -113,11 +113,11 @@ The `ElementInternals` interface includes the following properties, defined on t
 - {{domxref("ElementInternals.ariaSort")}}
   - : A string reflecting the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 - {{domxref("ElementInternals.ariaValueMax")}}
-  - : A string reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueMax) attribute, which defines the maximum allowed value for a range widget.
+  - : A string reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
 - {{domxref("ElementInternals.ariaValueMin")}}
-  - : A string reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueMin) attribute, which defines the minimum allowed value for a range widget.
+  - : A string reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
 - {{domxref("ElementInternals.ariaValueNow")}}
-  - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueNow) attribute, which defines the current value for a range widget.
+  - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("ElementInternals.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 

@@ -33,7 +33,7 @@ suspend(suspendTime)
 
 ### Parameters
 
-- suspendTime
+- `suspendTime`
   - : A {{jsxref("double")}} specifying the suspend time, in seconds.
 
 ### Return value

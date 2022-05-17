@@ -13,7 +13,7 @@ browser-compat: api.StylePropertyMap
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_Object_Model_API) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
+The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 
 {{InheritanceDiagram}}
 

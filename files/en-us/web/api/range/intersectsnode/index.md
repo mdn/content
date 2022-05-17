@@ -23,7 +23,7 @@ intersectsNode( referenceNode )
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} to compare with the {{domxref("Range")}}.
 
 ### Return value

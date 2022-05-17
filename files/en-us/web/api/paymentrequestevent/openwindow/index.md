@@ -26,7 +26,7 @@ openWindow(url)
 
 ### Parameters
 
-- url
+- `url`
   - : The URL to open in the new window. It must be on the same origin as the calling
     page.
 

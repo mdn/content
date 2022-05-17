@@ -71,8 +71,8 @@ window.addEventListener("beforeunload", function (e) {
 ## See also
 
 - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
+- {{domxref("Document/readystatechange_event", "readystatechange")}}
+- {{domxref("Window/load_event", "load")}}
 - {{Event("beforeunload")}}
-- {{Event("unload")}}
+- {{domxref("Window/unload_event", "unload")}}
 - [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)

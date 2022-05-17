@@ -1,5 +1,5 @@
 ---
-title: 'aria-roledescription'
+title: aria-roledescription
 slug: Web/Accessibility/ARIA/Attributes/aria-roledescription
 tags:
   - Accessibility
@@ -10,7 +10,6 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-roledescription
 ---
-
 The `aria-roledescription` attribute defines a human-readable, author-localized description for the role of an element.
 
 ## Description
@@ -33,7 +32,7 @@ Changing how the role is presented to the user has no impact on the functionalit
 
 Again, avoid using `aria-roledescription`. In this example, `escape` has no relevant meaning to the user, but `button` with "escape" as a label does.
 
-When using `aria-roledescription`, also ensure that the element to which it is applied has a valid ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/) or has implicit role semantics and that the value itself is not empty and contains more than just whitespace characters.
+When using `aria-roledescription`, also ensure that the element to which it is applied has a valid ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) or has implicit role semantics and that the value itself is not empty and contains more than just whitespace characters.
 
 The `aria-roledescription` is required when using `aria-brailleroledescription`. Note that, in general, `aria-brailleroledescription` should only be used in rare cases when a `aria-roledescription` is excessively verbose when rendered in Braille.
 

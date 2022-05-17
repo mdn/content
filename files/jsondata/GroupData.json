@@ -30,7 +30,7 @@
       ],
       "interfaces": ["BatteryManager"],
       "methods": ["Navigator.getBattery()"],
-      "properties": ["Navigator.battery"],
+      "properties": [],
       "events": []
     },
     "Barcode Detection API": {
@@ -765,13 +765,7 @@
       ],
       "properties": [],
       "events": [],
-      "dictionaries": [
-        "MediaConfiguration",
-        "VideoConfiguration",
-        "AudioConfiguration",
-        "MediaDecodingConfiguration",
-        "MediaEncodingConfiguration"
-      ]
+      "dictionaries": []
     },
     "Media Capture and Streams": {
       "overview": ["Media Streams API"],
@@ -1747,7 +1741,6 @@
         "WebGL2RenderingContext",
         "WEBGL_compressed_texture_s3tc",
         "WEBGL_compressed_texture_s3tc_srgb",
-        "WEBGL_compressed_texture_atc",
         "WEBGL_compressed_texture_etc1",
         "WEBGL_compressed_texture_pvrtc",
         "WEBGL_debug_renderer_info",

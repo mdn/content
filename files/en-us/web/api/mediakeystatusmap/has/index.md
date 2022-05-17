@@ -24,7 +24,7 @@ has(key)
 
 ### Parameters
 
-- key
+- `key`
   - : The key whose value you want returned
 
 ### Return value

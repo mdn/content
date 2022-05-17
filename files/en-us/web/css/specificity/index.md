@@ -29,7 +29,7 @@ The following list of selector types increases by specificity:
 
 Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
 
-For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2), you can also visit: <https://specifishity.com>
+For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2), you can also visit: <https://specifishity.com>
 
 Inline styles added to an element (e.g., `style="font-weight: bold;"`) always overwrite any styles in external stylesheets, and thus can be thought of as having the highest specificity.
 

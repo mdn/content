@@ -29,7 +29,7 @@ It's permissible for the info string to contain multiple words, like:
 In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
 - `bash`
-- `bat`
+- `batch`
 - `cpp` (for C/C++)
 - `css`
 - `html`

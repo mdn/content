@@ -122,4 +122,4 @@ All these features have been added little by little over the years to the differ
 ## See also
 
 - [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model)
-- [Houdini](/en-US/docs/Web/Houdini)
+- [Houdini](/en-US/docs/Web/Guide/Houdini)

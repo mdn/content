@@ -8,13 +8,11 @@ tags:
   - ARIA widget
   - Reference
 ---
-
-
 The `radio` role is one of a group of checkable buttons, in a `radiogroup`, where no more than one of the buttons can be checked at a time.
 
 ## Description
 
-A radio element is a checkable input in a group of role elements, of which only one of which can be checked at a time. The radio elements must be grouped together in a ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) to indicate which ones affect the same value.
+A radio element is a checkable input in a group of role elements, of which only one of which can be checked at a time. The radio elements must be grouped together in a ['radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) to indicate which ones affect the same value.
 
 ```html
 <div role="radiogroup" aria-labelledby="legend25" id="radiogroup25">
@@ -96,7 +94,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Associated WAI-ARIA Roles, States, and Properties
 
-- ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) role
+- ['radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) role
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a radiogroup within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
@@ -127,7 +125,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Radios in a toolbar
 
-Because arrow keys are used to navigate among elements of a toolbar and the Tab key moves focus in and out of a toolbar, when a radio group is nested inside a toolbar, the keyboard interaction of the radio group is slightly different from that of a radio group that is not inside of a toolbar. See [`radiogroup` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_Role#Keyboard_interactions) for more information
+Because arrow keys are used to navigate among elements of a toolbar and the Tab key moves focus in and out of a toolbar, when a radio group is nested inside a toolbar, the keyboard interaction of the radio group is slightly different from that of a radio group that is not inside of a toolbar. See [`radiogroup` keyboard interactions](/en-US/docs/web/accessibility/aria/roles/radiogroup_role#keyboard_interactions) for more information
 
 ## Required JavaScript
 
@@ -280,7 +278,7 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 - [HTML `<input type="radio">` radio button](/en-US/docs/Web/HTML/Element/input/radio)
 - [HTML `tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex)
-- [ARIA: `radiogroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [ARIA: `radiogroup` role](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
 - [ARIA: `checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)

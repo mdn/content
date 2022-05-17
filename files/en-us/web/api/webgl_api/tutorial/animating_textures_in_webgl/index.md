@@ -150,6 +150,6 @@ That's all there is to it!
 
 ## See also
 
-- [Using audio and video in Firefox](/en-US/docs/Using_HTML5_audio_and_video)
+- [Using audio and video in Firefox](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

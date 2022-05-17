@@ -91,4 +91,4 @@ worker.onmessageerror = (event) => {
 ## See also
 
 - [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-- Related events: [`message`](/docs/Web/API/Worker/message_event)
+- Related events: [`message`](/en-US/docs/Web/API/Worker/message_event)
