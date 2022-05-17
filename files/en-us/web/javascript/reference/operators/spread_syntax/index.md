@@ -277,8 +277,7 @@ let mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-Note that {{jsxref("Object.assign()")}} triggers {{jsxref("Functions/set",
-   "setters")}}, whereas spread syntax doesn't.
+Note that {{jsxref("Object.assign()")}} can be used to mutate an object, whereas spread syntax can't.
 
 Note that you cannot replace or mimic the {{jsxref("Object.assign()")}} function:
 
