@@ -97,8 +97,7 @@ inappropriate, than it is to follow every guideline to the letter.
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
    if they need a review of the content, and where the rationale behind the
-   change is explained. Ping our [@core-yari-content](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fcore-yari-content)
-   team to ask for help if you are still not sure, or if you think the
+   change is explained. Ping our team on [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) to ask for help if you are still not sure, or if you think the
    content is suspicious.
 
 Note: You may encounter merge conflicts as you review pull requests, if a
@@ -135,8 +134,7 @@ to this project. If you would like to help with MDN content reviews,
 [get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#Step_4_Ask_for_help).
 
 Note that changes to any content areas not explicitly listed below will be
-handled by the [@core-yari-content](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fcore-yari-content)
-team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
+handled by the content team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
 
 - [Web accessibility content](https://github.com/mdn/content/tree/main/files/en-us/web/accessibility):
   - [@ericwbailey](https://github.com/ericwbailey)
@@ -147,54 +145,46 @@ team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
 - [Server-side learning content](https://github.com/mdn/content/tree/main/files/en-us/learn/server-side):
   - [@hamishwillee](https://github.com/hamishwillee)
 - [MDN meta docs](https://github.com/mdn/content/tree/main/files/en-us/mdn)
-  — the [@yari-content-mdn](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-mdn)
-  team, which consists of:
+  — the content team, which consists of:
   - [@Rumyra](https://github.com/Rumyra/)
   - [@Elchi3](https://github.com/Elchi3)
 - [Firefox Developer Tools content](https://github.com/mdn/content/tree/main/files/en-us/tools):
   - [@hamishwillee](https://github.com/hamishwillee)
 - [Mozilla Add-ons reference content](https://github.com/mdn/content/tree/main/files/en-us/mozilla/add-ons)
-  — the [@yari-content-mozilla-add-ons](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-mozilla-add-ons)
-  team, which consists of:
+  — the content M9zilla add-ons team, which consists of:
   - [@caitmuenster](https://github.com/caitmuenster)
   - [@rpl](https://github.com/rpl)
   - [@Rob--W](https://github.com/Rob--W)
   - [@zombie](https://github.com/zombie)
   - [@mixedpuppy](https://github.com/mixedpuppy)
 - [HTTP reference content](https://github.com/mdn/content/tree/main/files/en-us/web/http)
-  — the [@yari-content-http](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-http)
-  team, which consists of:
+  — the content HTTP team, which consists of:
   - [@hamishwillee](https://github.com/hamishwillee)
   - [@Elchi3](https://github.com/Elchi3)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [CSS reference content](https://github.com/mdn/content/tree/main/files/en-us/web/css)
-  — the [@yari-content-css](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-css)
-  team, which consists of:
+  — the content CSS team, which consists of:
   - [@rachelandrew](https://github.com/rachelandrew)
   - [@ericwbailey](https://github.com/ericwbailey)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [HTML reference content](https://github.com/mdn/content/tree/main/files/en-us/web/html)
-  — the [@yari-content-html](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-html)
-  team, which consists of:
+  — the content HTML team, which consists of:
   - [@rachelandrew](https://github.com/rachelandrew)
   - [@ericwbailey](https://github.com/ericwbailey)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [JavaScript reference content](https://github.com/mdn/content/tree/main/files/en-us/web/javascript)
-  — the [@yari-content-javascript](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-javascript)
-  team, which consists of:
+  — the content JavaScript team, which consists of:
   - [@Rumyra](https://github.com/Rumyra)
   - [@sideshowbarker](https://github.com/sideshowbarker)
   - [@Elchi3](https://github.com/Elchi3)
 - [Web API reference content](https://github.com/mdn/content/tree/main/files/en-us/web/api)
-  — the [@yari-content-web-api](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-web-api)
-  team, which consists of:
+  — the content WebAPI team, which consists of:
   - [@Rumyra](https://github.com/Rumyra)
   - [@sideshowbarker](https://github.com/sideshowbarker)
   - [@Elchi3](https://github.com/Elchi3)
   - [@jpmedley](https://github.com/jpmedley)
 - [SVG reference content](https://github.com/mdn/content/tree/main/files/en-us/web/svg)
-  — the [@yari-content-svg](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-svg)
-  team, which consists of:
+  — the content SVG team, which consists of:
   - [@Ryuno-Ki](https://github.com/Ryuno-Ki)
 
 ### Reviewer alumni
