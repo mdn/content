@@ -24,7 +24,7 @@ respond(bytesWritten)
 
 ### Parameters
 
-- _bytesWritten_
+- `bytesWritten`
   - : xxx
 
 ### Return value

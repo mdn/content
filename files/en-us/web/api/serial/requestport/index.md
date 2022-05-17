@@ -22,7 +22,7 @@ requestPort(options)
 
 ### Parameters
 
-- options
+- `options`
 
   - : An object with the following properties:
 
@@ -30,8 +30,10 @@ requestPort(options)
 
       - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
 
-        - `usbVendorId`: An unsigned short integer that identifies a USB device vendor.
-        - `usbProductId`: An unsigned short integer that identifies a USB device.
+        - `usbVendorId`
+          - : An unsigned short integer that identifies a USB device vendor.
+        - `usbProductId`
+          - : An unsigned short integer that identifies a USB device.
 
 ### Return value
 

@@ -25,7 +25,7 @@ delete(property)
 
 ### Parameters
 
-- property
+- `property`
   - : An identifier indicating the stylistic feature (e.g. font, width, background
     color) to remove.
 

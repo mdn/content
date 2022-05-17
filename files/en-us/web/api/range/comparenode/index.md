@@ -69,7 +69,7 @@ compareNode(referenceNode)
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{DOMxRef("Node")}} to compare with the `Range`.
 
 ### Return value

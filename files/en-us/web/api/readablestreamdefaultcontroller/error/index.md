@@ -27,7 +27,7 @@ error(e)
 
 ### Parameters
 
-- _e_
+- `e`
   - : The error you want future interactions to fail with.
 
 ### Return value

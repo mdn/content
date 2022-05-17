@@ -28,10 +28,10 @@ appendStream(stream, maxSize)
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("ReadableStream")}} that is the source of the media segment data you
     want to append to the `SourceBuffer`.
-- maxSize
+- `maxSize`
   - : An unsigned long value indicating the maximum number of bytes that can be appended
     in this operation.
 
