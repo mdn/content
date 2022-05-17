@@ -49,7 +49,7 @@ The event is fired on the drop target(s).
 
 ### A minimal drag and drop example
 
-In this example we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
+In this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
 
 We use three event handlers here:
 
