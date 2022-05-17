@@ -765,13 +765,7 @@
       ],
       "properties": [],
       "events": [],
-      "dictionaries": [
-        "MediaConfiguration",
-        "VideoConfiguration",
-        "AudioConfiguration",
-        "MediaDecodingConfiguration",
-        "MediaEncodingConfiguration"
-      ]
+      "dictionaries": []
     },
     "Media Capture and Streams": {
       "overview": ["Media Streams API"],
