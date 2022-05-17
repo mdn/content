@@ -50,7 +50,7 @@ The `dragend` event is fired when a drag operation is being ended (by releasing 
 
 In this example, we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
 
-We make the element half transparent while it is being dragged, and listen for the `dragend` event to reset the element's opacity when it is released.
+We make the element half-transparent while it is being dragged, and listen for the `dragend` event to reset the element's opacity when it is released.
 
 For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/Document/drag_event) event.
 
