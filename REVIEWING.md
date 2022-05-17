@@ -134,7 +134,8 @@ to this project. If you would like to help with MDN content reviews,
 [get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#Step_4_Ask_for_help).
 
 Note that changes to any content areas not explicitly listed below will be
-handled by the content team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
+handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
+team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
 
 - [Web accessibility content](https://github.com/mdn/content/tree/main/files/en-us/web/accessibility):
   - [@ericwbailey](https://github.com/ericwbailey)
@@ -145,46 +146,54 @@ handled by the content team, which currently consists of [@Rumyra](https://githu
 - [Server-side learning content](https://github.com/mdn/content/tree/main/files/en-us/learn/server-side):
   - [@hamishwillee](https://github.com/hamishwillee)
 - [MDN meta docs](https://github.com/mdn/content/tree/main/files/en-us/mdn)
-  — the content team, which consists of:
+  — the [@yari-content-mdn](https://github.com/orgs/mdn/teams/yari-content-mdn)
+  team, which consists of:
   - [@Rumyra](https://github.com/Rumyra/)
   - [@Elchi3](https://github.com/Elchi3)
 - [Firefox Developer Tools content](https://github.com/mdn/content/tree/main/files/en-us/tools):
   - [@hamishwillee](https://github.com/hamishwillee)
 - [Mozilla Add-ons reference content](https://github.com/mdn/content/tree/main/files/en-us/mozilla/add-ons)
-  — the content M9zilla add-ons team, which consists of:
+  — the [@yari-content-mozilla-add-ons](https://github.com/orgs/mdn/teams/yari-content-mozilla-add-ons)
+  team, which consists of:
   - [@caitmuenster](https://github.com/caitmuenster)
   - [@rpl](https://github.com/rpl)
   - [@Rob--W](https://github.com/Rob--W)
   - [@zombie](https://github.com/zombie)
   - [@mixedpuppy](https://github.com/mixedpuppy)
 - [HTTP reference content](https://github.com/mdn/content/tree/main/files/en-us/web/http)
-  — the content HTTP team, which consists of:
+  — the [@yari-content-http](https://github.com/orgs/mdn/teams/yari-content-http)
+  team, which consists of:
   - [@hamishwillee](https://github.com/hamishwillee)
   - [@Elchi3](https://github.com/Elchi3)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [CSS reference content](https://github.com/mdn/content/tree/main/files/en-us/web/css)
-  — the content CSS team, which consists of:
+  — the [@yari-content-css](https://github.com/orgs/mdn/teams/yari-content-css)
+  team, which consists of:
   - [@rachelandrew](https://github.com/rachelandrew)
   - [@ericwbailey](https://github.com/ericwbailey)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [HTML reference content](https://github.com/mdn/content/tree/main/files/en-us/web/html)
-  — the content HTML team, which consists of:
+  — the [@yari-content-html](https://github.com/orgs/mdn/teams/yari-content-html)
+  team, which consists of:
   - [@rachelandrew](https://github.com/rachelandrew)
   - [@ericwbailey](https://github.com/ericwbailey)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [JavaScript reference content](https://github.com/mdn/content/tree/main/files/en-us/web/javascript)
-  — the content JavaScript team, which consists of:
+  — the [@yari-content-javascript](https://github.com/orgs/mdn/teams/yari-content-javascript)
+  team, which consists of:
   - [@Rumyra](https://github.com/Rumyra)
   - [@sideshowbarker](https://github.com/sideshowbarker)
   - [@Elchi3](https://github.com/Elchi3)
 - [Web API reference content](https://github.com/mdn/content/tree/main/files/en-us/web/api)
-  — the content WebAPI team, which consists of:
+  — the [@yari-content-web-api](https://github.com/orgs/mdn/teams/yari-content-web-api)
+  team, which consists of:
   - [@Rumyra](https://github.com/Rumyra)
   - [@sideshowbarker](https://github.com/sideshowbarker)
   - [@Elchi3](https://github.com/Elchi3)
   - [@jpmedley](https://github.com/jpmedley)
 - [SVG reference content](https://github.com/mdn/content/tree/main/files/en-us/web/svg)
-  — the content SVG team, which consists of:
+  — the [@yari-content-svg](https://github.com/orgs/mdn/teams/yari-content-svg)
+  team, which consists of:
   - [@Ryuno-Ki](https://github.com/Ryuno-Ki)
 
 ### Reviewer alumni
