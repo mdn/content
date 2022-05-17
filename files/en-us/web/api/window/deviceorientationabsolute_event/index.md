@@ -56,7 +56,7 @@ An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## See also
 
-- {{ event("deviceorientation") }}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
 - {{ domxref("DeviceOrientationEvent") }}
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)

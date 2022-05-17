@@ -18,7 +18,7 @@ status of the {{domxref("WebGLFramebuffer")}} object.
 ## Syntax
 
 ```js
-GLenum gl.checkFramebufferStatus(target);
+checkFramebufferStatus(target)
 ```
 
 ### Parameters

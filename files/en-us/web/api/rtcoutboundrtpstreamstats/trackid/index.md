@@ -31,15 +31,9 @@ The **`trackId`** property of the
 {{domxref("RTCSenderVideoTrackAttachmentStats")}} object representing the
 {{domxref("MediaStreamTrack")}} which is being sent on this stream.
 
-## Syntax
+## Value
 
-```js
-var trackStatsId = RTCOutboundRtpStreamStats.trackId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the ID of the
+A string containing the ID of the
 {{domxref("RTCSenderAudioTrackAttachmentStats")}} or
 {{domxref("RTCSenderVideoTrackAttachmentStats")}} object representing the track which is
 the source of the media being sent on this stream.

@@ -18,18 +18,11 @@ Returns the rotation angle, in degrees, of the contact area ellipse defined by {
 
 > **Note:** This attribute has _not_ been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.
 
-## Syntax
+## Value
 
-```js
-var angle = touchItem.rotationAngle;
-```
+A number.
 
-### Return value
-
-- `angle`
-  - : The number of degrees of rotation to apply to the described ellipse to align with the contact area between the user and the touch surface.
-
-## Example
+## Examples
 
 The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#example) includes an example of this property's usage.
 

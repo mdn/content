@@ -16,14 +16,14 @@ The **`commit()`** method of the {{domxref("IDBTransaction")}} interface commits
 
 Note that `commit()` doesn't normally _have_ to be called — a transaction will automatically commit when all outstanding requests have been satisfied and no new requests have been made. `commit()` can be used to start the commit process without waiting for events from outstanding requests to be dispatched.
 
-If it is called on a transaction that is not active, it throws an {{exception("InvalidStateError")}} `DOMException`.
+If it is called on a transaction that is not active, it throws an `InvalidStateError` {{domxref("DOMException")}}.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
 ```js
-transaction.commit();
+commit()
 ```
 
 ### Parameters

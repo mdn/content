@@ -23,7 +23,7 @@ The **`box-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadow effects aro
 
 The `box-shadow` property enables you to cast a drop shadow from the frame of almost any element. If a {{cssxref("border-radius")}} is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of multiple box shadows is the same as multiple [text shadows](/en-US/docs/Web/CSS/text-shadow) (the first specified shadow is on top).
 
-[Box-shadow generator](/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
+[Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
 
 ## Syntax
 
@@ -46,10 +46,11 @@ box-shadow: inset 5em 1em gold;
 /* Any number of shadows, separated by commas */
 box-shadow: 3px 3px red, -1em 0 0.4em olive;
 
-/* Global keywords */
+/* Global values */
 box-shadow: inherit;
 box-shadow: initial;
 box-shadow: revert;
+box-shadow: revert-layer;
 box-shadow: unset;
 ```
 
@@ -171,4 +172,4 @@ p {
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("text-shadow")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

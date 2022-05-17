@@ -33,8 +33,7 @@ first, lexicographically (alphabetically).
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var track = audioCtx.createMediaStreamTrackSource(track);
+createMediaStreamTrackSource(track)
 ```
 
 ### Parameters
@@ -48,7 +47,7 @@ var track = audioCtx.createMediaStreamTrackSource(track);
 A {{domxref("MediaStreamTrackAudioSourceNode")}} object which acts as a source for
 audio data found in the specified audio track.
 
-## Example
+## Examples
 
 In this example, {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} is used to
 request access to the user's microphone. Once that access is attained, an audio context

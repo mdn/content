@@ -41,6 +41,7 @@ break-after: region;
 break-after: inherit;
 break-after: initial;
 break-after: revert;
+break-after: revert-layer;
 break-after: unset;
 ```
 
@@ -77,9 +78,9 @@ The `break-after` property is specified as one of the keyword values from the li
 - `page`
   - : Forces a page break right after the principal box.
 - `left`
-  - : Forces one or two page breaks right after the principal box, whichever will make the next page into a left page.
+  - : Forces one or two page breaks right after the principal box, whichever will make the next page into a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
-  - : Forces one or two page breaks right after the principal box, whichever will make the next page into a right page.
+  - : Forces one or two page breaks right after the principal box, whichever will make the next page into a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
 - `recto` {{experimental_inline}}
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)
 - `verso` {{experimental_inline}}

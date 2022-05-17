@@ -100,4 +100,4 @@ self.addEventListener('sync', event => {
 
 ## See also
 
-- [Introducing Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
+- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/)

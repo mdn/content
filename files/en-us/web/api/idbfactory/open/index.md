@@ -30,18 +30,16 @@ May trigger `upgradeneeded`, `blocked` or
 
 ## Syntax
 
-For the current standard:
-
 ```js
-var IDBOpenDBRequest = indexedDB.open(name);
-var IDBOpenDBRequest = indexedDB.open(name, version);
+open(name)
+open(name, version)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the database.
-- version {{optional_inline}}
+- `version` {{optional_inline}}
   - : Optional. The version to open the database with. If the version is not provided and
     the database exists, then a connection to the database will be opened without changing
     its version. If the version is not provided and the database does not exist, then it
@@ -72,13 +70,10 @@ request are fired.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- {{jsxref("TypeError")}}
+  - : Thrown if the value of `version` is not a number greater than zero.
 
-| Exception   | Description                                                        |
-| ----------- | ------------------------------------------------------------------ |
-| `TypeError` | The value of version is zero or a negative number or not a number. |
-
-## Example
+## Examples
 
 Example of calling `open` with the current specification's
 `version` parameter:

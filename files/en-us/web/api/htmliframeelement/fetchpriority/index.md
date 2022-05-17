@@ -1,25 +1,25 @@
 ---
-title: HTMLIFrameElement.fetchpriority
-slug: Web/API/HTMLIFrameElement/fetchpriority
+title: HTMLIFrameElement.fetchPriority
+slug: Web/API/HTMLIFrameElement/fetchPriority
 tags:
   - API
   - HTML DOM
   - HTMLIFrameElement
   - Property
   - Reference
-  - fetchpriority
-browser-compat: api.HTMLIFrameElement.fetchpriority
+  - fetchPriority
+browser-compat: api.HTMLIFrameElement.fetchPriority
 ---
 {{APIRef}}
 
-The **`fetchpriority`** property of the
+The **`fetchPriority`** property of the
 {{domxref("HTMLIFrameElement")}} interface represents a hint given to the
 browser on how it should prioritize the fetch of the iframe document relative
 to other iframe documents.
 
-## Values
+## Value
 
-A {{domxref("DOMString")}} representing the priority hint. Possible values are:
+A string representing the priority hint. Possible values are:
 
 - **`high`**: Fetch the iframe document at a high priority relative to other
   iframe documents.
@@ -28,7 +28,7 @@ A {{domxref("DOMString")}} representing the priority hint. Possible values are:
 - **`auto`**: Default mode, which indicates no preference for
   the fetch priority. The browser decides what is best for the user.
 
-The `fetchpriority` property allows you to signal high or low priority iframe
+The `fetchPriority` property allows you to signal high or low priority iframe
 document fetches. This can be useful when applied to {{HTMLElement("iframe")}}
 elements to signal iframes that are "less-important" to the user experience
 early in the loading process.
@@ -44,7 +44,7 @@ degrading performance.
 
 ```js
 var iframe = document.createElement("iframe");
-iframe.fetchpriority = 'low';
+iframe.fetchPriority = 'low';
 iframe.src = "/";
 ```
 

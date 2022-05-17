@@ -23,8 +23,16 @@ state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{d
 ## Syntax
 
 ```js
-void ctx.restore();
+restore()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -22,7 +22,7 @@ This ensures that an exception in one callback will not prevent others from bein
 ## Syntax
 
 ```js
-self.reportError(throwable);
+reportError(throwable)
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ Void.
 - {{jsxref("TypeError")}}
   - : The method is called without an error argument.
 
-## Example
+## Examples
 
 Feature test for the method using:
 

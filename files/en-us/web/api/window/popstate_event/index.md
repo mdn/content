@@ -19,28 +19,33 @@ browser-compat: api.Window.popstate_event
 
 The **`popstate`** event of the {{domxref("Window")}} interface is fired when the active history entry changes while the user navigates the session history. It changes the current history entry to that of the last page the user visited or, if {{domxref("history.pushState()")}} has been used to add a history entry to the history stack, that history entry is used instead.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PopStateEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("WindowEventHandlers.onpopstate", "onpopstate")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('popstate', event => { });
+onpopstate = event => { };
+```
+
+## Event type
+
+A {{domxref("PopStateEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PopStateEvent")}}
+
+## Event properties
+
+- {{domxref("PopStateEvent.state")}} {{readonlyInline}}
+  - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onhashchange` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## The history stack
 

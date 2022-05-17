@@ -17,7 +17,7 @@ variable at a given location.
 ## Syntax
 
 ```js
-any gl.getUniform(program, location);
+getUniform(program, location)
 ```
 
 ### Parameters

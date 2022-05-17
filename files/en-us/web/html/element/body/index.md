@@ -57,8 +57,10 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role"
-          >document</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>
@@ -121,7 +123,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Function to call when the document receives focus.
 - {{htmlattrdef("onhashchange")}}
   - : Function to call when the fragment identifier part (starting with the hash (`'#'`) character) of the document's current address has changed.
-- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
+- {{htmlattrdef("onlanguagechange")}}
   - : Function to call when the preferred languages changed.
 - {{htmlattrdef("onload")}}
   - : Function to call when the document has finished loading.

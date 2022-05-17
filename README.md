@@ -62,14 +62,14 @@ There are several ways forward from this point. It's up to you.
 Here are some options:
 
 1. Go to <https://github.com/mdn/content> and just use the
-[GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github).
+[GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files).
 This is the easiest approach if you just want to make a simple change to
 a single file, like fixing a typo.
-1. Install and use the [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop)
-1. Install and use the [GitHub CLI](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-cli)
+1. Install and use the [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop)
+1. Install and use the [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli)
 1. [Install `git`](https://git-scm.com/downloads) and use it from the
 command line. You might find these resources helpful:
-    - [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
+    - [Using Git](https://docs.github.com/en/get-started)
     - [`git` cheatsheet](https://training.github.com/)
 
 If you choose an option other than the GitHub UI, you want to install
@@ -128,7 +128,7 @@ document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs
 If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
 a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
-you can sign into GitHub, go to <https://github.com/mdn/content>,
+you can sign in to GitHub, go to <https://github.com/mdn/content>,
 navigate to the source file `files/en-us/web/javascript/index.md`,
 and then click on the edit (pencil) button.
 
@@ -136,11 +136,11 @@ and then click on the edit (pencil) button.
   to jump to its source file on GitHub.
 
 From there the GitHub UI will take your hand and
-[walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
+[walk you through the rest](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files),
 like automatically creating a
-[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 and branch to commit your changes to, as well as helping you reach the
-ultimate goal, a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+ultimate goal, a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
 
@@ -166,13 +166,13 @@ moving one or more documents, the GitHub UI is not very efficient.
 You'd have to make a separate pull request for every page you want to change.
 Instead, you're going to have to use `git` or one of the other
 `git`-based approaches like the
-[GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop).
+[GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop).
 
 1. You'll want to create a
-[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 of this repository, so you can freely experiment with branches and
 changes in your own copy before submitting your changes as a
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Let's assume your GitHub username is `octocat`. Your fork would be a copy
 of this repository but in your own account, so
 `https://github.com/octocat/content`.
@@ -291,7 +291,7 @@ and then push the branch to your fork. Remember, the default name that
     ```
 
 1. You're now ready to create a
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 1. Once you've created your pull request, sit back, relax, and wait for
 a review.
@@ -369,7 +369,7 @@ There are only a few things to keep in mind:
   the site to Markdown one section at a time, and don't want to mix authoring
   formats within a section. At this point we have only converted the JavaScript
   documentation. So if you are adding a new document under
-  `files/en-us/web/javascript`, make it a Markdown file. Otherwise make it an
+  `files/en-us/web/javascript`, make it a Markdown file. Otherwise, make it an
   HTML file.
 - Remember that a document is represented by an `index.html` or `index.md` file
   within its own folder.
@@ -410,7 +410,7 @@ or `index.md` file.
     ```
 
 1. And finally create your
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ### Moving one or more documents
 
@@ -457,7 +457,7 @@ push your branch to your fork:
     git push -u origin my-move
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 **Important: `yarn content move` automatically adds the necessary redirect
 information to the `_redirects.txt` file so that the old location will redirect
@@ -516,7 +516,7 @@ push your branch to your fork:
     git push -u origin my-delete
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 > **Note:** If the slug of the page you wish to delete contain special
   characters, include it in quotes:
@@ -560,83 +560,6 @@ pushing your branch to your fork:
     git commit -a
     git push -u origin my-delete
     ```
-
-### Adding images
-
-Adding an image to a document is easy as well. All you need to do is add
-your image file within the document's folder, and then reference the image
-from within the document's `index.html` or `index.md` file, using an `<img>`
-or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
-It's as easy as that. Let's walk through an example:
-
-1. You should be getting used to this by now, as we've done it several
-times above. Make sure you start with a fresh working branch updated with
-the latest content from the `main` branch of the `mdn` remote.
-
-    ```sh
-    cd ~/repos/mdn/content
-    git checkout main
-    git pull mdn main
-    # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
-    yarn
-    git checkout -b my-images
-    ```
-
-1. Add your image to the document folder. For this example, let's assume
-we're adding a new image to the `files/en-us/web/css` document.
-
-    ```sh
-    cd ~/repos/mdn/content
-    cp /some/path/my-cool-image.png files/en-us/web/css/
-    ```
-
-1. Run the `filecheck` command on each image you add. It'll complain if
-something's wrong (see also the [Compressing images](#compressing-images)
-section below).
-We'll automatically run this as one of the tests we run when your new pull
-request is created, but why wait to fix any possible issues later?
-
-    ```sh
-    yarn filecheck files/en-us/web/css/my-cool-image.png
-    ```
-
-1. Use your image within the document. For example, add the following `<img>` element
-somewhere inside `files/en-us/web/css/index.html`:
-
-    ```html
-    <img src="my-cool-image.png" alt="My cool image">
-    ```
-
-1. Add and commit all of the deleted, created, and modified files, as well as
-push your branch to your fork:
-
-    ```sh
-    git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
-    git commit
-    git push -u origin my-images
-    ```
-
-1. Now you're ready to create your
-   [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
-#### Compressing images
-
-When you add images to MDN, you should make sure that they are compressed
-as much as possible without degrading quality, to save on download size
-for our readers. In fact, if you don't do this our CI process will fail
-and the build results will warn you that some of your images are too big.
-
-The best way to compress them is by using the built-in compression tool.
-You can compress an image appropriately by using the `filecheck` command
-with the `--save-compression` option — this compresses the specified image
-as much as possible, and saves the result over the top of the original.
-
-For example:
-
-```sh
-yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
-```
 
 ## Learn more
 

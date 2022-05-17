@@ -54,7 +54,7 @@ The input source's {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}
 indicates the position and orientation of the target ray, and can be used to determine
 where to render the ray.
 
-## Example
+## Examples
 
 This fragment of code shows part of a function to be called once every frame. It looks for inputs which have a non-`null` {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}. Inputs which have a value for this property represent inputs that project a target ray outward from the user.
 

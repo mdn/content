@@ -4,7 +4,6 @@ slug: Web/API/DataTransferItem/webkitGetAsEntry
 tags:
   - API
   - DataTransferItem
-  - File System API
   - File and Directory Entries API
   - Files
   - Method
@@ -15,7 +14,7 @@ tags:
   - getAsEntry
 browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
-{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Non-standard_header}}
 
 If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitGetAsEntry()` returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, `null` is returned.
 
@@ -38,7 +37,7 @@ A {{domxref("FileSystemEntry")}}-based object describing the dropped item.
 This will be either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.
 The method aborts and returns `null` if the dropped item isn't a file, or if the {{domxref("DataTransferItem")}} object is not in read or read/write mode.
 
-## Example
+## Examples
 
 In this example, a drop zone is created, which responds to the {{event("drop")}} event
 by scanning through the dropped files and directories, outputting a hierarchical
@@ -167,7 +166,7 @@ This fetches the list of {{domxref("DataTransferItem")}} objects representing th
 Then we call {{domxref("Event.preventDefault()")}} to prevent the event from being handled further after we're done.
 
 Now it's time to start building the list. First, the list is emptied by setting {{domxref("Node.textContent", "listing.textContent")}} to be empty.
-That leaves us with an empty {{domxref("ul")}} to begin inserting directory entries into.
+That leaves us with an empty {{HTMLElement("ul")}} to begin inserting directory entries into.
 
 Then we iterate over the items in the list of dropped items.
 For each one, we call its {{domxref("DataTransferItem.webkitGetAsEntry", "webkitGetAsEntry()")}} method to obtain a {{domxref("FileSystemEntry")}} representing the file.
@@ -177,11 +176,9 @@ If that's successful, we call `scanFiles()` to process the item—either by addi
 
 You can see how this works by trying it out below. Find some files and directories and drag them in, and take a look at the resulting output.
 
-{{ EmbedLiveSample('Example', 600, 400) }}
+{{ EmbedLiveSample('Examples', 600, 400) }}
 
 ## Specifications
-
-{{Specifications}}
 
 This API has no official W3C or WHATWG specification.
 
@@ -192,7 +189,7 @@ This API has no official W3C or WHATWG specification.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
 - Events: {{event("dragover")}} and {{event("drop")}}

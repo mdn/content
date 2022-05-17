@@ -27,15 +27,16 @@ interfaces.
 ## Syntax
 
 ```js
-entries = list.getEntriesByName(name, type);
+getEntriesByName(name)
+getEntriesByName(name, type)
 ```
 
 ### Parameters
 
 - _`name`_
-  - : A {{domxref("DOMString")}} representing the name of the entry to retrieve.
+  - : A string representing the name of the entry to retrieve.
 - _`type`_ {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the type of entry to retrieve such as
+  - : A string representing the type of entry to retrieve such as
     "`mark`". The valid entry types are listed in
     {{domxref("PerformanceEntry.entryType")}}.
 
@@ -49,7 +50,7 @@ chronological order based on the entries'
 {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects meet the specified
 criteria, an empty list is returned.
 
-## Example
+## Examples
 
 ```js
 function print_perf_entry(pe) {

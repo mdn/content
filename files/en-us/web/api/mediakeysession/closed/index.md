@@ -19,13 +19,7 @@ The `MediaKeySession.closed` read-only property returns a
 promise can only be fulfilled and is never rejected. Closing a session means that
 licenses and keys associated with it are no longer valid for decrypting media data.
 
-## Syntax
-
-```js
-var promise = mediaKeySessionObj.closed;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}}.
 

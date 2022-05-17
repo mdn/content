@@ -18,7 +18,7 @@ buffer.
 ## Syntax
 
 ```js
-any gl.getBufferParameter(target, pname);
+getBufferParameter(target, pname)
 ```
 
 ### Parameters

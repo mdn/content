@@ -48,7 +48,7 @@ If the intrinsic width is not available—either because the image does not spec
 intrinsic width or because the image data is not available in order to obtain this
 information, `naturalWidth` returns 0.
 
-## Example
+## Examples
 
 See [`HTMLImageElement.naturalHeight`](/en-US/docs/Web/API/HTMLImageElement/naturalHeight#example) for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.
 

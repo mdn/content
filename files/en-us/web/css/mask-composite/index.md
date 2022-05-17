@@ -24,6 +24,7 @@ mask-composite: exclude;
 mask-composite: inherit;
 mask-composite: initial;
 mask-composite: revert;
+mask-composite: revert-layer;
 mask-composite: unset;
 ```
 

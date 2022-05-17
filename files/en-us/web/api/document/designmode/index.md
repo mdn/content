@@ -26,7 +26,7 @@ no longer supported. In IE6-10, the value is capitalized.
 A string indicating whether `designMode` is (or should be) set to on or off.
 Valid values are `on` and `off`.
 
-## Example
+## Examples
 
 Make an {{HTMLElement("iframe")}}'s document editable:
 

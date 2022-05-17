@@ -167,16 +167,16 @@ This works particularly well when you want to use a value that is quite new and 
 
 We will look at many more ways to support varying browsers in later lessons.
 
-## And finally
+## Summary
 
-You've nearly finished this module; we only have one more thing to do. In the next article you'll [use your new knowledge](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page) to restyle an example, testing out some CSS in the process.
+You've nearly finished this module — we only have one more thing to do. In the [Styling a biography page assessment](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page) you'll use your new knowledge to restyle an example, testing out some CSS in the process.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Styling_a_biography_page", "Learn/CSS/First_steps")}}
 
 ## In this module
 
-1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

@@ -10,19 +10,17 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.deltaX
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaX`** read-only property is a
 `double` representing the horizontal scroll amount in the
 {{domxref("WheelEvent.deltaMode")}} unit.
 
-## Syntax
+## Value
 
-```js
-var dX = event.deltaX;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});

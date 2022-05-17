@@ -23,6 +23,8 @@ The created image will have a resolution of 96dpi for file formats that support 
 ## Syntax
 
 ```js
+toBlob(callback)
+toBlob(callback, type)
 toBlob(callback, type, quality)
 ```
 
@@ -32,7 +34,7 @@ toBlob(callback, type, quality)
   - : A callback function with the resulting {{domxref("Blob")}} object as a single argument.
     `null` may be passed if the image cannot be created for any reason.
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} indicating the image format.
+  - : A string indicating the image format.
     The default type is `image/png`; that type is also used if the given type isn't supported.
 - `quality` {{optional_inline}}
   - : A {{jsxref("Number")}} between `0` and `1` indicating the image quality to be used when creating images using file formats that support lossy compression (such as `image/jpeg` or `image/webp`).
@@ -40,7 +42,7 @@ toBlob(callback, type, quality)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

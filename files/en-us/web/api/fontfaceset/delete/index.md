@@ -16,7 +16,7 @@ The **`delete()`** method of the {{domxref("FontFaceSet")}} interface removes a 
 ## Syntax
 
 ```js
-FontFaceSet.delete(font)
+delete(font)
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ FontFaceSet.delete(font)
 - `font`
   - : A {{domxref("FontFace")}} to be removed from the set.
 
-### Return Value
+### Return value
 
 A boolean value which is `true` if the deletion was successful.
 

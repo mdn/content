@@ -12,7 +12,7 @@ tags:
 ---
 {{GamesSidebar}}
 
-Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are [several different kinds of shaders](https://www.khronos.org/opengl/wiki/Shader), but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.
+Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are [several kinds of shaders](https://www.khronos.org/opengl/wiki/Shader), but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.
 
 GLSL is not as intuitive as JavaScript. GLSL is strongly typed and there is a lot of math involving vectors and matrices. It can get very complicated — very quickly. In this article we will make a simple code example that renders a cube. To speed up the background code we will be using the Three.js API.
 
@@ -219,11 +219,11 @@ canvas { width: 100%; height: 100%; }
 
 ### Result
 
-{{ EmbedLiveSample('Final_code', '100%', '400', '', 'Games/Techniques/3D_on_the_web/GLSL_Shaders') }}
+{{ EmbedLiveSample('Final_code', '100%', '400') }}
 
 ## Conclusion
 
-This article has taught the very basics of shaders. Our example doesn't do much but there are many more cool things you can do with shaders — check out some really cool ones on [ShaderToy](https://shadertoy.com/) for inspiration and to learn from their sources.
+This article has taught the very basics of shaders. Our example doesn't do much but there are many more cool things you can do with shaders — check out some really cool ones on [ShaderToy](https://www.shadertoy.com/) for inspiration and to learn from their sources.
 
 ## See also
 

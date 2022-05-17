@@ -29,7 +29,7 @@ The `__proto__` getter function exposes the value of the internal `[[Prototype]]
 
 The `__proto__` setter allows the `[[Prototype]]` of an object to be mutated. The object must be extensible according to {{JSxRef("Object.isExtensible()")}}: if it is not, a {{JSxRef("Global_Objects/TypeError", "TypeError")}} is thrown. The value provided must be an object or {{JSxRef("Global_Objects/null", "null")}}. Providing any other value will do nothing.
 
-To understand how prototypes are used for inheritance, see guide article [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+To understand how prototypes are used for inheritance, see guide article [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 The `__proto__` property is a simple accessor property on {{JSxRef("Object.prototype")}} consisting of a getter and setter function. A property access for `__proto__` that eventually consults {{JSxRef("Object.prototype")}} will find this property, but an access that does not consult {{JSxRef("Object.prototype")}} will not. If some other `__proto__` property is found before {{JSxRef("Object.prototype")}} is consulted, that property will hide the one found on {{JSxRef("Object.prototype")}}.
 
@@ -97,7 +97,7 @@ var obj = {
 
 obj.myname(); // myname
 
- 
+
 ```
 
 ## Specifications

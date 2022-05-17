@@ -47,7 +47,7 @@ var prevDiff = -1;
 
 ### Register event handlers
 
-Event handlers are registered for the following pointer events: {{event("pointerdown")}}, {{event("pointermove")}} and {{event("pointerup")}}. The handler for {{event("pointerup")}} is used for the {{event("pointercancel")}}, {{event("pointerout")}} and {{event("pointerleave")}} events since these four events have the same semantics in this application.
+Event handlers are registered for the following pointer events: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}} and {{domxref("HTMLElement/pointerup_event", "pointerup")}}. The handler for {{domxref("HTMLElement/pointerup_event", "pointerup")}} is used for the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}} and {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events since these four events have the same semantics in this application.
 
 ```js
 function init() {
@@ -67,7 +67,7 @@ function init() {
 
 ### Pointer down
 
-The {{event("pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. In this application, the event's state must be cached in case this down event is part of a two-pointer pinch/zoom gesture.
+The {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. In this application, the event's state must be cached in case this down event is part of a two-pointer pinch/zoom gesture.
 
 ```js
 function pointerdown_handler(ev) {
@@ -80,7 +80,7 @@ function pointerdown_handler(ev) {
 
 ### Pointer move
 
-The {{event("pointermove")}} event handler detects if a user is invoking a two-pointer pinch/zoom gesture. If two pointers are down, and the distance between the pointers is increasing (signifying a pinch out or zoom in), the element's background color is changed to `pink`, and if the distance between the pointers is decreasing (a pinch in or zoom out), the background color is changed to `lightblue`. In a more sophisticated application, pinch in or pinch out determination could be used to apply application-specific semantics.
+The {{domxref("HTMLElement/pointermove_event", "pointermove")}} event handler detects if a user is invoking a two-pointer pinch/zoom gesture. If two pointers are down, and the distance between the pointers is increasing (signifying a pinch out or zoom in), the element's background color is changed to `pink`, and if the distance between the pointers is decreasing (a pinch in or zoom out), the background color is changed to `lightblue`. In a more sophisticated application, pinch in or pinch out determination could be used to apply application-specific semantics.
 
 When this event is processed, the target's border is set to `dashed` to provide a clear visual indication the element has received a move event.
 
@@ -131,9 +131,9 @@ function pointermove_handler(ev) {
 
 ### Pointer up
 
-The {{event("pointerup")}} event is fired when a pointer is raised from the _contact surface_. When this occurs, the event is removed from the event cache and the target element's background color and border are restored to their original values.
+The {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired when a pointer is raised from the _contact surface_. When this occurs, the event is removed from the event cache and the target element's background color and border are restored to their original values.
 
-In this application, this handler is also used for {{event("pointercancel")}}, {{event("pointerleave")}} and {{event("pointerout")}} events.
+In this application, this handler is also used for {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} and {{domxref("HTMLElement/pointerout_event", "pointerout")}} events.
 
 ```js
 function pointerup_handler(ev) {
@@ -222,5 +222,5 @@ function clearLog(event) {
 ## See also
 
 - [Pointer Events now in Firefox Nightly](https://hacks.mozilla.org/2015/08/pointer-events-now-in-firefox-nightly/); Mozilla Hacks; by Matt Brubeck and Jason Weathersby; 2015-Aug-04
-- [jQuery Pointer Events Polyfill](https://github.com/jquery/PEP)
+- [jQuery Pointer Events Polyfill](https://github.com/jquery-archive/PEP)
 - [Gestures](https://material.io/design/interaction/gestures.html); Material Design

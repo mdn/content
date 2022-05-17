@@ -18,12 +18,6 @@ The **`WorkerNavigator.permissions`** read-only property
 returns a {{domxref("Permissions")}} object that can be used to query and update
 permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-## Syntax
-
-```js
-permissionsObj = navigator.permissions
-```
-
 ## Value
 
 A {{domxref("Permissions")}} object.

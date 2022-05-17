@@ -27,14 +27,15 @@ bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
 ## Syntax
 
 ```js
-rtpTransceiver = RTCPeerConnection.addTransceiver(trackOrKind, init);
+addTransceiver(trackOrKind)
+addTransceiver(trackOrKind, init)
 ```
 
 ### Parameters
 
 - `trackOrKind`
   - : A {{domxref("MediaStreamTrack")}} to associate with the transceiver, or a
-    {{domxref("DOMString")}} which is used as the {{domxref("MediaStreamTrack.kind",
+    string which is used as the {{domxref("MediaStreamTrack.kind",
     "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by
     extension of the {{domxref("RTCRtpReceiver")}} itself.
 - `init` {{optional_inline}}
@@ -45,13 +46,19 @@ rtpTransceiver = RTCPeerConnection.addTransceiver(trackOrKind, init);
     - `sendEncodings` {{optional_inline}}
       - : A list of encodings to allow when sending RTP media from the {{domxref("RTCRtpSender")}}. Each entry is of type {{domxref("RTCRtpEncodingParameters")}}.
     - `streams` {{optional_inline}}
-      - : A list of {{domxref("MediaStream")}} objects to add to the transceiver's {{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{event("track")}} event occurs, these are the streams that will be specified by that event.
+      - : A list of {{domxref("MediaStream")}} objects to add to the transceiver's {{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.track_event", "track")}} event occurs, these are the streams that will be specified by that event.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError`
-  - : A string was specified as `trackOrKind` which is not valid. The string
-    must be either `"audio"` or `"video"`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
+
+- {{jsxref("RangeError")}}
+  - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0.
 
 ## Specifications
 

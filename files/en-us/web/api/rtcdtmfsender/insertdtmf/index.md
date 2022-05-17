@@ -34,13 +34,15 @@ Since `insertDTMF()` replaces the tone buffer, in order to add to the DTMF tones
 ## Syntax
 
 ```js
-RTCDTMFSender.insertDTMF(tones[, duration[, interToneGap]]);
+insertDTMF(tones)
+insertDTMF(tones, duration)
+insertDTMF(tones, duration, interToneGap)
 ```
 
 ### Parameters
 
 - `tones`
-  - : A {{domxref("DOMString")}} containing the DTMF codes to be transmitted to the
+  - : A string containing the DTMF codes to be transmitted to the
     recipient. Specifying an empty string as the `tones` parameter clears the
     tone buffer, aborting any currently queued tones. A "," character inserts a two second
     delay.
@@ -54,7 +56,7 @@ RTCDTMFSender.insertDTMF(tones[, duration[, interToneGap]]);
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -64,7 +66,7 @@ RTCDTMFSender.insertDTMF(tones[, duration[, interToneGap]]);
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if one or more of the characters in `tones` is not valid DTMF (0-9, A-Z, # or ,).
 
-## Example
+## Examples
 
 tbd
 

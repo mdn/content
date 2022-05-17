@@ -25,15 +25,19 @@ See [Timers](/en-US/docs/Web/API/console#timers) in the
 ## Syntax
 
 ```js
-console.time(label);
+time(label)
 ```
 
-## Parameters
+### Parameters
 
 - `label`
   - : The name to give the new timer. This will identify the timer; use the same name when
     calling {{domxref("console.timeEnd()")}} to stop the timer and get the time output to
     the console.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

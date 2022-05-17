@@ -41,7 +41,7 @@ For {{domxref("Element")}} objects, the value of `tagName` is the same as
 the value of the {{domxref("Node.nodeName", "nodeName")}} property the element object
 inherits from {{domxref("Node")}}.
 
-## Example
+## Examples
 
 ### HTML
 

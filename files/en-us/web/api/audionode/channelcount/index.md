@@ -24,7 +24,7 @@ The **`channelCount`** property of the {{ domxref("AudioNode") }} interface repr
 
 An integer.
 
-## Example
+## Examples
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;

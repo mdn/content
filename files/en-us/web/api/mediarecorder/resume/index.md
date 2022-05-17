@@ -31,8 +31,16 @@ the following steps:
 ## Syntax
 
 ```js
-MediaRecorder.resume()
+resume()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -42,7 +50,7 @@ is "inactive" — the recording cannot be resumed if it is not already paused; i
 {{domxref("MediaRecorder.state")}} is already "recording", `resume()` has no
 effect.
 
-## Example
+## Examples
 
 ```js
 ...
@@ -75,5 +83,5 @@ effect.
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording
-  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

@@ -23,13 +23,13 @@ interface puts the `SpeechSynthesis` object into a paused state.
 pause()
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

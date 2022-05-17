@@ -16,13 +16,11 @@ The **`HTMLContentElement.getDistributedNodes()`** method
 returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}}
 associated with this `<content>` element.
 
-## Syntax
+## Value
 
-```js
-var nodeList = object.getDistributedNodes()
-```
+A {{domxref("NodeList")}} object.
 
-## Example
+## Examples
 
 ```js
 // Get the distributed nodes

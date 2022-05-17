@@ -20,7 +20,7 @@ The {{domxref("AudioNode.channelCount")}} property can be set between 0 and this
 
 An `unsigned long`.
 
-## Example
+## Examples
 
 The following would set up a simple audio graph, featuring an `AudioDestinationNode` with `maxChannelCount` of 2:
 

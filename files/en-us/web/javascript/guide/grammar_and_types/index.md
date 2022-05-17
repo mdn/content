@@ -223,21 +223,31 @@ let x = 3;
 
 ### Function hoisting
 
-In the case of functions, only function _declarations_ are hoisted—but _not_ the function _expressions_.
+Functions are hoisted if they’re defined using [function _declarations_](/en-US/docs/Web/JavaScript/Reference/Statements/function) — but functions are not hoisted if they’re defined using [function _expressions_](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-```js
-/* Function declaration */
+The following example shows how, due to function hoisting, the function `foo` can be called even before it’s defined — because the `foo` function is defined using a function declaration.
 
+```js example-good
 foo(); // "bar"
 
+/* Function declaration */
 function foo() {
   console.log('bar');
 }
+```
+
+In the following example, the variable name `baz` is hoisted — due to [variable hoisting](#variable_hoisting) — but because a function is assigned to `baz` using a function expression rather than `baz` being defined with a function declaration, the function can’t be called before it’s defined, because it’s not hoisted.
+
+Thus, the `baz()` call below throws a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) with _“baz is not a function”_, because the function assigned to `baz` isn’t hoisted — while the `console.log(baz)` call doesn’t throw a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) but instead logs [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), because the _variable_ `baz` is still hoisted even though the function assigned to it isn’t. (But the value of `baz` is undefined, since nothing has yet been assigned to it).
+
+```js example-bad
+// Doesn’t throw ReferenceError
+console.log(baz) // undefined
+
+// Throws 'TypeError: baz is not a function'
+baz();
 
 /* Function expression */
-
-baz(); // TypeError: baz is not a function
-
 var baz = function() {
   console.log('bar2');
 };
@@ -379,7 +389,6 @@ _Literals_ represent values in JavaScript. These are fixed values—not variable
 
 - [Array literals](#array_literals)
 - [Boolean literals](#boolean_literals)
-- [Floating-point literals](#floating-point_literals)
 - [Numeric literals](#numeric_literals)
 - [Object literals](#object_literals)
 - [RegExp literals](#regexp_literals)

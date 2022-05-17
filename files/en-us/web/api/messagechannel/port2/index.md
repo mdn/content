@@ -20,18 +20,12 @@ initially sent to.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-channel.port2;
-```
-
-### Value
+## Value
 
 A {{domxref("MessagePort")}} object representing the second port of the channel, the
 port attached to the context at the other end of the channel.
 
-## Example
+## Examples
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the

@@ -18,7 +18,7 @@ coordinates.
 ## Syntax
 
 ```js
-void gl.viewport(x, y, width, height);
+viewport(x, y, width, height)
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ void gl.viewport(x, y, width, height);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Errors thrown
 

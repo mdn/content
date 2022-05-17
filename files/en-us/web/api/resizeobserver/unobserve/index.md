@@ -20,14 +20,13 @@ The **`unobserve()`** method of the
 ## Syntax
 
 ```js
-void unobserve(target);
+unobserve(target)
 ```
 
 ### Parameters
 
 - `target`
-  - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
-    unobserved.
+  - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be unobserved.
 
 ### Return value
 

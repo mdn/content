@@ -5,7 +5,7 @@ tags:
   - WebDriver
   - timeouts
 ---
-Associated with a [WebDriver](/en-US/docs/Web/WebDriver) session are various timeout definitions that control behavior for [script injection](/en-US/docs/Web/WebDriver/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Timeouts#implicit).
+Associated with a [WebDriver](/en-US/docs/Web/WebDriver) session are various timeout definitions that control behavior for [script injection](#script), [document navigation](#pageload), and [element retrieval](#implicit).
 
 You will find the _[timeouts object](#payload)_ used in a few different contexts. It can be used as configuration when [creating a new session](/en-US/docs/Web/WebDriver/Commands/NewSession) through [capabilities](/en-US/docs/Web/WebDriver/Capabilities), it is returned as part of the matched, effective capabilities after the session has been created, and it is used as input and output for the [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) and [Get Timeouts](/en-US/docs/Web/WebDriver/Commands/GetTimeouts) commands.
 

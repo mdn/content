@@ -52,5 +52,5 @@ pc.onicecandidate = function( ev ) {
 
 ## See also
 
-- {{event("icecandidate")}}
+- {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
 - {{domxref("RTCPeerConnection")}}

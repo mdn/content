@@ -8,9 +8,9 @@ tags:
   - Interface
   - Reference
   - Reporting API
-browser-compat: api.DeprecationReportBody
+spec-urls: https://wicg.github.io/deprecation-reporting/#deprecationreportbody
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `DeprecationReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a deprecation report.
 
@@ -26,24 +26,24 @@ An instance of `DeprecationReportBody` is returned as the value of {{domxref("Re
 
 This interface also inherits properties from {{domxref("ReportBody")}}.
 
-- {{domxref("DeprecationReportBody.id")}}
+- {{domxref("DeprecationReportBody.id")}} {{experimental_inline}}
   - : A string representing the feature or API that is deprecated, for example `NavigatorGetUserMedia`. This can be used to group reports by deprecated feature.
 - {{domxref("DeprecationReportBody.anticipatedRemoval")}}
   - : A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return `null`.
-- {{domxref("DeprecationReportBody.message")}}
+- {{domxref("DeprecationReportBody.message")}} {{experimental_inline}}
   - : A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any. This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.
-- {{domxref("DeprecationReportBody.sourceFile")}}
+- {{domxref("DeprecationReportBody.sourceFile")}} {{experimental_inline}}
   - : A string containing the path to the source file where the deprecated feature was used, if known, or `null` otherwise.
-- {{domxref("DeprecationReportBody.lineNumber")}}
+- {{domxref("DeprecationReportBody.lineNumber")}} {{experimental_inline}}
   - : A number representing the line in the source file in which the deprecated feature was used, if known, or `null` otherwise.
-- {{domxref("DeprecationReportBody.columnNumber")}}
+- {{domxref("DeprecationReportBody.columnNumber")}} {{experimental_inline}}
   - : A number representing the column in the source file in which the deprecated feature was used, if known, or `null` otherwise.
 
 ## Methods
 
 This interface also inherits methods from {{domxref("ReportBody")}}.
 
-- {{domxref("DeprecationReportBody.toJSON()")}}
+- {{domxref("DeprecationReportBody.toJSON()")}} {{experimental_inline}}
   - : A _serializer_ which returns a JSON representation of the `InterventionReportBody` object.
 
 ## Examples
@@ -105,9 +105,9 @@ The `reports` parameter contains an array of all the reports in the observer's r
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
 
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://developers.google.com/web/updates/2018/09/reportingapi)
+- [The Reporting API](https://web.dev/reporting-api/)

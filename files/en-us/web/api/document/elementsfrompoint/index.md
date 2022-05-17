@@ -14,6 +14,7 @@ browser-compat: api.Document.elementsFromPoint
 The **`elementsFromPoint()`** method
 of the {{domxref("Document")}} interface returns an array of all elements
 at the specified coordinates (relative to the viewport).
+The elements are ordered from the topmost to the bottommost box of the viewport.
 
 It operates in a similar way to the {{domxref("Document.elementFromPoint",
   "elementFromPoint()")}} method.
@@ -21,7 +22,7 @@ It operates in a similar way to the {{domxref("Document.elementFromPoint",
 ## Syntax
 
 ```js
-elementsFromPoint(x, y);
+elementsFromPoint(x, y)
 ```
 
 ### Parameters
@@ -33,9 +34,9 @@ elementsFromPoint(x, y);
 
 ### Return value
 
-An array of {{domxref('element')}} objects.
+An array of {{domxref('Element')}} objects, ordered from the topmost to the bottommost box of the viewport.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -66,7 +67,7 @@ if (document.elementsFromPoint) {
 }
 ```
 
-{{EmbedLiveSample('Example', '420', '120')}}
+{{EmbedLiveSample('Examples', '420', '160')}}
 
 ## Specifications
 

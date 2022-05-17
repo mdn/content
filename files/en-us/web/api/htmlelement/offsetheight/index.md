@@ -29,17 +29,11 @@ returned.
 > **Note:** This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var intElemOffsetHeight = element.offsetHeight;
-```
+A number.
 
-`intElemOffsetHeight` is a variable storing an integer
-corresponding to the `offsetHeight` pixel value of the element. The
-`offsetHeight` property is read-only.
-
-## Example
+## Examples
 
 ![](dimensions-offset.png)
 

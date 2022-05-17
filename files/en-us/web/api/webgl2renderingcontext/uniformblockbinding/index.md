@@ -18,7 +18,7 @@ for active uniform blocks.
 ## Syntax
 
 ```js
-void gl.uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
+uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ void gl.uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

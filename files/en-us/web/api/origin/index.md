@@ -17,15 +17,9 @@ browser-compat: api.origin
 The global **`origin`** read-only property returns the origin of the global
 scope, serialized as a string.
 
-## Syntax
+## Value
 
-```js
-var myOrigin = self.origin; // or just origin
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

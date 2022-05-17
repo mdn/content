@@ -31,14 +31,18 @@ help avoid clipping (distorting) of the audio output.
 ## Syntax
 
 ```js
-baseAudioCtx.createDynamicsCompressor();
+createDynamicsCompressor()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("DynamicsCompressorNode")}}.
 
-## Example
+## Examples
 
 The code below demonstrates a simple usage of `createDynamicsCompressor()`
 to add compression to an audio track. For a more complete example, have a look at our [basic Compressor

@@ -26,9 +26,9 @@ database, it could use a lock name such as `"net_db_sync"`.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
-## Example
+## Examples
 
 The following examples show how the name property passed in the call
 to {{domxref('LockManager.request()')}}. `LockManager` is the object returned

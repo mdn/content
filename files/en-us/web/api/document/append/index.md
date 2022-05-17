@@ -13,8 +13,8 @@ browser-compat: api.Document.append
 {{APIRef("DOM")}}
 
 The **`Document.append()`** method
-inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after
-the last child of the document. {{domxref("DOMString")}} objects
+inserts a set of {{domxref("Node")}} objects or string objects after
+the last child of the document. String objects
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 This method appends a child to a `Document`. To append to an arbitrary element in the tree, see {{domxref("Element.append()")}}.
@@ -22,13 +22,19 @@ This method appends a child to a `Document`. To append to an arbitrary element i
 ## Syntax
 
 ```js
-append(...nodesOrDOMStrings)
+append(param1)
+append(param1, param2)
+append(param1, param2, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodesOrDOMStrings`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to insert.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -24,7 +24,7 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 A {{jsxref('Number')}}.
 
-## Example
+## Examples
 
 Acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 

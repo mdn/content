@@ -17,7 +17,7 @@ browser-compat: api.MediaTrackConstraints.channelCount
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
-**`channelCount`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong)
+**`channelCount`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong)
 describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.channelCount", "channelCount")}} constrainable property.
 
@@ -26,27 +26,19 @@ the value of {{domxref("MediaTrackSupportedConstraints.channelCount")}} as retur
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { channelCount: constraint };
-
-constraintsObject.channelCount = constraint;
-```
-
-### Value
+## Value
 
 If this value is a number, the user agent will attempt to obtain media whose channel
 count is as close as possible to this number given the capabilities of the hardware and
 the other constraints specified. Otherwise, the value of this
-[`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) will guide the user agent in its efforts to provide an
+[`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) will guide the user agent in its efforts to provide an
 exact match to the required channel count (if `exact` is specified or both
 `min` and `max` are provided and have the same value) or to a
 best-possible value.
 
 The channel count is 1 for monaural sound, 2 for stereo, and so forth.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

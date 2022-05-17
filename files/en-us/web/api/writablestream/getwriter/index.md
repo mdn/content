@@ -3,7 +3,6 @@ title: WritableStream.getWriter()
 slug: Web/API/WritableStream/getWriter
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Streams
@@ -11,17 +10,15 @@ tags:
   - getWriter
 browser-compat: api.WritableStream.getWriter
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`getWriter()`** method of the
-{{domxref("WritableStream")}} interface returns a new instance of
-{{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance. While
-the stream is locked, no other writer can be acquired until this one is released.
+The **`getWriter()`** method of the {{domxref("WritableStream")}} interface returns a new instance of {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance.
+While the stream is locked, no other writer can be acquired until this one is released.
 
 ## Syntax
 
 ```js
-var writer = writableStream.getWriter();
+getWriter()
 ```
 
 ### Parameters
@@ -34,9 +31,8 @@ A {{domxref("WritableStreamDefaultWriter")}} object instance.
 
 ### Exceptions
 
-- TypeError
-  - : The stream you are trying to create a writer for is not a
-    {{domxref("WritableStream")}}.
+- {{jsxref("TypeError")}}
+  - : The stream you are trying to create a writer for is not a {{domxref("WritableStream")}}.
 
 ## Examples
 
@@ -91,8 +87,8 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      var buffer = new ArrayBuffer(1);
+      var view = new Uint8Array(buffer);
       view[0] = chunk;
       var decoded = decoder.decode(view, { stream: true });
       var listItem = document.createElement('li');

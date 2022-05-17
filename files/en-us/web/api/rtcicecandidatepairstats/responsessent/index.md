@@ -25,13 +25,7 @@ The {{domxref("RTCIceCandidatePairStats")}} dictionary's
 {{Glossary("STUN")}} connectivity check responses that have been sent so far on the
 connection described by this pair of candidates.
 
-## Syntax
-
-```js
-responsesSent = rtcIceCandidatePairStats.responsesSent;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of times a response has been sent to a
 {{Glossary("STUN")}} connectivity check request.

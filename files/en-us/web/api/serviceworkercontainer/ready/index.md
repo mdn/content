@@ -21,18 +21,12 @@ an {{domxref("ServiceWorkerRegistration.active","active")}} worker. Once that
 condition is met, it resolves with
 the {{domxref("ServiceWorkerRegistration")}}.
 
-## Syntax
-
-```js
-navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) { /* ... */ });
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}} that will never reject, and which may eventually resolve with a
 {{domxref("ServiceWorkerRegistration")}}.
 
-## Example
+## Examples
 
 ```js
 if ('serviceWorker' in navigator) {

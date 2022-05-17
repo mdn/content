@@ -15,14 +15,14 @@ For details about how to use `FileReader`, see [Using files from web application
 ## Syntax
 
 ```js
-new FileReader();
+new FileReader()
 ```
 
 ### Parameters
 
 None.
 
-## Example
+## Examples
 
 The following code snippet shows creation of a [`FileReader`](/en-US/docs/Web/API/FileReader) object using the `FileReader()` constructor and subsequent usage of the object:
 

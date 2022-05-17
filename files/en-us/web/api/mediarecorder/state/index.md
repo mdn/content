@@ -15,7 +15,7 @@ browser-compat: api.MediaRecorder.state
 The **`MediaRecorder.state`** read-only property returns the
 current state of the current `MediaRecorder` object.
 
-## Values
+## Value
 
 A string containing one of the following values:
 
@@ -27,7 +27,7 @@ A string containing one of the following values:
 - `paused`
   - : Recording has been started, then paused, but not yet stopped or resumed.
 
-## Example
+## Examples
 
 ```js
 ...
@@ -57,5 +57,5 @@ A string containing one of the following values:
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording
-  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

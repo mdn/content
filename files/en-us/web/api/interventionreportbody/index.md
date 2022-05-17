@@ -8,9 +8,9 @@ tags:
   - InterventionReportBody
   - Reference
   - Reporting API
-browser-compat: api.InterventionReportBody
+spec-urls: https://wicg.github.io/intervention-reporting/#interventionreportbody
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `InterventionReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.
 
@@ -28,22 +28,22 @@ An instance of `InterventionReportBody` is returned as the value of {{domxref("R
 
 This interface also inherits properties from {{domxref("ReportBody")}}.
 
-- {{domxref("InterventionReportBody.id")}}{{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.id")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A {{domxref("DOMString","string")}} representing the intervention that generated the report. This can be used to group reports.
-- {{domxref("InterventionReportBody.message")}}{{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.message")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A {{domxref("DOMString","string")}} containing a human-readable description of the intervention, including information such how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
-- {{domxref("InterventionReportBody.sourceFile")}}{{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.sourceFile")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A {{domxref("DOMString","string")}} containing the path to the source file where the intervention occurred, if known, or `null` otherwise.
-- {{domxref("InterventionReportBody.lineNumber")}}{{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.lineNumber")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A {{domxref("DOMString","string")}} representing the line in the source file in which the intervention occurred, if known, or `null` otherwise.
-- {{domxref("InterventionReportBody.columnNumber")}}{{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.columnNumber")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A {{domxref("DOMString","string")}} representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.
 
 ## Methods
 
 This interface also inherits methods from {{domxref("ReportBody")}}.
 
-- {{domxref("InterventionReportBody.toJSON()")}}
+- {{domxref("InterventionReportBody.toJSON()")}} {{experimental_inline}}
   - : A _serializer_ which returns a JSON representation of the `InterventionReportBody` object.
 
 ## Examples
@@ -73,9 +73,9 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
 
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://developers.google.com/web/updates/2018/09/reportingapi)
+- [The Reporting API](https://web.dev/reporting-api/)

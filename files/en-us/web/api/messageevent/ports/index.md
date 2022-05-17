@@ -19,17 +19,11 @@ representing the ports associated with the channel the message is being sent thr
 (where appropriate, e.g. in channel messaging or when sending a message to a shared
 worker).
 
-## Syntax
-
-```js
-var myPorts = messageEvent.ports;
-```
-
-### Value
+## Value
 
 An array of {{domxref("MessagePort")}} objects.
 
-## Example
+## Examples
 
 ```js
 onconnect = function(e) {

@@ -21,17 +21,11 @@ thrown.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myResult = request.result;
-```
-
-### Value
+## Value
 
 any
 
-## Example
+## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available

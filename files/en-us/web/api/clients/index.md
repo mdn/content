@@ -24,7 +24,7 @@ The `Clients` interface provides access to {{domxref("Client")}} objects. Access
 - {{domxref("Clients.matchAll()")}}
   - : Returns a {{jsxref("Promise")}} for an array of {{domxref("Client")}} objects. An options argument allows you to control the types of clients returned.
 - {{domxref("Clients.openWindow()")}}
-  - : Opens a new browser window for a given url and returns a {{jsxref("Promise")}} for the new {{domxref("WindowClient")}}.
+  - : Opens a new browser window for a given URL and returns a {{jsxref("Promise")}} for the new {{domxref("WindowClient")}}.
 - {{domxref("Clients.claim()")}}
   - : Allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}.
 

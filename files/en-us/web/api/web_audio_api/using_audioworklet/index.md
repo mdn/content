@@ -325,4 +325,4 @@ let currentGain = gainParam.value;
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Enter Audio Worklet](https://developers.google.com/web/updates/2017/12/audio-worklet) (Google Developers blog)
+- [Enter Audio Worklet](https://developer.chrome.com/blog/audio-worklet/) (Chrome Developers blog)

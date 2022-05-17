@@ -18,17 +18,11 @@ The **`toJSON()`** property of the
 {{domxref("PaymentAddress")}} interface is a standard serializer that returns a JSON
 representation of the PaymentAddress object's properties.
 
-## Syntax
-
-```js
-var json = PaymentAddress.toJSON()
-```
-
-### Parameters
+## Value
 
 None.
 
-### Return value
+## Value
 
 A JSON object.
 

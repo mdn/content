@@ -21,7 +21,7 @@ The `positionY` read-only property of the {{ domxref("AudioListener") }} interfa
 
 An {{domxref("AudioParam")}}. Its default value is 0, and it can range between positive and negative infinity.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 

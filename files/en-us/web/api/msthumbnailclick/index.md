@@ -68,7 +68,7 @@ var btnPlay = window.external.msSiteModeAddThumbBarButton(iconUri, toolTip);
 // refresh the taskbar
 window.external.msSiteModeShowThumbBar();
 
-// call a javascript function when the button is pressed
+// call a JavaScript function when the button is pressed
 function onButtonClicked(e) {
    switch (e.buttonID) {
      case btnPlay: play();

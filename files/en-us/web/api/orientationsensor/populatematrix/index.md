@@ -38,7 +38,7 @@ instructions.
 ## Syntax
 
 ```js
-orientationInstance.populateMatrix(targetMatrix)
+populateMatrix(targetMatrix)
 ```
 
 Because {{domxref('OrientationSensor')}} is a base class, `populateMatrix`
@@ -46,14 +46,14 @@ may only be read from one of its derived classes.
 
 ### Parameters
 
-- _targetMatrix_
+- `targetMatrix`
   - : TBD
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 // TBD

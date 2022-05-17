@@ -18,7 +18,7 @@ to record in {{domxref("WebGLTransformFeedback")}} buffers.
 ## Syntax
 
 ```js
-void gl.transformFeedbackVaryings(program, varyings, bufferMode);
+transformFeedbackVaryings(program, varyings, bufferMode)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ void gl.transformFeedbackVaryings(program, varyings, bufferMode);
 - program
   - : A {{domxref("WebGLProgram")}}.
 - varyings
-  - : An {{jsxref("Array")}} of {{domxref("DOMString")}} specifying the names of the
+  - : An {{jsxref("Array")}} of string specifying the names of the
     varying variables to use.
 - `bufferMode`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the mode to use when capturing the varying
@@ -35,7 +35,7 @@ void gl.transformFeedbackVaryings(program, varyings, bufferMode);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

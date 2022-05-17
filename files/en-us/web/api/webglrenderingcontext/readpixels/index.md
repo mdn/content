@@ -19,11 +19,12 @@ specified rectangle of the current color framebuffer into an
 
 ```js
 // WebGL1:
-void gl.readPixels(x, y, width, height, format, type, pixels);
+readPixels(x, y, width, height, format, type, pixels)
 
 // WebGL2:
-void gl.readPixels(x, y, width, height, format, type, GLintptr offset);
-void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GLuint dstOffset);
+readPixels(x, y, width, height, format, type, offset)
+readPixels(x, y, width, height, format, type, pixels)
+readPixels(x, y, width, height, format, type, pixels, dstOffset)
 ```
 
 ### Parameters
@@ -95,7 +96,7 @@ void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GL
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -18,7 +18,7 @@ information about varying variables from {{domxref("WebGLTransformFeedback")}} b
 ## Syntax
 
 ```js
-WebGLActiveInfo gl.getTransformFeedbackVarying(program, index);
+getTransformFeedbackVarying(program, index)
 ```
 
 ### Parameters

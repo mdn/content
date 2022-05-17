@@ -24,7 +24,7 @@ effects of a previous call to {{domxref("HTMLVideoElement.requestPictureInPictur
 ## Syntax
 
 ```js
-exitPromise = document.exitPictureInPicture();
+exitPictureInPicture()
 ```
 
 ### Parameters

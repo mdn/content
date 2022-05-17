@@ -19,7 +19,7 @@ the size of the {{domxref("Blob")}} or {{domxref("File")}} in bytes.
 The number of bytes of data contained within the `Blob` (or
 `Blob`-based object, such as a {{domxref("File")}}).
 
-## Example
+## Examples
 
 This example uses an {{HTMLElement("input")}} element of type `file` to ask
 the user for a group of files, then iterates over those files outputting their names and

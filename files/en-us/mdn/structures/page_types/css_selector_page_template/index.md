@@ -39,7 +39,7 @@ browser-compat: css.selectors.NameOfTheSelector
 >     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
->     For example, the the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
+>     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
 > - **tags**
 >   - : Always include the following tags: **CSS**, **Reference**, _NameOfTheSelector_ (e.g. **:hover**).
 >
@@ -61,7 +61,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
 > You should update or delete them according to the advice below:
 >
-> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
+> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental).
 >   If the technology you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete).
@@ -74,8 +74,8 @@ browser-compat: css.selectors.NameOfTheSelector
 > **Syntax section (`\{{CSSSyntax}}`)**
 >
 > The content of the Syntax section is generated using the `\{{CSSSyntax}}` macro.
-> For these to populate you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/master/css/selectors.json) data file.
-> See [selectors.md](https://github.com/mdn/data/blob/master/css/selectors.md) for more information.
+> For these to populate you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) data file.
+> See [selectors.md](https://github.com/mdn/data/blob/main/css/selectors.md) for more information.
 >
 > _Remember to remove this whole explanatory note before publishing_
 

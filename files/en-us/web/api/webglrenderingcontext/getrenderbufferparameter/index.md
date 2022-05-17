@@ -18,7 +18,7 @@ about the renderbuffer.
 ## Syntax
 
 ```js
-any gl.getRenderbufferParameter(target, pname);
+getRenderbufferParameter(target, pname)
 ```
 
 ### Parameters

@@ -24,8 +24,16 @@ the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} or
 ## Syntax
 
 ```js
-void ctx.closePath();
+closePath()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

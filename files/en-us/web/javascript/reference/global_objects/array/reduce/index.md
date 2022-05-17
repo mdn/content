@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 tags:
   - Array
   - Array method
@@ -54,7 +54,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ },
   - : A "reducer" function.
 
     The function is called with the following arguments:
-  
+
     - `previousValue`: the value resulting from the previous call to `callbackFn`.
       On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`: the value of the current element.
@@ -352,7 +352,7 @@ let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 ### Counting instances of values in an object
 
 ```js
-let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
+const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
 
 let countedNames = names.reduce(function (allNames, name) {
   if (name in allNames) {
@@ -370,7 +370,7 @@ let countedNames = names.reduce(function (allNames, name) {
 ### Grouping objects by a property
 
 ```js
-let people = [
+const people = [
   { name: 'Alice', age: 21 },
   { name: 'Max', age: 20 },
   { name: 'Jane', age: 20 }
@@ -403,7 +403,7 @@ let groupedPeople = groupBy(people, 'age')
 ```js
 // friends - an array of objects
 // where object field "books" is a list of favorite books
-let friends = [{
+const friends = [{
   name: 'Anna',
   books: ['Bible', 'Harry Potter'],
   age: 21
@@ -438,7 +438,7 @@ let allbooks = friends.reduce(function(previousValue, currentValue) {
 > duplicate items have been removed.
 
 ```js
-let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
+const myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
 let myArrayWithNoDuplicates = myArray.reduce(function (previousValue, currentValue) {
   if (previousValue.indexOf(currentValue) === -1) {
     previousValue.push(currentValue)

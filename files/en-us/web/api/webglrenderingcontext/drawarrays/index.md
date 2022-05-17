@@ -16,7 +16,7 @@ The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/do
 ## Syntax
 
 ```js
-void gl.drawArrays(mode, first, count);
+drawArrays(mode, first, count)
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ void gl.drawArrays(mode, first, count);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

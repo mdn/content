@@ -17,29 +17,19 @@ browser-compat: api.IDBRequest.readyState
 The **`readyState`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the state of the request.
 
-\>Every request starts in the `pending` state. The state changes to
+Every request starts in the `pending` state. The state changes to
 `done` when the request completes successfully or when an error
 occurs.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var currentReadyState = request.readyState;
-```
+The {{domxref("IDBRequestReadyState")}} of the request,
+which is `pending` if the request is still ongoing,
+or `done` if the request has completed.
 
-### Value
-
-The {{domxref("IDBRequestReadyState")}} of the request, which takes one of the
-following two values:
-
-| Value     | Meaning                 |
-| --------- | ----------------------- |
-| `pending` | The request is pending. |
-| `done`    | The request is done.    |
-
-## Example
+## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available

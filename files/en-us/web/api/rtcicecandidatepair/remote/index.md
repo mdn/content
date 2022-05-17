@@ -30,7 +30,7 @@ of a viable pair of ICE candidates. The `RTCIceCandidatePair` is returned by
 the {{domxref("RTCIceTransport")}} method
 {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}.
 
-## Example
+## Examples
 
 This one-line example obtains the current candidate pair and then from that gets the
 remote candidate.

@@ -25,15 +25,7 @@ appended, whereas those outside the range will be filtered out.
 The default value of `appendWindowStart` is the presentation start time,
 which is the beginning time of the playable media.
 
-## Syntax
-
-```js
-var myAppendWindowStart = sourceBuffer.appendWindowStart;
-
-sourceBuffer.appendWindowStart = 2.0;
-```
-
-### Value
+## Value
 
 A double, indicating the start time of the append window, in seconds.
 
@@ -51,7 +43,7 @@ The following exceptions may be thrown when setting a new value for this propert
         currently `true`), or this `SourceBuffer` has been
         removed from the {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 TBD
 

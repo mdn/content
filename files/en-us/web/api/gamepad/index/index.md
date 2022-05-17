@@ -24,7 +24,7 @@ and reconnected will retain the same index.
 
 A {{jsxref("number") }}.
 
-## Example
+## Examples
 
 ```js
 window.addEventListener("gamepadconnected", function() {

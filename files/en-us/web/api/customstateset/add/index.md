@@ -16,21 +16,21 @@ The **`add`** method of the {{domxref("CustomStateSet")}} interface adds an item
 ## Syntax
 
 ```js
-CustomStateSet.add(value)
+add(value)
 ```
 
 ### Parameters
 
 - `value`
-  - : A {{domxref("DOMString")}} which must be a `<dashed-ident>`, with the form `--mystate`.
+  - : A string which must be a `<dashed-ident>`, with the form `--mystate`.
 
-### Return Value
+### Return value
 
 Undefined.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the string is not a `<dashed-ident>`.
 
 ## Examples

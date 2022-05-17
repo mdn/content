@@ -34,12 +34,12 @@ sample by this node. The default value is 1.0.
 To access the `offset` parameter's current value, access the parameter's
 `value` property, as shown in the syntax box above.
 
-## Example
+## Examples
 
 This example shows how to set up a `ConstantSourceNode` so its
 `offset` is used as the input to a pair of {{domxref("GainNode")}}s; this
 snippet is derived from the complete example you can find in [Controlling
-multiple parameters with ConstantSourcenode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
+multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
 
 ```js
 gainNode2 = context.createGain();

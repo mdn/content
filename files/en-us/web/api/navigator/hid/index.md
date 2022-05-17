@@ -17,13 +17,7 @@ read-only property returns an {{domxref("HID")}} object providing methods
 for connecting to HID devices, listing attached HID devices, and event
 handlers for connected HID devices.
 
-## Syntax
-
-```js
-var hidVar = navigator.hid
-```
-
-### Value
+## Value
 
 An {{domxref("HID")}} object.
 

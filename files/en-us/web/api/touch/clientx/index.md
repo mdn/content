@@ -15,18 +15,12 @@ browser-compat: api.Touch.clientX
 The `Touch.clientX` read-only property returns the X coordinate of the touch
 point relative to the viewport, not including any scroll offset.
 
-## Syntax
-
-```js
-touchItem.clientX;
-```
-
-### Return value
+## Value
 
 A `long` representing the X coordinate of the touch point relative to the
 viewport, not including any scroll offset.
 
-## Example
+## Examples
 
 This example illustrates using the {{domxref("Touch")}} object's
 {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} properties. The

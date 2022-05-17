@@ -32,13 +32,11 @@ example:
 The HTML DOM generated from the above HTML will have a {{HTMLElement("tbody")}} element
 even though the tags are not included in the source HTML.
 
-## Syntax
+## Value
 
-```js
-HTMLCollectionObject = table.tBodies
-```
+A live {{domxref("HTMLCollection")}}.
 
-## Example
+## Examples
 
 This snippet gets the number of bodies in a table.
 

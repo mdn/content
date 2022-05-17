@@ -38,6 +38,7 @@ font-stretch: 200%;
 font-stretch: inherit;
 font-stretch: initial;
 font-stretch: revert;
+font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
@@ -133,7 +134,7 @@ The table below demonstrates the effect of supplying various different percentag
 </table>
 
 - **Helvetica Neue**, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of `font-stretch` less than 100% select the condensed face, while all other values select the normal face.
-- **[League Mono Variable](https://tylerfinck.com/leaguemonovariable/)** is a variable font that offers something like a continuous range of widths for different percentage values of `font-stretch`.
+- **[League Mono Variable](https://demos.tyfromtheinternet.com/leaguemonovariable/)** is a variable font that offers something like a continuous range of widths for different percentage values of `font-stretch`.
 
 ## Formal definition
 

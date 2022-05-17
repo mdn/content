@@ -38,7 +38,7 @@ be part of the results, but option groups are not included in the list.
 If no options are currently selected, the collection is empty and returns a
 {{domxref("HTMLCollection.length", "length")}} of 0.
 
-## Example
+## Examples
 
 In this example, a {{HTMLElement("select")}} element with a number of options is used
 to let the user order various food items.

@@ -31,7 +31,7 @@ in India.
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the postal code portion of the address. A
+A string which contains the postal code portion of the address. A
 postal code is a string (either numeric or alphanumeric) which is used by a postal
 service to optimize mail routing and delivery.
 
@@ -46,6 +46,6 @@ codes.
 ## See also
 
 - Universal Postal Union: [Post
-  code lookup service](http://www.upu.int/en/resources/postcodes/looking-up-a-postcode.html)
+  code lookup service](https://www.upu.int/en/resources/postcodes/looking-up-a-postcode.html)
 - Universal Postal Union: [Universal
-  Post\*Code® Database](http://www.upu.int/en/resources/postcodes/universal-postcoder-database.html)
+  Post\*Code® Database](https://www.upu.int/en/resources/postcodes/universal-postcoder-database.html)

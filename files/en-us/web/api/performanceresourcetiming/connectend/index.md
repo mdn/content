@@ -18,18 +18,12 @@ intervals such as SSL handshake and SOCKS authentication.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.connectEnd;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the time after a connection is
 established.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

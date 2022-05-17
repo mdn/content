@@ -24,35 +24,37 @@ to {{jsxref("undefined")}}.
 ## Syntax
 
 ```js
-cache.match(request, options).then(function(response) {
-  // Do something with the response
-});
+match(request)
+match(request, options)
 ```
 
 ### Parameters
 
-- request
+- `request`
   - : The {{domxref("Request")}} for which you are attempting to find responses in the
     {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation. The available
     options are:
 
-    - `ignoreSearch`: A boolean value that specifies whether to
-      ignore the query string in the URL.  For example, if set to
-      `true` the `?value=bar` part of
-      `http://foo.com/?value=bar` would be ignored when performing a match.
-      It defaults to `false`.
-    - `ignoreMethod`: A boolean value that, when set to
-      `true`, prevents matching operations from validating the
-      {{domxref("Request")}} `http` method (normally only `GET`
-      and `HEAD` are allowed.) It defaults to `false`.
-    - `ignoreVary`: A boolean value that when set to
-      `true` tells the matching operation not to perform `VARY`
-      header matching — i.e. if the URL matches you will get a match regardless of
-      whether the {{domxref("Response")}} object has a `VARY` header. It
-      defaults to `false`.
+    - `ignoreSearch`
+      - : A boolean value that specifies whether to
+        ignore the query string in the URL.  For example, if set to
+        `true` the `?value=bar` part of
+        `http://foo.com/?value=bar` would be ignored when performing a match.
+        It defaults to `false`.
+    - `ignoreMethod`
+      - : A boolean value that, when set to
+        `true`, prevents matching operations from validating the
+        {{domxref("Request")}} `http` method (normally only `GET`
+        and `HEAD` are allowed.) It defaults to `false`.
+    - `ignoreVary`
+      - : A boolean value that when set to
+        `true` tells the matching operation not to perform `VARY`
+        header matching — i.e. if the URL matches you will get a match regardless of
+        whether the {{domxref("Response")}} object has a `VARY` header. It
+        defaults to `false`.
 
 ### Return value
 

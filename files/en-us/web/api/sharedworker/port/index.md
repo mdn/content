@@ -16,17 +16,11 @@ The **`port`** property of the {{domxref("SharedWorker")}}
 interface returns a {{domxref("MessagePort")}} object used to communicate and control
 the shared worker.
 
-## Syntax
-
-```js
-myWorker.port;
-```
-
-### Value
+## Value
 
 A {{domxref("MessagePort")}} object.
 
-## Example
+## Examples
 
 The following code snippet shows creation of a `SharedWorker` object using
 the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Multiple

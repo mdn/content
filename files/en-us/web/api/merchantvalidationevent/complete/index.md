@@ -19,13 +19,13 @@ browser-compat: api.MerchantValidationEvent.complete
 
 The {{domxref("MerchantValidationEvent")}} method **`complete()`** takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.
 
-All you have to do is call `complete()` from your handler for the {{event("merchantvalidation")}} event, passing in the data fetched from the `validationURL`.
+All you have to do is call `complete()` from your handler for the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event, passing in the data fetched from the `validationURL`.
 
 ## Syntax
 
 ```js
-merchantValidationEvent.complete(validationData);
-merchantValidationEvent.complete(merchantSessionPromise);
+complete(validationData)
+complete(merchantSessionPromise)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ merchantValidationEvent.complete(merchantSessionPromise);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -44,7 +44,7 @@ This exception may be passed into the rejection handler for the promise:
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the event did not come directly from the user agent, but was instead dispatched by other code. Another payment request is currently being processed, the current payment request is not currently being displayed to the user, or payment information is currently being updated.
 
-## Example
+## Examples
 
 In this example, we see the client-side code needed to support merchant validation for a payment request called `payRequest`:
 
@@ -59,7 +59,7 @@ function getValidationData(url) {
 }
 ```
 
-This code sets up a handler for the {{event("merchantvalidation")}} event. The event handler calls a function, `getValidationData()`, which retrieves the data from the validation URL, then passes that data (or a promise to deliver the data) into `complete()`.
+This code sets up a handler for the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event. The event handler calls a function, `getValidationData()`, which retrieves the data from the validation URL, then passes that data (or a promise to deliver the data) into `complete()`.
 
 ## Browser compatibility
 

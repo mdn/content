@@ -12,7 +12,7 @@ tags:
   - mouse
 browser-compat: api.MouseEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse).
 Common events using this interface include {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}}.
@@ -45,6 +45,10 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the current layer.
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the current layer.
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}

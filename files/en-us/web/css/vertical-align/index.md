@@ -45,6 +45,7 @@ vertical-align: 20%;
 vertical-align: inherit;
 vertical-align: initial;
 vertical-align: revert;
+vertical-align: revert-layer;
 vertical-align: unset;
 ```
 
@@ -231,7 +232,7 @@ td {
 
 ## See also
 
-- [Typical use cases of Flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item)
+- [Typical use cases of Flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

@@ -36,7 +36,7 @@ An {{domxref("XRWebGLDepthInformation")}} object.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the `XRFrame` is not active nor animated. Obtaining depth information is only valid within the {{domxref("XRSession.requestAnimationFrame()", "requestAnimationFrame()")}} callback.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the the session's {{domxref("XRSession.depthUsage", "depthUsage")}} is not `"gpu-optimized"`.
+  - : Thrown if the session's {{domxref("XRSession.depthUsage", "depthUsage")}} is not `"gpu-optimized"`.
 
 ## Examples
 
@@ -47,7 +47,7 @@ const canvasElement = document.querySelector(".output-canvas");
 const gl = canvasElement.getContext("webgl");
 await gl.makeXRCompatible();
 
-// Make sure  to request a session with depth-sensing enabled
+// Make sure to request a session with depth-sensing enabled
 const session = navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {

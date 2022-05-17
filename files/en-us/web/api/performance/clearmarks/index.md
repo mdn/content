@@ -21,24 +21,23 @@ removed from the performance entry buffer.
 ## Syntax
 
 ```js
-performance.clearMarks();
-performance.clearMarks(name);
+clearMarks()
+clearMarks(name)
 ```
 
-### Arguments
+### Parameters
 
-- name {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the name of the timestamp. If this argument
+- `name` {{optional_inline}}
+  - : A string representing the name of the timestamp. If this argument
     is omitted, all {{domxref("PerformanceEntry","performance entries")}} with an
     {{domxref("PerformanceEntry.entryType","entry type")}} of "`mark`" will be
     removed.
 
 ### Return value
 
-- void
-  - :
+void
 
-## Example
+## Examples
 
 The following example shows both uses of the `clearMarks()` method.
 

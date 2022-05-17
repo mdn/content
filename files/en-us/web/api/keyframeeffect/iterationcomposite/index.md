@@ -17,17 +17,9 @@ browser-compat: api.KeyframeEffect.iterationComposite
 
 The **`iterationComposite`** property of a {{domxref("KeyframeEffect")}} resolves how the animation's property value changes accumulate or override each other upon each of the animation's iterations.
 
-## Syntax
+## Value
 
-```js
-// getting
-var iterationCompositeEnumeration = keyframeEffect.iterationComposite;
-
-// setting
-keyframeEffect.iterationComposite = 'replace';
-```
-
-### Values
+One of the followings:
 
 - replace
   - : The `keyframeEffect` value produced is independent of the current iteration.

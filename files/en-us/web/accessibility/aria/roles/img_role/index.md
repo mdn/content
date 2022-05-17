@@ -10,6 +10,7 @@ tags:
   - document structure role
   - Role
   - figure
+spec-urls: https://w3c.github.io/aria/#img
 ---
 The ARIA `img` role can be used to identify multiple elements inside page content that should be considered as a single image. These elements could be images, code snippets, text, emojis, or other content that can be combined to deliver information in a visual manner.
 
@@ -130,9 +131,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Specifications
 
-| Specification                                | Status                   |
-| -------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#img","img")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 

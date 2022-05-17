@@ -15,18 +15,11 @@ browser-compat: api.Touch.screenY
 
 Returns the Y coordinate of the touch point relative to the screen, not including any scroll offset.
 
-## Syntax
+## Value
 
-```js
-var y = touchItem.screenY;
-```
+A number.
 
-### Return value
-
-- `y`
-  - : The Y coordinate of the touch point relative to the screen, not including any scroll offset.
-
-## Example
+## Examples
 
 The [Touch.screenX example](/en-US/docs/Web/API/Touch/screenX#example) includes an example of this property's usage.
 

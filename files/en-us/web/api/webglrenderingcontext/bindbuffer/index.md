@@ -17,7 +17,7 @@ The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/do
 ## Syntax
 
 ```js
-void gl.bindBuffer(target, buffer);
+bindBuffer(target, buffer)
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ void gl.bindBuffer(target, buffer);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

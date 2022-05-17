@@ -26,9 +26,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.delete(cacheName).then(function(boolean) {
-  // your cache is now deleted
-});
+delete(cacheName)
 ```
 
 ### Parameters

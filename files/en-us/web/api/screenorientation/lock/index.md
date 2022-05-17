@@ -4,7 +4,7 @@ slug: Web/API/ScreenOrientation/lock
 tags:
   - API
   - Orientation
-  - Property
+  - Method
   - Reference
   - Screen Orientation API
   - ScreenOrientation
@@ -21,7 +21,7 @@ If locking is supported, then it must work for all the parameter values listed b
 ## Syntax
 
 ```js
-screen.orientation.lock(orientation)
+lock(orientation)
 ```
 
 ### Parameters
@@ -72,10 +72,10 @@ The promise may be rejected with the following exceptions:
     For example, a browser may require that the top-level browsing context's `Document` is full screen.
     The promise may also be rejected with this error if the document has the sandboxed orientation lock browsing context flag set.
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The `orientation` argument was not supplied.
 
-## Example
+## Examples
 
 This example shows how to lock the screen to the opposite orientation of the current one.
 Note that this example will only work on mobile devices and other devices that support orientation changes.
@@ -92,9 +92,9 @@ Note that this example will only work on mobile devices and other devices that s
 ```js
 const log = document.getElementById("log");
 
-// Lock button: Lock the screen to the other orientation (rotated by 90 degrees) 
+// Lock button: Lock the screen to the other orientation (rotated by 90 degrees)
 const rotate_btn = document.querySelector('#lock_button');
-rotate_btn.addEventListener('click', () => { 
+rotate_btn.addEventListener('click', () => {
   log.textContent+=`Lock pressed \n`;
 
   const oppositeOrientation = screen.orientation.type.startsWith("portrait") ? "landscape" : "portrait";
@@ -110,14 +110,14 @@ rotate_btn.addEventListener('click', () => {
 
 // Unlock button: Unlock the screen orientation (if locked)
 const unlock_btn = document.querySelector('#unlock_button');
-unlock_btn.addEventListener('click', () => { 
+unlock_btn.addEventListener('click', () => {
   log.textContent+='Unlock pressed \n';
   screen.orientation.unlock();
 } );
 
 // Full screen button: Set the example to fullscreen.
 const fullscreen_btn = document.querySelector('#fullscreen_button');
-fullscreen_btn.addEventListener('click', () => { 
+fullscreen_btn.addEventListener('click', () => {
   log.textContent+='Fullscreen pressed \n';
   document.querySelector("#example_container").requestFullscreen();
 } );
@@ -126,7 +126,7 @@ fullscreen_btn.addEventListener('click', () => {
 To test the example, first press the Fullscreen button.
 Once the example is full screen, press the Lock button to switch the orientation, and Unlock to return to the natural orientation.
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

@@ -18,7 +18,7 @@ The **`WebGLRenderingContext.bindFramebuffer()`** method of the
 ## Syntax
 
 ```js
-void gl.bindFramebuffer(target, framebuffer);
+bindFramebuffer(target, framebuffer)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ void gl.bindFramebuffer(target, framebuffer);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

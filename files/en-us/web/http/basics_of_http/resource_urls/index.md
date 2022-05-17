@@ -49,7 +49,7 @@ Firefox, including the default preferences, which could be a serious security an
 privacy issue.
 
 For example, [a script on
-Browserleaks](https://www.browserleaks.com/firefox) highlights what Firefox reveals when queried by a simple script
+Browserleaks](https://browserleaks.com/firefox) highlights what Firefox reveals when queried by a simple script
 running on the site (you can find the code in <https://browserleaks.com/firefox#more>).
 
 The file firefox.js passes preference names and values to the pref() function. For

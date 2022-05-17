@@ -22,7 +22,7 @@ the node is participating in.
 The {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}} object that was
 used to construct this `AudioNode`.
 
-## Example
+## Examples
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;

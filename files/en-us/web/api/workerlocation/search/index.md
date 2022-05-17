@@ -13,11 +13,9 @@ browser-compat: api.WorkerLocation.search
 
 The **`search`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.search", "search")}} part of the worker's location.
 
-## Syntax
+## Value
 
-```js
-string = location.search;
-```
+A string.
 
 ## Examples
 

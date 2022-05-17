@@ -58,6 +58,7 @@ justify-content: unsafe center;
 justify-content: inherit;
 justify-content: initial;
 justify-content: revert;
+justify-content: revert-layer;
 justify-content: unset;
 ```
 

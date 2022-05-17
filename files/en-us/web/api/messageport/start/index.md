@@ -22,18 +22,18 @@ when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
 ## Syntax
 
 ```js
-port.start()
+start()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
 None.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 In the following code block, you can see a `handleMessage` handler function,
 run when a message is sent back to this document using `onmessage`:

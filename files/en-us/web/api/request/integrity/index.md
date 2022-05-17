@@ -14,19 +14,13 @@ browser-compat: api.Request.integrity
 
 The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.
 
-## Syntax
-
-```js
-var myIntegrity = request.integrity;
-```
-
-### Value
+## Value
 
 The [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
 If an integrity has not been specified, the property returns `''`.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request `integrity` value in a variable:
 

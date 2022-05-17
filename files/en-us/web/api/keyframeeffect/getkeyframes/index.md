@@ -20,7 +20,7 @@ The **`getKeyframes()`** method of a {{domxref("KeyframeEffect")}} returns an Ar
 ## Syntax
 
 ```js
-var keyframes = keyframeEffect.getKeyframes();
+getKeyframes()
 ```
 
 ### Parameters
@@ -34,9 +34,9 @@ Returns a sequence of objects with the following format:
 - property value pairs
   - : As many property value pairs as are contained in each keyframe of the animation.
 - offset
-  - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. This will be `null` if the keyframe is automatically spaced using `{{domxref("KeyframeEffect.spacing")}}`.
+  - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. This will be `null` if the keyframe is automatically spaced using {{domxref("KeyframeEffect.spacing")}}.
 - computedOffset
-  - : The computed offset for this keyframe, calculated when the list of computed keyframes was produced according to `{{domxref("KeyframeEffect.spacing")}}`. Unlike **`offset`,** above, the **`computedOffset`** is never `null`.
+  - : The computed offset for this keyframe, calculated when the list of computed keyframes was produced according to {{domxref("KeyframeEffect.spacing")}}. Unlike **`offset`,** above, the **`computedOffset`** is never `null`.
 - easing
   - : The [easing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
 - composite
@@ -44,7 +44,7 @@ Returns a sequence of objects with the following format:
 
 ## Examples
 
-In the [Red Queen Race](http://codepen.io/rachelnabors/pen/PNGGaV) example, we can inspect Alice and the RedQueen's animation to see its individual keyframes like so:
+In the [Red Queen Race](https://codepen.io/rachelnabors/pen/PNGGaV) example, we can inspect Alice and the RedQueen's animation to see its individual keyframes like so:
 
 ```js
 // Return the array of keyframes

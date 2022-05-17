@@ -20,7 +20,7 @@ is destroyed by the garbage collector.
 ## Syntax
 
 ```js
-void gl.deleteShader(shader);
+deleteShader(shader)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ void gl.deleteShader(shader);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

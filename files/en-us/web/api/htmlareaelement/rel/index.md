@@ -12,19 +12,16 @@ browser-compat: api.HTMLAreaElement.rel
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAreaElement.rel`** property reflects the
-{{htmlattrxref("rel", "area")}} attribute. It is a {{domxref("DOMString")}} containing a
+{{htmlattrxref("rel", "area")}} attribute. It is a string containing a
 space-separated list of [link types](/en-US/docs/Web/HTML/Link_types)
 indicating the relationship between the resource represented by the
 {{HTMLElement("area")}} element and the current document.
 
-## Syntax
+## Value
 
-```js
-var relstr = areaElt.rel;
-areaElt.rel = relstr;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 var areas = document.getElementsByTagName("area");

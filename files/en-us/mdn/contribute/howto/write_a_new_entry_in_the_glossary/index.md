@@ -39,7 +39,7 @@ The first paragraph of any glossary page is a simple and short description of th
 Preferably, this should be no more than two sentences.
 Make sure anyone reading the description can immediately understand the defined term.
 
-> **Note:** Please don't copy-and-paste from other definitions or content on the Internet.
+> **Note:** Please don't copy-and-paste from other definitions or content on the internet.
 > (And especially not Wikipedia, since its range of license versions is smaller and incompatible with MDN.) Your glossary entry should be original content.
 
 #### Writing a good glossary entry
@@ -66,7 +66,7 @@ It is good practice to organize the links into three groups:
 
 - General knowledge
   - : These links provide higher-level information about the term or topic.
-    For example: a link to a relevant [Wikipedia](https://wikipedia.org/) page.
+    For example: a link to a relevant [Wikipedia](https://www.wikipedia.org/) page.
 - Technical reference
   - : These links offer in-depth technical information, on MDN Web Docs or other sites.
 - Learn about it
@@ -77,7 +77,7 @@ It is good practice to organize the links into three groups:
 Some terms can have multiple meanings depending upon context.
 To resolve ambiguity, follow these guidelines:
 
-- The term's main page must be a disambiguation page containing the [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs)  macro.
+- The term's main page must be a disambiguation page containing the [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) macro.
 - The term has subpages that define the term for different contexts.
 
 Let's illustrate this with an example.

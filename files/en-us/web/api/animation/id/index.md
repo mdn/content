@@ -16,7 +16,7 @@ The **`Animation.id`** property of the [Web Animations API](/en-US/docs/Web/API/
 
 ## Value
 
-A {{domxref("DOMString")}} which can be used to identify the animation, or `null` if the animation has no `id`.
+A string which can be used to identify the animation, or `null` if the animation has no `id`.
 
 ## Examples
 

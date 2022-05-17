@@ -7,6 +7,7 @@ tags:
   - HmacImportParams
   - Reference
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacImportParams
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -15,10 +16,10 @@ The **`HmacImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/AP
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `HMAC`.
+  - : A string. This should be set to `HMAC`.
 - `hash`
 
-  - : A {{domxref("DOMString")}} representing the name of the [digest function](/en-US/docs//Web/API/SubtleCrypto/digest#supported_algorithms) to use. The can take a value of `SHA-256`, `SHA-384`, or `SHA-512`.
+  - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. The can take a value of `SHA-256`, `SHA-384`, or `SHA-512`.
 
     > **Warning:** Although you can technically pass `SHA-1` here, this is strongly discouraged as it is considered vulnerable.
 
@@ -31,22 +32,7 @@ See the examples for {{domxref("SubtleCrypto.importKey()")}}.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-HmacImportParams', 'SubtleCrypto.HmacImportParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

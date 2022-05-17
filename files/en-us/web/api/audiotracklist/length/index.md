@@ -29,7 +29,7 @@ A number indicating how many audio tracks are included in the
 `AudioTrackList`. Each track can be accessed by treating the
 `AudioTrackList` as an array of objects of type {{domxref("AudioTrack")}}.
 
-## Example
+## Examples
 
 This snippet gets the number of audio tracks in the first {{HTMLElement("video")}}
 element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",

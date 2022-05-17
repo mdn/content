@@ -24,7 +24,7 @@ that is the source of bitmap images and a description of how the image is to be 
 in the device.
 
 This property is read-only; however, you can indirectly change its
-value using  {{domxref("XRSession.updateRenderState")}}.
+value using {{domxref("XRSession.updateRenderState")}}.
 
 ## Value
 

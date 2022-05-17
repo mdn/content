@@ -15,7 +15,7 @@ The `readAsDataURL` method is used to read the contents of the specified
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} becomes `DONE`, and the
 {{event("loadend")}} is triggered. At that time, the
-{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) representing the
+{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) representing the
 file's data as a base64 encoded string.
 
 > **Note:** The blob's {{domxref("FileReader.result","result")}} cannot be
@@ -26,7 +26,7 @@ file's data as a base64 encoded string.
 ## Syntax
 
 ```js
-instanceOfFileReader.readAsDataURL(blob);
+readAsDataURL(blob)
 ```
 
 ### Parameters
@@ -34,7 +34,11 @@ instanceOfFileReader.readAsDataURL(blob);
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### HTML
 
@@ -64,7 +68,7 @@ function previewFile() {
 
 ### Live Result
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+{{EmbedLiveSample("Examples", "100%", 240)}}
 
 ## Example reading multiple files
 
@@ -112,8 +116,8 @@ function previewFiles() {
 > **Note:** The [`FileReader()`](/en-US/docs/Web/API/FileReader) constructor was
 > not supported by Internet Explorer for versions before 10. For a full compatibility code
 > you can see our [crossbrowser possible solution for image
-> preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html). See also [this more
-> powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
+> preview](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html). See also [this more
+> powerful example](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html).
 
 ## Specifications
 

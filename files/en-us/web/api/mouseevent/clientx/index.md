@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.clientX
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`clientX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate within the application's {{glossary("viewport")}} at which the event occurred (as opposed to the coordinate within the page).
 
@@ -22,7 +22,7 @@ For example, clicking on the left edge of the viewport will always result in a m
 
 A `double` floating point value.
 
-## Example
+## Examples
 
 This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
 

@@ -66,9 +66,9 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 ## Other documentation
 
-- [Developer Tools Performance Features](/en-US/docs/Tools/Performance)
-  - : This section provides information on how to use and understand the performance features in your developer tools, including [Waterfall](/en-US/docs/Tools/Performance/Waterfall), [Call Tree](/en-US/docs/Tools/Performance/Call_Tree), and [Flame Charts](/en-US/docs/Tools/Performance/Flame_Chart).
-- [Profiling with the built-in profiler](/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler)
+- [Developer Tools Performance Features](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
+  - : This section provides information on how to use and understand the performance features in your developer tools, including [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html), [Call Tree](https://firefox-source-docs.mozilla.org/devtools-user/performance/call_tree/index.html), and [Flame Charts](https://firefox-source-docs.mozilla.org/devtools-user/performance/flame_chart/index.html).
+- [Profiling with the built-in profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : Learn how to profile app performance with Firefox's built-in profiler.
 
 ## Glossary Terms
@@ -182,7 +182,7 @@ Headers
 
 Tools
 
-- [Performance in Firefox Developer Tools](/en-US/docs/Tools/Performance)
+- [Performance in Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
 - Flame charts
 - The Network panel
 - Waterfall charts

@@ -14,13 +14,11 @@ The **`Range.endContainer`** read-only property returns the
 {{domxref("Node")}} within which the {{domxref("Range")}} ends. To change the end
 position of a node, use the {{domxref("Range.setEnd()")}} method or a similar one.
 
-## Syntax
+## Value
 
-```js
-endRangeNode = range.endContainer;
-```
+A {{domxref("Node")}} object.
 
-## Example
+## Examples
 
 ```js
 var range = document.createRange();

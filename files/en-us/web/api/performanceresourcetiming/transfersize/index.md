@@ -12,26 +12,20 @@ browser-compat: api.PerformanceResourceTiming.transferSize
 
 The **`transferSize`** read-only property represents the size
 (in octets) of the fetched resource. The size includes the response header fields plus
-the response payload body (as defined by [RFC7230](https://httpwg.github.io/specs/rfc7230.html#message.body)).
+the response payload body (as defined by [RFC7230](https://httpwg.org/specs/rfc7230.html#message.body)).
 
 {{AvailableInWorkers}}
 
 If the resource is fetched from a local cache, or if it is a cross-origin resource,
 this property returns zero.
 
-## Syntax
-
-```js
-resource.transferSize;
-```
-
-### Return value
+## Value
 
 A `number` representing the size (in octets) of the fetched resource. The
 size includes the response header fields plus the [response payload
-body](https://httpwg.github.io/specs/rfc7230.html#message.body) (RFC7230).
+body](https://httpwg.org/specs/rfc7230.html#message.body) (RFC7230).
 
-## Example
+## Examples
 
 The following example, the value of size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.

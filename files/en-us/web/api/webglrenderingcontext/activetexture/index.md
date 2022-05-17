@@ -18,7 +18,7 @@ make active.
 ## Syntax
 
 ```js
-void gl.activeTexture(texture);
+activeTexture(texture)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ void gl.activeTexture(texture);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

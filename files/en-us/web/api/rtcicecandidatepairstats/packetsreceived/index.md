@@ -26,13 +26,7 @@ candidates.
 The number of packets sent to date on the connection can be obtained using
 {{domxref("RTCIceCandidatePairStats.packetsSent", "packetsSent")}}.
 
-## Syntax
-
-```js
-packetsReceived = rtcIceCandidatePairStats.packetsReceived;
-```
-
-### Value
+## Value
 
 An integer value indicating the total number of packets, of any kind, which have been
 received on the connection described by the two candidates comprising this pair.

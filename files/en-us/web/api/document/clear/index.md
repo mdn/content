@@ -17,8 +17,16 @@ The **`Document.clear()`** method does nothing, but doesn't raise any error.
 ## Syntax
 
 ```js
-document.clear();
+clear()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -19,7 +19,9 @@ binding point and writes them to an {{jsxref("ArrayBuffer")}} or
 ## Syntax
 
 ```js
-void gl.getBufferSubData(target, srcByteOffset, ArrayBufferView dstData, optional dstOffset, optional length);
+getBufferSubData(target, srcByteOffset, dstData)
+getBufferSubData(target, srcByteOffset, dstData, dstOffset)
+getBufferSubData(target, srcByteOffset, dstData, dstOffset, length)
 ```
 
 ### Parameters
@@ -58,7 +60,7 @@ void gl.getBufferSubData(target, srcByteOffset, ArrayBufferView dstData, optiona
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

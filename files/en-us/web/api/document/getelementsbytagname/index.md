@@ -22,20 +22,25 @@ without having to call `document.getElementsByTagName()` again.
 ## Syntax
 
 ```js
-var elements = document.getElementsByTagName(name);
+getElementsByTagName(name)
 ```
 
-- _elements_ is a live {{domxref("HTMLCollection")}} (but see the note below)
-  of found elements in the order they appear in the tree.
-- _name_ is a string representing the name of the elements. The special
-  string "\*" represents all elements.
+### Parameters
+
+- `name`
+  - : A string representing the name of the elements. The special
+    string `*` represents all elements.
+
+### Return value
+
+A live {{domxref("HTMLCollection")}} of found elements in the order they appear in the tree.
 
 > **Note:** [The
-> latest W3C specification](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) says _elements_ is an
+> latest W3C specification](https://dom.spec.whatwg.org/#interface-document) says returned value is an
 > `HTMLCollection`; however, this method returns a {{domxref("NodeList")}} in
 > WebKit browsers. See {{bug(14869)}} for details.
 
-## Example
+## Examples
 
 In the following example, `getElementsByTagName()` starts from a particular
 parent element and searches top-down recursively through the DOM from that parent

@@ -17,19 +17,13 @@ The **`referrerPolicy`** read-only property of the
 referrer information, sent in the {{HTTPHeader("Referer")}} header, should be included
 with the request.
 
-## Syntax
+## Value
 
-```js
-var myReferrerPolicy = request.referrerPolicy;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the request's `referrerPolicy`. For
+A string representing the request's `referrerPolicy`. For
 more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
 header page.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as

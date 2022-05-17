@@ -20,21 +20,29 @@ updates.
 
 > **Note:** This method is not expected to become standard, and is only implemented
 > by recent builds of Internet Explorer and Node.js 0.10+. It meets resistance both from
-> [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and [Webkit](https://code.google.com/p/chromium/issues/detail?id=146172)
+> [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and [Webkit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172)
 > (Google/Apple).
 
 ## Syntax
 
 ```js
-var immediateID = setImmediate(func, [param1, param2, ...]);
-var immediateID = setImmediate(func);
+setImmediate(func)
+setImmediate(func, param0)
+setImmediate(func, param0, param1)
+setImmediate(func, param0, param1, /* ... ,*/ paramN)
 ```
 
-- where `immediateID` is the ID of the immediate which can be used later
-  with {{DOMxRef("window.clearImmediate")}}.
-- `func` is the function you wish to call.
+### Parameters
 
-All parameters will be passed directly to your function.
+- `func`
+  - :  The function you wish to call.
+
+- `param0, ..., paramN`
+  - : All parameters will be passed directly to your function.
+
+### Return value
+
+The ID of the immediate which can be used later with {{DOMxRef("window.clearImmediate")}}.
 
 ## Notes
 
@@ -44,7 +52,7 @@ the immediate actions, just like {{DOMxRef("clearTimeout")}} for
 
 This method can be used instead of the `setTimeout(fn, 0)` method to execute
 [heavy
-operations](https://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/).
+operations](https://humanwhocodes.com/blog/2009/08/11/timed-array-processing-in-javascript/).
 
 The feature can be emulated in a few different ways:
 
@@ -58,7 +66,7 @@ The feature can be emulated in a few different ways:
   spec](https://html.spec.whatwg.org/multipage/webappapis.html#timers), it does not make for a suitable polyfill for the natural immediacy of
   `setImmediate`.
 
-All of these techniques are incorporated into a [robust setImmediate polyfill](https://github.com/NobleJS/setImmediate).
+All of these techniques are incorporated into a [robust setImmediate polyfill](https://github.com/YuzuJS/setImmediate).
 
 ## Specifications
 
@@ -75,4 +83,4 @@ specification is no longer being worked on.
 - [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
 - {{DOMxRef("Window.clearImmediate()")}}
 - [Microsoft
-  `setImmediate` API Demo](http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html)
+  `setImmediate` API Demo](https://redirect.microsoft/testdrive/Performance/setImmediateSorting/Default.html)

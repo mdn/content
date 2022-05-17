@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
-{{APIRef("DOM Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The **`KeyboardEvent.initKeyboardEvent()`** method initializes
 the attributes of a keyboard event object. This method was introduced in draft of DOM
@@ -20,7 +20,7 @@ Web applications should use constructor instead of this if it's available.
 ## Syntax
 
 ```js
-kbdEvent.initKeyboardEvent(typeArg, canBubbleArg, cancelableArg,
+initKeyboardEvent(typeArg, canBubbleArg, cancelableArg,
                            viewArg, charArg, keyArg,
                            locationArg, modifiersListArg, repeat)
 ```
@@ -48,6 +48,10 @@ kbdEvent.initKeyboardEvent(typeArg, canBubbleArg, cancelableArg,
   - : Whether the Shift key modifier is active.
 - _`metaKey`_
   - : Whether the Meta key modifier is active.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -21,7 +21,8 @@ this particular call to `count()` has been called.
 ## Syntax
 
 ```js
-console.count([label]);
+count()
+count(label)
 ```
 
 ### Parameters
@@ -30,6 +31,10 @@ console.count([label]);
   - : A string. If supplied, `count()` outputs the number of
     times it has been called with that label. If omitted, `count()` behaves as
     though it was called with the "default" label.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

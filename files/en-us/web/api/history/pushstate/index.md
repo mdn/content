@@ -24,8 +24,8 @@ session history stack.
 ## Syntax
 
 ```js
-history.pushState(state, unused)
-history.pushState(state, unused, url)
+pushState(state, unused)
+pushState(state, unused, url)
 ```
 
 ### Parameters
@@ -58,6 +58,10 @@ history.pushState(state, unused, url)
     current URL. The new URL must be of the same {{glossary("origin")}} as the current
     URL; otherwise, `pushState()` will throw an exception. If this parameter
     isn't specified, it's set to the document's current URL.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Description
 

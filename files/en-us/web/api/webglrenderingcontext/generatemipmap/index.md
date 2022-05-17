@@ -24,7 +24,7 @@ resolution until a 1x1 dimension texture image is created.
 ## Syntax
 
 ```js
-void gl.generateMipmap(target);
+generateMipmap(target)
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ void gl.generateMipmap(target);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

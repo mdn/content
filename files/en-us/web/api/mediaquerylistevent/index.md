@@ -28,7 +28,7 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 - {{DOMxRef("MediaQueryListEvent.matches")}}{{ReadOnlyInline}}
   - : A boolean value that is `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
 - {{DOMxRef("MediaQueryListEvent.media")}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} representing a serialized media query.
+  - : A string representing a serialized media query.
 
 ## Methods
 
@@ -45,7 +45,7 @@ function screenTest(e) {
     para.textContent = 'This is a narrow screen — less than 600px wide.';
     document.body.style.backgroundColor = 'red';
   } else {
-    /* the viewport is more than than 600 pixels wide */
+    /* the viewport is more than 600 pixels wide */
     para.textContent = 'This is a wide screen — more than 600px wide.';
     document.body.style.backgroundColor = 'blue';
   }

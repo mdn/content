@@ -13,7 +13,7 @@ browser-compat: api.ImageTrackList.ready
 
 The **`ready`** property of the {{domxref("ImageTrackList")}} interface returns a {{jsxref("Promise")}} that resolves when the `ImageTrackList` is populated with {{domxref("ImageTrack","tracks")}}.
 
-### Value
+## Value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}}.
 

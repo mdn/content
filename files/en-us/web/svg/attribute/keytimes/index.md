@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/keyTimes
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.keyTimes
+spec-urls: https://svgwg.org/specs/animations/#KeyTimesAttribute
 ---
 {{SVGRef}}
 
@@ -68,7 +68,7 @@ There must be exactly as many values in the `keyTimes` list as in the `values` l
 
 Each successive time value must be greater than or equal to the preceding time value.
 
-The `keyTimes` list semantics depends upon the interpolation mode:
+The `keyTimes` list semantics depends upon the {{Glossary("interpolation")}} mode:
 
 - For linear and spline animation, the first time value in the list must be 0, and the last time value in the list must be `1`. The key time associated with each value defines when the value is set; values are interpolated between the key times.
 - For discrete animation, the first time value in the list must be `0`. The time associated with each value defines when the value is set; the animation function uses that value until the next time defined in the list.
@@ -81,32 +81,4 @@ If the duration of the animation is indefinite, any `keyTimes` specification wil
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#KeyTimesAttribute", "keyTimes")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#KeyTimesAttribute", "keyTimes")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
-
-## Browser compatibility
-
-{{Compat}}
+{{Specifications}}

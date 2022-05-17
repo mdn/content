@@ -19,7 +19,7 @@ used in the current WebGL state.
 ## Syntax
 
 ```js
-void gl.validateProgram(program);
+validateProgram(program)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ void gl.validateProgram(program);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

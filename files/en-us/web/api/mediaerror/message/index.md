@@ -16,26 +16,20 @@ browser-compat: api.MediaError.message
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.message`** returns a
-{{domxref("DOMString")}} which contains a human-readable string offering specific
+human-readable string offering specific
 diagnostic details related to the error described by the `MediaError` object,
 or an empty string (`""`) if no diagnostic information can be determined or
 provided.
 
-## Syntax
+## Value
 
-```js
-var errorMessage = mediaError.message;
-```
-
-### Value
-
-A {{domxref("DOMString")}} providing a detailed, specific explanation of what went
+A string providing a detailed, specific explanation of what went
 wrong and possibly how it might be fixed. This is _not_ a generic description of
 the {{domxref("MediaError.code")}} property's value, but instead goes deeper into the
 specifics of this particular error and its circumstances. If no specific details are
 available, this string is empty.
 
-## Example
+## Examples
 
 This example creates a {{HTMLElement("audio")}} element, establishes an error handler
 for it, then lets the user click buttons to choose whether to assign a valid audio file
@@ -44,7 +38,7 @@ handler outputs a message to a box onscreen describing the error, including both
 `code` and the `message`.
 
 Only the relevant parts of the code are displayed; you can [see the
-complete source code here](https://github.com/mdn/dom-examples/blob/master/media/mediaerror/).
+complete source code here](https://github.com/mdn/dom-examples/tree/master/media/mediaerror).
 
 The example creates an {{HTMLElement("audio")}} element and lets the user assign either
 a valid music file to it, or a link to a file which doesn't exist. This lets us see the

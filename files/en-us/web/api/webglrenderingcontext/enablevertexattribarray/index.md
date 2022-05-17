@@ -44,7 +44,7 @@ access the attribute, including {{domxref("WebGLRenderingContext.vertexAttribPoi
 ## Syntax
 
 ```js
-void gl.enableVertexAttribArray(index);
+enableVertexAttribArray(index)
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ void gl.enableVertexAttribArray(index);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -69,7 +69,7 @@ To check for errors after calling `enableVertexAttribArray()`, call
     the maximum number of entries permitted in the context's vertex attribute list, as
     indicated by the value of `WebGLRenderingContext.MAX_VERTEX_ATTRIBS`.
 
-## Example
+## Examples
 
 This code — a snippet taken from the full example [A basic 2D WebGL
 animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example) — shows the use of `enableVertexArray()` to activate

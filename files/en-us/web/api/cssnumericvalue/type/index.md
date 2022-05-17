@@ -23,7 +23,7 @@ The **`type()`** method of the
 ## Syntax
 
 ```js
-var cssNumericType = CSSNumericValue.type();
+type()
 ```
 
 ### Parameters

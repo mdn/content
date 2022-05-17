@@ -20,18 +20,18 @@ In fact, the main reason `clone()` exists is to allow multiple uses of body obje
 ## Syntax
 
 ```js
-var response2 = response1.clone();
+clone()
 ```
 
 ### Parameters
 
 None.
 
-### Value
+### Return value
 
 A {{domxref("Response")}} object.
 
-## Example
+## Examples
 
 In our [Fetch Response clone example](https://github.com/mdn/fetch-examples/tree/master/fetch-response-clone) (see [Fetch Response clone live](https://mdn.github.io/fetch-examples/fetch-response-clone/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
 We then fetch this request using {{domxref("fetch()")}}.

@@ -13,7 +13,7 @@ browser-compat: api.VideoFrame.duration
 
 The **`duration`** property of the {{domxref("VideoFrame")}} interface returns an integer indicating the duration of the video in microseconds.
 
-### Value
+## Value
 
 An integer.
 

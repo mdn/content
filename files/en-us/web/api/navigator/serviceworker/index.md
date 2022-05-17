@@ -20,13 +20,7 @@ communication with the {{domxref("ServiceWorker")}}.
 
 The feature may not be available in private mode.
 
-## Syntax
-
-```js
-const workerContainerInstance = navigator.serviceWorker;
-```
-
-### Value
+## Value
 
 {{domxref("ServiceWorkerContainer")}}.
 

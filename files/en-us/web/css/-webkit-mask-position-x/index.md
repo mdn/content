@@ -28,7 +28,7 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 -webkit-mask-position-x: 50px;
 -webkit-mask-position-x: -1cm;
 
-/* Multiple values values */
+/* Multiple values */
 -webkit-mask-position-x: 50px, 25%, -3em;
 
 /* Global values */

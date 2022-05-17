@@ -30,7 +30,7 @@ not removable from the device).
 ## Syntax
 
 ```js
-arrTransports = authenticatorAttestationResponse.getTransports()
+getTransports()
 ```
 
 ### Parameters

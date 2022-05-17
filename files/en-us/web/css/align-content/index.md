@@ -57,6 +57,7 @@ align-content: unsafe center;
 align-content: inherit;
 align-content: initial;
 align-content: revert;
+align-content: revert-layer;
 align-content: unset;
 ```
 
@@ -210,8 +211,6 @@ select {
 
     <option value="start">start</option>
     <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
 
     <option value="baseline">baseline</option>
     <option value="first baseline">first baseline</option>

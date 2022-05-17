@@ -22,15 +22,41 @@ values for uniform variables.
 ## Syntax
 
 ```js
-void gl.uniformMatrix2fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix3x2fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix4x2fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix2x3fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix3fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix4x3fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix2x4fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix3x4fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix4fv(location, transpose, data, optional srcOffset, optional srcLength);
+uniformMatrix2fv(location, transpose, data)
+uniformMatrix2fv(location, transpose, data, srcOffset)
+uniformMatrix2fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix3x2fv(location, transpose, data)
+uniformMatrix3x2fv(location, transpose, data, srcOffset)
+uniformMatrix3x2fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix4x2fv(location, transpose, data)
+uniformMatrix4x2fv(location, transpose, data, srcOffset)
+uniformMatrix4x2fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix2x3fv(location, transpose, data)
+uniformMatrix2x3fv(location, transpose, data, srcOffset)
+uniformMatrix2x3fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix3fv(location, transpose, data)
+uniformMatrix3fv(location, transpose, data, srcOffset)
+uniformMatrix3fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix4x3fv(location, transpose, data)
+uniformMatrix4x3fv(location, transpose, data, srcOffset)
+uniformMatrix4x3fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix2x4fv(location, transpose, data)
+uniformMatrix2x4fv(location, transpose, data, srcOffset)
+uniformMatrix2x4fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix3x4fv(location, transpose, data)
+uniformMatrix3x4fv(location, transpose, data, srcOffset)
+uniformMatrix3x4fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix4fv(location, transpose, data)
+uniformMatrix4fv(location, transpose, data, srcOffset)
+uniformMatrix4fv(location, transpose, data, srcOffset, srcLength)
 ```
 
 ### Parameters
@@ -46,7 +72,7 @@ void gl.uniformMatrix4fv(location, transpose, data, optional srcOffset, optional
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -19,12 +19,18 @@ The **`Document.createRange()`** method returns a new
 ## Syntax
 
 ```js
-range = document.createRange();
+createRange()
 ```
 
-_range_ is the created {{domxref("Range")}} object.
+### Parameters
 
-## Example
+None.
+
+### Return value
+
+The created {{domxref("Range")}} object.
+
+## Examples
 
 ```js
 let range = document.createRange();

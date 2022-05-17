@@ -20,7 +20,7 @@ multiple GL contexts.
 ## Syntax
 
 ```js
-void gl.waitSync(sync, flags, timeout);
+waitSync(sync, flags, timeout)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ void gl.waitSync(sync, flags, timeout);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

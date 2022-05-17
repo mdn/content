@@ -15,19 +15,13 @@ The **`unloadEventEnd`** read-only property returns a
 time immediately after the user agent finishes the unload event of the previous
 document. If there is no previous document, this property value is `0`.
 
-## Syntax
-
-```js
-perfEntry.unloadEventEnd;
-```
-
-### Return Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the
 time immediately after the user agent finishes the unload event of the previous
 document.
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

@@ -19,13 +19,15 @@ buffer object's data store.
 ## Syntax
 
 ```js
-// WebGL1:
-void gl.bufferData(target, size, usage);
-void gl.bufferData(target, ArrayBuffer? srcData, usage);
-void gl.bufferData(target, ArrayBufferView srcData, usage);
+// WebGL1
+bufferData(target, usage)
+bufferData(target, size, usage)
+bufferData(target, srcData, usage)
 
-// WebGL2:
-void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
+// WebGL2
+bufferData(target, usage, srcOffset)
+bufferData(target, srcData, usage, srcOffset)
+bufferData(target, srcData, usage, srcOffset, length)
 ```
 
 ### Parameters
@@ -106,7 +108,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

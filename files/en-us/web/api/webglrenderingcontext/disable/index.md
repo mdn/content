@@ -17,7 +17,7 @@ capabilities for this context.
 ## Syntax
 
 ```js
-void gl.disable(cap);
+disable(cap)
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ void gl.disable(cap);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

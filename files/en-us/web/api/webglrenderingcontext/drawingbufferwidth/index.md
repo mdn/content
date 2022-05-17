@@ -18,11 +18,9 @@ property represents the actual width of the current drawing buffer. It should ma
 this context, but might differ if the implementation is not able to provide the
 requested width.
 
-## Syntax
+## Value
 
-```js
-gl.drawingBufferWidth;
-```
+A number.
 
 ## Examples
 

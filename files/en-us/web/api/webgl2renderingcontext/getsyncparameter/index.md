@@ -18,7 +18,7 @@ information of a {{domxref("WebGLSync")}} object.
 ## Syntax
 
 ```js
-any gl.getSyncParameter(sync, pname);
+getSyncParameter(sync, pname)
 ```
 
 ### Parameters

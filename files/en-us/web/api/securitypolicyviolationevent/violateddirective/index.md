@@ -4,7 +4,6 @@ slug: Web/API/SecurityPolicyViolationEvent/violatedDirective
 tags:
   - API
   - CSP
-  - Experimental
   - HTTP
   - Property
   - Reference
@@ -13,24 +12,18 @@ tags:
   - violatedDirective
 browser-compat: api.SecurityPolicyViolationEvent.violatedDirective
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+{{HTTPSidebar}}
 
 The **`violatedDirective`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
+{{domxref("SecurityPolicyViolationEvent")}} interface is a string
 representing the directive whose enforcement uncovered the violation.
 
-## Syntax
+## Value
 
-```js
-let violatedDir = violationEventInstance.violatedDirective;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the
+A string representing the directive whose enforcement uncovered the
 violation.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

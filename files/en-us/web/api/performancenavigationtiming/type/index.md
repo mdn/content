@@ -14,7 +14,7 @@ The **`type`** read-only property returns the type of navigation.
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"navigate"`
   - : Navigation started by clicking a link, entering the URL in the browser's address
@@ -28,7 +28,7 @@ A {{domxref("DOMString","string")}} containing one of the following values:
 - `"prerender"`
   - : Navigation is initiated by a [prerender hint](https://www.w3.org/TR/resource-hints/#prerender).
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

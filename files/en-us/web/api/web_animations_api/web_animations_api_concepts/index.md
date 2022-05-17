@@ -73,5 +73,5 @@ The API allows for the creation of dynamic animations that can be updated on the
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) — main page
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) — guide
-- The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

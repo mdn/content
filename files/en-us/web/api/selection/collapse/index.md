@@ -18,7 +18,8 @@ editable, the caret will blink there.
 ## Syntax
 
 ```js
-sel.collapse(node, offset);
+collapse(node)
+collapse(node, offset)
 ```
 
 ### Parameters
@@ -31,6 +32,10 @@ sel.collapse(node, offset);
 - _`offset`_ {{optional_inline}}
   - : The offset in `node` to which the selection will be collapsed. If not
     specified, the default value `0` is used.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

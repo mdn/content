@@ -17,31 +17,36 @@ The **`ChannelMergerNode()`** constructor creates a new {{domxref("ChannelMerger
 ## Syntax
 
 ```js
-new ChannelMergerNode(context, options);
+new ChannelMergerNode(context)
+new ChannelMergerNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : A [`ChannelMergerOptions`](https://webaudio.github.io/web-audio-api/#idl-def-ChannelMergerOptions) dictionary object defining the properties you want the `ChannelMergerNode` to have:
 
-    - `numberOfInputs`: A number defining the number of inputs the {{domxref("ChannelMergerNode")}} should have. If not specified, the default value used is 6.
-    - `channelCount`: Represents an integer used to determine how many channels are used when [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
-      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
-      definition depend on the value of `channelCountMode`.
-    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between
-      the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
-      information including default values.)
-    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels. This
-      interpretation will define how audio [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
-      The possible values are `"speakers"` or `"discrete"`. (See
-      {{domxref("AudioNode.channelCountMode")}} for more information including default
-      values.)
+    - `numberOfInputs`
+      - : A number defining the number of inputs the {{domxref("ChannelMergerNode")}} should have. If not specified, the default value used is 6.
+    - `channelCount`
+      - : Represents an integer used to determine how many channels are used when [up-mixing
+        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
+        {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+        definition depend on the value of `channelCountMode`.
+    - `channelCountMode`
+      - : Represents an enumerated value describing the way channels must be matched between
+        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+        information including default values.)
+    - `channelInterpretation`
+      - : Represents an enumerated value describing the meaning of the channels. This
+        interpretation will define how audio [up- `mixing`
+        and down- `mixing`    ](/en- `US`    /docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up- `mixing`    and_down- `mixing`    ) will happen.
+        The possible values are `"speakers"` or `"discrete"`. (See
+        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        values.)
 
 ### Return value
 
@@ -52,7 +57,7 @@ A new {{domxref("ChannelMergerNode")}} object instance.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if an option such as `channelCount` or `channelCountMode` has been given an invalid value.
 
-## Example
+## Examples
 
 ```js
 var ac = new AudioContext();

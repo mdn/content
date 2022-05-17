@@ -21,7 +21,7 @@ interface contains a string which names the index.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying a name for the index.
+A string specifying a name for the index.
 
 ### Exceptions
 
@@ -37,7 +37,7 @@ name.
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an index is already using the specified `name`.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on
@@ -52,7 +52,7 @@ The name of the index is logged to the console: it should be returned as
 Finally, we iterate through each record, inserting the data into an HTML table. For a
 complete working example, see our [IndexedDB-examples
 demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex)).
+example live](https://mdn.github.io/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {

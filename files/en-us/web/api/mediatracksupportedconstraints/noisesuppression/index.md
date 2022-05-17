@@ -32,13 +32,7 @@ offers the ability to automatically control the gain (volume) on media tracks; t
 obviously is contingent on whether or not the individual device supports automatic gain
 control as well.
 
-## Syntax
-
-```js
-noiseSuppressionSupported = supportedConstraintsDictionary.noiseSuppression;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary (and its value is always `true`)
 if the user agent supports the `noiseSuppression` constraint (and therefore
@@ -46,7 +40,7 @@ supports noise suppression on audio tracks). If the property isn't present, this
 property is missing from the supported constraints dictionary, and you'll get
 {{jsxref("undefined")}} if you try to look at its value.
 
-## Example
+## Examples
 
 This example displays whether or not your browser supports the
 `noiseSuppression` constraint.

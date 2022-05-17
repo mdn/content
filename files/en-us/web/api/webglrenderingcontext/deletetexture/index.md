@@ -20,7 +20,7 @@ been deleted.
 ## Syntax
 
 ```js
-void gl.deleteTexture(texture);
+deleteTexture(texture)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ void gl.deleteTexture(texture);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

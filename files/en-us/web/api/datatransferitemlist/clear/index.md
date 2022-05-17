@@ -23,7 +23,7 @@ in read-only mode, and this method silently does nothing. No exception is thrown
 ## Syntax
 
 ```js
-DataTransferItemList.clear();
+clear()
 ```
 
 ### Parameters
@@ -32,9 +32,9 @@ None.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example shows the use of the `clear()` method.
 
@@ -123,9 +123,9 @@ function dragend_handler(ev) {
 
 #### Result
 
-{{EmbedLiveSample('Example', 400, 300)}}
+{{EmbedLiveSample('Examples', 400, 300)}}
 
-{{LiveSampleLink('Example','Result link')}}
+{{LiveSampleLink('Examples','Result link')}}
 
 ## Specifications
 

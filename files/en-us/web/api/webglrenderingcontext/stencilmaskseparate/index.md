@@ -21,7 +21,7 @@ and back stencil writemasks to one value at the same time.
 ## Syntax
 
 ```js
-void gl.stencilMaskSeparate(face, mask);
+stencilMaskSeparate(face, mask)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ void gl.stencilMaskSeparate(face, mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

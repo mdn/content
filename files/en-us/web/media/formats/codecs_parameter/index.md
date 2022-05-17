@@ -66,11 +66,13 @@ Several of the links above go to the same section; that's because those media ty
 
 ### AV1
 
-The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
+The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff/) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
 
 ```plain
-av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
+av01.P.LLT.DD[.M.CCC.cp.tc.mc.F]
 ```
+
+> **Note:** Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
 
 This codec parameter string's components are described in more detail in the table below. Each component is a fixed number of characters long; if the value is less than that length, it must be padded with leading zeros.
 
@@ -115,7 +117,7 @@ This codec parameter string's components are described in more detail in the tab
               <td>2</td>
               <td>
                 "Professional" profile adds support for 4:2:2 chroma subsampling
-                and 12 bit per component color.
+                and 12-bit per component color.
               </td>
             </tr>
           </tbody>
@@ -125,21 +127,14 @@ This codec parameter string's components are described in more detail in the tab
     <tr>
       <td><code>LL</code></td>
       <td>
-        The two-digit level number, which is converted to the X.Y format level
-        format, where <code>X = 2 + (LL >> 2)</code> and
-        <code>Y = LL &#x26; 3</code>. See
-        <a href="https://aomediacodec.github.io/av1-spec/#levels"
-          >Appendix A, section 3</a
-        >
-        in the AV1 Specification for details.
+        The two-digit level number, which is converted to the X.Y format level format, where <code>X = 2 + (LL >> 2)</code> and <code>Y = LL &#x26; 3</code>.
+        See <a href="https://aomediacodec.github.io/av1-spec/#levels">Appendix A, section 3</a> in the AV1 Specification for details.
       </td>
     </tr>
     <tr>
       <td><code>T</code></td>
       <td>
-        The one-character tier indicator. For the Main tier (<code
-          >seq_tier</code
-        >
+        The one-character tier indicator. For the Main tier (<code>seq_tier</code>
         equals 0), this character is the letter <code>M</code>. For the High
         tier (<code>seq_tier</code> is 1), this character is the letter
         <code>H</code>. The High tier is only available for level 4.0 and up.
@@ -360,7 +355,7 @@ Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the ful
 
 > **Note:** The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
 
-The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object ypes provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
+The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object types provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
 
 <table class="standard-table">
   <caption>
@@ -638,7 +633,7 @@ The strings `vp8.0` and `vp9.0` also work, but are not recommended.
 
 #### ISO Base Media File Format syntax
 
-As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
+As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4/), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
 
 In this format, the `codecs` parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (`.`) separated two-digit values.
 
@@ -899,7 +894,7 @@ The first four components are required; everything from `CC` (chroma subsampling
               <td><code>09</code></td>
               <td>
                 BT.2020; BT.2100. Used for ultra-high definition (4K) High
-                Dynamic Range (HDR) video, these have a very wide color gamut
+                Dynamic Range (HDR) video, these have a very wide color {{glossary("gamut")}}
                 and support 10-bit and 12-bit color component depths.
               </td>
             </tr>
@@ -973,7 +968,7 @@ The first four components are required; everything from `CC` (chroma subsampling
       <td><code>FF</code></td>
       <td>
         Indicates whether to restrict the black level and color range of each
-        color component to the legal range. For 8 bit color samples, the legal
+        color component to the legal range. For 8-bit color samples, the legal
         range is 16-235. A value of <code>00</code> indicates that these
         limitations should be enforced, while a value of <code>01</code> allows
         the full range of possible values for each component, even if the

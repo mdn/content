@@ -16,7 +16,7 @@ The static
 **`Reflect.preventExtensions()`** method prevents new
 properties from ever being added to an object (i.e., prevents future extensions to the
 object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with
-some [differences](#difference_from_object.preventExtensions).
+some [differences](#difference_from_object.preventextensions).
 
 {{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 

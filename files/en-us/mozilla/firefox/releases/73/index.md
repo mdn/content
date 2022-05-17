@@ -16,7 +16,7 @@ This article provides information about the changes in Firefox 73 that will affe
 ### Developer tools
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) now appear as errors in the console (and no longer as warnings) giving them the appropriate visibility ({{bug(1602093)}}).
-- Text and regular expression searches in the web console [can now be negated by prefixing them with '-'](/en-US/docs/Tools/Web_Console/Console_messages#filtering_and_searching) ({{bug(1291192)}}).
+- Text and regular expression searches in the web console [can now be negated by prefixing them with '-'](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering-and-searching) ({{bug(1291192)}}).
 
 ### HTML
 
@@ -48,7 +48,7 @@ _No changes._
 
 #### DOM
 
-- The {{domxref("Window.innerWidth", "innerWidth")}} and {{domxref("Window.innerHeight", "innerHeight")}} properties on {{domxref("Window")}} objects have been updated to return the width and height of the layout viewport in all situations, rather than sometimes being based on the visual viewport. In particular, previously when using [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode), these returned the visual viewport dimensions, causing the behavior to vary from what was expected ({{bug(1514429)}}).
+- The {{domxref("Window.innerWidth", "innerWidth")}} and {{domxref("Window.innerHeight", "innerHeight")}} properties on {{domxref("Window")}} objects have been updated to return the width and height of the layout viewport in all situations, rather than sometimes being based on the visual viewport. In particular, previously when using [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), these returned the visual viewport dimensions, causing the behavior to vary from what was expected ({{bug(1514429)}}).
 
 #### WebVR
 

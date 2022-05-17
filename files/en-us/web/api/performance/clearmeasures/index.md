@@ -21,24 +21,23 @@ removed from the performance entry buffer.
 ## Syntax
 
 ```js
-performance.clearMeasures();
-performance.clearMeasures(name);
+clearMeasures()
+clearMeasures(name)
 ```
 
-### Arguments
+### Parameters
 
-- name {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the name of the timestamp. If this argument
+- `name` {{optional_inline}}
+  - : A string representing the name of the timestamp. If this argument
     is omitted, all {{domxref("PerformanceEntry","performance entries")}} with an
     {{domxref("PerformanceEntry.entryType","entry type")}} of "`measure`" will
     be removed.
 
 ### Return value
 
-- void
-  - :
+void
 
-## Example
+## Examples
 
 The following example shows both uses of the `clearMeasures()` method.
 

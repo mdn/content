@@ -20,7 +20,7 @@ NDEFRecord.recordType
 
 ### Value
 
-A {{DOMxRef("USVString")}} which can be one of the following:
+A string which can be one of the following:
 
 - `"empty"`
   - : An empty NDEF record.

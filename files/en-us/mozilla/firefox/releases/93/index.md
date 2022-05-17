@@ -64,7 +64,7 @@ This article provides information about the changes in Firefox 93 that will affe
 ## Other
 
 - Support for [AVIF](/en-US/docs/Web/Media/Formats/Image_types#AVIF_image) images is now enabled by default ({{bug(1682995)}}).
-  This format has excellent compression and no patent restrictions (it was developed by the [Alliance for Open Media](http://aomedia.org/)).
+  This format has excellent compression and no patent restrictions (it was developed by the [Alliance for Open Media](https://aomedia.org/)).
   Firefox can display still images, with colorspace support for both full and limited range colors, and image transforms for mirroring and rotation.
   The preference [image.avif.compliance_strictness](/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness) can be used to adjust the compliance strictness with the specification. Animated images are not supported.
 

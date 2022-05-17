@@ -46,6 +46,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 border-image: inherit;
 border-image: initial;
 border-image: revert;
+border-image: revert-layer;
 border-image: unset;
 ```
 

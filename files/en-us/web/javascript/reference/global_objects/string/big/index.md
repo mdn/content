@@ -17,7 +17,7 @@ browser-compat: javascript.builtins.String.big
 The **`big()`** method creates a {{HTMLElement("big")}} HTML
 element that causes a string to be displayed in a big font.
 
-> **Note:** The \<big> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore.
+> **Note:** The \<big> element has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore.
 > Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
 
 ## Syntax

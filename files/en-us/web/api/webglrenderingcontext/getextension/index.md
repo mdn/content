@@ -17,7 +17,7 @@ The **`WebGLRenderingContext.getExtension()`** method enables a
 ## Syntax
 
 ```js
-gl.getExtension(name);
+getExtension(name)
 ```
 
 ### Parameters

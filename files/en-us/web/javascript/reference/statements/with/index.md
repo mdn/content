@@ -40,7 +40,7 @@ scope chain, then the name is bound to the property and the object containing th
 property. Otherwise a {{jsxref("ReferenceError")}} is thrown.
 
 > **Note:** Using `with` is not recommended, and is forbidden in
-> ECMAScript 5 [strict mode](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode).
+> ECMAScript 5 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 > The recommended alternative is to assign the object whose properties you
 > want to access to a temporary variable.
 
@@ -133,6 +133,6 @@ with (Math) {
 ## See also
 
 - {{jsxref("Statements/block", "block", "", 1)}}
-- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}

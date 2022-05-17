@@ -23,7 +23,7 @@ regardless of {{domxref("MediaStreamTrack.kind")}}.
 ## Syntax
 
 ```js
-var mediaStreamTracks = mediaStream.getTracks()
+getTracks()
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ None.
 
 An array of {{domxref("MediaStreamTrack")}} objects.
 
-## Example
+## Examples
 
 ```js
 navigator.mediaDevices.getUserMedia({audio: false, video: true})

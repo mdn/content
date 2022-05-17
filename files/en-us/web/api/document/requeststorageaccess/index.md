@@ -118,7 +118,7 @@ we have added two preferences in `about:config` that control prompting upon
 ## Syntax
 
 ```js
-var promise = document.requestStorageAccess();
+requestStorageAccess()
 ```
 
 ### Parameters

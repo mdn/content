@@ -35,14 +35,6 @@ _Also inherits properties from its parent, {{domxref("Event")}} interface._
 - {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
   - : Returns the new version of the database.
 
-### Deprecated properties
-
-- {{ domxref("IDBVersionChangeEvent.version") }} {{readonlyInline}} {{deprecated_inline}}
-
-  - : The new version of the database in a {{event("versionchange")}} transaction.
-
-    > **Warning:** While this property is still implemented in older browsers, the latest specification replaces it with the `oldVersion` and `newVersion` attributes. See the compatibility table to know what browsers support them.
-
 ### Methods
 
 _No specific method, but inherits properties from its parent, {{domxref("Event")}} interface._
@@ -94,5 +86,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- [IDBDatabase.onversionchange](/en-US/docs/Web/API/IDBDatabase/onversionchange)
 - Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

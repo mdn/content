@@ -25,7 +25,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
 ### Preparing the example
 
-1. First we need a wasm module! Grab our [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) file and save a copy in a new directory on your local machine.
+1. First we need a wasm module! Grab our [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) file and save a copy in a new directory on your local machine.
 2. Next, let's create a simple HTML file called `index.html` in the same directory as your wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) if you haven't got one easily available).
 3. Now, to help us understand what is going on here, let's look at the text representation of our wasm module (which we also meet in [Converting WebAssembly format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format)):
 
@@ -90,7 +90,7 @@ In addition to viewing WebAssembly as text, developers are able to debug (place 
 
 ## Memory
 
-In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called [Linear Memory](https://webassembly.org/docs/semantics/#linear-memory) that are read and written by [load and store instructions](https://webassembly.org/docs/semantics/#linear-memory-accesses) inside the module. In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.
+In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called [Linear Memory](https://webassembly.github.io/spec/core/exec/index.html) that are read and written by [load and store instructions](https://webassembly.github.io/spec/core/exec/index.html-accesses#linear-memory-accesses) inside the module. In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.
 
 Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object. This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create [shared memories](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories), which can be transferred between Window and Worker contexts using [`postMessage()`](/en-US/docs/Web/API/Window/postMessage), and used in multiple places.
 
@@ -137,7 +137,7 @@ Just like functions, linear memories can be defined inside a module or imported.
 
 ### More involved memory example
 
-Let's make the above assertions clearer by looking at a more involved memory example — a WebAssembly module that imports the memory instance we defined earlier, populates it with an array of integers, then sums them. You can find this at [memory.wasm.](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)
+Let's make the above assertions clearer by looking at a more involved memory example — a WebAssembly module that imports the memory instance we defined earlier, populates it with an array of integers, then sums them. You can find this at [memory.wasm.](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/memory.wasm)
 
 1. make a local copy of `memory.wasm` in the same directory as before.
 
@@ -188,7 +188,7 @@ Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/R
 
 ### A table example
 
-Let's look at a simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm).
+Let's look at a simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/table.wasm).
 
 1. Make a local copy of `table.wasm` in a new directory.
 
@@ -271,7 +271,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 Now we've demonstrated usage of the main key WebAssembly building blocks, this is a good place to mention the concept of multiplicity. This provides WebAssembly with a multitude of advances in terms of architectural efficiency:
 
 - One module can have N Instances, in the same way that one function literal can produce N closure values.
-- One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Tables and Memories](https://webassembly.org/docs/future-features/#multiple-tables-and-memories)).
+- One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Memories](https://webassembly.org/roadmap/)).
 - One module instance can use 0–1 table instances — this is the "function address space" of the instance, used to implement C function pointers. Future versions of WebAssembly may allow 0–N table instances per module instance.
 - One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing [dynamic linking](https://webassembly.org/docs/dynamic-linking).
 
@@ -285,4 +285,4 @@ This article has taken you through the basics of using the WebAssembly JavaScrip
 
 - [webassembly.org](https://webassembly.org/)
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
+- [WebAssembly on Mozilla Research](https://research.mozilla.org/)

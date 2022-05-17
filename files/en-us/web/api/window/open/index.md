@@ -19,10 +19,10 @@ The **`open()`** method of the {{domxref('Window')}} interface loads a specified
 ## Syntax
 
 ```js
-open();
-open(url);
-open(url, target);
-open(url, target, windowFeatures);
+open()
+open(url)
+open(url, target)
+open(url, target, windowFeatures)
 ```
 
 ### Parameters
@@ -154,7 +154,7 @@ function openFFPromotionPopup() {
 The above code solves a few usability problems related to links opening secondary
 window. The purpose of the `return false` in the code is to cancel default
 action of the link: if the onclick event handler is executed, then there is no need to
-execute the default action of the link. But if javascript support is disabled or
+execute the default action of the link. But if JavaScript support is disabled or
 non-existent on the user's browser, then the onclick event handler is ignored and the
 browser loads the referenced resource in the target frame or window that has the name
 "PromoteFirefoxWindowName". If no frame nor window has the name
@@ -239,7 +239,7 @@ function openRequestedSinglePopup(url) {
 - How can I prevent the confirmation message asking the user whether they want to
   close the window?
 
-  - : You cannot. **New windows not opened by javascript cannot as a rule be closed
+  - : You cannot. **New windows not opened by JavaScript cannot as a rule be closed
     by JavaScript.** The JavaScript Console in Mozilla-based browsers will report
     the warning message:
     `"Scripts may not close windows that were not opened by script."` Otherwise
@@ -269,7 +269,7 @@ function openRequestedSinglePopup(url) {
 
   - : You cannot reliably because the users can prevent the window from being resized by
     setting `dom.disable_window_move_resize` to `true` in
-    `about:config` or by editing accordingly their [user.js file](https://www.mozilla.org/support/firefox/edit#user).
+    `about:config` or by editing accordingly their [user.js file](http://kb.mozillazine.org/User.js_file).
 
     In general, users usually disable moving and resizing of existing windows because
     allowing authors' scripts to do so has been abused overwhelmingly in the past and the
@@ -298,7 +298,7 @@ function openRequestedSinglePopup(url) {
     window; the [opener](/en-US/docs/Web/API/Window/opener) property gives a
     secondary window a reference to its main window.
 - I cannot access the properties of the new secondary window. I always get an error in
-  the javascript console saying "Error: uncaught
+  the JavaScript console saying "Error: uncaught
   exception: Permission denied to get property
   \<property_name or method_name>. Why is that?
 
@@ -310,7 +310,7 @@ function openRequestedSinglePopup(url) {
     window, the browser in the main window will verify that the secondary window has the
     same domain name.
 
-    More reading on the cross-domain script security restriction: [http://www.mozilla.org/projects/secu...me-origin.html](https://www.mozilla.org/projects/security/components/same-origin.html)
+    More reading on the cross-domain script security restriction in the [Same-orgin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
 
 ## Usability issues
 
@@ -348,11 +348,11 @@ recommendable usability and accessibility guidelines:
 
 "javascript:" links break accessibility and usability of webpages in every browser.
 
-- "javascript:" pseudo-links become dysfunctional when javascript support is disabled
+- "javascript:" pseudo-links become dysfunctional when JavaScript support is disabled
   or inexistent. Several corporations allow their employees to surf on the web but under
-  strict security policies: no javascript enabled, no java, no activeX, no Flash. For
+  strict security policies: no JavaScript enabled, no Java, no ActiveX, no Flash. For
   various reasons (security, public access, text browsers, etc..), about 5% to 10% of
-  users on the web surf with javascript disabled.
+  users on the web surf with JavaScript disabled.
 - "javascript:" links will interfere with advanced features in tab-capable browsers:
   eg. middle-click on links, Ctrl+click on links, tab-browsing features in extensions,
   etc.
@@ -370,14 +370,14 @@ recommendable usability and accessibility guidelines:
 - [Top Ten Web-Design Mistakes of
   2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
 - [Links
-  & JavaScript Living Together in Harmony](https://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
+  & JavaScript Living Together in Harmony](https://evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
 - [comp.lang.javascript newsgroup
   discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
 
 #### Never use `<a href="#" onclick="window.open(...);">`
 
 Such pseudo-link also breaks accessibility of links. **Always use a real URL for
-the href attribute value** so that if javascript support is disabled or
+the href attribute value** so that if JavasScript support is disabled or
 inexistent or if the user agent does not support opening of secondary window (like
 MS-Web TV, text browsers, etc), then such user agents will still be able to load the
 referenced resource according to its default mode of opening/handling a referenced
@@ -422,7 +422,7 @@ new tab or not, in "background" or not).
 
 #### Always use the target attribute
 
-If javascript support is disabled or non-existent, then the user agent will create a
+If JavaScript support is disabled or non-existent, then the user agent will create a
 secondary window accordingly or will render the referenced resource according to its
 handling of the target attribute: e.g. some user agents that cannot create new windows,
 like MS Web TV, will fetch the referenced resource and append it at the end of the
@@ -492,7 +492,7 @@ authors:
 - web author is not aware of default margin (and/or border and/or padding) values
   applying to root element or body node in various browsers and various browser versions
 - user uses an user stylesheet ([userContent.css in
-  Mozilla-based browsers](https://www.mozilla.org/support/firefox/edit#content)) for his viewing habits that increases document box
+  Mozilla-based browsers](https://kb.mozillazine.org/index.php?title=UserContent.css)) for his viewing habits that increases document box
   dimensions (margin, padding, default font size)
 - user can customize individually the size (height or width) of most toolbars via
   operating system settings. E.g. window resizing borders, height of browser titlebar,
@@ -508,7 +508,7 @@ authors:
   area for applications: e.g. user resizes the Windows taskbar, user positions the
   Windows taskbar on the left side (arabic language based) or right side (Hebrew
   language), user has a permanent MS-Office quick launch toolbar, etc.
-- some operating system (Mac OS X) forces presence of toolbars that can then fool the
+- some operating system (macOS) forces presence of toolbars that can then fool the
   web author's anticipations, calculations of the effective dimensions of the browser
   window
 
@@ -520,10 +520,6 @@ does not allow the entire browser window to be rendered within the work area for
 applications of the user's operating system. **No part of the new window can be
 initially positioned offscreen. This is by default in all Mozilla-based browser
 releases.**
-
-[MSIE 6 SP2
-has a similar error correction mechanism](https://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5) but it is not activated by default in all
-security levels: a security setting can disable such error correction mechanism.
 
 ## Specifications
 

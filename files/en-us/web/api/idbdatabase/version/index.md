@@ -25,7 +25,7 @@ When a database is first created, this attribute is an empty string.
 
 An integer containing the version of the connected database.
 
-## Example
+## Examples
 
 ```js
 // Let us open our database

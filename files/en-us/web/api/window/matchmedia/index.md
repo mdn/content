@@ -23,7 +23,7 @@ media query.
 ## Syntax
 
 ```js
-mqList = window.matchMedia(mediaQueryString)
+matchMedia(mediaQueryString)
 ```
 
 ### Parameters

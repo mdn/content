@@ -22,8 +22,8 @@ system.
 ## Syntax
 
 ```js
-navigator.keyboard.lock()
-navigator.keyboard.lock(keyCodes)
+lock()
+lock(keyCodes)
 ```
 
 ### Parameters

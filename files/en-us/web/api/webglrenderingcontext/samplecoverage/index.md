@@ -18,7 +18,7 @@ parameters for anti-aliasing effects.
 ## Syntax
 
 ```js
-void gl.sampleCoverage(value, invert);
+sampleCoverage(value, invert)
 ```
 
 ### Parameters
@@ -32,7 +32,7 @@ void gl.sampleCoverage(value, invert);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

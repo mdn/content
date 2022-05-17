@@ -3,14 +3,13 @@ title: Permissions
 slug: Web/API/Permissions
 tags:
   - API
-  - Experimental
   - Interface
   - Permissions
   - Permissions API
   - Reference
 browser-compat: api.Permissions
 ---
-{{APIRef("Permissions API")}}{{SeeCompatTable}}
+{{APIRef("Permissions API")}}
 
 The Permissions interface of the [Permissions API](Permissions_API) provides the core Permission API functionality, such as methods for querying and revoking permissions
 

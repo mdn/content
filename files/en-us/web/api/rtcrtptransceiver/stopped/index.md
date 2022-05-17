@@ -27,13 +27,7 @@ caused the transceiver to be stopped for some reason.
 > at the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}.
 > Its value is `stopped` if the transceiver has stopped.
 
-## Syntax
-
-```js
-var isStopped = RTCRtpTransceiver.stopped;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the transceiver's
 {{domxref("RTCRtpTransceiver.sender", "sender")}} will no longer send data, and its

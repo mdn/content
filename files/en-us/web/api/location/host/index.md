@@ -1,5 +1,5 @@
 ---
-title: 'Location: host'
+title: location.host
 slug: Web/API/Location/host
 tags:
   - API
@@ -11,7 +11,7 @@ browser-compat: api.Location.host
 {{ApiRef("Location")}}
 
 The **`host`** property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} containing the host, that is the
+interface is a string containing the host, that is the
 _hostname_, and then, if the _port_ of the URL is nonempty, a
 `':'`, and the _port_ of the URL.
 

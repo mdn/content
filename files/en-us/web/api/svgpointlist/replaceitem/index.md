@@ -16,8 +16,10 @@ The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface repl
 ## Syntax
 
 ```js
-SVGPointList.replaceItem(obj,index);
+replaceItem(obj, index)
 ```
+
+### Parameters
 
 - `obj`
   - : An {{domxref("SVGPoint","point")}} object containing the coordinates of the point to be inserted.

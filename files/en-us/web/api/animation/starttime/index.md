@@ -24,7 +24,7 @@ A floating-point number representing the current time in milliseconds, or `null`
 
 ## Examples
 
-In the [Running on Web Animations API example](http://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), the we can sync all new animated cats by giving them all the same `startTime` as the original running cat:
+In the [Running on Web Animations API example](https://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), the we can sync all new animated cats by giving them all the same `startTime` as the original running cat:
 
 ```js
 var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);

@@ -29,13 +29,18 @@ examples.
 ## Syntax
 
 ```js
-console.groupCollapsed([label]);
+groupCollapsed()
+groupCollapsed(label)
 ```
 
-## Parameters
+### Parameters
 
 - `label`
   - : Label for the group. Optional.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

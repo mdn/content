@@ -38,7 +38,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 - The attribute {{ domxref("document.xmlStandalone") }} has been removed as it has been deprecated in the DOM4 specification.
 - The attribute {{ domxref("document.xmlEncoding") }} has been removed as it has been deprecated in the DOM4 specification.
 - The attribute {{ domxref("text.isElementContentWhiteSpace") }} has been removed as it has been deprecated in the DOM4 specification.
-- The method {{ domxref("text.replaceWholeText") }} has been removed as it has been deprecated in the DOM4 specification.
+- The method `text.replaceWholeText` has been removed as it has been deprecated in the DOM4 specification.
 - The method {{ domxref("node.isSameNode") }} has been removed as it has been deprecated in the DOM4 specification. Instead of `node1.isSameNode(node2)`, you can use the `===` operator, like this: `node1 === node2`.
 
 #### Page Visibility API
@@ -67,7 +67,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 #### Web Workers
 
 - The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2).
-- The [`Worker()`](</en-US/docs/Web/API/Worker#worker()>) constructor now accepts [data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+- The [`Worker()`](</en-US/docs/Web/API/Worker#worker()>) constructor now accepts [data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
 #### IndexedDB
 
@@ -112,7 +112,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 ### Developer tools
 
 - The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
-- The new [Page Inspector](/en-US/docs/Tools/Page_Inspector) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
+- The new [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
 
 ## Changes for Mozilla and add-on developers
 
@@ -135,10 +135,10 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### Interface changes
 
-- The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. **XXX need to [update docs](/en-US/Using_an_External_Spell-checker) on how to actually do this.**
-- The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed.
-- The `nsIDocumentViewer` interface has been merged into {{ interface("nsIContentViewer") }}.
-- The {{ interface("nsIURIFixup") }} interface has a new flag, `FIXUP_FLAG_USE_UTF8`, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.
+- The `mozISpellCheckingEngine` and `nsIEditorSpellCheck` interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. **XXX need to [update docs](/en-US/Using_an_External_Spell-checker) on how to actually do this.**
+- The `nsIBrowserHistory.lastPageVisited` attribute has been removed.
+- The `nsIDocumentViewer` interface has been merged into `nsIContentViewer`.
+- The `nsIURIFixup` interface has a new flag, `FIXUP_FLAG_USE_UTF8`, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.
 
 ### Plug-in changes
 

@@ -32,8 +32,10 @@ drawn.
 ## Syntax
 
 ```js
-void ctx.clip([fillRule]);
-void ctx.clip(path [, fillRule]);
+clip()
+clip(path)
+clip(fillRule)
+clip(path, fillRule)
 ```
 
 ### Parameters
@@ -50,6 +52,10 @@ void ctx.clip(path [, fillRule]);
 
 - `path`
   - : A {{domxref("Path2D")}} path to use as the clipping region.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

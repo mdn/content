@@ -27,7 +27,7 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 ## Properties
 
 - {{domxref("IDBDatabase.name")}} {{readonlyInline}}
-  - : A {{ domxref("DOMString") }} that contains the name of the connected database.
+  - : A string that contains the name of the connected database.
 - {{domxref("IDBDatabase.version")}} {{readonlyInline}}
   - : A 64-bit integer that contains the version of the connected database. When a database is first created, this attribute is an empty string.
 - {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}

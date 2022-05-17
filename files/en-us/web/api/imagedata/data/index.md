@@ -16,11 +16,9 @@ The readonly **`ImageData.data`** property returns a
 pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer
 values between `0` and `255` (inclusive).
 
-## Syntax
+## Value
 
-```js
-imageData.data
-```
+A {{jsxref("Uint8ClampedArray")}}.
 
 ## Examples
 

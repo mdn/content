@@ -26,7 +26,7 @@ Although this property is read-only, it will not throw if it is modified (even i
 
 A Boolean value which is `true` if the document is currently displaying an element in fullscreen mode; otherwise, the value is `false.`
 
-## Example
+## Examples
 
 This simple function reports whether or not fullscreen mode is currently active, using the obsolete `fullscreen` property.
 

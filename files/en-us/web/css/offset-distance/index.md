@@ -34,6 +34,7 @@ offset-distance: 40px;
 offset-distance: inherit;
 offset-distance: initial;
 offset-distance: revert;
+offset-distance: revert-layer;
 offset-distance: unset;
 ```
 

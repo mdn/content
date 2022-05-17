@@ -24,7 +24,7 @@ browser-compat: api.MediaTrackConstraints.displaySurface
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`displaySurface`** property is a
-[`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) describing the requested or mandatory constraints
+[`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints
 placed upon the value of the {{domxref("MediaTrackSettings.displaySurface",
     "displaySurface")}} constrainable property.
 
@@ -37,17 +37,9 @@ the value of {{domxref("MediaTrackSupportedConstraints.displaySurface")}} as ret
 a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
+## Value
 
-```js
-var constraintsObject = { displaySurface: constraint };
-
-constraintsObject.displaySurface = constraint;
-```
-
-### Value
-
-A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) which specifies the type of display surface that's
+A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) which specifies the type of display surface that's
 being captured. This value _does not_ affect the list of display sources in the
 browser's user interface.
 
@@ -59,7 +51,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How
 You can check the setting selected by the user agent after the display media has been
 created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
-video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
+video {{domxref("MediaStreamTrack")}}, then checking the value of the returned
 {{domxref("MediaTrackSettings")}} object's
 {{domxref("MediaTrackSettings.displaySurface", "displaySurface")}} object.
 

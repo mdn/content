@@ -13,7 +13,7 @@ browser-compat: api.URLSearchParams.keys
 
 The **`keys()`** method of the {{domxref("URLSearchParams")}}
 interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
-through all keys contained in this object. The keys are {{domxref("USVString")}}
+through all keys contained in this object. The keys are string
 objects.
 
 > **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
@@ -21,7 +21,7 @@ objects.
 ## Syntax
 
 ```js
-searchParams.keys();
+keys()
 ```
 
 ### Parameters

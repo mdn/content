@@ -14,7 +14,7 @@ browser-compat: api.HTMLObjectElement.data
 {{APIRef("HTML DOM")}}
 
 The **`data`** property of the
-{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+{{domxref("HTMLObjectElement")}} interface returns a string that
 reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address
 of a resource's data.
 

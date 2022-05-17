@@ -25,7 +25,7 @@ If the source of the media is a {{domxref("MediaStream")}}, this value is
 `true` if the value of the stream's {{domxref("MediaStream.active",
   "active")}} property is `false`.
 
-## Example
+## Examples
 
 ```js
 var obj = document.createElement('video');

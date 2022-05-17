@@ -26,11 +26,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : An {{domxref("HTMLFormControlsCollection")}} or {{domxref("HTMLCollection")}} referencing the containing form element, if this element is in a form.
     If the field set is not a descendant of a form element, then the attribute can be the ID of any form element in the same document it is related to, or the `null` value if none matches.
 - {{domxref("HTMLFieldSetElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "fieldset")}} HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
+  - : A string reflecting the {{htmlattrxref("name", "fieldset")}} HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
 - {{domxref("HTMLFieldSetElement.type")}}{{ReadOnlyInline}}
-  - : The {{domxref("DOMString")}} "`fieldset`".
+  - : The string "`fieldset`".
 - {{domxref("HTMLFieldSetElement.validationMessage")}}
-  - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the element does not satisfy (if any). This is the empty string if the element is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
+  - : A string representing a localized message that describes the validation constraints that the element does not satisfy (if any). This is the empty string if the element is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
 - {{domxref("HTMLFieldSetElement.validity")}}
   - : A {{domxref("ValidityState")}} representing the validity states that this element is in.
 - {{domxref("HTMLFieldSetElement.willValidate")}}

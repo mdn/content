@@ -18,7 +18,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
 ## Syntax
 
 ```js
-void ext.deleteQueryEXT(query);
+deleteQueryEXT(query)
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ void ext.deleteQueryEXT(query);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

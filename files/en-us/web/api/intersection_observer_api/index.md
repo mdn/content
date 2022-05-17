@@ -11,6 +11,7 @@ tags:
   - Performance
   - Reference
   - Web
+spec-urls: https://w3c.github.io/IntersectionObserver/
 ---
 {{DefaultAPISidebar("Intersection Observer API")}}
 
@@ -321,7 +322,7 @@ Each entry in the list of thresholds is an {{domxref("IntersectionObserverEntry"
 The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called [approximately](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.
 
 ```js
-intersectionCallback(entries) => {
+const intersectionCallback = (entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       let elem = entry.target;
@@ -343,7 +344,7 @@ intersectionCallback(entries) => {
 
 ## A simple example
 
-This simple example causes a target element to change its color and transparency as it becomes more or less visible. At [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), you can find a more extensive example showing how to time how long a set of elements (such as ads) are visible to the user and to react to that information by recording statistics or by updating elements..
+This simple example causes a target element to change its color and transparency as it becomes more or less visible. At [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), you can find a more extensive example showing how to time how long a set of elements (such as ads) are visible to the user and to react to that information by recording statistics or by updating elements.
 
 ### HTML
 
@@ -424,7 +425,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{domxref("Window/load_event", "load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -581,9 +582,7 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

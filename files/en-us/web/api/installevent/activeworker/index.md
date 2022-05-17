@@ -17,13 +17,7 @@ The **`activeWorker`** read-only property of the {{domxref("InstallEvent")}} int
 
 This will return `null` if no active worker is already controlling the page.
 
-## Syntax
-
-```js
-var myActiveWorker = event.activeWorker
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorker")}} object.
 

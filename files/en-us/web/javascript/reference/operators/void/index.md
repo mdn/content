@@ -14,7 +14,7 @@ browser-compat: javascript.operators.void
 The **`void` operator** evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html", "taller")}}
 
 ## Syntax
 

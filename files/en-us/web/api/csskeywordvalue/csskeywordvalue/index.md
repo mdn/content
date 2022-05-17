@@ -25,13 +25,13 @@ new CSSKeywordValue(val)
 
 ### Parameters
 
-- value
+- `value`
   - : Sets or returns the value of the new `CSSKeywordValue`.
 
 ### Exceptions
 
-- `TypeError`
-  - : If the `value` parameter is not specified or it is not of type {{jsxref('String')}}.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `value` parameter is not specified or it is not of type {{jsxref('String')}}.
 
 ## Examples
 
@@ -39,7 +39,7 @@ The following example resets the CSS {{cssxref('display')}} property to its defa
 setting the inline
 [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute
 to `style="display: initial"` if viewed in the [developer tools
-inspector](/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element).
+inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
 
 ```css hidden
 #myElement {

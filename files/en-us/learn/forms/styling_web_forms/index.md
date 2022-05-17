@@ -54,8 +54,8 @@ Some elements can be styled with few if any problems across platforms. These inc
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
 3. Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email...), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
-4. Multi-line {{HTMLElement("textarea")}}s
-5. Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}}s)
+4. Multi-line {{HTMLElement("textarea")}}
+5. Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}})
 6. {{HTMLElement("label")}}
 7. {{HTMLElement("output")}}
 
@@ -159,7 +159,7 @@ legend {
 }
 ```
 
-The `<fieldset>` needs to be positioned too, so that the `<legend>` is positioned relative to it (otherwise the `<legend>` would be positioned relative to the `<body>`.)
+The `<fieldset>` needs to be positioned too, so that the `<legend>` is positioned relative to it (otherwise the `<legend>` would be positioned relative to the `<body>`).
 
 The {{HTMLElement("legend")}} element is very important for accessibility — it will be spoken by assistive technologies as part of the label of each form element inside the fieldset — but using a technique like the one above is fine. The legend contents will still be spoken in the same way; it is just the visual position that has changed.
 
@@ -370,7 +370,7 @@ And voila! Your form should now look like this:
 
 ![](updated-form-screenshot.jpg)
 
-> **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
+> **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
 ## Test your skills!
 

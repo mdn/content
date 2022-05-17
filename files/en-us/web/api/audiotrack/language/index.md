@@ -29,7 +29,7 @@ should be the video's primary language.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of
 the primary language used in the audio track, or an empty string (`""`) if
 the language is not specified or known, or if the track doesn't contain speech.
 
@@ -37,7 +37,7 @@ For example, if the primary language used in the track is United States English,
 value would be `"en-US"`. For Brazilian Portuguese, the value would be
 `"pt-BR"`.
 
-## Example
+## Examples
 
 This example locates all of a media element's primary language and translated audio
 tracks and returns a list of objects containing each of those tracks'

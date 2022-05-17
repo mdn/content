@@ -18,7 +18,7 @@ information of a {{domxref("WebGLSampler")}} object.
 ## Syntax
 
 ```js
-any gl.getSamplerParameter(sampler, pname);
+getSamplerParameter(sampler, pname)
 ```
 
 ### Parameters

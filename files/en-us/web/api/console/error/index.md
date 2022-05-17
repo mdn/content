@@ -19,8 +19,10 @@ The **`console.error()`** method outputs an error message to the Web console.
 ## Syntax
 
 ```js
-console.error(obj1 [, obj2, ..., objN]);
-console.error(msg [, subst1, ..., substN]);
+error(obj1)
+error(obj1, /* ..., */ objN)
+error(msg)
+error(msg, subst1, /* ..., */ substN])
 ```
 
 ### Parameters
@@ -38,6 +40,10 @@ See [Outputting
 text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for
 details.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}
@@ -49,6 +55,6 @@ details.
 ## See also
 
 - [MSDN: Using the F12 Tools
-  Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
+  Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
 - [Chrome
-  Developer Tools: Using the Console](https://developers.google.com/web/tools/chrome-devtools/console/api#error)
+  Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/console/api/#error)

@@ -29,6 +29,7 @@ word-break: break-word; /* deprecated */
 word-break: inherit;
 word-break: initial;
 word-break: revert;
+word-break: revert-layer;
 word-break: unset;
 ```
 
@@ -128,4 +129,4 @@ The `word-break` property is specified as a single keyword chosen from the list 
 - {{cssxref("overflow-wrap")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("line-break")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text)

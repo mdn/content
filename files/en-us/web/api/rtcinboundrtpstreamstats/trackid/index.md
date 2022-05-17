@@ -27,15 +27,9 @@ The **`trackId`** property of the
 {{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the
 {{domxref("MediaStreamTrack")}} which is receiving the incoming media.
 
-## Syntax
+## Value
 
-```js
-var trackStatsId = rtcInboundRtpStreamStats.trackId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the ID of the
+A string containing the ID of the
 {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or
 {{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the track which
 is receiving the media from this RTP session.

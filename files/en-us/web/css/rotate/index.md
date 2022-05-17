@@ -39,6 +39,7 @@ rotate: 1 1 1 90deg;
 rotate: inherit;
 rotate: initial;
 rotate: revert;
+rotate: revert-layer;
 rotate: unset;
 ```
 

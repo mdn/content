@@ -91,4 +91,4 @@ See also the [DOM Level 1 Core specification](https://www.w3.org/TR/REC-DOM-Leve
 **Original Document Information**
 
 - Author(s): L. David Baron \<dbaron at dbaron dot org>
-- Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](https://www.mozilla.org/foundation/licensing/website-content.html)
+- Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](https://www.mozilla.org/en-US/foundation/licensing/website-content/)

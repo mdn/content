@@ -18,7 +18,7 @@ The **`isHTML()`** method of the {{domxref("TrustedTypePolicyFactory")}} interfa
 ## Syntax
 
 ```js
-var isHTML = TrustedTypePolicyFactory.isHTML(value);
+isHTML(value)
 ```
 
 ### Parameters

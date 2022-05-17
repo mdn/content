@@ -22,13 +22,11 @@ expectation is that binding-specific casting methods can be used to cast down fr
 instance of the CSSRule interface to the specific derived interface implied by the
 type."
 
-## Syntax
+## Value
 
-```js
-string = style.type;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 if (newStyle.type != "text/css"){

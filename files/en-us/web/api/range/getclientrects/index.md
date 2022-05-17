@@ -19,10 +19,18 @@ The **`Range.getClientRects()`** method returns a list of {{
 ## Syntax
 
 ```js
-rectList = range.getClientRects()
+getClientRects()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 range = document.createRange();

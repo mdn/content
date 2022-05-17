@@ -30,7 +30,7 @@ WebIDL can be found in multiple locations:
 WebIDL is defined in [its specification](https://heycam.github.io/webidl/). But it has been designed to be extended to convey more information, and browser vendors have done so:
 
 - For Gecko, Mozilla created the [documentation](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) of its dialectal WebIDL.
-- For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl) to describe its extensions.
+- For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl/) to describe its extensions.
 - For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
 
 > **Note:** We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
@@ -108,7 +108,7 @@ See the following two pages that document `HTMLHyperlinkElementUtils.hash` accor
 - [`HTMLAnchorElement.hash`](/en-US/docs/Web/API/HTMLAnchorElement/hash)
 - [`HTMLAreaElement.hash`](/en-US/docs/Web/API/HTMLAreaElement/hash)
 
-For compat data, consult the [data guideline for mixins in BCD](https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md#mixins).
+For compat data, consult the [data guideline for mixins in BCD](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md).
 
 ### Old mixin syntax
 
@@ -247,7 +247,7 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the `[SetterThrows]` annotation. When this happens, the Syntax section of the property page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{exception('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{jsxref('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
 
 It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the `[GetterThrows]` annotation is used. Here also, the Syntax section of the property page _must_ have an Exceptions subsection.
 
@@ -372,7 +372,7 @@ The keyword `void` means that there is no return value. It is not a return value
 
 Some methods can throw exceptions. This is marked using the `[Throws]` annotation. When this happens, the Syntax section of the method page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{exception('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{jsxref('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
 
 Have a look at one of these [_Exceptions_ sections](/en-US/docs/Web/API/SubtleCrypto/importKey#exceptions).
 
@@ -498,7 +498,7 @@ Some IDL members indicate special behaviors that should be noted on appropriate 
 
 ### Stringifiers
 
-In addition to adding the `toString()` method to an interface as described in [toString() and toJSON()](#tostring_and_tojson), stringifiers also indicate that an object instance, when used as a string, returns a `DOMString` other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.
+In addition to adding the `toString()` method to an interface as described in [toString() and toJSON()](#tostring_and_tojson), stringifiers also indicate that an object instance, when used as a string, returns a string other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.
 
 When the `stringifier` keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:
 

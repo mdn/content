@@ -44,7 +44,6 @@ The `all` property is specified as one of the CSS global keyword values. Note th
 - {{cssxref("revert-layer")}}
   - : Specifies that all the element's properties should roll back the cascade to a previous [cascade layer](/en-US/docs/Web/CSS/@layer), if one exists. If no other cascade layer exists, the element's properties will roll back to the matching rule, if one exists, in the current layer or to a previous [style origin](/en-US/docs/Glossary/Style_origin).
 
-
 ## Formal definition
 
 {{CSSInfo}}

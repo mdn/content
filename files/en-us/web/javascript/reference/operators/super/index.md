@@ -110,7 +110,7 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'. 
+new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
 ```
 
 ### `super.prop` cannot overwrite non-writable properties

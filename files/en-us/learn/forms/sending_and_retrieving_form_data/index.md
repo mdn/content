@@ -60,7 +60,7 @@ The {{HTMLElement("form")}} element defines how the data will be sent. All of it
 
 ### The action attribute
 
-The [`action`](/en-US/docs/Web/HTML/Attributes/action) attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
+The {{htmlattrxref("action","form")}} attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
 
 In this example, the data is sent to an absolute URL — `https://example.com`:
 
@@ -88,7 +88,7 @@ How the data is sent depends on the `method` attribute.
 
 ### The method attribute
 
-The [`method`](/en-US/docs/Web/HTML/Attributes/method) attribute defines how data is sent. The [HTTP protocol](/en-US/docs/Web/HTTP) provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the `GET` method and the `POST` method
+The {{htmlattrxref("method","form")}} attribute defines how data is sent. The [HTTP protocol](/en-US/docs/Web/HTTP) provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the `GET` method and the `POST` method
 
 To understand the difference between those two methods, let's step back and examine [how HTTP works](/en-US/docs/Web/HTTP/Overview). Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a [header](/en-US/docs/Web/HTTP/Headers) that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.
 
@@ -169,7 +169,7 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 
 ### Viewing HTTP requests
 
-HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the [Firefox Network Monitor](/en-US/docs/Tools/Network_Monitor) or the [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). As an example, your form data will be shown as follows in the Chrome Network tab. After submitting the form:
+HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the [Firefox Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) or the [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)). As an example, your form data will be shown as follows in the Chrome Network tab. After submitting the form:
 
 1. Open the developer tools.
 2. Select "Network"
@@ -192,7 +192,7 @@ Whichever HTTP method you choose, the server receives a string that will be pars
 
 ### Example: Raw PHP
 
-[PHP](https://php.net/) offers some global objects to access the data. Assuming you've used the `POST` method, the following example just takes the data and displays it to the user. Of course, what you do with the data is up to you. You might display it, store it into a database, send it by email, or process it in some other way.
+[PHP](https://www.php.net/) offers some global objects to access the data. Assuming you've used the `POST` method, the following example just takes the data and displays it to the user. Of course, what you do with the data is up to you. You might display it, store it into a database, send it by email, or process it in some other way.
 
 ```php
 <?php
@@ -209,7 +209,7 @@ This example displays a page with the data we sent. You can see this in action i
 
 ![](php-result.png)
 
-> **Note:** This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [AMPPS](https://ampps.com/download) (Mac, Windows, Linux).
+> **Note:** This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [AMPPS](https://ampps.com/downloads/) (Mac, Windows, Linux).
 >
 > Note also that if you are using MAMP but don't have MAMP Pro installed (or if the MAMP Pro demo time trial has expired), you might have trouble getting it working. To get it working again, we have found that you can load up the MAMP app, then choose the menu options _MAMP_ > _Preferences_ > _PHP_, and set "Standard Version:" to "7.2.x" (x will differ depending on what version you have installed).
 
@@ -314,7 +314,7 @@ If you've worked your way through these tutorials in order, you now know how to 
 If you want to learn more about securing a web application, you can dig into these resources:
 
 - [Server-side website programming first steps](/en-US/docs/Learn/Server-side/First_steps)
-- [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
+- [The Open Web Application Security Project (OWASP)](https://owasp.org/)
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
 {{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}

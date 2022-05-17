@@ -19,7 +19,7 @@ The value of this attribute could be used to attach these tracks to dedicated sc
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the `inBandMetadataTrackDispatchType`, or an empty string.
+A string containing the `inBandMetadataTrackDispatchType`, or an empty string.
 
 ## Examples
 

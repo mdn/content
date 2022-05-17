@@ -17,7 +17,7 @@ The **`WebGL2RenderingContext.deleteSync()`** method of the [WebGL 2 API](/en-US
 ## Syntax
 
 ```js
-void gl.deleteSync(sync);
+deleteSync(sync)
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ void gl.deleteSync(sync);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

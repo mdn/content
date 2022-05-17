@@ -22,7 +22,7 @@ the content outside it is rendered inert.
 ## Syntax
 
 ```js
-dialogInstance.showModal();
+showModal()
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

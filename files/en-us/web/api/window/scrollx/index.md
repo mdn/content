@@ -35,7 +35,7 @@ In more technical terms, `scrollX` returns the X coordinate of the left edge
 of the current {{Glossary("viewport")}}. If there is no viewport, the returned value is
 0\.
 
-## Example
+## Examples
 
 This example checks the current horizontal scroll position of the document. If it's
 greater than 400 pixels, the window is scrolled back to the beginning.

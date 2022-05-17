@@ -20,7 +20,7 @@ stored in the buffer.
 
 A double.
 
-## Example
+## Examples
 
 ```js
 // Stereo

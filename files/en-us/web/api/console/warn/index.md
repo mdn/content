@@ -23,11 +23,13 @@ console.
 ## Syntax
 
 ```js
-console.warn(obj1 [, obj2, ..., objN]);
-console.warn(msg [, subst1, ..., substN]);
+warn(obj1)
+warn(obj1, /* ..., */ objN)
+warn(msg)
+warn(msg, subst1, /* ..., */ substN])
 ```
 
-## Parameters
+### Parameters
 
 - `obj1` ... `objN`
   - : A list of JavaScript objects to output. The string representations of each of these
@@ -41,6 +43,10 @@ console.warn(msg [, subst1, ..., substN]);
 See [Outputting
 text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}
@@ -52,4 +58,4 @@ text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console)
 ## See also
 
 - [MSDN: Using
-  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
+  the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))

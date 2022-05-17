@@ -30,15 +30,13 @@ Chrome for Windows.
 ## Syntax
 
 ```js
-self.clients.openWindow(url).then(function(windowClient) {
-  // Do something with your WindowClient
-});
+openWindow(url)
 ```
 
 ### Parameters
 
 - `url`
-  - : A {{domxref("USVString")}} representing the URL of the client you want to open in
+  - : A string representing the URL of the client you want to open in
     the window. Generally this value must be a URL from the same origin as the calling
     script.
 

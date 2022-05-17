@@ -27,15 +27,9 @@ the local {{Glossary("ICE")}} candidate which was analyzed to generate the
 {{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of
 candidates.
 
-## Syntax
+## Value
 
-```js
-localCandidateId = rtcIceCandidatePairStats.localCandidateId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} giving a unique identifier for the local
+A string giving a unique identifier for the local
 {{domxref("RTCIceCandidate")}} for the connection described by this
 `RTCIceCandidatePairStats` object.
 

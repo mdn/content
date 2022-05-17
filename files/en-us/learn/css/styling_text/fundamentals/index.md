@@ -205,7 +205,7 @@ The five names are defined as follows:
       <td><code>serif</code></td>
       <td>
         Fonts that have serifs (the flourishes and other small details you see
-        at the ends of the strokes in some typefaces)
+        at the ends of the strokes in some typefaces).
       </td>
       <td id="serif-example">
         <pre class="brush: html hidden">My big red elephant</pre>
@@ -392,7 +392,7 @@ CSS provides four common properties to alter the visual weight/emphasis of text:
 
 - {{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), but realistically you'll rarely use any of them except for `normal` and `bold`:
 
-  - `normal`, `bold`: Normal and bold font weight
+  - `normal`, `bold`: Normal and bold font weight.
   - `lighter`, `bolder`: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.
   - `100`–`900`: Numeric boldness values that provide finer grained control than the above keywords, if needed.
 
@@ -790,13 +790,13 @@ window.addEventListener("load", drawOutput);
 
 ## Summary
 
-We hoped you enjoyed playing with text in this article! The next article will provide you with all you need to know about styling HTML lists.
+We hope you enjoyed playing with text in this article! The next article will provide you with all you need to know about [styling HTML lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists).
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 ## In this module
 
-- **Fundamental text and font styling**
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)

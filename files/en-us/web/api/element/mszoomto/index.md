@@ -18,10 +18,10 @@ Zoomed elements can expose their zoom level through {{Event("msContentZoom")}} (
 
 This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-### Syntax
+## Syntax
 
 ```js
-Element.msZoomTo(arguments);
+msZoomTo(arguments)
 ```
 
 ### Parameters
@@ -63,7 +63,7 @@ This method has no effect if called from a parent document to scroll or zoom con
 
 This method does not return a value.
 
-## Example
+## Examples
 
 ```js
 /* Zooming in on an element while still keeping it centered in the viewport */

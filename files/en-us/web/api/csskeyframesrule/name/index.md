@@ -16,9 +16,9 @@ The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
-## Example
+## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, with the `name` set to "slidein".

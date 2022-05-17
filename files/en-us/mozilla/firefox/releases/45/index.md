@@ -14,10 +14,10 @@ To test the latest developer features of Firefox, install Firefox Developer Edit
 
 Highlights:
 
-- [Full-text search in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#searching)
-- [Heap snapshot diffing in the Memory tool](/en-US/docs/Tools/Memory/Basic_operations#comparing_snapshots)
-- [DomContentLoaded and load events shown in the Network Monitor](/en-US/docs/Tools/Network_Monitor#timeline)
-- [Animation inspector improvements](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations)
+- [Full-text search in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#searching)
+- [Heap snapshot diffing in the Memory tool](https://firefox-source-docs.mozilla.org/devtools-user/memory/basic_operations/index.html#comparing-snapshots)
+- [DomContentLoaded and load events shown in the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#timeline)
+- [Animation inspector improvements](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
 
 [All devtools bugs fixed between Firefox 43 and Firefox 44.](https://bugzilla.mozilla.org/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&chfield=resolution&chfieldfrom=2015-10-29&chfieldto=2015-12-14&chfieldvalue=FIXED&classification=Client%20Software&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&resolution=FIXED&list_id=12753878)
 
@@ -92,10 +92,10 @@ _No change._
 #### Miscellaneous
 
 - [Web Speech Synthesis API](/en-US/docs/Web/API/Web_Speech_API) has been implemented on Firefox Desktop ({{bug(1003439)}}).
-- The {{domxref("WindowEventHandlers/onstorage", "Window.onstorage")}} event handler property has been added.
+- The {{domxref("Window/storage_event", "storage")}} event has been added.
 - The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) ({{bug(1108055)}}).
 - The {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} event handler property has been added ({{bug(1231193)}}).
-- After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can nowadd another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ({{bug(1223696)}}).
+- After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can now add another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ({{bug(1223696)}}).
 
 ### MathML
 
@@ -112,7 +112,7 @@ _No change._
 
 ## HTTP
 
-- The `jar:` protocol has been disabled by default when accessed from Web content; you may enable this if necessary by setting the {{pref("network.jar.block-remote-files")}} preference to `false` ({{bug(1215235)}}).
+- The `jar:` protocol has been disabled by default when accessed from Web content; you may enable this if necessary by setting the `network.jar.block-remote-files` preference to `false` ({{bug(1215235)}}).
 
 ## Security
 

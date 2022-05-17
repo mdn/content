@@ -28,7 +28,7 @@ lookupPrefix(namespace);
 ### Return value
 
 A string containing the corresponding prefix, or `null` if none has been found.
-If `namespace` is null, or the the empty string, `lookupPrefix()` returns `null`.
+If `namespace` is null, or the empty string, `lookupPrefix()` returns `null`.
 
 If the node is a {{domxref("DocumentType")}} or a {{domxref("DocumentFragment")}},
 `lookupPrefix()` always returns `null`.

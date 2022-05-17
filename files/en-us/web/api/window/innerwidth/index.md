@@ -42,7 +42,7 @@ property instead.
 The `innerWidth` property is available on any window or object that behaves
 like a window, such as a frame or tab.
 
-## Example
+## Examples
 
 ```js
 // This will return the width of the viewport

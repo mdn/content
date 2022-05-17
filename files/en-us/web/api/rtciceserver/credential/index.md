@@ -11,12 +11,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCIceServer.credential
 ---
-{{APIRef("WebRTC")}}
-
-{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}
-
-{{SeeCompatTable}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The {{domxref("RTCIceServer")}} dictionary's
 **`credential`** property is a string providing the credential

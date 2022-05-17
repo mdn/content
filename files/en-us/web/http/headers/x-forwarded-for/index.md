@@ -8,7 +8,6 @@ tags:
   - Reference
   - Request header
   - header
-browser-compat: http.headers.X-Forwarded-For
 ---
 {{HTTPSidebar}}
 
@@ -34,7 +33,7 @@ For detailed guidance on using this header, see the [Parsing](#parsing) and [Sel
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
@@ -151,10 +150,6 @@ considered trustworthy or safe for security-related uses.
 
 Not part of any current specification. The standardized version of this header is
 {{HTTPHeader("Forwarded")}}.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.relatedTarget
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.relatedTarget`** read-only property is the secondary target for the mouse event, if there is one.
 
@@ -92,7 +92,7 @@ For events with no secondary target, `relatedTarget` returns
 
 An {{domxref("EventTarget")}} object or `null`.
 
-## Example
+## Examples
 
 Try moving your mouse cursor into and out of the red and blue boxes.
 

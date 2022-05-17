@@ -25,7 +25,7 @@ Must be a power of 2 between 2^5 and 2^15, so one of: `32`, `64`, `128`, `256`, 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if the value set is not a power of 2, or is outside the allowed range.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 

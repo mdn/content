@@ -23,7 +23,7 @@ of the individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-new CSSSkew(ax, ay);
+new CSSSkew(ax, ay)
 ```
 
 ### Parameters

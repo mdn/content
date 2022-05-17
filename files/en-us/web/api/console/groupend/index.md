@@ -13,7 +13,7 @@ browser-compat: api.console.groupEnd
 {{APIRef("Console API")}}
 
 The **`console.groupEnd()`** method exits the current inline group in the [Web
-console](/en-US/docs/Tools/Web_Console). See [Using groups in the
+console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). See [Using groups in the
 console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxref("console")}} documentation for details and examples.
 
 {{AvailableInWorkers}}
@@ -21,12 +21,16 @@ console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxr
 ## Syntax
 
 ```js
-console.groupEnd();
+groupEnd()
 ```
 
-## Parameters
+### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -35,3 +39,7 @@ None.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console.group()")}}

@@ -20,7 +20,7 @@ The **`unlock()`** method of the
 ## Syntax
 
 ```js
-navigator.keyboard.unlock()
+unlock()
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

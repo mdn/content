@@ -28,7 +28,7 @@ The {{domxref("XRSystem")}} object used to interface with the [WebXR Device API]
 context. This can be used to present augmented and/or virtual reality imagery to the
 user.
 
-## Example
+## Examples
 
 Each {{domxref("Window")}} has its own instance of {{domxref("Navigator")}}, which can
 be accessed as {{domxref("Window.navigator","window.navigator")}} or as

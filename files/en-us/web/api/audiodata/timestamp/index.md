@@ -13,7 +13,7 @@ browser-compat: api.AudioData.timestamp
 
 The **`duration`** read-only property of the {{domxref("AudioData")}} interface returns the timestamp of this `AudioData` object.
 
-### Value
+## Value
 
 An integer.
 

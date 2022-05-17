@@ -27,13 +27,7 @@ The {{domxref("MediaTrackSettings")}} dictionary's
 **`displaySurface`** property indicates the type of display
 surface being captured.
 
-## Syntax
-
-```js
-displaySurface = mediaTrackSettings.displaySurface;
-```
-
-### Value
+## Value
 
 The value of `displaySurface` is a string that comes from the
 `DisplayCaptureSurfaceType` enumerated type, and is one of the following:

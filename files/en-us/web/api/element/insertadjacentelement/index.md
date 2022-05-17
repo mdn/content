@@ -20,14 +20,14 @@ relative to the element it is invoked upon.
 ## Syntax
 
 ```js
-targetElement.insertAdjacentElement(position, element);
+insertAdjacentElement(position, element)
 ```
 
 ### Parameters
 
 - `position`
 
-  - : A {{domxref("DOMString")}} representing the position relative to the
+  - : A string representing the position relative to the
     `targetElement`; must match (case-insensitively) one of the following
     strings:
 
@@ -49,10 +49,10 @@ The element that was inserted, or `null`, if the insertion failed.
 
 ### Exceptions
 
-| Exception     | Explanation                                         |
-| ------------- | --------------------------------------------------- |
-| `SyntaxError` | The `position` specified is not a recognized value. |
-| `TypeError`   | The `element` specified is not a valid element.     |
+- `SyntaxError` {{domxref("DOMException")}}
+  - Thrown if the `position` specified is not a recognized value.
+- {{jsxref("TypeError")}}
+  - Thrown if the `element` specified is not a valid element.
 
 ### Visualization of position names
 
@@ -70,7 +70,7 @@ The element that was inserted, or `null`, if the insertion failed.
 > `afterend` positions work only if the node is in a tree and has an element
 > parent.
 
-## Example
+## Examples
 
 ```js
 beforeBtn.addEventListener('click', function() {

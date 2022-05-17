@@ -18,10 +18,18 @@ The **`PushManager.hasPermission()`** method of the {{domxref("PushManager")}} i
 ## Syntax
 
 ```js
-PushManager.hasPermission().then(function(pushPermissionStatus) { /* ... */ } );
+hasPermission()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to the `PushPermissionStatus`.
+
+## Examples
 
 ```js
 // TBD

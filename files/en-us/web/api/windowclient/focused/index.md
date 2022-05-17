@@ -22,7 +22,7 @@ the current client has focus.
 
 A boolean value.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('notificationclick', function(event) {

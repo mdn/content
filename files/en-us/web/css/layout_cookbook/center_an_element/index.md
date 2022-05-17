@@ -27,7 +27,7 @@ To place an item into the center of another box horizontally and vertically.
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
 
 ## Choices made
 

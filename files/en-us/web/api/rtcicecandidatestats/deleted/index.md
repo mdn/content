@@ -18,13 +18,7 @@ The {{domxref("RTCIceCandidateStats")}} dictionary's
 **`deleted`** property indicates whether or not the candidate
 has been deleted or released.
 
-## Syntax
-
-```js
-isDeleted = rtcIceCandidateStats.deleted;
-```
-
-### Value
+## Value
 
 A Boolean value indicating whether or not the candidate has been deleted or released.
 If this value is `true`, the candidate described by the
@@ -33,7 +27,7 @@ meaning varies depending on the type of candidate:
 
 - Local candidate
   - : A value of `true` means the candidate has been deleted as described by
-    {{RFC(5245, "8.3")}}.
+    {{RFC(5245, "", "8.3")}}.
 - Host candidate
   - : A value of `true` indicates that the candidate's network resources have
     been released. This generally mean that any associated socket(s) have been closed and
@@ -45,7 +39,7 @@ meaning varies depending on the type of candidate:
 The net result is the same; the candidate is no longer under consideration if this
 value is `true`.
 
-## Example
+## Examples
 
 In this example, {{domxref("setInterval()")}}
 is used to set up a function that runs periodically to display the latest statistics for

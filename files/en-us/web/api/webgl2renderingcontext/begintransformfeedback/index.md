@@ -18,7 +18,7 @@ feedback operation.
 ## Syntax
 
 ```js
-void gl.beginTransformFeedback(primitiveMode);
+beginTransformFeedback(primitiveMode)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ void gl.beginTransformFeedback(primitiveMode);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

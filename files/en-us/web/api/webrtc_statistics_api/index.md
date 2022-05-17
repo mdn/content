@@ -12,6 +12,7 @@ tags:
   - Stats
   - WebRTC
   - WebRTC Statistics API
+browser-compat: api.RTCStatsReport
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
@@ -529,11 +530,8 @@ The {{domxref("RTCStatsReport")}} object contains a map of named objects based o
 
 ## Specifications
 
-| Specification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| [WebRTC: Real-Time Communication Between Browsers # dom-rtcstatsreport](https://w3c.github.io/webrtc-pc/#dom-rtcstatsreport) |
-| [Identifiers for WebRTC's Statistics API](https://w3c.github.io/webrtc-stats/)                                               |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.RTCStatsType")}}
+{{Compat}}

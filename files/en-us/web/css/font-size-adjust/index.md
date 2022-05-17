@@ -26,6 +26,7 @@ font-size-adjust: ex-height 0.5;
 font-size-adjust: inherit;
 font-size-adjust: initial;
 font-size-adjust: revert;
+font-size-adjust: revert-layer;
 font-size-adjust: unset;
 ```
 

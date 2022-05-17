@@ -22,7 +22,8 @@ the element which will receive keyboard and similar events by default.
 ## Syntax
 
 ```js
-element.focus(options);
+focus()
+focus(options)
 ```
 
 ### Parameters
@@ -39,6 +40,10 @@ element.focus(options);
         the browser will scroll the element into view after focusing it. If
         `preventScroll` is set to `true`, no scrolling will
         occur.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

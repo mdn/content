@@ -20,7 +20,7 @@ specified name exists.
 ## Syntax
 
 ```js
-var hasName = URLSearchParams.has(name)
+has(name)
 ```
 
 ### Parameters

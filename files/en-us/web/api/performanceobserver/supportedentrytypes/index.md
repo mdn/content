@@ -17,17 +17,11 @@ The **`supportedEntryTypes`** read-only property of the
 
 As the list of supported entries varies per browser and is evolving, this property allows web developers to check which are available.
 
-## Syntax
-
-```js
-var supportedEntryTypes = PerformanceObserver.supportedEntryTypes;
-```
-
-### Return value
+## Value
 
 An array of {{domxref("PerformanceEntry.entryType")}} values.
 
-## Example
+## Examples
 
 ### Using the console to check supported types
 

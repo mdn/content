@@ -26,7 +26,7 @@ of the app window.
 
 The {{domxref("WindowControlsOverlay")}} interface.
 
-## Example
+## Examples
 
 ```js
 if ('windowControlsOverlay' in navigator) {

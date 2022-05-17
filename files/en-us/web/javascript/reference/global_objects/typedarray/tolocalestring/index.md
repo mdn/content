@@ -18,7 +18,7 @@ by a locale-specific string (such as a comma ","). This method has the same algo
 {{jsxref("Array.prototype.toLocaleString()")}} and, as the typed array elements are
 numbers, the same algorithm as {{jsxref("Number.prototype.toLocaleString()")}} applies
 for each element. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 ## Syntax
 

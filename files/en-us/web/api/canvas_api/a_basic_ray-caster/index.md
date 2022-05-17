@@ -19,7 +19,7 @@ This article provides an interesting real-world example of using the {{HTMLEleme
 
 ## Why?
 
-After realizing, to my delight, that the nifty `<canvas>` element I'd been [reading about](https://www.whatwg.org/specs/web-apps/current-work/#dynamic) was not only soon to be supported in Firefox, but was **already** supported in the current version of Safari, I had to try a little experiment.
+After realizing, to my delight, that the nifty `<canvas>` element I'd been [reading about](https://html.spec.whatwg.org/#dynamic) was not only soon to be supported in Firefox, but was **already** supported in the current version of Safari, I had to try a little experiment.
 
 The canvas [overview](/en-US/docs/Web/API/Canvas_API) and [tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) I found here at MDN are great, but nobody had written about animation yet, so I thought I'd try a port of a basic raycaster I'd worked on a while ago, and see what sort of performance we can expect from a JavaScript-controlled pixel buffer.
 
@@ -29,7 +29,7 @@ The basic idea is to use {{domxref("setInterval()")}} at some arbitrary delay th
 
 So every update, the raycaster looks to see if you've pressed any keys lately, to conserve calculations by not casting if you're idle. If you have, then the canvas is cleared, the ground and sky are drawn, the camera position and/or orientation are updated, and the rays are cast out. As the rays intersect walls, then they render a vertical sliver of canvas in the color of the wall they've hit, blended with a darker version of the color according to the distance to the wall. The height of the sliver is also modulated by the distance from the camera to the wall, and is drawn centered over the horizon line.
 
-The code I ended up with is a regurgitated amalgam of the raycaster chapters from an old André LaMothe*Tricks of the Game Programming Gurus* book (ISBN: 0672305070), and a [java raycaster](http://www.shinelife.co.uk/java-maze/) I found online, filtered through my compulsion to rename everything so it makes sense to me, and all the tinkering that had to be done to make things work well.
+The code I ended up with is a regurgitated amalgam of the raycaster chapters from an old André LaMothe*Tricks of the Game Programming Gurus* book (ISBN: 0672305070), and a [java raycaster](https://web.archive.org/web/20100511081744/http://www.shinelife.co.uk/java-maze) I found online, filtered through my compulsion to rename everything so it makes sense to me, and all the tinkering that had to be done to make things work well.
 
 ## Results
 

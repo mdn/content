@@ -19,9 +19,9 @@ but is limited and can't be used in all situations.
 There are differences between _arrow functions_ and _traditional functions_, as well as some limitations:
 
 - Arrow functions don't have their own bindings to
-  [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
-  and should not be used as [`methods`](/en-US/docs/Glossary/Method).
-- Arrow function don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
+  [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
+  and should not be used as [methods](/en-US/docs/Glossary/Method).
+- Arrow functions don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions aren't suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
   [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
@@ -301,9 +301,7 @@ const bound = add.bind(obj)
 console.log(bound(1, 2, 3)) // result 2026
 ```
 
-Perhaps the greatest benefit of using Arrow functions is with DOM-level methods
-(`setTimeout`, `setInterval`, `addEventListener`) that usually required some kind of closure,
-call, apply or bind to ensure the function executed in the proper scope.
+Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
 
 #### Traditional function example
 
@@ -443,7 +441,7 @@ An arrow function cannot contain a line break between its parameters and its arr
 ```js
 var func = (a, b, c)
   => 1;
-// SyntaxError: expected expression, got '=>'
+// SyntaxError: Unexpected token '=>'
 ```
 
 However, this can be amended by putting the line break after the arrow or using

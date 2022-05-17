@@ -25,8 +25,14 @@ The **`border-inline-start-style`** [CSS](/en-US/docs/Web/CSS) property defines 
 /* <'border-style'> values */
 border-inline-start-style: dashed;
 border-inline-start-style: dotted;
-border-inline-start-style: revert;
 border-inline-start-style: groove;
+
+/* Global values */
+border-inline-start-style: inherit;
+border-inline-start-style: initial;
+border-inline-start-style: revert;
+border-inline-start-style: revert-layer;
+border-inline-start-style: unset;
 ```
 
 Related properties are {{cssxref("border-block-start-style")}}, {{cssxref("border-block-end-style")}}, and {{cssxref("border-inline-end-style")}}, which define the other border styles of the element.

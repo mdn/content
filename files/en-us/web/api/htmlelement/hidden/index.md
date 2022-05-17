@@ -43,7 +43,7 @@ Inappropriate use cases include:
 A Boolean which is `true` if the element is hidden from view; otherwise, the
 value is `false`.
 
-## Example
+## Examples
 
 Here's an example where a hidden block is used to contain a thank you message that is
 displayed after a user agrees to an unusual request.

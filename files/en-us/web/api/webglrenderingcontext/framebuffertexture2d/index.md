@@ -18,7 +18,7 @@ of the [WebGL API](/en-US/docs/Web/API/WebGL_API) attaches a texture to a
 ## Syntax
 
 ```js
-void gl.framebufferTexture2D(target, attachment, textarget, texture, level);
+framebufferTexture2D(target, attachment, textarget, texture, level)
 ```
 
 ### Parameters
@@ -95,7 +95,7 @@ void gl.framebufferTexture2D(target, attachment, textarget, texture, level);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -21,7 +21,7 @@ creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 ## Syntax
 
 ```js
-var scriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
+createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 
 ### Parameters
@@ -54,11 +54,11 @@ var scriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputCh
 > **Note:** It is invalid for both `numberOfInputChannels` and
 > `numberOfOutputChannels` to be zero.
 
-### Returns
+### Return value
 
 A {{domxref("ScriptProcessorNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of a `ScriptProcessorNode` to take a
 track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
@@ -70,7 +70,7 @@ buffer, and each sample in each channel, and add a small amount of white noise, 
 setting that result to be the output sample in each case.
 
 > **Note:** For a full working example, see our [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/)
-> github repo (also view the [source
+> GitHub repo (also view the [source
 > code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
 
 ```js

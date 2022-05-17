@@ -17,8 +17,8 @@ After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}} or {{
 ## Syntax
 
 ```js
-new CSSStyleSheet();
-new CSSStyleSheet(options);
+new CSSStyleSheet()
+new CSSStyleSheet(options)
 ```
 
 ### Parameters
@@ -28,9 +28,9 @@ new CSSStyleSheet(options);
   - : An object containing the following:
 
     - `baseURL`{{optional_inline}}
-      - : A {{domxref("DOMString","string")}} containing the `baseURL` used to resolve relative URLs in the stylesheet.
+      - : A string containing the `baseURL` used to resolve relative URLs in the stylesheet.
     - `media`{{optional_inline}}
-      - : A {{domxref("MediaList")}} containing a list of media rules, or a {{domxref("DOMString","string")}} containing a single rule.
+      - : A {{domxref("MediaList")}} containing a list of media rules, or a string containing a single rule.
     - `disabled`{{optional_inline}}
       - : A {{jsxref("Boolean")}} indicating whether the stylesheet is disabled. False by default.
 

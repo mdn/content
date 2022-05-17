@@ -28,6 +28,7 @@ text-combine-upright: digits 4;   /* fits up to 4 consecutive digits horizontall
 text-combine-upright: inherit;
 text-combine-upright: initial;
 text-combine-upright: revert;
+text-combine-upright: revert-layer;
 text-combine-upright: unset;
 ```
 

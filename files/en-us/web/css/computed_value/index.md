@@ -11,7 +11,7 @@ spec-urls: https://www.w3.org/TR/CSS22/cascade.html#computed-value
 
 The **computed value** of a [CSS](/en-US/docs/Web/CSS) property is the value that is transferred from parent to child during inheritance. It is calculated from the [specified value](/en-US/docs/Web/CSS/specified_value) by:
 
-1. Handling the special values {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}.
+1. Handling the special values {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}}.
 2. Doing the computation needed to reach the value described in the "Computed value" line in the property's definition table.
 
 The computation needed to reach a property's computed value typically involves converting relative values (such as those in `em` units or percentages) to absolute values. For example, if an element has specified values `font-size: 16px` and `padding-top: 2em`, then the computed value of `padding-top` is `32px` (double the font size).

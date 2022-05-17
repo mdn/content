@@ -20,7 +20,7 @@ generic library creation.
 ## Syntax
 
 ```js
-WebGLActiveInfo gl.getActiveAttrib(program,index);
+getActiveAttrib(program, index)
 ```
 
 ### Parameters

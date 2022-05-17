@@ -33,11 +33,11 @@ The link header contains parameters, which are separated with `;` and are equiva
 
 The URI (absolute or relative) must be enclosed between `<` and `>`:
 
-```example-good
+```http example-good
 Link: <https://example.com>; rel="preconnect"
 ```
 
-```example-bad
+```http example-bad
 Link: https://bad.example; rel="preconnect"
 ```
 
@@ -51,9 +51,7 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 
 ## Specifications
 
-| Specification                                            | Title       |
-| -------------------------------------------------------- | ----------- |
-| {{RFC(8288, "Link Serialization in HTTP Headers", "3")}} | Web Linking |
+{{Specifications}}
 
 ## Browser compatibility
 

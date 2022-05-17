@@ -59,7 +59,7 @@ the `rangeSpec` object.
     are `Node.DOCUMENT_TYPE_NODE` (representing the {{domxref("DocumentType")}}
     node derived from the {{Glossary("Doctype", "DTD")}} identified using the `doctype`
     preamble in the HTML, for example) and the {{domxref("Attr")}} node describing an
-    attribute of an element on the DOM..
+    attribute of an element on the DOM.
 
 ## Specifications
 

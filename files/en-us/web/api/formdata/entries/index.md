@@ -14,22 +14,26 @@ browser-compat: api.FormData.entries
 
 The **`FormData.entries()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value
-pairs contained in this object. The key of each pair is a {{domxref("USVString")}}
-object; the value either a {{domxref("USVString")}}, or a {{domxref("Blob")}}.
+pairs contained in this object. The key of each pair is a string
+object; the value either a string, or a {{domxref("Blob")}}.
 
 > **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
 ```js
-formData.entries();
+entries()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test FormData object

@@ -19,7 +19,7 @@ given texture.
 ## Syntax
 
 ```js
-any gl.getTexParameter(target, pname);
+getTexParameter(target, pname)
 ```
 
 ### Parameters

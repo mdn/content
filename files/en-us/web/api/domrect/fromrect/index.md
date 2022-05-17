@@ -18,7 +18,8 @@ object with a given location and dimensions.
 ## Syntax
 
 ```js
-DOMRect.fromRect(rectangle)
+fromRect()
+fromRect(rectangle)
 ```
 
 ### Parameters

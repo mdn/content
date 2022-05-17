@@ -40,7 +40,7 @@ If you are not sure if front-end web development is for you, and/or you want a g
 
 We have tried to make learning front-end web development as comfortable as possible, but you will probably still get stuck because you don't understand something, or some code is just not working.
 
-Don't panic. We all get stuck, whether we are beginner or professional web developers. The [Learning and getting help](/en-US/docs/Learn/Learning_and_getting_help) article provides you with a series of tips for looking up information and helping yourself. If you are still stuck, feel free to post a question on our [Discourse forum](https://discourse.mozilla.org/c/mdn/learn/).
+Don't panic. We all get stuck, whether we are beginner or professional web developers. The [Learning and getting help](/en-US/docs/Learn/Learning_and_getting_help) article provides you with a series of tips for looking up information and helping yourself. If you are still stuck, feel free to post a question on our [Discourse forum](https://discourse.mozilla.org/c/mdn/learn/250).
 
 Let's get started. Good luck!
 
@@ -98,7 +98,7 @@ The assessments in each module are designed to test your knowledge of the subjec
 
 - [CSS first steps](/en-US/docs/Learn/CSS/First_steps) (10–15 hour read/exercises)
 - [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks) (35–45 hour read/exercises)
-- [Styling text](/en-US/docs/Learn/CSS/Styling_text) (15–20 hour read/exercises)
+- [CSS styling text](/en-US/docs/Learn/CSS/Styling_text) (15–20 hour read/exercises)
 - [CSS layout](/en-US/docs/Learn/CSS/CSS_layout) (30–40 hour read/exercises)
 
 #### Additional resources
@@ -143,7 +143,7 @@ The assessments in each module are designed to test your knowledge of the subjec
 
 ### Making the web work for everyone
 
-Time to complete: 60–75 hours
+Time to complete: 45–55 hours
 
 #### Prerequisites
 

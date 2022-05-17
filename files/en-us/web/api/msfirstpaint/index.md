@@ -12,7 +12,7 @@ tags:
 when the document loaded by the window object began to be displayed to the user.
 
 Put another way, `msFirstPaint` utilizes the browser to measure when the
-first content completes being painted in the window. It is available from javascript and
+first content completes being painted in the window. It is available from JavaScript and
 can be reported from the field.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.

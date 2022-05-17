@@ -18,13 +18,13 @@ The `replace()` and {{domxref("CSSStyleSheet.replaceSync()")}} methods can only 
 ## Syntax
 
 ```js
-CSSStyleSheet.replace(text);
+replace(text)
 ```
 
 ### Parameters
 
 - `text`
-  - : A {{domxref("USVString","string")}} containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
+  - : A string containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
 
 > **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
 
@@ -41,17 +41,18 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("CSSStyleSheet")}}.
 
 ## Examples
 
-In the following example a new stylesheet is created and two CSS rules are added using `replace()`. The first rule is then printed to the console, which will return: `body { font-size: 1.4em };`
+In the following example a new stylesheet is created and two CSS rules are added using `replace()`. The first rule is then printed to the console, which will return: `body { font-size: 1.4em; }`
 
 ```js
-let stylesheet = new CSSStyleSheet();
+const stylesheet = new CSSStyleSheet();
 
-stylesheet.replace('body { font-size: 1.4em };p { color: red; }')
-  .then(() => {   console.log(stylesheet.cssRules[0].cssText);
-})
-.catch(err => {
-  console.error('Failed to replace styles:', err);
-});
+stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
+  .then(() => {
+    console.log(stylesheet.cssRules[0].cssText);
+  })
+  .catch(err => {
+    console.error('Failed to replace styles:', err);
+  });
 ```
 
 ## Specifications

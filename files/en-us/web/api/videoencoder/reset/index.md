@@ -16,14 +16,14 @@ The **`reset()`** method of the {{domxref("VideoEncoder")}} interface resets all
 ## Syntax
 
 ```js
-VideoEncoder.reset()
+reset()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 

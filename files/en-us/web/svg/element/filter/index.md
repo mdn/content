@@ -49,9 +49,9 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
   <filter id="blurMe">
     <feGaussianBlur stdDeviation="5"/>
   </filter>
-  
+
   <circle cx="60" cy="60" r="50" fill="green"/>
-  
+
   <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)"/>
 </svg>
 ```

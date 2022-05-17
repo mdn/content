@@ -401,7 +401,7 @@ String(nullVar);          // "null"
 
 var undefinedVar;
 undefinedVar.toString();  // TypeError: undefinedVar is undefined
-String(undefinedVar);     // "undefined" 
+String(undefinedVar);     // "undefined"
 ```
 
 ## Specifications

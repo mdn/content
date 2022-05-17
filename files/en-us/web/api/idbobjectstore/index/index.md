@@ -24,12 +24,12 @@ to, for example, return a series of records sorted by that index using a cursor.
 ## Syntax
 
 ```js
-var index = objectStore.index(name);
+index(name)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the index to open.
 
 ### Return value
@@ -43,7 +43,7 @@ An {{domxref("IDBIndex")}} object for accessing the index.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if there is no index with the given name (case-sensitive) in the database.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the index
 `lName` from a simple contacts database. We then open a basic cursor on the
@@ -53,7 +53,7 @@ except that the returned records are sorted based on the index, not the primary 
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
 complete working example, see our [IDBIndex example
-in IndexedDB-examples demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the example live](https://mdn.github.io/indexeddb-examples/idbindex).)
+in IndexedDB-examples demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the example live](https://mdn.github.io/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {

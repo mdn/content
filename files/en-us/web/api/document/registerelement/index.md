@@ -25,19 +25,24 @@ browser and returns a constructor for the new element.
 ## Syntax
 
 ```js
-var constructor = document.registerElement(tag-name, options);
+registerElement(tagName)
+registerElement(tagName, options)
 ```
 
 ### Parameters
 
-- _tag-name_
+- `tagName`
   - : The name of the custom element. The name must contain a dash (-), for example
     `my-tag`.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
   - : An object with properties **prototype** to base the custom element on,
     and **extends**, an existing tag to extend. Both of these are optional.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Here is a very simple example:
 

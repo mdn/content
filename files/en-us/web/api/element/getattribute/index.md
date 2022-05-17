@@ -21,20 +21,21 @@ either be `null` or `""` (the empty string); see [Non-existing attributes](#non-
 ## Syntax
 
 ```js
-let attribute = element.getAttribute(attributeName);
+getAttribute(attributeName)
 ```
 
-where
+### Parameters
 
-- `attribute` is a string containing the value of
-  `attributeName`.
-- `attributeName` is the name of the attribute whose value you
-  want to get.
+- `attributeName` is the name of the attribute whose value you want to get.
+
+### Return value
+
+A string containing the value of `attributeName`.
 
 ## Examples
 
 ```js
-<!-- example div in an html DOC -->
+<!-- example div in an HTML DOC -->
 <div id="div1">Hi Champ!</div>
 
 // in a console

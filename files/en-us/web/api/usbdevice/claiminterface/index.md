@@ -21,7 +21,7 @@ the requested interface is claimed for exclusive access.
 ## Syntax
 
 ```js
-var promise = USBDevice.claimInterface(interfaceNumber)
+claimInterface(interfaceNumber)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ var promise = USBDevice.claimInterface(interfaceNumber)
 
 A {{jsxref("promise")}}.
 
-## Example
+## Examples
 
 The following example shows `claimInterface()` in the context of connecting
 to a USB device.

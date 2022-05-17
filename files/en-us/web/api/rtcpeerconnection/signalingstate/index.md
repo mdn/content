@@ -83,7 +83,7 @@ The allowed string values are:
 - `closed`
   - : The {{domxref("RTCPeerConnection")}} has been closed.
 
-## Example
+## Examples
 
 ```js
 var pc = new RTCPeerConnection(configuration);

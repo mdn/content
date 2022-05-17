@@ -18,17 +18,15 @@ containing the set of [link types](/en-US/docs/Web/HTML/Link_types)
 indicating the relationship between the resource represented by the
 {{HTMLElement("link")}} element and the current document.
 
-The property itself is read-only, meaning you can substitute the
+The property itself is read-only, meaning you can not substitute the
 {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
 changed.
 
-## Syntax
+## Value
 
-```js
-var relstr = linkElt.relList;
-```
+A live {{domxref("DOMTokenList")}}.
 
-## Example
+## Examples
 
 ```js
 var links = document.getElementsByTagName("link");
@@ -55,5 +53,5 @@ for (var i = 0; i < length; i++) {
 
 - The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("area")}},
   {{domxref("HTMLAnchorElement.relList")}} and {{domxref("HTMLAreaElement.relList")}}.
-- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+- The very same list but as a space-separated tokens in a string:
   {{domxref("HTMLLinkElement.rel")}}

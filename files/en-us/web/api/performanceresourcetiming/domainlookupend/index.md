@@ -21,18 +21,12 @@ times when the user agent starts and ends the domain data retrieval from the cac
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.domainLookupEnd;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the
 browser finishes the domain name lookup for the resource.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

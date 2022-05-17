@@ -25,10 +25,18 @@ document fragment valid.
 ## Syntax
 
 ```js
-documentFragment = range.extractContents();
+extractContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### Basic example
 

@@ -7,10 +7,13 @@ tags:
   - Reference
   - String
   - WebIDL
+spec-urls:
+  - https://webidl.spec.whatwg.org/#idl-USVString
+  - https://webidl.spec.whatwg.org/#es-USVString
 ---
 {{APIRef("DOM")}}
 
-A **`USVString`** is a sequence of [Unicode scalar values](http://www.unicode.org/glossary/#unicode_scalar_value). This definition differs from that of {{domxref("DOMString")}} or the JavaScript {{jsxref("String")}} type in that it always represents a valid sequence suitable for text processing, while the latter can contain surrogate code points. The `USVString` type is generally found in APIs that perform text processing, while {{domxref("DOMString")}} is used by most other APIs.
+A **`USVString`** is a sequence of [Unicode scalar values](https://www.unicode.org/glossary/#unicode_scalar_value). This definition differs from that of {{domxref("DOMString")}} or the JavaScript {{jsxref("String")}} type in that it always represents a valid sequence suitable for text processing, while the latter can contain surrogate code points. The `USVString` type is generally found in APIs that perform text processing, while {{domxref("DOMString")}} is used by most other APIs.
 
 When a `USVString` is provided to JavaScript, it maps to the JavaScript primitive {{jsxref("String")}} with the UTF-16 encoding of its sequence of Unicode scalar values.
 
@@ -18,30 +21,7 @@ When a Web API accepts a `USVString`, the JavaScript value provided is first str
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("WebIDL", "#idl-USVString", "USVString")}}
-      </td>
-      <td>{{Spec2("WebIDL")}}</td>
-      <td>Initial definition of the <code>USVString</code> type itself.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("WebIDL", "#es-USVString")}}</td>
-      <td>{{Spec2("WebIDL")}}</td>
-      <td>
-        This defines how JavaScript values are converted to
-        <code>USVString</code> and vice versa.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

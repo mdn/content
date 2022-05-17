@@ -44,7 +44,7 @@ Although this event type is {{domxref("PaymentRequestUpdateEvent")}}, it doesn't
 
 ## Examples
 
-In the example below, `onpayerdetailchange` is used to set up a listener for the {{event("payerdetailchange")}} event in order to validate the information entered by the user, requesting that any mistakes be corrected
+In the example below, `onpayerdetailchange` is used to set up a listener for the `payerdetailchange` event in order to validate the information entered by the user, requesting that any mistakes be corrected
 
 ```js
 // Options for PaymentRequest(), indicating that shipping address,

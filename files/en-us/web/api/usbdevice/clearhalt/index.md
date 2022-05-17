@@ -23,7 +23,7 @@ terminology) to clear that condition. See the for details.
 ## Syntax
 
 ```js
-var promise = USBDevice.clearHalt(direction, endpointNumber)
+clearHalt(direction, endpointNumber)
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ var promise = USBDevice.clearHalt(direction, endpointNumber)
 
 A {{jsxref("promise")}}.
 
-## Example
+## Examples
 
 The following example shows how to test for and clear a `'stall'` condition
 in the result of a data transfer.

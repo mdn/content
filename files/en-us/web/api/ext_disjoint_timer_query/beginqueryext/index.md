@@ -17,12 +17,12 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) starts a timer query.
 ## Syntax
 
 ```js
-void ext.beginQueryEXT(target, query);
+beginQueryEXT(target, query)
 ```
 
 ### Parameters
 
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIME_ELAPSED_EXT`.
 - `query`
@@ -30,7 +30,7 @@ void ext.beginQueryEXT(target, query);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

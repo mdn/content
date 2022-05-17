@@ -16,7 +16,7 @@ The **`WebGLRenderingContext.drawElements()`** method of the [WebGL API](/en-US/
 ## Syntax
 
 ```js
-void gl.drawElements(mode, count, type, offset);
+drawElements(mode, count, type, offset)
 ```
 
 ### Parameters
@@ -61,7 +61,7 @@ void gl.drawElements(mode, count, type, offset);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

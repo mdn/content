@@ -15,17 +15,11 @@ browser-compat: api.HTMLTableElement.cellPadding
 The **`HTMLTableElement.cellPadding`** property represents the
 padding around the individual cells of the table.
 
-## Syntax
+## Value
 
-```js
-HTMLTableElement.cellPadding = padding;
-var padding = HTMLTableElement.cellPadding;
-```
+A string representing pixels (e.g. "10") or a percentage value (e.g. "10%").
 
-- `padding` is either a number of pixels (e.g. "10") or a percentage value
-  (e.g. "10%").
-
-## Example
+## Examples
 
 ```js
 // Set cell padding to 10 pixels

@@ -29,10 +29,18 @@ whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call se
 ## Syntax
 
 ```js
-HTMLFormElement.reset()
+reset()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 document.getElementById('myform').reset();

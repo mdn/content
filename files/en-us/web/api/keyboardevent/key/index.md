@@ -11,21 +11,25 @@ tags:
   - UI Events
 browser-compat: api.KeyboardEvent.key
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The {{domxref("KeyboardEvent")}} interface's **`key`** read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.
+
+## Value
+
+A string.
 
 Its value is determined as follows:
 
 - If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key.
-- If the pressed key is a control or special character, the returned value is one of the [pre-defined key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values).
+- If the pressed key is a control or special character, the returned value is one of the [pre-defined key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
 - If the `KeyboardEvent` represents the press of a [dead key](https://wikipedia.org/wiki/Dead_key), the key value must be "`Dead`".
 - Some specialty keyboard keys (such as the extended keys for controlling media on multimedia keyboards) don't generate key codes on Windows; instead, they trigger `WM_APPCOMMAND` events. These events get mapped to DOM keyboard events, and are listed among the "Virtual key codes" for Windows, even though they aren't actually key codes.
 - If the key cannot be identified, the returned value is `Unidentified`.
 
 > **Callout:**
 >
-> [See a full list of key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values).
+> [See a full list of key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
 
 ## KeyboardEvent sequence
 
@@ -133,21 +137,21 @@ function logMessage(message) {
 
 textarea.addEventListener('keydown', (e) => {
   if (!e.repeat)
-    logMessage(`Key "${e.key}" pressed  [event: keydown]`);
+    logMessage(`Key "${e.key}" pressed [event: keydown]`);
   else
-    logMessage(`Key "${e.key}" repeating  [event: keydown]`);
+    logMessage(`Key "${e.key}" repeating [event: keydown]`);
 });
 
 textarea.addEventListener('beforeinput', (e) => {
-  logMessage(`Key "${e.data}" about to be input  [event: beforeinput]`);
+  logMessage(`Key "${e.data}" about to be input [event: beforeinput]`);
 });
 
 textarea.addEventListener('input', (e) => {
-  logMessage(`Key "${e.data}" input  [event: input]`);
+  logMessage(`Key "${e.data}" input [event: input]`);
 });
 
 textarea.addEventListener('keyup', (e) => {
-  logMessage(`Key "${e.key}" released  [event: keyup]`);
+  logMessage(`Key "${e.key}" released [event: keyup]`);
 });
 
 btnReset.addEventListener('click', (e) => {
@@ -186,7 +190,7 @@ As we release the `shift` key, a {{domxref("Element/keyup_event", "keyup")}} eve
 
 As we finally release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}} event is fired but the `key` property will be set to the string value `2` for both keyboard layouts because the modifier `shift` key is no longer active.
 
-## Example
+## Examples
 
 This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).
 

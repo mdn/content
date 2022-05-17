@@ -19,7 +19,7 @@ given program.
 ## Syntax
 
 ```js
-any gl.getProgramParameter(program, pname);
+getProgramParameter(program, pname)
 ```
 
 ### Parameters

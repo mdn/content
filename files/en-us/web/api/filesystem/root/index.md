@@ -24,7 +24,7 @@ API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 A {{domxref("FileSystemDirectoryEntry")}} representing the file system's root
 directory.
 
-## Example
+## Examples
 
 ```js
 // tbd
@@ -40,8 +40,6 @@ directory.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystem")}}

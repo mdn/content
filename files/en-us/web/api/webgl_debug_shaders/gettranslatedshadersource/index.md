@@ -18,7 +18,7 @@ you to debug a translated shader.
 ## Syntax
 
 ```js
-gl.getExtension('WEBGL_debug_shaders').getTranslatedShaderSource(shader);
+getTranslatedShaderSource(shader)
 ```
 
 ### Parameters

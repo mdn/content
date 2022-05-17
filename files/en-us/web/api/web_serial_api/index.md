@@ -6,6 +6,7 @@ tags:
   - Web Serial
   - Overview
   - Reference
+spec-urls: https://wicg.github.io/serial/
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Serial API")}}
 
@@ -86,9 +87,7 @@ while (port.readable) {
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Serial API')}} | {{Spec2('Web Serial API')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

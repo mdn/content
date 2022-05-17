@@ -27,7 +27,7 @@ closed.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The writer's lock is released.
 
 ## Examples

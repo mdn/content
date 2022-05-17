@@ -18,7 +18,7 @@ browser-compat: api.MediaTrackConstraints.echoCancellation
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`echoCancellation`** property is a
-[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) describing the requested or mandatory constraints placed
+[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
 upon the value of the {{domxref("MediaTrackSettings.echoCancellation",
   "echoCancellation")}} constrainable property.
 
@@ -31,15 +31,7 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var constraintsObject = { echoCancellation: constraint };
-
-constraintsObject.echoCancellation = constraint;
-```
-
-### Value
+## Value
 
 If this value is a simple `true` or `false`, the user agent will
 attempt to obtain media with echo cancellation enabled or disabled as specified, if
@@ -48,7 +40,7 @@ object with an `exact` field, that field's Boolean value indicates a required
 setting for the echo cancellation feature; if it can't be met, then the request will
 result in an error.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

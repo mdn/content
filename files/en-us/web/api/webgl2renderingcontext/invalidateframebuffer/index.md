@@ -18,7 +18,7 @@ of attachments in a framebuffer.
 ## Syntax
 
 ```js
-void gl.invalidateFramebuffer(target, attachments);
+invalidateFramebuffer(target, attachments)
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ void gl.invalidateFramebuffer(target, attachments);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

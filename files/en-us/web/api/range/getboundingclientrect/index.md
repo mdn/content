@@ -23,10 +23,18 @@ details on the returned value.
 ## Syntax
 
 ```js
-boundingRect = range.getBoundingClientRect()
+getBoundingClientRect()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### HTML
 
@@ -66,7 +74,7 @@ highlight.style.height = `${clientRect.height}px`;
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

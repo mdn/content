@@ -20,7 +20,7 @@ object at the specified index in the {{ domxref("TouchList") }}.
 ## Syntax
 
 ```js
-var touchPoint = touchList.item(index);
+item(index)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ var touchPoint = touchList.item(index);
   - : The requested {{ domxref("Touch") }} object from the {{ domxref("TouchList") }}.
     Returns `null` if the index is not less than the length of the list.
 
-## Example
+## Examples
 
 This code example illustrates the use of the {{domxref("TouchList")}} interface's
 {{domxref("TouchList.item()","item")}} method and the

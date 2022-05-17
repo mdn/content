@@ -44,7 +44,7 @@ If the value is an {{jsxref("Array")}}, `true` is returned; otherwise,
 `false` is.
 
 See the article
-["Determining with absolute accuracy whether or not a JavaScript object is an array"](http://web.mit.edu/jwalden/www/isArray.html)
+["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html)
 for more details.
 Given a {{jsxref("TypedArray")}} instance, `false` is always returned.
 

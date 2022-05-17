@@ -18,7 +18,7 @@ The **`lang`** read-only property of the {{domxref("SpeechSynthesisVoice")}} int
 
 ## Value
 
-A {{domxref("DOMString")}} representing the language of the device.
+A string representing the language of the device.
 
 ## Examples
 

@@ -16,12 +16,12 @@ by index.
 
 This method doesn't throw exceptions as long as you provide
 arguments; the empty string is returned if the index is out of range and a
-`TypeError` is thrown if no argument is provided.
+{{jsxref("TypeError")}} is thrown if no argument is provided.
 
 ## Syntax
 
 ```js
-var propertyName = style.item(index);
+item(index)
 ```
 
 ### Parameters
@@ -31,8 +31,7 @@ var propertyName = style.item(index);
 
 ### Return value
 
-- *`propertyName`* is a {{domxref('DOMString')}} that is the name of
-  the CSS property at the specified index.
+A string that is the name of the CSS property at the specified index.
 
 JavaScript has a special simpler syntax for obtaining an item from a NodeList by index:
 
@@ -40,7 +39,12 @@ JavaScript has a special simpler syntax for obtaining an item from a NodeList by
 var propertyName = style[index];
 ```
 
-## Example
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if no argument is provided.
+
+## Examples
 
 ```js
 var style = document.getElementById('div1').style;

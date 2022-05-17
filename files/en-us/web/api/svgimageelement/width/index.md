@@ -20,13 +20,7 @@ The **`width`** read-only property of the
 corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("image")}}
 element.
 
-## Syntax
-
-```js
-var width = svgImageElement.width;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}}.
 

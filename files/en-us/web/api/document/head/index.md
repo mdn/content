@@ -19,7 +19,7 @@ the current document.
 
 An {{domxref("HTMLHeadElement")}}.
 
-## Example
+## Examples
 
 ```html
 <!doctype html>

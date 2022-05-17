@@ -24,8 +24,8 @@ message is received in the "`message`" event on
 ## Syntax
 
 ```js
-client.postMessage(message[, transfer]);
-client.postMessage(message[, { transfer }]);
+postMessage(message)
+postMessage(message, transferables)
 ```
 
 ### Parameters
@@ -33,14 +33,14 @@ client.postMessage(message[, { transfer }]);
 - `message`
   - : The message to send to the client. This can be any [structured-clonable
     type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-- `transfer` {{optional_inline}}
+- `transferables` {{optional_inline}}
   - : A sequence of objects that are [transferred](/en-US/docs/Web/API/Transferable) with the message. The
     ownership of these objects is given to the destination side and they are no longer
     usable on the sending side.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

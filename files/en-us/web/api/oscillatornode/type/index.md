@@ -18,15 +18,9 @@ oscillator will output. There are several common waveforms available, as well as
 option to specify a custom waveform shape. The shape of the waveform will affect the
 tone that is produced.
 
-## Syntax
+## Value
 
-```js
-OscillatorNode.type = type;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying the shape of oscillator wave. The different
+A string specifying the shape of oscillator wave. The different
 available values are:
 
 - `sine`
@@ -51,7 +45,7 @@ available values are:
     {{domxref("OscillatorNode.setPeriodicWave", "setPeriodicWave()")}}. Doing so
     automatically sets the type for you.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{ domxref("AudioContext") }} to create
 an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see

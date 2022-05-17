@@ -12,7 +12,7 @@ You currently need a polyfill to render IMSC on the web. imscJS is a good choice
 
 ## Introducing imscJS
 
-[imscJS](https://github.com/sandflow/imscJS) is a JavaScript library for rendering IMSC documents to HTML. Below we will first go through a simple example how to use imscJS, then we'll look at a more complex example that actually renders subtitles on top of video at appropriate times. You can find the source code of the [first sample on github](https://github.com/mdn/imsc/blob/master/imscjs-simple-sample/imscjs-simple-sample.html).
+[imscJS](https://github.com/sandflow/imscJS) is a JavaScript library for rendering IMSC documents to HTML. Below we will first go through a simple example how to use imscJS, then we'll look at a more complex example that actually renders subtitles on top of video at appropriate times. You can find the source code of the [first sample on GitHub](https://github.com/mdn/imsc/blob/master/imscjs-simple-sample/imscjs-simple-sample.html).
 
 ## Embedding imscJS
 
@@ -266,7 +266,7 @@ This causes two problems when using imscJS:
 1. The IMSC HTML overlay covers the complete video. It sits on top of the `<video>` element. Although you can see the player controls (because most of the overlay has a transparent background), pointer events like mouse clicks are not coming through to the controls. Because they can't be accessed by standard CSS you can also not change the z-index of the controls to solve this problem. So, if you always have a subtitle overlay, you will not able be able to stop the video once it has started. This would be a very bad user experience.
 2. Usually the native video player controls have a caption user interface. You can select a text track or to switch off the rendering of subtitles. Unfortunately, the caption interface only controls the rendering of WebVTT subtitles. The browser does not know that we are rendering subtitles with imscJS, so these controls will have no effect.
 
-For the first problem there is a straightforward CSS solution. We need to set the CSS property `pointer-events` to `none` (see the [sample code](https://github.com/mdn/imsc/blob/master/imscjs-demo/css/style.css) on github for the complete CSS).
+For the first problem there is a straightforward CSS solution. We need to set the CSS property `pointer-events` to `none` (see the [sample code](https://github.com/mdn/imsc/blob/master/imscjs-demo/css/style.css) on GitHub for the complete CSS).
 
 ```css
 #render-div {
@@ -280,4 +280,24 @@ The caption user interface problem is a bit harder to solve. Although we can lis
 
 the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) tutorial.
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li><li class="toggle"><details open><summary>IMSC guides</summary><ol><li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li><li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li><li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li><li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li></ol></details></li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
+    <li class="toggle">
+      <details open>
+        <summary>IMSC guides</summary>
+        <ol>
+          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
+          </li>
+          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>

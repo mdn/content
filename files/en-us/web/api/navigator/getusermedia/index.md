@@ -36,7 +36,7 @@ executed.
 ## Syntax
 
 ```js
-navigator.getUserMedia(constraints, successCallback, errorCallback);
+getUserMedia(constraints, successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -73,7 +73,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 
 ### Return value
 
-{{domxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

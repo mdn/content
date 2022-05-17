@@ -18,7 +18,7 @@ active uniforms within a {{domxref("WebGLProgram")}}.
 ## Syntax
 
 ```js
-any gl.getActiveUniforms(program, uniformIndices, pname);
+getActiveUniforms(program, uniformIndices, pname)
 ```
 
 ### Parameters

@@ -17,7 +17,7 @@ The **`links`** read-only property of the {{domxref("Document")}} interface retu
 
 An {{domxref("HTMLCollection")}}.
 
-## Example
+## Examples
 
 ```js
 var links = document.links;

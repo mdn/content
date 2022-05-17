@@ -35,6 +35,7 @@ text-decoration-skip: objects edges box-decoration;
 text-decoration-skip: inherit;
 text-decoration-skip: initial;
 text-decoration-skip: revert;
+text-decoration-skip: revert-layer;
 text-decoration-skip: unset;
 ```
 

@@ -24,8 +24,8 @@ The prompt will not be displayed if the `speaker-selection` permission has not b
 ## Syntax
 
 ```js
-navigator.mediaDevices.selectAudioOutput()
-navigator.mediaDevices.selectAudioOutput(options)
+selectAudioOutput()
+selectAudioOutput(options)
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ navigator.mediaDevices.selectAudioOutput(options)
 
     - `deviceId` {{Optional_Inline}}
 
-      - : A {{domxref("DOMString")}} representing the id of the (only) device to display in the prompt (with default value: "").
+      - : A string representing the id of the (only) device to display in the prompt (with default value: "").
 
         > **Note:** A user agent may choose to skip prompting the user if a specified non-null id was previously exposed to the user by `selectAudioOutput()` in an earlier session.
         > In this case the user agent may simply resolve with this device id, or a new id for the same device if it has changed.
@@ -58,7 +58,7 @@ The object describes the user-selected audio output device.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if there hasn't been a {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
 
-## Example
+## Examples
 
 Here's an example of using `selectAudioOutput()`, which you might call within a function that is triggered by a button click.
 It outputs the selected [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId) and labels (if available) or an error message.

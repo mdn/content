@@ -5,6 +5,9 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/specs/animations/#DiscardElementBeginAttribute
+  - https://svgwg.org/specs/animations/#BeginAttribute
 ---
 {{SVGRef}}
 
@@ -45,7 +48,7 @@ For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("ani
 The `<begin-value-list>` is a semicolon-separated list of values. Each value can be one of the following:
 
 - `<offset-value>`
-  - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#Clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{event("load")}} or {{event("DOMContentLoaded")}} event). Negative values are valid.
+  - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{domxref("Window/load_event", "load")}} or {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event). Negative values are valid.
 - `<syncbase-value>`
   - : This value defines a *syncbase* and an optional offset from that *syncbase*. The element's animation start time is defined relative to the begin or active end of another animation.
 
@@ -53,7 +56,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 - `<event-value>`
   - : This value defines an event and an optional offset that determines the time at which the element's animation should begin. The animation start time is defined relative to the time that the specified event is fired.
 
-    A valid event-value consists of an element ID followed by a dot and one of the supported events for that element. All valid events (not necessarily supported by all elements) are defined by the DOM and HTML specifications. Those are: {{event("focus")}}, {{event("blur")}}, {{event("focusin")}}, {{event("focusout")}}, {{event("activate")}}, {{event("auxclick")}}, {{event("click")}}, {{event("dblclick")}}, {{event("mousedown")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mousemove")}}, {{event("mouseout")}}, {{event("mouseover")}}, {{event("mouseup")}}, {{event("wheel")}}, {{event("beforeinput")}}, {{event("input")}}, {{event("keydown")}}, {{event("keyup")}}, {{event("compositionstart")}}, {{event("compositionupdate")}}, {{event("compositionend")}}, {{event("load")}}, {{event("unload")}}, {{event("abort")}}, {{event("error")}}, {{event("select")}}, {{event("resize")}}, {{event("scroll")}}, {{event("beginEvent")}}, {{event("endEvent")}}, and {{event("repeatEvent")}}. An optional offset value as defined in `<offset-value>` can be appended.
+    A valid event-value consists of an element ID followed by a dot and one of the supported events for that element. All valid events (not necessarily supported by all elements) are defined by the DOM and HTML specifications. Those are: {{event("focus")}}, {{event("blur")}}, {{event("focusin")}}, {{event("focusout")}}, {{event("activate")}}, {{event("auxclick")}}, {{event("click")}}, {{event("dblclick")}}, {{event("mousedown")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mousemove")}}, {{event("mouseout")}}, {{event("mouseover")}}, {{event("mouseup")}}, {{event("wheel")}}, {{event("beforeinput")}}, {{event("input")}}, {{event("keydown")}}, {{event("keyup")}}, {{event("compositionstart")}}, {{event("compositionupdate")}}, {{event("compositionend")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}, {{event("abort")}}, {{event("error")}}, {{event("select")}}, {{event("resize")}}, {{event("scroll")}}, {{event("beginEvent")}}, {{event("endEvent")}}, and {{event("repeatEvent")}}. An optional offset value as defined in `<offset-value>` can be appended.
 - `<repeat-value>`
   - : This value defines a qualified repeat event. The element animation start time is defined relative to the time that the repeat event is raised with the specified iteration value.
 
@@ -322,40 +325,4 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#DiscardElementBeginAttribute", "begin for &lt;discard&gt;")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>
-        Adds the definition for the {{SVGElement("discard")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#BeginAttribute", "begin")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>
-        Refers to the specifications in DOM UI events and HTML for the
-        <code>&#x3C;event-value></code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#BeginAttribute", "begin")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

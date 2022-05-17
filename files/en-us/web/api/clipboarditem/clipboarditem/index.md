@@ -22,14 +22,15 @@ The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} create
 ## Syntax
 
 ```js
-new ClipboardItem(ClipboardItemData);
+new ClipboardItem(clipboardItemData)
+new ClipboardItem(clipboardItemData, clipboardItemOptions)
 ```
 
 ### Parameters
 
-- `ClipboardItemData`
+- `clipboardItemData`
   - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value. The data can be represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
-- `ClipboardItemOptions` {{optional_inline}}
+- `clipboardItemOptions` {{optional_inline}}
 
   - : An {{jsxref("Object")}} with the following properties:
 
@@ -75,4 +76,4 @@ async function writeClipImg() {
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

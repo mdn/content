@@ -19,7 +19,9 @@ returns an {{domxref("XPathResult")}}.
 ## Syntax
 
 ```js
-XPathResult node.evaluate(contextNode, type, result);
+evaluate(contextNode)
+evaluate(contextNode, type)
+evaluate(contextNode, type, result)
 ```
 
 ### Parameters
@@ -70,7 +72,7 @@ If the provided context node is not a type permitted as an XPath context node or
 request type is not permitted by the {{domxref("XPathEvaluator")}}, a
 {{domxref("DOMException")}} of type `NOT_SUPPORTED_ERR` is raised.
 
-## Example
+## Examples
 
 The following example shows the use of the `evaluate()` method.
 
@@ -93,7 +95,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

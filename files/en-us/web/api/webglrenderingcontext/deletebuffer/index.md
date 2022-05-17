@@ -18,7 +18,7 @@ deleted.
 ## Syntax
 
 ```js
-void gl.deleteBuffer(buffer);
+deleteBuffer(buffer)
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ void gl.deleteBuffer(buffer);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

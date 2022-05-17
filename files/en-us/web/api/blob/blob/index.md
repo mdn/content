@@ -18,15 +18,15 @@ of the values given in the parameter `array`.
 ## Syntax
 
 ```js
-new Blob(array);
-new Blob(array, options);
+new Blob(array)
+new Blob(array, options)
 ```
 
 ### Parameters
 
 - `array`
   - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
-    {{domxref("Blob")}}, {{domxref("USVString")}} objects, or a mix of any of such
+    {{domxref("Blob")}}, string objects, or a mix of any of such
     objects, that will be put inside the {{domxref("Blob")}}. `USVString`
     objects are encoded as UTF-8.
 - `options` {{optional_inline}}
@@ -47,7 +47,7 @@ new Blob(array, options);
 
 A new {{domxref("Blob")}} object containing the specified data.
 
-## Example
+## Examples
 
 ```js
 const array = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString

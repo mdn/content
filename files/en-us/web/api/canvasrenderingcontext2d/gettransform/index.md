@@ -19,7 +19,7 @@ the context.
 ## Syntax
 
 ```js
-let storedTransform = ctx.getTransform();
+getTransform()
 ```
 
 ### Parameters

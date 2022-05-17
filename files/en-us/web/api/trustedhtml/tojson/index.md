@@ -16,12 +16,16 @@ The **`toJSON()`** method of the {{domxref("TrustedHTML")}} interface returns a 
 ## Syntax
 
 ```js
-var json = TrustedHTML.toJSON();
+toJSON()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.
+A string containing a JSON representation of the stored data.
 
 ## Examples
 

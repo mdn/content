@@ -27,12 +27,13 @@ Note that this doesn't return the whole record as {{domxref("IDBIndex.get")}} do
 ## Syntax
 
 ```js
-var request = myIndex.getKey(key);
+getKey()
+getKey(key)
 ```
 
 ### Parameters
 
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} that identifies a record to be retrieved. If
     this value is null or missing, the browser will use an unbound key range.
 
@@ -52,7 +53,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on
@@ -68,7 +69,7 @@ is logged to the console when its success callback returns.
 Finally, we iterate through each record, and insert the data into an HTML table. For a
 complete working example, see our [IndexedDB-examples
 demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex).)
+example live](https://mdn.github.io/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {

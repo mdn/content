@@ -34,14 +34,14 @@ The two values are as follows:
 ## Syntax
 
 ```js
-var timestamp = context.getOutputTimestamp()
+getOutputTimestamp()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An `AudioTimestamp` object, which has the following properties.
 

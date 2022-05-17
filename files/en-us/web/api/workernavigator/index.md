@@ -30,9 +30,9 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}}{{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
 - {{DOMxRef("WorkerNavigator.language")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
+  - : Returns a string representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
 - {{DOMxRef("WorkerNavigator.languages")}} {{readonlyInline}} {{experimental_inline}}
-  - : Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.
+  - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{DOMxRef("WorkerNavigator.locks")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
 - {{DOMxRef("WorkerNavigator.onLine")}}{{ReadOnlyInline}}
@@ -46,7 +46,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{domxref("WorkerNavigator.serial")}} {{readonlyInline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 - {{DOMxRef("WorkerNavigator.storage")}}{{ReadOnlyInline}} {{experimental_inline}}
-  - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistance permissions and estimating available storage.
+  - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
 - {{DOMxRef("WorkerNavigator.userAgent")}}{{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
 - {{domxref("WorkerNavigator.userAgentData")}} {{readonlyInline}}

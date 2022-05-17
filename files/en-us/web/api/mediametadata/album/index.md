@@ -14,14 +14,7 @@ The **`album`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets the name of the album or
 collection containing the media to be played.
 
-## Syntax
-
-```js
-var album = mediaMetaData.album
-mediaMetaData.album = album
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} containing the name of the album.
 

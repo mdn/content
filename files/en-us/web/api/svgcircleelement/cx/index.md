@@ -16,17 +16,11 @@ The **`cx`** read-only property of the {{domxref("SVGCircleElement")}} interface
 
 If unspecified, the effect is as if the value is set to `0`.
 
-## Syntax
-
-```js
-var xCoordinate = element.cx;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}} representing the x-coordinate of the circle's center.
 
-## Example
+## Examples
 
 ### SVG
 

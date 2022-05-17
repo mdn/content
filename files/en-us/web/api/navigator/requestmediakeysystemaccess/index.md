@@ -35,13 +35,13 @@ returned {{domxref("MediaKeySystemAccess")}} object's
 ## Syntax
 
 ```js
-promise = navigator.requestMediaKeySystemAccess(keySystem, supportedConfigurations);
+requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 ```
 
 ### Parameters
 
 - `keySystem`
-  - : A {{domxref('DOMString')}} identifying the key system. For example
+  - : A string identifying the key system. For example
     `com.example.somesystem` or `org.w3.clearkey`.
 - `supportedConfigurations`
   - : A non-empty {{jsxref('Array')}} of objects conforming to the object returned by {{domxref("MediaKeySystemAccess.getConfiguration")}}. The first element with a satisfiable configuration will be used.
@@ -62,12 +62,12 @@ fulfillment handler receives as input just one parameter:
 In case of an error, the returned {{jsxref('Promise')}} is rejected with a
 {{domxref('DOMException')}} whose name indicates what kind of error occurred.
 
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Either the specified `keySystem` isn't supported by the platform or the
     browser, or none of the configurations specified by
     `supportedConfigurations` can be satisfied (if, for example, none of the
     `codecs` specified in `contentType` are available).
-- `TypeError`
+- {{jsxref("TypeError")}}`
   - : Either `keySystem` is an empty string or the
     `supportedConfigurations` array is empty.
 

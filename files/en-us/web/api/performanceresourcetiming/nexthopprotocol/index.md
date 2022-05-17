@@ -12,7 +12,7 @@ browser-compat: api.PerformanceResourceTiming.nextHopProtocol
 {{APIRef("Resource Timing API")}}
 
 The **`nextHopProtocol`** read-only
-property is a {{domxref("DOMString","string")}} representing the _network
+property is a string representing the _network
 protocol_ used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 
 When a proxy is used, if a tunnel connection is established, this property returns the
@@ -21,18 +21,12 @@ Protocol ID of the first hop to the proxy.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-resource.nextHopProtocol;
-```
-
-### Return value
-
-A {{domxref("DOMString","string")}} representing the _network protocol_ used to
+A string representing the _network protocol_ used to
 fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 
-## Example
+## Examples
 
 The following example uses the `nextHopProtocol` property.
 

@@ -36,7 +36,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 A double-precision floating-point number indicating the current configuration of the
 track's frame rate, in frames per second.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

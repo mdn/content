@@ -18,7 +18,7 @@ method of the Canvas 2D API adds a translation transformation to the current mat
 ## Syntax
 
 ```js
-void ctx.translate(x, y);
+translate(x, y)
 ```
 
 The `translate()` method adds a translation transformation to the current
@@ -35,6 +35,10 @@ matrix by moving the canvas and its origin `x` units horizontally and
 - `y`
   - : Distance to move in the vertical direction. Positive values are down, and negative
     are up.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

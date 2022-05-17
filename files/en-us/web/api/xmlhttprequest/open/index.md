@@ -24,7 +24,10 @@ initializes a newly-created request, or re-initializes an existing one.
 ## Syntax
 
 ```js
-XMLHttpRequest.open(method, url[, async[, user[, password]]])
+open(method, url)
+open(method, url, async)
+open(method, url, async, user)
+open(method, url, async, user, password)
 ```
 
 ### Parameters
@@ -34,7 +37,7 @@ XMLHttpRequest.open(method, url[, async[, user[, password]]])
     `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`,
     etc. Ignored for non-HTTP(S) URLs.
 - `url`
-  - : A {{domxref("DOMString")}} representing the URL to send the request to.
+  - : A string representing the URL to send the request to.
 - `async` {{optional_inline}}
 
   - : An optional Boolean parameter, defaulting to `true`, indicating whether
@@ -55,6 +58,10 @@ XMLHttpRequest.open(method, url[, async[, user[, password]]])
 - `password` {{optional_inline}}
   - : The optional password to use for authentication purposes; by default, this is the
     `null` value.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

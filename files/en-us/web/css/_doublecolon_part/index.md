@@ -5,8 +5,6 @@ tags:
   - '::part'
   - CSS
   - Draft
-  - Experimental
-  - NeedsBrowserCompatibility
   - NeedsExample
   - Pseudo-element
   - Reference

@@ -9,6 +9,7 @@ tags:
   - MediaStream Recording API
   - NeedsUpdate
   - Tutorial
+browser-compat: api.MediaRecorder
 ---
 {{DefaultAPISidebar("MediaStream Recording")}}
 
@@ -60,7 +61,7 @@ However, we wanted to make the third area (which contains the recorded samples y
 
 ### Checkbox hack for showing/hiding
 
-This is fairly well documented already, but we thought we'd give a mention to the checkbox hack, which abuses the fact that you can click on the {{htmlelement("label")}} of a checkbox to toggle it checked/unchecked. In Web Dictaphone this powers the Information screen, which is shown/hidden by clicking the question mark icon in the top right hand corner. First of all, we style the `<label>` how we want it, making sure that it has enough z-index to always sit above the other elements and therefore be focusable/clickable:
+This is fairly well documented already, but we thought we'd give a mention to the checkbox hack, which abuses the fact that you can click on the {{htmlelement("label")}} of a checkbox to toggle it checked/unchecked. In Web Dictaphone this powers the Information screen, which is shown/hidden by clicking the question mark icon in the top right-hand corner. First of all, we style the `<label>` how we want it, making sure that it has enough z-index to always sit above the other elements and therefore be focusable/clickable:
 
 ```css
 label {
@@ -259,9 +260,7 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 ## Specifications
 
-| Specification                                                                | Status                                       | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#MediaRecorderAPI")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -272,5 +271,5 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 ## See also
 
 - [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
-- `{{domxref("Navigator.getUserMedia()")}}`
-- [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)
+- {{domxref("Navigator.getUserMedia()")}}
+- [MediaRecorder API now supported by 65% of your website users](https://blog.addpipe.com/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

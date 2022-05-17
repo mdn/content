@@ -13,16 +13,14 @@ browser-compat: api.TextEncoder.encoding
 {{APIRef("Encoding API")}}
 
 The **`TextEncoder.encoding`** read-only property returns a
-{{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the
+string containing the name of the encoding algorithm used by the
 specific encoder.
 
 It can only have the following value `utf-8`.
 
-## Syntax
+## Value
 
-```js
-b = encoder.encoding;
-```
+A string.
 
 ## Specifications
 

@@ -20,12 +20,12 @@ The **`toMatrix()`** method of the
 ## Syntax
 
 ```js
-var matrix = CSSTransformValue.toMatrix();
+toMatrix()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

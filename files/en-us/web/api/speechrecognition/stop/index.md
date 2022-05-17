@@ -21,16 +21,16 @@ recognition service from listening to incoming audio, and attempts to return a
 ## Syntax
 
 ```js
-stop();
+stop()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

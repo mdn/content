@@ -14,15 +14,9 @@ browser-compat: api.WebSocket.binaryType
 The **`WebSocket.binaryType`** property controls the type of
 binary data being received over the WebSocket connection.
 
-## Syntax
-
-```js
-var binaryType = aWebSocket.binaryType;
-```
-
 ## Value
 
-A {{DOMXref("DOMString")}}:
+A string:
 
 - `"blob"`
   - : Use {{domxref("Blob")}} objects for binary data. This is the default value.

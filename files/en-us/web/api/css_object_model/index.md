@@ -108,9 +108,9 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 | [CSSOM View Module](https://drafts.csswg.org/cssom-view/)                                                   |
 | [CSS Fonts Module # object-model](https://drafts.csswg.org/css-fonts/#object-model)                         |
 | [CSS Animations # interface-dom](https://drafts.csswg.org/css-animations/#interface-dom)                    |
-| [CSS Conditional Rules Module # apis](https://drafts.csswg.org/css-conditional/#apis)                       |
-| [CSS Custom Properties for Cascading Variables Module # apis](https://drafts.csswg.org/css-variables/#apis) |
-| [CSS Counter Styles # apis](https://drafts.csswg.org/css-counter-styles/#apis)                              |
+| [CSS Conditional Rules Module # APIs](https://drafts.csswg.org/css-conditional/#apis)                       |
+| [CSS Custom Properties for Cascading Variables Module # APIs](https://drafts.csswg.org/css-variables/#apis) |
+| [CSS Counter Styles # APIs](https://drafts.csswg.org/css-counter-styles/#apis)                              |
 | [CSS Device Adaptation Module # cssom](https://drafts.csswg.org/css-device-adapt/#cssom)                    |
 | [CSS Painting API # paint-worklet](https://drafts.css-houdini.org/css-paint-api/#paint-worklet)             |
 | [CSS Typed OM](https://drafts.css-houdini.org/css-typed-om/)                                                |
@@ -122,4 +122,4 @@ All these features have been added little by little over the years to the differ
 ## See also
 
 - [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model)
-- [Houdini](/en-US/docs/Web/Houdini)
+- [Houdini](/en-US/docs/Web/Guide/Houdini)

@@ -17,17 +17,7 @@ browser-compat: api.KeyframeEffect.composite
 
 The **`composite`** property of a {{domxref("KeyframeEffect")}} resolves how an element's animation impacts its underlying property values.
 
-## Syntax
-
-```js
-// getting
-var compositeEnumeration = keyframeEffect.composite;
-
-// setting
-keyframeEffect.composite = 'accumulate';
-```
-
-### Value
+## Value
 
 To understand these values, take the example of a `keyframeEffect` value of `blur(2)` working on an underlying property value of  `blur(3)`.
 

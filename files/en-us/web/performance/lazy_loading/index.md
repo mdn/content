@@ -11,6 +11,7 @@ tags:
   - Performance
   - Web Performance
   - rendering
+spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
 **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), which translates into reduced page load times.
 
@@ -47,11 +48,11 @@ By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Cr
 
 ```html
 <link href="style.css"    rel="stylesheet" media="all">
-<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="portrait.css" rel="stylesheet" media="(orientation:portrait)">
 <link href="print.css"    rel="stylesheet" media="print">
 ```
 
-It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS)  to achieve that.
+It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS) to achieve that.
 
 ### Fonts
 
@@ -92,12 +93,10 @@ When browser compatibility is crucial, there are a few options:
 
 ## Specifications
 
-| **Specification**                                                        | **Status**                       | **Comment** |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#lazy-loading-attributes")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## See also
 
-- [Render blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
+- [Render blocking CSS](https://web.dev/critical-rendering-path-render-blocking-css/)
 - [Optimizing loading and rendering](https://web.dev/fast/#optimize-webfonts)
-- [Lazy loading images and video](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)
+- [Lazy loading images and video](https://web.dev/fast/#lazy-load-images-and-video)

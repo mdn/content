@@ -23,7 +23,7 @@ information regarding that attribute.
 
 A {{domxref("NamedNodeMap")}} object.
 
-## Example
+## Examples
 
 ### Basic examples
 
@@ -90,4 +90,4 @@ with id "paragraph", and prints each attribute's value.
 ## See also
 
 - {{domxref("NamedNodeMap")}}, the interface of the returned object
-- Cross-browser compatibility considerations: on [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes)
+- Cross-browser compatibility considerations: on [quirksmode](https://quirksmode.org/dom/core/#attributes)

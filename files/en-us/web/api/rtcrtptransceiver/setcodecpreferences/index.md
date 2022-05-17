@@ -39,7 +39,7 @@ characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/
 ## Syntax
 
 ```js
-rtcRtpTransceiver.setCodecPreferences(codecs)
+setCodecPreferences(codecs)
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ rtcRtpTransceiver.setCodecPreferences(codecs)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

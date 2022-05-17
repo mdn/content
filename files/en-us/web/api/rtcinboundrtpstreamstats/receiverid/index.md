@@ -27,15 +27,9 @@ The **`receiverId`** property of the
 {{domxref("RTCVideoReceiverStats")}} object representing the
 {{domxref("RTCRtpReceiver")}} receiving the stream.
 
-## Syntax
+## Value
 
-```js
-var receiverStatsId = rtcInboundRtpStreamStats.receiverId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains the ID of the
+A string which contains the ID of the
 `RTCAudioReceiverStats` or `RTCVideoReceiverStats` object which
 provides information about the `RTCRtpReceiver` which is receiving the
 streamed media.

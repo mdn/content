@@ -17,7 +17,7 @@ browser-compat: api.MediaTrackConstraints.noiseSuppression
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`noiseSuppression`** property is a
-[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) describing the requested or mandatory constraints placed
+[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
 upon the value of the {{domxref("MediaTrackSettings.noiseSuppression",
   "noiseSuppression")}} constrainable property.
 
@@ -29,15 +29,7 @@ this is unnecessary since browsers will ignore any constraints they're unfamilia
 Noise suppression is typically provided by microphones, although it can be provided by
 other input sources as well.
 
-## Syntax
-
-```js
-var constraintsObject = { noiseSuppression: constraint };
-
-constraintsObject.noiseSuppression = constraint;
-```
-
-### Value
+## Value
 
 If this value is a simple `true` or `false`, the user agent will
 attempt to obtain media with noise suppression enabled or disabled as specified, if
@@ -46,7 +38,7 @@ object with an `exact` field, that field's Boolean value indicates a required
 setting for the noise suppression feature; if it can't be met, then the request will
 result in an error.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

@@ -41,7 +41,7 @@ window's content area.
 Since this property is an alias for {{domxref("Window.scrollY")}}, see that article for
 additional details on this value and its use.
 
-## Example
+## Examples
 
 ```js hidden
 var contentHTML = `

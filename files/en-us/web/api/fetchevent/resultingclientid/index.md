@@ -28,9 +28,9 @@ If the fetch request is a subresource request or the request's
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {

@@ -22,12 +22,9 @@ that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 ## Syntax
 
 ```js
-var wave = AudioContext.createPeriodicWave(real, imag[, constraints]);
+createPeriodicWave(real, imag)
+createPeriodicWave(real, imag, constraints)
 ```
-
-### Returns
-
-A {{domxref("PeriodicWave")}}.
 
 ### Parameters
 
@@ -50,7 +47,11 @@ otherwise an error is thrown.
 
 > **Note:** If normalized, the resulting wave will have a maximum absolute peak value of 1.
 
-## Example
+### Return value
+
+A {{domxref("PeriodicWave")}}.
+
+## Examples
 
 The following example illustrates simple usage of `createPeriodicWave()`, to
 create a {{domxref("PeriodicWave")}} object containing a simple sine wave.

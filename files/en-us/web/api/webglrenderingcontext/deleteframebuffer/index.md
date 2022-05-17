@@ -19,7 +19,7 @@ has already been deleted.
 ## Syntax
 
 ```js
-void gl.deleteFramebuffer(framebuffer);
+deleteFramebuffer(framebuffer)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ void gl.deleteFramebuffer(framebuffer);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

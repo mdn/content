@@ -17,7 +17,7 @@ target.
 ## Syntax
 
 ```js
-void gl.endQuery(target);
+endQuery(target)
 ```
 
 ### Parameters
@@ -29,14 +29,14 @@ void gl.endQuery(target);
     - `gl.ANY_SAMPLES_PASSED`: Specifies an occlusion query: these queries
       detect whether an object is visible (whether the scoped drawing commands pass the
       depth test and if so, how many samples pass).
-    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: Same as above above, but less
+    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: Same as above, but less
       accurate and faster version.
     - `gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`: Number of primitives that
       are written to transform feedback buffers.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

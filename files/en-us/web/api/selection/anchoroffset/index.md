@@ -19,11 +19,9 @@ number of characters that the selection's anchor is offset within the
 This number is zero-based. If the selection begins with the first character in the
 {{domxref("Selection.anchorNode")}}, `0` is returned.
 
-## Syntax
+## Value
 
-```js
-number = sel.anchorOffset
-```
+A number.
 
 ## Specifications
 

@@ -18,7 +18,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a list of
 ## Syntax
 
 ```js
-sequence<WebGLShader> gl.getAttachedShaders(program);
+getAttachedShaders(program)
 ```
 
 ### Parameters

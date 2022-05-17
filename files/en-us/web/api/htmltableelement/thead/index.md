@@ -15,18 +15,11 @@ The **`HTMLTableElement.tHead`** represents the
 {{HTMLElement("thead")}} element of a {{HTMLElement("table")}} . Its value will be
 `null` if there is no such element.
 
-## Syntax
+## Value
 
-```js
-thead_element = table.tHead;
-table.tHead = thead_element;
-```
+A {{domxref("HTMLTableSectionElement")}}.
 
-### Parameters
-
-- `thead_element` is a {{domxref("HTMLTableSectionElement")}}.
-
-## Example
+## Examples
 
 ```js
 if (table.tHead == my_head_el) {

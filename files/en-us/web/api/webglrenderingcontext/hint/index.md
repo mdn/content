@@ -17,7 +17,7 @@ behaviors. The interpretation of these hints depend on the implementation.
 ## Syntax
 
 ```js
-void gl.hint(target, mode);
+hint(target, mode)
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ void gl.hint(target, mode);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

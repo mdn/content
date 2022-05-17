@@ -18,8 +18,8 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
 ## Syntax
 
 ```js
-void gl.texParameterf(GLenum target, GLenum pname, GLfloat param);
-void gl.texParameteri(GLenum target, GLenum pname, GLint param);
+texParameterf(target, GLenum pname, GLfloat param)
+texParameteri(target, GLenum pname, GLint param)
 ```
 
 ### Parameters
@@ -36,10 +36,13 @@ void gl.texParameteri(GLenum target, GLenum pname, GLint param);
       - `gl.TEXTURE_3D`: A three-dimensional texture.
       - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-The `pname` parameter is a {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
-parameter to set. The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
-{{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
-`pname`.
+- param
+  - : The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
+    {{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
+
+- pname
+  - : The `pname` parameter is a {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
+  parameter to set.
 
 <table class="standard-table">
   <thead>
@@ -149,7 +152,7 @@ parameter to set. The `param` parameter is a {{domxref("WebGL_API/Types", "GLflo
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -13,7 +13,7 @@ browser-compat: api.Gamepad
 
 The **`Gamepad`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
 
-A Gamepad object can be returned in one of two ways: via the `gamepad` property of the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events, or by grabbing any position in the array returned by the {{domxref("Navigator.getGamepads()")}} method.
+A Gamepad object can be returned in one of two ways: via the `gamepad` property of the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events, or by grabbing any position in the array returned by the {{domxref("Navigator.getGamepads()")}} method.
 
 ## Properties
 
@@ -32,7 +32,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
 - {{domxref("Gamepad.vibrationActuator")}} {{readonlyInline}}
   - : A {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 - {{domxref("Gamepad.id")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} containing identifying information about the controller.
+  - : A string containing identifying information about the controller.
 - {{domxref("Gamepad.index")}} {{readonlyInline}}
   - : An integer that is auto-incremented to be unique for each device currently connected to the system.
 - {{domxref("Gamepad.mapping")}} {{readonlyInline}}

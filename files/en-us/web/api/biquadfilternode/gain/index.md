@@ -18,13 +18,13 @@ When its value is positive, it represents a real gain; when negative, it represe
 
 It is expressed in dB, has a default value of `0`, and can take a value in a nominal range of `-40` to `40`.
 
-### Value
+## Value
 
 An {{domxref("AudioParam")}}.
 
 > **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create a Biquad filter node. For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (look at the [source code](https://github.com/mdn/voice-change-o-matic) too).
 

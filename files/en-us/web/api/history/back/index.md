@@ -26,8 +26,16 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 ## Syntax
 
 ```js
-history.back()
+back()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

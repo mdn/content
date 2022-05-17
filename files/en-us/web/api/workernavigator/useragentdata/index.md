@@ -14,13 +14,7 @@ browser-compat: api.WorkerNavigator.userAgentData
 The **`userAgentData`** read-only property of the {{domxref("WorkerNavigator")}} interface returns an {{domxref("NavigatorUAData")}} object
 which can be used to access the {{domxref("User-Agent Client Hints API")}}.
 
-## Syntax
-
-```js
-let userAgentData = navigator.userAgentData
-```
-
-### Value
+## Value
 
 A {{domxref("NavigatorUAData")}} object.
 

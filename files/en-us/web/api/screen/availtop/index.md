@@ -15,13 +15,11 @@ browser-compat: api.Screen.availTop
 Specifies the y-coordinate of the first pixel that is not allocated to permanent or
 semipermanent user interface features.
 
-## Syntax
+## Value
 
-```js
-let availTop = window.screen.availTop;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 let setX = window.screen.width - window.screen.availLeft;

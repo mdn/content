@@ -25,7 +25,7 @@ The `dopplerFactor` property's default value is `1`, which is a sensible default
 
 A double indicating the doppler effect's pitch shift value. The value is 1 by default.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 

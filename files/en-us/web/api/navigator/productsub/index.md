@@ -15,15 +15,11 @@ browser-compat: api.Navigator.productSub
 The **`Navigator.productSub`** read-only property returns the
 build number of the current browser.
 
-## Syntax
+## Value
 
-```js
-prodSub = navigator.productSub
-```
+A string.
 
-- `prodSub` is a string.
-
-## Example
+## Examples
 
 ```js
 <script>

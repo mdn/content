@@ -37,15 +37,15 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{event("mouseout")}}
 - {{event("mouseover")}}
 - {{event("mouseup")}}
-- {{event("pointerover")}}
-- {{event("pointerenter")}}
-- {{event("pointerdown")}}
-- {{event("pointerup")}}
-- {{event("pointercancel")}}
-- {{event("pointerout")}}
-- {{event("pointerleave")}}
-- {{event("gotpointercapture")}}
-- {{event("lostpointercapture")}}
+- {{domxref("HTMLElement/pointerover_event", "pointerover")}}
+- {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}
+- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
+- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}
+- {{domxref("HTMLElement/pointerout_event", "pointerout")}}
+- {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}
+- {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
 - {{event("touchstart")}}
 - {{event("touchend")}}
 - {{event("touchcancel")}}
@@ -87,7 +87,7 @@ const observer = new PerformanceObserver(function(list) {
 observer.observe({entryTypes: ["event"]});
 ```
 
-We can also directly query the [first input delay](https://web.dev/fid). The first input delay or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.
+We can also directly query the [first input delay](https://web.dev/fid/). The first input delay or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.
 
 ```js
 // Keep track of whether (and when) the page was first hidden, see:

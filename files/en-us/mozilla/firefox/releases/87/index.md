@@ -17,9 +17,9 @@ This article provides information about the changes in Firefox 87 that will affe
 
 ### Developer Tools
 
-- Developers can now use the [Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#view_media_rules_for_prefers-color-scheme) to simulate {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media queries, without having to change the operating system to light or dark mode ({{bug(1679408)}} and {{bug(1692272)}}).
-- Developers can now use the [Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_common_pseudo-classes) to toggle the {{cssxref(":target")}} pseudo-class for the currently selected element in addition to the pseudo-classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, and {{cssxref(":visited")}} ({{bug(1689899)}}).
-- Firefox 87 sees a number of [Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#rule_display) improvements and bug fixes related to inactive CSS rules:
+- Developers can now use the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme) to simulate {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media queries, without having to change the operating system to light or dark mode ({{bug(1679408)}} and {{bug(1692272)}}).
+- Developers can now use the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-common-pseudo-classes) to toggle the {{cssxref(":target")}} pseudo-class for the currently selected element in addition to the pseudo-classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, and {{cssxref(":visited")}} ({{bug(1689899)}}).
+- Firefox 87 sees a number of [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#rule-display) improvements and bug fixes related to inactive CSS rules:
 
   - The {{cssxref("table-layout")}} property is now marked as inactive for non-table elements ({{bug(1551571)}}).
   - The {{cssxref("scroll-padding")}} properties (shorthand and longhand) are now marked as inactive for non-scrollable elements ({{bug(1551577)}}).

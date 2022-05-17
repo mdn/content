@@ -22,7 +22,7 @@ A string with the character information contained in the {{domxref("CharacterDat
 ### Reading a comment using data
 
 ```html
-<!-- This is an html comment !-->
+<!-- This is an HTML comment !-->
 <output id="Result"></output>
 ```
 

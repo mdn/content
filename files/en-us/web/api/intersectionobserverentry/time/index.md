@@ -3,7 +3,6 @@ title: IntersectionObserverEntry.time
 slug: Web/API/IntersectionObserverEntry/time
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -12,7 +11,7 @@ tags:
   - Time
 browser-compat: api.IntersectionObserverEntry.time
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
 read-only **`time`** property is a
@@ -26,7 +25,7 @@ A {{domxref("DOMHighResTimeStamp")}} which indicates the time at which the
 intersection change described by the `IntersectionObserverEntry`. The time is
 specified in milliseconds since the creation of the containing document.
 
-## Example
+## Examples
 
 See [Timing
 element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility) for a complete example which

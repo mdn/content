@@ -21,7 +21,7 @@ property with a value of 0.
 
 An integer ≥ 0.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

@@ -36,10 +36,10 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 - {{domxref("SpeechRecognitionAlternative")}}
   - : Represents a single word that has been recognized by the speech recognition service.
-- {{domxref("SpeechRecognitionError")}} {{deprecated_inline}}
+- {{domxref("SpeechRecognitionErrorEvent")}}
   - : Represents error messages from the recognition service.
 - {{domxref("SpeechRecognitionEvent")}}
-  - : The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
+  - : The event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 - {{domxref("SpeechGrammar")}}
   - : The words or patterns of words that we want the recognition service to recognize.
 - {{domxref("SpeechGrammarList")}}
@@ -90,5 +90,5 @@ The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub cont
 
 - [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 - [SitePoint article](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
-- [HTML5Rocks article](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
+- [HTML5Rocks article](https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api/)
 - [Demo](https://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]

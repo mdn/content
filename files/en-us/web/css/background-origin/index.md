@@ -29,6 +29,7 @@ background-origin: content-box;
 background-origin: inherit;
 background-origin: initial;
 background-origin: revert;
+background-origin: revert-layer;
 background-origin: unset;
 ```
 

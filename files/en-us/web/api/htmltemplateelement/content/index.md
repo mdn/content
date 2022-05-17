@@ -16,13 +16,11 @@ The **`HTMLTemplateElement.content`** property returns a
 `<template>` element's template contents (a
 {{domxref("DocumentFragment")}}).
 
-## Syntax
+## Value
 
-```js
-var documentFragment = templateElement.content
-```
+A {{domxref("DocumentFragment")}}.
 
-## Example
+## Examples
 
 ```js
 var templateElement = document.querySelector("#foo");

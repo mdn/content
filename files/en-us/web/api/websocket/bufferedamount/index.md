@@ -17,12 +17,6 @@ not yet transmitted to the network. This value resets to zero once all queued da
 been sent. This value does not reset to zero when the connection is closed; if you keep
 calling [`send()`](/en-US/docs/Web/API/WebSocket/send), this will continue to climb.
 
-## Syntax
-
-```js
-var bufferedAmount = aWebSocket.bufferedAmount;
-```
-
 ## Value
 
 An `unsigned long`.

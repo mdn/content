@@ -92,4 +92,4 @@ function submit(event) {
 ## See also
 
 - {{event("invalid")}} event
-- [DOM on-event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [DOM on-event handlers](/en-US/docs/Web/Events/Event_handlers)

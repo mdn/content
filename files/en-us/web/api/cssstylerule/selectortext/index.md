@@ -15,9 +15,9 @@ The **`selectorText`** property of the {{domxref("CSSStyleRule")}} interface get
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
-## Example
+## Examples
 
 The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`. `myRules[0].selectorText` therefore returns a literal string of the selector, in this case `"h1"`.
 

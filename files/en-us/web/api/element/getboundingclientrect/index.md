@@ -33,10 +33,14 @@ position relative to the [viewport](/en-US/docs/Glossary/Viewport).
 ## Syntax
 
 ```js
-domRect = element.getBoundingClientRect();
+getBoundingClientRect()
 ```
 
-### Value
+### Parameters
+
+None.
+
+### Return value
 
 The returned value is a {{domxref("DOMRect")}} object which is the smallest rectangle
 which contains the entire element, including its padding and border-width. The
@@ -76,22 +80,6 @@ just add the current scrolling position to the `top` and `left`
 properties (these can be obtained using {{domxref("window.scrollX")}} and
 {{domxref("window.scrollY")}}) to get a bounding rectangle which is independent from the
 current scrolling position.
-
-### Cross-browser fallback
-
-Scripts requiring high cross-browser compatibility can use
-{{domxref("window.pageXOffset")}} and {{domxref("window.pageYOffset")}} instead of
-`window.scrollX` and `window.scrollY.` Scripts without access to
-these properties can use code like this:
-
-```js
-// For scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// For scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
-```
 
 ## Examples
 
@@ -184,34 +172,6 @@ update();
 ## Specifications
 
 {{Specifications}}
-
-### Notes
-
-The returned `DOMRect` object can be modified in modern browsers. This was
-not true with older versions which effectively returned `DOMRectReadOnly`.
-With IE and Edge, not being able to add missing properties to their returned [`ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>),
-object prevents backfilling `x` and `y`.
-
-Due to compatibility problems (see below), it is safest to rely on only properties
-`left`, `top`, `right`, and `bottom`.
-
-Properties in the returned `DOMRect` object are not own properties. While
-the `in` operator and `for...in` will find returned properties,
-other APIs such as `Object.keys()` will fail. Moreover, and unexpectedly, the
-ES2015 and newer features such as `Object.assign()` and object rest/spread
-will fail to copy returned properties.
-
-```js
-rect = elt.getBoundingClientRect()
-// The result in emptyObj is {}
-emptyObj = Object.assign({}, rect)
-emptyObj = { ...rect }
-{width, ...emptyObj} = rect
-```
-
-`DOMRect` properties `top`, `left`,
-`right`, and `bottom` are computed using the values of the
-object's other properties.
 
 ## Browser compatibility
 

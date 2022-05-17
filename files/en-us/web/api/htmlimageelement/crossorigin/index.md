@@ -24,7 +24,7 @@ retrieving the image.
 
 ## Value
 
-A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
+A string of a keyword specifying the CORS mode to use when fetching
 the image resource. If you don't specify `crossOrigin`, the image is fetched
 without CORS (the fetch `no-cors` mode).
 
@@ -44,7 +44,7 @@ Permitted values are:
 If `crossOrigin` is an empty string (`""`),
 the `anonymous` mode is selected.
 
-## Example
+## Examples
 
 In this example, a new {{HTMLElement("img")}} element is created and added to the
 document, loading the image with the Anonymous state; the image will be loaded using

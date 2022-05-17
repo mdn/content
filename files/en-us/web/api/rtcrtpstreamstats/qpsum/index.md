@@ -62,12 +62,12 @@ frames handled so far, and compute an average from there. See [Calculating
 Also, the exact meaning of the QP value depends on the {{Glossary("codec")}} being
 used. For example, for the VP8 codec, the QP value can be anywhere from 1 to 127 and is
 found in the frame header element `"y_ac_qi"`, whose value is defined in
-{{RFC(6386, "19.2")}}. H.264 uses a QP which ranges from 0 to 51; in this case, it's an
+{{RFC(6386, "", "19.2")}}. H.264 uses a QP which ranges from 0 to 51; in this case, it's an
 index used to derive a scaling matrix used during the quantization process.
 Additionally, QP is not likely to be the only parameter the codec uses to adjust the
 compression. See the individual codec specifications for details.
 
-## Example
+## Examples
 
 ### Calculating average quantization
 

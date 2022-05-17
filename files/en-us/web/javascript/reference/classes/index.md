@@ -343,7 +343,7 @@ d.speak(); // Mitzie barks.
 // For similar methods, the child's method takes precedence over parent's method
 ```
 
-Note that classes cannot extend regular (non-constructible) objects
+Note that classes cannot extend regular (non-constructible) objects.
 If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:
 
 ```js

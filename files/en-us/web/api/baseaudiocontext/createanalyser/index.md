@@ -27,14 +27,18 @@ can be used to expose audio time and frequency data and create data visualizatio
 ## Syntax
 
 ```js
-var analyserNode = baseAudioContext.createAnalyser();
+createAnalyser()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("AnalyserNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create an Analyser node,
 then use requestAnimationFrame() to collect time domain data repeatedly and draw an

@@ -9,4 +9,4 @@ tags:
 
 ## See also
 
-- [Google article "Minimizing browser reflow"](https://developers.google.com/speed/articles/reflow)
+- [Google article "Minimizing browser reflow"](https://developers.google.com/speed/docs/insights/browser-reflow)

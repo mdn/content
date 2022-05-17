@@ -13,7 +13,7 @@ browser-compat: api.VideoFrame.timestamp
 
 The **`timestamp`** property of the {{domxref("VideoFrame")}} interface returns an integer indicating the timestamp of the video in microseconds.
 
-### Value
+## Value
 
 An integer.
 

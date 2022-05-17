@@ -57,7 +57,7 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 When you customize scrollbars, consider they have enough contrast and that their hit area is large enough for people who use touch input.
 
-- [Baseline Rules for Scrollbar Usability | Adrian Roselli](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
+- [Baseline Rules for Scrollbar Usability | Adrian Roselli](https://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
 
 ## Browser compatibility
 

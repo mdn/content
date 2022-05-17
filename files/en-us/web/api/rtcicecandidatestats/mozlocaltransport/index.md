@@ -26,14 +26,6 @@ The non-standard Mozilla extension to the {{domxref("RTCIceCandidateStats")}}
 dictionary, **`mozLocalTransport`**, has been supplanted by the
 standard {{domxref("RTCIceCandidateStats.relayProtocol", "relayProtocol")}} property.
 
-## Syntax
-
-Instead of using `mozLocalTransport`, you should use code like this:
-
-```js
-localTransport = rtcIceCandidateStats.relayProtocol;
-```
-
 ## Specifications
 
 Not part of any specification.

@@ -15,7 +15,7 @@ The **`id`** read-only property of the {{domxref("MIDIPort")}} interface returns
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing an ID for the port.
+A string containing an ID for the port.
 
 ## Examples
 

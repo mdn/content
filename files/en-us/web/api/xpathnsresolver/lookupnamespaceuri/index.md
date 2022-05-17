@@ -20,17 +20,17 @@ given namespace prefix within an {{Glossary("XPath")}} expression evaluated by t
 ## Syntax
 
 ```js
-DOMString XPathNSResolver.lookupNamespaceURI(prefix);
+lookupNamespaceURI(prefix)
 ```
 
 ### Parameters
 
 - prefix
-  - : A {{domxref("DOMString")}} representing the prefix to look for.
+  - : A string representing the prefix to look for.
 
 ### Return value
 
-A {{domxref("DOMString")}} representing the associated namespace URI or
+A string representing the associated namespace URI or
 `null` if none is found.
 
 ## Specifications

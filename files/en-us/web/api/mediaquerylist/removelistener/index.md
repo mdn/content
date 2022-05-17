@@ -25,12 +25,12 @@ available in the browsers you need to support.
 ## Syntax
 
 ```js
-MediaQueryList.removeListener(func)
+removeListener(func)
 ```
 
 ### Parameters
 
-- func
+- `func`
   - : A function or function reference representing the callback function you want to
     remove.
 
@@ -38,7 +38,7 @@ MediaQueryList.removeListener(func)
 
 Void.
 
-## Example
+## Examples
 
 ```js
 var paragraph = document.querySelector('p');
@@ -50,7 +50,7 @@ function screenTest(e) {
     paragraph.textContent = 'This is a narrow screen — 600px wide or less.';
     document.body.style.backgroundColor = 'pink';
   } else {
-    /* the viewport is more than than 600 pixels wide */
+    /* the viewport is more than 600 pixels wide */
     paragraph.textContent = 'This is a wide screen — more than 600px wide.';
     document.body.style.backgroundColor = 'aquamarine';
   }

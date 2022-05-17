@@ -25,13 +25,14 @@ rejected promise.
 ## Syntax
 
 ```js
-var promise = writableStreamDefaultWriter.abort(reason);
+abort()
+abort(reason)
 ```
 
 ### Parameters
 
 - reason {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing a human-readable reason for the abort.
+  - : A string representing a human-readable reason for the abort.
 
 ### Return value
 
@@ -40,7 +41,7 @@ parameter.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The stream you are trying to abort is not a {{domxref("WritableStream")}}, or it is
     locked.
 

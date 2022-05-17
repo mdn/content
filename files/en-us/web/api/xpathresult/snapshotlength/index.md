@@ -18,13 +18,7 @@ snapshot.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var snapshotLength = result.snapshotLength;
-```
-
-### Return value
+## Value
 
 An integer value representing the number of nodes in the result snapshot.
 
@@ -36,7 +30,7 @@ In case {{domxref("XPathResult.resultType")}} is not
 `UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, an
 {{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-## Example
+## Examples
 
 The following example shows the use of the `snapshotLength` property.
 

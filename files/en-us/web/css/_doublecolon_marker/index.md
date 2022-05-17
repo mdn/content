@@ -4,7 +4,6 @@ slug: Web/CSS/::marker
 tags:
   - CSS
   - CSS Lists
-  - Experimental
   - Layout
   - Pseudo-element
   - Reference

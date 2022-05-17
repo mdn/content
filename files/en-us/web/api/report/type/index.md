@@ -9,7 +9,7 @@ tags:
   - Report
   - Reporting API
   - Type
-browser-compat: api.Report.type
+spec-urls: https://w3c.github.io/reporting/#dom-report-type
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -17,13 +17,7 @@ The **`type`** read-only property of the {{domxref("Report")}}
 interface returns the type of report generated, e.g. `deprecation` or
 `intervention`.
 
-## Syntax
-
-```js
-let reportType = reportInstance.type
-```
-
-### Returns
+## Value
 
 A string representing the type of the report. Currently the available types are
 `deprecation`, `intervention`, and `crash`.
@@ -49,7 +43,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
 
 ## See also
 

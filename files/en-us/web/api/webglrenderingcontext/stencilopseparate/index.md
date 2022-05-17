@@ -18,7 +18,7 @@ back-facing stencil test actions.
 ## Syntax
 
 ```js
-void gl.stencilOpSeparate(face, fail, zfail, zpass);
+stencilOpSeparate(face, fail, zfail, zpass)
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ constants listed below.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Constants
 

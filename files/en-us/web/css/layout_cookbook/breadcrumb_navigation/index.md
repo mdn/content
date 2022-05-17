@@ -25,7 +25,7 @@ The items typically display inline with a separator to indicate a hierarchy betw
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
 > **Note:** The example above uses two selectors to insert content before every `li` except the first one. This could also be achieved using one selector only:
 >

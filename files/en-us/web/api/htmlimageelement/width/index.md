@@ -33,7 +33,7 @@ screen or printer:
   using the image's natural (intrinsic) width, adjusted for the display density as
   indicated by {{domxref("HTMLImageElement.naturalWidth", "naturalWidth")}}.
 
-## Example
+## Examples
 
 In this example, two different sizes are provided for an image of a clock using the
 {{htmlattrxref("srcset", "img")}} attribute. One is 200px wide and the other is 400px
@@ -47,10 +47,10 @@ drawn at 400px.
 
 ```html
 <p>Image width: <span class="size">?</span>px (resize to update)</p>
-<img src="/files/16864/clock-demo-200px.png"
+<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png.png"
       alt="Clock"
-      srcset="/files/16864/clock-demo-200px.png 200w,
-          /files/16797/clock-demo-400px.png 400w"
+      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+          /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
       sizes="(max-width: 400px) 200px, 400px">
 ```
 

@@ -16,14 +16,14 @@ The **`flush()`** method of the {{domxref("VideoDecoder")}} interface returns a 
 ## Syntax
 
 ```js
-VideoDecoder.flush()
+flush()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}} that resolves with undefined.
 

@@ -19,22 +19,22 @@ associated stream.
 ## Syntax
 
 ```js
-readableStreamDefaultController.enqueue(chunk);
+enqueue(chunk)
 ```
 
 ### Parameters
 
-- _chunk_
+- `chunk`
   - : The chunk to enqueue.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 

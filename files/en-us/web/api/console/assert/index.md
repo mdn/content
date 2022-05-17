@@ -21,8 +21,13 @@ the console if the assertion is false. If the assertion is true, nothing happens
 ## Syntax
 
 ```js
-console.assert(assertion, obj1 [, obj2, ..., objN]);
-console.assert(assertion, msg [, subst1, ..., substN]); // C-like message formatting
+assert(assertion, obj1)
+assert(assertion, obj1, obj2)
+assert(assertion, obj1, obj2, /* ... ,*/ objN)
+
+assert(assertion, msg)
+assert(assertion, msg, subst1)
+assert(assertion, msg, subst1, /* ... ,*/ substN)
 ```
 
 ### Parameters
@@ -39,6 +44,10 @@ console.assert(assertion, msg [, subst1, ..., substN]); // C-like message format
   - : JavaScript objects with which to replace substitution strings within
     `msg`. This parameter gives you additional control over the format of the
     output.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

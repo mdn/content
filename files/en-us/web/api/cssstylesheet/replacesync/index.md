@@ -18,13 +18,13 @@ The `replaceSync()` and {{domxref("CSSStyleSheet.replace()")}} methods can only 
 ## Syntax
 
 ```js
-CSSStyleSheet.replaceSync(text);
+replaceSync(text)
 ```
 
 ### Parameters
 
 - `text`
-  - : A {{domxref("USVString","string")}} containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
+  - : A string containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
 
 > **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
 
@@ -42,9 +42,9 @@ Undefined.
 In the following example a new stylesheet is created and two CSS rules are added using `replaceSync`.
 
 ```js
-let stylesheet = new CSSStyleSheet();
+const stylesheet = new CSSStyleSheet();
 
-stylesheet.replaceSync('body { font-size: 1.4em };p { color: red; }');
+stylesheet.replaceSync('body { font-size: 1.4em; } p { color: red; }');
 ```
 
 ## Specifications

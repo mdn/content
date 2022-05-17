@@ -34,15 +34,13 @@ For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put
 ## Syntax
 
 ```js
-cache.add(request).then(function() {
-  // request has been added to the cache
-});
+add(request)
 ```
 
 ### Parameters
 
-- request
-  - : The request you want to add to the cache. This can be a  {{domxref("Request")}} object or a URL.
+- `request`
+  - : The request you want to add to the cache. This can be a {{domxref("Request")}} object or a URL.
 
 ### Return value
 
@@ -50,7 +48,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : The URL scheme is not `http` or `https`.
 

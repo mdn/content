@@ -17,13 +17,11 @@ The **`HTMLElement.isContentEditable`** read-only property
 returns a boolean value that is `true` if the contents of the element
 are editable; otherwise it returns `false`.
 
-## Syntax
+## Value
 
-```js
-editable = element.isContentEditable
-```
+A boolean value.
 
-## Example
+## Examples
 
 ### HTML
 

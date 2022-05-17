@@ -16,15 +16,9 @@ The **`host`** read-only property of
 the {{domxref("ShadowRoot")}} returns a reference to the DOM element the
 `ShadowRoot` is attached to.
 
-## Syntax
+## Value
 
-```js
-const someElement = shadowRoot.host
-```
-
-### Value
-
-A  DOM {{domxref('Element')}}.
+A DOM {{domxref('Element')}}.
 
 ## Examples
 

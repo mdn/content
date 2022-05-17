@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer()`** constructor is used to create
@@ -45,8 +46,8 @@ In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32
   "Int32Array")}} view referring to the buffer:
 
 ```js
-var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);
+const buffer = new ArrayBuffer(8);
+const view = new Int32Array(buffer);
 ```
 
 ## Specifications
@@ -65,13 +66,13 @@ constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an
 a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
-var dv = ArrayBuffer(10);
+const buffer = ArrayBuffer(10);
 // TypeError: calling a builtin ArrayBuffer constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var dv = new ArrayBuffer(10);
+const buffer = new ArrayBuffer(10);
 ```
 
 ## See also

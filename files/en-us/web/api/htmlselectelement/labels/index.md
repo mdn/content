@@ -15,18 +15,12 @@ The **`HTMLSelectElement.labels`** read-only property returns a
 {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("select")}} element.
 
-## Syntax
-
-```js
-var labelElements = select.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<select>` element.
 
-## Example
+## Examples
 
 ### HTML
 

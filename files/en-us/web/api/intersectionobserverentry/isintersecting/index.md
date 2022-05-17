@@ -3,7 +3,6 @@ title: IntersectionObserverEntry.isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -29,7 +28,7 @@ A Boolean value which indicates whether the
 a state of intersection (`true`) or out of a state of intersection
 (`false`).
 
-## Example
+## Examples
 
 In this simple example, an intersection callback is used to update a counter of how
 many targeted elements are currently intersecting with the

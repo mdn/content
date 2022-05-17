@@ -30,7 +30,7 @@ candidateType = rtcIceCandidateStats.candidateType;
 
 ### Value
 
-A {{domxref("DOMString")}} whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#Values).
+A string whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values).
 
 ## Specifications
 

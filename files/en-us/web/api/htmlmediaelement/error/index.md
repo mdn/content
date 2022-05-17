@@ -26,7 +26,7 @@ element, you can determine details about what happened by examining this object.
 A {{domxref("MediaError")}} object describing the most recent error to occur on the
 media element or `null` if no errors have occurred.
 
-## Example
+## Examples
 
 This example establishes a video element and adds an error handler to it; the error
 handler logs the details to console.

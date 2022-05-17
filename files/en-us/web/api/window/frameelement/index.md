@@ -25,7 +25,7 @@ The element which the window is embedded into. If the window isn't embedded into
 another document, or if the document into which it's embedded has a different
 {{glossary("origin")}}, the value is {{jsxref("null")}} instead.
 
-## Example
+## Examples
 
 ```js
 const frameEl = window.frameElement;

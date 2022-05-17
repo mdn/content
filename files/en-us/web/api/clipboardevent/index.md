@@ -28,7 +28,7 @@ The **`ClipboardEvent`** interface represents events providing information relat
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, or {{domxref("Element/paste_event", "paste")}} operation, along with its MIME type.
+  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, or {{domxref("Element/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Methods
 
@@ -47,4 +47,4 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 - Copy-related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

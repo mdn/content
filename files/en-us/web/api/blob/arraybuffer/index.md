@@ -18,8 +18,12 @@ binary data contained in an {{jsxref("ArrayBuffer")}}.
 ## Syntax
 
 ```js
-arrayBuffer();
+arrayBuffer()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

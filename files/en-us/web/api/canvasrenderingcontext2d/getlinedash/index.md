@@ -17,8 +17,12 @@ The **`getLineDash()`** method of the Canvas 2D API's
 ## Syntax
 
 ```js
-ctx.getLineDash();
+getLineDash()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -27,7 +27,7 @@ You can't specify the value of `address` directly in the options object, but its
 
 ## Value
 
-A {{domxref("DOMString")}} providing the IP address from which the candidate comes.
+A string providing the IP address from which the candidate comes.
 
 > **Note:** If `port` is `null` — and
 > `port` is supported by the {{Glossary("user agent")}} — passing the
@@ -79,7 +79,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 
 The fifth field, `"192.168.0.56"` is the IP address in this candidate's a-line string.
 
-## Example
+## Examples
 
 This code snippet uses the value of `address` to implement an IP address based ban feature.
 

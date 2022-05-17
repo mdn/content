@@ -30,13 +30,7 @@ the current STUN bindings — the mapping of the IP address and port configurati
 both peers on the {{Glossary("WebRTC")}} connection — are due to expire. If this time
 has arrived or passed, the bindings have expired.
 
-## Syntax
-
-```js
-consentExpiration = rtcIceCandidatePairStats.consentExpiredTimestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object that indicates the time at which the STUN
 binding that allows the two peers described by this {{domxref("RTCIceCandidatePair")}}

@@ -32,4 +32,4 @@ enhancement information (SEI) messages to determine the stereo capability of the
 ## See also
 
 - {{DOMxRef("HTMLVideoElement")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

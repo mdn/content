@@ -17,57 +17,58 @@ script must obey the [same-origin
 policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 > **Note:** there is disagreement among browser manufacturers about
-> whether a data URI is of the same origin or not. Although Gecko 10.0
-> {{geckoRelease("10.0")}} and later accept data URIs, that's not the case in all other
+> whether a data URL is of the same origin or not. Although Gecko 10.0
+> {{geckoRelease("10.0")}} and later accept data URLs, that's not the case in all other
 > browsers.
 
 ## Syntax
 
 ```js
-new SharedWorker(aURL, name);
-new SharedWorker(aURL, options);
+new SharedWorker(aURL)
+new SharedWorker(aURL, name)
+new SharedWorker(aURL, options)
 ```
 
 ### Parameters
 
-- _aURL_
-  - : A {{domxref("DOMString")}} representing the URL of the script the worker will
+- `aURL`
+  - : A string representing the URL of the script the worker will
     execute. It must obey the same-origin policy.
-- name {{optional_inline}}
-  - : A {{domxref("DOMString")}} specifying an identifying name for the
+- `name` {{optional_inline}}
+  - : A string specifying an identifying name for the
     {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is
     mainly useful for debugging purposes.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing option properties that can set when creating the object
     instance. Available properties are as follows:
 
-    - `type`: A {{domxref("DOMString")}} specifying the type of worker to
-      create. The value can be `classic` or `module`. If not
-      specified, the default used is `classic`.
-    - `credentials`: A {{domxref("DOMString")}} specifying the type of
-      credentials to use for the worker. The value can be `omit`,
-      `same-origin`, or _`include`. If not
-      specified, or if type is `classic`, the default used is
-      `omit` (no credentials required)._
-    - `name`: A {{domxref("DOMString")}} specifying an
-      identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
-      scope of the worker, which is mainly useful for debugging purposes.
-
-### Return value
-
-The created worker.
+    - `type`
+      - : A string specifying the type of worker to
+        create. The value can be `classic` or `module`. If not
+        specified, the default used is `classic`.
+    - `credentials`
+      - : A string specifying the type of
+        credentials to use for the worker. The value can be `omit`,
+        `same-origin`, or _`include`. If not
+        specified, or if type is `classic`, the default used is
+        `omit` (no credentials required)._
+    - `name`
+      - : A string specifying an
+        identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
+        scope of the worker, which is mainly useful for debugging purposes.
 
 ### Exceptions
 
-- A `SecurityError` is raised if the document is not allowed to start
-  workers, for example if the URL has an invalid syntax or if the same-origin policy is
-  violated.
-- A `NetworkError` is raised if the MIME type of the worker script is
-  incorrect. It should _always_ be `text/javascript` (for historical
-  reasons [other
-  JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types) may be accepted).
-- A `SyntaxError` is raised if _aURL_ cannot be parsed.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the document is not allowed to start workers,
+    for example if the URL has an invalid syntax or if the same-origin policy is violated.
+- `NetworkError`  {{domxref("DOMException")}}
+  - : Thrown if the MIME type of the worker script is incorrect.
+    It should _always_ be `text/javascript`
+    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types) may be accepted).
+- `SyntaxError`  {{domxref("DOMException")}}
+  - : Thrown if _aURL_ cannot be parsed.
 
 ## Examples
 

@@ -23,13 +23,7 @@ result.
 > **Note:** EMMA is defined in the specification [EMMA: Extensible MultiModal Annotation markup
 > language](https://www.w3.org/TR/emma/). You can see multiple EMMA examples in the spec.
 
-## Syntax
-
-```js
-var myEmma = event.emma;
-```
-
-### Value
+## Value
 
 A valid XML document. The exact contents can vary across user agents and recognition
 engines, but all supporting implementations will expose a valid XML document complete

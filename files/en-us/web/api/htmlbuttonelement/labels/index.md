@@ -14,18 +14,12 @@ The **`HTMLButtonElement.labels`** read-only property returns a
 {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("button")}} element.
 
-## Syntax
-
-```js
-var labelElements = button.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<button>` element.
 
-## Example
+## Examples
 
 ### HTML
 

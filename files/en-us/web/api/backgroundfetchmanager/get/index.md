@@ -19,7 +19,7 @@ The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface re
 ## Syntax
 
 ```js
-let backgroundFetchRegistration = BackgroundFetchManager.get(id);
+get(id)
 ```
 
 ### Parameters

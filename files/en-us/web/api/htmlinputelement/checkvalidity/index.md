@@ -19,8 +19,12 @@ The **`HTMLInputElement.checkValidity()`** method returns a boolean value which 
 ## Syntax
 
 ```js
-element.checkValidity();
+checkValidity()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

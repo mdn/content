@@ -29,7 +29,7 @@ this sample of the video quality was obtained.
 
 For details on how the time is determined, see {{domxref("Performance.now()")}}.
 
-## Example
+## Examples
 
 This example calls `getVideoPlaybackQuality()` to obtain a
 {{domxref("VideoPlaybackQuality")}} object, then determines what percentage of frames

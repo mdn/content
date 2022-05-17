@@ -20,7 +20,7 @@ of the sensors based on `Sensor`.
 ## Syntax
 
 ```js
-Sensor.start()
+start()
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

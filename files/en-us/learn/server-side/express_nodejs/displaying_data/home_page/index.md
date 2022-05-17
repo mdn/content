@@ -138,7 +138,7 @@ At this point we should have created everything needed to display the index page
 
 ![Home page - Express Local Library site](locallibary_express_home.png)
 
-> **Note:** You won't be able to _use_ the sidebar links yet because the urls, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
+> **Note:** You won't be able to _use_ the sidebar links yet because the URLs, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
 
 ## Next steps
 

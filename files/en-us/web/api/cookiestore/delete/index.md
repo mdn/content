@@ -16,8 +16,8 @@ The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a 
 ## Syntax
 
 ```js
-var promise = cookieStore.delete(name);
-var promise = cookieStore.delete(options);
+delete(name)
+delete(options)
 ```
 
 ### Parameters
@@ -25,17 +25,17 @@ var promise = cookieStore.delete(options);
 This method requires one of the following:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of a cookie.
-- options
+  - : A string with the name of a cookie.
+- `options`
 
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
-    - `url`{{Optional_Inline}}
-      - : A {{domxref("USVString")}} with the url of a cookie.
-    - `path`{{Optional_Inline}}
-      - : A {{domxref("USVString")}} containing a path.
+      - : A string with the name of a cookie.
+    - `url` {{Optional_Inline}}
+      - : A string with the URL of a cookie.
+    - `path` {{Optional_Inline}}
+      - : A string containing a path.
 
 > **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 

@@ -89,7 +89,7 @@ Let's quickly play with some numbers to reacquaint ourselves with the basic synt
 
 The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object, an instance of which represents all standard numbers you'll use in your JavaScript, has a number of useful methods available on it for you to manipulate numbers. We don't cover these in detail in this article because we wanted to keep it as a simple introduction and only cover the real basic essentials for now; however, once you've read through this module a couple of times it is worth going to the object reference pages and learning more about what's available.
 
-For example, to round your number to a fixed number of decimal places, use the [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method. Type the following lines into your browser's [console](/en-US/docs/Tools/Web_Console):
+For example, to round your number to a fixed number of decimal places, use the [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method. Type the following lines into your browser's [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html):
 
 ```js
 const lotsOfDecimal = 1.766584958675746364;
@@ -118,8 +118,11 @@ typeof myNumber;
 To fix the calculation, you can do this:
 
 ```js
+let myNumber = '74';
 Number(myNumber) + 3;
 ```
+
+The result is then 77, as initially expected.
 
 ## Arithmetic operators
 
@@ -354,7 +357,7 @@ But there are some more complex types, which provide useful shortcuts to keep yo
 
 Try typing some of the above examples into your console, to get an idea of how they work. In each case, see if you can guess what the value is before you type in the second line.
 
-Note that you can quite happily use other variables on the right hand side of each expression, for example:
+Note that you can quite happily use other variables on the right-hand side of each expression, for example:
 
 ```js
 let x = 3; // x contains the value 3

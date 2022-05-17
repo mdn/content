@@ -19,18 +19,12 @@ the port attached to the context that originated the channel.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-channel.port1;
-```
-
-### Value
+## Value
 
 A {{domxref("MessagePort")}} object, the first port of the channel, that is the port
 attached to the context that originated the channel.
 
-## Example
+## Examples
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. When the

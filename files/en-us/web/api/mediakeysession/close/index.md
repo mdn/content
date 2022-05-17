@@ -21,8 +21,12 @@ associated with this object and close it. Then, it returns a {{jsxref('Promise')
 ## Syntax
 
 ```js
-mediaKeySession.close().then(function() { /* ... */ });
+close()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

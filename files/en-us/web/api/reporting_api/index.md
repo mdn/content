@@ -131,7 +131,7 @@ Support is at an early stage right now. Firefox supports the JavaScript API and 
 - JavaScript API: `dom.reporting.enabled` (enabled in nightly only)
 - HTTP header: `dom.reporting.header.enabled`
 
-Chrome is also working on an implementation: [information about Chrome implementation](https://developers.google.com/web/updates/2018/09/reportingapi).
+Chrome is also working on an implementation: [information about Chrome implementation](https://web.dev/reporting-api/).
 
 ## See also
 

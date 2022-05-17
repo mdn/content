@@ -15,14 +15,11 @@ The **`parentRule`** property of the {{domxref("CSSRule")}}
 interface returns the containing rule of the current rule if this exists, or otherwise
 returns null.
 
-## Values
+## Value
 
-- `parentRule`
-  - : A {{domxref("CSSRule")}} which is the type of the containing rules. If the current
-    rule is inside a media query, this would return {{domxref("CSSMediaRule")}}. Otherwise
-    it returns null.
+A {{domxref("CSSRule")}} which is the type of the containing rules. If the current rule is inside a media query, this would return {{domxref("CSSMediaRule")}}. Otherwise it returns null.
 
-## Example
+## Examples
 
 ```css
 @media (min-width: 500px) {

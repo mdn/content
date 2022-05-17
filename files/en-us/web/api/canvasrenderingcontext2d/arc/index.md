@@ -19,7 +19,8 @@ method of the [Canvas 2D API
 ## Syntax
 
 ```js
-void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
+arc(x, y, radius, startAngle, endAngle)
+arc(x, y, radius, startAngle, endAngle, counterclockwise)
 ```
 
 The `arc()` method creates a circular arc centered at `(x, y)`
@@ -43,6 +44,10 @@ at `endAngle`, and travels in the direction given by
   - : An optional boolean value. If `true`, draws the arc
     counter-clockwise between the start and end angles. The default is `false`
     (clockwise).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

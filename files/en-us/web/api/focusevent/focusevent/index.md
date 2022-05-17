@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.FocusEvent.FocusEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`FocusEvent()`** constructor returns a newly created
 {{domxref("FocusEvent")}} object with an optional {{domxref("EventTarget")}}. When the
@@ -19,21 +19,21 @@ set to the other target.
 ## Syntax
 
 ```js
-new FocusEvent(typeArg);
-new FocusEvent(typeArg, focusEventInit);
+new FocusEvent(typeArg)
+new FocusEvent(typeArg, focusEventInit)
 ```
 
-### Properties
+### Parameters
 
 _The `FocusEvent()` constructor also inherits arguments from
 {{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event",
     "Event()")}}._
 
 - `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
+  - : A string representing the name of the event.
 - `focusEventInit` {{optional_inline}}
 
-  - : Is a `FocusEventInit` dictionary, having the following fields:
+  - : A `FocusEventInit` dictionary, having the following fields:
 
     - `"relatedTarget"`, optional and defaulting to `null`, is
       an {{domxref("EventTarget")}} representing the secondary target of a

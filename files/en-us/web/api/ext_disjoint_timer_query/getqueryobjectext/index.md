@@ -18,7 +18,7 @@ query object.
 ## Syntax
 
 ```js
-any ext.getQueryObjectEXT(query, pname);
+getQueryObjectEXT(query, pname)
 ```
 
 ### Parameters

@@ -23,22 +23,58 @@ uniform variables.
 ## Syntax
 
 ```js
-void gl.uniform1ui(location, v0);
-void gl.uniform2ui(location, v0, v1);
-void gl.uniform3ui(location, v0, v1, v2);
-void gl.uniform4ui(location, v0, v1, v2, v3);
-void gl.uniform1fv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform2fv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform3fv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform4fv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform1iv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform2iv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform3iv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform4iv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform1uiv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform2uiv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform3uiv(location, data, optional srcOffset, optional srcLength);
-void gl.uniform4uiv(location, data, optional srcOffset, optional srcLength);
+uniform1ui(location, v0)
+uniform2ui(location, v0, v1)
+uniform3ui(location, v0, v1, v2)
+uniform4ui(location, v0, v1, v2, v3)
+
+uniform1fv(location, data)
+uniform1fv(location, data, srcOffset)
+uniform1fv(location, data, srcOffset, srcLength)
+
+uniform2fv(location, data)
+uniform2fv(location, data, srcOffset)
+uniform2fv(location, data, srcOffset, srcLength)
+
+uniform3fv(location, data)
+uniform3fv(location, data, srcOffset)
+uniform3fv(location, data, srcOffset, srcLength)
+
+uniform4fv(location, data)
+uniform4fv(location, data, srcOffset)
+uniform4fv(location, data, srcOffset, srcLength)
+
+uniform1iv(location, data)
+uniform1iv(location, data, srcOffset)
+uniform1iv(location, data, srcOffset, srcLength)
+
+uniform2iv(location, data)
+uniform2iv(location, data, srcOffset)
+uniform2iv(location, data, srcOffset, srcLength)
+
+uniform3iv(location, data)
+uniform3iv(location, data, srcOffset)
+uniform3iv(location, data, srcOffset, srcLength)
+
+uniform4iv(location, data)
+uniform4iv(location, data, srcOffset)
+uniform4iv(location, data, srcOffset, srcLength)
+
+uniform1uiv(location, data)
+uniform1uiv(location, data, srcOffset)
+uniform1uiv(location, data, srcOffset, srcLength)
+
+uniform2uiv(location, data)
+uniform2uiv(location, data, srcOffset)
+uniform2uiv(location, data, srcOffset, srcLength)
+
+uniform3uiv(location, data)
+uniform3uiv(location, data, srcOffset)
+uniform3uiv(location, data, srcOffset, srcLength)
+
+uniform4uiv(location, data)
+uniform4uiv(location, data, srcOffset)
+uniform4uiv(location, data, srcOffset, srcLength)
 ```
 
 ### Parameters
@@ -58,7 +94,7 @@ void gl.uniform4uiv(location, data, optional srcOffset, optional srcLength);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

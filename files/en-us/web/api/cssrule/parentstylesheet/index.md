@@ -15,12 +15,11 @@ The **`parentStyleSheet`** property of the
 {{domxref("CSSRule")}} interface returns the {{domxref("StyleSheet")}} object in which
 the current rule is defined.
 
-## Values
+## Value
 
-- `stylesheet`
-  - : A {{domxref("StyleSheet")}} object.
+A {{domxref("StyleSheet")}} object.
 
-## Example
+## Examples
 
 ```js
 let myRules = document.styleSheets[0].cssRules;

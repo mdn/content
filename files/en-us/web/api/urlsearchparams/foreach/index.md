@@ -20,7 +20,7 @@ in this object via a callback function.
 ## Syntax
 
 ```js
-searchParams.forEach(callback);
+forEach(callback)
 ```
 
 ### Parameters

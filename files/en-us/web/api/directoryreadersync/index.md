@@ -6,25 +6,20 @@ tags:
   - Reference
 browser-compat: api.DirectoryReaderSync
 ---
-{{APIRef("File System API")}}{{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
 
-The `DirectoryReaderSync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) lets you read the entries in a directory.
+The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
-> **Note:** This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.
-
-## About this document
-
-This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
-
-This specification is pretty much abandoned, having failed to reach any substantial traction.
+> **Warning:** This interface is deprecated and is no more on the standard track.
+> _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
 
-Before you call the only method in this interface, [`readEntries()`](</#readEntries()> "#readEntries()"), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with [`resolveLocalFileSystemURL()`](</en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()>). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
+Before you call the only method in this interface, [`readEntries()`](</#readEntries()> "#readEntries()"), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
 #### Example
 
-In the following code snippet from [HTML5Rocks](http://www.html5rocks.com/en/tutorials/file/filesystem/), we create Web Workers and pass data from it to the main app.
+In the following code snippet from [HTML5Rocks](https://web.dev/read-files/), we create Web Workers and pass data from it to the main app.
 
 ```js
 // Taking care of the browser-specific prefixes.
@@ -101,11 +96,9 @@ self.onmessage = function(e) {
   <tbody>
     <tr>
       <td>
-        <code
-          >EntrySync
-          <a href="#createreader" title="#readEntries">readEntries</a> () raises
-          (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code
-        >
+        <code>
+          EntrySync <a href="#createreader" title="#readEntries">readEntries</a> ();
+        </code>
       </td>
     </tr>
   </tbody>
@@ -118,8 +111,7 @@ self.onmessage = function(e) {
 Returns a lost of entries from a specific directory. Call this method until an empty array is returned.
 
 ```
-EntrySync readEntries (
-) raises (FileException);
+EntrySync readEntries ();
 ```
 
 ##### Returns
@@ -130,7 +122,7 @@ None
 
 ##### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
 
 | Exception           | Description                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------- |
@@ -138,14 +130,15 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 | `INVALID_STATE_ERR` | The directory has been modified since the first call to readEntries was processed. |
 | `SECURITY_ERR`      | The browser determined that it was not safe to look up the metadata.               |
 
+## Specifications
+
+This feature is not part of any specification anymore. It is no longer on track to become a standard.
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
-
-Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

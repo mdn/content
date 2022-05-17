@@ -70,7 +70,7 @@ let foo;
 let someDummyText = foo || 'Hello!';
 ```
 
-However, due to `||` being a boolean logical operator, the left hand-side
+However, due to `||` being a boolean logical operator, the left-hand-side
 operand was coerced to a boolean for the evaluation and any _falsy_ value
 (`0`, `''`, `NaN`, `null`,
 `undefined`) was not returned. This behavior may cause unexpected

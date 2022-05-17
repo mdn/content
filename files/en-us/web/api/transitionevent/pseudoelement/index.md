@@ -15,15 +15,13 @@ browser-compat: api.TransitionEvent.pseudoElement
 {{ apiref("CSSOM") }} {{SeeCompatTable}}
 
 The **`TransitionEvent.pseudoElement`** read-only property is a
-{{domxref("DOMString")}}, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
+string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
 If the transition doesn't run on a pseudo-element but on the element, an empty string:
 ` ''``. `
 
-## Syntax
+## Value
 
-```js
-name = TransitionEvent.pseudoElement
-```
+A string.
 
 ## Specifications
 

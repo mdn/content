@@ -21,14 +21,12 @@ object yourself.
 ## Syntax
 
 ```js
-paymentRequestEvent.respondWith(
-  // Promise that resolves with a PaymentResponse.
-)
+respondWith(promise)
 ```
 
 ### Parameters
 
-- promise
+- `promise`
   - : A {{jsxref('Promise')}} that resolves with a {{domxref("PaymentResponse")}} object.
 
 ### Return value

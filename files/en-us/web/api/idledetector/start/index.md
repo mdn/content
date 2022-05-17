@@ -21,18 +21,20 @@ the idle detector.
 ## Syntax
 
 ```js
-IdleDetector.start();
-IdleDetector.start(options);
+start()
+start(options)
 ```
 
 ### Parameters
 
 - `options`{{optional_inline}}
   - : An object with the following properties:
-    - `threshold`: The minimum number of idle milliseconds before reporting should begin.
-    - `signal`: A reference to an {{domxref('AbortSignal')}} instance allowing you to abort idle detection.
+    - `threshold`
+      - : The minimum number of idle milliseconds before reporting should begin.
+    - `signal`
+      - : A reference to an {{domxref('AbortSignal')}} instance allowing you to abort idle detection.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}}.
 

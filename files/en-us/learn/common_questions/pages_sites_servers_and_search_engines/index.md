@@ -101,7 +101,7 @@ Don't confuse _websites_ and _web servers_. For example, if you hear someone say
 
 Search engines are a common source of confusion on the web. A search engine is a special kind of website that helps users find web pages from _other_ websites.
 
-There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized about certain topics. Use whichever you prefer.
+There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized about certain topics. Use whichever you prefer.
 
 Many beginners on the web confuse search engines and browsers. Let's make it clear: A **_browser_** is a piece of software that retrieves and displays web pages; a **_search engine_** is a website that helps people find web pages from other websites. The confusion arises because, the first time someone launches a browser, the browser displays a search engine's homepage. This makes sense, because, obviously, the first thing you want to do with a browser is to find a web page to display. Don't confuse the infrastructure (e.g., the browser) with the service (e.g., the search engine). The distinction will help you quite a bit, but even some professionals speak loosely, so don't feel anxious about it.
 

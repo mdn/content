@@ -1,6 +1,6 @@
 ---
 title: Operable
-slug: Web/Accessibility/Understanding_WCAG/Operable 
+slug: Web/Accessibility/Understanding_WCAG/Operable
 tags:
   - Accessibility
   - Focus

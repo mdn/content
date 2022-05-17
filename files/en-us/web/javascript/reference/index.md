@@ -131,6 +131,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
 - {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
 - {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
 
 ### WebAssembly
 

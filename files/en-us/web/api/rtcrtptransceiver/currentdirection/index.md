@@ -25,15 +25,9 @@ Its value is one of the strings defined in the table below.
 You can examine and set the transceiver's preferred directionality using
 {{domxref("RTCRtpTransceiver.direction", "direction")}} property.
 
-## Syntax
+## Value
 
-```js
-var direction = RTCRtpTransceiver.currentDirection
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the following values.
+A string whose value is one of the strings which are a member of the following values.
 
 <table class="standard-table">
   <thead>

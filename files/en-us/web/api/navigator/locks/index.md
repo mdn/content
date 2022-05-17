@@ -18,13 +18,7 @@ the {{domxref("Navigator")}} interface returns a {{domxref("LockManager")}} obje
 which provides methods for requesting a new {{domxref('Lock')}} object and querying
 for an existing `Lock` object.
 
-## Syntax
-
-```js
-var lockManager = navigator.locks
-```
-
-### Value
+## Value
 
 A {{domxref("LockManager")}} object.
 

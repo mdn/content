@@ -15,7 +15,7 @@ The **`text`** property of the {{domxref("VTTCue")}} interface represents the te
 
 ## Value
 
-A {{domxref("DOMString")}} containing the raw text of the cue.
+A string containing the raw text of the cue.
 
 ## Examples
 

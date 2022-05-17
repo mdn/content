@@ -24,18 +24,11 @@ or using a style rule.
 
 Also available on DOM [`tbody`](/en-US/docs/Web/API/HTMLTableElement/tBodies), [`row`](/en-US/docs/Web/API/HTMLTableElement/rows) and [`cell`](/en-US/docs/DOM/table.cells) objects.
 
-## Syntax
+## Value
 
-```js
-color = table.bgColor
-table.bgColor = color
-```
+A string representing a color value.
 
-### Parameters
-
-- `color` is a string representing a color value.
-
-## Example
+## Examples
 
 ```js
 // Set table background color to lightblue

@@ -15,14 +15,18 @@ Writes a string of text followed by a newline character to a document.
 ## Syntax
 
 ```js
-document.writeln(line);
+writeln(line)
 ```
 
 ### Parameters
 
 - `line` is string containing a line of text.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 document.writeln("<p>enter password:</p>");

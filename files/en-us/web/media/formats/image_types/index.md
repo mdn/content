@@ -200,7 +200,7 @@ APNG is a file format first introduced by Mozilla which extends the [PNG](#png_p
 Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of {{interwiki("wikipedia", "color depth", "color depths")}}, whereas animated GIF supports only 8-bit {{interwiki("wikipedia", "indexed color")}}.
 
 APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity {{interwiki("wikipedia", "throbber", "throbbers")}}, and other animated sequences.
-For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/stickers/) for Apple's iMessage application (and the Messages application on iOS).
+For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/imessage/) for Apple's iMessage application (and the Messages application on iOS).
 They're also commonly used for the animated portions of web browsers' user interfaces.
 
 <table class="standard-table">
@@ -378,7 +378,7 @@ As support is not yet comprehensive (and has little historical depth) you should
         <ul>
           <li>Color modes: YUV444, YUV422, YUV420</li>
           <li>Greyscale support: YUV400</li>
-          <li>Bits: 8/10/12 bit</li>
+          <li>Bits: 8/10/12-bit</li>
           <li>Alpha support</li>
           <li>ICC profile support</li>
           <li>

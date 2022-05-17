@@ -40,7 +40,7 @@ can still change the value of the parameter by assigning a new value to its
 An {{domxref("AudioParam")}} whose `value` is the Y coordinate of the audio
 source's position, in 3D Cartesian coordinates.
 
-## Example
+## Examples
 
 The following example starts an oscillator and pans it above the listener after 1
 second, below the listener after 2 seconds, and back to the center after 3 seconds. Note
@@ -76,5 +76,5 @@ osc.start(0);
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web
-  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

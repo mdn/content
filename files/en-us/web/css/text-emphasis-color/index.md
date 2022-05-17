@@ -32,6 +32,7 @@ text-emphasis-color: transparent;
 text-emphasis-color: inherit;
 text-emphasis-color: initial;
 text-emphasis-color: revert;
+text-emphasis-color: revert-layer;
 text-emphasis-color: unset;
 ```
 
@@ -58,9 +59,7 @@ text-emphasis-color: unset;
 
 ```css
 em {
-  -webkit-text-emphasis-color: green;
   text-emphasis-color: green;
-  -webkit-text-emphasis-style: "*";
   text-emphasis-style: "*";
 }
 ```
@@ -90,4 +89,4 @@ em {
 - The {{cssxref("&lt;color&gt;")}} data type
 - The other emphasis mark related properties: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, and {{cssxref("text-emphasis-position")}}.
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

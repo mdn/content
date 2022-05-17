@@ -10,7 +10,7 @@ tags:
   - initCompositionEvent
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
-{{deprecated_header}}{{APIRef("DOM Events")}}
+{{deprecated_header}}{{APIRef("UI Events")}}
 
 The **`initCompositionEvent()`**
 method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a
@@ -22,13 +22,13 @@ method of the {{domxref("CompositionEvent")}} interface initializes the attribut
 ## Syntax
 
 ```js
- compositionEventInstance.initCompositionEvent(typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg)
+initCompositionEvent(typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg)
 ```
 
 ### Parameters
 
 - `typeArg`
-  - : A {{domxref("DOMString")}} representing the type of composition event; this will be
+  - : A string representing the type of composition event; this will be
     one of `compositionstart`, `compositionupdate`, or
     `compositionend`.
 - `canBubbleArg`
@@ -38,10 +38,10 @@ method of the {{domxref("CompositionEvent")}} interface initializes the attribut
 - `viewArg`
   - : The {{domxref("Window")}} object from which the event was generated.
 - `dataArg`
-  - : A {{domxref("DOMString")}} representing the value of the `data`
+  - : A string representing the value of the `data`
     attribute.
 - `localeArg`
-  - : A {{domxref("DOMString")}} representing the value of the `locale`
+  - : A string representing the value of the `locale`
     attribute.
 
 ### Return value

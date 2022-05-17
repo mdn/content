@@ -20,8 +20,16 @@ element, and then returns `false`.
 ## Syntax
 
 ```js
-var result = selectElt.checkValidity();
+checkValidity()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

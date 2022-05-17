@@ -21,12 +21,12 @@ members are value and the units.
 ## Syntax
 
 ```js
-var cssNumericValue = CSSNumericValue.parse(cssText);
+parse(cssText)
 ```
 
 ### Parameters
 
-- cssText
+- `cssText`
   - : a string containing numeric and unit parts.
 
 ### Return value
@@ -35,7 +35,7 @@ A {{domxref('CSSNumericValue')}}.
 
 ### Exceptions
 
-- SyntaxError
+- `SyntaxError` {{domxref("DOMException")}}
   - : TBD
 
 ## Examples

@@ -46,7 +46,7 @@ been established, this value is `null`.
 > description is used by the ICE agent to determine whether or not the remote peer
 > supports trickled ICE candidates.
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();

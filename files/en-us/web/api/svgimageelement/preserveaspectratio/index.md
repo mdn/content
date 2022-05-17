@@ -21,13 +21,7 @@ property of the {{domxref("SVGImageElement")}} interface returns an
 {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("image")}}
 element.
 
-## Syntax
-
-```js
-var svgAnimatedPreserveAspectRatio = svgImageElement.preserveAspectRatio;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedPreserveAspectRatio")}}.
 

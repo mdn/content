@@ -47,6 +47,7 @@ background: no-repeat center/80% url("../img/image.png");
 background: inherit;
 background: initial;
 background: revert;
+background: revert-layer;
 background: unset;
 ```
 

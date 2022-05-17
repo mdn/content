@@ -21,17 +21,11 @@ is not intercepted by a Service Worker the property will always return 0.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.workerStart;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}}.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

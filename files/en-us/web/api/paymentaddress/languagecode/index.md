@@ -37,7 +37,7 @@ var paymentLanguageCode = PaymentAddress.languageCode;
 
 ### Value
 
-A {{domxref("DOMString")}} providing the {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}
+A string providing the {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}
 format language code indicating
 the language the address was written in, such as `"en-US"`,
 `"pt-BR"`, or `"ja-JP"`.

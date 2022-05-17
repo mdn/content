@@ -18,7 +18,7 @@ specified vertex attribute.
 ## Syntax
 
 ```js
-GLintptr gl.getVertexAttribOffset(index, pname);
+getVertexAttribOffset(index, pname)
 ```
 
 ### Parameters

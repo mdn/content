@@ -36,7 +36,7 @@ If the {{domxref("RTCIceCandidate.protocol","protocol")}} is "tcp", `tcpType` ha
 
 `tcpType` is `null` for {{Glossary("UDP")}} candidates.
 
-## Example
+## Examples
 
 In this example, the candidate's {{domxref("RTCIceCandidate.protocol", "protocol")}}
 and `tcpType` are used to adjust the user interface for simultaneous-open TCP candidates.

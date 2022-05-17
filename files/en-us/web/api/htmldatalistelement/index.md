@@ -19,7 +19,7 @@ The **`HTMLDataListElement`** interface provides special properties (beyond the 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}_
 
 - {{domxref("HTMLDataListElement.options")}} {{readonlyInline}}
-  - : Is a {{domxref("HTMLCollection")}} representing a collection of the contained option elements.
+  - : A {{domxref("HTMLCollection")}} representing a collection of the contained option elements.
 
 ## Methods
 

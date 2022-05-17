@@ -22,7 +22,7 @@ That is, if the animation is playing forward, it sets the playback time to the l
 ## Syntax
 
 ```js
-Animation.finish();
+finish()
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -18,7 +18,7 @@ The **`insertAdjacentText()`** method of the {{domxref("Element")}} interface, g
 ## Syntax
 
 ```js
-element.insertAdjacentText(where, data);
+insertAdjacentText(where, data)
 ```
 
 ### Parameters
@@ -45,9 +45,8 @@ Void.
 
 ### Exceptions
 
-| Exception     | Explanation                                         |
-| ------------- | --------------------------------------------------- |
-| `SyntaxError` | The `position` specified is not a recognized value. |
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if `where` is not a recognized value.
 
 ### Visualization of position names
 
@@ -65,7 +64,7 @@ Void.
 > `afterend` positions work only if the node is in a tree and has an element
 > parent.
 
-## Example
+## Examples
 
 ```js
 beforeBtn.addEventListener('click', function() {

@@ -29,7 +29,7 @@ it has already been sent. When a request is aborted, its
 ## Syntax
 
 ```js
-XMLHttpRequest.abort()
+abort()
 ```
 
 ### Parameters
@@ -38,9 +38,9 @@ None.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example begins loading content from the MDN home page, then due to some condition,
 aborts the transfer by calling `abort()`.
