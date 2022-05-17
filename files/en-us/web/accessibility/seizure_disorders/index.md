@@ -587,7 +587,7 @@ The Web Animations model is intended to provide the features necessary for expre
 
 - [Color Tutorial: describing color](https://colortutorial.design/) Tom Jewett
 - [Formula to Determine Brightness of RGB color](https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color) Stack Exchange Discussion Thread
-- [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/?error=cookies_not_supported&code=28a4ad58-1ea1-44cb-a4d0-be00d8af8f1f) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
+- [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 
 #### Discussions
 
