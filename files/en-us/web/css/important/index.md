@@ -36,7 +36,7 @@ When a declaration is important, the order of precedence is reversed. The user-a
 
 Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed with important declarations. It also ensures malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security. 
 
-Does anything have precedence over important declarations? Yes. [Transitions](/en-US/docs/Web/CSS/CSS_Transitions). CSS transitions are a way to control the speed at which a property changes from one value to another.  A transitioning property, while transitioning from one value to another, will not match a specific important declaration. 
+Does anything have precedence over important declarations? Yes. [Transitions](/en-US/docs/Web/CSS/CSS_Transitions). CSS transitions are a way to control the speed at which the property changes from one value to another.  A transitioning property, while transitioning from one value to another, will not match a specific important declaration. 
 
 ```css
 a {
@@ -54,7 +54,7 @@ In this example, the color and background color will transition to the hovered s
 
 ### Cascade layers
 
-Within each of the three origins - author, user, and user-agent - normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. The order of precedence is reversed for important declarations, with important declarations in the first declared layer taking precedence over important declarations in the last declared layer, with all the important declarations having precedence over important declarations made outside of any layer.
+Within each of the three origins - author, user, and user-agent - normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. The order of precedence is reversed for important declarations, with important declarations in the first declared layer taking precedence over important declarations in the last declared layer. All the important declarations have precedence over important declarations made outside of any layer.
 
 ### Inline styles
 
