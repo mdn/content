@@ -561,12 +561,13 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `step`
 
-  - : Valid for the numeric input types, including `number`, date/time input types, and `range`, the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
+  - : Valid for the numeric input types, including `number`, 
+  input types, and `range`, the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
 
     If not explicitly included:
 
     - `step` defaults to 1 for `number` and `range`.
-    - For the date/time input types, `step` is expressed in seconds, with the **default step being 60 seconds**. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in other algorithms).
+    - Each date/time input type has a default `step` value appropriate for the type; see the individual input pages: [`date`](/en-US/docs/Web/HTML/Element/input/date#step), [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local#step), [`month`](/en-US/docs/Web/HTML/Element/input/month#step), [`time`](/en-US/docs/Web/HTML/Element/input/time#step), and [`week`](/en-US/docs/Web/HTML/Element/input/week#step).
 
     The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
