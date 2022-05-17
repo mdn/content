@@ -56,11 +56,11 @@ inappropriate, than it is to follow every guideline to the letter.
    - You have the right to close a pull request if it is too complex and/or
      contains multiple unrelated changes and ask the submitter to submit their
     changes in smaller atomic chunks.
-1. When reviewing a pull request, use the [GitHub review tools](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews).
+1. When reviewing a pull request, use the [GitHub review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
    Use "Request changes" when submitting a review that will require the
    submitter to do some more work, or "Approve" if the submission is ready to
    add and you want to merge it. [Reviewing proposed changes in a pull
-   request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+   request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)
    is also useful if you want more information.
 1. Be polite and constructive at all times when writing review comments, or
    otherwise interacting with the submitter and other community members. We are
@@ -75,7 +75,7 @@ inappropriate, than it is to follow every guideline to the letter.
    issue, you might want to just fix the issue yourself rather than ask the
    submitter to change it. You can do this provided the PR has been set up
    to allow changes (see [Allowing changes to a pull request branch created
-   from a fork](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork)
+   from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)
    for more details). If you are not sure how to make changes to someone
    else's pull request, [@vkWeb](https://github.com/vkWeb/) wrote some nice
    simple instructions on how to do this on the command line; see
@@ -97,14 +97,14 @@ inappropriate, than it is to follow every guideline to the letter.
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
    if they need a review of the content, and where the rationale behind the
-   change is explained. Ping our [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
+   change is explained. Ping our [@core-yari-content](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fcore-yari-content)
    team to ask for help if you are still not sure, or if you think the
    content is suspicious.
 
 Note: You may encounter merge conflicts as you review pull requests, if a
 another pull request that touches some of the same files got merged before
 the one you are reviewing.
-[Addressing merge conflicts](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/addressing-merge-conflicts)
+[Addressing merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts)
 is a useful resource to help you. Feel free also to ask your team(s) for help
 if you need it.
 
@@ -135,7 +135,7 @@ to this project. If you would like to help with MDN content reviews,
 [get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#Step_4_Ask_for_help).
 
 Note that changes to any content areas not explicitly listed below will be
-handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
+handled by the [@core-yari-content](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fcore-yari-content)
 team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
 
 - [Web accessibility content](https://github.com/mdn/content/tree/main/files/en-us/web/accessibility):
@@ -147,14 +147,14 @@ team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
 - [Server-side learning content](https://github.com/mdn/content/tree/main/files/en-us/learn/server-side):
   - [@hamishwillee](https://github.com/hamishwillee)
 - [MDN meta docs](https://github.com/mdn/content/tree/main/files/en-us/mdn)
-  — the [@yari-content-mdn](https://github.com/orgs/mdn/teams/yari-content-mdn)
+  — the [@yari-content-mdn](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-mdn)
   team, which consists of:
   - [@Rumyra](https://github.com/Rumyra/)
   - [@Elchi3](https://github.com/Elchi3)
 - [Firefox Developer Tools content](https://github.com/mdn/content/tree/main/files/en-us/tools):
   - [@hamishwillee](https://github.com/hamishwillee)
 - [Mozilla Add-ons reference content](https://github.com/mdn/content/tree/main/files/en-us/mozilla/add-ons)
-  — the [@yari-content-mozilla-add-ons](https://github.com/orgs/mdn/teams/yari-content-mozilla-add-ons)
+  — the [@yari-content-mozilla-add-ons](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-mozilla-add-ons)
   team, which consists of:
   - [@caitmuenster](https://github.com/caitmuenster)
   - [@rpl](https://github.com/rpl)
@@ -162,38 +162,38 @@ team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
   - [@zombie](https://github.com/zombie)
   - [@mixedpuppy](https://github.com/mixedpuppy)
 - [HTTP reference content](https://github.com/mdn/content/tree/main/files/en-us/web/http)
-  — the [@yari-content-http](https://github.com/orgs/mdn/teams/yari-content-http)
+  — the [@yari-content-http](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-http)
   team, which consists of:
   - [@hamishwillee](https://github.com/hamishwillee)
   - [@Elchi3](https://github.com/Elchi3)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [CSS reference content](https://github.com/mdn/content/tree/main/files/en-us/web/css)
-  — the [@yari-content-css](https://github.com/orgs/mdn/teams/yari-content-css)
+  — the [@yari-content-css](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-css)
   team, which consists of:
   - [@rachelandrew](https://github.com/rachelandrew)
   - [@ericwbailey](https://github.com/ericwbailey)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [HTML reference content](https://github.com/mdn/content/tree/main/files/en-us/web/html)
-  — the [@yari-content-html](https://github.com/orgs/mdn/teams/yari-content-html)
+  — the [@yari-content-html](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-html)
   team, which consists of:
   - [@rachelandrew](https://github.com/rachelandrew)
   - [@ericwbailey](https://github.com/ericwbailey)
   - [@mirunacurtean](https://github.com/mirunacurtean)
 - [JavaScript reference content](https://github.com/mdn/content/tree/main/files/en-us/web/javascript)
-  — the [@yari-content-javascript](https://github.com/orgs/mdn/teams/yari-content-javascript)
+  — the [@yari-content-javascript](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-javascript)
   team, which consists of:
   - [@Rumyra](https://github.com/Rumyra)
   - [@sideshowbarker](https://github.com/sideshowbarker)
   - [@Elchi3](https://github.com/Elchi3)
 - [Web API reference content](https://github.com/mdn/content/tree/main/files/en-us/web/api)
-  — the [@yari-content-web-api](https://github.com/orgs/mdn/teams/yari-content-web-api)
+  — the [@yari-content-web-api](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-web-api)
   team, which consists of:
   - [@Rumyra](https://github.com/Rumyra)
   - [@sideshowbarker](https://github.com/sideshowbarker)
   - [@Elchi3](https://github.com/Elchi3)
   - [@jpmedley](https://github.com/jpmedley)
 - [SVG reference content](https://github.com/mdn/content/tree/main/files/en-us/web/svg)
-  — the [@yari-content-svg](https://github.com/orgs/mdn/teams/yari-content-svg)
+  — the [@yari-content-svg](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fmdn%2Fteams%2Fyari-content-svg)
   team, which consists of:
   - [@Ryuno-Ki](https://github.com/Ryuno-Ki)
 
