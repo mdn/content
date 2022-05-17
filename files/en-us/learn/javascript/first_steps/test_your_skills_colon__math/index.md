@@ -29,7 +29,7 @@ So, try updating the live code below to recreate the finished example, following
 3. Subtract the fourth variable from the third and store the result in another variable.
 4. Multiply the results from the last two steps together, storing the result in a variable called `finalResult`. The product should be 48. If it isn't, you'll have to adjust some of the initial input values.
 5. Finally, write a calculation that checks whether `finalResult` is an even number. Store the result in a variable called `evenOddResult`.
-
+Will gonna have array for each number, the info wasn't the enough to close numbers
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
 > **Callout:**
