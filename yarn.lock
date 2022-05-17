@@ -62,26 +62,26 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^4.1.20":
-  version "4.1.20"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.20.tgz#771c2a987c8d2cb7f454118d34cda5922b97ec1c"
-  integrity sha512-9VOi5TU0xE/XhShmGQpNAa3PduouSxDrEK0p7mVZe4ndhH8xV87fYb3vyYyL8i4wyRT7fHG8vyecVTRMLy04Mg==
+"@mdn/browser-compat-data@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.2.0.tgz#69a1bfa08a297c1fcc2b7621c09355be67435bc5"
+  integrity sha512-gsXiRMdYubxmsojDo+xnFrL//aTL2PHy1p4hxDbaKfxcvb9a6wBLttRMgzLPDdEZob9T7BgODHY/HdoMZ8gdXQ==
 
-"@mdn/yari@0.15.53":
-  version "0.15.53"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.15.53.tgz#323350b53ef531e83093fef080f9b5e9b42177fe"
-  integrity sha512-HgTDZ/ZNG8U2Qzfi2s/WPwte2n6VJk2UaRJpX/T281q5aCMn2jqiFudLv+OtcL9o/FpiXWJeOrilYRWIgOWTKQ==
+"@mdn/yari@0.15.55":
+  version "0.15.55"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.15.55.tgz#dee1facc4cebb97315427978beb9dd30f26ec2ff"
+  integrity sha512-n8bOpZFRYT/JIyAYH4BFbQXmtQ5DQMPYsSiTBrhWCNlf15m2IgwDDSVBWuP5JRJ2SPTMb8MaqrKtfa4YaOATVQ==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^4.1.20"
+    "@mdn/browser-compat-data" "^4.2.0"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "^1.5.0"
     browser-specs "^3.10.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    cli-progress "^3.11.0"
+    cli-progress "^3.11.1"
     compression "^1.7.4"
     cookie "^0.5.0"
     cookie-parser "^1.4.6"
@@ -829,10 +829,10 @@ cli-cursor@^3.1.0:
   dependencies:
     restore-cursor "^3.1.0"
 
-cli-progress@^3.11.0:
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/cli-progress/-/cli-progress-3.11.0.tgz#03651defd06182a5396ddc2a41da17c2f257ecdf"
-  integrity sha512-ug+V4/Qy3+0jX9XkWPV/AwHD98RxKXqDpL37vJBOxQhD90qQ3rDqDKoFpef9se91iTUuOXKlyg2HUyHBo5lHsQ==
+cli-progress@^3.11.1:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/cli-progress/-/cli-progress-3.11.1.tgz#02afb11be9a123f2a302931beb087eafe3a0d971"
+  integrity sha512-TTMA2LHrYaZeNMcgZGO10oYqj9hvd03pltNtVbu4ddeyDTHlYV7gWxsFiuvaQlgwMBFCv1TukcjiODWFlb16tQ==
   dependencies:
     string-width "^4.2.3"
 
