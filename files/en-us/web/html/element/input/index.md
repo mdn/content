@@ -561,7 +561,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `step`
 
-  - : Valid for the numeric input types, including `number`, 
+  - : Valid for the numeric input types, including `number`,  date/time 
   input types, and `range`, the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
 
     If not explicitly included:
