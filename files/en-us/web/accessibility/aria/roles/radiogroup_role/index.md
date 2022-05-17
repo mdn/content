@@ -10,7 +10,6 @@ spec-urls:
   - https://w3c.github.io/aria/#radiogroup
   - https://w3c.github.io/aria-practices/#radiobutton
 ---
-
 The `radiogroup` role is a group of `radio` buttons.
 
 ## Description

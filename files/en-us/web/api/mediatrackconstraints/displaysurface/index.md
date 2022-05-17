@@ -24,7 +24,7 @@ browser-compat: api.MediaTrackConstraints.displaySurface
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`displaySurface`** property is a
-[`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) describing the requested or mandatory constraints
+[`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints
 placed upon the value of the {{domxref("MediaTrackSettings.displaySurface",
     "displaySurface")}} constrainable property.
 
@@ -39,7 +39,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 
 ## Value
 
-A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) which specifies the type of display surface that's
+A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) which specifies the type of display surface that's
 being captured. This value _does not_ affect the list of display sources in the
 browser's user interface.
 

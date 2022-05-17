@@ -10,7 +10,6 @@ tags:
   - document structure role
 spec-urls: https://w3c.github.io/aria/#note
 ---
-
 A `note` role suggests a section whose content is parenthetic or ancillary to the main content.
 
 ## Description
@@ -44,7 +43,7 @@ If the above Wikipedia style entry for Madam C.J. Walker, the hilite box `note` 
 
 ## See Also
 
-- [Document structure roles](/en-US/docs/Web/Accessibility/ARIA/Roles#Document_structure_roles)
+- [Document structure roles](/en-US/docs/Web/Accessibility/ARIA/Roles#document_structure_roles)
 
 <section id="Quick_links">
 

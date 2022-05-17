@@ -30,7 +30,7 @@ A string.
 ## Examples
 
 Our [Using
-the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#Dealing_with_repeated_notifications) article has a good example of tag usage.
+the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#dealing_with_repeated_notifications) article has a good example of tag usage.
 
 ## Specifications
 

@@ -117,7 +117,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: no preference for the decoding mode. The browser decides what is best for the user.
 
-- {{htmlattrdef("fetchpriority")}}
+- {{htmlattrdef("fetchpriority")}} {{experimental_inline}}
 
   - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
 
@@ -136,7 +136,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.
 
-- {{htmlattrdef("loading")}} {{experimental_inline}}
+- {{htmlattrdef("loading")}}
 
   - : Indicates how the browser should load the image:
 

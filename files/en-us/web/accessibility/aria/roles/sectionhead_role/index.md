@@ -11,10 +11,9 @@ tags:
   - sectionhead role
 spec-urls: https://w3c.github.io/aria/#sectionhead
 ---
-
 The **`sectionhead` role**, an abstract role, is superclass role for labels or summaries of the topic of its related section.
 
-> **Note:**  The `sectionhead` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
+> **Note:**  The `sectionhead` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
