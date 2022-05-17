@@ -58,7 +58,7 @@ register(scriptURL, options)
 
         - `'classic'`
           - : The loaded service worker is in a standard script. This is the default.
-        - `module`
+        - `'module'`
           - : The loaded service worker is in an
             [ES module](/en-US/docs/Web/JavaScript/Guide/Modules)
             and the import statement is available on
