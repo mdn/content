@@ -27,7 +27,7 @@ _The `PerformanceTiming` interface doesn't inherit any properties._
 
 These properties each describe the time at which a particular point in the page loading process was reached. Some correspond to DOM events; others describe the time at which internal browser operations of interest took place.
 
-Each time is provided as a {{interwiki("wikipedia", "Unix_time", "Unix time")}} (`unsigned long long`) representing the moment, in milliseconds since the UNIX epoch.
+Each time is provided as a number representing the moment, in milliseconds since the UNIX epoch.
 
 These properties are listed in the order in which they occur during the navigation process.
 
