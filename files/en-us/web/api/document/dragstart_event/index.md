@@ -43,7 +43,7 @@ The `dragstart` event is fired when the user starts dragging an element or text 
 
 ### Setting opacity on drag start
 
-In this example we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
+In this example, we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
 
 We listen for the `dragstart` event to make the element half transparent while it is being dragged.
 
