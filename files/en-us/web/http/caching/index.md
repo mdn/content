@@ -7,8 +7,6 @@ tags:
   - HTTP
 ---
 
-# HTTP caching
-
 {{HTTPSidebar}}
 
 ## Overview
@@ -27,7 +25,7 @@ In the [HTTP Caching](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-c
 
 ### Private caches
 
-A private dache is a cache tied to a specific client — typically a browser cache. Since the stored response is not shared with other clients, a private cache can store a personalized response for that user.
+A private cache is a cache tied to a specific client — typically a browser cache. Since the stored response is not shared with other clients, a private cache can store a personalized response for that user.
 
 On the other hand, if personalized contents are stored in a cache other than a private cache, then other users may be able to retrieve those contents — which may cause unintentional information leakage.
 
@@ -51,7 +49,7 @@ The shared cache is located between the client and the server and can store resp
 
 In addition to the function of access control, some proxies implement caching to reduce traffic out of the network. This is usually not managed by the service developer, so it must be controlled by appropriate HTTP headers and so on. However, in the past, outdated proxy-cache implementations — such as implementations that do not properly understand the HTTP Caching standard — have often caused problems for developers.
 
-**Kichen-sink headers** like following are used to try to work around "old and not updated proxy cache" implementations that do not understand current HTTP Caching spec directives like `no-store`.
+**Kitchen-sink headers** like following are used to try to work around "old and not updated proxy cache" implementations that do not understand current HTTP Caching spec directives like `no-store`.
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
@@ -100,7 +98,7 @@ Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 ...
 ```
 
-It is heuristically known that content whih has not been updated for a full year will not be updated for some time after that. Therefore, the client stores this response (despite the lack of `max-age`) and reuses it for a while. How long to reuse is up to the implementation, but the specification recommends about 10% (in this case 0.1 year) of the time after storing.
+It is heuristically known that content which has not been updated for a full year will not be updated for some time after that. Therefore, the client stores this response (despite the lack of `max-age`) and reuses it for a while. How long to reuse is up to the implementation, but the specification recommends about 10% (in this case 0.1 year) of the time after storing.
 
 Heuristic caching is a workaround that came in being before `Cache-Control` support became widely, and basically all responses should explicitly specify a `Cache-Control` header.
 
@@ -348,7 +346,7 @@ As a workaround for outdated implementations that ignore `no-store`, you may see
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-It is [recommended](https://docs.microsoft.com/en-us/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
+It is [recommended](https://docs.microsoft.com/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
 
 If it is the shared cache that you are concerned about, you can make sure to prevent unintended caching by also adding `private`:
 
@@ -435,7 +433,7 @@ Cache-Control: max-age=31536000, immutable
 
 That prevents unnecessary revalidation during reloads.
 
-Note that, instead of implementing that directive, [Chrome has changed its implementation](https://blog.chromium.org/2017/01/reload-reloaded-faster-and-leaner-page_26.html) so that revalidation is not performed during reloads for subresouces.
+Note that, instead of implementing that directive, [Chrome has changed its implementation](https://blog.chromium.org/2017/01/reload-reloaded-faster-and-leaner-page_26.html) so that revalidation is not performed during reloads for subresources.
 
 ## Deleting stored responses
 
@@ -539,7 +537,7 @@ Since the cache distinguishes resources from one another based on their URLs, th
 <script src="bundle.v123.js"></script>
 <link rel="stylesheet" href="build.v123.css" />
 <body>
-  hellow
+  hello
 </body>
 ```
 
@@ -606,7 +604,7 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 Making a response cacheable over a long period of time by changing the URL when the content changes is called **cache busting**. That technique can be applied to all subresources, such as images.
 
-> **Note:** When evaluating the use of `immutable` and QPACK: 
+> **Note:** When evaluating the use of `immutable` and QPACK:
 > If you’re concerned that `immutable` changes the predefined value provided by QPACK, consider that
 > in this case, the `immutable` part can be encoded separately by splitting the `Cache-Control` value into two lines — though this is dependent on the encoding algorithm a particular QPACK implementation uses.
 
@@ -625,7 +623,7 @@ If the following HTML itself is stored, the latest version cannot be displayed e
 <script src="bundle.v123.js"></script>
 <link rel="stylesheet" href="build.v123.css" />
 <body>
-  hellow
+  hello
 </body>
 ```
 

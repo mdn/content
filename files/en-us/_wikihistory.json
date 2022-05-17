@@ -25094,14 +25094,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioConfiguration": {
-    "modified": "2020-10-15T22:07:16.234Z",
-    "contributors": [
-      "Sheppy",
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
   "Web/API/AudioContext": {
     "modified": "2020-10-15T21:22:06.092Z",
     "contributors": [
@@ -54981,21 +54973,6 @@
       "estelle"
     ]
   },
-  "Web/API/MediaConfiguration": {
-    "modified": "2020-10-15T22:07:10.854Z",
-    "contributors": [
-      "kamil.rzeszotarski",
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
-  "Web/API/MediaDecodingConfiguration": {
-    "modified": "2020-10-15T22:07:16.053Z",
-    "contributors": [
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
   "Web/API/MediaDeviceInfo": {
     "modified": "2020-10-15T21:38:49.898Z",
     "contributors": [
@@ -55181,13 +55158,6 @@
     "modified": "2020-10-15T22:24:10.836Z",
     "contributors": [
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/MediaEncodingConfiguration": {
-    "modified": "2020-10-15T22:07:16.193Z",
-    "contributors": [
-      "chrisdavidmills",
-      "estelle"
     ]
   },
   "Web/API/MediaError": {
@@ -77427,15 +77397,6 @@
       "ajaybhat",
       "Sheppy",
       "FredB"
-    ]
-  },
-  "Web/API/VideoConfiguration": {
-    "modified": "2020-10-15T22:07:16.179Z",
-    "contributors": [
-      "Sheppy",
-      "gmarty",
-      "chrisdavidmills",
-      "estelle"
     ]
   },
   "Web/API/VideoPlaybackQuality": {
