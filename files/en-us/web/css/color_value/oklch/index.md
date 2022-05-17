@@ -9,6 +9,7 @@ tags:
   - Web
   - color
   - oklch
+  - Experimental
 browser-compat: css.types.color.oklch
 ---
 {{CSSRef}}
