@@ -50,7 +50,7 @@ The target object is the _immediate user selection_ (the element directly indica
 
 ### Styling drop zones on dragenter
 
-In this example we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
+In this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
 
 We listen for the `dragenter` event to give the other container a purple background while the draggable element is over it, to signal that the draggable element could be dropped on to the container.
 
