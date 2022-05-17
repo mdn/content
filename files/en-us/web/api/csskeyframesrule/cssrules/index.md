@@ -12,7 +12,7 @@ browser-compat: api.CSSKeyframesRule.cssRules
 ---
 {{APIRef("CSSOM") }}
 
-The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes {{cssxref("at-rule")}}.
+The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 ## Value
 

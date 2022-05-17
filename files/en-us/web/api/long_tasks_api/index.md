@@ -13,6 +13,7 @@ tags:
   - Reference
   - TaskAttributionTiming
   - Web Performance
+spec-urls: https://w3c.github.io/longtasks/
 ---
 {{DefaultAPISidebar("Long Tasks")}}
 
@@ -74,9 +75,7 @@ observer.observe({entryTypes: ["longtask"]});
 
 ## Specifications
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Long Tasks')}} | {{Spec2('Long Tasks')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

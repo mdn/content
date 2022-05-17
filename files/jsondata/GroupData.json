@@ -137,8 +137,7 @@
       "interfaces": ["ContentIndex", "ContentIndexEvent"],
       "methods": [],
       "properties": [
-        "ServiceWorkerRegistration.index",
-        "ServiceWorkerGlobalScope.oncontentdelete"
+        "ServiceWorkerRegistration.index"
       ],
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
@@ -758,7 +757,6 @@
       ],
       "interfaces": [
         "MediaCapabilities",
-        "ScreenLuminance",
         "Screen"
       ],
       "methods": [
@@ -1071,6 +1069,22 @@
         "ServiceWorkerGlobalScope: push",
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
       ]
+    },
+    "Reporting API": {
+      "overview": ["Reporting_API"],
+      "guides": [],
+      "interfaces": [
+        "CrashReportBody",
+        "DeprecationReportBody",
+        "InterventionReportBody",
+        "Report",
+        "ReportBody",
+        "ReportError",
+        "ReportingObserver"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Resize Observer API": {
       "overview": ["Resize Observer API"],
@@ -1733,7 +1747,6 @@
         "WebGL2RenderingContext",
         "WEBGL_compressed_texture_s3tc",
         "WEBGL_compressed_texture_s3tc_srgb",
-        "WEBGL_compressed_texture_atc",
         "WEBGL_compressed_texture_etc1",
         "WEBGL_compressed_texture_pvrtc",
         "WEBGL_debug_renderer_info",
@@ -1988,7 +2001,7 @@
         "SpeechGrammarList",
         "SpeechRecognition",
         "SpeechRecognitionAlternative",
-        "SpeechRecognitionError",
+        "SpeechRecognitionErrorEvent",
         "SpeechRecognitionEvent",
         "SpeechRecognitionResult",
         "SpeechRecognitionResultList",
@@ -2018,7 +2031,6 @@
         "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm"
       ],
       "interfaces": [
-        "ChromeWorker",
         "DedicatedWorkerGlobalScope",
         "ServiceWorker",
         "SharedWorker",

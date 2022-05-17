@@ -9,6 +9,9 @@ tags:
   - landmark role
   - region role
   - ARIA region
+spec-urls:
+  - https://w3c.github.io/aria/#region
+  - https://w3c.github.io/aria-practices/#aria_lh_region
 ---
 The **`region`** role is used to identify document areas the author deems significant. It is a generic landmark available to aid in navigation when none of the other landmark roles are appropriate.
 
@@ -85,10 +88,7 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 
 ## Specifications
 
-| Specification                                                                                                | Status                                           |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#region","ARIA Region Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_region","Region landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

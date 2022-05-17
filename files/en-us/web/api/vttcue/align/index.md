@@ -15,7 +15,7 @@ The **`align`** property of the {{domxref("VTTCue")}} interface represents the a
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"start"`
   - : Start alignment.

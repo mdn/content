@@ -15,7 +15,7 @@ The **`name`** read-only property of the {{domxref("TrustedTypePolicy")}} interf
 
 ## Value
 
-A {{domxref("DOMString")}} containing the name of the policy.
+A string containing the name of the policy.
 
 ## Examples
 

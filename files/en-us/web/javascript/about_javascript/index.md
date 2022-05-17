@@ -33,7 +33,7 @@ Besides the above implementations, there are other popular JavaScript engines su
 
 - Google's [V8](https://v8.dev/), which is used in the Google Chrome browser and recent versions of Opera browser. This is also the engine used by [Node.js](https://nodejs.org).
 - The [JavaScriptCore](https://webkit.org/project/) (SquirrelFish/Nitro) used in some WebKit browsers such as Apple Safari.
-- [Carakan](https://my.opera.com/ODIN/blog/carakan-faq) in old versions of Opera.
+- [Carakan](https://dev.opera.com/blog/carakan-faq/) in old versions of Opera.
 - The [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) engine used in Internet Explorer (although the language it implements is formally called "JScript" in order to avoid trademark issues).
 
 Each of Mozilla's JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://dom.spec.whatwg.org/) into JavaScript.

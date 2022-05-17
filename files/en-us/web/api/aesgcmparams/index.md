@@ -7,7 +7,7 @@ tags:
   - Dictionary
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-AesGcmParams
 ---
 {{ APIRef("Web Crypto API") }}
 

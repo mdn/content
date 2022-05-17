@@ -22,7 +22,7 @@ endQueryEXT(target)
 
 ### Parameters
 
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIME_ELAPSED_EXT`.
 

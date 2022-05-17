@@ -21,7 +21,7 @@ The **`CSSPseudoElement`** interface represents a pseudo-element that may be the
 - {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{readOnlyInline}}
   - : Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.
 - {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{readOnlyInline}}
-  - : Returns the pseudo-element selector as a {{DOMxRef('CSSOMString')}}.
+  - : Returns the pseudo-element selector as a string.
 
 ## Methods
 

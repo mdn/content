@@ -8,6 +8,7 @@ tags:
   - Reference
   - ARIA roles
   - searchbox
+spec-urls: https://w3c.github.io/aria/#searchbox
 ---
 
 The `searchbox` role indicates an element is a type of `textbox` intended for specifying search criteria.
@@ -55,9 +56,7 @@ Including `role="searchbox"` when the form is a `search` and the label indicates
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#searchbox","ARIA: searchbox role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

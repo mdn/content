@@ -6,7 +6,6 @@ tags:
   - HTML
   - Reference
   - Web
-browser-compat: html.global_attributes
 spec-urls: https://html.spec.whatwg.org/multipage/dom.html#global-attributes
 ---
 
@@ -130,7 +129,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## Browser compatibility
 
-{{Compat}}
+{{Compat("html.global_attributes")}}
 
 ## See also
 

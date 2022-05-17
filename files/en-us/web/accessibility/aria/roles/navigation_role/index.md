@@ -8,6 +8,9 @@ tags:
   - Reference
   - navigation role
   - landmark role
+spec-urls:
+  - https://w3c.github.io/aria/#navigation
+  - https://w3c.github.io/aria-practices/#aria_lh_navigation
 ---
 The `navigation` role is used to identify major groups of links used for navigating through a website or page content.
 
@@ -109,10 +112,7 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 ## Specifications
 
-| Specification                                                                                                            | Status                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#navigation","ARIA Navigation Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_navigation","Navigation Landmark Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

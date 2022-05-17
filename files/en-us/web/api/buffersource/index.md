@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Reference
   - Typed Arrays
+spec-urls: https://webidl.spec.whatwg.org/#common-BufferSource
 ---
 {{APIRef}}
 
@@ -16,6 +17,4 @@ This is a helper type to simplify the specification. It isn't an interface and t
 
 ## Specifications
 
-| Specification                                                                        | Status                   | Comment             |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('WebIDL', "#common-BufferSource", "BufferSource")}} | {{Spec2('WebIDL')}} | Initial definition. |
+{{Specifications}}

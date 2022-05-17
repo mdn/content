@@ -34,7 +34,7 @@ update(value)
 
 ### Parameters
 
-- value
+- `value`
   - : The new value to be stored at the current position.
 
 ### Return value

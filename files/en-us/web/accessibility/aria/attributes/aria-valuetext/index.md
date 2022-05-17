@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-valuetext
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-valuetext
 ---
 
 The `aria-valuetext` attribute defines the human readable text alternative of `aria-valuenow` for a range widget.
@@ -54,9 +55,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-valuetext","ARIA: aria-valuetext Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

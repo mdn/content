@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-setsize
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-setsize
 ---
 
 The `aria-setsize` attribute defines the number of items in the current set of listitems or treeitems when not all items in the set are present in the DOM.
@@ -84,9 +85,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-setsize","ARIA: aria-setsize Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

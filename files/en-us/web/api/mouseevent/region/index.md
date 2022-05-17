@@ -18,7 +18,7 @@ If no hit region is affected, `null` is returned.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the id of the hit region.
+A string representing the id of the hit region.
 
 ## Examples
 

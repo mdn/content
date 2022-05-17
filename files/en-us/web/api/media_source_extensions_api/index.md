@@ -11,6 +11,7 @@ tags:
   - Reference
   - Video
   - streaming
+spec-urls: https://w3c.github.io/media-source/
 ---
 {{DefaultAPISidebar("Media Source Extensions")}}
 
@@ -64,9 +65,7 @@ There are numerous available free and open source tools for transcoding content 
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment             |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName('Media Source Extensions')}} | {{Spec2('Media Source Extensions')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

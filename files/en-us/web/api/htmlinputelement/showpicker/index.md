@@ -20,7 +20,6 @@ It can also be prepopulated with items from a {{htmlelement("datalist")}} elemen
 
 More generally, this method should ideally display the picker for any input element on the platform that has a picker.
 
-
 ## Syntax
 
 ```js
@@ -43,7 +42,6 @@ None ({{jsxref("undefined")}}).
   - : Thrown if not explicitly triggered by a user action such as a touch gesture or mouse click (the picker requires {{Glossary("Transient activation")}}).
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if called in a cross-origin iframe, except for file and color pickers (exempt for historical reasons).
-
 
 ## Examples
 
@@ -123,7 +121,6 @@ Click the button next to each input type to show its picker.
 
 {{EmbedLiveSample("Showing the normal pickers","600px", "350px")}}
 
-
 ### showPicker() for a datalist input
 
 This example shows how to show the picker for a input that specifies a text-based [`<datalist>`](/en-US/docs/Web/HTML/Element/datalist) (the same approach would work for other lists).
@@ -131,6 +128,7 @@ This example shows how to show the picker for a input that specifies a text-base
 #### HTML
 
 Here we define a `<datalist>` in HTML consisting of a number of internet browsers.
+
 ```html
 <datalist id="browsers">
   <option value="Chrome">
@@ -147,6 +145,7 @@ Here we define a `<datalist>` in HTML consisting of a number of internet browser
 #### JavaScript
 
 The code below shows the picker for the input when the button is clicked.
+
 ```js
   const button = document.querySelector("button");
   const browserInput = document.querySelector("input");
@@ -166,7 +165,6 @@ Click the button to show the picker for the "browser options" input:
 
 {{EmbedLiveSample("showPicker() for a datalist input","600px", "50px")}}
 
-
 ### showPicker() for autocomplete
 
 This example shows how to show the picker for an [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) input.
@@ -183,6 +181,7 @@ Here we define an input that takes an autocomplete option of "name".
 #### JavaScript
 
 The code below shows the picker for the input when the button is clicked.
+
 ```js
   const button = document.querySelector("button");
   const browserInput = document.querySelector("input");
@@ -201,7 +200,6 @@ The code below shows the picker for the input when the button is clicked.
 Click the button to show the picker for the "name" autocomplete input:
 
 {{EmbedLiveSample("showPicker() for autocomplete","600px", "50px")}}
-
 
 ## Specifications
 

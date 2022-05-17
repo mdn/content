@@ -36,7 +36,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 - {{domxref("SpeechRecognitionAlternative")}}
   - : Represents a single word that has been recognized by the speech recognition service.
-- {{domxref("SpeechRecognitionError")}} {{deprecated_inline}}
+- {{domxref("SpeechRecognitionErrorEvent")}}
   - : Represents error messages from the recognition service.
 - {{domxref("SpeechRecognitionEvent")}}
   - : The event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.

@@ -20,7 +20,7 @@ following a request being sent.
 
 ## Value
 
-A {{domxref("DOMString")}} which contains either the textual data received using the
+A string which contains either the textual data received using the
 `XMLHttpRequest` or `null` if the request failed or
 `""` if the request has not yet been sent by calling
 {{domxref("XMLHttpRequest.send", "send()")}}.

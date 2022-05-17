@@ -103,7 +103,7 @@ Below is a short description of each event type and its associated {{domxref("Gl
   </thead>
   <tbody>
     <tr>
-      <td>{{event('pointerover')}}</td>
+      <td>{{domxref('HTMLElement/pointerover_event', 'pointerover')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}
       </td>
@@ -113,7 +113,7 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerenter')}}</td>
+      <td>{{domxref('HTMLElement/pointerenter_event', 'pointerenter')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}
       </td>
@@ -125,14 +125,14 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerdown')}}</td>
+      <td>{{domxref('HTMLElement/pointerdown_event', 'pointerdown')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}
       </td>
       <td>Fired when a pointer becomes <em>active buttons state</em>.</td>
     </tr>
     <tr>
-      <td>{{event('pointermove')}}</td>
+      <td>{{domxref('HTMLElement/pointermove_event', 'pointermove')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}
       </td>
@@ -142,14 +142,14 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerup')}}</td>
+      <td>{{domxref('HTMLElement/pointerup_event', 'pointerup')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}
       </td>
       <td>Fired when a pointer is no longer <em>active buttons state</em>.</td>
     </tr>
     <tr>
-      <td>{{event('pointercancel')}}</td>
+      <td>{{domxref('HTMLElement/pointercancel_event', 'pointercancel')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}
       </td>
@@ -159,7 +159,7 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerout')}}</td>
+      <td>{{domxref('HTMLElement/pointerout_event', 'pointerout')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}
       </td>
@@ -173,7 +173,7 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerleave')}}</td>
+      <td>{{domxref('HTMLElement/pointerleave_event', 'pointerleave')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}
       </td>
@@ -185,14 +185,14 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('gotpointercapture')}}</td>
+      <td>{{domxref('HTMLElement/gotpointercapture_event', 'gotpointercapture')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}
       </td>
       <td>Fired when an element receives pointer capture.</td>
     </tr>
     <tr>
-      <td>{{event('lostpointercapture')}}</td>
+      <td>{{domxref('HTMLElement/lostpointercapture_event', 'lostpointercapture')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}}
       </td>
@@ -385,7 +385,7 @@ The following example shows pointer capture being set on an element.
 </html>
 ```
 
-The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.
+The following example shows a pointer capture being released (when a {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event occurs. The browser does this automatically when a {{domxref("HTMLElement/pointerup_event", "pointerup")}} or {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event occurs.
 
 ```html
 <html>

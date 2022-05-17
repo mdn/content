@@ -7,7 +7,7 @@ tags:
   - Property
   - Reference
   - ShadowRoot
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.shadowRoot
 ---
 {{APIRef("Shadow DOM")}}

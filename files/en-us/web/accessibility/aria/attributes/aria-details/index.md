@@ -9,6 +9,7 @@ tags:
   - aria-details
   - Reference
   - longdesc
+spec-urls: https://w3c.github.io/aria/#aria-details
 ---
 
 The global `aria-details` attribute identifies the element (or elements) that provide additional information related to the object.
@@ -68,9 +69,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-details","ARIA: aria-details Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

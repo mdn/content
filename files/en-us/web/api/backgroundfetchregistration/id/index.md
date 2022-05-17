@@ -15,7 +15,7 @@ The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}
 
 ## Value
 
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 

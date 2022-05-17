@@ -5,6 +5,7 @@ tags:
   - API
   - CSSOM
   - Reference
+spec-urls: https://drafts.csswg.org/cssom/#cssomstring-type
 ---
 {{APIRef("DOM")}}
 
@@ -22,9 +23,7 @@ tags:
 
 ## Specifications
 
-| Specification                                                                | Status                   | Comment             |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('CSSOM', '#cssomstring-type', 'CSSOMString')}} | {{Spec2("CSSOM")}} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

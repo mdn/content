@@ -15,7 +15,7 @@ tags:
   - Number
   - Reference
   - month
-browser-compat: html.elements.input.input-month
+browser-compat: html.elements.input.type_month
 ---
 
 {{HTMLRef("Input_types")}}
@@ -42,7 +42,7 @@ The Microsoft Edge `month` control looks like this:
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a month and year, or
+        A string representing a month and year, or
         empty.
       </td>
     </tr>
@@ -83,7 +83,7 @@ The Microsoft Edge `month` control looks like this:
 
 ## Value
 
-A {{domxref("DOMString")}} representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
+A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
 The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.
 
 ### Setting a default value

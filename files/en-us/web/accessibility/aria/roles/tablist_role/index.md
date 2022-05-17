@@ -10,6 +10,7 @@ tags:
   - tablist role
   - composite widget role
   - tablist
+spec-urls: https://w3c.github.io/aria/#tablist
 ---
 
 The `tablist` role identifies the element that serves as the container for a set of `tabs`. The tab content are referred to as `tabpanel` elements.
@@ -97,9 +98,7 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tablist","ARIA: tablist role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

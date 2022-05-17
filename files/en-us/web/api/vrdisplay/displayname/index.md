@@ -23,7 +23,7 @@ This will generally be something like "Oculus VR HMD (HMD)" or "Oculus VR HMD (S
 
 ## Value
 
-A {{domxref("DOMString")}} containing the human-readable name of the specific VR display.
+A string containing the human-readable name of the specific VR display.
 
 ## Examples
 

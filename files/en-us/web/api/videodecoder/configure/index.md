@@ -24,7 +24,7 @@ configure(config)
 - `config`
   - : An object containing the following members:
     - `codec`
-      - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
     - `description`{{Optional_Inline}}
       - : A {{domxref("BufferSource")}} containing a sequence of codec specific bytes, commonly known as extradata.
     - `codedWidth`{{Optional_Inline}}

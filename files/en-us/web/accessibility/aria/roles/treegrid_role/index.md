@@ -10,6 +10,9 @@ tags:
   - Treegrid role
   - composite widget role
   - treegrid
+spec-urls:
+  - https://w3c.github.io/aria/#treegrid
+  - https://w3c.github.io/aria-practices/#treegrid
 ---
 
 The `treegrid` role identifies an element as being grid whose rows can be expanded and collapsed in the same manner as for a `tree`.
@@ -154,10 +157,7 @@ It is important for all cells to be able to receive or contain keyboard focus be
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#treegrid","ARIA: treegrid role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#treegrid","treegrid role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

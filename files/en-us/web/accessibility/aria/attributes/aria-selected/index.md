@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-selected
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-selected
 ---
 
 The `aria-selected` attribute indicates the current "selected" state of various widgets.
@@ -114,9 +115,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-selected","ARIA: aria-selected Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

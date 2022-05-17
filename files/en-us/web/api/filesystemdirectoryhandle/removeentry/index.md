@@ -24,7 +24,7 @@ FileSystemDirectoryHandle.removeEntry(name).then...
 ### Parameters
 
 - _name_
-  - : A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
+  - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the entry you wish to remove.
 - _options_ {{optional_inline}}
 

@@ -10,6 +10,7 @@ tags:
   - Role
   - listitem
   - document structure role
+spec-urls: https://w3c.github.io/aria/#listitem
 ---
 The ARIA `listitem` role can be used to identify an item inside a list of items. It is normally used in conjunction with the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role, which is used to identify a list container.
 
@@ -68,9 +69,7 @@ or use an ordered list if the order of the list items matters:
 
 ## Specifications
 
-| Specification                                            | Status                   |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#listitem","listitem")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 

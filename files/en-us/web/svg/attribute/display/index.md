@@ -73,34 +73,7 @@ For a description of the values, please refer to the {{cssxref("display", "CSS d
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "render.html#VisibilityControl", "display")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Refers to the CSS 2 specification of the <code>display</code> property,
-        but outlines the differences regarding SVG.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#DisplayProperty", "display")}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -7,7 +7,7 @@ tags:
   - EcKeyGenParams
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-EcKeyGenParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-EcKeyGenParams
 ---
 {{ APIRef("Web Crypto API") }}
 

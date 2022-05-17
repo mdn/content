@@ -26,7 +26,7 @@ setSinkId(sinkId)
 
 ### Parameters
 
-- sinkId
+- `sinkId`
   - : The {{domxref("MediaDeviceInfo.deviceId")}} of the audio output device.
 
 ### Return value

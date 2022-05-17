@@ -12,7 +12,7 @@ tags:
   - Input Type
   - Reference
   - Type
-browser-compat: html.elements.input.input-file
+browser-compat: html.elements.input.type_file
 ---
 
 {{HTMLRef("Input_types")}}
@@ -26,7 +26,7 @@ browser-compat: html.elements.input.input-file
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the path to the selected
+        A string representing the path to the selected
         file.
       </td>
     </tr>
@@ -68,7 +68,7 @@ browser-compat: html.elements.input.input-file
 
 ## Value
 
-A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that represents the path to the selected file(s). If the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the input's `HTMLInputElement.files` property.
+A file input's {{htmlattrxref("value", "input")}} attribute contains a string that represents the path to the selected file(s). If the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the input's `HTMLInputElement.files` property.
 
 > **Note:**
 >

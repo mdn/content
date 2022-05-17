@@ -7,6 +7,9 @@ tags:
   - ARIA heading
   - document structure role
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#heading
+  - https://w3c.github.io/aria-practices/#heading
 ---
 The `heading` role defines this element as a heading to a page or section, with the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute providing for more structure.
 
@@ -101,10 +104,7 @@ None.
 
 ## Specifications
 
-| Specification                                            | Status                   |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#heading","heading")}} | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#heading","heading role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## Precedence order
 

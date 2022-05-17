@@ -7,6 +7,7 @@ tags:
   - roles
   - Reference
   - ARIA roles
+spec-urls: https://w3c.github.io/aria/#section
 ---
 
 The **`section` role**, an abstract role, is superclass role for renderable structural containment components.
@@ -24,9 +25,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#section","ARIA: section role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

@@ -22,7 +22,7 @@ The SSML tags will be stripped away by devices that don't support SSML.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the text to the synthesized.
+A string representing the text to the synthesized.
 The maximum length of the text that can be spoken in each utterance is 32,767 characters.
 
 ## Examples

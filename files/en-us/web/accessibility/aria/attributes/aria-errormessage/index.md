@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-errormessage
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-errormessage
 ---
 
 The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object.
@@ -91,9 +92,7 @@ Inherits from roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-errormessage","ARIA: aria-errormessage Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -9,6 +9,9 @@ tags:
   - ARIA roles
   - document structure role
   - toolbar role
+spec-urls:
+  - https://w3c.github.io/aria/#toolbar
+  - https://w3c.github.io/aria-practices/#toolbar
 ---
 
 The `toolbar` role defines the containing element as a collection of commonly used function buttons or controls represented in a compact visual form.
@@ -93,10 +96,7 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#toolbar","ARIA: toolbar role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#toolbar","toolbar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

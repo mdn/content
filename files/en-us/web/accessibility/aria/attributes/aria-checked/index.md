@@ -7,6 +7,9 @@ tags:
   - ARIA attribute
   - ARIA property
   - aria-checked
+spec-urls:
+  - https://w3c.github.io/aria/#aria-checked
+  - https://w3c.github.io/aria-practices/#checkbox
 ---
 
 The  `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
@@ -71,10 +74,7 @@ myHTMLElement.ariaChecked = true;
 
 ## Specifications
 
-| Specification         | Status            |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-checked","ARIA: aria-checked Attribute")}}              | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#checkbox","Checkbox role with `aria-checked`")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -31,7 +31,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.rangeCount")}}{{ReadOnlyInline}}
   - : Returns the number of ranges in the selection.
 - {{DOMxRef("Selection.type")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} describing the type of the current selection.
+  - : Returns a string describing the type of the current selection.
 
 ## Methods
 

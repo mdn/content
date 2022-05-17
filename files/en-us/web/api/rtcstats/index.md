@@ -22,11 +22,11 @@ Specific classes of statistic are defined as dictionaries based on `RTCStats`. F
 ## Properties
 
 - {{domxref("RTCStats.id", "id")}}
-  - : A {{domxref("DOMString")}} which uniquely identifies the object which was inspected to produce this object based on `RTCStats`.
+  - : A string which uniquely identifies the object which was inspected to produce this object based on `RTCStats`.
 - {{domxref("RTCStats.timestamp", "timestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
 - {{domxref("RTCStats.type", "type")}}
-  - : A {{domxref("DOMString")}} indicating the type of statistics the object contains, taken from the enum type {{domxref("RTCStatsType")}}.
+  - : A string indicating the type of statistics the object contains, taken from the enum type {{domxref("RTCStatsType")}}.
 
 ## The statistics type hierarchy
 

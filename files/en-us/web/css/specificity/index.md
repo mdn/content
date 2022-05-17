@@ -37,7 +37,7 @@ Inline styles added to an element (e.g., `style="font-weight: bold;"`) always ov
 
 When an `important` rule is used on a style declaration, this declaration overrides any other declarations. Although technically `!important` has nothing to do with specificity, it interacts directly with it. Using `!important,` however, is **bad practice** and should be avoided because it makes debugging more difficult by breaking the natural [cascading](/en-US/docs/Web/CSS/Cascade) in your stylesheets. When two conflicting declarations with the `!important` rule are applied to the same element, the declaration with a greater specificity will be applied.
 
-**Some rules of thumb:**
+**Recommended guidelines:**
 
 - **Always** look for a way to use specificity before even considering `!important`
 - **Only** use `!important` on page-specific CSS that overrides foreign CSS (from external libraries, like Bootstrap or normalize.css).

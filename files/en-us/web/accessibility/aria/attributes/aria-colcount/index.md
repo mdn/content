@@ -7,6 +7,7 @@ tags:
   - ARIA attribute
   - ARIA property
   - aria-colcount
+spec-urls: https://w3c.github.io/aria/#aria-colcount
 ---
 
 The `aria-colcount` attribute defines the total number of columns in a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role) when not all columns are present in the [DOM](/en-US/docs/Glossary/DOM).
@@ -85,9 +86,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-colcount","ARIA: aria-colcount Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

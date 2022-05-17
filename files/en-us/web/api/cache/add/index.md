@@ -39,7 +39,7 @@ add(request)
 
 ### Parameters
 
-- request
+- `request`
   - : The request you want to add to the cache. This can be a {{domxref("Request")}} object or a URL.
 
 ### Return value

@@ -9,6 +9,7 @@ tags:
   - aria-grabbed
   - Reference
   - deprecated
+spec-urls: https://w3c.github.io/aria/#aria-grabbed
 ---
 
 The `aria-grabbed` state indicates an element's "grabbed" state in a drag-and-drop operation. {{deprecated_inline}}
@@ -42,9 +43,7 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles/)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-grabbed","ARIA: aria-grabbed Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

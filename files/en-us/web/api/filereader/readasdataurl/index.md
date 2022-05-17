@@ -15,7 +15,7 @@ The `readAsDataURL` method is used to read the contents of the specified
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} becomes `DONE`, and the
 {{event("loadend")}} is triggered. At that time, the
-{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) representing the
+{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) representing the
 file's data as a base64 encoded string.
 
 > **Note:** The blob's {{domxref("FileReader.result","result")}} cannot be

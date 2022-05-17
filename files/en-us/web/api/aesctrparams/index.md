@@ -7,7 +7,7 @@ tags:
   - Dictionary
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCtrParams
 ---
 {{ APIRef("Web Crypto API") }}
 

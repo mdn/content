@@ -26,9 +26,9 @@ parse(property, cssText)
 
 ### Parameters
 
-- property
+- `property`
   - : A CSS property to set.
-- cssText
+- `cssText`
   - : A comma-separated string containing one or more values to apply to the provided
     property.
 
