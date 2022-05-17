@@ -79,4 +79,3 @@ window.addEventListener('online', function(e) { console.log('online'); });
 ## Browser compatibility
 
 {{Compat}}
-

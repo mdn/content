@@ -24,7 +24,7 @@ This type determines which of the {{domxref("RTCStats")}}-based dictionaries the
 ## Values
 
 - `candidate-pair`
-  - : An {{domxref("RTCIceCandidatePairStats")}} object providing statistics related to an {{domxref("RTCIceTransport")}}. Candidate pairs other than the currently active pair for the transport are deleted when the {{domxref("RTCPeerConnection")}} changes its {{domxref("RTCPeerConnection.iceGatheringState")}} to `new` during an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart). The active candidate pair is deleted after the transport switches to another candidate pair; this change cannot be detected otherwise.
+  - : An {{domxref("RTCIceCandidatePairStats")}} object providing statistics related to an {{domxref("RTCIceTransport")}}. Candidate pairs other than the currently active pair for the transport are deleted when the {{domxref("RTCPeerConnection")}} changes its {{domxref("RTCPeerConnection.iceGatheringState")}} to `new` during an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart). The active candidate pair is deleted after the transport switches to another candidate pair; this change cannot be detected otherwise.
 - `certificate`
   - : An {{domxref("RTCCertificateStats")}} object providing statistics related to a certificate being used by an {{domxref("RTCIceTransport")}}.
 - `codec`

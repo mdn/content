@@ -56,7 +56,7 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-family`](/en-US/docs/Web/CSS/font-family#Values) property.
+For a description of the values, please refer to the [CSS `font-family`](/en-US/docs/Web/CSS/font-family#values) property.
 
 ## Specifications
 

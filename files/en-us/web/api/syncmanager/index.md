@@ -12,7 +12,7 @@ browser-compat: api.SyncManager
 ---
 {{APIRef("Service Workers API")}}
 
-The **`SyncManager`** interface of the [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API) provides an interface for registering and listing sync registrations.
+The **`SyncManager`** interface of the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API) provides an interface for registering and listing sync registrations.
 
 ## Properties
 

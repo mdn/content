@@ -39,7 +39,7 @@ A `<color>` can be defined in any of the following ways:
   This can specify any visible color.
 - Using the {{cssxref("color_value/color","color()")}} functional notation, to specify a color in a variety of predefined or custom color spaces.
 
-> **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color).
+> **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
 
 ## Syntax
 
@@ -515,4 +515,4 @@ hsla(240 100% 50% / 5%)       /*   5% opaque blue */
 
 - The {{Cssxref("opacity")}} property lets you define transparency at the element level.
 - Some common properties that use this data type: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

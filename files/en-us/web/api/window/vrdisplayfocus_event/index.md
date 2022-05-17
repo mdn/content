@@ -53,7 +53,7 @@ window.addEventListener('vrdisplayfocus', function() {
 });
 ```
 
-Or use the [`onvrdisplayfocus`](/en-US/docs/Web/API/Window/onvrdisplayfocus) event handler property:
+Or use the `onvrdisplayfocus` event handler property:
 
 ```js
 window.onvrdisplayfocus = function() {

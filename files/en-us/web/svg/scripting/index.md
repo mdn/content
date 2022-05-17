@@ -79,4 +79,4 @@ The function `svgElement.style.setProperty("fill-opacity", "0.0")` throws a DOME
 
 ### Links
 
-[SVG wiki on Scripting and Programming](http://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)
+[SVG wiki on Scripting and Programming](https://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)

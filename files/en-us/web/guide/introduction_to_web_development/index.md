@@ -18,7 +18,7 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 
 ### HTML
 
-- [The basics of Hypertext Mark-up Language (HTML)](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) — what exactly is HTML?
+- [The basics of Hypertext Mark-up Language (HTML)](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) — what exactly is HTML?
 - [Basic structure of a web page](https://www.sitepoint.com/basic-structure-of-a-web-page/) — the doctype and document 'tree'
 - [Fundamental HTML elements](https://www.sitepoint.com/elements/) — structural, head, list, form elements and more, explained by category.
 - [HTML beginners tutorial](https://htmldog.com/guides/html/beginner/) — a tutorial and exercise that recap and take you through the basics you've learned above.
@@ -56,8 +56,6 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 
 ## Resources
 
-- [W3C Web Education Community Group Wiki](https://developer.mozilla.org/en-US/docs/Learn)
-  - : Covers web design, HTML and HTML5, CSS, JavaScript and accessibility. This is a good starting point for beginners wishing to learn web development fundamentals across a number of areas.
 - [SitePoint](https://www.sitepoint.com/blog/)
   - : A reliable reference site for learning HTML, CSS and JavaScript which also mentions feature support across different browsers and known browser bugs.
 - [HTMLDog](https://htmldog.com/)

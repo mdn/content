@@ -37,7 +37,7 @@ myCar.model = 'Mustang';
 myCar.year = 1969;
 ```
 
-The above example could also be written using an **[object initializer](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#object_initializers)**, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`):
+The above example could also be written using an **[object initializer](#object_initializers)**, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`):
 
 ```js
 const myCar = {

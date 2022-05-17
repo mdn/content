@@ -103,8 +103,8 @@ var food  = window.arguments[0];
 var price = window.arguments[1];
 ```
 
-Note that you can access this property from within anywhere in the dialog code. ([Another
-example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
+Note that you can access this property from within anywhere in the dialog code.
+([Another example](/en-US/docs/Mozilla/Add-ons/Code_snippets/Dialogs_and_Prompts#passing_arguments_and_displaying_a_dialog)).
 
 #### Returning values from the dialog
 
@@ -146,7 +146,6 @@ This is not part of any specification.
 
 ## See also
 
-- [Another
-  example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)
+- [Another example](/en-US/docs/Mozilla/Add-ons/Code_snippets/Dialogs_and_Prompts#passing_arguments_and_displaying_a_dialog)
 - [`window.importDialog`](/en-US/docs/Archive/Web/Window.importDialog)
   (mobile) {{deprecated_inline}}

@@ -17,7 +17,7 @@ browser-compat: javascript.builtins.String.fontcolor
 The **`fontcolor()`** method creates a {{HTMLElement("font")}}
 HTML element that causes a string to be displayed in the specified font color.
 
-> **Note:** The \<font> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore.
+> **Note:** The \<font> element has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore.
 > Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
 
 ## Syntax
