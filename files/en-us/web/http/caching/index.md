@@ -675,4 +675,4 @@ For more information, see the documentation for your CDN, and consult the servic
 ## See also
 
 - [RFC 9111: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/RFC9111)
-- [Caching Tutorial - Mark Nottingham](https://www.mnot.net/cache_docs)
+- [Caching Tutorial - Mark Nottingham](https://www.mnot.net/cache_docs/)
