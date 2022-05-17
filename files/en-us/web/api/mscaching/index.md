@@ -21,6 +21,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ### Values
 
 One of the following strings:
+
 - `auto`
   - : The caching for stream or ms-stream data is _disabled_.
 - `enabled`
