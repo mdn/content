@@ -62,7 +62,7 @@ showNotification(title, options)
     - `data`
       - : Arbitrary data that you want to be associated with the
         notification. This can be of any data type.
-    - `dir` 
+    - `dir`
       - : The direction of the notification; it can be `auto`,  `ltr` or `rtl`.
     - `icon`
       - : a string containing the URL of an image to

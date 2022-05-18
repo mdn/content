@@ -64,7 +64,6 @@ Media capabilities information enables websites to enable adaptive streaming to 
 - ScreenLuminance
   - : Will describe the known luminance characteristics of the screen (not currently supported anywhere).
 
-
 ## Specifications
 
 {{Specifications("api.MediaCapabilities")}}
