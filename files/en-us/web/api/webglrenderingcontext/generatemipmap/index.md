@@ -29,7 +29,7 @@ generateMipmap(target)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture
     whose mipmaps will be generated. Possible values:

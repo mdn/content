@@ -25,9 +25,9 @@ bindAttribLocation(program, index, name)
 
 - `program`
   - : A {{domxref("WebGLProgram")}} object to bind.
-- index
+- `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the generic vertex to bind.
-- name
+- `name`
   - : A string specifying the name of the variable to bind to the
     generic vertex index. This name cannot start with "webgl\_" or "\_webgl\_", as these are
     reserved for use by WebGL.

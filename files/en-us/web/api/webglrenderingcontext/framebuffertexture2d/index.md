@@ -23,25 +23,28 @@ framebufferTexture2D(target, attachment, textarget, texture, level)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-    - `gl.FRAMEBUFFER`: Collection buffer data storage of color, alpha,
-      depth and stencil buffers used to render an image.
+    - `gl.FRAMEBUFFER`
+      - : Collection buffer data storage of color, alpha,
+        depth and stencil buffers used to render an image.
     - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.DRAW_FRAMEBUFFER`: Used as a destination for drawing,
-        rendering, clearing, and writing operations.
-      - `gl.READ_FRAMEBUFFER`: Used as a source for reading operations.
+      - `gl.DRAW_FRAMEBUFFER`
+        - : Used as a destination for drawing,
+          rendering, clearing, and writing operations.
+      - `gl.READ_FRAMEBUFFER`
+        - : Used as a source for reading operations.
 
       When binding, `gl.FRAMEBUFFER` sets both the
       `gl.DRAW_FRAMEBUFFER` and `gl.READ_FRAMEBUFFER` binding
       points. When referencing, `gl.FRAMEBUFFER` refers to the
       `gl.DRAW_FRAMEBUFFER` binding
 
-- attachment
+- `attachment`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the
     `texture`. Possible values:
@@ -69,7 +72,7 @@ framebufferTexture2D(target, attachment, textarget, texture, level)
       - `gl.DEPTH_STENCIL_ATTACHMENT`: Depth and stencil buffer data
         storage.
 
-- textarget
+- `textarget`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture target. Possible values:
 
@@ -87,9 +90,9 @@ framebufferTexture2D(target, attachment, textarget, texture, level)
     - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: Image for the negative Z face of
       the cube.
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} object whose image to attach.
-- level
+- `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the mipmap level of the texture image to be
     attached. Must be 0.
 

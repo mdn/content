@@ -22,25 +22,27 @@ hint(target, mode)
 
 ### Parameters
 
-- target
+- `target`
 
   - : Sets which behavior to be controlled. Possible values:
 
-    - `gl.GENERATE_MIPMAP_HINT`: Quality of filtering when generating
-      mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}.
-    - When using the {{domxref("OES_standard_derivatives")}} extension:
+    - `gl.GENERATE_MIPMAP_HINT`
+      - : Quality of filtering when generating
+        mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}.
+    - Whenusing the {{domxref("OES_standard_derivatives")}} extension:
 
-      - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`: Accuracy of the
-        derivative calculation for the GLSL built-in functions: `dFdx`,
-        `dFdy`, and `fwidth`.
+      - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+        - : Accuracy of the
+          derivative calculation for the GLSL built-in functions: `dFdx`,
+          `dFdy`, and `fwidth`.
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    - Whenusing a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.FRAGMENT_SHADER_DERIVATIVE_HINT`: Same as
-        `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+      - `gl.FRAGMENT_SHADER_DERIVATIVE_HINT`
+        - : Same as `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
 
-- mode
+- `mode`
 
   - : Sets the behavior. The default value is `gl.DONT_CARE`. The possible
     values are:

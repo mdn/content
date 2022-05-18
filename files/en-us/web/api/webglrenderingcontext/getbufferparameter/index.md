@@ -23,13 +23,15 @@ getBufferParameter(target, pname)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target buffer object. Possible values:
 
-    - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
-      vertex coordinates, texture coordinate data, or vertex color data.
-    - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
+    - `gl.ARRAY_BUFFER`
+      - : Buffer containing vertex attributes, such as
+        vertex coordinates, texture coordinate data, or vertex color data.
+    - `gl.ELEMENT_ARRAY_BUFFER`
+      - : Buffer used for element indices.
     - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
@@ -45,27 +47,29 @@ getBufferParameter(target, pname)
       - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer
         operations.
 
-- pname
+- `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying information to query. Possible values:
 
-    - `gl.BUFFER_SIZE`: Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the size
-      of the buffer in bytes.
-    - `gl.BUFFER_USAGE`: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the
-      usage pattern of the buffer. This is either:
+    - `gl.BUFFER_SIZE`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the size
+        of the buffer in bytes.
+    - `gl.BUFFER_USAGE`
+      - : Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the
+        usage pattern of the buffer. This is either:
 
-      - `gl.STATIC_DRAW`,
-      - `gl.DYNAMIC_DRAW`,
-      - `gl.STREAM_DRAW`.
-      - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
-            1)}}, the following values are available additionally:
+        - `gl.STATIC_DRAW`,
+        - `gl.DYNAMIC_DRAW`,
+        - `gl.STREAM_DRAW`.
+        - `When`using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
+              1)}}, the following values are available additionally:
 
-        - `gl.STATIC_READ`,
-        - `gl.DYNAMIC_READ,`
-        - `gl.STREAM_READ`,
-        - `gl.STATIC_COPY`,
-        - `gl.DYNAMIC_COPY,`
-        - `gl.STREAM_COPY`.
+          - `gl.STATIC_READ`,
+          - `gl.DYNAMIC_READ,`
+          - `gl.STREAM_READ`,
+          - `gl.STATIC_COPY`,
+          - `gl.DYNAMIC_COPY,`
+          - `gl.STREAM_COPY`.
 
 ### Return value
 

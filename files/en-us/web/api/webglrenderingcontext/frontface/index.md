@@ -22,7 +22,7 @@ frontFace(mode)
 
 ### Parameters
 
-- mode
+- `mode`
 
   - : A [GLenum](/en-US/docs/Web/API/WebGL_API/Types) type winding orientation.
     The default value is `gl.CCW`. Possible values:

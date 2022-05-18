@@ -23,7 +23,7 @@ bindTexture(target, texture)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
@@ -35,7 +35,7 @@ bindTexture(target, texture)
       - `gl.TEXTURE_3D`: A three-dimensional texture.
       - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} object to bind.
 
 ### Return value

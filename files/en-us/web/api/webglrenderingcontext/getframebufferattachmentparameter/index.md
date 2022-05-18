@@ -24,21 +24,24 @@ getFramebufferAttachmentParameter(target, attachment, pname)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-    - `gl.FRAMEBUFFER`: Collection buffer data storage of color, alpha,
-      depth and stencil buffers used to render an image.
+    - `gl.FRAMEBUFFER`
+      - : Collection buffer data storage of color, alpha,
+        depth and stencil buffers used to render an image.
     - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.DRAW_FRAMEBUFFER`: Equivalent to `gl.FRAMEBUFFER`.
-        Used as a destination for drawing, rendering, clearing, and writing
-        operations.
-      - `gl.READ_FRAMEBUFFER`: Used as a source for reading operations.
+      - `gl.DRAW_FRAMEBUFFER`
+        - : Equivalent to `gl.FRAMEBUFFER`.
+          Used as a destination for drawing, rendering, clearing, and writing
+          operations.
+      - `gl.READ_FRAMEBUFFER`
+        - : Used as a source for reading operations.
 
-- attachment
+- `attachment`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the
     `texture`. Possible values:
@@ -62,7 +65,7 @@ getFramebufferAttachmentParameter(target, attachment, pname)
         `gl.COLOR_ATTACHMENT0`)
         `ext.COLOR_ATTACHMENT1_WEBGL ext.COLOR_ATTACHMENT2_WEBGL ext.COLOR_ATTACHMENT3_WEBGL ext.COLOR_ATTACHMENT4_WEBGL ext.COLOR_ATTACHMENT5_WEBGL ext.COLOR_ATTACHMENT6_WEBGL ext.COLOR_ATTACHMENT7_WEBGL ext.COLOR_ATTACHMENT8_WEBGL ext.COLOR_ATTACHMENT9_WEBGL ext.COLOR_ATTACHMENT10_WEBGL ext.COLOR_ATTACHMENT11_WEBGL ext.COLOR_ATTACHMENT12_WEBGL ext.COLOR_ATTACHMENT13_WEBGL ext.COLOR_ATTACHMENT14_WEBGL ext.COLOR_ATTACHMENT15_WEBGL`
 
-- pname
+- `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying information to query. Possible values:
 

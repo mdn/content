@@ -23,7 +23,7 @@ getAttachedShaders(program)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} object to get attached shaders for.
 
 ### Return value

@@ -31,13 +31,15 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-    - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
-      vertex coordinates, texture coordinate data, or vertex color data.
-    - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
+    - `gl.ARRAY_BUFFER`
+      - : Buffer containing vertex attributes, such as
+        vertex coordinates, texture coordinate data, or vertex color data.
+    - `gl.ELEMENT_ARRAY_BUFFER`
+      - : Buffer used for element indices.
     - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
@@ -53,14 +55,14 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
       - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer
         operations.
 
-- dstByteOffset
+- `dstByteOffset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes where the data replacement
     will start.
-- srcData {{optional_inline}}
+- `srcData` {{optional_inline}}
   - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} or one of the
     {{domxref("ArrayBufferView")}} typed array types that will be copied into the data
     store.
-- srcOffset
+- `srcOffset`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
     the buffer.
 - `length` {{optional_inline}}

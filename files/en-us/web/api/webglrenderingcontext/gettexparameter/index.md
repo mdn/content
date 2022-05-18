@@ -24,7 +24,7 @@ getTexParameter(target, pname)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
@@ -36,7 +36,7 @@ getTexParameter(target, pname)
       - `gl.TEXTURE_3D`: A three-dimensional texture.
       - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-- pname
+- `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
 
