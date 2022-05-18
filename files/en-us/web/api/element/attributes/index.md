@@ -35,7 +35,7 @@ var atts = para.attributes;
 
 ### Enumerating elements attributes
 
-Numerical indexing is useful for going through all of an element's attributes.
+You can enumerate through an element's attributes using `for...of`.
 The following example runs through the attribute nodes for the element in the document
 with id "paragraph", and prints each attribute's value.
 
@@ -48,15 +48,14 @@ with id "paragraph", and prints each attribute's value.
   <title>Attributes example</title>
   <script type="text/javascript">
    function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
+     let paragraph = document.getElementById("paragraph");
+     let result = document.getElementById("result");
 
      // First, let's verify that the paragraph has some attributes
      if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
+       let output = "";
+       for(let attr of paragraph.attributes) {
+         output += attr.name + "->" + attr.value;
        }
        result.value = output;
      } else {
