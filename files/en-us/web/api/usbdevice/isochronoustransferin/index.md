@@ -27,9 +27,9 @@ isochronousTransferIn(endpointNumber, packetLengths)
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- packetLengths
+- `packetLengths`
   - : An array of lengths for the packets being received.
 
 ### Return value

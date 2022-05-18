@@ -24,7 +24,7 @@ getAll(name)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to return.
 
 ### Return value

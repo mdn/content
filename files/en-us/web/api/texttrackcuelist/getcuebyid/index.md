@@ -23,7 +23,7 @@ getCueById(id)
 
 ### Parameters
 
-- id
+- `id`
   - : A string which is an identifier for the cue.
 
 ### Return value

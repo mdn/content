@@ -24,12 +24,13 @@ request(type)
 
 ### Parameters
 
-- _type_
+- `type`
 
   - : Options are as follows:
 
-    - `'screen'`: Requests a screen wake lock. Prevents devices from
-      dimming or locking the screen.
+    - `'screen'`
+      - : Requests a screen wake lock. Prevents devices from
+        dimming or locking the screen.
 
 ### Return value
 

@@ -23,7 +23,7 @@ getSamplerParameter(sampler, pname)
 
 ### Parameters
 
-- sampler
+- `sampler`
   - : A {{domxref("WebGLSampler")}} object.
 - `pname`
 

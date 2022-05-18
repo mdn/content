@@ -27,7 +27,7 @@ isPointInStroke(point)
 
 ### Parameters
 
-- point
+- `point`
   - : A DOMPointInit object interpreted as a point in the local coordinate system
     of the element.
 

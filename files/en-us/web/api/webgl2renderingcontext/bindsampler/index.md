@@ -22,10 +22,10 @@ bindSampler(unit, sampler)
 
 ### Parameters
 
-- unit
+- `unit`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the texture unit to which to bind
     the sampler to.
-- sampler
+- `sampler`
   - : A {{domxref("WebGLSampler")}} object to bind.
 
 ### Return value

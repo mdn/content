@@ -26,10 +26,10 @@ selectAlternateInterface(interfaceNumber, alternateSetting)
 
 ### Parameters
 
-- interfaceNumber
+- `interfaceNumber`
   - : The index of one of the interfaces supported by the device. Interfaces are
     device-specific.
-- alternateSetting
+- `alternateSetting`
   - : The configuration of the selected interface.
 
 ### Return value
