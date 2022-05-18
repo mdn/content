@@ -32,7 +32,7 @@ When a declaration is important, the order of precedence is reversed. Declaratio
 
 > **Note:** All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
 
-Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed with important declarations. It also ensures malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security. 
+Reversing the precedence order for `!important` declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as `!important`. It also guarantees malicious extensions can't override `!important` user-agent styles, which might break functionality or negatively impact security.
 
 Does anything have precedence over important declarations? Yes. [Transitions](/en-US/docs/Web/CSS/CSS_Transitions). CSS transitions are a way to control the speed at which the property changes from one value to another.  A transitioning property, while transitioning from one value to another, will not match a specific important declaration. 
 
