@@ -39,9 +39,9 @@ Not all devices are the same width; you should make sure that your pages work we
 
 The basic properties include:
 - `width`
-  - : Controls the size of the viewport. It can be set to a specific number of pixels like `width=600` or to the special value `device-width`, which is 100vw. Minimum: 1px. Maximum: 10000px. Negative values: ignored. 
+  - : Controls the size of the viewport. It can be set to a specific number of pixels like `width=600` or to the special value `device-width`, which is 100vw. Minimum: `1px`. Maximum: `10000px`. Negative values: ignored. 
 - `height`
-  - : Controls the size of the viewport. It can be set to a specific number of pixels like `height=400` or to the special value `device-height`, which is 100vh. Minimum: 1px. Maximum: 10000px. Negative values: ignored. 
+  - : Controls the size of the viewport. It can be set to a specific number of pixels like `height=400` or to the special value `device-height`, which is 100vh. Minimum: `1px`. Maximum: `10000px`. Negative values: ignored. 
 - `initial-scale`
   - : Controls the zoom level when the page is first loaded. Minimum: `0.1`. Maximum: `10`. Default:`1`. Negative values: ignored. 
 - `minimum-scale`
@@ -51,7 +51,7 @@ The basic properties include:
 - `user-scalable`
   - : Control if users are allowed to zoom the page in or out. Valid values: `0`, `1`, `yes`, `no`. Default: `1`, which is the same as `yes`. Setting the value to `0`, which is the same as `no`, is against Web Content Accessibility Guidelines (WCAG).
 
-> **Warning:** Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. WCAG requires at minium 2x scaling; however, it is a best practice to enable 5x zoom.
+> **Warning:** Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires at minium 2x scaling; however, it is a best practice to enable 5x zoom.
 
 ## Screen density
 
