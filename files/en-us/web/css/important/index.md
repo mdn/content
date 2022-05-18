@@ -111,7 +111,7 @@ p {
 }
  ``` 
 
-This is one of the several reasons avoiding `!important` is generally recommended.
+This example shows one of the several reasons avoiding `!important` is generally recommended.
 
 ## Best practices
 
