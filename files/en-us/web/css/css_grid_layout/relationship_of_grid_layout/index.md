@@ -230,7 +230,7 @@ In comparison, the grid version always has three column tracks. The tracks thems
 
 #### Auto-filling grid tracks
 
-We can create a similar effect to grid, while still keeping the content arranged in strict rows and columns, by creating our track listing using repeat notation and the `auto-fill` and `auto-fit` properties.
+We can use grid to create a similar effect to flexbox, while still keeping the content arranged in strict rows and columns, by creating our track listing using repeat notation and the `auto-fill` and `auto-fit` properties.
 
 In this next example, I have used the `auto-fill` keyword in place of an integer in the repeat notation and set the track listing to 200 pixels. This means that grid will create as many 200 pixels column tracks as will fit in the container.
 
