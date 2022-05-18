@@ -76,7 +76,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - `highWaterMark`
       - : A non-negative integer — this defines the total number of chunks that can be
         contained in the internal queue before backpressure is applied.
-    - size(chunk)
+    - `size` (chunk)
       - : A method containing a parameter `chunk` — this indicates the size to
         use for each chunk, in bytes.
 
