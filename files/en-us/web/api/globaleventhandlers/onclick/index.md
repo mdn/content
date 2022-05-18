@@ -61,7 +61,7 @@ This example changes the color of an element when it's clicked upon.
 document.getElementById('demo').onclick = function changeContent() {
 
    document.getElementById('demo').textContent = "Help me";
-   document.getElementById('demo').style = "Color: red";
+   document.getElementById('demo').style = "color: red";
 
 }
 ```
