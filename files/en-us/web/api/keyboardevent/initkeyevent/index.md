@@ -59,7 +59,7 @@ initKeyEvent (type, bubbles, cancelable, view,
     generated is a combination of keys containing the <kbd>Meta</kbd> key.
 - `keyCode`
   - : An `unsigned long` representing the virtual key code value of the key
-    which was depressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
+    which was pressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
     }} for the list of key codes.
 - `charCode`
   - : An `unsigned long` representing the Unicode character associated with

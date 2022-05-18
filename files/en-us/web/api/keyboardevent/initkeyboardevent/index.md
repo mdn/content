@@ -31,9 +31,9 @@ initKeyboardEvent(type, canBubble, cancelable,
   - : The type of keyboard event; browsers always set it to one of `keydown`,
     `keypress`, or `keyup`.
 - `canBubble` {{optional_inline}}
-  - : Whether or not the event can bubble. Defaults to `false`.
+  - : Indicates whether or not the event can bubble. Defaults to `false`.
 - `cancelable` {{optional_inline}}
-  - : Whether or not the event can be canceled. Defaults to `false`.
+  - : Indicates whether or not the event can be canceled. Defaults to `false`.
 - `view` {{optional_inline}}
   - : The {{domxref("WindowProxy")}} it is associated to. Defaults to `null`.
 - `key` {{optional_inline}}
@@ -41,13 +41,13 @@ initKeyboardEvent(type, canBubble, cancelable,
 - `location` {{optional_inline}}
   - : The value of the location attribute. Defaults to `0`.
 - `ctrlKey` {{optional_inline}}
-  - : Whether the Control key modifier is active. Defaults to `false`.
+  - : Indicates whether the control key modifier is active. Defaults to `false`.
 - `altKey` {{optional_inline}}
-  - : Whether the Alt key modifier is active. Defaults to `false`.
+  - : Indicates whether the alt key modifier is active. Defaults to `false`.
 - `shiftKey` {{optional_inline}}
-  - : Whether the Shift key modifier is active. Defaults to `false`.
+  - : Indicates whether the shift key modifier is active. Defaults to `false`.
 - `metaKey` {{optional_inline}}
-  - : Whether the Meta key modifier is active. Defaults to `false`.
+  - : Indicates whether the meta key modifier is active. Defaults to `false`.
 
 ### Return value
 

@@ -33,7 +33,7 @@ initProgressEvent(type, canBubble, cancelable, lengthComputable, loaded, total)
 - `type`
 
   - : A string identifying the specific type of animation event that
-    occurred. Browsers set it to one of the following values: `loadstart`, `progress`, `error`, `abort`, `load`, or `loadend`.
+    occurred. Possible values are: `loadstart`, `progress`, `error`, `abort`, `load`, or `loadend`.
 - `canBubble`
   - : A boolean flag indicating if the event can bubble
     (`true`) or not (`false`).
