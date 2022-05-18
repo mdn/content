@@ -39,7 +39,7 @@ isTypeSupported(type)
 A value of `false` if the media of the given type will _not_ play.
 
 A value of `true` is returned if the browser can _probably_ play media of the specified type.
-This is _not_ a guarantee, and your code must be prepared for the possibility that the media will not play correctly if at all. 
+This is _not_ a guarantee, and your code must be prepared for the possibility that the media will not play correctly if at all.
 
 All web APIs that work with media files use a "no/maybe/probably" approach (or, in this case, "no or probably") when determining if a media type can be used.
 This is because media files are complex, intricate constructs with far too many subtle variations to be absolutely certain of anything until you actually use the contents of the media.

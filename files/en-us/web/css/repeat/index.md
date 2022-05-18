@@ -55,6 +55,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ## Syntax
 
 The `repeat()` function takes two arguments:
+
 - **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid container.
 - **tracks**: the second argument specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
 
@@ -87,11 +88,11 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value
     - a {{cssxref("minmax()")}} function with:
-        - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value
-        - `max` given as one of a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
+      - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value
+      - `max` given as one of a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
     - a {{cssxref("minmax()")}} function with:
-        - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-        - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value.
+      - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
+      - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value.
 - {{cssxref("&lt;flex&gt;")}}
   - : A non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
 - {{cssxref("&lt;length&gt;")}}
@@ -104,8 +105,8 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
     - a {{cssxref("minmax()")}} function with:
-        - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-        - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
+      - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
+      - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
     - a {{cssxref("fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
 - `auto`
   - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.

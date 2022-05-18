@@ -33,8 +33,8 @@ encodingInfo(configuration)
       - : The type of media being tested. This takes one of two values:
 
         - `record` — Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.
-        - `transmission` — Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).      
-    
+        - `transmission` — Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
+
     - `video`
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
