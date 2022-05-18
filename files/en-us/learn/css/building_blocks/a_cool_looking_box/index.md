@@ -60,7 +60,8 @@ We'd like you to style the provided {{htmlelement("div")}}, giving it the follow
 
 - A reasonable width for a large box, say around 200 pixels.
 - A reasonable height for a large box, centering the text vertically in the process.
-- Horizontally Centered box.
+- Center the box horizontally.
+- Center the text within the box.
 - A slight increase in font size, to around 17-18 pixel computed style. Use rems. Write a comment about how you worked out the value.
 - A base color for the design. Give the box this color as its background color.
 - A contrasting color for the text and a black text shadow.
