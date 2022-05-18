@@ -49,7 +49,7 @@ with id "paragraph", and prints each attribute's value.
   <script type="text/javascript">
    function listAttributes() {
      const paragraph = document.getElementById("paragraph");
-     let result = document.getElementById("result");
+     const result = document.getElementById("result");
 
      // First, let's verify that the paragraph has some attributes
      if (paragraph.hasAttributes()) {
