@@ -33,7 +33,7 @@ _The `FocusEvent()` constructor also inherits arguments from
   - : A string with the name of the event.
     It is case-sensitive and browsers set it to `blur`, `focus`, `focusin`, or `focusout`.
 - `options` {{optional_inline}}
-  - : n object that, _in addition of the properties defined in {{domxref("UIEvent/UIEvent", "UIEvent()")}}_, can have the following properties:
+  - : An object that, in addition of the properties defined in {{domxref("UIEvent/UIEvent", "UIEvent()")}}, can have the following properties:
     - `relatedTarget` {{optional_inline}}
       - : An {{domxref("EventTarget")}} representing the secondary target of a {{domxref("FocusEvent")}}. It defaults to `null`.
 
