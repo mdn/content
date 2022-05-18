@@ -48,7 +48,7 @@ a:hover {
 }
 ```
 
-In this example, the color and background color will transition to the hovered state over two seconds. Even though the default states are normal and hover states are important declarations, the transition does happen.
+In this example, the `color` and `background-color` properties will transition to the hovered state over two seconds. Even though default states are normal declarations and hover states are `!important` declarations, the transition does happen.
 
 ### Cascade layers
 
