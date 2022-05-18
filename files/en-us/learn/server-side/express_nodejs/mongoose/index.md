@@ -427,7 +427,7 @@ We can save our references to the related document by assigning the `_id` value.
 Below we create an author, then a story, and assign the author id to our story's author field.
 
 ```js
-const bob = new Author({ name: 'Bob Smith' });
+let bob = new Author({ name: 'Bob Smith' });
 
 bob.save(function (err) {
   if (err) return handleError(err);
