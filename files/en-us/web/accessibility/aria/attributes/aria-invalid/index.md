@@ -1,5 +1,5 @@
 ---
-title: 'aria-invalid'
+title: aria-invalid
 slug: Web/Accessibility/ARIA/Attributes/aria-invalid
 tags:
   - Accessibility
@@ -8,8 +8,8 @@ tags:
   - ARIA property
   - aria-invalid
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
-
 The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
 
 ## Description
@@ -121,7 +121,7 @@ Used in roles:
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
@@ -137,9 +137,7 @@ Inherited into role:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-invalid","ARIA: aria-invalid Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

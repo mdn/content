@@ -79,9 +79,3 @@ window.addEventListener('online', function(e) { console.log('online'); });
 ## Browser compatibility
 
 {{Compat}}
-
-## Notes
-
-See [Online/Offline Events](/en-US/docs/Web/API/Navigator/Online_and_offline_events) for a
-more detailed description of this property as well as new offline-related features
-introduced in Firefox 3.

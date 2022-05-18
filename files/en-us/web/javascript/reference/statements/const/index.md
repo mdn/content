@@ -27,7 +27,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 - `nameN`
   - : The constant's name, which can be any legal {{Glossary("identifier")}}.
 - `valueN`
-  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions),
+  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions),
     including a function expression.
 
 The [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
@@ -55,7 +55,7 @@ variable identifier cannot be reassigned. For instance, in the case where the co
 an object, this means the object's contents (e.g., its properties) can be altered.
 
 All the considerations about the
-[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_TDZ)
+[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)
 apply to both {{jsxref("Statements/let", "let")}} and `const`.
 
 A constant cannot share its name with a function or a variable in the same scope.
@@ -154,4 +154,4 @@ MY_ARRAY = ['B'];
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
-- [Constants in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Constants)
+- [Constants in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

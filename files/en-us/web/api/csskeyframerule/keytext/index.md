@@ -16,7 +16,7 @@ The **`keyText`** property of the {{domxref("CSSKeyframeRule")}} interface repre
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ### Exceptions
 

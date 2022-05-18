@@ -11,6 +11,7 @@ tags:
   - Performance
   - Reference
   - Web
+spec-urls: https://w3c.github.io/IntersectionObserver/
 ---
 {{DefaultAPISidebar("Intersection Observer API")}}
 
@@ -424,7 +425,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{domxref("Window/load_event", "load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -581,9 +582,7 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

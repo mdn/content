@@ -52,7 +52,7 @@ Every `SVGAngle` object operates in one of two modes:
 
 - `valueAsString`
 
-  - : The value as a {{domxref("DOMString")}} value, in the units expressed by `unitType`. Setting this attribute will cause `value`, `valueInSpecifiedUnits`, and `unitType` to be updated automatically to reflect this setting.
+  - : The value as a string value, in the units expressed by `unitType`. Setting this attribute will cause `value`, `valueInSpecifiedUnits`, and `unitType` to be updated automatically to reflect this setting.
 
     **Exceptions on setting:**
 

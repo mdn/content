@@ -10,6 +10,7 @@ tags:
   - range role
   - spinbutton role
   - spinbutton
+spec-urls: https://w3c.github.io/aria/#spinbutton
 ---
 
 The `spinbutton` role defines a type of range that expects the user to select a value from among discrete choices.
@@ -145,9 +146,7 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#spinbutton","ARIA: spinbutton role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See also
 

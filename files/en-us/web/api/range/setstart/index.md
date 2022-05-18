@@ -30,9 +30,9 @@ setStart(startNode, startOffset)
 
 ### Parameters
 
-- _startNode_
+- `startNode`
   - : The {{ domxref("Node") }} where the {{ domxref("Range") }} should start.
-- _startOffset_
+- `startOffset`
   - : An integer greater than or equal to zero representing the offset for the start of
     the {{ domxref("Range") }} from the start of `startNode`.
 

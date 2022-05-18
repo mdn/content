@@ -159,7 +159,7 @@ This makes documenting code incredibly powerful and flexible.
 #### Overly-short articles are hard to find
 
 If an article is "thin"—that is, too short—it may not be indexed properly (or at all) by search engines.
-As a rule of thumb, the article's body text should be at least 250–300 words.
+As a guiding principle, the article's body text should be at least 250–300 words.
 Don't artificially inflate a page, but treat this guideline as a minimum target length when possible.
 
 ### Headings

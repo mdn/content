@@ -20,7 +20,7 @@ If unset, the app's (i.e. the {{htmlelement("html")}} {{htmlattrxref("lang", "ht
 
 ## Value
 
-A {{domxref("DOMString")}} representing a BCP 47 language tag.
+A string representing a BCP 47 language tag.
 
 ## Examples
 

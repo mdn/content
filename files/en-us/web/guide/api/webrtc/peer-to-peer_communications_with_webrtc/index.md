@@ -11,6 +11,9 @@ tags:
   - RTCPeerConnection
   - WebRTC
   - WebRTC API
+spec-urls:
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/webrtc-pc/
 ---
 {{WebRTCSidebar}}
 
@@ -28,7 +31,4 @@ A high-level description of what happens in an `RTCPeerConnection` was shown in 
 
 ## Specifications
 
-| Specification                            | Status                               | Comment                              |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------ |
-| {{SpecName("Media Capture")}} | {{Spec2("Media Capture")}} | Definition of the `getUserMedia` API |
-| {{SpecName("WebRTC 1.0")}}     | {{Spec2("WebRTC 1.0")}}     | Initial definition                   |
+{{Specifications}}

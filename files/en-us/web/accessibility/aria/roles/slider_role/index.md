@@ -10,8 +10,8 @@ tags:
   - widget role
   - widget
   - slider role
+spec-urls: https://w3c.github.io/aria/#slider
 ---
-
 The `slider` role defines an input where the user selects a value from within a given range.
 
 ## Description
@@ -58,7 +58,7 @@ Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA
 
 Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, accepting user interaction. In addition to including the {{htmlattrxref('tabindex')}} attribute to enable slider focus, keyboard and pointer device support must be implemented.
 
-The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#Keyboard_interactions) below.
+The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#keyboard_interactions) below.
 
 > **Note:** It is recommended to use native [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `slider` role. User agents provide a stylized widget for the range input element, based on the current `value` as it relates to the minimum and maximum values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
 
@@ -194,9 +194,7 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#slider","ARIA: slider role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See also
 

@@ -17,7 +17,7 @@ The value of the `url` property will be the final URL obtained after any redirec
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

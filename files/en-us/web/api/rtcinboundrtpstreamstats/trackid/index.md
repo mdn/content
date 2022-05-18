@@ -29,7 +29,7 @@ The **`trackId`** property of the
 
 ## Value
 
-A {{domxref("DOMString")}} containing the ID of the
+A string containing the ID of the
 {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or
 {{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the track which
 is receiving the media from this RTP session.

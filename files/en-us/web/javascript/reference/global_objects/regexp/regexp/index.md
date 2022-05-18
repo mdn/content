@@ -38,7 +38,7 @@ RegExp(pattern[, flags])
 
     As of ES5, this can also be another `RegExp` object or literal (for the
     two RegExp constructor notations only). Patterns may include
-    [special characters](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters)
+    [special characters](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#using_special_characters)
     to match a wider range of values than would a literal string.
 
 - `flags`

@@ -38,7 +38,7 @@ A Boolean value which is `true` if the WebGL context's depth buffer is being
 used while computing the locations of points in the 3D world. Otherwise, if this is
 `true`, the depth buffer's values are being used to assist in placing objects
 in the scene. Since the [XR
-compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) uses the depth buffer by default, this value is `false`
+compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) uses the depth buffer by default, this value is `false`
 unless explicitly set otherwise when creating the {{domxref("XRWebGLLayer")}} using its
 constructor, {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}.
 

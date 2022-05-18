@@ -29,7 +29,7 @@ index(name)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the index to open.
 
 ### Return value

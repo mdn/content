@@ -45,6 +45,10 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the current layer.
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the current layer.
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}

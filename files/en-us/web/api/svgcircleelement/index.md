@@ -31,9 +31,13 @@ _This interface also inherits properties from its parent, {{domxref("SVGGeometry
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
-## Example
+## Examples
 
-### SVG content
+### Resizing a circle
+
+In this example we draw a circle and randomly increase or decrease its radius when you click it.
+
+#### HTML
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
@@ -42,9 +46,7 @@ _This interface has no methods but inherits methods from its parent, {{domxref("
 </svg>
 ```
 
-### JavaScript content
-
-This function `clickCircle()` is called when the circle is clicked. It randomly increases or decreases the radius of the circle element.
+#### JavaScript
 
 ```js
 function clickCircle() {
@@ -58,8 +60,7 @@ function clickCircle() {
 }
 ```
 
-_Click on the circle._
-{{EmbedLiveSample('Example', '250', '250', '', 'Web/API/SVGCircleElement')}}
+{{EmbedLiveSample('Resizing a circle', '', '300')}}
 
 ## Specifications
 

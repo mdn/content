@@ -47,4 +47,4 @@ If the user's system does not have a program registered to handle a specific pro
 ## See also
 
 - {{DOMxRef("MSLaunchUriCallback")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

@@ -35,9 +35,9 @@ cmp(first, second)
 
 ### Parameters
 
-- first
+- `first`
   - : The first key to compare.
-- second
+- `second`
   - : The second key to compare.
 
 ### Return value

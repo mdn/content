@@ -214,7 +214,7 @@ th {
 
 ### HWB functional notation
 
-Much like the HSL functional notation above, the [hwb()](/en-US/docs/Web/CSS/color_value/hwb()) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
+Much like the HSL functional notation above, the [hwb()](/en-US/docs/Web/CSS/color_value/hwb) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
 
 Here are some examples of using HWB notation:
 

@@ -26,7 +26,7 @@ div(number)
 
 ### Parameters
 
-- number
+- `number`
   - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
 ### Return value

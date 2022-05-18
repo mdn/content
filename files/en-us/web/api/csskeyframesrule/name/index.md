@@ -16,7 +16,7 @@ The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Examples
 

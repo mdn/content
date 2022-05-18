@@ -62,14 +62,14 @@ There are several ways forward from this point. It's up to you.
 Here are some options:
 
 1. Go to <https://github.com/mdn/content> and just use the
-[GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github).
+[GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files).
 This is the easiest approach if you just want to make a simple change to
 a single file, like fixing a typo.
-1. Install and use the [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop)
-1. Install and use the [GitHub CLI](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-cli)
+1. Install and use the [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop)
+1. Install and use the [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli)
 1. [Install `git`](https://git-scm.com/downloads) and use it from the
 command line. You might find these resources helpful:
-    - [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
+    - [Using Git](https://docs.github.com/en/get-started)
     - [`git` cheatsheet](https://training.github.com/)
 
 If you choose an option other than the GitHub UI, you want to install
@@ -136,11 +136,11 @@ and then click on the edit (pencil) button.
   to jump to its source file on GitHub.
 
 From there the GitHub UI will take your hand and
-[walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
+[walk you through the rest](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files),
 like automatically creating a
-[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 and branch to commit your changes to, as well as helping you reach the
-ultimate goal, a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+ultimate goal, a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
 
@@ -166,13 +166,13 @@ moving one or more documents, the GitHub UI is not very efficient.
 You'd have to make a separate pull request for every page you want to change.
 Instead, you're going to have to use `git` or one of the other
 `git`-based approaches like the
-[GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop).
+[GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop).
 
 1. You'll want to create a
-[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 of this repository, so you can freely experiment with branches and
 changes in your own copy before submitting your changes as a
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Let's assume your GitHub username is `octocat`. Your fork would be a copy
 of this repository but in your own account, so
 `https://github.com/octocat/content`.
@@ -291,7 +291,7 @@ and then push the branch to your fork. Remember, the default name that
     ```
 
 1. You're now ready to create a
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 1. Once you've created your pull request, sit back, relax, and wait for
 a review.
@@ -410,7 +410,7 @@ or `index.md` file.
     ```
 
 1. And finally create your
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ### Moving one or more documents
 
@@ -457,7 +457,7 @@ push your branch to your fork:
     git push -u origin my-move
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 **Important: `yarn content move` automatically adds the necessary redirect
 information to the `_redirects.txt` file so that the old location will redirect
@@ -516,7 +516,7 @@ push your branch to your fork:
     git push -u origin my-delete
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 > **Note:** If the slug of the page you wish to delete contain special
   characters, include it in quotes:

@@ -53,7 +53,7 @@ window.addEventListener('vrdisplayconnect', function() {
 });
 ```
 
-Or use the [`onvrdisplayconnect`](/en-US/docs/Web/API/Window/onvrdisplayconnect) event handler property:
+Or use the `onvrdisplayconnect` event handler property:
 
 ```js
 window.onvrdisplayconnect = function() {

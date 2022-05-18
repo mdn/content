@@ -6,6 +6,7 @@ tags:
   - Accessibility
   - Meter
   - Web Development
+spec-urls: https://www.w3.org/TR/wai-aria-1.2/#meter
 ---
 The `meter` role is used to identify an element being used as a meter.
 
@@ -80,9 +81,7 @@ In the above scenario, when the `aria-valuenow` value updates, the width of the 
 
 ## Specifications
 
-| Specification                                            | Status                       |
-| -------------------------------------------------------- | ---------------------------- |
-| {{SpecName("ARIA 1.2","#meter","meter")}} | {{Spec2('ARIA 1.2')}} |
+{{Specifications}}
 
 ## See also
 

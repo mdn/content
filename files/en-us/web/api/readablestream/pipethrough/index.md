@@ -60,7 +60,6 @@ pipeThrough(transformStream, options)
 
       - : If set to an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) object, ongoing pipe operations can then be aborted via the corresponding [`AbortController`](/en-US/docs/Web/API/AbortController).
 
-
 ### Return value
 
 The `readable` side of the `transformStream`.

@@ -6,7 +6,7 @@ tags:
   - Element
   - Property
   - Reference
-  - shadow dom
+  - shadow DOM
   - slot
 browser-compat: api.Element.slot
 ---

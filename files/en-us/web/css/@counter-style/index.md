@@ -122,14 +122,14 @@ Which will produce lists like this:
 Ⓑ Two
 Ⓒ Three
 Ⓓ Four
-Ⓔ FIve
+Ⓔ Five
 ...
 ...
-Ⓨ Twenty Five
-Ⓩ Twenty Six
-27 Twenty Seven
-28 Twenty Eight
-29 Twenty Nine
+Ⓨ Twenty-five
+Ⓩ Twenty-six
+27 Twenty-seven
+28 Twenty-eight
+29 Twenty-nine
 30 Thirty
 
 See more examples on the [demo page](https://mdn.github.io/css-examples/counter-style-demo/).

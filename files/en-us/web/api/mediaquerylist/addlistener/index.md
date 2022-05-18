@@ -31,7 +31,7 @@ addListener(func)
 
 ### Parameters
 
-- func
+- `func`
   - : A function or function reference representing the callback function you want to run
     when the media query status changes.
 

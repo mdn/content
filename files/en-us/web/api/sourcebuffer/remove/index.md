@@ -31,9 +31,9 @@ remove(start, end)
 
 ### Parameters
 
-- start
+- `start`
   - : A double representing the start of the time range, in seconds.
-- end
+- `end`
   - : A double representing the end of the time range, in seconds.
 
 ### Return value

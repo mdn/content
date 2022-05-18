@@ -15,7 +15,7 @@ The **`id`** read-only property of the {{domxref("PerformanceElementTiming")}} i
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

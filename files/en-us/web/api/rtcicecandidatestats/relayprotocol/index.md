@@ -30,7 +30,7 @@ The ICE protocol being used by the candidate otherwise can be obtained from the
 
 ## Value
 
-A {{domxref("DOMString")}} identifying the protocol being used by the endpoint to
+A string identifying the protocol being used by the endpoint to
 communicate with the TURN server. The possible values are:
 
 - `tcp`

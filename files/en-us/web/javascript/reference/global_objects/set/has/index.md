@@ -32,7 +32,7 @@ has(value)
 Returns `true` if an element with the specified value exists in the
 `Set` object; otherwise `false`.
 
-> **Note:** Technically speaking, `has()` uses the [Same-value-zero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality)
+> **Note:** Technically speaking, `has()` uses the [Same-value-zero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)
 > algorithm to determine whether the given element is found.
 
 ## Examples

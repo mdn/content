@@ -24,7 +24,7 @@ isVertexArrayOES(arrayObject)
 
 ### Parameters
 
-- arrayObject
+- `arrayObject`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to test.
 
 ### Return value

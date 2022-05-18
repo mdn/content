@@ -25,7 +25,7 @@ setKeyframes(keyframes)
 
 ### Parameters
 
-- keyframes
+- `keyframes`
 
   - : A keyframe object or `null`. If set to `null`, the keyframes are replaced with a sequence of empty keyframes.
 

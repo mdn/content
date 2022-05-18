@@ -26,7 +26,7 @@ getEntriesByType(type)
 
 ### Parameters
 
-- type
+- `type`
   - : The type of entry to retrieve such as "`mark`". The valid entry types are
     listed in {{domxref("PerformanceEntry.entryType")}}.
 

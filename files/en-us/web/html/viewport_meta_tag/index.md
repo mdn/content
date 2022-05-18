@@ -8,7 +8,6 @@ tags:
   - viewport
 spec-urls: https://drafts.csswg.org/css-device-adapt/#viewport-meta
 ---
-
 This article describes how to use the "viewport" `<meta>` tag to control the viewport's size and shape.
 
 ## Background
@@ -63,7 +62,7 @@ For pages that set an initial or maximum scale, this means the `width` property 
 <meta name="viewport" content="width=500, initial-scale=1">
 ```
 
-Other [attributes](/en-US/docs/Web/HTML/Element/meta#Attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.
+Other [attributes](/en-US/docs/Web/HTML/Element/meta#attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.
 
 Not all mobile browsers handle orientation changes in the same way. For example, Mobile Safari often just zooms the page when changing from portrait to landscape, instead of laying out the page as it would if originally loaded in landscape. If web developers want their scale settings to remain consistent when switching orientations on the iPhone, they must add a `maximum-scale` value to prevent this zooming, which has the sometimes-unwanted side effect of preventing users from zooming in:
 
@@ -79,7 +78,7 @@ Suppress the small zoom applied by many smartphones by setting the initial scale
 
 ## Common viewport sizes for mobile and tablet devices
 
-If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://docs.adobe.com/content/help/en/target/using/experiences/vec/mobile-viewports.html). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
+If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://experienceleague.adobe.com/docs/target/using/experiences/vec/mobile-viewports.html). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
 
 ## Specifications
 

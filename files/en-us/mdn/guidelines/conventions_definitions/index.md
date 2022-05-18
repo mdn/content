@@ -139,7 +139,7 @@ Here are some guidelines to help you decide what to do.
 - If the item was implemented in any release version of any one or more browsers—but _only_ behind a preference or flag—do not delete the item from the documentation immediately.
   Instead, mark the item as deprecated as follows:
 
-  - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the {{tag("Deprecated")}} tag to the page's list of tags.
+  - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the `Deprecated` tag to the page's list of tags.
   - On the overview page for the element, interface, or API, find the list of items which includes the item that's been removed from the specification and add the [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) macro after the item's name in that list.
   - Search the informative text of the overview page for that interface, element, etc. for any references to the removed item.
     Add warning boxes in appropriate places with text along the lines of "\[whatever] has been removed from the specification and will be removed from browsers soon.
@@ -152,7 +152,7 @@ Here are some guidelines to help you decide what to do.
 
 - If the item was implemented in one or more release builds of browsers—without requiring a preference or flag to be changed—mark the item as deprecated, as follows:
 
-  - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the {{tag("Deprecated")}} tag to the page's list of tags.
+  - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the `Deprecated` tag to the page's list of tags.
   - On the overview page for the element, interface, or API, find the list of items which includes the item that's been removed from the specification and add the [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) macro after the item's name in that list.
   - Search the informative text of the overview page for that interface, element, etc. for any references to the removed item.
     Add warning boxes in appropriate places with text along the lines of "\[whatever] has been removed from the specification and is deprecated.

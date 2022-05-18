@@ -27,7 +27,7 @@ writeValue(array)
 
 ### Parameters
 
-- array
+- `array`
   - : Sets the value with the bytes contained in the array.
 
 ### Return value

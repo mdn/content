@@ -250,7 +250,7 @@ mapped.sort((a, b) => {
 const result = mapped.map(v => data[v.i]);
 ```
 
-There is an open source library available called [mapsort](https://null.house/open-source/mapsort) which applies this approach.
+There is an open source library available called [mapsort](https://github.com/Pimm/mapsort) which applies this approach.
 
 ### Sort stability
 

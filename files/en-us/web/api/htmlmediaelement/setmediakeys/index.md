@@ -28,7 +28,7 @@ setMediaKeys(mediaKeys)
 
 ### Parameters
 
-- mediaKeys
+- `mediaKeys`
   - : A reference to a {{domxref("MediaKeys")}} object that the
     {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.
 

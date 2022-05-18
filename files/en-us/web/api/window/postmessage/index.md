@@ -40,13 +40,13 @@ postMessage(message, targetOrigin, transfer)
 - `message`
   - : Data to be sent to the other window. The data is serialized using
     {{domxref("Web_Workers_API/Structured_clone_algorithm", "the structured clone
-    algorithm")}}. This means you can pass a broad variety of data objects safely to the
+    algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the
     destination window without having to serialize them yourself.
 - `targetOrigin`
-  - : Specifies what the origin of `targetWindow` must be for the event to be
+  - : Specifies what the origin of this window must be for the event to be
     dispatched, either as the literal string `"*"` (indicating no preference)
     or as a URI. If at the time the event is scheduled to be dispatched the scheme,
-    hostname, or port of `targetWindow`'s document does not match that provided
+    hostname, or port of this window's document does not match that provided
     in `targetOrigin`, the event will not be dispatched; only if all three
     match will the event be dispatched. This mechanism provides control over where
     messages are sent; for example, if `postMessage()` was used to transmit a

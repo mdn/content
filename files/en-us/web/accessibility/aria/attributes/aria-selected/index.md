@@ -1,5 +1,5 @@
 ---
-title: 'aria-selected'
+title: aria-selected
 slug: Web/Accessibility/ARIA/Attributes/aria-selected
 tags:
   - Accessibility
@@ -8,13 +8,13 @@ tags:
   - ARIA property
   - aria-selected
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-selected
 ---
-
 The `aria-selected` attribute indicates the current "selected" state of various widgets.
 
 ## Description
 
-The `aria-selected` attribute indicates the current "selected" state for [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) roles.
+The `aria-selected` attribute indicates the current "selected" state for [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) roles.
 
 This attribute is used to indicate which elements within single-selection and multiple-selection composite widgets are selected. If more than one element is selectable at a time, include `aria-multiselectable="true"` on the grid, listbox, tablist, or other owning role, while including `aria-selected` only on the selectable cells, options, and tabs.
 
@@ -114,9 +114,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-selected","ARIA: aria-selected Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

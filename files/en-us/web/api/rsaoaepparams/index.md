@@ -7,7 +7,7 @@ tags:
   - Reference
   - RsaOaepParams
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaOaepParams
+spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaOaepParams
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -16,7 +16,7 @@ The **`RsaOaepParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/W
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `RSA-OAEP`.
+  - : A string. This should be set to `RSA-OAEP`.
 - `label` {{optional_inline}}
 
   - : A {{domxref("BufferSource")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext. A digest of the label is part of the input to the encryption operation.

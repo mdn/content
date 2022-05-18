@@ -25,18 +25,18 @@ msInsertVideoEffect(activatableClassId, effectRequired, config)
 
 ### Parameters
 
-- activatableClassId
+- `activatableClassId`
   - : A string defining the video effects class.
-- effectRequired
+- `effectRequired`
   - : A {{JSxRef("Boolean")}} which if set to
-    _true_ requires a video effect to be defined.
-- config{{Optional_Inline}}
+    `true` requires a video effect to be defined.
+- `config` {{Optional_Inline}}
   - : An optional {{JSxRef("Object")}} to help with defining any additional configuration
     needed.
 
 ### Return value
 
-This method does not return a value.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -48,4 +48,4 @@ oVideo1.msInsertVideoEffect("Windows.Media.VideoEffects.VideoStabilization", tru
 ## See also
 
 - {{DOMxRef("HTMLVideoElement")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

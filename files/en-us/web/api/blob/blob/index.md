@@ -30,10 +30,7 @@ new Blob(array, options)
     objects, that will be put inside the {{domxref("Blob")}}. `USVString`
     objects are encoded as UTF-8.
 - `options` {{optional_inline}}
-
-  - : An optional object of type {{domxref("BlobPropertyBag")}} which may specify any of
-    the following properties:
-
+  - : An object which may specify any of the following properties:
     - `type` {{optional_inline}}
       - : The {{Glossary("MIME type")}} of the data that will be stored into the blob. The
         default value is the empty string, (`""`).

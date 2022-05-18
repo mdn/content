@@ -11,7 +11,7 @@ tags:
   - Input Type
   - Reference
   - button
-browser-compat: html.elements.input.input-button
+browser-compat: html.elements.input.type_button
 ---
 
 {{HTMLRef("Input_types")}}
@@ -26,7 +26,7 @@ browser-compat: html.elements.input.input-button
   <tbody>
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
-      <td>A {{domxref("DOMString")}} used as the button's label</td>
+      <td>A string used as the button's label</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -58,7 +58,7 @@ browser-compat: html.elements.input.input-button
 
 ### Button with a value
 
-An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label.
+An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a string that is used as the button's label.
 
 ```html
 <input type="button" value="Click Me">

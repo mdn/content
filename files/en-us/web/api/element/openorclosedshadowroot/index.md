@@ -13,7 +13,7 @@ tags:
   - Reference
   - WebExtensions
   - openOrClosedShadowRoot
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.openOrClosedShadowRoot
 ---
 {{APIRef("Shadow DOM")}}{{non-standard_header}}

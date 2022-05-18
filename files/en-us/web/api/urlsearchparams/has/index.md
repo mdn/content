@@ -25,7 +25,7 @@ has(name)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to find.
 
 ### Return value

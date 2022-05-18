@@ -24,7 +24,7 @@ new SpeechSynthesisUtterance(text)
 ### Parameters
 
 - `text`
-  - : A {{domxref("DOMString")}} containing the text that will be synthesized when the utterance is spoken.
+  - : A string containing the text that will be synthesized when the utterance is spoken.
 
 ## Examples
 

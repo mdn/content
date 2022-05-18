@@ -59,5 +59,3 @@ current CSS Transforms Module Level 1 Working Draft.
 
 - {{domxref("Window.webkitConvertPointFromPageToNode")}}
 - Mozilla implementation bug: {{bug(850806)}}
-- [`webkitConvertPointFromNodeToPage`
-  documentation at IE Dev Center](https://developer.mozilla.org/en-US/docs/web/api/window/webkitconvertpointfromnodetopage)

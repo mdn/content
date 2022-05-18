@@ -20,7 +20,7 @@ The **`SVGViewElement`** interface provides access to the properties of {{SVGEle
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGViewElement.viewTarget")}} {{deprecated_inline}}
-  - : An {{domxref("SVGStringList")}} corresponding to the {{SVGAttr("viewTarget")}} attribute of the given {{SVGElement("view")}} element. A list of {{domxref("DOMString")}} values which contain the names listed in the {{SVGAttr("viewTarget")}} attribute. Each of the `DOMString` values can be associated with the corresponding element using the {{domxref("Document.getElementById()", "getElementById()")}} method call.
+  - : An {{domxref("SVGStringList")}} corresponding to the {{SVGAttr("viewTarget")}} attribute of the given {{SVGElement("view")}} element. A list of string values which contain the names listed in the {{SVGAttr("viewTarget")}} attribute. Each of the `DOMString` values can be associated with the corresponding element using the {{domxref("Document.getElementById()", "getElementById()")}} method call.
 
 ## Methods
 

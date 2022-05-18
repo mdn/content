@@ -32,5 +32,5 @@ A {{domxref("NetworkInformation")}} object.
 
 ## See also
 
-- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)

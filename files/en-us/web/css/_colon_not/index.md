@@ -23,7 +23,7 @@ The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 }
 ```
 
-The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](/en-US/docs/Web/CSS/:not#description) that you should be aware of before using it.
+The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](#description) that you should be aware of before using it.
 
 ## Syntax
 

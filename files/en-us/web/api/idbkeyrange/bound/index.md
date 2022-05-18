@@ -31,14 +31,14 @@ bound(lower, upper, lowerOpen, upperOpen)
 
 ### Parameters
 
-- lower
+- `lower`
   - : specifies the lower bound of the new key range.
-- upper
+- `upper`
   - : specifies the upper bound of the new key range.
-- lowerOpen {{optional_inline}}
+- `lowerOpen` {{optional_inline}}
   - : indicates whether the lower bound excludes the endpoint value. The default is
     false.
-- upperOpen {{optional_inline}}
+- `upperOpen` {{optional_inline}}
   - : Indicates whether the upper bound excludes the endpoint value. The default is
     false.
 

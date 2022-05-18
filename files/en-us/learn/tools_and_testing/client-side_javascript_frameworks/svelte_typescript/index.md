@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - Learn
   - Svelte
-  - Typescript
+  - TypeScript
   - client-side
 ---
 

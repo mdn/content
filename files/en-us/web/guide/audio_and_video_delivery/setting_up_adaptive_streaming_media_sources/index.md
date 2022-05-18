@@ -110,7 +110,7 @@ it might be wise to provide a fallback for browsers that don't yet support MPEG-
 
 ### LIVE Profile
 
-A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://github.com/gpac/gpac/wiki/MP4Box/dash/) to encode media into MPEG-DASH format.
+A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://github.com/gpac/gpac/wiki/mp4box-dash-opts) to encode media into MPEG-DASH format.
 
 > **Note:** You will need to be comfortable with make files and installing dependencies to get this software up and running.
 
@@ -218,7 +218,6 @@ Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into
 
 There are a number of useful tools available for HLS encoding
 
-- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](http://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
 - Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 

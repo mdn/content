@@ -23,7 +23,7 @@ selectNode(referenceNode)
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} to select within a {{domxref("Range")}}.
 
 ### Return value

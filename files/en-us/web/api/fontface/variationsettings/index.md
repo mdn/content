@@ -21,7 +21,7 @@ It is equivalent to the
 
 ## Value
 
-A {{domxref('CSSOMString')}} containing a descriptor.
+A string containing a descriptor.
 
 ## Specifications
 

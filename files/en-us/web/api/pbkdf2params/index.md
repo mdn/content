@@ -7,7 +7,7 @@ tags:
   - Pbkdf2Params
   - Reference
   - Web Crypto API
-spec-urls: https://www.w3.org/TR/WebCryptoAPI/#dfn-Pbkdf2Params
+spec-urls: https://w3c.github.io/webcrypto/#dfn-Pbkdf2Params
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -16,10 +16,10 @@ The **`Pbkdf2Params`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `PBKDF2`.
+  - : A string. This should be set to `PBKDF2`.
 - `hash`
 
-  - : A {{domxref("DOMString")}} representing the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. This may be one of:
+  - : A string representing the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. This may be one of:
 
     - `SHA-1`
     - `SHA-256`

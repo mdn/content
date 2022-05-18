@@ -44,7 +44,7 @@ console.log(month); // 11
 
 > **Note:** If needed, the full name of a month (`January` for
 > example) can be obtained by using
-> [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Using_options)
+> [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options)
 > with an `options` parameter. Using this method, internationalization is
 > made easier:
 >

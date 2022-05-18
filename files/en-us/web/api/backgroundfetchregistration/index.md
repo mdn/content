@@ -21,7 +21,7 @@ A `BackgroundFetchRegistration` instance is returned by the {{domxref("Backgroun
 The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.
 
 - {{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} containing the background fetch's ID.
+  - : A string containing the background fetch's ID.
 - {{domxref("BackgroundFetchRegistration.uploadTotal")}}{{ReadOnlyInline}}
   - : A {{jsxref("number")}} containing the total number of bytes to be uploaded.
 - {{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}

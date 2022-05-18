@@ -45,7 +45,7 @@ new PromiseRejectionEvent(type, options)
     - `reason`
       - : Any value or {{jsxref("Object")}} which represents the reason the promise was
         rejected. This can be anything from a numeric error code to an error
-        {{domxref("DOMString")}} to an object which contains detailed information
+        string to an object which contains detailed information
         describing the situation resulting in the promise being rejected.
 
 ### Return value

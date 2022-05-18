@@ -22,7 +22,7 @@ new TextDecoderStream(label, options)
 ### Parameters
 
 - `label`
-  - : A {{domxref("DOMString")}} defaulting to `utf-8`. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
+  - : A string defaulting to `utf-8`. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
 - `options` {{optional_inline}}
 
   - : A `TextDecoderOptions` dictionary with the property:

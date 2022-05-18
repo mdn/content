@@ -77,7 +77,7 @@ DBOpenRequest.onsuccess = (event) => {
 };
 ```
 
-Using the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/onblocked) property:
+Using the `onblocked` property:
 
 ```js
 // Open the database

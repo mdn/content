@@ -51,4 +51,3 @@ _No inherited static methods_.
 ## Browser compatibility
 
 {{Compat}}
-

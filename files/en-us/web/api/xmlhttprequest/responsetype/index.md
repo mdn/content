@@ -41,7 +41,7 @@ It can take the following values:
 - `"json"`
   - : The `response` is a JavaScript object created by parsing the contents of received data as {{Glossary("JSON")}}.
 - `"text"`
-  - : The `response` is a text in a {{domxref("DOMString")}} object.
+  - : The `response` is a text in a string.
 - `"ms-stream"` {{non-standard_inline}}
   - : The `response` is part of a streaming download; this response type is only allowed for download requests, and is only supported by Internet Explorer.
 

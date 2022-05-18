@@ -6,6 +6,7 @@ tags:
   - HTTP
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.12
 ---
 {{HTTPSidebar}}
 
@@ -29,9 +30,7 @@ There are a few rare conditions when this might occur:
 
 ## Specifications
 
-| Specification                                                | Title                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "414 URI Too Long" , "6.5.12")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

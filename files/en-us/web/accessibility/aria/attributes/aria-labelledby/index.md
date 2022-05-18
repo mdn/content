@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-labelledby
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-labelledby
 ---
 
 The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to.
@@ -96,9 +97,7 @@ The `aria-labelledby` attribute is **NOT** supported in [`code`](/en-US/docs/Web
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-labelledby","ARIA: aria-labelledby Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

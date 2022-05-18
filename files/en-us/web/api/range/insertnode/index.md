@@ -28,7 +28,7 @@ insertNode(newNode)
 
 ### Parameters
 
-- _newNode_
+- `newNode`
   - : The {{domxref("Node")}} to insert at the start of the `range`.
 
 ### Return value

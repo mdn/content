@@ -29,7 +29,7 @@ createChannelMerger(numberOfInputs)
 
 ### Parameters
 
-- numberOfInputs
+- `numberOfInputs`
   - : The number of channels in the input audio streams, which the output stream will
     contain; the default is 6 if this parameter is not specified.
 

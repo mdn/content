@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#presentation
+  - https://w3c.github.io/aria-practices/#presentation_role
 ---
 
 The `presentation` role and its synonym `none` remove an element's implicit ARIA semantics from being exposed to the accessibility tree.
@@ -56,10 +59,7 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#presentation","ARIA: presentation role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#presentation_role","Hiding semantics with the presentation role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

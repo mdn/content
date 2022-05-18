@@ -22,7 +22,7 @@ shorthand property.
 > To achieve your purpose, you can use:
 >
 > - {{domxref("CSSStyleDeclaration.getPropertyValue()")}} of the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
-> - {{domxref("Element.computedStyleMap()")}} of the modern [CSS Typed Object Model API](/en-US/docs/Web/CSS_Typed_OM_API), less supported and considered experimental.
+> - {{domxref("Element.computedStyleMap()")}} of the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
 ## Syntax
 

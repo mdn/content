@@ -33,7 +33,7 @@ For detailed guidance on using this header, see the [Parsing](#parsing) and [Sel
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>

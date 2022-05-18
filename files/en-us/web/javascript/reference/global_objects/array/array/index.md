@@ -46,7 +46,7 @@ new Array(arrayLength)
 
 ### Array literal notation
 
-Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Array_literals)
+Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#array_literals)
 notation:
 
 ```js

@@ -35,7 +35,7 @@ The most obvious use of this is to put a class name only on certain custom eleme
 
 ### Selectively styling shadow hosts
 
-The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
+The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
 In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
 

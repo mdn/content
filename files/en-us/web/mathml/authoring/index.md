@@ -41,7 +41,7 @@ You can use Presentation MathML inside HTML5 documents:
 </html>
 ```
 
-Content MathML is not supported by browsers. It's recommended to convert your Content MathML markup into Presentation MathML before publishing it, for example with the help of the [ctop.xsl](https://code.google.com/p/web-xslt/source/browse/trunk/#trunk/ctop) stylesheet. Tools mentioned on this page generates Presentation MathML.
+Content MathML is not supported by browsers. It's recommended to convert your Content MathML markup into Presentation MathML before publishing it, for example with the help of the [ctop.xsl](https://code.google.com/archive/p/web-xslt/source#trunk/ctop) stylesheet. Tools mentioned on this page generates Presentation MathML.
 
 #### Fallback for Browsers without MathML support
 
@@ -86,7 +86,7 @@ var isWebKit = ua.indexOf('AppleWebKit') > -1 && ua.indexOf('Chrome') === -1;
 
 #### Mathematical fonts
 
-In order to get a good layout or to allow different style, it's important to have mathematical fonts available. It's always good to provide a link to [MDN's Font Instructions](/en-US/docs/Mozilla/MathML_Project/Fonts), so that your visitors can verify whether they have appropriate fonts installed on their system. It's also good to provide a fallback with Web fonts.
+In order to get a good layout or to allow different style, it's important to have mathematical fonts available. It's always good to provide a link to [MDN's Font Instructions](/en-US/docs/Web/MathML/Fonts), so that your visitors can verify whether they have appropriate fonts installed on their system. It's also good to provide a fallback with Web fonts.
 
 Prior to Gecko 31.0 {{GeckoRelease("31.0")}}, it was a bit tedious to setup math fonts, see the [font instructions for Mozilla 2.0](/en-US/docs/Mozilla/MathML_Project/FontsMozilla2.0#MathML_Font_Selection_with_CSS). For Gecko 31.0 {{GeckoRelease("31.0")}}, this is much simpler and is compatible with any Web rendering engine with MathML support. For example, here is a minimal stylesheet to use Latin Modern for the text and Latin Modern Math for the mathematics:
 
@@ -287,7 +287,7 @@ mzlatex foo.tex       # Windows platform
 
 Note that [tex4ebook](https://github.com/michal-h21/tex4ebook) relies on TeX4ht to generate EPUB documents.
 
-[LaTeXML](https://dlmf.nist.gov/LaTeXML/) is another tool that can generate HTML5 and EPUB documents. Windows users can watch this [video tutorial](https://www.youtube.com/watch?v=Dg881w2e-lI). Given a foo.tex LaTeX file, you can use these simple commands:
+[LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) is another tool that can generate HTML5 and EPUB documents. Windows users can watch this [video tutorial](https://www.youtube.com/watch?v=Dg881w2e-lI). Given a foo.tex LaTeX file, you can use these simple commands:
 
 ```bash
 latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
@@ -317,7 +317,7 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
   - This might be a bit more difficult to set up, since you need some admin right on your server.
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) and [Mathoid](https://github.com/wikimedia/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
+[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) and [Mathoid](https://github.com/wikimedia/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
 
 ## Graphical Interface
 
@@ -333,7 +333,7 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
 [LyX](https://www.lyx.org/) is a graphical LaTeX editor, which has built-in support for XHTML+MathML export and can be configured to use similar LaTeX-to-(X)HTML converters. You can for example, you can configure it to [use LaTeXML HTML5/EPUB export](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx).
 
-[TeXmacs](https://www.texmacs.org/) is a free structured editor with special facilities for mathematics, graphics and interactive sessions. TeXmacs documents can be exported in XHTML+MathML.
+[TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html) is a free structured editor with special facilities for mathematics, graphics and interactive sessions. TeXmacs documents can be exported in XHTML+MathML.
 
 ![TeXmacs MathML example](tm-mathml-collage.png)
 

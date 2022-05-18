@@ -24,9 +24,12 @@ query(permissionDescriptor)
 
   - : An object that sets options for the `query` operation consisting of a comma-separated list of name-value pairs. The available options are:
 
-    - `name`: The name of the API whose permissions you want to query. An up-to-date list of permission names can be found in the spec under the [PermissionName enum](https://w3c.github.io/permissions/#enumdef-permissionname), but bear in mind that the actual permissions supported by browsers is currently much smaller than this. Firefox for example currently supports `geolocation`, `notifications`, `push`, and `persistent-storage` (see our [`Permissions.webidl` file](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)).
-    - `userVisibleOnly`: (Push only, not supported in Firefox — see the Browser Support section below) Indicates whether you want to show a notification for every message or be able to send silent push notifications. The default is `false`.
-    - `sysex`: (Midi only) Indicates whether you need and/or receive system exclusive messages. The default is `false`.
+    - `name`
+      - : The name of the API whose permissions you want to query. An up-to-date list of permission names can be found in the spec under the [PermissionName enum](https://w3c.github.io/permissions/#enumdef-permissionname), but bear in mind that the actual permissions supported by browsers is currently much smaller than this. Firefox for example currently supports `geolocation`, `notifications`, `push`, and `persistent-storage` (see our [`Permissions.webidl` file](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)).
+    - `userVisibleOnly`
+      - : (Push only, not supported in Firefox — see the Browser Support section below) Indicates whether you want to show a notification for every message or be able to send silent push notifications. The default is `false`.
+    - `sysex` (Midi only)
+      - : Indicates whether you need and/or receive system exclusive messages. The default is `false`.
 
 > **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is granted (e.g. by the user, in the relevant permissions dialog), `navigator.permissions.query()` will return `true` for both `notifications` and `push`.
 

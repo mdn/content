@@ -37,4 +37,4 @@ this.internals_.ariaRoleDescription = "My custom widget";
 
 {{Compat}}
 
-- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role)
+- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)

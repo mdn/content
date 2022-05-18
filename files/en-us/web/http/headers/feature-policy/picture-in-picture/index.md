@@ -29,9 +29,7 @@ As of June 2019, the [spec draft](https://wicg.github.io/picture-in-picture/#fea
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
