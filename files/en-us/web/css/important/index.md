@@ -14,7 +14,7 @@ The important flag, comprised of a `!` delimiter and `important` keyword, when a
 
 ## Description
 
-To create an important declaration, add the "important flag", comprised of the delimiter token `!` followed by the `important` keyword, after the value in the declaration. While white space is allowed between the delimeter and the keyword, the important flag is generally written as `!important`, without any white space.
+To mark a declaration important, add the _important flag_ (`!important`) after the value in the declaration. While white space is allowed between the delimiter and the keyword, the flag is generally written as `!important` without any white space.
 
 ```css
 selector {
