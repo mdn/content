@@ -121,7 +121,7 @@ If you need to override an external stylesheet containing `!important` declarati
 
 ### Accessibility
 
-Important styles from a user stylesheet take precedence over author important declarations, meaning adding an important flag to a site's styles will not prevent individual users with special requirements, such as large fonts, from being able to override your styles with their own important styles.
+Important styles from a user stylesheet take precedence over the author style sheet's `!important` declarations, meaning adding an `!important` flag to a site's styles will not prevent individual users with special requirements, such as large fonts, from being able to override your styles by adding`!important` styles in their own user's style sheet.
 
 ## Browser compatibility
 
