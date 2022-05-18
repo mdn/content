@@ -33,7 +33,7 @@ new ClipboardItem(data, options)
 - `options` {{optional_inline}}
   - : An object with the following properties:
     - `presentationStyle` {{optional_inline}}
-      - : One of the 3 strings: `unspecified`, `inline` or `attachment`. The default is `unspecified`.
+      - : One of the three strings: `unspecified`, `inline` or `attachment`. The default is `unspecified`.
 
 > **Note:** You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}}
 > interface.
