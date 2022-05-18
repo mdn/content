@@ -34,7 +34,7 @@ When a declaration is important, the order of precedence is reversed. Declaratio
 
 Reversing the precedence order for `!important` declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as `!important`. It also guarantees malicious extensions can't override `!important` user-agent styles, which might break functionality or negatively impact security.
 
-Does anything have precedence over important declarations? Yes. [Transitions](/en-US/docs/Web/CSS/CSS_Transitions). CSS transitions are a way to control the speed at which the property changes from one value to another.  A transitioning property, while transitioning from one value to another, will not match a specific important declaration. 
+Does anything have precedence over important declarations? Yes, [transitions](/en-US/docs/Web/CSS/CSS_Transitions). CSS transitions are a way to control the speed at which the property changes from one value to another. While transitioning from one value to another, a property will not match a specific important declaration.
 
 ```css
 a {
@@ -56,11 +56,11 @@ Within each of the three origins for style sheets – author, user, and user-age
 
 ### Inline styles
 
-When it comes to the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style), inline normal styles take precedence over all normal declarations, no matter the origin and inline important styles take precedence over all other important author styles, no matter the layer, but are overridden by important user styles, important user-agent styles and transitions.
+Inline styles are styles defined using the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attributes. They can also be normal or important. Inline _normal_ styles take precedence over all _normal_ declarations, no matter the origin. Inline _important_ styles take precedence over all other _important_ author styles, no matter the layer, but important styles from user's or user-agent's style sheets and transitions override them.
 
 ### !important and specificity
 
-While `!important` is not part of determining specificity, it is related.  Important declarations override all other declarations from the same [origin and cascade layer](/en-US/docs/Web/CSS/Cascade). 
+While `!important` is not part of determining specificity, it is related. Important declarations override all other declarations from the same [origin and cascade layer](/en-US/docs/Web/CSS/Cascade).
 
 ```css
 #myElement#myElement#myElement .myClass.myClass p:hover {
@@ -74,7 +74,7 @@ p {
 
 This example displays a case of over-specifying a selector. No matter how high the selector [specificity](/en-US/docs/Web/CSS/Specificity) matches a normal declaration, an `!important` declaration from the same source and cascade layer will always have precedence. In this case, the paragraph will always be red.
 
-When two important declarations are applied to the same element, with the same origin and layer, the declaration with a greater specificity will be applied.
+When two `!important` declarations from the same origin and layer apply to the same element, browsers select and use the declaration with the highest specificity.
 
 ```css
 #myElement p {
