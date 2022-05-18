@@ -72,7 +72,7 @@ p {
 }
 ```
 
-This is a case of over-specifying a selector. No matter how high the selector  [specificity](/en-US/docs/Web/CSS/Specificity) match of a normal declaration, an important declaration from the same origin and cascade layer will always have precending.  In this case, the paragraph will always be red.
+This example displays a case of over-specifying a selector. No matter how high the selector [specificity](/en-US/docs/Web/CSS/Specificity) matches a normal declaration, an `!important` declaration from the same source and cascade layer will always have precedence. In this case, the paragraph will always be red.
 
 When two important declarations are applied to the same element, with the same origin and layer, the declaration with a greater specificity will be applied.
 
