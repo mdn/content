@@ -25,31 +25,21 @@ an animation event created using the deprecated {{domxref("Document.createEvent(
 ## Syntax
 
 ```js
-initProgressEvent(typeArg, canBubbleArg, cancelableArg, lengthComputable, loaded, total)
+initProgressEvent(type, canBubble, cancelable, lengthComputable, loaded, total)
 ```
 
 ### Parameters
 
-- `typeArg`
+- `type`
 
   - : A string identifying the specific type of animation event that
-    occurred. The following values are allowed:
-
-    | Value       | Meaning                                          |
-    | ----------- | ------------------------------------------------ |
-    | `loadstart` | The operation has started.                       |
-    | `progress`  | The operation still is in progress.              |
-    | `error`     | The operation failed and didn't complete.        |
-    | `abort`     | The operation was cancelled and didn't complete. |
-    | `load`      | The operation completed.                         |
-    | `loadend`   | The operation stopped.                           |
-
-- `canBubbleArg`
+    occurred. Browsers set it to one of the following values: `loadstart`, `progress`, `error`, `abort`, `load`, or `loadend`.
+- `canBubble`
   - : A boolean flag indicating if the event can bubble
-    (`true`) or not (`false)`.
-- `cancelableArg`
+    (`true`) or not (`false`).
+- `cancelable`
   - : A boolean flag indicating if the event associated action can be
-    avoided (`true`) or not (`false)`.
+    avoided (`true`) or not (`false`).
 - `lengthComputable`
   - : A boolean flag indicating if the total work to be done, and the
     amount of work already done, by the underlying process is calculable. In other words,

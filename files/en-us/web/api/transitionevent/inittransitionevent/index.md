@@ -31,31 +31,25 @@ method.
 ## Syntax
 
 ```js
-initTransitionEvent(typeArg, canBubbleArg, cancelableArg, transitionNameArg, elapsedTimeArg)
+initTransitionEvent(type, canBubble, cancelable, transitionName, elapsedTime)
 ```
 
 ### Parameters
 
-- `typeArg`
-
+- `type`
   - : A string identifying the specific type of transition event that
-    occurred. The following value is allowed:
-
-    | Value           | Meaning                   |
-    | --------------- | ------------------------- |
-    | `transitionend` | The transition completed. |
-
-- `canBubbleArg`
+    occurred. Browsers always set it up to `transitionend`.
+- `canBubble`
   - : A boolean flag indicating if the event can bubble
-    (`true`) or not (`false)`.
-- `cancelableArg`
+    (`true`) or not (`false`).
+- `cancelable`
   - : A boolean flag indicating if the event associated action can be
-    avoided (`true`) or not (`false)`.
-- `transitionNameArg`
+    avoided (`true`) or not (`false`).
+- `transitionName`
   - : A string containing the name of the CSS property associated
     with the transition. This value is not affected by the {{cssxref("transition-delay")}}
     property.
-- `elapsedTimeArg`
+- `elapsedTime`
   - : Is `float` giving the amount of time the transition has been running, in
     seconds, when this event fired.
 
