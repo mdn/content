@@ -250,7 +250,7 @@ static get parameterDescriptors() {
     },
     {
       name: "frequency",
-      defaultValue: 440.0;
+      defaultValue: 440.0,
       minValue: 27.5,
       maxValue: 4186.009
     }
