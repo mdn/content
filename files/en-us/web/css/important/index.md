@@ -113,7 +113,7 @@ This example shows one of the several reasons avoiding `!important` is generally
 
 ## Best practices
 
-Avoid using `!important` to override specificity. When intentionally creating important declarations for UI requirements, comment your CSS to explain to maintainers why a feature must not be overridden.
+Avoid using `!important` to override specificity. When intentionally creating `!important` declarations for UI requirements, comment in your CSS code to explain to maintainers why they should not override that feature.
 
 If working to override styles with high scecificity that are not under your control, such as styles in a 3rd party plugin declared with an [id selector](/en-US/docs/Web/CSS/ID_selectors), consider importing the 3rd party stylesheet script into a [named or anonymous layer](/en-US/docs/Web/CSS/@layer) as your first cascade layer, instead of using `!important`. As long as the external styles do not include important declarations, your styles will take precedence over the widget styles no matter the specificity. 
 
