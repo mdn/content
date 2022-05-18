@@ -22,15 +22,15 @@ selector {
 }
 ```
 
-The `!important` flag comes after the value of the property value pair declaration, preceded by at least one space. The `!important` flag must be the last token in the declaration. In other words, there can be white space and comments between the flag and the declaration's ending semi-colon, but nothing else.
+The `!important` comes after the value of the property value pair declaration, preceded by at least one space. The important flag must be the last token in the declaration. In other words, there can be white space and comments between the flag and the declaration's ending semi-colon, but nothing else.
 
 ## Impact on the cascade
 
-When it comes to `!important` declarations, the [cascade origin and layer orders](/en-US/docs/Web/CSS/Cascade) are reversed. Without the important flag, declarations in the author's style sheets override declarations in a user's style sheet, which override declarations in the user-agent's default style sheet.
+When it comes to important declarations, the [cascade origin and layer orders](/en-US/docs/Web/CSS/Cascade) are reversed. Without the important flag, declarations in the author's style sheets override declarations in a user's style sheet, which override declarations in the user-agent's default style sheet.
 
-When a declaration is `!important`, the order of precedence is reversed. Declarations marked as `!important` in the user-agent style sheets override all `!important` declarations in the user style sheets. Similarly, all `!important` declarations in the user style sheets override all `!important` declarations in the author's style sheets. Finally, all `!important` declarations take precedence over all animations.
+When a declaration is important, the order of precedence is reversed. Declarations marked as important in the user-agent style sheets override all `!important` declarations in the user style sheets. Similarly, all important declarations in the user style sheets override all important declarations in the author's style sheets. Finally, all important declarations take precedence over all animations.
 
-> **Note:** All important declarations take precedence over all animations. `!important` is not valid on within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
+> **Note:** All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
 
 Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed with important declarations. It also ensures malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security. 
 
@@ -90,7 +90,7 @@ In this case, the selector specificity matters. Only if the selectors had the sa
 
 ## Impact on shorthand properties
 
-Declaring a shorthand property to be `!important` sets all of sub-properties `!important`. To two following selector style blocks are equivalent:
+Declaring a shorthand property with `!important` sets all of sub-properties `!important`. To two following selector style blocks are equivalent:
 
 ```css
 p {
@@ -109,19 +109,19 @@ p {
 }
  ``` 
 
-This example shows one of the several reasons avoiding `!important` is generally recommended.
+This example shows one of the several reasons avoiding the important flag is generally recommended.
 
 ## Best practices
 
-Avoid using `!important` to override specificity. When intentionally creating `!important` declarations for UI requirements, comment in your CSS code to explain to maintainers why they should not override that feature.
+Avoid using `!important` to override specificity. When intentionally creating important declarations for UI requirements, comment in your CSS code to explain to maintainers why they should not override that feature.
 
-Even when working to override high-specificity styles not under your control, such as styles in a 3rd party plugin declared with an [id selector](/en-US/docs/Web/CSS/ID_selectors), you don't need to use `!important`. Consider instead importing the 3rd party stylesheet script into a [named or anonymous layer](/en-US/docs/Web/CSS/@layer) as your first cascade layer, instead of using `!important`. As long as the external styles do not include `!important` declarations, your styles will take precedence over the widget styles, no matter the specificity.
+Even when working to override high-specificity styles not under your control, such as styles in a 3rd party plugin declared with an [id selector](/en-US/docs/Web/CSS/ID_selectors), you don't need to use `!important`. Consider instead importing the 3rd party stylesheet script into a [named or anonymous layer](/en-US/docs/Web/CSS/@layer) as your first cascade layer, instead of using `!important`. As long as the external styles do not include important declarations, your styles will take precedence over the widget styles, no matter the specificity.
 
-If you need to override an external stylesheet containing `!important` declarations, create a cascade layer containing the needed overrides, and declare that layer first.
+If you need to override an external stylesheet containing important declarations, create a cascade layer containing the needed overrides, and declare that layer first.
 
 ### Accessibility
 
-Important styles from a user stylesheet take precedence over the author style sheet's `!important` declarations, meaning adding an `!important` flag to a site's styles will not prevent individual users with special requirements, such as large fonts, from being able to override your styles by adding`!important` styles in their own user's style sheet.
+Important styles from a user stylesheet take precedence over the author style sheet's important declarations, meaning adding an `!important` flag to a site's styles will not prevent individual users with special requirements, such as large fonts, from being able to override your styles by adding important styles in their own user's style sheet.
 
 ## Browser compatibility
 
