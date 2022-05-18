@@ -27,9 +27,9 @@ transferOut(endpointNumber, data)
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- data
+- `data`
   - : A {{domxref("TypedArray")}} containing the data to send to the device.
 
 ### Return value

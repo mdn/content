@@ -26,7 +26,7 @@ selectConfiguration(configurationValue)
 
 ### Parameters
 
-- configurationValue
+- `configurationValue`
   - : The number of a device-specific configuration.
 
 ### Return value

@@ -27,7 +27,7 @@ controlTransferIn(setup, length)
 
 ### Parameters
 
-- setup
+- `setup`
 
   - : An object that sets options for . The available options are:
 
@@ -42,7 +42,7 @@ controlTransferIn(setup, length)
     - `value`: Vender-specific request parameters.
     - `index`: The interface number of the recipient.
 
-- length
+- `length`
   - : The maximum number of bytes to read from the device. The actual data is in
     the {{domxref("USBInTransferResult")}} in the resolved Promise.
 

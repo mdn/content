@@ -26,7 +26,7 @@ claimInterface(interfaceNumber)
 
 ### Parameters
 
-- interfaceNumber
+- `interfaceNumber`
   - : The index of one of the interfaces supported by the device. Interfaces are
     device-specific.
 
