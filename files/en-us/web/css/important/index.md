@@ -28,11 +28,11 @@ The `!important` comes after the value of the property value pair declaration, p
 
 When it comes to important declarations, the [cascade origin and layer orders](/en-US/docs/Web/CSS/Cascade) are reversed. Without the important flag, declarations in the author's style sheets override declarations in a user's style sheet, which override declarations in the user-agent's default style sheet.
 
-When a declaration is important, the order of precedence is reversed. Declarations marked as important in the user-agent style sheets override all `!important` declarations in the user style sheets. Similarly, all important declarations in the user style sheets override all important declarations in the author's style sheets. Finally, all important declarations take precedence over all animations.
+When a declaration is important, the order of precedence is reversed. Declarations marked as important in the user-agent style sheets override all important declarations in the user style sheets. Similarly, all important declarations in the user style sheets override all important declarations in the author's style sheets. Finally, all important declarations take precedence over all animations.
 
 > **Note:** All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
 
-Reversing the precedence order for `!important` declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as `!important`. It also guarantees malicious extensions can't override `!important` user-agent styles, which might break functionality or negatively impact security.
+Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as important. It also guarantees malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security.
 
 Does anything have precedence over important declarations? Yes, [transitions](/en-US/docs/Web/CSS/CSS_Transitions). CSS transitions are a way to control the speed at which the property changes from one value to another. While transitioning from one value to another, a property will not match a specific important declaration.
 
@@ -52,7 +52,7 @@ In this example, the `color` and `background-color` properties will transition t
 
 ### Cascade layers
 
-Within each of the three origins for style sheets – author, user, and user-agent – normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. Important declarations reverse the order of precedence: `!important` declarations in the first layer take precedence over `!important!` declarations in the next layer, and so on. Also, all the `!important` declarations have precedence over `!important` declarations made outside of any layer.
+Within each of the three origins for style sheets – author, user, and user-agent – normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. Important declarations reverse the order of precedence: important declarations in the first layer take precedence over important declarations in the next layer, and so on. Also, all the important declarations have precedence over important declarations made outside of any layer.
 
 ### Inline styles
 
@@ -72,9 +72,9 @@ p {
 }
 ```
 
-This example displays a case of over-specifying a selector. No matter how high the selector [specificity](/en-US/docs/Web/CSS/Specificity) matches a normal declaration, an `!important` declaration from the same source and cascade layer will always have precedence. In this case, the paragraph will always be red.
+This example displays a case of over-specifying a selector. No matter how high the selector [specificity](/en-US/docs/Web/CSS/Specificity) matches a normal declaration, an important declaration from the same source and cascade layer will always have precedence. In this case, the paragraph will always be red.
 
-When two `!important` declarations from the same origin and layer apply to the same element, browsers select and use the declaration with the highest specificity.
+When two important declarations from the same origin and layer apply to the same element, browsers select and use the declaration with the highest specificity.
 
 ```css
 #myElement p {
@@ -90,7 +90,7 @@ In this case, the selector specificity matters. Only if the selectors had the sa
 
 ## Impact on shorthand properties
 
-Declaring a shorthand property with `!important` sets all of sub-properties `!important`. To two following selector style blocks are equivalent:
+Declaring a shorthand property with `!important` sets all of sub-properties as important. To two following selector style blocks are equivalent:
 
 ```css
 p {
