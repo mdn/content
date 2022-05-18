@@ -20,18 +20,20 @@ The **`RTCSessionDescription.toJSON()`** method generates a
 ## Syntax
 
 ```js
-var jsonValue = sd.toJSON();
+toJSON()
 ```
+### Parameters
 
-The result value is a {{jsxref("JSON")}} object containing the following values:
+None.
 
-- `"type"`, containing the value of the
-  {{domxref("RTCSessionDescription.type")}} property and can be one of the following
-  values: `"offer"`, `"answer"`, `"pranswer"` or
-  `null`.
-- `"sdp"`, containing a {{domxref("DOMString")}}, or `null`,
-  with the {{Glossary("SDP")}} message corresponding to
-  {{domxref("RTCSessionDescription.sdp")}} property.
+### Return value
+
+A {{jsxref("JSON")}} object containing the following properties:
+
+- `type`
+  - : One of the following: `"offer"`, `"answer"`, `"pranswer"` or `null`.
+- `sdp`
+  - : Either `null` or the {{Glossary("SDP")}} message string corresponding to {{domxref("RTCSessionDescription.sdp")}} property.
 
 ## Example
 
