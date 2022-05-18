@@ -12,8 +12,6 @@ tags:
 
 The important flag, comprised of a `!` delimiter and `important` keyword, when added to a declaration in a selector block, makes the declaration an important declaration. 
 
-## Description
-
 To mark a declaration important, add the _important flag_ (`!important`) after the value in the declaration. While white space is allowed between the delimiter and the keyword, the flag is generally written as `!important` without any white space.
 
 ```css
