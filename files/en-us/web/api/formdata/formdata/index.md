@@ -19,6 +19,7 @@ The **`FormData()`** constructor creates a new {{domxref("FormData")}} object.
 ## Syntax
 
 ```js
+new FormData()
 new FormData(form)
 ```
 
