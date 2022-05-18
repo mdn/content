@@ -52,7 +52,7 @@ In this example, the `color` and `background-color` properties will transition t
 
 ### Cascade layers
 
-Within each of the three origins - author, user, and user-agent - normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. The order of precedence is reversed for important declarations, with important declarations in the first declared layer taking precedence over important declarations in the last declared layer. All the important declarations have precedence over important declarations made outside of any layer.
+Within each of the three origins for style sheets – author, user, and user-agent – normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. Important declarations reverse the order of precedence: `!important` declarations in the first layer take precedence over `!important!` declarations in the next layer, and so on. Also, all the `!important` declarations have precedence over `!important` declarations made outside of any layer.
 
 ### Inline styles
 
