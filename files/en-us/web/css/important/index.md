@@ -28,7 +28,7 @@ The `!important` flag comes after the value of the property value pair declarati
 
 When it comes to `!important` declarations, the [cascade origin and layer orders](/en-US/docs/Web/CSS/Cascade) are reversed. Without the important flag, declarations in the author's style sheets override declarations in a user's style sheet, which override declarations in the user-agent's default style sheet.
 
-When a declaration is important, the order of precedence is reversed. The user-agent important declarations override all user important declarations. All user important declarations override all important author declarations. And all important declarations take precedence over all animations.  
+When a declaration is `!important`, the order of precedence is reversed. Declarations marked as `!important` in the user-agent style sheets override all `!important` declarations in the user style sheets. Similarly, all `!important` declarations in the user style sheets override all `!important` declarations in the author's style sheets. Finally, all `!important` declarations take precedence over all animations.
 
 > **Note:** All important declarations take precedence over all animations. `!important` is not valid on within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
 
