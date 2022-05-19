@@ -1,5 +1,5 @@
 ---
-title: ident
+title: <ident>
 slug: Web/CSS/ident
 tags:
   - CSS
