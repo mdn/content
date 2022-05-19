@@ -15,34 +15,44 @@ spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 
 ## How is specificity calculated?
 
-Specificity is a weight that is applied to a given CSS declaration, determined by the number of each [selector type](#selector_types) in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+Specificity is a weight that is applied to a given CSS declaration, determined by the number of each [selector type](#selector_types) in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations in a cascade layer or origin. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
 
 > **Note:** [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
 
+> **Note:** Specificity only matters for declarations of the same importance and same origin and cascade layer. If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/Cascade) determines which declaration takes precedence.  
+
 ### Selector Types
 
-The following list of selector types increases by specificity:
+Selector specificty is a 3-column value **ID-CLASS-TYPE**. The number in the _ID_ columns of competing selectors are compared. The selector with the greater value wins. If there is an equal number of _ID_ values, the _CLASS_ column is compared. The selector with the greater number of _CLASS_ value wins. If the values in that column are equal, the _TYPE_ column is compared. If there are equal values there too, the proximity rule comes into play, wherein the last declared style has precedence. 
 
-1. [Type selectors](/en-US/docs/Web/CSS/Type_selectors) (e.g., `h1`) and pseudo-elements (e.g., `::before`).
-2. [Class selectors](/en-US/docs/Web/CSS/Class_selectors) (e.g., `.example`), attributes selectors (e.g., `[type="radio"]`) and pseudo-classes (e.g., `:hover`).
-3. [ID selectors](/en-US/docs/Web/CSS/ID_selectors) (e.g., `#example`).
+The three columns are created from the number of components from each component of the selector. The following list of selectors decrease by specificity:
 
-Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
+- ID Column
+  - : Includes only [ID selectors](/en-US/docs/Web/CSS/ID_selectors), such as `#example`
+- CLASS Column
+  - : Includes [class selectors](/en-US/docs/Web/CSS/Class_selectors), such as `.myClass`, attributes selectors like `[type="radio"]` and `[lang|="fr"]`, and pseudo-classes, such as `:hover`, `:nth-of-type(3n)`, and `:required`.
+- TYPE columns
+  - : Include [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`,  and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double colon notation.
+- No value
+  - : The Universal selector ({{CSSxRef("Universal_selectors", "*")}}), and {{CSSxRef(":where", ":where()")}} and its parameters, have a specificity of 0. They aren't counted in the equation, but they do match elements.
 
-For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2), you can also visit: <https://specifishity.com>
+Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", and "||")}} may make a selector more specific, but don't add value to the specificy value.  The negation pseudo-class ({{CSSxRef(":not", ":not()")}}) itself has not weight, but the parameters, the selectors declared _inside_ `:not()`, do.
 
-Inline styles added to an element (e.g., `style="font-weight: bold;"`) always overwrite any styles in external stylesheets, and thus can be thought of as having the highest specificity.
+For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2), you can also visit: [SpeciFISHity](https://specifishity.com)
+
+Inline styles added to an element (e.g., `style="font-weight: bold;"`) always overwrite any normal styles in author stylesheets, and thus can be thought of as having the highest specificity.
 
 ### The !important exception
 
-When an `important` rule is used on a style declaration, this declaration overrides any other declarations. Although technically `!important` has nothing to do with specificity, it interacts directly with it. Using `!important,` however, is **bad practice** and should be avoided because it makes debugging more difficult by breaking the natural [cascading](/en-US/docs/Web/CSS/Cascade) in your stylesheets. When two conflicting declarations with the `!important` rule are applied to the same element, the declaration with a greater specificity will be applied.
+Important declarations override any other declarations within the same cascade layer and origin. Although technically [`!important`](/en-US/docs/Web/CSS/important) has nothing to do with specificity, it interacts directly with specificity and the cascade. It reverses the [cascade](/en-US/docs/Web/CSS/Cascade) order of stylesheets. Using `!important` is considered a **bad practice** for overriding specificity, and should be avoided for this purpose. When two conflicting declarations from the same origin and cascade layer with the `!important` rule are applied to the same element, the declaration with a greater specificity will be applied.
 
 **Recommended guidelines:**
 
 - **Always** look for a way to use specificity before even considering `!important`
-- **Only** use `!important` on page-specific CSS that overrides foreign CSS (from external libraries, like Bootstrap or normalize.css).
+- **Always** leverage the cascade with @layers instead of using `!important` when overriding foreign CSS (from external libraries, like Bootstrap or normalize.css).
 - **Never** use `!important` when you're writing a plugin/mashup.
 - **Never** use `!important` on site-wide CSS.
+- **Always** comment your CSS when using `!important` so future code maintainers know why it was important and know not to override it.
 
 **Instead of using `!important`, consider:**
 
@@ -50,31 +60,44 @@ When an `important` rule is used on a style declaration, this declaration overri
 2. Use more specific rules. By indicating one or more elements before the element you're selecting, the rule becomes more specific and gets higher priority:
 
     ```html
-    <div id="test">
+    <div id="myId">
       <span>Text</span>
     </div>
     ```
 
     ```css
-    div#test span { color: green; }
+    #myId span { color: green; }
+    [id="myId"] span { color: yellow; }
     div span { color: blue; }
     span { color: red; }
     ```
 
     No matter the order, text will be green because that rule is most specific. (Also, the rule for blue overwrites the rule for red, notwithstanding the order of the rules)
 
-3. As a nonsense special case for (2), duplicate simple selectors to increase specificity when you have nothing more to specify.
+3. As a special case for (2), duplicating simple selectors will increase specificity when overriding very specific selectors over which you have no control.
 
     ```css
-    #myId#myId span { color: yellow; }
+    #myId#myId span { color: purple; }
     .myClass.myClass span { color: orange; }
     ```
+4. Import stylesheets into cascade layers. If styles are coming from a stylesheet you can't edit or don't understand, import it into a cascade layer. When two selectors from different layers match the same element, origin and importance take precendence; the specificity of the selector in the losing stylesheet is irrelevant.
+
+```html
+<style>
+  @import TW.css layer();
+  p, p * {
+    font-size: 1rem;
+  }
+</style>
+```
+
+In this example, all paragraph text will be 1rem no matter how many styles from the TW stylesheet the paragraphs and elements nested inside.
 
 #### How !important can be used:
 
 ##### A) Overriding inline styles
 
-Your global CSS file that sets visual aspects of your site globally may be overwritten by inline styles defined directly on individual elements. Both inline styles and !important are considered bad practice, but sometimes you need the latter to override the former.
+Your global CSS file that sets visual aspects of your site globally may be overwritten by inline styles defined directly on individual elements. Both inline styles using the HTML [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute and `!important` are considered bad practice, but sometimes you need the latter to override the former.
 
 In this case, you could set certain styles in your global CSS file as !important, thus overriding inline styles set directly on elements.
 
@@ -88,7 +111,7 @@ In this case, you could set certain styles in your global CSS file as !important
 }
 ```
 
-Many JavaScript frameworks and libraries add inline styles. Using `!important` with a very targeted selector is one way to override these inline styles.
+Many JavaScript frameworks and libraries add inline styles. Using `!important` with a very targeted selector is one way to override these inline styles. Make sure to include a comment with every inclusion of the `!important` flag so code maintainers understand why a CSS anti-pattern was used.
 
 ##### B) Overriding high specificity
 
@@ -98,15 +121,60 @@ Many JavaScript frameworks and libraries add inline styles. Using `!important` w
 }
 
 p.awesome {
+  color: red !important; /* there are better options! keep reading */
+}
+```
+
+How do you make `awesome` paragraphs always turn red, even ones inside `#someElement`, especially when `id="someElement"`  is actually a randomly generated [`id`](/en-US/docs/Web/HTML/Global_attributes/id) in a 3rd party widget you can't control? 
+
+Without `!important`, the first rule will have more specificity and will win over the second rule. However, there are ways to override styles you can't control, as discussed in [Instead of using `!important`]()
+
+#### How to override `!important`
+
+A) The best solution is to not use `!important` in your code base; remove them when found. If possible, rewrite the original rule to avoid the use of `!important` altogether. Increase the specifity of the selector of the formerly important declaration so it is greater than other declarations, or give it the same specificity, and put it after the declaration it is meant to override.
+
+```css
+[id="someElement"] p {
+  color: blue;
+}
+
+p.awesome {
   color: red;
 }
 ```
 
-How do you make `awesome` paragraphs always turn red, even ones inside `#someElement`? Without `!important`, the first rule will have more specificity and will win over the second rule.
+Including an id as part of an attribute selector instead of as an id selector gives it the same specificity as a class. Both selectors above now have the same weight. In a specificity tie, the last rule defined within the same origin layer wins.
+ 
 
-#### How to override `!important`
+B) Creating a [cascade layer](../@layer/) of important declaration overrides is an excellent solution when unable to remove `!important` flags from a CSS code base. Two ways of doing this include:
 
-A) Add another CSS rule with `!important`, and either give the selector a higher specificity (adding a tag, id or class to the selector), or add a CSS rule with the same selector at a later point than the existing one. This works because in a specificity tie, the last rule defined wins.
+Method #1
+
+  1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove in step A. 
+  2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` before linking to other stylesheets to be certain the important overrides is imported as the first layer. 
+
+```html
+<style>
+  @import importantOverrides.css layer();
+</style>
+````
+
+Method #2
+
+  1. At the beginning of your stylesheet declarations, create a named cascade layer:
+
+  ```css
+<style>
+  @import importantOverrides.css layer();
+</style>
+````
+  
+  Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove in step A. 
+  2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` before linking to other stylesheets to be certain the important overrides is imported as the first layer. 
+
+The cascade dictates important declarations in the first author layer take precedence over important declarations in subsequent layers, no matter the specificity of the selectors in either layer.
+
+B) If unable to use cascade layers, add another CSS rule with `!important`, and either give the selector a higher specificity (adding a tag, id or class to the selector), or add a CSS rule with the same selector at a later point than the existing one. This works because in a specificity tie, the last rule defined wins.
 
 Some examples with a higher specificity:
 
@@ -121,28 +189,6 @@ B) Or add the same selector after the existing one:
 ```css
 td { height: 50px !important; }
 ```
-
-C) Or, preferably, rewrite the original rule to avoid the use of `!important` altogether.
-
-```css
-[id="someElement"] p {
-  color: blue;
-}
-
-p.awesome {
-  color: red;
-}
-```
-
-Including an id as part of an attribute selector instead of as an id selector gives it the same specificity as a class. Both selectors above now have the same weight. In a specificity tie, the last rule defined wins.
-
-#### For more information, visit:
-
-- <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
-- <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>
-- <https://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css>
-- <https://stackoverflow.com/questions/11178673/how-to-override-important>
-- <https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css>
 
 ### The :is() and :not() exceptions
 
