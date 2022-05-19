@@ -34,7 +34,7 @@ append(name, value)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

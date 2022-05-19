@@ -29,7 +29,7 @@ respond(bytesWritten)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

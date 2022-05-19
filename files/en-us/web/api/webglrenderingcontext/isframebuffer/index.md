@@ -23,7 +23,7 @@ isFramebuffer(framebuffer)
 
 ### Parameters
 
-- framebuffer
+- `framebuffer`
   - : A {{domxref("WebGLFramebuffer")}} to check.
 
 ### Return value
