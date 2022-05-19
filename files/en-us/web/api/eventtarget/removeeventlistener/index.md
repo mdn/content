@@ -44,7 +44,7 @@ removeEventListener(type, listener, useCapture);
 
     The available options are:
 
-    - `capture`:  A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a capturing listener or not. If this parameter is absent, a default value of `false` is assumed.
+    - `capture`:  A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a capturing listener or not. If this parameter is absent, the default value `false` is assumed.
 
 - `useCapture` {{optional_inline}}
   - : A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a
