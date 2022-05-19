@@ -89,8 +89,7 @@ navigator.bluetooth.requestDevice(options).then(function(device) {
 });
 ```
 
-[Detailed
-examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
+[Detailed examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
 
 ## Specifications
 
