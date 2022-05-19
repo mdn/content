@@ -23,7 +23,7 @@ Browsers beging rendering content as HTML is parsed, often before all assets, in
 
 Without the `width` and `height` attributes, no placeholder space is created, creating a noticeable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.
 
-To keep images from breaking out of their containers in responsive designs when a container is narrower than an image, the following CSS is generally used:
+In responsive designs, when a container is narrower than an image, the following CSS is generally used to keep images from breaking out of their containers:
 
 ```css
 img {
