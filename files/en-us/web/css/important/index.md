@@ -22,7 +22,7 @@ selector {
 }
 ```
 
-The `!important` comes after the value of the property value pair declaration, preceded by at least one space. The important flag must be the last token in the declaration. In other words, there can be white space and comments between the flag and the declaration's ending semi-colon, but nothing else.
+The `!important` comes after the value of the property value pair declaration, preceded by at least one space. The important flag must be the last token in the declaration. In other words, there can be white space and comments between the flag and the declaration's ending semicolon, but nothing else.
 
 ## Impact on the cascade
 
@@ -107,7 +107,7 @@ p {
   background-attachment: scroll !important;
   background-color: blue !important;
 }
- ``` 
+ ```
 
 This example shows one of the several reasons avoiding the important flag is generally recommended.
 
