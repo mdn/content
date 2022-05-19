@@ -18,7 +18,7 @@ When the event has both a source and a destination, the `relatedTarget` value mu
 new PictureInPictureEvent(type, options)
 ```
 
-### Properties
+### Parameters
 
 - `type`
   - : A string representing the name of the event.
