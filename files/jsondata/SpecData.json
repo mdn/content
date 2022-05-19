@@ -704,6 +704,11 @@
     "url": "https://w3c.github.io/deviceorientation/",
     "status": "ED"
   },
+  "Digest Headers": {
+    "name": "Digest Headers",
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-05",
+    "status": "Draft"
+  },
   "DOM Parsing": {
     "name": "DOM Parsing and Serialization",
     "url": "https://w3c.github.io/DOM-Parsing/",
