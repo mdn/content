@@ -114,7 +114,7 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
 
   - : One of the following objects can be used as a pixel source for the texture:
 
-    - {{domxref("ArrayBufferView")}},
+    - {{domxref("ArrayBufferView")}}:
 
       - A {{jsxref("Uint8Array")}} must be used if `type` is
         `gl.UNSIGNED_BYTE`.
@@ -124,11 +124,11 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
       - A {{jsxref("Float32Array")}} must be used if `type` is
         `gl.FLOAT`.
 
-    - {{domxref("ImageBitmap")}},
-    - {{domxref("ImageData")}},
-    - {{domxref("HTMLImageElement")}},
-    - {{domxref("HTMLCanvasElement")}},
-    - {{domxref("HTMLVideoElement")}}.
+    - {{domxref("ImageBitmap")}}
+    - {{domxref("ImageData")}}
+    - {{domxref("HTMLImageElement")}}
+    - {{domxref("HTMLCanvasElement")}}
+    - {{domxref("HTMLVideoElement")}}
 
 - `srcData`
 

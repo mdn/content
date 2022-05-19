@@ -23,9 +23,9 @@ getVertexAttribOffset(index, pname)
 
 ### Parameters
 
-- index
+- `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute.
-- pname
+- `pname`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} which must be `gl.VERTEX_ATTRIB_ARRAY_POINTER`.
 
 ### Return value

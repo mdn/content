@@ -36,23 +36,25 @@ bufferData(target, srcData, usage, srcOffset, length)
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-    - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
-      vertex coordinates, texture coordinate data, or vertex color data.
-    - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+    - `gl.ARRAY_BUFFER`
+      - : Buffer containing vertex attributes, such as
+        vertex coordinates, texture coordinate data, or vertex color data.
+    - `gl.ELEMENT_ARRAY_BUFFER`
+      - :  Buffer used for element indices.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
-      - `gl.COPY_READ_BUFFER`: Buffer for copying from one
-        buffer object to another.
-      - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one
-        buffer object to another.
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform
-        feedback operations.
-      - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform
-        blocks.
-      - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer
-        operations.
-      - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel
-        transfer operations.
+      - `gl.COPY_READ_BUFFER`
+        - : Buffer for copying from one buffer object to another.
+      - `gl.COPY_WRITE_BUFFER`
+        - : Buffer for copying from one buffer object to another.
+      - `gl.TRANSFORM_FEEDBACK_BUFFER`
+        - : Buffer for transform feedback operations.
+      - `gl.UNIFORM_BUFFER`
+        - : Buffer used for storing uniform blocks.
+      - `gl.PIXEL_PACK_BUFFER`
+        - : Buffer used for pixel transfer operations.
+      - `gl.PIXEL_UNPACK_BUFFER`
+        - : Buffer used for pixel transfer operations.
 
 - `size`
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
@@ -67,38 +69,47 @@ bufferData(target, srcData, usage, srcOffset, length)
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store
     for optimization purposes. Possible values:
 
-    - `gl.STATIC_DRAW`: The contents are intended to be specified
-      once by the application, and used many times as the source for WebGL
-      drawing and image specification commands.
-    - `gl.DYNAMIC_DRAW`: The contents are intended to be respecified
-      repeatedly by the application, and used many times as the source for WebGL
-      drawing and image specification commands.
-    - `gl.STREAM_DRAW`: The contents are intended to be specified
-      once by the application, and used at most a few times as the source for
-      WebGL drawing and image specification commands.
+    - `gl.STATIC_DRAW`
+      - : The contents are intended to be specified
+        once by the application, and used many times as the source for WebGL
+        drawing and image specification commands.
+    - `gl.DYNAMIC_DRAW`
+      - : The contents are intended to be respecified
+        repeatedly by the application, and used many times as the source for WebGL
+        drawing and image specification commands.
+    - `gl.STREAM_DRAW`
+      - : The contents are intended to be specified
+        once by the application, and used at most a few times as the source for
+        WebGL drawing and image specification commands.
     - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
         1)}}, the following values are available additionally:
 
-      - `gl.STATIC_READ`: The contents are intended to be
-        specified once by reading data from WebGL, and queried many times
-        by the application.
-      - `gl.DYNAMIC_READ`: The contents are intended to be
-        respecified repeatedly by reading data from WebGL, and queried
-        many times by the application.
-      - `gl.STREAM_READ`: The contents are intended to be
-        specified once by reading data from WebGL, and queried at most a
-        few times by the application
-      - `gl.STATIC_COPY`: The contents are intended to be
-        specified once by reading data from WebGL, and used many times as
-        the source for WebGL drawing and image specification commands.
-      - `gl.DYNAMIC_COPY`: The contents are intended to be
-        respecified repeatedly by reading data from WebGL, and used many
-        times as the source for WebGL drawing and image specification
-        commands.
-      - `gl.STREAM_COPY`: The contents are intended to be
-        specified once by reading data from WebGL, and used at most a few
-        times as the source for WebGL drawing and image specification
-        commands.
+      - `gl.STATIC_READ`
+        - : The contents are intended to be
+          specified once by reading data from WebGL, and queried many times
+          by the application.
+      - `gl.DYNAMIC_READ`
+        - : The contents are intended to be
+          respecified repeatedly by reading data from WebGL, and queried
+          many times by the application.
+      - `gl.STREAM_READ`
+        - : The contents are intended to be
+          specified once by reading data from WebGL, and queried at most a
+          few times by the application
+      - `gl.STATIC_COPY`
+        - : The contents are intended to be
+          specified once by reading data from WebGL, and used many times as
+          the source for WebGL drawing and image specification commands.
+      - `gl.DYNAMIC_COPY`
+        - : The contents are intended to be
+          respecified repeatedly by reading data from WebGL, and used many
+          times as the source for WebGL drawing and image specification
+          commands.
+      - `gl.STREAM_COPY`
+        - : The contents are intended to be
+          specified once by reading data from WebGL, and used at most a few
+          times as the source for WebGL drawing and image specification
+          commands.
 
 - `srcOffset`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading

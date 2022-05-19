@@ -23,9 +23,9 @@ transformFeedbackVaryings(program, varyings, bufferMode)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}}.
-- varyings
+- `varyings`
   - : An {{jsxref("Array")}} of string specifying the names of the
     varying variables to use.
 - `bufferMode`
