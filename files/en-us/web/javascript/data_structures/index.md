@@ -38,7 +38,7 @@ The set of types in the JavaScript language consists of [_primitive values_](#pr
 
 ## Primitive values
 
-All types except objects define immutable values (that is, values which can't be changed). For example (and unlike in C), Strings are immutable. We refer to values of these types as "_primitive values_".
+All types except objects define immutable values (that is, values which can't be changed). For example, Strings are immutable. We refer to values of these types as "_primitive values_".
 
 ### Boolean type
 
