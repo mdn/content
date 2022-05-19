@@ -36,7 +36,28 @@ The three columns are created from the number of components from each component 
 - No value
   - : The Universal selector ({{CSSxRef("Universal_selectors", "*")}}), and {{CSSxRef(":where", ":where()")}} and its parameters, have a specificity of 0. They aren't counted in the equation, but they do match elements.
 
-Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", and "||")}} may make a selector more specific, but don't add value to the specificy value.  The negation pseudo-class ({{CSSxRef(":not", ":not()")}}) itself has not weight, but the parameters, the selectors declared _inside_ `:not()`, do.
+Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}} may make a selector more specific, but don't add value to the specificy value. 
+
+ The negation pseudo-class ({{CSSxRef(":not", ":not()")}}) itself has not weight, but the parameters, the selectors declared _inside_ `:not()`, do.
+
+```css
+#myElement input.myClass { color: red; } /* 1-1-1 */
+input[type="password"]:required { color: blue; } /* 0-2-1 */
+html body main input { color: green; }  /* 0-0-4 */
+```
+
+If the above selectors all target the same input, the input will be red, as the first declaration has the highest value in the _ID_ column. 
+
+The last selector has four type components. While it has the highest integer value, no matter how many type components are included, even if there were 150, type components never have precedence over a class selectors. The column values are compared starting from the left and moving right when column values are equal.
+
+If we convert the id selector to an attribute selector, the first two selectors have the same specificity:
+
+```css
+[id="myElement"] input.myClass { color: red; }   /* 0-2-1 */
+input[type="password"]:required { color: blue; } /* 0-2-1 */
+```
+
+When two selectors in the the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
 
 For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2), you can also visit: [SpeciFISHity](https://specifishity.com)
 
