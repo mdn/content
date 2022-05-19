@@ -13,7 +13,7 @@ tags:
   - performance
 ---
 
-When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the  aspect ratio of the image can be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is major component of good user experience and web performance. 
+When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the aspect ratio of the image can be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is major component of good user experience and web performance. 
 
 ## Jank problems when loading images
 
@@ -21,7 +21,7 @@ Browsers beging rendering content as HTML is parsed, often before all assets, in
 
 ![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](ar-guide.jpg)
 
-Without the `width` and `height` attributes, no placeholder space is created, creating a noticable {{glossary('jank')}}, or layout shift, when the image loads after the page has already been partially or fully rendered. These content layout shift are a performance and usability issue.   
+Without the `width` and `height` attributes, no placeholder space is created, creating a noticeable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.
 
 To keep images from breaking out of their containers in responsive designs when a container is narrower than an image, the following CSS is generally used:
 
