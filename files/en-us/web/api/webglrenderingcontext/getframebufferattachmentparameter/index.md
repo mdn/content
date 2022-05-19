@@ -31,7 +31,7 @@ getFramebufferAttachmentParameter(target, attachment, pname)
     - `gl.FRAMEBUFFER`
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.DRAW_FRAMEBUFFER`
@@ -54,12 +54,12 @@ getFramebufferAttachmentParameter(target, attachment, pname)
       stencil buffer.
     - `gl.DEPTH_STENCIL_ATTACHMENT`: Texture attachment for both, the depth
       and stencil buffer.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.COLOR_ATTACHMENT1 gl.COLOR_ATTACHMENT2 gl.COLOR_ATTACHMENT3 gl.COLOR_ATTACHMENT4 gl.COLOR_ATTACHMENT5 gl.COLOR_ATTACHMENT6 gl.COLOR_ATTACHMENT7 gl.COLOR_ATTACHMENT8 gl.COLOR_ATTACHMENT9 gl.COLOR_ATTACHMENT10 gl.COLOR_ATTACHMENT11 gl.COLOR_ATTACHMENT12 gl.COLOR_ATTACHMENT13 gl.COLOR_ATTACHMENT14 gl.COLOR_ATTACHMENT15`
 
-    - When using the {{domxref("WEBGL_draw_buffers")}} extension:
+    When using the {{domxref("WEBGL_draw_buffers")}} extension:
 
       - `ext.COLOR_ATTACHMENT0_WEBGL` (same as
         `gl.COLOR_ATTACHMENT0`)
@@ -78,12 +78,12 @@ getFramebufferAttachmentParameter(target, attachment, pname)
       value: 0.
     - `gl.FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE`: The name of
       cube-map face of the texture.
-    - When using the {{domxref("EXT_sRGB")}} extension:
+    When using the {{domxref("EXT_sRGB")}} extension:
 
       - `ext.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT`: The framebuffer
         color encoding.
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE`
@@ -96,12 +96,10 @@ getFramebufferAttachmentParameter(target, attachment, pname)
       - `gl.FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE`
       - `gl.FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER`
 
-    - When using the {{domxref("OVR_multiview2")}} extension:
+    When using the {{domxref("OVR_multiview2")}} extension:
 
-      - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR`: the number of
-        views of the framebuffer object attachment.
-      - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR`:  the
-        base view index of the framebuffer object attachment.
+      - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR`: the number of views of the framebuffer object attachment.
+      - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR`:  the base view index of the framebuffer object attachment.
 
 ### Return value
 

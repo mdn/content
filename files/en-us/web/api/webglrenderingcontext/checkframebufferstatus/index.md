@@ -30,7 +30,7 @@ checkFramebufferStatus(target)
     - `gl.FRAMEBUFFER`
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.DRAW_FRAMEBUFFER`

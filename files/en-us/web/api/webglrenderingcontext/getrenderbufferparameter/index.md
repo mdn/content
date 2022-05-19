@@ -70,7 +70,7 @@ getRenderbufferParameter(target, pname)
     - `gl.RENDERBUFFER_STENCIL_SIZE`
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} that
         is the resolution size (in bits) for the stencil component.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following value is available additionally:
 
       - `gl.RENDERBUFFER_SAMPLES`
