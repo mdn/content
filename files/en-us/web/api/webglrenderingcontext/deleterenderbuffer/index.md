@@ -24,7 +24,7 @@ deleteRenderbuffer(renderbuffer)
 
 ### Parameters
 
-- renderbuffer
+- `renderbuffer`
   - : A {{domxref("WebGLRenderbuffer")}} object to delete.
 
 ### Return value

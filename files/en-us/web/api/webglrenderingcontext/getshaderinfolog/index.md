@@ -23,7 +23,7 @@ getShaderInfoLog(shader)
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} to query.
 
 ### Return value

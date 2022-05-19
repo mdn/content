@@ -23,7 +23,7 @@ getTranslatedShaderSource(shader)
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} to get the translated source from.
 
 ### Return value
