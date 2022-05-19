@@ -13,7 +13,7 @@ tags:
   - performance
 ---
 
-When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the  aspect ratio of the image can be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shigt is major component of good user experience and web performance. 
+When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the aspect ratio of the image can be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is major component of good user experience and web performance. 
 
 ## Jank problems when loading images
 
@@ -21,7 +21,7 @@ The browser starts rendering content before all assets are downloaded, including
 
 ![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](ar-guide.jpg)
 
-Without the `width` and `height` attributes, no placeholder space is created, creating a noticable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.   
+Without the `width` and `height` attributes, no placeholder space is created, creating a noticeable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.
 
 To keep images from breaking out of their containers in responsive designs when the container becomes narrower than the image, the following CSS is generally used:
 
@@ -55,7 +55,7 @@ img {
 
 The aspect ratio is then used to calculate the height and therefore the correct size is applied to the `<img>` element, meaning that the aforementioned jank will not occur, or be minimal if the listed dimensions are not fully accurate, when the image loads.
 
-The aspect ratio is only used to reserve space for the image on load. Once the image has loaded, the intrinsic aspect ratio of the loaded image, rather than the aspect ratio from the attributes is uses, ensuring it displays at the correct aspect ratio.
+The aspect ratio is used to reserve space only on the image load. Once the image has loaded, the intrinsic aspect ratio of the loaded image, rather than the aspect ratio from the attributes is uses, ensuring it displays at the correct aspect ratio.
 
 While CSS best practices from the last decade may have suggested omitting the `width` and `height` attributes of an image on an HTML {{htmlelement("img")}}, due to aspect ratio mapping, including these two attributes is once again a best practice.
 
