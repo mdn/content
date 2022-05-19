@@ -17,7 +17,7 @@ When the `width` and `height` attributes of an image are included on an HTML {{h
 
 ## Jank problems when loading images
 
-Browsers beging rendering content as HTML is parsed, often before all assets, including images, are downloaded. It is good practice to add `width` and `height` attributes to your HTML {{htmlelement("img")}} elements, so that when browsers first render the page, they can reserve a correctly-sized placeholder boxes for each image to appear in when it loaded.
+Browsers beging rendering content as HTML is parsed, often before all assets, including images, are downloaded. It is a good practice to add `width` and `height` attributes to your HTML {{htmlelement("img")}} elements, so that when browsers first render the page, they can reserve a correctly-sized placeholder boxes for each image to appear in when it loaded.
 
 ![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](ar-guide.jpg)
 
