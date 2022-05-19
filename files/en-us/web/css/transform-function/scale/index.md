@@ -26,7 +26,7 @@ shrinks. If it is negative, the result a [point reflection](https://en.wikipedia
 in that dimension. A value of 1 has no effect.
 
 > **Note:** The `scale()` function only scales in 2D. To scale in 3D, use
-> [`scale3d()`](</en-US/docs/Web/CSS/transform-function/scale3d()>) instead.
+> [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) instead.
 
 ## Syntax
 
