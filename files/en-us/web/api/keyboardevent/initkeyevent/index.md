@@ -63,7 +63,7 @@ initKeyEvent (type, bubbles, cancelable, view,
     }} for the list of key codes.
 - `charCode`
   - : An `unsigned long` representing the Unicode character associated with
-    the depressed key otherwise `0`.
+    the pressed key otherwise `0`.
 
 ### Return value
 
