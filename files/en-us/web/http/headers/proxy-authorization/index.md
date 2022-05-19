@@ -7,6 +7,7 @@ tags:
   - Reference
   - Request header
   - header
+spec-urls: https://httpwg.org/specs/rfc7235.html#header.proxy-authorization
 ---
 {{HTTPSidebar}}
 
@@ -63,9 +64,7 @@ Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## Specifications
 
-| Specification                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------- |
-| [RFC 7235<br/># header.proxy-authorization](https://httpwg.org/specs/rfc7235.html#header.proxy-authorization) |
+{{Specifications}}
 
 ## See also
 

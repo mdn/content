@@ -849,6 +849,11 @@
     "url": "https://wicg.github.io/eyedropper-api/",
     "status": "Draft"
   },
+  "Expect-CT": {
+    "name": "Expect-CT Extension for HTTP",
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-08",
+    "status": "Draft"
+  },
   "Feature Policy": {
     "name": "Permissions Policy",
     "url": "https://w3c.github.io/webappsec-permissions-policy/",
@@ -1083,6 +1088,11 @@
     "name": "Legacy RegExp features in JavaScript",
     "url": "https://github.com/tc39/proposal-regexp-legacy-features/",
     "status": "Draft"
+  },
+  "Linked Data Platform": {
+    "name": "Linked Data Platform",
+    "url": "https://www.w3.org/TR/ldp/",
+    "status": "REC"
   },
   "Local Font Access API": {
     "name": "Local Font Access API",
@@ -1513,6 +1523,11 @@
     "name": "Accelerated Shape Detection in Images",
     "url": "https://wicg.github.io/shape-detection-api/",
     "status": "Draft"
+  },
+  "Source Map": {
+    "name": "Source Map",
+    "url": "https://sourcemaps.info/spec.html",
+    "status": "Standard"
   },
   "Static Range": {
     "name": "Static Range",
