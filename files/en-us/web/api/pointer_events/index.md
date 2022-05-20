@@ -28,7 +28,7 @@ Additionally, a pointer event contains the usual properties present in mouse eve
 
 ### active buttons state
 
-The condition when a _[pointer](#pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
+The condition when a _[pointer](#pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is pressed while hovering.
 
 ### active pointer
 
@@ -340,7 +340,7 @@ For mouse there is only one pointer, so it will always be the primary pointer. F
 
 ## Determining button states
 
-Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. depressing an additional button while another button on the pointer device is already depressed.
+Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. pressing an additional button while another button on the pointer device is already pressed.
 
 To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).
 
