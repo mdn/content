@@ -51,7 +51,7 @@ getBufferParameter(target, pname)
 - `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying information to query. Possible values:
- 
+
     - `gl.BUFFER_SIZE`
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the size
         of the buffer in bytes.
@@ -69,7 +69,6 @@ getBufferParameter(target, pname)
         - `gl.STATIC_COPY`
         - `gl.DYNAMIC_COPY`
         - `gl.STREAM_COPY`
-
 
 ### Return value
 

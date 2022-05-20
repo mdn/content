@@ -30,14 +30,14 @@ bindFramebuffer(target, framebuffer)
     - `gl.FRAMEBUFFER`
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used as both a destination for drawing and as a source for reading (see below).
-    
+
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.DRAW_FRAMEBUFFER`
-        - : Used as a destination for drawing operations such as `gl.draw*`, `gl.clear*` and `gl.blitFramebuffer`.
-      - `gl.READ_FRAMEBUFFER`
-        - : Used as a source for reading operations such as `gl.readPixels` and `gl.blitFramebuffer`.
+    - `gl.DRAW_FRAMEBUFFER`
+      - : Used as a destination for drawing operations such as `gl.draw*`, `gl.clear*` and `gl.blitFramebuffer`.
+    - `gl.READ_FRAMEBUFFER`
+      - : Used as a source for reading operations such as `gl.readPixels` and `gl.blitFramebuffer`.
 
 - `framebuffer`
   - : A {{domxref("WebGLFramebuffer")}} object to bind.

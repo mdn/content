@@ -61,7 +61,7 @@ getFramebufferAttachmentParameter(target, attachment, pname)
 
     When using the {{domxref("WEBGL_draw_buffers")}} extension:
 
-      - `ext.COLOR_ATTACHMENT0_WEBGL` (same as
+    - `ext.COLOR_ATTACHMENT0_WEBGL` (same as
         `gl.COLOR_ATTACHMENT0`)
         `ext.COLOR_ATTACHMENT1_WEBGL ext.COLOR_ATTACHMENT2_WEBGL ext.COLOR_ATTACHMENT3_WEBGL ext.COLOR_ATTACHMENT4_WEBGL ext.COLOR_ATTACHMENT5_WEBGL ext.COLOR_ATTACHMENT6_WEBGL ext.COLOR_ATTACHMENT7_WEBGL ext.COLOR_ATTACHMENT8_WEBGL ext.COLOR_ATTACHMENT9_WEBGL ext.COLOR_ATTACHMENT10_WEBGL ext.COLOR_ATTACHMENT11_WEBGL ext.COLOR_ATTACHMENT12_WEBGL ext.COLOR_ATTACHMENT13_WEBGL ext.COLOR_ATTACHMENT14_WEBGL ext.COLOR_ATTACHMENT15_WEBGL`
 
@@ -86,20 +86,20 @@ getFramebufferAttachmentParameter(target, attachment, pname)
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE`
-      - `gl.FRAMEBUFFER_ATTACHMENT_BLUE_SIZE`
-      - `gl.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING`
-      - `gl.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE`
-      - `gl.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE`
-      - `gl.FRAMEBUFFER_ATTACHMENT_GREEN_SIZE`
-      - `gl.FRAMEBUFFER_ATTACHMENT_RED_SIZE`
-      - `gl.FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE`
-      - `gl.FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER`
+    - `gl.FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE`
+    - `gl.FRAMEBUFFER_ATTACHMENT_BLUE_SIZE`
+    - `gl.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING`
+    - `gl.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE`
+    - `gl.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE`
+    - `gl.FRAMEBUFFER_ATTACHMENT_GREEN_SIZE`
+    - `gl.FRAMEBUFFER_ATTACHMENT_RED_SIZE`
+    - `gl.FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE`
+    - `gl.FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER`
 
     When using the {{domxref("OVR_multiview2")}} extension:
 
-      - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR`: the number of views of the framebuffer object attachment.
-      - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR`:  the base view index of the framebuffer object attachment.
+    - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR`: the number of views of the framebuffer object attachment.
+    - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR`:  the base view index of the framebuffer object attachment.
 
 ### Return value
 
