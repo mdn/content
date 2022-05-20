@@ -87919,12 +87919,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/getCandidateWindowClientRect": {
-    "modified": "2019-01-17T03:16:44.967Z",
-    "contributors": [
-      "mattwojo"
-    ]
-  },
   "Web/API/indexedDB": {
     "modified": "2020-10-15T21:25:18.475Z",
     "contributors": [
