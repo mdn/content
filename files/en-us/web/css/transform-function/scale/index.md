@@ -23,7 +23,7 @@ ratio of the element is preserved (this is a [homothetic transformation](https:/
 
 When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
 shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
-in that dimension. A value of 1 has no effect.
+in that dimension. The value `1` has no effect.
 
 > **Note:** The `scale()` function only scales in 2D. To scale in 3D, use
 > [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) instead.
