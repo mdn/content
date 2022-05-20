@@ -89,10 +89,6 @@ In some browsers (Chrome 47 and later, for example), a splash screen is displaye
 - [`background_color`](/en-US/docs/Web/Manifest/background_color)
 - The icon in the [`icons`](/en-US/docs/Web/Manifest/icons) array that is closest to 128dpi for the device.
 
-## Specifications
-
-{{Specifications}}
-
 ## Browser compatibility
 
 {{Compat}}
