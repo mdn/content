@@ -76,12 +76,12 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     - `gl.LUMINANCE`: Each color component is a luminance component, alpha
       is 1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
-    - When using the {{domxref("EXT_sRGB")}} extension:
+    When using the {{domxref("EXT_sRGB")}} extension:
 
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.RED`
@@ -101,15 +101,15 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
       alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
       alpha bit.
-    - When using the {{domxref("OES_texture_float")}} extension:
+    When using the {{domxref("OES_texture_float")}} extension:
 
       - `gl.FLOAT`
 
-    - When using the {{domxref("OES_texture_half_float")}} extension:
+    When using the {{domxref("OES_texture_half_float")}} extension:
 
       - `gl.HALF_FLOAT_OES`
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.BYTE`
@@ -146,7 +146,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     - {{domxref("HTMLVideoElement")}},
     - {{domxref("ImageBitmap")}}.
 
-- offset
+- `offset`
   - : (WebGL 2 only) A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the
     {{domxref("WebGLBuffer")}}'s data store. Used to upload data to the currently bound
     {{domxref("WebGLTexture")}} from the `WebGLBuffer` bound to the

@@ -713,17 +713,17 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `gl.LUMINANCE`: Each color component is a luminance component, alpha is
       1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
-    - When using the {{domxref("WEBGL_depth_texture")}} extension:
+    When using the {{domxref("WEBGL_depth_texture")}} extension:
 
       - `gl.DEPTH_COMPONENT`
       - `gl.DEPTH_STENCIL`
 
-    - When using the {{domxref("EXT_sRGB")}} extension:
+    When using the {{domxref("EXT_sRGB")}} extension:
 
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
       following values are available additionally:
 
       - `gl.R8`
@@ -774,7 +774,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
       alpha bit.
-    - When using the {{domxref("WEBGL_depth_texture")}} extension:
+    When using the {{domxref("WEBGL_depth_texture")}} extension:
 
       - `gl.UNSIGNED_SHORT`
       - `gl.UNSIGNED_INT`
@@ -785,11 +785,11 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
       - `gl.FLOAT`
 
-    - When using the {{domxref("OES_texture_half_float")}} extension:
+    When using the {{domxref("OES_texture_half_float")}} extension:
 
       - `ext.HALF_FLOAT_OES` (constant provided by the extension)
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.BYTE`
@@ -829,7 +829,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - {{domxref("HTMLVideoElement")}},
     - {{domxref("ImageBitmap")}}.
 
-- offset
+- `offset`
   - : (WebGL 2 only) A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the
     {{domxref("WebGLBuffer")}}'s data store. Used to upload data to the currently bound
     {{domxref("WebGLTexture")}} from the `WebGLBuffer` bound to the
