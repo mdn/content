@@ -39,6 +39,8 @@ This article provides information about the changes in Firefox 102 that will aff
 
 #### DOM
 
+- The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference, and is planned for removal ({{bug(1768486)}}).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
