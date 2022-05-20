@@ -38,7 +38,7 @@ they are read or written:
 
 In addition to the information below, you'll find a how-to guide for using HTML data
 attributes in our article [_Using data
-attributes_.](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
 
 ### Name conversion
 
@@ -83,9 +83,8 @@ For example, a `data-abc-def` attribute corresponds to
 ### Setting values
 
 - When the attribute is set, its value is always converted to a string.
-
   For example: `element.dataset.example = null` is
-  converted into `data-example="null"`.
+  converted into `data-example="null"`
 
 - To remove an attribute, you can use the [`delete`
   operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`
@@ -135,6 +134,6 @@ if ('someDataAttr' in el.dataset === false) {
 ## See also
 
 - The HTML [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) class
-  of global attributes.
+  of global attributes
 - [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}
