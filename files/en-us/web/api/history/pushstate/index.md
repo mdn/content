@@ -40,7 +40,7 @@ pushState(state, unused, url)
 
     The `state` object can be anything that can be serialized. Because
     Firefox saves `state` objects to the user's disk so they can be restored
-    after the user restarts the browser, we impose a size limit of 2 MiB on the
+    after the user restarts the browser, we impose a size limit of 16 MiB on the
     serialized representation of a `state` object. If you pass a
     `state` object whose serialized representation is larger than this
     to `pushState()`, the method will throw an exception. If you need more
