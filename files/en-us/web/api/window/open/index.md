@@ -163,11 +163,9 @@ browser loads the referenced resource in the target frame or window that has the
 
 More reading on the use of the target attribute:
 
-[HTML 4.01 Target
-attribute specifications](https://www.w3.org/TR/html401/present/frames.html#h-16.3.2)
+[HTML 4.01 Target attribute specifications](https://www.w3.org/TR/html401/present/frames.html#h-16.3.2)
 
-[How do I create a link
-that opens a new window?](https://www.htmlhelp.com/faq/html/links.html#new-window)
+[How do I create a link that opens a new window?](https://www.htmlhelp.com/faq/html/links.html#new-window)
 
 You can also parameterize the function to make it versatile, functional in more
 situations, therefore re-usable in scripts and webpages:
@@ -250,8 +248,7 @@ function openRequestedSinglePopup(url) {
 - How can I bring back the window if it is minimized or behind another window?
   - : First check for the existence of the window object reference of such window and if
     it exists and if it has not been closed, then use the [focus()](/en-US/docs/Web/API/Window/focus) method. There is no other reliable
-    way. You can examine an [example explaining how to use the
-    focus() method](#best_practices).
+    way. You can examine an [example explaining how to use the focus() method](#best_practices).
 - How do I force a maximized window?
   - : You cannot. All browser manufacturers try to make the opening of new secondary
     windows noticed by users and noticeable by users to avoid confusion, to avoid
@@ -367,12 +364,9 @@ recommendable usability and accessibility guidelines:
 
 **Further reading:**
 
-- [Top Ten Web-Design Mistakes of
-  2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
-- [Links
-  & JavaScript Living Together in Harmony](https://evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
-- [comp.lang.javascript newsgroup
-  discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
+- [Top Ten Web-Design Mistakes of 2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
+- [Links & JavaScript Living Together in Harmony](https://evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
+- [comp.lang.javascript newsgroup discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
 
 #### Never use `<a href="#" onclick="window.open(...);">`
 
@@ -399,8 +393,7 @@ disorienting to users (Back toolbar button is disabled).
 > a small monitor where the windows are maximized to fill up the screen. So a user who
 > tries to return to the origin will be confused by a grayed out _Back_
 > button."
-> quote from [The Top Ten
-> _New_ Mistakes of Web Design](https://www.useit.com/alertbox/990530.html): 2. Opening New Browser Windows, Jakob
+> quote from [The Top Ten >_New_Mistakes of Web Design](https://www.useit.com/alertbox/990530.html): 2. Opening New Browser Windows, Jakob
 > Nielsen, May 1999
 When extreme changes in context are explicitly identified before they occur, then the
 users can determine if they wish to proceed or so they can be prepared for the change:
@@ -412,13 +405,11 @@ new tab or not, in "background" or not).
 
 - "If your link spawns a new window, or causes another windows to 'pop up' on your
   display, or move the focus of the system to a new FRAME or Window, then the nice thing
-  to do is to tell the user that something like that will happen." [World Wide Web Consortium
-  Accessibility Initiative regarding popups](https://www.w3.org/WAI/wcag-curric/sam77-0.htm)
+  to do is to tell the user that something like that will happen." [World Wide Web Consortium Accessibility Initiative regarding popups](https://www.w3.org/WAI/wcag-curric/sam77-0.htm)
 - "Use link titles to provide users with a preview of where each link will take them,
   before they have clicked on it." [Ten Good Deeds in Web Design](https://www.useit.com/alertbox/991003.html),
   Jakob Nielsen, October 1999
-- [Using Link Titles to Help Users
-  Predict Where They Are Going](https://www.useit.com/alertbox/980111.html), Jakob Nielsen, January 1998
+- [Using Link Titles to Help Users Predict Where They Are Going](https://www.useit.com/alertbox/980111.html), Jakob Nielsen, January 1998
 
 #### Always use the target attribute
 
@@ -491,8 +482,7 @@ authors:
   preference often set a minimal font size in Mozilla-based browsers.
 - web author is not aware of default margin (and/or border and/or padding) values
   applying to root element or body node in various browsers and various browser versions
-- user uses an user stylesheet ([userContent.css in
-  Mozilla-based browsers](https://kb.mozillazine.org/index.php?title=UserContent.css)) for his viewing habits that increases document box
+- user uses an user stylesheet ([userContent.css in Mozilla-based browsers](https://kb.mozillazine.org/index.php?title=UserContent.css)) for his viewing habits that increases document box
   dimensions (margin, padding, default font size)
 - user can customize individually the size (height or width) of most toolbars via
   operating system settings. E.g. window resizing borders, height of browser titlebar,
