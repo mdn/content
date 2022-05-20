@@ -8,7 +8,9 @@ tags:
   - Web Storage API
   - localStorage
   - sessionStorage
-spec-urls: https://html.spec.whatwg.org/multipage/webstorage.html#webstorage
+browser-compat:
+  - api.Window.localStorage
+  - api.Window.sessionStorage
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 
@@ -203,13 +205,7 @@ Web Storage also provides a couple of simple methods to remove data. We don't us
 
 ## Browser compatibility
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/).
 

@@ -13,6 +13,9 @@ tags:
   - Reference
   - WebGL
   - WebGL API
+browser-compat:
+  - api.WebGLRenderingContext
+  - api.WebGL2RenderingContext
 ---
 {{WebGLSidebar}}
 
@@ -166,22 +169,11 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 
 ## Specifications
 
-| Specification                                                                       |
-| ----------------------------------------------------------------------------------- |
-| [WebGL Specification](https://www.khronos.org/registry/webgl/specs/latest/1.0/)     |
-| [WebGL 2.0 Specification](https://www.khronos.org/registry/webgl/specs/latest/2.0/) |
-| [OpenGL ES 2.0](https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/)      |
-| [OpenGL ES 3.0](https://www.khronos.org/registry/OpenGL-Refpages/es3.0/html/)       |
+{{Specifications}}
 
 ## Browser compatibility
 
-### WebGL 1
-
-{{Compat("api.WebGLRenderingContext", 0)}}
-
-### WebGL 2
-
-{{Compat("api.WebGL2RenderingContext", 0)}}
+{{Compat}}
 
 ### Compatibility notes
 

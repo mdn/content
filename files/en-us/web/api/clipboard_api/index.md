@@ -15,6 +15,10 @@ tags:
   - Reference
   - copy
   - paste
+browser-compat:
+  - api.Clipboard
+  - api.ClipboardEvent
+  - api.ClipboardItem
 ---
 {{DefaultAPISidebar("Clipboard API")}}
 
@@ -46,21 +50,11 @@ This snippet fetches the text from the clipboard and appends it to the first ele
 
 ## Specifications
 
-{{Specifications("api.Clipboard")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-### Clipboard
-
-{{Compat("api.Clipboard")}}
-
-### ClipboardEvent
-
-{{Compat("api.ClipboardEvent")}}
-
-### ClipboardItem
-
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## See also
 

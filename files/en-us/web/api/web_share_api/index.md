@@ -9,6 +9,9 @@ tags:
   - Landing
   - Overview
   - Reference
+browser-compat:
+  - api.Navigator.share
+  - api.Navigator.canShare
 ---
 {{DefaultAPISidebar("Web Share API")}}
 
@@ -72,12 +75,11 @@ The above example is taken from our [Web share test](https://mdn.github.io/dom-e
 
 ## Specifications
 
-{{Specifications("api.Navigator.share")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.share")}}
-{{Compat("api.Navigator.canShare")}}
+{{Compat}}
 
 ## See also
 

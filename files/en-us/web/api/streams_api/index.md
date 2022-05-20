@@ -8,6 +8,9 @@ tags:
   - Landing
   - Reference
   - Streams
+browser-compat:
+  - api.ReadableStream
+  - api.WritableStream
 ---
 {{DefaultAPISidebar("Streams")}}
 
@@ -102,19 +105,11 @@ Examples from other developers:
 
 ## Specifications
 
-| Specification                                               |
-| ----------------------------------------------------------- |
-| [Streams Living Standard](https://streams.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### ReadableStream
-
-{{Compat("api.ReadableStream")}}
-
-### WritableStream
-
-{{Compat("api.WritableStream")}}
+{{Compat}}
 
 ## See also
 

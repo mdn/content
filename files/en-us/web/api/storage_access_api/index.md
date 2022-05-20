@@ -6,6 +6,9 @@ tags:
   - Reference
   - Storage
   - Storage Access API
+browser-compat:
+  - api.Document.hasStorageAccess
+  - api.Document.requestStorageAccess
 ---
 {{DefaultAPISidebar("Storage Access API")}}{{SeeCompatTable}}
 
@@ -77,9 +80,7 @@ The API is currently only at the proposal stage — the standardization process 
 
 ## Browser compatibility
 
-{{Compat("api.Document.hasStorageAccess")}}
-
-{{Compat("api.Document.requestStorageAccess")}}
+{{Compat}}
 
 ## See also
 

@@ -9,6 +9,9 @@ tags:
   - Web Storage API
   - localStorage
   - sessionStorage
+browser-compat:
+  - api.Window.localStorage
+  - api.Window.sessionStorage
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 
@@ -54,19 +57,11 @@ In addition, we have provided an [event output page](https://mdn.github.io/dom-e
 
 ## Specifications
 
-| Specification                                                                                          |
-| ------------------------------------------------------------------------------------------------------ |
-| [HTML Living Standard # webstorage](https://html.spec.whatwg.org/multipage/webstorage.html#webstorage) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Private Browsing / Incognito modes
 

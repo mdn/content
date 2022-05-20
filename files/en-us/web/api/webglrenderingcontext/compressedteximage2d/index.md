@@ -9,7 +9,9 @@ tags:
   - WebGL
   - WebGL extension
   - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.compressedTexImage2D
+browser-compat:
+  - api.WebGLRenderingContext.compressedTexImage2D
+  - api.WebGL2RenderingContext.compressedTexImage3D
 ---
 {{APIRef("WebGL")}}
 
@@ -194,13 +196,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
 ## Browser compatibility
 
-### compressedTexImage2D
-
 {{Compat}}
-
-### compressedTexImage3D
-
-{{Compat("api.WebGL2RenderingContext.compressedTexImage3D")}}
 
 ## See also
 

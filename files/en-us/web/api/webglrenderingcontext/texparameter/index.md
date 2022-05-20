@@ -8,7 +8,9 @@ tags:
   - Textures
   - WebGL
   - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.texParameterf
+browser-compat:
+  - api.WebGLRenderingContext.texParameterf
+  - api.WebGLRenderingContext.texParameteri
 ---
 {{APIRef("WebGL")}}
 
@@ -164,13 +166,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST)
 
 ## Browser compatibility
 
-### `WebGLRenderingContext.texParameterf()`
-
 {{Compat}}
-
-### `WebGLRenderingContext.texParameteri()`
-
-{{Compat("api.WebGLRenderingContext.texParameteri")}}
 
 ## See also
 
