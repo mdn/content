@@ -37,7 +37,7 @@ A typical mobile-optimized site contains something like the following:
 Not all devices are the same width; you should make sure that your pages work well in a large variation of screen sizes and orientations.
 
 
-The basic properties include:
+The basic properties of the "viewport" `<meta>` tag include:
 - `width`
   - : Controls the size of the viewport. It can be set to a specific number of pixels like `width=600` or to the special value `device-width`, which is 100vw. Minimum: `1px`. Maximum: `10000px`. Negative values: ignored. 
 - `height`
