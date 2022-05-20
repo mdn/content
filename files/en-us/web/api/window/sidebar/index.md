@@ -101,4 +101,4 @@ Mozilla-specific. Not part of any standard.
 ## Browser compatibility
 
 Moved behind preference in Firefox 102.
-For more information see Firefox compatibity information in [`window.external`](/en-US/docs/Web/API/Window/external#browser_compatibility).
+For more information see Firefox compatibility information in [`window.external`](/en-US/docs/Web/API/Window/external#browser_compatibility).
