@@ -21,6 +21,7 @@ in this object via a callback function.
 
 ```js
 forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters
@@ -41,7 +42,7 @@ forEach(callback)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

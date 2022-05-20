@@ -23,14 +23,14 @@ renderbufferStorage(target, internalFormat, width, height)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
 
-    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
-      renderable internal format.
+    - `gl.RENDERBUFFER`
+      - : Buffer data storage for single images in a renderable internal format.
 
-- internalFormat
+- `internalFormat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
     values:
@@ -41,7 +41,7 @@ renderbufferStorage(target, internalFormat, width, height)
     - `gl.DEPTH_COMPONENT16`: 16 depth bits.
     - `gl.STENCIL_INDEX8`: 8 stencil bits.
     - `gl.DEPTH_STENCIL`
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.R8`
@@ -75,16 +75,16 @@ renderbufferStorage(target, internalFormat, width, height)
       - `gl.DEPTH24_STENCIL8`
       - `gl.DEPTH32F_STENCIL8`
 
-    - When using the {{domxref("WEBGL_color_buffer_float")}} extension:
+    When using the {{domxref("WEBGL_color_buffer_float")}} extension:
 
       - `ext.RGBA32F_EXT`: RGBA 32-bit floating-point type.
       - `ext.RGB32F_EXT`: RGB 32-bit floating-point type.
 
-    - When using the {{domxref("EXT_sRGB")}} extension:
+    When using the {{domxref("EXT_sRGB")}} extension:
 
       - `ext.SRGB8_ALPHA8_EXT`: 8-bit sRGB and alpha.
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} and
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} and
       the {{domxref("EXT_color_buffer_float")}} extension:
 
       - `gl.R16F`
@@ -95,9 +95,9 @@ renderbufferStorage(target, internalFormat, width, height)
       - `gl.RGBA32F`
       - `gl.R11F_G11F_B10F`
 
-- width
+- `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the renderbuffer in pixels.
-- height
+- `height`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the renderbuffer in pixels.
 
 ### Return value

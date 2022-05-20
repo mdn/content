@@ -23,7 +23,7 @@ isRenderbuffer(renderbuffer)
 
 ### Parameters
 
-- renderbuffer
+- `renderbuffer`
   - : A {{domxref("WebGLRenderbuffer")}} to check.
 
 ### Return value

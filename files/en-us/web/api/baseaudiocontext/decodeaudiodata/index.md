@@ -54,7 +54,7 @@ decodeAudioData(arrayBuffer)
 
 ### Return value
 
-Void, or a {{jsxref("Promise") }} object that fulfills with the
+None ({{jsxref("undefined")}}) or a {{jsxref("Promise") }} object that fulfills with the
 _decodedData_.
 
 ## Examples

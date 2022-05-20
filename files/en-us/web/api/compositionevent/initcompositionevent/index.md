@@ -46,7 +46,7 @@ initCompositionEvent(type, canBubble, cancelable, view, data, locale)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

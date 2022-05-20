@@ -27,21 +27,17 @@ insertAdjacentText(where, data)
 
   - : A string representing the position relative to the element the method is called from; must be one of the following strings:
 
-    - `'beforebegin'`: Before the `element`
-      itself.
-    - `'afterbegin'`: Just inside the
-      `element`, before its first child.
-    - `'beforeend'`: Just inside the
-      `element`, after its last child.
-    - `'afterend'`: After the `element`
-      itself.
+    - `'beforebegin'`: Before the `element` itself.
+    - `'afterbegin'`: Just inside the `element`, before its first child.
+    - `'beforeend'`: Just inside the `element`, after its last child.
+    - `'afterend'`: After the `element` itself.
 
 - `data`
   - : A string from which to create a new text node to insert at the given position `where` relative to the element the method is called from.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
