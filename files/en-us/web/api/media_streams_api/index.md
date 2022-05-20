@@ -63,9 +63,7 @@ Early versions of the Media Capture and Streams API specification included separ
 
 ## Guides and tutorials
 
-The articles below provide additional guidance and how-to information that will help you learn to use the API, and how to perform specific tasks that you may wish to handle.
-
-{{LandingPageListSubpages}}
+The [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) article discusses the concepts of **constraints** and **capabilities**, as well as media settings, and includes a [Constraint Exerciser](/en-US/docs/Web/API/Media_Streams_API/Constraints#example_constraint_exerciser) that lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
 ## Browser compatibility
 
