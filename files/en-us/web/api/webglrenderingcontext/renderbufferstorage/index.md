@@ -28,8 +28,7 @@ renderbufferStorage(target, internalFormat, width, height)
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
 
     - `gl.RENDERBUFFER`
-    - : Buffer data storage for single images in a
-      renderable internal format.
+      - : Buffer data storage for single images in a renderable internal format.
 
 - `internalFormat`
 
