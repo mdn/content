@@ -22,6 +22,7 @@ The **`RTCSessionDescription.toJSON()`** method generates a
 ```js
 toJSON()
 ```
+
 ### Parameters
 
 None.

@@ -42,8 +42,8 @@ blendEquation(mode)
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.MIN`:  Minimum of source and destination
-      - `gl.MAX`:  Maximum of source and destination
+    - `gl.MIN`:  Minimum of source and destination
+    - `gl.MAX`:  Maximum of source and destination
 
 ### Exception
 

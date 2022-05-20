@@ -39,8 +39,8 @@ hint(target, mode)
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.FRAGMENT_SHADER_DERIVATIVE_HINT`
-        - : Same as `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+    - `gl.FRAGMENT_SHADER_DERIVATIVE_HINT`
+      - : Same as `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
 
 - `mode`
 
@@ -59,7 +59,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 The following example hints that the quality of filtering when generating mipmap images
-should be most efficient instead of best quality.
+should be most efficient instead of the best quality.
 
 ```js
 gl.hint(gl.GENERATE_MIPMAP_HINT, gl.FASTEST);
