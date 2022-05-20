@@ -10,6 +10,7 @@ tags:
   - Resource Timing API
   - Timing
   - Web Performance
+spec-urls: https://w3c.github.io/resource-timing/
 ---
 {{DefaultAPISidebar("Resource Timing API")}}
 
@@ -63,9 +64,7 @@ The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceR
 
 ## Specifications
 
-| Specification                                             |
-| --------------------------------------------------------- |
-| [Resource Timing](https://w3c.github.io/resource-timing/) |
+{{Specifications}}
 
 ## Implementation status
 

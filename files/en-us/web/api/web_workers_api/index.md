@@ -6,6 +6,7 @@ tags:
   - Overview
   - Reference
   - Web Workers
+spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 ---
 {{DefaultAPISidebar("Web Workers API")}}
 
@@ -82,9 +83,7 @@ You can find out more information on how these demos work in [Using Web Workers]
 
 ## Specifications
 
-| Specification                                                                                 |
-| --------------------------------------------------------------------------------------------- |
-| [HTML Living Standard # workers](https://html.spec.whatwg.org/multipage/workers.html#workers) |
+{{Specifications}}
 
 ## See also
 

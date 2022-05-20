@@ -9,6 +9,7 @@ tags:
   - barcode detection
   - shape detection
   - Experimental
+browser-compat: api.BarcodeDetector
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
 
@@ -272,13 +273,11 @@ This example uses the `detect()` method to detect the barcodes within the given 
 
 ## Specifications
 
-| Specification                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------- |
-| [Accelerated Shape Detection in Images # barcode-detection-api](https://wicg.github.io/shape-detection-api/#barcode-detection-api) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.BarcodeDetector")}}
+{{Compat}}
 
 ## See also
 

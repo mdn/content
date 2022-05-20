@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
   - Web
+spec-urls: https://svgwg.org/svg2-draft/
 ---
 {{DefaultAPISidebar("SVG")}}
 
@@ -153,9 +154,7 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [Scalable Vector Graphics (SVG) Full 1.2 Specification](https://www.w3.org/TR/SVG12/) |
+{{Specifications}}
 
 ## See also
 
