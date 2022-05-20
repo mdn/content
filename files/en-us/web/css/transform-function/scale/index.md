@@ -22,7 +22,7 @@ done in each direction. If both coordinates are equal, the scaling is uniform (_
 ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
 When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
-shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+shrinks. A negative value results in a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
 in that dimension. The value `1` has no effect.
 
 > **Note:** The `scale()` function only scales in 2D. To scale in 3D, use
@@ -44,8 +44,8 @@ scale(sx, sy)
 - `sx`
   - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the scaling vector.
 - `sy`
-  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
-    is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector.
+    If not defined, its default value is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
 
 <table class="standard-table">
   <thead>
