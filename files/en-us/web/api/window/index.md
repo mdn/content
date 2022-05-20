@@ -67,6 +67,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the document that the window contains.
 - {{domxref("Window.event")}} {{deprecated_inline}} {{readOnlyInline}}
   - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
+- {{domxref("Window.external")}} {{deprecated_inline}} {{readOnlyInline}}
+  - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.frameElement")}} {{readOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
