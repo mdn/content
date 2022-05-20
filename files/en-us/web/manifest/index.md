@@ -14,11 +14,11 @@ browser-compat: html.manifest
 
 **Web app manifests** are part of a collection of web technologies called [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs), which are websites that can be installed to a device's homescreen without an app store. Unlike regular web apps with simple homescreen links or bookmarks, PWAs can be downloaded in advance and can work offline, as well as use regular [Web APIs](/en-US/docs/Web/API).
 
-The web app manifest provides information about a web application in a {{Glossary("JSON")}} text file, necessary for the web app to be downloaded and be presented to the user similarly to a native app (e.g., be installed on the homescreen of a device, providing users with quicker access and a richer experience). PWA manifests include its name, author, icon(s), version, description, and list of all the necessary resources (among other things).
+A web application manifest, as defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, provides information about a web application in a {{Glossary("JSON")}} text file, necessary for the web app to be downloaded and be presented to the user similarly to a native app (e.g., be installed on the homescreen of a device, providing users with quicker access and a richer experience). PWA manifests include its name, author, icon(s), version, description, and list of all the necessary resources (among other things).
 
 ## Members
 
-Web manifests can contain the following keys. Click on each one to link through to more information about it:
+Web application manifests can contain the following keys. Click on each one to link through to more information about it:
 
 {{ListSubpages("/en-US/docs/Web/Manifest")}}
 
@@ -91,9 +91,7 @@ In some browsers (Chrome 47 and later, for example), a splash screen is displaye
 
 ## Specifications
 
-| Specification                                      |
-| -------------------------------------------------- |
-| [Web App Manifest](https://w3c.github.io/manifest/) |
+{{Specifications}}
 
 ## Browser compatibility
 
