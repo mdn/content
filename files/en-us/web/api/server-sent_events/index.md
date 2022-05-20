@@ -6,6 +6,7 @@ tags:
   - Overview
   - SSE
   - Server-sent events
+spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -30,9 +31,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## Specifications
 
-| Specification                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------ |
-| [HTML Living Standard # server-sent-events](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events) |
+{{Specifications}}
 
 ## See also
 

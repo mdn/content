@@ -9,6 +9,7 @@ tags:
   - HTML DOM
   - Introduction
   - Tutorial
+spec-urls: https://dom.spec.whatwg.org/
 ---
 {{DefaultAPISidebar("DOM")}}
 
@@ -309,6 +310,4 @@ The following simple example illustrates using the DOM {{domxref("Document")}} A
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [DOM Living Standard](https://dom.spec.whatwg.org/) |
+{{Specifications}}
