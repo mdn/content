@@ -18,11 +18,11 @@ Firefox 4, which shipped on March 22, 2011, enhances performance, adds more supp
 
 ## Features for web developers
 
-Gecko now uses the [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) directly in the HTML markup.
+Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) directly in the HTML markup.
 
 ### HTML
 
-- [Meet the HTML5 parser](/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser)
+- [Meet the HTML5 parser](/en-US/docs/Learn/HTML)
   - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
 - [Forms in HTML5](/en-US/docs/Learn/Forms)
   - : A look at improvements to web forms in HTML5. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.

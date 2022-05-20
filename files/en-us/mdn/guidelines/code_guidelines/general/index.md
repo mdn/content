@@ -14,20 +14,20 @@ The following code example guidelines apply to all code, whether we are talking 
 
 ## In this article
 
-- [Indentation, spacing, size](/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation_spacing_size)
+- [Indentation, spacing, size](#indentation_spacing_size)
 
-  - [Indentation](/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation)
-  - [Code line length](/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_line_length)
-  - [Code block height](/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_block_height)
+  - [Indentation](#indentation)
+  - [Code line length](#code_line_length)
+  - [Code block height](#code_block_height)
 
-- [Guidelines for displaying examples](/en-US/docs/MDN/Guidelines/Code_guidelines/General#guidelines_for_displaying_examples)
+- [Guidelines for displaying examples](#guidelines_for_displaying_examples)
 
-  - [Size of rendered example](/en-US/docs/MDN/Guidelines/Code_guidelines/General#size_of_rendered_example)
-  - [Use of images and other media](/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_images_and_other_media)
-  - [Use of color](/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_color)
-  - [Highlight good and bad practice examples](/en-US/docs/MDN/Guidelines/Code_guidelines/General#highlight_good_and_bad_practice_examples)
+  - [Size of rendered example](#size_of_rendered_example)
+  - [Use of images and other media](#use_of_images_and_other_media)
+  - [Use of color](#use_of_color)
+  - [Highlight good and bad practice examples](#highlight_good_and_bad_practice_examples)
 
-- [Writing syntax sections on reference pages](/en-US/docs/MDN/Guidelines/Code_guidelines/General#writing_syntax_sections_on_reference_pages)
+- [Writing syntax sections on reference pages](#writing_syntax_sections_on_reference_pages)
 
 ## Indentation, spacing, size
 
