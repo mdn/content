@@ -8155,11 +8155,12 @@
 /en-US/docs/Web/API/HTMLCanvasElement.getContext	/en-US/docs/Web/API/HTMLCanvasElement/getContext
 /en-US/docs/Web/API/HTMLCanvasElement.height	/en-US/docs/Web/API/HTMLCanvasElement/height
 /en-US/docs/Web/API/HTMLCanvasElement.mozFetchAsStream	/en-US/docs/Web/API/HTMLCanvasElement/mozFetchAsStream
-/en-US/docs/Web/API/HTMLCanvasElement.mozGetAsFile	/en-US/docs/Web/API/HTMLCanvasElement/mozGetAsFile
+/en-US/docs/Web/API/HTMLCanvasElement.mozGetAsFile	/en-US/docs/Web/API/HTMLCanvasElement
 /en-US/docs/Web/API/HTMLCanvasElement.mozOpaque	/en-US/docs/Web/API/HTMLCanvasElement/mozOpaque
 /en-US/docs/Web/API/HTMLCanvasElement.toBlob	/en-US/docs/Web/API/HTMLCanvasElement/toBlob
 /en-US/docs/Web/API/HTMLCanvasElement.toDataURL	/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
 /en-US/docs/Web/API/HTMLCanvasElement.width	/en-US/docs/Web/API/HTMLCanvasElement/width
+/en-US/docs/Web/API/HTMLCanvasElement/mozGetAsFile	/en-US/docs/Web/API/HTMLCanvasElement
 /en-US/docs/Web/API/HTMLCollection.item	/en-US/docs/Web/API/HTMLCollection/item
 /en-US/docs/Web/API/HTMLCollection/HTMLCollection.length	/en-US/docs/Web/API/HTMLCollection/length
 /en-US/docs/Web/API/HTMLContentElement.getDistributedNodes	/en-US/docs/Web/API/HTMLContentElement/getDistributedNodes
