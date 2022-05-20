@@ -11,7 +11,7 @@ tags:
   - Landing
   - Overview
   - working with files
-spec-urls: https://wicg.github.io/file-system-access/
+spec-urls: https://fs.spec.whatwg.org/
 ---
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
