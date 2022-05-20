@@ -68,8 +68,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ## Examples
 
-This example is from the MDN [sw-test
-example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
 Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
 like so:
 
@@ -106,7 +105,6 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}
