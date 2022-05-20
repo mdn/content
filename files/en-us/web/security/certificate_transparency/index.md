@@ -40,7 +40,3 @@ Apple [requires](https://support.apple.com/en-gb/HT205280) a varying number of S
 Firefox [does not](https://bugzilla.mozilla.org/show_bug.cgi?id=1281469) currently check or require the use of CT logs for sites that users visit.
 
 The [Expect-CT header](/en-US/docs/Web/HTTP/Headers/Expect-CT) can be used to request that a browser _always_ enforces the requirement for certificate transparency (e.g. in Chrome, even if the certificate was issued with a notBefore date prior to April).
-
-## Specifications
-
-{{Specifications}}
