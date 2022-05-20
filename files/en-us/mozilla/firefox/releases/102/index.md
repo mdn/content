@@ -37,6 +37,8 @@ This article provides information about the changes in Firefox 102 that will aff
 
 ### APIs
 
+- The Non-standard interfaces [IDBMutableFile](/en-US/docs/Web/API/IDBMutableFile), [IDBFileHandle](/en-US/docs/Web/API/IDBFileHandle), [IDBFileRequest](/en-US/docs/Web/API/IDBFileRequest), and the method [IDBDatabase.createMutableFile()](/en-US/docs/Web/API/IDBDatabase#idbdatabase.createmutablefile), have been disabled by default, in preparation for removal in a future release ({{bug(1764771)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
