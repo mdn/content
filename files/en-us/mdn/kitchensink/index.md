@@ -120,10 +120,10 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 | `QUERY_COUNTER_BITS_EXT`     | 0x8864 | The number of bits used to hold the query result for the given target. |
 | `CURRENT_QUERY_EXT`          | 0x8865 | The currently active query. |
 | `QUERY_RESULT_EXT`           | 0x8866 | The query result. |
-| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether or not a query result is available. |
+| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether a query result is available. |
 | `TIME_ELAPSED_EXT`           | 0x88BF | Elapsed time (in nanoseconds). |
 | `TIMESTAMP_EXT`              | 0x8E28 | The current time. |
-| `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether or not the GPU performed any disjoint operation. |
+| `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether the GPU performed any disjoint operation. |
 
 ### HTML table
 
