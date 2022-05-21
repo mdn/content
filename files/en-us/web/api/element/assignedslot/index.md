@@ -27,8 +27,7 @@ assigned to a slot, or if the associated shadow root was attached with its
 
 ## Examples
 
-In our [simple-template
-example](https://github.com/mdn/web-components-examples/tree/main/simple-template) ([see it
+In our [simple-template example](https://github.com/mdn/web-components-examples/tree/main/simple-template) ([see it
 live](https://mdn.github.io/web-components-examples/simple-template/)), we create a trivial custom element example called
 `<my-paragraph>` in which a shadow root is attached and then populated
 using the contents of a template that contains a slot named `my-text`.

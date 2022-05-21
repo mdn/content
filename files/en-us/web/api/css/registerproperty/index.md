@@ -122,8 +122,7 @@ We can add these styles to some buttons:
 
 ## See also
 
-- [Using the CSS
-  properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSS.supports()")}}
 - {{DOMxRef("CSS.escape()")}}
