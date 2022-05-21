@@ -90,8 +90,7 @@ There are four primary ways of analyzing this XML document:
 
 > **Note:** `XMLHttpRequest` can now interpret HTML for you
 > using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the
-> article about [HTML
-> in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn how to do this.
+> article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn how to do this.
 
 ### Processing a responseText property containing an HTML document
 

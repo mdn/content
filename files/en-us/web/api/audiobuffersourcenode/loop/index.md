@@ -40,9 +40,7 @@ are provided to play and stop the audio playback, and a slider control is used t
 the `playbackRate` property value on the fly. When the audio is played, it
 loops.
 
-> **Note:** You can [run the full
-> example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
-> the source](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html).)
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view the source](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html).)
 
 ```js
 function getData() {

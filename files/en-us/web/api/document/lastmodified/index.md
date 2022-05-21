@@ -78,8 +78,7 @@ if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
 ```
 
 > **Note:** WebKit returns the time string in UTC; Gecko and
-> Internet Explorer return a time in the local timezone. (See: [Bug 4363 – document.lastModified
-> returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
+> Internet Explorer return a time in the local timezone. (See: [Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
 
 If you want to know **whether _an external page_ has changed**,
 please read [this
