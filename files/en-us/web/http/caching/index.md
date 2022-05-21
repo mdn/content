@@ -613,9 +613,9 @@ Cache-Control: public, max-age=31536000
 Cache-Control: immutable
 ```
 
-### Primary resources
+### Main resources
 
-Unlike subresources, primary resources cannot be cache busted because their URLs can't be decorated in the same way that subresource URLs can be.
+Unlike subresources, main resources cannot be cache busted because their URLs can't be decorated in the same way that subresource URLs can be.
 
 If the following HTML itself is stored, the latest version cannot be displayed even if the content is updated on the server side.
 
@@ -658,13 +658,13 @@ Most web content can be covered by a combination of the two patterns described a
 
 ### More about managed caches
 
-With the method described in previous sections, subresources can be cached for a long time by using cache busting, but primary resources (which are usually HTML documents) can’t be.
+With the method described in previous sections, subresources can be cached for a long time by using cache busting, but main resources (which are usually HTML documents) can’t be.
 
-Caching primary resources is difficult because, using just standard directives from the HTTP Caching specification, there’s no way to actively delete cache contents when content is updated on the server.
+Caching main resources is difficult because, using just standard directives from the HTTP Caching specification, there’s no way to actively delete cache contents when content is updated on the server.
 
 However, it is possible by deploying a managed cache such as a CDN or service worker.
 
-For example, a CDN that allows cache purging via an API or dashboard operation would allow for a more aggressive caching strategy by storing the primary resource and explicitly purging the relevant cache only when an update occurs on the server.
+For example, a CDN that allows cache purging via an API or dashboard operation would allow for a more aggressive caching strategy by storing the main resource and explicitly purging the relevant cache only when an update occurs on the server.
 
 A service worker could do the same if it could delete the contents in the Cache API when an update occurs on the server.
 
