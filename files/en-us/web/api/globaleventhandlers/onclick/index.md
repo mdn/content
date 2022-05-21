@@ -37,7 +37,7 @@ It is also possible to add the event directly on to the HTML element. Like this:
 ```
 
 > **Note:** When this approach is used, one  must include
-> the parens `()` so that the function triggers when clicked.
+> the parenthesis `()` so that the function triggers when clicked.
 
 ### Value
 
