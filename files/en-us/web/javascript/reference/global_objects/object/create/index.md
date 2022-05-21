@@ -49,18 +49,16 @@ The `proto` parameter has to be either
 
 If `proto` is neither of these a {{jsxref("TypeError")}} is thrown.
 
-## Custom and Null objects
+## Object with `null` prototype
 
-A new object created from a completely custom object (especially one created from the
-`null` object, which is basically a custom object with NO members) can behave
-in unexpected ways. This is especially true when debugging, since common object-property
+A new object with `null` prototype can behave in unexpected ways, because it doesn't inherit any object methods from `Object.prototype`. This is especially true when debugging, since common object-property
 converting/detecting utility functions may generate errors, or lose information
 (especially if using silent error-traps that ignore errors). For example, here are two
 objects:
 
 ```js
-oco = Object.create( {} );   // create a normal object
-ocn = Object.create( null ); // create a "null" object
+oco = {};   // create a normal object
+ocn = Object.create(null); // create a "null" object
 
 > console.log(oco) // {} -- Seems normal
 > console.log(ocn) // {} -- Seems normal here too, so far
@@ -108,9 +106,9 @@ _A simple common debugging function:_
 
 ```js
 // display top-level property name:value pairs of given object
-function ShowProperties(obj){
-  for(var prop in obj){
-    console.log(prop + ": " + obj[prop] + "\n" );
+function showProperties(obj) {
+  for (const prop in obj) {
+    console.log(prop + ": " + obj[prop] + "\n");
   }
 }
 ```
@@ -119,43 +117,39 @@ _Not such simple results: (especially if silent error-trapping had hidden the er
 messages)_
 
 ```js
-ob={}; ob.po=oco; ob.pn=ocn; // create a compound object using the test objects from above as property values
+ob = {}; ob.po = oco; ob.pn = ocn; // create a compound object using the test objects from above as property values
 
-> ShowProperties( ob ) // display top-level properties
+> showProperties(ob) // display top-level properties
 - po: [object Object]
 - Error: Cannot convert object to primitive value
-
-Note that only first property gets shown.
 ```
 
-_(But if the same object is created in a different order -- at least in some
-implementations...)_
+Note that only first property gets shown, due to `ob.po` being traversed first. But if the same object is created in a different order...
 
 ```js
-ob={}; ob.pn=ocn; ob.po=oco; // create same compound object again, but create same properties in different order
+ob = {}; ob.pn = ocn; ob.po = oco; // create same compound object again, but create same properties in different order
 
-> ShowProperties( ob ) // display top-level properties
+> showProperties(ob) // display top-level properties
 - Error: Cannot convert object to primitive value
-
-Note that neither property gets shown.
 ```
 
-Note that such a different order may arise statically via disparate fixed codings such
+Note that neither property gets shown.
+
+Such a different order may arise statically via disparate fixed codings such
 as here, but also dynamically via whatever the order any such property-adding
 code-branches actually get executed at runtime as depends on inputs and/or
-random-variables. Then again, the actual iteration order is not guaranteed no matter
-what the order members are added.
+random-variables.
 
-Be aware of, also, that using [`Object.entries()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) on an object created via `Object.create()`
+Beware, also, that using [`Object.entries()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) on an object created via `Object.create()`
 will result in an empty array being returned, because the first argument is the _prototype_, not the object's own properties.
 
 ```js
-var obj = Object.create({ a: 1, b: 2 });
+const obj = Object.create({ a: 1, b: 2 });
 
 > console.log(Object.entries(obj)); // shows "[]"
 ```
 
-## Adding back object methods
+### Adding object methods back
 
 As demonstrated above, lack of default object methods can make debugging unwieldy. We can add the `toString` method back to the "null" object by simply assigning it one:
 
@@ -174,7 +168,9 @@ ob = {}; ob.pn = ocn; ob.po = oco; // create a compound object (same as before)
 - pn: [object Object]
 ```
 
-Different from normal objects, `toString` here is an own property of `ocn`, instead of being on its prototype. This is because, well, `ocn` has no (`null`) prototype. Setting the generic **prototype** as the new object's prototype works even better:
+Different from normal objects, `toString` here is an own property of `ocn`, instead of being on its prototype. This is because, well, `ocn` has no (`null`) prototype.
+
+Resetting the new object's prototype works even better:
 
 ```js
 ocn = Object.create(null);                  // create "null" object (same as before)
