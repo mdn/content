@@ -31,7 +31,7 @@ createNSResolver(nodeResolver)
 
 ### Parameters
 
-- nodeResolver
+- `nodeResolver`
   - : A {{domxref("Node")}} to be used as a context for namespace resolution.
 
 ### Return value
