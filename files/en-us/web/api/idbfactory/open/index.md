@@ -60,8 +60,7 @@ open(name, version)
     > {{domxref("StorageManager.persist()")}} to get persistent storage instead.
 
 > **Note:** You can find out more information on the different available
-> storage types, and how Firefox handles client-side data storage, at [Browser
-> storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
+> storage types, and how Firefox handles client-side data storage, at [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
 
 ### Return value
 
