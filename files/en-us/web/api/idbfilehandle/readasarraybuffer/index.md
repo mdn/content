@@ -23,7 +23,6 @@ In many ways, it performs like the {{domxref("FileReader.readAsArrayBuffer()")}}
 The reading operation starts at the position given by the
 {{domxref("IDBFileHandle.location", "location")}} property.
 
-
 ## Syntax
 
 ```js
