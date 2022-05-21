@@ -19,9 +19,8 @@ browser-compat: api.IDBFileHandle.write
 The **`write()`** method of the {{domxref("IDBFileHandle")}} interface
 writes some data into the file.
 
-The write starts at the position set in {{domxref("IDBFileHandle.location", "location")}} and moves
+The write operation starts at the position set in {{domxref("IDBFileHandle.location", "location")}} and moves
 that position by the number of written bytes.
-
 
 ## Syntax
 

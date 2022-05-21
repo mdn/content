@@ -20,7 +20,6 @@ The **`open()`** method of the {{domxref("IDBMutableFile")}}
 returns an {{domxref("IDBFileHandle")}} object
 that allows to safely write in the file.
 
-
 ## Syntax
 
 ```js

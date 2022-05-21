@@ -20,14 +20,13 @@ The **'abort'** event is fired when the associated locked file has been aborted 
 
 This event is not cancelable and does not bubble.
 
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', event => { });
-onabort = event => { };
+addEventListener('abort', event => { })
+onabort = event => { }
 ```
 
 ## Event type
