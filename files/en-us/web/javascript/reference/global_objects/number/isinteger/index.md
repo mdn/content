@@ -40,7 +40,7 @@ numbers that can be represented as integer. It will always return `false` if the
 
 Note that some number literals, while looking like non-integers, actually represent integers — due to the precision limit of ECMAScript floating-point number encoding (IEEE-754). For example, `5.0000000000000001` only differs from `5` by `1e-16`, which is too small to be represented. (For reference, [`Number.EPSILON`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON) stores the distance between 1 and the next representable floating-point number greater than 1, and that is about `2.22e-16`.) Therefore, `5.0000000000000001` will be represented with the same encoding as `5`, thus making `Number.isInteger(5.0000000000000001)` return `true`.
 
-In a similar sense, numbers around the magnitude of [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) will suffer from loss of precision and make `Number.isInteger` return `true` even when it's not an integer. (The actual threshold varies based on how many bits are needed to represent the decimal—for example, `Number.isInteger(4500000000000000.1)` is `true`, but `Number.isInteger(4500000000000000.5)` is `false`.)
+In a similar sense, numbers around the magnitude of [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) will suffer from loss of precision and make `Number.isInteger` return `true` even when it's not an integer. (The actual threshold varies based on how many bits are needed to represent the decimal — for example, `Number.isInteger(4500000000000000.1)` is `true`, but `Number.isInteger(4500000000000000.5)` is `false`.)
 
 ## Examples
 
