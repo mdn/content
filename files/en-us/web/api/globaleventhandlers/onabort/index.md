@@ -17,7 +17,7 @@ browser-compat: api.GlobalEventHandlers.onabort
 
 The **`onabort`** property of the {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for processing `abort` events.
 
-Currently, only {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}} interfaces (which inherit the {{domxref("HTMLMediaElement")}} interface) fire the {{domxref("HTMLMediaElement/abort_event", "abort")}} event.
+Currently, only the {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}} interfaces (which inherit the {{domxref("HTMLMediaElement")}} interface) fire the {{domxref("HTMLMediaElement/abort_event", "abort")}} event.
 
 > **Note:** Previously the `abort` event is fired on `Window`, but it has been removed from the standard (see [HTML issue #3525](https://github.com/whatwg/html/issues/3525)).
 
