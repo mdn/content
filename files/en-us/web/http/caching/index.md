@@ -121,7 +121,7 @@ Cache-Control: max-age=604800
 ...
 ```
 
-The cache which stored that response counts the time elapsed since the response was generated as an age. The meaning of `max-age` is that if the age is less than one week, then the response is fresh — and if the age is greater than one week, the the cached response is stale.
+The cache which stored that response counts the time elapsed since the response was generated as an age. The meaning of `max-age` is that if the age is less than one week, then the response is fresh — and if the age is greater than one week, the cached response is stale.
 
 If that response is stored in a private cache, it will be available for reuse in response to client requests for one week after it is stored. If the shared cache saves it, it is necessary to inform the client of the time elapsed from when it was stored to the shared cache until it is reused by the client. If the response has been stored in the shared cache for one day and then reused by the client, then the following response will be sent from the shared cache to the client.
 
@@ -220,7 +220,7 @@ Cache-Control: max-age=3600
 
 Upon receiving that response, the client reverts the stored stale response back to being fresh and can reuse it during the remaining 1 hour.
 
-The server can can obtain the modification time from the operating-system file system, which is relatively easy to do for the case of serving static files. However, there are some problems; for example, the time format is complex and difficult to parse, and distributed servers have difficulty synchronizing file-update times.
+The server can obtain the modification time from the operating-system file system, which is relatively easy to do for the case of serving static files. However, there are some problems; for example, the time format is complex and difficult to parse, and distributed servers have difficulty synchronizing file-update times.
 
 To solve such problems, the `ETag` response header was standardized as an alternative.
 
@@ -288,7 +288,7 @@ Cache-Control: max-age=0, must-revalidate
 
 `max-age=0` means that the response is immediately stale, and `must-revalidate` means that it must not be reused without revalidation once it is stale — so in combination, the semantics seem to be the same as `no-cache`.
 
-However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as an workaround.
+However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as a workaround.
 
 But now that HTTP/1.1-conformant servers are widely deployed, there’s no reason to ever use that `max-age=0`-and-`must-revalidate` combination — you should instead just use `no-cache`.
 
@@ -388,7 +388,7 @@ The `max-age=0` directive in the request specifies “reuse of responses with an
 
 As a result, a request is validated by `If-None-Match` and `If-Modified-Since`.
 
-That behavior is also defined in the [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) standard and can be reproduced in JavaScript by calling`fetch()` with the cache mode set to `no-cache` (note that `reload` is not the right mode for this case):
+That behavior is also defined in the [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) standard and can be reproduced in JavaScript by calling `fetch()` with the cache mode set to `no-cache` (note that `reload` is not the right mode for this case):
 
 ```js
 // Note: "reload" is not the right mode for a normal reload; "no-cache" is
