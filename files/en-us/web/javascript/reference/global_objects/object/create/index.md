@@ -146,8 +146,8 @@ code-branches actually get executed at runtime as depends on inputs and/or
 random-variables. Then again, the actual iteration order is not guaranteed no matter
 what the order members are added.
 
-Be aware of, also, that using Object.entries() on an object created via Object.create()
-will result in an empty array being returned.
+Be aware of, also, that using [`Object.entries()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) on an object created via `Object.create()`
+will result in an empty array being returned, because the first argument is the _prototype_, not the object's own properties.
 
 ```js
 var obj = Object.create({ a: 1, b: 2 });
@@ -155,77 +155,33 @@ var obj = Object.create({ a: 1, b: 2 });
 > console.log(Object.entries(obj)); // shows "[]"
 ```
 
-#### Some NON-solutions
+## Adding back object methods
 
-A good solution for the missing object-methods is not immediately apparent.
-
-Adding the missing object-method directly from the standard-object does NOT work:
+As demonstrated above, lack of default object methods can make debugging unwieldy. We can add the `toString` method back to the "null" object by simply assigning it one:
 
 ```js
-ocn = Object.create( null ); // create "null" object (same as before)
+ocn = Object.create(null); // create "null" object (same as before)
 
-ocn.toString = Object.toString; // since new object lacks method then try assigning it directly from standard-object
-
-> ocn.toString // shows "toString() { [native code] }" -- missing method seems to be there now
-> ocn.toString == Object.toString // shows "true" -- method seems to be same as the standard object-method
-
-> ocn.toString() // error: Function.prototype.toString requires that 'this' be a Function
-```
-
-Adding the missing object-method directly to new object's "prototype" does not work
-either, since the new object does not have a real prototype (which is really the cause
-of ALL these problems) and one cannot be **directly** added:
-
-```js
-ocn = Object.create( null ); // create "null" object (same as before)
-
-ocn.prototype.toString = Object.toString; // Error: Cannot set property 'toString' of undefined
-
-ocn.prototype = {};                       // try to create a prototype
-ocn.prototype.toString = Object.toString; // since new object lacks method then try assigning it from standard-object
-
-> ocn.toString() // error: ocn.toString is not a function
-```
-
-Adding the missing object-method by calling [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) with the name of the standard-object itself as the second argument does not work either:
-
-```js
-ocn = Object.create( null );        // create "null" object (same as before)
-Object.setPrototypeOf(ocn, Object); // wrong; sets new object's prototype to the Object() function
-
-> ocn.toString() // error: Function.prototype.toString requires that 'this' be a Function
-```
-
-#### Some OK solutions
-
-Again, adding the missing object-method directly from the
-**standard-object** does NOT work. However, adding the
-**generic** method directly, DOES:
-
-```js
-ocn = Object.create( null ); // create "null" object (same as before)
-
-ocn.toString = toString; // since new object lacks method then assign it directly from generic version
+ocn.toString = Object.prototype.toString; // since new object lacks toString, add the original generic one back
 
 > ocn.toString() // shows "[object Object]"
 > "ocn is: " + ocn // shows "ocn is: [object Object]"
 
-ob={}; ob.pn=ocn; ob.po=oco; // create a compound object (same as before)
+ob = {}; ob.pn = ocn; ob.po = oco; // create a compound object (same as before)
 
 > ShowProperties(ob) // display top-level properties
 - po: [object Object]
 - pn: [object Object]
 ```
 
-However, setting the generic **prototype** as the new object's prototype
-works even better:
+Different from normal objects, `toString` here is an own property of `ocn`, instead of being on its prototype. This is because, well, `ocn` has no (`null`) prototype. Setting the generic **prototype** as the new object's prototype works even better:
 
 ```js
-ocn = Object.create( null );                  // create "null" object (same as before)
-Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to the "generic" object (NOT standard-object)
+ocn = Object.create(null);                  // create "null" object (same as before)
+Object.setPrototypeOf(ocn, Object.prototype); // set new object's [[Prototype]] to Object.prototype
 ```
 
-_(In addition to all the string-related functions shown above, this also adds:)_
+In addition to all the string-related functions shown above, this also adds:
 
 ```js
 > ocn.valueOf() // shows {}
@@ -235,7 +191,7 @@ _(In addition to all the string-related functions shown above, this also adds:)_
 // ...and all the rest of the properties and methods of Object.prototype.
 ```
 
-As shown, objects modified this way now look very much like ordinary objects.
+In fact, `Object.setPrototypeOf(ocn, Object.prototype)` effectively reverts the `Object.create(null)` operation: objects created with the literal syntax (`ocn = {}`) automatically gets `Object.prototype` as its prototype.
 
 ## Examples
 
