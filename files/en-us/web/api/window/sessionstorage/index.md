@@ -99,7 +99,7 @@ field.addEventListener("change", function() {
 });
 ```
 
-> **Note:** Please refer to the [Using the Web > Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+> **Note:** Please refer to the [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
 ## Specifications
 

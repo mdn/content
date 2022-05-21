@@ -393,7 +393,7 @@ disorienting to users (Back toolbar button is disabled).
 > a small monitor where the windows are maximized to fill up the screen. So a user who
 > tries to return to the origin will be confused by a grayed out _Back_
 > button."
-> quote from [The Top Ten >_New_Mistakes of Web Design](https://www.useit.com/alertbox/990530.html): 2. Opening New Browser Windows, Jakob
+> quote from [The Top Ten New Mistakes of Web Design](https://www.useit.com/alertbox/990530.html): 2. Opening New Browser Windows, Jakob
 > Nielsen, May 1999
 When extreme changes in context are explicitly identified before they occur, then the
 users can determine if they wish to proceed or so they can be prepared for the change:
