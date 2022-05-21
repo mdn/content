@@ -38,6 +38,12 @@ const { bar } = foo; // where foo = { bar:10, baz:12 };
 /* This creates a constant with the name 'bar', which has a value of 10 */
 ```
 
+Unlike `var`, `const` begins _Declarations_, not _Statements_. That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+
+```js
+if (true) const a = 1; // SyntaxError: Unexpected token 'const'
+```
+
 ## Description
 
 This declaration creates a constant whose scope can be either global or local to the
@@ -45,9 +51,7 @@ block in which it is declared. Global constants do **not** become
 properties of the {{domxref("window")}} object, unlike {{jsxref("Statements/var",
   "var")}} variables.
 
-An initializer for a constant is required. You must specify its value in the same
-statement in which it's declared. (This makes sense, given that it can't be changed
-later.)
+An initializer for a constant is required. You must specify its value in the same declaration. (This makes sense, given that it can't be changed later.)
 
 The **`const` declaration** creates a read-only reference to a
 value. It does **not** mean the value it holds is immutable—just that the

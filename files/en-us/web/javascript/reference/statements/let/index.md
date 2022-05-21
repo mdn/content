@@ -13,7 +13,7 @@ browser-compat: javascript.statements.let
 ---
 {{jsSidebar("Statements")}}
 
-The **`let`** statement declares a block-scoped local variable,
+The **`let`** declaration declares a block-scoped local variable,
 optionally initializing it to a value.
 
 {{EmbedInteractiveExample("pages/js/statement-let.html")}}
@@ -39,6 +39,12 @@ syntax can also be used to declare variables.
 ```js
 let { bar } = foo; // where foo = { bar:10, baz:12 };
 /* This creates a variable with the name 'bar', which has a value of 10 */
+```
+
+Unlike `var`, `let` begins _Declarations_, not _Statements_. That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+
+```js
+if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
 ## Description
