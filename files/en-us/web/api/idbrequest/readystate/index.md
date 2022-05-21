@@ -25,9 +25,11 @@ occurs.
 
 ## Value
 
-The {{domxref("IDBRequestReadyState")}} of the request,
-which is `pending` if the request is still ongoing,
-or `done` if the request has completed.
+One of the following strings:
+- `pending`
+  - : Returned if the request is still ongoing.
+- `done`
+  - : Returned if the request has already completed.
 
 ## Examples
 
