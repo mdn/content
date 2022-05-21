@@ -4,7 +4,6 @@ slug: Web/API/GlobalEventHandlers/onabort
 tags:
   - API
   - Event Handler
-  - Experimental
   - GlobalEventHandlers
   - NeedsContent
   - NeedsHelp
@@ -14,7 +13,7 @@ tags:
   - Window
 browser-compat: api.GlobalEventHandlers.onabort
 ---
-{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
+{{ApiRef("HTML DOM")}}
 
 The **`onabort`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
