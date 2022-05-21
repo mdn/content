@@ -19,7 +19,7 @@ The **`onabort`** property of the {{domxref("GlobalEventHandlers")}} mixin is th
 
 Currently, only the {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}} interfaces (which inherit the {{domxref("HTMLMediaElement")}} interface) fire the {{domxref("HTMLMediaElement/abort_event", "abort")}} event.
 
-> **Note:** Previously the `abort` event is fired on `Window`, but it has been removed from the standard (see [HTML issue #3525](https://github.com/whatwg/html/issues/3525)).
+> **Note:** Previously the `abort` event was fired on `Window`, but has since been removed from the standard (see [HTML issue #3525](https://github.com/whatwg/html/issues/3525)).
 
 ## Syntax
 
