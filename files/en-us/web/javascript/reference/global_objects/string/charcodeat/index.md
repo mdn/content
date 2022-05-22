@@ -131,7 +131,7 @@ function knownCharCodeAt(str, idx) {
 
   const surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
   while ((surrogatePairs.exec(str)) != null) {
-    let li = surrogatePairs.lastIndex;
+    const li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
     }
@@ -147,8 +147,8 @@ function knownCharCodeAt(str, idx) {
   const code = str.charCodeAt(idx);
 
   if (0xD800 <= code && code <= 0xDBFF) {
-    let hi = code;
-    let low = str.charCodeAt(idx + 1);
+    const hi = code;
+    const low = str.charCodeAt(idx + 1);
     // Go one further, since one of the "characters"
     // is part of a surrogate pair
     return ((hi - 0xD800) * 0x400) +
