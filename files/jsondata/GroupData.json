@@ -254,6 +254,7 @@
       ]
     },
     "Device Orientation Events": {
+      "overview": ["DeviceOrientationEvent"]
       "guides": [
           "/docs/Web/Events/Detecting_device_orientation",
           "/docs/Web/Events/Orientation_and_motion_data_explained",
