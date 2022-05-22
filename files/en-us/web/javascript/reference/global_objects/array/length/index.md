@@ -94,7 +94,7 @@ console.log(numbers.length); // 3
 ```js
 const numbers = [];
 numbers.length = 3;
-console.log(numbers); // [undefined, undefined, undefined]
+console.log(numbers); // [empty x 3]
 ```
 
 ## Specifications
