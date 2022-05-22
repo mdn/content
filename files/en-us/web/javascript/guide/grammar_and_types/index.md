@@ -351,13 +351,14 @@ In expressions involving numeric and string values with the `+` operator, JavaSc
 ```js
 x = 'The answer is ' + 42 // "The answer is 42"
 y = 42 + ' is the answer' // "42 is the answer"
+'37' + 7 // "377"
 ```
 
 With all other operators, JavaScript does _not_ convert numeric values to strings. For example:
 
 ```js
 '37' - 7 // 30
-'37' + 7 // "377"
+'37' * 7 // 259
 ```
 
 ### Converting strings to numbers
