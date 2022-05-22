@@ -42,7 +42,7 @@ new WebAssembly.Module(bufferSource)
 ### Synchronously compiling a WebAssembly module
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
