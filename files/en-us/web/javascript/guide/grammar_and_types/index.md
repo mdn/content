@@ -412,23 +412,24 @@ If an array is created using a literal in a top-level script, JavaScript interpr
 
 #### Extra commas in array literals
 
-You do not have to specify all elements in an array literal. If you put two commas in a row, the array fills in the value `undefined` for the unspecified elements. The following example creates the `fish` array:
+If you put two commas in a row in an array literal, the array leaves an empty slot for the unspecified element. The following example creates the `fish` array:
 
 ```js
 let fish = ['Lion', , 'Angel'];
 ```
 
-This array has two elements with values and one empty element:
+When you log this array, you will see:
 
-- `fish[0]` is "Lion"
-- `fish[1]` is `undefined`
-- `fish[2]` is "Angel"
+```js
+console.log(fish);
+// [ 'Lion', <1 empty item>, 'Angel' ]
+```
+
+Note that the second item is "empty", which is not exactly the same as the actual `undefined` value. When using array-traversing methods like [`Array.prototype.map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), empty slots are skipped. However, index-accessing `fish[1]` still returns `undefined`.
 
 If you include a trailing comma at the end of the list of elements, the comma is ignored.
 
 In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
-
-> **Note:** Trailing commas can create errors in older browser versions and it is a best practice to remove them.
 
 ```js
 let myList = ['home', , 'school', ];
@@ -437,7 +438,7 @@ let myList = ['home', , 'school', ];
 In the following example, the `length` of the array is four, and `myList[0]` and `myList[2]` are missing.
 
 ```js
-let myList = [ ,'home', , 'school'];
+let myList = [, 'home', , 'school'];
 ```
 
 In the following example, the `length` of the array is four, and `myList[1]` and `myList[3]` are missing. **Only the last comma is ignored.**
@@ -446,9 +447,23 @@ In the following example, the `length` of the array is four, and `myList[1]` and
 let myList = ['home', , 'school', , ];
 ```
 
+> **Note:** Trailing commas help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
+>
+> ```diff
+> const myList = [
+>   "home",
+>   "school",
+> + "hospital",
+> ];
+> ```
+
 Understanding the behavior of extra commas is important to understanding JavaScript as a language.
 
-However, when writing your own code, you should explicitly declare the missing elements as `undefined`. Doing this increases your code's clarity and maintainability.
+However, when writing your own code, you should explicitly declare the missing elements as `undefined`, or at least insert a comment to highlight its absence. Doing this increases your code's clarity and maintainability.
+
+```js
+let myList = ['home', /* empty */, 'school', /* empty */, ];
+```
 
 ### Boolean literals
 
