@@ -83,7 +83,7 @@ const z = new Int8Array(buffer, 1, 4);
 
 // From an iterable
 const iterable = function*(){ yield* [1,2,3]; }();
-const int8 = new Int8Array(iterable);
+const int8_from_iterable = new Int8Array(iterable);
 // Int8Array[1, 2, 3]
 ```
 
