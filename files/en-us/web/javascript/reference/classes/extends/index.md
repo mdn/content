@@ -55,7 +55,7 @@ class ChildClass extends ParentClass {}
 // Uncaught TypeError: Class extends value does not have valid prototype property 3
 ```
 
-> **Note:** You would rarely worry about this in practice, because a non-object `prototype` doesn't behave as it should anyways.
+> **Note:** You would rarely worry about this in practice, because a non-object `prototype` doesn't behave as it should anyway.
 > 
 > ```js
 > function ParentClass() {}
