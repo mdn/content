@@ -30,7 +30,7 @@ var request = objectStore.getKey(key);
 
 ### Parameters
 
-- _key_
+- `key`
   - : The key or key range that identifies the record to be retrieved.
 
 ### Return Value

@@ -50,7 +50,7 @@ Math.cbrt(x)
 
 ### Parameters
 
-- _x_
+- `x`
   - : A number.
 
 ### Return value

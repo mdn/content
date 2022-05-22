@@ -28,13 +28,13 @@ _There is no return value for this method._
 
 ### Parameters
 
-- _domainname_
+- `domainname`
   - : A {{domxref("DOMString")}} is the domain name where the IdP is.
-- _protocol_ {{optional_Inline}}
+- `protocol` {{optional_Inline}}
   - : A {{domxref("DOMString")}} representing the protocol used to communicate with the
     IdP. It defaults to `"default"` and is used to determine the URL where the
     IdP is listening.
-- _username_ {{optional_Inline}}
+- `username` {{optional_Inline}}
   - : A {{domxref("DOMString")}} representing the username associated with the IdP.
 
 ## Example

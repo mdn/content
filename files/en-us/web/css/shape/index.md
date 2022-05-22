@@ -32,13 +32,13 @@ rect(top, right, bottom, left)
 
 ![](rect.png)
 
-- _top_
+- `top`
   - : Is a {{cssxref("length")}} representing the offset for the top of the rectangle relative to the top border of the element's box.
-- _right_
+- `right`
   - : Is a {{cssxref("length")}} representing the offset for the right of the rectangle relative to the left border of the element's box.
-- _bottom_
+- `bottom`
   - : Is a {{cssxref("length")}} representing the offset for the bottom of the rectangle relative to the top border of the element's box.
-- _left_
+- `left`
   - : Is a {{cssxref("length")}} representing the offset for the left of the rectangle relative to the left border of the element's box.
 
 ## Interpolation

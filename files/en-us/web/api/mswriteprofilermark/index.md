@@ -20,8 +20,8 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ### Parameters
 
-- _bstrProfilerMarkName_\[in]
-  - : An event name. Type = **String**. This parameter may be null.
+- `profilerMarkName`
+  - : A string. The event name. This parameter may be null.
 
 ### Return value
 

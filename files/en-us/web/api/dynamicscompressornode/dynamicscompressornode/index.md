@@ -25,9 +25,9 @@ new DynamicsCompressorNode(context, options)
 
 ### Parameters
 
-- _context_
+- `context`
   - : A reference to an {{domxref("AudioContext")}}.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Options are as follows:
 

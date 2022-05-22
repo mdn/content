@@ -28,7 +28,7 @@ The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-ru
 
 where:
 
-- _url_
+- `url`
   - : Is a {{CSSxRef("&lt;string&gt;")}}, a `<url>`, or a {{CSSxRef("url")}} function representing the location of the resource to import. The URL may be absolute or relative.
 - _list-of-media-queries_
   - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.

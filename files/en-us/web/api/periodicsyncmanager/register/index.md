@@ -26,7 +26,7 @@ var register = PeriodicSyncManager.register(tag, BackgroundSyncOptions);
 
 ### Parameters
 
-- _tag_
+- `tag`
   - : A unique {{jsxref('String')}} identifier
 - _BackgroundSyncOptions_ {{optional_inline}}
 

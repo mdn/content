@@ -25,10 +25,10 @@ var FileSystemDirectoryHandle = FileSystemDirectoryHandle.getDirectoryHandle();
 
 ### Parameters
 
-- _name_
+- `name`
   - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the subdirectory you wish to retrieve.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An optional object containing options for the retrieved subdirectory. Options are as
     follows:

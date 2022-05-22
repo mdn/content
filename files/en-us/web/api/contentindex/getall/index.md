@@ -33,7 +33,7 @@ This method receives no parameters.
 Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
 `ContentDescription` items.
 
-- _ContentDescription_
+- `ContentDescription`
 
   - : Each item returned is an {{jsxref('Object')}} containing the following data:
 

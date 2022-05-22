@@ -27,9 +27,9 @@ Object.hasOwn(instance,prop)
 
 ### Parameters
 
-- _instance_
+- `instance`
   - : The JavaScript object instance to test.
-- _prop_
+- `prop`
   - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
     the property to test.
 

@@ -23,15 +23,15 @@ FileSystemDirectoryHandle.removeEntry(name).then...
 
 ### Parameters
 
-- _name_
+- `name`
   - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the entry you wish to remove.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An optional object containing options, which are as follows:
 
-    - `recursive`: A {{jsxref('Boolean')}}. Default `false`.
-      When set to `true` entries will be removed recursively.
+    - `recursive`
+      - : A {{jsxref('Boolean')}}. Default `false`. When set to `true` entries will be removed recursively.
 
 ### Return value
 

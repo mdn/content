@@ -27,7 +27,7 @@ element(id)
 
 where:
 
-- _id_
+- `id`
   - : The ID of an element to use as the background, specified using the HTML attribute #_id_ on the element.
 
 ## Examples

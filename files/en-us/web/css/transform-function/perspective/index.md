@@ -46,7 +46,7 @@ perspective(d)
 
 ### Values
 
-- _d_
+- `d`
   - : Is a {{cssxref("&lt;length&gt;")}} representing the distance from the user to the z=0 plane. If it is 0 or a
     negative value, no perspective transform is applied.
 

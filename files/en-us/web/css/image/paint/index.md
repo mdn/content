@@ -21,11 +21,9 @@ The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 paint(workletName, parameters)
 ```
 
-where:
-
-- _workletName_
+- `workletName`
   - : The name of the registered worklet.
-- _parameters_
+- `parameters`
   - : Optional additional parameters to pass to the paintWorklet
 
 ## Examples

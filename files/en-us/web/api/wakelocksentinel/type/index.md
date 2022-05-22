@@ -25,13 +25,7 @@ var type = sentinel.type;
 ### Value
 
 A string representation of the currently acquired wake lock type.
-
-- _type_ {{ReadOnlyInline}}
-
-  - : Return values are:
-
-    - `'screen'`: A screen wake lock. Prevents devices from dimming
-      or locking the screen.
+The type 'screen'` is a screen wake lock. It prevents devices from dimming or locking the screen.
 
 ## Examples
 

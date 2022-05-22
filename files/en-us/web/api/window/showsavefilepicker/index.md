@@ -24,7 +24,7 @@ window.showSaveFilePicker();
 
 ### Parameters
 
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An optional object containing options, which are as follows:
 

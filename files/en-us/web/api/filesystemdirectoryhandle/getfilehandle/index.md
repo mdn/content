@@ -24,16 +24,17 @@ var FileSystemFileHandle = FileSystemDirectoryHandle.getFileHandle(name);
 
 ### Parameters
 
-- _name_
+- `name`
   - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the file you wish to retrieve.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object with the following properties:
 
-    - `create`: A {{jsxref('Boolean')}}. Default `false`. When
-      set to `true` if the file is not found, one with the specified name
-      will be created and returned.
+    - `create`
+      - : A {{jsxref('Boolean')}}. Default `false`. When
+        set to `true` if the file is not found, one with the specified name
+        will be created and returned.
 
 ### Return value
 

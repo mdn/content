@@ -27,7 +27,7 @@ where:
 
 - _layer-name_
   - : Is the name of the cascade layer.
-- _rules_
+- `rules`
   - : Is the set of CSS rules in the cascade layer.
 
 ## Description

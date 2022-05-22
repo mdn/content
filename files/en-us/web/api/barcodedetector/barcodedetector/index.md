@@ -20,12 +20,13 @@ barcodes in images.
 ## Syntax
 
 ```js
-new BarcodeDetector();
+new BarcodeDetector()
+new BarcodeDetector(options)
 ```
 
 ### Parameters
 
-- _barcodeDetectorOptions_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options object containing a series of `BarcodeFormats` to search for
     in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The

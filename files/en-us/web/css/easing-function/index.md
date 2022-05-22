@@ -105,9 +105,9 @@ steps(number_of_steps, direction)
 
 where:
 
-- _number_of_steps_
+- `number_of_steps`
   - : Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
-- _direction_
+- `direction`
 
   - : Is a keyword indicating if it the function is [left- or right-continuous](https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity):
 

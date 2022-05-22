@@ -21,7 +21,7 @@ directory.
 
 ## Value
 
-- _FileSystemHandleKind_
+- `FileSystemHandleKind`
 
   - : Can be either:
 
