@@ -126,7 +126,7 @@ const z = new Int32Array(buffer, 0, 4);
 
 // From an iterable
 const iterable = function*(){ yield* [1,2,3]; }();
-const int32 = new Int32Array(iterable);
+const int32_from_iterable = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
 
