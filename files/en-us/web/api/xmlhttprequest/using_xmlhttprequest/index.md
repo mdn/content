@@ -14,6 +14,7 @@ tags:
   - XHR
   - XML
   - XMLHttpRequest
+browser-compat: api.XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -919,11 +920,11 @@ Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
 
 ## Specifications
 
-{{Specifications("api.XMLHttpRequest")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## See also
 

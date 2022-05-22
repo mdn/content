@@ -9,6 +9,7 @@ tags:
   - Landing
   - PWA
   - content indexing
+browser-compat: api.ContentIndex
 ---
 {{DefaultAPISidebar("Content Index API")}}
 
@@ -192,11 +193,11 @@ The {{Event('contentdelete')}} event is only fired when the deletion happens due
 
 ## Specifications
 
-{{Specifications("api.ContentIndex")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ContentIndex")}}
+{{Compat}}
 
 ## See also
 

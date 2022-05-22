@@ -7,6 +7,7 @@ tags:
   - HTML API
   - Overview
   - Reference
+browser-compat: api.BroadcastChannel
 ---
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
@@ -68,11 +69,11 @@ The messaging protocol is not defined and the different browsing contexts need t
 
 ## Specifications
 
-{{Specifications("api.BroadcastChannel")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## See also
 
