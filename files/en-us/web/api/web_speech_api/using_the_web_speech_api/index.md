@@ -82,8 +82,8 @@ The grammar format used is [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/)
 The next thing to do is define a speech recognition instance to control the recognition for our application. This is done using the {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} constructor. We also create a new speech grammar list to contain our grammar, using the {{domxref("SpeechGrammarList.SpeechGrammarList()","SpeechGrammarList()")}} constructor.
 
 ```js
-let recognition = new SpeechRecognition();
-let speechRecognitionList = new SpeechGrammarList();
+const recognition = new SpeechRecognition();
+const speechRecognitionList = new SpeechGrammarList();
 ```
 
 We add our `grammar` to the list using the {{domxref("SpeechGrammarList.addFromString()")}} method. This accepts as parameters the string we want to add, plus optionally a weight value that specifies the importance of this grammar in relation of other grammars available in the list (can be from 0 to 1 inclusive.) The added grammar is available in the list as a {{domxref("SpeechGrammar")}} object instance.
