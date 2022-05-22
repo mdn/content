@@ -38,7 +38,7 @@ delete(key)
 ### Using delete()
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set('bar', 'foo');
 
 myMap.delete('bar'); // Returns true. Successfully removed.
