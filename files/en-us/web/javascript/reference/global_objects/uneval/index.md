@@ -43,16 +43,16 @@ A string representing the source code of `object`.
 ### Using uneval
 
 ```js
-var a = 1;
+const a = 1;
 uneval(a); // returns a String containing 1
 
-var b = '1';
+const b = '1';
 uneval(b); // returns a String containing "1"
 
 uneval(function foo() {}); // returns "(function foo(){})"
 
-var a = uneval(function foo() { return 'hi'; });
-var foo = eval(a);
+const c = uneval(function foo() { return 'hi'; });
+const foo = eval(c);
 foo(); // returns "hi"
 ```
 
