@@ -49,7 +49,7 @@ String.prototype.trimLeft.name === "trimStart";
 The following example displays the lowercase string `'foo '`:
 
 ```js
-const str = '   foo  ';
+let str = '   foo  ';
 
 console.log(str.length); // 8
 
