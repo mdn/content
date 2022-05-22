@@ -156,7 +156,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.break-inside.multicol_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

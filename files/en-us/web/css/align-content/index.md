@@ -248,7 +248,7 @@ display.addEventListener('change', function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 
