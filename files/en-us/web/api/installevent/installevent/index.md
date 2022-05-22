@@ -11,6 +11,9 @@ tags:
   - ServiceWorker
 browser-compat: api.InstallEvent.InstallEvent
 ---
+
+{{APIRef("Service Workers API")}}
+
 {{non-standard_header}}{{deprecated_header}}{{SeeCompatTable}}
 
 The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} object.

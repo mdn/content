@@ -19,7 +19,7 @@ tags:
   - payment
 browser-compat: api.MerchantValidationEvent.methodName
 ---
-{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
+{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`methodName`** is a read-only value which returns a string

@@ -32,22 +32,22 @@ new Boolean(value)
 ### Creating `Boolean` objects with an initial value of `false`
 
 ```js
-var bNoParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
-var bfalse = new Boolean(false);
+const bNoParam = new Boolean();
+const bZero = new Boolean(0);
+const bNull = new Boolean(null);
+const bEmptyString = new Boolean('');
+const bfalse = new Boolean(false);
 ```
 
 ### Creating `Boolean` objects with an initial value of `true`
 
 ```js
-var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
+const btrue = new Boolean(true);
+const btrueString = new Boolean('true');
+const bfalseString = new Boolean('false');
+const bSuLin = new Boolean('Su Lin');
+const bArrayProto = new Boolean([]);
+const bObjProto = new Boolean({});
 ```
 
 ## Specifications
