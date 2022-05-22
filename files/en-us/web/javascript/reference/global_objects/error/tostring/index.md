@@ -33,15 +33,15 @@ method inherited by all objects. Its semantics are as follows (assuming
 Error.prototype.toString = function() {
   'use strict';
 
-  var obj = Object(this);
+  const obj = Object(this);
   if (obj !== this) {
     throw new TypeError();
   }
 
-  var name = this.name;
+  let name = this.name;
   name = (name === undefined) ? 'Error' : String(name);
 
-  var msg = this.message;
+  let msg = this.message;
   msg = (msg === undefined) ? '' : String(msg);
 
   if (name === '') {
@@ -60,23 +60,23 @@ Error.prototype.toString = function() {
 ### Using toString()
 
 ```js
-var e1 = new Error('fatal error');
+const e1 = new Error('fatal error');
 console.log(e1.toString()); // 'Error: fatal error'
 
-var e2 = new Error('fatal error');
+let e2 = new Error('fatal error');
 e2.name = undefined;
 console.log(e2.toString()); // 'Error: fatal error'
 
-var e3 = new Error('fatal error');
+let e3 = new Error('fatal error');
 e3.name = '';
 console.log(e3.toString()); // 'fatal error'
 
-var e4 = new Error('fatal error');
+let e4 = new Error('fatal error');
 e4.name = '';
 e4.message = undefined;
 console.log(e4.toString()); // ''
 
-var e5 = new Error('fatal error');
+let e5 = new Error('fatal error');
 e5.name = 'hello';
 e5.message = undefined;
 console.log(e5.toString()); // 'hello'
