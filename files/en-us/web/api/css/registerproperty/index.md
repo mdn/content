@@ -8,6 +8,7 @@ tags:
 browser-compat: api.CSS.registerProperty
 ---
 {{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** method registers
 {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
