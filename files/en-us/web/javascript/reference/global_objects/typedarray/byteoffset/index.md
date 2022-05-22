@@ -27,8 +27,8 @@ const buffer = new ArrayBuffer(8);
 const uint8array1 = new Uint8Array(buffer);
 uint8array1.byteOffset; // 0 (no offset specified)
 
-const uint8 = new Uint8Array(buffer, 3);
-uint8.byteOffset; // 3 (as specified when constructing Uint8Array)
+const uint8array2 = new Uint8Array(buffer, 3);
+uint8array2.byteOffset; // 3 (as specified when constructing Uint8Array)
 ```
 
 ## Specifications
