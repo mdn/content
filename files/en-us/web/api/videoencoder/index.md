@@ -8,6 +8,7 @@ tags:
   - VideoEncoder
 browser-compat: api.VideoEncoder
 ---
+{{APIRef("WebCodecs API")}}
 The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} encodes {{domxref("VideoFrame")}} objects.
 
 ## Constructor
