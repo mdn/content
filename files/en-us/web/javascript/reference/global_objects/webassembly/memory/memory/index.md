@@ -105,6 +105,8 @@ This memory's `buffer` property will return a
 
 ## Specifications
 
+The `shared` attribute is only documented in [this proposal](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#javascript-api-changes) and not part of the specs.
+
 {{Specifications}}
 
 ## Browser compatibility
