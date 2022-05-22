@@ -1,0 +1,8 @@
+tasks:
+  - init: yarn install && yarn run build
+    command: yarn run start
+
+ports:
+  - port: 5042
+    visibility: private
+    onOpen: open-browser
