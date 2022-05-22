@@ -84,12 +84,12 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.RED`
-      - `gl.RG`
-      - `gl.RED_INTEGER`
-      - `gl.RG_INTEGER`
-      - `gl.RGB_INTEGER`
-      - `gl.RGBA_INTEGER`
+    - `gl.RED`
+    - `gl.RG`
+    - `gl.RED_INTEGER`
+    - `gl.RG_INTEGER`
+    - `gl.RGB_INTEGER`
+    - `gl.RGBA_INTEGER`
 
 - `type`
 
@@ -107,23 +107,23 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
 
     When using the {{domxref("OES_texture_half_float")}} extension:
 
-      - `gl.HALF_FLOAT_OES`
+    - `gl.HALF_FLOAT_OES`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.BYTE`
-      - `gl.UNSIGNED_SHORT`
-      - `gl.SHORT`
-      - `gl.UNSIGNED_INT`
-      - `gl.INT`
-      - `gl.HALF_FLOAT`
-      - `gl.FLOAT`
-      - `gl.UNSIGNED_INT_2_10_10_10_REV`
-      - `gl.UNSIGNED_INT_10F_11F_11F_REV`
-      - `gl.UNSIGNED_INT_5_9_9_9_REV`
-      - `gl.UNSIGNED_INT_24_8`
-      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
+    - `gl.BYTE`
+    - `gl.UNSIGNED_SHORT`
+    - `gl.SHORT`
+    - `gl.UNSIGNED_INT`
+    - `gl.INT`
+    - `gl.HALF_FLOAT`
+    - `gl.FLOAT`
+    - `gl.UNSIGNED_INT_2_10_10_10_REV`
+    - `gl.UNSIGNED_INT_10F_11F_11F_REV`
+    - `gl.UNSIGNED_INT_5_9_9_9_REV`
+    - `gl.UNSIGNED_INT_24_8`
+    - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
         {{jsxref("null")}})
 
 - `pixels`
