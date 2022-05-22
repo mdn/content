@@ -26,6 +26,7 @@ occurs.
 ## Value
 
 One of the following strings:
+
 - `pending`
   - : Returned if the request is still ongoing.
 - `done`
