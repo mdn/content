@@ -140,7 +140,7 @@ The CSS below is nearly identical to the previous example. The only exception is
 
 ```css
 html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+  font-size: 62.5%; /* font-size 1rem = 10px on default browser settings */
 }
 span {
   font-size: 1.6rem;
