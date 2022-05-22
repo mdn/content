@@ -27,7 +27,7 @@ class ChildClass extends ParentClass { /* ... */ }
 The `extends` keyword can be used to subclass custom classes as well as
 built-in objects.
 
-Any constructor that can be called with `new` (i.e. it has the `prototype` property) can be the candidate for the parent class.
+Any constructor that can be called with `new` (that is, it has the `prototype` property) can be the candidate for the parent class.
 
 ```js
 function OldStyleClass() {
