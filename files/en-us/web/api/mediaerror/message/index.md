@@ -42,7 +42,7 @@ complete source code here](https://github.com/mdn/dom-examples/tree/master/media
 
 The example creates an {{HTMLElement("audio")}} element and lets the user assign either
 a valid music file to it, or a link to a file which doesn't exist. This lets us see the
-behavior of the {{event("error")}} event handler, which is received by an event handler
+behavior of the {{domxref("HTMLMediaElement/error_event", "error")}} event handler, which is received by an event handler
 we add to the `<audio>` element itself.
 
 The error handler looks like this:
