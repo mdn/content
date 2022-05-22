@@ -7,6 +7,13 @@ When an incoming connection is created, a [receiving user agent](https://www.w3.
 
 The event is fired for all connections that are created when [monitoring incoming presentation connections](https://www.w3.org/TR/presentation-api/#dfn-monitoring-incoming-presentation-connections).
 
+## Constructor
+
+## Properties
+
+## Methods
+
+
 ## Browser compatibility
 
 {{Compat}}
