@@ -26,7 +26,7 @@ grow(number)
 
 ### Parameters
 
-- _number_
+- `number`
   - : The number of WebAssembly pages you want to grow the memory by (each one is 64KiB in
     size).
 

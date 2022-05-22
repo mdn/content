@@ -25,10 +25,10 @@ WebAssembly.Module.customSections(module, sectionName)
 
 ### Parameters
 
-- _module_
+- `module`
   - : The {{jsxref("WebAssembly.Module")}} object whose custom sections are being
     considered.
-- _sectionName_
+- `sectionName`
   - : The string name of the desired custom section.
 
 ### Return value

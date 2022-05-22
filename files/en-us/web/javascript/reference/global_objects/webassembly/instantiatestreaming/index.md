@@ -27,11 +27,11 @@ WebAssembly.instantiateStreaming(source, importObject)
 
 ### Parameters
 
-- _source_
+- `source`
   - : A [`Response`](/en-US/docs/Web/API/Response)
     object or a promise that will fulfill with one, representing the underlying source of
     a .wasm module you want to stream, compile, and instantiate.
-- _importObject_ {{optional_inline}}
+- `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
     There must be one matching property for each declared import of the compiled module or
