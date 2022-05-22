@@ -43,54 +43,66 @@ new WebAssembly.Table(tableDescriptor)
 
 ### Creating a new WebAssembly Table instance
 
-The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)
-and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
-creates a new WebAssembly Table instance with an initial size of 2
-elements. We then print out the table length and contents of the two indexes (retrieved
-via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length
-is two and both elements are {{jsxref("null")}}.
+The following example creates a new WebAssembly Table instance with an initial size of 2
+elements. The WebAssembly Table is created and accessed in JavaScript while also visible and callable inside a wasm instance.
+
+This example uses the following reference files: 
+1. `table2.html`:  HTML file containing a script that loads and instantiates an external [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table) ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
+2. `table2.wasm`: wasm module to be imported into table2.html ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
+
+In `table2.html`, a `WebAssembly.Table()` is instantiated with the following: 
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
-console.log(tbl.length);  // "2"
-console.log(tbl.get(0));  // "null"
-console.log(tbl.get(1));  // "null"
+let tbl = new WebAssembly.Table({
+  initial: 2, 
+  element: "anyfunc"
+});
+console.log(tbl.length);  // a table with 2 elements
+console.log(tbl.get(0));  // content for index 1 is null
+console.log(tbl.get(1));  // content for index 2 is null
 ```
 
-We then create an import object that contains the table:
+The index contents are retrieved using {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}.
+
+Create an import object that contains the table:
 
 ```js
-var importObj = {
+const importObject = {
   js: {
     tbl:tbl
   }
 };
 ```
 
-Finally, we load and instantiate a wasm module (table2.wasm) using the
-{{jsxref("WebAssembly.instantiateStreaming()")}} method.  The table2.wasm module
-contains two functions (one that returns 42 and another that returns 83) and stores both
-into elements 0 and 1 of the imported table
-(see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)).
-So after instantiation, the table still has length 2, but the
-elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions)
-which we can call from JS.
+Load and instantiate a wasm module using the {{jsxref("WebAssembly.instantiateStreaming()")}} method:  
 
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
+  console.log(tbl.length);  // table length is still 2
+  console.log(tbl.get(0)());  // content for index 1 is 42 and is an Exported WebAssembly function; note the additional '()'
+  console.log(tbl.get(1)());  // content for index 2 is 83 and is an Exported WebAssembly function; note the additional '()'
 });
 ```
 
-Note how you've got to include a second function invocation operator at the end of the
-accessor to actually invoke the referenced function and log the value stored inside it
-(e.g. `get(0)()` rather than `get(0)`) .
+The `table2.wasm` module contains two functions:
+1. Return 42 and store this value in index 1 of the `importObject` table
+2. Return 83 and store value in index 2 of `importObject` table
 
-This example shows that we're creating and accessing the table from JavaScript, but the
-same table is visible and callable inside the wasm instance too.
+After instantiating `table2.wasm`, `tbl` is updated with the following:
+- table length is still 2
+- content for index 1 is now a function which returns 42
+- content for index 2 is now a function which returns 83
+
+The content for indexes 1 and 2 are now callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions), which are called to change the index's content values. To call the wasm functions directly from `tbl`, append a second function invocation operator at the end of the
+accessor:
+
+```js
+console.log(tbl.get(0));  // outputs wasm function which returns 42
+console.log(tbl.get(0)());  // 42
+console.log(tbl.get(1));  // outputs wasm function which returns 83
+console.log(tbl.get(1)());  // 83
+```
 
 ## Specifications
 
