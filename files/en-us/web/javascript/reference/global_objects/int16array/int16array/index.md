@@ -80,7 +80,7 @@ const y = new Int16Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-let buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(8);
 const z = new Int16Array(buffer, 0, 4);
 
 // From an iterable
