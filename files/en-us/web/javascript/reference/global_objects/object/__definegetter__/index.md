@@ -61,7 +61,9 @@ console.log(o.gimmeFive); // 5
 // Using the get operator
 const o = { get gimmeFive() { return 5; } };
 console.log(o.gimmeFive); // 5
+```
 
+```js
 // Using Object.defineProperty
 const o = {};
 Object.defineProperty(o, 'gimmeFive', {
