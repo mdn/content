@@ -22,7 +22,7 @@ Multi-byte number formats are represented in memory differently depending on mac
 ```js
 const littleEndian = (function() {
   const buffer = new ArrayBuffer(2);
-  const DataView(buffer).setInt16(0, 256, true /* littleEndian */);
+  new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
   return new Int16Array(buffer)[0] === 256;
 })();
