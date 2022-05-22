@@ -74,7 +74,9 @@ const o = { set value(val) { this.anotherValue = val; } };
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
+```
 
+```js
 // Using Object.defineProperty
 const o = {};
 Object.defineProperty(o, 'value', {
