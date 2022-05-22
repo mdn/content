@@ -199,7 +199,7 @@ try {
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
-  var instance = new Error(message, fileName, lineNumber);
+  let instance = new Error(message, fileName, lineNumber);
   instance.name = 'CustomError';
   instance.foo = foo;
   Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
