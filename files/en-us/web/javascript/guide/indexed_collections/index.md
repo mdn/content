@@ -479,13 +479,19 @@ for (const i of arr) console.log(i);
 const another = [...arr]; // "another" is [ 1, 2, undefined, undefined, 5 ]
 ```
 
-But in array iteration methods, empty slots are skipped.
+But in others (most notably array iteration methods), empty slots are skipped.
 
 ```js
 const mapped = arr.map((i) => i + 1); // [ 2, 3, <2 empty items>, 6 ]
 arr.forEach((i) => console.log(i)); // Logs "1 2 5"
 const filtered = arr.filter(() => true); // [ 1, 2, 5 ]
 const hasFalsy = arr.some((k) => !k); // false
+
+// Property enumeration
+const keys = Object.keys(arr); // [ '0', '1', '4' ]
+for (const key in arr) console.log(key); // Logs "0 1 4"
+// Spreading into an object uses property enumeration, not the array's iterator
+const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
 
 ### Multi-dimensional arrays
