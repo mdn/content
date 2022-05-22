@@ -185,7 +185,7 @@ function extend(sup, base) {
   base.prototype = Object.create(sup.prototype);
   base.prototype.constructor = new Proxy(base, {
     construct: function(target, args) {
-      var obj = Object.create(base.prototype);
+      const obj = Object.create(base.prototype);
       this.apply(target, obj, args);
       return obj;
     },
@@ -197,17 +197,17 @@ function extend(sup, base) {
   return base.prototype.constructor;
 }
 
-var Person = function(name) {
+const Person = function(name) {
   this.name = name;
 };
 
-var Boy = extend(Person, function(name, age) {
+const Boy = extend(Person, function(name, age) {
   this.age = age;
 });
 
 Boy.prototype.gender = 'M';
 
-var Peter = new Boy('Peter', 13);
+const Peter = new Boy('Peter', 13);
 
 console.log(Peter.gender);  // "M"
 console.log(Peter.name);    // "Peter"
@@ -390,11 +390,11 @@ Now in order to create a complete sample `traps` list, for didactic purposes, we
 
 ```js
 /*
-  var docCookies = ... get the "docCookies" object here:
+  const docCookies = ... get the "docCookies" object here:
   https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
 */
 
-var docCookies = new Proxy(docCookies, {
+const docCookies = new Proxy(docCookies, {
   get (oTarget, sKey) {
     return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
   },
@@ -417,7 +417,7 @@ var docCookies = new Proxy(docCookies, {
     return oTarget;
   },
   getOwnPropertyDescriptor: function (oTarget, sKey) {
-    var vValue = oTarget.getItem(sKey);
+    const vValue = oTarget.getItem(sKey);
     return vValue ? {
       value: vValue,
       writable: true,
