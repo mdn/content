@@ -63,20 +63,20 @@ Error.prototype.toString = function() {
 const e1 = new Error('fatal error');
 console.log(e1.toString()); // 'Error: fatal error'
 
-let e2 = new Error('fatal error');
+const e2 = new Error('fatal error');
 e2.name = undefined;
 console.log(e2.toString()); // 'Error: fatal error'
 
-let e3 = new Error('fatal error');
+const e3 = new Error('fatal error');
 e3.name = '';
 console.log(e3.toString()); // 'fatal error'
 
-let e4 = new Error('fatal error');
+const e4 = new Error('fatal error');
 e4.name = '';
 e4.message = undefined;
 console.log(e4.toString()); // ''
 
-let e5 = new Error('fatal error');
+const e5 = new Error('fatal error');
 e5.name = 'hello';
 e5.message = undefined;
 console.log(e5.toString()); // 'hello'
