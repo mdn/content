@@ -8,6 +8,9 @@ tags:
   - Reference
 browser-compat: api.FileReader.FileReader
 ---
+
+{{APIRef(“File API”))}}
+
 The **`FileReader()`** constructor creates a new FileReader.
 
 For details about how to use `FileReader`, see [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
