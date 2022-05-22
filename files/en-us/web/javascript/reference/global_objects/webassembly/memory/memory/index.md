@@ -28,11 +28,11 @@ new WebAssembly.Memory(memoryDescriptor)
 
 ### Parameters
 
-- _memoryDescriptor_
+- `memoryDescriptor`
 
   - : An object that can contain the following members:
 
-    - _initial_
+    - `initial`
       - : The initial size of the WebAssembly Memory, in units of WebAssembly pages.
     - _maximum {{optional_inline}}_
       - : The maximum size the WebAssembly Memory is allowed to grow to, in units of
