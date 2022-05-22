@@ -234,10 +234,10 @@ const inputForm = document.querySelector('form');
 const inputTxt = document.querySelector('.txt');
 const voiceSelect = document.querySelector('select');
 
-let pitch = document.querySelector('#pitch');
-let pitchValue = document.querySelector('.pitch-value');
-let rate = document.querySelector('#rate');
-let rateValue = document.querySelector('.rate-value');
+const pitch = document.querySelector('#pitch');
+const pitchValue = document.querySelector('.pitch-value');
+const rate = document.querySelector('#rate');
+const rateValue = document.querySelector('.rate-value');
 
 let voices = [];
 ```
