@@ -43,7 +43,7 @@ Some examples will need to be run by a web server to work successfully. You can 
 
 ## What tools do the professionals use?
 
-That looks like a scary list, but fortunately, you can get started in web development without knowing anything about most of these. 
+The following looks like a scary list, but fortunately, you can get started in web development without knowing anything about most of these.
 
 - **A computer**. Maybe that sounds obvious to some people, but some of you are reading this article on your phone or a library computer. For serious web development, it's better to invest in a desktop or laptop computer running Windows, macOS or Linux.
 - **A text editor**, to write code in. This could be a text editor (e.g. [Visual Studio Code](https://code.visualstudio.com/), [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [GNU Emacs](https://www.gnu.org/software/emacs/), or [VIM](https://www.vim.org/)), or a hybrid editor (e.g. [Dreamweaver](https://www.adobe.com/products/dreamweaver.html) or [WebStorm](https://www.jetbrains.com/webstorm/)). Office document editors are not suitable for this use, as they rely on hidden elements that interfere with the rendering engines used by web browsers.
