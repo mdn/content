@@ -21,8 +21,7 @@ There are some that can't have a shadow DOM for security reasons (for example {{
 
 The following is a list of elements you **can** attach a shadow root to:
 
-- Any autonomous custom element with a [valid
-  name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
+- Any autonomous custom element with a [valid name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
 - {{htmlelement("blockquote")}}

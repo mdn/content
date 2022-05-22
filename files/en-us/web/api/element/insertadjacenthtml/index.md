@@ -141,6 +141,5 @@ reset.addEventListener('click', () => {
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}
 - {{domxref("XMLSerializer")}}: Serialize a DOM tree into an XML string
-- [hacks.mozilla.org
-  guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing
+- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing
   that insertAdjacentHTML can be way faster in some cases.
