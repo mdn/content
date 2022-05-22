@@ -56,9 +56,9 @@ Let's look at the JavaScript in a bit more detail.
 As mentioned earlier, Chrome currently supports speech recognition with prefixed properties, therefore at the start of our code we include these lines to feed the right objects to Chrome, and any future implementations that might support the features without a prefix:
 
 ```js
-let SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
-let SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
-let SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
+const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
+const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 ```
 
 #### The grammar
