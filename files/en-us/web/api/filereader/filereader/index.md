@@ -9,7 +9,7 @@ tags:
 browser-compat: api.FileReader.FileReader
 ---
 
-{{APIRef(“File API”))}}
+{{APIRef("File API"))}}
 
 The **`FileReader()`** constructor creates a new FileReader.
 
