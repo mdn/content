@@ -9,6 +9,7 @@ tags:
   - Notifications API
   - Push
   - Tutorial
+browser-compat: api.Notification
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
@@ -256,11 +257,11 @@ window.addEventListener('load', function () {
 
 ## Specifications
 
-{{Specifications("api.Notification")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

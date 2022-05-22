@@ -9,6 +9,7 @@ tags:
   - Overview
   - Web Audio API
   - sound
+browser-compat: api.AudioContext
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -198,13 +199,13 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 
 ## Specifications
 
-{{Specifications("api.AudioContext")}}
+{{Specifications}}
 
 ## Browser compatibility
 
 ### AudioContext
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## See also
 
