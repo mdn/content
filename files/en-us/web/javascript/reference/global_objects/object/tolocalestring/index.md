@@ -74,7 +74,7 @@ const testDate = new Date(Date.now());
 let deDate = testDate.toLocaleString('de');
 // "29.5.2020, 18:04:24"
 
-var frDate = testDate.toLocaleString('fr');
+const frDate = testDate.toLocaleString('fr');
 // "29/05/2020, 18:04:24"
 ```
 
