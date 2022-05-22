@@ -230,9 +230,9 @@ First of all, we capture references to all the DOM elements involved in the UI, 
 ```js
 let synth = window.speechSynthesis;
 
-let inputForm = document.querySelector('form');
-let inputTxt = document.querySelector('.txt');
-let voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('.txt');
+const voiceSelect = document.querySelector('select');
 
 let pitch = document.querySelector('#pitch');
 let pitchValue = document.querySelector('.pitch-value');
