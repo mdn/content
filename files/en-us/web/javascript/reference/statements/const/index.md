@@ -38,12 +38,6 @@ const { bar } = foo; // where foo = { bar:10, baz:12 };
 /* This creates a constant with the name 'bar', which has a value of 10 */
 ```
 
-Unlike `var`, `const` begins _Declarations_, not _Statements_. That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
-
-```js
-if (true) const a = 1; // SyntaxError: Unexpected token 'const'
-```
-
 ## Description
 
 This declaration creates a constant whose scope can be either global or local to the
@@ -63,6 +57,12 @@ All the considerations about the
 apply to both {{jsxref("Statements/let", "let")}} and `const`.
 
 A constant cannot share its name with a function or a variable in the same scope.
+
+> **Note:** Unlike `var`, `const` begins _Declarations_, not _Statements_. That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+>
+> ```js
+> if (true) const a = 1; // SyntaxError: Unexpected token 'const'
+> ```
 
 ## Examples
 
