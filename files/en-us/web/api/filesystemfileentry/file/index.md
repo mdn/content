@@ -68,7 +68,7 @@ This function calls `file()`, specifying as its success callback a method
 which proceeds to use a {{domxref("FileReader")}} to read the file as text. The
 FileReader's {{domxref("Window/load_event", "load")}} event handler is set up to deliver the loaded string to
 the `successCallback` specified when the `readFile()` method was
-called; similarly, its {{event("error")}} handler is set up to call the
+called; similarly, its {{domxref("FileReader/error_event", "error")}} handler is set up to call the
 `errorCallback` specified.
 
 ## Specifications

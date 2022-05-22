@@ -57,5 +57,5 @@ evtSource.onopen = (e) => {
 
 - [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
 - {{event("open")}}
-- {{event("error")}}
+- {{domxref("EventSource/error_event", "error")}}
 - {{event("message")}}
