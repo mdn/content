@@ -51,7 +51,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
-- The `color_scheme` and `content_color_scheme` properties are added to {{WebExtAPIRef("theme")}} API. These properties enable a theme to override whether a light or dark color scheme is automatically applied to the chrome or content. ({{bug(1708105)}})
+- The `color_scheme` and `content_color_scheme` properties are added to [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key and available in the{{WebExtAPIRef("theme")}} API. These properties enable a theme to override whether a light or dark color scheme is automatically applied to the chrome or content. ({{bug(1708105)}})
 
 ## Older versions
 
