@@ -65,7 +65,7 @@ document.onanimationiteration = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/animationiteration_event#live_example)
+[See a live example of this event](/en-US/docs/Web/API/HTMLElement/animationiteration_event#live_example).
 
 ## Specifications
 
