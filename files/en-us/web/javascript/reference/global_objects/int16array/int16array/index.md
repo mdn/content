@@ -75,7 +75,7 @@ const arr = new Int16Array([21,31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
-let x = new Int16Array([21, 31]);
+const x = new Int16Array([21, 31]);
 const y = new Int16Array(x);
 console.log(y[0]); // 21
 
