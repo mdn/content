@@ -238,7 +238,7 @@ startButton.addEventListener("click", function() {
   })
   .catch((error) => {
     if (error.name === "NotFoundError") {
-      log("Camera or microphone not found. Can’t record.");
+      log("Camera or microphone not found. Can't record.");
     } else {
       log(error);
     }
