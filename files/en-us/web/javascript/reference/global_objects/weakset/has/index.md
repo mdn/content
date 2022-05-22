@@ -38,8 +38,8 @@ has(value)
 ### Using the has method
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+const ws = new WeakSet();
+const obj = {};
 ws.add(window);
 
 mySet.has(window);  // returns true
