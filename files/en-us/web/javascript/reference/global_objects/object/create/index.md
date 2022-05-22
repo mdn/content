@@ -146,15 +146,6 @@ as here, but also dynamically via whatever the order any such property-adding
 code-branches actually get executed at runtime as depends on inputs and/or
 random-variables.
 
-Beware, also, that using [`Object.entries()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) on an object created via `Object.create()`
-will result in an empty array being returned, because the first argument is the _prototype_, not the object's own properties.
-
-```js
-const obj = Object.create({ a: 1, b: 2 });
-
-console.log(Object.entries(obj)); // shows "[]"
-```
-
 ### Adding object methods back
 
 As demonstrated above, lack of default object methods can make debugging unwieldy. We can add the `toString` method back to the null-prototype object by simply assigning it one:
