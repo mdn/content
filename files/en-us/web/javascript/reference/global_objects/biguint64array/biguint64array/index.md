@@ -85,7 +85,7 @@ const z = new BigUint64Array(buffer, 0, 4);
 
 // From an iterable
 const iterable = function*(){ yield* [1n, 2n, 3n]; }();
-const biguint64 = new BigUint64Array(iterable);
+const biguint64_2 = new BigUint64Array(iterable);
 // BigUint64Array[1n, 2n, 3n]
 ```
 
