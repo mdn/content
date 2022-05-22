@@ -69,19 +69,17 @@ wast2wasm simple-name-section.was -o simple-name-section.wasm --debug-names
 
 ### Using customSections
 
-The following example (see the custom-section.html [source](https://github.com/mdn/webassembly-examples/blob/master/other-examples/custom-section.html)
-and [live example](https://mdn.github.io/webassembly-examples/other-examples/custom-section.html))
-compiles the loaded simple-name-section.wasm byte code.
+The following example uses `WebAssembly.Module.customSections` to check
+if a loaded module instance contains a "name" custom section. A module contains a "name" custom section if `WebAssembly.Module.customSections` 
+returns an `ArrayBuffer` with a length greater than 0.
 
-We then do a check using `WebAssembly.Module.customSections`, looking to see
-whether the module instance contains a "name" custom section by checking that its
-`length` is more than 0. Since there is a "name" section in the example, an
-`ArrayBuffer` object is returned.
+See custom-section.html [source code](https://github.com/mdn/webassembly-examples/blob/master/other-examples/custom-section.html)
+and [live example](https://mdn.github.io/webassembly-examples/other-examples/custom-section.html).
 
 ```js
 WebAssembly.compileStreaming(fetch('simple-name-section.wasm'))
 .then(function(mod) {
-  var nameSections = WebAssembly.Module.customSections(mod, "name");
+  const nameSections = WebAssembly.Module.customSections(mod, "name");
   if (nameSections.length != 0) {
     console.log("Module contains a name section");
     console.log(nameSections[0]);
