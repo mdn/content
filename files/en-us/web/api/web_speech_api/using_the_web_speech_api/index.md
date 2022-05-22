@@ -253,7 +253,7 @@ function populateVoiceList() {
   voices = synth.getVoices();
 
   for(i = 0; i < voices.length ; i++) {
-    let option = document.createElement('option');
+    const option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
     if(voices[i].default) {
