@@ -65,7 +65,7 @@ If a feed is nested within a feed, such as a comments feed within a feed of blog
 
 ### Required JavaScript features
 
-None, except as required by any attributes. For example, setting [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) to `true` during the update operation if needed, and then to `false` upon completion. 
+None, except as required by any attributes. For example, setting [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) to `true` during the update operation if needed, and then to `false` upon completion.
 
 Note: It is the author's responsibility to apply the "above" keyboard behavior.
 
