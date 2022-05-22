@@ -55,7 +55,7 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 
 ```js
 const buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const dataview = new DataView(buffer);
 dataview.getBigUint64(0); // 0n
 ```
 
