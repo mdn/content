@@ -9,6 +9,7 @@ tags:
 browser-compat: api.Location.username
 ---
 {{APIRef("HTMLDOM")}}
+{{deprecated_header}}
 
 The **`username`** property of the {{domxref("Location")}}
 interface is a string containing the username specified before the
