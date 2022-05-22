@@ -112,9 +112,9 @@ recognition.maxAlternatives = 1;
 After grabbing references to the output {{htmlelement("div")}} and the HTML element (so we can output diagnostic messages and update the app background color later on), we implement an onclick handler so that when the screen is tapped/clicked, the speech recognition service will start. This is achieved by calling {{domxref("SpeechRecognition.start()")}}. The `forEach()` method is used to output colored indicators showing what colors to try saying.
 
 ```js
-let diagnostic = document.querySelector('.output');
-let bg = document.querySelector('html');
-let hints = document.querySelector('.hints');
+const diagnostic = document.querySelector('.output');
+const bg = document.querySelector('html');
+const hints = document.querySelector('.hints');
 
 let colorHTML= '';
 colors.forEach(function(v, i, a){
