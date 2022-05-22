@@ -91,7 +91,7 @@ fn.prototype.myname = function () {
     console.log('myname');
 };
 
-var obj = {};
+const obj = {};
 obj.__proto__ = fn.prototype;
 obj.myname(); // myname
 ```
