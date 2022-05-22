@@ -298,9 +298,6 @@ This function creates and returns a new object each time we call it. The object 
 
 Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduceSelf()` method will be the same for all objects created using this function. This is a very common pattern for creating objects. 
 
-still we can replace this keyword with the name of empty initialized object, but for now you can imagine that maybe, with use of `this` we can put
-methods definitions somewhere else (to avoiding fulling memory with repetitive things) and use these functions on objects with different shape.
-
 
 Now we can create as many objects as we like, reusing the definition:
 
