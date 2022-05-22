@@ -57,46 +57,46 @@ converting/detecting utility functions may generate errors, or lose information
 objects:
 
 ```js
-oco = {};   // create a normal object
-ocn = Object.create(null); // create a "null" object
+const normalObj = {};   // create a normal object
+const nullProtoObj = Object.create(null); // create an object with "null" prototype
 
-> console.log(oco) // {} -- Seems normal
-> console.log(ocn) // {} -- Seems normal here too, so far
+console.log(normalObj); // {} -- Seems normal
+console.log(nullProtoObj); // {} -- Seems normal here too, so far
 
-oco.p = 1; // create a simple property on normal obj
-ocn.p = 0; // create a simple property on "null" obj
+normalObj.p = 1; // create a simple property on normal obj
+nullProtoObj.p = 0; // create a simple property on null-prototype object
 
-> console.log(oco) // {p: 1} -- Still seems normal
-> console.log(ocn) // {p: 0} -- Still seems normal here too. BUT WAIT...
+console.log(normalObj); // {p: 1} -- Still seems normal
+console.log(nullProtoObj); // {p: 0} -- Still seems normal here too. BUT WAIT...
 ```
 
 As shown above, all seems normal so far. However, when attempting to actually use these
 objects, their differences quickly become apparent:
 
 ```js
-> "oco is: " + oco // shows "oco is: [object Object]"
+> "normalObj is: " + normalObj // shows "normalObj is: [object Object]"
 
-> "ocn is: " + ocn // throws error: Cannot convert object to primitive value
+> "nullProtoObj is: " + nullProtoObj // throws error: Cannot convert object to primitive value
 ```
 
 Testing just a few of the many most basic built-in functions shows the magnitude of the
 problem more clearly:
 
 ```js
-> alert(oco) // shows [object Object]
-> alert(ocn) // throws error: Cannot convert object to primitive value
+> alert(normalObj) // shows [object Object]
+> alert(nullProtoObj) // throws error: Cannot convert object to primitive value
 
-> oco.toString() // shows [object Object]
-> ocn.toString() // throws error: ocn.toString is not a function
+> normalObj.toString() // shows [object Object]
+> nullProtoObj.toString() // throws error: nullProtoObj.toString is not a function
 
-> oco.valueOf() // shows {}
-> ocn.valueOf() // throws error: ocn.valueOf is not a function
+> normalObj.valueOf() // shows {}
+> nullProtoObj.valueOf() // throws error: nullProtoObj.valueOf is not a function
 
-> oco.hasOwnProperty("p") // shows "true"
-> ocn.hasOwnProperty("p") // throws error: ocn.hasOwnProperty is not a function
+> normalObj.hasOwnProperty("p") // shows "true"
+> nullProtoObj.hasOwnProperty("p") // throws error: nullProtoObj.hasOwnProperty is not a function
 
-> oco.constructor // shows "Object() { [native code] }"
-> ocn.constructor // shows "undefined"
+> normalObj.constructor // shows "Object() { [native code] }"
+> nullProtoObj.constructor // shows "undefined"
 ```
 
 As said, these differences can make debugging even simple-seeming problems quickly go
@@ -117,20 +117,26 @@ _Not such simple results: (especially if silent error-trapping had hidden the er
 messages)_
 
 ```js
-ob = {}; ob.po = oco; ob.pn = ocn; // create a compound object using the test objects from above as property values
+ // create a compound object using the test objects from above as property values
+const obj = {};
+obj.po = normalObj;
+obj.pn = nullProtoObj;
 
-> showProperties(ob) // display top-level properties
-- po: [object Object]
-- Error: Cannot convert object to primitive value
+showProperties(obj); // display top-level properties
+// - po: [object Object]
+// - Error: Cannot convert object to primitive value
 ```
 
 Note that only first property gets shown, due to `ob.po` being traversed first. But if the same object is created in a different order...
 
 ```js
-ob = {}; ob.pn = ocn; ob.po = oco; // create same compound object again, but create same properties in different order
+// create same compound object again, but create same properties in different order
+const obj = {};
+obj.pn = nullProtoObj;
+obj.po = normalObj;
 
-> showProperties(ob) // display top-level properties
-- Error: Cannot convert object to primitive value
+showProperties(obj); // display top-level properties
+// - Error: Cannot convert object to primitive value
 ```
 
 Note that neither property gets shown.
@@ -146,48 +152,51 @@ will result in an empty array being returned, because the first argument is the 
 ```js
 const obj = Object.create({ a: 1, b: 2 });
 
-> console.log(Object.entries(obj)); // shows "[]"
+console.log(Object.entries(obj)); // shows "[]"
 ```
 
 ### Adding object methods back
 
-As demonstrated above, lack of default object methods can make debugging unwieldy. We can add the `toString` method back to the "null" object by simply assigning it one:
+As demonstrated above, lack of default object methods can make debugging unwieldy. We can add the `toString` method back to the null-prototype object by simply assigning it one:
 
 ```js
-ocn = Object.create(null); // create "null" object (same as before)
+const nullProtoObj = Object.create(null); // create null-prototype object (same as before)
 
-ocn.toString = Object.prototype.toString; // since new object lacks toString, add the original generic one back
+nullProtoObj.toString = Object.prototype.toString; // since new object lacks toString, add the original generic one back
 
-> ocn.toString() // shows "[object Object]"
-> "ocn is: " + ocn // shows "ocn is: [object Object]"
+> nullProtoObj.toString() // shows "[object Object]"
+> "nullProtoObj is: " + nullProtoObj // shows "nullProtoObj is: [object Object]"
 
-ob = {}; ob.pn = ocn; ob.po = oco; // create a compound object (same as before)
+// create a compound object (same as before)
+const obj = {};
+obj.pn = nullProtoObj;
+obj.po = normalObj;
 
-> ShowProperties(ob) // display top-level properties
-- po: [object Object]
-- pn: [object Object]
+showProperties(obj); // display top-level properties
+// - po: [object Object]
+// - pn: [object Object]
 ```
 
-Different from normal objects, `toString` here is an own property of `ocn`, instead of being on its prototype. This is because, well, `ocn` has no (`null`) prototype.
+Different from normal objects, `toString` here is an own property of `nullProtoObj`, instead of being on its prototype. This is because, well, `nullProtoObj` has no (`null`) prototype.
 
 Resetting the new object's prototype works even better:
 
 ```js
-ocn = Object.create(null);                  // create "null" object (same as before)
-Object.setPrototypeOf(ocn, Object.prototype); // set new object's [[Prototype]] to Object.prototype
+const nullProtoObj = Object.create(null);              // create null-prototype object (same as before)
+Object.setPrototypeOf(nullProtoObj, Object.prototype); // set new object's [[Prototype]] to Object.prototype
 ```
 
 In addition to all the string-related functions shown above, this also adds:
 
 ```js
-> ocn.valueOf() // shows {}
-> ocn.hasOwnProperty("x") // shows "false"
-> ocn.constructor // shows "Object() { [native code] }"
+> nullProtoObj.valueOf() // shows {}
+> nullProtoObj.hasOwnProperty("x") // shows "false"
+> nullProtoObj.constructor // shows "Object() { [native code] }"
 
 // ...and all the rest of the properties and methods of Object.prototype.
 ```
 
-In fact, `Object.setPrototypeOf(ocn, Object.prototype)` effectively reverts the `Object.create(null)` operation: objects created with the literal syntax (`ocn = {}`) automatically gets `Object.prototype` as its prototype.
+In fact, `Object.setPrototypeOf(nullProtoObj, Object.prototype)` effectively reverts the `Object.create(null)` operation: objects created with the literal syntax (`const obj = {}`) automatically gets `Object.prototype` as its prototype.
 
 ## Examples
 
