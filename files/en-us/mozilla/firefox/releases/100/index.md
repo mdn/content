@@ -49,6 +49,10 @@ No notable changes.
 
 - Added support for user prompts (e.g. `alert`) on Android ({{bug(1708105)}}).
 
+## Changes for add-on developers
+
+- The `color_scheme` and `content_color_scheme` properties are added to {{WebExtAPIRef("theme")}} API. These properties enable a theme to override whether a light or dark color scheme is automatically applied to the chrome or content. ({{bug(1708105)}})
+
 ## Older versions
 
 {{Firefox_for_developers(99)}}
