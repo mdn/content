@@ -76,13 +76,10 @@ if (!Array.prototype.fill) {
 
       // Steps 9-10.
       const end = arguments[2];
-      const relativeEnd = end === undefined ?
-        len : end >> 0;
+      const relativeEnd = end === undefined ? len : end >> 0;
 
       // Step 11.
-      const finalValue = relativeEnd < 0 ?
-        Math.max(len + relativeEnd, 0) :
-        Math.min(relativeEnd, len);
+      const finalValue = relativeEnd < 0 ? Math.max(len + relativeEnd, 0) : Math.min(relativeEnd, len);
 
       // Step 12.
       while (k < finalValue) {
