@@ -17,7 +17,7 @@ In _Installing basic software_, we show you what tools you need to do simple web
 
 ## What tools do I actually need, right now?
 
-In this article, we'll set you up with a bare minimum — a text editor and some modern web browsers.
+In this article, we'll set you up with the bare minimum — a text editor and some modern web browsers.
 
 ### Installing a text editor
 
