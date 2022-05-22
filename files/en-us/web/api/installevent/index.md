@@ -12,6 +12,7 @@ tags:
   - ServiceWorker
   - Workers
 browser-compat: api.InstallEvent
+{{APIRef("Service Workers API"))}}
 ---
 {{non-standard_header}}{{deprecated_header}}
 
