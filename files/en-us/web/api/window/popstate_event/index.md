@@ -41,7 +41,7 @@ A {{domxref("PopStateEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event handler aliases
 
-In addition to the `Window` interface, the event handler property `onpopstate` is also available on the following targets:
+In addition to the `Window` interface, the event handler property `onpopstate` is also available on the following elements:
 
 - {{domxref("HTMLBodyElement")}}
 - {{domxref("HTMLFrameSetElement")}}
