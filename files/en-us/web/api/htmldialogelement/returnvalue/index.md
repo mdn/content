@@ -22,7 +22,7 @@ close it.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the `returnValue` of the dialog.
+A string representing the `returnValue` of the dialog.
 
 ## Examples
 
@@ -86,8 +86,7 @@ dialog.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

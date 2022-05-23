@@ -27,7 +27,7 @@ object.
 ## Syntax
 
 ```js
-cssStyleSheet.deleteRule(index)
+deleteRule(index)
 ```
 
 ### Parameters
@@ -38,9 +38,9 @@ cssStyleSheet.deleteRule(index)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example removes the first rule from the stylesheet `myStyles`.
 

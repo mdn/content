@@ -11,7 +11,7 @@ tags:
   - UIEvent
 browser-compat: api.MouseEvent.buttons
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.buttons`** read-only property indicates which buttons are pressed on the mouse (or other input device) when a mouse event is triggered.
 

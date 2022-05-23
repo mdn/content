@@ -23,13 +23,13 @@ returns the number of records within a key range.
 ## Syntax
 
 ```js
-var request = myIndex.count();
-var request = myIndex.count(key);
+count()
+count(key)
 ```
 
 ### Parameters
 
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : The key or key range that identifies the record to be counted.
 
 ### Return value
@@ -48,7 +48,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on
@@ -64,7 +64,7 @@ returns.
 Finally, we iterate through each record, and insert the data into an HTML table. For a
 complete working example, see our [IndexedDB-examples
 demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex).)
+example live](https://mdn.github.io/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {

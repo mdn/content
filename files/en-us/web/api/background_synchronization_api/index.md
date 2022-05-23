@@ -11,6 +11,7 @@ tags:
   - Service Workers
   - Sync
   - Web Background Synchronization API
+browser-compat: api.SyncManager
 ---
 {{securecontext_header}}
 
@@ -92,11 +93,11 @@ self.addEventListener('sync', event => {
 
 ## Specifications
 
-{{Specifications("api.SyncManager")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.SyncManager")}}
+{{Compat}}
 
 ## See also
 

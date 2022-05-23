@@ -18,7 +18,7 @@ browser-compat: api.MediaTrackConstraints.groupId
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
-**`groupId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString)
+**`groupId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring)
 describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.groupId", "groupId")}} constrainable property.
 
@@ -29,7 +29,7 @@ unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
 ## Value
 
-An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
+An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) specifying one or more acceptable,
 ideal, and/or exact (mandatory) group IDs which are acceptable as the source of media
 content.
 

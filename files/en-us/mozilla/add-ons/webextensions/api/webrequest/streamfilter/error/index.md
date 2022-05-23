@@ -1,5 +1,5 @@
 ---
-title: webRequest.Streamfilter.error
+title: webRequest.StreamFilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 tags:
   - API

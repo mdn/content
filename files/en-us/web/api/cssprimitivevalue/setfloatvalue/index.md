@@ -28,12 +28,12 @@ will be unchanged and a {{domxref("DOMException")}} will be raised.
 ## Syntax
 
 ```js
-cssPrimitiveValue.setFloatValue(unitType, floatValue);
+setFloatValue(unitType, floatValue)
 ```
 
 ### Parameters
 
-- unitType
+- `unitType`
 
   - : An `unsigned short` representing the code for the unit type, in which the
     value should be returned. Valid values are:
@@ -59,12 +59,12 @@ cssPrimitiveValue.setFloatValue(unitType, floatValue);
     | `CSS_RAD`        | The value is an {{cssxref("&lt;angle&gt;")}} in radians.                                                                   |
     | `CSS_S`          | The value is a {{cssxref("&lt;time&gt;")}} in seconds.                                                                    |
 
-- floatValue
+- `floatValue`
   - : A `float` representing the new float value.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -90,7 +90,7 @@ Void.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

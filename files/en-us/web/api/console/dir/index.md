@@ -29,13 +29,17 @@ properties of the object.
 ## Syntax
 
 ```js
-console.dir(object);
+dir(object)
 ```
 
 ### Parameters
 
 - `object`
   - : A JavaScript object whose properties should be output.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -47,7 +51,5 @@ console.dir(object);
 
 ## See also
 
-- [MSDN: Using
-  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
-- [Chrome
-  Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)

@@ -34,9 +34,9 @@ image where a CSS property expects a file.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : Thrown when one of the arguments is invalid or missing.
-- InvalidModificationError
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown when the a worklet already exists with the specified name.
 
 ## Examples
@@ -71,7 +71,7 @@ class CheckerboardPainter {
 registerPaint('checkerboard', CheckerboardPainter);
 ```
 
-The first step in using a paintworket is defining the paint worklet using the
+The first step in using a paintworklet is defining the paint worklet using the
 `registerPaint()` function, as done above. To use it, you register it with
 the `CSS.paintWorklet.addModule()` method:
 
@@ -101,5 +101,4 @@ li {
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Houdini)
-- [Houdini overview](/en-US/docs/Web/Houdini/learn)
+- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)

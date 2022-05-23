@@ -556,7 +556,7 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Fixing_capitalization', '100%', 550) }}
+{{ EmbedLiveSample('Fixing_capitalization', '100%', 570) }}
 
 ### Making new strings from old parts
 

@@ -12,11 +12,7 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTService
 ---
-{{SeeCompatTable}}
-
-> **Note:** This page describes the W3C Community Group BluetoothRemoteGATTService, formerly
-> called BluetoothGATTService. For the Firefox OS interface of the same name,
-> see [`BluetoothGattService`](/en-US/docs/Archive/B2G_OS/API/BluetoothGattService).
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The `BluetoothRemoteGATTService` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a
 service provided by a GATT server, including a device, a list of referenced services,
@@ -33,7 +29,7 @@ and a list of the characteristics of this service.
   - : Returns a boolean value indicating whether this is a primary or secondary
     service.
 - {{domxref("BluetoothRemoteGATTService.uuid")}}{{readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} representing the UUID of this service.
+  - : Returns a string representing the UUID of this service.
 
 ## Methods
 
@@ -42,7 +38,7 @@ and a list of the characteristics of this service.
     {{domxref("BluetoothRemoteGATTCharacteristic")}} for a given universally unique identifier
     (UUID).
 - {{domxref("BluetoothRemoteGATTService.getCharacteristics()")}}
-  - : Returns a {{jsxref("Promise")}} to an {{domxref("Array")}} of
+  - : Returns a {{jsxref("Promise")}} to an {{jsxref("Array")}} of
     {{domxref("BluetoothRemoteGATTCharacteristic")}} instances for an optional universally
     unique identifier (UUID).
 

@@ -23,9 +23,8 @@ service worker.
 ## Syntax
 
 ```js
-self.clients.matchAll(options).then(function(clients) {
-  // do something with your clients list
-});
+matchAll()
+matchAll(options)
 ```
 
 ### Parameters
@@ -35,14 +34,16 @@ self.clients.matchAll(options).then(function(clients) {
   - : An options object allowing you to set options for the matching operation. Available
     options are:
 
-    - `includeUncontrolled`: A boolean value — if set to
-      `true`, the matching operation will return all service worker clients
-      who share the same origin as the current service worker. Otherwise, it returns
-      only the service worker clients controlled by the current service worker. The
-      default is `false`.
-    - `type`: Sets the type of clients you want matched. Available values
-      are `"window"`, `"worker"`, `"sharedworker"`, and
-      `"all"`. The default is `"window"`.
+    - `includeUncontrolled`
+      - : A boolean value — if set to
+        `true`, the matching operation will return all service worker clients
+        who share the same origin as the current service worker. Otherwise, it returns
+        only the service worker clients controlled by the current service worker. The
+        default is `false`.
+    - `type`
+      - : Sets the type of clients you want matched. Available values
+        are `"window"`, `"worker"`, `"sharedworker"`, and
+        `"all"`. The default is `"window"`.
 
 ### Return value
 

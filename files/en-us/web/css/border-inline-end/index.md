@@ -39,6 +39,7 @@ border-inline-end: medium dashed blue;
 border-inline-end: inherit;
 border-inline-end: initial;
 border-inline-end: revert;
+border-inline-end: revert-layer;
 border-inline-end: unset;
 ```
 

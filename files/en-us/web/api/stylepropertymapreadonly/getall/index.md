@@ -21,19 +21,19 @@ The **`getAll()`** method of the
 ## Syntax
 
 ```js
-var cssStyleValues[] = StylePropertyMapReadOnly.getAll(property)
+getAll(property)
 ```
 
 ### Parameters
 
-- property
+- `property`
   - : The name of the property to retrieve all values of.
 
 ### Return value
 
 An array of {{domxref("CSSStyleValue")}} objects.
 
-## Example
+## Examples
 
 The following example uses `getAll()` with the
 {{cssxref('background-image')}} property. An {{jsxref('Array')}} is returned which

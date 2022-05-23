@@ -25,14 +25,18 @@ means that path intersections will still get filled.
 ## Syntax
 
 ```js
-void ctx.stroke();
-void ctx.stroke(path);
+stroke()
+stroke(path)
 ```
 
 ### Parameters
 
 - `path`
   - : A {{domxref("Path2D")}} path to stroke.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -964,7 +964,7 @@ The **[High Efficiency Video Coding](http://hevc.info/)** (**HEVC**) codec is de
 
 For example, each coding tree unit (CTU)—similar to the macroblock used in previous codecs—consists of a tree of luma values for each sample as well as a tree of chroma values for each chroma sample used in the same coding tree unit, as well as any required syntax elements. This structure supports easy processing by multiple cores.
 
-An interesting feature of HEVC is that the main profile supports only 8 bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.
+An interesting feature of HEVC is that the main profile supports only 8-bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.
 
 HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by MPEG LA](https://www.mpegla.com/programs/hevc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or web site!
 
@@ -1552,7 +1552,7 @@ Theora was originally based upon the VC3 codec by On2 Technologies. The codec an
 
 One drawback to Theora is that it only supports 8 bits per color component, with no option to use 10 or more in order to avoid color banding. That said, 8 bits per component is still the most commonly-used color format in use today, so this is only a minor inconvenience in most cases. Also, Theora can only be used in an Ogg container. The biggest drawback of all, however, is that it is not supported by Safari, leaving Theora unavailable not only on macOS but on all those millions and millions of iPhones and iPads.
 
-The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/) offers additional details about Theora as well as the Ogg container format it is used within.
+The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers additional details about Theora as well as the Ogg container format it is used within.
 
 <table class="standard-table">
   <tbody>
@@ -2077,6 +2077,6 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(3839)}}: MIME Type Registrations for 3GPP Multimedia Files
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
-- [Video codecs in Opera](https://dev.opera.com/articles/view/introduction-html5-video/#codecs)
-- [Video](https://msdn.microsoft.com/library/ff975073%28v=VS.85%29.aspx) and [audio](https://msdn.microsoft.com/library/ff975061%28v=vs.85%29.aspx) codecs in Internet Explorer
-- [Video and audio codecs in Chrome](https://www.chromium.org/audio-video)
+- [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
+- [Video](/en-US/docs/Web/API/HTMLVideoElement) and [audio](/en-US/docs/Web/HTML/Element/audio) codecs in Internet Explorer
+- [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)

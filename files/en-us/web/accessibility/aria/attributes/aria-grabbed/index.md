@@ -1,7 +1,7 @@
 ---
-title: 'aria-grabbed'
+title: aria-grabbed
 slug: Web/Accessibility/ARIA/Attributes/aria-grabbed
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -9,8 +9,8 @@ tags:
   - aria-grabbed
   - Reference
   - deprecated
+spec-urls: https://w3c.github.io/aria/#aria-grabbed
 ---
-
 The `aria-grabbed` state indicates an element's "grabbed" state in a drag-and-drop operation. {{deprecated_inline}}
 
 ## Description
@@ -21,7 +21,7 @@ The `aria-grabbed` attribute was used to indicate if an element is in a "grabbed
 
 Setting `aria-grabbed="true"` indicated the element had been selected for dragging. Setting `aria-grabbed="false"` indicated that the element could be grabbed for a drag-and-drop operation, but is not currently grabbed.
 
-When `aria-grabbed` is set to `true`, the [`aria-dropeffect`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-dropeffect) attribute of all potential drop targets should be updated with the type of function, or effect, will occur to the grabbed element when it is dropped. When no element is in a grabbed state, revert the `aria-dropeffect` attributes of all your drop targets.
+When `aria-grabbed` is set to `true`, the [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect) attribute of all potential drop targets should be updated with the type of function, or effect, will occur to the grabbed element when it is dropped. When no element is in a grabbed state, revert the `aria-dropeffect` attributes of all your drop targets.
 
 The `aria-grabbed` property is expected to be replaced by a new feature in a future version of WAI-ARIA and is considered deprecated.
 
@@ -38,17 +38,15 @@ The `aria-grabbed` property is expected to be replaced by a new feature in a fut
 
 ## Associated roles
 
-Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles/)
+Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-grabbed","ARIA: aria-grabbed Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 
-- [`aria-dropeffect`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-dropeffect)
+- [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
 - [HTML global `draggable` attribute](/en-US/docs/Web/HTML/Global_attributes/draggable)
 - HTML [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}

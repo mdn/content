@@ -33,6 +33,7 @@ column-rule-color: hsla(0, 100%, 50%, 0.6);
 column-rule-color: inherit;
 column-rule-color: initial;
 column-rule-color: revert;
+column-rule-color: revert-layer;
 column-rule-color: unset;
 ```
 
@@ -90,4 +91,4 @@ p {
 
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("caret-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

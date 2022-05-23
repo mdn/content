@@ -34,6 +34,7 @@ mask-position: 1rem 1rem, center;
 mask-position: inherit;
 mask-position: initial;
 mask-position: revert;
+mask-position: revert-layer;
 mask-position: unset;
 ```
 

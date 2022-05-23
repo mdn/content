@@ -16,14 +16,14 @@ The **`clear()`** method of the {{domxref("CustomStateSet")}} interface removes 
 ## Syntax
 
 ```js
-CustomStateSet.clear()
+clear()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 Undefined.
 

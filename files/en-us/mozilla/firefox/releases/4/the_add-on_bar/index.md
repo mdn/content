@@ -11,13 +11,13 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-Firefox 4 eliminates the status bar from the bottom of the browser window in favor of a new toolbar located at the bottom of the window. This new toolbar, with the ID "addon-bar", is a standard XUL {{ XULElem("toolbar") }}; add-ons can insert content into it, and the user can drag buttons into it while customizing their toolbars. This is the primary difference between the add-on bar and the old status bar; you can now put any XUL element into it, since it's a standard toolbar.
+Firefox 4 eliminates the status bar from the bottom of the browser window in favor of a new toolbar located at the bottom of the window. This new toolbar, with the ID "addon-bar", is a standard XUL `<toolbar>`; add-ons can insert content into it, and the user can drag buttons into it while customizing their toolbars. This is the primary difference between the add-on bar and the old status bar; you can now put any XUL element into it, since it's a standard toolbar.
 
 > **Note:** For the time being, there is a status bar shim included so that add-ons that expect the status bar to be present will still work.
 
 ## Adding an element to the add-on bar
 
-The add-on bar is an XUL toolbar with the ID "addon-bar". The code below locates the most-recently used window and adds a new item to the add-on bar that displays the text "Hello world!" using an XUL {{ XULElem("label") }} element.
+The add-on bar is an XUL toolbar with the ID "addon-bar". The code below locates the most-recently used window and adds a new item to the add-on bar that displays the text "Hello world!" using an XUL `<label>` element.
 
 ```js
 // Find the most recently used window
@@ -90,4 +90,4 @@ See: [Adding a button by default](/en-US/docs/Code_snippets/Toolbar#Adding_butto
 
 ## See also
 
-- The [Firefox 4 add-on bar for developers](https://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers), by Mike Kaply
+- The [Firefox 4 add-on bar for developers](https://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers/), by Mike Kaply

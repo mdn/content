@@ -41,6 +41,7 @@ bottom: auto;
 bottom: inherit;
 bottom: initial;
 bottom: revert;
+bottom: revert-layer;
 bottom: unset;
 ```
 

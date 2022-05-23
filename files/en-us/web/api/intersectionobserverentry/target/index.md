@@ -4,7 +4,6 @@ slug: Web/API/IntersectionObserverEntry/target
 tags:
   - API
   - Element
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserver
@@ -13,7 +12,7 @@ tags:
   - target
 browser-compat: api.IntersectionObserverEntry.target
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
 read-only **`target`** property indicates which targeted

@@ -7,7 +7,6 @@ tags:
   - Property
   - Reference
   - WebDriver
-  - weblock
 browser-compat: api.Navigator.webdriver
 ---
 {{SeeCompatTable}}{{APIRef("WebDriver")}}

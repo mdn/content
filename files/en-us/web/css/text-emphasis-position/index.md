@@ -30,6 +30,7 @@ text-emphasis-position: left under;
 text-emphasis-position: inherit;
 text-emphasis-position: initial;
 text-emphasis-position: revert;
+text-emphasis-position: revert-layer;
 text-emphasis-position: unset;
 ```
 

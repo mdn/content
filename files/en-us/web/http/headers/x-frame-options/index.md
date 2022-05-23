@@ -81,7 +81,7 @@ add_header X-Frame-Options SAMEORIGIN always;
 
 To configure IIS to send the `X-Frame-Options` header, add this to your site's `Web.config` file:
 
-```html
+```xml
 <system.webServer>
   ...
 
@@ -95,7 +95,7 @@ To configure IIS to send the `X-Frame-Options` header, add this to your site's `
 </system.webServer>
 ```
 
-Or see this [Microsoft support article on setting this configuration using the IIS Manager](https://support.office.com/article/Mitigating-framesniffing-with-the-X-Frame-Options-header-1911411b-b51e-49fd-9441-e8301dcdcd79) user interface.
+Or see this [Microsoft support article on setting this configuration using the IIS Manager](https://support.microsoft.com/en-US/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79) user interface.
 
 ### Configuring HAProxy
 
@@ -140,5 +140,5 @@ app.use(frameguard({ action: 'SAMEORIGIN' }))
 
 - {{HTTPHeader("Content-Security-Policy")}} directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}}
 - [HTTP Header Field X-Frame-Options - RFC 7034](https://datatracker.ietf.org/doc/html/rfc7034)
-- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
-- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
+- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

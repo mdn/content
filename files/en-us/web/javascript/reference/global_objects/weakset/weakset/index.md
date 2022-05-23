@@ -32,9 +32,9 @@ new WeakSet(iterable)
 ### Using the WeakSet object
 
 ```js
-var ws = new WeakSet();
-var foo = {};
-var bar = {};
+const ws = new WeakSet();
+const foo = {};
+const bar = {};
 
 ws.add(foo);
 ws.add(bar);

@@ -49,7 +49,7 @@ The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
 In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
 
 ```js
-var number = 3500;
+const number = 3500;
 
 console.log(new Intl.NumberFormat().format(number));
 // → '3,500' if in US English locale
@@ -60,7 +60,7 @@ console.log(new Intl.NumberFormat().format(number));
 This example shows some of the variations in localized number formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
-var number = 123456.789;
+const number = 123456.789;
 
 // German uses comma as decimal separator and period for thousands
 console.log(new Intl.NumberFormat('de-DE').format(number));
@@ -89,7 +89,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 The results can be customized using the `options` argument:
 
 ```js
-var number = 123456.789;
+const number = 123456.789;
 
 // request a currency format
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
@@ -132,4 +132,4 @@ console.log((16).toLocaleString('en-GB', {
 ## See also
 
 - {{jsxref("Intl")}}
-- [A polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat)
+- [A polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat/)

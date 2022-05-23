@@ -15,7 +15,7 @@ The **`ascentOverride`** property of the {{domxref("FontFace")}} interface retur
 
 ## Value
 
-A {{domxref("CSSOMString","string")}}.
+A string.
 
 ## Examples
 

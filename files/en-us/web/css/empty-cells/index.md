@@ -27,6 +27,8 @@ empty-cells: hide;
 /* Global values */
 empty-cells: inherit;
 empty-cells: initial;
+empty-cells: revert;
+empty-cells: revert-layer;
 empty-cells: unset;
 ```
 

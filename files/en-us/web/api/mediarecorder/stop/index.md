@@ -31,8 +31,16 @@ following steps:
 ## Syntax
 
 ```js
-MediaRecorder.stop()
+stop()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -40,7 +48,7 @@ An `InvalidState` error is raised if the `stop()` method is
 called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
 is "inactive" — it makes no sense to stop media capture if it is already stopped.
 
-## Example
+## Examples
 
 ```js
 ...
@@ -68,5 +76,5 @@ is "inactive" — it makes no sense to stop media capture if it is already stopp
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording
-  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

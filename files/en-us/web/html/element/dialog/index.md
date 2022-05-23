@@ -97,7 +97,7 @@ The `dialog` element still has [usability issues with some forms of assistive te
 ### Simple example
 
 The following will render a modeless (non-modal) dialog. The "OK" button allows the dialog to be closed when activated. It is important to provide a mechanism to close a dialog within the `dialog` element. For instance, the <kbd>Esc</kbd> key does not close modeless dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
-  
+
 ```html
 <dialog open>
   <p>Greetings, one and all!</p>
@@ -149,11 +149,11 @@ const confirmBtn = favDialog.querySelector('#confirmBtn');
 // If a browser doesn't support the dialog, then hide the
 // dialog contents by default.
 if ( typeof favDialog.showModal !== 'function' ) {
-	favDialog.hidden = true;
-	/* a fallback script to allow this dialog/form to function
-	   for legacy browsers that do not support <dialog>
-				could be provided here.
-	*/
+  favDialog.hidden = true;
+  /* a fallback script to allow this dialog/form to function
+     for legacy browsers that do not support <dialog>
+     could be provided here.
+  */
 }
 // "Update details" button opens the <dialog> modally
 updateButton.addEventListener('click', function onOpen() {

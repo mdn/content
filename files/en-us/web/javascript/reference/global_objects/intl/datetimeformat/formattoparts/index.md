@@ -92,9 +92,9 @@ Possible types are the following:
 manipulated directly:
 
 ```js
-var date = Date.UTC(2012, 11, 17, 3, 0, 42);
+const date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
-var formatter = new Intl.DateTimeFormat('en-us', {
+const formatter = new Intl.DateTimeFormat('en-us', {
   weekday: 'long',
   year: 'numeric',
   month: 'numeric',
@@ -147,7 +147,7 @@ a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
 and {{jsxref("Array.prototype.join()")}}.
 
 ```js
-var dateString = formatter.formatToParts(date).map(({type, value}) => {
+const dateString = formatter.formatToParts(date).map(({type, value}) => {
   switch (type) {
     case 'dayPeriod': return `<b>${value}</b>`;
     default : return value;
@@ -262,4 +262,4 @@ df.formatToParts(date)
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
-- [A polyfill of `Intl.DateTimeFormat.prototype.formatToParts` in the proposal repository](https://github.com/zbraniecki/proposal-intl-formatToParts)
+- [A polyfill of `Intl.DateTimeFormat.prototype.formatToParts` in the proposal repository](https://github.com/tc39/proposal-intl-formatToParts)

@@ -16,7 +16,7 @@ The **`WebGLRenderingContext.getError()`** method of the [WebGL API](/en-US/docs
 ## Syntax
 
 ```js
-GLenum gl.getError();
+getError()
 ```
 
 ### Parameters

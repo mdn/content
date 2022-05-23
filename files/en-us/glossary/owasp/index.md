@@ -9,4 +9,4 @@ tags:
 
 ## See also
 
-- [Official website](https://www.owasp.org)
+- [Official website](https://owasp.org/)

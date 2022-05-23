@@ -7,6 +7,7 @@ tags:
   - Reference
   - RsaOaepParams
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaOaepParams
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -15,7 +16,7 @@ The **`RsaOaepParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/W
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `RSA-OAEP`.
+  - : A string. This should be set to `RSA-OAEP`.
 - `label` {{optional_inline}}
 
   - : A {{domxref("BufferSource")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext. A digest of the label is part of the input to the encryption operation.
@@ -28,22 +29,7 @@ See the examples for {{domxref("SubtleCrypto.encrypt()")}} and {{domxref("Subtle
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-RsaOaepParams', 'SubtleCrypto.RsaOaepParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

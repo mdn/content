@@ -20,12 +20,12 @@ new {{domxref("CSSMathInvert")}} object which represents a CSS
 ## Syntax
 
 ```js
-new CSSMathInvert(arg);
+new CSSMathInvert(arg)
 ```
 
 ### Parameters
 
-- arg
+- `arg`
   - : A {{domxref('CSSNumericValue')}}.
 
 ### Exceptions

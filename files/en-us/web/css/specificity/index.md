@@ -29,7 +29,7 @@ The following list of selector types increases by specificity:
 
 Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
 
-For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2), you can also visit: <https://specifishity.com>
+For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2), you can also visit: <https://specifishity.com>
 
 Inline styles added to an element (e.g., `style="font-weight: bold;"`) always overwrite any styles in external stylesheets, and thus can be thought of as having the highest specificity.
 
@@ -37,7 +37,7 @@ Inline styles added to an element (e.g., `style="font-weight: bold;"`) always ov
 
 When an `important` rule is used on a style declaration, this declaration overrides any other declarations. Although technically `!important` has nothing to do with specificity, it interacts directly with it. Using `!important,` however, is **bad practice** and should be avoided because it makes debugging more difficult by breaking the natural [cascading](/en-US/docs/Web/CSS/Cascade) in your stylesheets. When two conflicting declarations with the `!important` rule are applied to the same element, the declaration with a greater specificity will be applied.
 
-**Some rules of thumb:**
+**Recommended guidelines:**
 
 - **Always** look for a way to use specificity before even considering `!important`
 - **Only** use `!important` on page-specific CSS that overrides foreign CSS (from external libraries, like Bootstrap or normalize.css).

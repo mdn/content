@@ -12,7 +12,7 @@ tags:
   - periodicSync
 browser-compat: api.ServiceWorkerRegistration.periodicSync
 ---
-{{DefaultAPISidebar("Service Worker API")}}
+{{APIRef("Service Workers API")}}
 
 The **`periodicSync`** read-only property of
 the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
@@ -21,7 +21,7 @@ run at specific intervals.
 
 ## Value
 
-A PeriodicSyncManager {{jsxref('Object')}}.
+A {{domxref('PeriodicSyncManager')}} object.
 
 ## Examples
 
@@ -43,7 +43,7 @@ if ('periodicSync' in registration) {
 }
 ```
 
-From the {{domxref('Service Worker API','service worker')}}:
+From the [service worker](/en-US/docs/Web/API/Service_Worker_API):
 
 ```js
 // service worker script

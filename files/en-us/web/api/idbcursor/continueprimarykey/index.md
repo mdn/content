@@ -34,7 +34,7 @@ from an object store will throw an error.
 ## Syntax
 
 ```js
-cursor.continuePrimaryKey(key, primaryKey);
+continuePrimaryKey(key, primaryKey)
 ```
 
 ### Parameters
@@ -43,6 +43,10 @@ cursor.continuePrimaryKey(key, primaryKey);
   - : The key to position the cursor at.
 - `primaryKey`
   - : The primary key to position the cursor at.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -60,7 +64,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the cursor's direction is not `prev` or `next`.
 
-## Example
+## Examples
 
 here's how you can resume an iteration of all articles tagged with
 `"javascript"` since your last visit:

@@ -51,6 +51,8 @@ function strict() {
 function notStrict() { return "I'm not strict."; }
 ```
 
+In strict mode, starting with ES2015, functions inside blocks are scoped to that block. Prior to ES2015, block-level functions were forbidden in strict mode.
+
 ### Strict mode for modules
 
 ECMAScript 2015 introduced [JavaScript modules](/en-US/docs/Web/JavaScript/Reference/Statements/export) and therefore a 3rd way to enter strict mode. The entire contents of JavaScript modules are automatically in strict mode, with no statement needed to initiate it.
@@ -78,9 +80,11 @@ First, strict mode makes it impossible to accidentally create global variables. 
 
 ```js
 'use strict';
-                       // Assuming no global variable mistypeVariable exists
-mistypeVariable = 17;  // this line throws a ReferenceError due to the
-                       // misspelling of variable
+let mistypeVariable;
+                      
+mistypeVarible = 17;  // Assuming no global variable mistypeVarible exists
+                      // this line throws a ReferenceError due to the
+                      // misspelling of "mistypeVariable" (lack of an "a")
 ```
 
 Second, strict mode makes assignments which would otherwise silently fail to throw an exception. For example, `NaN` is a non-writable global variable. In normal code assigning to `NaN` does nothing; the developer receives no failure feedback. In strict mode assigning to `NaN` throws an exception. Any assignment that silently fails in normal code (assignment to a non-writable global or property, assignment to a getter-only property, assignment to a new property on a [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) object) will throw in strict mode:

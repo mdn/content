@@ -12,7 +12,7 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTCharacteristic.service
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.service`** read-only
 property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.

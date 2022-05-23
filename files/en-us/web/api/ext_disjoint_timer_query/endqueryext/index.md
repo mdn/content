@@ -17,18 +17,18 @@ The **`EXT_disjoint_timer_query.endQueryEXT()`** method of the
 ## Syntax
 
 ```js
-void ext.endQueryEXT(target);
+endQueryEXT(target)
 ```
 
 ### Parameters
 
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIME_ELAPSED_EXT`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

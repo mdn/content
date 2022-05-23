@@ -52,7 +52,7 @@ None.
 The code below demonstrates how to sanitize a string of HTML into a `div` element.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Sanitize the string
@@ -67,7 +67,7 @@ console.log(sanitizedDiv.innerHTML)
 // At some point later ...
 
 // Get the element to update. This must be a div to match our sanitizeFor() context.
-// Set its content to be the children of our sanitized element. 
+// Set its content to be the children of our sanitized element.
 document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 ```
 

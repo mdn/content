@@ -27,6 +27,7 @@ text-justify: distribute; /* Deprecated value */
 text-justify: inherit;
 text-justify: initial;
 text-justify: revert;
+text-justify: revert-layer;
 text-justify: unset;
 ```
 

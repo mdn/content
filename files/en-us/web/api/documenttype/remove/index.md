@@ -24,6 +24,14 @@ The **`DocumentType.remove()`** method removes a document's `doctype`.
 remove()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Using `remove()`

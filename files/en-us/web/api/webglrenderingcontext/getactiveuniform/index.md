@@ -20,7 +20,7 @@ generic library creation.
 ## Syntax
 
 ```js
-WebGLActiveInfo WebGLRenderingContext.getActiveUniform(program, index);
+getActiveUniform(program, index)
 ```
 
 ### Parameters

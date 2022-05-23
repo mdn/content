@@ -23,7 +23,7 @@ method.
 ## Syntax
 
 ```js
-void gl.clear(mask);
+clear(mask)
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ void gl.clear(mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -79,7 +79,7 @@ If you're only using one external image this can be a good approach, but once yo
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: url](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 var img = new Image();   // Create new img element
@@ -88,7 +88,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 
 One advantage of data URLs is that the resulting image is available immediately without another round trip to the server. Another potential advantage is that it is also possible to encapsulate in one file all of your [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), [HTML](/en-US/docs/Web/HTML), and images, making it more portable to other locations.
 
-Some disadvantages of this method are that your image is not cached, and for larger images the encoded url can become quite long.
+Some disadvantages of this method are that your image is not cached, and for larger images the encoded URL can become quite long.
 
 ### Using frames from a video
 

@@ -19,14 +19,14 @@ values for each element in the status map, in insertion order.
 ## Syntax
 
 ```js
-var iterator = mediaKeyStatusMap.values()
+values()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A new iterator.
 

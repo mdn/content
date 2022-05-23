@@ -16,8 +16,8 @@ The **`forEach()`** method of the {{domxref("FontFaceSet")}} interface executes 
 ## Syntax
 
 ```js
-FontFaceSet.forEach(callbackFn)
-FontFaceSet.forEach(callbackFn, thisArg)
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ FontFaceSet.forEach(callbackFn, thisArg)
 - `thisArg`
   - : Value to use as {{jsxref('this')}} when executing `callbackFn`.
 
-### Return Value
+### Return value
 
 Undefined.
 

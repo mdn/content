@@ -32,48 +32,49 @@ API instead.
 ## Syntax
 
 ```js
-const result = crypto.subtle.exportKey(format, key);
+exportKey(format, key)
 ```
 
 ### Parameters
 
-- _`format`_ is a string value describing the data format in which
-  the key should be exported. It can be one of the following:
-
-  - `raw`: [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
-  - `pkcs8`: [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
-  - `spki`: [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo)
-    format.
-  - `jwk`: [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key)
-    format.
-
-- `key` is the {{domxref("CryptoKey")}} to export.
+- `format`
+  - : A string value describing the data format in which
+    the key should be exported. It can be one of the following:
+    - `raw`
+      - : [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
+    - `pkcs8`
+      - : [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
+    - `spki`
+      - : [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) format.
+    - `jwk`
+      - : [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key) format.
+- `key`
+  - : The {{domxref("CryptoKey")}} to export.
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-  - If `format` was `jwk`, then the promise fulfills
-    with a JSON object containing the key.
-  - Otherwise the promise fulfills with an
-    [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-    containing the key.
+- If `format` was `jwk`, then the promise fulfills
+  with a JSON object containing the key.
+- Otherwise the promise fulfills with an
+  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+  containing the key.
 
 ### Exceptions
 
 The promise is rejected when one of the following exceptions is encountered:
 
-- {{exception("InvalidAccessError")}}
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when trying to export a non-extractable key.
-- {{exception("NotSupported")}}
+- `NotSupported` {{domxref("DOMException")}}
   - : Raised when trying to export in an unknown format.
 - {{jsxref("TypeError")}}
   - : Raised when trying to use an invalid format.
 
 ## Examples
 
-> **Note:** You can [try the
-> working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
+> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
 
 ### Raw export
 
@@ -121,7 +122,7 @@ is then PEM-encoded. [See the complete code on GitHub.](https://github.com/mdn/d
 
 ```js
 /*
-Convert  an ArrayBuffer into a string
+Convert an ArrayBuffer into a string
 from https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {
@@ -174,7 +175,7 @@ object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/b
 
 ```js
 /*
-Convert  an ArrayBuffer into a string
+Convert an ArrayBuffer into a string
 from https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {

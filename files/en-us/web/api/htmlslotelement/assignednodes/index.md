@@ -19,8 +19,8 @@ If the `flatten` option is set to `true`, it returns a sequence of both the node
 ## Syntax
 
 ```js
-HTMLSlotElement.assignedNodes()
-HTMLSlotElement.assignedNodes(options)
+assignedNodes()
+assignedNodes(options)
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ An array of nodes.
 ## Examples
 
 The following snippet is taken from our [slotchange
-example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see
+example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([see
 it live also](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js

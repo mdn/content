@@ -19,7 +19,7 @@ tags:
   - payment
 browser-compat: api.MerchantValidationEvent.methodName
 ---
-{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
+{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`methodName`** is a read-only value which returns a string
@@ -28,7 +28,7 @@ requires merchant validation.
 
 ## Value
 
-A read-only {{domxref("DOMString")}} which uniquely identifies the payment handler
+A read-only string which uniquely identifies the payment handler
 which is requesting merchant validation. See
 {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
   validation")}} for more information on the process.

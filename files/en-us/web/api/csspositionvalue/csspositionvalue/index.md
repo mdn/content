@@ -26,9 +26,9 @@ new CSSPositionValue(x, y)
 
 ### Parameters
 
-- x
+- `x`
   - : A position along the web page's horizontal axis.
-- y
+- `y`
   - : A position along the web page's vertical axix.
 
 ## Examples

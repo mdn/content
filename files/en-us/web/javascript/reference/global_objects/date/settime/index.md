@@ -43,8 +43,8 @@ Use the `setTime()` method to help assign a date and time to another
 ### Using setTime()
 
 ```js
-var theBigDay = new Date('July 1, 1999');
-var sameAsBigDay = new Date();
+const theBigDay = new Date('July 1, 1999');
+const sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
 ```
 

@@ -25,7 +25,7 @@ The **`appendBuffer()`** method of the
 ## Syntax
 
 ```js
-sourceBuffer.appendBuffer(source);
+appendBuffer(source)
 ```
 
 ### Parameters
@@ -37,13 +37,13 @@ sourceBuffer.appendBuffer(source);
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 None.
 
-## Example
+## Examples
 
 TBD.
 

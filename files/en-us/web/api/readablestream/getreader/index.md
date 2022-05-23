@@ -18,13 +18,13 @@ While the stream is locked, no other reader can be acquired until this one is re
 ## Syntax
 
 ```js
-readableStream.getReader()
-readableStream.getReader({mode})
+getReader()
+getReader(mode)
 ```
 
 ### Parameters
 
-- `{mode}` {{optional_inline}}
+- `mode` {{optional_inline}}
 
   - : An object containing a property `mode`, specifying the type of reader to create.
     Values can be:
@@ -38,10 +38,10 @@ A {{domxref("ReadableStreamDefaultReader")}} or {{domxref("ReadableStreamBYOBRea
 
 ### Exceptions
 
-- `RangeError`
-  - : The provided mode value is not `"byob"` or `undefined`.
-- `TypeError`
-  - : The stream you are trying to create a reader for is not a
+- {{jsxref("RangeError")}}
+  - : Thrown if the provided mode value is not `"byob"` or `undefined`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the stream you are trying to create a reader for is not a
     {{domxref("ReadableStream")}}.
 
 ## Examples

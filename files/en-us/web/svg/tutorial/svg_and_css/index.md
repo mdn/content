@@ -11,6 +11,8 @@ tags:
   - SVG
   - Web
 ---
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+
 This page illustrates the application of CSS to the specialized language for creating graphics: [SVG](/en-US/docs/Web/SVG).
 
 Below you'll create a simple demonstration that runs in your SVG-enabled browser.
@@ -25,7 +27,7 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
 <svg width="600px" height="600px" viewBox="-300 -300 600 600"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <link  rel="stylesheet" 
+  <link rel="stylesheet"
     href="style8.css" type="text/css"/>
 
   <title>SVG demonstration</title>
@@ -40,7 +42,7 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
   </defs>
 
   <text id="heading" x="-280" y="-270">SVG demonstration</text>
-  <text  id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
+  <text id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
 
   <g id="flower">
     <circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/>
@@ -439,7 +441,7 @@ See below how the structure then looks like.
   </defs>
 
   <text id="heading" x="-280" y="-270">SVG demonstration</text>
-  <text  id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
+  <text id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
 
   <g id="flower">
     <circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/>
@@ -450,6 +452,8 @@ See below how the structure then looks like.
 
 </svg>
 ```
+
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
 ## What next?
 

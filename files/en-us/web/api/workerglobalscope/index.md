@@ -19,7 +19,7 @@ This interface is usually specialized by each worker type: {{domxref("DedicatedW
 
 ## Properties
 
-_This interface inherits properties from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
 ### Standard properties
 
@@ -65,7 +65,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 ## Methods
 
-_This interface inherits methods from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ### Standard methods
 
@@ -119,6 +119,6 @@ console.log(navigator);
 
 ## See also
 
-- Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, , {{domxref("ServiceWorkerGlobalScope")}}
+- Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, {{domxref("ServiceWorkerGlobalScope")}}
 - Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}.
 - [Using web workers.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

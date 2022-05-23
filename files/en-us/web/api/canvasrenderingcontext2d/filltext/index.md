@@ -43,13 +43,14 @@ The text is rendered using the font and text layout configuration as defined by 
 ## Syntax
 
 ```js
-CanvasRenderingContext2D.fillText(text, x, y [, maxWidth]);
+fillText(text, x, y)
+fillText(text, x, y, maxWidth)
 ```
 
 ### Parameters
 
 - `text`
-  - : A {{domxref("DOMString")}} specifying the text string to render into the context.
+  - : A string specifying the text string to render into the context.
     The text is rendered using the settings specified by
     {{domxref("CanvasRenderingContext2D.font","font")}},
     {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}},
@@ -68,7 +69,7 @@ CanvasRenderingContext2D.fillText(text, x, y [, maxWidth]);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

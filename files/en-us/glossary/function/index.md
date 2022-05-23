@@ -73,7 +73,7 @@ An **Immediately Invoked Function Expressions** ({{glossary("IIFE")}}) is a func
 
 ```js
 // Declared functions can't be called immediately this way
-// Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+// Error (https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
 /*
 function foo() {
     console.log('Hello Foo');
@@ -92,7 +92,7 @@ function foo() {
 (() => console.log('hello world'))();
 ```
 
-If you'd like to know more about IIFEs, check out the following page on Wikipedia : [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+If you'd like to know more about IIFEs, check out the following page on Wikipedia : [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
 
 ## See also
 

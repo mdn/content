@@ -29,18 +29,18 @@ If the key range is not specified or is null, then the range includes all the re
 ## Syntax
 
 ```js
-var request = myIndex.openCursor();
-var request = myIndex.openCursor(range);
-var request = myIndex.openCursor(range, direction);
+openCursor()
+openCursor(range)
+openCursor(range, direction)
 ```
 
 ### Parameters
 
-- range {{optional_inline}}
+- `range` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is
     passed, this will default to a key range that selects all the records in this object
     store.
-- direction {{optional_inline}}
+- `direction` {{optional_inline}}
   - : The cursor's [direction](/en-US/docs/Web/API/IDBCursor#constants). See [IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants) for possible
     values.
 
@@ -55,14 +55,14 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBIndex")}}'s transaction is inactive.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the value for the direction parameter is invalid.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the key or key range provided contains an invalid key.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on
@@ -73,7 +73,7 @@ except that the returned records are sorted based on the index, not the primary 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
 complete working example, see our [IndexedDB-examples
 demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex).)
+example live](https://mdn.github.io/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {

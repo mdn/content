@@ -26,10 +26,18 @@ operation is pending.
 ## Syntax
 
 ```js
-IDBDatabase.close();
+close()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Let us open our database

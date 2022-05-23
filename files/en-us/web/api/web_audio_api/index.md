@@ -9,6 +9,7 @@ tags:
   - Overview
   - Web Audio API
   - sound
+browser-compat: api.AudioContext
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -115,7 +116,7 @@ Interfaces for defining effects that you want to apply to your audio sources.
 - {{domxref("PeriodicWave")}}
   - : Describes a periodic waveform that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 - {{domxref("IIRFilterNode")}}
-  - : Implements a general **[infinite impulse response](https://en.wikipedia.org/wiki/infinite%20impulse%20response "infinite impulse response")** (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers as well.
+  - : Implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response "infinite impulse response") (IIR) filter; this type of filter can be used to implement tone-control devices and graphic equalizers as well.
 
 ### Defining audio destinations
 
@@ -198,13 +199,13 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 
 ## Specifications
 
-{{Specifications("api.AudioContext")}}
+{{Specifications}}
 
 ## Browser compatibility
 
 ### AudioContext
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## See also
 
@@ -226,9 +227,9 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
 - [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML5 Audio](https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML5 Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
-- [XSound](https://korilakkuma.github.io/XSound/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording ... etc
+- [XSound](https://xsound.jp/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording ... etc
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [Pts.js](https://ptsjs.org/): Simplifies web audio visualization ([guide](https://ptsjs.org/guide/sound-0800))
 

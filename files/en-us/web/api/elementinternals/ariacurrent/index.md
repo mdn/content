@@ -19,7 +19,7 @@ The **`ariaCurrent`** property of the {{domxref("ElementInternals")}} interface 
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"page"`
   - : Represents the current page within a set of pages.

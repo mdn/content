@@ -17,7 +17,7 @@ The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Anima
 ## Syntax
 
 ```js
-animation.persist();
+persist()
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

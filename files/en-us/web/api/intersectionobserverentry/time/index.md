@@ -3,7 +3,6 @@ title: IntersectionObserverEntry.time
 slug: Web/API/IntersectionObserverEntry/time
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -12,7 +11,7 @@ tags:
   - Time
 browser-compat: api.IntersectionObserverEntry.time
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
 read-only **`time`** property is a

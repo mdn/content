@@ -25,14 +25,14 @@ for {{domxref("btoa", "btoa()")}}.
 ## Syntax
 
 ```js
-var decodedData = atob(encodedData);
+atob(encodedData)
 ```
 
 ### Parameters
 
 - `encodedData`
-  - : A [binary string](/en-US/docs/Web/API/DOMString/Binary) contains an
-    base64 encoded data.
+  - : A [binary string](/en-US/docs/Web/API/DOMString/Binary) containing
+    base64-encoded data.
 
 ### Return value
 
@@ -43,7 +43,7 @@ An ASCII string containing decoded data from `encodedData`.
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if `encodedData` is not valid base64.
 
-## Example
+## Examples
 
 ```js
 const encodedData = btoa('Hello, world'); // encode a string
@@ -61,5 +61,5 @@ const decodedData = atob(encodedData); // decode the string
 ## See also
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("btoa","btoa()")}}

@@ -19,12 +19,12 @@ new {{domxref("CSSMathNegate")}} object which negates the value passed into it.
 ## Syntax
 
 ```js
-new CSSMathNegate(arg);
+new CSSMathNegate(arg)
 ```
 
 ### Parameters
 
-- arg
+- `arg`
   - : A {{domxref('CSSNumericValue')}}.
 
 ## Examples

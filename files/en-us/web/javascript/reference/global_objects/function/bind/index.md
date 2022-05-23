@@ -146,15 +146,15 @@ const result1 = addArguments(1, 2);
 //  3
 
 // Create a function with a preset leading argument
-const leadingThirtysevenList = list.bind(null, 37);
+const leadingThirtySevenList = list.bind(null, 37);
 
 // Create a function with a preset first argument.
 const addThirtySeven = addArguments.bind(null, 37);
 
-const list2 = leadingThirtysevenList();
+const list2 = leadingThirtySevenList();
 //  [37]
 
-const list3 = leadingThirtysevenList(1, 2, 3);
+const list3 = leadingThirtySevenList(1, 2, 3);
 //  [37, 1, 2, 3]
 
 const result2 = addThirtySeven(5);

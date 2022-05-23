@@ -20,16 +20,22 @@ returned object should be first initialized and can then be passed to
 ## Syntax
 
 ```js
-var event = document.createEvent(type);
+createEvent(type)
 ```
 
-- `event` is the created [Event](/en-US/docs/Web/API/Event) object.
-- `type` is a string that represents the type of event to be
+### Parameters
+
+- `type`
+  - : A string that represents the type of event to be
   created. Possible event types include `"UIEvents"`,
   `"MouseEvents"`, `"MutationEvents"`, and
   `"HTMLEvents"`. See [Notes](#notes) section for details.
 
-## Example
+### Return value
+
+An [Event](/en-US/docs/Web/API/Event) object.
+
+## Examples
 
 ```js
 // Create the event.

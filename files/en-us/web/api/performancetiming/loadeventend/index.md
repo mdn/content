@@ -22,7 +22,7 @@ browser-compat: api.PerformanceTiming.loadEventEnd
 The legacy
 **`PerformanceTiming.loadEventEnd`**
 read-only property returns an `unsigned long long` representing the moment,
-in milliseconds since the UNIX epoch, when the {{event("load")}} event handler
+in milliseconds since the UNIX epoch, when the {{domxref("Window/load_event", "load")}} event handler
 terminated, that is when the load event is completed. If this event has not yet been
 sent, or is not yet completed, it returns `0.`
 

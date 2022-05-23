@@ -18,9 +18,7 @@ reads the request body and returns it as a promise that resolves with a {{domxre
 ## Syntax
 
 ```js
-request.formData().then(function(formdata) {
-  // do something with your formdata
-});
+formData()
 ```
 
 ### Parameters

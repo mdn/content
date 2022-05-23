@@ -7,9 +7,10 @@ tags:
   - Interface
   - barcode
   - barcode detector
+  - Experimental
 browser-compat: api.BarcodeDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
 
@@ -27,7 +28,7 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
     - `boundingBox`: A {{domxref('DOMRectReadOnly')}}, which returns the dimensions of a rectangle representing the extent of a detected barcode, aligned with the image.
     - `cornerPoints`: The x and y co-ordinates of the four corner points of the detected barcode relative to the image, starting with the top left and working clockwise. This may not be square due to perspective distortions within the image.
     - `format`: The detected barcode format. (For a full list of formats see the \[landing page])
-    - `rawValue`: A {{jsxref('String')}} decoded from the barcode data.
+    - `rawValue`: A string decoded from the barcode data.
 
 - {{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}}
   - : Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported [barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).

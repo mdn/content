@@ -20,12 +20,12 @@ The **`value`** property of the
 
 ## Value
 
-A {{domxref('USVString')}}.
+A string.
 
 ### Exceptions
 
-- `TypeError`
-  - : If the `value` property is an empty {{jsxref('String')}} when being set.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `value` property is an empty {{jsxref('String')}} when being set.
 
 ## Examples
 

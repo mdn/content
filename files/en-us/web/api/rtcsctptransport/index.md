@@ -30,7 +30,7 @@ _Also inherits properties from: {{DOMxRef("EventTarget")}}_
 - {{DOMxRef("RTCSctpTransport.maxMessageSize")}}{{ReadOnlyInline}}
   - : An integer value indicating the maximum size, in bytes, of a message which can be sent using the {{DOMxRef("RTCDataChannel.send()")}} method.
 - {{DOMxRef("RTCSctpTransport.state")}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} enumerated value indicating the state of the SCTP transport.
+  - : A string enumerated value indicating the state of the SCTP transport.
 - {{DOMxRef("RTCSctpTransport.transport")}}{{ReadOnlyInline}}
   - : An {{DOMxRef("RTCDtlsTransport")}} object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.
 

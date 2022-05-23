@@ -23,7 +23,7 @@ The **Web Share API** provides a mechanism for sharing text, links, files, and o
 ## Concepts and usage
 
 The **Web Share API** allows a site to share text, links, files, and other content to user-selected share targets, utilizing the sharing mechanisms of the underlying operating system.
-These share targets typically include the system clipboard, email, contacts or messaging applications, and Bluetooth or WiFi channels.
+These share targets typically include the system clipboard, email, contacts or messaging applications, and Bluetooth or Wi-Fi channels.
 
 The API has just two methods.
 The {{domxref("navigator.canShare()")}} method may be used to first validate whether some data is "sharable", prior to passing it to {{domxref("navigator.share()")}} for sending.

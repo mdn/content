@@ -20,14 +20,14 @@ insertion order.
 ## Syntax
 
 ```js
-// TBD
+entries()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 ### Exceptions
 

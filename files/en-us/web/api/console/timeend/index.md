@@ -23,15 +23,19 @@ details and examples.
 ## Syntax
 
 ```js
-console.timeEnd(label);
+timeEnd(label)
 ```
 
 ### Parameters
 
 - `label`
   - : The name of the timer to stop. Once stopped, the elapsed time is automatically
-    displayed in the [Web console](/en-US/docs/Tools/Web_Console) along
+    displayed in the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) along
     with an indicator that the time has ended.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

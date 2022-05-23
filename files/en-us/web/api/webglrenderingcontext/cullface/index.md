@@ -17,7 +17,7 @@ and/or back-facing polygons can be culled.
 ## Syntax
 
 ```js
-void gl.cullFace(mode);
+cullFace(mode)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ void gl.cullFace(mode);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -34,6 +34,7 @@ margin-left: auto;
 margin-left: inherit;
 margin-left: initial;
 margin-left: revert;
+margin-left: revert-layer;
 margin-left: unset;
 ```
 

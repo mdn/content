@@ -28,13 +28,17 @@ contains an {{jsxref("ArrayBuffer")}} representing the file's data.
 ## Syntax
 
 ```js
-instanceOfFileReader.readAsArrayBuffer(blob);
+readAsArrayBuffer(blob)
 ```
 
 ### Parameters
 
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

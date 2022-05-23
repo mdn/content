@@ -4,7 +4,6 @@ slug: Web/CSS/:is
 tags:
   - ':is'
   - CSS
-  - Experimental
   - Pseudo-class
   - Reference
   - Selector

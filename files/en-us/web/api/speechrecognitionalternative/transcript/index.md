@@ -23,15 +23,9 @@ For continuous recognition, leading or trailing whitespace will be included wher
 necessary so that concatenation of consecutive {{domxref("SpeechRecognitionResult")}}s
 produces a proper transcript of the session.
 
-## Syntax
+## Value
 
-```js
-var myTranscript = speechRecognitionAlternativeInstance.transcript;
-```
-
-### Returns
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

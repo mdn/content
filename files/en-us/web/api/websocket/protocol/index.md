@@ -18,7 +18,7 @@ object, or the empty string if no connection is established.
 
 ## Value
 
-A [`DOMString`](/en-US/docs/Web/API/DOMString).
+A string.
 
 ## Specifications
 

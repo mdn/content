@@ -22,7 +22,8 @@ The **`console.countReset()`** method resets counter used with
 ## Syntax
 
 ```js
-console.countReset([label]);
+countReset()
+countReset(label)
 ```
 
 ### Parameters
@@ -31,6 +32,10 @@ console.countReset([label]);
   - : A string. If supplied, `countReset()` resets the count for
     that label to 0. If omitted, `countReset()` resets the default counter to
     0\.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

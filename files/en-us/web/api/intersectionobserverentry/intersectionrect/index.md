@@ -3,7 +3,6 @@ title: IntersectionObserverEntry.intersectionRect
 slug: Web/API/IntersectionObserverEntry/intersectionRect
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -12,7 +11,7 @@ tags:
   - intersectionRect
 browser-compat: api.IntersectionObserverEntry.intersectionRect
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
 read-only **`intersectionRect`** property is a

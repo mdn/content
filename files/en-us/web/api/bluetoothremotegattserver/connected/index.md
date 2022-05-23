@@ -11,7 +11,7 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTServer.connected
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.connected`** read-only
 property returns a boolean value that returns true while this script execution

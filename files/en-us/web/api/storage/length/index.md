@@ -16,17 +16,11 @@ The **`length`** read-only property of the
 {{domxref("Storage")}} interface returns the number of data items stored in a given
 `Storage` object.
 
-## Syntax
-
-```js
-length = storage.length;
-```
-
-### Return value
+## Value
 
 The number of items stored in the `Storage` object.
 
-## Example
+## Examples
 
 The following function adds three data items to the local storage for the current
 domain, then returns the number of items in the storage:

@@ -19,12 +19,12 @@ the passed object is a {{domxref("WebGLVertexArrayObject")}} object.
 ## Syntax
 
 ```js
-GLBoolean ext.isVertexArrayOES(arrayObject);
+isVertexArrayOES(arrayObject)
 ```
 
 ### Parameters
 
-- arrayObject
+- `arrayObject`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to test.
 
 ### Return value

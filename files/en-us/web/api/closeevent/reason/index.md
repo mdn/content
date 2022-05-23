@@ -14,7 +14,7 @@ The **`reason`** read-only property of the {{domxref("CloseEvent")}} interface r
 
 ## Value
 
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 

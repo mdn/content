@@ -22,29 +22,28 @@ given callback with the drag data item's string data as the argument if the item
 ## Syntax
 
 ```js
-dataTransferItem.getAsString(callback);
+// Arrow function
+getAsString((data) => { /* ... */ } )
+
+// Callback function
+getAsString(callbackFn)
+
+// Inline callback function
+getAsString(function(data) { /* ... */ })
 ```
 
 ### Parameters
 
-- `callback`
-  - : A callback function that has access to the {{domxref("DataTransferItem","data
-    transfer item's")}} string data. See [Callback](#callback) below for details.
+- `callbackFn`
+  - : A callback function that receives following arguments:
+    - `data`
+      - : The {{domxref("DataTransferItem", "data transfer item's")}} string data.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Callback
-
-The callback parameter is a callback function which accepts one parameter:
-
-- {{domxref("DOMString")}}
-  - : The drag data item's string data.
-
-The callback return value is `undefined`.
-
-## Example
+## Examples
 
 This example shows the use of the `getAsString()` method as an _inline
 function_ in a {{event("drop")}} event handler.

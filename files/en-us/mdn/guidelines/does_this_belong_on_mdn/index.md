@@ -12,7 +12,7 @@ In this article, you'll find information describing how to decide whether or not
 
 ## The question
 
-If you're preparing to document something, you may be trying to decide whether to put the information on MDN Web Docs. In addition, you may be considering maintaining documentation in your source code, putting the document on the [Mozilla wiki](https://wiki.mozilla.org/), or in readme files in a Git repository. This article's purpose is to help you decide which of these options is right for your content.
+If you're preparing to document something, you may be trying to decide whether to put the information on MDN Web Docs. In addition, you may be considering maintaining documentation in your source code, putting the document on the [Mozilla wiki](https://wiki.mozilla.org/Main_Page), or in readme files in a Git repository. This article's purpose is to help you decide which of these options is right for your content.
 
 The two main considerations for whether a document belongs on MDN are:
 
@@ -61,7 +61,7 @@ While MDN Web Docs contains a large quantity of Mozilla product documentation, t
 
 - [Firefox browser](/en-US/docs/Mozilla/Firefox)
 
-  - [Firefox Developer Tools](/en-US/docs/Tools)
+  - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - [Add-ons](/en-US/docs/Mozilla/Add-ons)
   - [Building and configuring Firefox](/en-US/docs/Mozilla/Developer_guide/Build_Instructions)
   - etc.

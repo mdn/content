@@ -17,18 +17,11 @@ browser-compat: api.TouchEvent.targetTouches
 
 The **`targetTouches`** read-only property is a {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose {{event("touchstart")}} event occurred inside the same target {{ domxref("element") }} as the current target element.
 
-## Syntax
+## Value
 
-```js
-var touches = touchEvent.targetTouches;
-```
+A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose `touchstart` event occurred inside the same target {{ domxref("element") }} as the current target element.
 
-### Return value
-
-- `touches`
-  - : A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose `touchstart` event occurred inside the same target {{ domxref("element") }} as the current target element.
-
-## Example
+## Examples
 
 This example illustrates the {{domxref("TouchEvent")}} object's {{domxref("TouchEvent.targetTouches")}} property. The {{domxref("TouchEvent.targetTouches")}} property is a {{domxref("TouchList")}} object that includes those TPs that are currently touching the surface _and_ started on the element that is the target of the current event. As such, the `targetTouches` list is a strict subset of the `touches` list.
 

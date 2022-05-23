@@ -25,7 +25,7 @@ drawn at twice the normal size.
 ## Syntax
 
 ```js
-void ctx.scale(x, y);
+scale(x, y)
 ```
 
 ### Parameters
@@ -36,6 +36,10 @@ void ctx.scale(x, y);
 - `y`
   - : Scaling factor in the vertical direction. A negative value flips pixels across the
     horizontal axis. A value of `1` results in no vertical scaling.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -16,8 +16,7 @@ browser-compat: api.CSS.paintWorklet
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`paintWorklet`** is a static,
-read-only property of the {{DOMxRef("CSS")}} interface that provides access to the
+The static, read-only **`paintWorklet`**  property of the {{DOMxRef("CSS")}} interface provides access to the
 {{DOMxRef("PaintWorklet")}}, which programmatically generates an image where a CSS
 property expects a file.
 
@@ -49,5 +48,4 @@ file and does so by feature detection.
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Houdini)
-- [Houdini overview](/en-US/docs/Web/Houdini/learn)
+- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)

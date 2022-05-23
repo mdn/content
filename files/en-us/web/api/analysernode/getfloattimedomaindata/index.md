@@ -16,10 +16,7 @@ The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} I
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Float32Array(analyser.fftSize); // Float32Array needs to be the same length as the fftSize
-analyser.getFloatTimeDomainData(dataArray); // fill the Float32Array with data returned from getFloatTimeDomainData()
+getFloatTimeDomainData(array)
 ```
 
 ### Parameters
@@ -30,9 +27,9 @@ analyser.getFloatTimeDomainData(dataArray); // fill the Float32Array with data r
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/voice-change-o-matic-float-data) too).
 

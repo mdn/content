@@ -1,5 +1,5 @@
 ---
-title: Multimedia and Embedding
+title: Multimedia and embedding
 slug: Learn/HTML/Multimedia_and_embedding
 tags:
   - Assessment

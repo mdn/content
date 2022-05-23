@@ -22,7 +22,7 @@ why the promise was rejected.
 
 ## Value
 
-A  value or object which provides information you can use to understand why the promise
+A value or object which provides information you can use to understand why the promise
 was rejected. This could be anything from an error code to an object with text, links,
 and whatever else you might wish to include.
 
@@ -46,5 +46,5 @@ window.onunhandledrejection = function(e) {
 
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
-- {{event("rejectionhandled")}}
+- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
 - {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}

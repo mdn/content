@@ -46,6 +46,7 @@ background-position-y: 0px, center;
 background-position-y: inherit;
 background-position-y: initial;
 background-position-y: revert;
+background-position-y: revert-layer;
 background-position-y: unset;
 ```
 

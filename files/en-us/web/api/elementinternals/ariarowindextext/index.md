@@ -19,7 +19,7 @@ The **`ariaRowIndexText`** property of the {{domxref("ElementInternals")}} inter
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
@@ -39,4 +39,4 @@ this.internals_.ariaRowIndexText = "Heading row";
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

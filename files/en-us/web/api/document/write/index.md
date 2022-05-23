@@ -19,15 +19,19 @@ The **`Document.write()`** method writes a string of text to a document stream o
 ## Syntax
 
 ```js
-document.write(markup);
+write(markup)
 ```
 
 ### Parameters
 
-- _markup_
+- `markup`
   - : A string containing the text to be written to the document.
 
-### Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```html
 <html>
@@ -73,7 +77,7 @@ If the `document.write()` call is embedded within an inline HTML `<script>` tag,
 
 > **Note:** In Edge only, calling `document.write()` more than once in an {{HTMLElement("iframe")}} causes the error "SCRIPT70: Permission denied".
 
-> **Note:** Starting with version 55, Chrome will not execute `<script>` elements injected via `document.write()` when specific conditions are met. For more information, refer to [Intervening against document.write()](https://developers.google.com/web/updates/2016/08/removing-document-write).
+> **Note:** Starting with version 55, Chrome will not execute `<script>` elements injected via `document.write()` when specific conditions are met. For more information, refer to [Intervening against document.write()](https://developer.chrome.com/blog/removing-document-write/).
 
 ## Specifications
 

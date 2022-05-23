@@ -26,11 +26,11 @@ The **`TransitionEvent`** interface represents events providing information rela
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("TransitionEvent.propertyName")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMString")}} containing the name CSS property associated with the transition.
+  - : A string containing the name CSS property associated with the transition.
 - {{domxref("TransitionEvent.elapsedTime")}} {{readonlyInline}}
-  - : Is a `float` giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.
+  - : A `float` giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.
 - {{domxref("TransitionEvent.pseudoElement")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMString")}}, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
+  - : A string, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Types of `TransitionEvent`
 
@@ -48,7 +48,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("TransitionEvent.initTransitionEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
-  - : Initializes a `TransitionEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}} method.
+  - : Initializes a `TransitionEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent('TransitionEvent')")}} method.
 
 ## Specifications
 

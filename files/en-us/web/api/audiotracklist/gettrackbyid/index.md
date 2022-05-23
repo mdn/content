@@ -28,13 +28,13 @@ you know its ID string.
 ## Syntax
 
 ```js
-var theTrack = AudioTrackList.getTrackById(id);
+getTrackById(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+  - : A string indicating the ID of the track to locate within the track
     list.
 
 ### Return value
@@ -47,7 +47,7 @@ The tracks are searched in their natural order; that is, in the order defined by
 media resource itself, or, if the resource doesn't define an order, the relative order
 in which the tracks are declared by the media resource.
 
-## Example
+## Examples
 
 This example suggests a hypothetical game in which movies are used as cut-scenes or
 other key set pieces within the game. Each movie has one audio track for each character,

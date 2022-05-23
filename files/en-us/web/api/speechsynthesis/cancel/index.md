@@ -25,13 +25,13 @@ If an utterance is currently being spoken, speaking will stop immediately.
 cancel()
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

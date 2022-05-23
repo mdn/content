@@ -25,8 +25,10 @@ or more JavaScript objects.
 ## Syntax
 
 ```js
-console.log(obj1 [, obj2, ..., objN]);
-console.log(msg [, subst1, ..., substN]);
+log(obj1)
+log(obj1, /* ..., */ objN)
+log(msg)
+log(msg, subst1, /* ..., */ substN])
 ```
 
 ### Parameters
@@ -44,8 +46,11 @@ console.log(msg [, subst1, ..., substN]);
   - : JavaScript objects with which to replace substitution strings within
     `msg`. This gives you additional control over the format of the output.
 
-See [Outputting text to
-the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
+See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Difference between log() and dir()
 
@@ -65,8 +70,7 @@ Specifically, `console.log` gives special treatment to DOM elements, whereas
 `console.dir` does not. This is often useful when trying to see the full
 representation of the DOM JS object.
 
-There's more information in the [Chrome
-Console API reference](https://developer.chrome.com/docs/devtools/console/api/#consoledirobject) about this and other functions.
+There's more information in the [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#consoledirobject) about this and other functions.
 
 ## Logging objects
 
@@ -87,7 +91,5 @@ change. This may not be what you want.
 
 ## See also
 
-- [MSDN: Using
-  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
-- [NodeJS:
-  Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

@@ -18,8 +18,16 @@ environment allows it.
 ## Syntax
 
 ```js
-console.clear();
+clear()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

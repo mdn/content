@@ -27,10 +27,10 @@ You can also create a new `DOMPointReadOnly` object using the
 ## Syntax
 
 ```js
-const point = DOMPointReadOnly.fromPoint(sourcePoint)
+fromPoint(sourcePoint)
 ```
 
-### Properties
+### Parameters
 
 - `sourcePoint`
 

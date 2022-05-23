@@ -16,14 +16,14 @@ The **`clone()`** method of the {{domxref("AudioData")}} interface creates a new
 ## Syntax
 
 ```js
-AudioData.clone()
+clone()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 The cloned {{domxref("AudioData")}} object.
 

@@ -24,13 +24,18 @@ advances to the immediate next position, based on its direction.
 ## Syntax
 
 ```js
-cursor.continue(key);
+continue()
+continue(key)
 ```
 
 ### Parameters
 
 - `key` {{optional_inline}}
   - : The key to position the cursor at.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -46,7 +51,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the cursor is currently being iterated or has iterated past its end.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. The cursor does not

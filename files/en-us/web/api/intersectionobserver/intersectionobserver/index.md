@@ -70,12 +70,12 @@ Call its {{domxref("IntersectionObserver.observe", "observe()")}} method to begi
 
 ### Exceptions
 
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : The specified `rootMargin` is invalid.
-- `RangeError`
+- {{jsxref("RangeError")}}
   - : One or more of the values in `threshold` is outside the range 0.0 to 1.0.
 
-## Example
+## Examples
 
 This example creates a new intersection observer which calls the function `myObserverCallback` every time the visible area of the element being observed changes by at least 10%.
 

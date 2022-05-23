@@ -302,7 +302,7 @@ Each input source should define a **primary action**. A primary action (which wi
 
 When the user points a device along a target ray in your 3D space and then triggers a select action, the following events are sent to the active {{domxref("XRSession")}}:
 
-1. A {{domxref("XRSession.selectstart_event", "selectstart")}} event, indicating that the user has performed the activity that begins the primary action. This may be a gesture, depressing a button, or the like.
+1. A {{domxref("XRSession.selectstart_event", "selectstart")}} event, indicating that the user has performed the activity that begins the primary action. This may be a gesture, pressing a button, or the like.
 2. If the primary action ends successfully (for example, due to the user releasing the button or trigger), rather than because of an error, the {{domxref("XRSession.select_event", "select")}} event is sent.
 3. After the `select` event is sent _or_ if the controller on which the action is being performed is disconnected or otherwise becomes unavailable, the {{domxref("XRSession.selectend_event", "selectend")}} event is sent.
 
@@ -492,7 +492,7 @@ To determine what object is targeted, follow the targeting ray until it intersec
 
 In any case, to identify the targeted object, you need to determine if the ray specified by the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}} intersects any objects in the scene, whether they're virtual or real-world.
 
-See [Targeting and hit detection](/en-US/docs/Web/API/WebXR_Device_API/Targeting) for a more detailed look at what's involved..
+See [Targeting and hit detection](/en-US/docs/Web/API/WebXR_Device_API/Targeting) for a more detailed look at what's involved.
 
 ### Presenting hand-held objects
 

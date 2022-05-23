@@ -23,8 +23,10 @@ The following example shows a custom checkbox component inside a form with an ID
 Printing `form.length` to the console, gives us the value of {{domxref("HTMLFormElement.length")}}.
 
 ```html
-<form id="myForm"><custom-checkbox id="custom-checkbox"></custom-checkbox>
-  <custom-label for="custom-checkbox">Join newsletter</custom-label></form>
+<form id="myForm">
+  <custom-checkbox id="custom-checkbox"></custom-checkbox>
+  <custom-label for="custom-checkbox">Join newsletter</custom-label>
+</form>
 ```
 
 ```js
@@ -33,16 +35,15 @@ class CustomCheckbox extends HTMLElement {
 
   constructor() {
     super();
-    this.internals_ = this.attachInternals();
+    this.#internals = this.attachInternals();
   }
 
-  /* ... */
+  connectedCallback() {
+    console.log(this.#internals.form.length)
+  }
+}
 
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
-
-let element = document.getElementById("custom-checkbox");
-console.log(element.internals_.form.length);
+window.customElements.define("custom-checkbox", CustomCheckbox);
 ```
 
 ## Specifications

@@ -11,7 +11,7 @@ browser-compat: api.Navigator.share
 ---
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
-The **`navigator.share()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, bluetooth, etc.
+The **`navigator.share()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.
 
 This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
 
@@ -35,9 +35,9 @@ navigator.share(data)
 
     Possible values are:
 
-    - `url`: A {{domxref("USVString")}} representing a URL to be shared.
-    - `text`: A {{domxref("USVString")}} representing text to be shared.
-    - `title`: A {{domxref("USVString")}} representing a title to be shared. May be ignored by the target.
+    - `url`: A string representing a URL to be shared.
+    - `text`: A string representing text to be shared.
+    - `title`: A string representing a title to be shared. May be ignored by the target.
     - `files`: An array of {{domxref("File")}} objects representing files to be shared. See [below](#shareable_file_types) for shareable file types.
 
 ### Return value
@@ -48,9 +48,9 @@ A {{jsxref("Promise")}} that resolves with `undefined`, or rejected with one of 
 
 The {{jsxref("Promise")}} may be rejected with one of the following `DOMException` values:
 
-- `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : The [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission has not been granted, or the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : The specified share data cannot be validated. Possible reasons include:
 
@@ -59,9 +59,9 @@ The {{jsxref("Promise")}} may be rejected with one of the following `DOMExceptio
     - Files are specified but the implementation does not support file sharing.
     - Sharing the specified data would be considered a "hostile share" by the user-agent.
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The user canceled the share operation or there are no share targets available.
-- `DataError`
+- `DataError` {{domxref("DOMException")}}
   - : There was a problem starting the share target or transmitting the data.
 
 ## Shareable file types
@@ -80,6 +80,7 @@ The following is a list of usually shareable file types. However, you should alw
   - `.wav` - `audio/wav`
   - `.weba` - `audio/webm`
 - Image
+  - `.avif` - `image/avif`
   - `.bmp` - `image/bmp`
   - `.gif` - `image/gif`
   - `.ico` - `image/x-icon`

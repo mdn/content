@@ -58,7 +58,7 @@ Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
 
 ## Specifications
 
-{{Specifications("http.headers.Digest")}}
+{{Specifications}}
 
 ## Browser compatibility
 

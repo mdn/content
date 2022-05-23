@@ -7,9 +7,10 @@ tags:
   - Method
   - barcode
   - shape detection
+  - Experimental
 browser-compat: api.BarcodeDetector.getSupportedFormats
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`getSupportedFormats()`** static method
 of the {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which
@@ -27,8 +28,8 @@ This method receives no parameters.
 
 ### Return value
 
-An {{jsxref('Array')}} of [supported
-barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
+A {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of
+[supported barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
 
 ### Exceptions
 

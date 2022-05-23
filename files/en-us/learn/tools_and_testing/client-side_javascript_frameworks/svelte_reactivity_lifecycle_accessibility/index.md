@@ -180,7 +180,7 @@ These frameworks, by default, basically re-run all our JavaScript on every chang
 
 Svelte doesn't use a virtual DOM representation. Instead, it parses and analyzes our code, creates a dependency tree, and then generates the required JavaScript to update only the parts of the DOM that need to be updated. This approach usually generates optimal JavaScript code with minimal overhead, but it also has its limitations.
 
-Sometimes Svelte cannot detect changes to variables being watched. Remember that to tell Svelte that a variable has changed, you have to assign it a new value. A simple rule of thumb is that **The name of the updated variable must appear on the left hand side of the assignment.**
+Sometimes Svelte cannot detect changes to variables being watched. Remember that to tell Svelte that a variable has changed, you have to assign it a new value. A simple rule to keep in mind is that **The name of the updated variable must appear on the left-hand side of the assignment.**
 
 For example, in the following piece of code:
 

@@ -40,8 +40,6 @@ _This interface doesn't inherit any property._
 
 - {{domxref("TreeWalker.filter")}} {{readonlyInline}}
   - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
-- {{domxref("TreeWalker.expandEntityReferences")}} {{readonlyInline}}{{deprecated_inline}}
-  - : Is a boolean value indicating, when discarding an entity reference its whole sub-tree must be discarded at the same time.
 - {{domxref("TreeWalker.currentNode")}}
   - : Is the {{domxref("Node")}} on which the `TreeWalker` is currently pointing at.
 

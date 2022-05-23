@@ -27,7 +27,7 @@ This interface has no constructor.
 ## Methods
 
 - {{domxref("DataTransferItemList.add()")}}
-  - : Adds an item (either a {{domxref("File")}} object or a {{domxref("DOMString","string")}}) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.
+  - : Adds an item (either a {{domxref("File")}} object or a string) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.
 - {{domxref("DataTransferItemList.remove()")}}
   - : Removes the drag item from the list at the given index.
 - {{domxref("DataTransferItemList.clear()")}}

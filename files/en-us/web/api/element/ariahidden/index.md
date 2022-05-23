@@ -17,7 +17,7 @@ The **`ariaHidden`** property of the {{domxref("Element")}} interface reflects t
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is hidden from the accessibility API.

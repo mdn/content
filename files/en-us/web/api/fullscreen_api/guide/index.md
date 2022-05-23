@@ -13,6 +13,7 @@ tags:
   - full screen
   - fullscreen
   - screen
+spec-urls: https://fullscreen.spec.whatwg.org/
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 
@@ -57,7 +58,7 @@ On the other hand, if you're trying to emulate WebKit's behavior on Gecko, you n
 
 ### Notification
 
-When fullscreen mode is successfully engaged, the document which contains the element receives a {{Event("fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a  {{Event("fullscreenchange")}} event. Note that the {{Event("fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
+When fullscreen mode is successfully engaged, the document which contains the element receives a {{Event("fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a {{Event("fullscreenchange")}} event. Note that the {{Event("fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
 
 ### When a fullscreen request fails
 
@@ -124,7 +125,7 @@ If fullscreen mode is already active (`fullscreenElement` is non-`null`), we cal
 
 ## Prefixing
 
-For the moment not all browsers are implementing the unprefixed version of the API (for vendor agnostic access to the Fullscreen API you can use [Fscreen](https://github.com/rafrex/fscreen)). Here is the table summarizing the prefixes and name differences between them:
+For the moment not all browsers are implementing the unprefixed version of the API (for vendor agnostic access to the Fullscreen API you can use [Fscreen](https://github.com/rafgraph/fscreen)). Here is the table summarizing the prefixes and name differences between them:
 
 <table class="standard-table">
   <thead>
@@ -179,9 +180,7 @@ For the moment not all browsers are implementing the unprefixed version of the A
 
 ## Specifications
 
-| Specification                        | Status                           | Comment          |
-| ------------------------------------ | -------------------------------- | ---------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} | Initial version. |
+{{Specifications}}
 
 ## Browser compatibility
 

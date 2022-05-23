@@ -21,17 +21,21 @@ enabled).
 ## Syntax
 
 ```js
-document.enableStyleSheetsForSet(name);
+enableStyleSheetsForSet(name)
 ```
 
 ### Parameters
 
-- _name_
+- `name`
   - : The name of the style sheets to enable. All style sheets with a title that match
     this name will be enabled, while all others that have a title will be disabled.
     Specify an empty string for the _name_ parameter to disable all alternate and
     preferred style sheets (but not the persistent style sheets; that is, those with no
     `title` attribute).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Notes
 
@@ -43,7 +47,7 @@ document.enableStyleSheetsForSet(name);
 - This method never affects the values of {{domxref("document.lastStyleSheetSet")}} or
   {{domxref("document.preferredStyleSheetSet")}}.
 
-## Example
+## Examples
 
 ```js
 document.enableStyleSheetsForSet("Some style sheet set name");

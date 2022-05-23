@@ -26,7 +26,7 @@ and gaps which describe the pattern.
 ## Syntax
 
 ```js
-ctx.setLineDash(segments);
+setLineDash(segments)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ ctx.setLineDash(segments);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

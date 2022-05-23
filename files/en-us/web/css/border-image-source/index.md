@@ -31,6 +31,7 @@ border-image-source: linear-gradient(to top, red, yellow);
 border-image-source: inherit;
 border-image-source: initial;
 border-image-source: revert;
+border-image-source: revert-layer;
 border-image-source: unset;
 ```
 

@@ -21,8 +21,9 @@ audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 ## Syntax
 
 ```js
-new OfflineAudioContext(options);
-new OfflineAudioContext(numberOfChannels, length, sampleRate);
+new OfflineAudioContext(options)
+
+new OfflineAudioContext(numberOfChannels, length, sampleRate)
 ```
 
 ### Parameters
@@ -65,7 +66,7 @@ Like a regular `AudioContext`, an
 `OfflineAudioContext` can be the target of events, therefore it implements
 the {{domxref("EventTarget")}} interface.
 
-## Example
+## Examples
 
 ```js
 const offlineCtx = new OfflineAudioContext({

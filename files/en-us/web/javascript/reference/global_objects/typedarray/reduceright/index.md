@@ -17,7 +17,7 @@ The **`reduceRight()`** method applies a function against an
 accumulator and each value of the typed array (from right-to-left) has to reduce it to a
 single value. This method has the same algorithm as
 {{jsxref("Array.prototype.reduceRight()")}}. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 ## Syntax
 

@@ -29,15 +29,15 @@ createChannelMerger(numberOfInputs)
 
 ### Parameters
 
-- numberOfInputs
+- `numberOfInputs`
   - : The number of channels in the input audio streams, which the output stream will
     contain; the default is 6 if this parameter is not specified.
 
-### Returns
+### Return value
 
 A {{domxref("ChannelMergerNode")}}.
 
-## Example
+## Examples
 
 The following example shows how you could separate a stereo track (say, a piece of
 music), and process the left and right channel differently. To use them, you need to use

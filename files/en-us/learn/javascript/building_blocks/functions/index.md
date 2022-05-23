@@ -216,7 +216,7 @@ This is called an **anonymous function**, because it has no name. You'll often s
 
 For example, let's say you want to run some code when the user types into a text box. To do this you can call the {{domxref("EventTarget/addEventListener", "addEventListener()")}} function of the text box. This function expects you to pass it (at least) two parameters:
 
-- the name of the event to listen for, which in this case is {{domxref("Document/keydown_event", "\"keydown\"")}}
+- the name of the event to listen for, which in this case is {{domxref("Document/keydown_event", "keydown")}}
 - a function to run when the event happens.
 
 When the user presses a key, the browser will call the function you provided, and will pass it a parameter containing information about this event, including the particular key that the user pressed:
@@ -350,7 +350,7 @@ function greeting() {
 
 Both functions you want to call are called `greeting()`, but you can only ever access the `first.js` file's `greeting()` function (the second one is ignored). In addition, an error results when attempting (in the `second.js` file) to assign a new value to the `name` variable — because it was already declared with `const`, and so can't be reassigned.
 
-> **Note:** You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> **Note:** You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)).
 
 Keeping parts of your code locked away in functions avoids such problems, and is considered the best practice.
 

@@ -55,4 +55,4 @@ Not part of any specification.
   - [`gesturestart`](/en-US/docs/Web/API/Element/gesturestart_event)
   - [`gesturechange`](/en-US/docs/Web/API/Element/gesturechange_event)
 
-- [GestureEventClassReference at the Safari Developer Library](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html)
+- [GestureEventClassReference at the Safari Developer Library](https://developer.apple.com/documentation/webkitjs/gestureevent)

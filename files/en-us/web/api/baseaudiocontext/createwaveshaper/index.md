@@ -24,14 +24,18 @@ distortion. It is used to apply distortion effects to your audio.
 ## Syntax
 
 ```js
-baseAudioCtx.createWaveShaper();
+createWaveShaper()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("WaveShaperNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create a wave shaper
 node. For applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) [demo](https://mdn.github.io/voice-change-o-matic/) ([see
@@ -39,8 +43,7 @@ app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js
 
 > **Note:** Sigmoid functions are commonly used for distortion curves
 > because of their natural properties. Their S-shape, for instance, helps create a
-> smoother sounding result. We found the below distortion curve code on [Stack
-> Overflow](http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
+> smoother sounding result. We found the below distortion curve code on [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

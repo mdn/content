@@ -96,7 +96,7 @@ Texture wrapping allows us to repeat the 2D image around the 3D object. Texture 
 The colors we see on the screen is a result of the light source interacting with the surface colors of the object's material. Light might be absorbed or reflected. The standard **Phong Lighting Model** implemented in WebGL has four basic types of lighting:
 
 - **Diffuse**: A distant directional light, like the sun.
-- **Specular**: A point of light, just like a light bulb in a room or a flash light.
+- **Specular**: A point of light, just like a light bulb in a room or a flashlight.
 - **Ambient**: The constant light applied to everything on the scene.
 - **Emissive**: The light emitted directly by the object.
 
@@ -106,7 +106,7 @@ During the output manipulation stage all the fragments of the primitives from th
 
 ![Output merging](mdn-games-3d-output-merging.png)
 
-During output merging some processing is also applied to ignore information that is not needed — for example the parameters of objects that are outside of the screen or behind other objects, and thus not visible, are not calculated.
+During output merging some processing is also applied to ignore information that is not needed — for example the parameters of objects that are outside the screen or behind other objects, and thus not visible, are not calculated.
 
 ## Conclusion
 

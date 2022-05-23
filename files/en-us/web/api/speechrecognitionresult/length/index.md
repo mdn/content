@@ -24,13 +24,7 @@ The number of alternatives contained in the result depends on what the
 {{domxref("SpeechRecognition.maxAlternatives")}} property was set to when the speech
 recognition was first initiated.
 
-## Syntax
-
-```js
-var myLength = speechRecognitionResultInstance.length;
-```
-
-### Returns
+## Value
 
 A number.
 

@@ -24,7 +24,7 @@ applied to any subsequent drawing.
 ## Syntax
 
 ```js
-CanvasPattern ctx.createPattern(image, repetition);
+createPattern(image, repetition)
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ CanvasPattern ctx.createPattern(image, repetition);
 
 - `repetition`
 
-  - : A {{domxref("DOMString")}} indicating how to repeat the pattern's image. Possible
+  - : A string indicating how to repeat the pattern's image. Possible
     values are:
 
     - `"repeat"` (both directions)

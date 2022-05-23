@@ -32,6 +32,7 @@ unicode-bidi: plaintext;
 unicode-bidi: inherit;
 unicode-bidi: initial;
 unicode-bidi: revert;
+unicode-bidi: revert-layer;
 unicode-bidi: unset;
 ```
 

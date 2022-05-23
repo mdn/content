@@ -26,20 +26,20 @@ available in the browsers you need to support.
 ## Syntax
 
 ```js
-MediaQueryList.addListener(func)
+addListener(func)
 ```
 
 ### Parameters
 
-- func
+- `func`
   - : A function or function reference representing the callback function you want to run
     when the media query status changes.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 var paragraph = document.querySelector('p');

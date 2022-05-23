@@ -8,6 +8,7 @@ tags:
   - Reference
   - Status code
   - WebDAV
+spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.2
 ---
 {{HTTPSidebar}}
 
@@ -26,6 +27,4 @@ the request entity is correct, but it was unable to process the contained instru
 
 ## Specifications
 
-| Specification                                                        | Title                                                                 |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| {{RFC("4918", "422 Unprocessable Entity" , "11.2")}} | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |
+{{Specifications}}

@@ -73,7 +73,7 @@ for (let source in xrSession.inputSources) {
 For each input source which has a value for `gripSpace`, this loop obtains
 the {{domxref("XRPose")}} representing the position and orientation that are described
 by `gripSpace`. If a valid pose is returned, a method
-`myDrawMeshUsingTransform()` is called to  draw the controller's mesh
+`myDrawMeshUsingTransform()` is called to draw the controller's mesh
 transformed using the grip pose's transform matrix.
 
 ## Specifications

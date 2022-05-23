@@ -8,7 +8,7 @@ tags:
 ---
 This page explains how to write mathematics using the MathML language. Just like HTML, MathML is described with tags and attributes. HTML becomes verbose when your document contains advanced structures like lists or tables but fortunately there are many generators from simple notations, WYSIWYG editors and other Content Management Systems to help writing Web pages.
 
-Mathematical notations are even more complex with structures like fractions, square roots or matrices that are likely to require their own tags. As a consequence, good MathML authoring tools are more important and we describe some tools below. In particular, the Mozilla MathML team has been developing [TeXZilla](https://github.com/fred-wang/TeXZilla/), a Javascript Unicode LaTeX-to-MathML converter that is intended to be used in many scenarios described here. Of course, the list is by no means exhaustive and you are invited to check out the [W3C MathML software list](https://www.w3.org/Math/Software/) where you can find various other tools.
+Mathematical notations are even more complex with structures like fractions, square roots or matrices that are likely to require their own tags. As a consequence, good MathML authoring tools are more important and we describe some tools below. In particular, the Mozilla MathML team has been developing [TeXZilla](https://github.com/fred-wang/TeXZilla/), a Javascript Unicode LaTeX-to-MathML converter that is intended to be used in many scenarios described here. Of course, the list is by no means exhaustive and you are invited to check out the [W3C MathML software list](https://www.w3.org/wiki/Math_Tools) where you can find various other tools.
 
 Note that by design, MathML is well-integrated in HTML5 and in particular you can use usual Web features like CSS, DOM, Javascript or SVG. This is out of the scope of this document but anyone with basic knowledge of Web languages will easily be able to mix these features with MathML. Check out [our demos](/en-US/docs/Mozilla/MathML_Project#Sample_MathML_Documents) and [MathML references](/en-US/docs/Web/MathML) for more details.
 
@@ -41,7 +41,7 @@ You can use Presentation MathML inside HTML5 documents:
 </html>
 ```
 
-Content MathML is not supported by browsers. It's recommended to convert your Content MathML markup into Presentation MathML before publishing it, for example with the help of the [ctop.xsl](https://code.google.com/p/web-xslt/source/browse/trunk/#trunk/ctop) stylesheet. Tools mentioned on this page generates Presentation MathML.
+Content MathML is not supported by browsers. It's recommended to convert your Content MathML markup into Presentation MathML before publishing it, for example with the help of the [ctop.xsl](https://code.google.com/archive/p/web-xslt/source#trunk/ctop) stylesheet. Tools mentioned on this page generates Presentation MathML.
 
 #### Fallback for Browsers without MathML support
 
@@ -86,7 +86,7 @@ var isWebKit = ua.indexOf('AppleWebKit') > -1 && ua.indexOf('Chrome') === -1;
 
 #### Mathematical fonts
 
-In order to get a good layout or to allow different style, it's important to have mathematical fonts available. It's always good to provide a link to [MDN's Font Instructions](/en-US/docs/Mozilla/MathML_Project/Fonts), so that your visitors can verify whether they have appropriate fonts installed on their system. It's also good to provide a fallback with Web fonts.
+In order to get a good layout or to allow different style, it's important to have mathematical fonts available. It's always good to provide a link to [MDN's Font Instructions](/en-US/docs/Web/MathML/Fonts), so that your visitors can verify whether they have appropriate fonts installed on their system. It's also good to provide a fallback with Web fonts.
 
 Prior to Gecko 31.0 {{GeckoRelease("31.0")}}, it was a bit tedious to setup math fonts, see the [font instructions for Mozilla 2.0](/en-US/docs/Mozilla/MathML_Project/FontsMozilla2.0#MathML_Font_Selection_with_CSS). For Gecko 31.0 {{GeckoRelease("31.0")}}, this is much simpler and is compatible with any Web rendering engine with MathML support. For example, here is a minimal stylesheet to use Latin Modern for the text and Latin Modern Math for the mathematics:
 
@@ -135,7 +135,7 @@ If for some reason you need to use MathML in XML documents, be sure to satisfy t
 
 #### MathML in email and instant messaging clients
 
-Modern mail clients may send and receive emails in the HTML5 format and thus can use MathML expressions. Be sure to have the "send as HTML" and "view as HTML" options enabled. In Thunderbird, you can use the "Insert HTML" command to paste your HTML+MathML code. [MathBird](http://disruptive-innovations.com/zoo/MathBird/) is a convenient add-on for Thunderbird to insert such MathML expressions using the AsciiMath input syntax. Moreover, a LaTeX-to-MathML input box has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.mozilla.org/thunderbird/) since version 31. Again, the way MathML is handled and the quality of the MathML rendering [depends on the mail client](https://web.archive.org/web/20160304021257/http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121). Even if your browser supports MathML, your Webmail may prevent you to send or receive mails with MathML inside.
+Modern mail clients may send and receive emails in the HTML5 format and thus can use MathML expressions. Be sure to have the "send as HTML" and "view as HTML" options enabled. In Thunderbird, you can use the "Insert HTML" command to paste your HTML+MathML code. [MathBird](http://disruptive-innovations.com/zoo/MathBird/) is a convenient add-on for Thunderbird to insert such MathML expressions using the AsciiMath input syntax. Moreover, a LaTeX-to-MathML input box has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.thunderbird.net/en-US/) since version 31. Again, the way MathML is handled and the quality of the MathML rendering [depends on the mail client](https://web.archive.org/web/20160304021257/http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121). Even if your browser supports MathML, your Webmail may prevent you to send or receive mails with MathML inside.
 
 Gecko-based instant messaging clients can integrate a Javascript-based text-to-MathML converter (mentioned below) and then render the MathML expressions generated from the (plaintext) instant messages. For example, there is an [Instantbird add-on](https://addons.instantbird.org/en-US/instantbird/addon/340) that handles LaTeX expressions.
 
@@ -179,7 +179,7 @@ In a Web environment, the most obvious method to convert a simple syntax into a 
 
 and get it automatically converted into MathML. This is still a work-in-progress, but could be improved in the future thanks to Web Components and shadow DOM. Alternatively, you can use the more traditional [Javascript parsing of expressions at load time](https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page) as all the other tools in this section do.
 
-One simple client-side conversion tools is [ASCIIMathML](http://www1.chapman.edu/~jipsen/mathml/asciimath.html). Just download the [ASCIIMathML.js](https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js) script and copy it to your Web site. Then on your Web pages, add a `<script>` tag to load ASCIIMathML and the mathematical expressions delimited by `` ` `` (grave accent) will be automatically parsed and converted to MathML:
+One simple client-side conversion tools is [ASCIIMathML](https://www1.chapman.edu/~jipsen/mathml/asciimath.html). Just download the [ASCIIMathML.js](https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js) script and copy it to your Web site. Then on your Web pages, add a `<script>` tag to load ASCIIMathML and the mathematical expressions delimited by `` ` `` (grave accent) will be automatically parsed and converted to MathML:
 
 ```html
 <html>
@@ -287,7 +287,7 @@ mzlatex foo.tex       # Windows platform
 
 Note that [tex4ebook](https://github.com/michal-h21/tex4ebook) relies on TeX4ht to generate EPUB documents.
 
-[LaTeXML](https://dlmf.nist.gov/LaTeXML/) is another tool that can generate HTML5 and EPUB documents. Windows users can watch this [video tutorial](https://www.youtube.com/watch?v=Dg881w2e-lI). Given a foo.tex LaTeX file, you can use these simple commands:
+[LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) is another tool that can generate HTML5 and EPUB documents. Windows users can watch this [video tutorial](https://www.youtube.com/watch?v=Dg881w2e-lI). Given a foo.tex LaTeX file, you can use these simple commands:
 
 ```bash
 latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
@@ -317,13 +317,13 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
   - This might be a bit more difficult to set up, since you need some admin right on your server.
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) and [Mathoid](https://github.com/gwicke/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
+[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) and [Mathoid](https://github.com/wikimedia/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
 
 ## Graphical Interface
 
 ### Input Box
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) has several interfaces, including a [CKEditor plugin](https://ckeditor.com/addon/texzilla) used on MDN, an [online demo](https://fred-wang.github.io/TeXZilla/), a [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) or a [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). It has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.mozilla.org/thunderbird/) since version 31.[Abiword](http://abisource.org/) contains a small equation editor, based on itex2MML. Finally, [Bluegriffon](http://www.bluegriffon.com/) has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.
+[TeXZilla](https://github.com/fred-wang/TeXZilla) has several interfaces, including a [CKEditor plugin](https://ckeditor.com/cke4/addon/texzilla) used on MDN, an [online demo](https://fred-wang.github.io/TeXZilla/), a [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) or a [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). It has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.thunderbird.net/en-US/) since version 31.[Abiword](http://abisource.org/) contains a small equation editor, based on itex2MML. Finally, [Bluegriffon](http://www.bluegriffon.com/) has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.
 
 ![BlueGriffon](mathml-shot1.png)
 
@@ -333,11 +333,11 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
 [LyX](https://www.lyx.org/) is a graphical LaTeX editor, which has built-in support for XHTML+MathML export and can be configured to use similar LaTeX-to-(X)HTML converters. You can for example, you can configure it to [use LaTeXML HTML5/EPUB export](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx).
 
-[TeXmacs](https://www.texmacs.org/) is a free structured editor with special facilities for mathematics, graphics and interactive sessions. TeXmacs documents can be exported in XHTML+MathML.
+[TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html) is a free structured editor with special facilities for mathematics, graphics and interactive sessions. TeXmacs documents can be exported in XHTML+MathML.
 
 ![TeXmacs MathML example](tm-mathml-collage.png)
 
-[OpenOffice](https://www.openoffice.org/) and [LibreOffice](https://libreoffice.org/) have an equation editor (File → New → Formula). It is semi-WYSIWYG: you enter the source of the formula using the equation panel/keyboard and a preview of the formula is regularly refreshed. The editor uses its own syntax "StarMath" for the source but MathML is also generated when the document is saved. To get the MathML code, save the document as mml and open it with any text editor. Alternatively, you can extract the odf file (which is actually a zip archive) and open an xml file called `content.xml`.
+[OpenOffice](https://www.openoffice.org/) and [LibreOffice](https://www.libreoffice.org/) have an equation editor (File → New → Formula). It is semi-WYSIWYG: you enter the source of the formula using the equation panel/keyboard and a preview of the formula is regularly refreshed. The editor uses its own syntax "StarMath" for the source but MathML is also generated when the document is saved. To get the MathML code, save the document as mml and open it with any text editor. Alternatively, you can extract the odf file (which is actually a zip archive) and open an XML file called `content.xml`.
 
 ![Open Office Math](openoffice.png)
 
@@ -351,4 +351,4 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
 - Author(s): Frédéric Wang
 - Other Contributors: Florian Scholz
-- Copyright Information: Portions of this content are © 2010 by individual mozilla.org contributors; content available under a Creative Commons license | [Details](https://www.mozilla.org/foundation/licensing/website-content.html).
+- Copyright Information: Portions of this content are © 2010 by individual mozilla.org contributors; content available under a Creative Commons license | [Details](https://www.mozilla.org/en-US/foundation/licensing/website-content/).

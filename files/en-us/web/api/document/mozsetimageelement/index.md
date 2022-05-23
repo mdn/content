@@ -19,7 +19,7 @@ element ID.
 ## Syntax
 
 ```js
-document.mozSetImageElement(imageElementId, imageElement);
+mozSetImageElement(imageElementId, imageElement)
 ```
 
 ### Parameters
@@ -31,7 +31,11 @@ document.mozSetImageElement(imageElementId, imageElement);
   to that image element string. Specify `null` to remove the background
   element.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example changes the background of a {{ HTMLElement("div") }} block each time the
 block is clicked by the user.

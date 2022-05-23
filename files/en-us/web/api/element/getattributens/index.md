@@ -20,7 +20,7 @@ details.
 ## Syntax
 
 ```js
-attrVal = element.getAttributeNS(namespace, name)
+getAttributeNS(namespace, name)
 ```
 
 ### Parameters

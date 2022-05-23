@@ -26,32 +26,19 @@ eventually be removed, but currently both mechanisms are provided for legacy rea
 
 ## Syntax
 
-Event-based version:
-
 ```js
-offlineAudioCtx.startRendering();
-offlineAudioCtx.oncomplete = function(e) {
-  // e.renderedBuffer contains the output buffer
-}
-```
-
-Promise-based version:
-
-```js
-offlineAudioCtx.startRendering().then(function(buffer) {
-  // buffer contains the output buffer
-});
+startRendering()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 In this simple example, we declare both an {{domxref("AudioContext")}} and an
 `OfflineAudioContext` object. We use the `AudioContext` to load an
@@ -70,8 +57,7 @@ promise `AudioBuffer`. This is then played as part of a simple standard audio
 graph.
 
 > **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-> GitHub repo (see the [source
-> code](https://github.com/mdn/webaudio-examples) too.)
+> GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples) too.)
 
 ```js
 // define online and offline audio context

@@ -20,14 +20,14 @@ The **`getState()`** method of the {{domxref("PositionSensorVRDevice")}} interfa
 ## Syntax
 
 ```js
-var myPositionState = PositionSensorVRDevice.getState();
+getState()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref("VRPose")}} object.
 

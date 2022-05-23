@@ -21,8 +21,12 @@ on context creation.
 ## Syntax
 
 ```js
-ctx.getContextAttributes();
+getContextAttributes()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

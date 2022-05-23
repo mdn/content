@@ -18,7 +18,7 @@ This method may only be run once, to notify the user on a failed or a successful
 ## Syntax
 
 ```js
-let updateUI = BackgroundFetchUpdateUIEvent.updateUI(options);
+updateUI(options)
 ```
 
 ### Parameters
@@ -32,13 +32,13 @@ let updateUI = BackgroundFetchUpdateUIEvent.updateUI(options);
       - : A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
 
         - `src`
-          - : A {{domxref("DOMString","string")}} which is a URL of an image.
+          - : A string which is a URL of an image.
         - `sizes`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
+          - : A string which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
         - `type`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} containing an image MIME type.
+          - : A string containing an image MIME type.
         - `label`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} providing a name for the associated image.
+          - : A string providing a name for the associated image.
 
     - `title`{{optional_inline}}
       - : A {{domxref("DOMString", "string")}} containing text to update the title of the user interface.

@@ -27,6 +27,7 @@ column-fill: balance-all;
 column-fill: inherit;
 column-fill: initial;
 column-fill: revert;
+column-fill: revert-layer;
 column-fill: unset;
 ```
 

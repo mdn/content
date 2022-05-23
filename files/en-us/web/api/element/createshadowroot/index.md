@@ -8,7 +8,7 @@ tags:
   - Method
   - Non-standard
   - Reference
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.createShadowRoot
 ---
 {{APIRef('Shadow DOM')}}{{non-standard_header}}{{deprecated_header}}
@@ -23,12 +23,16 @@ the element that it is attached to is called the {{glossary("shadow root")}}.
 ## Syntax
 
 ```js
-var shadowroot = element.createShadowRoot();
+createShadowRoot()
 ```
 
 ### Parameters
 
 No parameters.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Result value
 

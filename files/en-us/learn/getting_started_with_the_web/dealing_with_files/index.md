@@ -66,7 +66,7 @@ To make files talk to one another, you have to provide a file path between them 
 4. Insert the file path into your HTML code between the double quote marks of the `src=""` code.
 5. Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image!
 
-![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
+![A screenshot of our basic website showing just the Firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
 Some general rules for file paths:
 
@@ -83,7 +83,7 @@ For now, this is about all you need to know.
 
 That is about it for now. Your folder structure should look something like this:
 
-![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
+![A file structure in macOS finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 

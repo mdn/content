@@ -90,8 +90,7 @@ storage access to...
 When an ephemeral or persistent storage access grant expires, the number of sites the
 requesting origin has storage access to is decremented by one.
 
-> **Note:** If the requesting origin is not [classified
-> as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
+> **Note:** If the requesting origin is not [classified as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
 > storage access grant, which will go away when the page is reloaded. The user is never
 > shown a prompt in this case, and calling `requestStorageAccess()` won't
 > have any side effects besides changing the value returned by
@@ -118,7 +117,7 @@ we have added two preferences in `about:config` that control prompting upon
 ## Syntax
 
 ```js
-var promise = document.requestStorageAccess();
+requestStorageAccess()
 ```
 
 ### Parameters

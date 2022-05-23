@@ -11,6 +11,7 @@ tags:
   - Accessibility
   - ARIA role
   - reference
+spec-urls: https://w3c.github.io/aria/#rowgroup
 ---
 An element with `role="rowgroup"` is a group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure. A `rowgroup` contains one or more rows of [cells](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role),  [grid cells](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [column headers](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), or [row headers](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
@@ -138,9 +139,7 @@ none
 
 ## Specifications
 
-| Specification                                                            | Status                   |
-| ------------------------------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#rowgroup","ARIA rowgroup role")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 

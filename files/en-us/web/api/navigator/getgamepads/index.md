@@ -24,10 +24,18 @@ Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if
 ## Syntax
 
 ```js
- var gamepads = navigator.getGamepads();
+getGamepads()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {
@@ -49,5 +57,5 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## See also
 
-- [Using the Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)
+- [Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

@@ -19,35 +19,39 @@ specified rectangle of the current color framebuffer into an
 
 ```js
 // WebGL1:
-void gl.readPixels(x, y, width, height, format, type, pixels);
+readPixels(x, y, width, height, format, type, pixels)
 
 // WebGL2:
-void gl.readPixels(x, y, width, height, format, type, GLintptr offset);
-void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GLuint dstOffset);
+readPixels(x, y, width, height, format, type, offset)
+readPixels(x, y, width, height, format, type, pixels)
+readPixels(x, y, width, height, format, type, pixels, dstOffset)
 ```
 
 ### Parameters
 
-- x
+- `x`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the first horizontal pixel that is read from the
     lower left corner of a rectangular block of pixels.
-- y
+- `y`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the first vertical pixel that is read from the
     lower left corner of a rectangular block of pixels.
-- width
+- `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the rectangle.
-- height
+- `height`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the rectangle.
-- format
+- `format`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the pixel data. Possible values:
 
-    - `gl.ALPHA`: Discards the red, green and blue components and reads the
-      alpha component.
-    - `gl.RGB`: Discards the alpha components and reads the red, green and
-      blue components.
-    - `gl.RGBA`: Red, green, blue and alpha components are read from the
-      color buffer.
+    - `gl.ALPHA`
+      - : Discards the red, green and blue components and reads the
+        alpha component.
+    - `gl.RGB`
+      - : Discards the alpha components and reads the red, green and
+        blue components.
+    - `gl.RGBA`
+      - : Red, green, blue and alpha components are read from the
+        color buffer.
 
     WebGL2 adds
 
@@ -58,7 +62,7 @@ void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GL
     - `gl.RGB_INTEGER`
     - `gl.RGBA_INTEGER`
 
-- type
+- `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the pixel data. Possible values:
 
@@ -80,7 +84,7 @@ void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GL
     - `gl.UNSIGNED_INT_10F_11F_11F_REV`
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
 
-- pixels
+- `pixels`
 
   - : An {{domxref("ArrayBufferView")}} object to read data into. The array type must
     match the type of the `type` parameter.
@@ -95,7 +99,7 @@ void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GL
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

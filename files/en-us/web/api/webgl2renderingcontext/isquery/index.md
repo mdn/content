@@ -17,7 +17,7 @@ passed object is a valid {{domxref("WebGLQuery")}} object.
 ## Syntax
 
 ```js
-GLBoolean gl.isQuery(query);
+isQuery(query)
 ```
 
 ### Parameters

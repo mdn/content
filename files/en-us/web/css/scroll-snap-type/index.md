@@ -36,6 +36,8 @@ scroll-snap-type: both mandatory;
 /* Global values */
 scroll-snap-type: inherit;
 scroll-snap-type: initial;
+scroll-snap-type: revert;
+scroll-snap-type: revert-layer;
 scroll-snap-type: unset;
 ```
 

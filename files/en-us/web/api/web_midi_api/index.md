@@ -7,6 +7,7 @@ tags:
   - Overview
   - Reference
   - Web MIDI API
+spec-urls: https://webaudio.github.io/web-midi-api/
 ---
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
@@ -96,9 +97,7 @@ function startLoggingMIDIInput( midiAccess, indexOfPort ) {
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| [Web MIDI API](https://webaudio.github.io/web-midi-api/) |
+{{Specifications}}
 
 ## See also
 

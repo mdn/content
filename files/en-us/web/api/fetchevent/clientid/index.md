@@ -22,7 +22,7 @@ associated client.
 
 ## Value
 
-A {{domxref("DOMString")}} that represents the client ID.
+A string that represents the client ID.
 
 ## Examples
 

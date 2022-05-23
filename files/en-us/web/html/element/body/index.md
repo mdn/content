@@ -123,7 +123,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Function to call when the document receives focus.
 - {{htmlattrdef("onhashchange")}}
   - : Function to call when the fragment identifier part (starting with the hash (`'#'`) character) of the document's current address has changed.
-- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
+- {{htmlattrdef("onlanguagechange")}}
   - : Function to call when the preferred languages changed.
 - {{htmlattrdef("onload")}}
   - : Function to call when the document has finished loading.

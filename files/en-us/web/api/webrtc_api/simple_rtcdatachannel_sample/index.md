@@ -16,7 +16,7 @@ In this example, we will open an {{domxref("RTCDataChannel")}} connection linkin
 
 ## The HTML
 
-First, let's take a quick look at the [HTML that's needed](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html). There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:
+First, let's take a quick look at the [HTML that's needed](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/index.html). There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:
 
 ```html
 <button id="connectButton" name="connectButton" class="buttonleft">
@@ -51,13 +51,13 @@ Finally, there's the little box into which we'll insert the messages. This {{HTM
 
 ## The JavaScript code
 
-While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
+While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
 
 The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of [ECMAScript 2015](/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla), you should read up on them. Similarly, this example uses [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to simplify syntax.
 
 ### Starting up
 
-When the script is run, we set up a {{event("load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
+When the script is run, we set up a {{domxref("Window/load_event", "load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
 
 ```js
 function startup() {

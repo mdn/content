@@ -598,8 +598,6 @@ The last color stop in each of the four gradients uses a fully transparent color
 
 {{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
 
-<!-- ------------------------ -->
-
 ### A `createConicGradient` example
 
 In this example, we'll define two different conic gradients. A conic gradient differs from a radial gradient as, instead of creating circles, it circles around a point.

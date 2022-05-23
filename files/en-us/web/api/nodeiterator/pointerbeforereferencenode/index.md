@@ -27,8 +27,7 @@ A boolean.
 var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 flag = nodeIterator.pointerBeforeReferenceNode;
 ```

@@ -15,7 +15,7 @@ The **`ImageDecoder()`** constructor creates a new {{domxref("ImageDecoder")}} o
 ## Syntax
 
 ```js
-new ImageDecoder(init);
+new ImageDecoder(init)
 ```
 
 ### Parameters
@@ -23,7 +23,7 @@ new ImageDecoder(init);
 - `init`
   - : An object containing the following members:
     - `type`
-      - : A {{domxref("DOMString","string")}} containing the MIME type of the image file to be decoded.
+      - : A string containing the MIME type of the image file to be decoded.
     - `data`
       - : A {{domxref("BufferSource")}} or {{domxref("ReadableStream")}} of bytes representing an encoded image type as described by `type`.
     - `premultiplyAlpha`{{Optional_Inline}}

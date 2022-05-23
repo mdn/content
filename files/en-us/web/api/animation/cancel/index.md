@@ -21,7 +21,7 @@ The Web Animations API's **`cancel()`** method of the {{domxref("Animation")}} i
 ## Syntax
 
 ```js
-Animation.cancel();
+cancel()
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

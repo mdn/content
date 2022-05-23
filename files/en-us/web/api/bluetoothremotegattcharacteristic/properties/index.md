@@ -12,7 +12,7 @@ tags:
   - properties
 browser-compat: api.BluetoothRemoteGATTCharacteristic.properties
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.properties`**
 read-only property returns a {{domxref('BluetoothCharacteristicProperties')}} instance

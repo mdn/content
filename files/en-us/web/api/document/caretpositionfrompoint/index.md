@@ -18,7 +18,7 @@ caret's character offset within that node.
 ## Syntax
 
 ```js
-caretPositionFromPoint(x, y);
+caretPositionFromPoint(x, y)
 ```
 
 ### Parameters
@@ -28,17 +28,17 @@ caretPositionFromPoint(x, y);
 - `y`
   - : The vertical coordinate of a point.
 
-### Returns
+### Return value
 
 A {{domxref('CaretPosition')}} object.
 
-## Example
+## Examples
 
 Click anywhere in the **Demo** paragraph below to insert a line break at the point where you click. The code for it is below the demo.
 
 ### Demo
 
-{{EmbedLiveSample('Example', '100%', '100px')}}
+{{EmbedLiveSample('Examples')}}
 
 The code below first checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} support, but if the browser doesn't support that, the code then checks for `document.caretPositionFromPoint`, and uses that instead.
 

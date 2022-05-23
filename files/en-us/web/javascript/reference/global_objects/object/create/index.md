@@ -109,7 +109,7 @@ _A simple common debugging function:_
 ```js
 // display top-level property name:value pairs of given object
 function ShowProperties(obj){
-  for(var prop in obj){
+  for(const prop in obj){
     console.log(prop + ": " + obj[prop] + "\n" );
   }
 }
@@ -150,7 +150,7 @@ Be aware of, also, that using Object.entries() on an object created via Object.c
 will result in an empty array being returned.
 
 ```js
-var obj = Object.create({ a: 1, b: 2 });
+const obj = Object.create({ a: 1, b: 2 });
 
 > console.log(Object.entries(obj)); // shows "[]"
 ```
@@ -271,7 +271,7 @@ Rectangle.prototype = Object.create(Shape.prototype);
 //To avoid that, we set the prototype.constructor to Rectangle (child).
 Rectangle.prototype.constructor = Rectangle;
 
-var rect = new Rectangle();
+const rect = new Rectangle();
 
 console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
 console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
@@ -281,7 +281,7 @@ rect.move(1, 1); // Outputs, 'Shape moved.'
 ### Using propertiesObject argument with Object.create()
 
 ```js
-var o;
+let o;
 
 // create an object with null as prototype
 o = Object.create(null);
@@ -334,7 +334,7 @@ o.p;
 // 42
 
 o.q = 12;
-for (var prop in o) {
+for (const prop in o) {
   console.log(prop);
 }
 // 'q'
@@ -371,4 +371,4 @@ o2 = Object.create({p: 42}) */
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Reflect.construct()")}}
-- John Resig's post on [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)
+- John Resig's post on [getPrototypeOf()](https://johnresig.com/blog/objectgetprototypeof/)

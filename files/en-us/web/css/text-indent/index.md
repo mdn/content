@@ -40,6 +40,7 @@ text-indent: 5em hanging each-line;
 text-indent: inherit;
 text-indent: initial;
 text-indent: revert;
+text-indent: revert-layer;
 text-indent: unset;
 ```
 

@@ -153,7 +153,7 @@ location /status {
 
 Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:
 
-```example-bad
+```plain example-bad
 https://username:password@www.example.com/
 ```
 

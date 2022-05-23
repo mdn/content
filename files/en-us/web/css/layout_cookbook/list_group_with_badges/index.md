@@ -26,7 +26,7 @@ Our list items should be displayed with the badges lined up on the right, no mat
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/list-group-badges--download.html)
 
 ## Choices made
 

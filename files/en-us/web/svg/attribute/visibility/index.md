@@ -40,6 +40,8 @@ You can use this attribute with the following SVG elements:
 
 ## Example
 
+### Example 1
+
 ```css hidden
 html, body, svg {
   height: 100%;
@@ -57,7 +59,56 @@ html, body, svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "250", "100")}}
+{{EmbedLiveSample("Example 1", "250", "100")}}
+
+### Example 2
+
+The following example toggles the CSS `visibility` of the SVG image path.
+
+#### HTML
+
+```html
+<button id="nav-toggle-button" >
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="button-icon">
+    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z" class="invisible" />
+    <path d="M0 0h24v24H0z" fill="none" />
+  </svg>
+  <span>
+    click me
+  </span>
+</button>
+```
+
+#### CSS
+
+```css
+svg {
+  display: inline !important;
+}
+span {
+  vertical-align: 50%;
+}
+button {
+  line-height: 1em;
+}
+.invisible {
+  visibility: hidden;
+}
+```
+
+#### JavaScript
+
+```js
+document.querySelector("button").addEventListener("click", function (evt) {
+  this.querySelector("svg > path:nth-of-type(1)").classList.toggle("invisible");
+  this.querySelector("svg > path:nth-of-type(2)").classList.toggle("invisible");
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Example 2", "100%", "80")}}
 
 ## Usage notes
 
@@ -87,87 +138,9 @@ html, body, svg {
 - `collapse`
   - : This value is equal to `hidden`.
 
-## Example
-
-The following example toggles the CSS `visibility` of the SVG image path.
-
-### HTML
-
-```html
-<button id="nav-toggle-button" >
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="button-icon">
-    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z" class="invisible" />
-    <path d="M0 0h24v24H0z" fill="none" />
-  </svg>
-  <span>
-    click me
-  </span>
-</button>  
-```
-
-### CSS
-
-```css
-svg {
-  display: inline !important;
-}
-span {
-  vertical-align: 50%;
-}
-button {
-  line-height: 1em;
-}
-.invisible {
-  visibility: hidden;
-}
-```
-
-### JavaScript
-
-```js
-document.querySelector("button").addEventListener("click", function (evt) {
-  this.querySelector("svg > path:nth-of-type(1)").classList.toggle("invisible");
-  this.querySelector("svg > path:nth-of-type(2)").classList.toggle("invisible");
-}); 
-```
-
-{{EmbedLiveSample("Example", "100%", "80")}}
-
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS2.1", "visufx.html#visibility", "visibility")}}
-      </td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>CSS definition of the property</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "render.html#VisibilityControl", "visibility")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Mainly refers to CSS 2.1</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#VisibilityProperty", "visibility")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

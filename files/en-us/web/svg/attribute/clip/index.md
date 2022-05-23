@@ -70,34 +70,7 @@ The value `auto` defines a clipping path along the bounds of the viewport create
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('CSS Masks', '#clip-property', 'clip')}}
-      </td>
-      <td>{{Spec2('CSS Masks')}}</td>
-      <td>
-        Deprecates <code>clip</code> property, suggests
-        {{cssxref("clip-path")}} as replacement.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "masking.html#ClipProperty", "clip")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

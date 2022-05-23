@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 86 that will affe
 
 ### Developer Tools
 
-- The `cd()` [web console helper function](/en-US/docs/Tools/Web_Console/Helpers), which was deprecated in Firefox 74, has now been removed. The `<iframe>` context picker tool described in [Working with iframes](/en-US/docs/Tools/Working_with_iframes) serves the same purpose, but is much better! For more information see {{bug(1607741)}}.
+- The `cd()` [web console helper function](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html), which was deprecated in Firefox 74, has now been removed. The `<iframe>` context picker tool described in [Working with iframes](https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html) serves the same purpose, but is much better! For more information see {{bug(1607741)}}.
 - The different {{cssxref("margin")}} and {{cssxref("padding")}} shorthand and longhand properties are now marked as inactive on internal table elements because they have no effect on them. ({{bug(1551569)}}).
 - The {{cssxref("order")}} property was previously incorrectly marked as inactive for grid items. This got fixed in {{bug(1579017)}}.
 

@@ -29,10 +29,14 @@ Be aware that you can't call `delete()` (or
 ## Syntax
 
 ```js
-myIDBCursor.delete();
+delete()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this
 operation are fired. The result attribute is set to undefined.
@@ -48,7 +52,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the cursor was created using {{domxref("IDBindex.openKeyCursor")}}, is currently being iterated, or has iterated past its end.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. If the

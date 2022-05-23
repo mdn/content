@@ -13,7 +13,7 @@ When SVG was specified, support for web fonts was not widespread in browsers. Si
 
 > **Note:** SVG Fonts are currently supported only in Safari and Android Browser.
 >
-> Internet Explorer [hasn't considered implementing this](http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx), the functionality has been [removed from Chrome 38](https://www.chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox has [postponed its implementation indefinitely](https://bugzilla.mozilla.org/show_bug.cgi?id=119490) to concentrate on [WOFF](/en-US/docs/Web/Guide/WOFF). Other tools however like the [Adobe SVG Viewer](http://www.adobe.com/svg/viewer/install/) plugin, Batik and parts of Inkscape support SVG font embedding.
+> Internet Explorer [hasn't considered implementing this](https://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx), the functionality has been [removed from Chrome 38](https://chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox has [postponed its implementation indefinitely](https://bugzilla.mozilla.org/show_bug.cgi?id=119490) to concentrate on [WOFF](/en-US/docs/Web/Guide/WOFF). Other tools however like the [Adobe SVG Viewer](https://www.adobe.com/devnet/svg.html) plugin, Batik and parts of Inkscape support SVG font embedding.
 
 The base for defining an SVG font is the {{ SVGElement("font") }} element.
 
@@ -32,7 +32,7 @@ There are some ingredients required for embedding a font in SVG. Let's show an e
     </font-face-src>
   </font-face>
   <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
-  <glyph unicode="!" horiz-adv-x="300"><!-- Outline of exclam. pt. glyph --></glyph>
+  <glyph unicode="!" horiz-adv-x="300"><!-- Outline of exclamation point glyph --></glyph>
   <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
   <!-- more glyphs -->
 </font>

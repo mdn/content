@@ -21,12 +21,12 @@ supplied value.
 ## Syntax
 
 ```js
-var cssNumericValue = CSSNumericValue.div(number);
+div(number)
 ```
 
 ### Parameters
 
-- number
+- `number`
   - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
@@ -35,8 +35,8 @@ A {{domxref('CSSMathProduct')}}.
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

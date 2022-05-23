@@ -18,7 +18,7 @@ See {{domxref("HTMLElement.innerText")}} for more information and examples showi
 
 ## Value
 
-A {{domxref("DOMString")}} representing the rendered text content of an element and its descendants.
+A string representing the rendered text content of an element and its descendants.
 
 If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 

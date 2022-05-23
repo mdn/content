@@ -27,7 +27,7 @@ You can't specify the value of `address` directly in the options object, but its
 
 ## Value
 
-A {{domxref("DOMString")}} providing the IP address from which the candidate comes.
+A string providing the IP address from which the candidate comes.
 
 > **Note:** If `port` is `null` — and
 > `port` is supported by the {{Glossary("user agent")}} — passing the

@@ -24,8 +24,8 @@ method. This lets you scale, rotate, translate (move), and skew the context.
 ## Syntax
 
 ```js
-ctx.setTransform(a, b, c, d, e, f);
-ctx.setTransform(matrix);
+setTransform(a, b, c, d, e, f)
+setTransform(matrix)
 ```
 
 The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
@@ -64,6 +64,10 @@ transformation matrix to set:
 The newer type consists of a single parameter, `matrix`, representing a 2D
 transformation matrix to set (technically, a `DOMMatrixInit` object; any
 object will do as long as it contains the above components as properties).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

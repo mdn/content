@@ -5,6 +5,7 @@ tags:
   - At-rule
   - CSS
   - Reference
+  - Deprecated
 browser-compat: css.at-rules.document
 ---
 {{CSSRef}}{{Deprecated_header}}
@@ -69,7 +70,7 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## Specifications
 
-[Initially](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in {{SpecName('CSS3 Conditional')}}, `@document` has been [postponed](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4 then removed.
+[Initially](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in Level 3, `@document` was [postponed](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4, but then subsequently removed.
 
 ## Browser compatibility
 
@@ -77,4 +78,4 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## See also
 
-- [Per-site user style sheet rules](http://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.
+- [Per-site user style sheet rules](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.

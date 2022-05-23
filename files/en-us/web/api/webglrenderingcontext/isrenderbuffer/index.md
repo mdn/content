@@ -18,12 +18,12 @@ passed {{domxref("WebGLRenderbuffer")}} is valid and `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isRenderbuffer(renderbuffer);
+isRenderbuffer(renderbuffer)
 ```
 
 ### Parameters
 
-- renderbuffer
+- `renderbuffer`
   - : A {{domxref("WebGLRenderbuffer")}} to check.
 
 ### Return value

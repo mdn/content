@@ -22,7 +22,8 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 ## Syntax
 
 ```js
-history.go([delta])
+go()
+go(delta)
 ```
 
 ### Parameters
@@ -33,6 +34,10 @@ history.go([delta])
     `history.go(2)` moves forward two pages and `history.go(-2)`
     moves back two pages. If no value is passed or if `delta` equals 0, it has
     the same result as calling `location.reload()`.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -17,7 +17,7 @@ The **`ariaSetSize`** property of the {{domxref("Element")}} interface reflects 
 
 ## Value
 
-A {{domxref("DOMString")}} containing an integer.
+A string containing an integer.
 
 ## Examples
 
@@ -44,4 +44,4 @@ console.log(el.ariaSetSize); // 4
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

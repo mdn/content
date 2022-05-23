@@ -23,7 +23,7 @@ information.
 ## Syntax
 
 ```js
-var promise = document.hasStorageAccess();
+hasStorageAccess()
 ```
 
 ### Parameters

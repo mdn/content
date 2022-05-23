@@ -25,7 +25,7 @@ on it.
 ## Syntax
 
 ```js
-void ctx.strokeRect(x, y, width, height);
+strokeRect(x, y, width, height)
 ```
 
 The `strokeRect()` method draws a stroked rectangle whose starting point is
@@ -42,6 +42,10 @@ at `(x, y)` and whose size is specified by `width` and
   - : The rectangle's width. Positive values are to the right, and negative to the left.
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

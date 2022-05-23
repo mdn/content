@@ -30,13 +30,17 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 ## Syntax
 
 ```js
-object.replace(url);
+replace(url)
 ```
 
 ### Parameters
 
 - `url`
-  - : Is a {{domxref("DOMString")}} containing the URL of the page to navigate to.
+  - : A string containing the URL of the page to navigate to.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

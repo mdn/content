@@ -39,4 +39,4 @@ specifying the handler for the event.
 ## See also
 
 - {{event("mouseenter")}}
-- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

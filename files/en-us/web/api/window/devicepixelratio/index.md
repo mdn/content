@@ -73,7 +73,7 @@ var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blu
 canvas.width = Math.floor(size * scale);
 canvas.height = Math.floor(size * scale);
 
-// Normalize coordinate system to use css pixels.
+// Normalize coordinate system to use CSS pixels.
 ctx.scale(scale, scale);
 
 ctx.fillStyle = "#bada55";
@@ -117,9 +117,9 @@ updatePixelRatio();
 ```
 
 The string `mqString` is set up to be the media query itself. The media
-query, which begins as `(resolution: 1dppx)` (for standard  displays) or
+query, which begins as `(resolution: 1dppx)` (for standard displays) or
 `(resolution: 2dppx)` (for Retina/HiDPI displays), checks to see if the
-current display resolution matches a specific  number of device dots per
+current display resolution matches a specific number of device dots per
 `px`.
 
 The `updatePixelRatio()` function fetches the current value of

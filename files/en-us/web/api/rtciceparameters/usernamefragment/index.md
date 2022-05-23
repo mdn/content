@@ -28,7 +28,7 @@ current ICE session.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the username fragment that, in tandem with the
+A string containing the username fragment that, in tandem with the
 {{domxref("RTCIceParameters.password", "password")}}, uniquely identify the ICE session
 being used by the transport. The string may be up to 256 characters long.
 

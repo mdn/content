@@ -24,7 +24,7 @@ The `yield` keyword is used to pause and resume a [generator function](/en-US/do
 
 - `expression` {{optional_inline}}
   - : Defines the value to return from the generator function via
-    [the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol).
+    [the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
     If omitted, `undefined` is returned instead.
 - `rv` {{optional_inline}}
   - : Retrieves the optional value passed to the generator's `next()` method
@@ -104,16 +104,16 @@ console.log(appleStore.next())      // { value: 5, done: false }
 console.log(appleStore.next())      // { value: undefined, done: true }
 ```
 
-You can also send a value with next(value) into the generator. 'step' evaluates as a
-return value in this syntax \[_rv_] = **yield**
-\[_expression_]
+You can also send a value with `next(value)` into the generator. `step` evaluates as a
+return value in this syntax `[_rv_] = **yield** [expression]` — although a value passed
+to the generator's `next()` method is ignored the first time `next()` is called.
 
 ```js
 function* counter(value) {
  let step;
 
  while (true) {
-   step = yield ++value;
+   step = yield value++;
 
    if (step) {
      value += step;
@@ -122,6 +122,7 @@ function* counter(value) {
 }
 
 const generatorFunc = counter(0);
+console.log(generatorFunc.next().value);   // 0
 console.log(generatorFunc.next().value);   // 1
 console.log(generatorFunc.next().value);   // 2
 console.log(generatorFunc.next().value);   // 3
@@ -140,7 +141,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## See also
 
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

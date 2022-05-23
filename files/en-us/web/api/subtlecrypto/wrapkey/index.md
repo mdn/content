@@ -34,47 +34,38 @@ of import + decrypt.
 ## Syntax
 
 ```js
-const result = crypto.subtle.wrapKey(
-    format,
-    key,
-    wrappingKey,
-    wrapAlgo
-);
+wrapKey(format, key, wrappingKey, wrapAlgo)
 ```
 
 ### Parameters
 
-- _`format`_ is a string describing the data format in which the key
-  will be exported before it is encrypted. It can be one of the following:
-
-  - `raw`: [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
-  - `pkcs8`: [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
-  - `spki`: [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo)
-    format.
-  - `jwk`: [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key)
-    format.
-
-- `key` is the {{domxref("CryptoKey")}} to wrap.
-- `wrappingkey` is the {{domxref("CryptoKey")}} used to encrypt
-  the exported key. The key must have the `wrapKey` usage set.
-- `wrapAlgo` is an object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
-  to be used to encrypt the exported key, and any required extra parameters:
-
-  - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
-    pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams)
-    object.
-  - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
-    pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams)
-    object.
-  - To use [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-    pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams)
-    object.
-  - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
-    pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams)
-    object.
-  - To use [AES-KW](#aes-kw),
-    pass the string `"AES-KW"`, or an object of the form
-    `{ "name": "AES-KW }`.
+- `format`
+  - : A string describing the data format in which the key will be exported before it is encrypted. It can be one of the following:
+    - `raw`
+      - : [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
+    - `pkcs8`
+      - : [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
+    - `spki`
+      - : [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) format.
+    - `jwk`
+      - : [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key) format.
+- `key`
+  - : The {{domxref("CryptoKey")}} to wrap.
+- `wrappingkey`
+  - : The {{domxref("CryptoKey")}} used to encrypt the exported key. The key must have the `wrapKey` usage set.
+- `wrapAlgo`
+  - : An object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
+    to be used to encrypt the exported key, and any required extra parameters:
+    - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
+      pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams) object.
+    - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
+      pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams) object.
+    - To use [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
+      pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams) object.
+    - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
+      pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams) object.
+    - To use [AES-KW](#aes-kw),
+      pass the string `"AES-KW"`, or an object of the form `{ "name": "AES-KW }`.
 
 ### Return value
 
@@ -87,9 +78,9 @@ const result = crypto.subtle.wrapKey(
 
 The promise is rejected when one of the following exceptions is encountered:
 
-- {{exception("InvalidAccessError")}}
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when the wrapping key is not a key for the requested wrap algorithm.
-- {{exception("NotSupported")}}
+- `NotSupported` {{domxref("DOMException")}}
   - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
     encryption or wrapping.
 - {{jsxref("TypeError")}}
@@ -97,10 +88,8 @@ The promise is rejected when one of the following exceptions is encountered:
 
 ## Supported algorithms
 
-All [algorithms
-that are usable for encryption](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) are also usable for key wrapping, as long as the
-key has the "wrapKey" usage set. For key wrapping you have the additional option of
-AES-KW.
+All [algorithms that are usable for encryption](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) are also usable for key wrapping,
+as long as the key has the "wrapKey" usage set. For key wrapping you have the additional option of AES-KW.
 
 ### AES-KW
 
@@ -114,8 +103,7 @@ AES-KW is specified in [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394)
 
 ## Examples
 
-> **Note:** You can [try the
-> working examples](https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html) out on GitHub.
+> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html) out on GitHub.
 
 ### Raw wrap
 
@@ -201,7 +189,8 @@ window.crypto.subtle.generateKey(
 ### PKCS #8 wrap
 
 This example wraps an RSA private signing key. It uses "pkcs8" as the export format and
-AES-GCM, with a password-derived key, to encrypt it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/pkcs8.js)
+AES-GCM, with a password-derived key, to encrypt it.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/pkcs8.js)
 
 ```js
 let salt;
@@ -290,7 +279,8 @@ window.crypto.subtle.generateKey(
 ### SubjectPublicKeyInfo wrap
 
 This example wraps an RSA public encryption key. It uses "spki" as the export format
-and AES-CBC, with a password-derived key, to encrypt it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/spki.js)
+and AES-CBC, with a password-derived key, to encrypt it.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/spki.js)
 
 ```js
 let salt;
@@ -379,7 +369,8 @@ window.crypto.subtle.generateKey(
 ### JSON Web Key import
 
 This code wraps an ECDSA private signing key. It uses "jwk" as the export format and
-AES-GCM, with a password-derived key, to encrypt it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/jwk.js)
+AES-GCM, with a password-derived key, to encrypt it.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/jwk.js)
 
 ```js
 let salt;

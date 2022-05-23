@@ -29,6 +29,7 @@ isolation: isolate;
 isolation: inherit;
 isolation: initial;
 isolation: revert;
+isolation: revert-layer;
 isolation: unset;
 ```
 

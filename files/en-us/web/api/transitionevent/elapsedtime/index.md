@@ -19,11 +19,9 @@ The **`TransitionEvent.elapsedTime`** read-only property is a
 when this event fired. This value is not affected by the {{cssxref("transition-delay")}}
 property.
 
-## Syntax
+## Value
 
-```js
-name = TransitionEvent.elapsedTime
-```
+A number.
 
 ## Specifications
 

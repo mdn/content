@@ -30,12 +30,9 @@ Template literals are sometimes informally called _template strings_, because th
 
 `string text ${expression} string text`
 
-// Re-usable template:
-const templateFn = expression => `string text ${expression} string text`;
-
-// Tagged, this calls the function "example" with the template as the
+// Tagged, this calls the function "tagFunction" with the template as the
 // first argument and substitution values as subsequent arguments:
-example`string text ${expression} string text`
+tagFunction`string text ${expression} string text`
 ```
 
 ## Description
@@ -258,7 +255,7 @@ latex`\unicode`
 
 Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences
 are common.
-The ECMAScript proposal [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/)
+The ECMAScript proposal [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/)
 (integrated in the ECMAScript 2018 standard) removed the
 syntax restriction of ECMAScript escape sequences from tagged templates.
 

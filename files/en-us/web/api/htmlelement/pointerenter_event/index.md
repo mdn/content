@@ -12,7 +12,7 @@ browser-compat: api.HTMLElement.pointerenter_event
 ---
 {{APIRef}}
 
-The `pointerenter` event fires when a pointing device is moved into the hit test boundaries of an element or one of its descendants, including as a result of a {{event("pointerdown")}} event from a device that does not support hover (see {{event("pointerdown")}}).
+The `pointerenter` event fires when a pointing device is moved into the hit test boundaries of an element or one of its descendants, including as a result of a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event from a device that does not support hover (see {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}).
 
 <table class="properties">
   <tbody>

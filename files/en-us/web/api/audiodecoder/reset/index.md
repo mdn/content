@@ -16,14 +16,14 @@ The **`reset()`** method of the {{domxref("AudioDecoder")}} interface resets all
 ## Syntax
 
 ```js
-AudioDecoder.reset()
+reset()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 

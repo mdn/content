@@ -7,6 +7,7 @@ tags:
   - Informational
   - Reference
   - WebSockets
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.2.2
 ---
 {{HTTPSidebar}}
 
@@ -37,9 +38,7 @@ Connection: Upgrade
 
 ## Specifications
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "101 Switching Protocol" , "6.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

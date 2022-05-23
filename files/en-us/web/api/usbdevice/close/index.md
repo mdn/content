@@ -21,7 +21,7 @@ released and the device session has ended.
 ## Syntax
 
 ```js
-var promise = USBDevice.close()
+close()
 ```
 
 ### Parameters

@@ -7,6 +7,7 @@ tags:
   - At-rule
   - CSS
   - Reference
+  - Experimental
 browser-compat: css.at-rules.scroll-timeline
 ---
 

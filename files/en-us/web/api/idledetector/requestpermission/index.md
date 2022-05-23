@@ -19,14 +19,14 @@ whether to grant the origin access to their idle state. Resolves with
 ## Syntax
 
 ```js
-IdleDetector.requestPermission()
+requestPermission()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A `Promise` that resolves with `"granted"` or `"denied"`.
 

@@ -12,12 +12,12 @@ browser-compat: api.Selection.type
 {{APIRef("DOM")}}
 
 The **`type`** read-only property of the
-{{domxref("Selection")}} interface returns a {{domxref("DOMString")}} describing the
+{{domxref("Selection")}} interface returns a string describing the
 type of the current selection.
 
 ## Value
 
-A {{domxref("DOMString")}} describing the type of the current selection. Possible
+A string describing the type of the current selection. Possible
 values are:
 
 - `None`: No selection has currently been made.

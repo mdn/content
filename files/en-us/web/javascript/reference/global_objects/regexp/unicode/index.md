@@ -28,7 +28,7 @@ You cannot change this property directly. It is read-only.
 ### Using the unicode property
 
 ```js
-var regex = new RegExp('\u{61}', 'u');
+const regex = new RegExp('\u{61}', 'u');
 
 console.log(regex.unicode); // true
 ```

@@ -16,7 +16,7 @@ The **`subarray()`** method returns a new _TypedArray_
 on the same {{jsxref("ArrayBuffer")}} store and with the same element types as for this
 _TypedArray_ object. The begin offset is **inclusive** and the end
 offset is **exclusive**. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 {{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
 

@@ -29,7 +29,7 @@ by [media queries](/en-US/docs/Web/CSS/Media_Queries).
 
 ## Value
 
-A {{domxref("USVString")}} containing a comma-separated list of source size descriptors
+A string containing a comma-separated list of source size descriptors
 followed by an optional fallback size. Each **source size descriptor** is
 comprised of a media condition, then at least one whitespace character, then the
 **source size value** to use for the image when the media condition

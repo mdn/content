@@ -29,9 +29,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.keys().then(function(keyList) {
-  //do something with your keyList
-});
+keys()
 ```
 
 ### Parameters

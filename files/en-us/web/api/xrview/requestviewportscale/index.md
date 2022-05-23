@@ -28,7 +28,7 @@ requestViewportScale(scale)
 
 ### Return value
 
-Returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -48,7 +48,7 @@ as `false`.
 Finally, we iterate through each record, and insert the data into an HTML table. For a
 complete working example, see our [IndexedDB-examples
 demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex).)
+example live](https://mdn.github.io/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {

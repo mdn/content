@@ -25,7 +25,7 @@ described by the arguments of this method. This lets you scale, rotate, translat
 ## Syntax
 
 ```js
-void ctx.transform(a, b, c, d, e, f);
+transform(a, b, c, d, e, f)
 ```
 
 The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
@@ -56,6 +56,10 @@ The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
   - : Horizontal translation (moving).
 - `f` (dy)
   - : Vertical translation (moving).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

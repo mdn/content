@@ -30,7 +30,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 - Calling {{domxref("Document/exitFullscreen")}} now restores the previously fullscreen element if some other element was in fullscreen mode when the current element's {{domxref("Element/requestFullScreen")}} method was called.
 - The {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} method no longer supports a no-argument form. This form was not used much and is unlikely to become part of the standard.
 - SVG-as-an-image can now be drawn into a canvas without [tainting the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
-- The non-standard `countryCode` property of the `GeoPositionAddress` interface has been removed; see {{interface("nsIDOMGeoPositionAddress")}}.
+- The non-standard `countryCode` property of the `GeoPositionAddress` interface has been removed; see `nsIDOMGeoPositionAddress`.
 - [Server-sent events](/en-US/docs/Web/API/Server-sent_events) now support [CORS](/en-US/docs/Web/HTTP/CORS).
 - In the past, when the user followed a link, the values set on the {{domxref("window.navigator")}} object were retained by the new page. Now a new `navigator` object is created for the new page. This makes Firefox behave like all other browsers.
 
@@ -84,9 +84,9 @@ _No change._
 
 ### Developer tools
 
-- The [Page Inspector](/en-US/docs/Tools/Page_Inspector) now offers a [3D view](/en-US/docs/Tools/3D_View) if your system supports [WebGL](/en-US/docs/Web/API/WebGL_API).
-- The new [Style Editor](/en-US/docs/Tools/Style_Editor) provides a free-form way to edit and compose CSS style sheets in real-time.
-- The [View Source feature](/en-US/docs/Tools/View_source) now uses the new HTML5 parser instead of the old HTML parser.
+- The [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) now offers a [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) if your system supports [WebGL](/en-US/docs/Web/API/WebGL_API).
+- The new [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) provides a free-form way to edit and compose CSS style sheets in real-time.
+- The [View Source feature](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) now uses the new HTML5 parser instead of the old HTML parser.
 
 ## Changes for Mozilla and add-on developers
 
@@ -99,21 +99,21 @@ _No change._
 #### New JavaScript code modules
 
 - [`source-editor.jsm`](/en-US/docs/JavaScript_code_modules/source-editor.jsm)
-  - : Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by [Scratchpad](/en-US/docs/Tools/Scratchpad) and other developer tools integrated into Firefox.
+  - : Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by _Scratchpad_ and other developer tools integrated into Firefox.
 
 ### Interface changes
 
-- The {{interface("mozIAsyncHistory")}} interface has a new method {{ifmethod("mozIAsyncHistory","isURIVisited")}} to check if a URI has been visited.
-- A new interface {{interface("mozIVisitStatusCallback")}} has been added to provide callback handling functionality for {{ifmethod("mozIAsyncHistory","isURIVisited")}}.
-- The {{interface("nsIMacDockSupport")}} interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
-- In the {{interface("nsINavHistoryResultObserver")}} interface, you now need to implement {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} instead of the obsolete `containerOpened()` and `containerClosed()` methods.
+- The `mozIAsyncHistory` interface has a new method `mozIAsyncHistory.isURIVisited()` to check if a URI has been visited.
+- A new interface `mozIVisitStatusCallback` has been added to provide callback handling functionality for `mozIAsyncHistory.isURIVisited()`.
+- The `nsIMacDockSupport` interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
+- In the `nsINavHistoryResultObserver` interface, you now need to implement `nsINavHistoryResultObserver.containerStateChanged()` instead of the obsolete `containerOpened()` and `containerClosed()` methods.
 
 #### Removed interfaces
 
 The following interfaces were implementation details that are no longer needed:
 
-- {{interface("nsICharsetResolver")}}
-- {{interface("nsIDOMNSElement")}}, see [bug707576](https://bugzilla.mozilla.org/show_bug.cgi?id=707576), use {{interface("nsIDOMElement")}} instead.
+- `nsICharsetResolver`
+- `nsIDOMNSElement`, see [bug707576](https://bugzilla.mozilla.org/show_bug.cgi?id=707576), use `nsIDOMElement` instead.
 
 ### Theme-related changes
 
@@ -121,7 +121,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Preference changes
 
-- {{Pref("ui.tooltipDelay")}}
+- `ui.tooltipDelay`
   - : Specifies the delay, in milliseconds, between the mouse cursor beginning to hover and the display of a tooltip.
 
 ### Build system changes

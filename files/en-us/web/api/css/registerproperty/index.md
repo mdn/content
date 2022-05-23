@@ -8,6 +8,7 @@ tags:
 browser-compat: api.CSS.registerProperty
 ---
 {{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** method registers
 {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
@@ -47,12 +48,12 @@ members:
 
 ### Exceptions
 
-- `InvalidModificationError`
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : The given `name` has already been registered.
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : The given `name` isn't a valid custom property name (starts with two
     dashes, e.g. `--foo`).
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The required `name` and/or `inherits` dictionary members were
     not provided.
 
@@ -122,8 +123,7 @@ We can add these styles to some buttons:
 
 ## See also
 
-- [Using the CSS
-  properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSS.supports()")}}
 - {{DOMxRef("CSS.escape()")}}

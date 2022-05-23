@@ -24,7 +24,7 @@ on it.
 ## Syntax
 
 ```js
-void ctx.fillRect(x, y, width, height);
+fillRect(x, y, width, height)
 ```
 
 The `fillRect()` method draws a filled rectangle whose starting point is at
@@ -42,6 +42,10 @@ attribute.
   - : The rectangle's width. Positive values are to the right, and negative to the left.
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

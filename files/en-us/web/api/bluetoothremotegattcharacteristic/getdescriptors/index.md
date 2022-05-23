@@ -12,7 +12,7 @@ tags:
   - getDescriptors()
 browser-compat: api.BluetoothRemoteGATTCharacteristic.getDescriptors
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.getDescriptors()`** method
 returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
@@ -21,10 +21,14 @@ returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.getDescriptors(bluetoothDescriptorUUID).then(function(bluetoothGATTDescriptors[]) { /* ... */ })
+getDescriptors(bluetoothDescriptorUUID)
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}}
 of {{domxref("BluetoothRemoteGATTDescriptor")}} objects.

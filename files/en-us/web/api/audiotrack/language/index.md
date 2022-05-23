@@ -29,7 +29,7 @@ should be the video's primary language.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of
 the primary language used in the audio track, or an empty string (`""`) if
 the language is not specified or known, or if the track doesn't contain speech.
 

@@ -24,21 +24,21 @@ is, the bounds include the endpoint values). By default, the bounds are closed.
 ## Syntax
 
 ```js
-var myIDBKeyRange = IDBKeyRange.bound(lower, upper);
-var myIDBKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen);
-var myIDBKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);
+bound(lower, upper)
+bound(lower, upper, lowerOpen)
+bound(lower, upper, lowerOpen, upperOpen)
 ```
 
 ### Parameters
 
-- lower
+- `lower`
   - : specifies the lower bound of the new key range.
-- upper
+- `upper`
   - : specifies the upper bound of the new key range.
-- lowerOpen {{optional_inline}}
+- `lowerOpen` {{optional_inline}}
   - : indicates whether the lower bound excludes the endpoint value. The default is
     false.
-- upperOpen {{optional_inline}}
+- `upperOpen` {{optional_inline}}
   - : Indicates whether the upper bound excludes the endpoint value. The default is
     false.
 
@@ -48,34 +48,13 @@ var myIDBKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of
-the following type:
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown when one of the following conditions is met:
+    - The lower or upper parameters were not passed a valid key.
+    - The lower key is greater than the upper key.
+    - The lower key and upper key match and either of the bounds are open.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>
-        <p>The following conditions raise an exception:</p>
-        <ul>
-          <li>The lower or upper parameters were not passed a valid key.</li>
-          <li>The lower key is greater than the upper key.</li>
-          <li>
-            The lower key and upper key match and either of the bounds are open.
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## Example
+## Examples
 
 The following example illustrates how you'd use a bound key range. Here we declare
 a `keyRangeValue = IDBKeyRange.bound("A", "F");` — a range between values of
@@ -83,14 +62,12 @@ a `keyRangeValue = IDBKeyRange.bound("A", "F");` — a range between values of
 store, and open a Cursor with {{domxref("IDBObjectStore.openCursor")}},
 declaring `keyRangeValue` as its optional key range value. This means that
 the cursor will only retrieve records with keys inside that range. This range includes
-the values "A" and "F", as we haven't declared that they should be open  bounds. If we
+the values "A" and "F", as we haven't declared that they should be open bounds. If we
 used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
 include `"A"` and `"F"`, only the values between them.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at the idbkeyrange directory [in the
-> indexeddb-examples](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo ([view the example live
-> too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> key range, have a look at the idbkeyrange directory in the [indexeddb-examples](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo. (Vies the example [live](https://mdn.github.io/indexeddb-examples/idbkeyrange/) too.
 
 ```js
 function displayData() {

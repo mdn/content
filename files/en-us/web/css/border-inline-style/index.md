@@ -23,8 +23,14 @@ The border style in the other dimension can be set with {{cssxref("border-block-
 /* <'border-style'> values */
 border-inline-style: dashed;
 border-inline-style: dotted;
-border-inline-style: revert;
 border-inline-style: groove;
+
+/* Global values */
+border-inline-style: inherit;
+border-inline-style: initial;
+border-inline-style: revert;
+border-inline-style: revert-layer;
+border-inline-style: unset;
 ```
 
 ### Values

@@ -26,7 +26,7 @@ This can be used, for example, as a source for a [WebRTC](/en-US/docs/Web/API/We
 ## Syntax
 
 ```js
-var mediaStream = mediaElement.captureStream()
+captureStream()
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ None.
 A {{domxref('MediaStream')}} object which can be used as a source for audio and/or
 video data by other media processing code, or as a source for [WebRTC](/en-US/docs/Glossary/WebRTC).
 
-## Example
+## Examples
 
 In this example, an event handler is established so that clicking a button starts
 capturing the contents of a media element with the ID `"playback"` into a

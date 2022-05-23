@@ -22,7 +22,7 @@ The **`error()`** method of the {{domxref("Response")}} interface returns a new 
 ## Syntax
 
 ```js
-var errorResponse = Response.error();
+error()
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ None.
 
 A {{domxref("Response")}} object.
 
-## Example
+## Examples
 
 TBD (does not yet appear to be supported anywhere).
 

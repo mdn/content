@@ -23,7 +23,7 @@ An {{domxref("Element")}}, {{domxref("CSSPseudoElement")}}, or `null`.
 
 ## Examples
 
-In the [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), `whiteRabbit` sets the **`target`** element to be animated:
+In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), `whiteRabbit` sets the **`target`** element to be animated:
 
 ```js
 var whiteRabbit = document.getElementById("rabbit");

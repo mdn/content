@@ -19,7 +19,7 @@ The **`HTMLHeadElement`** interface contains the descriptive information, or met
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the URIs of one or more metadata profiles (white space separated).
+  - : A string representing the URIs of one or more metadata profiles (white space separated).
 
 ## Methods
 

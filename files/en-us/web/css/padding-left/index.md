@@ -34,6 +34,7 @@ padding-left: 10%;
 padding-left: inherit;
 padding-left: initial;
 padding-left: revert;
+padding-left: revert-layer;
 padding-left: unset;
 ```
 

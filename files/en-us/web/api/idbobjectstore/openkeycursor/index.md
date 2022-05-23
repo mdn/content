@@ -25,9 +25,9 @@ results's `success` event.
 ## Syntax
 
 ```js
-var request = objectStore.openKeyCursor();
-var request = objectStore.openKeyCursor(query);
-var request = objectStore.openKeyCursor(query, direction);
+openKeyCursor()
+openKeyCursor(query)
+openKeyCursor(query, direction)
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the specified key or key range is invalid.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store:

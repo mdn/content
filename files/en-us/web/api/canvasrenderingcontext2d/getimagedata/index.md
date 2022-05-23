@@ -38,7 +38,7 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 ## Syntax
 
 ```js
-ctx.getImageData(sx, sy, sw, sh);
+getImageData(sx, sy, sw, sh)
 ```
 
 ### Parameters
@@ -74,7 +74,7 @@ canvas specified. The coordinates of the rectangle's top-left corner are
     configure CORS to allow the source image to be used in this way.
     See [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image).
 
-## Example
+## Examples
 
 ### Getting image data from a canvas
 

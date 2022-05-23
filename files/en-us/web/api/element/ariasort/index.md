@@ -17,7 +17,7 @@ The **`ariaSort`** property of the {{domxref("Element")}} interface reflects the
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"ascending"`
   - : Items are sorted in ascending order by this column.
@@ -79,4 +79,4 @@ console.log(el.ariaSort); // ascending
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

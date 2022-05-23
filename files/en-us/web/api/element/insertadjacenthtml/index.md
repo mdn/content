@@ -19,7 +19,7 @@ the resulting nodes into the DOM tree at a specified position.
 ## Syntax
 
 ```js
-element.insertAdjacentHTML(position, text);
+insertAdjacentHTML(position, text)
 ```
 
 ### Parameters
@@ -32,7 +32,7 @@ element.insertAdjacentHTML(position, text);
       - : Before the element. Only valid if the element is in the DOM tree and has a parent element.
     - `"afterbegin"`
       - : Just inside the element, before its first child.
-    - `"beforeend"`:
+    - `"beforeend"`
       - : Just inside the element, after its last child.
     - `"afterend"`
       - : After the element. Only valid if the element is in the DOM tree and has a parent element.
@@ -42,7 +42,7 @@ element.insertAdjacentHTML(position, text);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -126,7 +126,7 @@ reset.addEventListener('click', () => {
 
 #### Result
 
-{{EmbedLiveSample("Example", 100, 100)}}
+{{EmbedLiveSample("Examples", 100, 100)}}
 
 ## Specifications
 

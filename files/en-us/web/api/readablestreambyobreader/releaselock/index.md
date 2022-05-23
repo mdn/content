@@ -27,7 +27,7 @@ has not finished. This will result in a `TypeError` being thrown.
 ## Syntax
 
 ```js
-readableStreamBYOBReader.releaseLock();
+releaseLock()
 ```
 
 ### Parameters
@@ -36,12 +36,12 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamBYOBReader`, or a read request
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamBYOBReader`, or a read request
     is pending.
 
 ## Examples

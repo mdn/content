@@ -30,12 +30,12 @@ request object.
 ## Syntax
 
 ```js
-var request = objectStore.get(key);
+get(key)
 ```
 
 ### Parameters
 
-- key
+- `key`
   - : The key or key range that identifies the record to be retrieved.
 
 ### Return value
@@ -54,12 +54,12 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and get
 one specific record from object store using `get()` — a sample record with
 the key "Walk dog". Once this data object is retrieved, you could then update it using
-normal JavaScript, then put it back into the database using  a
+normal JavaScript, then put it back into the database using a
 {{domxref("IDBObjectStore.put")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 ([view
 example live](https://mdn.github.io/to-do-notifications/).)

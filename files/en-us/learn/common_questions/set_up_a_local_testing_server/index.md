@@ -109,7 +109,7 @@ Python's `http.server` (or `SimpleHTTPServer` for Python 2) module is useful, bu
 
 - To run Python server-side code, you'll need to use a Python web framework. There are many popular Python web frameworks, such as Django (a [guide](/en-US/docs/Learn/Server-side/Django) is available), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
 - To run Node.js (JavaScript) server-side code, you'll need to use raw node or a framework built on top of it. Express is a good choice — see [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs).
-- To run PHP server-side code, launch [PHP's built-in development server](https://php.net/manual/en/features.commandline.webserver.php):
+- To run PHP server-side code, launch [PHP's built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
 
   ```bash
   $ cd path/to/your/php/code

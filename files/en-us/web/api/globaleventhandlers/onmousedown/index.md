@@ -16,7 +16,7 @@ The **`onmousedown`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
 processes {{event("mousedown")}} events.
 
-The `mousedown` event fires when the user depresses the mouse button.
+The `mousedown` event fires when the user presses a mouse button.
 
 > **Note:** The opposite of `onmousedown` is
 > {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}}.
@@ -29,8 +29,7 @@ target.onmousedown = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
 argument.
 
 ## Example

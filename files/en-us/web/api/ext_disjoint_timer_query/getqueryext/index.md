@@ -18,12 +18,12 @@ target.
 ## Syntax
 
 ```js
-any ext.getQueryEXT(target, pname);
+getQueryEXT(target, pname)
 ```
 
 ### Parameters
 
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIMESTAMP_EXT` or `ext.TIME_ELAPSED_EXT`.
 - `pname`

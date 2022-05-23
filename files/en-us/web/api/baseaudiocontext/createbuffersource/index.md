@@ -28,22 +28,25 @@ track.
 ## Syntax
 
 ```js
-var source = baseAudioContext.createBufferSource();
+createBufferSource()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("AudioBufferSourceNode")}}.
 
-## Example
+## Examples
 
 In this example, we create a two second buffer, fill it with white noise, and then play
 it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain
 what is going on.
 
 > **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/),
-> or [view
-> the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

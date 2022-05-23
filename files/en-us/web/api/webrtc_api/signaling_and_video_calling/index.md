@@ -37,7 +37,7 @@ Our [chat server](https://github.com/mdn/samples-server/tree/master/s/websocket-
 
 To allow the server to support signaling and ICE negotiation, we need to update the code. We'll have to allow directing messages to one specific user instead of broadcasting to all connected users, and ensure unrecognized message types are passed through and delivered, without the server needing to know what they are. This lets us send signaling messages using this same server, instead of needing a separate server.
 
-Let's take a look at changes we need to make to the chat server to support WebRTC signaling. This is in the file [`chatserver.js`](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chatserver.js).
+Let's take a look at changes we need to make to the chat server to support WebRTC signaling. This is in the file [`chatserver.js`](https://github.com/mdn/samples-server/blob/master/s/webrtc-from-chat/chatserver.js).
 
 First up is the addition of the function `sendToOneUser()`. As the name suggests, this sends a stringified JSON message to a particular username.
 
@@ -181,7 +181,7 @@ The HTML for our client needs a location for video to be presented. This require
 </div>
 ```
 
-The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chat.css) on GitHub to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.
+The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/blob/master/s/webrtc-from-chat/chat.css) on GitHub to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.
 
 The `<video>` element with the `id` "`received_video`" will present video received from the connected user. We specify the `autoplay` attribute, ensuring once the video starts arriving, it immediately plays. This removes any need to explicitly handle playback in our code. The "`local_video`" `<video>` element presents a preview of the user's camera; specifying the `muted` attribute, as we don't need to hear local audio in this preview panel.
 
@@ -513,7 +513,7 @@ Each peer sends to the other peer a candidate for each possible transport config
 
 In addition, if something happens to cause a change in the streaming scenario, negotiation will begin again, with the {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event being sent to the {{domxref("RTCPeerConnection")}}, and the entire process starts again as described before. This can happen in a variety of situations, including:
 
-- Changes in the network status, such as a bandwidth change, transitioning from WiFi to cellular connectivity, or the like.
+- Changes in the network status, such as a bandwidth change, transitioning from Wi-Fi to cellular connectivity, or the like.
 - Switching between the front and rear cameras on a phone.
 - A change to the configuration of the stream, such as its resolution or frame rate.
 

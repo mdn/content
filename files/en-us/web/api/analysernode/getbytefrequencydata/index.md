@@ -22,11 +22,7 @@ If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCou
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array should be the same length as the frequencyBinCount
-
-void analyser.getByteFrequencyData(dataArray); // fill the Uint8Array with data returned from getByteFrequencyData()
+getByteFrequencyData(array)
 ```
 
 ### Parameters
@@ -37,9 +33,9 @@ void analyser.getByteFrequencyData(dataArray); // fill the Uint8Array with data 
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 

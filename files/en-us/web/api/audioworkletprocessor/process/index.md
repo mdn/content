@@ -1,5 +1,5 @@
 ---
-title: AudioWorkletProcessor.process
+title: AudioWorkletProcessor.process()
 slug: Web/API/AudioWorkletProcessor/process
 tags:
   - API
@@ -43,7 +43,7 @@ invoked to do so.
 ## Syntax
 
 ```js
-var isActivelyProcessing = audioWorkletProcessor.process(inputs, outputs, parameters);
+process(inputs, outputs, parameters)
 ```
 
 ### Parameters

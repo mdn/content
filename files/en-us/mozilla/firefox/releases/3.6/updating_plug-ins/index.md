@@ -14,7 +14,7 @@ Several changes were made in Gecko 1.9.2 that may impact plug-in developers in p
 
 ## Interface changes
 
-The {{ interface("nsIPluginInstance") }} method `destroy()` has been removed, since it wasn't doing anything anyway.
+The `nsIPluginInstance` method `destroy()` has been removed, since it wasn't doing anything anyway.
 
 ## Mac OS X specific changes
 

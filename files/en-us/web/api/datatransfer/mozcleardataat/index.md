@@ -31,22 +31,23 @@ entirely, shifting the remaining items down and changing their indices.
 ## Syntax
 
 ```js
-void dataTransfer.mozClearDataAt([type], index);
+mozClearDataAt(index)
+mozClearDataAt(type, index)
 ```
 
-### Arguments
+### Parameters
 
-- _type_
-  - : A {{domxref("DOMString","string")}} representing the type of the drag data to remove
+- `type`
+  - : A string representing the type of the drag data to remove
     from the {{domxref("DataTransfer","drag data object")}}.
-- _index_
+- `index`
   - : A `unsigned long` representing the index of the data to remove.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example shows the use of the `mozClearDataAt()` method in a
 {{event("dragend")}} event handler.

@@ -36,7 +36,7 @@ new ImageCapture(videoTrack)
 A new `ImageCapture` object which can be used to capture still frames from
 the specified video track.
 
-## Example
+## Examples
 
 The following example shows how to use a call to
 {{domxref("MediaDevices.getUserMedia()")}} to retrieve the

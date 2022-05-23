@@ -17,7 +17,7 @@ blending pixel arithmetic.
 ## Syntax
 
 ```js
-void gl.blendFunc(sfactor, dfactor);
+blendFunc(sfactor, dfactor)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ void gl.blendFunc(sfactor, dfactor);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

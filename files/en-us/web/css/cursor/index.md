@@ -46,6 +46,7 @@ cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), ... , url(cursor_n.cur) 5 5, p
 cursor: inherit;
 cursor: initial;
 cursor: revert;
+cursor: revert-layer;
 cursor: unset;
 ```
 
@@ -71,7 +72,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 - `keyword`
 
   - : A keyword value _must_ be specified, indicating either the type of cursor to use, or the fallback cursor to use if all specified icons fail to load.
-  
+
     The available keywords are listed in the table below.
     You can hover your mouse over the table rows to see the effect of the different cursor keyword values on your browser.
 
@@ -188,7 +189,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           </td>
           <td>
             An item may not be dropped at the current location.<br />{{bug("275173")}}:
-            On Windows and Mac OS X, <code>no-drop</code> is the same as <code>not-allowed</code>.
+            On Windows and macOS, <code>no-drop</code> is the same as <code>not-allowed</code>.
           </td>
         </tr>
         <tr style="cursor: not-allowed">
@@ -356,9 +357,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 ### Icon size limits
 
 While the specification does not limit the `cursor` image size, {{Glossary("user agent", "user agents")}} commonly restrict them to avoid potential misuse.
-For example, on Firefox and Chromium cursor images are restricted to 32x32 pixels by default, and cursor changes using larger images will generally just be ignored.
-
-Check the [Browser compatibility](#browser_compatibility) table for any notes on cursor size limits.
+For example, on Firefox and Chromium cursor images are restricted to 128x128 pixels by default, but it is recommended to limit the cursor image size to 32x32 pixels. Cursor changes using images that are larger than the user-agent maximum supported size will generally just be ignored.
 
 ### Supported image file formats
 

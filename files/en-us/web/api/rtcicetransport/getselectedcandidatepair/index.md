@@ -27,7 +27,7 @@ of {{Glossary("ICE")}} candidates describing the configuration of the endpoints 
 ## Syntax
 
 ```js
-candidatePair = RTCIceTransport.getSelectedCandidatePair();
+getSelectedCandidatePair()
 ```
 
 ### Parameters

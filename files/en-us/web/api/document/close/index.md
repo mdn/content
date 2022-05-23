@@ -17,10 +17,18 @@ document, opened with {{domxref("Document.open()")}}.
 ## Syntax
 
 ```js
-document.close();
+close()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Open a document to write to it

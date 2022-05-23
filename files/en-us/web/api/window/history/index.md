@@ -16,7 +16,11 @@ The `Window.history` read-only property returns a reference to the {{domxref("Hi
 
 See [Manipulating the browser history](/en-US/docs/Web/API/History_API) for examples and details. In particular, that article explains security features of the {{domxref("History.pushState", "pushState()")}} and {{domxref("History.replaceState", "replaceState()")}} methods that you should be aware of before using them.
 
-## Example
+## Value
+
+A reference to the {{domxref("History")}} object.
+
+## Examples
 
 ```js
 history.back();     // equivalent to clicking back button

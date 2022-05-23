@@ -27,7 +27,7 @@ These introductory materials and step-by-step guides walk you through key aspect
 - [How to enable progressive loading](/en-US/docs/Web/Progressive_web_apps/Loading)
 - [How to build "mobile first" PWAs](/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
 - [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Using client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB), and the [the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB), and the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API) and [the Push API](/en-US/docs/Web/API/Push_API)
 
 ## See also

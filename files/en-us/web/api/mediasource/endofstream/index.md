@@ -22,32 +22,35 @@ The **`endOfStream()`** method of the
 ## Syntax
 
 ```js
-mediaSource.endOfStream(endOfStreamError);
+endOfStream()
+endOfStream(endOfStreamError)
 ```
 
 ### Parameters
 
-- endOfStreamError {{optional_inline}}
+- `endOfStreamError` {{optional_inline}}
 
-  - : A {{domxref("DOMString")}} representing an error to throw when the end of the stream
+  - : A string representing an error to throw when the end of the stream
     is reached. The possible values are:
 
-    - `network`: Terminates playback and signals that a network error has
-      occurred. This can be used create a custom error handler related to media streams.
-      For example, you might have a function that handles media chunk requests, separate
-      from other network requests. When you make an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) call for a media
-      chunk, and `onabort` or `onerror` triggers, you might want
-      to call `endOfStream('network')`, display a descriptive message in the
-      UI, and maybe retry the network request immediately or wait until the network is
-      back up (via some kind of polling.)
-    - `decode`: Terminates playback and signals that a decoding error has
-      occurred. This can be used to indicate that a parsing error has occurred while
-      fetching media data; maybe the data is corrupt, or is encoded using a codec that
-      the browser doesn't know how to decode.
+    - `network`
+      - : Terminates playback and signals that a network error has
+        occurred. This can be used create a custom error handler related to media streams.
+        For example, you might have a function that handles media chunk requests, separate
+        from other network requests. When you make an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) call for a media
+        chunk, and `onabort` or `onerror` triggers, you might want
+        to call `endOfStream('network')`, display a descriptive message in the
+        UI, and maybe retry the network request immediately or wait until the network is
+        back up (via some kind of polling.)
+    - `decode`
+      - : Terminates playback and signals that a decoding error has
+        occurred. This can be used to indicate that a parsing error has occurred while
+        fetching media data; maybe the data is corrupt, or is encoded using a codec that
+        the browser doesn't know how to decode.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -55,7 +58,7 @@ mediaSource.endOfStream(endOfStreamError);
   - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is
       `true`.)
 
-## Example
+## Examples
 
 The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
 live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download

@@ -110,7 +110,7 @@ it might be wise to provide a fallback for browsers that don't yet support MPEG-
 
 ### LIVE Profile
 
-A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box/dash/) to encode media into MPEG-DASH format.
+A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://github.com/gpac/gpac/wiki/mp4box-dash-opts) to encode media into MPEG-DASH format.
 
 > **Note:** You will need to be comfortable with make files and installing dependencies to get this software up and running.
 
@@ -206,11 +206,11 @@ it might be wise to provide a fallback:
 </video>
 ```
 
-> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](https://dashif.org/reference/players/javascript/index.html).
+> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://w3c.github.io/media-source/), see the latest [dash.js reference player](https://dashif.org/reference/players/javascript/index.html).
 
 ## HLS Encoding
 
-HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/html5/hls/).
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/html5/hls).
 
 Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
 
@@ -218,11 +218,10 @@ Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into
 
 There are a number of useful tools available for HLS encoding
 
-- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](http://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
 - Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 
-> **Note:** You can find more details about these tools at [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html).
+> **Note:** You can find more details about these tools at [Using HTTP Live Streaming](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StreamingMediaGuide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html).
 
 ### Index Files (Playlists)
 
@@ -260,7 +259,7 @@ Further resources on adaptive streaming.
 
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
 - [What is HLS (HTTP-Live-Streaming)?](<https://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx>)
-- [HTTP Live Streaming Overview](https://developer.apple.com/library/ios/documentation/networkinginternet/conceptual/streamingmediaguide/Introduction/Introduction.html)
+- [HTTP Live Streaming Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StreamingMediaGuide/Introduction/Introduction.html)
 
 ### MPEG-DASH overview and references
 
@@ -272,12 +271,12 @@ Further resources on adaptive streaming.
 ### MPEG-DASH tools
 
 - [DASHEncoder](https://github.com/slederer/DASHEncoder)
-- [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box)
+- [MP4Box](https://github.com/gpac/gpac/wiki/MP4Box)
 - [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
 - [Akamai Dash Diagnostic Player](http://mediapm.edgesuite.net/dash/public/support-player/current/index.html)
 
 Adaptive streaming examples
 
-- [ITEC – Dynamic Adaptive Streaming over HTTP](https://www-itec.uni-klu.ac.at/dash/?page_id=207)
+- [ITEC – Dynamic Adaptive Streaming over HTTP](https://dash.itec.aau.at/dash-dataset/)
 - [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)

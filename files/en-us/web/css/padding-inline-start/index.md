@@ -31,6 +31,7 @@ padding-inline-start: 5%;     /* A padding relative to the block container's wid
 padding-inline-start: inherit;
 padding-inline-start: initial;
 padding-inline-start: revert;
+padding-inline-start: revert-layer;
 padding-inline-start: unset;
 ```
 

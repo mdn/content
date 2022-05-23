@@ -17,18 +17,18 @@ install prompt at a time of their own choosing.
 ## Syntax
 
 ```js
-BeforeInstallPromptEvent.prompt()
+prompt()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An empty {{jsxref("Promise")}}.
 
-## Example
+## Examples
 
 ```js
 var isTooSoon = true;

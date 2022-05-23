@@ -26,7 +26,7 @@ database, it could use a lock name such as `"net_db_sync"`.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

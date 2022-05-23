@@ -19,7 +19,11 @@ browser-compat: api.XMLDocument.async
 
 (It has been possible to load documents synchronously since 1.4 alpha.)
 
-## Example
+## Value
+
+A boolean.
+
+## Examples
 
 ```js
 function loadXMLData(e) {

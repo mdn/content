@@ -112,7 +112,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     height="720">
 </object>
 ```
-  
+
 Note that a `type` field is normally specified, but is not needed for youtube videos.
 
 ## Specifications

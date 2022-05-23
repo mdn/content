@@ -30,14 +30,14 @@ operations, such as storing and iterating.
 ## Syntax
 
 ```js
-var result = indexedDB.cmp(first, second);
+cmp(first, second)
 ```
 
 ### Parameters
 
-- first
+- `first`
   - : The first key to compare.
-- second
+- `second`
   - : The second key to compare.
 
 ### Return value
@@ -53,13 +53,10 @@ possible values and their meanings:
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if one of the supplied keys was not a valid key.
 
-| Attribute                                   | Description                                   |
-| ------------------------------------------- | --------------------------------------------- |
-| [`DataError`](/en-US/docs/Web/API/DOMError) | One of the supplied keys was not a valid key. |
-
-## Example
+## Examples
 
 ```js
 var a = 1;

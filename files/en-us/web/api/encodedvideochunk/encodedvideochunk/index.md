@@ -15,12 +15,12 @@ The **`EncodedVideoChunk()`** constructor creates a new {{domxref("EncodedVideoC
 ## Syntax
 
 ```js
-new EncodedVideoChunk(init);
+new EncodedVideoChunk(options)
 ```
 
 ### Parameters
 
-- `init`
+- `options`
   - : An object containing the following members:
     - `type`
       - : Indicates if the chunk is a key chunk that does not rely on other frames for encoding. One of:

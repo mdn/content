@@ -25,13 +25,13 @@ abort(reason)
 
 ### Parameters
 
-- `reason`
+- `reason` {{optional_inline}}
   - : The reason why the operation was aborted, which can be any JavaScript value.
     If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

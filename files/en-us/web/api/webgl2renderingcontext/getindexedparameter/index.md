@@ -18,7 +18,7 @@ information about a given `target`.
 ## Syntax
 
 ```js
-any gl.getIndexedParameter(target, index);
+getIndexedParameter(target, index)
 ```
 
 ### Parameters

@@ -21,7 +21,7 @@ element.
 ## Syntax
 
 ```js
-IntersectionObserver.unobserve(target);
+unobserve(target)
 ```
 
 ### Parameters
@@ -32,9 +32,9 @@ IntersectionObserver.unobserve(target);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This snippet shows an observer being created, an element being observed, and then being
 unobserved.

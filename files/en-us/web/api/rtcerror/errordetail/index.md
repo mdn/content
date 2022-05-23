@@ -48,7 +48,7 @@ occurred on an {{domxref("RTCPeerConnection")}}. The possible values are taken f
     certificate against the provided fingerprints, this error doesn't occur, though this
     situation may result instead in a `dtls-failure` error.
 - `hardware-encoder-error`
-  - : The hardsare encoder doesn't support the given configuration parameters.
+  - : The hardware encoder doesn't support the given configuration parameters.
 - `hardware-encoder-not-available`
   - : The hardware encoder resources required to accomplish the requested operation aren't
     available.

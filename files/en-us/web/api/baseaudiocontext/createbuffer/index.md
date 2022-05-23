@@ -37,14 +37,13 @@ reference page.
 ## Syntax
 
 ```js
-var buffer = baseAudioContext.createBuffer(numOfChannels, length, sampleRate);
+createBuffer(numOfChannels, length, sampleRate)
 ```
 
 ### Parameters
 
 > **Note:** For an in-depth explanation of how audio buffers work, and
-> what these parameters mean, read [Audio
-> buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our Basic concepts guide.
+> what these parameters mean, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our Basic concepts guide.
 
 - `numOfChannels`
   - : An integer representing the number of channels this buffer should have. The default
@@ -58,7 +57,7 @@ var buffer = baseAudioContext.createBuffer(numOfChannels, length, sampleRate);
   - : The sample rate of the linear audio data in sample-frames per second. All browsers
     must support sample rates in at least the range 8,000 Hz to 96,000 Hz.
 
-### Returns
+### Return value
 
 An {{domxref("AudioBuffer")}} configured based on the specified options.
 
@@ -68,7 +67,7 @@ An {{domxref("AudioBuffer")}} configured based on the specified options.
   - : Thrown if one or more of the options are negative or otherwise has an invalid value (such as
     `numberOfChannels` being higher than supported, or a
     `sampleRate` outside the nominal range).
-- `RangeError` {{domxref("DOMException")}}
+- {{jsxref("RangeError")}}
   - : Thrown if there isn't enough memory available to allocate the buffer.
 
 ## Examples

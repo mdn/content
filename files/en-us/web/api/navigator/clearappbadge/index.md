@@ -17,7 +17,7 @@ The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clear
 ## Syntax
 
 ```js
-let promise = Navigator.clearAppBadge();
+clearAppBadge()
 ```
 
 ### Parameters

@@ -12,7 +12,7 @@ tags:
   - connect()
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The
 **`BluetoothRemoteGATTServer.connect()`** method causes the
@@ -21,17 +21,16 @@ script execution environment to connect to `this.device`.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTServer.connect()
-  .then(function(bluetoothRemoteGATTServer) { /* ... */ })
+connect()
 ```
-
-### Returns
-
-A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
 
 ### Parameters
 
 None.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
 
 ## Specifications
 

@@ -19,20 +19,17 @@ new {{domxref("URLSearchParams")}} object.
 ## Syntax
 
 ```js
-new URLSearchParams(init);
+new URLSearchParams()
+new URLSearchParams(init)
 ```
 
 ### Parameters
 
-_`init`_ {{optional_inline}}
-
-One of:
-
-- A {{domxref("USVString")}}, which will be parsed from
-  `application/x-www-form-urlencoded` format. A leading `'?'`
-  character is ignored.
-- A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators) that produces a sequence of string pairs. Note that {{domxref("File")}} entries will be serialized as `[object File]` rather than as their filename (as they would in an `application/x-www-form`-urlencoded form).
-- A record of {{domxref("USVString")}} keys and {{domxref("USVString")}} values.
+- `init` {{optional_inline}}
+  - : One of:
+    - A string, which will be parsed from `application/x-www-form-urlencoded` format. A leading `'?'` character is ignored.
+    - A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators) that produces a sequence of string pairs. Note that {{domxref("File")}} entries will be serialized as `[object File]` rather than as their filename (as they would in an `application/x-www-form-urlencoded` form).
+    - A record of string keys and string values.
 
 ### Return value
 

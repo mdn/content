@@ -38,12 +38,12 @@ console.log(arEG.timeZones); // logs ["Africa/Cairo"]
 
 ```js
 let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.hourCycles); // logs ["Asia/Tokyo"]
+console.log(jaJP.timeZones); // logs ["Asia/Tokyo"]
 ```
 
 ```js
 let ar = new Intl.Locale("ar");
-console.log(ar.hourCycles); // logs undefined
+console.log(ar.timeZones); // logs undefined
 ```
 
 ## Specifications

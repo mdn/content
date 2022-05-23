@@ -16,14 +16,14 @@ The **`toJSON()`** method of the {{domxref("VideoColorSpace")}} interface is a _
 ## Syntax
 
 ```js
-VideoColorSpace.toJSON()
+toJSON()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A JSON object.
 

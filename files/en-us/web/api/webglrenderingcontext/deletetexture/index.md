@@ -20,17 +20,17 @@ been deleted.
 ## Syntax
 
 ```js
-void gl.deleteTexture(texture);
+deleteTexture(texture)
 ```
 
 ### Parameters
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

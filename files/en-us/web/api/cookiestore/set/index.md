@@ -16,8 +16,8 @@ The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie
 ## Syntax
 
 ```js
-var promise = cookieStore.set(name,value);
-var promise = cookieStore.set(options);
+set(name, value)
+set(options)
 ```
 
 ### Parameters
@@ -25,24 +25,24 @@ var promise = cookieStore.set(options);
 This method requires one of the following:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of the cookie.
+  - : A string with the name of the cookie.
 - `value`
-  - : A {{domxref("USVString")}} with the value of the cookie.
-- options
+  - : A string with the value of the cookie.
+- `options`
 
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `value`
-      - : A {{domxref("USVString")}} with the value of the cookie.
-    - `expires`{{Optional_Inline}}
+      - : A string with the value of the cookie.
+    - `expires` {{Optional_Inline}}
       - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
-    - `domain`{{Optional_Inline}}
-      - : A {{domxref("USVString")}} containing the domain of the cookie.
-    - `path`{{Optional_Inline}}
-      - : A {{domxref("USVString")}} containing the path of the cookie.
-    - `sameSite`{{Optional_Inline}}
+    - `domain` {{Optional_Inline}}
+      - : A string containing the domain of the cookie.
+    - `path` {{Optional_Inline}}
+      - : A string containing the path of the cookie.
+    - `sameSite` {{Optional_Inline}}
 
       - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
 

@@ -27,7 +27,7 @@ The transceiver's _current_ direction is indicated by the
 
 ## Value
 
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the following values, indicating the transceiver's preferred direction.
+A string whose value is one of the strings which are a member of the following values, indicating the transceiver's preferred direction.
 
 <table class="standard-table">
   <thead>

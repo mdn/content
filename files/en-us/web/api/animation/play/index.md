@@ -20,7 +20,7 @@ The **`play()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Anim
 ## Syntax
 
 ```js
-animation.play();
+play()
 ```
 
 ### Parameters
@@ -29,9 +29,9 @@ None.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the cake causes Alice's growing animation (`aliceChange`) to play forward, causing her to get bigger, as well as triggering the cake's animation. Two `Animation.play()`s, one `EventListener`:
 

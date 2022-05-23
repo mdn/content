@@ -1,13 +1,14 @@
 ---
 title: 'aria-multiselectable'
 slug: Web/Accessibility/ARIA/Attributes/aria-multiselectable
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-multiselectable
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-multiselectable
 ---
 
 The `aria-multiselectable` attribute indicates that the user may select more than one item from the current selectable descendants.
@@ -183,9 +184,9 @@ Instead of `aria-selected="true"`, include the [`checked`](en-US/docs/Web/HTML/E
 ## ARIAMixin API
 
 - {{domxref("Element.ariaMultiSelectable")}}
-  - : The  [`ariaMultiSelectable`](/en-US/docs/Web/API/Element/ariaMultiSelectable) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiselectable` attribute.
+  - : The [`ariaMultiSelectable`](/en-US/docs/Web/API/Element/ariaMultiSelectable) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiselectable` attribute.
 - {{domxref("ElementInternals.ariaMultiSelectable")}}
-  - : The  [`ariaMultiSelectable`](/en-US/docs/Web/API/ElementInternals/ariaMultiSelectable) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-multiselectable` attribute.
+  - : The [`ariaMultiSelectable`](/en-US/docs/Web/API/ElementInternals/ariaMultiSelectable) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-multiselectable` attribute.
 
 ## Associated roles
 
@@ -202,9 +203,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-multiselectable","ARIA: aria-multiselectable Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

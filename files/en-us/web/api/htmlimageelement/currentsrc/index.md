@@ -20,7 +20,7 @@ currently presented in the {{HTMLElement("img")}} element it represents.
 
 ## Value
 
-A {{domxref("USVString")}} indicating the full URL of the image currently visible in
+A string indicating the full URL of the image currently visible in
 the {{HTMLElement("img")}} element represented by the `HTMLImageElement`.
 This is useful when you provide multiple image options using the
 {{domxref("HTMLImageElement.sizes", "sizes")}} and/or

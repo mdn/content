@@ -34,7 +34,7 @@ about container and codec support across browsers.
 ## Value
 
 The MIME media type which describes the format of the recorded media, as a
-{{domxref("DOMString")}}. This string _may_ include the [`codecs`
+string. This string _may_ include the [`codecs`
 parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by
 the media recorder.
 
@@ -101,5 +101,5 @@ by `m.mimeType` would then be
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording
-  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia()")}}

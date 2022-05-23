@@ -29,8 +29,12 @@ video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
 ## Syntax
 
 ```js
-videoElement.requestPictureInPicture();
+requestPictureInPicture()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

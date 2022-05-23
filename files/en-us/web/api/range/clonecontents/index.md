@@ -25,10 +25,18 @@ fragment valid.
 ## Syntax
 
 ```js
-documentFragment = range.cloneContents();
+cloneContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("DocumentFragment") }} object.
+
+## Examples
 
 ```js
 range = document.createRange();

@@ -18,15 +18,19 @@ a `Range` relative to another {{domxref("Node")}}. The parent
 ## Syntax
 
 ```js
-range.setEndBefore(referenceNode);
+setEndBefore(referenceNode)
 ```
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} to end the `Range` before.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var range = document.createRange();
