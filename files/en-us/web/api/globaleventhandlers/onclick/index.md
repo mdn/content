@@ -31,6 +31,14 @@ after the {{domxref("Element/mousedown_event", "mousedown")}} and
 target.onclick = functionRef;
 ```
 
+It is also possible to add the event directly on to the HTML element. Like this:
+```html
+<div onclick="functionRef(event)">Click here</div>
+```
+
+> **Note:** When this approach is used, one  must include
+> the parenthesis `()` so that the function triggers when clicked.
+
 ### Value
 
 `functionRef` is a function name or a [function
