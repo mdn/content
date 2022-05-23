@@ -26,35 +26,6 @@ const square4 = ans; // ans is undefined as it was defined in another execution 
 
 ```
 
-### Inside the Execution Context there two components:
-
-#### 1. Memory component/ Variable Environment
-This is the first phase also known as `Memory Creation Phase` in which, JavaScript will allocate memory to all its variables and functions.
-
-Variables and functions values can be stored in a  key-value format. Memory component is also called as `variable environment`.
-
-
-| Memory Component                                  | Code Component    | 
-| --------------------------------------------------| :----------------:| 
-| n : undefined                                     |                   | 
-| square: f() { var ans = num* num; return ans}     |                   |  
-| square2: undefined                                |                   |
-| square4: undefined                                |                   |
-
-For variable(s), key is the variable name itself and value is undefined (even if the variable is initialized).
-For function(s), key is the function name and value is body of the code.
-
-#### 2. Code component/ Thread Of Execution
-This is the second phase also known as `Code Execution Phase`, where JavaScript will run again line by line and it starts executing the code now.
-
-It starts assigning the values to the variables in memory.
-
-Code Component is also called as `Thread of Execution`. 
-
-#### When the code is run `Global Execution Context` is created.
-
-#### It is due to the **Execution Context**, the variable(s) name and function(s) are hoisted because of allocation in memory.
-
 
 ## See also
 
