@@ -26,10 +26,10 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 
 ### Values
 
-- `a1` `b1` `c1` `d1` `a2` `b2` `c2` `d2`
-  `a3` `b3` `c3` `d3`
+- _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_
+  _a3_ _b3_ _c3_ _d3_
   - : Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.
-- `a4` `b4` `c4` `d4`
+- _a4_ _b4_ _c4 d4_
   - : Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.
 
 <table class="standard-table">

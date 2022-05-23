@@ -64,7 +64,7 @@ cubic-bezier(x1, y1, x2, y2)
 
 where:
 
-- `x1`, `y1`, `x2`, `y2`
+- **x1, y1, x2, y2**
   - : Are {{cssxref("&lt;number&gt;")}} values representing the abscissas, and ordinates of the P1 and P2 points defining the cubic Bézier curve. x1 and x2 must be in the range \[0, 1] or the value is invalid.
 
 #### Keywords for common cubic-bezier easing functions
@@ -105,9 +105,9 @@ steps(number_of_steps, direction)
 
 where:
 
-- `number_of_steps`
+- _number_of_steps_
   - : Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
-- `direction`
+- _direction_
 
   - : Is a keyword indicating if it the function is [left- or right-continuous](https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity):
 

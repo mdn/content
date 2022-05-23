@@ -30,9 +30,9 @@ matrix(a, b, c, d, tx, ty)
 
 ### Values
 
-- `a` `b` `c` `d`
+- _a_ _b_ _c_ _d_
   - : Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.
-- `tx` `ty`
+- _tx_ _ty_
   - : Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.
 
 <table class="standard-table">

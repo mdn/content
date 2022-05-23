@@ -22,6 +22,8 @@ The **`<shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 The `<shape>` data type is specified using the `rect()` function, which produces a region in the form of a rectangle.
 
+`rect()`
+
 ```css
 rect(top, right, bottom, left)
 ```
@@ -30,13 +32,13 @@ rect(top, right, bottom, left)
 
 ![](rect.png)
 
-- `top`
+- _top_
   - : Is a {{cssxref("length")}} representing the offset for the top of the rectangle relative to the top border of the element's box.
-- `right`
+- _right_
   - : Is a {{cssxref("length")}} representing the offset for the right of the rectangle relative to the left border of the element's box.
-- `bottom`
+- _bottom_
   - : Is a {{cssxref("length")}} representing the offset for the bottom of the rectangle relative to the top border of the element's box.
-- `left`
+- _left_
   - : Is a {{cssxref("length")}} representing the offset for the left of the rectangle relative to the left border of the element's box.
 
 ## Interpolation

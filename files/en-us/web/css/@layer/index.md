@@ -25,9 +25,9 @@ The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rul
 
 where:
 
-- `layer-name`
+- _layer-name_
   - : Is the name of the cascade layer.
-- `rules`
+- _rules_
   - : Is the set of CSS rules in the cascade layer.
 
 ## Description
