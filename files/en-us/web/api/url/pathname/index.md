@@ -11,7 +11,7 @@ browser-compat: api.URL.pathname
 ---
 {{ApiRef("URL API")}}
 
-The **`pathname`** property of the URL interface is a [USVString](https://developer.mozilla.org/en-US/docs/Web/API/USVString) containing an initial `/` followed by the path of the URL, not including the query string or fragment (or the empty string if there is no path).
+The **`pathname`** property of the {{domxref("URL")}} interface is a string containing an initial `/` followed by the path of the URL, not including the query string or fragment (or the empty string if there is no path).
  
 The path of the URL is a `/` delimited sequence of segments, which may each be one of `.`, `..` or a string with zero or more characters excluding `/`, `?`, and `#`.
 
