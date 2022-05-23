@@ -10,15 +10,15 @@ Everything in JavaScript happens/executes inside **Execution Context**.
 
 #### Example:
 ```js
-var n = 2;
+let n = 2;
 
 function square(num) {
-  var ans = num * num;
+  let ans = num * num;
   return ans;
 }
 
-var square2 = square(n);
-var square4 = square(4);
+let square2 = square(n);
+let square4 = square(4);
 
 ```
 
