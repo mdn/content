@@ -73,21 +73,21 @@ For example, a `data-abc-def` attribute corresponds to
 ### Accessing values
 
 - Attributes can be set and read by the camelCase name/key as an object property of
-  the dataset: `element.dataset.keyname`
+  the dataset: `element.dataset.keyname`.
 - Attributes can also be set and read using bracket syntax:
-  `element.dataset['keyname']`
+  `element.dataset['keyname']`.
 - The [`in`
   operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
-  `'keyname' in element.dataset`
+  `'keyname' in element.dataset`.
 
 ### Setting values
 
 - When the attribute is set, its value is always converted to a string.
   For example: `element.dataset.example = null` is
-  converted into `data-example="null"`
+  converted into `data-example="null"`.
 
 - To remove an attribute, you can use the [`delete`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`.
 
 ## Value
 
@@ -119,7 +119,7 @@ delete el.dataset.dateOfBirth;
 if ('someDataAttr' in el.dataset === false) {
   el.dataset.someDataAttr = 'mydata';
   // Result on JS: 'someDataAttr' in el.dataset === true
-  // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-some-data-attr = "mydata">John Doe</div>
+  // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-some-data-attr="mydata">John Doe</div>
 }
 ```
 
