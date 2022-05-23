@@ -18,33 +18,33 @@ The **`HTMLFieldSetElement`** interface provides special properties and methods 
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLFieldSetElement.disabled")}}
+- [`HTMLFieldSetElement.disabled`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#disabled_fieldset)
   - : A boolean value reflecting the {{htmlattrxref("disabled", "fieldset")}} HTML attribute, indicating whether the user can interact with the control.
-- {{domxref("HTMLFieldSetElement.elements")}}{{ReadOnlyInline}}
+- [`HTMLFieldSetElement.elements`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements){{ReadOnlyInline}}
   - : The elements belonging to this field set. The type of this property depends on the version of the spec that is implemented by the browser.
-- {{domxref("HTMLFieldSetElement.form")}}{{ReadOnlyInline}}
+- [`HTMLFieldSetElement.form`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form){{ReadOnlyInline}}
   - : An {{domxref("HTMLFormControlsCollection")}} or {{domxref("HTMLCollection")}} referencing the containing form element, if this element is in a form.
     If the field set is not a descendant of a form element, then the attribute can be the ID of any form element in the same document it is related to, or the `null` value if none matches.
-- {{domxref("HTMLFieldSetElement.name")}}
+- [`HTMLFieldSetElement.name`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#attr-name)
   - : A string reflecting the {{htmlattrxref("name", "fieldset")}} HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
-- {{domxref("HTMLFieldSetElement.type")}}{{ReadOnlyInline}}
+- [`HTMLFieldSetElement.name`](https://developer.mozilla.org/en-US/docs/Glossary/Type){{ReadOnlyInline}}
   - : The string "`fieldset`".
-- {{domxref("HTMLFieldSetElement.validationMessage")}}
+- [`HTMLFieldSetElement.validationMessage`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/validationMessage)
   - : A string representing a localized message that describes the validation constraints that the element does not satisfy (if any). This is the empty string if the element is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
-- {{domxref("HTMLFieldSetElement.validity")}}
+- [`HTMLFieldSetElement.validity`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/validit)
   - : A {{domxref("ValidityState")}} representing the validity states that this element is in.
-- {{domxref("HTMLFieldSetElement.willValidate")}}
+- [`HTMLFieldSetElement.willValidate`](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Constraint_validation)
   - : A boolean value `false`, because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
 
 ## Methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLFieldSetElement.checkValidity()")}}
+- [`HTMLFieldSetElement.checkValidity()`](https://developer.mozilla.org/en-US/docs/Web/API/ValidityState)
   - : Always returns `true` because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
-- {{domxref("HTMLFieldSetElement.reportValidity()")}}
+- [`HTMLFieldSetElement.reportValidity()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity)
   - : Always returns `true` because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
-- {{domxref("HTMLFieldSetElement.setCustomValidity()")}}
+- [`HTMLFieldSetElement.setCustomValidity()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity)
   - : Sets a custom validity message for the field set. If this message is not the empty string, then the field set is suffering from a custom validity error, and does not validate.
 
 ## Specifications
