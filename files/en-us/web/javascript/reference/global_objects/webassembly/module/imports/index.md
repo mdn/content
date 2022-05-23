@@ -43,7 +43,7 @@ If module is not a {{jsxref("WebAssembly.Module")}} object instance, a
 
 The following example compiles a loaded wasm module and queries the module's imports.
 
-See imports.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html) and 
+See imports.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html) and
 [live version](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html).
 
 ```js
