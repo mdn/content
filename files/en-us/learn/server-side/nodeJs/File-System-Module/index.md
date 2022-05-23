@@ -36,4 +36,4 @@ Save the code above in a file called "demo_readfile.js", and initiate the file:
 ```terminal
 C:\Users\Your Name>node demo_readfile.js
 ```
-f you have followed the same steps on your computer, you will see the same result as the example: http://localhost:8080
+If you have followed the same steps on your computer, you will see the same result as the example: http://localhost:8080
