@@ -50,8 +50,8 @@ setUint16(byteOffset, value, littleEndian)
 ### Using the setUint16 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setUint16(1, 3);
 dataview.getUint16(1); // 3
 ```

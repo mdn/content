@@ -22,9 +22,8 @@ release the lock on the object, making it inactive:
  and all ongoing operations are canceled.
 
 > **Warning:** When an ongoing operation is canceled, there is no rollback
-> database transaction), therefore the file can be corrupted if the
+> database transaction, therefore the file can be corrupted if the
 > canceled operation was performing some writing.
-
 
 ## Syntax
 

@@ -8,7 +8,9 @@ tags:
   - Houdini
   - Reference
   - factory function
+browser-compat: api.CSS
 ---
+{{APIRef("CSSOM")}}
 {{SeeCompatTable}}
 
 The **CSS numeric factory
@@ -93,11 +95,11 @@ console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 
 ## Specifications
 
-{{Specifications("api.CSS")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
 ## See also
 

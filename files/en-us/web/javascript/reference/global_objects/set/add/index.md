@@ -37,7 +37,7 @@ The `Set` object with added value.
 ### Using the add() method
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 
 mySet.add(1);
 mySet.add(5).add('some text'); // chainable

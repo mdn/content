@@ -77,7 +77,7 @@ For example, Varnish uses VCL-based logic to handle cache storage, while service
 
 That means if a managed cache intentionally ignores a `no-store` directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you’re using, and ensure you’re controlling the cache properly in the ways provided by the mechanism you’ve chosen to use.
 
-Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a `CDN-Cache-Control` header to standardize those.
+Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a [`CDN-Cache-Control`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-targeted-cache-control) header to standardize those.
 
 ![Type of Cache](type-of-cache.png)
 
@@ -121,7 +121,7 @@ Cache-Control: max-age=604800
 ...
 ```
 
-The cache which stored that response counts the time elapsed since the response was generated as an age. The meaning of `max-age` is that if the age is less than one week, then the response is fresh — and if the age is greater than one week, the the cached response is stale.
+The cache which stored that response counts the time elapsed since the response was generated as an age. The meaning of `max-age` is that if the age is less than one week, then the response is fresh — and if the age is greater than one week, the cached response is stale.
 
 If that response is stored in a private cache, it will be available for reuse in response to client requests for one week after it is stored. If the shared cache saves it, it is necessary to inform the client of the time elapsed from when it was stored to the shared cache until it is reused by the client. If the response has been stored in the shared cache for one day and then reused by the client, then the following response will be sent from the shared cache to the client.
 
@@ -220,7 +220,7 @@ Cache-Control: max-age=3600
 
 Upon receiving that response, the client reverts the stored stale response back to being fresh and can reuse it during the remaining 1 hour.
 
-The server can can obtain the modification time from the operating-system file system, which is relatively easy to do for the case of serving static files. However, there are some problems; for example, the time format is complex and difficult to parse, and distributed servers have difficulty synchronizing file-update times.
+The server can obtain the modification time from the operating-system file system, which is relatively easy to do for the case of serving static files. However, there are some problems; for example, the time format is complex and difficult to parse, and distributed servers have difficulty synchronizing file-update times.
 
 To solve such problems, the `ETag` response header was standardized as an alternative.
 
@@ -288,7 +288,7 @@ Cache-Control: max-age=0, must-revalidate
 
 `max-age=0` means that the response is immediately stale, and `must-revalidate` means that it must not be reused without revalidation once it is stale — so in combination, the semantics seem to be the same as `no-cache`.
 
-However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as an workaround.
+However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as a workaround.
 
 But now that HTTP/1.1-conformant servers are widely deployed, there’s no reason to ever use that `max-age=0`-and-`must-revalidate` combination — you should instead just use `no-cache`.
 
@@ -388,7 +388,7 @@ The `max-age=0` directive in the request specifies “reuse of responses with an
 
 As a result, a request is validated by `If-None-Match` and `If-Modified-Since`.
 
-That behavior is also defined in the [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) standard and can be reproduced in JavaScript by calling`fetch()` with the cache mode set to `no-cache` (note that `reload` is not the right mode for this case):
+That behavior is also defined in the [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) standard and can be reproduced in JavaScript by calling `fetch()` with the cache mode set to `no-cache` (note that `reload` is not the right mode for this case):
 
 ```js
 // Note: "reload" is not the right mode for a normal reload; "no-cache" is
@@ -613,9 +613,9 @@ Cache-Control: public, max-age=31536000
 Cache-Control: immutable
 ```
 
-### Primary resources
+### Main resources
 
-Unlike subresources, primary resources cannot be cache busted because their URLs can't be decorated in the same way that subresource URLs can be.
+Unlike subresources, main resources cannot be cache busted because their URLs can't be decorated in the same way that subresource URLs can be.
 
 If the following HTML itself is stored, the latest version cannot be displayed even if the content is updated on the server side.
 
@@ -629,7 +629,7 @@ If the following HTML itself is stored, the latest version cannot be displayed e
 
 For that case, `no-cache` would be appropriate — rather than`no-store` — since we don't want to store HTML, but instead just want it to always be up-to-date.
 
-Furthermore, adding `If-Modified-Since` and `If-None-Match` will allow clients to send conditional requests, and a `302 Not Modified` can be returned if there have been no updates to the HTML:
+Furthermore, adding `If-Modified-Since` and `If-None-Match` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
 
 ```http
 200 OK HTTP/1.1
@@ -658,17 +658,17 @@ Most web content can be covered by a combination of the two patterns described a
 
 ### More about managed caches
 
-With the method described in previous sections, subresources can be cached for a long time by using cache busting, but primary resources (which are usually HTML documents) can’t be.
+With the method described in previous sections, subresources can be cached for a long time by using cache busting, but main resources (which are usually HTML documents) can’t be.
 
-Caching primary resources is difficult because, using just standard directives from the HTTP Caching specification, there’s no way to actively delete cache contents when content is updated on the server.
+Caching main resources is difficult because, using just standard directives from the HTTP Caching specification, there’s no way to actively delete cache contents when content is updated on the server.
 
 However, it is possible by deploying a managed cache such as a CDN or service worker.
 
-For example, a CDN that allows cache purging via an API or dashboard operation would allow for a more aggressive caching strategy by storing the primary resource and explicitly purging the relevant cache only when an update occurs on the server.
+For example, a CDN that allows cache purging via an API or dashboard operation would allow for a more aggressive caching strategy by storing the main resource and explicitly purging the relevant cache only when an update occurs on the server.
 
 A service worker could do the same if it could delete the contents in the Cache API when an update occurs on the server.
 
-For more information, see the documentation for your CDN, and consult the service worker documentation here.
+For more information, see the documentation for your CDN, and consult the [service worker documentation](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API).
 
 ## See also
 

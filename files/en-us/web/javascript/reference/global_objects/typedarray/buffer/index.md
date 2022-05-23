@@ -24,8 +24,8 @@ The `buffer` property is an accessor property whose set accessor function is `un
 ### Using the buffer property
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint16 = new Uint16Array(buffer);
+const buffer = new ArrayBuffer(8);
+const uint16 = new Uint16Array(buffer);
 uint16.buffer; // ArrayBuffer { byteLength: 8 }
 ```
 

@@ -12,6 +12,9 @@ tags:
   - porting
   - webkitAudioContext
 ---
+
+{{DefaultAPISidebar("Web Audio API")}}
+
 In this article, we cover the differences in Web Audio API since it was first implemented in WebKit and how to update your code to use the modern Web Audio API.
 
 The Web Audio standard was first implemented in [WebKit](https://webkit.org/), and the implementation was built in parallel with the work on the [specification](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) of the API. As the specification evolved and changes were made to the spec, some of the old implementation pieces were not removed from the WebKit (and Blink) implementations due to backwards compatibility reasons.

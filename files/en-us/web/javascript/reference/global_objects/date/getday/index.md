@@ -37,8 +37,8 @@ value of the {{jsxref("Date")}} object `Xmas95`. December 25, 1995, is a
 Monday.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
-var weekday = Xmas95.getDay();
+const Xmas95 = new Date('December 25, 1995 23:15:30');
+const weekday = Xmas95.getDay();
 
 console.log(weekday); // 1
 ```
@@ -49,7 +49,7 @@ console.log(weekday); // 1
 > made easier:
 >
 > ```js
-> var options = { weekday: 'long'};
+> const options = { weekday: 'long'};
 > console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 > // Monday
 > console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));

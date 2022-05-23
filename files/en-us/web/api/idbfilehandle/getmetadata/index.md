@@ -18,7 +18,6 @@ browser-compat: api.IDBFileHandle.getMetadata
 
 The **`getMetadata()`** method of the {{domxref("IDBFileHandle")}} allows retrieving some metadata about the file.
 
-
 ## Syntax
 
 ```js

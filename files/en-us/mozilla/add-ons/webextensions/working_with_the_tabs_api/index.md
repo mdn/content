@@ -29,7 +29,7 @@ We then conclude by looking at some other, miscellaneous features offered by the
 
 For the majority of the Tabs API functions you don't need any permissions; however, there are some exceptions:
 
-- `"tabs`" permission is needed to access the `Tab.url`, `Tab.title`, and `Tab.favIconUrl` properties of the Tab object. In Firefox, you also need `"tabs"` to perform a [query](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) by URL.
+- `"tabs"` permission is needed to access the `Tab.url`, `Tab.title`, and `Tab.favIconUrl` properties of the Tab object. In Firefox, you also need `"tabs"` to perform a [query](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) by URL.
 - [Host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) is needed for {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}.
 
 The following is how you might request `"tabs"` permission in your extension's manifest.json file:

@@ -40,7 +40,7 @@ The following example uses the `fixed` method to change the formatting of a
 string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 ```
 

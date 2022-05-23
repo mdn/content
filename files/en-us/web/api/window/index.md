@@ -329,7 +329,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Called when the RIGHT mouse button is pressed
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.
+  - : Called when a resource fails to load OR when an error occurs at runtime. See {{domxref("Window/error_event", "error")}} event.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : Called after the window receives or regains focus. See {{event("focus")}} events.
 - {{domxref("GlobalEventHandlers.oninput")}}

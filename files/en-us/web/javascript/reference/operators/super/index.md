@@ -169,6 +169,38 @@ Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"
 ```
 
+Note that the reference of `super` is determined by the object literal `super` was declared in, not the object the method is called on. Therefore, unbinding or re-binding a method doesn't change the reference of `super` in it (although they do change the reference of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)). You can see `super` as a variable in the object literal scope, which the methods create a closure over. (But also beware that it's not actually not a variable — see below)
+
+```js
+const parent1 = { prop: 1 };
+const parent2 = { prop: 2 };
+
+const child = {
+  myParent() {
+    console.log(super.prop);
+  },
+};
+
+Object.setPrototypeOf(child, parent1);
+child.myParent(); // logs "1"
+
+const myParent = child.myParent;
+myParent(); // still logs "1"
+
+const anotherChild = { __proto__: parent2, myParent };
+anotherChild.myParent(); // still logs "1"
+```
+
+Note also that `super.prop` is a special syntax for property lookup on the prototype, but `super` itself is not a variable that points to the prototype.
+
+```js
+const child = {
+  myParent() {
+    console.log(super); // SyntaxError: 'super' keyword unexpected here
+  },
+};
+```
+
 ## Specifications
 
 {{Specifications}}

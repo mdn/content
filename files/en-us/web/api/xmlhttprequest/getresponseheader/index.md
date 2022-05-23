@@ -41,7 +41,7 @@ getResponseHeader(headerName)
 
 ### Parameters
 
-- _headerName_
+- `headerName`
   - : A string indicating the name of the header you want to return the
     text value of.
 

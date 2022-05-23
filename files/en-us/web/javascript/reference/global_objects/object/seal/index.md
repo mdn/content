@@ -61,7 +61,7 @@ properties changed.
 ### Using Object.seal
 
 ```js
-var obj = {
+const obj = {
   prop: function() {},
   foo: 'bar'
 };
@@ -72,7 +72,7 @@ obj.foo = 'baz';
 obj.lumpy = 'woof';
 delete obj.prop;
 
-var o = Object.seal(obj);
+const o = Object.seal(obj);
 
 o === obj; // true
 Object.isSealed(obj); // === true

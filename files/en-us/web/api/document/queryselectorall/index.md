@@ -40,8 +40,7 @@ querySelectorAll(selectors)
 
 > **Note:** Characters which are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping,
-> special care must be taken when writing string literals using these characters. See [Escaping
-> special characters](/en-US/docs/Web/API/Document/querySelector#escaping_special_characters) for more information.
+> special care must be taken when writing string literals using these characters. See [Escaping special characters](/en-US/docs/Web/API/Document/querySelector#escaping_special_characters) for more information.
 
 ### Return value
 

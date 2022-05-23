@@ -10,6 +10,7 @@ tags:
   - log
   - output
   - test
+browser-compat: api.console
 ---
 {{DefaultAPISidebar("Console API")}}
 
@@ -46,11 +47,11 @@ See the [console](/en-US/docs/Web/API/console#usage) reference page for more exa
 
 ## Specifications
 
-{{Specifications("api.console")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.console")}}
+{{Compat}}
 
 ## See also
 

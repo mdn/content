@@ -79,8 +79,8 @@ Object.is(null, null);            // true
 Object.is(undefined, undefined);  // true
 Object.is(window, window);        // true
 Object.is([], []);                // false
-var foo = { a: 1 };
-var bar = { a: 1 };
+const foo = { a: 1 };
+const bar = { a: 1 };
 Object.is(foo, foo);              // true
 Object.is(foo, bar);              // false
 

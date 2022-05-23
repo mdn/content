@@ -18,20 +18,21 @@ directory handle contains a file or directory called the name specified.
 ## Syntax
 
 ```js
-FileSystemDirectoryHandle.removeEntry(name).then...
+removeEntry(name)
+removeEntry(name, options)
 ```
 
 ### Parameters
 
-- _name_
+- `name`
   - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the entry you wish to remove.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An optional object containing options, which are as follows:
 
-    - `recursive`: A {{jsxref('Boolean')}}. Default `false`.
-      When set to `true` entries will be removed recursively.
+    - `recursive`
+      - : A boolean value, which defaults to `false`. When set to `true` entries will be removed recursively.
 
 ### Return value
 

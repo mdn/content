@@ -34,7 +34,7 @@ This property is set only if the regular expression instance used the `g` flag t
 Consider the following sequence of statements:
 
 ```js
-var re = /(hi)?/g;
+const re = /(hi)?/g;
 ```
 
 Matches the empty string.

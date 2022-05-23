@@ -19,7 +19,6 @@ browser-compat: api.IDBFileHandle.fileHandle
 The read-only **`fileHandle`** property of the {{domxref("IDBFileHandle")}} interface
 returns the {{domxref("IDBMutableFile")}} object that produced this object.
 
-
 ## Value
 
 A {{domxref("IDBMutableFile")}} object.

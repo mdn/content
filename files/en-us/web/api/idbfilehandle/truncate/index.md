@@ -26,7 +26,6 @@ If the method is called with an argument, the operation removes all the bytes st
 at the index corresponding to the parameter and regardless of the value of
 {{domxref("IDBFileHandle.location", "location")}}.
 
-
 ## Syntax
 
 ```js

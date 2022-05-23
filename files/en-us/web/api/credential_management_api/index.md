@@ -9,6 +9,7 @@ tags:
   - Overview
   - Reference
   - credential management
+browser-compat: api.Credential
 ---
 {{DefaultAPISidebar("Credential Management API")}}{{ SeeCompatTable() }}
 
@@ -41,8 +42,8 @@ Later version of the spec allow credentials to be retrieved from a different sub
 
 ## Specifications
 
-{{Specifications("api.Credential")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Credential")}}
+{{Compat}}

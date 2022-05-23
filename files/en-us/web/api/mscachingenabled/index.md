@@ -15,13 +15,12 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ## Syntax
 
 ```js
- var cacheState = XMLHttpRequest.msCachingEnabled();
+XMLHttpRequest.msCachingEnabled()
 ```
 
 ### Parameters
 
-- _cacheState_\[out, retval]
-  - : Type = **boolean**. If true, `XMLHttpRequest` is cached to disk. If false, it is not written to disk.
+None.
 
 ### Return value
 
