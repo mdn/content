@@ -51,8 +51,7 @@ Code Component is also called as `Thread of Execution`.
 
 #### It is due to the **Execution Context**, the variable(s) name and function(s) are hoisted because of allocation in memory.
 
-### Two golden Rules of Hoisting:
-So, the concept of Hoisting can be explained now based on the Execution Context.
 
-1. Variable(s) are scanned and are made undefined(Memory Creation Phase).
-2. Function(s) are scanned and are made available(Memory Creation Phase).
+## See also
+
+- {{glossary("Hoisting")}} 
