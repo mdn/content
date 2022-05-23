@@ -665,7 +665,7 @@ body {
 .c-cb > label::before {
   content: "";
   position: absolute;
-  border: 2px solid currentColor;
+  border: 2px solid currentcolor;
   background: transparent;
 }
 .c-cb > input[type="checkbox"]:focus + label::before {

@@ -466,7 +466,7 @@ The four properties are as follows:
 1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text. This behaves similarly to the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
 3. The blur radius: a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors). If not included, it defaults to [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e. the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
+4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors). If not included, it defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e. the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
 
 #### Multiple shadows
 
