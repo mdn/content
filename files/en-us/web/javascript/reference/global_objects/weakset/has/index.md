@@ -35,7 +35,7 @@ has(value)
 
 ## Examples
 
-### Using the has method
+### Using the `has()` method
 
 ```js
 const ws = new WeakSet();
