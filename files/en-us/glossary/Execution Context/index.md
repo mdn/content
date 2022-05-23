@@ -14,15 +14,15 @@ Variables created using `let` and constants are available in the _current_ execu
 
 #### Example:
 ```js
-const n = 2;
+const n = 2;  // n is available to the global execution context
 
-function square(num) {
-  const ans = num * num;
+function square(num) { // the square function creates its own execution context, when num is declared
+  const ans = num * num; // ans is only available to the function execution context
   return ans;
 }
 
-const square2 = square(n);
-const square4 = square(4);
+const square2 = square(n); // square2 is available to the global execution context
+const square4 = ans; // ans is undefined as it was defined in another execution context
 
 ```
 
