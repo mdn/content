@@ -629,7 +629,7 @@ If the following HTML itself is stored, the latest version cannot be displayed e
 
 For that case, `no-cache` would be appropriate — rather than`no-store` — since we don't want to store HTML, but instead just want it to always be up-to-date.
 
-Furthermore, adding `If-Modified-Since` and `If-None-Match` will allow clients to send conditional requests, and a `302 Not Modified` can be returned if there have been no updates to the HTML:
+Furthermore, adding `If-Modified-Since` and `If-None-Match` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
 
 ```http
 200 OK HTTP/1.1
