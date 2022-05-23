@@ -23,7 +23,7 @@ new WebAssembly.Global(descriptor, value)
 
 - `descriptor`
 
-  - : A `GlobalDescriptor` dictionary object, which contains two properties:
+  - : An object, which contains two properties:
 
     - `value`: A string representing the
       data type of the global. This can be any one of:

@@ -20,6 +20,7 @@ directory the method is called.
 
 ```js
 getFileHandle(name)
+getFileHandle(name, options)
 ```
 
 ### Parameters

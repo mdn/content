@@ -31,9 +31,9 @@ This method receives no parameters.
 ### Return value
 
 Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
-`ContentDescription` items.
+`contentDescription` items.
 
-- `ContentDescription`
+- `contentDescription`
 
   - : Each item returned is an {{jsxref('Object')}} containing the following data:
 

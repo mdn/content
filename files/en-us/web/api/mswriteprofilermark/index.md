@@ -21,7 +21,7 @@ msWriteProfilerMark(profilerMarkName)
 ### Parameters
 
 - `profilerMarkName`
-  - : A string. The event name. This parameter may be null.
+  - : A string containing the event name. This parameter is not optional but may be `null`.
 
 ### Return value
 

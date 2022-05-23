@@ -21,9 +21,7 @@ directory.
 
 ## Value
 
-- `FileSystemHandleKind`
-
-  - : Can be either:
+A string that can be:
 
     - `'file'`: If handle is a {{domxref('FileSystemFileHandle')}}.
     - `'directory'`: If handle is a

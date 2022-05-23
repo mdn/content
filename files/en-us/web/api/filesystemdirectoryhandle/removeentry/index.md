@@ -19,6 +19,7 @@ directory handle contains a file or directory called the name specified.
 
 ```js
 removeEntry(name)
+removeEntry(name, options)
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ removeEntry(name)
   - : An optional object containing options, which are as follows:
 
     - `recursive`
-      - : A {{jsxref('Boolean')}}. Default `false`. When set to `true` entries will be removed recursively.
+      - : A boolean value, which defaults to `false`. When set to `true` entries will be removed recursively.
 
 ### Return value
 
