@@ -20,7 +20,8 @@ within the directory handle on which the method is called.
 ## Syntax
 
 ```js
-getDirectoryHandle()
+getDirectoryHandle(name)
+getDirectoryHandle(name, options)
 ```
 
 ### Parameters
@@ -34,7 +35,7 @@ getDirectoryHandle()
     follows:
 
     - `create`
-      - : A {{jsxref('Boolean')}}. Default `false`. When
+      - : A boolean value, which defaults to `false`. When
         set to `true` if the directory is not found, one with the specified
         name will be created and returned.
 

@@ -21,14 +21,14 @@ resolves when the registration completes.
 ## Syntax
 
 ```js
-register(tag, backgroundSyncOptions)
+register(tag, options)
 ```
 
 ### Parameters
 
 - `tag`
   - : A unique {{jsxref('String')}} identifier
-- `backgroundSyncOptions` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An {{jsxref('Object')}} containing the following optional data:
 

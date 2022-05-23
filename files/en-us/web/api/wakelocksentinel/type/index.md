@@ -16,12 +16,6 @@ The read-only **`type`** property of the
 {{domxref("WakeLockSentinel")}} interface returns a string
 representation of the currently acquired {{domxref("WakeLockSentinel")}} type.
 
-## Syntax
-
-```js
-var type = sentinel.type;
-```
-
 ### Value
 
 A string representation of the currently acquired wake lock type.

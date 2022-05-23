@@ -47,17 +47,16 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
     - `url`: A {{jsxref('String')}} containing the URL of the corresponding
       HTML document. Needs to be under the scope of the current
       {{domxref('ServiceWorker','service worker')}}.
-    - `category`: {{Optional_Inline}} A {{jsxref('String')}} defining the
-      category of content. Can be:
+    - `category` {{Optional_Inline}}: A {{jsxref('String')}} defining the
+        category of content. Can be:
 
-      - `''` An empty {{jsxref('String')}}, this is the default.
-      - `homepage`
-      - `article`
-      - `video`
-      - `audio`
+        - `''` An empty {{jsxref('String')}}, this is the default.
+        - `homepage`
+        - `article`
+        - `video`
+        - `audio`
 
-    - `icons` {{Optional_Inline}}
-      - : An {{jsxref('Array')}} of image
+    - `icons` {{Optional_Inline}}: An {{jsxref('Array')}} of image
         resources, defined as an {{jsxref('Object')}} with the following data:
 
         - `src`

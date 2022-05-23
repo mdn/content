@@ -21,10 +21,10 @@ If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set 
 ## Syntax
 
 ```js
-pc.setIdentityProvider(domainname [, protocol] [, username]);
+setIdentityProvider(domainname)
+setIdentityProvider(domainname, protocol)
+setIdentityProvider(domainname, protocol, username)
 ```
-
-_There is no return value for this method._
 
 ### Parameters
 
@@ -36,6 +36,10 @@ _There is no return value for this method._
     IdP is listening.
 - `username` {{optional_Inline}}
   - : A {{domxref("DOMString")}} representing the username associated with the IdP.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Example
 

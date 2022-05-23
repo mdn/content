@@ -25,7 +25,7 @@ result of the request object.
 ## Syntax
 
 ```js
-var request = objectStore.getKey(key);
+getKey(key)
 ```
 
 ### Parameters

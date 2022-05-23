@@ -27,13 +27,17 @@ stream matches, it returns `null`.
 ## Syntax
 
 ```js
-var mediaStream = pc.getStream(id);
+getStream(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} corresponding to the stream to return.
+  - : Aa string. Id of a stream.
+
+### Return value
+
+The {{DOMxRef("MediaStream")}} with the given id.
 
 ## Example
 
