@@ -14,6 +14,7 @@ tags:
   - justify
   - justify-content
 ---
+
 {{CSSRef}}
 
 One of the reasons that flexbox quickly caught the interest of web developers is that it brought proper alignment capabilities to the web for the first time. It enabled proper vertical alignment, so we can at last easily center a box. In this guide, we will take a thorough look at how the alignment and justification properties work in Flexbox.
@@ -190,6 +191,8 @@ In this live example, I have flex items arranged into a row with the basic flex 
 ## Creating gaps between items
 
 To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} properties. The {{cssxref("column-gap")}} property creates gaps between items on the main axis. The {{cssxref("row-gap")}} property creates gaps between flex lines, when you have {{cssxref("flex-wrap")}} set to `wrap`. The {{cssxref("gap")}} property is a shorthand that sets both together.
+
+> **Note:** The {{cssxref("column-gap")}} creates gaps between items left to right (horizontally),the {{cssxref("row-gap")}} creates gaps between item from top to bottom (vertically). The direction of the main axis has no infleunce on the flow. Try adjusting the direction of the example below.
 
 {{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
 
