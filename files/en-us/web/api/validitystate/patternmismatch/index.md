@@ -43,7 +43,7 @@ input:invalid {
 }
 ```
 
-{{EmbedLiveSample("Examples", 300, 40)}}
+{{EmbedLiveSample("Examples", 300, 87)}}
 
 Note, in this case, we get a `patternMismatch` not a {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} if the values are too long or too short because it is the pattern that is dictating the length of the value. Had we used [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.
 
