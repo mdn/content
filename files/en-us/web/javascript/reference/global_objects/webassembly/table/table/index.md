@@ -43,11 +43,11 @@ new WebAssembly.Table(tableDescriptor)
 
 ### Creating a new WebAssembly Table instance
 
-The following example creates a new WebAssembly Table instance with an initial size of 2
-elements. The WebAssembly Table is created and accessed in JavaScript while also visible and callable inside a wasm instance.
+The following example creates a new `WebAssembly.Table` instance with an initial size of 2
+elements. The `Table` contents are examined then populated using a Wasm module.
 
 This example uses the following reference files: 
-1. `table2.html`:  An HTML file containing a script that loads and instantiates an external [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table) ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
+1. `table2.html`:  An HTML file containing a script that loads and instantiates an external [`WebAssembly.Table`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table) ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
 2. `table2.wasm`: The Wasm module being imported in table2.html ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
 
 In `table2.html`, a `WebAssembly.Table()` is instantiated with the following: 
@@ -58,8 +58,8 @@ const tbl = new WebAssembly.Table({
   element: "anyfunc"
 });
 console.log(tbl.length);  // a table with 2 elements
-console.log(tbl.get(0));  // content for index 1 is null
-console.log(tbl.get(1));  // content for index 2 is null
+console.log(tbl.get(0));  // content for index 0 is null
+console.log(tbl.get(1));  // content for index 1 is null
 ```
 
 The index contents are retrieved using {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}.
@@ -74,27 +74,36 @@ const importObject = {
 };
 ```
 
-Load and instantiate a wasm module using the {{jsxref("WebAssembly.instantiateStreaming()")}} method:  
+Load and instantiate `table2.wasm` using the {{jsxref("WebAssembly.instantiateStreaming()")}} method:  
 
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
   console.log(tbl.length);  // table length is still 2
-  console.log(tbl.get(0)());  // content for index 1 is 42 and is an Exported WebAssembly function; note the additional '()'
-  console.log(tbl.get(1)());  // content for index 2 is 83 and is an Exported WebAssembly function; note the additional '()'
+  console.log(tbl.get(0)());  // content for index 0 is 42 and is an Exported WebAssembly function; note the additional '()'
+  console.log(tbl.get(1)());  // content for index 1 is 83 and is an Exported WebAssembly function; note the additional '()'
 });
-```
 
+```
 The `table2.wasm` module contains two functions:
-1. Return 42 and store this value in index 1 of the `importObject` table
-2. Return 83 and store value in index 2 of `importObject` table
+1. Return 42 and store this value in index 0 of the `importObject` table
+2. Return 83 and store value in index 1 of `importObject` table
+
+```wasm
+(module
+    (import "js" "tbl" (table 2 anyfunc))
+    (func $f42 (result i32) i32.const 42)
+    (func $f83 (result i32) i32.const 83)
+    (elem (i32.const 0) $f42 $f83)
+)
+```
 
 After instantiating `table2.wasm`, `tbl` is updated with the following:
 - table length is still 2
-- content for index 1 is now a function which returns 42
-- content for index 2 is now a function which returns 83
+- content for index 0 is now a function which returns 42
+- content for index 1 is now a function which returns 83
 
-The content for indexes 1 and 2 are now callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions), which are called to change the index's content values. To call the wasm functions directly from `tbl`, append a second function invocation operator at the end of the
+The content for indexes 0 and 1 are now callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions), which are called to change the index's content values. To call the wasm functions directly from `tbl`, append a second function invocation operator at the end of the
 accessor:
 
 ```js
