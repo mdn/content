@@ -53,7 +53,7 @@ This example uses the following reference files:
 In `table2.html`, a `WebAssembly.Table()` is instantiated with the following: 
 
 ```js
-let tbl = new WebAssembly.Table({
+const tbl = new WebAssembly.Table({
   initial: 2, 
   element: "anyfunc"
 });
