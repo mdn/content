@@ -64,7 +64,7 @@ cubic-bezier(x1, y1, x2, y2)
 
 where:
 
-- **x1, y1, x2, y2**
+- `x1`, `y1`, `x2`, `y2`
   - : Are {{cssxref("&lt;number&gt;")}} values representing the abscissas, and ordinates of the P1 and P2 points defining the cubic Bézier curve. x1 and x2 must be in the range \[0, 1] or the value is invalid.
 
 #### Keywords for common cubic-bezier easing functions

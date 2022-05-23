@@ -33,7 +33,7 @@ getStream(id)
 ### Parameters
 
 - `id`
-  - : Aa string. Id of a stream.
+  - : A string. Id of a stream.
 
 ### Return value
 

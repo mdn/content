@@ -15,7 +15,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ## Syntax
 
 ```js
- window.msWriteProfilerMark("start-render");
+msWriteProfilerMark(profilerMarkName)
 ```
 
 ### Parameters

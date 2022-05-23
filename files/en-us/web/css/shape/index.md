@@ -22,8 +22,6 @@ The **`<shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 The `<shape>` data type is specified using the `rect()` function, which produces a region in the form of a rectangle.
 
-`rect()`
-
 ```css
 rect(top, right, bottom, left)
 ```

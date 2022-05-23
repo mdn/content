@@ -41,12 +41,12 @@ small values of `perspective()` represent a large transformation;
 and no transformation.
 
 ```css
-perspective(d)
+perspective(distance)
 ```
 
 ### Values
 
-- `d`
+- `distance`
   - : Is a {{cssxref("&lt;length&gt;")}} representing the distance from the user to the z=0 plane. If it is 0 or a
     negative value, no perspective transform is applied.
 

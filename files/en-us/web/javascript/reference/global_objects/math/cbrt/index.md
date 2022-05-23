@@ -45,7 +45,7 @@ number, that is
 ## Syntax
 
 ```js
-Math.cbrt(x)
+cbrt(x)
 ```
 
 ### Parameters
