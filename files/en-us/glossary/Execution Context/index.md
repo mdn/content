@@ -6,7 +6,11 @@ tags:
   - JavaScript
 ---
 
-Everything in JavaScript happens/executes inside **Execution Context**.
+An **execution context** is the environment in which Javascript code executes. It contains the information that links a variable name with the actual variable storing data, either inside the execution context, if they are declared in it, or outside it if not. The binding of the {{jsxref("this")}} reference is also done in the execution context.
+
+When running, the JavaScript engine initially creates the _global execution context_, then a new context is created for each function or `eval` call.
+
+Variables created using `let` and constants are available in the _current_ execution context only, while variables created using `var` are _hoisted_ to the _global_ execution context and available everywhere, when not hidden by another declaration.
 
 #### Example:
 ```js
