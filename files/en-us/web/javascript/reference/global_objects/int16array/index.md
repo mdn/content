@@ -125,7 +125,7 @@ const z = new Int16Array(buffer, 0, 4);
 
 // From an iterable
 const iterable = function*(){ yield* [1,2,3]; }();
-const int16 = new Int16Array(iterable);
+const int16_from_iterable = new Int16Array(iterable);
 // Int16Array[1, 2, 3]
 ```
 
