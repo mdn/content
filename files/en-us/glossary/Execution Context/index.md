@@ -1,6 +1,6 @@
 ---
 title: Execution context
-slug: Glossary/Execution Context
+slug: Glossary/Execution_context
 tags:
   - Glossary
   - JavaScript
