@@ -1,5 +1,5 @@
 ---
-title: Execution Context
+title: Execution context
 slug: Glossary/Execution Context
 tags:
   - Glossary
