@@ -20,7 +20,7 @@ within the directory handle on which the method is called.
 ## Syntax
 
 ```js
-var FileSystemDirectoryHandle = FileSystemDirectoryHandle.getDirectoryHandle();
+getDirectoryHandle()
 ```
 
 ### Parameters
@@ -33,9 +33,10 @@ var FileSystemDirectoryHandle = FileSystemDirectoryHandle.getDirectoryHandle();
   - : An optional object containing options for the retrieved subdirectory. Options are as
     follows:
 
-    - `create`: A {{jsxref('Boolean')}}. Default `false`. When
-      set to `true` if the directory is not found, one with the specified
-      name will be created and returned.
+    - `create`
+      - : A {{jsxref('Boolean')}}. Default `false`. When
+        set to `true` if the directory is not found, one with the specified
+        name will be created and returned.
 
 ### Return value
 

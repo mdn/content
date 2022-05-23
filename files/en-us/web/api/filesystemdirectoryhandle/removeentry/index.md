@@ -18,7 +18,7 @@ directory handle contains a file or directory called the name specified.
 ## Syntax
 
 ```js
-FileSystemDirectoryHandle.removeEntry(name).then...
+removeEntry(name)
 ```
 
 ### Parameters

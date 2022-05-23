@@ -19,7 +19,7 @@ directory the method is called.
 ## Syntax
 
 ```js
-var FileSystemFileHandle = FileSystemDirectoryHandle.getFileHandle(name);
+getFileHandle(name)
 ```
 
 ### Parameters

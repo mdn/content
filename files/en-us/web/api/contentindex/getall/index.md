@@ -21,7 +21,7 @@ an iterable list of content index entries.
 ## Syntax
 
 ```js
-var indexedContent = ContentIndex.getAll();
+getAll()
 ```
 
 ### Parameters
@@ -56,14 +56,18 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
       - `video`
       - `audio`
 
-    - `icons`: {{Optional_Inline}} An {{jsxref('Array')}} of image
-      resources, defined as an {{jsxref('Object')}} with the following data:
+    - `icons` {{Optional_Inline}}
+      - : An {{jsxref('Array')}} of image
+        resources, defined as an {{jsxref('Object')}} with the following data:
 
-      - `src:` A URL {{jsxref('String')}} of the source image.
-      - `sizes:` {{Optional_Inline}} A {{jsxref('String')}}
-        representation of the image size.
-      - `type:` {{Optional_Inline}} The {{Glossary("MIME type")}} of the
-        image.
+        - `src`
+          - : A URL {{jsxref('String')}} of the source image.
+        - `sizes` {{Optional_Inline}} 
+          - : A {{jsxref('String')}}
+            representation of the image size.
+        - `type` {{Optional_Inline}} 
+          - : The {{Glossary("MIME type")}} of the
+            image.
 
 ### Exceptions
 

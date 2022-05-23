@@ -32,8 +32,9 @@ new BarcodeDetector(options)
     in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The
     options are:
 
-    - `formats`: An {{jsxref('Array')}} of barcode formats as strings. To
-      see a full list of supported formats see the {{domxref('Barcode Detection API','Barcode Detection API overview page')}}.
+    - `formats`
+      - : An {{jsxref('Array')}} of barcode formats as strings. To
+        see a full list of supported formats see the {{domxref('Barcode Detection API','Barcode Detection API overview page')}}.
 
 ## Examples
 
