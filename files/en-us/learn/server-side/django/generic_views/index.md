@@ -360,7 +360,7 @@ Let's consider a few real examples of patterns:
         <p>
           This is the RE used in our URL mapper. It matches a string that has
           <code>book/</code> at the start of the line (<strong>^book/</strong>),
-          then has one or more digits (<code>\d+</code>), and then ends (with no 
+          then has one or more digits (<code>\d+</code>), and then ends (with no
           non-digit characters before the end of line marker).
         </p>
         <p>
