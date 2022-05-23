@@ -70,15 +70,6 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
 
-### Parameters
-
-- value
-  - : The value to be stored.
-- key
-  - : The key to use to identify the record. If unspecified, it results to null. If the
-    object store has a key generator (e.g. autoincrement) the key of the object must be
-    passed in to update the object.
-
 ## Examples
 
 The following example requests a given record title; when that request is successful
