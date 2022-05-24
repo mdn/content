@@ -37,10 +37,6 @@ The `:dir()` pseudo-class requires one parameter, representing the text directio
 - `rtl`
   - : Target right-to-left elements.
 
-### Formal syntax
-
-{{csssyntax}}
-
 ## Examples
 
 ### HTML

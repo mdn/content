@@ -26,7 +26,9 @@ p:last-of-type {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:last-of-type
+```
 
 ## Examples
 

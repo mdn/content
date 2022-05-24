@@ -45,7 +45,9 @@ p {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:host-context( <compound-selector> )
+```
 
 ## Examples
 

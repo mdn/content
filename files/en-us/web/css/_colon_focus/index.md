@@ -26,7 +26,9 @@ input:focus {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:focus
+```
 
 ## Examples
 
