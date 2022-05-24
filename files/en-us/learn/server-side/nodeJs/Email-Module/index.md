@@ -19,7 +19,7 @@ After you have downloaded the Nodemailer module, you can include the module in a
 var nodemailer = require('nodemailer');
 ```
 ## Send an Email
-Now you are ready to send emails from your server.
+Now you are ready to send emails from your server using username and password provided by your email service provider.
 Use the username and password from your selected email provider to send an email. This tutorial will show you how to use your Gmail account to send an email:
 ```js
 var nodemailer = require('nodemailer');
