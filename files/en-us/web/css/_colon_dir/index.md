@@ -30,6 +30,10 @@ The `:dir()` pseudo-class uses only the _semantic_ value of the directionality, 
 
 The `:dir()` pseudo-class requires one parameter, representing the text directionality you want to target.
 
+```
+:dir( [ ltr | rtl ] )
+```
+
 ### Parameters
 
 - `ltr`
