@@ -38,4 +38,4 @@ Save the code above in a file called "demo_module.js", and execute the file:
 ```terminal
 C:\Users\Your Name>node demo_module.js
 ```
-If you have followed the same steps on your computer, you will see the same result as the example: http://localhost:8080
+Now, open a web browser and use this URL `http://localhost:8080` to see the result. It should print current time.
