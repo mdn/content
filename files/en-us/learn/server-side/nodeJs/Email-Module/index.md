@@ -59,6 +59,7 @@ var mailOptions = {
   text: 'That was easy!'
 }
 ```
+
 ## Send HTML
 To send HTML formatted text in your email, use the "html" property instead of the "text" property:
 ```js
