@@ -33,7 +33,7 @@ http.createServer(function (req, res) {
   res.end();
 }).listen(8080);
 ```
-Notice that we use ./ to locate the module, that means that the module is located in the same folder as the Node.js file.
+Notice that we use `./` to locate the module. It means the module is located in the same folder as our `myfirstmodule.js` file.
 Save the code above in a file called "demo_module.js", and initiate the file:
 ```terminal
 C:\Users\Your Name>node demo_module.js
