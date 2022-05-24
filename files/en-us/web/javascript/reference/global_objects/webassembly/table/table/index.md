@@ -62,7 +62,7 @@ console.log(tbl.get(0));  // content for index 0 is null
 console.log(tbl.get(1));  // content for index 1 is null
 ```
 
-The index contents are retrieved using {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}.
+We retrieve the index contents using {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}.
 
 Next, we create an import object that contains the table:
 
