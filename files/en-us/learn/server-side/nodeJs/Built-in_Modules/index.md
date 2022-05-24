@@ -25,7 +25,7 @@ Save the code above in a file called "myfirstmodule.js"
 Now you can include and use the module in any of your Node.js files.
 ```js
 const http = require('http');
-var dt = require('./myfirstmodule');
+const dt = require('./myfirstmodule');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
