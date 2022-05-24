@@ -6,7 +6,7 @@ tags:
   - JavaScript
 ---
 
-An **execution context** is the environment in which Javascript code executes. It contains the information that links a variable name with the actual variable storing data, either inside the execution context, if they are declared in it, or outside it if not. The binding of the {{jsxref("this")}} reference is also done in the execution context.
+An **execution context** is the environment in which Javascript code executes. It consists of the {{glossary("scope")}}, the information that links a variable name with the actual variable storing data, and of the binding of the {{jsxref("this")}} reference, the object `this` refers to.
 
 When running, the JavaScript engine initially creates the _global execution context_, then a new context is created for each function or `eval` call.
 
