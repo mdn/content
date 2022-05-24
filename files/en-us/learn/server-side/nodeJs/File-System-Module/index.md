@@ -10,6 +10,7 @@ Common use for the File System module:
 -Update files
 -Delete files
 -Rename files
+
 ## Read Files
 The fs.readFile() method is used to read files on your computer.
 Assume we have the following HTML file (located in the same folder as Node.js):
