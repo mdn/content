@@ -42,7 +42,7 @@ If `module` is not a {{jsxref("WebAssembly.Module")}} object instance, a
 
 ## Description
 
-A wasm module consist of a sequence of **sections**. Most of these
+A wasm module consists of a sequence of **sections**. Most of these
 sections are fully specified and validated by the wasm spec, but modules can also
 contain **custom sections** that are ignored and skipped over during
 validation. (Read [High level structure](https://github.com/WebAssembly/design/blob/main/BinaryEncoding.md#high-level-structure)
