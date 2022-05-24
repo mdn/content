@@ -28,7 +28,7 @@ new MediaMetadata(metadata)
 
 ### Parameters
 
-- _metadata_ {{optional_inline}}
+- `metadata` {{optional_inline}}
 
   - : The metadata parameters are as follows:
 

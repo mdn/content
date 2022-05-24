@@ -9,6 +9,7 @@ tags:
   - HTMLElement
   - Reference
   - Web
+browser-compat: api.GlobalEventHandlers.onchange
 ---
 {{APIRef}}
 
@@ -125,10 +126,10 @@ function updateValue(e) {
 
 ## Specifications
 
-{{Specifications("api.GlobalEventHandlers.onchange")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}
 
 Different browsers do not always agree whether a `change` event should be fired for certain types of interaction. For example, keyboard navigation in {{HTMLElement("select")}} elements used to never fire a `change` event in Gecko until the user hit Enter or switched the focus away from the `<select>` (see {{bug("126379")}}). Since Firefox 63 (Quantum), this behavior is consistent between all major browsers, however.

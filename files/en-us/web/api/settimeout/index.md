@@ -75,7 +75,7 @@ To call a function repeatedly (e.g., every _N_ milliseconds), consider using
 
 ### Non-number delay values are silently coerced into numbers
 
-If `setTimeout()` is called with [_delay_](#delay) value that’s not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
+If `setTimeout()` is called with [_delay_](#delay) value that's not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
 
 ```js example-bad
 setTimeout(() => {
@@ -91,7 +91,7 @@ setTimeout(() => {
 }, "1 second")
 ```
 
-Therefore, don’t use strings for the _delay_ value but instead always use numbers:
+Therefore, don't use strings for the _delay_ value but instead always use numbers:
 
 ```js example-good
 setTimeout(() => {

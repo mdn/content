@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Location.password
 ---
+{{APIRef("HTMLDOM")}}
 {{deprecated_header}}
 
 The **`password`** property of the {{domxref("Location")}}

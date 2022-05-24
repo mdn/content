@@ -42,9 +42,7 @@ decode an audio track, and put it into an {{domxref("AudioBufferSourceNode")}}. 
 are provided to play and stop the audio playback, and a slider control is used to change
 the `playbackRate` property value on the fly.
 
-> **Note:** You can [run the example
-> live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
-> the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).) Play the song and alter the playback rate for some fun results.
+> **Note:** You can [run the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)). Play the song and alter the playback rate for some fun results.
 
 ```html
 <input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1">

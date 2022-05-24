@@ -223,7 +223,7 @@ Rectangle.prototype = Object.create(Shape.prototype);
 //To avoid that, we set the prototype.constructor to Rectangle (child).
 Rectangle.prototype.constructor = Rectangle;
 
-var rect = new Rectangle();
+const rect = new Rectangle();
 
 console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
 console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
@@ -233,7 +233,7 @@ rect.move(1, 1); // Outputs, 'Shape moved.'
 ### Using propertiesObject argument with Object.create()
 
 ```js
-var o;
+let o;
 
 // create an object with null as prototype
 o = Object.create(null);
@@ -286,7 +286,7 @@ o.p;
 // 42
 
 o.q = 12;
-for (var prop in o) {
+for (const prop in o) {
   console.log(prop);
 }
 // 'q'

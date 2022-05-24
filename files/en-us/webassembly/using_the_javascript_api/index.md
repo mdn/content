@@ -184,7 +184,7 @@ Function references are necessary to compile languages like C/C++ that have func
 
 When the time comes to call a function pointer, the WebAssembly caller supplies the index, which can then be safety bounds checked against the table before indexing and calling the indexed function reference. Thus, tables are currently a rather low-level primitive used to compile low-level programming language features safely and portably.
 
-Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](https://webassembly.org/docs/dynamic-linking/). The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) in JavaScript, and to wasm modules.
+Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) in JavaScript, and to wasm modules.
 
 ### A table example
 
@@ -273,7 +273,7 @@ Now we've demonstrated usage of the main key WebAssembly building blocks, this i
 - One module can have N Instances, in the same way that one function literal can produce N closure values.
 - One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Memories](https://webassembly.org/roadmap/)).
 - One module instance can use 0–1 table instances — this is the "function address space" of the instance, used to implement C function pointers. Future versions of WebAssembly may allow 0–N table instances per module instance.
-- One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing [dynamic linking](https://webassembly.org/docs/dynamic-linking).
+- One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing [dynamic linking](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md).
 
 You can see multiplicity in action in our Understanding text format article — see the [Mutating tables and dynamic linking section](/en-US/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
 
