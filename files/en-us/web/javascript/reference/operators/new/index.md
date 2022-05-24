@@ -28,19 +28,19 @@ new constructor[([arguments])]
 - `constructor`
   - : A class or function that specifies the type of the object instance.
 - `arguments`
-  - : A list of values that the `constructor` will be called with.
+  - : A list of values that the `constructor` will be called with. `new Foo` is equivalent to `new Foo()`, i.e. if no argument list is specified, `Foo` is called without arguments.
 
 ## Description
 
-When a function is called with the **`new`** keyword, it will be used as a constructor function. `new` will do the following things:
+When a function is called with the **`new`** keyword, the function will be used as a constructor. `new` will do the following things:
 
 1. Creates a blank, plain JavaScript object. For convenience, let's call it `newInstance`.
 2. Points `newInstance`'s [[Prototype]] to the constructor function's `prototype` property.
 
-    > **Note:** Properties/objects added to the constructor function's `prototype` property are therefore accessible to all instances created from the constructor function (using `new`).
+    > **Note:** Properties/objects added to the constructor function's `prototype` property are therefore accessible to all instances created from the constructor function.
 
-3. Executes the constructor function with the given arguments, binding `newInstance` as the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) context (i.e. all references to `this` in the constructor function now refer to `newInstance`). `new Foo` is equivalent to `new Foo()`, i.e. if no argument list is specified, `Foo` is called without arguments.
-4. If the constructor function returns a non-primitive (not `null`, `false`, `3.1415`, or other primitive types), it becomes the result of the whole `new` expression. Otherwise, if the constructor function doesn't return anything or returns a primitive, `newInstance` is returned instead. (Normally constructors don't return a value, but they can choose to do so to override the normal object creation process.)
+3. Executes the constructor function with the given arguments, binding `newInstance` as the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) context (i.e. all references to `this` in the constructor function now refer to `newInstance`).
+4. If the constructor function returns a [non-primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_values), this return value becomes the result of the whole `new` expression. Otherwise, if the constructor function doesn't return anything or returns a primitive, `newInstance` is returned instead. (Normally constructors don't return a value, but they can choose to do so to override the normal object creation process.)
 
 [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) can only be instantiated with the `new` operator — attempting to call a class without `new` will throw a `TypeError`.
 
@@ -170,7 +170,7 @@ can access the following property:
 car2.owner.name
 ```
 
-### Using `new` on classes
+### Using `new` with classes
 
 ```js
 class Person {
