@@ -101,7 +101,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
   - : An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
 
-    - `true`, which indicates that the element should be, if possible, checked for spelling errors;
+    - empty string or `true`, which indicates that the element should be, if possible, checked for spelling errors;
     - `false`, which indicates that the element should not be checked for spelling errors.
 
 - [`style`](/en-US/docs/Web/HTML/Global_attributes/style)
@@ -120,7 +120,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
   - : An enumerated attribute that is used to specify whether an element's attribute values and the values of its {{DOMxRef("Text")}} node children are to be translated when the page is localized, or whether to leave them unchanged. It can have the following values:
 
-    - empty string and `yes`, which indicates that the element will be translated.
+    - empty string or `yes`, which indicates that the element will be translated.
     - `no`, which indicates that the element will not be translated.
 
 ## Specifications
