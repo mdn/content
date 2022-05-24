@@ -30,3 +30,4 @@ const square4 = ans; // ans is undefined as it was defined in another execution 
 ## See also
 
 - {{glossary("Hoisting")}} 
+- {{glossary("Scope")}}
