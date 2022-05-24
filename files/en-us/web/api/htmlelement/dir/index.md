@@ -37,10 +37,10 @@ directionality of its parent element.
 
 ## Value
 
-One of the followings:
+One of the following:
 
-- `ltr`, for left-to-right
-- `rtl`, for right-to-left
+- `ltr`, for left-to-right;
+- `rtl`, for right-to-left;
 - `auto` for specifying that the direction of the element must be determined based on the contents of the element.
 
 ## Examples
