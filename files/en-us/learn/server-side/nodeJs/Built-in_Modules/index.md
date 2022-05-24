@@ -18,7 +18,7 @@ exports.getDateTime = function () {
   return Date();
 };
 ```
-Use the exports keyword to make properties and methods available outside the module file.
+Attach properties and methods to `module.exports` object to make them available outside the module file. The `module.exports` is a special object which is included in every JavaScript file in the Node.js application by default.
 Save the code above in a file called "myfirstmodule.js"
 
 ## Include Your Own Module
