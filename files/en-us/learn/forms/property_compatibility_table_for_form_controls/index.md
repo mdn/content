@@ -89,18 +89,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -113,18 +113,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1][2]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -150,18 +150,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1][2]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -187,18 +187,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -211,18 +211,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1][2]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -253,18 +253,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("color")}}<sup>[1]</sup>
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -286,18 +286,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("font")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -310,18 +310,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("letter-spacing")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -334,18 +334,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("text-align")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -358,18 +358,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("text-decoration")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -382,18 +382,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("text-indent")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -414,18 +414,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("text-overflow")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -438,18 +438,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("text-shadow")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -462,18 +462,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("text-transform")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -491,18 +491,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -525,18 +525,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1][2]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -563,18 +563,18 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -611,18 +611,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -635,18 +635,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -666,18 +666,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -690,18 +690,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -714,18 +714,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -750,18 +750,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("color")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -774,18 +774,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("font")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -798,18 +798,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("letter-spacing")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -822,18 +822,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("text-align")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -846,18 +846,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("text-decoration")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -870,18 +870,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("text-indent")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -894,18 +894,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("text-overflow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -918,18 +918,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("text-shadow")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -942,18 +942,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("text-transform")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -971,18 +971,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -995,18 +995,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes<sup>[1]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1026,18 +1026,18 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/subm
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -1074,18 +1074,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1098,18 +1098,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -1129,18 +1129,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1153,18 +1153,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1177,18 +1177,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -1213,18 +1213,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("color")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1237,18 +1237,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("font")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1261,18 +1261,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("letter-spacing")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1285,18 +1285,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("text-align")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1309,18 +1309,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("text-decoration")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -1333,18 +1333,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("text-indent")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1357,18 +1357,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("text-overflow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1381,18 +1381,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("text-shadow")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -1418,18 +1418,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1447,18 +1447,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1470,18 +1470,18 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no sta
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1513,18 +1513,18 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1543,18 +1543,18 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1573,18 +1573,18 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1597,18 +1597,18 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1621,18 +1621,18 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1727,18 +1727,18 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1751,18 +1751,18 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1775,18 +1775,18 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -1819,18 +1819,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -1852,18 +1852,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1876,18 +1876,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1900,18 +1900,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -1924,18 +1924,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -1967,18 +1967,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("color")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2000,18 +2000,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("font")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2033,18 +2033,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("letter-spacing")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2069,18 +2069,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("text-align")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2100,18 +2100,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("text-decoration")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2132,18 +2132,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("text-indent")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1][2]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2164,18 +2164,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("text-overflow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2188,18 +2188,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("text-shadow")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1][2]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2220,18 +2220,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("text-transform")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2256,18 +2256,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2287,18 +2287,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2310,18 +2310,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{html
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2355,18 +2355,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -2379,18 +2379,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -2403,18 +2403,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -2427,18 +2427,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -2451,18 +2451,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2488,18 +2488,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("color")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -2512,18 +2512,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("font")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -2536,18 +2536,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("letter-spacing")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2572,18 +2572,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("text-align")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2603,18 +2603,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("text-decoration")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2631,18 +2631,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("text-indent")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2655,18 +2655,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("text-overflow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2679,18 +2679,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("text-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2703,18 +2703,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("text-transform")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2739,18 +2739,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -2763,18 +2763,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes<sup>[1]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -2794,18 +2794,18 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmle
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -2842,18 +2842,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2866,18 +2866,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2890,18 +2890,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2914,18 +2914,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2938,18 +2938,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2967,18 +2967,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("color")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -2991,18 +2991,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("font")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3015,18 +3015,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("letter-spacing")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3039,18 +3039,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("text-align")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3063,18 +3063,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("text-decoration")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3087,18 +3087,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("text-indent")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3111,18 +3111,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("text-overflow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3135,18 +3135,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("text-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3159,18 +3159,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("text-transform")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3188,18 +3188,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3212,18 +3212,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3236,18 +3236,18 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3280,18 +3280,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3304,18 +3304,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3328,18 +3328,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3352,18 +3352,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -3376,18 +3376,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3405,18 +3405,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("color")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -3429,18 +3429,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("font")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3460,18 +3460,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("letter-spacing")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -3488,18 +3488,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("text-align")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3512,18 +3512,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("text-decoration")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3536,18 +3536,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("text-indent")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -3566,18 +3566,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("text-overflow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3590,18 +3590,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("text-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3614,18 +3614,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("text-transform")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3643,18 +3643,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3674,18 +3674,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3698,18 +3698,18 @@ See the `{{htmlelement("input/file", "file")}}` input type.
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -3746,18 +3746,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3770,18 +3770,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3794,18 +3794,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3818,18 +3818,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -3842,18 +3842,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3871,18 +3871,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("color")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3895,18 +3895,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("font")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3919,18 +3919,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("letter-spacing")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3943,18 +3943,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("text-align")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3967,18 +3967,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("text-decoration")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -3991,18 +3991,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("text-indent")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4015,18 +4015,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("text-overflow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4039,18 +4039,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("text-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4063,18 +4063,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("text-transform")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4092,18 +4092,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4116,18 +4116,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4140,18 +4140,18 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4184,18 +4184,18 @@ See the `{{htmlelement("input/color", "color")}}` input type:
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4208,18 +4208,18 @@ See the `{{htmlelement("input/color", "color")}}` input type:
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4238,18 +4238,18 @@ See the `{{htmlelement("input/color", "color")}}` input type:
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4262,18 +4262,18 @@ See the `{{htmlelement("input/color", "color")}}` input type:
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4286,18 +4286,18 @@ See the `{{htmlelement("input/color", "color")}}` input type:
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4398,18 +4398,18 @@ See the `{{htmlelement("input/color", "color")}}` input type:
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4429,18 +4429,18 @@ See the `{{htmlelement("input/color", "color")}}` input type:
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4452,18 +4452,18 @@ See the `{{htmlelement("input/color", "color")}}` input type:
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4495,18 +4495,18 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4519,18 +4519,18 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4543,18 +4543,18 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4567,18 +4567,18 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4591,18 +4591,18 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -4707,18 +4707,18 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4738,18 +4738,18 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4761,18 +4761,18 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -4804,18 +4804,18 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4828,18 +4828,18 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -4859,18 +4859,18 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4883,18 +4883,18 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -4907,18 +4907,18 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -5020,18 +5020,18 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -5051,18 +5051,18 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -5074,18 +5074,18 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
         No<sup>[1]</sup>
       </td>
       <td
+        class="bg-red"
         style="
           text-align: center;
-          background-color: rgb(255, 153, 153);
           vertical-align: top;
         "
       >
@@ -5117,18 +5117,18 @@ See the `{{htmlelement("input/image", "image")}}` input type:
         {{cssxref("width")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -5141,18 +5141,18 @@ See the `{{htmlelement("input/image", "image")}}` input type:
         {{cssxref("height")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -5165,18 +5165,18 @@ See the `{{htmlelement("input/image", "image")}}` input type:
         {{cssxref("border")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -5189,18 +5189,18 @@ See the `{{htmlelement("input/image", "image")}}` input type:
         {{cssxref("margin")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -5213,18 +5213,18 @@ See the `{{htmlelement("input/image", "image")}}` input type:
         {{cssxref("padding")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -5319,18 +5319,18 @@ See the `{{htmlelement("input/image", "image")}}` input type:
         {{cssxref("background")}}
       </th>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
         Yes
       </td>
       <td
+        class="bg-green"
         style="
           text-align: center;
-          background-color: rgb(204, 255, 102);
           vertical-align: top;
         "
       >
@@ -5343,18 +5343,18 @@ See the `{{htmlelement("input/image", "image")}}` input type:
         {{cssxref("border-radius")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
@@ -5371,18 +5371,18 @@ See the `{{htmlelement("input/image", "image")}}` input type:
         {{cssxref("box-shadow")}}
       </th>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
         Partial<sup>[1]</sup>
       </td>
       <td
+        class="bg-yellow"
         style="
           text-align: center;
-          background-color: rgb(255, 255, 102);
           vertical-align: top;
         "
       >
