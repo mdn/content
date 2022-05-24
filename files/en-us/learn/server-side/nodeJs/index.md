@@ -51,7 +51,7 @@ Node.js files have extension ".js"
 
 ## "Hello world" project
 ```js
-var http = require('http');
+const http = require('http');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
