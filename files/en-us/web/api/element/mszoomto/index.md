@@ -27,7 +27,7 @@ msZoomTo(arguments)
 ### Parameters
 
 - `arguments`
-  - : A MSZoomToOptions object. It has following properties:
+  - : An object. It has the following properties:
 
     - `contentX`
       - : The x-coordinate of the content that is the target of the scroll/zoom. If no value is specified, defaults to the current centerpoint of visible content, horizontally.

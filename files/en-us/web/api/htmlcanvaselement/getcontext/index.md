@@ -71,16 +71,16 @@ getContext(contextType, contextAttributes)
     2d context attributes:
 
     - `alpha`
-      - : Boolean that indicates if the canvas
+      - : A boolean value that indicates if the canvas
         contains an alpha channel. If set to `false`, the browser now knows
         that the backdrop is always opaque, which can speed up drawing of transparent
         content and images.
     - `desynchronized`
-      - : Boolean that hints the user agent
+      - : A boolean value that hints the user agent
         to reduce the latency by desynchronizing the canvas paint cycle from the event
         loop
     - `willReadFrequently`
-      - : Boolean that indicates whether
+      - : A boolean value that indicates whether
         or not a lot of read-back operations are planned. This will force the use of a
         software (instead of hardware accelerated) 2D canvas and can save memory when
         calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}
@@ -89,23 +89,23 @@ getContext(contextType, contextAttributes)
     WebGL context attributes:
 
     - `alpha`
-      - : Boolean that indicates if the canvas
+      - : A boolean value that indicates if the canvas
         contains an alpha buffer.
     - `depth`
-      - : Boolean that indicates that the drawing
+      - : A boolean value that indicates that the drawing
         buffer is requested to have a depth buffer of at least 16 bits.
     - `stencil`
-      - : Boolean that indicates that the drawing
+      - : A boolean value that indicates that the drawing
         buffer is requested to have a stencil buffer of at least 8 bits.
     - `desynchronized`
-      - : Boolean that hints the user agent
+      - : A boolean value that hints the user agent
         to reduce the latency by desynchronizing the canvas paint cycle from the event
         loop
     - `antialias`
-      - : Boolean that indicates whether or not
+      - : A boolean value that indicates whether or not
         to perform anti-aliasing if possible.
     - `failIfMajorPerformanceCaveat`
-      - : Boolean that
+      - : A boolean value that
         indicates if a context will be created if the system performance is low or if no
         hardware GPU is available.
     - `powerPreference`
@@ -124,7 +124,7 @@ getContext(contextType, contextAttributes)
             performance.
 
     - `premultipliedAlpha`
-      - : Boolean that indicates that
+      - : A boolean value that indicates that
         the page compositor will assume the drawing buffer contains colors with
         pre-multiplied alpha.
     - `preserveDrawingBuffer`
@@ -132,7 +132,7 @@ getContext(contextType, contextAttributes)
         buffers will not be cleared and will preserve their values until cleared or
         overwritten by the author.
     - `xrCompatible`
-      - : Boolean that hints to the user agent
+      - : A boolean value that hints to the user agent
         to use a compatible graphics adapter for an
         [immersive XR device](/en-US/docs/Web/API/WebXR_Device_API). Setting this
         synchronous flag at context creation is discouraged; rather call the asynchronous

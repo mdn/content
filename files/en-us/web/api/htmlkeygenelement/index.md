@@ -19,25 +19,25 @@ The {{HTMLElement("keygen")}} elements expose the **`HTMLKeygenElement`** interf
 ## Properties
 
 - `autofocus`
-  - : A [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) that reflects the {{ htmlattrxref("autofocus", "keygen") }} HTML attribute, indicating that the form control should have input focus when the page loads.
+  - : A boolean value that reflects the {{ htmlattrxref("autofocus", "keygen") }} HTML attribute, indicating that the form control should have input focus when the page loads.
 - `challenge`
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) that reflects the {{ htmlattrxref("challenge", "keygen") }} HTML attribute, containing a challenge string that is packaged with the submitted key.
+  - : A string that reflects the {{ htmlattrxref("challenge", "keygen") }} HTML attribute, containing a challenge string that is packaged with the submitted key.
 - `form` {{ReadOnlyInline}}
   - : A [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) that indicates the control's form owner, reflecting the {{ htmlattrxref("form", "keygen") }} HTML attribute if it is defined.
 - `keytype`
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) that reflects the {{ htmlattrxref("keytype", "keygen") }} HTML attribute, containing the type of key used.
+  - : A string that reflects the {{ htmlattrxref("keytype", "keygen") }} HTML attribute, containing the type of key used.
 - `labels` {{ReadOnlyInline}} {{ unimplemented_inline(556743) }}
   - : A [`NodeList`](/en-US/docs/Web/API/NodeList) that represents a list of label elements associated with this keygen element.
 - `name`
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) that reflects the {{ htmlattrxref("name", "keygen") }} HTML attribute, containing the name for the control that is submitted with form data.
+  - : A string that reflects the {{ htmlattrxref("name", "keygen") }} HTML attribute, containing the name for the control that is submitted with form data.
 - `type` {{ReadOnlyInline}}
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) that must be the value `keygen`.
+  - : A string that must be the value `keygen`.
 - `validationMessage` {{ReadOnlyInline}}
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.
+  - : A string representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
 - `validity` {{ReadOnlyInline}}
-  - : A [`ValidityState`](/en-US/docs/DOM/ValidityState_Interface) representing the validity states that this element is in.
+  - : A {{domxref("ValidityState")}} object representing the validity states that this element is in.
 - `willValidate`
-  - : A [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) that is always false because `keygen` objects are never candidates for constraint validation.
+  - : A boolean value that is always false because `keygen` objects are never candidates for constraint validation.
 
 ## Methods
 

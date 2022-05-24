@@ -52,7 +52,7 @@ attachShadow(options)
 
 - `options`
 
-  - : A object that contain the following fields:
+  - : An object which contains the following fields:
 
     - `mode`
 
