@@ -128,7 +128,7 @@ span {
 
 The result is:
 
-{{EmbedLiveSample("Ems", 400, 40)}}
+{{EmbedLiveSample("Ems", 400, 75)}}
 
 Assuming that the browser's default `font-size` is 16px, the words "outer" would be rendered at 16px, but the word "inner" would be rendered at 25.6px. This is because the inner {{HTMLElement("span")}}'s `font-size` is 1.6em which is relative to its parent's `font-size`, which is in turn relative to its parent's `font-size`. This is often called **compounding**.
 
@@ -140,7 +140,7 @@ The CSS below is nearly identical to the previous example. The only exception is
 
 ```css
 html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+  font-size: 62.5%; /* font-size 1rem = 10px on default browser settings */
 }
 span {
   font-size: 1.6rem;
@@ -153,7 +153,7 @@ Then we apply this CSS to the same HTML, which looks like this:
 <span>Outer <span>inner</span> outer</span>
 ```
 
-{{EmbedLiveSample("Rems", 400, 40)}}
+{{EmbedLiveSample("Rems", 400, 75)}}
 
 In this example, the words "outer inner outer" are all displayed at 16px (assuming that the browser's `font-size` has been left at the default value of 16px).
 
@@ -203,7 +203,7 @@ See the W3C Editor's Draft for a more detailed description of [font-relative len
 
 #### Result
 
-{{EmbedLiveSample('Setting_font_sizes','600','200')}}
+{{EmbedLiveSample('Setting_font_sizes', 600, 250)}}
 
 ## Specifications
 

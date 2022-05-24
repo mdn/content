@@ -90,7 +90,7 @@ if (condition) /* code to run if condition is true */
 else /* run some other code instead */
 ```
 
-This syntax is perfectly valid, but is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
+This syntax is perfectly valid, but it is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
 
 ### A real example
 

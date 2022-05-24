@@ -124,7 +124,7 @@ The browser will parse the HTML and create a DOM from it, then parse the CSS. Si
 
 The updated output is as follows:
 
-{{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 55)}}
+{{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 90)}}
 
 In our [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) article in the next module we will be using browser DevTools to debug CSS problems, and will learn more about how the browser interprets CSS.
 

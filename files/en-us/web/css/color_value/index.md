@@ -61,21 +61,21 @@ The `transparent` keyword represents a fully transparent color. This makes the b
 
 > **Note:** `transparent` wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
 
-### currentColor keyword
+### currentcolor keyword
 
-The `currentColor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
+The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
 
-If `currentColor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
+If `currentcolor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
 
 ```html
-<div style="color: blue; border: 1px dashed currentColor;">
+<div style="color: blue; border: 1px dashed currentcolor;">
   The color of this text is blue.
-  <div style="background: currentColor; height:9px;"></div>
+  <div style="background: currentcolor; height:9px;"></div>
   This block is surrounded by a blue border.
 </div>
 ```
 
-{{EmbedLiveSample('currentColor_keyword', 600, 80)}}
+{{EmbedLiveSample('currentcolor_keyword', 600, 80)}}
 
 ### RGB color model
 

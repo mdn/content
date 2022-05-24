@@ -25,12 +25,12 @@ result of the request object.
 ## Syntax
 
 ```js
-var request = objectStore.getKey(key);
+getKey(key)
 ```
 
 ### Parameters
 
-- _key_
+- `key`
   - : The key or key range that identifies the record to be retrieved.
 
 ### Return Value
