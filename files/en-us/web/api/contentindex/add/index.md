@@ -61,9 +61,9 @@ add(contentDescription)
 
         - `src`
           - : A URL {{jsxref('String')}} of the source image.
-        - `sizes` {{Optional_Inline}} 
+        - `sizes` {{Optional_Inline}}
           - : A {{jsxref('String')}} representation of the image size.
-        - `type` {{Optional_Inline}} 
+        - `type` {{Optional_Inline}}
           - : The {{Glossary("MIME type")}} of the image.
 
 ### Return value

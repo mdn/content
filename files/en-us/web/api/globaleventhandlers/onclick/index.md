@@ -32,6 +32,7 @@ target.onclick = functionRef;
 ```
 
 It is also possible to add the event directly on to the HTML element. Like this:
+
 ```html
 <div onclick="functionRef(event)">Click here</div>
 ```
