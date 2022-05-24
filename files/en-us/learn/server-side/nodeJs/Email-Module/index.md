@@ -48,6 +48,7 @@ transporter.sendMail(mailOptions, function(error, info){
 });
 ```
 And that's it! Now your server is able to send emails.
+
 ## Multiple Receivers
 To send an email to more than one receiver, add them to the "to" property of the mailOptions object, separated by commas:
 ```js
