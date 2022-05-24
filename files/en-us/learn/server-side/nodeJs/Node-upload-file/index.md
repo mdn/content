@@ -15,7 +15,7 @@ The Formidable module can be downloaded and installed using NPM:
 C:\Users\Your Name>npm install formidable
 ```
 After you have downloaded the Formidable module, you can include the module in any application:
-```terminal
+```js
 var formidable = require('formidable');
 ```
 ## Upload Files
