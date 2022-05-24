@@ -57,6 +57,22 @@ y = mycar.make; // y gets the value "Toyota"
                 // (the make property was changed by the function)
 ```
 
+When you pass an array as a parameter, if the function changes any of the array's value, that change is visible outside the function, as shown in the following example:
+
+```js
+function myFunc(theArr) {
+  theArr[0] = 30;
+}
+
+var arr = [45];
+var a, b;
+
+a = arr[0]; // a gets the value 45
+myFunc(arr);
+b = arr[0]; // b gets the value 30
+
+```
+
 ### Function expressions
 
 While the function declaration above is syntactically a statement, functions can also be created by a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
