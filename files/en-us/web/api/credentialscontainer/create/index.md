@@ -58,7 +58,7 @@ create(options)
         - `provider`: (required) string TBD
         - `protocol`: string {{optional_inline}} TBD
 
-    - `publicKey` {optional_inline}}
+    - `publicKey` {{optional_inline}}
       - : An object that describes the options for creating a [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credential containing the following properties:
         - `rp`
           - : An object describing the relying party which requested the credential creation.
