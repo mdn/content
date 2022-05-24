@@ -198,7 +198,7 @@ switch(x) {
 
 ### Temporal dead zone (TDZ)
 
-`Temporal Dead Zone`(TDZ) is the time since when the variable is hoisted and till it is initialised to some value, the time-lapse between the declaration and initialisation of a variable(s) is known as the **temporal dead zone**.
+The _Temporal Dead Zone_ (TDZ) is the time between a `let` or `const` variable being hoisted until code execution reaches the point where it is initialized with a value.
 
 `let` variables cannot be read/written until they have been
 declared. If no initial value is specified on
