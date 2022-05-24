@@ -13,7 +13,7 @@ Common use for the File System module:
 
 ## Read Files
 The fs.readFile() method is used to read files on your computer.
-Assume we have the following HTML file (located in the same folder as Node.js):
+Assume we have the following HTML file, named `demofile.html`, located in the same folder as our script:
 ```html
 <html>
 <body>
