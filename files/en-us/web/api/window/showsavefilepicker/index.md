@@ -29,8 +29,8 @@ showSaveFilePicker()
   - : An object containing options, which are as follows:
 
     - `excludeAcceptAllOption`
-      - : A boolean value that defaults to 
-        `false`. By default the picker should include an option to not apply
+      - : A boolean value that defaults to
+        `false`. By default, the picker should include an option to not apply
         any file type filters (instigated with the type option below). Setting this option
         to `true` means that option is _not_ available.
     - `suggestedName`
