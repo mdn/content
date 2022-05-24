@@ -198,6 +198,8 @@ switch(x) {
 
 ### Temporal dead zone (TDZ)
 
+`Temporal Dead Zone`(TDZ) is the time since when the let variable is hoisted and till it is initialised to some value, the time-lapse between the declaration and initialisation of a variable(s) is known as the **temporal dead zone**.
+
 `let` variables cannot be read/written until they have been
 declared. If no initial value is specified on
 declaration, the variable is initialized with a value of
@@ -208,9 +210,6 @@ declaration, the variable is initialized with a value of
 > which will return a value of `undefined` if they are accessed before they
 > are declared.
 
-The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
-until the declaration has completed.
-
 ```js example-bad
 { // TDZ starts at beginning of scope
   console.log(bar); // undefined
@@ -219,6 +218,8 @@ until the declaration has completed.
   let foo = 2; // End of TDZ (for foo)
 }
 ```
+`let` and `const` are hoisted, we can't use them before initialization is the result of "temporal dead zone".
+
 
 The term "temporal" is used because the zone depends on the order of execution (time)
 rather than the order in which the code is written (position). For example, the code
