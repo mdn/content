@@ -67,7 +67,7 @@ used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
 include `"A"` and `"F"`, only the values between them.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at the idbkeyrange directory in the [indexeddb-examples](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo. (Vies the example [live](https://mdn.github.io/indexeddb-examples/idbkeyrange/) too.
+> key range, have a look at the idbkeyrange directory in the [indexeddb-examples](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo. (View the example [live](https://mdn.github.io/indexeddb-examples/idbkeyrange/) too.
 
 ```js
 function displayData() {
