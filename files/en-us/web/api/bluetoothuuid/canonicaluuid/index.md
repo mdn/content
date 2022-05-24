@@ -23,7 +23,7 @@ canonicalUUID(alias)
 ### Parameters
 
 - `alias`
-  - : A string containing a 16- or 32- bit UUID alias.
+  - : A string containing a 16-bit or 32-bit UUID alias.
 
 ### Return value
 

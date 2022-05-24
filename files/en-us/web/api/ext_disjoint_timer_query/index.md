@@ -23,7 +23,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 This extension exposes a new type:
 
-- GLuint64EXT
+- `GLuint64EXT`
   - : Unsigned 64-bit integer number.
 
 ## Constants

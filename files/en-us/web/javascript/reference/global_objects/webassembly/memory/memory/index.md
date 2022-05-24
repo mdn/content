@@ -28,19 +28,19 @@ new WebAssembly.Memory(memoryDescriptor)
 
 ### Parameters
 
-- _memoryDescriptor_
+- `memoryDescriptor`
 
   - : An object that can contain the following members:
 
-    - _initial_
+    - `initial`
       - : The initial size of the WebAssembly Memory, in units of WebAssembly pages.
-    - _maximum {{optional_inline}}_
+    - `maximum` {{optional_inline}}
       - : The maximum size the WebAssembly Memory is allowed to grow to, in units of
         WebAssembly pages. When present, the `maximum` parameter acts as a hint
         to the engine to reserve memory up front. However, the engine may ignore or clamp
         this reservation request. Unshared WebAssembly memories don't need to set a
         `maximum`, but shared memories do.
-    - shared _{{optional_inline}}_
+    - `shared` {{optional_inline}}
       - : A boolean value that defines whether the memory is a shared memory or not. If
         set to `true`, it is a shared memory. The default is
         `false`.
