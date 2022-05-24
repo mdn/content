@@ -10,7 +10,7 @@ tags:
 ---
 ## The Nodemailer Module
 The Nodemailer module makes it easy to send emails from your computer.
-The Nodemailer module can be downloaded and installed using npm:
+The module can be downloaded and installed using npm:
 ```terminal
 C:\Users\Your Name>npm install nodemailer
 ```
