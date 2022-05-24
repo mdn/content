@@ -48,7 +48,7 @@ elements. The `Table` contents are examined then populated using a Wasm module.
 
 This example uses the following reference files: 
 1. `table2.html`:  An HTML file containing a script that loads and instantiates an external [`WebAssembly.Table`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table) ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
-2. `table2.wasm`: The Wasm module being imported in table2.html ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
+2. `table2.wasm`: The WebAssembly module being imported by the JavaScript code in table2.html ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
 
 In `table2.html`, a `WebAssembly.Table()` is instantiated with the following: 
 
