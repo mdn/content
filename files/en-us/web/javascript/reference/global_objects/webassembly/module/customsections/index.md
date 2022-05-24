@@ -25,10 +25,10 @@ WebAssembly.Module.customSections(module, sectionName)
 
 ### Parameters
 
-- _module_
+- `module`
   - : The {{jsxref("WebAssembly.Module")}} object whose custom sections are being
     considered.
-- _sectionName_
+- `sectionName`
   - : The string name of the desired custom section.
 
 ### Return value
@@ -42,7 +42,7 @@ If `module` is not a {{jsxref("WebAssembly.Module")}} object instance, a
 
 ## Description
 
-A wasm module is comprised of a sequence of **sections**. Most of these
+A wasm module consists of a sequence of **sections**. Most of these
 sections are fully specified and validated by the wasm spec, but modules can also
 contain **custom sections** that are ignored and skipped over during
 validation. (Read [High level structure](https://github.com/WebAssembly/design/blob/main/BinaryEncoding.md#high-level-structure)
@@ -56,7 +56,7 @@ locals in the module (like "symbols" in a native build).
 
 Note that the WebAssembly text format currently doesn't have a syntax specified for
 adding new custom sections; you can however add a name section to your wasm during
-conversion from text format over to .wasm. The wast2wasm command available as part of
+conversion from text format over to .wasm. The `wast2wasm` command available as part of
 the [wabt tool](https://github.com/webassembly/wabt) has a
 `--debug-names` option — specify this during conversion to get a .wasm with a
 names custom section, for example:
@@ -70,7 +70,7 @@ wast2wasm simple-name-section.was -o simple-name-section.wasm --debug-names
 ### Using customSections
 
 The following example uses `WebAssembly.Module.customSections` to check
-if a loaded module instance contains a "name" custom section. A module contains a "name" custom section if `WebAssembly.Module.customSections` 
+if a loaded module instance contains a "name" custom section. A module contains a "name" custom section if `WebAssembly.Module.customSections`
 returns an `ArrayBuffer` with a length greater than 0.
 
 See custom-section.html [source code](https://github.com/mdn/webassembly-examples/blob/master/other-examples/custom-section.html)

@@ -45,33 +45,35 @@ The following is a list of elements you **can** attach a shadow root to:
 ## Syntax
 
 ```js
-attachShadow(init)
+attachShadow(options)
 ```
 
 ### Parameters
 
-- `init`
+- `options`
 
-  - : A object that contain the following fields:
+  - : An object which contains the following fields:
 
     - `mode`
 
       - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
         This can be one of:
 
-        - `open`: Elements of the shadow root are accessible from JavaScript outside the root,
-          for example using {{domxref("Element.shadowRoot")}}:
+        - `open`
+          - : Elements of the shadow root are accessible from JavaScript outside the root,
+            for example using {{domxref("Element.shadowRoot")}}:
 
-          ```js
-          element.shadowRoot; // Returns a ShadowRoot obj
-          ```
+            ```js
+            element.shadowRoot; // Returns a ShadowRoot obj
+            ```
 
-        - `closed`: Denies access to the node(s) of a closed shadow root
-          from JavaScript outside it:
+        - `closed`
+          - : Denies access to the node(s) of a closed shadow root
+            from JavaScript outside it:
 
-          ```js
-          element.shadowRoot; // Returns null
-          ```
+            ```js
+            element.shadowRoot; // Returns null
+            ```
 
     - `delegatesFocus`
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
