@@ -57,7 +57,8 @@ const original = 3.14;
 const truncated1 = ~~original; // Double negation
 const truncated2 = original & -1; // Bitwise AND with -1
 const truncated3 = original | 0; // Bitwise OR with 0
-const truncated4 = original >> 0; // Bitwise shifting by 0
+const truncated4 = original ^ 0; // Bitwise XOR with 0
+const truncated5 = original >> 0; // Bitwise shifting by 0
 ```
 
 Beware that this is essentially `toInt32`, which is not the same as `Math.trunc`. When the value does not satisfy `-2^31 - 1 < value < 2^31` (`-2147483649 < value < 2147483648`), the conversion would overflow.
