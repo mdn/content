@@ -30,13 +30,18 @@ As there are several ways to define the character encoding of a style sheet, the
 ## Syntax
 
 ```
+@charset "UTF-8";
+@charset "iso-8859-15";
+```
+
+### Formal syntax
+
+```
 @charset "<charset>";
 ```
 
-where:
-
 - _charset_
-  - : Is a {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with *preferred* must be used.
+  - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with *preferred* must be used.
 
 ## Examples
 
