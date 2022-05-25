@@ -31,7 +31,7 @@ A {{domxref("Node")}} representing `node` where the drag originated. Returns
 ## Examples
 
 This example shows the use of the `mozSourceNode` property in the
-{{event("dragend")}} event handler.
+{{domxref("HTMLElement/dragend_event", "dragend")}} event handler.
 
 ```js
 function dragend_handler(event)

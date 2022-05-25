@@ -11,7 +11,7 @@ browser-compat: api.GlobalEventHandlers.ondragover
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the
-{{event("dragover")}} event.
+{{domxref("HTMLElement/dragover_event", "dragover")}} event.
 
 ## Syntax
 
@@ -147,4 +147,4 @@ button.addEventListener("click", () => {
 
 ## See also
 
-- {{event("dragover")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}

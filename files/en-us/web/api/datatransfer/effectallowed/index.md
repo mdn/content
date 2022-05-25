@@ -19,14 +19,14 @@ dragged will be moved, and the _link_ operation is used to indicate that some
 form of relationship or connection will be created between the source and drop
 locations.
 
-This property should be set in the {{event("dragstart")}} event to set the desired drag
-effect for the drag source. Within the {{event("dragenter")}} and {{event("dragover")}}
+This property should be set in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event to set the desired drag
+effect for the drag source. Within the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}}
 event handlers, this property will be set to whatever value was assigned during the
-{{event("dragstart")}} event, thus `effectAllowed` may be used to determine
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} event, thus `effectAllowed` may be used to determine
 which effect is permitted.
 
 Assigning a value to `effectAllowed` in events other than
-{{event("dragstart")}} has no effect.
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} has no effect.
 
 ## Value
 
