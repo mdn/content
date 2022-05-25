@@ -60,7 +60,7 @@ theTree.constructor is function Tree(name) {
 
 ### Assigning the `constructor` property to an object
 
-One can assign the `constructor` property to non-primitives.
+One can assign the `constructor` property of non-primitives.
 
 ```js
 const arr = [];
@@ -164,7 +164,7 @@ CreatedConstructor.prototype.create = function create() {
 new CreatedConstructor().create().create(); // still works without re-creating constructor property
 ```
 
-Let's consider one more case, where it's more involved.
+Let's consider one more involved case.
 
 ```js
 function ParentWithStatic() {}
