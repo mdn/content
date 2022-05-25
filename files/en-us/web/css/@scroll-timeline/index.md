@@ -106,7 +106,9 @@ The `scroll-offset` property determines where, within the scrolling, the animati
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@scroll-timeline <timeline-name> { <declaration-list> }
+```
 
 ## Examples
 
