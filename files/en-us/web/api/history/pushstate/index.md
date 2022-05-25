@@ -113,6 +113,5 @@ window.history.pushState({}, '', url);
 
 ## See also
 
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
 - [Window: popstate event](/en-US/docs/Web/API/Window/popstate_event)
