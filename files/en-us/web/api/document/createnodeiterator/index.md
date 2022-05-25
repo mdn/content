@@ -11,7 +11,7 @@ browser-compat: api.Document.createNodeIterator
 ---
 {{APIRef("DOM")}}
 
-The `Document.createNodeIterator()` method returns a newly created [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
+The **`Document.createNodeIterator()`** method returns a new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
 
 ## Syntax
 
