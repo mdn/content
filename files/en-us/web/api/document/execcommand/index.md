@@ -155,8 +155,7 @@ A boolean value that is `false` if the command is unsupported or disabled.
 
 ## Examples
 
-An example of [how to use
-execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
+An example of [how to use execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
 
 ### Using insertText
 

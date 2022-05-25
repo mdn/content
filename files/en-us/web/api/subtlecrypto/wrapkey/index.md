@@ -108,7 +108,7 @@ AES-KW is specified in [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394)
 ### Raw wrap
 
 This example wraps an AES key. It uses "raw" as the export format and AES-KW, with a
-password-derived key, to encrypt it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/raw.js)
+password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/raw.js).
 
 ```js
 let salt;
