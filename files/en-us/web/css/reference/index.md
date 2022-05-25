@@ -68,7 +68,7 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), wh
 
 **Basic selectors** are fundamental selectors; these are the most basic selectors that are frequently combined to create other, more complex selectors.
 
-- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors) `*`
 - [Type selector](/en-US/docs/Web/CSS/Type_selectors) `elementname`
 - [Class selector](/en-US/docs/Web/CSS/Class_selectors) `.classname`
 - [ID selector](/en-US/docs/Web/CSS/ID_selectors) `#idname`
