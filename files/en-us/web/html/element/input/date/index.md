@@ -227,8 +227,6 @@ input:valid+span::after {
 
 ## Handling browser support
 
-As mentioned, the major problem with date inputs is [browser support](#browser_compatibility).
-
 Unsupporting browsers gracefully degrade to a text input, but this creates problems in consistency of user interface (the presented controls are different) and data handling.
 
 The second problem is the more serious one; with date input supported, the value is normalized to the format `yyyy-mm-dd`. But with a text input, the browser has no recognition of what format the date should be in, and there are many different formats in which people write dates. For example:
