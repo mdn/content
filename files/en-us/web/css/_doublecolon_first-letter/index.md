@@ -44,7 +44,9 @@ Only a small subset of CSS properties can be used with the `::first-letter` pseu
 
 ## Syntax
 
-{{csssyntax}}
+```
+::first-letter
+```
 
 ## Examples
 

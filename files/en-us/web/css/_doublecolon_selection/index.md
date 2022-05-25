@@ -33,11 +33,8 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
 
-```css
-/* Legacy Firefox syntax (version 61 and below) */
-::-moz-selection
-
-{{CSSSyntax}}
+```
+::selection
 ```
 
 ## Examples
