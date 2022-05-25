@@ -72,7 +72,7 @@ Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.
 
 The following commands and events are available:
 
-- Adds the [`session` module](https://w3c.github.io/webdriver-bidi/#module-session) including a partial implementation for the commands to globally subscribe ([`session.subscribe](https://w3c.github.io/webdriver-bidi/#command-session-subscribe)) to and unsubscribe ([`session.unsubscribe`](https://w3c.github.io/webdriver-bidi/#command-session-unsubscribe)) from events, and the ability to create a direct WebDriver BiDi session ([`session.new`](https://w3c.github.io/webdriver-bidi/#command-session-new)) when not using WebDriver classic.
+- Adds the [`session` module](https://w3c.github.io/webdriver-bidi/#module-session) including a partial implementation for the commands to globally subscribe ([`session.subscribe`](https://w3c.github.io/webdriver-bidi/#command-session-subscribe)) to and unsubscribe ([`session.unsubscribe`](https://w3c.github.io/webdriver-bidi/#command-session-unsubscribe)) from events, and the ability to create a direct WebDriver BiDi session ([`session.new`](https://w3c.github.io/webdriver-bidi/#command-session-new)) when not using WebDriver classic.
 
 - Adds the [`browsingContext` module](https://w3c.github.io/webdriver-bidi/
 
