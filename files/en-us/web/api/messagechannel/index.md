@@ -60,6 +60,42 @@ function onMessage(e) {
 
 For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
+
+In this example, you can see two way message passing between main and worker thread.
+
+```js
+
+// main.js
+
+let {port1: mainPort, port2: workerPort} = new MessageChannel();
+
+let worker = new Worker("worker-code.js");
+let data = {
+    type: "eventFromMain",
+    payload: { name: "init" }
+};
+worker.postMessage(data, [workerPort]);
+
+mainPort.onmessage = (e) => console.log(e.data);
+
+// worker-code.js
+let workerPort;
+let data = {
+    type:"eventFromWoker", 
+    payload: {name:"init"}
+};
+function workerPortListener(e) {
+    workerPort = e.ports[0];
+    console.log(e.data);
+    
+    workerPort.postMessage(data);
+}
+
+// addEventListener("message", workerPortListener);
+globalThis.onmessage = workerPortListener;
+```
+For a full runing example, see [message channel demo](https://github.com/kavitshah8/messageChnannel).
+
 ## Specifications
 
 {{Specifications}}
