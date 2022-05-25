@@ -16,15 +16,16 @@ The fs.readFile() method is used to read files on your computer.
 Assume we have the following HTML file, named `demofile.html`, located in the same folder as our script:
 ```html
 <html>
-<body>
-<h1>My Header</h1>
-<p>My paragraph.</p>
-</body>
+  <body>
+    <h1>My Header</h1>
+    <p>My paragraph.</p>
+  </body>
 </html>
 ```
 ```js
-var http = require('http');
-var fs = require('fs');
+const http = require('http');
+const fs = require('fs');
+
 http.createServer(function (req, res) {
   fs.readFile('demofile.html', function(err, data) {
     res.writeHead(200, {'Content-Type': 'text/html'});
