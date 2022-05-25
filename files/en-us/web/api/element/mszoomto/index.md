@@ -66,7 +66,6 @@ msZoomTo(arguments)
         - `default`: Uses the default animation.
         - `none`: No animation is used.
 
-
 This method has no scrolling effect on non-scrollable elements and no zooming effect on non-zoomable elements (e.g., elements with "-ms-content-zooming: none").
 
 This method has no effect if called from a parent document to scroll or zoom content hosted in an iframe.
