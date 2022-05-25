@@ -23,9 +23,8 @@ directory.
 
 A string that can be:
 
-    - `'file'`: If handle is a {{domxref('FileSystemFileHandle')}}.
-    - `'directory'`: If handle is a
-      {{domxref('FileSystemDirectoryHandle')}}.
+- `'file'`: If the handle is a {{domxref('FileSystemFileHandle')}}.
+- `'directory'`: If the handle is a {{domxref('FileSystemDirectoryHandle')}}.
 
 ## Examples
 
