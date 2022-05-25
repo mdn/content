@@ -1,3 +1,13 @@
+---
+title: Node.js built-in_module
+slug: Learn/Server-side/nodeJs/Built-in Modules
+tags:
+  - JavaScript
+  - NeedsContent
+  - Node
+  - Built-in moduel
+  - Server
+---
 ## What is a Module in Node.js?
 Consider modules to be the same as JavaScript libraries.
 A set of functions you want to include in your application.
@@ -8,7 +18,7 @@ Node.js has a set of built-in modules which you can use without any further inst
 ## Include Modules
 To include a module, use the require() function with the name of the module:
 ```js
-var http = require('http');
+const http = require('http');
 ```
 ## Create Your Own Modules
 You can create your own modules, and easily include them in your applications.

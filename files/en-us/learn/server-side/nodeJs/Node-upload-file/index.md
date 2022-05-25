@@ -16,14 +16,14 @@ C:\Users\Your Name>npm install formidable
 ```
 After you have downloaded the Formidable module, you can include the module in any application:
 ```js
-var formidable = require('formidable');
+Const formidable = require('formidable');
 ```
 ## Upload Files
 Now you are ready to make a web page in Node.js that lets the user upload files to your computer:
 ### Step 1: Create an Upload Form
 Create a Node.js file that writes an HTML form, with an upload field:
 ```js
-var http = require('http');
+Connst http = require('http');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
@@ -38,8 +38,8 @@ http.createServer(function (req, res) {
 Include the Formidable module to be able to parse the uploaded file once it reaches the server.
 When the file is uploaded and parsed, it gets placed on a temporary folder on your computer.
 ```js
-var http = require('http');
-var formidable = require('formidable');
+const http = require('http');
+const formidable = require('formidable');
 
 http.createServer(function (req, res) {
   if (req.url == '/fileupload') {
@@ -63,9 +63,9 @@ When a file is successfully uploaded to the server, it is placed on a temporary 
 The path to this directory can be found in the "files" object, passed as the third argument in the parse() method's callback function.
 To move the file to the folder of your choice, use the File System module, and rename the file:
 ```js
-var http = require('http');
-var formidable = require('formidable');
-var fs = require('fs');
+const http = require('http');
+const formidable = require('formidable');
+const fs = require('fs');
 
 http.createServer(function (req, res) {
   if (req.url == '/fileupload') {

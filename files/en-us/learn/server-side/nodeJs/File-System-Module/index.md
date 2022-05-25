@@ -2,7 +2,7 @@
 The Node.js file system module allows you to work with the file system on your computer.
 To include the File System module, use the require() method:
 ```js
-var fs = require('fs');
+const fs = require('fs');
 ```
 Common use for the File System module:
 -Read files
@@ -13,7 +13,7 @@ Common use for the File System module:
 
 ## Read Files
 The fs.readFile() method is used to read files on your computer.
-Assume we have the following HTML file, named `demofile.html`, located in the same folder as our script:
+Assume we have the following HTML file, named `index.html`, located in the same folder as our script:
 ```html
 <html>
   <body>
@@ -27,15 +27,15 @@ const http = require('http');
 const fs = require('fs');
 
 http.createServer(function (req, res) {
-  fs.readFile('demofile.html', function(err, data) {
+  fs.readFile('index.html', function(err, data) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(data);
     return res.end();
   });
 }).listen(8080);
 ```
-Save the code above in a file called "demo_readfile.js", and initiate the file:
+Save the code above in a file called "test_readfile.js", and initiate the file:
 ```terminal
-C:\Users\Your Name>node demo_readfile.js
+C:\Users\Your Name>node test_readfile.js
 ```
 If you have followed the same steps on your computer, you will see the same result as the example: http://localhost:8080
