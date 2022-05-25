@@ -57,7 +57,7 @@ The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feat
 - [`RTCRtpEncodingParameters.maxFramerate`](/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) is now supported for setting the maximum framerate that can be used to send an encoding (in {{domxref("RTCPeerConnection.addTransceiver()")}} and {{domxref("RTCRtpSender.setParameters()")}}).
   Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information see {{bug(1611957)}}.
-  
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
@@ -66,9 +66,19 @@ The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feat
 
 #### Removals
 
-### WebDriver conformance (Marionette)
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
+
+The following commands and events are available:
+
+- Adds the [`session` module](https://w3c.github.io/webdriver-bidi/#module-session) including a partial implementation for the commands to globally subscribe ([`session.subscribe](https://w3c.github.io/webdriver-bidi/#command-session-subscribe)) to and unsubscribe ([`session.unsubscribe`](https://w3c.github.io/webdriver-bidi/#command-session-unsubscribe)) from events, and the ability to create a direct WebDriver BiDi session ([`session.new`](https://w3c.github.io/webdriver-bidi/#command-session-new)) when not using WebDriver classic.
+
+- Adds the [`browsingContext` module](https://w3c.github.io/webdriver-bidi/
+
+# module-browsingContext) including the commands to open a new tab or window ([`browsingContext.create`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create)) or close such one ([`browsingContext.close`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close)), retrieve open browsing contexts ([`browsingContext.getTree`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-getTree)) and to navigate within a browsing context ([`browsingContext.navigate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate)). There is also support for the event when a browsing context got created ([`browsingContext.contextCreated`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextCreated)).
+
+- Adds the [`log` module](https://w3c.github.io/webdriver-bidi/#module-log) including support for log events ([`log.entryAdded`](https://w3c.github.io/webdriver-bidi/#event-log-entryAdded)).
 
 ## Changes for add-on developers
 
