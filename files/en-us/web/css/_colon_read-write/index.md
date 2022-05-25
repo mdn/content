@@ -27,7 +27,9 @@ p:read-write {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:read-write
+```
 
 ## Examples
 

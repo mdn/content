@@ -26,7 +26,9 @@ div:empty {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:empty
+```
 
 ## Examples
 

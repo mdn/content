@@ -27,7 +27,9 @@ This selector is useful, to take a common example, for highlighting an entire {{
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:focus-within
+```
 
 ## Examples
 

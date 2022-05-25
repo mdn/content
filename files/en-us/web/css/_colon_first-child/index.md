@@ -26,7 +26,9 @@ p:first-child {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:first-child
+```
 
 ## Examples
 
