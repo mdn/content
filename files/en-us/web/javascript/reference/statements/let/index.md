@@ -206,9 +206,6 @@ declaration, the variable is initialized with a value of
 `undefined`. Accessing the variable before the declaration results in a
 {{jsxref("ReferenceError")}}.
 
-> **Note:** This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
-> which will return a value of `undefined` if they are accessed before they
-> are declared.
 
 ```js example-bad
 { // TDZ starts at beginning of scope
