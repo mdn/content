@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
+page-type: web-api-constructor
 tags:
   - API
   - AnalyserNode

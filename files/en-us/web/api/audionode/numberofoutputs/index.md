@@ -1,6 +1,7 @@
 ---
 title: AudioNode.numberOfOutputs
 slug: Web/API/AudioNode/numberOfOutputs
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode

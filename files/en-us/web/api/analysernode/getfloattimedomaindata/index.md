@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode

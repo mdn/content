@@ -1,6 +1,7 @@
 ---
 title: AudioNode.context
 slug: Web/API/AudioNode/context
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode

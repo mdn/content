@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
+page-type: web-api-interface
 tags:
   - API
   - Audio

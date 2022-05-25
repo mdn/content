@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

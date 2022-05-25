@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer.sampleRate
 slug: Web/API/AudioBuffer/sampleRate
+page-type: web-api-instance-property
 tags:
   - API
   - AudioBuffer
