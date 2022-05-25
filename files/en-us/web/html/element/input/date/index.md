@@ -127,11 +127,9 @@ For `date` inputs, the value of `step` is given in days; and is treated as a num
 
 ## Using date inputs
 
-Date inputs sound convenient — they provide an easy interface for choosing dates, and they normalize the data format sent to the server regardless of the user's locale. However, there are currently issues with `<input type="date">` because of its limited browser support.
+Date inputs sound convenient — they provide an easy interface for choosing dates, and they normalize the data format sent to the server regardless of the user's locale.
 
-In this section, we'll look at basic and then more complex uses of `<input type="date">`, and offer advice on mitigating the browser support issue later (see [Handling browser support](#handling_browser_support)).
-
-> **Note:** Hopefully, over time browser support will become ubiquitous, and this problem will fade away.
+In this section, we'll look at basic and then more complex uses of `<input type="date">`, and offer advice on mitigating browser support issues later (see [Handling browser support](#handling_browser_support)).
 
 ### Basic uses of date
 
