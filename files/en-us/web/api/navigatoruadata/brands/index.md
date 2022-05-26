@@ -17,9 +17,9 @@ The **`brands`** read-only property of the {{domxref("NavigatorUAData")}} interf
 
 An array containing the following information for each brand:
 
-- brand
+- `brand`
   - : A string containing the brand. For example, `"Google Chrome"`.
-- version
+- `version`
   - : A string containing the version. For example, `"91"`.
 
 ## Examples

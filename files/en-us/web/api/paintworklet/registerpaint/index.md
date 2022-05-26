@@ -23,9 +23,9 @@ image where a CSS property expects a file.
 
 ## Value
 
-- name
+- `name`
   - : The name of the worklet class to register.
-- class
+- `class`
   - : A reference to the class that implements the worklet.
 
 ## Value

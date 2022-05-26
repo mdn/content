@@ -21,7 +21,7 @@ A [`GamepadHand`](https://w3c.github.io/gamepad/extensions.html#gamepadhand-enum
 
 - `left` — the left hand.
 - `right` — the right hand.
-- Empty string ("") — this value is returned if the other values are not applicable, e.g. the controller is held in both hands, or would be fine in either.
+- `"" (Empty string)` — if the other values are not applicable, e.g. the controller is held in both hands, or would be fine in either.
 
 ## Examples
 
