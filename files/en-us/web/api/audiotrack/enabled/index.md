@@ -37,9 +37,9 @@ This example switches between the main and commentary audio tracks of a media el
 
 ```js
 function swapCommentaryMain() {
-  var videoElem = document.getElementById("main-video");
-  var audioTrackMain;
-  var audioTrackCommentary;
+  const videoElem = document.getElementById("main-video");
+  const audioTrackMain;
+  const audioTrackCommentary;
 
   videoElem.audioTracks.forEach(track) {
     if (track.kind === "main") {
@@ -50,7 +50,7 @@ function swapCommentaryMain() {
   }
 
   if (audioTrackMain && audioTrackCommentary) {
-    var commentaryEnabled = audioTrackCommentary.enabled;
+    const commentaryEnabled = audioTrackCommentary.enabled;
     audioTrackCommentary.enabled = audioTrackMain.enabled;
     audioTrackMain.enabled = commentaryEnabled;
   }
