@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
