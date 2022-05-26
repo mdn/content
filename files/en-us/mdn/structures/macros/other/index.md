@@ -30,7 +30,7 @@ We have an assortment of macros that can be used to automatically generate the c
 
 ### Quicklinks
 
-We have macros specifically designed to create [quicklinks](/en-US/docs/MDN/Structures/Quicklinks):
+We have one macro specifically designed to create [quicklinks](/en-US/docs/MDN/Structures/Quicklinks):
 
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.
 
