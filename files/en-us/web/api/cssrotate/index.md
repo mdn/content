@@ -1,6 +1,7 @@
 ---
 title: CSSRotate
 slug: Web/API/CSSRotate
+page-type: web-api-interface
 tags:
   - API
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: ContentIndexEvent()
 slug: Web/API/ContentIndexEvent/ContentIndexEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - Content

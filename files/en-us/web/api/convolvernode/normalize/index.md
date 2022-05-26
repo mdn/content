@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode.normalize
 slug: Web/API/ConvolverNode/normalize
+page-type: web-api-instance-property
 tags:
   - API
   - ConvolverNode

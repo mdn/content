@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

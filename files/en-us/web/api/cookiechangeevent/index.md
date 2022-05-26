@@ -1,6 +1,7 @@
 ---
 title: CookieChangeEvent
 slug: Web/API/CookieChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

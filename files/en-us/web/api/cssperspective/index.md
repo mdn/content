@@ -1,6 +1,7 @@
 ---
 title: CSSPerspective
 slug: Web/API/CSSPerspective
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API

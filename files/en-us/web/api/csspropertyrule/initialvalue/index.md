@@ -1,6 +1,7 @@
 ---
 title: CSSPropertyRule.initialValue
 slug: Web/API/CSSPropertyRule/initialvalue
+page-type: web-api-instance-property
 tags:
   - API
   - CSS

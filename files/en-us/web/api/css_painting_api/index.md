@@ -1,6 +1,7 @@
 ---
 title: CSS Painting API
 slug: Web/API/CSS_Painting_API
+page-type: web-api-overview
 tags:
   - API
   - CSS

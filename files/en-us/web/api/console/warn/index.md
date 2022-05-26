@@ -1,6 +1,7 @@
 ---
 title: console.warn()
 slug: Web/API/console/warn
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

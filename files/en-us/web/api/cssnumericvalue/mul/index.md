@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.mul()
 slug: Web/API/CSSNumericValue/mul
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
