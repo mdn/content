@@ -21,11 +21,14 @@ interface returns the current state of the `AudioContext`.
 
 A string. Possible values are:
 
-- `suspended`: The audio context has been suspended (with the
-  {{domxref("AudioContext.suspend()")}} method.)
-- `running`: The audio context is running normally.
-- `closed`: The audio context has been closed (with the
-  {{domxref("AudioContext.close()")}} method.)
+- `suspended`
+  - : The audio context has been suspended (with the
+    {{domxref("AudioContext.suspend()")}} method.)
+- `running`
+  - : The audio context is running normally.
+- `closed`
+  - : The audio context has been closed (with the
+    {{domxref("AudioContext.close()")}} method.)
 
 ## Examples
 

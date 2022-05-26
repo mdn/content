@@ -33,23 +33,23 @@ Assigning a value to `effectAllowed` in events other than
 A string representing the drag operation that is allowed. The
 possible values are:
 
-- none
+- `none`
   - : The item may not be dropped.
-- copy
+- `copy`
   - : A copy of the source item may be made at the new location.
-- copyLink
+- `copyLink`
   - : A copy or link operation is permitted.
-- copyMove
+- `copyMove`
   - : A copy or move operation is permitted.
-- link
+- `link`
   - : A link may be established to the source at the new location.
-- linkMove
+- `linkMove`
   - : A link or move operation is permitted.
-- move
+- `move`
   - : An item may be moved to a new location.
-- all
+- `all`
   - : All operations are permitted.
-- uninitialized
+- `uninitialized`
   - : The default value when the effect has not been set, equivalent to all.
 
 Assigning any other value to `effectAllowed` has no effect and the old value
