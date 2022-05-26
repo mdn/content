@@ -100,7 +100,7 @@ There is nothing protecting the `constructor` property from being re-assigned or
 
 ### Changing the `constructor` of a constructor function's `prototype`
 
-Every function constructor will have a `prototype` property, which will become the instance's [[Prototype]] when called via the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. `ConstructorFunction.prototype.constructor` will therefore become a property on the instance's [[Prototype]], as previously demonstrated.
+Every function constructor will have a `prototype` property, which will become the instance's `[[Prototype]]` when called via the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. `ConstructorFunction.prototype.constructor` will therefore become a property on the instance's `[[Prototype]]`, as previously demonstrated.
 
 However, if `ConstructorFunction.prototype` is re-assigned, the `constructor` property will be lost. For example, the following is a common way to create an inheritance pattern:
 
