@@ -41,7 +41,7 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  var trackList = [];
+  const trackList = [];
   const wantedKinds = [
     "main", "alternative", "main-desc", "translation", "commentary"
   ];
