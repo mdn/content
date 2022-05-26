@@ -28,8 +28,8 @@ const channels = 2;
 
 // Create an empty two second stereo buffer at the
 // sample rate of the AudioContext
-let frameCount = audioCtx.sampleRate * 2.0;
-let myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+const frameCount = audioCtx.sampleRate * 2.0;
+const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
   // Fill the buffer with white noise;
