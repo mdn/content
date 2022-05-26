@@ -64,7 +64,7 @@ The `outline` property may be specified using one, two, or three of the values l
 
 Outline is a line outside of the element's [border](/en-US/docs/Web/CSS/border). Unlike other areas of the box, outlines don't take up space, so they don't affect the layout of the document in any way.
 
-There are a few properties that affect an outline's appearance. It is possible to change the style, color, and width using the `outline` property, the distance from the border using the {{cssxref("outline-offset")}} property, and corner angles using the  {{cssxref("border-radius")}} property.
+There are a few properties that affect an outline's appearance. It is possible to change the style, color, and width using the `outline` property, the distance from the border using the {{cssxref("outline-offset")}} property, and corner angles using the {{cssxref("border-radius")}} property.
 
 An outline is not required to be rectangular: While dealing with multiline text, some browsers will draw an outline for each line box separately, while others will wrap the whole text with a single outline.
 

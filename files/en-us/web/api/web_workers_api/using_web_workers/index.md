@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - WebWorkers
   - Workers
+spec-urls: https://html.spec.whatwg.org/multipage/#workers
 ---
 {{DefaultAPISidebar("Web Workers API")}}
 
@@ -32,13 +33,13 @@ Workers may, in turn, spawn new workers, as long as those workers are hosted wit
 
 ## Dedicated workers
 
-As mentioned above, a dedicated worker is only accessible by the script that called it. In this section we'll discuss the JavaScript found in our [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)): This allows you to enter two numbers to be multiplied together. The numbers are sent to a dedicated worker, multiplied together, and the result is returned to the page and displayed.
+As mentioned above, a dedicated worker is only accessible by the script that called it. In this section we'll discuss the JavaScript found in our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)): This allows you to enter two numbers to be multiplied together. The numbers are sent to a dedicated worker, multiplied together, and the result is returned to the page and displayed.
 
 This example is rather trivial, but we decided to keep it simple while introducing you to basic worker concepts. More advanced details are covered later on in the article.
 
 ### Worker feature detection
 
-For slightly more controlled error handling and backwards compatibility, it is a good idea to wrap your worker accessing code in the following ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+For slightly more controlled error handling and backwards compatibility, it is a good idea to wrap your worker accessing code in the following ([main.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/main.js)):
 
 ```js
 if (window.Worker) {
@@ -50,7 +51,7 @@ if (window.Worker) {
 
 ### Spawning a dedicated worker
 
-Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread ([main.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/main.js)):
 
 ```js
 var myWorker = new Worker('worker.js');
@@ -58,7 +59,7 @@ var myWorker = new Worker('worker.js');
 
 ### Sending messages to and from a dedicated worker
 
-The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.onmessage", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.message_event", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/main.js)):
 
 ```js
 first.onchange = function() {
@@ -74,7 +75,7 @@ second.onchange = function() {
 
 So here we have two {{htmlelement("input")}} elements represented by the variables `first` and `second`; when the value of either is changed, `myWorker.postMessage([first.value,second.value])` is used to send the value inside both to the worker, as an array. You can send pretty much anything you like in the message.
 
-In the worker, we can respond when the message is received by writing an event handler block like this ([worker.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js)):
+In the worker, we can respond when the message is received by writing an event handler block like this ([worker.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/worker.js)):
 
 ```js
 onmessage = function(e) {
@@ -148,7 +149,7 @@ The browser loads each listed script and executes it. Any global objects from ea
 
 ## Shared workers
 
-A shared worker is accessible by multiple scripts — even if they are being accessed by different windows, iframes or even workers. In this section we'll discuss the JavaScript found in our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)): This is very similar to the basic dedicated worker example, except that it has two functions available handled by different script files: _multiplying two numbers_, or _squaring a number_. Both scripts use the same worker to do the actual calculation required.
+A shared worker is accessible by multiple scripts — even if they are being accessed by different windows, iframes or even workers. In this section we'll discuss the JavaScript found in our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)): This is very similar to the basic dedicated worker example, except that it has two functions available handled by different script files: _multiplying two numbers_, or _squaring a number_. Both scripts use the same worker to do the actual calculation required.
 
 Here we'll concentrate on the differences between dedicated and shared workers. Note that in this example we have two HTML pages, each with JavaScript applied that uses the same single worker file.
 
@@ -158,7 +159,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 ### Spawning a shared worker
 
-Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html) and [index2.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index2.html)) — each one has to spin up the worker using code like the following:
+Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
 
 ```js
 var myWorker = new SharedWorker('worker.js');
@@ -172,7 +173,7 @@ The port connection needs to be started either implicitly by use of the `onmessa
 
 ### Sending messages to and from a shared worker
 
-Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) and [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/square.js)):
 
 ```js
 squareNumber.onchange = function() {
@@ -181,7 +182,7 @@ squareNumber.onchange = function() {
 }
 ```
 
-Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)):
+Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/worker.js)):
 
 ```js
 onconnect = function(e) {
@@ -200,7 +201,7 @@ We use the `ports` attribute of this event object to grab the port and store it 
 
 Next, we add a `message` handler on the port to do the calculation and return the result to the main thread. Setting up this `message` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
 
-Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) and [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/square.js)):
 
 ```js
 myWorker.port.onmessage = function(e) {
@@ -779,9 +780,7 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 
 ## Specifications
 
-| Specification                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#workers', 'Web workers')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## See also
 

@@ -5,15 +5,17 @@ tags:
   - Reference
   - Web
 ---
+{{DefaultAPISidebar("Web Workers API") }}
+
 In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc), there are a variety of functions available from the DOM to workers. This article provides a list of those.
 
 ## Worker Contexts & Functions
 
-**Workers run in a different global context than the current window!** While  {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (`WindowOrWorkerGlobalScope`), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts:
+**Workers run in a different global context than the current window!** While {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (`WindowOrWorkerGlobalScope`), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts:
 
 - {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers
 - {{domxref("SharedWorkerGlobalScope")}} for shared workers
-- {{domxref("ServiceWorkerGlobalScope")}} for [service workers](/en-US/docs/Web/API/ServiceWorker_API)
+- {{domxref("ServiceWorkerGlobalScope")}} for [service workers](/en-US/docs/Web/API/Service_Worker_API)
 
 Some of the functions that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are: {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}},{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}.
 

@@ -103,10 +103,10 @@ _No change._
 
 ### Interface changes
 
-- The {{interface("mozIAsyncHistory")}} interface has a new method {{ifmethod("mozIAsyncHistory","isURIVisited")}} to check if a URI has been visited.
-- A new interface {{interface("mozIVisitStatusCallback")}} has been added to provide callback handling functionality for {{ifmethod("mozIAsyncHistory","isURIVisited")}}.
+- The `mozIAsyncHistory` interface has a new method `mozIAsyncHistory.isURIVisited()` to check if a URI has been visited.
+- A new interface `mozIVisitStatusCallback` has been added to provide callback handling functionality for `mozIAsyncHistory.isURIVisited()`.
 - The `nsIMacDockSupport` interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
-- In the `nsINavHistoryResultObserver` interface, you now need to implement {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} instead of the obsolete `containerOpened()` and `containerClosed()` methods.
+- In the `nsINavHistoryResultObserver` interface, you now need to implement `nsINavHistoryResultObserver.containerStateChanged()` instead of the obsolete `containerOpened()` and `containerClosed()` methods.
 
 #### Removed interfaces
 
@@ -121,7 +121,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Preference changes
 
-- {{Pref("ui.tooltipDelay")}}
+- `ui.tooltipDelay`
   - : Specifies the delay, in milliseconds, between the mouse cursor beginning to hover and the display of a tooltip.
 
 ### Build system changes

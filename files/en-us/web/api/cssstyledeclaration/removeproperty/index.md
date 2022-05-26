@@ -16,7 +16,7 @@ removes a property from a CSS style declaration object.
 ## Syntax
 
 ```js
-removeProperty(property);
+removeProperty(property)
 ```
 
 ### Parameters

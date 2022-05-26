@@ -31,7 +31,7 @@ compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) s
 ## Syntax
 
 ```js
-preventSilentAccess();
+preventSilentAccess()
 ```
 
 ### Parameters

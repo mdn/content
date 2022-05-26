@@ -24,12 +24,12 @@ to, for example, return a series of records sorted by that index using a cursor.
 ## Syntax
 
 ```js
-var index = objectStore.index(name);
+index(name)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the index to open.
 
 ### Return value
@@ -43,7 +43,7 @@ An {{domxref("IDBIndex")}} object for accessing the index.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if there is no index with the given name (case-sensitive) in the database.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the index
 `lName` from a simple contacts database. We then open a basic cursor on the

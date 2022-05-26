@@ -18,7 +18,7 @@ passed object is a valid {{domxref("WebGLVertexArrayObject")}} object.
 ## Syntax
 
 ```js
-GLBoolean gl.isVertexArray(vertexArray);
+isVertexArray(vertexArray)
 ```
 
 ### Parameters

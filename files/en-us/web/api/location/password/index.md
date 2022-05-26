@@ -8,10 +8,11 @@ tags:
   - Reference
 browser-compat: api.Location.password
 ---
+{{APIRef("HTMLDOM")}}
 {{deprecated_header}}
 
 The **`password`** property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} containing the password specified before the
+interface is a string containing the password specified before the
 domain name.
 
 If it is set without first setting the

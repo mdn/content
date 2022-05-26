@@ -16,8 +16,12 @@ The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} int
 ## Syntax
 
 ```js
-getSubscriptions();
+getSubscriptions()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

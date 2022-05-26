@@ -22,7 +22,7 @@ functions for retrieving the strings associated with specific physical keys.
 ## Syntax
 
 ```js
-navigator.keyboard.getLayoutMap()
+getLayoutMap()
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ None.
 A {{jsxref('Promise')}} that resolves with an instance of
 {{domxref('KeyboardLayoutMap')}}.
 
-## Example
+## Examples
 
 The following example demonstrates how to get the location- or layout-specific string
 associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.

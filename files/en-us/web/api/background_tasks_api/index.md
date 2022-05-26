@@ -9,6 +9,7 @@ tags:
   - Overview
   - cancelIdleCallback
   - requestIdleCallback
+browser-compat: api.Window.requestIdleCallback
 ---
 {{DefaultAPISidebar("Background Tasks")}}
 
@@ -472,11 +473,11 @@ Below is the actual functioning result of the code above. Try it out, play with 
 
 ## Specifications
 
-{{Specifications("api.Window.requestIdleCallback")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.IdleDeadline")}}
+{{Compat}}
 
 ## See also
 

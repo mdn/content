@@ -189,8 +189,6 @@ The following methods can be used to manipulate paths of objects.
 
 Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("DOMMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
 
-- {{domxref("CanvasRenderingContext2D.currentTransform")}} {{experimental_inline}}
-  - : Current transformation matrix ({{domxref("DOMMatrix")}} object).
 - {{domxref("CanvasRenderingContext2D.getTransform()")}}
   - : Retrieves the current transformation matrix being applied to the context.
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
@@ -258,7 +256,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ### Blink and WebKit
 
-Most of these APIs are [deprecated and were removed shortly after Chrome 36](https://code.google.com/p/chromium/issues/detail?id=363198).
+Most of these APIs are [deprecated and were removed shortly after Chrome 36](https://bugs.chromium.org/p/chromium/issues/detail?id=363198).
 
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.clearShadow()`
   - : Removes all shadow settings like {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}}.
@@ -307,10 +305,6 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 
 #### Prefixed APIs
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inverted transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`

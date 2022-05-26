@@ -132,8 +132,8 @@ You can sort the table by a particular column by clicking on that column's label
 ## Syntax
 
 ```js
-table(data);
-table(data, columns);
+table(data)
+table(data, columns)
 ```
 
 ### Parameters
@@ -142,6 +142,10 @@ table(data, columns);
   - : The data to display. This must be either an array or an object.
 - `columns`
   - : An array containing the names of columns to include in the output.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

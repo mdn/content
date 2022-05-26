@@ -18,7 +18,7 @@ tags:
 
 Highlights:
 
-- [Debugging Firefox for Android over Wifi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-over-the-network)
+- [Debugging Firefox for Android over Wi-Fi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-over-the-network)
 - _Firefox OS Simulator configuration in WebIDE_
 - [CSS filter presets](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html#saving-filter-presets)
 

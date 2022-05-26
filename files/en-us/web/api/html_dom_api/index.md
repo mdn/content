@@ -14,6 +14,7 @@ tags:
   - Web
   - Windows
   - hierarchy
+spec-urls: https://html.spec.whatwg.org/multipage/
 ---
 {{DefaultAPISidebar("HTML DOM")}}
 
@@ -53,7 +54,7 @@ Among the things added to `Document` by the HTML standard are:
 - Access to lists of elements in the document's {{HTMLElement("head")}} block and {{DOMxRef("Document/body", "body", "", "1")}}, as well as lists of the {{DOMxRef("Document/images", "images", "", "1")}}, {{DOMxRef("Document/links", "links", "", "1")}}, {{DOMxRef("Document/scripts", "scripts", "", "1")}}, etc. contained in the document.
 - Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
 - Event handlers for document {{DOMxRef("GlobalEventHandlers", "events defined by the HTML standard", "", "1")}} to allow access to {{DOMxRef("MouseEvent", "mouse", "", "1")}} and {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} events, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}}, and more.
-- Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("HTMLElement/oncopy", "copy", "", "1")}}, {{DOMxRef("HTMLElement/oncut", "cut", "", "1")}}, and {{DOMxRef("HTMLElement/onpaste", "paste", "", "1")}} actions.
+- Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("HTMLElement/copy_event", "copy", "", "1")}}, {{DOMxRef("HTMLElement/cut_event", "cut", "", "1")}}, and {{DOMxRef("HTMLElement/paste_event", "paste", "", "1")}} actions.
 
 ### HTML element interfaces
 
@@ -131,7 +132,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 - {{DOMxRef("HTMLOptionElement")}}
 - {{DOMxRef("HTMLOutputElement")}}
 - {{DOMxRef("HTMLParagraphElement")}}
-- {{DOMxRef("HTMLParamElement")}}
 - {{DOMxRef("HTMLPictureElement")}}
 - {{DOMxRef("HTMLPreElement")}}
 - {{DOMxRef("HTMLProgressElement")}}
@@ -273,7 +273,7 @@ Several interfaces are technically defined in the HTML specification while actua
 
 #### Web storage interfaces
 
-The {{DOMxRef("Web_Storage_API", "", "", "1")}} provides the ability for web sites to store data either temporarily or permanently on the user's device for later re-use.
+The {{DOMxRef("Web_Storage_API", "", "", "1")}} provides the ability for websites to store data either temporarily or permanently on the user's device for later re-use.
 
 - {{DOMxRef("Storage")}}
 - {{DOMxRef("StorageEvent")}}
@@ -292,7 +292,7 @@ These interfaces are used by the {{DOMxRef("Web_Workers_API", "", "", "1")}} bot
 - {{DOMxRef("Worker")}}
 - {{DOMxRef("WorkerGlobalScope")}}
 - {{DOMxRef("WorkerLocation")}}
-- {{DOMxRef("WorkerNavigator ")}}
+- {{DOMxRef("WorkerNavigator")}}
 
 #### WebSocket interfaces
 
@@ -309,7 +309,7 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 ## Examples
 
-In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLInputElement.input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
+In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
 
 #### JavaScript
 
@@ -366,12 +366,7 @@ The HTML for the form looks like this:
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                                         |
-| ------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG')}} | {{Spec2('HTML WHATWG')}} | WHATWG HTML Specification                       |
-| {{SpecName('HTML5 W3C')}}     | {{Spec2('HTML5 W3C')}}     | No change from {{SpecName("DOM2 HTML")}} |
-| {{SpecName('DOM2 HTML')}}     | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName("DOM1")}}.    |
-| {{SpecName('DOM1')}}         | {{Spec2('DOM1')}}         | Initial definition.                             |
+{{Specifications}}
 
 ## Browser compatibility
 

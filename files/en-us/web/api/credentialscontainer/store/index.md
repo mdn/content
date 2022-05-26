@@ -23,12 +23,12 @@ The **`store()`** method of the
 ## Syntax
 
 ```js
-store(Credential);
+store(credentials)
 ```
 
 ### Parameters
 
-- Credentials
+- `credentials`
   - : A valid {{domxref("Credential")}} instance.
 
 ### Return value

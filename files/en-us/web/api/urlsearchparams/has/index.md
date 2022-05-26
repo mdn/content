@@ -20,12 +20,12 @@ specified name exists.
 ## Syntax
 
 ```js
-var hasName = URLSearchParams.has(name)
+has(name)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to find.
 
 ### Return value

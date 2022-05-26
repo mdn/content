@@ -76,7 +76,7 @@ You can use {{jsxref("Functions/arguments/length", "arguments.length")}} to coun
 The {{jsxref("Operators/typeof", "typeof")}} operator returns `'object'` when used with `arguments`
 
 ```js
-console.log(typeof arguments); // 'object' 
+console.log(typeof arguments); // 'object'
 ```
 
 The type of individual arguments can be determined by indexing `arguments`:
@@ -155,7 +155,7 @@ function foo(...args) {
 foo(1, 2, 3); // [1, 2, 3]
 ```
 
-While the presence of rest, default, or destructured parameters does not alter [the behavior of the `arguments` object in strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler), there are subtle differences for non-strict code.
+While the presence of rest, default, or destructured parameters does not alter [the behavior of the `arguments` object in strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), there are subtle differences for non-strict code.
 
 In strict-mode code, the `arguments` object behaves the same whether or not a function is passed rest, default, or destructured parameters. That is, assigning new values to variables in the body of the function will not affect the `arguments` object. Nor will assigning new variables to the `arguments` object affect the value of variables.
 

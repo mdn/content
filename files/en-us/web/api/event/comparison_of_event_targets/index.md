@@ -31,7 +31,7 @@ There are five targets to consider:
         >
       </td>
       <td>
-        The DOM element on the left hand side of the call that triggered this
+        The DOM element on the left-hand side of the call that triggered this
         event.
       </td>
     </tr>

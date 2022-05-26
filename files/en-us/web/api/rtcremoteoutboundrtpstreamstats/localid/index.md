@@ -32,7 +32,7 @@ sides of the same synchronization source (SSRC).
 
 ## Value
 
-A {{domxref("DOMString")}} which can be compared to the value of an
+A string which can be compared to the value of an
 {{domxref("RTCInboundRtpStreamStats")}} object's
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} property to see if the two
 represent statistics for each of the two sides of the same set of data received by the
@@ -43,7 +43,7 @@ local peer.
 You can think of the local and remote views of the same RTP stream as pairs, each of
 which has a reference back to the other one. Thus, if an {{domxref("RTCStatsReport")}}
 includes an `remote-outbound-rtp` statistics object (of type
-`RTCRemoteOutboundRtpStreamstats`), it should also have a corresponding
+`RTCRemoteOutboundRtpStreamStats`), it should also have a corresponding
 `inbound-rtp` object. Both of these provide information about the same batch
 of packets being transmitted from the remote peer to the local device. The difference is
 that `remote-outbound-rtp` describes statistics about the transmission(s)

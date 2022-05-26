@@ -9,7 +9,7 @@ tags:
   - Learn
   - Styling
   - client-side
-  - vue
+  - Vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -426,7 +426,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid currentColor;
+  border: 2px solid currentcolor;
   background: transparent;
 }
 .custom-checkbox > input[type="checkbox"]:focus + label::before {

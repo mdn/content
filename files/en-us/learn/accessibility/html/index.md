@@ -511,7 +511,7 @@ Images also have another mechanisms available for providing descriptive text. Fo
 <img src="dinosaur.png" longdesc="dino-info.html">
 ```
 
-This sounds like a good idea, especially for infographics like big charts with lots of information on them that could perhaps be represented as an accessible data table instead (see [Accessible data tables](/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables)). However, `longdesc` is not supported consistently by screen readers, and the content is completely inaccessible to non-screen reader users. It is arguably much better to include the long description on the same page as the image, or link to it with a regular link.
+This sounds like a good idea, especially for infographics like big charts with lots of information on them that could perhaps be represented as an accessible data table instead (see [Accessible data tables](#accessible_data_tables)). However, `longdesc` is not supported consistently by screen readers, and the content is completely inaccessible to non-screen reader users. It is arguably much better to include the long description on the same page as the image, or link to it with a regular link.
 
 HTML5 includes two new elements — {{htmlelement("figure")}} and {{htmlelement("figcaption")}} — which are supposed to associate a figure of some kind (it could be anything, not necessarily an image) with a figure caption:
 
@@ -587,7 +587,7 @@ A skip link, also known as skipnav, is an `a` element placed as close as possibl
 Skip links are especially useful for people who navigate with the aid of assistive technology such as switch control, voice command, or mouth sticks/head wands, where the act of moving through repetitive links can be a laborious task.
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
-- [How–to: Use Skip Navigation links - The A11Y Project](https://www.a11yproject.com/posts/2013-05-11-skip-nav-links/)
+- [How–to: Use Skip Navigation links - The A11Y Project](https://www.a11yproject.com/posts/skip-nav-links/)
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 

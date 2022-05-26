@@ -16,8 +16,8 @@ The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie
 ## Syntax
 
 ```js
-set(name,value);
-set(options);
+set(name, value)
+set(options)
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ This method requires one of the following:
   - : A string with the name of the cookie.
 - `value`
   - : A string with the value of the cookie.
-- options
+- `options`
 
   - : An object containing:
 
@@ -36,13 +36,13 @@ This method requires one of the following:
       - : A string with the name of a cookie.
     - `value`
       - : A string with the value of the cookie.
-    - `expires`{{Optional_Inline}}
+    - `expires` {{Optional_Inline}}
       - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
-    - `domain`{{Optional_Inline}}
+    - `domain` {{Optional_Inline}}
       - : A string containing the domain of the cookie.
-    - `path`{{Optional_Inline}}
+    - `path` {{Optional_Inline}}
       - : A string containing the path of the cookie.
-    - `sameSite`{{Optional_Inline}}
+    - `sameSite` {{Optional_Inline}}
 
       - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
 

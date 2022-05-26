@@ -77,7 +77,7 @@ fetch("some.json", {cache: "force-cache"})
 let controller = new AbortController();
 fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: controller.signal})
   .catch(e => e instanceof TypeError && e.message === "Failed to fetch" ?
-    ({status: 504}) : // Workaround for chrome; which fails with a typeerror
+    ({status: 504}) : // Workaround for chrome; which fails with a TypeError
     Promise.reject(e))
   .then(res => {
     if (res.status === 504) {

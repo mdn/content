@@ -16,7 +16,7 @@ Creates an `XPathNSResolver` which resolves namespaces with respect to the defin
 ## Syntax
 
 ```js
-nsResolver = document.createNSResolver(node);
+createNSResolver(node)
 ```
 
 ### Parameters

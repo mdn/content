@@ -21,9 +21,9 @@ processing {{event("close")}} events sent to a {{HTMLElement("dialog")}} element
 
 The `close` event fires when the user closes a `<dialog>`.
 
-> **Note:** To handle the closing of a window, use
-> {{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} or
-> {{domxref("WindowEventHandlers.onunload", "onunload")}}.
+> **Note:** To handle the closing of a window, use the
+> {{domxref("Window/beforeunload_event", "beforeunload")}} or
+> {{domxref("Window/unload_event", "unload")}} events.
 
 ## Syntax
 

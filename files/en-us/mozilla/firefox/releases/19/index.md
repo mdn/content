@@ -42,7 +42,7 @@ Firefox 19 was released on February 19, 2013. This article lists key changes tha
 
 ### XForms
 
-Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms/) in Firefox 19.
+Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms) in Firefox 19.
 
 ## Changes for add-on and Mozilla developers
 
@@ -54,13 +54,13 @@ Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.phil
 ### Interface changes
 
 - `nsIImgLoadingContent`
-  - : The parameter (aObserver) of `addObserver()` method changes from {{interface("imgIDecoderObserver")}} to {{interface("imgINotificationObserver")}}. The `notify()` method of {{interface("imgINotificationObserver")}} is not scriptable, so you need to use `createScriptedObserver()` from {{interface("imgITools")}}.
+  - : The parameter (aObserver) of `addObserver()` method changes from `imgIDecoderObserver` to `imgINotificationObserver`. The `notify()` method of `imgINotificationObserver` is not scriptable, so you need to use `createScriptedObserver()` from `imgITools`.
 - `nsIChannel`
   - : The property `contentLength` changed from `long` to `int64_t`.
 
 ## See also
 
-- [Firefox 19 Beta Release Notes](https://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
+- [Firefox 19 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/19.0beta/releasenotes/)
 - [Add-on Compatibility for Firefox 19](https://blog.mozilla.org/addons/2013/02/07/compatibility-for-firefox-19/)
 
 ### Older versions

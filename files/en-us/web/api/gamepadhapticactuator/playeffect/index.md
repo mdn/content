@@ -19,24 +19,28 @@ The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interf
 ## Syntax
 
 ```js
-playEffect(type, params);
+playEffect(type, params)
 ```
 
 ### Parameters
 
-- _type_
+- `type`
   - : A string representing the desired effect. This can vary depending on the hardware type. Possible values are "dual-rumble" or "vibration".
 
-- _params_
+- `params`
 
   - : An object to describe a desired haptic effect.
 
     Expected values are:
 
-    - `duration`: The duration of the effect in milliseconds.
-    - `startDelay`: The delay in milliseconds before the effect is started.
-    - `strongMagnitude`: Rumble intensity of the low-frequency (strong) rumble motors, normalized to the range between 0.0 and 1.0.
-    - `weakMagnitude`: Rumble intensity of the high-frequency (weak) rumble motors, normalized to the range between 0.0 and 1.0.
+    - `duration`
+      - : The duration of the effect in milliseconds.
+    - `startDelay`
+      - : The delay in milliseconds before the effect is started.
+    - `strongMagnitude`
+      - : Rumble intensity of the low-frequency (strong) rumble motors, normalized to the range between 0.0 and 1.0.
+    - `weakMagnitude`
+      - : Rumble intensity of the high-frequency (weak) rumble motors, normalized to the range between 0.0 and 1.0.
 
 > **Note:** A new call to `playEffect()` overrides a previous ongoing call.
 

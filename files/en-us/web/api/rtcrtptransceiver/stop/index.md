@@ -31,7 +31,7 @@ This method does nothing if the transceiver is already stopped.
 ## Syntax
 
 ```js
-RTCRtpTransceiver.stop()
+stop()
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ None.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

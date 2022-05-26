@@ -25,7 +25,7 @@ Install the _Latin Modern Math_ and _STIX_ fonts as follows:
 
 > **Note:** _Cambria Math_ is installed by default on Windows 7 and later versions and should ensure relatively good MathML rendering. [An enhancement request has been submitted to Microsoft to install Latin Modern Math and STIX by default](https://windows.uservoice.com/forums/265757-windows-feature-suggestions/suggestions/9727281-add-new-math-fonts-latin-modern-math-and-stix-2).
 
-### OS X
+### macOS
 
 Install the _Latin Modern Math_ and _STIX_ fonts as follows:
 
@@ -94,11 +94,11 @@ You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/
 
 You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
-> **Note:** We [plan to bundle](https://bugzilla.mozilla.org/show_bug.cgi?id=775060) a [MATH font](#Fonts_with_a_MATH_table) in the default installation.
+> **Note:** We [plan to bundle](https://bugzilla.mozilla.org/show_bug.cgi?id=775060) a [MATH font](#fonts_with_a_math_table) in the default installation.
 
 ### Other systems
 
-On other systems, consider installing a [MATH font](#Fonts_with_a_MATH_table) using your package manager. Note that these fonts are generally delivered with TeX distributions such as [TeX Live](https://www.tug.org/texlive/), but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the [MathML fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
+On other systems, consider installing a [MATH font](#fonts_with_a_math_table) using your package manager. Note that these fonts are generally delivered with TeX distributions such as [TeX Live](https://www.tug.org/texlive/), but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the [MathML fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
 ## Advanced setup
 
@@ -108,14 +108,14 @@ Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Al
 
 ### Installation without Administrator Privilege
 
-If you need to install fonts on a system without administrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [STIX](https://github.com/stipub/stixfonts) into some local font folder and (if necessary) to run `fc-cache` on it. On OS X and Linux, the standard paths are `~/Library/Fonts/` and `~/.fonts`.
+If you need to install fonts on a system without administrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [STIX](https://github.com/stipub/stixfonts) into some local font folder and (if necessary) to run `fc-cache` on it. On macOS and Linux, the standard paths are `~/Library/Fonts/` and `~/.fonts`.
 
 ### Fonts with a MATH table
 
 You can actually render MathML using any font with a MATH table and related Open Font Format features. A list of such math fonts is provided below. You can use the _advanced font preference menu_ to configure the default font for mathematics. Alternatively, you can try the [MathML-fontsettings add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/).
 
 - [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
-- [Cambria Math](https://www.microsoft.com/typography/fonts/family.aspx?FID=360)
+- [Cambria Math](https://docs.microsoft.com/en-us/typography/font-list/?FID=360)
 - [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
 - [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math) (under development)
 - [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math)

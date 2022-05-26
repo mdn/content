@@ -40,8 +40,12 @@ happens.
 ## Syntax
 
 ```js
-seekToNextFrame();
+seekToNextFrame()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

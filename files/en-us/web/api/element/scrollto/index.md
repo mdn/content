@@ -17,8 +17,8 @@ interface scrolls to a particular set of coordinates inside a given element.
 ## Syntax
 
 ```js
-element.scrollTo(x-coord, y-coord)
-element.scrollTo(options)
+scrollTo(x-coord, y-coord)
+scrollTo(options)
 ```
 
 ### Parameters
@@ -38,6 +38,10 @@ element.scrollTo(options)
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

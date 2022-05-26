@@ -29,12 +29,12 @@ Be aware that you can't call `update()` (or
 ## Syntax
 
 ```js
-var anIDBRequest = myIDBCursor.update(value);
+update(value)
 ```
 
 ### Parameters
 
-- value
+- `value`
   - : The new value to be stored at the current position.
 
 ### Return value
@@ -59,7 +59,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if the data being stored could not be cloned by the internal structured
         cloning algorithm.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. If the

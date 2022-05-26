@@ -22,7 +22,7 @@ send binary or text data to a presenting browsing context.
 ## Syntax
 
 ```js
-PresentationConnection.send(data);
+send(data)
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ PresentationConnection.send(data);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

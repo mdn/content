@@ -15,7 +15,7 @@ The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} in
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing a URL.
+A string containing a URL.
 
 ## Examples
 

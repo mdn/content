@@ -26,7 +26,7 @@ permission issues, result in the promise being rejected.
 ## Syntax
 
 ```js
-var promise = HTMLMediaElement.play();
+play()
 ```
 
 ### Parameters
@@ -80,7 +80,7 @@ UI based on whether the returned promise is fulfilled or rejected. See the
 For even more in-depth information about autoplay and autoplay blocking, see our
 article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
-## Example
+## Examples
 
 This example demonstrates how to confirm that playback has begun and how to gracefully
 handle blocked automatic playback:

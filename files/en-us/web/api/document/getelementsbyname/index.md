@@ -19,15 +19,19 @@ elements with a given `name` attribute in the document.
 ## Syntax
 
 ```js
-var elements = document.getElementsByName(name);
+getElementsByName(name)
 ```
 
-- _elements_ is a live {{domxref("NodeList")}} Collection, meaning it
-  automatically updates as new elements with the same `name` are added
-  to/removed from the document.
-- _name_ is the value of the `name` attribute of the element(s).
+### Parameters
 
-## Example
+- `name`
+  - : The value of the `name` attribute of the element(s) we are looking for.
+
+### Return value
+
+A live {{domxref("NodeList")}} collection, meaning it automatically updates as new elements with the same `name` are added to, or removed from, the document.
+
+## Examples
 
 ```html
 <!DOCTYPE html>

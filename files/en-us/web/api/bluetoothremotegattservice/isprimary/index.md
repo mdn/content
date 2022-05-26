@@ -12,7 +12,7 @@ tags:
   - isPrimary
 browser-compat: api.BluetoothRemoteGATTService.isPrimary
 ---
-{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.isPrimary`** read-only property
 returns a boolean value that indicates whether this is a primary service. If it

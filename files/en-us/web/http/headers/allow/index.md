@@ -6,6 +6,7 @@ tags:
   - HTTP Header
   - Response header
   - Reference
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-7.4.1
 ---
 {{HTTPSidebar}}
 
@@ -45,9 +46,7 @@ Allow: GET, POST, HEAD
 
 ## Specifications
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

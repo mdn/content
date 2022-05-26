@@ -46,7 +46,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 ## Syntax
 
 ```js
-XMLHttpRequest.setRequestHeader(header, value)
+setRequestHeader(header, value)
 ```
 
 ### Parameters
@@ -58,7 +58,7 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

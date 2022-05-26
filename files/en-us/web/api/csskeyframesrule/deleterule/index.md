@@ -17,7 +17,7 @@ The **`deleteRule()`** method of the {{domxref("CSSKeyframeRule")}} interface de
 ## Syntax
 
 ```js
-deleteRule(select);
+deleteRule(select)
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ deleteRule(select);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

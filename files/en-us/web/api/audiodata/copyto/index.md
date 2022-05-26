@@ -40,12 +40,11 @@ Undefined.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
-- `RangeError` {{domxref("DOMException")}}
-  - : Thrown if the length of the sample is longer than the destination length.
-- `RangeError` {{domxref("DOMException")}}
-  - : Thrown if the format of the `AudioData` object describes a planar format, but `options.planeIndex` is outside of the number of planes available.
-- `RangeError` {{domxref("DOMException")}}
-  - : Thrown if the format of the `AudioData` object describes an interleaved format, but `options.planeIndex` is greater than `0`.
+- {{jsxref("RangeError")}}
+  - : Thrown if one of the following conditions is met:
+    - The length of the sample is longer than the destination length.
+    - The format of the `AudioData` object describes a planar format, but `options.planeIndex` is outside of the number of planes available.
+    - The format of the `AudioData` object describes an interleaved format, but `options.planeIndex` is greater than `0`.
 
 ## Examples
 

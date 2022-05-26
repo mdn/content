@@ -21,7 +21,7 @@ app operations canceled and their promises rejected.
 ## Syntax
 
 ```js
-var promise = USBDevice.reset()
+reset()
 ```
 
 ### Parameters

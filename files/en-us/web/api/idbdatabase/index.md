@@ -27,7 +27,7 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 ## Properties
 
 - {{domxref("IDBDatabase.name")}} {{readonlyInline}}
-  - : A {{ domxref("DOMString") }} that contains the name of the connected database.
+  - : A string that contains the name of the connected database.
 - {{domxref("IDBDatabase.version")}} {{readonlyInline}}
   - : A 64-bit integer that contains the version of the connected database. When a database is first created, this attribute is an empty string.
 - {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
@@ -39,7 +39,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 - {{domxref("IDBDatabase.close()")}}
   - : Returns immediately and closes the connection to a database in a separate thread.
-- {{domxref("IDBDatabase.createMutableFile()")}}
+- `IDBDatabase.createMutableFile()` {{deprecated_inline}}{{Non-standard_Inline}}
   - : Creates a file handle, allowing files to be stored inside an IndexedDB database.
 - {{domxref("IDBDatabase.createObjectStore()")}}
   - : Creates and returns a new object store or index.

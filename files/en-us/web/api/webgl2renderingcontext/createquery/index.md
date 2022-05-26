@@ -18,7 +18,7 @@ information.
 ## Syntax
 
 ```js
-WebGLQuery gl.createQuery();
+createQuery()
 ```
 
 ### Parameters

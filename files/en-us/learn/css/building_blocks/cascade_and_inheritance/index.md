@@ -235,7 +235,7 @@ One situation in which you may have to use `!important` is when you are working 
 
 Finally, it is also useful to note that the importance of a CSS declaration depends on what stylesheet it is specified in — it is possible for users to set custom stylesheets to override the developer's styles. For example, the user might be visually impaired, and want to set the font size on all web pages they visit to be double the normal size to allow for easier reading.
 
-## To summarize
+## Order of overriding declarations
 
 Conflicting declarations will be applied in the following order, with later ones overriding earlier ones:
 
@@ -249,11 +249,11 @@ It makes sense for web developers' stylesheets to override user stylesheets, so 
 
 ## Test your skills!
 
-We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: the Cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_tasks).
 
-## What's next
+## Summary
 
-If you understood most of this article, then well done — you've started getting familiar with the fundamental mechanics of CSS. Next up, we'll look at selectors in detail.
+If you understood most of this article, then well done — you've started getting familiar with the fundamental mechanics of CSS. Next up, we'll look at [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) in detail.
 
 If you didn't fully understand the cascade, specificity, and inheritance, then don't worry! This is definitely the most complicated thing we've covered so far in the course and is something that even professional web developers sometimes find tricky. We'd advise that you return to this article a few times as you continue through the course, and keep thinking about it.
 
@@ -263,21 +263,24 @@ Refer back here if you start to come across strange issues with styles not apply
 
 ## In this module
 
-1. **Cascade and inheritance**
-2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

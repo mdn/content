@@ -14,6 +14,17 @@ browser-compat: css.properties.margin-inline
 
 The **`margin-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) is a shorthand property that defines both the logical inline start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
 
+{{EmbedInteractiveExample("pages/css/margin-inline.html")}}
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("margin-inline-start")}}
+- {{cssxref("margin-inline-end")}}
+
+## Syntax
+
 ```css
 /* <length> values */
 margin-inline: 10px 20px;  /* An absolute length */
@@ -33,15 +44,6 @@ margin-inline: unset;
 ```
 
 This property corresponds to the {{CSSxRef("margin-top")}} and {{CSSxRef("margin-bottom")}}, or the {{CSSxRef("margin-right")}} and {{CSSxRef("margin-left")}} properties, depending on the values defined for {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, and {{CSSxRef("text-orientation")}}.
-
-## Constituent properties
-
-This property is a shorthand for the following CSS properties:
-
-- {{cssxref("margin-inline-start")}}
-- {{cssxref("margin-inline-end")}}
-
-## Syntax
 
 The `margin-inline` property may be specified using one or two values.
 

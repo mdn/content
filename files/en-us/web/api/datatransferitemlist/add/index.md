@@ -16,23 +16,23 @@ browser-compat: api.DataTransferItemList.add
 
 The **`DataTransferItemList.add()`** method creates a new
 {{domxref("DataTransferItem")}} using the specified data and adds it to the drag data
-list. The item may be a {{domxref("File")}} or a {{domxref("DOMString","string")}} of a
+list. The item may be a {{domxref("File")}} or a string of a
 given type. If the item is successfully added to the list, the newly-created
 {{domxref("DataTransferItem")}} object is returned.
 
 ## Syntax
 
 ```js
-DataTransferItem = DataTransferItemList.add(data, type);
-DataTransferItem = DataTransferItemList.add(file);
+add(data, type)
+add(file)
 ```
 
 ### Parameters
 
 - `data`
-  - : A {{domxref("DOMstring","string")}} representing the drag item's data.
+  - : A string representing the drag item's data.
 - `type`
-  - : A {{domxref("DOMstring","string")}} of the drag item's type. Some example types are
+  - : A string of the drag item's type. Some example types are
     `text/html` and `text/plain`.
 - `file`
   - : A {{domxref("File")}} object. No type needs to be given in this case.
@@ -50,7 +50,7 @@ has no data store), `null` is returned.
     item whose {{domxref("DataTransferItem.kind","kind")}} is `"Plain Unicode string"` and
     whose type is equal to the specified type parameter.
 
-## Example
+## Examples
 
 This example shows the use of the `add()` method.
 
@@ -139,9 +139,9 @@ function dragend_handler(ev) {
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 300)}}
+{{EmbedLiveSample('Examples', 400, 300)}}
 
-{{LiveSampleLink('Example', 'Result link')}}
+{{LiveSampleLink('Examples', 'Result link')}}
 
 ## Specifications
 

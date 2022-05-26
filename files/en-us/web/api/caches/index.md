@@ -59,7 +59,7 @@ this.addEventListener('install', function(event) {
 
 ## See also
 
-- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
+- [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - {{domxref("CacheStorage")}}
 - {{domxref("Cache")}}

@@ -20,7 +20,7 @@ for visibility changes.
 ## Syntax
 
 ```js
-intersectionObserver.disconnect();
+disconnect()
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

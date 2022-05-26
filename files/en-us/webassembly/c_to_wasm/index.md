@@ -11,7 +11,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](/en-US/docs/Mozilla/Projects/Emscripten). Let's look at how it works.
+When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](https://emscripten.org/). Let's look at how it works.
 
 ## Emscripten Environment Setup
 
@@ -136,7 +136,7 @@ If you have a function defined in your C code that you want to call as needed fr
 3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with `NO_EXIT_RUNTIME`, which is necessary as otherwise when `main()` exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)
 
     ```bash
-    emcc -o hello3.html hello3.c -O3 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
+    emcc -o hello3.html hello3.c -O3 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"
     ```
 
 4. If you load the example in your browser again, you'll see the same thing as before!

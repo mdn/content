@@ -18,7 +18,7 @@ The **`WebGL2RenderingContext.createSampler()`** method of the
 ## Syntax
 
 ```js
-WebGLSampler gl.createSampler();
+createSampler()
 ```
 
 ### Parameters

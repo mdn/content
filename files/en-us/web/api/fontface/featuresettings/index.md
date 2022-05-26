@@ -21,7 +21,7 @@ are not available from a font's variant properties. It is equivalent to the
 
 ## Value
 
-A {{domxref('CSSOMString')}} containing a descriptor.
+A string containing a descriptor.
 
 ## Specifications
 

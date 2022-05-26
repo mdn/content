@@ -14,6 +14,7 @@ tags:
   - XHR
   - XML
   - XMLHttpRequest
+browser-compat: api.XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -90,8 +91,7 @@ There are four primary ways of analyzing this XML document:
 
 > **Note:** `XMLHttpRequest` can now interpret HTML for you
 > using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the
-> article about [HTML
-> in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn how to do this.
+> article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn how to do this.
 
 ### Processing a responseText property containing an HTML document
 
@@ -911,7 +911,7 @@ XMLHttpRequest is created when the window to be closed is still there, and final
 sending the request (in other words, `open()`) when this window has lost its
 focus and another window gains focus. The most effective way to avoid this problem is to
 set a listener on the new window's {{event("activate")}} event which is set once the
-terminated window has its {{event("unload")}} event triggered.
+terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
 
 ## Workers
 
@@ -920,22 +920,17 @@ Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
 
 ## Specifications
 
-{{Specifications("api.XMLHttpRequest")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## See also
 
-1. [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
-1. [HTML in
-    XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-1. [HTTP access control](/en-US/docs/Web/HTTP/CORS)
-1. [XMLHttpRequest -
-    REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-1. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
-1. ["Using the XMLHttpRequest
-    Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-1. [The `XMLHttpRequest` object:
-    WHATWG specification](https://xhr.spec.whatwg.org/)
+- [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

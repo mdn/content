@@ -17,7 +17,7 @@ children of the specified node to the selection. Previous selection is lost.
 ## Syntax
 
 ```js
-sel.selectAllChildren(parentNode)
+selectAllChildren(parentNode)
 ```
 
 ### Parameters
@@ -26,7 +26,11 @@ sel.selectAllChildren(parentNode)
   - : All children of `parentNode` will be selected. `parentNode`
     itself is not part of the selection.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### HTML
 
@@ -55,7 +59,7 @@ button.addEventListener('click', (e) => {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 200)}}
+{{EmbedLiveSample("Examples", 700, 200)}}
 
 ## Specifications
 

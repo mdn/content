@@ -25,20 +25,20 @@ available in the browsers you need to support.
 ## Syntax
 
 ```js
-MediaQueryList.removeListener(func)
+removeListener(func)
 ```
 
 ### Parameters
 
-- func
+- `func`
   - : A function or function reference representing the callback function you want to
     remove.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 var paragraph = document.querySelector('p');

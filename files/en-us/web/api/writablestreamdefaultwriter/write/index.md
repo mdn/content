@@ -26,12 +26,12 @@ destination.
 ## Syntax
 
 ```js
-var promise = writableStreamDefaultWriter.write(chunk);
+write(chunk)
 ```
 
 ### Parameters
 
-- chunk
+- `chunk`
   - : A block of binary data to pass to the `WritableStream`.
 
 ### Return value
@@ -42,7 +42,7 @@ writing process is initiated.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The target stream is not a writable stream, or it does not have an owner.
 
 ## Examples

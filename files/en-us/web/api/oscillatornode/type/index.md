@@ -20,7 +20,7 @@ tone that is produced.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the shape of oscillator wave. The different
+A string specifying the shape of oscillator wave. The different
 available values are:
 
 - `sine`

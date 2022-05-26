@@ -23,17 +23,14 @@ This second article in our [Express Tutorial](/en-US/docs/Learn/Server-side/Expr
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
-          >Set up a Node development environment</a
-        >. Review the Express Tutorial.
+        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Set up a Node development environment</a>.
+          Review the Express Tutorial.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To be able to start your own new website projects using the
-        <em>Express Application Generator</em>.
+        To be able to start your own new website projects using the <em>Express Application Generator</em>.
       </td>
     </tr>
   </tbody>
@@ -425,8 +422,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 ```
 
-The next set of functions call `app.use()` to add the _middleware_ libraries into the request handling chain.
-In addition to the 3rd party libraries we imported previously, we use the `express.static` middleware to get _Express_ to serve all the static files in the **/public** directory in the project root.
+The next set of functions call `app.use()` to add the _middleware_ libraries that we imported above into the request handling chain.
+For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/api.html#req.body) with the form fields.
+After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **/public** directory in the project root.
 
 ```js
 app.use(logger('dev'));

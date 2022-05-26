@@ -19,7 +19,7 @@ It is similar to the CSS {{cssxref("filter")}} property and accepts the same val
 ## Value
 
 The `filter` property accepts a value of `"none"` or one or more
-of the following filter functions in a {{domxref("DOMString")}}.
+of the following filter functions in a string.
 
 - [`url()`](</en-US/docs/Web/CSS/filter#url()>)
   - : A CSS {{cssxref("url", "url()")}}. Takes an IRI pointing to an SVG filter element,
@@ -45,14 +45,18 @@ of the following filter functions in a {{domxref("DOMString")}}.
     offset version of the drawing's alpha mask drawn in a particular color, composited
     below the drawing. This function takes up to five arguments:
 
-    - `<offset-x>`: See {{cssxref("&lt;length&gt;")}} for possible
-      units. Specifies the horizontal distance of the shadow.
-    - `<offset-y>`: See {{cssxref("&lt;length&gt;")}} for possible
-      units. Specifies the vertical distance of the shadow.
-    - `<blur-radius>`: The larger this value, the bigger the blur, so
-      the shadow becomes bigger and lighter. Negative values are not allowed.
-    - `<color>`: See {{cssxref("&lt;color&gt;")}} values for possible
-      keywords and notations.
+    - `<offset-x>`
+      - : See {{cssxref("&lt;length&gt;")}} for possible
+        units. Specifies the horizontal distance of the shadow.
+    - `<offset-y>`
+      - : See {{cssxref("&lt;length&gt;")}} for possible
+        units. Specifies the vertical distance of the shadow.
+    - `<blur-radius>`
+      - : The larger this value, the bigger the blur, so
+        the shadow becomes bigger and lighter. Negative values are not allowed.
+    - `<color>`
+      - : See {{cssxref("&lt;color&gt;")}} values for possible
+        keywords and notations.
 
 - [`grayscale()`](</en-US/docs/Web/CSS/filter#grayscale()>)
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Converts the drawing to grayscale. A value

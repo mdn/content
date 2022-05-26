@@ -19,7 +19,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current
 ## Syntax
 
 ```js
-void gl.copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
+copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 ```
 
 ### Parameters
@@ -63,7 +63,7 @@ void gl.copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

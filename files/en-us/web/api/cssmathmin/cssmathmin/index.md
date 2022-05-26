@@ -20,12 +20,12 @@ new {{domxref("CSSMathMin")}} object which represents the CSS
 ## Syntax
 
 ```js
-new CSSMathMin(args);
+new CSSMathMin(args)
 ```
 
 ### Parameters
 
-- args
+- `args`
   - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
     integer or a {{domxref('CSSNumericValue')}}.
 

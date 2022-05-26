@@ -22,12 +22,13 @@ interface creates a new key range containing a single value.
 ## Syntax
 
 ```js
-var myIDBKeyRange = IDBKeyRange.only(value);
+only(value)
 ```
 
 ### Parameters
 
-*value* is the value for the new key range.
+- `value`
+  - : The value for the new key range.
 
 ### Return value
 
@@ -35,13 +36,10 @@ var myIDBKeyRange = IDBKeyRange.only(value);
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the `value` parameter was not a valid key.
 
-| Exception   | Description                                     |
-| ----------- | ----------------------------------------------- |
-| `DataError` | The value parameter passed was not a valid key. |
-
-## Example
+## Examples
 
 The following example illustrates how you'd use an only key range. Here we declare
 a `keyRangeValue = IDBKeyRange.only("A");` — a range that only includes the
@@ -52,8 +50,7 @@ the cursor will only retrieve the record with the key value "A".
 
 > **Note:** For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange)
-> repo ([view the example
-> live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> repo ([view the example live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {

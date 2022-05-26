@@ -17,7 +17,7 @@ There are several arguments against using video content for technical documentat
 
 - Video is linear.
   People don't tend to read online documentation in a linear fashion, starting at the start and reading through to the end.
-  [They scan](https://www.sensible.com/chapter.html).
+  _They scan._
   Video is really hard to scan — it forces the user to consume the content start-to-finish.
 - Video is less information-dense than text.
   It takes longer to consume a video explaining something than it does to read the equivalent instructions.

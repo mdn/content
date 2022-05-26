@@ -23,9 +23,12 @@ The actions are set using the `actions` option of the second argument for the [`
 
 A read-only array of actions. Each element in the array is an object with the following members:
 
-- action: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
-- title: A {{domxref("DOMString")}} containing action text to be shown to the user.
-- icon: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
+- `action`
+  - : A string identifying a user action to be displayed on the notification.
+- `title`
+  - : A string containing action text to be shown to the user.
+- `icon`
+  - : A string containing the URL of an icon to display with the action.
 
 ## Specifications
 

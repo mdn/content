@@ -18,7 +18,7 @@ either "videoinput", "audioinput" or "audiooutput".
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

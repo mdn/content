@@ -27,16 +27,16 @@ close/remove a previously displayed notification.
 ## Syntax
 
 ```js
-Notification.close();
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

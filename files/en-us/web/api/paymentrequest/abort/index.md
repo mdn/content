@@ -20,16 +20,16 @@ interface that might be shown.
 ## Syntax
 
 ```js
-PaymentRequest.abort();
+abort()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
-None
+None.
+
+### Return value
+
+None ({{jsxref('undefined')}}).
 
 ## Examples
 

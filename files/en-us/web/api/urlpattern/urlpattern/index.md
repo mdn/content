@@ -22,20 +22,20 @@ object representing the url pattern defined by the parameters.
 ## Syntax
 
 ```js
-new URLPattern(input);
-new URLPattern(input, baseURL);
+new URLPattern(input)
+new URLPattern(input, baseURL)
 ```
 
 ### Parameters
 
 - `input`
   - : The pattern that will be used for matching. This can either be a
-    {{domxref("USVString")}}, or an object providing patterns for each URL part
+    string, or an object providing patterns for each URL part
     individually. The object members can be any of `protocol`, `username`,
     `password`, `hostname`, `port`, `pathname`, `search`, `hash`, or `baseURL`.
     Omitted parts in the object will be treated as wildcards (`*`).
 - `baseURL` {{optional_inline}}
-  - : A {{domxref("USVString")}} representing the base URL to use in cases where
+  - : A string representing the base URL to use in cases where
     `input` is a relative pattern. If not specified, it defaults to `undefined`.
 
 ### Exceptions

@@ -19,7 +19,7 @@ the whole, for a long task.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the containers `id` attribute.
+A string containing the containers `id` attribute.
 
 ## Specifications
 

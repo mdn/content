@@ -18,7 +18,14 @@ value of a {{ domxref("StorageEvent") }}.
 ## Syntax
 
 ```js
-storageEvent.initStorageEvent(type[, canBubble[, cancelable[, key[, oldValue[, newValue[, url[, storageArea]]]]]]])
+initStorageEvent(type)
+initStorageEvent(type, canBubble)
+initStorageEvent(type, canBubble, cancelable)
+initStorageEvent(type, canBubble, cancelable, key)
+initStorageEvent(type, canBubble, cancelable, key, oldValue)
+initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue)
+initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue, url)
+initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue, url, storageArea)
 ```
 
 ### Parameters
@@ -40,6 +47,10 @@ storageEvent.initStorageEvent(type[, canBubble[, cancelable[, key[, oldValue[, n
 - `storageArea` {{optional_inline}}
   - : The {{DOMxRef("Storage")}} object representing the storage area on which this event
     occurred.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -115,7 +115,7 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : Rendered archipelago with futuristic military vehicles.
 - [Flight Stream](https://callumprentice.github.io/apps/flight_stream/index.html)
   - : 3D globe with simulated flight paths.
-- [WebGL filters](http://pixelscommander.com/polygon/htmlgl/demo/filters.html)
+- [WebGL filters](https://pixelscommander.com/polygon/htmlgl/demo/filters.html)
   - : Demo showing WebGL filters being used to add effects to HTML elements.
 - [SVG isometric tiles](https://codepen.io/AshKyd/pen/zxmgzV)
   - : Generating isometric tiles with SVG matrices.

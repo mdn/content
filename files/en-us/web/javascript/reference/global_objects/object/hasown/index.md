@@ -22,14 +22,14 @@ If the property is inherited, or does not exist, the method returns `false`.
 ## Syntax
 
 ```js
-Object.hasOwn(instance,prop)
+hasOwn(instance, prop)
 ```
 
 ### Parameters
 
-- _instance_
+- `instance`
   - : The JavaScript object instance to test.
-- _prop_
+- `prop`
   - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
     the property to test.
 
@@ -122,7 +122,6 @@ you can use `hasOwn()` method to check whether a particular index exists:
 let fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
 Object.hasOwn(fruits, 3);   // true ('Orange')
 Object.hasOwn(fruits, 4);   // false - not defined
-    
 ```
 
 ### Problematic cases for hasOwnProperty

@@ -1,5 +1,5 @@
 ---
-title: EyeDropper.prototype.open()
+title: EyeDropper.open()
 slug: Web/API/EyeDropper/open
 tags:
   - API
@@ -11,13 +11,13 @@ browser-compat: api.EyeDropper.open
 ---
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
-The **`EyeDropper.prototype.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has either selected a color or dismissed the eyedropper mode.
+The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has either selected a color or dismissed the eyedropper mode.
 
 ## Syntax
 
 ```js
-eyeDropper.open();
-eyeDropper.open({ signal: abortController.signal });
+open()
+open( options )
 ```
 
 ### Parameters

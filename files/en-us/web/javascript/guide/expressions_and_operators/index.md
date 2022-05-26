@@ -609,7 +609,7 @@ Conceptually, the bitwise logical operators work as follows:
 
 - The operands are converted to thirty-two-bit integers and expressed by a series of bits (zeros and ones).
   Numbers with more than 32 bits get their most significant bits discarded.
-  For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
+  For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 
   ```
   Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
@@ -913,7 +913,7 @@ The `delete` operator returns `true` if the operation is possible; it returns `f
 delete Math.PI; // returns false (cannot delete non-configurable properties)
 
 const myObj = {h: 4};
-delete myobj.h; // returns true (can delete user-defined properties)
+delete myObj.h; // returns true (can delete user-defined properties)
 ```
 
 ##### Deleting array elements
@@ -1081,24 +1081,25 @@ You can override operator precedence by using parentheses.
 
 The following table describes the precedence of operators, from highest to lowest.
 
-| Operator type          | Individual operators                                    |
-| ---------------------- | ------------------------------------------------------- |
-| member                 | `. []`                                                  |
-| call / create instance | `() new`                                                |
-| negation/increment     | `! ~ - + ++ -- typeof void delete`                      |
-| multiply/divide        | `* / %`                                                 |
-| addition/subtraction   | `+ -`                                                   |
-| bitwise shift          | `<< >> >>>`                                             |
-| relational             | `< <= > >= in instanceof`                               |
-| equality               | `== != === !==`                                         |
-| bitwise-and            | `&`                                                     |
-| bitwise-xor            | `^`                                                     |
-| bitwise-or             | `\|`                                                    |
-| logical-and            | `&&`                                                    |
-| logical-or             | `\|\|`                                                  |
-| conditional            | `?:`                                                    |
-| assignment             | `= += -= *= /= %= <<= >>= >>>= &= ^= \|= &&= \|\|= ??=` |
-| comma                  | `,`                                                     |
+| Operator type          | Individual operators                                                                      |
+| ---------------------- | ----------------------------------------------------------------------------------------- |
+| member                 | `.` `[]`                                                                                  |
+| call / create instance | `()` `new`                                                                                |
+| negation/increment     | `!` `~` `-` `+` `++` `--` `typeof` `void` `delete`                                        |
+| exponentiate           | `**`                                                                                      |
+| multiply/divide        | `*` `/` `%`                                                                               |
+| addition/subtraction   | `+` `-`                                                                                   |
+| bitwise shift          | `<<` `>>` `>>>`                                                                           |
+| relational             | `<` `<=` `>` `>=` `in` `instanceof`                                                       |
+| equality               | `==` `!=` `===` `!==`                                                                     |
+| bitwise-and            | `&`                                                                                       |
+| bitwise-xor            | `^`                                                                                       |
+| bitwise-or             | `\|`                                                                                      |
+| logical-and            | `&&`                                                                                      |
+| logical-or             | `\|\|`                                                                                    |
+| conditional            | `?:`                                                                                      |
+| assignment             | `=` `+=` `-=` `**=` `*=` `/=` `%=` `<<=` `>>=` `>>>=` `&=` `^=` `\|=` `&&=` `\|\|=` `??=` |
+| comma                  | `,`                                                                                       |
 
 A more detailed version of this table, complete with links to additional details about
 each operator, may be found in the

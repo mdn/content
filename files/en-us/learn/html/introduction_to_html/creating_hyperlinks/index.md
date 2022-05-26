@@ -204,18 +204,18 @@ It's easy to throw links up on your page. That's not enough. We need to make our
 
 Let's look at a specific example:
 
-**Good** link text: [Download Firefox](https://firefox.com)
+**Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://firefox.com/">
+<p><a href="https://www.mozilla.org/firefox/">
   Download Firefox
 </a></p>
 ```
 
-**Bad** link text: [Click here](https://firefox.com/) to download Firefox
+**Bad** link text: [Click here](https://www.mozilla.org/firefox/) to download Firefox
 
 ```html example-bad
-<p><a href="https://firefox.com/">
+<p><a href="https://www.mozilla.org/firefox/">
   Click here
 </a>
 to download Firefox</p>
@@ -341,7 +341,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, we'll return to text semantics and look at some more advanced/unusual features that you'll find useful — Advanced text formatting is your next stop.
+That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, we'll return to text semantics and look at some more advanced/unusual features that you'll find useful — [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) is your next stop.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 

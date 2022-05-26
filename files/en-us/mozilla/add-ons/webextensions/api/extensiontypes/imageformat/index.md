@@ -27,7 +27,7 @@ Values of this type are strings. Possible values are: `"jpeg"`, `"png"`.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes#type-ImageFormat) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-ImageFormat) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

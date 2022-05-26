@@ -18,12 +18,12 @@ passed {{domxref("WebGLFramebuffer")}} is valid and `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isFramebuffer(framebuffer);
+isFramebuffer(framebuffer)
 ```
 
 ### Parameters
 
-- framebuffer
+- `framebuffer`
   - : A {{domxref("WebGLFramebuffer")}} to check.
 
 ### Return value

@@ -84,7 +84,24 @@ size: A4 portrait;
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<length>{1,2}                               |
+auto                                        |
+[ <page-size> || [ portrait | landscape ] ]
+
+where
+<page-size> =
+  A5     |
+  A4     |
+  A3     |
+  B5     |
+  B4     |
+  JIS-B5 |
+  JIS-B4 |
+  letter |
+  legal  |
+  ledger
+```
 
 ## Examples
 

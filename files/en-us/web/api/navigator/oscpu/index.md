@@ -16,7 +16,7 @@ The **`Navigator.oscpu`** property returns a string that identifies the current 
 
 ## Value
 
-A {{domxref("DOMString")}} providing a string which identifies the operating system on which the browser is running.
+A string providing a string which identifies the operating system on which the browser is running.
 
 | Operating system              | `oscpuInfo` string format                         |
 | ----------------------------- | ------------------------------------------------- |

@@ -1,5 +1,5 @@
 ---
-title: TextDecoder.prototype.encoding
+title: TextDecoder.encoding
 slug: Web/API/TextDecoder/encoding
 tags:
   - API
@@ -12,8 +12,8 @@ browser-compat: api.TextDecoder.encoding
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
-The **`TextDecoder.prototype.encoding`** read-only property
-returns a {{DOMxRef("DOMString")}} containing the name of the decoding algorithm used by
+The **`TextDecoder.encoding`** read-only property
+returns a string containing the name of the decoding algorithm used by
 the specific decoder.
 
 It can be one of the following values:

@@ -30,6 +30,10 @@ can be used to expose audio time and frequency data and create data visualizatio
 createAnalyser()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{domxref("AnalyserNode")}}.

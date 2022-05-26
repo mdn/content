@@ -34,4 +34,4 @@ const wakeLock = navigator.wakeLock;
 - {{DOMxRef("WakeLock.request","WakeLock.request()")}}
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API)
 - [Blog post - Stay awake with the
-  Screen Wake Lock API](https://web.dev/wakelock/)
+  Screen Wake Lock API](https://web.dev/wake-lock/)

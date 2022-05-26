@@ -62,7 +62,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 ### DOM
 
 - The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} {{domxref("HTMLHyperLinkElementUtils")}} properties previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return "`/x?a=true&b=false"` and `search` would return "", rather than "`/x`" and "`?a=true&b=false"` respectively. This has now been fixed ({{bug(1310483)}}).
-- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a {{domxref("USVString")}} or sequence of {{domxref("USVString")}}s as an init object ({{bug("1330678")}}).
+- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a string or sequence of strings as an init object ({{bug("1330678")}}).
 - The {{domxref("Selection.setBaseAndExtent()")}} method of the [Selection API](/en-US/docs/Web/API/Selection) is now implemented (see {{bug(1321623)}}).
 - The ["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) addition to `file` type {{htmlelement("input")}} `values` has been implemented in Gecko, giving it parity with other browsers (see {{bug(1274596)}}).
 - {{domxref("Node.getRootNode()")}} has been implemented, replacing the deprecated `Node.rootNode` property ({{bug(1269155)}}).
@@ -130,9 +130,9 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### CSS
 
-- Removed {{property_prefix("-moz")}} prefixed variant of {{cssxref(":dir", ":dir()")}} pseudo-class ({{bug(1270406)}}).
+- Removed `-moz` prefixed variant of {{cssxref(":dir", ":dir()")}} pseudo-class ({{bug(1270406)}}).
 - The `-moz` prefixed version of {{cssxref("text-align-last")}} got removed ({{bug(1276808)}}).
-- Removed {{property_prefix("-moz")}} prefixed variant of {{cssxref("calc", "calc()")}} method ({{bug(1331296)}}).
+- Removed `-moz` prefixed variant of {{cssxref("calc", "calc()")}} method ({{bug(1331296)}}).
 - The proprietary `-moz-samplesize` media fragment (added to aid in delivery of downsampled images to low memory Firefox OS devices; see {{bug(854795)}}) has been removed ({{bug(1311246)}}).
 
 ### JavaScript
@@ -141,7 +141,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### APIs
 
-- The [Wifi information API](/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API), Speaker Manager API, and Tethering API, and [Settings API](/en-US/docs/Archive/B2G_OS/API/Settings_API) have been removed from the platform (see {{bug(1313788)}}, {{bug(1317853)}}, {{bug(1313789)}}, and {{bug(1313155)}} respectively).
+- The [Wi-Fi information API](/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API), Speaker Manager API, and Tethering API, and [Settings API](/en-US/docs/Archive/B2G_OS/API/Settings_API) have been removed from the platform (see {{bug(1313788)}}, {{bug(1317853)}}, {{bug(1313789)}}, and {{bug(1313155)}} respectively).
 
 ### Other
 

@@ -24,7 +24,7 @@ The {{domxref("DOMPointReadOnly")}} method
 ## Syntax
 
 ```js
-pointJSON = DOMPointReadOnly.toJSON();
+toJSON()
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ None.
 A new object whose properties are set to the values in the
 `DOMPoint` or `DOMPointReadOnly` on which the method was called.
 
-## Example
+## Examples
 
 This example creates a {{domxref("DOMPoint")}} object representing the top-left corner
 of the current window, in screen coordinates, then converts that to JSON.

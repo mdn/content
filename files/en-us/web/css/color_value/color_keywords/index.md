@@ -31,7 +31,7 @@ There are a few caveats to consider when using color keywords:
 
 - Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/X_Window_System), their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
 
-- In addition to the color keywords, the [`<color>`](/en-US/docs/Web/CSS/color_value) data type supports other keywords: [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) to create a wholly transparent color, [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) that represents the value of an element's {{Cssxref("color")}} property  lets you use the `color` value on properties that do not receive it by default, as well as _[system color keywords](/en-US/docs/Web/CSS/color_value#system_colors)_ that represents colors that matches those of the OS.
+- In addition to the color keywords, the [`<color>`](/en-US/docs/Web/CSS/color_value) data type supports other keywords: [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) to create a wholly transparent color, [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) that represents the value of an element's {{Cssxref("color")}} property lets you use the `color` value on properties that do not receive it by default, as well as _[system color keywords](/en-US/docs/Web/CSS/color_value#system_colors)_ that represents colors that matches those of the OS.
 
 ## List of all color keywords
 
@@ -46,7 +46,7 @@ There are a few caveats to consider when using color keywords:
   </thead>
   <tbody>
     <tr>
-      <td rowspan="16">{{SpecName("CSS1")}}</td>
+      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
       <td style="background: black"></td>
@@ -127,13 +127,13 @@ There are a few caveats to consider when using color keywords:
       <td style="background: aqua"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
+      <td><a href="https://www.w3.org/TR/CSS2/">CSS Level 2 (Revision 1)</a></td>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
     <tr>
-      <td rowspan="130">{{SpecName("CSS3 Colors")}}</td>
+      <td rowspan="130"><a href="https://drafts.csswg.org/css-color-3/">CSS Color Level 3</a></td>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
       <td style="background: aliceblue"></td>
@@ -788,7 +788,7 @@ There are a few caveats to consider when using color keywords:
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td><a href="https://drafts.csswg.org/css-color-4/">CSS Color Level 4</a></td>
       <td style="text-align: center">
         <a href="https://en.wikipedia.org/wiki/Eric_A._Meyer#Personal_life"
           ><code>rebeccapurple</code></a

@@ -28,7 +28,10 @@ which will be transmitted to the other peer.>
 ## Syntax
 
 ```js
-rtpSender = rtcPeerConnection.addTrack(track, stream...);
+addTrack(track)
+addTrack(track, stream0)
+addTrack(track, stream0, stream1)
+addTrack(track, stream0, stream1, /* ... ,*/ streamN)
 ```
 
 ### Parameters
@@ -36,7 +39,7 @@ rtpSender = rtcPeerConnection.addTrack(track, stream...);
 - `track`
   - : A {{domxref("MediaStreamTrack")}} object representing the media track to add to the
     peer connection.
-- `stream...` {{optional_inline}}
+- `stream0, ..., streamN` {{optional_inline}}
   - : One or more local {{domxref("MediaStream")}} objects to which the track should be
     added.
 
@@ -224,7 +227,7 @@ creating a new sender results in these changes:
 - The new transceiver is added to the `RTCPeerConnection`'s set of
   transceivers.
 
-## Example
+## Examples
 
 This example is drawn from the code presented in the article [Signaling and video
 calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) and its corresponding sample code. It comes from the

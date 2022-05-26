@@ -44,7 +44,7 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 - `normal`
   - : Tells the browser to use font glyphs that are appropriate for the language specified by the `lang` attribute. This is the default value.
 - {{cssxref("string")}}
-  - : Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the [OpenType language system](https://www.microsoft.com/typography/otspec/languagetags.htm). For example, "ENG" is English, and "KOR" is Korean.
+  - : Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the [OpenType language system](https://docs.microsoft.com/en-us/typography/opentype/spec/languagetags). For example, "ENG" is English, and "KOR" is Korean.
 
 ## Formal definition
 
@@ -79,7 +79,7 @@ p.para2 {
 
 #### Result
 
-{{ EmbedLiveSample('Using_Danish_glyphs', '600', '', '', 'Web/CSS/font-language-override') }}
+{{ EmbedLiveSample('Using Danish glyphs') }}
 
 ## Specifications
 

@@ -9,6 +9,7 @@ tags:
   - Permissions API
   - Web
   - access
+browser-compat: api.Permissions
 ---
 {{DefaultAPISidebar("Permissions API")}}
 
@@ -50,15 +51,11 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 ## Specifications
 
-| Specification                                     |
-| ------------------------------------------------- |
-| [Permissions](https://w3c.github.io/permissions/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Permissions interface
-
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## See also
 

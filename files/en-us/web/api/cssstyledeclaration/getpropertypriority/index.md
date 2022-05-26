@@ -17,7 +17,7 @@ property.
 ## Syntax
 
 ```js
-getPropertyPriority(property);
+getPropertyPriority(property)
 ```
 
 ### Parameters

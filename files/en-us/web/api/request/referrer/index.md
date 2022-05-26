@@ -21,7 +21,7 @@ Request. (e.g., `client`, `no-referrer`, or a URL.)
 
 ## Value
 
-A {{domxref("DOMString")}} representing the request's referrer.
+A string representing the request's referrer.
 
 ## Examples
 

@@ -16,8 +16,7 @@ browser-compat: api.FileSystem.root
 
 The read-only **`root`** property of the
 {{domxref("FileSystem")}} interface specifies a {{domxref("FileSystemDirectoryEntry")}}
-object representing the root directory of the file system, for use with the [File and Directory Entries
-API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
+object representing the root directory of the file system, for use with the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
 ## Value
 
@@ -40,8 +39,6 @@ directory.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystem")}}

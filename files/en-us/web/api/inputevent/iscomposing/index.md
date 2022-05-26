@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.InputEvent.isComposing
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`InputEvent.isComposing`** read-only property returns a
 boolean value indicating if the event is fired after

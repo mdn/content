@@ -26,13 +26,17 @@ be shown alongside the marker.
 ## Syntax
 
 ```js
-timeStamp(label);
+timeStamp(label)
 ```
 
 ### Parameters
 
 - `label`
   - : Label for the timestamp. Optional.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Browser compatibility
 

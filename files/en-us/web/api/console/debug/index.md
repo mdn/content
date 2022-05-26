@@ -47,9 +47,12 @@ debug(msg, subst1, /* ..., */ substN])
     {{SectionOnPage("/en-US/docs/Web/API/console", "Using string substitutions")}} for a
     description of how substitutions work.
 
-See [Outputting
-text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of the {{domxref("console")}} object for
+See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of the {{domxref("console")}} object for
 details.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

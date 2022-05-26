@@ -58,7 +58,7 @@ A **document** is usually a text file structured using a markup language — {{G
 
 **Presenting** a document to a user means converting it into a form usable by your audience. {{Glossary("browser","Browsers")}}, like {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, or {{Glossary("Microsoft Edge","Edge")}} , are designed to present documents visually, for example, on a computer screen, projector, or printer.
 
-> **Note:** A browser is sometimes called a {{Glossary("User agent","user agent")}}, which basically means a computer program that represents a person inside a computer system. Browsers are the main type of user agents we think of when talking about CSS, however, they not the only ones. There are other user agents available, such as those that convert HTML and CSS documents into PDFs to be printed.
+> **Note:** A browser is sometimes called a {{Glossary("User agent","user agent")}}, which basically means a computer program that represents a person inside a computer system. Browsers are the main type of user agents we think of when talking about CSS, however, they are not the only ones. There are other user agents available, such as those that convert HTML and CSS documents into PDFs to be printed.
 
 CSS can be used for very basic document text styling — for example, for changing the [color](/en-US/docs/Web/CSS/color_value) and [size](/en-US/docs/Web/CSS/font-size) of headings and links. It can be used to create a layout — for example, [turning a single column of text into a layout](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) with a main content area and a sidebar for related information. It can even be used for effects such as [animation](/en-US/docs/Web/CSS/CSS_Animations). Have a look at the links in this paragraph for specific examples.
 
@@ -127,16 +127,16 @@ The browser support status is shown on every MDN CSS property page in a section 
 
 {{Compat("css.properties.font-family")}}
 
-## What's next
+## Summary
 
-Now that you have some understanding of what CSS is, let's move on to [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started), where you can start to write some CSS yourself.
+You made it to the end of the article! Now that you have some understanding of what CSS is, let's move on to [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started), where you can start to write some CSS yourself.
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 ## In this module
 
-1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

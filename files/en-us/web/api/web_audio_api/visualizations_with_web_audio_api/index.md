@@ -10,6 +10,9 @@ tags:
   - visualization
   - waveform
 ---
+
+{{DefaultAPISidebar("Web Audio API")}}
+
 One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.
 
 > **Note:** You can find working examples of all the code snippets in our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo.
@@ -134,7 +137,7 @@ Now we run through a loop, defining the position of a small segment of the wave 
       }
 ```
 
-Finally, we finish the line in the middle of the right hand side of the canvas, then draw the stroke we've defined:
+Finally, we finish the line in the middle of the right-hand side of the canvas, then draw the stroke we've defined:
 
 ```js
       canvasCtx.lineTo(canvas.width, canvas.height/2);

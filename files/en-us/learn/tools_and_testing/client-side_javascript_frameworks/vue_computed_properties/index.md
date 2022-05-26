@@ -9,7 +9,7 @@ tags:
   - Learn
   - client-side
   - computed properties
-  - vue
+  - Vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -56,7 +56,7 @@ The aim here is to add a summary count of our to-do list. This can be useful for
 
 It would be recalculated on every render. For a small app like this, that probably doesn't matter too much. For bigger apps, or when the expression is more complicated, that could cause a serious performance problem.
 
-A better solution is to use Vue's **[computed properties](https://vuejs.org/v2/guide/computed.html)**. Computed Properties work similarly to methods, but only re-run when one of their dependencies changes. In our case, this would only re-run when the `ToDoItems` array changes.
+A better solution is to use Vue's **[computed properties](https://v2.vuejs.org/v2/guide/computed.html)**. Computed Properties work similarly to methods, but only re-run when one of their dependencies changes. In our case, this would only re-run when the `ToDoItems` array changes.
 
 To create a computed property, we need to add a `computed` property to our component object, much like the `methods` property we've used previously.
 

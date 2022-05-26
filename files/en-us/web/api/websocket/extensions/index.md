@@ -17,7 +17,7 @@ extensions as negotiated by the connection.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

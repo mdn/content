@@ -15,7 +15,7 @@ The **`name`** property of the {{domxref("CSSCounterStyleRule")}} interface gets
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

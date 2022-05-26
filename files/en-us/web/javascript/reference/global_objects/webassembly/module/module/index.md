@@ -33,7 +33,7 @@ new WebAssembly.Module(bufferSource)
 
 ### Parameters
 
-- _bufferSource_
+- `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
     containing the binary code of the .wasm module you want to compile.
 
@@ -42,7 +42,7 @@ new WebAssembly.Module(bufferSource)
 ### Synchronously compiling a WebAssembly module
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);

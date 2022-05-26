@@ -31,8 +31,8 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 ## Syntax
 
 ```js
-targetWindow.postMessage(message, targetOrigin)
-targetWindow.postMessage(message, targetOrigin, transfer)
+postMessage(message, targetOrigin)
+postMessage(message, targetOrigin, transfer)
 ```
 
 ### Parameters
@@ -40,13 +40,13 @@ targetWindow.postMessage(message, targetOrigin, transfer)
 - `message`
   - : Data to be sent to the other window. The data is serialized using
     {{domxref("Web_Workers_API/Structured_clone_algorithm", "the structured clone
-    algorithm")}}. This means you can pass a broad variety of data objects safely to the
+    algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the
     destination window without having to serialize them yourself.
 - `targetOrigin`
-  - : Specifies what the origin of `targetWindow` must be for the event to be
+  - : Specifies what the origin of this window must be for the event to be
     dispatched, either as the literal string `"*"` (indicating no preference)
     or as a URI. If at the time the event is scheduled to be dispatched the scheme,
-    hostname, or port of `targetWindow`'s document does not match that provided
+    hostname, or port of this window's document does not match that provided
     in `targetOrigin`, the event will not be dispatched; only if all three
     match will the event be dispatched. This mechanism provides control over where
     messages are sent; for example, if `postMessage()` was used to transmit a
@@ -57,12 +57,12 @@ targetWindow.postMessage(message, targetOrigin, transfer)
     window's document should be located. Failing to provide a specific target discloses
     the data you send to any interested malicious site.**
 - `transfer` {{optional_Inline}}
-  - : Is a sequence of {{Glossary("transferable objects")}} that are transferred with the message.
+  - : A sequence of {{Glossary("transferable objects")}} that are transferred with the message.
     The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## The dispatched event
 
@@ -149,7 +149,7 @@ See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned c
   to shared memory", "", 1)}} which is starting to roll out to browsers (Firefox 79, for
 example).
 
-## Example
+## Examples
 
 ```js
 /*
@@ -200,7 +200,7 @@ window.addEventListener("message", (event) => {
   event.source.postMessage("hi there yourself!  the secret response " +
                            "is: rheeeeet!",
                            event.origin);
-}, false);
+});
 ```
 
 ### Notes

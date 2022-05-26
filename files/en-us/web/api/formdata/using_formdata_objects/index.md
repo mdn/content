@@ -135,7 +135,7 @@ A more recent addition to the platform than the {{domxref("FormData")}} object i
 
 This allows a {{domxref("FormData")}} object to be quickly obtained in response to a `formdata` event firing, rather than needing to put it together yourself.
 
-Typically this is used as shown in our [simple formdata event demo](https://long-impatiens.glitch.me/) — in the JavaScript  we reference a form:
+Typically this is used as shown in our [simple formdata event demo](https://long-impatiens.glitch.me/) — in the JavaScript we reference a form:
 
 ```js
 const formElem = document.querySelector('form');

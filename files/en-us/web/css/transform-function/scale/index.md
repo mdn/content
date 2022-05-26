@@ -15,18 +15,18 @@ The **`scale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at
 different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](scale.png)
+{{EmbedInteractiveExample("pages/css/function-scale.html")}}
 
 This scaling transformation is characterized by a two-dimensional vector. Its coordinates define how much scaling is
 done in each direction. If both coordinates are equal, the scaling is uniform (_isotropic_) and the aspect
 ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
 When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
-shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
-in that dimension. A value of 1 has no effect.
+shrinks. A negative value results in a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+in that dimension. The value `1` has no effect.
 
 > **Note:** The `scale()` function only scales in 2D. To scale in 3D, use
-> [`scale3d()`](</en-US/docs/Web/CSS/transform-function/scale3d()>) instead.
+> [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) instead.
 
 ## Syntax
 
@@ -44,8 +44,8 @@ scale(sx, sy)
 - `sx`
   - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the scaling vector.
 - `sy`
-  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
-    is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector.
+    If not defined, its default value is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
 
 <table class="standard-table">
   <thead>
@@ -142,7 +142,7 @@ migraine. If you need to include such animations on your website, you should pro
 off animations, preferably site-wide.
 
 Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature
-— use it to write a [media query](/en-US/docs/Web/CSS/Media_queries) that will turn off animations if the
+— use it to write a [media query](/en-US/docs/Web/CSS/Media_Queries) that will turn off animations if the
 user has reduced animation specified in their system preferences.
 
 Find out more:

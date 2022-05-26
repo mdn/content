@@ -17,7 +17,7 @@ The **`observe()`** method of the
 set of performance entry types to observe.
 
 The performance entry types are
-specified as an array of {{domxref("DOMString")}} objects, each naming one entry type;
+specified as an array of string objects, each naming one entry type;
 the type names are documented in
 {{SectionOnPage("/en-US/docs/Web/API/PerformanceEntry/entryType", "Performance entry
   type names")}}.
@@ -28,7 +28,7 @@ function—set when creating the {{domxref("PerformanceObserver")}}—is invoked
 ## Syntax
 
 ```js
-observer.observe(options);
+observe(options)
 ```
 
 ### Parameters
@@ -38,20 +38,27 @@ observer.observe(options);
   - : A `PerformanceObserverInit` dictionary with the following possible
     members:
 
-    - `entryTypes`: An array of {{domxref("DOMString")}} objects, each
-      specifying one performance entry type to observe. May not be used together with
-      the "`type`" or "`buffered`" options.
-    - `type`: A single {{domxref("DOMString")}} specifying exactly one
-      performance entry type to observe. May not be used together with the
-      `entryTypes` option.
-    - `buffered`: A boolean flag to indicate whether buffered
-      entries should be queued into the observer's buffer. Must be used only with the
-      "`type`" option.
+    - `entryTypes`
+      - : An array of string objects, each
+        specifying one performance entry type to observe. May not be used together with
+        the "`type`" or "`buffered`" options.
+    - `type`
+      - : A single string specifying exactly one
+        performance entry type to observe. May not be used together with the
+        `entryTypes` option.
+    - `buffered`
+      - : A boolean flag to indicate whether buffered
+        entries should be queued into the observer's buffer. Must be used only with the
+        "`type`" option.
 
     See {{domxref("PerformanceEntry.entryType")}} for a list of valid performance entry
     type names. Unrecognized types are ignored, though the browser may output a warning
     message to the console to help developers debug their code. If no valid types are
     found, `observe()` has no effect.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

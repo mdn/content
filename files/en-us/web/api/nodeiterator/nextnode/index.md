@@ -25,10 +25,18 @@ throw.
 ## Syntax
 
 ```js
-node = nodeIterator.nextNode();
+nextNode()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(

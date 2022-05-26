@@ -105,7 +105,7 @@ When the distance between the center of the ball and the edge of the wall is exa
 
 ## Compare your code
 
-Lets again check the finished code for this part against what you've got, and have a play:
+Let's again check the finished code for this part against what you've got, and have a play:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","395")}}
 

@@ -19,7 +19,7 @@ The **`load()`** method of the {{domxref("FontFace")}} interface loads a font ba
 ## Syntax
 
 ```js
-FontFace.load()
+load()
 ```
 
 ### Parameters

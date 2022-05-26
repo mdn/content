@@ -205,6 +205,7 @@ The following table summarizes the `Math` object's methods.
           {{jsxref("Math.pow", "pow()")}},
           {{jsxref("Math.exp", "exp()")}},
           {{jsxref("Math.expm1", "expm1()")}},
+          {{jsxref("Math.log", "log()")}},
           {{jsxref("Math.log10", "log10()")}},
           {{jsxref("Math.log1p", "log1p()")}},
           {{jsxref("Math.log2", "log2()")}}

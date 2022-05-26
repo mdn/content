@@ -21,11 +21,9 @@ The difference between `set()` and {{domxref("FormData.append")}} is that if the
 
 ## Syntax
 
-There are two versions of this method: a two and a three parameter version:
-
 ```js
-formData.set(name, value);
-formData.set(name, value, filename);
+set(name, value)
+set(name, value, filename)
 ```
 
 #### Parameters
@@ -33,13 +31,17 @@ formData.set(name, value, filename);
 - `name`
   - : The name of the field whose data is contained in `value`.
 - `value`
-  - : The field's value. This can be a {{domxref("USVString")}} or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.
+  - : The field's value. This can be a string or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.
 - `filename` {{optional_inline}}
-  - : The filename reported to the server (a {{domxref("USVString")}}), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
+  - : The filename reported to the server (a string), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
 
 > **Note:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 The following line creates an empty `FormData` object:
 

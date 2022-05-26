@@ -25,7 +25,7 @@ prototype chain as well).
 ## Syntax
 
 ```js
-CSSUnparsedValue.entries(obj)
+entries(obj)
 ```
 
 ### Parameters

@@ -23,7 +23,7 @@ details and examples.
 ## Syntax
 
 ```js
-timeLog(label);
+timeLog(label)
 ```
 
 ### Parameters

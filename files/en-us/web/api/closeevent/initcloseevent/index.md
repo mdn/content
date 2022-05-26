@@ -22,35 +22,37 @@ Once dispatched, it doesn't do anything anymore.
 
 > **Note:** Do not use this method any more as it is deprecated.
 >
-> Instead use specific event constructors, like {{domxref("CloseEvent.MouseEvent", "CloseEvent()")}}.
+> Instead use specific event constructors, like {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}.
 > The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
 
 ## Syntax
 
 ```js
-initMouseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason)
+initCloseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason)
 ```
 
 ### Parameters
 
-- _`type`_
-  - : the string to set the event's {{domxref("Event.type", "type")}} to. Possible types
-    for mouse events include: `click`, `mousedown`,
-    `mouseup`, `mouseover`, `mousemove`,
-    `mouseout`.
-- _`canBubble`_
+- `type`
+  - : the string to set the event's {{domxref("Event.type", "type")}} to. Possible type
+    for close event is `close`.
+- `canBubble`
   - : whether or not the event can bubble. Sets the value of
     {{domxref("Event.bubbles")}}.
-- _`cancelable`_
+- `cancelable`
   - : whether or not the event's default action can be prevented. Sets the value of
     {{domxref("Event.cancelable")}}.
-- _`wasClean`_
+- `wasClean`
   - : whether or not the connection was cleanly closed.
 - `reasonCode`
   - : the reason of the close.
 - `reason`
-  - : a string describing the reason of the close in shuman-readable
+  - : a string describing the reason of the close in human-readable
     way.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

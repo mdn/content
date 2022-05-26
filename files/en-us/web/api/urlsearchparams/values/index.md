@@ -14,7 +14,7 @@ browser-compat: api.URLSearchParams.values
 
 The **`values()`** method of the {{domxref("URLsearchParams")}}
 interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
-through all values contained in this object. The values are {{domxref("USVString")}}
+through all values contained in this object. The values are string
 objects.
 
 {{availableinworkers}}
@@ -22,7 +22,7 @@ objects.
 ## Syntax
 
 ```js
-searchParams.values();
+values()
 ```
 
 ### Parameters

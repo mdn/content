@@ -41,7 +41,7 @@ If you have assumptions from working with other types of databases, you might ge
 
   The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in [http://www.example.com/app/](https://www.example.com/app/) can retrieve data from [http://www.example.com/dir/](https://www.example.com/dir/), because they have the same origin, it cannot retrieve data from [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (different port) or <https://www.example.com/dir/> (different protocol), because they have different origins.
 
-  > **Note:** Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (see {{bug("1147821")}}.)
+  > **Note:** Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see {{bug("1147821")}}.)
 
 ### Limitations
 
@@ -154,7 +154,7 @@ Each record has a value, which could include anything that can be expressed in J
 
 When an object or array is stored, the properties and values in that object or array can also be anything that is a valid value.
 
-[Blobs](/en-US/docs/Web/API/Blob) and files can be stored, cf. [specification](https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html).
+[Blobs](/en-US/docs/Web/API/Blob) and files can be stored, cf. [specification](https://w3c.github.io/IndexedDB/).
 
 ### Range and scope
 
@@ -181,4 +181,4 @@ With an understanding of IndexedDB's key characteristics and core terminology un
 - [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [IndexedDB — The Store in Your Browser](https://msdn.microsoft.com/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10))

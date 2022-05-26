@@ -29,6 +29,10 @@ moveTo(x, y)
 - `y`
   - : The y-axis (vertical) coordinate of the point.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Creating multiple sub-paths
@@ -48,8 +52,8 @@ The first line begins at (50, 50) and ends at (200, 50). The second line begins 
 90\) and ends at (280, 120).
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.moveTo(50, 50);   // Begin first sub-path

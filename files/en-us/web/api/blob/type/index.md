@@ -15,7 +15,7 @@ The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("
 
 ## Value
 
-A {{domxref("DOMString")}} containing the file's MIME type, or an empty string if the
+A string containing the file's MIME type, or an empty string if the
 type could not be determined.
 
 ## Examples
@@ -77,5 +77,4 @@ input.addEventListener('change', (event) => {
 ## See also
 
 - {{domxref("Blob")}}
-- [Using files
-  from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)

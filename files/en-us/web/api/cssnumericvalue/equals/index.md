@@ -23,12 +23,12 @@ equality to be tested quickly.
 ## Syntax
 
 ```js
-equals(number);
+equals(number)
 ```
 
 ### Parameters
 
-- number
+- `number`
   - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
 ### Return value

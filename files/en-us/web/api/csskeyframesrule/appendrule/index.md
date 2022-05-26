@@ -17,7 +17,7 @@ The **`appendRule()`** method of the {{domxref("CSSKeyframeRule")}} interface ap
 ## Syntax
 
 ```js
-appendRule(rule);
+appendRule(rule)
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ appendRule(rule);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

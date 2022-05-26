@@ -52,7 +52,7 @@ The node parameters you use must also be supported in Firefox too. If they aren'
 
 For example, up until a couple of days ago [PannerNode](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#PannerNode-section) did not support the default HRTF panning model yet, and attempting to use a `PannerNode` with that configuration resulted in silence or a mono output coming out from that node, depending on the build you used.
 
-Today the support is already present in [Nightly](https://nightly.mozilla.org/), but not quite yet in [Aurora](https://www.mozilla.org/en-US/firefox/aurora/). In the meantime, you can explicitly specify `'equalpower'` instead:
+Today the support is already present in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), but not quite yet in [Aurora](https://www.mozilla.org/en-US/firefox/channel/desktop/). In the meantime, you can explicitly specify `'equalpower'` instead:
 
 ```js
 var panner = new audioContext.PannerNode();

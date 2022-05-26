@@ -8,6 +8,7 @@ tags:
   - HTTP
   - Deprecated
   - Security
+browser-compat: http.headers.Public-Key-Pins
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 
@@ -138,13 +139,11 @@ Add the following line to the Web.config file to send the `Public-Key-Pins` head
 
 ## Specifications
 
-| Specification                                            | Title                                 |
-| -------------------------------------------------------- | ------------------------------------- |
-| {{RFC("7469", "Public-Key-Pins", "2.1")}} | Public Key Pinning Extension for HTTP |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Public-Key-Pins")}}
+{{Compat}}
 
 ## See also
 

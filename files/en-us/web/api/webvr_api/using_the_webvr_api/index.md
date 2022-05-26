@@ -99,7 +99,7 @@ Let's briefly explain these:
 - `vrDisplay` starts uninitialized, but will later on hold a reference to our VR headset ({{domxref("VRDisplay")}} — the central control object of the API).
 - `btn` and `poseStatsBtn` hold references to the two buttons we are using to control our app.
 - `normalSceneFrame` and `vrSceneFrame` start uninitialized, but later on will hold references to {{domxref("Window.requestAnimationFrame()")}} and {{domxref("VRDisplay.requestAnimationFrame()")}} calls — these will initiate the running of a normal rendering loop, and a special WebVR rendering loop; we'll explain the difference between these two later on.
-- The other variables store references to different parts of the VR pose data display box, which you can see in the bottom right hand corner of the UI.
+- The other variables store references to different parts of the VR pose data display box, which you can see in the bottom right-hand corner of the UI.
 
 ### Getting a reference to our VR display
 

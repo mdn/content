@@ -61,10 +61,6 @@ body {
 }
 ```
 
-### Result
-
-{{EmbedLiveSample("Examples")}}
-
 ## Specifications
 
 {{Specifications}}

@@ -16,12 +16,12 @@ The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interfac
 ## Syntax
 
 ```js
-unsubscribe(subscriptions);
+unsubscribe(subscriptions)
 ```
 
 ### Parameters
 
-- subscriptions
+- `subscriptions`
 
   - : An object containing:
 

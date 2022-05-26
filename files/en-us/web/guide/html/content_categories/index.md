@@ -1,5 +1,5 @@
 ---
-title: Content  categories
+title: Content categories
 slug: Web/Guide/HTML/Content_categories
 tags:
   - Advanced
@@ -94,7 +94,7 @@ Some elements belong to this category only under specific conditions:
 
 ### Palpable content
 
-Content is palpable when it's neither empty or hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable.
+Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable.
 
 ### Form-associated content
 

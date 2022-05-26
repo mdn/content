@@ -85,7 +85,7 @@ All the direct children are now grid items. In a web browser, you won't see any 
 
 ![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
-As you learn and then work with the CSS Grid Layout this tool will give you a better idea of what is happening with your grids visually.
+As you learn and then work with the CSS Grid Layout, this tool will give you a better idea of what is happening with your grids visually.
 
 If we want to start making this more grid-like we need to add column tracks.
 

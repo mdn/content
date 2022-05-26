@@ -1,5 +1,5 @@
 ---
-title: TextDecoder.prototype.decode()
+title: TextDecoder.decode()
 slug: Web/API/TextDecoder/decode
 tags:
   - API
@@ -11,16 +11,16 @@ browser-compat: api.TextDecoder.decode
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
-The **`TextDecoder.prototype.decode()`** method returns a
-{{DOMxRef("DOMString")}} containing the text, given in parameters, decoded with the
-specific method for that `TextDecoder` object.
+The **`TextDecode.decode()`** method returns a
+string containing the text, given in parameters, decoded with the
+specific method for that {{domxref("TextDecoder")}}> object.
 
 ## Syntax
 
 ```js
-b1 = decoder.decode(buffer, options);
-b2 = decoder.decode(buffer);
-b3 = decoder.decode();
+decode()
+decode(buffer)
+decode(buffer, options)
 ```
 
 ### Parameters
@@ -32,14 +32,18 @@ b3 = decoder.decode();
     containing the text to decode.
 - `options` {{Optional_Inline}}
 
-  - : Is a `TextDecodeOptions` dictionary with the property:
+  - : An object with the property:
 
     - `stream`
       - : A boolean flag indicating that additional data will follow in
         subsequent calls to decode(). Set to true if processing the data in chunks, and
         false for the final chunk or if the data is not chunked. It defaults to false.
 
-## Example
+### Return value
+
+A string.
+
+## Examples
 
 This example encodes and decodes the euro symbol, €.
 
@@ -64,7 +68,7 @@ document.getElementById('decoded-value').textContent = str;
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

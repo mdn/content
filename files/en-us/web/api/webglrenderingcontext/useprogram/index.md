@@ -17,17 +17,17 @@ The **`WebGLRenderingContext.useProgram()`** method of the [WebGL API](/en-US/do
 ## Syntax
 
 ```js
-void gl.useProgram(program);
+useProgram(program)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to use.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -8,6 +8,9 @@ tags:
   - ARIA dialog
   - Reference
   - Web Development
+spec-urls:
+  - https://w3c.github.io/aria/#dialog
+  - https://w3c.github.io/aria-practices/#dialog_modal
 ---
 The `dialog` role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).
 
@@ -110,7 +113,7 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 #### Working Examples:
 
-- [jQuery-UI Dialog](https://jqueryui.com/demos/dialog/)
+- [jQuery-UI Dialog](https://jqueryui.com/dialog/)
 
 ### Notes
 
@@ -119,18 +122,15 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 ## Specifications
 
-| Specification                                    | Status                   |
-| ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#dialog","dialog")}} | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#dialog_modal","Dialog")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 Coming soon
 
 ## See also
 
-- [ARIA: alertdialog role](/en-US/docs/web/Accessibility/ARIA/roles/alertdialog_role)
+- [ARIA: alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [Using the alertdialog role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
-- {{HTMLElement('dialog', 'The HTML <code>&lt;dialog></code> element')}}
+- {{HTMLElement('dialog', 'The HTML <code>&lt;dialog&gt;</code> element')}}
 
 <section id="Quick_links">
 

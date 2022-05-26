@@ -20,7 +20,7 @@ equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descrip
 
 ## Value
 
-A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
+A string containing a descriptor as it would be defined in a style
 sheet's `@font-face` rule.
 
 ## Specifications

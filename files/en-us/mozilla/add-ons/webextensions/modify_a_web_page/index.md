@@ -60,7 +60,7 @@ document.body.appendChild(header);
 
 Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/). The page should look like this:
 
-![developer.mozilla.org page "eaten" by the script](eaten_page.png )
+![developer.mozilla.org page "eaten" by the script](eaten_page.png)
 
 ## Modifying pages programmatically
 
@@ -232,7 +232,7 @@ Since [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tab
 
 > **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to view `console.log` in background script.
 >
-> Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)  which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
+> Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
 
 If we want send messages back from the content script to the background page,  we would use [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) instead of [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), e.g.:
 

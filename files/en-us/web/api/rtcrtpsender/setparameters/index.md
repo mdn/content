@@ -33,7 +33,7 @@ connection.
 ## Syntax
 
 ```js
-var promise = rtcRtpSender.setParameters(parameters)
+setParameters(parameters)
 ```
 
 ### Parameters
@@ -80,16 +80,10 @@ from the list below.
     has no parameters to set.
 - `OperationError` {{domxref("DOMException")}}
   - : Returned if an error occurs that does not match the ones specified here.
-- `RangeError` {{domxref("DOMException")}}
-  - : Returned if the value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy",
-    "scaleResolutionDownBy")}} is less than 1.0, which would result in scaling up rather
-    than down, which is not allowed; or one or more of the specified encodings'
-    {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} values is less
-    than 0.0.
+- {{jsxref("RangeError")}}
+  - : Returned if the value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} is less than 1.0 — which would result in scaling up rather than down, which is not allowed; or if one or more of the specified `encodings` {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} values is less than 0.0.
 
-In addition, if a WebRTC error occurs while configuring or accessing the media, an
-{{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail",
-  "errorDetail")}} set to `hardware-encoder-error`.
+In addition, if a WebRTC error occurs while configuring or accessing the media, an {{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail", "errorDetail")}} set to `hardware-encoder-error`.
 
 ## Description
 

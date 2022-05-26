@@ -17,7 +17,7 @@ The **`ariaColIndexText`** property of the {{domxref("Element")}} interface refl
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
@@ -70,4 +70,4 @@ console.log(el.ariaColIndexText); // "New column name"
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

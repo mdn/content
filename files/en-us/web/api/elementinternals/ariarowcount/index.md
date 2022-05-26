@@ -19,7 +19,7 @@ The **`ariaRowCount`** property of the {{domxref("ElementInternals")}} interface
 
 ## Value
 
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -37,4 +37,4 @@ this.internals_.ariaRowCount = "100";
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

@@ -28,13 +28,17 @@ To stop recording call {{domxref("console.profileEnd()")}}.
 ## Syntax
 
 ```js
-profile(profileName);
+profile(profileName)
 ```
 
 ### Parameters
 
 - `profileName`
   - : The name to give the profile. Optional.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Browser compatibility
 

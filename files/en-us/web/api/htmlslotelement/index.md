@@ -18,7 +18,7 @@ The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_
 ## Properties
 
 - {{domxref('HTMLSlotElement.name')}}
-  - : A {{domxref("DOMString","string")}} used to get and set the slot's name.
+  - : A string used to get and set the slot's name.
 
 ## Methods
 
@@ -36,7 +36,7 @@ The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_
 
 ## Examples
 
-The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
+The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');

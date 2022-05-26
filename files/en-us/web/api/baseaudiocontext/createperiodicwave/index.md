@@ -26,10 +26,6 @@ createPeriodicWave(real, imag)
 createPeriodicWave(real, imag, constraints)
 ```
 
-### Return value
-
-A {{domxref("PeriodicWave")}}.
-
 ### Parameters
 
 - `real`
@@ -45,11 +41,16 @@ otherwise an error is thrown.
   - : An dictionary object that specifies whether normalization should be disabled (if
     not specified, normalization is enabled by default.) It takes one property:
 
-    - `disableNormalization`: If set to `true`,
-      normalization is disabled for the periodic wave. The default is
-      `false`.
+    - `disableNormalization`
+      - : If set to `true`,
+        normalization is disabled for the periodic wave. The default is
+        `false`.
 
 > **Note:** If normalized, the resulting wave will have a maximum absolute peak value of 1.
+
+### Return value
+
+A {{domxref("PeriodicWave")}}.
 
 ## Examples
 

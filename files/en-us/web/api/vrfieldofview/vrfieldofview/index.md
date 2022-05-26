@@ -20,35 +20,28 @@ The **`VRFieldOfView()`** constructor creates a new {{domxref("VRFieldOFView")}}
 
 ## Syntax
 
-There are two forms of this constructor, which take their information in slightly different ways. The first one accepts four separate arguments — the {{domxref("VRFieldOfView.upDegrees")}}, {{domxref("VRFieldOfView.rightDegrees")}}, {{domxref("VRFieldOfView.downDegrees")}}, and {{domxref("VRFieldOfView.leftDegrees")}} values you want the field of view to have
-
 ```js
-var myFOV = new VRFieldOfView(upDegrees, rightDegrees, downDegrees, leftDegrees);
-```
+new VRFieldOfView(upDegrees, rightDegrees, downDegrees, leftDegrees)
 
-The second one takes a `VRFieldOfViewInit` object as a single argument, which is just a dictionary containing the four degree values mentioned above:
-
-```js
-var init = {upDegrees:up,rightDegrees:right,downDegrees:down,leftDegrees:left}
-var myFOV = new VRFieldOfView(init);
+new VRFieldOfView(options)
 ```
 
 ### Parameters
 
 - Four argument version:
 
-  - upDegrees
+  - `upDegrees`
     - : The number of degrees upwards that the field of view will extend in.
-  - rightDegrees
+  - `rightDegrees`
     - : The number of degrees to the right that the field of view will extend in.
-  - downDegrees
+  - `downDegrees`
     - : The number of degrees downwards that the field of view will extend in.
-  - leftDegrees
+  - `leftDegrees`
     - : The number of degrees to the left that the field of view will extend in.
 
 - One argument version:
 
-  - init
+  - `options`
     - : A dictionary object containing the four degree values specified above.
 
 ## Examples
@@ -74,7 +67,7 @@ function setCustomFOV(up,right,down,left) {
 
 This constructor was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

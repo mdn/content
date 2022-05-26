@@ -5,6 +5,7 @@ tags:
   - HTTP
   - Server error
   - Status code
+spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
 ---
 {{HTTPSidebar}}
 
@@ -20,6 +21,4 @@ The **`Variant Also Negotiates`** status code indicates an internal server confi
 
 ## Specifications
 
-| Specification                                                            | Title                                   |
-| ------------------------------------------------------------------------ | --------------------------------------- |
-| {{RFC("2295", "506 Variant Also Negotiates" , "8.1")}} | Transparent Content Negotiation in HTTP |
+{{Specifications}}

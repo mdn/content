@@ -19,8 +19,12 @@ The **`randomUUID()`** method of the {{domxref("Crypto")}} interface is used to 
 ## Syntax
 
 ```js
-randomUUID();
+randomUUID()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

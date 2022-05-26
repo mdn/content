@@ -13,7 +13,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.html](https://www.squarefree.com/burningedge/releases/1.1.html) (thanks Jesse).
+This page is based largely on [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (thanks Jesse).
 
 ### New Web Developer Features
 
@@ -50,7 +50,7 @@ This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.
 <!---->
 
 - CSS3 cursors
-  - : More [mouse cursor names](https://www.w3.org/TR/css3-ui/#cursor) are now supported.
+  - : More [mouse cursor names](https://www.w3.org/TR/css-ui-3/#cursor) are now supported.
 
 <!---->
 
@@ -68,7 +68,7 @@ This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.
 <!---->
 
 - CSS `outline` property
-  - : [CSS outlines](https://www.w3.org/TR/css3-ui/#outline1) can now be used. These differ from borders in that they don't affect the page layout.
+  - : [CSS outlines](https://www.w3.org/TR/css-ui-3/#outline1) can now be used. These differ from borders in that they don't affect the page layout.
 
 <!---->
 
@@ -128,7 +128,7 @@ This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.
 <!---->
 
 - XForms support
-  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](https://developer.mozilla.org/en-US/docs/Archive/Web/XForms).
+  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](/en-US/docs/Archive/Web/XForms).
 
 ### New Extension Developer Features
 

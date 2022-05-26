@@ -59,7 +59,7 @@ The `__defineSetter__` method allows a {{jsxref("Functions/set", "setter",
 ### Non-standard and deprecated way
 
 ```js
-var o = {};
+const o = {};
 o.__defineSetter__('value', function(val) { this.anotherValue = val; });
 o.value = 5;
 console.log(o.value); // undefined
@@ -70,13 +70,15 @@ console.log(o.anotherValue); // 5
 
 ```js
 // Using the set operator
-var o = { set value(val) { this.anotherValue = val; } };
+const o = { set value(val) { this.anotherValue = val; } };
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
+```
 
+```js
 // Using Object.defineProperty
-var o = {};
+const o = {};
 Object.defineProperty(o, 'value', {
   set: function(val) {
     this.anotherValue = val;
@@ -104,5 +106,5 @@ console.log(o.anotherValue); // 5
 - {{jsxref("Object.prototype.__lookupGetter__()")}}
 - {{jsxref("Object.prototype.__lookupSetter__()")}}
 - [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
-- [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
+- [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - {{bug(647423)}}

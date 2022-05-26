@@ -46,7 +46,7 @@ processing either an {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} o
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ### Exceptions
 

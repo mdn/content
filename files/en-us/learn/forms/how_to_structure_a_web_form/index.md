@@ -47,7 +47,7 @@ We already met this in the previous article.
 
 > **Warning:** It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave in an unpredictable manner, so it is a bad idea.
 
-It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#attr-form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
+It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
 
 Let's move forward and cover the structural elements you'll find nested in a form.
 
@@ -327,7 +327,7 @@ You now have all the knowledge you'll need to properly structure your web forms.
 
 ## See also
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 

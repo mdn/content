@@ -19,7 +19,7 @@ The **`HTMLInputElement.setCustomValidity()`** method sets a custom validity mes
 ## Syntax
 
 ```js
-element.setCustomValidity(message);
+setCustomValidity(message)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ element.setCustomValidity(message);
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

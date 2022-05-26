@@ -22,12 +22,12 @@ shorthand property.
 > To achieve your purpose, you can use:
 >
 > - {{domxref("CSSStyleDeclaration.getPropertyValue()")}} of the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
-> - {{domxref("Element.computedStyleMap()")}} of the modern [CSS Typed Object Model API](/en-US/docs/Web/CSS_Typed_OM_API), less supported and considered experimental.
+> - {{domxref("Element.computedStyleMap()")}} of the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
 ## Syntax
 
 ```js
-getPropertyCSSValue(property);
+getPropertyCSSValue(property)
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ var rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

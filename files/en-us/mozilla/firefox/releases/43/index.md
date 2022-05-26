@@ -81,10 +81,10 @@ _No change._
 - The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ({{bug(1191178)}}).
 - The modern [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) has been implemented: unprefixed {{domxref("Screen.orientation")}} and the {{domxref("ScreenOrientation")}} interface are now available ({{bug("1131470")}}). The non-standard {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, and {{domxref("Screen.mozUnlockOrientation()")}} will be removed in the future.
 - Under Linux, like under Windows, {{domxref("Event.timeStamp")}} now returns a {{domxref("DOMHighResTimeStamp")}} ({{bug(1026803)}}).
-- Experimental support for {{domxref("Selection")}} events {{event("selectionchange")}} and {{event("selectstart")}}, as well as the {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} and {{domxref("GlobalEventHandlers.onselectstart")}} event handlers property has been added ({{bug(571294)}}). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
+- Experimental support for {{domxref("Selection")}} events {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Document/selectstart_event", "selectstart")}}, as well as the {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} and {{domxref("GlobalEventHandlers.onselectstart")}} event handlers property has been added ({{bug(571294)}}). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
 - Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ({{bug(1204841)}}).
 - The {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} method has been removed ({{bug(1206030)}}).
-- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{exception("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).
+- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{jsxref("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).
 
 ### MathML
 
@@ -108,7 +108,7 @@ _No change._
 
 ## Security
 
-- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) ({{bug("536509")}}).
+- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ({{bug("536509")}}).
 - This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ({{bug(1201023)}}). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).
 - Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ({{bug("992096")}}).
 

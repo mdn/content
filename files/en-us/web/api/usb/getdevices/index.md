@@ -21,7 +21,7 @@ objects for paired attached devices. For information on pairing devices, see
 ## Syntax
 
 ```js
-USB.getDevices()
+getDevices()
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ None.
 A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("USBDevice")}}
 objects.
 
-## Example
+## Examples
 
 The following example logs the product name and serial number of paired devices to the
 console. For information on pairing devices, see

@@ -3,7 +3,7 @@ title: scroll-margin
 slug: Web/CSS/scroll-margin
 tags:
   - CSS
-  - Property
+  - CSS Property
   - Reference
   - margin
   - recipe:css-shorthand-property

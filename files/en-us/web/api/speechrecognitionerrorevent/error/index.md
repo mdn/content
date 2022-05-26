@@ -20,7 +20,7 @@ The **`error`** read-only property of the
 
 ## Value
 
-A {{domxref("DOMString")}} naming the type of error. The possible error types are:
+A string naming the type of error. The possible error types are:
 
 - no-speech
   - : No speech was detected.

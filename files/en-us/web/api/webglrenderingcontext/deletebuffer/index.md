@@ -18,17 +18,17 @@ deleted.
 ## Syntax
 
 ```js
-void gl.deleteBuffer(buffer);
+deleteBuffer(buffer)
 ```
 
 ### Parameters
 
-- buffer
+- `buffer`
   - : A {{domxref("WebGLBuffer")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -18,20 +18,20 @@ the corresponding query object.
 ## Syntax
 
 ```js
-void ext.queryCounterEXT(query, target);
+queryCounterEXT(query, target)
 ```
 
 ### Parameters
 
 - `query`
   - : A {{domxref("WebGLQuery")}} object for which to record the current time.
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIMESTAMP_EXT`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -92,5 +92,4 @@ The following events can be triggered on an upload object and used to monitor th
 ## See also
 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [FileHandle API](/en-US/docs/Web/API/File_Handle_API)
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)

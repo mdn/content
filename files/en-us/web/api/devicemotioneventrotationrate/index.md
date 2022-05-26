@@ -5,11 +5,10 @@ tags:
   - API
   - DOM
   - DOM Reference
-  - Experimental
   - Reference
 browser-compat: api.DeviceMotionEventRotationRate
 ---
-{{securecontext_header}}{{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}
+{{securecontext_header}}{{ ApiRef("Device Orientation Events") }}
 
 A `DeviceMotionEventRotationRate` object provides information about the rate at which the device is rotating around all three axes.
 

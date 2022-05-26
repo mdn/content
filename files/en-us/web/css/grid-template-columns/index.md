@@ -82,7 +82,7 @@ grid-template-columns: unset;
 
     > **Note:** `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.
 
-- `{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
+- `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
   - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of columns that exhibit a recurring pattern to be written in a more compact form.
@@ -150,5 +150,5 @@ grid-template-columns: unset;
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
 - Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
-- Video tutorial: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
+- Video tutorial: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
 - [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)

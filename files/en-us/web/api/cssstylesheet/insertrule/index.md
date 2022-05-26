@@ -22,8 +22,8 @@ method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current s
 ## Syntax
 
 ```js
-insertRule(rule);
-insertRule(rule, index);
+insertRule(rule)
+insertRule(rule, index)
 ```
 
 ### Parameters

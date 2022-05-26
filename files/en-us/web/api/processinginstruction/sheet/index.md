@@ -16,7 +16,7 @@ The `xml-stylesheet` processing instruction is used to associate a stylesheet in
 
 ## Value
 
-A {{jsxref("String")}} containing the name of the associated stylesheet, or `null` if there are none.
+A string containing the name of the associated stylesheet, or `null` if there are none.
 
 ## Example
 

@@ -17,13 +17,13 @@ The **`abort()`** method of the {{domxref("WritableStream")}} interface aborts t
 ## Syntax
 
 ```js
-writableStream.abort(reason)
+abort(reason)
 ```
 
 ### Parameters
 
 - `reason`
-  - : A {{domxref("DOMString")}} providing a human-readable reason for the abort.
+  - : A string providing a human-readable reason for the abort.
 
 ### Return value
 
@@ -31,7 +31,7 @@ A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` par
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The stream you are trying to abort is not a {{domxref("WritableStream")}}, or it is locked.
 
 ## Examples

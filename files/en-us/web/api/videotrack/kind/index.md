@@ -27,7 +27,7 @@ to determine the scenarios in which specific tracks should be enabled or disable
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the type of content the media represents. The
+A string specifying the type of content the media represents. The
 string is one of those found in [Video track kind strings](#video_track_kind_strings) below.
 
 ## Video track kind strings

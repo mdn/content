@@ -30,43 +30,9 @@ We have an assortment of macros that can be used to automatically generate the c
 
 ### Quicklinks
 
-We have macros specifically designed to create [quicklinks](/en-US/docs/MDN/Structures/Quicklinks):
+We have one macro specifically designed to create [quicklinks](/en-US/docs/MDN/Structures/Quicklinks):
 
-- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given).
-Up to two total levels of depth are generated.
-
-### Transclusion
-
-**Transclusion** is the embedding of part or all of one page into another.
-
-> **Warning:** Do not use this feature/macro.
-> We are in the process of removing it from MDN.
-
-Exercise caution when using this macro, to ensure that the transcluded content makes sense in the context of the page it is embedded into.
-
-[`page`](https://github.com/mdn/yari/blob/main/kumascript/macros/page.ejs) lets you embed some or all of a specific page into a document. It accepts five parameters:
-
-1. The URI of the page to transclude. For example, "/en-US/docs/MDN/About".
-2. The name of the section within the page to transclude. This can be specified either as the title string or as the ID of a block to copy over. If not specified, the entire article is transcluded. {{optional_inline}}
-3. The revision number of the page version to transclude. This feature is not currently implemented, but would allow including text from specific versions of an article. {{unimplemented_inline}}
-4. A Boolean value indicating whether or not to show the heading of the top-level section being transcluded. This is useful if you wish to specify your own heading. The default value is false, meaning the heading is not included by default. {{optional_inline}}
-5. The heading level to use as the top heading level. This adjusts the outermost first-discovered level of the transcluded content to the specified number, and all other headings correspondingly. This lets you include content that has its own headings but adjust them to match the heading level at which you're including them. If you don't specify this value, the headings are not adjusted. {{unimplemented_inline}}
-
-#### Example without heading
-
-\\{{Page("/en-US/docs/MDN/About", "How you can help")}}
-
-Result:
-
-{{Page("/en-US/docs/MDN/About", "How you can help")}}
-
-#### Example with heading
-
-\\{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}
-
-Result:
-
-{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}
+- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.
 
 ## Deprecated
 
@@ -75,8 +41,6 @@ These macros have been replace by other ways of doing the same thing, and should
 ### Linking
 
 - The [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) macro creates a phrase that links to both the name of a section and the article containing that section. For example, `\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}` outputs the following: _{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}_.
-- **Do not use the [`anch`](https://github.com/mdn/yari/blob/main/kumascript/macros/anch.ejs) macro. It has been deprecated. Instead use a regular Markdown link with the `coding` style.** The [`anch`](https://github.com/mdn/yari/blob/main/kumascript/macros/anch.ejs) macro was used in the past to insert a link to an anchor. `\{\{Anch("top")\}\}` produced `<a href="#top">top</a>` ([top](#top)). You could add a second parameter, which contained replacement text to display as the link text.
-- **Do not use the [`manch`](https://github.com/mdn/yari/blob/main/kumascript/macros/manch.ejs) macro. It has been deprecated. Instead use a regular Markdown link with the `coding` style.** The [`manch`](https://github.com/mdn/yari/blob/main/kumascript/macros/manch.ejs) was used in the past to insert a link to a method within the current interface; this was intended only for use in interface documentation pages. `\{\{manch("foo")\}\}` produced `<code><a href="current/path#foo">foo()</a></code>` ({{ manch("foo") }}).
 - The [`Link`](https://github.com/mdn/yari/blob/main/kumascript/macros/Link.ejs) macro inserts a link to the specified page on MDN, using the page's title as the visible string to click on, and the tooltip picked up from the page's SEO summary.
 - The [`LinkItem`](https://github.com/mdn/yari/tree/main/kumascript/macros/LinkItem.ejs) macro inserts a link to a specified URL, with the indicated text as the visible string to click on. The link automatically picks up as its tooltip the summary of the target page. This differs from [`Link`](https://github.com/mdn/yari/blob/main/kumascript/macros/Link.ejs) in that you must specify the title.
 - The [`LinkItemDL`](https://github.com/mdn/yari/tree/main/kumascript/macros/LinkItemDL.ejs) macro inserts a link to a specified URL, with the indicated text as a {{HTMLElement("dt")}} which is also the link. The {{HTMLElement("dd")}} element contains the specified page's summary.

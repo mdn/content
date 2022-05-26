@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Reflect.isExtensible
 The static
 **`Reflect.isExtensible()`** method determines if an object is
 extensible (whether it can have new properties added to it). It is similar to
-{{jsxref("Object.isExtensible()")}}, but with some [differences](#Difference_to_Object.isExtensible).
+{{jsxref("Object.isExtensible()")}}, but with some [differences](#difference_to_object.isextensible).
 
 {{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 

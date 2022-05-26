@@ -111,7 +111,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 #### Result
 
-{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
+{{EmbedLiveSample("Flex_layout", "auto", 250)}}
 
 ### Grid layout
 
@@ -149,7 +149,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 #### Result
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("Grid_layout", "auto", 250)}}
 
 ### Multi-column layout
 
@@ -178,7 +178,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ## Specifications
 
-{{Specifications("css.properties.gap.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

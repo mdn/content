@@ -36,10 +36,18 @@ submitted when you do it with original HTML form submit.
 ## Syntax
 
 ```js
-HTMLFormElement.submit()
+submit()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 document.forms["myform"].submit();

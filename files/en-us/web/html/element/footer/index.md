@@ -8,10 +8,9 @@ tags:
   - Reference
 browser-compat: html.elements.footer
 ---
-
 {{HTMLRef}}
 
-The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest [sectioning content](/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
+The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
@@ -109,6 +108,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ## Usage notes
 
 - Enclose information about the author in an {{HTMLElement("address")}} element that can be included into the `<footer>` element.
+- When the nearest ancestor sectioning content or sectioning root element is the body element the footer applies to the whole page.
 - The `<footer>` element is not sectioning content and therefore doesn't introduce a new section in the [outline](/en-US/docs/Web/HTML/Element/Heading_Elements).
 
 ## Examples
@@ -138,4 +138,4 @@ Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs
 
 - Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Contentinfo role](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
+- [ARIA: Contentinfo role](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)

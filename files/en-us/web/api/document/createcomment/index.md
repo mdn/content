@@ -16,15 +16,19 @@ it.
 ## Syntax
 
 ```js
-CommentNode = document.createComment(data);
+createComment(data)
 ```
 
 ### Parameters
 
-- _data_
+- `data`
   - : A string containing the data to be added to the Comment.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var docu = new DOMParser().parseFromString('<xml></xml>',  'application/xml');

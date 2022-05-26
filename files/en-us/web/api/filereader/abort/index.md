@@ -19,8 +19,16 @@ the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 ## Syntax
 
 ```js
-instanceOfFileReader.abort();
+abort()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -19,10 +19,14 @@ Releases the window from trapping events of a specific type.
 ## Syntax
 
 ```js
-window.releaseEvents(eventType)
+releaseEvents(eventType)
 ```
 
-`eventType` is a combination of the following values:
+### Parameters
+
+- `eventType`
+
+  - : `eventType` is a combination of the following values:
 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
 `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`,
 `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`,
@@ -32,7 +36,11 @@ window.releaseEvents(eventType)
 `Event.RESET`, `Event.RESIZE`, `Event.SELECT`,
 `Event.SUBMIT`, `Event.UNLOAD`.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 window.releaseEvents(Event.KEYPRESS)
@@ -43,7 +51,7 @@ window.releaseEvents(Event.KEYPRESS)
 Note that you can pass a list of events to this method using the following syntax:
 `window.releaseEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
 
-See also [`window.captureEvents`](/en-US/docs/Web/API/window.captureEvents)
+See also [`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents)
 ({{deprecated_inline}}).
 
 ## Specifications

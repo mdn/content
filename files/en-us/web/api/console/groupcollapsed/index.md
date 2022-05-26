@@ -20,8 +20,7 @@ button next to it to expand it, revealing the entries created in the group.
 
 Call {{domxref("console.groupEnd()")}} to back out to the parent group.
 
-See [Using groups in
-the console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxref("console")}} documentation for details and
+See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxref("console")}} documentation for details and
 examples.
 
 {{AvailableInWorkers}}
@@ -37,6 +36,10 @@ groupCollapsed(label)
 
 - `label`
   - : Label for the group. Optional.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

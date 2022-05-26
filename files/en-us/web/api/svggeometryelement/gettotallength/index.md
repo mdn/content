@@ -19,8 +19,12 @@ the user agent's computed value for the total length of the path in user units.
 ## Syntax
 
 ```js
-float someElement.getTotalLength();
+getTotalLength()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

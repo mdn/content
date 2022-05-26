@@ -14,7 +14,7 @@ The **`gt`** instructions, short for *greater than*, check if a number is greate
 
 The integer types have separate greater than instructions for signed (**`gt_s`**) and unsigned (**`gt_u`**) numbers.
 
-{{EmbedInteractiveExample("pages/wat/gt.html")}}
+{{EmbedInteractiveExample("pages/wat/gt.html", "tabbed-taller")}}
 
 ## Syntax
 

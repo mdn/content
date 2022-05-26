@@ -37,9 +37,9 @@ To tell these situations apart, you either call
 ## Syntax
 
 ```js
-var request = objectStore.getAll();
-var request = objectStore.getAll(query);
-var request = objectStore.getAll(query, count);
+getAll()
+getAll(query)
+getAll(query, count)
 ```
 
 ### Parameters

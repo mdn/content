@@ -22,12 +22,12 @@ transmitted to the USB device.
 ## Syntax
 
 ```js
-var promise = USBDevice.controlTransferOut(setup, data)
+controlTransferOut(setup, data)
 ```
 
 ### Parameters
 
-- setup
+- `setup`
 
   - : An object that sets options for . The available options are:
 
@@ -42,7 +42,7 @@ var promise = USBDevice.controlTransferOut(setup, data)
     - `value`: Vender-specific request parameters.
     - `index`: The interface number of the recipient.
 
-- data
+- `data`
   - : A {{domxref("TypedArray")}} containing the data that will be transferred to the
     device. Not all commands require data; some commands can send data just through the
     value parameter. Check with your device to see what the specific request requires.

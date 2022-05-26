@@ -45,6 +45,10 @@ The `rect()` method creates a rectangular path whose starting point is at
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Drawing a rectangle

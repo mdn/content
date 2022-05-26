@@ -18,7 +18,7 @@ element.
 
 ## Value
 
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

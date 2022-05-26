@@ -3,13 +3,12 @@ title: Touch.force
 slug: Web/API/Touch/force
 tags:
   - API
-  - Experimental
   - Property
   - Read-only
   - touch
 browser-compat: api.Touch.force
 ---
-{{ APIRef("Touch Events") }}{{SeeCompatTable}}
+{{ APIRef("Touch Events") }}
 
 The **`Touch.force`** read-only property returns the amount of
 pressure the user is applying to the touch surface for a {{ domxref("Touch") }} point.

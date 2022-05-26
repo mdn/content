@@ -27,6 +27,10 @@ filter configurable as several different common filter types.
 createBiquadFilter()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("BiquadFilterNode")}}.

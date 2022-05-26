@@ -30,22 +30,22 @@ constraints change.
 ## Syntax
 
 ```js
-sourceBuffer.changeType(type);
+changeType(type)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} specifying the MIME type that future buffers will conform
+  - : A string specifying the MIME type that future buffers will conform
     to.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified string is empty, rather than indicating a valid MIME type.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("SourceBuffer")}} is not a member of the parent media source's

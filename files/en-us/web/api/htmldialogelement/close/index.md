@@ -16,24 +16,25 @@ browser-compat: api.HTMLDialogElement.close
 {{ SeeCompatTable() }}
 
 The **`close()`** method of the {{domxref("HTMLDialogElement")}}
-interface closes the dialog. An optional {{domxref("DOMString")}} may be passed as an
+interface closes the dialog. An optional string may be passed as an
 argument, updating the `returnValue` of the dialog.
 
 ## Syntax
 
 ```js
-dialogInstance.close(returnValue);
+close()
+close(returnValue)
 ```
 
 ### Parameters
 
-- returnValue {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing an updated value for the
+- `returnValue` {{optional_inline}}
+  - : A string representing an updated value for the
     {{domxref("HTMLDialogElement.returnValue")}} of the dialog.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -99,8 +100,7 @@ button.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

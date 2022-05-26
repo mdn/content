@@ -24,7 +24,7 @@ This does come with some side effects. For example:
 ## Syntax
 
 ```js
-document.open();
+open()
 ```
 
 ### Parameters

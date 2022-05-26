@@ -19,15 +19,15 @@ whether a value has been associated with the given key.
 ## Syntax
 
 ```js
-var boolean = mediaKeyStatusMap(key)
+has(key)
 ```
 
 ### Parameters
 
-- key
+- `key`
   - : The key whose value you want returned
 
-### Returns
+### Return value
 
 A {{jsxref('Boolean')}}.
 

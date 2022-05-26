@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.GestureEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 {{Non-standard_header()}}
 
@@ -46,7 +46,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## Specifications
 
-_Not part of any specification._ Apple has [a description at the Safari Developer Library](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html).
+_Not part of any specification._ Apple has [a description at the Safari Developer Library](https://developer.apple.com/documentation/webkitjs/gestureevent).
 
 ## Browser compatibility
 

@@ -133,7 +133,7 @@ The map has a number of different controls available; by default it just shows a
 map.addControl(L.mapquest.control());
 ```
 
-The [`mapquest.control()` method](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) just creates a simple full-featured control set, and it is placed in the top-right hand corner by default. You can adjust the position by specifying an options object as a parameter for the control containing a `position` property, the value of which is a string specifying a position for the control. Try this, for example:
+The [`mapquest.control()` method](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) just creates a simple full-featured control set, and it is placed in the top-right-hand corner by default. You can adjust the position by specifying an options object as a parameter for the control containing a `position` property, the value of which is a string specifying a position for the control. Try this, for example:
 
 ```js
   map.addControl(L.mapquest.control({ position: 'bottomright' }));
@@ -398,7 +398,7 @@ We are not going to say too much more about this example in the article — [the
 To get it running, you'll need to:
 
 - Read the [YouTube Data API Overview](https://developers.google.com/youtube/v3/getting-started) documentation.
-- Make sure you visit the [Enabled APIs page](https://console.developers.google.com/apis/enabled), and in the list of APIs, make sure the status is ON for the YouTube Data API v3.
+- Make sure you visit the [Enabled APIs page](https://console.cloud.google.com/apis/enabled), and in the list of APIs, make sure the status is ON for the YouTube Data API v3.
 - Get an API key from [Google Cloud](https://cloud.google.com/).
 - Find the string `ENTER-API-KEY-HERE` in the source code, and replace it with your API key.
 - Run the example through a web server. It won't work if you just run it directly in the browser (i.e. via a `file://` URL).
@@ -414,6 +414,7 @@ This article has given you a useful introduction to using third-party APIs to ad
 - [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
 - [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 - [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- **Third party APIs**
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
 - [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

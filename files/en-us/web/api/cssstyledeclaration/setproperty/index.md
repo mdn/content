@@ -17,7 +17,8 @@ a new value for a property on a CSS style declaration object.
 ## Syntax
 
 ```js
-setProperty(propertyName, value, priority);
+setProperty(propertyName, value)
+setProperty(propertyName, value, priority)
 ```
 
 ### Parameters
@@ -38,7 +39,7 @@ setProperty(propertyName, value, priority);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

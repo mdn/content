@@ -20,8 +20,16 @@ collecting reports in its report queue.
 ## Syntax
 
 ```js
-reportingObserverInstance.observe()
+observe()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

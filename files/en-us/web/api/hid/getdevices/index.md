@@ -16,7 +16,7 @@ The **`getDevices()`** method of the {{domxref("HID")}} interface gets a list of
 ## Syntax
 
 ```js
-HID.getDevices();
+getDevices()
 ```
 
 ### Parameters

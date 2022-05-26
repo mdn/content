@@ -18,27 +18,27 @@ interface, when passed a key name and value, will add that key to the given
 ## Syntax
 
 ```js
-storage.setItem(keyName, keyValue);
+setItem(keyName, keyValue)
 ```
 
 ### Parameters
 
 - `keyName`
-  - : A {{domxref("DOMString")}} containing the name of the key you want to create/update.
+  - : A string containing the name of the key you want to create/update.
 - `keyValue`
-  - : A {{domxref("DOMString")}} containing the value you want to give the key you are
+  - : A string containing the value you want to give the key you are
     creating/updating.
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 `setItem()` may throw an exception if the storage is full. Developers should make sure to
 **always catch possible exceptions from `setItem()`**.
 
-## Example
+## Examples
 
 The following function creates three data items inside local storage.
 

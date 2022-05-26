@@ -12,6 +12,10 @@ tags:
   - WebRTC
   - WebRTC API
   - streaming
+spec-urls:
+  - https://w3c.github.io/webrtc-pc/)
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/mediacapture-fromelement/
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
@@ -192,21 +196,17 @@ These interfaces and events are related to interactivity with Public-Switched Te
 
 ## Specifications
 
-| Specification                                                                        |
-| ------------------------------------------------------------------------------------ |
-| [WebRTC: Real-Time Communication Between Browsers](https://w3c.github.io/webrtc-pc/) |
-| [Media Capture and Streams](https://w3c.github.io/mediacapture-main/)                |
-| [Media Capture from DOM Elements](https://w3c.github.io/mediacapture-fromelement/)   |
+{{Specifications}}
 
 ### WebRTC-proper protocols
 
-- [Application Layer Protocol Negotiation for Web Real-Time Communications](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
-- [WebRTC Audio Codec and Processing Requirements](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
-- [RTCWeb Data Channels](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
-- [RTCWeb Data Channel Protocol](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
-- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
-- [WebRTC Security Architecture](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
-- [Transports for RTCWEB](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
+- [Application Layer Protocol Negotiation for Web Real-Time Communications](https://datatracker.ietf.org/doc/rfc8833/)
+- [WebRTC Audio Codec and Processing Requirements](https://datatracker.ietf.org/doc/rfc7874/)
+- [RTCWeb Data Channels](https://datatracker.ietf.org/doc/rfc8831/)
+- [RTCWeb Data Channel Protocol](https://datatracker.ietf.org/doc/rfc8832/)
+- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](https://datatracker.ietf.org/doc/rfc8834/)
+- [WebRTC Security Architecture](https://datatracker.ietf.org/doc/rfc8827/)
+- [Transports for RTCWEB](https://datatracker.ietf.org/doc/rfc8835/)
 
 ### Related supporting protocols
 
@@ -215,7 +215,7 @@ These interfaces and events are related to interactivity with Public-Switched Te
 - [URI Scheme for the Session Traversal Utilities for NAT (STUN) Protocol](https://datatracker.ietf.org/doc/html/rfc7064)
 - [Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers](https://datatracker.ietf.org/doc/html/rfc7065)
 - [An Offer/Answer Model with Session Description Protocol (SDP)](https://datatracker.ietf.org/doc/html/rfc3264)
-- [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
+- [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/rfc7635/)
 
 ## See also
 

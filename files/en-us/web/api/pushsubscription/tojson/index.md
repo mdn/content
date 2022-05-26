@@ -23,19 +23,19 @@ providing a useful shortcut.
 ## Syntax
 
 ```js
-mySubscription = subscription.toJSON()
+toJSON()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A JSON object. It currently only contains the subscription endpoint, as an
 `endpoint` member.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.ready.then(function(reg) {

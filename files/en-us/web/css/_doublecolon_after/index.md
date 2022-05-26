@@ -25,7 +25,9 @@ a::after {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::after
+```
 
 > **Note:** CSS3 introduced the `::after` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept `:after`, introduced in CSS2.
 

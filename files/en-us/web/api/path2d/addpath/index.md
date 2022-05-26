@@ -19,7 +19,8 @@ of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
 ## Syntax
 
 ```js
-void path.addPath(path [, transform]);
+addPath(path)
+addPath(path, transform)
 ```
 
 ### Parameters
@@ -29,6 +30,10 @@ void path.addPath(path [, transform]);
 - `transform` {{optional_inline}}
   - : A {{domxref("DOMMatrix")}} to be used as the transformation matrix for the path that
     is added. (Technically a `DOMMatrixInit` object).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

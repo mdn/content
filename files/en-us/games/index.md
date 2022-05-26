@@ -14,8 +14,6 @@ tags:
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
 
-{{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
-
 ## Develop web games
 
 Welcome to the MDN game development center! In this area of the site, we provide resources for web developers wanting to develop games. You will find many useful tutorials and technique articles in the main menu on the left, so feel free to explore.
@@ -55,7 +53,7 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
 
 - [HTML5 Game Engine](https://html5gameengine.com/)
   - : List of the most popular HTML5 game frameworks along with their rating, features and samples.
-- [JSBreakouts](https://www.jsbreakouts.org/)
+- [JSBreakouts](https://jsbreakouts.org/)
   - : Compare JavaScript Breakout clones in different frameworks to help you choose the right one for you.
 - [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
   - : Tutorials and articles about game development in general.

@@ -20,7 +20,7 @@ specified in the `title` parameter of the
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -49,7 +49,7 @@ find(function(element, index, array) { /* ... */ }, thisArg)
 - `callbackFn`
 
   - : Function to execute on each value in the array.
-  
+
     The function is called with the following arguments:
 
     - `element`

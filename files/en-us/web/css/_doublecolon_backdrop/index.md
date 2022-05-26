@@ -34,7 +34,9 @@ All fullscreen elements are placed in a last-in/first out (LIFO) stack in the to
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::backdrop
+```
 
 ## Examples
 

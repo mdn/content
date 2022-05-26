@@ -21,8 +21,7 @@ performance information.
 
 This property is not available in workers.
 
-> **Warning:** This property is deprecated in the [Navigation Timing Level 2
-> specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
+> **Warning:** This property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
 
 ## Value

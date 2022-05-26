@@ -35,10 +35,10 @@ font-stretch: 200%;
 
 /* multiple values */
 font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;;
+font-stretch: condensed ultra-condensed;
 ```
 
-The `font-weight` property is described using any one of the values listed below.
+The `font-stretch` property is described using any one of the values listed below.
 
 ### Values
 
@@ -125,7 +125,21 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<font-stretch-absolute>{1,2}
+
+<font-stretch-absolute> =
+  normal          |
+  ultra-condensed |
+  extra-condensed |
+  condensed       |
+  semi-condensed  |
+  semi-expanded   |
+  expanded        |
+  extra-expanded  |
+  ultra-expanded  |
+  <percentage>
+```
 
 ## Examples
 

@@ -19,21 +19,26 @@ the samples to the specified channel of the `AudioBuffer`, from the source array
 ## Syntax
 
 ```js
+copyToChannel(source, channelNumber)
 copyToChannel(source, channelNumber, startInChannel)
 ```
 
 ### Parameters
 
-- source
+- `source`
   - : A {{jsxref("Float32Array")}} that the channel data will be copied from.
-- channelNumber
+- `channelNumber`
   - : The channel number of the current {{domxref("AudioBuffer")}} to copy the channel
     data to. If _channelNumber_ is greater than or equal to
     {{domxref("AudioBuffer.numberOfChannels")}}, an `INDEX_SIZE_ERR` will be
     thrown.
-- startInChannel {{optional_inline}}
+- `startInChannel` {{optional_inline}}
   - : An optional offset to copy the data to. If _startInChannel_ is greater than
     {{domxref("AudioBuffer.length")}}, an `INDEX_SIZE_ERR` will be thrown.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -56,5 +61,4 @@ myArrayBuffer.copyToChannel (anotherArray,0,0);
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

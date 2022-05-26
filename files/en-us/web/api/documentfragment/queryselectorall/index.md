@@ -21,14 +21,18 @@ a `SYNTAX_ERR` value is raised.
 ## Syntax
 
 ```js
-elementList = documentfragment.querySelectorAll(selectors);
+querySelectorAll(selectors)
 ```
 
 ### Parameters
 
-- _selectors_
-  - : Is a {{domxref("DOMString")}} containing one or more CSS selectors separated by
+- `selectors`
+  - : A string containing one or more CSS selectors separated by
     commas.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

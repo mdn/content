@@ -92,10 +92,10 @@ _No change._
 #### Miscellaneous
 
 - [Web Speech Synthesis API](/en-US/docs/Web/API/Web_Speech_API) has been implemented on Firefox Desktop ({{bug(1003439)}}).
-- The {{domxref("WindowEventHandlers/onstorage", "Window.onstorage")}} event handler property has been added.
+- The {{domxref("Window/storage_event", "storage")}} event has been added.
 - The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) ({{bug(1108055)}}).
 - The {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} event handler property has been added ({{bug(1231193)}}).
-- After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can nowadd another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ({{bug(1223696)}}).
+- After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can now add another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ({{bug(1223696)}}).
 
 ### MathML
 
@@ -112,7 +112,7 @@ _No change._
 
 ## HTTP
 
-- The `jar:` protocol has been disabled by default when accessed from Web content; you may enable this if necessary by setting the {{pref("network.jar.block-remote-files")}} preference to `false` ({{bug(1215235)}}).
+- The `jar:` protocol has been disabled by default when accessed from Web content; you may enable this if necessary by setting the `network.jar.block-remote-files` preference to `false` ({{bug(1215235)}}).
 
 ## Security
 

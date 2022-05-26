@@ -65,5 +65,5 @@ Overall, these restrictions shouldn't affect web developers too significantly. T
 ## See also
 
 - [privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks
-- [Plugging the CSS History Leak](https://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
+- [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
 - [Preventing attacks on a user's history through CSS :visited selectors](https://dbaron.org/mozilla/visited-privacy)

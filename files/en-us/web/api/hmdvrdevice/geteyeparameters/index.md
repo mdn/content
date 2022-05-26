@@ -22,15 +22,15 @@ This includes field of view information, and more.
 ## Syntax
 
 ```js
-var myLeftEye = HMDVRDevice.getEyeParameters('left');
+getEyeParameters(whichEye)
 ```
 
 ### Parameters
 
 - `whichEye`
-  - : A {{domxref("DOMString")}} representing the eye you want to return information about. The value can be `left` or `right`.
+  - : A string representing the eye you want to return information about. The value can be `left` or `right`.
 
-### Returns
+### Return value
 
 A {{domxref("VREyeParameters")}} object.
 

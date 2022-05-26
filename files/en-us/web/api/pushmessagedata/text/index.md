@@ -20,16 +20,16 @@ The **`text()`** method of the {{domxref("PushMessageData")}} interface extracts
 ## Syntax
 
 ```js
-var myText = pushEvent.data.text();
+text()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

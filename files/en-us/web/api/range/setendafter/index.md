@@ -18,7 +18,7 @@ The **`Range.setEndAfter()`** method sets the end position of a
 ## Syntax
 
 ```js
-range.setEndAfter(referenceNode);
+setEndAfter(referenceNode)
 ```
 
 ### Parameters
@@ -26,7 +26,11 @@ range.setEndAfter(referenceNode);
 - `referenceNode`
   - : The {{domxref("Node")}} to end the {{domxref("Range")}} after.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var range = document.createRange();

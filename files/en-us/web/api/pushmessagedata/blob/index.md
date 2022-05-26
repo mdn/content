@@ -19,14 +19,14 @@ The **`blob()`** method of the {{domxref("PushMessageData")}} interface extracts
 ## Syntax
 
 ```js
-var myBlob = PushEvent.data.blob();
+blob()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref("Blob")}}.
 

@@ -16,8 +16,8 @@ The **`cancelWatchAvailability()`** method of the {{domxref("RemotePlayback")}} 
 ## Syntax
 
 ```js
-RemotePlayback.cancelWatchAvailability();
-RemotePlayback.cancelWatchAvailability(id);
+cancelWatchAvailability()
+cancelWatchAvailability(id)
 ```
 
 ### Parameters

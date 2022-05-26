@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.relatedTarget
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.relatedTarget`** read-only property is the secondary target for the mouse event, if there is one.
 
@@ -63,7 +63,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragenter")}}</td>
+      <td>{{domxref("HTMLElement/dragenter_event", "dragenter")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device entered to
       </td>
@@ -72,7 +72,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragleave")}}</td>
+      <td>{{domxref("HTMLElement/dragleave_event", "dragleave")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device exited from
       </td>

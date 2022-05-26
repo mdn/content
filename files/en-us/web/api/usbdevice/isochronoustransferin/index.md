@@ -22,14 +22,14 @@ transmitted received from the USB device.
 ## Syntax
 
 ```js
-var promise = USBDevice.isochronousTransferIn(endpointNumber, packetLengths)
+isochronousTransferIn(endpointNumber, packetLengths)
 ```
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- packetLengths
+- `packetLengths`
   - : An array of lengths for the packets being received.
 
 ### Return value

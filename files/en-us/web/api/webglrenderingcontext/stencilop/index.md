@@ -17,7 +17,7 @@ stencil test actions.
 ## Syntax
 
 ```js
-void gl.stencilOp(fail, zfail, zpass);
+stencilOp(fail, zfail, zpass)
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ All three parameters accept all constants listed below.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Constants
 

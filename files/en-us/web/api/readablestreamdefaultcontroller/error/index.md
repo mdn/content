@@ -22,22 +22,22 @@ with the associated stream to error.
 ## Syntax
 
 ```js
-readableStreamDefaultController.error(e);
+error(e)
 ```
 
 ### Parameters
 
-- _e_
+- `e`
   - : The error you want future interactions to fail with.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 

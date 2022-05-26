@@ -13,7 +13,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-att
 
 {{HTMLSidebar}}
 
-The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#attr-value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). This value must be less than or equal to the value of the `max` attribute. If a value is specified for `min` that isn't a valid number, the input has no minimum value.
+The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). This value must be less than or equal to the value of the `max` attribute. If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
 Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element, the `min` attribute is a number that specifies the most negative value a form control to be considered valid.
 

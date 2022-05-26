@@ -8,6 +8,7 @@ tags:
   - Decompression
   - Reference
   - Overview
+browser-compat: api.CompressionStream
 ---
 {{DefaultAPISidebar("Compression Streams API")}}
 
@@ -42,8 +43,8 @@ async function DecompressBlob(blob) {
 
 ## Specifications
 
-{{Specifications("api.CompressionStream")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.CompressionStream")}}
+{{Compat}}

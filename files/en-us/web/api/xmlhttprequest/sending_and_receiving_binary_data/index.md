@@ -71,11 +71,11 @@ var abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
 
 The example above fetches the byte at offset `x` within the loaded binary data. The valid range for `x` is from 0 to `filestream.length-1`.
 
-See [downloading binary streams with XMLHttpRequest](http://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation. See also [downloading files](/en-US/docs/Code_snippets/Downloading_Files).
+See [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation. See also [downloading files](/en-US/docs/Code_snippets/Downloading_Files).
 
 ## Sending binary data
 
-The `send` method of the XMLHttpRequest has been extended to enable easy transmission of binary data by accepting an [`ArrayBuffer`](/en-US/docs/JavaScript_typed_arrays/ArrayBuffer), {{domxref("Blob")}}, or {{domxref("File")}} object.
+The `send` method of the XMLHttpRequest has been extended to enable easy transmission of binary data by accepting an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), {{domxref("Blob")}}, or {{domxref("File")}} object.
 
 The following example creates a text file on-the-fly and uses the `POST` method to send the "file" to the server. This example uses plain text, but you can imagine the data being a binary file instead.
 
@@ -111,10 +111,10 @@ xhr.send(myArray);
 
 This is building a 512-byte array of 8-bit integers and sending it; you can use any binary data you'd like, of course.
 
-> **Note:** Support for sending [`ArrayBuffer`](/en-US/docs/JavaScript_typed_arrays/ArrayBuffer) objects using XMLHttpRequest was added to Gecko 9.0 {{geckoRelease("9.0")}}. **Add information about other browsers' support here.**
+> **Note:** Support for sending [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) objects using XMLHttpRequest was added to Gecko 9.0 {{geckoRelease("9.0")}}. **Add information about other browsers' support here.**
 
 ## Submitting forms and uploading files
 
-Please, read [this paragraph](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
+Please, read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
 
 {{APIRef("XMLHttpRequest")}}

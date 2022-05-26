@@ -17,15 +17,21 @@ with the given namespace and name.
 ## Syntax
 
 ```js
-element.setAttributeNS(namespace, name, value)
+setAttributeNS(namespace, name, value)
 ```
+
+### Parameters
 
 - `namespace` is a string specifying the namespace of the attribute.
 - `name` is a string identifying the attribute by its qualified name;
   that is, a namespace prefix followed by a colon followed by a local name.
 - `value` is the desired string value of the new attribute.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 let d = document.getElementById('d1');

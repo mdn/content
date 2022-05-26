@@ -23,9 +23,9 @@ The [Gamepad API](https://www.w3.org/TR/gamepad/) is still at the Working Draft 
 
 ## Which gamepads are best?
 
-The most popular gamepads right now are those from the Xbox 360, Xbox One, PS3 and PS4 — they have been heavily tested and work well with the Gamepad API implementation in browsers across Windows and Mac OS X.
+The most popular gamepads right now are those from the Xbox 360, Xbox One, PS3 and PS4 — they have been heavily tested and work well with the Gamepad API implementation in browsers across Windows and macOS.
 
-There's also a number of other devices with various different button layouts that more or less work across browser implementations. The code discussed in this article was tested with a few gamepads, but the author's favorite configuration is a wireless Xbox 360 controller and the Firefox browser on Mac OS X.
+There's also a number of other devices with various different button layouts that more or less work across browser implementations. The code discussed in this article was tested with a few gamepads, but the author's favorite configuration is a wireless Xbox 360 controller and the Firefox browser on macOS.
 
 ## Case Study: Hungry Fridge
 

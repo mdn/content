@@ -85,7 +85,7 @@ Possible values are:
 - `"worker"`
   - : The target is a worker.
 - `"xslt"`
-  - : The target is an XLST transform.
+  - : The target is an XSLT transform.
 
 ## Examples
 

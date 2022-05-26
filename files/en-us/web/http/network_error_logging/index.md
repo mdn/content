@@ -6,6 +6,7 @@ tags:
   - HTTP
   - Network Error Logging
   - Reference
+browser-compat: http.headers.NEL
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 
@@ -137,10 +138,8 @@ The type of the network error may be one of the following pre-defined values fro
 
 ## Specifications
 
-| Specification                                                                      |
-| ---------------------------------------------------------------------------------- |
-| [Network Error Logging](https://w3c.github.io/network-error-logging/#introduction) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.NEL")}}
+{{Compat}}

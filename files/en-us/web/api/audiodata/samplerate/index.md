@@ -22,7 +22,7 @@ A decimal value.
 The below example prints the value of `sampleRate` to the console.
 
 ```js
-console.log(AudioData.duration);
+console.log(audioData.sampleRate);
 ```
 
 ## Specifications

@@ -17,7 +17,7 @@ previously called commands are finished.
 ## Syntax
 
 ```js
-void gl.finish();
+finish()
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

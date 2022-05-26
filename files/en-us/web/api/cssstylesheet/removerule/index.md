@@ -34,7 +34,7 @@ object. It is functionally identical to the standard, preferred method
 ## Syntax
 
 ```js
-removeRule(index);
+removeRule(index)
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ removeRule(index);
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

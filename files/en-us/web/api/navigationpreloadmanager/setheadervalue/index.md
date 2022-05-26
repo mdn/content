@@ -30,7 +30,7 @@ setHeaderValue(value)
 - `value`
   - : An arbitrary string value, which the target server uses to determine what should returned for the requested resource.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
@@ -52,7 +52,7 @@ navigator.serviceWorker.ready
     console.log("Done!");
   })
   .catch(e => console.error("NavigationPreloadManager not supported: " + e.message));
-  
+
 ```
 
 ## Specifications

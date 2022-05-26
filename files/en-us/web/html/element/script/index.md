@@ -116,7 +116,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
 
     - `high`
-      - : Signals a high-priority fetch relative to other external scripts..
+      - : Signals a high-priority fetch relative to other external scripts.
     - `low`
       - : Signals a low-priority fetch relative to other external scripts.
     - `auto`

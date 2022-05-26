@@ -21,8 +21,18 @@ with a content decryption module (CDM).
 ## Syntax
 
 ```js
-var mediaKeySessionObject = MediaKeys.createSession([MediaKeySessionType]);
+createSession()
+createSession(mediaKeySessionType)
 ```
+
+### Parameters
+
+- `mediaKeySessionType`  {{optional_inline}}
+  - : A string. Either "temporary" or "persistent-license". The default value is "temporary".
+
+### Return value
+
+A new {{domxref("MediaKeySession")}} object.
 
 ## Specifications
 

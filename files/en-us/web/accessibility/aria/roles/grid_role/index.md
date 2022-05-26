@@ -11,6 +11,9 @@ tags:
   - grid role
   - composite widget role
   - NeedsContent
+spec-urls:
+  - https://w3c.github.io/aria/#grid
+  - https://w3c.github.io/aria-practices/#grid
 ---
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 
@@ -590,10 +593,7 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 
 ## Specifications
 
-| Specification                                                                    | Status                                           |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#grid","Role Grid")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#grid","Role Grid")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -605,7 +605,7 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 - [ARIA: `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [ARIA: `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [ARIA: columnheader role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- {{HTMLElement('table','HTML <code>&lg;table></code> element')}}
+- {{HTMLElement('table','HTML <code>&lt;table&gt;</code> element')}}
 - [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)

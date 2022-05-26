@@ -280,7 +280,7 @@ However, there are some edge cases. You might for example have an audio recordin
 
 ## Video text tracks
 
-To make video accessible for deaf, blind, or even other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
+To make video accessible for deaf, visually impaired, or other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
 
 > **Note:** text tracks are also useful for potentially any user, not just those with disabilities. for example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library.)
 
@@ -296,7 +296,7 @@ There are different types of text tracks for different purposes. The main ones y
 
 - Captions — There for the benefit of deaf users who can't hear the audio track, including the words being spoken, and contextual information such as who spoke the words, if the people were angry or sad, and what mood the music is currently creating.
 - Subtitles — Include translations of the audio dialog, for users that don't understand the language being spoken.
-- Descriptions — These include descriptions for blind people who can't see the video, for example, what the scene looks like.
+- Descriptions — These include descriptions for visually impaired people who can't see the video, for example, what the scene looks like.
 - Chapter titles — Chapter markers intended to help the user navigate the media resource
 
 ### Implementing HTML5 video text tracks
@@ -352,7 +352,7 @@ We've not written a new set of assessments for this article, because there are a
 
 This chapter has provided a summary of accessibility concerns for multimedia content, along with some practical solutions.
 
-It is not always easy to make multimedia accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that blind users are not really in the target audience bracket for such apps.
+It is not always easy to make multimedia accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that visually impaired users are not really in the target audience bracket for such apps.
 
 You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.
 

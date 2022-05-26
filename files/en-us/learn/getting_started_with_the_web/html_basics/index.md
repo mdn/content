@@ -100,7 +100,7 @@ That wraps up the basics of individual HTML elements, but they aren't handy on t
 
 Here, we have the following:
 
-- `<!DOCTYPE html>` — doctype. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
+- `<!DOCTYPE html>` — [doctype](/en-US/docs/Glossary/Doctype). It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
 - `<html></html>` — the {{htmlelement("html")}} element. This element wraps all the content on the entire page and is sometimes known as the root element.
 - `<head></head>` — the {{htmlelement("head")}} element. This element acts as a container for all the stuff you want to include on the HTML page that _isn't_ the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
 - `<meta charset="utf-8">` — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.
@@ -210,7 +210,7 @@ Links are very important — they are what makes the web a web! To add a link, w
     <a href="">Mozilla Manifesto</a>
     ```
 
-4. Fill in the value of this attribute with the web address that you want the link to link to:
+4. Fill in the value of this attribute with the web address that you want the link to:
 
     ```html
     <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>

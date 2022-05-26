@@ -22,7 +22,7 @@ the content outside it is rendered inert.
 ## Syntax
 
 ```js
-dialogInstance.showModal();
+showModal()
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -102,8 +102,7 @@ button.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

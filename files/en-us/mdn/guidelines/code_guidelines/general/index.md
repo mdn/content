@@ -79,7 +79,7 @@ let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
 
 ### Code block height
 
-Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short like 15-25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and link to the full example on a GitHub repo or codepen, say.
+Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short, like 15–25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and linking to the full example on a GitHub repo or codepen, say.
 
 ## Guidelines for displaying examples
 
@@ -89,7 +89,7 @@ The MDN main content pane is about 700px wide on desktop, so embedded MDN exampl
 
 For height, we'd recommend keeping the rendered example at below 700px in height if at all possible, for maximum onscreen legibility.
 
-You should also think about making your examples responsive to  some degree, so they are also useful on mobile devices.
+You should also think about making your examples responsive to some degree, so they are also useful on mobile devices.
 
 ### Use of images and other media
 

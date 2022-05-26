@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.metaKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.metaKey`** read-only property returning a
 boolean value that indicates if the <kbd>Meta</kbd> key was pressed

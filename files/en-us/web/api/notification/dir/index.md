@@ -17,11 +17,14 @@ The `dir` read-only property of the {{domxref("Notification")}} interface indica
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the text direction. Possible values are:
+A string specifying the text direction. Possible values are:
 
-- `auto`: adopts the browser's language setting behavior (the default.)
-- `ltr`: left to right.
-- `rtl` : right to left.
+- `auto`
+  - : adopts the browser's language setting behavior (the default.)
+- `ltr`
+  - : left to right.
+- `rtl` 
+  - : right to left.
 
 > **Note:** Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.
 

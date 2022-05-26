@@ -23,14 +23,14 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement.open")}}
   - : A boolean value reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.
 - {{domxref("HTMLDialogElement.returnValue")}}
-  - : A {{domxref("DOMString")}} that sets or returns the return value for the dialog.
+  - : A string that sets or returns the return value for the dialog.
 
 ## Methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
-  - : Closes the dialog. An optional {{domxref("DOMString")}} may be passed as an argument, updating the `returnValue` of the dialog.
+  - : Closes the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 - {{domxref("HTMLDialogElement.show()")}}
   - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
 - {{domxref("HTMLDialogElement.showModal()")}}

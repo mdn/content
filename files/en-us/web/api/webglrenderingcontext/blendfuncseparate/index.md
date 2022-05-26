@@ -18,7 +18,7 @@ for blending pixel arithmetic for RGB and alpha components separately.
 ## Syntax
 
 ```js
-void gl.blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha);
+blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ void gl.blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

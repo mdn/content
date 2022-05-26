@@ -17,12 +17,12 @@ passed {{domxref("WebGLTexture")}} is valid and `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isTexture(texture);
+isTexture(texture)
 ```
 
 ### Parameters
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} to check.
 
 ### Return value

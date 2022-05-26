@@ -6,7 +6,7 @@ browser-compat: api.HTMLElement.accessKeyLabel
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.accessKeyLabel`**
-read-only property returns a {{jsxref("String")}} containing the element's
+read-only property returns a string containing the element's
 browser-assigned access key (if any); otherwise it returns an empty string.
 
 ## Syntax

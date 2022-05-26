@@ -9,6 +9,7 @@ tags:
   - Overview
   - PWA
   - contact picker
+browser-compat: api.ContactsManager
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
@@ -96,11 +97,11 @@ async function getContacts() {
 
 ## Specifications
 
-{{Specifications("api.ContactsManager")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ContactsManager")}}
+{{Compat}}
 
 ## See also
 

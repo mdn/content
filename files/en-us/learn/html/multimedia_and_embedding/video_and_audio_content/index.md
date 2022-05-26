@@ -287,7 +287,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-And that's a wrap; we hope you had fun playing with video and audio in web pages! In the next article, we'll look at other ways of embedding content on the Web, using technologies like {{htmlelement("iframe")}} and {{htmlelement("object")}}.
+And that's a wrap — we hope you had fun playing with video and audio in web pages! In the next article, we'll look at [other ways of embedding content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies) on the Web, using technologies like {{htmlelement("iframe")}} and {{htmlelement("object")}}.
 
 ## See also
 
@@ -295,7 +295,6 @@ And that's a wrap; we hope you had fun playing with video and audio in web pages
 - [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
 - [Audio and Video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery): A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.
 - [Audio and Video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation): A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)
-- Automated options to [translate multimedia](https://www.inwhatlanguage.com/blog/translate-video-audio/).
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Event reference > Media](/en-US/docs/Web/Events#media)
@@ -305,6 +304,7 @@ And that's a wrap; we hope you had fun playing with video and audio in web pages
 ## In this module
 
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
 - [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

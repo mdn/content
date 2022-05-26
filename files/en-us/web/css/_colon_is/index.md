@@ -4,7 +4,6 @@ slug: Web/CSS/:is
 tags:
   - ':is'
   - CSS
-  - Experimental
   - Pseudo-class
   - Reference
   - Selector
@@ -262,7 +261,9 @@ some-element::after {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:is( <forgiving-selector-list> )
+```
 
 ## Specifications
 

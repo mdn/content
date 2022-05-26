@@ -16,7 +16,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 ### HTML
 
 - The `title` attribute now supports newline characters to allow multi-line tooltips.
-- If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the [specification](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html). Now the fallback content is rendered instead.
+- If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the [specification](https://html.spec.whatwg.org/multipage/canvas.html). Now the fallback content is rendered instead.
 - The `crossorigin` attribute is now supported on {{HTMLElement("video")}}.
 
 ### CSS
@@ -32,7 +32,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 - {{domxref("DOMParser")}} now supports parsing of HTML document fragments.
 - {{domxref("XMLHttpRequest")}} now supports timeouts using the `timeout` property and "timeout" event, as well as the `ontimeout` event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.
-- {{domxref("XMLHttpRequest")}} can now load from [`data:` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+- {{domxref("XMLHttpRequest")}} can now load from [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 - When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the `responseType` set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.
 - Gecko now supports [multi-touch](/en-US/docs/Web/API/Touch_events) (instead of just single touches at a time) on Android.
 - While editing text using an IME, the `input` event is now sent whenever the contents of the element being edited have been changed; this happens after the `compositionupdate` event has been sent to indicate that the IME's text has been changed. You can use the `input` event handler, therefore, to monitor changes to the actual content of the element.
@@ -87,7 +87,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ### XUL
 
-- The definition of the values for the {{XULAttr("chromemargin")}} attribute has changed slightly, to make it easier to make cross-platform XUL code look good on platforms with different default window border widths.
+- The definition of the values for the `chromemargin` attribute has changed slightly, to make it easier to make cross-platform XUL code look good on platforms with different default window border widths.
 
 ### XPCOM
 
@@ -102,12 +102,12 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 - The `nsIScreen_MOZILLA_2_0_BRANCH` interface has been merged into `nsIScreen`. The APIs defined in that interface (for controlling minimum screen brightness) had not previously been documented, but now they are.
 - The `nsIScriptError2` interface has been merged into `nsIScriptError`.
-- {{ifmethod("nsIDownloadManager", "addDownload")}} is now handled asynchronously rather than synchronously.
-- The {{ifmethod("imgIContainerObserver", "frameChanged")}} method now receives as its first parameter an {{interface("imgIRequest")}} object identifying the corresponding request.
-- The {{ifmethod("nsIDOMWindowUtils", "sendTouchEvent")}} method has been added to allow synthesizing touch events.
-- You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.
-- The new {{ifattribute("nsIMemoryMultiReporter", "explicitNonHeap")}} attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" **and** are of the kind `KIND_NONHEAP`.
-- The {{ifattribute("nsIDOMWindowUtils", "paintingSuppressed")}} attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.
+- `nsIDownloadManager.addDownload()` is now handled asynchronously rather than synchronously.
+- The `imgIContainerObserver.frameChanged()` method now receives as its first parameter an `imgIRequest` object identifying the corresponding request.
+- The `nsIDOMWindowUtils.sendTouchEvent()` method has been added to allow synthesizing touch events.
+- You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling `nsISelectionController.scrollSelectionIntoView()`.
+- The new `nsIMemoryMultiReporter.explicitNonHeap` attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" **and** are of the kind `KIND_NONHEAP`.
+- The `nsIDOMWindowUtils.paintingSuppressed` attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.
 - The `nsIDocCharset` and `nsIDocumentCharsetInfo` interfaces have been merged into `nsIDocShell`. As part of this work, the old `forcedDetector` attribute has been removed; it never did anything.
 
 ### SpiderMonkey

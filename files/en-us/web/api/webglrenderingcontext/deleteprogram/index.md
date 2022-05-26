@@ -19,7 +19,7 @@ been deleted.
 ## Syntax
 
 ```js
-void gl.deleteProgram(program);
+deleteProgram(program)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ void gl.deleteProgram(program);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

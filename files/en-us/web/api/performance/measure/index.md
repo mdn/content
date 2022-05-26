@@ -34,10 +34,10 @@ measure(measureName, startMark, endMark)
 
 If only `measureName` is specified, the start timestamp is set to zero, and the end timestamp (which is used to calculate the duration) is the value that would be returned by {{domxref("Performance.now()")}}.
 
-### Arguments
+### Parameters
 
 - `measureName`
-  - : A {{domxref("DOMString")}} representing the name of the measure.
+  - : A string representing the name of the measure.
 
 - `MeasureOptions` {{optional_inline}}
   - : An object that may contain all measure options (the `startMark` and `endMark` may be specified in this object or as their own arguments):
@@ -45,21 +45,21 @@ If only `measureName` is specified, the start timestamp is set to zero, and the 
     - `detail`
       - : Arbitrary metadata to be included in the measure.
     - `start`
-      - : Timestamp {{domxref("DOMHighResTimeStamp")}} to be used as the start time, or {{domxref("DOMString")}} to be used as start mark.
+      - : Timestamp {{domxref("DOMHighResTimeStamp")}} to be used as the start time, or string to be used as start mark.
           If this represents the name of a start mark, then it is defined in the same way as `startMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
     - `duration`
       - : Duration between the start and end mark times ({{domxref("DOMHighResTimeStamp")}}).
     - `end`
-      - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or {{domxref("DOMString")}} to be used as end mark.
+      - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or string to be used as end mark.
           If this represents the name of an end mark, then it is defined in the same way as `endMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
 
 - `startMark` {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the name of the measure's starting mark.
+  - : A string representing the name of the measure's starting mark.
     May also be the name of a {{domxref("PerformanceTiming")}} property.
     Specifying a name that does not represent an existing {{domxref('PerformanceMark')}} or {{domxref("PerformanceTiming")}} raises a `SyntaxError` {{domxref("DOMException")}}.
 
 - `endMark` {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the name of the measure's ending mark.
+  - : A string representing the name of the measure's ending mark.
     This may also be the name of a {{domxref("PerformanceTiming")}} property.
     Specifying a name that does not represent an existing {{domxref('PerformanceMark')}} or {{domxref("PerformanceTiming")}} raises a `SyntaxError` {{domxref("DOMException")}}.
 
@@ -76,7 +76,7 @@ The returned _measure_ will have the following property values:
   - the {{domxref("DOMHighResTimeStamp","timestamp")}} of a start mark, if specified in `MeasureOptions.start` or `startMark`
   - a timestamp calculated from the `MeasureOptions.end` and `MeasureOptions.duration` (if `MeasureOptions.start` was not specified)
   - 0, if it isn't specified and can't be determined from other values.
-  
+
 - {{domxref("PerformanceEntry.duration","duration")}} - set to a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure calculated by subtracting the `startTime` from the end timestamp.
 
   The end timestamp is one of:
@@ -86,9 +86,9 @@ The returned _measure_ will have the following property values:
   - the value returned by {{domxref("Performance.now()")}}, if no end mark is specified or can be determined from other values.
 - {{domxref("PerformanceMeasure","detail")}} - set to the value passed in `MeasureOptions`.
 
-## Exceptions
+### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : This can be thrown in any case where the start, end or duration might be ambiguous:
 
     - Both `endMark` and `MeasureOptions` are specified.
@@ -106,10 +106,10 @@ The returned _measure_ will have the following property values:
 - `DataCloneError` {{domxref("DOMException")}}
   - : The `MeasureOptions.detail` value is non-`null` and cannot be serialized using the HTML "StructuredSerialize" algorithm.
 
-- `RangeError`
+- {{jsxref("RangeError")}}
   - : The `MeasureOptions.detail` value is non-`null` and memory cannot be allocated during serialization using the HTML "StructuredSerialize" algorithm.
 
-## Example
+## Examples
 
 The following example shows how `measure()` is used to create a new _measure_ {{domxref("PerformanceEntry","performance entry")}} in the browser's performance entry buffer.
 

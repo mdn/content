@@ -29,7 +29,7 @@ getByteTimeDomainData(array)
 
 ### Return value
 
-**`void`** | None
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

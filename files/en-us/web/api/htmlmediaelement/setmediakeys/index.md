@@ -23,16 +23,16 @@ playback.
 ## Syntax
 
 ```js
-var Promise = HTMLMediaElement.setMediaKeys(mediaKeys);
+setMediaKeys(mediaKeys)
 ```
 
 ### Parameters
 
-- mediaKeys
+- `mediaKeys`
   - : A reference to a {{domxref("MediaKeys")}} object that the
     {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to the passed instance of `MediaKeys`.
 

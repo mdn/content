@@ -28,7 +28,8 @@ providing statistics about either the overall connection or about the specified
 ## Syntax
 
 ```js
-promise = rtcPeerConnection.getStats(selector)
+getStats()
+getStats(selector)
 ```
 
 ### Parameters
@@ -85,7 +86,7 @@ promise = rtcPeerConnection.getStats(selector, successCallback, failureCallback)
     callback receives as input the exception (a {{domxref("DOMException")}} object
     describing the error which occurred. No return value is expected from the callback.
 
-## Example
+## Examples
 
 This example creates a periodic function using
 {{domxref("setInterval()")}} that collects

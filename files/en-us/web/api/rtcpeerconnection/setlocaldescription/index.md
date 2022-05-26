@@ -35,9 +35,9 @@ negotiation is complete. Only then does the agreed-upon configuration take effec
 ## Syntax
 
 ```js
-aPromise = RTCPeerConnection.setLocalDescription(sessionDescription);
-
-pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{deprecated_inline}}
+setLocalDescription()
+setLocalDescription(sessionDescription)
+setLocalDescription(sessionDescription, successCallback, errorCallback) // deprecated
 ```
 
 ### Parameters
@@ -47,6 +47,10 @@ pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{de
     which specifies the configuration to be applied to the local end of the connection. If
     the description is omitted, the WebRTC runtime tries to automatically do the right
     thing.
+
+### Return value
+
+A {{jsxref("Promise")}}.
 
 #### Implicit description
 

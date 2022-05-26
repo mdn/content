@@ -27,7 +27,7 @@ this might be done:
 - Renegotiation of the connection is needed, and a different set of ICE servers needs
   to be used for some reason. Perhaps the user has moved into a new region, so using new
   regional ICE servers is necessary, for example.
-  In this situation, one might call `setConfiguration()` to switch to new regional ICE servers, then initiate an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart).
+  In this situation, one might call `setConfiguration()` to switch to new regional ICE servers, then initiate an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
 > **Note:** You cannot change the identity information for a connection once it's already been set.
 
@@ -48,7 +48,7 @@ setConfiguration(configuration)
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if one or more of the URLs specified in `configuration.iceServers` is a {{Glossary("TURN")}} server, but complete login information is not provided (that is,
-    either the {{domxref("RTCIceServer.username")}} or {{domxref("RTCIceServer.credential")}} is missing, or if {{domxref("RTCIceServer.credentialType")}} is "password" and {{domxref("RTCIceServer.credential")}} is not a {{domxref("DOMString")}}).
+    either the {{domxref("RTCIceServer.username")}} or {{domxref("RTCIceServer.credential")}} is missing, or if {{domxref("RTCIceServer.credentialType")}} is "password" and {{domxref("RTCIceServer.credential")}} is not a string).
     This prevents successful login to the server.
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if the `configuration` includes changed identity information, but the connection already has identity information specified.

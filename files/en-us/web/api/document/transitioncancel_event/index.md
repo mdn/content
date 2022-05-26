@@ -61,7 +61,7 @@ document.ontransitioncancel = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitioncancel_event#live_example)
+[See a live example of this event](/en-US/docs/Web/API/HTMLElement/transitioncancel_event#live_example).
 
 ## Specifications
 

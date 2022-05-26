@@ -162,11 +162,15 @@ Next, include a "Parameters" subsection, which explains what each parameter shou
 
 The name of each parameter in the list should be contained in a {{HTMLElement("code")}} block.
 
-> **Note:** If the feature does not take any parameters, you don't need to include a "Parameters" section, but you can if you wish include it with content of "None".
+> **Note:** Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
 
 #### Return value section
 
-Next, include a "Return value" subsection, which explains what the return value of the constructor or method is, even if it is `undefined`. See the above links for examples.
+Next, include a "Return value" subsection, which explains what the return value of the constructor or method is. See the above links as examples.
+
+If there is no return value, use the following text:
+
+None (\\{{jsxref("undefined")}}).
 
 #### Exceptions section
 
@@ -288,4 +292,3 @@ SVG attribute reference pages also do not include syntax sections.
 ## See also
 
 - [Markdown in MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)
-

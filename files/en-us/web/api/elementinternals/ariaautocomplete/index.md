@@ -19,7 +19,7 @@ The **`ariaAutoComplete`** property of the {{domxref("ElementInternals")}} inter
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"inline"`
   - : When a user is providing input, text suggesting one way to complete the provided input may be dynamically inserted after the caret.

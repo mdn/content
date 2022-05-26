@@ -32,7 +32,7 @@ Most of the fields in this property take values which are defined and maintained
 - {{domxref("RTCRtpCodecParameters.payloadType", "payloadType")}} {{optional_inline}}
   - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
 - {{domxref("RTCRtpCodecParameters.mimeType", "mimeType")}} {{optional_inline}}
-  - : The codec's MIME media type and subtype specified as a {{domxref("DOMString")}} of the form `"type/subtype"`. IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+  - : The codec's MIME media type and subtype specified as a string of the form `"type/subtype"`. IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
 - {{domxref("RTCRtpCodecParameters.clockRate", "clockRate")}} {{optional_inline}}
   - : An unsigned long integer value specifying the codec's clock rate in hertz (Hz). The clock rate is the rate at which the codec's RTP timestamp advances. Most codecs have specific values or ranges of values they permit; see the [IANA payload format media type registry](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2) for details.
 - {{domxref("RTCRtpCodecParameters.channels", "channels")}} {{optional_inline}}

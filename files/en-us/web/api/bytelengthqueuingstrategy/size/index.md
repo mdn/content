@@ -25,7 +25,7 @@ size(chunk)
 
 ### Parameters
 
-- chunk
+- `chunk`
   - : A chunk of data being passed through the stream.
 
 ### Return value

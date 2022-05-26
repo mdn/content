@@ -24,17 +24,17 @@ object.
 ## Syntax
 
 ```js
-mediaSource.removeSourceBuffer(sourceBuffer);
+removeSourceBuffer(sourceBuffer)
 ```
 
 ### Parameters
 
-- sourceBuffer
+- `sourceBuffer`
   - : The {{domxref("SourceBuffer")}} object to be removed.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

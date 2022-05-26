@@ -395,13 +395,13 @@ It's possible to use `String` as a more reliable
 used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
 
 ```js
-var nullVar = null;
+const nullVar = null;
 nullVar.toString();       // TypeError: nullVar is null
 String(nullVar);          // "null"
 
-var undefinedVar;
+const undefinedVar;
 undefinedVar.toString();  // TypeError: undefinedVar is undefined
-String(undefinedVar);     // "undefined" 
+String(undefinedVar);     // "undefined"
 ```
 
 ## Specifications

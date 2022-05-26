@@ -10,7 +10,7 @@ This document outlines a set of security guidelines that will generally apply to
 
 ## Secure Coding Principles
 
-Ensure that the application follows the [OWASP Secure Coding Principles](https://www.owasp.org/index.php/Secure_Coding_Principles):
+Ensure that the application follows the [OWASP Secure Coding Principles](https://wiki.owasp.org/index.php/Secure_Coding_Principles):
 
 1. Minimize attack surface area
 2. Establish secure defaults

@@ -62,13 +62,13 @@ New ECMAScript 2015 features implemented:
 - The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
 - Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.
 - The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ({{bug(960426)}}).
-- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{event("unload")}} or {{domxref("Window.beforeunload_event", "beforeunload")}} handler.
+- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{domxref("Window/unload_event", "unload")}} or {{domxref("Window.beforeunload_event", "beforeunload")}} handler.
 
 ### MathML
 
 - Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, see the [fonts for Mozilla's MathML engine](/en-US/docs/Mozilla/MathML_Project/Fonts) and try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
 - The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
-- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic mathvariants ({{Bug(930504)}}).
+- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ({{Bug(930504)}}).
 
 ### SVG
 

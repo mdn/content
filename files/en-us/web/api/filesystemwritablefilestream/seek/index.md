@@ -33,9 +33,9 @@ FileSystemWritableStream.seek(position).then(...);
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : If the {{domxref('PermissionStatus.state')}} is not 'granted'.
-- TypeError
+- {{jsxref("TypeError")}}
   - : If `position` is not defined or of type unsigned long.
 
 ## Examples

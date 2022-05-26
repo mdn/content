@@ -15,7 +15,7 @@ browser-compat: api.XPathException.code
 
 The **`code`** read-only property of the
 {{domxref("XPathException")}} interface returns a `short` that contains one
-of the [error code constants](/en-US/docs/Web/API/XPathException#Constants).
+of the [error code constants](/en-US/docs/Web/API/XPathException#constants).
 
 ## Value
 

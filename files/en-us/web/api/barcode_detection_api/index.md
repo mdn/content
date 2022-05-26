@@ -8,8 +8,10 @@ tags:
   - barcode
   - barcode detection
   - shape detection
+  - Experimental
+browser-compat: api.BarcodeDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 
@@ -36,7 +38,7 @@ The Barcode Detection API supports the following barcode formats:
       <td>aztec</td>
       <td>
         A square two-dimensional matrix following iso24778 and with a square
-        bullseye pattern at their centre, thus resembling an Aztec pyramid. Does
+        bullseye pattern at their center, thus resembling an Aztec pyramid. Does
         not require a surrounding blank zone.
       </td>
       <td>
@@ -271,13 +273,11 @@ This example uses the `detect()` method to detect the barcodes within the given 
 
 ## Specifications
 
-| Specification                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------- |
-| [Accelerated Shape Detection in Images # barcode-detection-api](https://wicg.github.io/shape-detection-api/#barcode-detection-api) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.BarcodeDetector")}}
+{{Compat}}
 
 ## See also
 

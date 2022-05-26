@@ -16,8 +16,12 @@ The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{j
 ## Syntax
 
 ```js
-var promise = Serial.getPorts();
+getPorts()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

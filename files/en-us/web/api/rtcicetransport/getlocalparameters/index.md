@@ -33,7 +33,7 @@ transport when the client calls {{domxref("RTCPeerConnection.setLocalDescription
 ## Syntax
 
 ```js
-parameters = RTCIceTransport.getLocalParameters();
+getLocalParameters()
 ```
 
 ### Parameters
