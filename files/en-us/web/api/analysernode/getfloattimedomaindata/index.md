@@ -57,9 +57,9 @@ function draw() {
   canvasCtx.beginPath();
 
   const sliceWidth = WIDTH * 1.0 / bufferLength;
-  const x = 0;
+  let x = 0;
 
-  for(const i = 0; i < bufferLength; i++) {
+  for(let i = 0; i < bufferLength; i++) {
     const v = dataArray[i] * 200.0;
     const y = HEIGHT/2 + v;
 
