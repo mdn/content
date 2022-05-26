@@ -1405,7 +1405,7 @@ Additionally, this key accepts various properties that are aliases for one of th
         <p><code>Array</code> of <code>String</code></p>
       </td>
       <td>
-        <p>Optional.</p>
+        <p>Optional</p>
         <p>
           An array of enumeration values defining the alignment of the
           corresponding <code>"additional_backgrounds":</code> array item.<br />The
@@ -1436,7 +1436,7 @@ Additionally, this key accepts various properties that are aliases for one of th
         <p><code>Array</code> of <code>String</code></p>
       </td>
       <td>
-        <p>Optional.</p>
+        <p>Optional</p>
         <p>
           An array of enumeration values defining how the corresponding
           <code>"additional_backgrounds":</code> array item repeats. Options
@@ -1449,6 +1449,48 @@ Additionally, this key accepts various properties that are aliases for one of th
           <li><code>"repeat-y"</code></li>
         </ul>
         <p>If not specified, defaults to <code>"no-repeat"</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>color_scheme</code></td>
+      <td>
+        <p><code>String</code></p>
+      </td>
+      <td>
+        <p>Optional</p>
+        <p>
+          Determines which color scheme is applied to the chrome (for example, context menus) 
+          and content (for example, built-in pages and the preferred color scheme for web pages). 
+          Options include:
+        </p>
+        <ul>
+          <li><code>"auto"</code> – a light or dark scheme based automatically on the theme.</li>
+          <li><code>"light"</code> – a light scheme.</li>
+          <li><code>"dark"</code> – a dark scheme.</li>
+          <li><code>"system"</code> – uses the system scheme.</li>
+        </ul>
+        <p>If not specified, defaults to <code>"auto"</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>content_color_scheme</code></td>
+      <td>
+        <p><code>String</code></p>
+      </td>
+      <td>
+        <p>Optional</p>
+        <p>
+          Determines which color scheme is applied to the content (for example, built-in pages and 
+          preferred color scheme for web pages). Overrides <code>color_scheme</code>. Options
+          include:
+        </p>
+        <ul>
+          <li><code>"auto"</code> – a light or dark scheme based automatically on the theme.</li>
+          <li><code>"light"</code> – a light scheme.</li>
+          <li><code>"dark"</code> – a dark scheme.</li>
+          <li><code>"system"</code> – the system scheme.</li>
+        </ul>
+        <p>If not specified, defaults to <code>"auto"</code>.</p>
       </td>
     </tr>
   </tbody>
