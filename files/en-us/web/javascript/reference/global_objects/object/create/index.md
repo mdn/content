@@ -90,16 +90,6 @@ console.log("nullProtoObj is: " + nullProtoObj); // shows "nullProtoObj is: [obj
 
 Unlike normal objects, in which `toString()` is on the object's prototype, the `toString()` method here is an own property of `nullProtoObj`. This is because `nullProtoObj` has no (`null`) prototype.
 
-We may also re-set the prototype:
-
-```js
-const nullProtoObj = Object.create(null);              // create null-prototype object (same as before)
-Object.setPrototypeOf(nullProtoObj, Object.prototype); // set new object's [[Prototype]] to Object.prototype
-nullProtoObj.toString(); // [object Object]
-```
-
-In fact, `Object.setPrototypeOf(nullProtoObj, Object.prototype)` effectively reverts the `Object.create(null)` operation: objects created with the literal syntax (`const obj = {}`) automatically gets `Object.prototype` as its prototype.
-
 In practice, objects with `null` prototype are usually used as a cheap substitute for [maps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). The presence of `Object.prototype` properties will cause some bugs:
 
 ```js
@@ -129,7 +119,21 @@ hasPerson("hasOwnProperty") // false
 getAge("toString") // undefined
 ```
 
-In such case, the addition of any method should be done cautiously.
+In such case, the addition of any method should be done cautiously, as they can be confused with the other key-value pairs stored as data.
+
+Making your object not inherit from `Object.prototype` also prevents prototype pollution attacks. If a malicious script adds a property to `Object.prototype`, it will be accessible on every object in your program, except objects that have null prototype.
+
+```js
+const user = {};
+
+// A malicious script:
+Object.prototype.authenticated = true;
+
+// Unexpectedly allowing unauthenticated user to pass through
+if (user.authenticated) {
+  // access confidential data...
+}
+```
 
 ## Examples
 
