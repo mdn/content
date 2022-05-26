@@ -51,143 +51,85 @@ If `proto` is neither of these a {{jsxref("TypeError")}} is thrown.
 
 ## Object with `null` prototype
 
-A new object with `null` prototype can behave in unexpected ways, because it doesn't inherit any object methods from `Object.prototype`. This is especially true when debugging, since common object-property
-converting/detecting utility functions may generate errors, or lose information
-(especially if using silent error-traps that ignore errors). For example, here are two
-objects:
+A new object with `null` prototype can behave in unexpected ways, because it doesn't inherit any object methods from `Object.prototype`. This is especially true when debugging, since common object-property converting/detecting utility functions may generate errors, or lose information (especially if using silent error-traps that ignore errors).
+
+For example, the lack of [`Object.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) often makes debugging intractable:
 
 ```js
 const normalObj = {};   // create a normal object
 const nullProtoObj = Object.create(null); // create an object with "null" prototype
 
-console.log(normalObj); // {} -- Seems normal
-console.log(nullProtoObj); // {} -- Seems normal here too, so far
+console.log("normalObj is: " + normalObj); // shows "normalObj is: [object Object]"
+console.log("nullProtoObj is: " + nullProtoObj); // throws error: Cannot convert object to primitive value
 
-normalObj.p = 1; // create a simple property on normal obj
-nullProtoObj.p = 0; // create a simple property on null-prototype object
-
-console.log(normalObj); // {p: 1} -- Still seems normal
-console.log(nullProtoObj); // {p: 0} -- Still seems normal here too. BUT WAIT...
+alert(normalObj); // shows [object Object]
+alert(nullProtoObj); // throws error: Cannot convert object to primitive value
 ```
 
-As shown above, all seems normal so far. However, when attempting to actually use these
-objects, their differences quickly become apparent:
+Other methods will fail as well.
 
 ```js
-> "normalObj is: " + normalObj // shows "normalObj is: [object Object]"
+normalObj.valueOf() // shows {}
+nullProtoObj.valueOf() // throws error: nullProtoObj.valueOf is not a function
 
-> "nullProtoObj is: " + nullProtoObj // throws error: Cannot convert object to primitive value
+normalObj.hasOwnProperty("p") // shows "true"
+nullProtoObj.hasOwnProperty("p") // throws error: nullProtoObj.hasOwnProperty is not a function
+
+normalObj.constructor // shows "Object() { [native code] }"
+nullProtoObj.constructor // shows "undefined"
 ```
 
-Testing just a few of the many most basic built-in functions shows the magnitude of the
-problem more clearly:
+We can add the `toString` method back to the null-prototype object by simply assigning it one:
 
 ```js
-> alert(normalObj) // shows [object Object]
-> alert(nullProtoObj) // throws error: Cannot convert object to primitive value
-
-> normalObj.toString() // shows [object Object]
-> nullProtoObj.toString() // throws error: nullProtoObj.toString is not a function
-
-> normalObj.valueOf() // shows {}
-> nullProtoObj.valueOf() // throws error: nullProtoObj.valueOf is not a function
-
-> normalObj.hasOwnProperty("p") // shows "true"
-> nullProtoObj.hasOwnProperty("p") // throws error: nullProtoObj.hasOwnProperty is not a function
-
-> normalObj.constructor // shows "Object() { [native code] }"
-> nullProtoObj.constructor // shows "undefined"
-```
-
-As said, these differences can make debugging even simple-seeming problems quickly go
-astray. For example:
-
-_A simple common debugging function:_
-
-```js
-// display top-level property name:value pairs of given object
-function showProperties(obj) {
-  for (const prop in obj) {
-    console.log(prop + ": " + obj[prop] + "\n");
-  }
-}
-```
-
-_Not such simple results: (especially if silent error-trapping had hidden the error
-messages)_
-
-```js
- // create a compound object using the test objects from above as property values
-const obj = {};
-obj.po = normalObj;
-obj.pn = nullProtoObj;
-
-showProperties(obj); // display top-level properties
-// - po: [object Object]
-// - Error: Cannot convert object to primitive value
-```
-
-Note that only first property gets shown, due to `ob.po` being traversed first. But if the same object is created in a different order...
-
-```js
-// create same compound object again, but create same properties in different order
-const obj = {};
-obj.pn = nullProtoObj;
-obj.po = normalObj;
-
-showProperties(obj); // display top-level properties
-// - Error: Cannot convert object to primitive value
-```
-
-Note that neither property gets shown.
-
-Such a different order may arise statically via disparate fixed codings such
-as here, but also dynamically via whatever the order any such property-adding
-code-branches actually get executed at runtime as depends on inputs and/or
-random-variables.
-
-### Adding object methods back
-
-As demonstrated above, lack of default object methods can make debugging unwieldy. We can add the `toString` method back to the null-prototype object by simply assigning it one:
-
-```js
-const nullProtoObj = Object.create(null); // create null-prototype object (same as before)
-
 nullProtoObj.toString = Object.prototype.toString; // since new object lacks toString, add the original generic one back
 
-> nullProtoObj.toString() // shows "[object Object]"
-> "nullProtoObj is: " + nullProtoObj // shows "nullProtoObj is: [object Object]"
-
-// create a compound object (same as before)
-const obj = {};
-obj.pn = nullProtoObj;
-obj.po = normalObj;
-
-showProperties(obj); // display top-level properties
-// - po: [object Object]
-// - pn: [object Object]
+console.log(nullProtoObj.toString()); // shows "[object Object]"
+console.log("nullProtoObj is: " + nullProtoObj); // shows "nullProtoObj is: [object Object]"
 ```
 
-Different from normal objects, `toString` here is an own property of `nullProtoObj`, instead of being on its prototype. This is because, well, `nullProtoObj` has no (`null`) prototype.
+Unlike normal objects, in which `toString()` is on the object's prototype, the `toString()` method here is an own property of `nullProtoObj`. This is because `nullProtoObj` has no (`null`) prototype.
 
-Resetting the new object's prototype works even better:
+We may also re-set the prototype:
 
 ```js
 const nullProtoObj = Object.create(null);              // create null-prototype object (same as before)
 Object.setPrototypeOf(nullProtoObj, Object.prototype); // set new object's [[Prototype]] to Object.prototype
-```
-
-In addition to all the string-related functions shown above, this also adds:
-
-```js
-> nullProtoObj.valueOf() // shows {}
-> nullProtoObj.hasOwnProperty("x") // shows "false"
-> nullProtoObj.constructor // shows "Object() { [native code] }"
-
-// ...and all the rest of the properties and methods of Object.prototype.
+nullProtoObj.toString(); // [object Object]
 ```
 
 In fact, `Object.setPrototypeOf(nullProtoObj, Object.prototype)` effectively reverts the `Object.create(null)` operation: objects created with the literal syntax (`const obj = {}`) automatically gets `Object.prototype` as its prototype.
+
+In practice, objects with `null` prototype are usually used as a cheap substitute for [maps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). The presence of `Object.prototype` properties will cause some bugs:
+
+```js
+const ages = { alice: 18, bob: 27 };
+
+function hasPerson(name) {
+  return name in ages;
+}
+
+function getAge(name) {
+  return ages[name];
+}
+
+hasPerson("hasOwnProperty") // true
+getAge("toString") // [Function: toString]
+```
+
+Using a null-prototype object removes this hazard without introducing too much complexity to the `hasPerson` and `getAge` functions:
+
+```js
+const ages = Object.create(null, {
+  alice: { value: 18, enumerable: true },
+  bob: { value: 27, enumerable: true },
+});
+
+hasPerson("hasOwnProperty") // false
+getAge("toString") // undefined
+```
+
+In such case, the addition of any method should be done cautiously.
 
 ## Examples
 
