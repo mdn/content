@@ -6,3 +6,5 @@ on:
 jobs:
   idle:
     uses: mdn/workflows/.github/workflows/idle-issues.yml@main
+    with:
+      target-repo: "mdn/content"
