@@ -1,6 +1,7 @@
 ---
 title: ByteLengthQueuingStrategy.size()
 slug: Web/API/ByteLengthQueuingStrategy/size
+page-type: web-api-instance-method
 tags:
   - API
   - ByteLengthQueuingStrategy

@@ -1,6 +1,7 @@
 ---
 title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
+page-type: web-api-instance-method
 tags:
   - API
   - Clip

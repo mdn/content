@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

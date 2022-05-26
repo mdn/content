@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage

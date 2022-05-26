@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem.presentationStyle
 slug: Web/API/ClipboardItem/presentationStyle
+page-type: web-api-instance-property
 tags:
   - API
   - Clipboard

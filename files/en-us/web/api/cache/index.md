@@ -1,6 +1,7 @@
 ---
 title: Cache
 slug: Web/API/Cache
+page-type: web-api-interface
 tags:
   - API
   - Cache

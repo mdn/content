@@ -1,6 +1,7 @@
 ---
 title: Applying styles and colors
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
+page-type: guide
 tags:
   - Canvas
   - Graphics

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawWidgetAsOnScreen()
 slug: Web/API/CanvasRenderingContext2D/drawWidgetAsOnScreen
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

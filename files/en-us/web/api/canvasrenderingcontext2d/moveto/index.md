@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

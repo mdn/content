@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
