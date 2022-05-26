@@ -50,6 +50,7 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
   <group-rule-body>
 }
 ```
+
 ## Examples
 
 ### Specifying document for CSS rule
