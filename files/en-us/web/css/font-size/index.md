@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-size
 ---
+
 {{CSSRef}}
 
 The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the font. Changing the font size also updates the sizes of the font size-relative {{cssxref("&lt;length&gt;")}} units, such as `em`, `ex`, and so forth.
@@ -113,7 +114,7 @@ One important fact to keep in mind: em values compound. Take the following HTML 
 
 ```css
 html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+  font-size: 62.5%; /* 1em = 10px, if the default browser font-size is 16px. (62.5% of 16 = 10) */
 }
 span {
   font-size: 1.6em;
@@ -122,7 +123,7 @@ span {
 
 ```html
 <div>
-<span>Outer <span>inner</span> outer</span>
+  <span>Outer <span>inner</span> outer</span>
 </div>
 ```
 
