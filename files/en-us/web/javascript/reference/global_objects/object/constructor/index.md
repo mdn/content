@@ -16,7 +16,7 @@ The value is only read-only for primitive values such as `1`, `true`, and `"test
 
 ## Description
 
-All objects (with the exception of objects created with `Object.create(null)`) will have a `constructor` property on its [[Prototype]]. Objects created without the explicit use of a constructor function (such as object- and array-literals) will have a `constructor` property that points to the Fundamental Object constructor type for that object.
+Any object (with the exception of objects created with `Object.create(null)`) will have a `constructor` property on its `[[Prototype]]`. Objects created without the explicit use of a constructor function (such as object literals and array literals) will have a `constructor` property that points to the Fundamental Object constructor type for that object.
 
 ```js
 let o = {}
