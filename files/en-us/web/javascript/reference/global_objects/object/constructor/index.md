@@ -76,7 +76,7 @@ foo.constructor === 'bar' // true
 // etc.
 ```
 
-This does not overwrite the old `constructor` property — it was originally present on the instance's [[Prototype]], not as its own property.
+This does not overwrite the old `constructor` property — it was originally present on the instance's `[[Prototype]]`, not as its own property.
 
 ```js
 const arr = [];
