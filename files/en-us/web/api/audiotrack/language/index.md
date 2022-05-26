@@ -49,7 +49,7 @@ would like to listen to while watching a movie, for example.
 
 ```js
 function getAvailableLanguages(el) {
-  var trackList = [];
+  const trackList = [];
   const wantedKinds = [
     "main", "translation"
   ];
