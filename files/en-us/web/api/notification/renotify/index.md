@@ -34,7 +34,7 @@ var options = {
   renotify: true
 }
 
-var n = new Notification('Test notification',options);
+var n = new Notification('Test notification', options);
 
 console.log(n.renotify) // should log true
 ```
