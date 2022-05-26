@@ -121,9 +121,9 @@ function draw() {
   canvasCtx.beginPath();
 
   const sliceWidth = canvas.width * 1.0 / bufferLength;
-  const x = 0;
+  let x = 0;
 
-  for (const i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
 
     const v = dataArray[i] / 128.0;
     const y = v * canvas.height / 2;
