@@ -58,14 +58,15 @@ The `finally()` method is very similar to calling
   is for precisely when you _do not care_ about the rejection reason, or the
   fulfillment value, and so there's no need to provide it. So for example:
 
-  - Unlike `Promise.resolve(2).then(() => {}, () => {})` (which
-    will be resolved with `undefined`),
-    `Promise.resolve(2).finally(() => {})` will be resolved with
-    `2`.
-  - Similarly, unlike `Promise.reject(3).then(() => {}, () => {})`
-    (which will be fulfilled with `undefined`),
-    `Promise.reject(3).finally(() => {})` will be rejected with
-    `3`.
+  - Unlike `Promise.resolve(2).then(res => {}, err => {})` (which
+    will be resolved with res = 2),
+    `Promise.resolve(2).finally(what => {})` will be resolved with
+    `what = undefined`.
+  - Similarly, unlike `Promise.reject(3).then(res => {}, err => {})`
+    (which will be rejected with err = 3),
+    `Promise.reject(3).finally(what => {})` will be rejected with
+    `what = undefined`.  No argument is ever passed to finally(), 
+    even if you try hard.
 
 > **Note:** A `throw` (or returning a rejected promise) in the
 > `finally` callback will reject the new promise with the rejection reason
