@@ -50,7 +50,7 @@ number.
 - Leading and trailing spaces in the argument are ignored.
 - If the argument's first character can't be converted to a number (it's not any of
   the above characters), `parseFloat` returns {{jsxref("NaN")}}.
-- `parseFloat` can also parse and return {{jsxref("Infinity")}}.
+- `parseFloat` can also parse and return {{jsxref("Infinity")}} if the string starts with {{jsxref("Infinity")}} preceded by none or more white spaces.
 - `parseFloat` converts {{jsxref("BigInt")}} syntax to {{jsxref("Number", "Numbers")}}, losing precision. This happens because the trailing `n`
   character is discarded.
 
