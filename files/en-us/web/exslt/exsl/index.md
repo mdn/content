@@ -11,7 +11,3 @@ tags:
 The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is `http://exslt.org/common`.
 
 {{SubpagesWithSummaries}}
-
-## Browser compatibility
-
-{{Compat("xslt.exslt.exsl")}}
