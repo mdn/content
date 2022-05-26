@@ -7,38 +7,75 @@ tags:
   - Guide
   - Reference
   - Web
-spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---
 {{CSSRef}}
 
-**Specificity** is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of [CSS selectors](/en-US/docs/Web/CSS/Reference#selectors).
+**Specificity** is the algorithm by which browsers decide which CSS property style declarations are the most relevant to an element and, therefore, which property values will be applied. The specificity algorithm calculates [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) weight to determine which rule from competing style declarations gets applied to an element. 
+
+[Cascade origin and importance](/en-US/docs/Web/CSS/Cascade) is applied before the specificity algorithm. In other words, for competing property declarations, specifity is only compared between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. Only when origin, importance, and specificity are equal, does order of appearance become relevant.
 
 ## How is specificity calculated?
 
-Specificity is a weight that is applied to a given CSS declaration, determined by the number of each [selector type](#selector_types) in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations in a cascade layer or origin. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+Specificity is a weight that is applied to a given CSS declaration, determined by the number of [selectors of each weight category](#selector-weight-categories) in the matching selector. If there are two or more declarations providing different property values for the same element or pseudo-element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
 
-> **Note:** [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
+### Selector weight categories
 
-> **Note:** Specificity only matters for declarations of the same importance and same origin and cascade layer. If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/Cascade) determines which declaration takes precedence.  
+Selector specificity is a 3-column value: _ID - CLASS - TYPE_. The three columns are created from the number of selector components for each selector weight category in the selectors matching the element. 
 
-### Selector Types
-
-Selector specificty is a 3-column value **ID-CLASS-TYPE**. The number in the _ID_ columns of competing selectors are compared. The selector with the greater value wins. If there is an equal number of _ID_ values, the _CLASS_ column is compared. The selector with the greater number of _CLASS_ value wins. If the values in that column are equal, the _TYPE_ column is compared. If there are equal values there too, the proximity rule comes into play, wherein the last declared style has precedence. 
-
-The three columns are created from the number of components from each component of the selector. The following list of selectors decrease by specificity:
+The following list of selectors decrease by specificity:
 
 - ID Column
   - : Includes only [ID selectors](/en-US/docs/Web/CSS/ID_selectors), such as `#example`
 - CLASS Column
   - : Includes [class selectors](/en-US/docs/Web/CSS/Class_selectors), such as `.myClass`, attributes selectors like `[type="radio"]` and `[lang|="fr"]`, and pseudo-classes, such as `:hover`, `:nth-of-type(3n)`, and `:required`.
-- TYPE columns
-  - : Include [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`,  and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double colon notation.
+- TYPE column
+  - : Includes [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`,  and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double colon notation.
 - No value
   - : The Universal selector ({{CSSxRef("Universal_selectors", "*")}}), and {{CSSxRef(":where", ":where()")}} and its parameters, have a specificity of 0. They aren't counted in the equation, but they do match elements.
 
 Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}} may make a selector more specific, but don't add value to the specificy value. 
 
- The negation pseudo-class ({{CSSxRef(":not", ":not()")}}) itself has not weight, but the parameters, the selectors declared _inside_ `:not()`, do.
+The negation pseudo-class, {{CSSxRef(":not", ":not()")}},  itself has no weight. Neither does the {{CSSxRef(":is", ":is()")}} pseudo-class. The parameters in these selectors, however, do. The [`:not()` and `:is()` exceptions](#the-is-and-not-exceptions) are discussed below.
+
+#### Basic example
+
+```css
+:root #myApp input:required,
+input:focus {
+  color: blue;
+}
+```
+
+The specificity for the required input is `1-2-1`, based on one ID, two pseudo-classes, and one element type. The second selector in theAll other inputs only match when receiving focus with a specificity of `0-1-1`, for the `:focus` pseudo-class (0-1-0) and the `input` type (0-1-1). 
+
+### 3-column comparison
+
+Once the specificity value of the relevant selectors ad determined, the number of selector components in each column are compared, from left to right.
+
+The first column is the number of `id` components in each selector. The number in the _ID_ columns of competing selectors are compared. The selector with the greater value in the _ID_ column wins no matter what the values are in the other columns. 
+
+```css
+#myApp #myElement {/* 2-0-0 */}
+#myElement#myElement#myElement {/* 3-0-0 - WINS!! */}
+```
+
+If there is an equal number of _ID_ values, the _CLASS_ column is compared. The _CLASS_ column is the number of class names, attribute selectors, and pseudoclasses in the selector. When the _id_ columns are equal, the selector with the greater number of _CLASS_ value wins, no matter the value in the _type_ column. 
+
+If the values in the _CLASS_ and _ID_ columns are equal, the _TYPE_ column becomes relevant. The _TYPE_ column is the number of element types and pseudoelements in the selector. When the first two columns have the same value, the selector with the greater number of _TYPE_ values wins. 
+
+```css
+body input.myClass {/* 0-1-2 - WINS because CLASS column is greater */}
+html body main input  {/* 0-0-4 */}
+```
+
+If there are equal values in all three columns, the proximity rule comes into play, wherein the last declared style has precedence. 
+
+```css
+input.myClass {/* 0-1-1 */}
+:root input   {/* 0-1-1  WINS because it comes later */}
+```
+
+### Basic example
 
 ```css
 #myElement input.myClass { color: red; } /* 1-1-1 */
@@ -56,6 +93,12 @@ If we convert the id selector to an attribute selector, the first two selectors 
 [id="myElement"] input.myClass { color: red; }   /* 0-2-1 */
 input[type="password"]:required { color: blue; } /* 0-2-1 */
 ```
+
+When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations in a cascade layer or origin. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+
+> **Note:** [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
+
+> **Note:** Specificity only matters for declarations of the same importance and same origin and cascade layer. If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/Cascade) determines which declaration takes precedence.  
 
 When two selectors in the the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
 
@@ -385,5 +428,6 @@ This is because the `h1` selector targets the element specifically, but the gree
 ## See also
 
 - Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
-- CSS3 Selectors Specificity - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
+- CSS4 Selectors Specificity - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
 - {{CSS_Key_Concepts}}
+- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
