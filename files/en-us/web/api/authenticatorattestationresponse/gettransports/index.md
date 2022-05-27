@@ -54,7 +54,7 @@ lexicographical order. Their values may be :
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -75,7 +75,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var transports = newCredentialInfo.response.getTransports();
+    const transports = newCredentialInfo.response.getTransports();
     console.table(transports); // may be something like ["internal", "nfc", "usb"]
   }).catch(function (err) {
      console.error(err);
