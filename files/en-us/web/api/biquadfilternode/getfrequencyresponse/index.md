@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode.getFrequencyResponse()
 slug: Web/API/BiquadFilterNode/getFrequencyResponse
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

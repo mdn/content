@@ -1,6 +1,7 @@
 ---
 title: Beacon API
 slug: Web/API/Beacon_API
+page-type: web-api-overview
 tags:
   - Guide
   - Overview

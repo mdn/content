@@ -1,6 +1,7 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
+page-type: web-api-instance-property
 tags:
   - API
   - Blob

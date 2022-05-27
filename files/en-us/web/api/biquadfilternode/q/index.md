@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode.Q
 slug: Web/API/BiquadFilterNode/Q
+page-type: web-api-instance-property
 tags:
   - API
   - BiquadFilterNode

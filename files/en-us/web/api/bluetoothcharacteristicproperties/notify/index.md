@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.notify
 slug: Web/API/BluetoothCharacteristicProperties/notify
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

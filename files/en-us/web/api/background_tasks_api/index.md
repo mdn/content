@@ -1,6 +1,7 @@
 ---
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
+page-type: web-api-overview
 tags:
   - API
   - Background Tasks API

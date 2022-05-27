@@ -1,6 +1,7 @@
 ---
 title: Badging API
 slug: Web/API/Badging_API
+page-type: web-api-overview
 tags:
   - API
   - Overview

@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
