@@ -38,8 +38,8 @@ This example switches between the main and commentary audio tracks of a media el
 ```js
 function swapCommentaryMain() {
   const videoElem = document.getElementById("main-video");
-  const audioTrackMain;
-  const audioTrackCommentary;
+  let audioTrackMain;
+  let audioTrackCommentary;
 
   videoElem.audioTracks.forEach(track) {
     if (track.kind === "main") {
