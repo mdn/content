@@ -41,14 +41,14 @@ available from
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
   timeout: 60000
 };
 
 navigator.credentials.get({  publicKey: options })
   .then(function (assertionPKCred) {
-    var signature = assertionPKCred.response.signature;
+    const signature = assertionPKCred.response.signature;
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication
