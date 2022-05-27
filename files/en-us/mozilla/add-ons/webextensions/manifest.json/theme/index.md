@@ -1459,8 +1459,8 @@ Additionally, this key accepts various properties that are aliases for one of th
       <td>
         <p>Optional</p>
         <p>
-          Determines which color scheme is applied to the chrome (for example, context menus) 
-          and content (for example, built-in pages and the preferred color scheme for web pages). 
+          Determines which color scheme is applied to the chrome (for example, context menus)
+          and content (for example, built-in pages and the preferred color scheme for web pages).
           Options include:
         </p>
         <ul>
@@ -1480,7 +1480,7 @@ Additionally, this key accepts various properties that are aliases for one of th
       <td>
         <p>Optional</p>
         <p>
-          Determines which color scheme is applied to the content (for example, built-in pages and 
+          Determines which color scheme is applied to the content (for example, built-in pages and
           preferred color scheme for web pages). Overrides <code>color_scheme</code>. Options
           include:
         </p>
