@@ -41,7 +41,7 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 - Useless selectors can be written using this pseudo-class. For example, `:not(*)` matches any element which is not an element, which is obviously nonsense, so the accompanying rule will never be applied.
 - This pseudo-class can increase the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule. For example, `#foo:not(#bar)` will match the same element as the simpler `#foo`, but has a higher specificity.
 - `:not(.foo)` will match anything that isn't `.foo`, _including {{HTMLElement("html")}} and {{HTMLElement("body")}}._
-- This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, `body :not(table) a` will still apply to links inside a }{{HTMLElement("table")}}, since {{HTMLElement("tr")}} will match with the `:not()` part of the selector.
+- This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, `body :not(table) a` will still apply to links inside a {{HTMLElement("table")}}, since {{HTMLElement("tr")}} will match with the `:not()` part of the selector.
 - You can negate several selectors at the same time. Example: `:not(.foo, .bar)` is equivalent to `:not(.foo):not(.bar)`.
 
 ## Examples
