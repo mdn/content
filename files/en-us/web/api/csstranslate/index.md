@@ -1,6 +1,7 @@
 ---
 title: CSSTranslate
 slug: Web/API/CSSTranslate
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API

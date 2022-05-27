@@ -1,6 +1,7 @@
 ---
 title: How to create a DOM tree
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
+page-type: guide
 tags:
   - AJAX
   - Add-ons

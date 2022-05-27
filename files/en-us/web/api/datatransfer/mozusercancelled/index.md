@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozUserCancelled
 slug: Web/API/DataTransfer/mozUserCancelled
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard

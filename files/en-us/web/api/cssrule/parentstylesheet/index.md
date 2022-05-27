@@ -1,6 +1,7 @@
 ---
 title: CSSRule.parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

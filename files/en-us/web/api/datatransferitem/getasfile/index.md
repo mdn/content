@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsFile()
 slug: Web/API/DataTransferItem/getAsFile
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItem

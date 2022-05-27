@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
+page-type: web-api-instance-property
 tags:
   - API
   - DataTransferItemList

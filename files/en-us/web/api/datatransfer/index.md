@@ -1,6 +1,7 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
+page-type: web-api-interface
 tags:
   - API
   - DataTransfer

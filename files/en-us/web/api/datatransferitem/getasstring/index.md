@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsString()
 slug: Web/API/DataTransferItem/getAsString
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItem
