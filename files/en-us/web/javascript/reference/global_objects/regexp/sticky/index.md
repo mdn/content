@@ -29,8 +29,8 @@ You cannot change this property directly. It is read-only.
 ### Using a regular expression with the sticky flag
 
 ```js
-var str = '#foo#';
-var regex = /foo/y;
+const str = '#foo#';
+const regex = /foo/y;
 
 regex.lastIndex = 1;
 regex.test(str); // true
@@ -48,11 +48,11 @@ For several versions, Firefox's SpiderMonkey engine had [a bug](https://bugzilla
 Examples of correct behavior:
 
 ```js
-var regex = /^foo/y;
+const regex = /^foo/y;
 regex.lastIndex = 2;
 regex.test('..foo');   // false - index 2 is not the beginning of the string
 
-var regex2 = /^foo/my;
+const regex2 = /^foo/my;
 regex2.lastIndex = 2;
 regex2.test('..foo');  // false - index 2 is not the beginning of the string or line
 regex2.lastIndex = 2;

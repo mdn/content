@@ -19,8 +19,7 @@ servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the
 {{AvailableInWorkers}}
 
 > **Note:** The example snippets in this article are taken from our
-> WebSocket chat client/server sample. [See the
-> code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
+> WebSocket chat client/server sample. [See the code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
 
 ## Creating a WebSocket object
 

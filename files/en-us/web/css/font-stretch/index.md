@@ -56,12 +56,6 @@ This property may be specified as a single keyword value or a single {{cssxref("
 
   - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.
 
-    > **Note:** In earlier versions of the `font-stretch` specification, the property accepts only the nine keyword values.
-    >
-    > **The {{ SpecName('CSS4 Fonts', '#propdef-font-stretch') }} spec** extends the syntax to accept a `<percentage>` value as well. This enables variable fonts to offer something more like a _continuum_ of character widths. For TrueType or OpenType variable fonts, the "`wdth`" variation is used to implement varying widths.
-    >
-    > However, note that the `<percentage>` syntax is not yet supported by all browsers: check the [Browser compatibility](#browser_compatibility) table for details.
-
 ### Keyword to numeric mapping
 
 The table below shows the mapping between keyword values and numeric percentages:

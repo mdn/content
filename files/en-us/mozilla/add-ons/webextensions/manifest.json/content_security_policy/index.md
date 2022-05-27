@@ -62,7 +62,7 @@ In Manifest V2 there is one content security policy specified against the key, l
 "content_security_policy": "default-src 'self'"
 ```
 
-## Manifest V2 syntax
+## Manifest V3 syntax
 
 In Manifest V3, the `content_security_policy` key is an object that may have any of the following properties, all optional:
 

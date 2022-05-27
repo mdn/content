@@ -25,7 +25,7 @@ specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.
 ## Syntax
 
 ```js
-xmlString = anXMLSerializer.serializeToString(rootNode);
+serializeToString(rootNode)
 ```
 
 ### Parameters

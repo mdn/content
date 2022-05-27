@@ -17,7 +17,7 @@ The drag processing described in this document use the {{domxref("DataTransfer")
 
 ## Setting and getting with indices
 
-The {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method allows you to add multiple items during a {{event("dragstart")}} event. This function similarly to {{domxref("DataTransfer.setData","setData()")}}
+The {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method allows you to add multiple items during a {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. This function similarly to {{domxref("DataTransfer.setData","setData()")}}
 
 ```js
 var dt = event.dataTransfer;
@@ -66,7 +66,7 @@ Fortunately, you don't normally need to clear items often; it's more common to j
 
 Common cases where dragging multiple items is used is when dragging multiple files or bookmarks. In this case, add the appropriate formats for each item. Although not required, you should always add the same formats for each item. The ensures that receiving drop targets can expect consistent data.
 
-To check if multiple files are being dragged, check the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property. It will be set to the number of items being dragged. If a particular drop target only supports dropping a single item, it could either reject the dragged items or it could just use just the first item. To reject the items, either don't cancel the {{event("dragover")}} event, or set the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to `none`. You may wish to do both in case another listener has already cancelled the event.
+To check if multiple files are being dragged, check the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property. It will be set to the number of items being dragged. If a particular drop target only supports dropping a single item, it could either reject the dragged items or it could just use just the first item. To reject the items, either don't cancel the {{domxref("HTMLElement/dragover_event", "dragover")}} event, or set the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to `none`. You may wish to do both in case another listener has already cancelled the event.
 
 To just take the first item being dropped, use the {{domxref("DataTransfer.getData","getData()")}} method as with a single item. This is convenient as drop targets which only need to support a single item do not need to do anything extra.
 
@@ -155,7 +155,7 @@ function output(text)
 </html>
 ```
 
-This example cancels both the `{{event("dragenter")}}` and `{{event("dragover")}}` events by calling the {{domxref("Event.preventDefault","preventDefault()")}}. method. This allows a drop to occur on that element.
+This example cancels both the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and `{{domxref("HTMLElement/dragover_event", "dragover")}}` events by calling the {{domxref("Event.preventDefault","preventDefault()")}}. method. This allows a drop to occur on that element.
 
 The `dodrop` event handler is called when dropping an item. It checks the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property to check how many items have been dropped and iterates over them. For each item, the {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} method is called to get the list of types. This list is iterated over to get all of the data associated with the drag.
 

@@ -9,6 +9,7 @@ tags:
   - Pointer Events
   - Web
   - events
+browser-compat: api.PointerEvent
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
@@ -467,15 +468,13 @@ Here are some _best practices_ to consider when using pointer events:
 
 ## Specifications
 
-| Specification                                          |
-| ------------------------------------------------------ |
-| [Pointer Events](https://w3c.github.io/pointerevents/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
-Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.
+Some additional values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
 
 ## Demos and examples
 

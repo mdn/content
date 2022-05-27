@@ -24,7 +24,7 @@ validateProgram(program)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to validate.
 
 ### Return value

@@ -22,7 +22,7 @@ useProgram(program)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to use.
 
 ### Return value

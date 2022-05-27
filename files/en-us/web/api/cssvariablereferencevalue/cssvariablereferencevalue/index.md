@@ -37,9 +37,3 @@ new CSSVariableReferenceValue(variable, fallback)
 ## Browser compatibility
 
 {{Compat}}
-
-- _variable_
-  - : A CSS [custom property](/en-US/docs/Web/CSS/--*)
-- _fallback_
-  - : Optional. A [custom
-    property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values).

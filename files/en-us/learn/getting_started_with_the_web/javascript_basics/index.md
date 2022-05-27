@@ -229,7 +229,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td><code>let myVariable = 'Bob';</code></td>
     </tr>
     <tr>
-      <th scope="row">Equality</th>
+      <th scope="row">Strict equality</th>
       <td>
         This performs a test to see if two values are equal. It returns a
         <code>true</code>/<code>false</code> (Boolean) result.
@@ -287,7 +287,7 @@ if(iceCream === 'chocolate') {
 }
 ```
 
-The expression inside the `if( ... )` is the test. This uses the identity operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
+The expression inside the `if( ... )` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
 
 ### Functions
 

@@ -51,7 +51,7 @@ If `yearValue` is a number between 0 and 99 (inclusive), then the year for
 The first two lines set the year to 1996. The third sets the year to 2000.
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 
 theBigDay.setYear(96);
 theBigDay.setYear(1996);

@@ -25,7 +25,7 @@ lookupNamespaceURI(prefix)
 
 ### Parameters
 
-- prefix
+- `prefix`
   - : A string representing the prefix to look for.
 
 ### Return value

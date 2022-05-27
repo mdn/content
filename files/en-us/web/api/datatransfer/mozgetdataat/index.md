@@ -46,7 +46,7 @@ mozGetDataAt(type, index)
 ## Examples
 
 This example shows the use of the `mozGetDataAt()` method in a
-{{event("drop")}} event handler.
+{{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function drop_handler(event)

@@ -2137,7 +2137,7 @@
 /en-US/docs/DOM/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/DOM/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/DOM/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/DOM/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/DOM/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/DOM/window.name	/en-US/docs/Web/API/Window/name
 /en-US/docs/DOM/window.navigator	/en-US/docs/Web/API/Window/navigator
@@ -3313,7 +3313,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Document_Object_Model_(DOM)/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Document_Object_Model_(DOM)/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/Document_Object_Model_(DOM)/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/Document_Object_Model_(DOM)/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator	/en-US/docs/Web/API/Window/navigator
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.appName	/en-US/docs/Web/API/Navigator/appName
@@ -8155,11 +8155,12 @@
 /en-US/docs/Web/API/HTMLCanvasElement.getContext	/en-US/docs/Web/API/HTMLCanvasElement/getContext
 /en-US/docs/Web/API/HTMLCanvasElement.height	/en-US/docs/Web/API/HTMLCanvasElement/height
 /en-US/docs/Web/API/HTMLCanvasElement.mozFetchAsStream	/en-US/docs/Web/API/HTMLCanvasElement/mozFetchAsStream
-/en-US/docs/Web/API/HTMLCanvasElement.mozGetAsFile	/en-US/docs/Web/API/HTMLCanvasElement/mozGetAsFile
+/en-US/docs/Web/API/HTMLCanvasElement.mozGetAsFile	/en-US/docs/Web/API/HTMLCanvasElement
 /en-US/docs/Web/API/HTMLCanvasElement.mozOpaque	/en-US/docs/Web/API/HTMLCanvasElement/mozOpaque
 /en-US/docs/Web/API/HTMLCanvasElement.toBlob	/en-US/docs/Web/API/HTMLCanvasElement/toBlob
 /en-US/docs/Web/API/HTMLCanvasElement.toDataURL	/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
 /en-US/docs/Web/API/HTMLCanvasElement.width	/en-US/docs/Web/API/HTMLCanvasElement/width
+/en-US/docs/Web/API/HTMLCanvasElement/mozGetAsFile	/en-US/docs/Web/API/HTMLCanvasElement
 /en-US/docs/Web/API/HTMLCollection.item	/en-US/docs/Web/API/HTMLCollection/item
 /en-US/docs/Web/API/HTMLCollection/HTMLCollection.length	/en-US/docs/Web/API/HTMLCollection/length
 /en-US/docs/Web/API/HTMLContentElement.getDistributedNodes	/en-US/docs/Web/API/HTMLContentElement/getDistributedNodes
@@ -9734,6 +9735,7 @@
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
+/en-US/docs/Web/API/Window/mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
@@ -10346,7 +10348,7 @@
 /en-US/docs/Web/API/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Web/API/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/Web/API/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/Web/API/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/window.name	/en-US/docs/Web/API/Window/name
 /en-US/docs/Web/API/window.navigator	/en-US/docs/Web/API/Window/navigator

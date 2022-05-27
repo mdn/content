@@ -72,9 +72,9 @@ This method can be used in almost the same way as
 different arguments order.
 
 ```js
-var re = /-/g;
-var str = '2016-01-01';
-var newstr = re[Symbol.replace](str, '.');
+const re = /-/g;
+const str = '2016-01-01';
+const newstr = re[Symbol.replace](str, '.');
 console.log(newstr);  // 2016.01.01
 ```
 
@@ -91,17 +91,17 @@ class MyRegExp extends RegExp {
   }
   [Symbol.replace](str, replacement) {
     // Perform @@replace |count| times.
-    var result = str;
-    for (var i = 0; i < this.count; i++) {
+    let result = str;
+    for (let i = 0; i < this.count; i++) {
       result = RegExp.prototype[Symbol.replace].call(this, result, replacement);
     }
     return result;
   }
 }
 
-var re = new MyRegExp('\\d', '', 3);
-var str = '01234567';
-var newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
+const re = new MyRegExp('\\d', '', 3);
+const str = '01234567';
+const newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
 console.log(newstr); // ###34567
 ```
 

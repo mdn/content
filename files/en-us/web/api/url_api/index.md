@@ -13,6 +13,7 @@ tags:
   - URL API
   - Web
   - hostname
+browser-compat: api.URL
 ---
 {{DefaultAPISidebar("URL API")}}
 
@@ -103,13 +104,11 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [URL Living Standard](https://url.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## See also
 

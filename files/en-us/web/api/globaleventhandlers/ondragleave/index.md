@@ -11,7 +11,7 @@ browser-compat: api.GlobalEventHandlers.ondragleave
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the
-{{event("dragleave")}} event.
+{{domxref("HTMLElement/dragleave_event", "dragleave")}} event.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ targetElement.ondragleave = dragleaveHandler;
 
 This example demonstrates using the
 {{domxref("GlobalEventHandlers.ondragleave","ondragleave")}} global event handler to set an
-element's {{event("dragleave")}} event handler.
+element's {{domxref("HTMLElement/dragleave_event", "dragleave")}} event handler.
 
 ### HTML
 
@@ -147,4 +147,4 @@ button.addEventListener("click", () => {
 
 ## See also
 
-- {{event("dragleave")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}

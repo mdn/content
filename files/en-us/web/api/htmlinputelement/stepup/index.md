@@ -125,8 +125,8 @@ stepUp(stepIncrement)
 
 ### Parameters
 
-- _`stepIncrement`_ {{optional_inline}}
-  - : A numeric value.  If no parameter is passed, `stepIncrement` defaults to `1`.
+- `stepIncrement` {{optional_inline}}
+  - : A numeric value. If no parameter is passed, `stepIncrement` defaults to `1`.
 
 ### Return value
 

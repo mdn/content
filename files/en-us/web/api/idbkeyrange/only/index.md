@@ -50,8 +50,7 @@ the cursor will only retrieve the record with the key value "A".
 
 > **Note:** For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange)
-> repo ([view the example
-> live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> repo ([view the example live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {

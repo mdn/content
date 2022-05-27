@@ -125,7 +125,7 @@ row-gap: unset;
 
 ## Specifications
 
-{{Specifications("css.properties.row-gap.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

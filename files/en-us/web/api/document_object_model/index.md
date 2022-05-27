@@ -10,6 +10,7 @@ tags:
   - Overview
   - Reference
   - Web
+spec-urls: https://dom.spec.whatwg.org/
 ---
 {{DefaultAPISidebar("DOM")}}
 
@@ -271,9 +272,7 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [DOM Living Standard](https://dom.spec.whatwg.org/) |
+{{Specifications}}
 
 ## See also
 

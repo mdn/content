@@ -27,7 +27,7 @@ sub(number)
 ### Parameters
 
 - `number`
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSMathSum')}}.
+  - : Either a number or a {{domxref('CSSMathSum')}}.
 
 ### Return value
 
@@ -45,8 +45,6 @@ let mathSum = CSS.px("23").sum(CSS.percent("4")).sum(CSS.cm("3")).sum(CSS.in("9"
 // Prints "calc(23px - 4% - 3cm - 9in)"
 console.log(mathSum.toString());
 ```
-
-And/or include a list of links to useful code samples that live elsewhere:
 
 ## Specifications
 

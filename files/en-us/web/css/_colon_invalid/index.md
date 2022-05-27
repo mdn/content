@@ -25,7 +25,9 @@ This pseudo-class is useful for highlighting field errors for the user.
 
 ## Syntax
 
-{{csssyntax}}
+```
+:invalid
+```
 
 ## Examples
 
