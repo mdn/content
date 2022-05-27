@@ -1,7 +1,7 @@
 ---
 title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
-page-type: web-api-instance-method
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
