@@ -749,19 +749,12 @@ In addition to dedicated and shared web workers, there are other types of worker
 
 ## Debugging worker threads
 
-Most browsers support debugging of worker threads in their JavaScript debuggers in _exactly the same way_ as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.
+Most browsers enable you to debug web workers in their JavaScript debuggers in _exactly the same way_ as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.
 
-The screenshot below shows this on Firefox. The _sources list_ shows `worker.js` running in a separate worker thread. When selected this file is opened in the [source pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source-pane), just like code running in the main thread.
+To learn how to debug web workers, see the documentation for each browser's JavaScript debugger:
 
-![](worker-source.png)
-
-> **Note:** Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.
-
-In the source pane you can [set a breakpoint](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html) (or [logpoint](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html)) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct [breakpoints](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html), [inline variable preview](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html#inline-variable-preview), [call stack](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call-stack), etc., just as you'd expect.
-
-![](worker-breakpoints-callstack.png)
-
-> **Note:** For more information see [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
+- [Chrome Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/)
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
 
 ## Functions and interfaces available in workers
 
