@@ -8,7 +8,8 @@ tags:
   - Reference
 browser-compat: api.Location.username
 ---
-{{APIRef("HTMLDOM")}}
+{{APIRef("HTML DOM")}}
+
 {{deprecated_header}}
 
 The **`username`** property of the {{domxref("Location")}}
