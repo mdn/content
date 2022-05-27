@@ -1,6 +1,7 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer.numberOfChannels
 slug: Web/API/AudioBuffer/numberOfChannels
+page-type: web-api-instance-property
 tags:
   - API
   - AudioBuffer

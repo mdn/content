@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer.length
 slug: Web/API/AudioBuffer/length
+page-type: web-api-instance-property
 tags:
   - API
   - AudioBuffer

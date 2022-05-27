@@ -1,6 +1,7 @@
 ---
 title: AesCtrParams
 slug: Web/API/AesCtrParams
+page-type: web-api-interface
 tags:
   - API
   - AesCtrParams

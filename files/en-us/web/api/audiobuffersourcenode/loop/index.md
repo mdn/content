@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
