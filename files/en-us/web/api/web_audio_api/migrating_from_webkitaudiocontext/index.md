@@ -12,7 +12,6 @@ tags:
   - porting
   - webkitAudioContext
 ---
-
 {{DefaultAPISidebar("Web Audio API")}}
 
 In this article, we cover the differences in Web Audio API since it was first implemented in WebKit and how to update your code to use the modern Web Audio API.
