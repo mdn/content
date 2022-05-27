@@ -1,5 +1,5 @@
 ---
-title: CSSAnimation
+title: CSSAnimation.animationName
 slug: Web/API/CSSAnimation/animationName
 page-type: web-api-instance-property
 tags:
