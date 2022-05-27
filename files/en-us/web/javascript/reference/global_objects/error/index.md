@@ -145,7 +145,7 @@ try {
 }
 ```
 
-[Custom error types](#custom_error_types) can also use make use of the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+[Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
 
 ```js
 class MyError extends Error {
