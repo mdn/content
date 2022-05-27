@@ -58,6 +58,11 @@ The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feat
   Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information see {{bug(1611957)}}.
 
+- _Constructable stylesheets_ are now supported, making it much easier to create reusable stylesheets for use with [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+  The update includes the addition of a [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) for creating new stylesheets, and the {{domxref("CSSStyleSheet.replace()")}} and {{domxref("CSSStyleSheet.replaceSync()")}} methods that can be used to add CSS rules to them.
+  See {{bug(1520690)}} for more information.
+
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
