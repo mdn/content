@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue
 slug: Web/API/CSSPrimitiveValue
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

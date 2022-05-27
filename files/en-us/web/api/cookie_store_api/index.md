@@ -1,6 +1,7 @@
 ---
 title: Cookie Store API
 slug: Web/API/Cookie_Store_API
+page-type: web-api-overview
 tags:
   - API
   - Cookie Store

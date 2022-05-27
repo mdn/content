@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.primitiveType
 slug: Web/API/CSSPrimitiveValue/primitiveType
+page-type: web-api-instance-property
 tags:
   - API
   - CSSPrimitiveValue

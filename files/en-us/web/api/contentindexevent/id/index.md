@@ -1,6 +1,7 @@
 ---
 title: ContentIndexEvent.id
 slug: Web/API/ContentIndexEvent/id
+page-type: web-api-instance-property
 tags:
   - Content
   - Content Index API

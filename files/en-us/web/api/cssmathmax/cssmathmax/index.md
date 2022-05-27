@@ -1,6 +1,7 @@
 ---
 title: CSSMathMax()
 slug: Web/API/CSSMathMax/CSSMathMax
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API

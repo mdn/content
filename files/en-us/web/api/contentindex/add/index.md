@@ -1,6 +1,7 @@
 ---
 title: ContentIndex.add()
 slug: Web/API/ContentIndex/add
+page-type: web-api-instance-method
 tags:
   - Content
   - Content Index API
