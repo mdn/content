@@ -173,8 +173,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
 - {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
   - : Gets/sets the status bar text for the given window.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
 - {{domxref("Window.returnValue")}} {{deprecated_inline}}
