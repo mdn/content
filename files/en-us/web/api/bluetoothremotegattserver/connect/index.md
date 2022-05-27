@@ -1,7 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.connect()
 slug: Web/API/BluetoothRemoteGATTServer/connect
-page-type: web-api-static-method
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
