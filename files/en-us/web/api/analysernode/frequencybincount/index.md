@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
+page-type: web-api-instance-property
 tags:
   - API
   - AnalyserNode

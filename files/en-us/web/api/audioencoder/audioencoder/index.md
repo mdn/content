@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder.AudioEncoder()
 slug: Web/API/AudioEncoder/AudioEncoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -1,6 +1,7 @@
 ---
 title: AnimationEvent.pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
+page-type: web-api-instance-property
 tags:
   - API
   - AnimationEvent

@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
+page-type: web-api-instance-property
 tags:
   - API
   - AnalyserNode

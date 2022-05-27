@@ -49,7 +49,7 @@ new Response(body, options)
     - `headers`
       - : Any headers you want to add to your response, contained
         within a {{domxref("Headers")}} object or object literal of
-        {{jsxref("String")}} key/value pairs (see [HTTP headers](/en- `US`    /docs/Web/HTTP/Headers) for a reference).
+        {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Headers) for a reference).
 
 ## Examples
 

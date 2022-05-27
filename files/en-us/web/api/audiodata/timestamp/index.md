@@ -1,6 +1,7 @@
 ---
 title: AudioData.timestamp
 slug: Web/API/AudioData/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Property

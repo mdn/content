@@ -23,7 +23,7 @@ A string specifying the text direction. Possible values are:
   - : adopts the browser's language setting behavior (the default.)
 - `ltr`
   - : left to right.
-- `rtl` 
+- `rtl`
   - : right to left.
 
 > **Note:** Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.
