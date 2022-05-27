@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransfer

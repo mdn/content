@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozTypesAt()
 slug: Web/API/DataTransfer/mozTypesAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method

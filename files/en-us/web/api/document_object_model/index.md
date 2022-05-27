@@ -1,6 +1,7 @@
 ---
 title: Document Object Model (DOM)
 slug: Web/API/Document_Object_Model
+page-type: web-api-overview
 tags:
   - API
   - DOM

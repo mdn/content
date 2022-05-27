@@ -1,6 +1,7 @@
 ---
 title: CSSScale()
 slug: Web/API/CSSScale/CSSScale
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API

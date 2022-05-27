@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.addRule()
 slug: Web/API/CSSStyleSheet/addRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSS

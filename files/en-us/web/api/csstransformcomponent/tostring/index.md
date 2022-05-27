@@ -1,6 +1,7 @@
 ---
 title: CSSTransformComponent.toString()
 slug: Web/API/CSSTransformComponent/toString
+page-type: web-api-instance-method
 tags:
   - API
   - CSS

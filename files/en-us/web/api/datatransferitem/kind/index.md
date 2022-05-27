@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.kind
 slug: Web/API/DataTransferItem/kind
+page-type: web-api-instance-property
 tags:
   - API
   - DataTransferItem

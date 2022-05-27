@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.addElement()
 slug: Web/API/DataTransfer/addElement
+page-type: web-api-instance-method
 tags:
   - API
   - Method

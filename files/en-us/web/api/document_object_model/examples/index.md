@@ -1,6 +1,7 @@
 ---
 title: Examples of web and XML development using the DOM
 slug: Web/API/Document_Object_Model/Examples
+page-type: guide
 tags:
   - DOM
   - DOM Reference
