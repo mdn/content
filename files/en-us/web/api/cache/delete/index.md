@@ -1,6 +1,7 @@
 ---
 title: Cache.delete()
 slug: Web/API/Cache/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Cache

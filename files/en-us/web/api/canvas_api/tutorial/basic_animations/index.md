@@ -1,6 +1,7 @@
 ---
 title: Basic animations
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
+page-type: guide
 tags:
   - Canvas
   - Graphics

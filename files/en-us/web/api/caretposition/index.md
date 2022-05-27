@@ -1,6 +1,7 @@
 ---
 title: CaretPosition
 slug: Web/API/CaretPosition
+page-type: web-api-interface
 tags:
   - API
   - CSSOM View

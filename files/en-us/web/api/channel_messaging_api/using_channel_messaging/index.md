@@ -1,6 +1,7 @@
 ---
 title: Using channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
+page-type: guide
 tags:
   - API
   - Channel messaging

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
+page-type: web-api-interface
 tags:
   - API
   - Canvas

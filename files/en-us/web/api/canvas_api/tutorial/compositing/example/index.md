@@ -1,6 +1,7 @@
 ---
 title: Compositing example
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
+page-type: guide
 tags:
   - Canvas
   - Example

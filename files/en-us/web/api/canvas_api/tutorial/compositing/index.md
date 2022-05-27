@@ -1,6 +1,7 @@
 ---
 title: Compositing and clipping
 slug: Web/API/Canvas_API/Tutorial/Compositing
+page-type: guide
 tags:
   - Canvas
   - Graphics

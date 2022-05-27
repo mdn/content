@@ -1,6 +1,7 @@
 ---
 title: Clipboard.read()
 slug: Web/API/Clipboard/read
+page-type: web-api-instance-method
 tags:
   - API
   - Clip

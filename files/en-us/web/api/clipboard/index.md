@@ -1,6 +1,7 @@
 ---
 title: Clipboard
 slug: Web/API/Clipboard
+page-type: web-api-interface
 tags:
   - API
   - Clip
