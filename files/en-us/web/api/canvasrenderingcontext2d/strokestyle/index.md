@@ -1,7 +1,7 @@
 ---
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
