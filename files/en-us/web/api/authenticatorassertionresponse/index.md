@@ -45,7 +45,7 @@ const options = {
 
 navigator.credentials.get({ "publicKey": options })
     .then(function (credentialInfoAssertion) {
-    let assertionResponse = credentialInfoAssertion.response;
+    const assertionResponse = credentialInfoAssertion.response;
     // Do something specific with the response
 
     // send assertion response back to the server
