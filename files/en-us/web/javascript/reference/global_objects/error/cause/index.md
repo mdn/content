@@ -15,7 +15,9 @@ It is used when catching and re-throwing an error with a more-specific or useful
 
 ## Value
 
-Any value can be passed as the cause, but an Error is expected.
+This is the value that was passed to the [`Error()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) in the `options.cause` argument.
+
+Any value may used.
 
 ## Examples
 
