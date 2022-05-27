@@ -82,12 +82,12 @@ browser.browsingData.remove({},
   {downloads: true, history: true}).
 then(onRemoved, onError);
 ```
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
 >
