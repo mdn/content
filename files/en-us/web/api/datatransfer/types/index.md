@@ -13,7 +13,7 @@ browser-compat: api.DataTransfer.types
 
 The **`DataTransfer.types`** read-only property returns an
 array of the drag data formats (as strings) that were set in
-the {{event("dragstart")}} event. The order of the formats is the same order as the data
+the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. The order of the formats is the same order as the data
 included in the drag operation.
 
 The formats are Unicode strings giving the type or format of the data, generally given

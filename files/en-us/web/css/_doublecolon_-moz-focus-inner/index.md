@@ -20,7 +20,9 @@ The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-focus-inner
+```
 
 ## Example
 

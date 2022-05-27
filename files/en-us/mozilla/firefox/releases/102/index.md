@@ -51,7 +51,7 @@ This article provides information about the changes in Firefox 102 that will aff
 
 #### Removals
 
-### WebDriver conformance (Marionette)
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### Removals
 

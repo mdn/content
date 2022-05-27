@@ -35,7 +35,14 @@ If a marker representation is smaller than the specified pad length, then the ma
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<integer> && <symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 

@@ -21,8 +21,7 @@ There are some that can't have a shadow DOM for security reasons (for example {{
 
 The following is a list of elements you **can** attach a shadow root to:
 
-- Any autonomous custom element with a [valid
-  name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
+- Any autonomous custom element with a [valid name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
 - {{htmlelement("blockquote")}}
@@ -85,9 +84,9 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 ### Exceptions
 
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : The element you are trying to attach to is already a shadow host.
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : You are trying to attach a shadow root to an element outside the HTML namespace, the element cannot have a shadow attached to it,
     or the static property `disabledFeatures` has been given a value of `"shadow"` in the element definition.
 

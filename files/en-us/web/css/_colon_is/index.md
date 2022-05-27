@@ -261,7 +261,9 @@ some-element::after {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:is( <forgiving-selector-list> )
+```
 
 ## Specifications
 

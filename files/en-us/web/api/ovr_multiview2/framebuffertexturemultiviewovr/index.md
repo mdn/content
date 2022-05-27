@@ -60,7 +60,7 @@ framebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex
 
      When using the {{domxref("WEBGL_depth_texture")}} extension:
 
-      - `ext.DEPTH_STENCIL_ATTACHMENT`: Depth and stencil buffer data
+    - `ext.DEPTH_STENCIL_ATTACHMENT`: Depth and stencil buffer data
         storage.
 
 - `texture`

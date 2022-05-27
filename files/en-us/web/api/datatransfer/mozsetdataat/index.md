@@ -59,7 +59,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example shows the use of the `mozSetDataAt()` method in a
-{{event("dragstart")}} handler.
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} handler.
 
 ```js
 function dragstart_handler(event)

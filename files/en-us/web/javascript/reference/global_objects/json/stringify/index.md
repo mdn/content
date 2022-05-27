@@ -417,5 +417,5 @@ result of `JSON.stringify` do you need to carefully handle
 
 ## See also
 
-- [Polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) in `core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [Polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) in `core-js`](https://github.com/zloirock/core-js#ecmascript-json)
 - {{JSxRef("JSON.parse()")}}

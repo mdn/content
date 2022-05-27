@@ -21,7 +21,9 @@ This article provides information about the changes in Firefox 101 that will aff
 
 ### CSS
 
-The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`)  or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ({{bug(1656363)}}).
+- The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`)  or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ({{bug(1656363)}}).
+
+- Three new viewport sizes have been introduced: small (`s`), large (`l`), and dynamic (`d`). These new sizes have added new [viewport-percentage length units](/en-US/docs/Web/CSS/length) in addition to the existing ones - `vh`, `vw`, `vmax`, and `vmin`. The new viewport-percentage length units include `svh`, `lvh`, `dvh`, `svw`, `lvw`, `dvw`, `svmax`, `lvmax`, `dvmax`, `svmin`, `lvmin`, and `dvmin` ({{bug(1610815)}}).
 
 #### Removals
 
@@ -57,7 +59,12 @@ The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feat
 - [`RTCRtpEncodingParameters.maxFramerate`](/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) is now supported for setting the maximum framerate that can be used to send an encoding (in {{domxref("RTCPeerConnection.addTransceiver()")}} and {{domxref("RTCRtpSender.setParameters()")}}).
   Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information see {{bug(1611957)}}.
-  
+
+- _Constructable stylesheets_ are now supported, making it much easier to create reusable stylesheets for use with [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+  The update includes the addition of a [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) for creating new stylesheets, and the {{domxref("CSSStyleSheet.replace()")}} and {{domxref("CSSStyleSheet.replaceSync()")}} methods that can be used to add CSS rules to them.
+  See {{bug(1520690)}} for more information.
+
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
@@ -66,9 +73,17 @@ The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feat
 
 #### Removals
 
-### WebDriver conformance (Marionette)
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
+
+The following commands and events are available:
+
+- Adds the [`session` module](https://w3c.github.io/webdriver-bidi/#module-session) including a partial implementation for the commands to globally subscribe ([`session.subscribe`](https://w3c.github.io/webdriver-bidi/#command-session-subscribe)) to and unsubscribe ([`session.unsubscribe`](https://w3c.github.io/webdriver-bidi/#command-session-unsubscribe)) from events, and the ability to create a direct WebDriver BiDi session ([`session.new`](https://w3c.github.io/webdriver-bidi/#command-session-new)) when not using WebDriver classic.
+
+- Adds the [`browsingContext` module](https://w3c.github.io/webdriver-bidi/#module-browsingContext) including the commands to open a new tab or window ([`browsingContext.create`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create)) or close such one ([`browsingContext.close`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close)), retrieve open browsing contexts ([`browsingContext.getTree`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-getTree)) and to navigate within a browsing context ([`browsingContext.navigate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate)). There is also support for the event when a browsing context got created ([`browsingContext.contextCreated`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextCreated)).
+
+- Adds the [`log` module](https://w3c.github.io/webdriver-bidi/#module-log) including support for log events ([`log.entryAdded`](https://w3c.github.io/webdriver-bidi/#event-log-entryAdded)).
 
 ## Changes for add-on developers
 
@@ -76,6 +91,9 @@ The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feat
 - Addition of the {{WebExtAPIRef("action")}} API, which takes over the features of the {{WebExtAPIRef("browserAction")}} API in Manifest V3 extensions. Corresponding addition of the [`"action"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key. Note that the {{WebExtAPIRef("browserAction")}} API and [`"action"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key are only available in Manifest V2 extensions.
 - The [`"background"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false` under the control of preferences: for Manifest V2, the <code>extensions.eventPages.enabled</code> preference, and in Manifest V3, the <code>extensions.manifestV3.enabled</code> preference.
 - Addition of the [`"host_permissions"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key, which is available for Manifest V3 extensions.
+- The content script execution environment has changed for Manifest V3 extensions:
+  - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/CORS).
+  - the `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
 
 #### Removals
 
