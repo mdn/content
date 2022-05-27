@@ -6,6 +6,7 @@ tags:
   - Overview
   - Reference
   - Remote Playback API
+browser-compat: api.RemotePlayback
 ---
 {{DefaultAPISidebar("Remote Playback API")}}
 
@@ -55,8 +56,8 @@ videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
 
 ## Specifications
 
-{{Specifications("api.RemotePlayback")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.RemotePlayback")}}
+{{Compat}}

@@ -87,5 +87,4 @@ setInterval(checkPageFocus, 300);
 
 ## See also
 
-- [Using
-  the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
+- [Using the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

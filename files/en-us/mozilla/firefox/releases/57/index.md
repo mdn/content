@@ -96,7 +96,7 @@ _No changes._
   > **Note:** Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See {{bug(1381145)}} to track progress on implementing and deploying ndata support in Firefox.
 
 - The {{DOMxRef("RTCDataChannel.send()")}} method can now throw a `TypeError` exception if the size of the message you're trying to send is not compatible with the receiving {{Glossary("user agent")}} (this is implemented as part of {{bug(979417)}}).
-- The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) has been updated so that {{event("error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.
+- The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) has been updated so that {{domxref("MediaRecorder/error_event", "error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.
 - Updated the documentation around {{DOMxRef("OfflineAudioContext")}} since its constructor's inputs can now be specified in an object rather than as a list of parameters ({{bug(1388591)}}).
 - The Web Audio API now properly supports multi-channel output ({{bug(1378070)}}).
 

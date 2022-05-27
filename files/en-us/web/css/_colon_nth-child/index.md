@@ -33,6 +33,10 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 
 `:nth-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
 
+```
+:nth-child( <nth> [ of <complex-selector-list> ]? )
+```
+
 ### Keyword values
 
 - `odd`
@@ -51,10 +55,6 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
     - `n` is all nonnegative integers, starting from 0.
 
     It can be read as the *An+B*th element of a list.
-
-### Formal syntax
-
-{{csssyntax}}
 
 ## Examples
 

@@ -76,7 +76,17 @@ This may take one of three forms:
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+cyclic                             |
+numeric                            |
+alphabetic                         |
+symbolic                           |
+additive                           |
+[ fixed <integer>? ]               |
+[ extends <counter-style-name> ]
+
+<counter-style-name> = <custom-ident>
+```
 
 ## Examples
 

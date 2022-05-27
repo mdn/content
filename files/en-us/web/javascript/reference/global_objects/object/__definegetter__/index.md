@@ -50,7 +50,7 @@ to be defined on a pre-existing object.
 ### Non-standard and deprecated way
 
 ```js
-var o = {};
+const o = {};
 o.__defineGetter__('gimmeFive', function() { return 5; });
 console.log(o.gimmeFive); // 5
 ```
@@ -59,11 +59,13 @@ console.log(o.gimmeFive); // 5
 
 ```js
 // Using the get operator
-var o = { get gimmeFive() { return 5; } };
+const o = { get gimmeFive() { return 5; } };
 console.log(o.gimmeFive); // 5
+```
 
+```js
 // Using Object.defineProperty
-var o = {};
+const o = {};
 Object.defineProperty(o, 'gimmeFive', {
   get: function() {
     return 5;

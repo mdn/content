@@ -24,12 +24,12 @@ the underlying sink.
 ## Syntax
 
 ```js
-error(e)
+error(message)
 ```
 
 ### Parameters
 
-- e
+- `message`
   - : A string representing the error you want future interactions to
     fail with.
 

@@ -21,8 +21,8 @@ delete(value)
 
 ### Parameters
 
-: `value`
-  : - The value to remove from the `CustomStateSet`.
+- `value`
+  - : value to remove from the `CustomStateSet`.
 
 ### Return value
 

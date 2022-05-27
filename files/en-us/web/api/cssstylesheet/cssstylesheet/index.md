@@ -53,4 +53,6 @@ console.log(stylesheet.media);
 
 ## See also
 
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
 - [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

@@ -140,9 +140,7 @@ presents an alert with an appropriate error message.
 If, on the other hand, fullscreen mode is already in effect, we call
 {{domxref("document.exitFullscreen()")}} to disable fullscreen mode.
 
-You can [see this example
-in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the
-code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](https://glitch.com/).
+You can [see this example in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](https://glitch.com/).
 
 ### Using navigationUI
 

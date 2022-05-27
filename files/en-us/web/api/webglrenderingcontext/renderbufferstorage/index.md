@@ -77,23 +77,23 @@ renderbufferStorage(target, internalFormat, width, height)
 
     When using the {{domxref("WEBGL_color_buffer_float")}} extension:
 
-      - `ext.RGBA32F_EXT`: RGBA 32-bit floating-point type.
-      - `ext.RGB32F_EXT`: RGB 32-bit floating-point type.
+    - `ext.RGBA32F_EXT`: RGBA 32-bit floating-point type.
+    - `ext.RGB32F_EXT`: RGB 32-bit floating-point type.
 
     When using the {{domxref("EXT_sRGB")}} extension:
 
-      - `ext.SRGB8_ALPHA8_EXT`: 8-bit sRGB and alpha.
+    - `ext.SRGB8_ALPHA8_EXT`: 8-bit sRGB and alpha.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} and
       the {{domxref("EXT_color_buffer_float")}} extension:
 
-      - `gl.R16F`
-      - `gl.RG16F`
-      - `gl.RGBA16F`
-      - `gl.R32F`
-      - `gl.RG32F`
-      - `gl.RGBA32F`
-      - `gl.R11F_G11F_B10F`
+    - `gl.R16F`
+    - `gl.RG16F`
+    - `gl.RGBA16F`
+    - `gl.R32F`
+    - `gl.RG32F`
+    - `gl.RGBA32F`
+    - `gl.R11F_G11F_B10F`
 
 - `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the renderbuffer in pixels.

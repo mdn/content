@@ -82,13 +82,13 @@ list or a tree that can be traversed both ways, `toSource()` will not
 recreate the self-reference, as of Firefox 24. For example:
 
 ```js
-var obj1 = {};
-var obj2 = { a: obj1 };
+const obj1 = {};
+const obj2 = { a: obj1 };
 obj1.b = obj2;
 
 console.log('Cyclical: ' + (obj1.b.a == obj1));
 
-var objSource = obj1.toSource(); // returns "({b:{a:{}}})"
+const objSource = obj1.toSource(); // returns "({b:{a:{}}})"
 
 obj1 = eval(objSource);
 

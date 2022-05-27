@@ -71,8 +71,7 @@ for (let number = 2; number <= 5; number += 1) {
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
 ```
 
-See [Outputting
-text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for further
+See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for further
 details.
 
 ## Specifications

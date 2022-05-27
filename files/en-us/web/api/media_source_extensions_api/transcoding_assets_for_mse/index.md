@@ -9,6 +9,9 @@ tags:
   - Media Source Extensions
   - adaptive
 ---
+
+{{DefaultAPISidebar("Media Source Extensions")}}
+
 When working with Media Source Extensions, it is likely that you need to condition your assets before you can stream them. This article takes you through the requirements and shows you a toolchain you can use to encode your assets appropriately.
 
 ## Getting started

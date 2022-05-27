@@ -10,7 +10,7 @@ browser-compat: api.GlobalEventHandlers.ondrop
 ---
 {{ApiRef("HTML DOM")}}
 
-A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("drop")}}
+A {{domxref("GlobalEventHandlers","global event handler")}} for the {{domxref("HTMLElement/drop_event", "drop")}}
 event.
 
 ## Syntax
@@ -28,7 +28,7 @@ var dropHandler = targetElement.ondrop;
 
 This example demonstrates the use of the
 {{domxref("GlobalEventHandlers.ondrop","ondrop")}} attribute to define an element's
-{{event("drop")}} event handler.
+{{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 <!DOCTYPE html>
@@ -94,4 +94,4 @@ function dragover_handler(ev) {
 
 ## See also
 
-- {{event("drop")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}

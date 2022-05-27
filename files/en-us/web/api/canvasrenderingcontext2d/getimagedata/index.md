@@ -61,7 +61,7 @@ getImageData(sx, sy, sw, sh)
 An {{domxref("ImageData")}} object containing the image data for the rectangle of the
 canvas specified. The coordinates of the rectangle's top-left corner are
 `(sx, sy)`, while the coordinates of the bottom corner are
-`(sx + sw, sy + sh)`.
+`(sx + sw - 1, sy + sh - 1)`.
 
 ### Exceptions
 

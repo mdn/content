@@ -9,7 +9,7 @@ tags:
   - ajax upload
   - upload
 spec-urls:
-  - https://html.spec.whatwg.org/multipage/number-state.html#concept-input-type-file-selected
+  - https://html.spec.whatwg.org/multipage/input.html#concept-input-type-file-selected
   - https://w3c.github.io/FileAPI/
 ---
 {{APIRef("File API")}}
@@ -197,7 +197,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-In this example, we're turning the element with the ID `dropbox` into our drop zone. This is done by adding listeners for the {{event('dragenter')}}, {{event('dragover')}}, and {{event('drop')}} events.
+In this example, we're turning the element with the ID `dropbox` into our drop zone. This is done by adding listeners for the {{domxref("HTMLElement/dragenter_event", "dragenter")}}, {{domxref("HTMLElement/dragover_event", "dragover")}}, and {{domxref("HTMLElement/drop_event", "drop")}} events.
 
 We don't actually need to do anything with the `dragenter` and `dragover` events in our case, so these functions are both simple. They just stop propagation of the event and prevent the default action from occurring:
 

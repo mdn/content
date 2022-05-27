@@ -23,8 +23,7 @@ In Firefox, the method is allowed to show popups only when called as the result 
 notification click event.
 
 In Chrome for Android, the method may instead open the URL in an existing browsing
-context provided by a [standalone web
-app](/en-US/docs/Web/Progressive_web_apps) previously added to the user's home screen. As of recently, this also works on
+context provided by a [standalone web app](/en-US/docs/Web/Progressive_web_apps) previously added to the user's home screen. As of recently, this also works on
 Chrome for Windows.
 
 ## Syntax

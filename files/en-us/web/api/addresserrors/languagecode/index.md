@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.languageCode
 slug: Web/API/AddressErrors/languageCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address

@@ -52,7 +52,37 @@ font-variant: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+normal |
+none   |
+[ <common-lig-values>                      ||
+  <discretionary-lig-values>               ||
+  <historical-lig-values>                  ||
+  <contextual-alt-values>                  ||
+  stylistic(<feature-value-name>)          ||
+  historical-forms                         ||
+  styleset(<feature-value-name>#)          ||
+  character-variant(<feature-value-name>#) ||
+  swash(<feature-value-name>)              ||
+  ornaments(<feature-value-name>)          ||
+  annotation(<feature-value-name>)         ||
+  [ small-caps      |
+    all-small-caps  |
+    petite-caps     |
+    all-petite-caps |
+    unicase         |
+    titling-caps
+  ]                                        ||
+  <numeric-figure-values>                  ||
+  <numeric-spacing-values>                 ||
+  <numeric-fraction-values>                ||
+  ordinal                                  ||
+  slashed-zero                             ||
+  <east-asian-variant-values>              ||
+  <east-asian-width-values>                ||
+  ruby
+]
+```
 
 ## Examples
 

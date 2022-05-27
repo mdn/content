@@ -56,8 +56,7 @@ elem.dispatchEvent(event);
 ## Notes
 
 Event type strings suitable for passing to `createEvent()` are listed in the
-[DOM standard — see the
-table in step 2](https://dom.spec.whatwg.org/#dom-document-createevent). Bear in mind that most event objects now have constructors, which
+[DOM standard — see the table in step 2](https://dom.spec.whatwg.org/#dom-document-createevent). Bear in mind that most event objects now have constructors, which
 are the modern recommended way to create event object instances.
 
 Gecko supports some non-standard event object aliases, which are listed below.

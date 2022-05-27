@@ -38,7 +38,7 @@ foo; //ReferenceError: foo is not defined
 
 ```js
 // foo is known to exist now but it has no type or value:
-var foo = null;
+const foo = null;
 foo; //null
 ```
 

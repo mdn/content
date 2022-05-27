@@ -145,7 +145,7 @@ The position of the thumb is the maximum value minus the current value times the
   position: absolute;
   height: 1rem;
   width: 2rem;
-  background-color: currentColor;
+  background-color: currentcolor;
   left: -0.5rem;
 }
 ```

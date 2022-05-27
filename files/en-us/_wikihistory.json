@@ -83166,19 +83166,6 @@
       "ethertank"
     ]
   },
-  "Web/API/Window/mozPaintCount": {
-    "modified": "2020-10-15T21:13:55.623Z",
-    "contributors": [
-      "ExE-Boss",
-      "connorshea",
-      "sarafec",
-      "fscholz",
-      "teoli",
-      "libreGeekingKid",
-      "ethertank",
-      "Sheppy"
-    ]
-  },
   "Web/API/Window/name": {
     "modified": "2020-10-15T21:14:42.471Z",
     "contributors": [

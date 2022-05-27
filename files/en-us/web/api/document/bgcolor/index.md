@@ -32,8 +32,7 @@ document.bgColor = "darkblue";
 The default value for this property in Firefox is white (`#ffffff` in
 hexadecimal).
 
-`document.bgColor` is deprecated in [DOM Level 2
-HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). The recommended alternative is use of the CSS style
+`document.bgColor` is deprecated in [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). The recommended alternative is use of the CSS style
 {{Cssxref("background-color")}} which can be accessed through the DOM with
 `document.body.style.backgroundColor`. Another alternative is
 `document.body.bgColor`, although this is also deprecated in HTML 4.01 in

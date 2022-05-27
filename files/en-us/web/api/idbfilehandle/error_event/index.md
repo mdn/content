@@ -20,14 +20,13 @@ The **`error`** is fired when something goes wrong with the {{domxref("IDBFileHa
 
 This event is not cancelable and does not bubble.
 
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
-onerror = event => { };
+addEventListener('error', event => { })
+onerror = event => { }
 ```
 
 ## Event type

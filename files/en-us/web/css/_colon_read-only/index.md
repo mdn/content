@@ -27,7 +27,9 @@ p:read-only {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:read-only
+```
 
 ## Examples
 
