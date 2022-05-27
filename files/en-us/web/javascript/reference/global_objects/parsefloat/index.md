@@ -87,7 +87,7 @@ The following example returns `NaN`:
 parseFloat('FF2');
 ```
 
-### `parseFloat` returning `Infinity`
+### Returning infinity
 
 Infinity values are returned when the number is outside the double-precision 64-bit IEEE 754-2019 format range:
 
@@ -96,7 +96,7 @@ parseFloat('1.7976931348623159e+308');  //  Infinity
 parseFloat('-1.7976931348623159e+308'); // -Infinity
 ```
 
-### `parseFloat` and `BigInt`
+### Interaction with BigInt values
 
 The following examples both return `900719925474099300`, losing precision as
 the integer is too large to be represented as a float:
