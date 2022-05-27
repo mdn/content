@@ -198,14 +198,14 @@ switch(x) {
 
 ### Temporal dead zone (TDZ)
 
-The _Temporal Dead Zone_ (TDZ) is the time between a `let` or `const` variable being hoisted until code execution reaches the point where it is initialized with a value.
+A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared.
 
-`let` variables cannot be read/written until they have been
-declared. If no initial value is specified on
-declaration, the variable is initialized with a value of
-`undefined`. Accessing the variable before the declaration results in a
-{{jsxref("ReferenceError")}}.
+While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}.
+The variable is initialized with a value when execution reaches the line of code where it was declared.
+If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`
 
+This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared.
+The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which the are declared.
 
 ```js example-bad
 { // TDZ starts at beginning of scope
@@ -215,14 +215,9 @@ declaration, the variable is initialized with a value of
   let foo = 2; // End of TDZ (for foo)
 }
 ```
-`let` and `const` are hoisted, we can't use them before initialization is the result of "temporal dead zone".
 
-
-The term "temporal" is used because the zone depends on the order of execution (time)
-rather than the order in which the code is written (position). For example, the code
-below works because, even though the function that uses the `let` variable
-appears before the variable is declared, the function is _called_ outside the
-TDZ.
+The term "temporal" is used because the zone depends on the order of execution (time) rather than the order in which the code is written (position).
+For example, the code below works because, even though the function that uses the `let` variable appears before the variable is declared, the function is _called_ outside the TDZ.
 
 ```js
 {
