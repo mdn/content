@@ -8,7 +8,7 @@ tags:
   - PointerEvent
   - events
   - touch
-spec-urls: https://w3c.github.io/pointerevents/
+browser-compat: api.PointerEvent
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
@@ -233,9 +233,7 @@ function log(msg) {
 
 ## Browser compatibility
 
-### `PointerEvent` interface
-
-{{Compat("api.PointerEvent", 0)}}
+{{Compat}}
 
 ## See also
 

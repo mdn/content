@@ -8,6 +8,7 @@ tags:
   - Navigation
   - cookbook
   - flexbox
+browser-compat: css.properties.flex
 ---
 {{CSSRef}}
 
@@ -47,11 +48,7 @@ I have used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/ari
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### Flexbox
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## See also
 

@@ -7,7 +7,7 @@ tags:
   - CSS Grid
   - Guide
   - subgrid
-spec-urls: https://drafts.csswg.org/css-grid/
+browser-compat: css.properties.grid-template-columns.subgrid
 ---
 {{CSSRef}}
 
@@ -97,7 +97,7 @@ As the subgrid value acts in much the same way as a regular nested grid, it is e
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.subgrid")}}
+{{Compat}}
 
 ## See also
 

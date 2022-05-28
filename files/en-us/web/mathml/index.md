@@ -7,6 +7,7 @@ tags:
   - Reference
   - Web
   - XML
+browser-compat: mathml.elements.math
 ---
 {{MathMLRef}}
 
@@ -48,4 +49,4 @@ Here you'll find links to documentation, examples, and tools to help you work wi
 
 ## Browser compatibility
 
-{{Compat("mathml.elements.math", 0)}}
+{{Compat}}

@@ -9,6 +9,7 @@ tags:
   - Web
   - color
   - rgb
+browser-compat: css.types.color.rgb
 ---
 {{CSSRef}}
 
@@ -36,12 +37,4 @@ rgb(255 255 255 / .5); /* white with 50% opacity, using CSS Colors 4 space-separ
 
 ## Browser compatibility
 
-{{Compat("css.types.color.rgb_functional_notation")}}
-
-### Space-separated values
-
-{{Compat("css.types.color.space_separated_functional_notation")}}
-
-### Accepts alpha value
-
-{{Compat("css.types.color.rgb_function_accepts_alpha")}}
+{{Compat}}
