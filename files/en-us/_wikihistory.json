@@ -66024,13 +66024,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceCandidateStats/mozLocalTransport": {
-    "modified": "2020-10-15T22:12:42.891Z",
-    "contributors": [
-      "fippo",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceCandidateStats/port": {
     "modified": "2020-10-15T22:15:52.213Z",
     "contributors": [
