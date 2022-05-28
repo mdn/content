@@ -54,20 +54,19 @@ The `finally()` method is very similar to calling
 
 - When creating a function inline, you can pass it once, instead of being forced to
   either declare it twice, or create a variable for it
-- A `finally` callback will not receive any argument. 
-  Also, the return value from the finally callback will be discarded.  This use case
+- A `finally` callback will not receive any argument. This use case
   is for precisely when you _do not care_ about the rejection reason, or the
   fulfillment value, and so there's no need to provide it. 
 - A `finally` call will chain through an equivalent to the orignal promise.  
   So for example:
   - Unlike `Promise.resolve(2).then(() => 77, () => {})` (which
     will return a promise which will be resolved with `77`), 
-    `Promise.resolve(2).finally(() => 99)` will return a 
-    promise which will be resolved with `2`. (The 99 is ignored.)
+    `Promise.resolve(2).finally(() => {})` will return a 
+    promise which will be resolved with `2`.
   - Similarly, unlike `Promise.reject(3).then(() => {}, () => 88)`
     (which will, again, return a promise which will be rejected with `88`),
-    `Promise.reject(3).finally(() => 99)` will return a promise 
-    which will be rejected with `3`. (The 99 is ignored.)
+    `Promise.reject(3).finally(() => {})` will return a promise 
+    which will be rejected with `3`.
 
 > **Note:** A `throw` (or returning a rejected promise) in the
 > `finally` callback will reject the promise, which will, in that case, 
