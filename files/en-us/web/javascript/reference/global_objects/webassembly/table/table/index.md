@@ -43,14 +43,14 @@ new WebAssembly.Table(tableDescriptor)
 
 ### Creating a new WebAssembly Table instance
 
-The following example creates a new `WebAssembly.Table` instance with an initial size of 2
-elements. The `Table` contents are examined then populated using a Wasm module.
+The following example creates a `WebAssembly.Table` instance with an initial size of 2
+elements. The `WebAssembly.Table` contents are populated using a WebAssembly module and is accessible using Javascript. When viewing the [live example](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html), open your developer console to display console logs from the code snippets below. 
 
 This example uses the following reference files: 
-1. `table2.html`:  An HTML file containing a script that loads and instantiates an external [`WebAssembly.Table`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table) ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
-2. `table2.wasm`: The WebAssembly module being imported by the JavaScript code in table2.html ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
+1. `table2.html`:  An HTML file containing a script that loads and instantiates a [`WebAssembly.Table`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table) ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html))
+2. `table2.wasm`: A WebAssembly module imported by the JavaScript code in table2.html ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
 
-In `table2.html`, a `WebAssembly.Table()` is instantiated with the following: 
+In `table2.html`, a `WebAssembly.Table` is created: 
 
 ```js
 const tbl = new WebAssembly.Table({
@@ -64,7 +64,7 @@ console.log(tbl.get(1));  // content for index 1 is null
 
 We retrieve the index contents using {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}.
 
-Next, we create an import object that contains the table:
+Next, we create an import object that contains the `WebAssembly.Table`:
 
 ```js
 const importObject = {
@@ -103,8 +103,7 @@ After instantiating `table2.wasm`, `tbl` is updated with the following:
 - content for index 0 is now a function which returns 42
 - content for index 1 is now a function which returns 83
 
-The content for indexes 0 and 1 are now callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions), which are called to change the index's content values. To call the wasm functions directly from `tbl`, append a second function invocation operator at the end of the
-accessor:
+The content for indexes 0 and 1 are now callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions), which are called to change the index's content values. To call the WebAssembly functions directly from `tbl`, append a second function invocation operator at the end of the accessor:
 
 ```js
 console.log(tbl.get(0));  // outputs wasm function which returns 42
@@ -112,6 +111,8 @@ console.log(tbl.get(0)());  // 42
 console.log(tbl.get(1));  // outputs wasm function which returns 83
 console.log(tbl.get(1)());  // 83
 ```
+
+This example shows that while we are creating and accessing the `WebAssembily.Table` from JavaScript, the same `Table` is visible and callable inside the WebAssembily instance.
 
 ## Specifications
 
