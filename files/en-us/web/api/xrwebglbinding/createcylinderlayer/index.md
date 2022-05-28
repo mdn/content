@@ -73,7 +73,7 @@ createCylinderLayer(init)
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right.
         - `stereo-top-bottom`
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom.
-          The default value is `mono`.
+        The default value is `mono`.
     - `mipLevels` {{optional_inline}}
       - : A number specifying desired number of mip levels. The default value is `1`.
     - `radius` {{optional_inline}}
