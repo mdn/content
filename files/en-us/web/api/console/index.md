@@ -1,6 +1,7 @@
 ---
 title: console
 slug: Web/API/console
+page-type: web-api-interface
 tags:
   - API
   - Debugging

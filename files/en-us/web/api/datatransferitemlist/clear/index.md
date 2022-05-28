@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.clear()
 slug: Web/API/DataTransferItemList/clear
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItemList

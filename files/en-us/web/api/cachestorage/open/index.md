@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage

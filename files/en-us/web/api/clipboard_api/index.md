@@ -1,6 +1,7 @@
 ---
 title: Clipboard API
 slug: Web/API/Clipboard_API
+page-type: web-api-overview
 tags:
   - API
   - Async Clipboard API

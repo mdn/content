@@ -1,6 +1,7 @@
 ---
 title: CSSValueList.length
 slug: Web/API/CSSValueList/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSSValueList

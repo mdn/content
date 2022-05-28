@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.fftSize
 slug: Web/API/AnalyserNode/fftSize
+page-type: web-api-instance-property
 tags:
   - API
   - AnalyserNode

@@ -1,6 +1,7 @@
 ---
 title: AudioTrack
 slug: Web/API/AudioTrack
+page-type: web-api-interface
 tags:
   - Audio
   - AudioTrack

@@ -1,6 +1,7 @@
 ---
 title: Client.url
 slug: Web/API/Client/url
+page-type: web-api-instance-property
 tags:
   - API
   - Client

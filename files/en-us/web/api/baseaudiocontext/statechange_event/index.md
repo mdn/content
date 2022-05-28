@@ -1,6 +1,7 @@
 ---
 title: 'BaseAudioContext: statechange event'
 slug: Web/API/BaseAudioContext/statechange_event
+page-type: web-api-event
 tags:
   - API
   - Audio

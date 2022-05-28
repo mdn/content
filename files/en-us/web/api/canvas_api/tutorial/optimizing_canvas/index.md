@@ -1,6 +1,7 @@
 ---
 title: Optimizing canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
+page-type: guide
 tags:
   - Advanced
   - Canvas

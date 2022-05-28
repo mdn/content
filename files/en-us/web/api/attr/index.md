@@ -1,6 +1,7 @@
 ---
 title: Attr
 slug: Web/API/Attr
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

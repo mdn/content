@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.cssText
 slug: Web/API/CSSStyleDeclaration/cssText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

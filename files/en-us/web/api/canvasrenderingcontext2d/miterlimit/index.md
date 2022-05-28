@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

@@ -1,6 +1,7 @@
 ---
 title: Content Index API
 slug: Web/API/Content_Index_API
+page-type: web-api-overview
 tags:
   - API
   - Content

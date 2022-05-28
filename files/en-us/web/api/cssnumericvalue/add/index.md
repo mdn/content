@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.add()
 slug: Web/API/CSSNumericValue/add
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

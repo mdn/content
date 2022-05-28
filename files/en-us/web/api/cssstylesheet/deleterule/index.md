@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSS

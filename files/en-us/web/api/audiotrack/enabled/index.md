@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.enabled
 slug: Web/API/AudioTrack/enabled
+page-type: web-api-instance-property
 tags:
   - Audio
   - AudioTrack

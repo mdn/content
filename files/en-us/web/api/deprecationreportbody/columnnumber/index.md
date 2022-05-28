@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody.columnNumber
 slug: Web/API/DeprecationReportBody/columnNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property

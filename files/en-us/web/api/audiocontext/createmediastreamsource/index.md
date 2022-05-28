@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

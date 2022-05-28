@@ -1,6 +1,7 @@
 ---
 title: ContentIndex.getAll()
 slug: Web/API/ContentIndex/getAll
+page-type: web-api-instance-method
 tags:
   - Content
   - Content Index API

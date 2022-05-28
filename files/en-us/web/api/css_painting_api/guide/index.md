@@ -1,6 +1,7 @@
 ---
 title: Using the CSS Painting API
 slug: Web/API/CSS_Painting_API/Guide
+page-type: guide
 tags:
   - CSS
   - CSS Paint API

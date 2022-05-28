@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createWaveShaper()
 slug: Web/API/BaseAudioContext/createWaveShaper
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext

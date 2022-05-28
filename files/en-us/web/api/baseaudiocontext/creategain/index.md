@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

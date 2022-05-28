@@ -1,6 +1,7 @@
 ---
 title: CookieStore.getAll()
 slug: Web/API/CookieStore/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - Method

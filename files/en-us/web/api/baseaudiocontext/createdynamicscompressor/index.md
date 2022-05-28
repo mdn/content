@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext

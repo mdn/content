@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozSetDataAt()
 slug: Web/API/DataTransfer/mozSetDataAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method

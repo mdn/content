@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.minDecibels
 slug: Web/API/AnalyserNode/minDecibels
+page-type: web-api-instance-property
 tags:
   - API
   - AnalyserNode

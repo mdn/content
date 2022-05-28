@@ -1,6 +1,7 @@
 ---
 title: console.timeLog()
 slug: Web/API/console/timeLog
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

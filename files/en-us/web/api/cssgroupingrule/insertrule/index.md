@@ -1,6 +1,7 @@
 ---
 title: CSSGroupingRule.insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM

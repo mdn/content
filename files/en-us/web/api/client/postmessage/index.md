@@ -1,6 +1,7 @@
 ---
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - Client

@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozClearDataAt()
 slug: Web/API/DataTransfer/mozClearDataAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method

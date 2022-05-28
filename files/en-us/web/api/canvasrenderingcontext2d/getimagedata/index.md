@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

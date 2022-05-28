@@ -1,6 +1,7 @@
 ---
 title: Manipulating video using canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
+page-type: guide
 tags:
   - API
   - Canvas

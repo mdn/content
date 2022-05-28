@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
+page-type: web-api-interface
 tags:
   - API
   - Audio

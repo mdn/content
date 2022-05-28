@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode

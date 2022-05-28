@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletGlobalScope
 slug: Web/API/AudioWorkletGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Audio

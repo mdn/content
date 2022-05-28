@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.country
 slug: Web/API/AddressErrors/country
+page-type: web-api-instance-property
 tags:
   - API
   - AddressErrors

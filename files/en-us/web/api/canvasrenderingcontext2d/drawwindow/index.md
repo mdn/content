@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawWindow()
 slug: Web/API/CanvasRenderingContext2D/drawWindow
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

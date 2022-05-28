@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem.getType()
 slug: Web/API/ClipboardItem/getType
+page-type: web-api-instance-method
 tags:
   - Clipboard
   - Clipboard API

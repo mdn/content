@@ -1,6 +1,7 @@
 ---
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
+page-type: guide
 tags:
   - Canvas
   - Graphics

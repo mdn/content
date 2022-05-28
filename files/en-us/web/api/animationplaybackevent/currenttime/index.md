@@ -1,6 +1,7 @@
 ---
 title: AnimationPlaybackEvent.currentTime
 slug: Web/API/AnimationPlaybackEvent/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

@@ -1,6 +1,7 @@
 ---
 title: Canvas API
 slug: Web/API/Canvas_API
+page-type: web-api-overview
 tags:
   - API
   - Canvas

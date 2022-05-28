@@ -1,6 +1,7 @@
 ---
 title: Constraint validation API
 slug: Web/API/Constraint_validation
+page-type: web-api-overview
 tags:
   - API
   - Constraint validation

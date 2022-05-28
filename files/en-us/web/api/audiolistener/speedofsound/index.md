@@ -1,6 +1,7 @@
 ---
 title: AudioListener.speedOfSound
 slug: Web/API/AudioListener/speedOfSound
+page-type: web-api-instance-property
 tags:
   - API
   - AudioListener

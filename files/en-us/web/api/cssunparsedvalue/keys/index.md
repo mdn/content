@@ -1,6 +1,7 @@
 ---
 title: CSSUnparsedValue.keys()
 slug: Web/API/CSSUnparsedValue/keys
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.is2D
 slug: Web/API/CSSTransformValue/is2D
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
