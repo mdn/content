@@ -21,9 +21,7 @@ coordinates.
 
 ## Value
 
-- _screenY_ stores the `window.mozInnerScreenY` property value.
-- The `window.mozInnerScreenY` property is a floating point, read-only
-  value; it has no default value.
+The `window.mozInnerScreenY` property is a floating point, read-only value; it has no default value.
 
 ## Specifications
 
