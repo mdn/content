@@ -23,7 +23,7 @@ getEntriesByType(type)
 
 ### Parameters
 
-- _`type`_
+- `type`
   - : The type of entry to retrieve such as "`frame`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}.
 
 ### Return value

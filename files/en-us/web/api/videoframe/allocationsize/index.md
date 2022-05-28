@@ -32,8 +32,10 @@ allocationSize(options)
         - `height`: The height of the frame.
     - `layout`{{Optional_Inline}}
       - : A list containing the following values for each plane in the `VideoFrame`. Planes may not overlap. If unspecified the planes will be tightly packed:
-        - `offset`: An integer representing the offset in bytes where the given plane begins.
-        - `stride`: An integer representing the number of bytes, including padding, used by each row of the plane.
+        - `offset`
+          - : An integer representing the offset in bytes where the given plane begins.
+        - `stride`
+          - : An integer representing the number of bytes, including padding, used by each row of the plane.
 
 ### Return value
 

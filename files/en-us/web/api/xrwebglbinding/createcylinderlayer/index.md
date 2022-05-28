@@ -63,11 +63,16 @@ createCylinderLayer(init)
       - : A boolean that, if true, indicates you can only draw to this layer when {{domxref("XRCompositionLayer.needsRedraw", "needsRedraw")}} is `true`. The default value is `false`.
     - `layout` {{optional_inline}}
       - : A string indicating the layout of the layer. Possible values:
-        - `default`: The layer accommodates all views of the session.
-        - `mono`: A single {{domxref("XRSubImage")}} is allocated and presented to both eyes.
-        - `stereo`: The user agent decides how it allocates the {{domxref("XRSubImage")}} (one or two) and the layout (top/bottom or left/right).
-        - `stereo-left-right`: A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right.
-        - `stereo-top-bottom`: A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom.
+        - `default`
+          - : The layer accommodates all views of the session.
+        - `mono`
+          - : A single {{domxref("XRSubImage")}} is allocated and presented to both eyes.
+        - `stereo`
+          - : The user agent decides how it allocates the {{domxref("XRSubImage")}} (one or two) and the layout (top/bottom or left/right).
+        - `stereo-left-right`
+          - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right.
+        - `stereo-top-bottom`
+          - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom.
         The default value is `mono`.
     - `mipLevels` {{optional_inline}}
       - : A number specifying desired number of mip levels. The default value is `1`.
