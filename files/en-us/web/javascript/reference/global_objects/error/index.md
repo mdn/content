@@ -24,7 +24,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{JSxRef("EvalError")}}
   - : Creates an instance representing an error that occurs regarding the global function {{JSxRef("Global_Objects/eval", "eval()")}}.
 - {{JSxRef("RangeError")}}
-  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.
+  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside its valid range.
 - {{JSxRef("ReferenceError")}}
   - : Creates an instance representing an error that occurs when de-referencing an invalid reference.
 - {{JSxRef("SyntaxError")}}
@@ -56,7 +56,7 @@ Besides the generic `Error` constructor, there are other core error constructors
   - : Error name.
 - {{jsxref("Error.prototype.cause")}}
   - : Error cause.
-     If an error is caught and re-thrown, this property should contain the original error. 
+     If an error is caught and re-thrown, this property should contain the original error.
 - {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
