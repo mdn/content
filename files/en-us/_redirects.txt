@@ -9108,6 +9108,7 @@
 /en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCoun	/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
 /en-US/docs/Web/API/RTCIceCandidatePairStats/contentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
+/en-US/docs/Web/API/RTCIceCandidateStats/mozLocalTransport	/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol
 /en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
 /en-US/docs/Web/API/RTCIceComponent	/en-US/docs/Web/API/RTCIceCandidate/component
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
