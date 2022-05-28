@@ -99,7 +99,6 @@ Click the button next to each input type to show its picker.
 
 {{EmbedLiveSample("Showing the normal pickers","100%", "140px")}}
 
-
 ### showPicker() for a datalist input
 
 `showPicker()` can launch the picker for a list of options defined in a [`<datalist>`](/en-US/docs/Web/HTML/Element/datalist).
@@ -133,7 +132,6 @@ The code below adds an event listener that calls `showPicker()` when the button 
     }
   });
 ```
-
 
 ### showPicker() for autocomplete
 
