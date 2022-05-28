@@ -10,6 +10,7 @@ tags:
   - Server Sent Events
   - Server-sent events
   - messaging
+browser-compat: api.EventSource
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -200,6 +201,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## Browser compatibility
 
-### `EventSource`
-
-{{Compat("api.EventSource")}}
+{{Compat}}

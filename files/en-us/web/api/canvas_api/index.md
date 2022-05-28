@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Overview
   - Reference
+browser-compat: html.elements.canvas
 ---
 {{CanvasSidebar}}
 
@@ -98,11 +99,11 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 
 ## Specifications
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-Mozilla applications gained support for `<canvas>` starting with Gecko 1.8 ([Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5)). The element was originally introduced by Apple for the macOS Dashboard and Safari. Internet Explorer supports `<canvas>` from version 9 onwards; for earlier versions of IE, a page can effectively add support for `<canvas>` by including a script from Google's [Explorer Canvas](https://github.com/arv/explorercanvas) project. Google Chrome and Opera 9 also support `<canvas>`.
+{{Compat}}
 
 ## See also
 

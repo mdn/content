@@ -8,6 +8,7 @@ tags:
   - Reference
   - Status code
   - Web
+browser-compat: http.status
 ---
 {{HTTPSidebar}}
 
@@ -208,7 +209,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 ## Browser compatibility
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## See also
 

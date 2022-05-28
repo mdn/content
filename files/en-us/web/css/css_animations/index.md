@@ -7,7 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/css-animations/
+browser-compat: css.properties.animation
 ---
 {{CSSRef}}
 
@@ -48,9 +48,7 @@ spec-urls: https://drafts.csswg.org/css-animations/
 
 ## Browser compatibility
 
-### `animation` property
-
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## See also
 

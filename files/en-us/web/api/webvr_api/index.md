@@ -11,6 +11,7 @@ tags:
   - VR
   - Virtual Reality
   - WebVR
+browser-compat: api.Navigator.getVRDisplays
 ---
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
 
@@ -133,9 +134,7 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## Browser compatibility
 
-### `Navigator.getVRDisplays`
-
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## See also
 

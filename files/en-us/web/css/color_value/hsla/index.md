@@ -9,6 +9,7 @@ tags:
   - Web
   - color
   - hsla
+browser-compat: css.types.color.hsla
 ---
 {{CSSRef}}
 
@@ -37,10 +38,10 @@ hsla(235 100% 50% / 1); /* CSS Colors 4 space-separated values */
 - Functional notation: `hsla(H S L[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
-{{Compat("css.types.color.alpha")}}
-
-### Space-separated values
-
-{{Compat("css.types.color.space_separated_functional_notation")}}
+{{Compat}}

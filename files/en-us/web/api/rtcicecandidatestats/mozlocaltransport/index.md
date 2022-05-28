@@ -19,6 +19,7 @@ tags:
   - WebRTC
   - WebRTC API
   - mozLocalTransport
+browser-compat: api.RTCIceCandidateStats.relayProtocol
 ---
 {{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}
 
@@ -32,4 +33,4 @@ Not part of any specification.
 
 ## Browser compatibility
 
-{{Compat("api.RTCIceCandidateStats.relayProtocol")}}
+{{Compat}}
