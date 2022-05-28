@@ -8,6 +8,7 @@ tags:
   - Extensions
   - Guide
   - WebExtensions
+browser-compat: webextensions.browser_style
 ---
 {{AddonSidebar}}
 
@@ -109,7 +110,7 @@ Most styles are automatically applied, but some elements require you to add the 
 
 ## Browser compatibility
 
-{{Compat("webextensions.browser_style")}}
+{{Compat}}
 
 ## Firefox Panel Components
 

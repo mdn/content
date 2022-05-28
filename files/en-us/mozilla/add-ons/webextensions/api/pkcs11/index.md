@@ -11,6 +11,7 @@ tags:
   - Web Development
   - WebExtensions
   - pkcs11
+browser-compat: webextensions.api.pkcs11
 ---
 {{AddonSidebar}}
 
@@ -63,4 +64,6 @@ For details about the manifest file's contents and location, see [Native manifes
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}}
+
+{{WebExtExamples("h2")}}
