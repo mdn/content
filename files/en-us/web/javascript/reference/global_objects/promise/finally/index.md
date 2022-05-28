@@ -61,13 +61,13 @@ The `finally()` method is very similar to calling
 - A `finally` call will chain through an equivalent to the orignal promise.  
   So for example:
   - Unlike `Promise.resolve(2).then(() => 77, () => {})` (which
-    will return a promise which will be resolved with `77`, 
-    `Promise.resolve(2).finally(() => {})` will return a 
-    promise which will be resolved with `2`.
+    will return a promise which will be resolved with `77`), 
+    `Promise.resolve(2).finally(() => 99)` will return a 
+    promise which will be resolved with `2`. (The 99 is ignored.)
   - Similarly, unlike `Promise.reject(3).then(() => {}, () => 88)`
     (which will, again, return a promise which will be rejected with `88`),
-    `Promise.reject(3).finally(() => {})` will return a promise 
-    which will be rejected with `3`.
+    `Promise.reject(3).finally(() => 99)` will return a promise 
+    which will be rejected with `3`. (The 99 is ignored.)
 
 > **Note:** A `throw` (or returning a rejected promise) in the
 > `finally` callback will reject the promise, which will, in that case, 
