@@ -21,7 +21,7 @@ statement if a specified condition is {{Glossary("truthy")}}. If the condition i
 ## Syntax
 
 ```js
-if (condition) {
+if(condition) {
    statement1
 } else {
    statement2
@@ -48,11 +48,11 @@ Multiple `if...else` statements can be nested to create an
 keyword in JavaScript.
 
 ```js
-if (condition1)
+if(condition1)
   statement1
-else if (condition2)
+else if(condition2)
   statement2
-else if (condition3)
+else if(condition3)
   statement3
 ...
 else
@@ -62,13 +62,13 @@ else
 To see how this works, this is how it would look if the nesting were properly indented:
 
 ```js
-if (condition1)
+if(condition1)
   statement1
 else
-  if (condition2)
+  if(condition2)
     statement2
   else
-    if (condition3)
+    if(condition3)
 ...
 ```
 
@@ -78,7 +78,7 @@ always use block statements, especially in code involving nested `if`
 statements:
 
 ```js
-if (condition) {
+if(condition) {
   statements1
 } else {
   statements2
@@ -95,7 +95,7 @@ example:
 
 ```js
 var b = new Boolean(false);
-if (b) // this condition is truthy
+if(b) // this condition is truthy
 ```
 
 ## Examples
@@ -103,7 +103,7 @@ if (b) // this condition is truthy
 ### Using if...else
 
 ```js
-if (cipher_char === from_char) {
+if(cipher_char === from_char) {
   result = result + to_char;
   x++;
 } else {
@@ -117,9 +117,9 @@ Note that there is no `elseif` syntax in JavaScript. However, you can write
 it with a space between `else` and `if`:
 
 ```js
-if (x > 50) {
+if(x > 50) {
   /* do something */
-} else if (x > 5) {
+} else if(x > 5) {
   /* do something */
 } else {
   /* do something */
@@ -131,7 +131,7 @@ if (x > 50) {
 You should almost never have an `if...else` with an assignment like "`x = y`" as a condition:
 
 ```js example-bad
-if (x = y) {
+if(x = y) {
   /* do something */
 }
 ```
