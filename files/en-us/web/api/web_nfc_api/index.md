@@ -5,6 +5,7 @@ tags:
   - NDEF
   - Reference
   - Web NFC
+browser-compat: api.NDEFReader
 ---
 {{DefaultAPISidebar("Web NFC API")}}{{SeeCompatTable}}
 
@@ -23,10 +24,8 @@ The Web NFC API allows exchanging data over NFC via light-weight NFC Data Exchan
 
 ## Specifications
 
-| Specification                             | Status | Comment |
-| ----------------------------------------- | ------ | ------- |
-| [Web NFC](https://w3c.github.io/web-nfc/) | Draft  |         |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.NDEFReader")}}
+{{Compat}}

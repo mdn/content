@@ -22,7 +22,7 @@ isShader(shader)
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} to check.
 
 ### Return value

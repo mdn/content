@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.name
 slug: Web/API/DedicatedWorkerGlobalScope/name
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

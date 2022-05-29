@@ -15,13 +15,13 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ## Syntax
 
 ```js
- window.msWriteProfilerMark("start-render");
+msWriteProfilerMark(profilerMarkName)
 ```
 
 ### Parameters
 
-- _bstrProfilerMarkName_\[in]
-  - : An event name. Type = **String**. This parameter may be null.
+- `profilerMarkName`
+  - : A string containing the event name. This parameter is not optional but may be `null`.
 
 ### Return value
 

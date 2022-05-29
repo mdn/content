@@ -47,7 +47,7 @@ observe(target, options)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

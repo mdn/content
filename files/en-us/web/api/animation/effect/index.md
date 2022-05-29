@@ -1,6 +1,7 @@
 ---
 title: Animation.effect
 slug: Web/API/Animation/effect
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

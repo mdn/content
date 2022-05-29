@@ -1,6 +1,7 @@
 ---
 title: CSSRotate.z
 slug: Web/API/CSSRotate/z
+page-type: web-api-instance-property
 tags:
   - API
   - CSS

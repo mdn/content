@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM

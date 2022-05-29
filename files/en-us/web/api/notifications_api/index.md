@@ -7,6 +7,7 @@ tags:
   - Notifications API
   - permission
   - system
+browser-compat: api.Notification
 ---
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
@@ -55,13 +56,11 @@ In addition, the Notifications API spec specifies a number of additions to the [
 
 ## Specifications
 
-| Specification                                                               |
-| --------------------------------------------------------------------------- |
-| [Notifications API Living Standard](https://notifications.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

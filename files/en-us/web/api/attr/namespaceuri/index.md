@@ -1,6 +1,7 @@
 ---
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

@@ -64,22 +64,22 @@ Handling a rejected promise in each `.then()` has consequences further down the 
 
 ```js
 myPromise
-.then(handleResolvedA)
-.then(handleResolvedB)
-.then(handleResolvedC)
-.catch(handleRejectedAny);
+  .then(handleResolvedA)
+  .then(handleResolvedB)
+  .then(handleResolvedC)
+  .catch(handleRejectedAny);
 ```
 
-Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} for the callback functions, an implementation of a promise chain might look something like this:
+Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} for the callback functions, implementation of the promise chain might look something like this:
 
 ```js
-promise1
-.then(value => { return value + ' and bar'; })
-.then(value => { return value + ' and bar again'; })
-.then(value => { return value + ' and again'; })
-.then(value => { return value + ' and again'; })
-.then(value => { console.log(value) })
-.catch(err => { console.log(err) });
+myPromise
+  .then(value => { return value + ' and bar'; })
+  .then(value => { return value + ' and bar again'; })
+  .then(value => { return value + ' and again'; })
+  .then(value => { return value + ' and again'; })
+  .then(value => { console.log(value) })
+  .catch(err => { console.log(err) });
 ```
 
 The termination condition of a promise determines the "settled" state of the next promise in the chain. A "resolved" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each resolved promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.

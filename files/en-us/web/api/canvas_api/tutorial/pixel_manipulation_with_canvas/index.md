@@ -1,6 +1,7 @@
 ---
 title: Pixel manipulation with canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+page-type: guide
 tags:
   - Canvas
   - Graphics

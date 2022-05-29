@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

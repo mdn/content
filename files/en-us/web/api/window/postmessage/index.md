@@ -200,7 +200,7 @@ window.addEventListener("message", (event) => {
   event.source.postMessage("hi there yourself!  the secret response " +
                            "is: rheeeeet!",
                            event.origin);
-}, false);
+});
 ```
 
 ### Notes

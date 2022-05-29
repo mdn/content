@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAssertionResponse
 slug: Web/API/AuthenticatorAssertionResponse
+page-type: web-api-interface
 tags:
   - API
   - Authentication

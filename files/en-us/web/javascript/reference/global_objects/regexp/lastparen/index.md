@@ -28,7 +28,7 @@ You can not use the shorthand alias with the dot property accessor (`RegExp.$+`)
 ### Using lastParen and $+
 
 ```js
-var re = /(hi)/g;
+const re = /(hi)/g;
 re.test('hi there!');
 RegExp.lastParen; // "hi"
 RegExp['$+'];     // "hi"

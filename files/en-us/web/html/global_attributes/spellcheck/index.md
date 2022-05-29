@@ -16,10 +16,8 @@ The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) 
 
 It may have the following values:
 
-- `true`, which indicates that the element should be, if possible, checked for spelling errors;
+- empty string or `true`, which indicates that the element should be, if possible, checked for spelling errors;
 - `false`, which indicates that the element should not be checked for spelling errors.
-
-> **Note:** The `spellcheck` attribute is an _enumerated_ one and not a _Boolean_ one. This means that the explicit usage of one of the values `true` or `false` is mandatory, and that a shorthand like `<textarea spellcheck></textarea>` is not allowed. The correct usage is `<textarea spellcheck="true"></textarea>`.
 
 If this attribute is not set, its default value is element-type and browser-defined. This default value may also be _inherited_, which means that the element content will be checked for spelling errors only if its nearest ancestor has a _spellcheck_ state of `true`.
 

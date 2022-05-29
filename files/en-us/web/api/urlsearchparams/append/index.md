@@ -27,14 +27,14 @@ append(name, value)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to append.
-- value
+- `value`
   - : The value of the parameter to append.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

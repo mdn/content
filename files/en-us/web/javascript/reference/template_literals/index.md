@@ -51,6 +51,12 @@ backtick.
 `\`` === '`' // --> true
 ```
 
+Dollar signs can be escaped as well to prevent interpolation.
+
+```js
+`\${1}` === '${1}' // --> true
+```
+
 ### Multi-line strings
 
 Any newline characters inserted in the source are part of the template literal.

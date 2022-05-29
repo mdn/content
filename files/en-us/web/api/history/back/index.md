@@ -67,5 +67,4 @@ document.getElementById('go-back').addEventListener('click', () => {
 ## See also
 
 - {{domxref("History")}}
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

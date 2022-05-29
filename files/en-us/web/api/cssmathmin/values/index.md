@@ -1,6 +1,7 @@
 ---
 title: CSSMathMin.values
 slug: Web/API/CSSMathMin/values
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

@@ -22,7 +22,7 @@ getExtension(name)
 
 ### Parameters
 
-- name
+- `name`
   - : A {{jsxref("String")}} for the name of the WebGL extension to enable.
 
 ### Return value

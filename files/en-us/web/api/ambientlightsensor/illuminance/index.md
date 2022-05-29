@@ -1,6 +1,7 @@
 ---
 title: AmbientLightSensor.illuminance
 slug: Web/API/AmbientLightSensor/illuminance
+page-type: web-api-instance-property
 tags:
   - API
   - Ambient Light Level API

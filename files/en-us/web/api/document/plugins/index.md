@@ -33,5 +33,4 @@ An {{domxref("HTMLCollection")}}.
 
 ## See also
 
-- [MSDN
-  documentation](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)
+- [MSDN documentation](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)

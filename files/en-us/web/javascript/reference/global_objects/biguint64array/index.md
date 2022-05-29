@@ -106,28 +106,28 @@ The **`BigUint64Array`** typed array represents an array of 64-bit unsigned inte
 
 ```js
 // From a length
-var biguint64 = new BigUint64Array(2);
+let biguint64 = new BigUint64Array(2);
 biguint64[0] = 42n;
 console.log(biguint64[0]); // 42n
 console.log(biguint64.length); // 2
 console.log(biguint64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new BigUint64Array([21n,31n]);
+let arr = new BigUint64Array([21n,31n]);
 console.log(arr[1]); // 31n
 
 // From another TypedArray
-var x = new BigUint64Array([21n, 31n]);
-var y = new BigUint64Array(x);
+let x = new BigUint64Array([21n, 31n]);
+const y = new BigUint64Array(x);
 console.log(y[0]); // 21n
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new BigUint64Array(buffer, 0, 4);
+let buffer = new ArrayBuffer(32);
+const z = new BigUint64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
-var biguint64 = new BigUint64Array(iterable);
+let iterable = function*(){ yield* [1n, 2n, 3n]; }();
+const biguint64 = new BigUint64Array(iterable);
 // BigUint64Array[1n, 2n, 3n]
 ```
 

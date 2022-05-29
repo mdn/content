@@ -189,9 +189,9 @@ Trailing commas are valid in named imports and named exports.
     C,
   } from 'D'
 
-  import { X, Y, Z } from 'W'
+  import { X, Y, Z, } from 'W'
 
-  import { A as B, C as D, E as F } from 'Z'; //Renaming imports
+  import { A as B, C as D, E as F, } from 'Z'; //Renaming imports
 ```
 
 #### named exports
@@ -200,12 +200,12 @@ Trailing commas are valid in named imports and named exports.
   export {
     A,
     B,
-    C
+    C,
   }
 
-  export { A, B, C };
+  export { A, B, C, };
 
-  export { A as B, C as D, E as F }; // Renaming exports
+  export { A as B, C as D, E as F, }; // Renaming exports
 ```
 
 ### Quantifier prefix

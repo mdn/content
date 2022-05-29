@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext

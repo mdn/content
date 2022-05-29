@@ -23,16 +23,18 @@ getQueryParameter(query, pname)
 
 ### Parameters
 
-- query
+- `query`
   - : A {{domxref("WebGLQuery")}} object.
 - `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Possible values:
 
-    - `gl.QUERY_RESULT`: Returns a {{domxref("WebGL_API/Types", "GLuint")}} containing the
-      query result.
-    - `gl.QUERY_RESULT_AVAILABLE`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}}
-      indicating whether or not a query result is available.
+    - `gl.QUERY_RESULT`
+      - : Returns a {{domxref("WebGL_API/Types", "GLuint")}} containing the
+        query result.
+    - `gl.QUERY_RESULT_AVAILABLE`
+      - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}}
+        indicating whether or not a query result is available.
 
 ### Return value
 

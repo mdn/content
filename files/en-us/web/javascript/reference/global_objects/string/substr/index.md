@@ -90,7 +90,7 @@ if ('ab'.substr(-1) != 'b') {
 ### Using substr()
 
 ```js
-var aString = 'Mozilla';
+const aString = 'Mozilla';
 
 console.log(aString.substr(0, 1));   // 'M'
 console.log(aString.substr(1, 0));   // ''

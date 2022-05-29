@@ -21,19 +21,20 @@ resolves when the registration completes.
 ## Syntax
 
 ```js
-var register = PeriodicSyncManager.register(tag, BackgroundSyncOptions);
+register(tag, options)
 ```
 
 ### Parameters
 
-- _tag_
+- `tag`
   - : A unique {{jsxref('String')}} identifier
-- _BackgroundSyncOptions_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An {{jsxref('Object')}} containing the following optional data:
 
-    - `minInterval`: The minimum interval time, in milliseconds, at which
-      the periodic sync should occur.
+    - `minInterval`
+      - : The minimum interval time, in milliseconds, at which
+        the periodic sync should occur.
 
 ### Return value
 

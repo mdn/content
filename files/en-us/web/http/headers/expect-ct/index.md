@@ -82,9 +82,7 @@ Builds of Chrome are designed to stop enforcing the `Expect-CT` policy 10 weeks 
 
 ## Specifications
 
-| Specification                                                                           | Title                        |
-| --------------------------------------------------------------------------------------- | ---------------------------- |
-| [Internet Draft](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-08) | Expect-CT Extension for HTTP |
+{{Specifications}}
 
 ## Browser compatibility
 

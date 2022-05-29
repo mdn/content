@@ -72,7 +72,7 @@ An example of a meter using `role="meter"`:
        y="0"
        width="100%"
        height="100%"
-       fill="currentColor"></rect>
+       fill="currentcolor"></rect>
   </svg>
 </div>
 ```

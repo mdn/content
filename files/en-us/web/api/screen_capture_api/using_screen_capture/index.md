@@ -15,6 +15,7 @@ tags:
   - display
   - getDisplayMedia
   - screen
+browser-compat: api.MediaDevices.getDisplayMedia
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 
@@ -335,7 +336,7 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 
 ## Browser compatibility
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## See also
 

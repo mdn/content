@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAttestationResponse.attestationObject
 slug: Web/API/AuthenticatorAttestationResponse/attestationObject
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorAttestationResponse

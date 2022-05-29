@@ -1,6 +1,7 @@
 ---
 title: Animation.pause()
 slug: Web/API/Animation/pause
+page-type: web-api-instance-method
 tags:
   - Animation
   - Method

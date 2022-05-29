@@ -29,7 +29,9 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 
 ## Syntax
 
-{{csssyntax}}
+```
+:active
+```
 
 ## Examples
 

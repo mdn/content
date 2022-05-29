@@ -39,20 +39,12 @@ search parameters have been set.)
 ## Examples
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
-let params = new URLSearchParams(url.search);
+const url = new URL('https://example.com?foo=1&bar=2');
+const params = new URLSearchParams(url.search);
 
-//Add a second foo parameter.
+// Add a second foo parameter.
 params.append('foo', 4);
-console.log(params.toString());
-//Prints 'foo=1&bar=2&foo=4'
-
-// note: params can also be directly created
-let url = new URL('https://example.com?foo=1&bar=2');
-let params = url.searchParams;
-
-// or even simpler
-let params = new URLSearchParams('foo=1&bar=2');
+console.log(params.toString()); // Prints 'foo=1&bar=2&foo=4'
 ```
 
 ## Specifications

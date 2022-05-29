@@ -11,7 +11,7 @@ browser-compat: api.GlobalEventHandlers.ondragstart
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the
-{{event("dragstart")}} event.
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
 
 ## Syntax
 
@@ -148,4 +148,4 @@ button.addEventListener("click", () => {
 
 ## See also
 
-- {{event("dragstart")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}

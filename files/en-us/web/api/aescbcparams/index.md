@@ -1,6 +1,7 @@
 ---
 title: AesCbcParams
 slug: Web/API/AesCbcParams
+page-type: web-api-interface
 tags:
   - API
   - AesCbcParams

@@ -22,9 +22,9 @@ getUniform(program, location)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} containing the uniform attribute.
-- location
+- `location`
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to get.
 

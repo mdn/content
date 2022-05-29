@@ -1,6 +1,7 @@
 ---
 title: AudioContext.resume()
 slug: Web/API/AudioContext/resume
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

@@ -26,9 +26,9 @@ setTimeout(code, delay)
 
 setTimeout(functionRef)
 setTimeout(functionRef, delay)
-setTimeout(functionRef, delay, arg1)
-setTimeout(functionRef, delay, arg1, arg2)
-setTimeout(functionRef, delay, arg1, arg2, /* ... ,*/ argN)
+setTimeout(functionRef, delay, param1)
+setTimeout(functionRef, delay, param1, param2)
+setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN)
 ```
 
 ### Parameters
@@ -47,9 +47,9 @@ setTimeout(functionRef, delay, arg1, arg2, /* ... ,*/ argN)
 
     Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](#reasons_for_delays_longer_than_specified) below.
 
-    Also note that if the value isn’t a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
+    Also note that if the value isn't a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
-- `arg1`, …, argN` {{optional_inline}}
+- `param1`, …, `paramN` {{optional_inline}}
 
   - : Additional arguments which are passed through to the function specified by
     `function`.
@@ -75,7 +75,7 @@ To call a function repeatedly (e.g., every _N_ milliseconds), consider using
 
 ### Non-number delay values are silently coerced into numbers
 
-If `setTimeout()` is called with [_delay_](#delay) value that’s not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
+If `setTimeout()` is called with [_delay_](#delay) value that's not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
 
 ```js example-bad
 setTimeout(() => {
@@ -91,7 +91,7 @@ setTimeout(() => {
 }, "1 second")
 ```
 
-Therefore, don’t use strings for the _delay_ value but instead always use numbers:
+Therefore, don't use strings for the _delay_ value but instead always use numbers:
 
 ```js example-good
 setTimeout(() => {

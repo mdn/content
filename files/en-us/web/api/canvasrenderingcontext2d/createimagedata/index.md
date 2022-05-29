@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

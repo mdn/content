@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode.gain
 slug: Web/API/BiquadFilterNode/gain
+page-type: web-api-instance-property
 tags:
   - API
   - BiquadFilterNode

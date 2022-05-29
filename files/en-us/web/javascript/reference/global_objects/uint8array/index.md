@@ -105,28 +105,28 @@ The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers.
 
 ```js
 // From a length
-var uint8 = new Uint8Array(2);
+const uint8 = new Uint8Array(2);
 uint8[0] = 42;
 console.log(uint8[0]); // 42
 console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-var arr = new Uint8Array([21,31]);
+const arr = new Uint8Array([21,31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
-var x = new Uint8Array([21, 31]);
-var y = new Uint8Array(x);
+const x = new Uint8Array([21, 31]);
+const y = new Uint8Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(8);
-var z = new Uint8Array(buffer, 1, 4);
+const buffer = new ArrayBuffer(8);
+const z = new Uint8Array(buffer, 1, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
-var uint8 = new Uint8Array(iterable);
+const iterable = function*(){ yield* [1,2,3]; }();
+const uint8Arr = new Uint8Array(iterable);
 // Uint8Array[1, 2, 3]
 ```
 

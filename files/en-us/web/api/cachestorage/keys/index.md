@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.keys()
 slug: Web/API/CacheStorage/keys
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage

@@ -11,6 +11,7 @@ tags:
   - Media Capabilities API
   - Video
   - capabilities
+browser-compat: api.MediaCapabilities
 ---
 {{APIRef("Media Capabilities API")}}
 
@@ -242,7 +243,7 @@ document.getElementById('try-it').addEventListener('click', mc.tryIt);
 
 ## Browser compatibility
 
-{{Compat("api.MediaCapabilities")}}
+{{Compat}}
 
 ## See also
 

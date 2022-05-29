@@ -1,6 +1,7 @@
 ---
 title: Blob
 slug: Web/API/Blob
+page-type: web-api-interface
 tags:
   - API
   - Blob

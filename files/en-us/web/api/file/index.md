@@ -13,7 +13,7 @@ browser-compat: api.File
 
 The **`File`** interface provides information about files and allows JavaScript in a web page to access their content.
 
-`File` objects are generally retrieved from a {{DOMxRef("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, from a drag and drop operation's {{DOMxRef("DataTransfer")}} object, or from the `mozGetAsFile()` API on an {{DOMxRef("HTMLCanvasElement")}}.
+`File` objects are generally retrieved from a {{DOMxRef("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, or from a drag and drop operation's {{DOMxRef("DataTransfer")}} object.
 
 A `File` object is a specific kind of {{DOMxRef("Blob")}}, and can be used in any context that a Blob can. In particular, {{DOMxRef("FileReader")}}, {{DOMxRef("URL.createObjectURL()")}}, {{DOMxRef("createImageBitmap()")}}, and {{DOMxRef("XMLHttpRequest", "", "send()")}} accept both `Blob`s and `File`s.
 

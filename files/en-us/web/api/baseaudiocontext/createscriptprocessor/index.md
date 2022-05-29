@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -70,8 +71,7 @@ buffer, and each sample in each channel, and add a small amount of white noise, 
 setting that result to be the output sample in each case.
 
 > **Note:** For a full working example, see our [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/)
-> GitHub repo (also view the [source
-> code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
+> GitHub repo. (You can also access the [source code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
 
 ```js
 var myScript = document.querySelector('script');

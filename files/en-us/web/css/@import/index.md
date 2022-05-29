@@ -47,7 +47,11 @@ The `@import` rule can also be used to create a [cascade layer](/en-US/docs/Web/
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@import [ <url> | <string> ]
+        [ supports( [ <supports-condition> | <declaration> ] ) ]?
+        <media-query-list>? ;
+```
 
 ## Examples
 

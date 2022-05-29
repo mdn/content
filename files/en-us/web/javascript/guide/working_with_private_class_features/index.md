@@ -5,6 +5,7 @@ tags:
   - Document
   - Guide
   - JavaScript
+browser-compat: javascript.classes
 ---
 {{jsSidebar("JavaScript Guide")}}
 
@@ -225,4 +226,4 @@ scalar1.add({}) // throws informative exception
 
 ## Browser compatibility
 
-{{Compat("javascript.classes")}}
+{{Compat}}

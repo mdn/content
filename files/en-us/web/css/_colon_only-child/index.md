@@ -26,7 +26,9 @@ p:only-child {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:only-child
+```
 
 ## Examples
 

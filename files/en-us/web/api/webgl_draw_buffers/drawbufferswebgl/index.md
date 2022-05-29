@@ -29,7 +29,7 @@ drawBuffersWEBGL(buffers)
 
 ### Parameters
 
-- buffers
+- `buffers`
 
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} constants defining drawing buffers.
     Possible values:

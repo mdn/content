@@ -37,11 +37,12 @@ addModule(moduleURL, options)
 
   - : An object with any of the following options:
 
-    - `credentials`: A {{domxref("Request.credentials")}} value that
-      indicates whether to send credentials (e.g. cookies and HTTP authentication)
-      when loading the module. Can be one of `"omit"`,
-      `"same-origin"`, or `"include"`. Defaults to
-      `"same-origin"`. See also {{domxref("Request.credentials")}}.
+    - `credentials`
+      - : A {{domxref("Request.credentials")}} value that
+        indicates whether to send credentials (e.g. cookies and HTTP authentication)
+        when loading the module. Can be one of `"omit"`,
+        `"same-origin"`, or `"include"`. Defaults to
+        `"same-origin"`. See also {{domxref("Request.credentials")}}.
 
 ### Return value
 

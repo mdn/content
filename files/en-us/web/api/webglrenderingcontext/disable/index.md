@@ -17,12 +17,12 @@ capabilities for this context.
 ## Syntax
 
 ```js
-disable(cap)
+disable(capability)
 ```
 
 ### Parameters
 
-- `cap`
+- `capability`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to disable. Possible
     values:

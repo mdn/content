@@ -7,7 +7,7 @@ tags:
   - Overview
   - Reference
   - Web Bluetooth API
-spec-urls: https://webbluetoothcg.github.io/web-bluetooth/
+browser-compat: api.Bluetooth
 ---
 {{DefaultAPISidebar("Bluetooth API")}}{{SeeCompatTable}}
 
@@ -38,4 +38,4 @@ The Web Bluetooth API provides the ability to connect and interact with Bluetoot
 
 ## Browser compatibility
 
-{{Compat("api.Bluetooth")}}
+{{Compat}}

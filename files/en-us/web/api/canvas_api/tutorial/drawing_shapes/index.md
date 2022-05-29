@@ -1,6 +1,7 @@
 ---
 title: Drawing shapes with canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
+page-type: guide
 tags:
   - Canvas
   - Graphics

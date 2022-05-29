@@ -7,7 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/css-display/#the-display-properties
+browser-compat: css.properties.display
 ---
 {{CSSRef}}
 

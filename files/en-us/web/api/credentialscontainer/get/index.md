@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
+page-type: web-api-instance-method
 tags:
   - API
   - Credential Management API
@@ -59,7 +60,7 @@ get(options)
         - `providers`
           - : An array of string instances of
             identity providers to search for.
-        - `protocols` 
+        - `protocols`
           - : An array of string instances of
             federation protocols to search for.
 

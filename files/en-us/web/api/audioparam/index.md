@@ -1,6 +1,7 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
+page-type: web-api-interface
 tags:
   - API
   - Audio

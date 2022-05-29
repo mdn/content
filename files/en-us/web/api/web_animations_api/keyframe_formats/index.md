@@ -11,7 +11,7 @@ tags:
   - setKeyframes()
   - waapi
   - web animations api
-spec-urls: https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument
+browser-compat: api.Element.animate
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
@@ -128,9 +128,7 @@ The following special attributes may also be specified:
 
 ## Browser compatibility
 
-### `Element.animate`
-
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## See also
 

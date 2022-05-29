@@ -59,7 +59,7 @@ document.ontransitionrun = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitionstart_event#live_example)
+[See a live example of this event](/en-US/docs/Web/API/HTMLElement/transitionstart_event#live_example).
 
 ## Specifications
 

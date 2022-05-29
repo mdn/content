@@ -79,7 +79,7 @@ The `finally()` method is very similar to calling
 let isLoading = true;
 
 fetch(myRequest).then(function(response) {
-    var contentType = response.headers.get("content-type");
+    const contentType = response.headers.get("content-type");
     if(contentType && contentType.includes("application/json")) {
       return response.json();
     }

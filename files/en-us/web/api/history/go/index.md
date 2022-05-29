@@ -87,5 +87,4 @@ history.go(0);
 - {{DOMxRef("History.back","back()")}}
 - {{DOMxRef("History.forward","forward()")}}
 - {{domxref("Window/popstate_event", "popstate")}} event
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

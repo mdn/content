@@ -59,7 +59,7 @@ document.onanimationend = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/animationend_event#live_example)
+[See a live example of this event](/en-US/docs/Web/API/HTMLElement/animationend_event#live_example).
 
 ## Specifications
 

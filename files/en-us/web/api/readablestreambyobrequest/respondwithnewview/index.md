@@ -29,7 +29,7 @@ respondWithNewView(view)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

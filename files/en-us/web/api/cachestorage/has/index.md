@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage

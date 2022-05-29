@@ -26,7 +26,9 @@ p:last-child {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:last-child
+```
 
 ## Examples
 

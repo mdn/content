@@ -1,6 +1,7 @@
 ---
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
+page-type: web-api-instance-method
 tags:
   - API
   - Crypto

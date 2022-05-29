@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.type
 slug: Web/API/DataTransferItem/type
+page-type: web-api-instance-property
 tags:
   - API
   - DataTransferItem

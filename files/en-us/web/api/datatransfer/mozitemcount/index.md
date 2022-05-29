@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozItemCount
 slug: Web/API/DataTransfer/mozItemCount
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard

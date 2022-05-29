@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.appendRule()
 slug: Web/API/CSSKeyframesRule/appendRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
