@@ -18,6 +18,8 @@ Firefox also supports additional features not in the OpenSearch standard, such a
 
 OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins), and can be installed programmatically as described in [Adding search engines from web pages](/en-US/docs/Web/OpenSearch).
 
+OpenSearch plugins can't be uploaded anymore on AMO. Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
+
 ## OpenSearch description file
 
 The XML file that describes a search engine follows the basic template below. Sections in _\[square brackets]_ should be customized for the specific plugin you're writing.
