@@ -11659,7 +11659,7 @@
 /en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /en-US/docs/Web/HTTP/Basics_of_HTTP/Introduction_to_www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-/en-US/docs/Web/HTTP/CORS/Errors/Reason:_CORS_header_‘Origin’_cannot_be_added	/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
+/en-US/docs/Web/HTTP/CORS/Errors/Reason:_CORS_header_‘Origin'_cannot_be_added	/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 /en-US/docs/Web/HTTP/Caching_FAQ	/en-US/docs/Web/HTTP/Caching
 /en-US/docs/Web/HTTP/Controlling_DNS_prefetching	/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /en-US/docs/Web/HTTP/Cookies/Cookie_Prefixes	/en-US/docs/Web/HTTP/Cookies#Cookie_prefixes
