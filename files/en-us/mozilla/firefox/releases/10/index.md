@@ -67,7 +67,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 #### Web Workers
 
 - The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2).
-- The [`Worker()`](</en-US/docs/Web/API/Worker#worker()>) constructor now accepts [data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+- The [`Worker()`](/en-US/docs/Web/API/Worker#worker) constructor now accepts [data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
 #### IndexedDB
 
@@ -77,8 +77,8 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - The [`IDBCursor.advance()`](/en-US/docs/Web/API/IDBCursor#advance) method has been added.
 - When encountering an unknown optional parameter in [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore#createindex) or [`IDBDatabase.createObjectStore()`](/en-US/docs/Web/API/IDBDatabase#createobjectstore), Gecko will not fire an exception anymore, but ignore it.
 - When [`IDBTransaction.abort()`](/en-US/docs/Web/API/IDBTransaction#abort%28%29) is called, all pending [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
-- The methods [`IDBObjectStore.delete()`](</en-US/docs/Web/API/IDBObjectStore#delete()>) and [`IDBCursor.delete()`](</en-US/docs/Web/API/IDBCursor#delete()>) now set the `result` attribute of the returned [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) to `undefined`.
-- The method [`IDBDatabase.setVersion()`](</en-US/docs/Web/API/IDBDatabase#setversion()>) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/en-US/docs/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) interface.
+- The methods [`IDBObjectStore.delete()`](/en-US/docs/Web/API/IDBObjectStore#delete) and [`IDBCursor.delete()`](/en-US/docs/Web/API/IDBCursor#delete) now set the `result` attribute of the returned [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) to `undefined`.
+- The method [`IDBDatabase.setVersion()`](/en-US/docs/Web/API/IDBDatabase#setversion) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/en-US/docs/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) interface.
 - When opening a database with {{domxref("IDBFactory.open()")}}, if the `version` parameter is not provided and the database does not exist, then it will be created with a version of `1`.
 - The method [`IDBFactory.deleteDatabase()`](/en-US/docs/Web/API/IDBFactory#deletedatabase%28%29) method has been added.
 - Methods that search via an {{domxref("IDBKeyRange")}} (such as {{domxref("IDBObjectStore.openCursor")}} and {{domxref("IDBIndex.getKey")}}) can accept either a single key or key range.

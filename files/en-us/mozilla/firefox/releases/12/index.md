@@ -83,7 +83,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 #### source-editor.jsm
 
 - The [`resetUndo()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) method was added; this lets you clear the undo stack.
-- The source editor now offers methods for providing search capability: [`find()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#find()>), [`findNext()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext()>), and [`findPrevious()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()>).
+- The source editor now offers methods for providing search capability: [`find()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#find), [`findNext()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext), and [`findPrevious()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious).
 
 ### XUL
 

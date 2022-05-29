@@ -94,7 +94,7 @@ _No change._
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
+- [`readInputStreamToString()`](/en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
 
 #### New JavaScript code modules
 

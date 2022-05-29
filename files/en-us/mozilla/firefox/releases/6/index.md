@@ -129,7 +129,7 @@ For an overview of the changes you may need to make in order to make your add-on
 
 #### XPCOMUtils.jsm
 
-- The new [`importRelative()`](</en-US/docs/JavaScript_code_modules/XPCOMUtils.jsm#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
+- The new [`importRelative()`](/en-US/docs/JavaScript_code_modules/XPCOMUtils.jsm#importRelative) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
 
 ### XPCOM
 
