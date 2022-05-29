@@ -39,15 +39,15 @@ node will play.
 > live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
 ```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
-  for (var channel = 0; channel < channels; channel++) {
+  for (let channel = 0; channel < channels; channel++) {
    // This gives us the actual ArrayBuffer that contains the data
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
+   let nowBuffering = myArrayBuffer.getChannelData(channel);
+   for (let i = 0; i < frameCount; i++) {
      // Math.random() is in [0; 1.0]
      // audio needs to be in [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
@@ -56,7 +56,7 @@ button.onclick = function() {
 
   // Get an AudioBufferSourceNode.
   // This is the AudioNode to use when we want to play an AudioBuffer
-  var source = audioCtx.createBufferSource();
+  let source = audioCtx.createBufferSource();
   // set the buffer in the AudioBufferSourceNode
   source.buffer = myArrayBuffer;
 ```
