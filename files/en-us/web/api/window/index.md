@@ -41,7 +41,7 @@ See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
 - {{domxref("StaticRange")}} {{experimental_inline}} {{readonlyinline}}
   - : Returns a {{domxref('StaticRange.StaticRange','StaticRange()')}} constructor which creates a {{domxref('StaticRange')}} object.
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+  - : Used for creating a [Web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 - {{domxref("XMLSerializer")}}
   - : Converts a DOM tree into XML or HTML source.
 

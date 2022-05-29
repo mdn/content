@@ -65,8 +65,7 @@ new Request(input, options)
         request: `omit`, `same-origin`, or `include`. The
         default is `same-origin`.
     - `cache`
-      - : The [cache
-        mode](/en-US/docs/Web/API/Request/cache) you want to use for the request.
+      - : The [cache mode](/en-US/docs/Web/API/Request/cache) you want to use for the request.
     - `redirect`
       - : The redirect mode to use: `follow`,
         `error`, or `manual`. The default is `follow`.
@@ -113,8 +112,7 @@ new Request(input, options)
 
 ## Examples
 
-In our [Fetch
-Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
+In our [Fetch Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
 create a new `Request` object using the constructor, then fetch it using a
 {{domxref("fetch()")}} call. Since we are fetching an image, we run
 {{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
@@ -134,9 +132,7 @@ fetch(myRequest).then(function(response) {
 });
 ```
 
-In our [Fetch
-Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (see [Fetch Request
-init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) we do the same thing except that we pass in an init object when we
+In our [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) we do the same thing except that we pass in an init object when we
 invoke `fetch()`:
 
 ```js
