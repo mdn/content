@@ -16,8 +16,7 @@ The **`getChannelData()`** method of the {{ domxref("AudioBuffer") }} Interface 
 ## Syntax
 
 ```js
-const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-const nowBuffering = myArrayBuffer.getChannelData(channel);
+getChannelData(channel);
 ```
 
 ### Parameters
