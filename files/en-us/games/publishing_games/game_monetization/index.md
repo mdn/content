@@ -87,7 +87,7 @@ It is possible to write articles about your games and even get paid for them. Ga
 
 ### Merchandise
 
-You can sell t-shirts, [stickers](https://www.stickermule.com/user/1070634890/stickers) or other gadgets — some devs make more money from the merchandise than from the games themselves, but it only works on very popular and recognizable games like Angry Birds. Still, it could be another small stream of passive income. The more diversified your earnings are, the better your business stability.
+You can sell t-shirts, [stickers](https://www.stickermule.com/custom-stickers) or other gadgets — some devs make more money from the merchandise than from the games themselves, but it only works on very popular and recognizable games like Angry Birds. Still, it could be another small stream of passive income. The more diversified your earnings are, the better your business stability.
 
 ### Donations
 
