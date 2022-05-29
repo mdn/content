@@ -7,6 +7,7 @@ tags:
   - Constraint validation
   - Landing
   - Reference
+browser-compat: api.ValidityState
 ---
 {{apiref()}}
 
@@ -107,7 +108,11 @@ In brief:
 
 ## Specifications
 
-{{Specifications("api.ValidityState")}}
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
