@@ -321,6 +321,10 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Functions/get", "getter", "", 1)}}
 - {{JSxRef("Functions/set", "setter", "", 1)}}
 
+## Classes
+
+[JavaScript classes.](/en-US/docs/Web/JavaScript/Reference/Classes)
+
 ## Additional reference pages
 
 - {{JSxRef("Lexical_grammar", "", "", 1)}}
