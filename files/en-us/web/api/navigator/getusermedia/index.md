@@ -108,7 +108,7 @@ if (navigator.getUserMedia) {
 
 ## Permissions
 
-To use `getUserMedia()` in an installable app (for example, a [Firefox OS app](/en-US/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), you need to specify one or both of the following fields inside your
+To use `getUserMedia()` in an installable app, you need to specify one or both of the following fields inside your
 manifest file:
 
 ```js
