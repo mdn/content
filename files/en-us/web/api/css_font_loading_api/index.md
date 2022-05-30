@@ -32,6 +32,4 @@ The CSS Font Loading API provides events and interfaces for dynamically loading 
 
 ## Browser compatibility
 
-### FontFace
-
 {{Compat}}

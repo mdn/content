@@ -40,13 +40,13 @@ None.
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 
 navigator.credentials.get({ "publicKey": options })
     .then(function (credentialInfoAssertion) {
-    var assertionResponse = credentialInfoAssertion.response;
+    const assertionResponse = credentialInfoAssertion.response;
     // Do something specific with the response
 
     // send assertion response back to the server
