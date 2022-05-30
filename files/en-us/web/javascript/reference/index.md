@@ -320,7 +320,7 @@ This chapter documents how to work with [JavaScript functions](/en-US/docs/Web/J
 
 ## Additional reference pages
 
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- {{JSxRef("Lexical_grammar", "", "", 1)}}
 - [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
-- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- [Deprecated features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- {{JSxRef("Strict_mode", "Strict mode", "", 1)}}
+- {{JSxRef("Deprecated_and_obsolete_features", "Deprecated features", "", 1)}}
