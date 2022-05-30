@@ -339,8 +339,7 @@ This is a lot of code — phew! Let's go through each section and explain what i
 
 ### Events
 
-At this point, we have a nicely implemented `checkGuess()` function, but it won't do anything because we haven't called it yet. Ideally, we want to call it when the "Submit guess" button is pressed, and to do this we need to use an **event**. Events are notifications about actions that happen in the browser — a button being clicked, a page loading, a video playing, etc. — in response to which we can run blocks of code. The parts of the browser that listen out for the event happening are called **event listeners**, and the blocks of code that run in response to the event firing are called **event handlers**.
-
+At this point, we have a nicely implemented `checkGuess()` function, but it won't do anything because we haven't called it yet. Ideally, we want to call it when the "Submit guess" button is pressed, and to do this we need to use an **event**. Events are things that happen in the browser — a button being clicked, a page loading, a video playing, etc. — in response to which we can run blocks of code. **Event listeners** observe specific events and call **event handlers**, which are blocks of code that run in response to an event firing.
 Add the following line below your `checkGuess()` function:
 
 ```js
