@@ -80,8 +80,7 @@ ctx.putImageData(imageData, 20, 20);
 
 ### More examples
 
-For more examples using `ImageData.data`, see [Pixel
-manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas),
+For more examples using `ImageData.data`, see [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas),
 {{domxref("CanvasRenderingContext2D.createImageData()")}}, and
 {{domxref("CanvasRenderingContext2D.putImageData()")}}.
 
@@ -100,5 +99,4 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 - {{domxref("ImageData")}}
 - {{domxref("CanvasRenderingContext2D.createImageData()")}}
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
-- [Pixel
-  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
