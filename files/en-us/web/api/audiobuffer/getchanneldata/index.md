@@ -14,10 +14,6 @@ browser-compat: api.AudioBuffer.getChannelData
 
 The **`getChannelData()`** method of the {{ domxref("AudioBuffer") }} Interface returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel).
 
-## Syntax
-
-```js
-getChannelData(channel);
 
 ### Parameters
 
