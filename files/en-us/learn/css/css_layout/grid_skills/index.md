@@ -13,7 +13,7 @@ The aim of this task is to get you working with CSS Grid Layout, and test that y
 
 > **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Grid Layout One
 
@@ -27,7 +27,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid1-download.html) to work in your own editor or in an online editor.
 
 ## Grid Layout Two
 
@@ -37,7 +37,7 @@ In this example we already have a grid defined. By editing the CSS rules for the
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 800)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 900)}}
 
 Additional questions:
 
@@ -45,7 +45,7 @@ Additional questions:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid2-download.html) to work in your own editor or in an online editor.
 
 ## Grid Layout Three
 
@@ -59,7 +59,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid3-download.html) to work in your own editor or in an online editor.
 
 ## Grid and Flex Layout 4
 
@@ -69,11 +69,11 @@ You will need to use both Grid Layout and Flexbox to recreate the example as see
 
 Try updating the code below to create your example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 2000)}}
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html) to work in your own editor or in an online editor.
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid4-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 
@@ -82,7 +82,7 @@ You can practice these examples in the Interactive Editors mentioned above.
 If you'd like your work assessed, or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Grid layout 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

@@ -18,7 +18,7 @@ The **`query()`** method of the {{domxref("LockManager")}} interface returns a {
 ## Syntax
 
 ```js
-LockManager.query()
+query()
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ This method may return a promise rejected with a {{domxref("DOMException")}} of 
 - `SecurityError` {{domxref("DOMException")}}
   - : If a lock manager cannot be obtained for the current environment.
 
-## Example
+## Examples
 
 ```js
 const state = await navigator.locks.query();

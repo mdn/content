@@ -17,7 +17,7 @@ causing all commands to be executed as quickly as possible.
 ## Syntax
 
 ```js
-void gl.flush();
+flush()
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -31,20 +31,14 @@ the value of {{domxref("MediaTrackSupportedConstraints.aspectRatio")}} as return
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var aspectRatio = MediaTrackSettings.aspectRatio;
-```
-
-### Value
+## Value
 
 A double-precision floating-point number indicating the current configuration of the
 track's aspect ratio. The aspect ratio is computed by taking the track's width, dividing
 by its height, and rounding the result to ten decimal places. For example, the standard
 16:9 high-definition aspect ratio can be computed as 1920/1080, or 1.7777777778.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

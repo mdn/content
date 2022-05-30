@@ -21,13 +21,7 @@ The read-only **`dtmf`** property on the
 over the {{domxref("RTCPeerConnection")}} . See [Using DTMF](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for details on how to
 make use of the returned `RTCDTMFSender` object.
 
-## Syntax
-
-```js
-var dtmfSender = RTCRtpSender.dtmf;
-```
-
-### Value
+## Value
 
 An {{domxref("RTCDTMFSender")}} which can be used to send DTMF over the RTP session, or
 `null` if the track being carried by the RTP session or the

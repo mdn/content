@@ -118,83 +118,6 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
     `stable`, `have-local-offer`, `have-remote-offer`,
     `have-local-pranswer`, `have-remote-pranswer`, or `closed`.
 
-### Event handlers
-
-_Also inherits event handlers from {{DOMxRef("EventTarget")}}._
-
-- {{DOMxRef("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which is called to handle the {{DOMxRef("RTCPeerConnection/connectionstatechange_event", "connectionstatechange")}} event.
-    This happens whenever the aggregate state of the connection changes.
-    The aggregate state is a combination of the states of all of the individual network transports
-    being used by the connection.
-- {{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the {{DOMxRef("RTCPeerConnection/datachannel_event", "datachannel")}} event.
-    This event, of type {{DOMxRef("RTCDataChannelEvent")}}, is sent
-    when an {{DOMxRef("RTCDataChannel")}} is added to the connection
-    by the remote peer calling {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}}.
-- {{DOMxRef("RTCPeerConnection.onicecandidate", "onicecandidate")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event.
-    This happens whenever the local {{Glossary("ICE")}} agent needs to deliver a message
-    to the other peer through the signaling server.
-- {{DOMxRef("RTCPeerConnection.onicecandidateerror", "onicecandidateerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the {{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event.
-    This event is fired when an error occurs during the {{Glossary("ICE")}} candidate gathering process.
-- {{DOMxRef("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event.
-    This happens whenever the local {{Glossary("ICE")}} agent needs to deliver a message
-    to the other peer through the signaling server.
-- {{DOMxRef("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event.
-    This happens when the {{Glossary("ICE")}} gathering state changes.
-- {{DOMxRef("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
-    This event is fired
-    when a change has occurred which requires session negotiation.
-    This negotiation should be carried out as the offerer,
-    because some session changes cannot be negotiated as the answerer.
-- {{DOMxRef("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event.
-    The function receives as input the event object of type {{DOMxRef("Event")}};
-    this event is sent
-    when the peer connection's {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} changes,
-    which may happen either because of a call to {{DOMxRef("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}
-    or to {{DOMxRef("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
-- {{DOMxRef("RTCPeerConnection.ontrack", "ontrack")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the {{DOMxRef("RTCPeerConnection/track_event", "track")}} event.
-    The function receives as input the event object, of type {{DOMxRef("RTCTrackEvent")}};
-    this event is sent
-    when a new incoming {{DOMxRef("MediaStreamTrack")}} has been created
-    and associated with an {{DOMxRef("RTCRtpReceiver")}} object
-    which has been added to the set of receivers on the connection.
-
-### Obsolete properties
-
-- {{DOMxRef("RTCPeerConnection.onaddstream", "onaddstream")}} {{Obsolete_Inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the obsolete {{DOMxRef("RTCPeerConnection/addstream_event", "addstream")}} event.
-- {{DOMxRef("RTCPeerConnection.onremovestream", "onremovestream")}} {{Obsolete_Inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function
-    which is called to handle the obsolete {{DOMxRef("RTCPeerConnection/removestream_event", "removestream")}} event.
-
 ## Methods
 
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
@@ -302,23 +225,23 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 ### Obsolete methods
 
-- {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{deprecated_inline}}
   - : Adds a {{DOMxRef("MediaStream")}} as a local source of audio or video.
     Instead of using this obsolete method,
     you should instead use {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}}
     once for each track
     you wish to send to the remote peer.
-- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{deprecated_inline}}
   - : Creates a new {{DOMxRef("RTCDTMFSender")}},
     associated to a specific {{DOMxRef("MediaStreamTrack")}},
     that will be able to send {{Glossary("DTMF")}} phone signaling over the connection.
-- {{DOMxRef("RTCPeerConnection.getStreamById", "getStreamById()")}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCPeerConnection.getStreamById", "getStreamById()")}} {{deprecated_inline}}
   - : Returns the {{DOMxRef("MediaStream")}} with the given id
     that is associated with local or remote end of the connection.
     This property has been replaced
     with the {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}
     and {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}} methods.
-- {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{deprecated_inline}}
   - : Removes a {{DOMxRef("MediaStream")}} as a local source of audio or video.
     Because this method is obsolete,
     you should instead use {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}.
@@ -329,52 +252,41 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
   - : Sent when the overall connectivity status of the `RTCPeerConnection` changes.
-    Also available through the {{domxref("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}} event handler property.
 - {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
   - : Sent when the remote peer adds an {{domxref("RTCDataChannel")}} to the connection.
-    Also available through the {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler property.
 - {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
   - : Sent to request that the specified candidate be transmitted to the remote peer.
-    Also available through the {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} event handler property.
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : Sent to the connection if an error occurred during {{Glossary("ICE")}} candidate gathering. The event describes the error.
-    Also available through the {{domxref("RTCPeerConnection.onicecandidateerror", "onicecandidateerror")}} event handler property.
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
   - : Sent when the state of the {{Glossary("ICE")}} connection changes, such as when it disconnects.
-    Also available using the {{domxref("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}} event handler property.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
   - : Sent when the {{Glossary("ICE")}} layer's gathering state, reflected by {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}, changes.
     This indicates whether ICE negotiation has not yet begun (`new`),
     has begun gathering candidates (`gathering`),
     or has completed (`complete`).
-    Also available using the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler property.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
   - : Sent when negotiation or renegotiation of the {{Glossary("ICE")}} connection needs to be performed;
     this can happen both when first opening a connection
     as well as when it is necessary to adapt to changing network conditions.
     The receiver should respond by creating an offer and sending it to the other peer.
-    Also available as the {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler property.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - : Sent when the connection's {{Glossary("ICE")}} signaling state changes.
-    Also available through the {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}} event handler property.
 - {{domxref("RTCPeerConnection.track_event", "track")}}
   - : Sent after a new track has been added
     to one of the {{domxref("RTCRtpReceiver")}} instances which comprise the connection.
-    Also available as the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler property.
 
 ### Obsolete events
 
-- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{Obsolete_Inline}}
+- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{deprecated_inline}}
   - : Sent when a new {{domxref("MediaStream")}} has been added to the connection.
     Instead of listening for this obsolete event,
     you should listen for {{domxref("RTCPeerConnection.track_event", "track")}} events;
     one is sent for each {{domxref("MediaStreamTrack")}} added to the connection.
-    Also available as the {{domxref("RTCPeerConnection.onaddstream", "onaddstream")}} event handler property.
-- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{Obsolete_Inline}}
+- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{deprecated_inline}}
   - : Sent when a {{domxref("MediaStream")}} is removed from the connection.
     Instead of listening for this obsolete event,
     you should listen for {{domxref("MediaStream.removetrack_event", "removetrack")}} events on each stream.
-    Also available as the {{domxref("RTCPeerConnection.onremovestream", "onremovestream")}} event handler property.
 
 ## Specifications
 

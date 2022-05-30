@@ -17,26 +17,33 @@ The **`pagehide`** event is sent to a {{domxref("Window")}} when the browser hid
 
 For example, when the user clicks the browser's Back button, the current page receives a `pagehide` event before the previous page is shown.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PageTransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("Window.onpagehide", "onpagehide")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('pagehide', event => { });
+onpagehide = event => { };
+```
+
+## Event type
+
+A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PageTransitionEvent")}}
+
+## Event properties
+
+- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+  - : Indicates if the document is loading from a cache.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onpagehide` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Usage notes
 
@@ -54,7 +61,7 @@ The best event to use to signal the end of a user's session is the [`visibilityc
 
 If you're specifically trying to detect page unload events, the `pagehide` event is the best option.
 
-See the [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api) guide for more information about how this event relates to other events in the page lifecycle.
+See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) guide for more information about how this event relates to other events in the page lifecycle.
 
 ## Examples
 
@@ -89,6 +96,6 @@ window.onpagehide = event => {
 ## See also
 
 - The {{domxref("Window.pageshow_event", "pageshow")}} event.
-- [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecycle behavior in your web applications.
+- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecycle behavior in your web applications.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
 - [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.

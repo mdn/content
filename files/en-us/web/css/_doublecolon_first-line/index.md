@@ -36,7 +36,9 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ## Syntax
 
-{{csssyntax}}
+```
+::first-line
+```
 
 ## Examples
 

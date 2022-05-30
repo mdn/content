@@ -43,18 +43,22 @@ The sequence of events which occurs in response to this method being called:
 ## Syntax
 
 ```js
-RTCDataChannel.close();
+close()
 ```
 
-## Parameters
+### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Return value
 
 `undefined`.
 
-## Example
+## Examples
 
 ```js
 var pc = new RTCPeerConnection();

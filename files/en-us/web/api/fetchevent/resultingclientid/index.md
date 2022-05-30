@@ -26,17 +26,11 @@ If the fetch request is a subresource request or the request's
 [`destination`](/en-US/docs/Web/API/Request/destination) is
 `report`, `resultingClientId` will be an empty string.
 
-## Syntax
+## Value
 
-```js
-var myResultingClientId = fetchEvent.resultingClientId;
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {
@@ -54,12 +48,8 @@ self.addEventListener('fetch', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service
-  workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web
-  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

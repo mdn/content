@@ -21,19 +21,7 @@ with the browser context which controls the presentation. This property is alway
 `null` when accessed from outside a browser context which is receiving a
 presentation.
 
-## Syntax
-
-```js
-receiver = Presentation.receiver;
-
-receiver = navigator.presentation.receiver;
-```
-
-Since the {{domxref("Presentation")}} interface is typically accessed through
-{{domxref("navigation.presentation")}}, the second form of the syntax shown above is the
-more commonly used.
-
-### Value
+## Value
 
 If the code is running in a context which is receiving a presentation, the returned
 value is a {{domxref("PresentationReceiver")}} which can then be used to communicate
@@ -42,7 +30,7 @@ with the context which is the source of the presentation.
 If the current context is not receiving a presentation, `receiver` is
 `null`.
 
-## Example
+## Examples
 
 ### Determining whether or not the context is receiving a presentation
 

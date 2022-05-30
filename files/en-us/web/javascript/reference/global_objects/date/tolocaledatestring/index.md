@@ -33,7 +33,15 @@ toLocaleDateString(locales, options)
 The `locales` and `options` arguments customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
 In implementations, which ignore the `locales` and `options` arguments, the locale used and the form of the string returned are entirely implementation dependent.
 
-See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor for details on these parameters and how to use them.
+- `locales` {{optional_inline}}
+
+  - : These are the same locales as documented in the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor.
+    They include (non-exhaustively): `nu`, `ca`, `hc`.
+
+- `options` {{optional_inline}}
+
+  - : These are the same options as documented in the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor. They include (non-exhaustively) the following properties:
+    `dateStyle`, `timeStyle`, `calendar`, `dayPeriod`, `numberingSystem`, `localeMatcher`, `weekday`, `era`, `year`, `month`, `day`, `hour`, `minute`, `second`, `fractionalSecondDigits`, `timeZoneName`.
 
 The default value for each date-time component property is {{jsxref("undefined")}}, but if the `weekday`, `year`, `month`, `day` properties are all {{jsxref("undefined")}}, then `year`, `month`, and `day` are assumed to be `"numeric"`.
 
@@ -52,7 +60,7 @@ When formatting large numbers of dates, it is better to create an {{jsxref("Glob
 In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleDateString() without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -82,7 +90,7 @@ This example shows some of the variations in localized date formats.
 In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -123,10 +131,10 @@ console.log(date.toLocaleDateString(['ban', 'id']));
 The results provided by `toLocaleDateString()` can be customized using the `options` argument:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // request a weekday along with a long date
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 console.log(date.toLocaleDateString('de-DE', options));
 // → "Donnerstag, 20. Dezember 2012"
 

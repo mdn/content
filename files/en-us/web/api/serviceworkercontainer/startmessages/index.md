@@ -23,14 +23,14 @@ earlier, even before that page's content has finished loading.
 By default, all messages sent from a page's controlling service worker to the page
 (using {{domxref("Client.postMessage()")}}) are queued while the page is loading, and
 get dispatched once the page's HTML document has been loaded and parsed (i.e. after the
-{{event("DOMContentLoaded")}} event fires). It's possible to start dispatching these
+{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event fires). It's possible to start dispatching these
 messages earlier by calling {{domxref("ServiceWorkerContainer.startMessages()")}}, for
 example if you've invoked a message handler using
 {{domxref("EventTarget.addEventListener()")}} before the page has finished loading, but
 want to start processing the messages right away.
 
 > **Note:** The messages start being sent automatically when setting the
-> handler directly using {{domxref("ServiceWorkerContainer.onmessage")}}. In this you
+> handler directly using {{domxref("ServiceWorkerContainer.message_event", "onmessage")}}. In this you
 > don't need `startMessages()`.
 
 ## Syntax

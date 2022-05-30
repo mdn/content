@@ -26,8 +26,7 @@ Error: Permission denied to access property "x"
 
 There was attempt to access an object for which you have no permission. This is likely
 an {{HTMLElement("iframe")}} element loaded from a different domain for which you
-violated the [same-origin
-policy](/en-US/docs/Web/Security/Same-origin_policy).
+violated the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 ## Examples
 

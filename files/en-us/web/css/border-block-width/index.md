@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.border-block-width
@@ -29,6 +28,7 @@ border-block-width: thick;
 border-block-width: inherit;
 border-block-width: initial;
 border-block-width: revert;
+border-block-width: revert-layer;
 border-block-width: unset;
 ```
 

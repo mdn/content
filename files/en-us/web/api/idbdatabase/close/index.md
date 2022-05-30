@@ -26,10 +26,18 @@ operation is pending.
 ## Syntax
 
 ```js
-IDBDatabase.close();
+close()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Let us open our database
@@ -46,7 +54,7 @@ DBOpenRequest.onsuccess = event => {
   // store the result of opening the database in the db variable.
   db = DBOpenRequest.result;
 
-  // now let"s close the database again!
+  // now let's close the database again!
   db.close();
 };
 ```

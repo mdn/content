@@ -38,16 +38,9 @@ for example, to support visually impaired users.
 The alternate text is displayed in the space the image would occupy and should be able
 to take the place of the image _without altering the meaning of the page_.
 
-## Syntax
+## Value
 
-```js
-htmlImageElement.alt = altText;
-let altText = htmlImageElement.alt;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains the alternate text to display when the image
+A string which contains the alternate text to display when the image
 is not loaded or for use by assistive devices.
 
 The `alt` attribute is officially mandatory; it's meant to always be
@@ -180,8 +173,8 @@ instead of the icon when the icons cannot be or are intentionally not used.
 
 When an image contains information presented as a diagram, chart, graph, or map,
 the `alt` text should provide the same information, at least in summary form.
-This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Formats/Image_types#PNG_Portable_Network_Graphics) or [JPEG](/en-US/docs/Web/Media/Formats/Image_types#JPEG_Joint_Photographic_Experts_Group_image) or in a vector format
-like [SVG](/en-US/docs/Web/Media/Formats/Image_types#SVG_Scalable_Vector_Graphics).
+This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) or [JPEG](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) or in a vector format
+like [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics).
 
 - For a map, the `alt` text could be directions to the place indicated by
   the map, similarly to how you would explain it verbally.

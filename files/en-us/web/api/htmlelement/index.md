@@ -18,7 +18,7 @@ The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) elem
 
 ## Properties
 
-_Inherits properties from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, and {{DOMxRef("TouchEventHandlers")}}._
+_Inherits properties from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("GlobalEventHandlers")}}._
 
 - {{DOMxRef("HTMLElement.accessKey")}}
   - : A string representing the access key assigned to the element.
@@ -48,18 +48,6 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
   - : Represents the rendered text content of a node and its descendants.
     As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
-- {{DOMxRef("HTMLElement.itemScope")}} {{Experimental_Inline}}
-  - : A boolean value representing the item scope.
-- {{DOMxRef("HTMLElement.itemType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMTokenList")}}…
-- {{DOMxRef("HTMLElement.itemId")}} {{Experimental_Inline}}
-  - : A string representing the item ID.
-- {{DOMxRef("HTMLElement.itemRef")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMTokenList")}}…
-- {{DOMxRef("HTMLElement.itemProp")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMTokenList")}}…
-- {{DOMxRef("HTMLElement.itemValue")}} {{Experimental_Inline}}
-  - : Returns a {{JSxRef("Object")}} representing the item value.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}
@@ -71,7 +59,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
 - {{DOMxRef("HTMLElement.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns a `double`, the distance from this element's left border to its `offsetParent`'s left border.
 - {{DOMxRef("HTMLElement.offsetParent")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Element")}} that is the element from which all offset calculations are currently computed.
+  - : An {{DOMxRef("Element")}} that is the element from which all offset calculations are currently computed.
 - {{DOMxRef("HTMLElement.offsetTop")}} {{ReadOnlyInline}}
   - : Returns a `double`, the distance from this element's top border to its `offsetParent`'s top border.
 - {{DOMxRef("HTMLElement.offsetWidth")}} {{ReadOnlyInline}}
@@ -95,30 +83,20 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
 
 ### Event handlers
 
-Most event handler properties, of the form `onXYZ`, are defined on the {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("TouchEventHandlers")}} interfaces and implemented by `HTMLElement`. In addition, the following handlers are specific to `HTMLElement`.
+Most event handler properties, of the form `onXYZ`, are defined on the {{DOMxRef("GlobalEventHandlers")}} interface and implemented by `HTMLElement`. In addition, the following handlers are specific to `HTMLElement`.
 
-- {{DOMxRef("HTMLElement.oncopy")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the `copy` event ({{bug("280959")}}).
-- {{DOMxRef("HTMLElement.oncut")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the `cut` event ({{bug("280959")}}).
-- {{DOMxRef("HTMLElement.onpaste")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
 - {{DOMxRef("TouchEventHandlers.ontouchstart")}} {{Non-standard_Inline}}
   - : Returns the event handling code for the {{domxref("Element/touchstart_event", "touchstart")}} event.
 - {{DOMxRef("TouchEventHandlers.ontouchend")}} {{Non-standard_Inline}}
   - : Returns the event handling code for the {{domxref("Element/touchend_event", "touchend")}} event.
 - {{DOMxRef("TouchEventHandlers.ontouchmove")}} {{Non-standard_Inline}}
   - : Returns the event handling code for the {{domxref("Element/touchmove_event", "touchmove")}} event.
-- {{DOMxRef("TouchEventHandlers.ontouchenter")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
-- {{DOMxRef("TouchEventHandlers.ontouchleave")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
 - {{DOMxRef("TouchEventHandlers.ontouchcancel")}} {{Non-standard_Inline}}
   - : Returns the event handling code for the {{domxref("Element/touchcancel_event", "touchcancel")}} event.
 
 ## Methods
 
-_Inherits methods from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, and {{DOMxRef("TouchEventHandlers")}}._
+_Inherits methods from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("GlobalEventHandlers")}}._
 
 - {{DOMxRef("HTMLElement.attachInternals()")}} {{Experimental_Inline}}
   - : Returns an {{DOMxRef("ElementInternals")}} object, and enables a custom element to participate in HTML forms.
@@ -133,6 +111,12 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}, and implements those 
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
+- {{DOMxRef("HTMLElement.copy_event", "copy")}}
+  - : Fired when the user initiates a copy action through the browser's user interface.
+- {{DOMxRef("HTMLElement.cut_event", "cut")}}
+  - : Fired when the user initiates a cut action through the browser's user interface.
+- {{DOMxRef("HTMLElement.paste_event", "paste")}}
+  - : Fired when the user initiates a paste action through the browser's user interface.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
   - : Fired when an element does not satisfy its constraints during constraint validation.
     Also available via the {{domxref("GlobalEventHandlers/oninvalid", "oninvalid")}} property.

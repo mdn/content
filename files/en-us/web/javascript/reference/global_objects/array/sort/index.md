@@ -29,13 +29,13 @@ implementation.
 sort()
 
 // Arrow function
-sort((firstEl, secondEl) => { /* ... */ } )
+sort((a, b) => { /* ... */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(firstEl, secondEl) { /* ... */ })
+sort(function compareFn(a, b) { /* ... */ })
 ```
 
 ### Parameters
@@ -44,9 +44,9 @@ sort(function compareFn(firstEl, secondEl) { /* ... */ })
 
   - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 
-    - `firstEl`
+    - `a`
       - : The first element for comparison.
-    - `secondEl`
+    - `b`
       - : The second element for comparison.
 
 ### Return value
@@ -98,6 +98,8 @@ function compare(a, b) {
 }
 ```
 
+> **Note:** Applications should not rely on order of arguments or calls, as those are implementation dependent.
+
 To compare numbers instead of strings, the compare function can subtract `b`
 from `a`. The following function will sort the array in ascending order (if
 it doesn't contain `Infinity` and `NaN`):
@@ -112,7 +114,7 @@ The `sort` method can be conveniently used with
 {{jsxref("Operators/function", "function expressions", "", 1)}}:
 
 ```js
-var numbers = [4, 2, 5, 1, 3];
+const numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
@@ -125,7 +127,7 @@ ES2015 provides {{jsxref("Functions/Arrow_functions", "arrow function expression
   1)}} with even shorter syntax.
 
 ```js
-let numbers = [4, 2, 5, 1, 3];
+const numbers = [4, 2, 5, 1, 3];
 numbers.sort((a, b) => a - b);
 console.log(numbers);
 
@@ -135,7 +137,7 @@ console.log(numbers);
 Arrays of objects can be sorted by comparing the value of one of their properties.
 
 ```js
-var items = [
+const items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -151,8 +153,8 @@ items.sort(function (a, b) {
 
 // sort by name
 items.sort(function(a, b) {
-  var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-  var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  const nameB = b.name.toUpperCase(); // ignore upper and lowercase
   if (nameA < nameB) {
     return -1;
   }
@@ -175,8 +177,8 @@ using one.
 
 ```js
 let stringArray = ['Blue', 'Humpback', 'Beluga'];
-let numericStringArray = ['80', '9', '700'];
 let numberArray = [40, 1, 5, 200];
+let numericStringArray = ['80', '9', '700'];
 let mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
@@ -191,8 +193,8 @@ numberArray.sort(); // [1, 200, 40, 5]
 numberArray.sort(compareNumbers); // [1, 5, 40, 200]
 
 numericStringArray.join(); // '80,9,700'
-numericStringArray.sort(); // [700, 80, 9]
-numericStringArray.sort(compareNumbers); // [9, 80, 700]
+numericStringArray.sort(); // ['700', '80', '9']
+numericStringArray.sort(compareNumbers); // ['9', '80', '700']
 
 mixedNumericArray.join(); // '80,9,700,40,1,5,200'
 mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
@@ -207,7 +209,7 @@ For sorting strings with non-ASCII characters, i.e. strings with accented charac
 appear in the right order.
 
 ```js
-var items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+const items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -220,7 +222,7 @@ items.sort(function (a, b) {
 The `compareFunction` can be invoked multiple times per element within the
 array. Depending on the `compareFunction`'s nature, this may yield a high
 overhead. The more work a `compareFunction` does and the more elements there
-are to sort, it may be more efficient to use [map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for
+are to sort, it may be more efficient to use [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for
 sorting. The idea is to traverse the array once to extract the actual values used for
 sorting into a temporary array, sort the temporary array, and then traverse the
 temporary array to achieve the right order.
@@ -248,7 +250,7 @@ mapped.sort((a, b) => {
 const result = mapped.map(v => data[v.i]);
 ```
 
-There is an open source library available called [mapsort](https://null.house/open-source/mapsort) which applies this approach.
+There is an open source library available called [mapsort](https://github.com/Pimm/mapsort) which applies this approach.
 
 ### Sort stability
 
@@ -261,7 +263,7 @@ const students = [
   { name: "Alex",   grade: 15 },
   { name: "Devlin", grade: 15 },
   { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Sam",    grade: 14 }
 ];
 ```
 
@@ -278,7 +280,7 @@ The `students` variable will then have the following value:
   { name: "Eagle",  grade: 13 },
   { name: "Sam",    grade: 14 },
   { name: "Alex",   grade: 15 }, // original maintained for similar grade (stable sorting)
-  { name: "Devlin", grade: 15 }, // original maintained for similar grade (stable sorting)
+  { name: "Devlin", grade: 15 }  // original maintained for similar grade (stable sorting)
 ];
 ```
 
@@ -291,7 +293,7 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
   { name: "Eagle",  grade: 13 },
   { name: "Sam",    grade: 14 },
   { name: "Devlin", grade: 15 }, // original order not maintained
-  { name: "Alex",   grade: 15 }, // original order not maintained
+  { name: "Alex",   grade: 15 }  // original order not maintained
 ];
 ```
 
@@ -308,7 +310,6 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
-- [About the stability of the algorithm used
-  by V8 engine](https://v8.dev/blog/array-sort)
+- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
 - [V8 sort stability](https://v8.dev/features/stable-sort)
 - [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)

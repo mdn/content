@@ -18,13 +18,7 @@ of the service worker. It can be one of the following values: `installing`,
 `installed,` `activating`, `activated`, or
 `redundant`.
 
-## Syntax
-
-```js
-someURL = ServiceWorker.state
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} that can take one of the following values:
 

@@ -1,6 +1,7 @@
 ---
 title: DecompressionStream.readable
 slug: Web/API/DecompressionStream/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.DecompressionStream.readable
 
 The **`readable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("ReadableStream")}}.
 
-## Syntax
-
-```js
-let stream = DecompressionStream.readable;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 

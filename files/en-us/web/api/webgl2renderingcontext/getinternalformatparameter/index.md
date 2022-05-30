@@ -18,7 +18,7 @@ information about implementation-dependent support for internal formats.
 ## Syntax
 
 ```js
-any gl.getInternalformatParameter(target, internalformat, pname);
+getInternalformatParameter(target, internalformat, pname)
 ```
 
 ### Parameters
@@ -27,8 +27,9 @@ any gl.getInternalformatParameter(target, internalformat, pname);
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
 
-    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
-      renderable internal format.
+    - `gl.RENDERBUFFER`
+      - : Buffer data storage for single images in a
+        renderable internal format.
 
 - `internalformat`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format about which to retrieve
@@ -39,8 +40,9 @@ any gl.getInternalformatParameter(target, internalformat, pname);
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of information to query. Possible
     values:
 
-    - `gl.SAMPLES`: Returns a {{jsxref("Int32Array")}} containing sample
-      counts supported for `internalformat` in descending order.
+    - `gl.SAMPLES`
+      - : Returns a {{jsxref("Int32Array")}} containing sample
+        counts supported for `internalformat` in descending order.
 
 ### Return value
 

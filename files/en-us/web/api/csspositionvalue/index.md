@@ -1,6 +1,7 @@
 ---
 title: CSSPositionValue
 slug: Web/API/CSSPositionValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -18,7 +19,7 @@ The **`CSSPositionValue`** interface of the [CSS Typed Object Model API](/en-US/
 
 ## Constructor
 
-- {{domxref("CSSPositionValue.CSSPositionValue()")}}
+- {{domxref("CSSPositionValue.CSSPositionValue", "CSSPositionValue()")}}
   - : Creates a new `CSSPositionValue` object.
 
 ## Properties

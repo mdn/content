@@ -19,13 +19,7 @@ The **`status`** read-only property of the
 the font, one of `"unloaded"`, `"loading"`, `"loaded"`,
 or `"error"`.
 
-## Syntax
-
-```js
-let status = FontFace.status;
-```
-
-### Value
+## Value
 
 One of `"unloaded"`, `"loading"`, `"loaded"`, or
 `"error"`.

@@ -128,7 +128,7 @@ class ClearableWeakMap {
 
 - [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
 - [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) in the [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

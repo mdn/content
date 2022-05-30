@@ -15,19 +15,16 @@ browser-compat: api.Notification.dir
 
 The `dir` read-only property of the {{domxref("Notification")}} interface indicates the text direction of the notification, as specified in the `dir` option of the {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
+## Value
 
-```js
-var direction = Notification.dir;
-```
+A string specifying the text direction. Possible values are:
 
-### Value
-
-A {{domxref("DOMString")}} specifying the text direction. Possible values are:
-
-- `auto`: adopts the browser's language setting behavior (the default.)
-- `ltr`: left to right.
-- `rtl` : right to left.
+- `auto`
+  - : adopts the browser's language setting behavior (the default.)
+- `ltr`
+  - : left to right.
+- `rtl`
+  - : right to left.
 
 > **Note:** Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.
 

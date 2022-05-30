@@ -77,7 +77,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Truncating_a_paragraph", "100%", "100")}}
+{{EmbedLiveSample("Truncating_a_paragraph", "100%", "130")}}
 
 ## Specifications
 

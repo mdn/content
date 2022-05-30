@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -18,7 +19,7 @@ method of the Canvas 2D API adds a rotation to the transformation matrix.
 ## Syntax
 
 ```js
-void ctx.rotate(angle);
+rotate(angle)
 ```
 
 ![](canvas_grid_rotate.png)
@@ -32,6 +33,10 @@ void ctx.rotate(angle);
 The rotation center point is always the canvas origin. To change the center point, you
 will need to move the canvas by using the
 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} method.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

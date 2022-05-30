@@ -21,7 +21,7 @@ The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/AP
 
 ## Constructor
 
-- {{domxref("SpeechRecognition.SpeechRecognition()")}}
+- {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}}
   - : Creates a new `SpeechRecognition` object.
 
 ## Properties

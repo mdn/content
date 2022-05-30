@@ -54,8 +54,8 @@ The raw string form of a given template literal.
 
 In most cases, `String.raw()` is used with template literal. The first
 syntax mentioned above is only rarely used, because the JavaScript engine will call this
-with proper arguments for you, (just like with other [tag
-functions](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)).
+with proper arguments for you, (just like with other
+[tag functions](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)).
 
 `String.raw()` is the only built-in tag function of template literals. It
 works just like the default template function and performs concatenation. You can even
@@ -82,6 +82,9 @@ String.raw`Hi\u000A!`;
 let name = 'Bob';
 String.raw`Hi\n${name}!`;
 // 'Hi\\nBob!', substitutions are processed.
+
+String.raw`Hi \${name}!`;
+// 'Hi \\${name}!', the dollar sign is escaped; there's no interpolation.
 
 // Normally you would not call String.raw() as a function,
 // but to simulate `foo${2 + 3}bar${'Java' + 'Script'}baz` you can do:

@@ -19,14 +19,14 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 ## Properties
 
 - {{domxref("MIDIPort.id")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the unique ID of the port.
+  - : Returns a string containing the unique ID of the port.
 - {{domxref("MIDIPort.manufacturer")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the manufacturer of the port.
+  - : Returns a string containing the manufacturer of the port.
 - {{domxref("MIDIPort.name")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the system name of the port.
+  - : Returns a string containing the system name of the port.
 - {{domxref("MIDIPort.type")}}{{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the type of the port, one of:
+  - : Returns a string containing the type of the port, one of:
 
     - `"input"`
       - : The `MIDIPort` is an input port.
@@ -34,10 +34,10 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
       - : The `MIDIPort` is an output port.
 
 - {{domxref("MIDIPort.version")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the version of the port.
+  - : Returns a string containing the version of the port.
 - {{domxref("MIDIPort.state")}}{{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the state of the port, one of:
+  - : Returns a string containing the state of the port, one of:
 
     - `"disconnected"`
       - : The device that this `MIDIPort` represents is disconnected from the system.
@@ -46,7 +46,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 - {{domxref("MIDIPort.connection")}}{{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:
+  - : Returns a string containing the connection state of the port, one of:
 
     - `"open"`
       - : The device that this `MIDIPort` represents has been opened and is available.
@@ -54,11 +54,6 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
       - : The device that this `MIDIPort` represents has not been opened, or has been closed.
     - `"pending"`
       - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
-
-### Event handlers
-
-- {{domxref("MIDIPort.onstatechange")}}
-  - : Called when an existing port changes its state or connection.
 
 ## Methods
 
@@ -68,6 +63,11 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
   - : Makes the MIDI device connected to this `MIDIPort` explicitly available, and returns a {{jsxref("Promise")}} which resolves once access to the port has been successful.
 - {{domxref("MIDIPort.close()")}}
   - : Makes the MIDI device connected to this `MIDIPort` unavailable, changing the {{domxref("MIDIPort.state","state")}} from `"open"` to `"closed"`. This returns a {{jsxref("Promise")}} which resolves once the port has been closed.
+
+## Events
+
+- {{domxref("MIDIPort.statechange_event")}}
+  - : Called when an existing port changes its state or connection.
 
 ## Examples
 

@@ -29,7 +29,7 @@ When added to a collection of cards, the cards should line up in two dimensions.
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/card--download.html)
 
 ## Choices made
 

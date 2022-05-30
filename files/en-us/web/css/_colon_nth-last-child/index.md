@@ -29,6 +29,10 @@ The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/doc
 
 The `nth-last-child` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
 
+```
+:nth-last-child( <nth> [ of <complex-selector-list> ]? )
+```
+
 ### Keyword values
 
 - `odd`
@@ -40,10 +44,6 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 
 - `<An+B>`
   - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`. The index of the first element, counting from the end, is `1`. The values `A` and `B` must both be {{cssxref("&lt;integer&gt;")}}s.
-
-### Formal syntax
-
-{{csssyntax}}
 
 ## Examples
 
@@ -167,4 +167,4 @@ li:nth-last-child(3) ~ li {
 ## See also
 
 - {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
-- [Quantity Queries for CSS](https://alistapart.com/article/quantity-queries-for-css)
+- [Quantity Queries for CSS](https://alistapart.com/article/quantity-queries-for-css/)

@@ -16,13 +16,7 @@ The **`readyState`** read-only property of the
 {{domxref("EventSource")}} interface returns a number representing the state of the
 connection.
 
-## Syntax
-
-```js
-var myReadyState = eventSource.readyState;
-```
-
-### Value
+## Value
 
 A number representing the state of the connection. Possible values are:
 
@@ -37,8 +31,7 @@ var evtSource = new EventSource('sse.php');
 console.log(evtSource.readyState);
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE
-> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 ## Specifications
 

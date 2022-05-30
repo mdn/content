@@ -13,14 +13,11 @@ browser-compat: api.HID.ondisconnect
 
 The **`ondisconnect`** [event handler](/en-US/docs/Web/Events/Event_handlers) of the {{domxref("HID")}} interface processes the events when the user agent disconnects from the HID device.
 
-## Syntax
+## Value
 
-```js
-HID.ondisconnect = function;
-HID.addEventListener('disconnect', function);
-```
+A function reference or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-## Example
+## Examples
 
 In the following example an event listener is registered to listen for the disconnection of a device. The name of the device is then printed to the console using {{domxref("HIDDevice.productName")}}
 

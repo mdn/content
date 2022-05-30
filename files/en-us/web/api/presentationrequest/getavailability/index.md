@@ -3,6 +3,9 @@ title: PresentationRequest.getAvailability()
 slug: Web/API/PresentationRequest/getAvailability
 browser-compat: api.PresentationRequest.getAvailability
 ---
+
+{{APIRef("Presentation API")}}
+
 When the `getAvailability()` method is called, the user agent _MUST_ run the following steps:
 
 - Input

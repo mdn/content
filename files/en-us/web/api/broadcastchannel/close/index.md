@@ -1,6 +1,7 @@
 ---
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
+page-type: web-api-instance-method
 tags:
   - Broadcast Channel API
   - Method
@@ -20,7 +21,7 @@ that this channel is not needed anymore.
 ## Syntax
 
 ```js
-var str = channel.close();
+channel.close();
 ```
 
 ## Example

@@ -18,7 +18,7 @@ Once that check is passed, the request to enter `immersive-vr` mode is allowed i
 
 - The `requestSession()` call was issued by code executing within the handler for a user event, or the from the startup code for a user-launched [web application](/en-US/docs/Web/Progressive_web_apps).
 - The document is considered trustworthy, in that it is responsible and is both currently active and has focus.
-- The user's intent to enter immersive VR mode is well understood; see {{anch("User intent")}} below for details.
+- The user's intent to enter immersive VR mode is well understood; see [User intent](#user_intent) below for details.
 
 If all of that is true, the promise returned by `requestSession()` is resolved, and the new {{domxref("XRSession")}} object is passed into the fulfillment handler. Otherwise, an appropriate exception is thrown, such as `SecurityError` if the document doesn't have permission to enter immersive mode.
 
@@ -31,7 +31,7 @@ Specifically:
 - If the `requestSession()` call isn't coming from within the handler executed in response to a user event, and is not being issued while launching a web application, the request is denied and `false` is delivered to the promise's fulfillment handler.
 - If the document making the request isn't the one which is responsible for the script, the request is denied.
 - If the document making the request isn't trustworthy, the request is denied and `false` is returned through the promise's fulfillment routine. A trustworthy document is one which is both responsible and active, and which currently has focus.
-- If the user's intent to open an inline XR presentation is not well understood, the request is denied. Understanding of the {{anch("User intent", "user's intent")}} may be either implicit or explicit.
+- If the user's intent to open an inline XR presentation is not well understood, the request is denied. Understanding of the [user's intent](#user_intent) may be either implicit or explicit.
 
 > **Note:** Additional requirements may be put into effect due to the specific features requested by the options object when calling `requestSession()`.
 

@@ -11,16 +11,11 @@ browser-compat: api.HTMLAreaElement.username
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.username`** property is a
-{{domxref("USVString")}} containing the username specified before the domain name.
+string containing the username specified before the domain name.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.username;
-// Setter
-area.username = string;
-```
+A string.
 
 ## Examples
 

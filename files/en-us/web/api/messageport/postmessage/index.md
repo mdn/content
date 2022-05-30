@@ -21,24 +21,24 @@ transfers ownership of objects to other browsing contexts.
 ## Syntax
 
 ```js
-port.postMessage(message, transferList);
+postMessage(message, transferList)
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
-- message
+- `message`
   - : The message you want to send through the channel. This can be of any basic data
     type. Multiple data items can be sent as an array.
-- transferList {{optional_inline}}
+- `transferList` {{optional_inline}}
   - : {{Glossary("Transferable Objects")}} to be transferred — these objects have their
     ownership transferred to the receiving browsing context, so are no longer usable by
     the sending browsing context.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the
@@ -76,7 +76,7 @@ window.addEventListener('message', function (event) {
 ```
 
 For a full working example, see our [channel
-messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live
+messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live
 too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications

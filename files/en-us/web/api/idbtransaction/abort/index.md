@@ -19,22 +19,30 @@ interface rolls back all the changes to objects in the database associated with 
 transaction.
 
 All pending {{domxref("IDBRequest")}} objects created during this transaction have
-their {{domxref("IDBRequest.error")}} attribute set to {{exception("AbortError")}}.
+their {{domxref("IDBRequest.error")}} attribute set to an `AbortError` {{domxref("DOMException")}}.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
 ```js
-transaction.abort();
+abort()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the transaction has already been committed or aborted.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event

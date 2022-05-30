@@ -74,7 +74,7 @@ In our next article, we'll build on our knowledge, creating HTML forms and form 
 - [Async module](https://caolan.github.io/async/) (Async docs)
 - [Using Template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug docs)
-- [Luxon](https://moment.github.io/luxon/docs/) (Luxon docs)
+- [Luxon](https://moment.github.io/luxon/#/) (Luxon docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 

@@ -18,19 +18,19 @@ This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}} interf
 ## Syntax
 
 ```js
-entries = list.getEntriesByType(type);
+getEntriesByType(type)
 ```
 
 ### Parameters
 
-- _`type`_
+- `type`
   - : The type of entry to retrieve such as "`frame`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}.
 
 ### Return value
 
 A list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects that have the specified `type`. The items will be in chronological order based on the entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the specified `type`, or no argument is provided, an empty list is returned.
 
-## Example
+## Examples
 
 ```js
 function print_perf_entry(pe) {

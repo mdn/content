@@ -51,7 +51,7 @@ The client can solicit extensions and/or subprotocols here; see [Miscellaneous](
 
 > **Note:** All **browsers** send an [`Origin` header](/en-US/docs/Web/HTTP/CORS#origin). You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a [403 Forbidden](/en-US/docs/Web/HTTP/Status#403) if you don't like what you see. However, be warned that non-browser agents can send a faked `Origin`. Most applications reject requests without this header.
 
-If any header is not understood or has an incorrect value, the server should send a {{HTTPStatus("400")}} ("Bad Request")} response and immediately close the socket. As usual, it may also give the reason why the handshake failed in the HTTP response body, but the message may never be displayed (browsers do not display it). If the server doesn't understand that version of WebSockets, it should send a {{HTTPHeader("Sec-WebSocket-Version")}} header back that contains the version(s) it does understand. In the example above, it indicates version 13 of the WebSocket protocol.
+If any header is not understood or has an incorrect value, the server should send a {{HTTPStatus("400")}} ("Bad Request") response and immediately close the socket. As usual, it may also give the reason why the handshake failed in the HTTP response body, but the message may never be displayed (browsers do not display it). If the server doesn't understand that version of WebSockets, it should send a {{HTTPHeader("Sec-WebSocket-Version")}} header back that contains the version(s) it does understand. In the example above, it indicates version 13 of the WebSocket protocol.
 
 The most interesting header here is {{HTTPHeader("Sec-WebSocket-Key")}}. Let's look at that next.
 

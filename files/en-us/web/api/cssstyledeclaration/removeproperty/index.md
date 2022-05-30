@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -16,7 +17,7 @@ removes a property from a CSS style declaration object.
 ## Syntax
 
 ```js
-var oldValue = style.removeProperty(property);
+removeProperty(property)
 ```
 
 ### Parameters
@@ -35,7 +36,7 @@ var oldValue = style.removeProperty(property);
 - {{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: if the property or
   declaration block is read only.
 
-## Example
+## Examples
 
 The following JavaScript code removes the `background-color` CSS property
 from a selector rule:

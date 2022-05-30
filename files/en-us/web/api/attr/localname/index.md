@@ -1,6 +1,7 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

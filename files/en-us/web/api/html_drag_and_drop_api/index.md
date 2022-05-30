@@ -9,6 +9,7 @@ tags:
   - XUL
   - drag and drop
   - events
+spec-urls: https://html.spec.whatwg.org/multipage/#dnd
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
@@ -16,7 +17,7 @@ tags:
 
 The user may select _draggable_ elements with a mouse, drag those elements to a _droppable_ element, and drop them by releasing the mouse button. A translucent representation of the _draggable_ elements follows the pointer during the drag operation.
 
-For web sites, extensions, and XUL applications, you can customize which elements can become _draggable_, the type of feedback the _draggable_ elements produce, and the _droppable_ elements.
+You can customize which elements can become _draggable_, the type of feedback the _draggable_ elements produce, and the _droppable_ elements.
 
 This overview of HTML Drag and Drop includes a description of the interfaces, basic steps to add drag-and-drop support to an application, and an interoperability summary of the interfaces.
 
@@ -139,7 +140,7 @@ The {{domxref("DragEvent")}} interface has a constructor and one {{domxref("Drag
 
 {{domxref("DataTransfer")}} objects include the drag event's state, such as the type of drag being done (like `copy` or `move`), the drag's data (one or more items), and the MIME type of each _drag item_. {{domxref("DataTransfer")}} objects also have methods to add or remove items to the drag's data.
 
-The {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} interfaces should be the only ones needed to add HTML Drag and Drop capabilities to an application. (Firefox supports some {{anch("Gecko specific interfaces","Gecko-specific extensions")}} to the {{domxref("DataTransfer")}} object, but those extensions will only work on Firefox.)
+The {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} interfaces should be the only ones needed to add HTML Drag and Drop capabilities to an application. (Firefox supports some [Gecko-specific extensions](#gecko_specific_interfaces) to the {{domxref("DataTransfer")}} object, but those extensions will only work on Firefox.)
 
 Each {{domxref("DataTransfer")}} object contains an {{domxref("DataTransfer.items","items")}} property, which is a {{domxref("DataTransferItemList","list")}} of {{domxref("DataTransferItem")}} objects. A {{domxref("DataTransferItem")}} object represents a single _drag item_, each with a {{domxref("DataTransferItem.kind","kind")}} property (either `string` or `file`) and a {{domxref("DataTransferItem.type","type")}} property for the data item's MIME type. The {{domxref("DataTransferItem")}} object also has methods to get the drag item's data.
 
@@ -147,7 +148,7 @@ The {{domxref("DataTransferItemList")}} object is a list of {{domxref("DataTrans
 
 A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTransferItem")}} interfaces is that the former uses the synchronous {{domxref("DataTransfer.getData","getData()")}} method to access a drag item's data, but the latter instead uses the asynchronous {{domxref("DataTransferItem.getAsString","getAsString()")}} method.
 
-> **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See {{anch("Interoperability")}} for more information about drag-and-drop interoperability.
+> **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See [Interoperability](#interoperability) for more information about drag-and-drop interoperability.
 
 ### Gecko-specific interfaces
 
@@ -186,7 +187,7 @@ For more information, see:
 
 ### Define the drag's data
 
-The application is free to include any number of data items in a drag operation. Each data item is a {{domxref("DOMString","string")}} of a particular `type` — typically a MIME type such as `text/html`.
+The application is free to include any number of data items in a drag operation. Each data item is a string of a particular `type` — typically a MIME type such as `text/html`.
 
 Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that _holds_ the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to _manage_ drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.
 
@@ -200,7 +201,7 @@ function dragstart_handler(ev) {
 ```
 
 - For a list of common data types used in drag-and-drop (such as text, HTML, links, and files), see [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
-- For more information about drag data, see [Drag Data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata).
+- For more information about drag data, see [Drag Data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_data).
 
 ### Define the drag image
 
@@ -219,7 +220,7 @@ function dragstart_handler(ev) {
 
 Learn more about drag feedback images in:
 
-- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback "Setting the Drag Feedback Image")
+- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image "Setting the Drag Feedback Image")
 
 ### Define the drag _effect_
 
@@ -272,7 +273,7 @@ Note that each handler calls {{domxref("Event.preventDefault","preventDefault()"
 
 For more information, see:
 
-- [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)
+- [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets)
 
 ### Handle the drop _effect_
 
@@ -307,7 +308,7 @@ function drop_handler(ev) {
 
 For more information, see:
 
-- [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop)
+- [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#performing_a_drop)
 
 ### Drag end
 
@@ -317,7 +318,7 @@ This event fires regardless of whether the drag completed or was canceled. The {
 
 For more information about handling the end of a drag operation, see:
 
-- [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend "Finishing a Drag")
+- [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#finishing_a_drag "Finishing a Drag")
 
 ## Interoperability
 
@@ -333,9 +334,7 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 
 ## Specifications
 
-| **Specification**                                | **Status**                       | **Comment** |
-| ------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dnd")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## See also
 

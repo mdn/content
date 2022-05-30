@@ -26,13 +26,7 @@ The {{domxref("VideoPlaybackQuality")}} interface's read-only
 video frames that have been received since the {{HTMLElement("video")}} element was
 last loaded or reloaded.
 
-## Syntax
-
-```js
-corruptFrameFount = videoPlaybackQuality.corruptedVideoFrames;
-```
-
-### Value
+## Value
 
 The number of corrupted video frames that have been received since the
 {{HTMLElement("video")}} element was last loaded or reloaded.
@@ -43,7 +37,7 @@ corrupted video frame. If a corrupted frame is dropped, then both
 {{domxref("VideoPlaybackQuality.droppedVideoFrames", "droppedVideoFrames")}} are
 incremented.
 
-## Example
+## Examples
 
 This example determines the percentage of frames which have been corrupted, and if the
 value is greater than 5%, calls a function called `downgradeVideo()` that

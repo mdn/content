@@ -31,13 +31,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.sampleRate")}} as returne
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var sampleRate = MediaTrackSettings.sampleRate;
-```
-
-### Value
+## Value
 
 An integer value indicating how many samples each second of audio data includes. Common
 values include 44,100 (standard CD audio), 48,000 (standard digital audio), 96,000
@@ -47,7 +41,7 @@ values are often used to reduce bandwidth requirements; 8,000 samples per second
 adequate for comprehensible albeit imperfect human speech, and both 11,025 FPS and
 22,050 FPS are often used for low-bandwidth, reduced quality sound and music.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

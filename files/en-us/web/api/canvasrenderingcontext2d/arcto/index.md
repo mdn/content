@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -26,7 +27,7 @@ This method is commonly used for making rounded corners.
 ## Syntax
 
 ```js
-void ctx.arcTo(x1, y1, x2, y2, radius);
+arcTo(x1, y1, x2, y2, radius)
 ```
 
 ### Parameters
@@ -41,6 +42,10 @@ void ctx.arcTo(x1, y1, x2, y2, radius);
   - : The y-axis coordinate of the second control point.
 - `radius`
   - : The arc's radius. Must be non-negative.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -208,7 +213,7 @@ const control    = document.getElementById('radius');
 
 const mouse = { x: 0, y: 0 };
 
-let   r  = 100; // Radius
+let r  = 100; // Radius
 const p0 = { x: 0, y: 50 };
 
 const p1 = { x: 100, y: 100 };

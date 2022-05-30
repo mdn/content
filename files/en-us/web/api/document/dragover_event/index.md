@@ -47,9 +47,80 @@ The event is fired on the drop target(s).
 
 ## Examples
 
-See the [drag event](/en-US/docs/Web/API/Document/drag_event) for example code or this [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/).
+### A minimal drag and drop example
 
-{{EmbedLiveSample('Examples', '300', '200', '', 'Web/API/Document/drag_event')}}
+In this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
+
+We use three event handlers here:
+
+- in the `dragstart` event handler, we get a reference to the element that the user dragged
+- in the `dragover` event handler for the target container, we call `event.preventDefault()`, which enables it to receive `drop` events.
+- in the `drop` event handler for the drop zone, we handle moving the draggable element from the original container to the drop zone.
+
+For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/Document/drag_event) event.
+
+#### HTML
+
+```html
+<div class="dropzone">
+  <div id="draggable" draggable="true">
+    This div is draggable
+  </div>
+</div>
+<div class="dropzone"></div>
+```
+
+#### CSS
+
+```css
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+.dropzone {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  margin: 10px;
+  padding: 10px;
+}
+```
+
+#### JavaScript
+
+```js
+let dragged = null;
+
+document.addEventListener("dragstart", event => {
+  // store a ref. on the dragged elem
+  dragged = event.target;
+});
+
+document.addEventListener("dragover", event => {
+  // prevent default to allow drop
+  event.preventDefault();
+});
+
+document.addEventListener("drop", event => {
+  // prevent default action (open as link for some elements)
+  event.preventDefault();
+  // move dragged element to the selected drop target
+  if (event.target.className == "dropzone") {
+    dragged.parentNode.removeChild(dragged);
+    event.target.appendChild(dragged);
+  }
+});
+```
+
+#### Result
+
+{{EmbedLiveSample('A minimal drag and drop example')}}
 
 ## Specifications
 

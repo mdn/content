@@ -13,7 +13,7 @@ browser-compat: api.ImageTrack.animated
 
 The **`animated`** property of the {{domxref("ImageTrack")}} interface returns `true` if the track is animated and therefore has multiple frames.
 
-### Value
+## Value
 
 A {{jsxref("boolean")}}, if `true` this is an animated track.
 

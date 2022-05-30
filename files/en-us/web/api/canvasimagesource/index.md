@@ -6,6 +6,7 @@ tags:
   - Canvas
   - Helper
   - Reference
+spec-urls: https://html.spec.whatwg.org/multipage/scripting.html#canvasimagesource
 ---
 {{APIRef("Canvas API")}}
 
@@ -22,19 +23,4 @@ The interfaces that it allows to be used as image sources are the following:
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', "scripting.html#canvasimagesource", "CanvasImageSource")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

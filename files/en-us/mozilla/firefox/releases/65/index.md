@@ -15,11 +15,11 @@ This article provides information about the changes in Firefox 65 that will affe
 
 ### Developer tools
 
-- The [Flexbox inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) is now enabled by default.
-- Support has been added to the [JavaScript Debugger](/en-US/docs/Tools/Debugger) for XHR Breakpoints ({{bug(821610)}}).
-- Right-click on an item in the accessibility tree from the Accessibility viewer to [print it as json](/en-US/docs/Tools/Accessibility_inspector#print_accessibility_tree_to_json) to the JSON viewer.
-- The [color contrast](/en-US/docs/Tools/Accessibility_inspector#color_contrast) display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.
-- The Headers tab of the [Network Monitor](/en-US/docs/Tools/Network_Monitor) now displays the Referrer Policy for the selected request ({{bug(1496742)}}).
+- The [Flexbox inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) is now enabled by default.
+- Support has been added to the [JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) for XHR Breakpoints ({{bug(821610)}}).
+- Right-click on an item in the accessibility tree from the Accessibility viewer to [print it as JSON](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#print-accessibility-tree-to-json) to the JSON viewer.
+- The [color contrast](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#color-contrast) display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.
+- The Headers tab of the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now displays the Referrer Policy for the selected request ({{bug(1496742)}}).
 - When displaying stack traces (e.g. in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.
 - In the same fashion as native terminals, you can now use reverse search to find entries in your JavaScript console history (`F9` on Windows/Linux or `Ctrl` + `R` on macOS, then type a search term, followed by `Ctrl` + `R`/`Ctrl` + `S` to toggle through results).
 - The JavaScript console's `$0` shortcut (references the currently inspected element on the page) now has autocomplete available, so for example you could type `$0.te` to get autocomplete suggestions for properties like `$0.textContent`.
@@ -61,11 +61,11 @@ This article provides information about the changes in Firefox 65 that will affe
 
     The `<div>` with `none` set on it is now non-selectable. Previously this value would have been overridden by the `all` value set on the parent element.
 
-  - non-`contenteditable` elements nested inside `contenteditable` elements  are now selectable.
+  - non-`contenteditable` elements nested inside `contenteditable` elements are now selectable.
   - `user-select` now behaves consistently inside and outside shadow DOM.
   - The proprietary `-moz-text` value has been removed.
 
-- CSS environment variables (the {{cssxref("env()")}} function) have been implemented ({{bug(1462233)}}).
+- CSS environment variables (the {{cssxref("env", "env()")}} function) have been implemented ({{bug(1462233)}}).
 
 #### Removals
 
@@ -104,24 +104,24 @@ _No changes._
 
 #### Web workers
 
-- {{domxref("SharedWorkerGlobalScope.onconnect")}}'s event object is a {{domxref("MessageEvent")}} instance — its `data` property is now an empty string value rather than `null` ({{bug(1508824)}}).
+- {{domxref("SharedWorkerGlobalScope.connect_event", "SharedWorkerGlobalScope.connect")}}'s event object is a {{domxref("MessageEvent")}} instance — its `data` property is now an empty string value rather than `null` ({{bug(1508824)}}).
 
 #### Fetch and Service workers
 
 - The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ({{bug(1503276)}}).
 - The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) ({{bug(1354577)}}).
 - The {{domxref("FetchEvent.replacesClientId")}} and {{domxref("FetchEvent.resultingClientId")}} properties are now supported ({{bug(1264177)}}).
-- The {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} and {{domxref("ServiceWorkerContainer.onmessageerror")}} handler properties have been implemented ({{bug(1399446)}}).
+- The {{domxref("ServiceWorkerGlobalScope.messageerror_event", "ServiceWorkerGlobalScope.onmessageerror")}} and {{domxref("ServiceWorkerContainer.onmessageerror")}} handler properties have been implemented ({{bug(1399446)}}).
 - The {{httpheader("Origin")}} header is no longer set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}} ({{bug(1508661)}}).
 
 #### Media, Web Audio, and WebRTC
 
 - The {{domxref("WebRTC API", "WebRTC", "", "1")}} {{domxref("RTCIceCandidateStats")}} dictionary has been updated according to the latest spec changes ({{bug(1324788)}}, {{bug(1489040)}}; RTCIceCandidateStats has been updated to the latest spec for more details on exactly what has changed).
-- The {{domxref("MediaRecorder")}} `pause` and `resume` events (and their corresponding event handler properties — {{domxref("MediaRecorder.onpause")}} and {{domxref("MediaRecorder.onresume")}}) were not previously implemented, even though compatibility tables claimed they had been. They have now been implemented ({{bug(1458538)}}, {{bug(1514016)}}).
+- The {{domxref("MediaRecorder")}} `pause` and `resume` events (and their corresponding event handler properties were not previously implemented, even though compatibility tables claimed they had been. They have now been implemented ({{bug(1458538)}}, {{bug(1514016)}}).
 
 #### Canvas and WebGL
 
-- The  {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} and {{domxref("EXT_texture_compression_rgtc")}} texture compression extensions have been exposed to WebGL1 and WebGL2 contexts ({{bug(1507263)}}).
+- The {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} and {{domxref("EXT_texture_compression_rgtc")}} texture compression extensions have been exposed to WebGL1 and WebGL2 contexts ({{bug(1507263)}}).
 
 #### Removals
 

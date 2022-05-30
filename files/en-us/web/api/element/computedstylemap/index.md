@@ -23,7 +23,7 @@ an alternative to {{domxref("CSSStyleDeclaration")}}.
 ## Syntax
 
 ```js
-var stylePropertyMapReadOnly = element.computedStyleMap()
+computedStyleMap()
 ```
 
 ### Parameters
@@ -82,7 +82,7 @@ for (const [prop, val] of allComputedStyles) {
 }
 ```
 
-In [browsers that support `computedStyleMap()`](#Browser_compatibility),
+In [browsers that support `computedStyleMap()`](#browser_compatibility),
 you'll see a list of all the CSS properties and values.
 In other browsers you'll just see a link.
 

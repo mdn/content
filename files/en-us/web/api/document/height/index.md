@@ -21,13 +21,7 @@ browser-compat: api.Document.height
 Returns the height of the {{domxref("document")}} object. In most cases, this is equal
 to the {{HTMLElement("body")}} element of the current document.
 
-## Syntax
-
-```js
-pixels = document.height
-```
-
-## Example
+## Examples
 
 ```js
 // alert document height

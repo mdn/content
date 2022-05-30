@@ -7,6 +7,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.1
 ---
 {{HTTPSidebar}}
 
@@ -22,9 +23,7 @@ The HyperText Transfer Protocol (HTTP) **`400 Bad Request`** response status cod
 
 ## Specifications
 
-| Specification                                                | Title                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "400 Bad Request" , "6.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

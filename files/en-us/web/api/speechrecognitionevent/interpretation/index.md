@@ -24,13 +24,7 @@ a grammar (see
 [Semantic Interpretation for Speech Recognition (SISR) Version 1.0](https://www.w3.org/TR/semantic-interpretation/)
 for specification and examples.)
 
-## Syntax
-
-```js
-var myInterpretation = event.interpretation;
-```
-
-### Value
+## Value
 
 The returned value can be of any type. If no semantic interpretation has been returned
 by the speech recognition system, `null` will be returned.

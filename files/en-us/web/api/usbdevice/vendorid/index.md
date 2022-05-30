@@ -17,13 +17,7 @@ browser-compat: api.USBDevice.vendorId
 The **`vendorId`** read only property of the
 {{domxref("USBDevice")}} interface is the official usg.org-assigned vendor ID.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.vendorId
-```
-
-### Value
+## Value
 
 The official usb.org-assigned vendor ID.
 

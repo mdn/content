@@ -18,13 +18,7 @@ The **`configurations`** read only property of the
 {{domxref("USBDevice")}} interface an {{jsxref("array")}} of device-specific interfaces
 for controlling a paired USB device.
 
-## Syntax
-
-```js
-var USBConfiguration[] = USBDevice.configurations
-```
-
-### Value
+## Value
 
 An {{jsxref("array")}} of {{domxref("USBConfiguration")}} objects.
 

@@ -27,7 +27,8 @@ started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "
 ## Syntax
 
 ```js
-dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
+createDataChannel(label)
+createDataChannel(label, options)
 ```
 
 ### Parameters
@@ -73,7 +74,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
         data channels are negotiated in-band,
         where one side calls `createDataChannel`, and
         the other side listens to the {{domxref("RTCDataChannelEvent")}} event
-        using the {{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler.
+        using the {{DOMxRef("RTCPeerConnection.datachannel_event", "ondatachannel")}} event handler.
         Alternatively (`true`),
         they can be negotiated out of-band,
         where both sides call `createDataChannel`
@@ -98,7 +99,7 @@ included; otherwise, the defaults listed above are established.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown in the following situations:
     - The label and/or protocol string is too long; these cannot be longer than 65,535
       bytes (bytes, rather than characters).

@@ -20,13 +20,7 @@ upper-bound value is included in the key range.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var upperOpen = myKeyRange.upperOpen
-```
-
-### Value
+## Value
 
 A boolean value:
 
@@ -35,7 +29,7 @@ A boolean value:
 | `true`  | The upper-bound value is not included in the key range. |
 | `false` | The upper-bound value is included in the key range.     |
 
-## Example
+## Examples
 
 The following example illustrates how you'd use a key range. Here we
 declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a

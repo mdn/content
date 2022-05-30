@@ -23,9 +23,9 @@ The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MID
 - {{domxref("MIDIAccess.sysexEnabled")}} {{readonlyinline}}
   - : A boolean attribute indicating whether system exclusive support is enabled on the current MIDIAccess instance.
 
-### Event Handlers
+### Events
 
-- {{domxref("MIDIAccess.onstatechange")}}
+- {{domxref("MIDIAccess.statechange_event")}}
   - : Called whenever a new MIDI port is added or an existing port changes state.
 
 ## Examples
@@ -42,10 +42,10 @@ navigator.requestMIDIAccess()
      const inputs = access.inputs.values();
      const outputs = access.outputs.values();
 
-     access.onstatechange = function(e) {
+     access.onstatechange = event => {
 
        // Print information about the (dis)connected MIDI controller
-       console.log(e.port.name, e.port.manufacturer, e.port.state);
+       console.log(event.port.name, event.port.manufacturer, event.port.state);
      };
   });
 ```

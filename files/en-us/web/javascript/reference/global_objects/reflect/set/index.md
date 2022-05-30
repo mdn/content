@@ -48,8 +48,8 @@ A {{jsxref("TypeError")}}, if `target` is not an
 ## Description
 
 The `Reflect.set` method allows you to set a property on an object. It does
-property assignment and is like the [property
-accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
+property assignment and is like the
+[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
 
 ## Examples
 
@@ -89,5 +89,4 @@ Reflect.getOwnPropertyDescriptor(obj, 'undefined')
 
 - [Polyfill of `Reflect.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [Property
-  accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

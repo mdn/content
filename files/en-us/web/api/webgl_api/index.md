@@ -18,9 +18,9 @@ tags:
 
 **WebGL** (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0 that can be used in HTML5 {{HTMLElement("canvas")}} elements. This conformance makes it possible for the API to take advantage of hardware graphics acceleration provided by the user's device.
 
-Support for WebGL is present in [Firefox](/en-US/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+, [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+, and [Microsoft Edge](https://www.microsoft.com/en-us/edge) build 10240+; however, the user's device must also have hardware that supports these features.
+Support for WebGL is present in [Firefox](/en-US/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+, [Internet Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2) 11+, and [Microsoft Edge](https://www.microsoft.com/en-us/edge) build 10240+; however, the user's device must also have hardware that supports these features.
 
-The {{anch("WebGL 2")}} API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the {{domxref("WebGL2RenderingContext")}} interface.
+The [WebGL 2](#webgl_2) API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the {{domxref("WebGL2RenderingContext")}} interface.
 
 The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/docs/Web/API/Canvas_API) to do 2D graphics on web pages.
 
@@ -149,13 +149,13 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 - [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) A talk by Nick Desaulniers that introduces the basics of WebGL.
 - [WebGL playground](http://webglplayground.net) An online tool for creating and sharing WebGL projects. Good for quick prototyping and experimenting.
 - [WebGL Academy](http://www.webglacademy.com) An HTML/JavaScript editor with tutorials to learn basics of webgl programming.
-- [WebGL Stats](http://webglstats.com/) A site with statistics about WebGL capabilities in browsers on different platforms.
+- [WebGL Stats](https://webglreport.com/) A site with statistics about WebGL capabilities in browsers on different platforms.
 
 ### Libraries
 
 - [three.js](https://threejs.org/) is an open-source, fully featured 3D WebGL library.
 - [Babylon.js](https://www.babylonjs.com) is a powerful, simple, and open game and 3D rendering engine packed into a friendly JavaScript framework.
-- [Pixi.js](https://www.pixijs.com/) is a fast, open-source 2D WebGL renderer.
+- [Pixi.js](https://pixijs.com/) is a fast, open-source 2D WebGL renderer.
 - [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games.
 - [PlayCanvas](https://playcanvas.com/) is an open-source game engine.
 - [glMatrix](https://github.com/toji/gl-matrix) is a JavaScript matrix and vector library for high-performance WebGL apps.

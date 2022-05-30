@@ -17,20 +17,14 @@ browser-compat: api.Document.preferredStyleSheetSet
 The **`preferredStyleSheetSet`** property returns the preferred style sheet set as set by the page
 author.
 
-## Syntax
+## Value
 
-```js
-preferredStyleSheetSet = document.preferredStyleSheetSet
-```
-
-On return, `preferredStyleSheetSet` indicates the author's preferred style
-sheet set. This is determined from the order of style sheet declarations and the
+The author's preferred style sheet set. This is determined from the order of style sheet declarations and the
 `Default-Style` HTTP header.
 
-If there isn't a preferred style sheet set defined by the author, the empty string
-(`""`) is returned.
+If there isn't a preferred style sheet set defined by the author, the empty string (`""`) is returned.
 
-## Example
+## Examples
 
 ```js
 if (document.preferredStyleSheetSet) {

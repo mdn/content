@@ -18,26 +18,21 @@ browser-compat: api.MediaStreamTrack.ended_event
 
 The **`ended`** event of the {{domxref("MediaStreamTrack")}} interface is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("MediaStreamTrack.onended")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('ended', event => { });
+
+onended = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Usage notes
 
@@ -59,7 +54,7 @@ track.addEventListener('ended', () => {
 })
 ```
 
-You can also set up the event handler using the {{domxref("MediaStreamTrack.onended")}} property:
+You can also set up the event handler using the `onended` property:
 
 ```js
 track.onended = function() {
@@ -79,10 +74,10 @@ track.onended = function() {
 
 ## See also
 
-- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
-- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
-- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
+- The HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} event
+- The HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} event
+- The HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} event
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
-- {{domxref("AudioScheduledSourceNode.ended_event", 'AudioScheduledSourceNode: ended event')}}
+- The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
+- The AudioScheduledSourceNode {{domxref("AudioScheduledSourceNode.ended_event", 'ended')}} event

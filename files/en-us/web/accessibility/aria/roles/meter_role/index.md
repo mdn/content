@@ -6,6 +6,7 @@ tags:
   - Accessibility
   - Meter
   - Web Development
+spec-urls: https://www.w3.org/TR/wai-aria-1.2/#meter
 ---
 The `meter` role is used to identify an element being used as a meter.
 
@@ -34,9 +35,9 @@ Because descendants of `meter` are presentational, the following code is equival
 
 ```html
 <div role="meter"><h3 role="presentation">Title of my meter</h3></div>
-````
+```
 
-From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree).:
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree).:
 
 ```html
 <div role="meter">Title of my meter</div>
@@ -71,7 +72,7 @@ An example of a meter using `role="meter"`:
        y="0"
        width="100%"
        height="100%"
-       fill="currentColor"></rect>
+       fill="currentcolor"></rect>
   </svg>
 </div>
 ```
@@ -80,13 +81,16 @@ In the above scenario, when the `aria-valuenow` value updates, the width of the 
 
 ## Specifications
 
-| Specification                                            | Status                       |
-| -------------------------------------------------------- | ---------------------------- |
-| {{SpecName("ARIA 1.2","#meter","meter")}} | {{Spec2('ARIA 1.2')}} |
+{{Specifications}}
 
 ## See also
 
 - {{HTMLElement('meter')}}
 - {{HTMLElement('progress')}}
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA
+          roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

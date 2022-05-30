@@ -14,13 +14,7 @@ browser-compat: api.ShadowRoot.styleSheets
 The **`styleSheets`** read-only property of the {{domxref("ShadowRoot")}} interface
 returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a shadow tree.
 
-## Syntax
-
-```js
-shadowRoot.styleSheets
-```
-
-### Value
+## Value
 
 A {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects.
 

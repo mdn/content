@@ -23,7 +23,7 @@ Refer to the documentation for {{Cssxref("time")}} and {{Cssxref("percentage")}}
 
 ### Use in calc()
 
-Where a `<time-percentage>` is specified as an allowable type, this means that the percentage resolves to a time and therefore can be used in a {{Cssxref("calc()")}} expression.
+Where a `<time-percentage>` is specified as an allowable type, this means that the percentage resolves to a time and therefore can be used in a {{Cssxref("calc", "calc()")}} expression.
 
 ### Valid percentages
 

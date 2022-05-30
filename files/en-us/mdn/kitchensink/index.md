@@ -13,7 +13,7 @@ tags:
 
 The **kitchensink** is a page that _attempts_ to incorporate every possible content element and Yari macro.
 
-This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the styles and macros.
+This page attempts to be the complete intersection of every other page. Not in terms of the text but in terms of the styles and macros.
 Let's start with some notes...
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
@@ -113,9 +113,19 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 ## Tables
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "#link-type-dns-prefetch", "dns-prefetch")}} | {{Spec2("HTML WHATWG")}} |         |
+### Markdown table
+
+| Constant name                | Value  | Description |
+| ---------------------------- | ------ | ----------- |
+| `QUERY_COUNTER_BITS_EXT`     | 0x8864 | The number of bits used to hold the query result for the given target. |
+| `CURRENT_QUERY_EXT`          | 0x8865 | The currently active query. |
+| `QUERY_RESULT_EXT`           | 0x8866 | The query result. |
+| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether a query result is available. |
+| `TIME_ELAPSED_EXT`           | 0x88BF | Elapsed time (in nanoseconds). |
+| `TIMESTAMP_EXT`              | 0x8E28 | The current time. |
+| `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether the GPU performed any disjoint operation. |
+
+### HTML table
 
 <table class="properties">
   <tbody>
@@ -177,7 +187,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>width</code></td>
       <td>A positive integer number, or the text <code>device-width</code></td>
       <td>
-        Defines the pixel width of the viewport that you want the web site to be
+        Defines the pixel width of the viewport that you want the website to be
         rendered at.
       </td>
     </tr>
@@ -207,13 +217,6 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
           ensure that important content doesn't end up outside the display.
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}}
-      </td>
-      <td>{{spec2('Fetch')}}</td>
-      <td></td>
     </tr>
   </tbody>
 </table>
@@ -291,7 +294,7 @@ this.color("blue");
 
 </pre></div>
 
-{{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ EmbedLiveSample('Rect_code', '700', '300') }}
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 

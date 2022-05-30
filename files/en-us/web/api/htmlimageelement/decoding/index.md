@@ -16,16 +16,9 @@ The **`decoding`** property of the
 {{domxref("HTMLImageElement")}} interface represents a hint given to the browser on how
 it should decode the image.
 
-## Syntax
+## Value
 
-```js
-refStr = imgElem.decoding;
-imgElem.decoding = refStr;
-```
-
-### Values
-
-A {{domxref("DOMString")}} representing the decoding hint. Possible values are:
+A string representing the decoding hint. Possible values are:
 
 - **`sync`**: Decode the image synchronously for atomic
   presentation with other content.

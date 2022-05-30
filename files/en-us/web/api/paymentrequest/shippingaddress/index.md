@@ -19,13 +19,9 @@ The **`shippingAddress`** read-only property of
 the {{domxref('PaymentRequest')}} interface returns the shipping address provided by the
 user. It is `null` by default.
 
-## Syntax
+## Value
 
-```js
-var paymentAddress = PaymentRequest.shippingAddress;
-```
-
-## Example
+## Examples
 
 Generally, the user agent will fill the `shippingAddress` property value.
 You can trigger this by setting
@@ -33,7 +29,7 @@ You can trigger this by setting
 the `PaymentRequest` constructor.
 
 In the example below, the cost of shipping varies by geography. When the
-{{domxref('PaymentRequest.onshippingaddresschange')}} is
+{{domxref('PaymentRequest.shippingaddresschange_event', 'shippingaddresschange')}} is
 called, `updateDetails()` is called to update the details of
 the `PaymentRequest`, using `shippingAddress` to set the correct
 shipping cost.

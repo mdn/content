@@ -84,8 +84,7 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 ## See also
 
 - [Polyfill of `Object.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

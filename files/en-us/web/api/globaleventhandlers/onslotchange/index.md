@@ -22,7 +22,7 @@ The `slotchange` event is fired on {{DOMxRef("HTMLSlotElement")}} instances ({{H
 
 ## Examples
 
-The following snippet is a slightly modified version of our [slotchange example](https://github.com/mdn/web-components-examples/tree/master/slotchange) which uses `onslotchange` rather than adding a listener for the `slotchange` event.
+The following snippet is a slightly modified version of our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) which uses `onslotchange` rather than adding a listener for the `slotchange` event.
 
 First the code gets an array of all the `<slot>`s and then assigns a handler function to the `onslotchange` property on the template's second slot — this second slot is the one that has its contents changed in the example.
 Every time the element in the slot changes, we log a report to the console saying which slot has changed, and what the new node inside the slot is.

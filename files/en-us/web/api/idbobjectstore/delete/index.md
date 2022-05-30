@@ -27,14 +27,12 @@ record — without having to explicitly look up the record's key.
 ## Syntax
 
 ```js
-var request = objectStore.delete(Key);
-
-var request = objectStore.delete(KeyRange);
+delete(key)
 ```
 
 ### Parameters
 
-- Key
+- `key`
   - : The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all
     records with keys in range.
 

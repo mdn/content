@@ -18,15 +18,15 @@ values for generic vertex attributes.
 ## Syntax
 
 ```js
-void gl.vertexAttrib1f(index, v0);
-void gl.vertexAttrib2f(index, v0, v1);
-void gl.vertexAttrib3f(index, v0, v1, v2);
-void gl.vertexAttrib4f(index, v0, v1, v2, v3);
+vertexAttrib1f(index, v0)
+vertexAttrib2f(index, v0, v1)
+vertexAttrib3f(index, v0, v1, v2)
+vertexAttrib4f(index, v0, v1, v2, v3)
 
-void gl.vertexAttrib1fv(index, value);
-void gl.vertexAttrib2fv(index, value);
-void gl.vertexAttrib3fv(index, value);
-void gl.vertexAttrib4fv(index, value);
+vertexAttrib1fv(index, value)
+vertexAttrib2fv(index, value)
+vertexAttrib3fv(index, value)
+vertexAttrib4fv(index, value)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ void gl.vertexAttrib4fv(index, value);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Description
 

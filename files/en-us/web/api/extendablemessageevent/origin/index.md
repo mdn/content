@@ -17,15 +17,9 @@ The **`origin`** read-only property of the
 {{domxref("ExtendableMessageEvent")}} interface returns the origin of the
 {{domxref("Client")}} that sent the message.
 
-## Syntax
+## Value
 
-```js
-var myOrigin = extendableMessageEvent.origin;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

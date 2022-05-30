@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -29,18 +30,22 @@ audio.
 ## Syntax
 
 ```js
-createPanner();
+createPanner()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("PannerNode")}}.
 
-## Example
+## Examples
 
 In the following example, you can see an example of how the `createPanner()`
 method, {{domxref("AudioListener")}}  and {{domxref("PannerNode")}} would be used to
-control audio spatialisation. Generally you will define the position in 3D space that
+control audio spatialization. Generally you will define the position in 3D space that
 your audio listener and panner (source) occupy initially, and then update the position
 of one or both of these as the application is used. You might be moving a character
 around inside a game world for example, and wanting delivery of audio to change

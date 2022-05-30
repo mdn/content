@@ -14,13 +14,7 @@ browser-compat: api.DOMRectReadOnly.y
 
 The **`y`** read-only property of the **`DOMRectReadOnly`** interface represents the y coordinate of the `DOMRect`'s origin.
 
-## Syntax
-
-```js
-var recY = DOMRect.y;
-```
-
-### Value
+## Value
 
 A double.
 

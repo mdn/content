@@ -15,15 +15,9 @@ The **`WebSocket.extensions`** read-only property returns the
 extensions selected by the server. This is currently only the empty string or a list of
 extensions as negotiated by the connection.
 
-## Syntax
-
-```js
-var extensions = aWebSocket.extensions;
-```
-
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

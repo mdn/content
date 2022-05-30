@@ -16,7 +16,7 @@ The **`getCueAsHTML()`** method of the {{domxref("VTTCue")}} interface returns a
 ## Syntax
 
 ```js
-VTTCue.getCueAsHTML();
+getCueAsHTML()
 ```
 
 ### Parameters

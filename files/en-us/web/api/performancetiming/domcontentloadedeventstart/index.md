@@ -22,14 +22,12 @@ The legacy
 **`PerformanceTiming.domContentLoadedEventStart`**
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, right before the parser sent the
-{{event("DOMContentLoaded")}} event, that is right after all the scripts that need to be
+{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event, that is right after all the scripts that need to be
 executed right after parsing has been executed.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domContentLoadedEventStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

@@ -17,18 +17,13 @@ tags:
 
 An event handler for drag and drop events sent to the window.
 
-## Syntax
+## Value
 
-```js
-window.ondragdrop = funcRef;
-```
+The event handler function to be registered.
 
-- funcRef
-  - : The event handler function to be registered.
+The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in [Gecko](/en-US/Gecko) ({{ Bug(112288) }}), you have to use `addEventListener`. See [addEventListener](/en-US/docs/Web/API/EventTarget/addEventListener) for details.
 
-The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in [Gecko](/en-US/Gecko) ({{ Bug(112288) }}), you have to use `addEventListener`. See [addEventListener](/en-US/docs/DOM/element.addEventListener) for details.
-
-## Example
+## Examples
 
 ### Fire an alert on dragdrop
 

@@ -43,7 +43,9 @@ groupBy(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each element in the array, taking 3 arguments:
+  - : Function to execute on each element in the array
+
+    The function is called with the following arguments:
 
     - `element`
       - : The value of the current element in the array.
@@ -57,7 +59,9 @@ groupBy(function(element, index, array) { /* ... */ }, thisArg)
 
 - `thisArg` {{optional_inline}}
   - : Object to use as {{jsxref("Operators/this", "this")}} inside `callbackFn`.
-      If not specified, `undefined` will be used.
+
+     The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
+     Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Return value
 
@@ -121,18 +125,18 @@ The code below groups the elements by the value of their `type` property.
 let result = inventory.groupBy( ({ type }) => type );
 
 /* Result is:
-{ 
+{
   vegetables: [
-    { name: 'asparagus', type: 'vegetables', quantity: 5 }, 
+    { name: 'asparagus', type: 'vegetables', quantity: 5 },
   ],
   fruit: [
     { name: "bananas", type: "fruit", quantity: 0 },
     { name: "cherries", type: "fruit", quantity: 5 }
-  ], 
+  ],
   meat: [
     { name: "goat", type: "meat", quantity: 23 },
     { name: "fish", type: "meat", quantity: 22 }
-  ] 
+  ]
 }
 */
 ```
@@ -153,20 +157,19 @@ function myCallback( { quantity } ) {
 result = inventory.groupBy( myCallback );
 
 /* Result is:
-{ 
+{
   restock: [
     { name: "asparagus", type: "vegetables", quantity: 5 },
     { name: "bananas", type: "fruit", quantity: 0 },
     { name: "cherries", type: "fruit", quantity: 5 }
-  ], 
+  ],
   ok: [
     { name: "goat", type: "meat", quantity: 23 },
     { name: "fish", type: "meat", quantity: 22 }
-  ] 
+  ]
 }
 */
 ```
-
 
 ## Specifications
 

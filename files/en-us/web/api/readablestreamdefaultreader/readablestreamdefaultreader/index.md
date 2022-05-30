@@ -21,12 +21,12 @@ instance.
 ## Syntax
 
 ```js
-var readableStreamDefaultReader = new ReadableStreamDefaultReader(stream);
+new ReadableStreamDefaultReader(stream)
 ```
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("ReadableStream")}} to be read.
 
 ### Return value
@@ -35,8 +35,8 @@ An instance of the {{domxref("ReadableStreamDefaultReader")}} object.
 
 ### Exceptions
 
-- TypeError
-  - : The supplied `stream` parameter is not a {{domxref("ReadableStream")}},
+- {{jsxref("TypeError")}}
+  - : Thrown if the supplied `stream` parameter is not a {{domxref("ReadableStream")}},
     or it is already locked for reading by another reader.
 
 ## Examples

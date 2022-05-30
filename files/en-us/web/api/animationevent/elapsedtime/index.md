@@ -1,6 +1,7 @@
 ---
 title: AnimationEvent.elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
+page-type: web-api-instance-property
 tags:
   - API
   - AnimationEvent
@@ -20,11 +21,9 @@ when this event fired, excluding any time the animation was paused. For an
 {{cssxref("animation-delay")}}, in which case the event will be fired with
 `elapsedTime` containing `(-1 * delay)`.
 
-## Syntax
+## Value
 
-```js
-time = AnimationEvent.elapsedTime
-```
+A `float` giving the amount of time in seconds.
 
 ## Specifications
 

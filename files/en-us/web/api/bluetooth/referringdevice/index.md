@@ -1,6 +1,7 @@
 ---
 title: Bluetooth.referringDevice
 slug: Web/API/Bluetooth/referringDevice
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

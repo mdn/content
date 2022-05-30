@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -20,13 +21,9 @@ property of the Canvas 2D API determines the shape used to draw the end points o
     "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-## Syntax
+## Value
 
-```js
-ctx.lineCap = "butt" || "round" || "square";
-```
-
-### Options
+One of the followings:
 
 - `"butt"`
   - : The ends of lines are squared off at the endpoints. Default value.

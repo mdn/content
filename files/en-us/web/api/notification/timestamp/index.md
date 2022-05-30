@@ -24,13 +24,7 @@ arbitrary timestamp that you want associated with the notification. For example,
 timestamp for an upcoming meeting could be set in the future, whereas a timestamp for a
 missed message could be set in the past.
 
-## Syntax
-
-```js
-var timestamp = Notification.timestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMTimeStamp")}}.
 

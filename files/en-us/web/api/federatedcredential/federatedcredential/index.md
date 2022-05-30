@@ -21,17 +21,18 @@ received from the `init` object for global {{domxref('fetch()')}}.
 ## Syntax
 
 ```js
-var myCredential = new FederatedCredential(init)
+new FederatedCredential(init)
 ```
 
 ### Parameters
 
-- _init_
+- `init`
 
   - : Options are:
 
-    - `provider`: A {{domxref("USVString")}}; identifying the credential
-      provider.
+    - `provider`
+      - : A string; identifying the credential
+        provider.
 
 ## Specifications
 

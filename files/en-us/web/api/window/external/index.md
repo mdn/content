@@ -3,9 +3,10 @@ title: Window.external
 slug: Web/API/Window/external
 tags:
   - API
-  - Deprecated
+  - property
   - Window
   - external
+  - Deprecated
 browser-compat: api.Window.external
 ---
 {{APIRef}} {{deprecated_header}}

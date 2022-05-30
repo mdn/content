@@ -93,7 +93,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
-    See {{anch("Browser compatibility")}} for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
+    See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
 - {{htmlattrdef("crossorigin")}}
   - : Normal `script` elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
@@ -110,6 +110,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     Scripts with the `defer` attribute will execute in the order in which they appear in the document.
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
+
+- {{htmlattrdef("fetchpriority")}}
+
+  - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
+
+    - `high`
+      - : Signals a high-priority fetch relative to other external scripts.
+    - `low`
+      - : Signals a low-priority fetch relative to other external scripts.
+    - `auto`
+      - : Default: Signals automatic determination of fetch priority relative to other external scripts.
 
 - {{htmlattrdef("integrity")}}
   - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).

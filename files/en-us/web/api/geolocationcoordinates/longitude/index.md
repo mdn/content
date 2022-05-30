@@ -25,13 +25,7 @@ the `GeolocationCoordinates` object is part of the
 {{domxref("GeolocationPosition")}} interface, which is the object type returned by
 Geolocation API functions that obtain and return a geographical position.
 
-## Syntax
-
-```js
-let longitude = geolocationCoordinatesInstance.longitude
-```
-
-### Value
+## Value
 
 The value in `longitude` is the geographical longitude of the location on
 Earth described by the `Coordinates` object, in decimal degrees. The value is

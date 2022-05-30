@@ -34,7 +34,7 @@ Use of native JavaScript modules is dependent on the {{JSxRef("Statements/import
 
 ## Introducing an example
 
-To demonstrate usage of modules, we've created a [simple set of examples](https://github.com/mdn/js-examples/tree/master/modules) that you can find on GitHub. These examples demonstrate a simple set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
+To demonstrate usage of modules, we've created a [simple set of examples](https://github.com/mdn/js-examples/tree/master/module-examples) that you can find on GitHub. These examples demonstrate a simple set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
 
 These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.
 
@@ -42,7 +42,7 @@ These are fairly trivial, but have been kept deliberately simple to demonstrate 
 
 ## Basic example structure
 
-In our first example (see [basic-modules](https://github.com/mdn/js-examples/tree/master/modules/basic-modules)) we have a file structure as follows:
+In our first example (see [basic-modules](https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules)) we have a file structure as follows:
 
 ```plain
 index.html
@@ -126,14 +126,14 @@ Once you've exported some features out of your module, you need to import them i
 import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 ```
 
-You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the path to the module file — a path relative to the site root, which for our `basic-modules` example would be `/js-examples/modules/basic-modules`.
+You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the path to the module file — a path relative to the site root, which for our `basic-modules` example would be `/js-examples/module-examples/basic-modules`.
 
 However, we've written the path a bit differently — we are using the dot (`.`) syntax to mean "the current location", followed by the path beyond that to the file we are trying to find. This is much better than writing out the entire relative path each time, as it is shorter, and it makes the URL portable — the example will still work if you move it to a different location in the site hierarchy.
 
 So for example:
 
 ```bash
-/js-examples/modules/basic-modules/modules/square.js
+/js-examples/module-examples/basic-modules/modules/square.js
 ```
 
 becomes
@@ -142,7 +142,7 @@ becomes
 ./modules/square.js
 ```
 
-You can see such lines in action in [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js).
+You can see such lines in action in [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
 > **Note:** In some module systems, you can omit the file extension and the leading `/`, `./`, or `../` (e.g. `'modules/square'`). This doesn't work in native JavaScript modules.
 
@@ -257,7 +257,7 @@ import { function1 as newFunctionName,
          function2 as anotherNewFunctionName } from './modules/module.js';
 ```
 
-Let's look at a real example. In our [renaming](https://github.com/mdn/js-examples/tree/master/modules/renaming) directory you'll see the same module system as in the previous example, except that we've added `circle.js` and `triangle.js` modules to draw and report on circles and triangles.
+Let's look at a real example. In our [renaming](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) directory you'll see the same module system as in the previous example, except that we've added `circle.js` and `triangle.js` modules to draw and report on circles and triangles.
 
 Inside each of these modules, we've got features with the same names being exported, and therefore each has the same `export` statement at the bottom:
 
@@ -327,7 +327,7 @@ Module.function2()
 etc.
 ```
 
-Again, let's look at a real example. If you go to our [module-objects](https://github.com/mdn/js-examples/tree/master/modules/module-objects) directory, you'll see the same example again, but rewritten to take advantage of this new syntax. In the modules, the exports are all in the following simple form:
+Again, let's look at a real example. If you go to our [module-objects](https://github.com/mdn/js-examples/tree/master/module-examples/module-objects) directory, you'll see the same example again, but rewritten to take advantage of this new syntax. In the modules, the exports are all in the following simple form:
 
 ```js
 export { name, draw, reportArea, reportPerimeter };
@@ -357,7 +357,7 @@ So you can now write the code just the same as before (as long as you include th
 
 As we hinted at earlier, you can also export and import classes; this is another option for avoiding conflicts in your code, and is especially useful if you've already got your module code written in an object-oriented style.
 
-You can see an example of our shape drawing module rewritten with ES classes in our [classes](https://github.com/mdn/js-examples/tree/master/modules/classes) directory. As an example, the [`square.js`](https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js) file now contains all its functionality in a single class:
+You can see an example of our shape drawing module rewritten with ES classes in our [classes](https://github.com/mdn/js-examples/tree/master/module-examples/classes) directory. As an example, the [`square.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js) file now contains all its functionality in a single class:
 
 ```js
 class Square {
@@ -379,7 +379,7 @@ which we then export:
 export { Square };
 ```
 
-Over in [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/classes/main.js), we import it like this:
+Over in [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js), we import it like this:
 
 ```js
 import { Square } from './modules/square.js';
@@ -403,7 +403,7 @@ export * from 'x.js'
 export { name } from 'x.js'
 ```
 
-For an example, see our [module-aggregation](https://github.com/mdn/js-examples/tree/master/modules/module-aggregation) directory. In this example (based on our earlier classes example) we've got an extra module called `shapes.js`, which aggregates all the functionality from `circle.js`, `square.js`, and `triangle.js` together. We've also moved our submodules inside a subdirectory inside the `modules` directory called `shapes`. So the module structure in this example is:
+For an example, see our [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation) directory. In this example (based on our earlier classes example) we've got an extra module called `shapes.js`, which aggregates all the functionality from `circle.js`, `square.js`, and `triangle.js` together. We've also moved our submodules inside a subdirectory inside the `modules` directory called `shapes`. So the module structure in this example is:
 
 ```plain
 modules/
@@ -421,7 +421,7 @@ In each of the submodules, the export is of the same form, e.g.
 export { Square };
 ```
 
-Next up comes the aggregation part. Inside [`shapes.js`](https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js), we include the following lines:
+Next up comes the aggregation part. Inside [`shapes.js`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js), we include the following lines:
 
 ```js
 export { Square } from './shapes/square.js';
@@ -460,9 +460,9 @@ import('./modules/myModule.js')
   });
 ```
 
-Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports) directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.
+Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.
 
-In this example we've only made changes to our [`index.html`](https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html) and [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.js) files — the module exports remain the same as before.
+In this example we've only made changes to our [`index.html`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) and [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) files — the module exports remain the same as before.
 
 Over in `main.js` we've grabbed a reference to each button using a [`Document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) call, for example:
 
@@ -489,9 +489,9 @@ Note that, because the promise fulfillment returns a module object, the class is
 
 Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
 
-Let's take a look at an example. You can find all the files and code described in this section within the [`top-level-await`](https://github.com/mdn/js-examples/tree/master/modules/top-level-await) directory, which extends from the previous examples.
+Let's take a look at an example. You can find all the files and code described in this section within the [`top-level-await`](https://github.com/mdn/js-examples/tree/master/module-examples/top-level-await) directory, which extends from the previous examples.
 
-Firstly we'll declare our color palette in a separate [`colors.json`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/data/colors.json) file:
+Firstly we'll declare our color palette in a separate [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) file:
 
 ```js
 {
@@ -503,7 +503,7 @@ Firstly we'll declare our color palette in a separate [`colors.json`](https://gi
 }
 ```
 
-Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/getColors.js) which uses a fetch request to load the [`colors.json`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/data/colors.json) file and return the data as an object.
+Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) which uses a fetch request to load the [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) file and return the data as an object.
 
 ```js
 // fetch request
@@ -517,7 +517,7 @@ Notice the last export line here.
 
 We're using the keyword `await` before specifying the constant `colors` to export. This means any other modules which include this one will wait until `colors` has been downloaded and parsed before using it.
 
-Let's include this module in our [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/main.js) file:
+Let's include this module in our [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) file:
 
 ```js
 import colors from './modules/getColors.js';
@@ -546,19 +546,19 @@ let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190,
 ...
 ```
 
-This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
+This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
 ## Troubleshooting
 
 Here are a few tips that may help you if you are having trouble getting your modules to work. Feel free to add to the list if you discover more!
 
-- We mentioned this before, but to reiterate: `.js` files need to be loaded with a MIME-type of `text/javascript` (or another JavaScript-compatible MIME-type, but `text/javascript` is recommended), otherwise you'll get a strict MIME type checking error like "The server responded with a non-JavaScript MIME type".
-- If you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server. GitHub pages is ideal as it also serves `.js` files with the correct MIME type.
+- We mentioned this before, but to reiterate: `.mjs` files need to be loaded with a MIME-type of `text/javascript` (or another JavaScript-compatible MIME-type, but `text/javascript` is recommended), otherwise you'll get a strict MIME type checking error like "The server responded with a non-JavaScript MIME type".
+- If you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server. GitHub pages is ideal as it also serves `.mjs` files with the correct MIME type.
 - Because `.mjs` is a non-standard file extension, some operating systems might not recognize it, or try to replace it with something else. For example, we found that macOS was silently adding on `.js` to the end of `.mjs` files and then automatically hiding the file extension. So all of our files were actually coming out as `x.mjs.js`. Once we turned off automatically hiding file extensions, and trained it to accept `.mjs`, it was OK.
 
 ## See also
 
-- [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), by Addy Osmani and Mathias Bynens
+- [Using JavaScript modules on the web](https://v8.dev/features/modules#mjs), by Addy Osmani and Mathias Bynens
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
 - Axel Rauschmayer's book [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)

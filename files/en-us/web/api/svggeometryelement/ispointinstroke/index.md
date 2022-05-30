@@ -22,20 +22,20 @@ the element.
 ## Syntax
 
 ```js
-boolean someElement.isPointInStroke(DOMPointInit point);
+isPointInStroke(point)
 ```
 
 ### Parameters
 
-- point
-  - : An object interpreted as a point in the local coordinate system
+- `point`
+  - : A DOMPointInit object interpreted as a point in the local coordinate system
     of the element.
 
 ### Return value
 
 A boolean indicating whether the given point is within the stroke or not.
 
-## Example
+## Examples
 
 ### SVG
 
@@ -68,7 +68,7 @@ console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));
 
 ### Result
 
-{{EmbedLiveSample("Example", "150", "150")}}
+{{EmbedLiveSample("Examples", "150", "150")}}
 
 ## Specifications
 

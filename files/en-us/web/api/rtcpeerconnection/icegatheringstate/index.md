@@ -19,13 +19,7 @@ This lets you detect, for example, when collection of ICE candidates has finishe
 You can detect when the value of this property changes by watching for an event of type
 {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}.
 
-## Syntax
-
-```js
- var state = RTCPeerConnection.iceGatheringState;
-```
-
-### Value
+## Value
 
 The possible values are:
 

@@ -16,8 +16,7 @@ browser-compat: javascript.builtins.Object.is
 {{JSRef}}
 
 The **`Object.is()`** method determines whether two values are
-[the same
-value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+[the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 
 ## Syntax
 
@@ -38,8 +37,7 @@ A {{jsxref("Boolean")}} indicating whether or not the two arguments are the same
 
 ## Description
 
-`Object.is()` determines whether two values are [the same
-value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness). Two values are the same if one of the following holds:
+`Object.is()` determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness). Two values are the same if one of the following holds:
 
 - both {{jsxref("undefined")}}
 - both {{jsxref("null")}}
@@ -81,8 +79,8 @@ Object.is(null, null);            // true
 Object.is(undefined, undefined);  // true
 Object.is(window, window);        // true
 Object.is([], []);                // false
-var foo = { a: 1 };
-var bar = { a: 1 };
+const foo = { a: 1 };
+const bar = { a: 1 };
 Object.is(foo, foo);              // true
 Object.is(foo, bar);              // false
 
@@ -132,6 +130,5 @@ if (!Object.is) {
 ## See also
 
 - [Polyfill of `Object.is` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Equality
-  comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) — a comparison of all three built-in sameness
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) — a comparison of all three built-in sameness
   facilities

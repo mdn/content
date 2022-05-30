@@ -54,7 +54,7 @@ Web developers have wanted to use video and audio on the Web for a long time, ev
 
 A native solution would solve much of this if implemented correctly. Fortunately, a few years later the {{glossary("HTML5")}} specification had such features added, with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements, and some shiny new {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} for controlling them. We'll not be looking at JavaScript here — just the basic foundations that can be achieved with HTML.
 
-We won't be teaching you how to produce audio and video files — that requires a completely different skillset. We have provided you with [sample audio and video files and example code](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) for your own experimentation, in case you are unable to get hold of your own.
+We won't be teaching you how to produce audio and video files — that requires a completely different skillset. We have provided you with [sample audio and video files and example code](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) for your own experimentation, in case you are unable to get hold of your own.
 
 > **Note:** Before you begin here, you should also know that there are quite a few OVPs (online video providers) like [YouTube](https://www.youtube.com/), [Dailymotion](https://www.dailymotion.com), and [Vimeo](https://vimeo.com/), and online audio providers like [Soundcloud](https://soundcloud.com/). Such companies offer a convenient, easy way to host and consume videos, so you don't have to worry about the enormous bandwidth consumption. OVPs even usually offer ready-made code for embedding video/audio in your webpages; if you use that route, you can avoid some of the difficulties we discuss in this article. We'll be discussing this kind of service a bit more in the next article.
 
@@ -81,7 +81,7 @@ The embedded video will look something like this:
 
 ![A simple video player showing a video of a small white rabbit](simple-video.png)
 
-You can [try the example live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) here (see also the [source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html).)
+You can [try the example live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) here (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/simple-video.html).)
 
 ### Using multiple source formats to improve compatibility
 
@@ -177,7 +177,7 @@ The new features are:
     - `"auto"` buffers the media file
     - `"metadata"` buffers only the metadata for the file
 
-You can find the above example available to [play live on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (also [see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Note that we haven't included the `autoplay` attribute in the live version — if the video starts to play as soon as the page loads, you don't get to see the poster!
+You can find the above example available to [play live on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (also [see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Note that we haven't included the `autoplay` attribute in the live version — if the video starts to play as soon as the page loads, you don't get to see the poster!
 
 ### The \<audio> element
 
@@ -195,7 +195,7 @@ This produces something like the following in a browser:
 
 ![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
-> **Note:** You can [run the audio demo live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> **Note:** You can [run the audio demo live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on GitHub (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 This takes up less space than a video player, as there is no visual component — you just need to display controls to play the audio. Other differences from HTML video are as follows:
 
@@ -261,7 +261,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-For more details, including on how to add labels please read [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, including on how to add labels please read [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Note:** Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 
@@ -269,7 +269,7 @@ For more details, including on how to add labels please read [Adding captions an
 
 For this active learning, we'd (ideally) like you to go out into the world and record some of your own video and audio — most phones these days allow you to record audio and video very easily and, provided you can transfer it on to your computer, you can use it. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs out there to allow you to do this without too much trouble, such as [Miro Video Converter](http://www.mirovideoconverter.com/) and [Audacity](https://sourceforge.net/projects/audacity/). We'd like you to have a go!
 
-If you are unable to source any video or audio, then you can feel free to use our [sample audio and video files](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) to carry out this exercise. You can also use our sample code for reference.
+If you are unable to source any video or audio, then you can feel free to use our [sample audio and video files](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) to carry out this exercise. You can also use our sample code for reference.
 
 We would like you to:
 
@@ -287,7 +287,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-And that's a wrap; we hope you had fun playing with video and audio in web pages! In the next article, we'll look at other ways of embedding content on the Web, using technologies like {{htmlelement("iframe")}} and {{htmlelement("object")}}.
+And that's a wrap — we hope you had fun playing with video and audio in web pages! In the next article, we'll look at [other ways of embedding content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies) on the Web, using technologies like {{htmlelement("iframe")}} and {{htmlelement("object")}}.
 
 ## See also
 
@@ -295,7 +295,6 @@ And that's a wrap; we hope you had fun playing with video and audio in web pages
 - [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
 - [Audio and Video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery): A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.
 - [Audio and Video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation): A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)
-- Automated options to [translate multimedia](https://www.inwhatlanguage.com/blog/translate-video-audio/).
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Event reference > Media](/en-US/docs/Web/Events#media)
@@ -305,6 +304,7 @@ And that's a wrap; we hope you had fun playing with video and audio in web pages
 ## In this module
 
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
 - [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

@@ -20,7 +20,7 @@ This specifies what stencil value to use when calling the
 ## Syntax
 
 ```js
-void gl.clearStencil(s);
+clearStencil(s)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ void gl.clearStencil(s);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

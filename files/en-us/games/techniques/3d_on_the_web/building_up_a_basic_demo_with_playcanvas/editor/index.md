@@ -62,17 +62,17 @@ To add some colors to the scene we need a new material that will be used on the 
 
 ![PlayCanvas Editor - New material](playcanvas-editor-newmaterial.png)
 
-Click on your new material in the assets tab and its entity inspector will appear on the right hand side of the display. Now edit the _Name_ text field to give it a unique name (we've chosen _boxMaterial_). A unique name will help us remember what this material is for — we will add more later!
+Click on your new material in the assets tab and its entity inspector will appear on the right-hand side of the display. Now edit the _Name_ text field to give it a unique name (we've chosen _boxMaterial_). A unique name will help us remember what this material is for — we will add more later!
 
 ![PlayCanvas Editor - Box material](playcanvas-editor-boxmaterial.png)
 
-To change its color we'll use the _Diffuse_ option in the entity inspector. Click _Diffuse_, then select the colored box next to the Color label — it will open a color wheel. From here you can click your desired color or enter it in the bottom text field as a hex value. We've chosen a blue color with a hex value of `0095DD` — enter this code in the text field and press return for it to be accepted.
+To change its color we'll use the _Diffuse_ option in the entity inspector. Click _Diffuse_, then select the colored box next to the Color label — it will open a {{glossary("color wheel")}}. From here you can click your desired color or enter it in the bottom text field as a hex value. We've chosen a blue color with a hex value of `0095DD` — enter this code in the text field and press return for it to be accepted.
 
 > **Note:** Yes, you read that right — you need to enter the hex value without the hash/pound symbol.
 
 ![PlayCanvas Editor - Diffuse color](playcanvas-editor-diffusecolor.png)
 
-Now we can apply the colored material to the shape by clicking and dragging its icon from the bottom part of the screen (the little dot on the left hand side of the material's name — it can be a bit fiddly to select; just persevere) onto the box on the scene.
+Now we can apply the colored material to the shape by clicking and dragging its icon from the bottom part of the screen (the little dot on the left-hand side of the material's name — it can be a bit fiddly to select; just persevere) onto the box on the scene.
 
 ![PlayCanvas Editor - Box drop](playcanvas-editor-boxdrop.png)
 

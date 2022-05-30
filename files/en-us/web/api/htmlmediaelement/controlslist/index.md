@@ -18,13 +18,7 @@ agent select what controls to show on the media element whenever the user agent 
 its own set of controls. The DOMTokenList takes one or more of three possible values:
 `nodownload`, `nofullscreen`, and `noremoteplayback`.
 
-## Syntax
-
-```js
-var domTokenList = HTMLMediaElement.controlsList;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMTokenList")}}.
 

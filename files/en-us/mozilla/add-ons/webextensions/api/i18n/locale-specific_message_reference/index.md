@@ -76,7 +76,7 @@ The name can include the following characters:
 
 ### message
 
-At least this property must be set for every string. The `"message"` member contains a localized string that can contain {{anch("placeholders")}}. You can use:
+At least this property must be set for every string. The `"message"` member contains a localized string that can contain [placeholders](#placeholders). You can use:
 
 - _$placeholder_name$_ (case insensitive) to insert a particular placeholder (for example $URL$ in the example above) into your string.
 - `$1`, `$2`, `$3`, etc. to directly insert values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call into your string.
@@ -111,7 +111,7 @@ Each placeholder substring definition has a number of values of its own:
 
 #### placeholder name
 
-The placeholder name is used to represent the placeholder in the substitution string (e.g. `"url"` becomes `$url$`). It is case insensitive and can contain the same characters as a message string {{anch("name")}}.
+The placeholder name is used to represent the placeholder in the substitution string (e.g. `"url"` becomes `$url$`). It is case insensitive and can contain the same characters as a message string [name](#name).
 
 #### content
 

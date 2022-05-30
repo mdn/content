@@ -8,6 +8,7 @@ tags:
   - Reference
   - Rotate
   - SVG
+spec-urls: https://svgwg.org/specs/animations/#RotateAttribute
 ---
 The `rotate` attribute specifies how the animated element rotates as it travels along a path specified in an {{SVGElement("animateMotion")}} element.
 
@@ -103,21 +104,4 @@ Setting `rotate`'s value to a number specifies a constant rotation, in degrees, 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#RotateAttribute", "rotate")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

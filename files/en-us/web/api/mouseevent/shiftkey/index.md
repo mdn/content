@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.shiftKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.shiftKey`** read-only property is a boolean value that indicates whether the <kbd>shift</kbd> key was pressed or not when a given mouse event occurs.
 
@@ -19,7 +19,7 @@ The **`MouseEvent.shiftKey`** read-only property is a boolean value that indicat
 
 A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
-## Example
+## Examples
 
 This example logs the `shiftKey` property when you trigger a {{Event("click")}} event.
 

@@ -18,25 +18,25 @@ The **`<filter-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/W
 
 The `<filter-function>` data type is specified using one of the filter functions listed below. Each function requires an argument which, if invalid, results in no filter being applied.
 
-- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/blur", "blur()")}}
   - : Blurs the image.
-- {{cssxref("filter-function/brightness()", "brightness()")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
   - : Makes the image brighter or darker.
-- {{cssxref("filter-function/contrast()", "contrast()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
   - : Increases or decreases the image's contrast.
-- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
   - : Applies a drop shadow behind the image.
-- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
   - : Converts the image to grayscale.
-- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
   - : Changes the overall hue of the image.
-- {{cssxref("filter-function/invert()", "invert()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
   - : Inverts the colors of the image.
-- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
   - : Makes the image transparent.
-- {{cssxref("filter-function/saturate()", "saturate()")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
   - : Super-saturates or desaturates the input image.
-- {{cssxref("filter-function/sepia()", "sepia()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}
   - : Converts the image to sepia.
 
 ## Examples

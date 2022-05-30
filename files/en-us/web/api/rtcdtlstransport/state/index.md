@@ -17,13 +17,7 @@ The **`state`** read-only property of the
 {{DOMxRef("RTCDtlsTransport")}} interface provides information which describes a
 Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport state.
 
-## Syntax
-
-```js
-let myState = dtlsTransport.state;
-```
-
-### Value
+## Value
 
 A string. Its value is one of the following:
 

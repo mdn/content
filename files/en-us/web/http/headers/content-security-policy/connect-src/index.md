@@ -99,7 +99,7 @@ The following connections are blocked and won't load:
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - Prior to Firefox 23, `xhr-src` was used in place of the
   `connect-src` directive and only restricted the use of

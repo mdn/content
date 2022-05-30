@@ -22,7 +22,7 @@ preserved).
 ## Syntax
 
 ```js
-searchParams.sort();
+sort()
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

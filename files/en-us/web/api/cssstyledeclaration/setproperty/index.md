@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -17,7 +18,8 @@ a new value for a property on a CSS style declaration object.
 ## Syntax
 
 ```js
-style.setProperty(propertyName, value, priority);
+setProperty(propertyName, value)
+setProperty(propertyName, value, priority)
 ```
 
 ### Parameters
@@ -38,7 +40,7 @@ style.setProperty(propertyName, value, priority);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

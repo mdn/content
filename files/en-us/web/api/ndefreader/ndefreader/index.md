@@ -19,7 +19,7 @@ field.
 ## Syntax
 
 ```js
-let reader = new NDEFReader();
+new NDEFReader();
 ```
 
 ### Parameters

@@ -14,7 +14,7 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 
 ## Constructor
 
-- {{domxref("EncodedAudioChunk.EncodedAudioChunk()")}}
+- {{domxref("EncodedAudioChunk.EncodedAudioChunk", "EncodedAudioChunk()")}}
   - : Creates a new `EncodedAudioChunk` object.
 
 ## Properties

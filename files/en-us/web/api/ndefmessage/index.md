@@ -9,7 +9,7 @@ browser-compat: api.NDEFMessage
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-The **`NDEFMessage`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) represents the content of an NDEF message that has been read from or could be written to an NFC tag. An instance is acquired by calling the `NDEFMessage()` constructor or from the {{domxref("NDEFReadingEvent.message")}} property, which is passed to {{domxref("NDEFReader.onreading")}}.
+The **`NDEFMessage`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) represents the content of an NDEF message that has been read from or could be written to an NFC tag. An instance is acquired by calling the `NDEFMessage()` constructor or from the {{domxref("NDEFReadingEvent.message")}} property, which is passed to the {{domxref("NDEFReader.reading_event", "reading")}} event.
 
 ## Constructor
 

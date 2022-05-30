@@ -18,10 +18,11 @@ three-dimensional sub-rectangle for a texture image in a compressed format.
 ## Syntax
 
 ```js
-// read from the buffer bound to gl.PIXEL_UNPACK_BUFFER
-void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, offset);
+compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, offset)
 
-void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
+compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, srcData)
+compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, srcData, srcOffset)
+compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, srcData, srcOffset, srcLengthOverride)
 ```
 
 ### Parameters
@@ -76,7 +77,7 @@ void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width,
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

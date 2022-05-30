@@ -1,27 +1,23 @@
 ---
 title: DeprecationReportBody.lineNumber
 slug: Web/API/DeprecationReportBody/lineNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
+  - Experimental
   - lineNumber
   - DeprecationReportBody
-browser-compat: api.DeprecationReportBody.lineNumber
+spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-linenumber
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`lineNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 
 > **Note:** This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} as it enables the location of the line in that file where the error occurred.
 
-## Syntax
-
-```js
-let lineNumber = DeprecationReportBody.lineNumber;
-```
-
-### Value
+## Value
 
 An integer, or `null` if the line is not known.
 
@@ -49,4 +45,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).

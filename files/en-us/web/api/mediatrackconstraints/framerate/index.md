@@ -18,7 +18,7 @@ browser-compat: api.MediaTrackConstraints.frameRate
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
-**`frameRate`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble)
+**`frameRate`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
 describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.frameRate", "frameRate")}} constrainable property.
 
@@ -27,27 +27,19 @@ the value of {{domxref("MediaTrackSupportedConstraints.frameRate")}} as returned
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
+## Value
 
-```js
-var constraintsObject = { frameRate: constraint };
-
-constraintsObject.frameRate = constraint;
-```
-
-### Value
-
-A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) describing the acceptable or required value(s) for a
+A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) describing the acceptable or required value(s) for a
 video track's frame rate, in frames per second.
 
 If this value is a number, the user agent will attempt to obtain media whose frame rate
 is as close as possible to this number given the capabilities of the hardware and the
-other constraints specified. Otherwise, the value of this [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble)
+other constraints specified. Otherwise, the value of this [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
 will guide the user agent in its efforts to provide an exact match to the required frame
 rate (if `exact` is specified or both `min` and `max`
 are provided and have the same value) or to a best-possible value.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

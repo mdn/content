@@ -19,15 +19,21 @@ existing children of a `Document` with a specified new set of children.
 ## Syntax
 
 ```js
-replaceChildren(...nodesOrDOMStrings)
+replaceChildren(param1)
+replaceChildren(param1, param2)
+replaceChildren(param1, param2, /* ... ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodesOrDOMStrings`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace the
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to replace the
     `Document`'s existing children with. If no replacement objects are
     specified, then the `Document` is emptied of all child nodes.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

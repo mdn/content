@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer.preventSilentAccess()
 slug: Web/API/CredentialsContainer/preventSilentAccess
+page-type: web-api-instance-method
 tags:
   - API
   - Credential Management API
@@ -31,14 +32,14 @@ compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) s
 ## Syntax
 
 ```js
-var Promise = CredentialsContainer.preventSilentAccess()
+preventSilentAccess()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An empty {{jsxref("Promise")}}.
 

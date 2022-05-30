@@ -1,6 +1,7 @@
 ---
 title: ContentIndexEvent.id
 slug: Web/API/ContentIndexEvent/id
+page-type: web-api-instance-property
 tags:
   - Content
   - Content Index API
@@ -17,13 +18,7 @@ The read-only **`id`** property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
 the deleted content index via its `id`.
 
-## Syntax
-
-```js
-var id = ContentIndexEvent.id;
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} representation of the deleted content index id.
 

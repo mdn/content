@@ -36,12 +36,12 @@ is `inactive`, `start()` sets the `state`  to
 `Blob` is created and the data is collected in it until the time slice period
 elapses or the source media ends. Each time a `Blob` is filled up to that
 point (the timeslice duration or the end-of-media, if no slice duration was provided), a
-{{event("dataavailable")}} event is sent to the `MediaRecorder` with the
+{{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the `MediaRecorder` with the
 recorded data. If the source is still playing, a new `Blob` is created and
 recording continues into that, and so forth.
 
 When the source stream ends, `state` is set to `inactive` and
-data gathering stops. A final {{event("dataavailable")}} event is sent to the
+data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the
 `MediaRecorder`, followed by a {{event("stop")}} event.
 
 > **Note:** If the browser is unable to start recording or continue
@@ -52,7 +52,8 @@ data gathering stops. A final {{event("dataavailable")}} event is sent to the
 ## Syntax
 
 ```js
-mediaRecorder.start(timeslice)
+start()
+start(timeslice)
 ```
 
 ### Parameters
@@ -66,13 +67,13 @@ mediaRecorder.start(timeslice)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 Errors that can be detected immediately are thrown as DOM exceptions. All other errors
-are reported through {{event("error")}} events sent to the `MediaRecorder`
-object. You can implement the {{domxref("MediaRecorder.onerror", "onerror")}} event
+are reported through {{domxref("MediaRecorder.error_event", "error")}} events sent to the `MediaRecorder`
+object. You can implement the {{domxref("MediaRecorder.error_event", "onerror")}} event
 handler to respond to these errors.
 
 - `InvalidModificationError` {{domxref("DOMException")}}
@@ -89,12 +90,12 @@ handler to respond to these errors.
   - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
     "getUserMedia()")}} when the user denies permission to use an input device. This
-    exception may also be delivered as an {{event("error")}} event if
+    exception may also be delivered as an {{domxref("MediaRecorder.error_event", "error")}} event if
     the security options for the source media change after recording begins.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if something else went wrong during the recording process.
 
-## Example
+## Examples
 
 ```js
 ...
@@ -119,6 +120,6 @@ handler to respond to these errors.
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}

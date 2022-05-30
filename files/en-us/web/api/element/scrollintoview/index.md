@@ -23,16 +23,16 @@ visible to the user.
 ## Syntax
 
 ```js
-element.scrollIntoView();
-element.scrollIntoView(alignToTop); // Boolean parameter
-element.scrollIntoView(scrollIntoViewOptions); // Object parameter
+scrollIntoView()
+scrollIntoView(alignToTop)
+scrollIntoView(scrollIntoViewOptions)
 ```
 
 ### Parameters
 
 - `alignToTop` {{optional_inline}}
 
-  - : Is a boolean value:
+  - : A boolean value:
 
     - If `true`, the top of the element will be aligned to the top of the
       visible area of the scrollable ancestor. Corresponds to
@@ -45,7 +45,7 @@ element.scrollIntoView(scrollIntoViewOptions); // Object parameter
 - `scrollIntoViewOptions` {{optional_inline}}
   {{experimental_inline}}
 
-  - : Is an Object with the following properties:
+  - : An Object with the following properties:
 
     - `behavior` {{optional_inline}}
       - : Defines the transition animation.
@@ -59,7 +59,11 @@ element.scrollIntoView(scrollIntoViewOptions); // Object parameter
         One of `start`, `center`, `end`, or
         `nearest`. Defaults to `nearest`.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var element = document.getElementById("box");

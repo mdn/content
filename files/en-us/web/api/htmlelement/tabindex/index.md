@@ -28,18 +28,11 @@ Elements that are disabled do not participate in the tabbing order.
 Values don't need to be sequential, nor must they begin with any particular value. They
 may even be negative, though each browser trims very large values.
 
-## Syntax
+## Value
 
-```js
-element.tabIndex = index;
-var index = element.tabIndex;
-```
+An integer.
 
-### Value
-
-`index` is an integer
-
-## Example
+## Examples
 
 ```js
 const b1 = document.getElementById('button1');
@@ -57,8 +50,7 @@ b1.tabIndex = 1;
 
 ## See also
 
-- [Accessibility
-  of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Accessibility of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - The HTML
   [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
   global attribute.

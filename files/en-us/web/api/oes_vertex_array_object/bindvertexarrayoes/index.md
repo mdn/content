@@ -19,17 +19,17 @@ passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
 ## Syntax
 
 ```js
-void ext.bindVertexArrayOES(arrayObject);
+bindVertexArrayOES(arrayObject)
 ```
 
 ### Parameters
 
-- arrayObject
+- `arrayObject`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to bind.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

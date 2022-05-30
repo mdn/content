@@ -8,6 +8,7 @@ tags:
   - Guide
   - Security
   - access
+browser-compat: http.headers.csp
 ---
 {{HTTPSidebar}}
 
@@ -15,7 +16,7 @@ tags:
 including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks.
 These attacks are used for everything from data theft, to site defacement, to malware distribution.
 
-CSP is designed to be fully backward compatible (except CSP version 2 where there are some explicitly-mentioned inconsistencies in backward compatibility; more details [here](https://www.w3.org/TR/CSP2) section 1.1).
+CSP is designed to be fully backward compatible (except CSP version 2 where there are some explicitly-mentioned inconsistencies in backward compatibility; more details [here](https://www.w3.org/TR/CSP2/) section 1.1).
 Browsers that don't support it still work with servers that implement it, and vice-versa: browsers that don't support CSP ignore it, functioning as usual, defaulting to the standard same-origin policy for web content.
 If the site doesn't offer the CSP header, browsers likewise use the standard [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
@@ -73,6 +74,8 @@ Your policy should include a {{CSP("default-src")}} policy directive, which is a
 A policy needs to include a {{CSP("default-src")}} or {{CSP("script-src")}} directive to prevent inline scripts from running, as well as blocking the use of `eval()`.
 A policy needs to include a {{CSP("default-src")}} or {{CSP("style-src")}} directive to restrict inline styles from being applied from a {{HTMLElement("style")}} element or a `style` attribute.
 There are specific directives for a wide variety of types of items, so that each type can have its own policy, including fonts, frames, images, audio and video media, scripts, and workers.
+
+For a complete list of policy directives, see the reference page for the [Content-Security-Policy header](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy).
 
 ## Examples: Common use cases
 
@@ -229,7 +232,9 @@ In summary, this is done to prevent leaking sensitive information about cross-or
 
 ## Browser compatibility
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
+
+### Compatibility notes
 
 A specific incompatibility exists in some versions of the Safari web browser, whereby if a Content Security Policy header is set, but not a Same Origin header,
 the browser will block self-hosted content and off-site content, and incorrectly report that this is due to the Content Security Policy not allowing the content.

@@ -17,13 +17,7 @@ The global **`isSecureContext`** read-only property returns a boolean indicating
 the current [context is secure](/en-US/docs/Web/Security/Secure_Contexts)
 (`true`) or not (`false`).
 
-## Syntax
-
-```js
-var isItSecure = self.isSecureContext; // or just isSecureContext
-```
-
-### Value
+## Value
 
 Boolean `true` or `false`.
 

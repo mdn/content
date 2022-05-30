@@ -79,4 +79,3 @@ function showBufferedAmount(channel) {
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}
 - {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event
-- {{domxref("RTCDataChannel.onbufferedamountlow")}}

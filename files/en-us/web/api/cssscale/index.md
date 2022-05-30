@@ -1,6 +1,7 @@
 ---
 title: CSSScale
 slug: Web/API/CSSScale
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,7 +21,7 @@ The **`CSSScale`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 
 ## Constructor
 
-- {{domxref("CSSScale.CSSScale()")}}
+- {{domxref("CSSScale.CSSScale", "CSSScale()")}}
   - : Creates a new `CSSScale` object.
 
 ## Properties

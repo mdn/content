@@ -22,14 +22,14 @@ The **`MediaSource()`** constructor of the
 ## Syntax
 
 ```js
-var mediaSource = new MediaSource();
+new MediaSource()
 ```
 
 ### Parameters
 
 None.
 
-## Example
+## Examples
 
 The following snippet is taken from a simple example written by Nick Desaulniers ([view the full demo
 live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download

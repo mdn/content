@@ -1,6 +1,7 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
+page-type: web-api-instance-property
 tags:
   - API
   - Blob
@@ -15,10 +16,10 @@ The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("
 
 ## Value
 
-A {{domxref("DOMString")}} containing the file's MIME type, or an empty string if the
+A string containing the file's MIME type, or an empty string if the
 type could not be determined.
 
-## Example
+## Examples
 
 This example asks the user to select a number of files, then checks each file to make
 sure it's one of a given set of image file types.
@@ -77,5 +78,4 @@ input.addEventListener('change', (event) => {
 ## See also
 
 - {{domxref("Blob")}}
-- [Using files
-  from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)

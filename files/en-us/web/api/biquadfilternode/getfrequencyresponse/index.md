@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode.getFrequencyResponse()
 slug: Web/API/BiquadFilterNode/getFrequencyResponse
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -26,7 +27,7 @@ must be the same size as the array of input frequency values
 ## Syntax
 
 ```js
-BiquadFilterNode.getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput);
+getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
 ### Parameters
@@ -51,14 +52,14 @@ BiquadFilterNode.getFrequencyResponse(frequencyArray, magResponseOutput, phaseRe
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `InvalidAccessError`
   - : The three arrays provided are not all of the same length.
 
-## Example
+## Examples
 
 In the following example we are using a biquad filter on a media stream (for the full
 demo, see our [stream-source-buffer
@@ -95,7 +96,7 @@ var freqResponseOutput = document.querySelector('.freq-response-output');
 
 Finally, after creating our biquad filter, we use `getFrequencyResponse()`
 to generate the response data and put it in our arrays, then loop through each data set
-and output  them in a human-readable list at the bottom of the page:
+and output them in a human-readable list at the bottom of the page:
 
 ```js
 var biquadFilter = audioCtx.createBiquadFilter();

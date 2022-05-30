@@ -10,6 +10,7 @@ tags:
   - Overview
   - Reference
   - Video
+browser-compat: api.MediaSession
 ---
 {{DefaultAPISidebar("Media Session API")}}
 
@@ -92,10 +93,8 @@ playButton.addEventListener('pointerup', function(event) {
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Media Session')}} | {{Spec2('Media Session')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.MediaSession")}}
+{{Compat}}

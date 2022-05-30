@@ -20,14 +20,7 @@ The **`open`** property of the
 {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is
 available for interaction.
 
-## Syntax
-
-```js
-dialogInstance.open = true;
-var myOpenValue = dialogInstance.open;
-```
-
-### Value
+## Value
 
 A boolean value representing the state of the {{htmlattrxref("open",
   "dialog")}} HTML attribute. `true` means it is set, and therefore the dialog
@@ -100,8 +93,7 @@ button.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

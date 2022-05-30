@@ -17,7 +17,7 @@ The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.prev
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   preventExtensions: function(target) {
   }
 });
@@ -44,6 +44,8 @@ This trap can intercept these operations:
 
 - {{jsxref("Object.preventExtensions()")}}
 - {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.freeze()")}}
 
 ### Invariants
 

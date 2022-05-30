@@ -20,20 +20,20 @@ The **`getState()`** method of the {{domxref("PositionSensorVRDevice")}} interfa
 ## Syntax
 
 ```js
-var myPositionState = PositionSensorVRDevice.getState();
+getState()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref("VRPose")}} object.
 
 ## Examples
 
-The following example is taken from our [positionsensorvrdevice](https://mdn.github.io/webvr-tests/positionsensorvrdevice/) demo, which uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop.
+The following example uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop.
 
 ```js
 function setView() {

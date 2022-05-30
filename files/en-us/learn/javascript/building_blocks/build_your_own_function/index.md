@@ -63,7 +63,7 @@ To begin with, let's put together a basic function.
 
 > **Note:** For function naming conventions, you should follow the same rules as [variable naming conventions](/en-US/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules). This is fine, as you can tell them apart — function names appear with parentheses after them, and variables don't.
 
-1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
+1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
 2. Next, add the following inside the `<script>` element:
 
     ```js
@@ -240,7 +240,7 @@ As it stands, the function is still not very useful — we don't want to just sh
 
 On to the next parameter. This one is going to involve slightly more work — we are going to set it so that depending on what the `msgType` parameter is set to, the function will display a different icon and a different background color.
 
-1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
+1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
 
     > **Note:** The warning and chat icons were originally found on [iconfinder.com](https://www.iconfinder.com/), and designed by [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) — Thanks! (The actual icon pages were since moved or removed.)
 
@@ -295,7 +295,7 @@ On to the next parameter. This one is going to involve slightly more work — we
 
     You can see how useful our (now not so) little function is becoming.
 
-> **Note:** If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) also), or ask us for help.
+> **Note:** If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) also), or ask us for help.
 
 ## Test your skills!
 

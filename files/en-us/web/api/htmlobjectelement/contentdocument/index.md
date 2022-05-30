@@ -18,13 +18,7 @@ the {{domxref("HTMLObjectElement")}} interface Returns a {{domxref("Document")}}
 representing the active document of the object element's nested browsing context, if
 any; otherwise null.
 
-## Syntax
-
-```js
-var document = HTMLObjectElement.contentDocument;
-```
-
-### Value
+## Value
 
 A {{domxref('Document')}}.
 

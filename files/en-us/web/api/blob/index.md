@@ -1,6 +1,7 @@
 ---
 title: Blob
 slug: Web/API/Blob
+page-type: web-api-interface
 tags:
   - API
   - Blob
@@ -42,7 +43,7 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 - {{DOMxRef("Blob.prototype.stream()")}}
   - : Returns a {{DOMxRef("ReadableStream")}} that can be used to read the contents of the `Blob`.
 - {{DOMxRef("Blob.prototype.text()")}}
-  - : Returns a promise that resolves with a {{DOMxRef("USVString")}} containing the entire contents of the `Blob` interpreted as UTF-8 text.
+  - : Returns a promise that resolves with a string containing the entire contents of the `Blob` interpreted as UTF-8 text.
 
 ## Examples
 

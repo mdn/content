@@ -1,6 +1,7 @@
 ---
 title: BlobEvent.timecode
 slug: Web/API/BlobEvent/timecode
+page-type: web-api-instance-property
 tags:
   - API
   - BlobEvent
@@ -21,13 +22,7 @@ produced by this recorder.
 Note that the timecode in the first produced
 BlobEvent does not need to be zero.
 
-## Syntax
-
-```js
-var timecode = blobEvent.timecode
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}}.
 

@@ -20,12 +20,12 @@ The **`setKeyframes()`** method of the {{domxref("KeyframeEffect")}} interface r
 ## Syntax
 
 ```js
-existingKeyframeEffect.setKeyframes(keyframes);
+setKeyframes(keyframes)
 ```
 
 ### Parameters
 
-- keyframes
+- `keyframes`
 
   - : A keyframe object or `null`. If set to `null`, the keyframes are replaced with a sequence of empty keyframes.
 
@@ -33,7 +33,7 @@ existingKeyframeEffect.setKeyframes(keyframes);
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

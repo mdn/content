@@ -15,10 +15,10 @@ This article provides information about the changes in Firefox 81 that will affe
 
 ### Developer Tools
 
-- The [Debugger](/en-US/docs/Tools/Debugger) now uses the TypeScript icon for `.ts` and `.tsx` files ({{bug(1642769)}}). Previously a generic file icon was used.
-- We've added support for line wrapping in the [Debugger source pane](/en-US/docs/Tools/Debugger/UI_Tour#source_pane) ({{bug(1590885)}}).
-- We've removed unnecessary [color vision simulations](/en-US/docs/Tools/Accessibility_inspector/Simulation) (protanomaly, deuteranomaly, and tritanomaly) from the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector), and added a simulation for achromatopsia (no color) ({{bug(1655053)}}).
-- Autocompletion is now supported when adding a [class to an element](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_and_changing_classes_on_an_element). Offered classes are based on existing classes in the document ({{bug(1492797)}}).
+- The [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) now uses the TypeScript icon for `.ts` and `.tsx` files ({{bug(1642769)}}). Previously a generic file icon was used.
+- We've added support for line wrapping in the [Debugger source pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source-pane) ({{bug(1590885)}}).
+- We've removed unnecessary [color vision simulations](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html) (protanomaly, deuteranomaly, and tritanomaly) from the [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), and added a simulation for achromatopsia (no color) ({{bug(1655053)}}).
+- Autocompletion is now supported when adding a [class to an element](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-and-changing-classes-on-an-element). Offered classes are based on existing classes in the document ({{bug(1492797)}}).
 
 ### HTML
 

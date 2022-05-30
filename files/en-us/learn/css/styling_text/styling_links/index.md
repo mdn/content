@@ -65,7 +65,7 @@ The first thing to understand is the concept of link states — different states
 
 ### Default styles
 
-The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more.)
+The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more).
 
 ```html
 <p><a href="#">A simple link</a></p>
@@ -78,9 +78,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Default_styles', '100%', 120) }}
+{{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
-> **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from.) `#` just links to the current page.
+> **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from). `#` just links to the current page.
 
 You'll notice a few things as you explore the default styles:
 
@@ -88,7 +88,7 @@ You'll notice a few things as you explore the default styles:
 - Unvisited links are blue.
 - Visited links are purple.
 - Hovering a link makes the mouse pointer change to a little hand icon.
-- Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key (On Mac, you'll need to use
+- Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key. (On Mac, you'll need to use
 
   <kbd>option</kbd>
 
@@ -96,7 +96,7 @@ You'll notice a few things as you explore the default styles:
 
   <kbd>tab</kbd>
 
-  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/use-your-keyboard-like-a-mouse-mchlp1399/) option by pressing
+  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/en-us/guide/mac-help/mchlp1399/mac) option by pressing
 
   <kbd>Ctrl</kbd>
 
@@ -209,7 +209,7 @@ Firefox</a>, <a href="#">Google Chrome</a>, and
 
 Putting the two together gives us this result:
 
-{{ EmbedLiveSample('Styling_some_links', '100%', 150) }}
+{{ EmbedLiveSample('Styling_some_links', '100%', 200) }}
 
 So what did we do here? This certainly looks different to the default styling, but it still provides a familiar enough experience for users to know what's going on:
 
@@ -309,14 +309,14 @@ window.addEventListener("load", drawOutput);
 
 ## Including icons on links
 
-A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites.) Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [this great example from icons8.com](https://icons8.com/web-app/741/external-link).
+A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites). Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [this great example from icons8.com](https://icons8.com/icon/741/external-link).
 
 Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
 
 ```html
 <p>For more information on the weather, visit our <a href="#">weather page</a>,
-look at <a href="#">weather on Wikipedia</a>, or check
-out <a href="#">weather on Extreme Science</a>.</p>
+look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
+out <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">weather on National Geographic</a>.</p>
 ```
 
 Next, the CSS:
@@ -354,7 +354,7 @@ a:active {
   color: red;
 }
 
-a[href*="#"] {
+a[href^="http"] {
   background: url('external-link-52.png') no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
@@ -369,7 +369,7 @@ We also use {{cssxref("background-size")}} to specify the size we want the backg
 
 Finally, we set some {{cssxref("padding-right")}} on the links to make space for the background image to appear in, so we aren't overlapping it with the text.
 
-A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href*="http"]` selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.
+A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that begins with "http".
 
 So that's it. Try revisiting the active learning section above and trying this new technique out!
 
@@ -387,7 +387,11 @@ First, some HTML:
 
 ```html
 <ul>
-  <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Pizza</a></li>
+  <li><a href="#">Music</a></li>
+  <li><a href="#">Wombats</a></li>
+  <li><a href="#">Finland</a></li>
 </ul>
 ```
 
@@ -439,7 +443,7 @@ a:active {
 
 This gives us the following result:
 
-{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 100) }}
+{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 120) }}
 
 Let's explain what's going on here, focusing on the most interesting parts:
 
@@ -449,14 +453,14 @@ Let's explain what's going on here, focusing on the most interesting parts:
 
   - As in previous examples, we start by turning off the default {{cssxref("text-decoration")}} and {{cssxref("outline")}} — we don't want those spoiling our look.
   - Next, we set the {{cssxref("display")}} to `inline-block`. {{htmlelement("a")}} elements are inline by default and, while we don't want them to spill onto their own lines like a value of `block` would achieve, we do want to be able to size them. `inline-block` allows us to do this.
-  - Now onto the sizing! We want to fill up the whole width of the {{htmlelement("ul")}} and leave a little margin between each button (but not a gap at the right hand edge). We also have 5 buttons whose sizes should all be the same. To do this, we set the {{cssxref("width")}} to 19.5% and the {{cssxref("margin-right")}} to 0.625%. You'll notice that all this width adds up to 100.625%, which would make the last button overflow the `<ul>` and fall down to the next line. However, we take it back down to 100% using the next rule, which selects only the last `<a>` in the list and removes the margin from it. Done!
+  - Now onto the sizing! We want to fill up the whole width of the {{htmlelement("ul")}} and leave a little margin between each button (but not a gap at the right-hand edge). We also have 5 buttons whose sizes should all be the same. To do this, we set the {{cssxref("width")}} to 19.5% and the {{cssxref("margin-right")}} to 0.625%. You'll notice that all this width adds up to 100.625%, which would make the last button overflow the `<ul>` and fall down to the next line. However, we take it back down to 100% using the next rule, which selects only the last `<a>` in the list and removes the margin from it. Done!
   - The last three declarations are pretty simple and are mainly just for cosmetic purposes. We center the text inside each link, set the {{cssxref("line-height")}} to 3 to give the buttons some height (which also has the advantage of centering the text vertically), and set the text color to black.
 
 > **Note:** You may have noticed that the list items in the HTML are all put on the same line as each other. This is done because spaces/line breaks in between inline block elements create spaces on the page, just like the spaces in between words; however, such spaces would break our horizontal navigation menu layout. So we've removed them. You can find more information about this problem (and solutions) at [Fighting the space between inline block elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
 
 ## Summary
 
-We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use custom fonts on your websites (or web fonts, as they are better known).
+We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use [custom fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) on your websites (or web fonts, as they are better known).
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
@@ -464,6 +468,6 @@ We hope this article has provided you with all you'll need to know about links �
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- **Styling links**
+- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
 - [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -35,18 +35,11 @@ For compatibility (or perhaps other) reasons, you can use the older properties i
 (or in addition): {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}},
 {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}.
 
-## Syntax
+## Value
 
-```js
-htmlImageElement.border = thickness;
-let thickness = htmlImageElement.border;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing an integer value specifying the thickness of the
+A string containing an integer value specifying the thickness of the
 border that should surround the image, in CSS pixels. A value of `0`, or an
-empty string, indicates that there should  be no border drawn. The default value of
+empty string, indicates that there should be no border drawn. The default value of
 `border` is `0`
 
 ## Usage notes

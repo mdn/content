@@ -12,7 +12,7 @@ tags:
 ---
 {{CSSRef}}
 
-CSS animations make it possible to do creative animations of content using nothing but CSS. However, there are likely to be times when this feature isn't available, and you may wish to handle that case by using JavaScript code to simulate a similar effect. This article, based on [this blog post](http://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/) by Chris Heilmann, demonstrates a technique for doing this.
+CSS animations make it possible to do creative animations of content using nothing but CSS. However, there are likely to be times when this feature isn't available, and you may wish to handle that case by using JavaScript code to simulate a similar effect. This article, based on [this blog post](https://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/) by Chris Heilmann, demonstrates a technique for doing this.
 
 ## Testing for CSS animation support
 
@@ -91,7 +91,7 @@ The next task is to actually add the keyframes to the page's CSS. The first thin
 
 If there isn't already a style sheet, a new {{HTMLElement("style")}} element is created, and its content is set to the value of keyframes. Then the new {{HTMLElement("style")}} element is inserted into the document's {{HTMLElement("head")}}, thereby adding the new style sheet to the document.
 
-[View on JSFiddle](https://jsfiddle.net/codepo8/ATS2S/8/embedded/result)
+[View on JSFiddle](https://jsfiddle.net/codepo8/ATS2S/8/)
 
 ## See also
 

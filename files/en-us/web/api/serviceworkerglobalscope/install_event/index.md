@@ -14,26 +14,27 @@ browser-compat: api.ServiceWorkerGlobalScope.install_event
 
 The **`install`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ExtendableEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("ServiceWorkerGlobalScope.oninstall")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('install', event => { });
+
+oninstall = event => { };
+```
+
+## Event type
+
+An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ExtendableEvent")}}
+
+## Event properties
+
+_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
 ## Examples
 
@@ -60,7 +61,7 @@ this.addEventListener('install', function(event) {
 });
 ```
 
-You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.oninstall")}} property:
+You can also set up the event handler using the `oninstall` property:
 
 ```js
 globalScope.oninstall = function(event) {

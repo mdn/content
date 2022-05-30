@@ -32,7 +32,7 @@ Usually, the response is parsed as "`text/xml`". If the
 {{domxref("XMLHttpRequest.responseType", "responseType")}} is set to
 "`document`" and the request was made asynchronously, instead the response is
 parsed as "`text/html`". `responseXML` is `null` for
-any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
 If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
 "`text/xml`" or "`application/xml`", you can use
@@ -40,13 +40,7 @@ If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
 
 This property isn't available to workers.
 
-## Syntax
-
-```js
-var data = XMLHttpRequest.responseXML;
-```
-
-### Value
+## Value
 
 A {{domxref("Document")}} from parsing the XML or HTML received using
 {{domxref("XMLHttpRequest")}}, or `null` if no data was received or if the
@@ -58,7 +52,7 @@ data is not XML/HTML.
   - : Thrown if the {{domxref("XMLHttpRequest.responseType", "responseType")}} isn't either
     `document` or an empty string.
 
-## Example
+## Examples
 
 ```js
 var xhr = new XMLHttpRequest;

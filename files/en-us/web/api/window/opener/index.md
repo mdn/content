@@ -21,13 +21,7 @@ a link with a {{htmlattrxref("target", "a")}} attribute.
 In other words, if window `A` opens window `B`,
 `B.opener` returns `A`.
 
-## Syntax
-
-```js
-const openerWindow = window.opener
-```
-
-### Value
+## Value
 
 A {{domxref("Window")}}-like object referring to the window that opened the current
 window (using {{domxref("window.open()")}}, or by a link with {{htmlattrxref("target",
@@ -37,7 +31,7 @@ another, returns {{jsxref("null")}}.
 If the opener is not on the same origin as the current page, functionality of the
 opener object is limited. For example, variables and functions on the window object are
 not accessible. However, navigation of the opener window is possible, which means that
-the opened page can open an URL in the original tab or window. In some cases, this makes
+the opened page can open a URL in the original tab or window. In some cases, this makes
 phishing attacks possible, where a trusted page that is opened in the original window is
 replaced by a phishing page by the newly opened page.
 

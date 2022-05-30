@@ -20,7 +20,7 @@ This method behaves in a similar way to {{domxref("ElementInternals.checkValidit
 ## Syntax
 
 ```js
-ElementInternals.reportValidity();
+reportValidity()
 ```
 
 ### Parameters

@@ -24,12 +24,9 @@ performance can be optimized.
 > {{domxref("HTMLCanvasElement.getContext()")}}. Use of `mozOpaque` should be
 > avoided. Firefox will stop supporting it in the future.
 
-## Syntax
+## Value
 
-```js
-var opaque = canvas.mozOpaque;
-canvas.mozOpaque = true;
-```
+A boolean value.
 
 ## Examples
 

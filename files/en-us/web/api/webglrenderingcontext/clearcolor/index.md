@@ -21,7 +21,7 @@ between 0 and 1.
 ## Syntax
 
 ```js
-void gl.clearColor(red, green, blue, alpha);
+clearColor(red, green, blue, alpha)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ void gl.clearColor(red, green, blue, alpha);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

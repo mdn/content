@@ -13,15 +13,9 @@ browser-compat: api.MIDIPort.id
 
 The **`id`** read-only property of the {{domxref("MIDIPort")}} interface returns the unique ID of the port.
 
-## Syntax
+## Value
 
-```js
-let id = MIDIPort.id;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing an ID for the port.
+A string containing an ID for the port.
 
 ## Examples
 

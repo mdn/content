@@ -27,16 +27,18 @@ cards.
 ## Syntax
 
 ```js
-retryPromise = paymentRequest.retry(errorFields);
+retry(errorFields)
 ```
 
 ### Parameters
 
 - `errorFields`
 
-  - : A {{domxref("PaymentValidationErrors")}} object, with the following properties:
-
-    {{page("/en-US/docs/Web/API/PaymentValidationErrors", "Properties")}}
+  - : An object, with the following properties:
+    - `error` {{optional_inline}}
+      - : A general description of a payment error from which the user may attempt to recover by retrying the payment, possibly after correcting mistakes in the payment information. `error` can be provided all by itself to provide only a generic error message, or in concert with the other properties to serve as an overview while other properties' values guide the user to errors in specific fields in the payment form.
+    - `paymentMethod {{optional_inline}}
+      - : Any payment-method-specific errors which may have occurred. This object's contents will vary depending on the payment method used.
 
 ### Return value
 
@@ -50,7 +52,7 @@ If a retry is needed, the loop calls `retry()`, then loops back to check the
 response when it comes in. The loop exits only when the user either cancels the payment
 request or the request is successful.
 
-See the {{anch("Examples", "example")}} below for a thorough example, but the basic
+See the [example](#examples) below for a thorough example, but the basic
 concept, in outline form, is:
 
 1. Create a new {{domxref("PaymentRequest")}}

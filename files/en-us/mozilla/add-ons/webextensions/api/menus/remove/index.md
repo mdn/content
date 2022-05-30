@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.menus.remove(
+let removing = browser.menus.remove(
   menuItemId      // integer or string
 )
 ```
@@ -59,7 +59,7 @@ browser.menus.create({
 
 browser.menus.onClicked.addListener(function(info, tab) {
   if (info.menuItemId == "remove-me") {
-    var removing = browser.menus.remove(info.menuItemId);
+    let removing = browser.menus.remove(info.menuItemId);
     removing.then(onRemoved, onError);
   }
 });
@@ -71,7 +71,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-remove) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-remove) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

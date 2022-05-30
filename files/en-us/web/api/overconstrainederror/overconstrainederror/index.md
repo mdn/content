@@ -25,14 +25,14 @@ applied.
 ## Syntax
 
 ```js
-var OverconstrainedError = new OverconstrainedError()
+new OverconstrainedError()
 ```
 
 ### Parameters
 
-- constraint
+- `constraint`
   - : The constraint that was not satisfied.
-- message
+- `message`
   - : Text for the error's `message` property.
 
 ## Specifications

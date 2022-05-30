@@ -15,16 +15,9 @@ browser-compat: api.Element.ariaKeyShortcuts
 
 The **`ariaKeyShortcuts`** property of the {{domxref("Element")}} interface reflects the value of the `aria-keyshortcuts` attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 
-## Syntax
+## Value
 
-```js
-var ariaKeyShortcuts = element.ariaKeyShortcuts;
-element.ariaKeyShortcuts = ariaKeyShortcuts
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

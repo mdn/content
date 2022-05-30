@@ -20,17 +20,17 @@ is destroyed by the garbage collector.
 ## Syntax
 
 ```js
-void gl.deleteShader(shader);
+deleteShader(shader)
 ```
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

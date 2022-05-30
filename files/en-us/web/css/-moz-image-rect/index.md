@@ -18,12 +18,12 @@ The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("backgr
 ## Syntax
 
 ```css
--moz-image-rect({{CSSxRef("url()")}}, top, right, bottom, left);
+-moz-image-rect({{CSSxRef("url", "url()")}}, top, right, bottom, left);
 ```
 
 ### Values
 
-- {{CSSxRef("url()")}}
+- {{CSSxRef("url", "url()")}}
   - : The URI of the image from which to take the sub-image.
 - `top`
   - : The top edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.

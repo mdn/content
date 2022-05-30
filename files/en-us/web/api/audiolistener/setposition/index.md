@@ -1,6 +1,7 @@
 ---
 title: AudioListener.setPosition()
 slug: Web/API/AudioListener/setPosition
+page-type: web-api-instance-method
 tags:
   - API
   - AudioListener
@@ -15,34 +16,32 @@ browser-compat: api.AudioListener.setPosition
 
 The `setPosition()` method of the {{ domxref("AudioListener") }} Interface defines the position of the listener.
 
-The three parameters `x`, `y` and `z` are unitless and describe the listener's position in 3D space according to the right-hand Cartesian coordinate system. {{domxref("PannerNode")}} objects use this position relative to individual audio sources for spatialisation.
+The three parameters `x`, `y` and `z` are unitless and describe the listener's position in 3D space according to the right-hand Cartesian coordinate system. {{domxref("PannerNode")}} objects use this position relative to individual audio sources for spatialization.
 
 The default value of the position vector is `(0,` `0,` `0)`.
 
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.setPosition(1,1,1);
+setPosition(x, y, z)
 ```
 
-### Returns
+### Parameters
 
-{{jsxref('undefined')}}.
+- `x`
+  - : The x position of the listener in 3D space.
+- `y`
+  - : The y position of the listener in 3D space.
+- `z`
+  - : The z position of the listener in 3D space.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
-
-## Parameters
-
-- x
-  - : The x position of the listener in 3D space.
-- y
-  - : The y position of the listener in 3D space.
-- z
-  - : The z position of the listener in 3D space.
 
 ## Specifications
 

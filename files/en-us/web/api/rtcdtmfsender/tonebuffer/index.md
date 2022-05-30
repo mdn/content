@@ -24,15 +24,9 @@ call {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}}.
 
 Tones are removed from the string as they're played, so only upcoming tones are listed.
 
-## Syntax
+## Value
 
-```js
-var toneBuffer = RTCDTMFSender.toneBuffer;
-```
-
-### Value
-
-A {{domxref("DOMString")}} listing the tones to be played. If the string is empty,
+A string listing the tones to be played. If the string is empty,
 there are no tones pending.
 
 ### Exceptions

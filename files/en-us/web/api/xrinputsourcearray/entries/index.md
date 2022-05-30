@@ -32,11 +32,7 @@ Most frequently, you will use this in tandem with statements such as
 ## Syntax
 
 ```js
-let inputSourceIterator = xrInputSourceArray.entries();
-
-for (let entry of xrInputSourceArray.entries()) {
-  /* ... */
-}
+entries()
 ```
 
 ### Parameters
@@ -45,8 +41,7 @@ None.
 
 ### Return value
 
-An
-[`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+An [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 which can be used to walk through the list of `XRInputSource` objects
 included in the input source array.
 

@@ -22,13 +22,7 @@ The {{domxref("HTMLVideoElement")}}
 attribute indicating whether the user agent should suggest the
 picture-in-picture feature to users, or request it automatically.
 
-## Syntax
-
-```js
-disablePictureInPicture = htmlVideoElement.disablePictureInPicture;
-```
-
-### Value
+## Value
 
 A boolean value that is `true` if the user agent should
 suggest that feature to users.

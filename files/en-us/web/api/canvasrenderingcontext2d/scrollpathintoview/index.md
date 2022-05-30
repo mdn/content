@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -20,14 +21,18 @@ to {{domxref("Element.scrollIntoView()")}}.
 ## Syntax
 
 ```js
-void ctx.scrollPathIntoView();
-void ctx.scrollPathIntoView(path);
+scrollPathIntoView()
+scrollPathIntoView(path)
 ```
 
 ### Parameters
 
 - `path`
   - : A {{domxref("Path2D")}} path to use.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,9 +1,9 @@
 ---
-title: 'Location: assign()'
+title: location.assign()
 slug: Web/API/Location/assign
 tags:
   - API
-  - HTML-DOM
+  - HTML DOM
   - Location
   - Method
   - Reference
@@ -28,15 +28,19 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 ## Syntax
 
 ```js
-location.assign(url);
+assign(url)
 ```
 
 ### Parameters
 
 - `url`
-  - : Is a {{domxref("DOMString")}} containing the URL of the page to navigate to.
+  - : A string containing the URL of the page to navigate to.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Navigate to the Location.reload article

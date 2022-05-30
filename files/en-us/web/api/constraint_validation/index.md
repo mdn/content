@@ -1,6 +1,7 @@
 ---
 title: Constraint validation API
 slug: Web/API/Constraint_validation
+page-type: web-api-overview
 tags:
   - API
   - Constraint validation
@@ -113,4 +114,4 @@ In brief:
 - [`<input>`](/en-US/docs/Web/HTML/Element/input)
 - [`<select>`](/en-US/docs/Web/HTML/Element/select)
 - [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
-- `{{domxref('ValidityState')}}`'s properties: {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.customError','customError')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}}, {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}}, {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valid','valid')}}, and {{domxref('validityState.valueMissing','valueMissing')}}.
+- {{domxref('ValidityState')}}'s properties: {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.customError','customError')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}}, {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}}, {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valid','valid')}}, and {{domxref('validityState.valueMissing','valueMissing')}}.

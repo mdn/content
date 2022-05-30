@@ -29,46 +29,26 @@ or {{domxref("IDBKeyRange")}}.
 ## Syntax
 
 ```js
-var request = objectStore.clear();
+clear()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this
 operation are fired.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of one of the following types:
+- `ReadOnlyError` {{domxref("DOMException")}}
+  - : Thrown if the transaction associated with this operation is in read-only [mode](/en-US/docs/Web/API/IDBTransaction/mode).
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ReadOnlyError</code></td>
-      <td>
-        The transaction associated with this operation is in read-only <a
-          href="/en-US/docs/Web/API/IDBTransaction#mode_constants"
-          >mode</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>
-        This {{domxref("IDBObjectStore")}}'s transaction is
-        inactive.<br />
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and
 clear all the current data out of the object store using `clear()`. For a

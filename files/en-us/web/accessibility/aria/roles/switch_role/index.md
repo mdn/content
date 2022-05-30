@@ -10,6 +10,9 @@ tags:
   - Switch
   - a11y
   - toggle
+spec-urls:
+  - https://w3c.github.io/aria/#switch
+  - https://w3c.github.io/html-aria/#index-aria-switch
 ---
 The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except that instead of representing "checked" and "unchecked" states, which are fairly generic in meaning, the `switch` role represents the states "on" and "off."
 
@@ -46,9 +49,9 @@ Because descendants of `switch` are presentational, the following code is equiva
 
 ```html
 <div role="switch"><h3 role="presentation">Title of my switch</h3></div>
-````
+```
 
-From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
 ```html
 <div role="switch">Title of my switch</div>
@@ -180,10 +183,7 @@ The result looks like this:
 
 ## Specifications
 
-| Specification                                                        | Status                           | Comment                                                                 |
-| -------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('ARIA', '#switch')}}                             | {{Spec2('ARIA')}}         | Defines ARIA in general along with all roles, properties, and so forth. |
-| {{SpecName('ARIA in HTML', '#index-aria-switch')}} | {{Spec2('ARIA in HTML')}} | Describes how ARIA's features integrate into HTML.                      |
+{{Specifications}}
 
 ## See also
 

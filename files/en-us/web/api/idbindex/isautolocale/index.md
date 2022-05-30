@@ -17,18 +17,11 @@ browser-compat: api.IDBIndex.isAutoLocale
 
 The **`isAutoLocale`** read-only property of the {{domxref("IDBIndex")}} interface returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
 
-## Syntax
-
-```js
-var myIndex = objectStore.index('index');
-console.log(myIndex.isAutoLocale);
-```
-
-### Value
+## Value
 
 A boolean value.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
 

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -34,7 +35,7 @@ object. It is functionally identical to the standard, preferred method
 ## Syntax
 
 ```js
-cssStyleSheet.removeRule(index)
+removeRule(index)
 ```
 
 ### Parameters
@@ -45,9 +46,9 @@ cssStyleSheet.removeRule(index)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example removes the first rule from the stylesheet `myStyles`.
 

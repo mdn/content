@@ -11,17 +11,12 @@ browser-compat: api.HTMLAreaElement.port
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.port`** property is a
-{{domxref("USVString")}} containing the port number of the URL. If the URL does not
+string containing the port number of the URL. If the URL does not
 contain an explicit port number, it will be set to `''`.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.port;
-// Setter
-area.port = string;
-```
+A string.
 
 ## Examples
 

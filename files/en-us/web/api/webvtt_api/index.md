@@ -238,7 +238,7 @@ Transcrit par Célestes™
 ::cue(#crédit\ de\ transcription) { color: red; }
 ```
 
-Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):
+Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
 
 ```plain
 WEBVTT
@@ -627,7 +627,7 @@ There are a number of tags, such as `<bold>`, that can be used. However, if the 
 
   - The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The *active text* is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the *active text* in the payload is *previous text* . Any text beyond the *active text* is *future text* . This enables karaoke style captions.
 
-  ##### Example 12 - Karaoke style text
+  ##### Example 14 - Karaoke style text
 
   ```plain
   1
@@ -649,7 +649,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Style the contained text using a CSS class.
 
-  ##### Example 14 - Class tag
+  ##### Example 15 - Class tag
 
   ```html
   <c.classname>text</c>
@@ -659,7 +659,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Italicize the contained text.
 
-  ##### Example 15 - Italics tag
+  ##### Example 16 - Italics tag
 
   ```html
   <i>text</i>
@@ -669,7 +669,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Bold the contained text.
 
-  ##### Example 16 - Bold tag
+  ##### Example 17 - Bold tag
 
   ```html
   <b>text</b>
@@ -679,7 +679,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Underline the contained text.
 
-  ##### Example 17 - Underline tag
+  ##### Example 18 - Underline tag
 
   ```html
   <u>text</u>
@@ -689,7 +689,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
-  ##### Example 18 - Ruby tag
+  ##### Example 19 - Ruby tag
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -699,7 +699,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
-  ##### Example 19 - Ruby text tag
+  ##### Example 20 - Ruby text tag
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -709,7 +709,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Similar to class tag, also used to style the contained text using CSS.
 
-  ##### Example 20 - Voice tag
+  ##### Example 21 - Voice tag
 
   ```html
   <v Bob>text</v>
@@ -719,23 +719,23 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
 The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
 
-- ### VTTCue
+### VTTCue
 
-  - The methods which are available in this interface are:
+- The methods which are available in this interface are:
 
-    - GetCueAsHTML to get the HTML of that Cue.
-    - VTT Constructor for creating new objects of Cues.
-    - Autokeyword.
-    - DirectionSetting: to set the direction of caption or text in a file.
-    - LineAlignment: to adjust the line alignment.
-    - PositionAlignSetting: to adjust the position of text.
+  - GetCueAsHTML to get the HTML of that Cue.
+  - VTT Constructor for creating new objects of Cues.
+  - Autokeyword.
+  - DirectionSetting: to set the direction of caption or text in a file.
+  - LineAlignment: to adjust the line alignment.
+  - PositionAlignSetting: to adjust the position of text.
 
-- ### VTTRegion
+### VTTRegion
 
-  - The methods used for region are listed below along with description of their functionality:
+- The methods used for region are listed below along with description of their functionality:
 
-    - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
-    - VTT Region Constructor: for construction of new VTT Regions.
+  - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
+  - VTT Region Constructor: for construction of new VTT Regions.
 
 ## Tutorial on how to write a WebVTT file
 
@@ -804,6 +804,6 @@ Where p and a are the tags which are used in HTML for paragraph and link, respec
 
 Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value `"middle"` instead of `"center"`. This has been corrected.
 
-WebVTT was implemented in Firefox 24 behind the preference {{pref("media.webvtt.enabled")}}, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
+WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
 
 Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).

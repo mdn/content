@@ -11,34 +11,27 @@ browser-compat: api.RTCPeerConnection.connectionstatechange_event
 ---
 {{APIRef("WebRTC")}}
 
-The **`connectionstatechange`** event is sent to the {{domxref("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}} event handler on an {{domxref("RTCPeerConnection")}} object after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.
+The **`connectionstatechange`** event is sent to the `onconnectionstatechange` event handler on an {{domxref("RTCPeerConnection")}} object after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.
 The new connection state can be found in {{domxref("RTCPeerConnection.connectionState", "connectionState")}},
 and is one of the string values:
 `new`, `connecting`, `connected`, `disconnected`,
 `failed`, or `closed`.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        {{domxref("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('connectionstatechange', event => { });
+
+onconnectionstatechange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

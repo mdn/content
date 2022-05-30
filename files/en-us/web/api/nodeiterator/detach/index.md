@@ -22,17 +22,24 @@ iterates, releasing any resources used by the set and setting the iterator's sta
 ## Syntax
 
 ```js
-nodeIterator.detach();
+detach()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 nodeIterator.detach(); // detaches the iterator
 

@@ -26,17 +26,11 @@ current `MediaSource`. The three possible values are:
 - `ended`: The source is attached to a media element but the stream has
   been ended via a call to {{domxref("MediaSource.endOfStream()")}}.
 
-## Syntax
+## Value
 
-```js
-var myReadyState = mediaSource.readyState;
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
 live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download

@@ -15,7 +15,7 @@ browser-compat: api.IDBVersionChangeEvent
 ---
 {{APIRef("IndexedDB")}}
 
-The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} event handler function.
+The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} event handler function.
 
 {{AvailableInWorkers}}
 
@@ -34,14 +34,6 @@ _Also inherits properties from its parent, {{domxref("Event")}} interface._
   - : Returns the old version of the database.
 - {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
   - : Returns the new version of the database.
-
-### Deprecated properties
-
-- {{ domxref("IDBVersionChangeEvent.version") }} {{readonlyInline}} {{deprecated_inline}}
-
-  - : The new version of the database in a {{event("versionchange")}} transaction.
-
-    > **Warning:** While this property is still implemented in older browsers, the latest specification replaces it with the `oldVersion` and `newVersion` attributes. See the compatibility table to know what browsers support them.
 
 ### Methods
 
@@ -94,5 +86,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- [IDBDatabase.onversionchange](/en-US/docs/Web/API/IDBDatabase/onversionchange)
 - Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

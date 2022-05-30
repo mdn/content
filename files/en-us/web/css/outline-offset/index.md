@@ -26,6 +26,7 @@ outline-offset: 0.2em;
 outline-offset: inherit;
 outline-offset: initial;
 outline-offset: revert;
+outline-offset: revert-layer;
 outline-offset: unset;
 ```
 

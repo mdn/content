@@ -38,4 +38,4 @@ specifying the handler for the event.
 ## See also
 
 - {{event("pause")}}
-- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAttestationResponse.attestationObject
 slug: Web/API/AuthenticatorAttestationResponse/attestationObject
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorAttestationResponse
@@ -24,13 +25,7 @@ that corresponds to the private key that has created the attestation signature i
 known; however, there are various well known attestation public key chains for different
 ecosystems (for example, Android or TPM attestations).
 
-## Syntax
-
-```js
-attestObj = authenticatorAttestationResponse.attestationObject
-```
-
-## Properties
+## Value
 
 After decoding the [CBOR](https://datatracker.ietf.org/doc/html/rfc7049) encoded
 `ArrayBuffer`, the resulting JavaScript object will contain the following

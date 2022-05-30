@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.cssRules
 slug: Web/API/CSSStyleSheet/cssRules
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -23,13 +24,7 @@ provides a real-time, up-to-date list of every CSS rule which comprises the
 stylesheet. Each item in the list is a {{domxref("CSSRule")}} defining a single
 rule.
 
-## Syntax
-
-```js
-var rules = cssStyleSheet.cssRules;
-```
-
-### Value
+## Value
 
 A live-updating {{domxref("CSSRuleList")}} containing each of the CSS rules making up
 the stylesheet. Each entry in the rule list is a {{domxref("CSSRule")}} object

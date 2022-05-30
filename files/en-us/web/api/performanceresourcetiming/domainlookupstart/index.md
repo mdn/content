@@ -16,18 +16,12 @@ domain name lookup for the resource.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.domainLookupStart;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain
 name lookup for the resource.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

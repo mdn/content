@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer.sampleRate
 slug: Web/API/AudioBuffer/sampleRate
+page-type: web-api-instance-property
 tags:
   - API
   - AudioBuffer
@@ -16,19 +17,12 @@ The **`sampleRate`** property of the {{
   domxref("AudioBuffer") }} interface returns a float representing the sample rate, in
 samples per second, of the PCM data stored in the buffer.
 
-## Syntax
-
-```js
-const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.sampleRate;
-```
-
-### Value
+## Value
 
 A floating-point value indicating the current sample rate of the buffers data, in
 samples per second.
 
-## Example
+## Examples
 
 ```js
 // Stereo
@@ -66,5 +60,4 @@ button.onclick = function() {
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -14,7 +14,7 @@ tags:
   - pre-processor
   - styleguide
 ---
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
 
@@ -382,11 +382,11 @@ If the partials are all loaded into an index file, as implied above, you can the
 
 If you are concerned about adding size to your stylesheets, for example, by adding a lot of additional comments and whitespace, then a post-processing step could be to optimize the CSS by stripping out anything unnecessary in the production version. An example of a post-processor solution for doing this would be [cssnano](https://cssnano.co/).
 
-## Wrapping up
+## Summary
 
-This is the final part of our Learning CSS Guide, and as you can see there are many ways in which your exploration of CSS can continue from this point.
+This is the final part of our building blocks module, and as you can see there are many ways in which your exploration of CSS can continue from this point — but now you can go on to testing yourself with our assessments: the first one is linked below.
 
-To learn more about layout in CSS, see the [Learn CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) section.
+To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
 
 You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
@@ -394,21 +394,24 @@ You should also now have the skills to explore the rest of the [MDN CSS](/en-US/
 
 ## In this module
 
-1. [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

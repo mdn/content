@@ -11,7 +11,7 @@ browser-compat: api.HTMLElement.pointerout_event
 ---
 {{APIRef}}
 
-The `pointerout` event is fired for several reasons including: pointing device is moved out of the _hit test_ boundaries of an element; firing the {{event("pointerup")}} event for a device that does not support hover (see {{event("pointerup")}}); after firing the {{event("pointercancel")}} event (see {{event("pointercancel")}}); when a pen stylus leaves the hover range detectable by the digitizer.
+The `pointerout` event is fired for several reasons including: pointing device is moved out of the _hit test_ boundaries of an element; firing the {{domxref("HTMLElement/pointerup_event", "pointerup")}} event for a device that does not support hover (see {{domxref("HTMLElement/pointerup_event", "pointerup")}}); after firing the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event (see {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}); when a pen stylus leaves the hover range detectable by the digitizer.
 
 <table class="properties">
   <tbody>

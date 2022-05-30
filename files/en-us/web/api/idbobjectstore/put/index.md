@@ -16,7 +16,7 @@ browser-compat: api.IDBObjectStore.put
 
 The **`put()`** method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.
 
-It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is `readwrite`. If the record is successfully stored, then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
+It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is `readwrite`. If the record is successfully stored, then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
 
 The put method is an _update or insert_ method.
 See the {{domxref("IDBObjectStore.add")}} method for an _insert only_ method.
@@ -31,15 +31,15 @@ record will be updated, instead of a new record being inserted.
 ## Syntax
 
 ```js
-let request = objectStore.put(item);
-let request = objectStore.put(item, key);
+put(item)
+put(item, key)
 ```
 
 ### Parameters
 
-- item
+- `item`
   - : The item you wish to update (or insert).
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : The primary key of the record you want to update (e.g. from
     {{domxref("IDBCursor.primaryKey")}}). This is only needed for object stores that have
     an `autoIncrement` primary key, therefore the key is not in a field on the
@@ -70,16 +70,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
 
-## Parameters
-
-- value
-  - : The value to be stored.
-- key
-  - : The key to use to identify the record. If unspecified, it results to null. If the
-    object store has a key generator (e.g. autoincrement) the key of the object must be
-    passed in to update the object.
-
-## Example
+## Examples
 
 The following example requests a given record title; when that request is successful
 the `onsuccess` function gets the associated record from the

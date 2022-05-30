@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode.normalize
 slug: Web/API/ConvolverNode/normalize
+page-type: web-api-instance-property
 tags:
   - API
   - ConvolverNode
@@ -23,19 +24,11 @@ set to `false`, then the convolution will be rendered with no
 pre-processing/scaling of the impulse response. Changes to this value do not take
 effect until the next time the `buffer` attribute is set.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var convolver = audioCtx.createConvolver();
-convolver.normalize = false;
-```
-
-### Value
+## Value
 
 A boolean.
 
-## Example
+## Examples
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

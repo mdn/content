@@ -15,13 +15,11 @@ returns the number of child elements of a `DocumentFragment`.
 
 To get the number of children of a specific element, see {{domxref("Element.childElementCount")}}.
 
-## Syntax
+## Value
 
-```js
-fragment.childElementCount;
-```
+A number representing the number of children of the element.
 
-## Example
+## Examples
 
 ```js
 let fragment = new DocumentFragment()

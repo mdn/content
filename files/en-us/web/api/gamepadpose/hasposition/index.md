@@ -17,13 +17,7 @@ browser-compat: api.GamepadPose.hasPosition
 
 The **`hasPosition`** read-only property of the {{domxref("GamepadPose")}} interface returns a boolean value stating whether the {{domxref("Gamepad")}} can track and return position information.
 
-## Syntax
-
-```js
-var hasItGotPosition = gamepadPoseInstance.hasPosition;
-```
-
-### Value
+## Value
 
 A boolean value.
 

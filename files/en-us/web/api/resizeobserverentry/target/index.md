@@ -20,14 +20,7 @@ The **`target`** read-only property of the
 {{domxref("ResizeObserverEntry")}} interface returns a reference to the
 {{domxref('Element')}} or {{domxref('SVGElement')}} that is being observed.
 
-## Syntax
-
-```js
-var element = ResizeObserverEntry.target;
-var svgElement = ResizeObserverEntry.target;
-```
-
-### Value
+## Value
 
 An {{domxref('Element')}} or {{domxref('SVGElement')}} representing the element being
 observed.

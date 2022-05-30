@@ -60,17 +60,17 @@ As you can infer from the brief example above, the caption is meant to contain a
 
 A caption is placed directly beneath the `<table>` tag.
 
-> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screenreaders. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page.)
+> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screenreaders. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page).
 
 ### Active learning: Adding a caption
 
 Let's try this out, revisiting an example we first met in the previous article.
 
-1. Open up your language teacher's school timetable from the end of [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col), or make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) file.
+1. Open up your language teacher's school timetable from the end of [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col), or make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) file.
 2. Add a suitable caption for the table.
 3. Save your code and open it in a browser to see what it looks like.
 
-> **Note:** You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> **Note:** You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 ## Adding structure with \<thead>, \<tfoot>, and \<tbody>
 
@@ -90,7 +90,7 @@ To use them:
 
 Let's put these new elements into action.
 
-1. First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) in a new folder.
+1. First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) in a new folder.
 2. Try opening it in a browser — You'll see that it looks OK, but it could stand to be improved. The "SUM" row that contains a summation of the spent amounts seems to be in the wrong place, and there are some details missing from the code.
 3. Put the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
 4. Save and refresh, and you'll see that adding the `<tfoot>` element has caused the "SUM" row to go down to the bottom of the table.
@@ -224,7 +224,7 @@ Your finished table should look something like the following:
 
 {{ EmbedLiveSample('Active_learning_Adding_table_structure', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** You can also find it on Github as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> **Note:** You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## Nesting Tables
 
@@ -345,7 +345,7 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
 
 But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screenreader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.
 
-> **Note:** There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/mediacentre/factsheets/fs282/en/).
+> **Note:** There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment).
 
 This section of the article provides further techniques for making tables as accessible as possible.
 
@@ -385,7 +385,7 @@ And each row could have a header defined like this (if we added row headers as w
 
 Screenreaders will recognize markup structured like this, and allow their users to read out the entire column or row at once, for example.
 
-`scope` has two more possible values — `colgroup` and `rowgroup`. these are used for headings that sit over the top of multiple columns or rows. If you look back at the "Items Sold August 2016" table at the start of this section of the article, you'll see that the "Clothes" cell sits above the "Trousers", "Skirts", and "Dresses" cells. All of these cells should be marked up as headers (`<th>`), but "Clothes" is a heading that sits over the top and defines the other three subheadings. "Clothes" therefore should get an attribute of `scope="colgroup"`, whereas the others would get an attribute of `scope="col"`.
+`scope` has two more possible values — `colgroup` and `rowgroup`. These are used for headings that sit over the top of multiple columns or rows. If you look back at the "Items Sold August 2016" table at the start of this section of the article, you'll see that the "Clothes" cell sits above the "Trousers", "Skirts", and "Dresses" cells. All of these cells should be marked up as headers (`<th>`), but "Clothes" is a heading that sits over the top and defines the other three subheadings. "Clothes" therefore should get an attribute of `scope="colgroup"`, whereas the others would get an attribute of `scope="col"`.
 
 ### The id and headers attributes
 
@@ -426,20 +426,24 @@ Returning to our spending costs example, the previous two snippets could be rewr
 
 ### Active learning: playing with scope and headers
 
-1. For this final exercise, we'd like you to first make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css), in a new directory.
+1. For this final exercise, we'd like you to first make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css), in a new directory.
 2. Now try adding in the appropriate `scope` attributes to make this table more appropriate.
 3. Finally, try making another copy of the starter files, and this time make the table more accessible using `id` and `headers` attributes.
 
-> **Note:** You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> **Note:** You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Summary
 
-There are a few other things you could learn about table HTML, but we have really given all you need to know at this moment in time. At this point, you might want to go and learn about styling HTML tables — see [Styling Tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
+There are a few other things you could learn about tables in HTML, but this is all you need to know for now. Next, you can test yourself with our [HTML tables assessment](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data). Have fun!
+
+If you are already learning CSS and have done well on the assessment, you can move on and learn about styling HTML tables — see [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
+
+If want to get started with learning CSS, check out the [CSS Learning Area](/en-US/docs/Learn/CSS)!
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 ## In this module
 
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- **HTML table advanced features and accessibility**
+- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

@@ -70,7 +70,7 @@ Example
 
 ## Dragging HTML and XML
 
-HTML content may use the `text/html` type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the `{{domxref("Element.innerHTML","innerHTML")}}` property of an element.
+HTML content may use the `text/html` type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the {{domxref("Element.innerHTML","innerHTML")}} property of an element.
 
 XML content may use the `text/xml` type, but ensure that the data is well-formed XML.
 
@@ -84,7 +84,7 @@ dt.setData("text/plain", "Hello there, stranger");
 
 ## Dragging Files
 
-A local file is dragged using the `application/x-moz-file` type with a data value that is an [nsIFile](/en-US/docs/XPCOM_Interface_Reference/nsIFile) object. Non-privileged web pages cannot retrieve or modify data of this type.
+A local file is dragged using the `application/x-moz-file` type with a data value that is an `nsIFile` object. Non-privileged web pages cannot retrieve or modify data of this type.
 
 Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.
 
@@ -121,7 +121,7 @@ In this example, the event returns false only if the data transfer contains the 
 
 ### Updates to DataTransfer.types
 
-The latest spec dictates that {{domxref("DataTransfer.types")}} should return a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
+The latest spec dictates that {{domxref("DataTransfer.types")}} should return a frozen array of strings rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
 
 As a result, the [contains](/en-US/docs/Web/API/Node/contains) method no longer works; the [includes](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 
@@ -135,11 +135,11 @@ You could use feature detection to determine which method is supported on `types
 
 ## Dragging Images
 
-Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) if the image is not stored on a web site or disk.
+Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) if the image is not stored on a web site or disk.
 
 As with links, the data for the `text/plain` type should also contain the URL. However, a `data:` URL is not usually useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 
-In chrome or other privileged code, you may also use the `image/jpeg`, `image/png` or `image/gif` types, depending on the type of image. The data should be an object which implements the [nsIInputStream](/en-US/docs/XPCOM_Interface_Reference/nsIInputStream) interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.
+In chrome or other privileged code, you may also use the `image/jpeg`, `image/png` or `image/gif` types, depending on the type of image. The data should be an object which implements the `nsIInputStream` interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.
 
 You should also include the `application/x-moz-file` type if the image is located on disk. In fact, this a common way in which image files are dragged.
 

@@ -13,15 +13,9 @@ browser-compat: api.MIDIPort.connection
 
 The **`connection`** property of the {{domxref("MIDIPort")}} interface returns the connection state of the port.
 
-## Syntax
+## Value
 
-```js
-let connection = MIDIPort.connection;
-```
-
-### Value
-
-Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:
+Returns a string containing the connection state of the port, one of:
 
 - `"open"`
   - : The device that this `MIDIPort` represents has been opened and is available.

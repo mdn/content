@@ -20,7 +20,7 @@ The **`delete()`** method of the {{domxref("FormData")}} interface deletes a key
 ## Syntax
 
 ```js
-formData.delete(name);
+delete(name)
 ```
 
 ### Parameters
@@ -28,11 +28,11 @@ formData.delete(name);
 - `name`
   - : The name of the key you want to delete.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following line creates an empty `FormData` object and prepopulates it with key/value pairs from a form:
 

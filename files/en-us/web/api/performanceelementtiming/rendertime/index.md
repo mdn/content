@@ -13,13 +13,7 @@ browser-compat: api.PerformanceElementTiming.renderTime
 
 The **`renderTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the render time of the associated element.
 
-## Syntax
-
-```js
-var renderTime = PerformanceElementTiming.renderTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} with the render time of the element.
 

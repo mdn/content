@@ -21,7 +21,7 @@ when unregistration completes.
 ## Syntax
 
 ```js
-var unregister = PeriodicSyncManager.unregister(tag);
+unregister(tag)
 ```
 
 ### Parameters

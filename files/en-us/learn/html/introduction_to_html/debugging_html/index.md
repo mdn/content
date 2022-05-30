@@ -70,7 +70,7 @@ HTML itself doesn't suffer from syntax errors because browsers parse it permissi
 
 It's time to study the permissive nature of HTML code.
 
-1. First, download our [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) and save it locally. This demo is deliberately written with some built-in errors for us to explore (the HTML markup is said to be **badly-formed**, as opposed to **well-formed**).
+1. First, download our [debug-example demo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) and save it locally. This demo is deliberately written with some built-in errors for us to explore (the HTML markup is said to be **badly-formed**, as opposed to **well-formed**).
 2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
 
@@ -136,7 +136,7 @@ To specify the HTML to validate, you can provide a web address, upload an HTML f
 
 ### Active learning: Validating an HTML document
 
-Let's try this with our [sample document](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
+Let's try this with our [sample document](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html).
 
 1. First, load the [Markup Validation Service](https://validator.w3.org/) in one browser tab, if it isn't already open.
 2. Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.

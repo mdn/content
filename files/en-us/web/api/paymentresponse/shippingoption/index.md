@@ -22,15 +22,13 @@ option selected by the user. This option is only present when the
 {{domxref('PaymentOptions')}} object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
-## Syntax
+## Value
 
-```js
-var shippingOption = PaymentRequest.shippingOption;
-```
+A string.
 
-## Example
+## Examples
 
-In the example below, the {{domxref('PaymentRequest.onshippingaoptionchange')}} event
+In the example below, the {{domxref('PaymentRequest.shippingoptionchange_event', 'shippingoptionchange')}} event
 is called. It calls `updateDetails()` to toggle the shipping method between
 "standard" and "express".
 

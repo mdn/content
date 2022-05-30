@@ -48,7 +48,7 @@ The important things to note:
 It's worth noting that you can (and often **should**) use macros to generate quicklinks.
 Any time you need to use the same set of quicklinks on more than one page, you should turn them into a macro.
 
-Your macro can be as simple or as complex as necessary; it needs to output HTML similar to what's shown in {{anch("Quicklinks syntax")}} above.
+Your macro can be as simple or as complex as necessary; it needs to output HTML similar to what's shown in [Quicklinks syntax](#quicklinks_syntax) above.
 
 ### Standard quicklinks macros
 

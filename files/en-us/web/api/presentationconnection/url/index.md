@@ -18,15 +18,9 @@ The **`url`** readonly property of the
 {{domxref("PresentationConnection")}} interface returns the URL used to create or
 reconnect to the presentation.
 
-## Syntax
+## Value
 
-```js
-var url = PresentationConnection.url
-```
-
-### Value
-
-A {{domxref("USVString")}} containing a URL.
+A string containing a URL.
 
 ## Specifications
 

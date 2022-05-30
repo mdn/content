@@ -17,7 +17,7 @@ In some instances, `InputDeviceCapabilities` represents the capabilities of logi
 
 ## Constructors
 
-- {{DOMxRef("InputDeviceCapabilities.InputDeviceCapabilities()")}}
+- {{domxref("InputDeviceCapabilities.InputDeviceCapabilities", "InputDeviceCapabilities()")}}
   - : Creates an `InputDeviceCapabilities` object.
 
 ## Properties

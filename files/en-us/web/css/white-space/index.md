@@ -38,6 +38,7 @@ white-space: break-spaces;
 white-space: inherit;
 white-space: initial;
 white-space: revert;
+white-space: revert-layer;
 white-space: unset;
 ```
 

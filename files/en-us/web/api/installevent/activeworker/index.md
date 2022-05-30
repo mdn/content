@@ -11,19 +11,16 @@ tags:
   - activeWorker
 browser-compat: api.InstallEvent.activeWorker
 ---
+
+{{APIRef("Service Workers API")}}
+
 {{non-standard_header}}{{deprecated_header}}
 
 The **`activeWorker`** read-only property of the {{domxref("InstallEvent")}} interface returns the {{domxref("ServiceWorker")}} that is currently actively controlling the page.
 
 This will return `null` if no active worker is already controlling the page.
 
-## Syntax
-
-```js
-var myActiveWorker = event.activeWorker
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorker")}} object.
 

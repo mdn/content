@@ -113,7 +113,7 @@ After this, the registration steps are:
 ### Demo sites
 
 - [Mozilla Demo](https://webauthn.bin.coffee/) website and its [source code](https://github.com/jcjones/webauthn.bin.coffee).
-- [Google Demo](https://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
+- [Google Demo](https://try-webauthn.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
 - [https://webauthn.io/ Demo](https://github.com/duo-labs/webauthn.io) website and its [source code](https://github.com/duo-labs/webauthn.io).
 - [github.com/webauthn-open-source](https://github.com/webauthn-open-source) and its [client source code](https://github.com/webauthn-open-source/webauthn-simple-app) and [server source code](https://github.com/webauthn-open-source/fido2-lib)
 - [OWASP Single Sign-On](https://owasp.org/www-project-sso/)
@@ -220,11 +220,3 @@ navigator.credentials.create(createCredentialDefaultArgs)
 ### AuthenticatorAssertionResponse
 
 {{Compat("api.AuthenticatorAssertionResponse")}}
-
-### PublicKeyCredentialCreationOptions
-
-{{Compat("api.PublicKeyCredentialCreationOptions")}}
-
-### PublicKeyCredentialRequestOptions
-
-{{Compat("api.PublicKeyCredentialRequestOptions")}}

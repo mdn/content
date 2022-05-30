@@ -19,13 +19,7 @@ The **`usbVersionMinor`** read only property of the
 protocol version supported by the device. The other two properties
 are USBDevice.usbVersionMajor and USBDevice.usbVersionSubminor.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.usbVersionMinor
-```
-
-### Value
+## Value
 
 The second of three properties that declare the USB protocol version supported by the
 device.

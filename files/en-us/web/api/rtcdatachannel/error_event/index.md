@@ -21,30 +21,34 @@ browser-compat: api.RTCDataChannel.error_event
 ---
 {{APIRef("WebRTC")}}
 
-A WebRTC {{domxref("RTCDataChannel.error_event", "error")}} event is sent to an {{domxref("RTCDataChannel")}} object's {{domxref("RTCDataChannel.onerror", "onerror")}} error handler when an error occurs on the data channel.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("RTCErrorEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("RTCDataChannel.onerror", "onerror")}}</td>
-    </tr>
-  </tbody>
-</table>
+A WebRTC {{domxref("RTCDataChannel.error_event", "error")}} event is sent to an {{domxref("RTCDataChannel")}} object's `onerror` event handler when an error occurs on the data channel.
 
 The {{domxref("RTCErrorEvent")}} object provides details about the error that occurred; see that article for details.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('error', event => { });
+
+onerror = event => { };
+```
+
+## Event type
+
+An {{domxref("RTCErrorEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("RTCErrorEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("RTCErrorEvent.error", "error")}} {{ReadOnlyInline}}
+  - : An {{domxref("RTCError")}} object specifying the error which occurred; this object includes the type of error that occurred, and information about where the error occurred (such as which line number in the {{Glossary("SDP")}} or what {{Glossary("SCTP")}} cause code was at issue).
 
 ## Examples
 
@@ -115,7 +119,7 @@ Error information is output to the console using {{domxref("console.error()")}}.
 
 In addition, however, depending on the value of {{domxref("RTCError.errorDetail", "errorDetail")}}, additional information may be output. Each error type has a different set of information output. For example, an SDP syntax error displays the line number of the error within the SDP, and an SCTP error displays a message corresponding to the SCTP cause code. Other error types similarly output appropriate information.
 
-You can also set up an event handler for `error` events using the `RTCDataChannel` interface's {{domxref("RTCDataChannel.onerror", "onerror")}} event handler property:
+You can also set up an event handler for `error` events using the `RTCDataChannel` interface's {{domxref("RTCDataChannel.error_event", "onerror")}} event handler property:
 
 ```js
 dc.onerror = ev => {

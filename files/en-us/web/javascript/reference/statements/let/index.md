@@ -33,8 +33,8 @@ let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
   - : For each variable declared, you may optionally specify its initial value to any
     legal JavaScript expression.
 
-Alternatively, the [Destructuring
-Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
+Alternatively, the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+syntax can also be used to declare variables.
 
 ```js
 let { bar } = foo; // where foo = { bar:10, baz:12 };
@@ -198,18 +198,14 @@ switch(x) {
 
 ### Temporal dead zone (TDZ)
 
-`let` variables cannot be read/written until they have been
-declared. If no initial value is specified on
-declaration, the variable is initialized with a value of
-`undefined`. Accessing the variable before the declaration results in a
-{{jsxref("ReferenceError")}}.
+A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared.
 
-> **Note:** This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
-> which will return a value of `undefined` if they are accessed before they
-> are declared.
+While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}.
+The variable is initialized with a value when execution reaches the line of code where it was declared.
+If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`.
 
-The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
-until the declaration has completed.
+This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared.
+The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which the are declared.
 
 ```js example-bad
 { // TDZ starts at beginning of scope
@@ -220,11 +216,8 @@ until the declaration has completed.
 }
 ```
 
-The term "temporal" is used because the zone depends on the order of execution (time)
-rather than the order in which the code is written (position). For example, the code
-below works because, even though the function that uses the `let` variable
-appears before the variable is declared, the function is _called_ outside the
-TDZ.
+The term "temporal" is used because the zone depends on the order of execution (time) rather than the order in which the code is written (position).
+For example, the code below works because, even though the function that uses the `let` variable appears before the variable is declared, the function is _called_ outside the TDZ.
 
 ```js
 {
@@ -347,13 +340,9 @@ let x = 1;
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
-- [ES6 In
-  Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
-- [Breaking
-  changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
-- [You
-  Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
-- [StackOverflow: What is the
-  Temporal Dead Zone](https://stackoverflow.com/a/33198850/1125029)?
-- [StackOverflow:
-  What is the difference between using `let` and `var`?](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable)
+- [Hoisting > `let` and `const` hoisting](/en-US/docs/Glossary/Hoisting#let_and_const_hoisting)
+- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
+- [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
+- [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
+- [StackOverflow: What is the Temporal Dead Zone](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone/33198850)?
+- [StackOverflow: What is the difference between using `let` and `var`?](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var)

@@ -23,14 +23,11 @@ to submit the form to the server. Possible values are:
 This value can be overridden by a {{htmlattrxref("formenctype", "button")}} attribute
 on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
 
-## Syntax
+## Value
 
-```js
-var string = form.enctype;
-form.enctype = string;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 form.enctype = 'application/x-www-form-urlencoded';

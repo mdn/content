@@ -1,6 +1,7 @@
 ---
 title: Drawing shapes with canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -178,7 +179,7 @@ The result looks like this:
 
 If you'd like to see the connecting lines, you can remove the lines that call `moveTo()`.
 
-> **Note:** To learn more about the `arc()` function, see the {{anch("Arcs")}} section below.
+> **Note:** To learn more about the `arc()` function, see the [Arcs](#arcs) section below.
 
 ### Lines
 
@@ -293,7 +294,7 @@ function draw() {
 
 ### Bezier and quadratic curves
 
-The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bézier_curve), available in both cubic and quadratic varieties. These are generally used to draw complex organic shapes.
+The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bezier_curve), available in both cubic and quadratic varieties. These are generally used to draw complex organic shapes.
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Draws a quadratic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control point specified by `cp1x` and `cp1y`.
@@ -379,7 +380,7 @@ function draw() {
 
 ### Rectangles
 
-In addition to the three methods we saw in {{anch("Drawing rectangles")}}, which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
+In addition to the three methods we saw in [Drawing rectangles](#drawing_rectangles), which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
 
 - {{domxref("CanvasRenderingContext2D.rect", "rect(x, y, width, height)")}}
   - : Draws a rectangle whose top-left corner is specified by (`x`, `y`) with the specified `width` and `height`.

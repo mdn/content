@@ -1,6 +1,7 @@
 ---
 title: AudioData
 slug: Web/API/AudioData
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,9 +9,11 @@ tags:
   - AudioData
 browser-compat: api.AudioData
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}
 
-The **`AudioData`** interface of the {{domxref('WebCodecs API')}} represents an audio sample.
+The **`AudioData`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) represents an audio sample.
+
+`AudioData` is a {{glossary("Transferable objects","transferable object")}}.
 
 ## Description
 
@@ -30,7 +33,7 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 
 ## Constructor
 
-- {{domxref("AudioData.AudioData()")}}
+- {{domxref("AudioData.AudioData", "AudioData()")}}
   - : Creates a new `AudioData` object.
 
 ## Properties

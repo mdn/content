@@ -35,7 +35,7 @@ Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 ## Syntax
 
 ```js
-var promise = navigator.mediaDevices.getDisplayMedia(constraints);
+getDisplayMedia(constraints)
 ```
 
 ### Parameters
@@ -57,8 +57,7 @@ audio track.
 
 > **Note:** Browser support for audio tracks varies, both in terms of
 > whether or not they're supported at all by the media recorder and in terms of the
-> audio sources supported. Check the {{anch("Browser
-    compatibility", "compatibility table")}} for details for each browser.
+> audio sources supported. Check the [compatibility table](#browser_compatibility) for details for each browser.
 
 ### Exceptions
 
@@ -81,7 +80,7 @@ audio track.
 - `OverconstrainedError` {{domxref("DOMException")}}
   - : Returned if, after creating the stream, applying the specified `constraints` fails
     because no compatible stream could be generated.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the specified `constraints` include constraints which are not permitted
     when calling `getDisplayMedia()`. These unsupported constraints are
     `advanced` and any constraints which in turn have a member named
@@ -107,7 +106,7 @@ details measures browsers are required to take in order to fully support
   windows that contain browsers, and to keep a close eye on what other content might be
   getting captured and shown to other users.
 
-## Example
+## Examples
 
 In the example below, a `startCapture()` method is created which initiates
 screen capture given a set of options specified by the `displayMediaOptions`

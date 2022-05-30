@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - Learn
   - Svelte
-  - Typescript
+  - TypeScript
   - client-side
 ---
 
@@ -78,7 +78,7 @@ Remember to run `npm install && npm run dev` to start your app in development mo
 
 ### REPL
 
-Unfortunately, [TypeScript support is not yet available in the REPL](https://github.com/sveltejs/svelte-repl/issues/130).
+Unfortunately, [TypeScript support is not yet available in the REPL](https://github.com/sveltejs/sites/issues/156).
 
 ## TypeScript: optional static typing for JavaScript
 
@@ -377,7 +377,7 @@ $: completedTodos = todos.filter((t: TodoType) => t.completed).length;
 Most of the time, TypeScript will be able to correctly infer the reactive variable type, but sometimes you might get an "implicitly has an 'any' type" error when working with reactive assignments. In those cases you can declare the typed variable in a different statement, like this:
 
 ```js
-let completeTodos: number;
+let completedTodos: number;
 $: completedTodos = todos.filter((t: TodoType) => t.completed).length;
 ```
 
@@ -765,7 +765,7 @@ import { localStore } from "./localStore";
 
 Now if we try to create a `localStore` with something that cannot be converted to JSON via `JSON.stringify()`, for example an object with a function as a property, VS Code/`validate` will complain about it:
 
-![vs code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with json stringify](11-vscode-invalid-store.png)
+![vs code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with JSON stringify](11-vscode-invalid-store.png)
 
 And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
 

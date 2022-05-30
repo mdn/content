@@ -195,7 +195,7 @@ rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 
 ### IIS
 
-In IIS, you use the [`<httpRedirect>`](https://www.iis.net/configreference/system.webserver/httpredirect) element to configure redirections.
+In IIS, you use the [`<httpRedirect>`](https://docs.microsoft.com/en-us/iis/configuration/system.webServer/httpRedirect/) element to configure redirections.
 
 ## Redirection loops
 

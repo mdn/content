@@ -10,20 +10,15 @@ browser-compat: api.HTMLAreaElement.password
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.password`** property is a
-{{domxref("USVString")}} containing the password specified before the domain name.
+string containing the password specified before the domain name.
 
 If it is set without first setting the
 [`username`](/en-US/docs/Web/API/HTMLAreaElement/username)
 property, it silently fails.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.password;
-// Setter
-area.password = string;
-```
+A string.
 
 ## Examples
 

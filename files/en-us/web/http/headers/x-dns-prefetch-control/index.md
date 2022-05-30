@@ -122,4 +122,4 @@ affected.
 ## See also
 
 - [DNS Prefetching for Firefox (blog post)](https://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html)
-- [Google Chrome handles DNS prefetching control](https://dev.chromium.org/developers/design-documents/dns-prefetching)
+- [Google Chrome handles DNS prefetching control](https://www.chromium.org/developers/design-documents/dns-prefetching/)

@@ -14,13 +14,13 @@ The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}
 
 ## Constructor
 
-- {{domxref("VideoColorSpace.VideoColorSpace()")}}
+- {{domxref("VideoColorSpace.VideoColorSpace", "VideoColorSpace()")}}
   - : Creates a new `VideoColorSpace` object.
 
 ## Properties
 
 - {{domxref("VideoColorSpace.primaries")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString", "string")}} containing the color primary describing the color gamut of a video sample.
+  - : A {{domxref("DOMString", "string")}} containing the color primary describing the color {{glossary("gamut")}} of a video sample.
 - {{domxref("VideoColorSpace.transfer")}}
   - : A {{domxref("DOMString", "string")}} containing the transfer characteristics of video samples.
 - {{domxref("VideoColorSpace.matrix")}}

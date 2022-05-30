@@ -23,14 +23,14 @@ supported.
 ## Syntax
 
 ```js
-offscreen.getContext(contextType, contextAttributes);
+getContext(contextType, contextAttributes)
 ```
 
 ### Parameters
 
 - `contextType`
 
-  - : Is a {{domxref("DOMString")}} containing the context identifier defining the drawing
+  - : A string containing the context identifier defining the drawing
     context associated to the canvas. Possible values are:
 
     - **`"2d"`** creates a

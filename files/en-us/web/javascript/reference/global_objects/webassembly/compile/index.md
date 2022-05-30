@@ -26,7 +26,7 @@ WebAssembly.compile(bufferSource)
 
 ### Parameters
 
-- _bufferSource_
+- `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
     containing the binary code of the .wasm module you want to compile.
 
@@ -77,5 +77,4 @@ fetch('simple.wasm').then(response =>
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

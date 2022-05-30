@@ -38,7 +38,7 @@ The second two values reverse the items by switching the start and end lines.
 
 Remember that the start line relates to writing modes. The row-related examples above demonstrate how `row` and `row-reverse` work in a left-to-right language such as English. If you are working in a right-to-left language like Arabic then `row` would start on the right, `row-reverse` on the left.
 
-![Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left.](order-rtl.png)
+![Flex containers with Arabic letters showing how row starts from the right-hand side and row-reverse from the left.](order-rtl.png)
 
 This can seem like a neat way to display things in reverse order however you should be mindful that the items are only _visually_ displayed in reverse order. The specification says the following on this matter:
 

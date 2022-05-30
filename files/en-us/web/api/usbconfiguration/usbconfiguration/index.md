@@ -22,14 +22,14 @@ the configuration on the provided USBDevice with the given configuration value.
 ## Syntax
 
 ```js
-var USBConfiguration = new USBConfiguration(device, configurationValue)
+new USBConfiguration(device, configurationValue)
 ```
 
 ### Parameters
 
-- device
+- `device`
   - : Specifies the {{domxref('USBDevice')}} you want to configure.
-- configurationValue
+- `configurationValue`
   - : Specifies the [configuration
     descriptor](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) you want to read. This is an unsigned integer in the range 0 to 255.
 

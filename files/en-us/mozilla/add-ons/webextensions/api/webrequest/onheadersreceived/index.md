@@ -176,12 +176,12 @@ Events have three functions:
 This code sets an extra cookie when requesting a resource from the target URL:
 
 ```js
-var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
 function setCookie(e) {
-  var setMyCookie = {
+  let setMyCookie = {
     name: "Set-Cookie",
     value: "my-cookie1=my-cookie-value1"
   };
@@ -201,15 +201,15 @@ browser.webRequest.onHeadersReceived.addListener(
 This code does the same thing the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
 ```js
-var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
 // modified set of response headers.
 function setCookieAsync(e) {
-  var asyncSetCookie = new Promise((resolve, reject) => {
+  let asyncSetCookie = new Promise((resolve, reject) => {
     window.setTimeout(() => {
-      var setMyCookie = {
+      let setMyCookie = {
         name: "Set-Cookie",
         value: "my-cookie1=my-cookie-value1"
       };
@@ -232,7 +232,7 @@ browser.webRequest.onHeadersReceived.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onHeadersReceived) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onHeadersReceived) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

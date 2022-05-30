@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Writing Modes
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.text-combine-upright
@@ -29,6 +28,7 @@ text-combine-upright: digits 4;   /* fits up to 4 consecutive digits horizontall
 text-combine-upright: inherit;
 text-combine-upright: initial;
 text-combine-upright: revert;
+text-combine-upright: revert-layer;
 text-combine-upright: unset;
 ```
 

@@ -19,8 +19,7 @@ servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the
 {{AvailableInWorkers}}
 
 > **Note:** The example snippets in this article are taken from our
-> WebSocket chat client/server sample. [See the
-> code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
+> WebSocket chat client/server sample. [See the code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
 
 ## Creating a WebSocket object
 
@@ -159,8 +158,8 @@ exampleSocket.onmessage = function (event) {
 
 ### Receiving and interpreting JSON objects
 
-Let's consider the chat client application first alluded to in {{ anch("Using JSON to
-  transmit objects") }}. There are assorted types of data packets the client might
+Let's consider the chat client application first alluded to in [Using JSON to
+  transmit objects](#using_json_to_transmit_objects). There are assorted types of data packets the client might
 receive, such as:
 
 - Login handshake

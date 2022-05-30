@@ -18,11 +18,9 @@ property represents the actual height of the current drawing buffer. It should m
 this context, but might differ if the implementation is not able to provide the
 requested height.
 
-## Syntax
+## Value
 
-```js
-gl.drawingBufferHeight;
-```
+A number.
 
 ## Examples
 

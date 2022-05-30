@@ -18,7 +18,7 @@ When an `IntersectionObserver` is created, it's configured to watch for given ra
 
 ## Constructor
 
-- {{domxref("IntersectionObserver.IntersectionObserver()")}}
+- {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}
   - : Creates a new `IntersectionObserver` object which will execute a specified callback function when it detects that a target element's visibility has crossed one or more thresholds.
 
 ## Properties

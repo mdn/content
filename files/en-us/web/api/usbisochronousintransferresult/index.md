@@ -18,7 +18,7 @@ The `USBIsochronousInTransferResult` interface of the [WebUSB API](/en-US/docs/W
 
 ## Constructor
 
-- {{domxref("USBIsochronousInTransferResult.USBIsochronousInTransferResult()")}}
+- {{domxref("USBIsochronousInTransferResult.USBIsochronousInTransferResult", "USBIsochronousInTransferResult()")}}
   - : Creates a new `USBIsochronousInTransferResult` object with the provided `packets` and `data` fields.
 
 ## Properties

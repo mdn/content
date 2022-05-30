@@ -8,6 +8,9 @@ tags:
   - NeedsUpdate
   - ajax upload
   - upload
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/input.html#concept-input-type-file-selected
+  - https://w3c.github.io/FileAPI/
 ---
 {{APIRef("File API")}}
 
@@ -148,7 +151,7 @@ You can style the new button for opening the file picker as you wish.
 
 ## Using a label element to trigger a hidden file input element
 
-To allow opening the file picker without using JavaScript (the click() method), a {{HTMLElement("label")}} element can be used. Note that in this case the input element must not be hidden using `display: none` (nor `visibility: hidden`), otherwise the label would not be keyboard-accessible. Use the [visually-hidden technique](https://a11yproject.com/posts/how-to-hide-content/) instead.
+To allow opening the file picker without using JavaScript (the click() method), a {{HTMLElement("label")}} element can be used. Note that in this case the input element must not be hidden using `display: none` (nor `visibility: hidden`), otherwise the label would not be keyboard-accessible. Use the [visually-hidden technique](https://www.a11yproject.com/posts/how-to-hide-content/) instead.
 
 Consider this HTML:
 
@@ -194,7 +197,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-In this example, we're turning the element with the ID `dropbox` into our drop zone. This is done by adding listeners for the {{event('dragenter')}}, {{event('dragover')}}, and {{event('drop')}} events.
+In this example, we're turning the element with the ID `dropbox` into our drop zone. This is done by adding listeners for the {{domxref("HTMLElement/dragenter_event", "dragenter")}}, {{domxref("HTMLElement/dragover_event", "dragover")}}, and {{domxref("HTMLElement/drop_event", "drop")}} events.
 
 We don't actually need to do anything with the `dragenter` and `dragover` events in our case, so these functions are both simple. They just stop propagation of the event and prevent the default action from occurring:
 
@@ -285,7 +288,7 @@ The HTML that presents the interface looks like this:
 </div>
 ```
 
-This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section {{anch("Using hidden file input elements using the click() method")}}, as is the method that invokes the file picker.
+This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section [Using hidden file input elements using the click() method](#using_hidden_file_input_elements_using_the_click_method), as is the method that invokes the file picker.
 
 The `handleFiles()` method follows:
 
@@ -525,29 +528,7 @@ URL.revokeObjectURL(obj_url);
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'number-state.html#concept-input-type-file-selected', 'File upload state')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('File API')}}</td>
-      <td>{{Spec2('File API')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

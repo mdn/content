@@ -13,8 +13,7 @@ browser-compat: javascript.builtins.WebAssembly.Module.Module
 
 A **`WebAssembly.Module()`** constructor creates a new Module
 object containing stateless WebAssembly code that has already been compiled by the
-browser and can be efficiently [shared
-with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
+browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 
 The `WebAssembly.Module()` constructor function can be called to
 synchronously compile given WebAssembly binary code. However, the primary way to get a
@@ -34,7 +33,7 @@ new WebAssembly.Module(bufferSource)
 
 ### Parameters
 
-- _bufferSource_
+- `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
     containing the binary code of the .wasm module you want to compile.
 
@@ -43,7 +42,7 @@ new WebAssembly.Module(bufferSource)
 ### Synchronously compiling a WebAssembly module
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
@@ -78,5 +77,4 @@ fetch('simple.wasm').then(response =>
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

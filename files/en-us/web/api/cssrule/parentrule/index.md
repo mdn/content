@@ -1,6 +1,7 @@
 ---
 title: CSSRule.parentRule
 slug: Web/API/CSSRule/parentRule
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,20 +16,11 @@ The **`parentRule`** property of the {{domxref("CSSRule")}}
 interface returns the containing rule of the current rule if this exists, or otherwise
 returns null.
 
-## Syntax
+## Value
 
-```js
-var parentRule = cssRule.parentRule
-```
+A {{domxref("CSSRule")}} which is the type of the containing rules. If the current rule is inside a media query, this would return {{domxref("CSSMediaRule")}}. Otherwise it returns null.
 
-### Values
-
-- `parentRule`
-  - : A {{domxref("CSSRule")}} which is the type of the containing rules. If the current
-    rule is inside a media query, this would return {{domxref("CSSMediaRule")}}. Otherwise
-    it returns null.
-
-## Example
+## Examples
 
 ```css
 @media (min-width: 500px) {

@@ -1,6 +1,7 @@
 ---
 title: CSSKeywordValue
 slug: Web/API/CSSKeywordValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,7 +22,7 @@ The interface instance name is a {{Glossary("stringifier")}} meaning that when u
 
 ## Constructor
 
-- {{domxref("CSSKeywordValue.CSSKeywordValue()")}}
+- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}}
   - : Creates a new `CSSKeywordValue` object.
 
 ## Properties
@@ -35,7 +36,7 @@ _Inherits methods from {{domxref('CSSStyleValue')}}._
 
 ## Examples
 
-The following example resets the CSS {{cssxref('display')}} property to its defaults, setting the inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute to `style="display: initial"` if viewed in the [developer tools inspector](/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element).
+The following example resets the CSS {{cssxref('display')}} property to its defaults, setting the inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute to `style="display: initial"` if viewed in the [developer tools inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
 
 ```css hidden
 #myElement {

@@ -1,6 +1,7 @@
 ---
 title: CSSPerspective
 slug: Web/API/CSSPerspective
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,7 +21,7 @@ The **`CSSPerspective`** interface of the {{domxref('CSS_Object_Model#css_typed_
 
 ## Constructor
 
-- {{domxref("CSSPerspective.CSSPerspective()")}}
+- {{domxref("CSSPerspective.CSSPerspective", "CSSPerspective()")}}
   - : Creates a new `CSSPerspective` object.
 
 ## Properties

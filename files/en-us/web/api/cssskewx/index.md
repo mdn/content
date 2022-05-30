@@ -1,6 +1,7 @@
 ---
 title: CSSSkewX
 slug: Web/API/CSSSkewX
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,7 +21,7 @@ The **`CSSSkewX`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 
 ## Constructor
 
-- {{domxref("CSSSkewX.CSSSkewX()")}}
+- {{domxref("CSSSkewX.CSSSkewX", "CSSSkewX()")}}
   - : Creates a new `CSSSkewX` object.
 
 ## Properties

@@ -42,6 +42,7 @@ max-height: fit-content(20em);
 max-height: inherit;
 max-height: initial;
 max-height: revert;
+max-height: revert-layer;
 max-height: unset;
 ```
 
@@ -64,7 +65,7 @@ max-height: unset;
 
 Ensure that elements set with a `max-height` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Formal definition

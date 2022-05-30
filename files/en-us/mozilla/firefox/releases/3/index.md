@@ -119,7 +119,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 <!---->
 
-- [Using nsILoginManager](/en-US/docs/XPCOM_Interface_Reference/Using_nsILoginManager)
+- Using nsILoginManager
   - : The Password Manager has been replaced by the new Login Manager.
 
 <!---->
@@ -155,12 +155,12 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 <!---->
 
 - [Idle service](/en-US/docs/nsIIdleService)
-  - : Firefox 3 offers the new {{Interface("nsIIdleService")}} interface, which lets extensions determine how long it's been since the user last pressed a key or moved their mouse.
+  - : Firefox 3 offers the new `nsIIdleService` interface, which lets extensions determine how long it's been since the user last pressed a key or moved their mouse.
 
 <!---->
 
 - [ZIP writer](/en-US/docs/nsIZipWriter)
-  - : The new {{Interface("nsIZipWriter")}} interface lets extensions create ZIP archives.
+  - : The new `nsIZipWriter` interface lets extensions create ZIP archives.
 
 <!---->
 
@@ -175,7 +175,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 <!---->
 
 - [The Thread Manager](/en-US/docs/The_Thread_Manager)
-  - : Firefox 3 provides the new {{Interface("nsIThreadManager")}} interface, along with new interfaces for threads and thread events, which provides a convenient way to create and manage threads in your code.
+  - : Firefox 3 provides the new `nsIThreadManager` interface, along with new interfaces for threads and thread events, which provides a convenient way to create and manage threads in your code.
 
 <!---->
 
@@ -185,11 +185,11 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 <!---->
 
 - [The `nsIJSON` interface](/en-US/docs/nsIJSON)
-  - : Firefox 3 offers the new {{Interface("nsIJSON")}} interface, which offers high-performance encoding and decoding of [JSON](/en-US/docs/Glossary/JSON) strings.
+  - : Firefox 3 offers the new `nsIJSON` interface, which offers high-performance encoding and decoding of [JSON](/en-US/docs/Glossary/JSON) strings.
 
 <!---->
 
-- [The nsIParentalControlsService interface](/en-US/docs/XPCOM_Interface_Reference/nsIParentalControlsService)
+- The `nsIParentalControlsService` interface
   - : Firefox 3 now supports the Microsoft Windows Vista parental controls feature, and allows code to interact with it.
 
 <!---->
@@ -224,7 +224,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Find toolbar.** The Find toolbar now opens with the current selection.
 - **Plugin management.** Users can now disable individual plugins in the Add-on Manager.
 - **Integration with Windows Vista.** Firefox's menus now display using Vista's native theme.
-- **Integration with Mac OS X.** Firefox now supports [Growl](http://growl.info/) for notifications of completed downloads and available updates.
+- **Integration with Mac OS X.** Firefox now supports [Growl](https://growl.github.io/growl/) for notifications of completed downloads and available updates.
 - **Star button.** The new star button in the location bar lets you quickly add a new bookmark with a single click. A second click lets you file and tag your new bookmark.
 - **Tags.** You can now associate keywords with your bookmarks to easily sort them by topic.
 - **Location bar and auto-complete.** Type the title or tag of a page in the location bar to quickly find the site you were looking for in your history and bookmarks. Favicons, bookmark, and tag indicators help you see where the results are coming from.
@@ -233,14 +233,14 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Web-based protocol handlers.** Web applications, such as your favorite web mail provider, can now be used instead of desktop applications for handling `mailto:` links from other sites. Similar support is provided for other protocols as well. (Note that web applications do have to register themselves with Firefox before this will work.)
 - **Easy to use Download Actions.** A new Applications preferences pane provides an improved user interface for configuring handlers for various file types and protocol schemes.
 - **Improved look and feel.** Graphics and font handling have been improved to make web sites look better on your screen, including sharper text rendering and better support for fonts with ligatures and complex scripts. In addition, Mac and Linux (Gnome) users will find that Firefox feels more like a native application for their platform than ever, with a new, native, look and feel.
-- **Color management support.** By setting the `gfx.color_management.enabled` preference in `{{mediawiki.external('about:config')}}`, you can ask Firefox to use the color profiles embedded in images to adjust the colors to match your computer's display.
+- **Color management support.** By setting the `gfx.color_management.enabled` preference in `about:config`, you can ask Firefox to use the color profiles embedded in images to adjust the colors to match your computer's display.
 - **Offline support.** Web applications can take advantage of new features to support being used even when you don't have an Internet connection.
 
 ### Security and privacy
 
 - **One-click site information.** Want to know more about the site you're visiting? Click the site's icon in the location bar to see who owns it. Identify information is prominently displayed and easier than ever to understand.
-- **Malware protection.** Firefox 3 warns you if you arrive at a web site that is known to install viruses, spyware, trojans, or other dangerous software (known as malware). You can see what the warning looks like by [clicking here](https://www.mozilla.com/firefox/its-an-attack.html).
-- **Web forgery protection enhanced.** Now when you visit a page that's suspected of being a forgery, you're shown a special page instead of the contents of the page with a warning. [Click here](https://www.mozilla.com/firefox/its-a-trap.html) to see what it looks like.
+- **Malware protection.** Firefox 3 warns you if you arrive at a web site that is known to install viruses, spyware, trojans, or other dangerous software (known as malware). You can see what the warning looks like by [clicking here](https://www.mozilla.org/en-US/firefox/its-an-attack.html).
+- **Web forgery protection enhanced.** Now when you visit a page that's suspected of being a forgery, you're shown a special page instead of the contents of the page with a warning. [Click here](https://www.mozilla.org/en-US/firefox/its-a-trap.html) to see what it looks like.
 - **Easier to understand SSL errors.** The errors presented when an invalid SSL certificate is encountered have been clarified to make it easier to understand what the problem is.
 - **Out-of-date add-on protection.** Firefox 3 now automatically checks add-on and plugin versions and disables older, insecure versions.
 - **Secure add-on updates.** Add-on update security has been improved by disallowing add-ons that use an insecure update mechanism.

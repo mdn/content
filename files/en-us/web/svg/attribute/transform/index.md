@@ -4,6 +4,10 @@ slug: Web/SVG/Attribute/transform
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://drafts.csswg.org/css-transforms/#svg-transform
+  - https://drafts.csswg.org/css-transforms/#svg-transform
+  - https://svgwg.org/svg2-draft/coords.html#TransformProperty
 ---
 {{SVGRef}}
 
@@ -252,42 +256,4 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('CSS Transforms 2', '#svg-transform', 'transform')}}
-      </td>
-      <td>{{Spec2('CSS Transforms 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('CSS3 Transforms', '#svg-transform', 'transform')}}
-      </td>
-      <td>{{Spec2('CSS3 Transforms')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "coords.html#TransformProperty", "transform")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "coords.html#TransformAttribute", "transform")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

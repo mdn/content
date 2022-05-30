@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.isPointInPath()
 slug: Web/API/CanvasRenderingContext2D/isPointInPath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,8 +20,10 @@ the current path.
 ## Syntax
 
 ```js
-ctx.isPointInPath(x, y [, fillRule]);
-ctx.isPointInPath(path, x, y [, fillRule]);
+isPointInPath(x, y)
+isPointInPath(x, y, fillRule)
+isPointInPath(path, x, y)
+isPointInPath(path, x, y, fillRule)
 ```
 
 ### Parameters

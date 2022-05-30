@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozItemCount
 slug: Web/API/DataTransfer/mozItemCount
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard
@@ -22,17 +23,11 @@ dragged.
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-dataTransfer.mozItemCount;
-```
-
-### Return value
+## Value
 
 A `number` representing the number of items being dragged.
 
-## Example
+## Examples
 
 This example shows the use of the `mozItemCount` property.
 

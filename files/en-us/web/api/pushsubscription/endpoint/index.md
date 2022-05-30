@@ -16,7 +16,7 @@ browser-compat: api.PushSubscription.endpoint
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
 The **`endpoint`** read-only property of the
-{{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing
+{{domxref("PushSubscription")}} interface returns a string containing
 the endpoint associated with the push subscription.
 
 The endpoint takes the form of a custom URL pointing to a push server, which can be
@@ -24,17 +24,11 @@ used to send a push message to the particular service worker instance that subsc
 the push service. For this reason, it is a good idea to keep your endpoint a secret, so
 others do not hijack it and abuse the push functionality.
 
-## Syntax
+## Value
 
-```js
-var myEnd = pushSubscription.endpoint;
-```
+A string.
 
-### Value
-
-A {{domxref("USVString")}}.
-
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.ready.then(function(reg) {

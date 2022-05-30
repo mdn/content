@@ -18,13 +18,7 @@ file's contents. This property is only valid after the read operation is complet
 the format of the data depends on which of the methods was used to initiate the read
 operation.
 
-## Syntax
-
-```js
-var file = instanceOfFileReader.result
-```
-
-### Value
+## Value
 
 An appropriate string or {{jsxref("ArrayBuffer")}} based on which of the reading methods
 was used to initiate the read operation. The value is `null` if the reading
@@ -78,7 +72,7 @@ The result types are described below.
   </tbody>
 </table>
 
-## Example
+## Examples
 
 This example presents a function, `read()`, which reads a file from a [file input](/en-US/docs/Web/HTML/Element/input/file). It works by creating a
 {{domxref("FileReader")}} object and creating a listener for

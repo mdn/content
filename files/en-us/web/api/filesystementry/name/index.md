@@ -14,22 +14,16 @@ browser-compat: api.FileSystemEntry.name
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`name`** property of
-the {{domxref("FileSystemEntry")}} interface returns a {{domxref("USVString")}}
+the {{domxref("FileSystemEntry")}} interface returns a string
 specifying the entry's name; this is the entry within its parent directory (the last
 component of the path as indicated by the {{domxref("FileSystemEntry.fullPath",
     "fullPath")}} property).
 
-## Syntax
+## Value
 
-```js
-var name = FileSystemEntry.name;
-```
+A string indicating the entry's name.
 
-### Value
-
-A {{domxref("USVString")}} indicating the entry's name.
-
-## Example
+## Examples
 
 This example shows a function called `isFileWithExtension()` which returns
 true if the specified {{domxref("FileSystemEntry")}} is both a file and the file's name
@@ -51,9 +45,7 @@ function isFileWithExtension(entry, extension) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemEntry.fullPath")}}

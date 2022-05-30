@@ -14,9 +14,8 @@ tags:
   - Reference
   - Time
   - datetime-local
-browser-compat: html.elements.input.input-datetime-local
+browser-compat: html.elements.input.type_datetime-local
 ---
-
 {{HTMLRef("Input_types")}}
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
@@ -34,9 +33,9 @@ Some browsers may resort to a text-only input element that validates that the re
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a date and time (in the
+        A string representing a date and time (in the
         local time zone), or empty.
       </td>
     </tr>
@@ -63,6 +62,10 @@ Some browsers may resort to a text-only input element that validates that the re
       </td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -75,7 +78,7 @@ Some browsers may resort to a text-only input element that validates that the re
 
 ## Value
 
-A {{domxref("DOMString")}} representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}}.
+A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}}.
 
 You can set a default value for the input by including a date and time inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
@@ -117,9 +120,9 @@ This value must specify a date string earlier than or equal to the one specified
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
@@ -131,7 +134,7 @@ _At this time, it's unclear what a value of `any` means for `step` when used wit
 
 Date/time inputs sound convenient at first glance; they provide an easy UI for choosing dates and times, and they normalize the data format sent to the server, regardless of the user's locale. However, there are issues with `<input type="datetime-local">` because of the limited browser support.
 
-We'll look at basic and more complex uses of `<input type="datetime-local">`, then offer advice on mitigating the browser support issue later on (see {{anch("Handling browser support")}}).
+We'll look at basic and more complex uses of `<input type="datetime-local">`, then offer advice on mitigating the browser support issue later on (see [Handling browser support](#handling_browser_support)).
 
 ### Basic uses of datetime-local
 
@@ -162,7 +165,7 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 The result here is that:
 
 - Only days in June 2017 can be selected — only the "days" part of the date value will be editable, and dates outside June can't be scrolled to in the datepicker widget.
-- Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).
+- Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see [Validation](#validation)) but still available (e.g. Chrome).
 
 > **Note:** You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
 
@@ -172,7 +175,7 @@ The result here is that:
 
 ### Setting timezones
 
-One thing the `datetime-local` input type doesn't provide is a way to set the time zone and/or locale of the date/time control. This was available in the [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
+One thing the `datetime-local` input type doesn't provide is a way to set the time zone and/or locale of the date/time control. This was available in the [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime-local) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
 
 For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden) input type. For example:
 
@@ -198,7 +201,7 @@ In either case, the date/time and time zone values would be submitted to the ser
 
 By default, `<input type="datetime-local">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date/time — which is helpful — but a user might still fill in no value and submit, or enter an invalid date and/or time (e.g. the 32nd of April).
 
-You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see {{anch("Setting maximum and minimum dates")}}), and you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the date/time mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
+You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), and you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the date/time mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
 
 Let's look at an example; here we've set minimum and maximum date/time values, and also made the field required:
 

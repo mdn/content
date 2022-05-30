@@ -4,9 +4,8 @@ slug: Web/API/File/type
 tags:
   - API
   - File API
-  - File Type
-  - Files
   - Property
+  - Read-only
   - Reference
 browser-compat: api.File.type
 ---
@@ -14,33 +13,45 @@ browser-compat: api.File.type
 
 Returns the media type ([MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) of the file represented by a {{domxref("File")}} object.
 
-## Syntax
-
-```js
-var name = file.type;
-```
-
 ## Value
 
 A string, containing the media type(MIME) indicating the type of the file, for example "image/png" for PNG images
 
-## Example
+## Examples
+
+### HTML
 
 ```html
-<input type="file" multiple onchange="showType(this)">
+<input type="file" id="filepicker" name="fileList" multiple />
+<output id="output"></output>
 ```
 
-```js
-function showType(fileInput) {
-  var files = fileInput.files;
-
-  for (var i = 0; i < files.length; i++) {
-    var name = files[i].name;
-    var type = files[i].type;
-    alert("Filename: " + name + " , Type: " + type);
-  }
+```css hidden
+output {
+  display: block;
+  white-space: pre-wrap;
 }
 ```
+
+### JavaScript
+
+```js
+const output = document.getElementById('output');
+const filepicker = document.getElementById('filepicker');
+
+filepicker.addEventListener('change', (event) => {
+  const files = event.target.files;
+  output.textContent = '';
+
+  for (const file of files) {
+    output.textContent += `${file.name}: ${file.type || 'unknown'}\n`;
+  }
+});
+```
+
+### Result
+
+{{EmbedLiveSample('Example')}}
 
 > **Note:** Based on the current implementation, browsers won't actually read the bytestream of a file to determine its media type.
 > It is assumed based on the file extension; a PNG image file renamed to .txt would give "_text/plain_" and not "_image/png_". Moreover, `file.type` is generally reliable only for common file types like images, HTML documents, audio and video.

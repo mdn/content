@@ -27,13 +27,7 @@ Services Code Point and the value is the number of packets sent for that DCSP.
 > **Note:** Not all operating systems make data available on a per-DSCP
 > basis, so this property shouldn't be relied upon on those systems.
 
-## Syntax
-
-```js
-var perDscpPacketsSent = RTCOutboundRtpStreamStats.perDscpPacketsSent;
-```
-
-### Value
+## Value
 
 A record comprised of string/value pairs. Each key is the string representation of a
 single Differentiated Services Code Point (DSCP)'s ID number.

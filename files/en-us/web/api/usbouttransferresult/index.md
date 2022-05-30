@@ -19,7 +19,7 @@ The `USBOutTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/Web
 
 ## Constructor
 
-- {{domxref("USBOutTransferResult.USBOutTransferResult()")}}
+- {{domxref("USBOutTransferResult.USBOutTransferResult", "USBOutTransferResult()")}}
   - : Creates a new `USBOutTransferResult` object with the provided `status` and `bytesWritten` fields.
 
 ## Properties

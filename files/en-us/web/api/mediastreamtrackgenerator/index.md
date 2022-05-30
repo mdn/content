@@ -15,7 +15,7 @@ The object consumes a stream of media frames as input, which can be audio or vid
 
 ## Constructor
 
-- {{domxref("MediaStreamTrackGenerator.MediaStreamTrackGenerator()")}}
+- {{domxref("MediaStreamTrackGenerator.MediaStreamTrackGenerator", "MediaStreamTrackGenerator()")}}
   - : Creates a new `MediaStreamTrackGenerator` object which accepts either {{domxref("VideoFrame")}} or {{domxref("AudioFrame")}} objects.
 
 ## Properties
@@ -31,7 +31,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which process barcodes and  highlights them before writing the transformed frames to the writablestream of {{domxref("MediaStreamTrackGenerator.writable")}}.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which process barcodes and highlights them before writing the transformed frames to the writable stream of {{domxref("MediaStreamTrackGenerator.writable")}}.
 
 ```js
 const stream = await getUserMedia({ video: true });

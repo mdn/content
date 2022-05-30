@@ -26,7 +26,8 @@ and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/
 ## Syntax
 
 ```js
-var mediaRecorder = new MediaRecorder(stream[, options]);
+new MediaRecorder(stream)
+new MediaRecorder(stream, options)
 ```
 
 ### Parameters
@@ -40,21 +41,25 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 
   - : A dictionary object that can contain the following properties:
 
-    - `mimeType`: A MIME type specifying the format for the resulting
-      media; you may specify the container format (the browser will select its preferred
-      codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
-      provide detailed information about which codecs to use and how to configure them.
-      Applications can check in advance if a `mimeType` is supported by the
-      {{Glossary("user agent")}} by calling
-      {{domxref("MediaRecorder.isTypeSupported()")}}.
-    - `audioBitsPerSecond`: The chosen bitrate for the audio component of
-      the media.
-    - `videoBitsPerSecond`: The chosen bitrate for the video component of
-      the media.
-    - `bitsPerSecond`: The chosen bitrate for the audio and video
-      components of the media. This can be specified instead of the above two
-      properties. If this is specified along with one or the other of the above
-      properties, this will be used for the one that isn't specified.
+    - `mimeType`
+      - : A MIME type specifying the format for the resulting
+        media; you may specify the container format (the browser will select its preferred
+        codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
+        provide detailed information about which codecs to use and how to configure them.
+        Applications can check in advance if a `mimeType` is supported by the
+        {{Glossary("user agent")}} by calling
+        {{domxref("MediaRecorder.isTypeSupported()")}}.
+    - `audioBitsPerSecond`
+      - : The chosen bitrate for the audio component of
+        the media.
+    - `videoBitsPerSecond`
+      - : The chosen bitrate for the video component of
+        the media.
+    - `bitsPerSecond`
+      - : The chosen bitrate for the audio and video
+        components of the media. This can be specified instead of the above two
+        properties. If this is specified along with one or the other of the above
+        properties, this will be used for the one that isn't specified.
 
     > **Note:** If bits per second values are not specified for video and/or audio, the default
     > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
@@ -69,7 +74,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the specified MIME type is not supported by the user agent.
 
-## Example
+## Examples
 
 This example shows how to create a media recorder for a specified stream, whose audio
 bit rate is set to 128 Kbit/sec and whose video bit rate is set to 2.5 Mbit/sec. The
@@ -108,6 +113,6 @@ if (navigator.mediaDevices.getUserMedia) {
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia")}}

@@ -19,13 +19,7 @@ The **`deviceClass`** read only property of the
 the purpose of loading a USB driver that will work with that device. The other two
 properties are USBDevice.deviceSubclass and USBDevice.deviceprotocol.
 
-## Syntax
-
-```js
-var number = USBDevice.deviceClass
-```
-
-### Value
+## Value
 
 A number.
 

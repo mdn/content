@@ -32,6 +32,7 @@ border-left-width: 6px;
 border-left-width: inherit;
 border-left-width: initial;
 border-left-width: revert;
+border-left-width: revert-layer;
 border-left-width: unset;
 ```
 

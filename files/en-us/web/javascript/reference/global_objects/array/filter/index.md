@@ -42,13 +42,13 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
 
   - : Function is a predicate, to test each element of the array. Return a value that coerces to `true` to keep the element, or to `false` otherwise.
 
-    It accepts three arguments:
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array on which `filter()` was called.
 
 - `thisArg`{{optional_inline}}
@@ -112,7 +112,7 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 
 ### Filtering invalid entries from JSON
 
-The following example uses `filter()` to create a filtered json of all elements with non-zero, numeric `id`.
+The following example uses `filter()` to create a filtered JSON of all elements with non-zero, numeric `id`.
 
 ```js
 let arr = [

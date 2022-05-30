@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -30,7 +31,7 @@ For more details about media stream audio source nodes, check out the {{
 ## Syntax
 
 ```js
-audioSourceNode = audioContext.createMediaStreamSource(stream);
+createMediaStreamSource(stream)
 ```
 
 ### Parameters
@@ -44,7 +45,7 @@ audioSourceNode = audioContext.createMediaStreamSource(stream);
 A new {{domxref("MediaStreamAudioSourceNode")}} object representing the audio node
 whose media is obtained from the specified source stream.
 
-## Example
+## Examples
 
 In this example, we grab a media (audio + video) stream from {{
     domxref("navigator.getUserMedia") }}, feed the media into a {{ htmlelement("video") }}
@@ -57,9 +58,7 @@ The range slider below the {{ htmlelement("video") }} element controls the amoun
 gain given to the lowpass filter — increase the value of the slider to make the audio
 sound more bass heavy!
 
-> **Note:** You can see this [example
-> running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view
-> the source](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer).
+> **Note:** You can see this [example running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer).
 
 ```js
 var pre = document.querySelector('pre');

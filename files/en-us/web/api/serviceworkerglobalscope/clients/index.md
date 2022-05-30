@@ -17,13 +17,7 @@ The **`clients`** read-only property of the
 {{domxref("ServiceWorkerGlobalScope")}} interface returns the [`Clients`](/en-US/docs/Web/API/Clients)
 object associated with the service worker.
 
-## Syntax
-
-```js
-swClients = self.clients
-```
-
-### Value
+## Value
 
 The {{domxref("Clients")}} object associated with the specific worker.
 

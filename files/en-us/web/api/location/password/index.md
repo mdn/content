@@ -1,5 +1,5 @@
 ---
-title: 'Location: password'
+title: location.password
 slug: Web/API/Location/password
 tags:
   - API
@@ -8,10 +8,12 @@ tags:
   - Reference
 browser-compat: api.Location.password
 ---
+{{APIRef("HTML DOM")}}
+
 {{deprecated_header}}
 
 The **`password`** property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} containing the password specified before the
+interface is a string containing the password specified before the
 domain name.
 
 If it is set without first setting the

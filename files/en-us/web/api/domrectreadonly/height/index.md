@@ -14,13 +14,7 @@ browser-compat: api.DOMRectReadOnly.height
 
 The **`height`** read-only property of the **`DOMRectReadOnly`** interface represents the height of the `DOMRect`.
 
-## Syntax
-
-```js
-var recHeight = DOMRect.height;
-```
-
-### Value
+## Value
 
 A double.
 

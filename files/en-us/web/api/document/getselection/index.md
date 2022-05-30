@@ -26,11 +26,11 @@ getSelection()
 
 None.
 
-### Returns
+### Return value
 
 A {{DOMxRef("Selection")}} object.
 
-## Example
+## Examples
 
 ### Getting a Selection object
 

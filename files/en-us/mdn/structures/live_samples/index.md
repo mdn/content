@@ -37,8 +37,8 @@ The live sample system has lots of options available, and we'll try to break thi
 
 There are two macros that you can use to display live samples:
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs) embeds a live sample into a page
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/master/kumascript/macros/LiveSampleLink.ejs) creates a link that opens the live sample in a new page
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) embeds a live sample into a page
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) creates a link that opens the live sample in a new page
 
 In many cases, you may be able to add the `EmbedLiveSample` or `LiveSampleLink` macro to pages with little or no additional work! As long as the sample can be identified by a heading's ID or is in a block with an ID you can use, adding the macro should do the job.
 
@@ -60,7 +60,7 @@ In many cases, you may be able to add the `EmbedLiveSample` or `LiveSampleLink` 
 
   - : The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used.
 
-    > **Warning:** To show a live sample from one code-containing page in a different, target page, the code-containing page must itself use the [`EmbedLiveSample`](https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs) macro to embed a live sample in its own page. Otherwise, if the code-containing page doesn't itself use the [`EmbedLiveSample`](https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs) macro its own page, the live sample will fail to display at all on the target page. (See [Yari issue #2243](https://github.com/mdn/yari/issues/2243).)
+    > **Warning:** This parameter is deprecated. Don't use it in new examples, and remove it from existing examples if you see it. We're actively removing usages of it, and when it is no longer used we will remove support for it.
 
 #### LiveSampleLink macro
 

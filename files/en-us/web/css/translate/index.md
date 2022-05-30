@@ -34,6 +34,7 @@ translate: 50% 105px 5rem;
 translate: inherit;
 translate: initial;
 translate: revert;
+translate: revert-layer;
 translate: unset;
 ```
 

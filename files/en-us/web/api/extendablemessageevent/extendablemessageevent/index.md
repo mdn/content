@@ -12,44 +12,48 @@ browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
 {{APIRef("Service Workers API")}}
 
-The
-**`ExtendableMessageEvent()`**
-constructor creates a new {{domxref("ExtendableMessageEvent")}} object instance.
+The **`ExtendableMessageEvent()`** constructor creates a new {{domxref("ExtendableMessageEvent")}} object.
 
 ## Syntax
 
 ```js
-var extendableMessageEvent = new ExtendableMessageEvent(type, init);
+new ExtendableMessageEvent(type)
+new ExtendableMessageEvent(type, options)
 ```
 
 ### Parameters
 
-- type
-  - : A {{domxref("DOMString")}} that defines the type of the message event being created.
-- init {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to  `messageerror` or `message`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
+    - `data` {{optional_inline}}
+      - : The event's data; this can be any data type. It defaults to `null`.
+    - `origin` {{optional_inline}}
+      - : A string that defines the origin of the corresponding service worker's environment settings object.
+        It defaults to `""`.
+    - `lastEventId` {{optional_inline}}
+      - : A string that defines the last event ID of the event source. It defaults to `""`.
+    - `source` {{optional_inline}}
+      - : The {{domxref("Client")}}, {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}} that sent the message.
+        It defaults to `null`.
+    - `ports` {{optional_inline}}
+      - : An array containing the {{domxref("MessagePort")}} objects connected to the channel sending the message.
+        It defaults to an empty array.
 
-  - : An initialization object, which should contain the following parameters:
+### Return value
 
-    - `data`: The event's data — this can be any data type.
-    - `origin`: A {{domxref("DOMString")}} that defines the origin of the
-      corresponding service worker's environment settings object.
-    - `lastEventId`: A {{domxref("DOMString")}} that defines the last event
-      ID of the event source.
-    - `source`: The {{domxref("Client")}}, {{domxref("ServiceWorker")}} or
-      {{domxref("MessagePort")}} that sent the message.
-    - `ports`: An array containing the {{domxref("MessagePort")}} objects
-      connected to the channel sending the message.
+A new {{domxref("ExtendableMessageEvent")}} object.
 
 ## Examples
 
 ```js
-var init = {
-             data : 'hello message',
-             source : MessagePortReference,
-             ports : MessagePortListReference
-           }
+const options = { data : 'hello message',
+                  source : MessagePortReference,
+                  ports : MessagePortListReference };
 
-var myEME = new ExtendableMessageEvent('message', init);
+const myEME = new ExtendableMessageEvent('message', init);
 ```
 
 ## Specifications

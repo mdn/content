@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var setting = browser.cookies.set(
+let setting = browser.cookies.set(
   details               // object
 )
 ```
@@ -54,7 +54,7 @@ var setting = browser.cookies.set(
 
     - `path`{{optional_inline}}
       - : A `string` representing the path of the cookie. If omitted, this defaults to the path portion of the URL parameter.
-    - `sameSite{{optional_inline}}`
+    - `sameSite`{{optional_inline}}
       - : A {{WebExtAPIRef("cookies.SameSiteStatus")}} value that indicates the SameSite state of the cookie. If omitted, it defaults to 0, 'no_restriction'.
     - `secure`{{optional_inline}}
       - : A `boolean` that specifies whether the cookie should be marked as secure (`true`), or not (false). If omitted, it defaults to false.
@@ -78,7 +78,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example sets a cookie for the document hosted by the currently active tab:
 
 ```js
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(setCookie);
 
 function setCookie(tabs) {
@@ -92,7 +92,7 @@ function setCookie(tabs) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-set) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-set) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

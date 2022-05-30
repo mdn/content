@@ -29,17 +29,11 @@ returned.
 > **Note:** This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var intElemOffsetHeight = element.offsetHeight;
-```
+A number.
 
-`intElemOffsetHeight` is a variable storing an integer
-corresponding to the `offsetHeight` pixel value of the element. The
-`offsetHeight` property is read-only.
-
-## Example
+## Examples
 
 ![](dimensions-offset.png)
 
@@ -69,7 +63,6 @@ dimensions, or an element's border-box height.
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.scrollHeight")}}
 - {{domxref("HTMLElement.offsetWidth")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [MSDN
   Measuring Element Dimension and Location](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)

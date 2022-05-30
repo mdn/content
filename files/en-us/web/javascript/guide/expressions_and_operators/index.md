@@ -159,7 +159,7 @@ console.log(x = f()); // Logs the return value directly.
 
 // An assignment expression can be nested in any place
 // where expressions are generally allowed,
-// such as as array literals' elements or as function calls' arguments.
+// such as array literals' elements or as function calls' arguments.
 console.log([ 0, x = f(), 0 ]);
 console.log(f(0, x = f(), 0));
 ```
@@ -290,8 +290,8 @@ For more information about objects, read [Working with Objects][object].)
 #### Avoid assignment chains
 
 Chaining assignments or nesting assignments in other expressions can
-result in surprising behavior. For this reason, [chaining assignments
-in the same statement is discouraged][discourage assign chain]).
+result in surprising behavior. For this reason,
+[chaining assignments in the same statement is discouraged][discourage assign chain]).
 
 In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does *not* work.
 Only the outermost/leftmost variable would get declared;
@@ -463,8 +463,7 @@ var var2 = 4;
 </table>
 
 > **Note:** `=>` is not a comparison operator but rather is the notation
-> for [Arrow
-> functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Arithmetic operators
 
@@ -610,11 +609,11 @@ Conceptually, the bitwise logical operators work as follows:
 
 - The operands are converted to thirty-two-bit integers and expressed by a series of bits (zeros and ones).
   Numbers with more than 32 bits get their most significant bits discarded.
-  For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
+  For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 
   ```
   Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-  After:               1010 0000 0000 0000 0110 0000 0000 0001
+  After:                 1010 0000 0000 0000 0110 0000 0000 0001
   ```
 
 - Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.
@@ -847,8 +846,8 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
 
 ### Conditional (ternary) operator
 
-The [conditional
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is the only JavaScript operator that takes three operands.
+The [conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+is the only JavaScript operator that takes three operands.
 The operator can have one of two values based on a condition.
 The syntax is:
 
@@ -871,8 +870,8 @@ This statement assigns the value "adult" to the variable `status` if
 
 ### Comma operator
 
-The [comma
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`) evaluates both of its operands and returns the value of the last operand.
+The [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`)
+evaluates both of its operands and returns the value of the last operand.
 This operator is primarily used inside a `for` loop, to allow multiple variables to be updated each time through the loop.
 It is regarded bad style to use it elsewhere, when it is not necessary.
 Often two separate statements can and should be used instead.
@@ -914,7 +913,7 @@ The `delete` operator returns `true` if the operation is possible; it returns `f
 delete Math.PI; // returns false (cannot delete non-configurable properties)
 
 const myObj = {h: 4};
-delete myobj.h; // returns true (can delete user-defined properties)
+delete myObj.h; // returns true (can delete user-defined properties)
 ```
 
 ##### Deleting array elements
@@ -1004,8 +1003,7 @@ typeof String;   // returns "function"
 
 #### `void`
 
-The [`void`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/void) is used in either of the following ways:
+The [`void` operator](/en-US/docs/Web/JavaScript/Reference/Operators/void) is used in either of the following ways:
 
 ```js
 void (expression)
@@ -1055,9 +1053,8 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 
 #### `instanceof`
 
-The [`instanceof`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) returns `true` if the specified object is of the specified
-object type. The syntax is:
+The [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) returns `true`
+if the specified object is of the specified object type. The syntax is:
 
 ```js
 objectName instanceof objectType
@@ -1084,28 +1081,29 @@ You can override operator precedence by using parentheses.
 
 The following table describes the precedence of operators, from highest to lowest.
 
-| Operator type          | Individual operators                                    |
-| ---------------------- | ------------------------------------------------------- |
-| member                 | `. []`                                                  |
-| call / create instance | `() new`                                                |
-| negation/increment     | `! ~ - + ++ -- typeof void delete`                      |
-| multiply/divide        | `* / %`                                                 |
-| addition/subtraction   | `+ -`                                                   |
-| bitwise shift          | `<< >> >>>`                                             |
-| relational             | `< <= > >= in instanceof`                               |
-| equality               | `== != === !==`                                         |
-| bitwise-and            | `&`                                                     |
-| bitwise-xor            | `^`                                                     |
-| bitwise-or             | `\|`                                                    |
-| logical-and            | `&&`                                                    |
-| logical-or             | `\|\|`                                                  |
-| conditional            | `?:`                                                    |
-| assignment             | `= += -= *= /= %= <<= >>= >>>= &= ^= \|= &&= \|\|= ??=` |
-| comma                  | `,`                                                     |
+| Operator type          | Individual operators                                                                      |
+| ---------------------- | ----------------------------------------------------------------------------------------- |
+| member                 | `.` `[]`                                                                                  |
+| call / create instance | `()` `new`                                                                                |
+| negation/increment     | `!` `~` `-` `+` `++` `--` `typeof` `void` `delete`                                        |
+| exponentiate           | `**`                                                                                      |
+| multiply/divide        | `*` `/` `%`                                                                               |
+| addition/subtraction   | `+` `-`                                                                                   |
+| bitwise shift          | `<<` `>>` `>>>`                                                                           |
+| relational             | `<` `<=` `>` `>=` `in` `instanceof`                                                       |
+| equality               | `==` `!=` `===` `!==`                                                                     |
+| bitwise-and            | `&`                                                                                       |
+| bitwise-xor            | `^`                                                                                       |
+| bitwise-or             | `\|`                                                                                      |
+| logical-and            | `&&`                                                                                      |
+| logical-or             | `\|\|`                                                                                    |
+| conditional            | `?:`                                                                                      |
+| assignment             | `=` `+=` `-=` `**=` `*=` `/=` `%=` `<<=` `>>=` `>>>=` `&=` `^=` `\|=` `&&=` `\|\|=` `??=` |
+| comma                  | `,`                                                                                       |
 
 A more detailed version of this table, complete with links to additional details about
-each operator, may be found in [JavaScript
-Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
+each operator, may be found in the
+[JavaScript Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
 
 ## Expressions
 

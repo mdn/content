@@ -71,7 +71,7 @@ Under the default CSP you may only load [\<script>](/en-US/docs/Web/HTML/Element
 This will no longer load the requested resource: it will fail silently, and any object which you expected to be present from the resource will not be found. There are two main solutions to this:
 
 - download the resource, package it in your extension, and refer to this version of the resource
-- use the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key to allow the remote origin you need.
+- use the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key or in Manifest V3 the `content_scripts` property, to allow the remote origin you need.
 
 ### eval() and friends
 
@@ -86,7 +86,7 @@ window.setTimeout("alert('Hello World!');", 500);
 ```
 
 ```js
-var f = new Function("console.log('foo');");
+let f = new Function("console.log('foo');");
 ```
 
 ### Inline JavaScript

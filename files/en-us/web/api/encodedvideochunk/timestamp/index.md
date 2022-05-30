@@ -13,7 +13,7 @@ browser-compat: api.EncodedVideoChunk.timestamp
 
 The **`timestamp`** read-only property of the {{domxref("EncodedVideoChunk")}} interface returns an integer indicating the timestamp of the video in microseconds.
 
-### Value
+## Value
 
 An integer.
 

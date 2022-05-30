@@ -79,7 +79,7 @@ reappears when you release. It uses the {{domxref("GlobalEventHandlers.onmousedo
   transition: transform .3s;
 }
 
-.depressed {
+.pressed {
   transform: translate(-50%, -50%);
 }
 ```
@@ -87,18 +87,18 @@ reappears when you release. It uses the {{domxref("GlobalEventHandlers.onmousedo
 ### JavaScript
 
 ```js
-function depress() {
-  toast.classList.add('depressed');
+function press() {
+  toast.classList.add('pressed');
 }
 
 function release() {
-  toast.classList.remove('depressed');
+  toast.classList.remove('pressed');
 }
 
 const toaster = document.querySelector('.toaster');
 const toast = document.querySelector('.toast');
 
-toaster.onmousedown = depress;
+toaster.onmousedown = press;
 document.onmouseup = release;
 ```
 

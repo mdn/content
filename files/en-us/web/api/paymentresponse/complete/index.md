@@ -27,14 +27,15 @@ the payment request and the {{jsxref("Promise")}} returned by the
 ## Syntax
 
 ```js
-completePromise = paymentRequest.complete(result);
+complete()
+complete(result)
 ```
 
 ### Parameters
 
 - `result` {{optional_inline}}
 
-  - : A {{domxref("DOMString")}} indicating the state of the payment operation upon
+  - : A string indicating the state of the payment operation upon
     completion. It must be one of the following:
 
     - `success`
@@ -50,7 +51,7 @@ completePromise = paymentRequest.complete(result);
 
     > **Note:** In older versions of the specification, an empty string,
     > `""`, was used instead of `unknown` to indicate a completion
-    > without a known result state. See the {{anch("Browser compatibility")}} section
+    > without a known result state. See the [Browser compatibility](#browser_compatibility) section
     > below for details.
 
 ### Return value

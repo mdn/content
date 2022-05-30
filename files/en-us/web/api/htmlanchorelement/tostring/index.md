@@ -11,14 +11,22 @@ browser-compat: api.HTMLAnchorElement.toString
 {{ApiRef("URL API")}}
 
 The **`HTMLAnchorElement.toString()`** {{Glossary("stringifier")}}
-method returns a {{domxref("USVString")}} containing the whole URL. It is a read-only
+method returns a string containing the whole URL. It is a read-only
 version of {{domxref("HTMLAnchorElement.href")}}.
 
 ## Syntax
 
 ```js
-anchor.toString();
+toString()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

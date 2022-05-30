@@ -15,6 +15,7 @@ tags:
   - port
   - query
   - resources
+spec-urls: https://httpwg.org/specs/rfc7230.html#section-2.7
 ---
 {{HTTPSidebar}}
 
@@ -63,7 +64,7 @@ The two URNs correspond to
 
 | Scheme      | Description                                                          |
 | ----------- | -------------------------------------------------------------------- |
-| data        | [Data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)           |
+| data        | [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)           |
 | file        | Host-specific file names                                             |
 | ftp         | {{Glossary("FTP","File Transfer Protocol")}}         |
 | http/https  | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
@@ -119,9 +120,7 @@ mailto:help@supercyberhelpdesk.info
 
 ## Specifications
 
-| Specification                                                            | Title                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
 ## See also
 

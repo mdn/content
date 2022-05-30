@@ -12,7 +12,7 @@ tags:
   - Input Type
   - Reference
   - Type
-browser-compat: html.elements.input.input-file
+browser-compat: html.elements.input.type_file
 ---
 
 {{HTMLRef("Input_types")}}
@@ -24,9 +24,9 @@ browser-compat: html.elements.input.input-file
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the path to the selected
+        A string representing the path to the selected
         file.
       </td>
     </tr>
@@ -58,16 +58,6 @@ browser-compat: html.elements.input.input-file
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Properties</strong></td>
-      <td>
-        <p>
-          <a href="/en-US/docs/Web/API/HTMLInputElement#properties_file"
-            >Properties that apply only to elements of type <code>file</code></a
-          >
-        </p>
-      </td>
-    </tr>
-    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}}
@@ -78,7 +68,7 @@ browser-compat: html.elements.input.input-file
 
 ## Value
 
-A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that represents the path to the selected file(s). If the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the input's `HTMLInputElement.files` property.
+A file input's {{htmlattrxref("value", "input")}} attribute contains a string that represents the path to the selected file(s). If the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the input's `HTMLInputElement.files` property.
 
 > **Note:**
 >
@@ -92,7 +82,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
 ### accept
 
-The [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of **{{anch("Unique file type specifiers", "unique file type specifiers")}}**. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.
+The [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of **[unique file type specifiers](#unique_file_type_specifiers)**. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.
 
 For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an `<input>` like this:
 
@@ -131,7 +121,7 @@ A **unique file type specifier** is a string that describes a type of file that 
 - The string `video/*` meaning "any video file".
 - The string `image/*` meaning "any image file".
 
-The `accept` attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
+The `accept` attribute takes a string containing one or more of these unique file type specifiers as its value, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
 ```html
 <input type="file" accept="image/*,.pdf">
@@ -163,7 +153,7 @@ This produces the following output:
 
 {{EmbedLiveSample('A_basic_example', 650, 90)}}
 
-> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -226,7 +216,7 @@ This produces a similar-looking output to the previous example:
 
 {{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact interface differs across browsers and operating systems).
 
@@ -243,13 +233,13 @@ Because of this, you should make sure that the `accept` attribute is backed up b
     input.value = "foo";
     ```
 
-2. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+2. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` prepended to it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ## Examples
 
 In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the `HTMLInputElement.files` property, as well as showing off a few clever tricks.
 
-> **Note:** You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
+> **Note:** You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
 
 First of all, let's look at the HTML:
 

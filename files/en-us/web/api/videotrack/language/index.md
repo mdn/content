@@ -1,5 +1,5 @@
 ---
-title: Videotrack.language
+title: VideoTrack.language
 slug: Web/API/VideoTrack/language
 tags:
   - API
@@ -25,15 +25,9 @@ For tracks that include multiple languages
 (such as a movie in English in which a few lines are spoken in other languages), this
 should be the video's primary language.
 
-## Syntax
+## Value
 
-```js
-var videoTrackLanguage = VideoTrack.language;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of
 the primary language used in the video track, or an empty string (`""`) if
 the language is not specified or known, or if the track doesn't contain speech.
 

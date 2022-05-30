@@ -17,11 +17,11 @@ tags:
 
 - The position of elements can now be changed within the content ({{bug(1139187)}}).
 - Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).
-- Added [HTTP log inspection to the Web Console](/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details) ({{bug(1211525)}}).
-- Added a [Firebug theme](/en-US/docs/Tools/Tools_Toolbox#choose_devtools_theme) ({{bug(1244054)}}).
-- Added the [DOM Inspector](/en-US/docs/Tools/DOM_Property_Viewer) ({{bug(1201475)}}).
-- [Font inspector](/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view) has been enabled by default again ({{bug(1280121)}}).
-- [Improved suggestions](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#edit_rules) for CSS properties ({{bug(1168246)}}).
+- Added [HTTP log inspection to the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#viewing-network-request-details) ({{bug(1211525)}}).
+- Added a [Firebug theme](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#choose-devtools-theme) ({{bug(1244054)}}).
+- Added the [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html) ({{bug(1201475)}}).
+- [Font inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#fonts-view) has been enabled by default again ({{bug(1280121)}}).
+- [Improved suggestions](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#edit-rules) for CSS properties ({{bug(1168246)}}).
 - Cookies, localstorage and sessionstorage entries are editable via double-click ({{bug(1231154)}}, {{bug(1231179)}}, {{bug(1231155)}}).
 
 ### HTML
@@ -35,10 +35,10 @@ tags:
 
 ### CSS
 
-- The {{cssxref("calc()")}} has been improved to be closer to the specification:
+- The {{cssxref("calc", "calc()")}} has been improved to be closer to the specification:
 
-  - {{cssxref("calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).
-  - Added support for nested CSS {{cssxref("calc()")}} ({{bug(968761)}}).
+  - {{cssxref("calc", "calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).
+  - Added support for nested CSS {{cssxref("calc", "calc()")}} ({{bug(968761)}}).
 
 - Our experimental implementation of CSS grids has been updated:
 

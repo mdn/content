@@ -22,7 +22,7 @@ The **`close()`** method of the
 ## Syntax
 
 ```js
-readableByteStreamController.close();
+close()
 ```
 
 ### Parameters
@@ -31,12 +31,12 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableByteStreamController`, or the stream
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream
     is not readable for some other reason.
 
 ## Examples

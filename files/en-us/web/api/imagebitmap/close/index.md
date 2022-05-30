@@ -18,8 +18,16 @@ method disposes of all graphical resources associated with an `ImageBitmap`.
 ## Syntax
 
 ```js
-void ImageBitmap.close()
+close()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

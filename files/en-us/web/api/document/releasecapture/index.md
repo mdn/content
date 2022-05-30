@@ -11,19 +11,26 @@ browser-compat: api.Document.releaseCapture
 {{ApiRef("DOM")}}
 
 The **`releaseCapture()`** method releases mouse capture if
-it's currently enabled on an element within this document. Enabling mouse capture on an
-element is done by calling {{domxref("element.setCapture()")}}.
+it's currently enabled on an element within this document.
+Once mouse capture is released, mouse events will no longer all be directed to the element on which capture is enabled.
+
+Enabling mouse capture on an element is done by calling {{domxref("element.setCapture()")}}.
 
 ## Syntax
 
 ```js
-document.releaseCapture();
+releaseCapture()
 ```
 
-Once mouse capture is released, mouse events will no longer all be directed to the
-element on which capture is enabled.
+### Parameters
 
-## Example
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 See the [example](/en-US/docs/Web/API/Element/setCapture#example) for
 {{domxref("element.setCapture()")}}.

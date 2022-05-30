@@ -18,13 +18,13 @@ See {{domxref("HTMLElement.innerText")}} for more information and examples showi
 
 ## Value
 
-A {{domxref("DOMString")}} representing the rendered text content of an element and its descendants.
+A string representing the rendered text content of an element and its descendants.
 
 If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 
 When used as a setter it replaces the current node with the given text, converting any line breaks into {{HTMLElement("br")}} elements.
 
-## Example
+## Examples
 
 This example highlights the fundamental difference between `outerText` and `innerText` when used as setters (they are the same when used by getters).
 

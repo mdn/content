@@ -132,7 +132,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 ## Syntax
 
 ```js
-var registering = browser.proxy.register(
+let registering = browser.proxy.register(
   url   // string
 )
 ```

@@ -25,6 +25,8 @@ table-layout: fixed;
 /* Global values */
 table-layout: inherit;
 table-layout: initial;
+table-layout: revert;
+table-layout: revert-layer;
 table-layout: unset;
 ```
 

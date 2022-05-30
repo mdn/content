@@ -17,12 +17,6 @@ The **`navigator.hardwareConcurrency`** read-only property
 returns the number of logical processors available to run threads on the user's
 computer.
 
-## Syntax
-
-```js
-logicalProcessors = navigator.hardwareConcurrency
-```
-
 ## Value
 
 A {{jsxref("Number")}} indicating the number of logical processor cores.

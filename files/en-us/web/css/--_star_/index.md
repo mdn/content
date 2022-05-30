@@ -10,7 +10,7 @@ browser-compat: css.properties.custom-property
 ---
 {{CSSRef}}
 
-Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var()")}} function.
+Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var", "var()")}} function.
 
 Custom properties are scoped to the element(s) they are declared on, and participate in the cascade: the value of such a custom property is that from the declaration decided by the cascading algorithm.
 
@@ -88,4 +88,4 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 ## See also
 
 - [Using CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-- The {{cssxref("var()")}} function
+- The {{cssxref("var", "var()")}} function

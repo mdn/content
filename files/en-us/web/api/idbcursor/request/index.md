@@ -18,13 +18,7 @@ The **`request`** read-only property of the {{domxref("IDBCursor")}} interface r
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-IDBCursor.request;
-```
-
-### Value
+## Value
 
 An {{domxref("IDBRequest")}} object instance.
 

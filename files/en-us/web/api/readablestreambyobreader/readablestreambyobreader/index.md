@@ -21,12 +21,12 @@ constructor creates and returns a `ReadableStreamBYOBReader` object instance.
 ## Syntax
 
 ```js
-var readableStreamBYOBReader = new ReadableStreamBYOBReader(stream);
+new ReadableStreamBYOBReader(stream)
 ```
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("ReadableStream")}} to be read.
 
 ### Return value
@@ -35,8 +35,8 @@ An instance of the {{domxref("ReadableStreamBYOBReader")}} object.
 
 ### Exceptions
 
-- TypeError
-  - : The supplied `stream` parameter is not a {{domxref("ReadableStream")}},
+- {{jsxref("TypeError")}}
+  - : Thrown if the supplied `stream` parameter is not a {{domxref("ReadableStream")}},
     or it is already locked for reading by another reader, or its stream controller is not
     a {{domxref("ReadableByteStreamController")}}.
 

@@ -26,17 +26,12 @@ This attribute is only populated if the constructor is called with the
  `shippingOption` returns `null`, even the developer provides
 a selected a shipping option.
 
-## Syntax
+## Value
 
-```js
-// Returns the id of the selected PaymentShippingOption
-var shippingOption = request.shippingOption;
-```
+## Examples
 
-## Example
-
-In the example below, the {{domxref('PaymentRequest.onshippingoptionchange')}} and
-the {{domxref('PaymentRequest.onshippingaoptionchange')}} events are dispatched. In
+In the example below, the {{domxref('PaymentRequest.shippingaddresschange_event', 'shippingaddresschange')}} and
+the {{domxref('PaymentRequest.shippingoptionchange_event', 'shippingoptionchange')}} events are dispatched. In
 each calls to `updateDetails()`  are made, one using a promise, and the other
 with a plain JS object. This demonstrates synchronous and asynchronous updates to a
 payment sheet.

@@ -27,7 +27,7 @@ a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implem
 
 A {{jsxref('Number')}}.
 
-## Example
+## Examples
 
 The gyroscope is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback.
 In the example below this occurs sixty times a second.

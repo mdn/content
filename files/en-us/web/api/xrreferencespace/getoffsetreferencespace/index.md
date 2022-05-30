@@ -43,7 +43,7 @@ call `getOffsetReferenceSpace()`*.
 Then, when drawing the scene, you can use the offset reference space to not only
 position objects relative to one another, but to apply the needed transforms to render
 objects properly based upon the viewer's position. This is demonstrated in the example
-{{anch("Implementing rotation based on non-XR inputs")}}, which demonstrates a way to
+[Implementing rotation based on non-XR inputs](#implementing_rotation_based_on_non-xr_inputs), which demonstrates a way to
 use this method to let the user use their mouse to pitch and yaw their viewing angle.
 
 ## Syntax

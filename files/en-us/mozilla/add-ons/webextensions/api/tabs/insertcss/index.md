@@ -17,6 +17,8 @@ browser-compat: webextensions.api.tabs.insertCSS
 
 Injects CSS into a page.
 
+> **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
+
 To use this API you must have the permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
 You can only inject CSS into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
@@ -30,7 +32,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var inserting = browser.tabs.insertCSS(
+let inserting = browser.tabs.insertCSS(
   tabId,           // optional integer
   details          // object
 )
@@ -73,7 +75,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example inserts into the currently active tab CSS which is taken from a string.
 
 ```js
-var css = "body { border: 20px dotted pink; }";
+let css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
 
@@ -81,7 +83,7 @@ browser.browserAction.onClicked.addListener(() => {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS({code: css});
+  let insertingCSS = browser.tabs.insertCSS({code: css});
   insertingCSS.then(null, onError);
 });
 ```
@@ -95,7 +97,7 @@ browser.browserAction.onClicked.addListener(() => {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  let insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
   insertingCSS.then(null, onError);
 });
 ```
@@ -106,7 +108,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

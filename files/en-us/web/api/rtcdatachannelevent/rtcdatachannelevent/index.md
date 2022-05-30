@@ -11,7 +11,7 @@ browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannelEvent()`** constructor
-creates a new {{domxref("RTCDataChannelEvent")}}.
+creates a new {{domxref("RTCDataChannelEvent")}} object.
 
 > **Note:** You will rarely if ever construct an `RTCDataChannelEvent` by hand; these
 > events are normally created and sent by the WebRTC layer itself.
@@ -19,30 +19,22 @@ creates a new {{domxref("RTCDataChannelEvent")}}.
 ## Syntax
 
 ```js
- var event = new RTCDataChannelEvent(type, rtcDataChannelEventInit);
+new RTCDataChannelEvent(type, options);
 ```
 
 ### Parameters
 
 - `type`
-  - : A string which specifies the name of the event. There is only one
-    type of `RTCDataChannelEvent`, so this will always be
-    `"datachannel"`.
-- `rtcDataChannelEventInit`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `datachannel`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `channel`
+      - : A {{domxref("RTCDataChannel")}}, representing the data channel being associated with the event.
 
-  - : An object with the following fields:
+### Return value
 
-    - `channel` of type {{domxref("RTCDataChannel")}}, representing the
-      data channel being concerned by the event.
-    - `bubbles`, optional, inherited from `EventInit`.
-      Indicates if the event must bubble or not. **Default is
-      `false`**.
-    - `cancelable`, optional, inherited from `EventInit`.
-      Indicates if the event can be canceled or not. **Default is false.**
-
-### Value
-
-A new {{domxref("RTCDataChannelEvent")}} configured as specified.
+A new {{domxref("RTCDataChannelEvent")}} object configured as specified.
 
 ## Example
 
@@ -66,5 +58,4 @@ var event = new RTCDataChannelEvent("datachannel", {"channel": dc});
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCPeerConnection")}}
-- [A simple
-  RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

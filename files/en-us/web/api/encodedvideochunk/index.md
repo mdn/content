@@ -14,7 +14,7 @@ The **`EncodedVideoChunk`** interface of the {{domxref('WebCodecs API','','',' '
 
 ## Constructor
 
-- {{domxref("EncodedVideoChunk.EncodedVideoChunk()")}}
+- {{domxref("EncodedVideoChunk.EncodedVideoChunk", "EncodedVideoChunk()")}}
   - : Creates a new `EncodedVideoChunk` object.
 
 ## Properties

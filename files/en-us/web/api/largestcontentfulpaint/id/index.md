@@ -13,15 +13,9 @@ browser-compat: api.LargestContentfulPaint.id
 
 The **`id`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the ID of the element that is the largest contentful paint.
 
-## Syntax
+## Value
 
-```js
-let id = LargestContentfulPaint.id;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the ID of the element.
+A string containing the ID of the element.
 
 ## Examples
 

@@ -20,15 +20,9 @@ property is any JavaScript value or {{jsxref("Object")}} which provides the reas
 passed into {{jsxref("Promise.reject()")}}. This in theory provides information about
 why the promise was rejected.
 
-## Syntax
+## Value
 
-```js
-reason = PromiseRejectionEvent.reason
-```
-
-### Value
-
-A  value or object which provides information you can use to understand why the promise
+A value or object which provides information you can use to understand why the promise
 was rejected. This could be anything from an error code to an object with text, links,
 and whatever else you might wish to include.
 
@@ -52,5 +46,5 @@ window.onunhandledrejection = function(e) {
 
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
-- {{event("rejectionhandled")}}
-- {{event("unhandledrejection")}}
+- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
+- {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}

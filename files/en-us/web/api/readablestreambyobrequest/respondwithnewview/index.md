@@ -19,22 +19,22 @@ The **`respondWithNewView()`** method of the
 ## Syntax
 
 ```js
-readableStreamBYOBRequestInstance.respondWithNewView(view);
+respondWithNewView(view)
 ```
 
 ### Parameters
 
-- _view_
+- `view`
   - : xxx
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamBYOBRequest`, or there is no
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no
     associated controller, or the associated internal array buffer is non-existent or
     detached.
 

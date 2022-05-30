@@ -31,18 +31,12 @@ the value of {{domxref("MediaTrackSupportedConstraints.frameRate")}} as returned
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var frameRate = MediaTrackSettings.frameRate;
-```
-
-### Value
+## Value
 
 A double-precision floating-point number indicating the current configuration of the
 track's frame rate, in frames per second.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

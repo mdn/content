@@ -1,5 +1,5 @@
 ---
-title: 'Location: hash'
+title: location.hash
 slug: Web/API/Location/hash
 tags:
   - API
@@ -11,7 +11,7 @@ browser-compat: api.Location.hash
 {{ APIRef("Location") }}
 
 The **`hash`** property of the
-{{domxref("Location")}} interface returns a {{domxref("USVString")}} containing a
+{{domxref("Location")}} interface returns a string containing a
 `'#'` followed by the fragment identifier of the URL — the ID on the page
 that the URL is trying to target.
 

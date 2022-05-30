@@ -21,7 +21,7 @@ The **`PushEvent`** interface of the [Push API](/en-US/docs/Web/API/Push_API) re
 
 ## Constructor
 
-- {{domxref("PushEvent.PushEvent()")}}
+- {{domxref("PushEvent.PushEvent", "PushEvent()")}}
   - : Creates a new `PushEvent` object.
 
 ## Properties

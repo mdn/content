@@ -1,6 +1,7 @@
 ---
 title: Applying styles and colors
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -597,8 +598,6 @@ In this case, we've offset the starting point slightly from the end point to ach
 The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient `#019F62 = rgba(1,159,98,1)`.
 
 {{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
-
-<!-- ------------------------ -->
 
 ### A `createConicGradient` example
 

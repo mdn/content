@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer.length
 slug: Web/API/AudioBuffer/length
+page-type: web-api-instance-property
 tags:
   - API
   - AudioBuffer
@@ -16,18 +17,11 @@ The **`length`** property of the {{ domxref("AudioBuffer") }}
 interface returns an integer representing the length, in sample-frames, of the PCM data
 stored in the buffer.
 
-## Syntax
-
-```js
-const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.length;
-```
-
-### Value
+## Value
 
 An integer.
 
-## Example
+## Examples
 
 ```js
 // Stereo
@@ -65,5 +59,4 @@ button.onclick = function() {
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

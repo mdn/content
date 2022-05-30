@@ -21,23 +21,15 @@ the event handler.
 
 This property is non-nullable (since version 46, in the case of Firefox.) If a request
 is not provided by some other means, the constructor `init` object must
-contain a request (see {{domxref("FetchEvent.FetchEvent()")}}.)
+contain a request (see {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}}.)
 
-## Syntax
-
-```js
-var recentRequest = fetchEvent.request;
-```
-
-### Value
+## Value
 
 A {{domxref("Request")}} object.
 
-## Example
+## Examples
 
-This code snippet is from the [service
-worker fetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([run the fetch
-sample live](https://googlechrome.github.io/samples/service-worker/prefetch/)). The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler
+This code snippet is from the [service worker fetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([run the fetch sample live](https://googlechrome.github.io/samples/service-worker/prefetch/)). The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler
 listens for the `fetch` event. When fired, pass a promise that back to the
 controlled page to {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}.
 This promise resolves to the first matching URL request in the {{domxref("Cache")}}
@@ -85,12 +77,8 @@ self.addEventListener('fetch', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service
-  workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web
-  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

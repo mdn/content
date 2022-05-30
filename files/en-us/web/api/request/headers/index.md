@@ -3,7 +3,6 @@ title: Request.headers
 slug: Web/API/Request/headers
 tags:
   - API
-  - Experimental
   - Fetch
   - Headers
   - Property
@@ -17,20 +16,14 @@ The **`headers`** read-only property of the
 {{domxref("Request")}} interface contains the {{domxref("Headers")}} object associated
 with the request.
 
-## Syntax
-
-```js
-var myHeaders = request.headers;
-```
-
-### Value
+## Value
 
 A {{domxref("Headers")}} object.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
-{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as
 the script), then save the request headers in a variable:
 
 ```js

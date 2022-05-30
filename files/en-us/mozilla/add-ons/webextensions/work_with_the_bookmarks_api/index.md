@@ -120,7 +120,7 @@ Defines the background script that'll add and remove the page's bookmark and set
 As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updatetab()` with this code:
 
 ```js
-  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+  let gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
   gettingActiveTab.then(updateTab);
 ```
 
@@ -137,8 +137,8 @@ As with any background script, [background.js](https://github.com/mdn/webextensi
 
 ```js
   function isSupportedProtocol(urlString) {
-    var supportedProtocols = ["https:", "http:", "file:"];
-    var url = document.createElement('a');
+    let supportedProtocols = ["https:", "http:", "file:"];
+    let url = document.createElement('a');
     url.href = urlString;
     return supportedProtocols.indexOf(url.protocol) != -1;
   }
@@ -147,7 +147,7 @@ As with any background script, [background.js](https://github.com/mdn/webextensi
 If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`:
 
 ```js
-      var searching = browser.bookmarks.search({url: currentTab.url});
+      let searching = browser.bookmarks.search({url: currentTab.url});
       searching.then((bookmarks) => {
         currentBookmark = bookmarks[0];
         updateIcon();

@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransfer
@@ -18,29 +19,34 @@ operation's {{domxref("DataTransfer","drag data")}} for the given type. If data 
 given type does not exist, this method does nothing.
 
 If this method is called with no arguments or the format is an empty
-{{domxref("DOMString","string")}}, the data of all types will be removed.
+string, the data of all types will be removed.
 
 This method does _not_ remove files from the drag operation, so it's possible
 for there still to be an entry with the type `"Files"` left in the object's
 {{domxref("DataTransfer.types")}} list if there are any files included in the drag.
 
-> **Note:** This method can only be used in the handler for the {{event("dragstart")}} event,
+> **Note:** This method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event,
 > because that's the only time the drag operation's data store is writeable.
 
 ## Syntax
 
 ```js
-DataTransfer.clearData([format]);
+clearData()
+clearData(format)
 ```
 
 ### Parameters
 
 - `format` {{optional_inline}}
-  - : A {{domxref("DOMString","string")}} which specifies the type of data to remove. If
+  - : A string which specifies the type of data to remove. If
     this parameter is an empty string or is not provided, the data for all types is
     removed.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.getData()","getData()")}},
@@ -165,7 +171,7 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 ```
 
-{{EmbedLiveSample('Example', 300, 250)}}
+{{EmbedLiveSample('Examples', 300, 300)}}
 
 ## Specifications
 

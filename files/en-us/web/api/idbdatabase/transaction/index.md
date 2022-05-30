@@ -23,9 +23,9 @@ object store.
 ## Syntax
 
 ```js
-IDBDatabase.transaction(storeNames);
-IDBDatabase.transaction(storeNames, mode);
-IDBDatabase.transaction(storeNames, mode, options);
+transaction(storeNames)
+transaction(storeNames, mode)
+transaction(storeNames, mode, options)
 ```
 
 ### Parameters
@@ -93,12 +93,13 @@ IDBDatabase.transaction(storeNames, mode, options);
 
   - : Dictionary of other options. Available options are:
 
-    - `durability`: `"default"`, `"strict"`, or
-      `"relaxed"`. The default is `"default"`. Using
-      `"relaxed"` provides better performance, but with fewer guarantees. Web
-      applications are encouraged to use `"relaxed"` for ephemeral data such
-      as caches or quickly changing records, and `"strict"` in cases where
-      reducing the risk of data loss outweighs the impact to performance and power.
+    - `durability`
+      - : `"default"`, `"strict"`, or
+        `"relaxed"`. The default is `"default"`. Using
+        `"relaxed"` provides better performance, but with fewer guarantees. Web
+        applications are encouraged to use `"relaxed"` for ephemeral data such
+        as caches or quickly changing records, and `"strict"` in cases where
+        reducing the risk of data loss outweighs the impact to performance and power.
 
 ### Return value
 
@@ -110,12 +111,12 @@ An {{domxref("IDBTransaction")}} object.
   - : Thrown if the {{domxref("IDBDatabase.close", "close()")}} method has previously been called on this {{domxref("IDBDatabase")}} instance.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if an object store specified in the 'storeNames' parameter has been deleted or removed.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the value for the `mode` parameter is invalid.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the function was called with an empty list of store names.
 
-## Example
+## Examples
 
 In this example we open a database connection, then use transaction() to open a
 transaction on the database. For a complete example, see our

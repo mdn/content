@@ -13,13 +13,7 @@ browser-compat: api.LargestContentfulPaint.loadTime
 
 The **`loadTime`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the time that the element was loaded.
 
-## Syntax
-
-```js
-let loadTime = LargestContentfulPaint.loadTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time in milliseconds that the element was loaded.
 

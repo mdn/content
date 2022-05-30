@@ -1,5 +1,5 @@
 ---
-title: 'Location: username'
+title: location.username
 slug: Web/API/Location/username
 tags:
   - API
@@ -8,10 +8,12 @@ tags:
   - Reference
 browser-compat: api.Location.username
 ---
+{{APIRef("HTML DOM")}}
+
 {{deprecated_header}}
 
 The **`username`** property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} containing the username specified before the
+interface is a string containing the username specified before the
 domain name.
 
 ## Syntax

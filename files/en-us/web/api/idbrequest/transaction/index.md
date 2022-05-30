@@ -22,7 +22,7 @@ This property can be `null` for requests not made within transactions,
 such as for requests returned from {{domxref("IDBFactory.open")}} — in this case
 you're just connecting to a database, so there is no transaction to return. If a
 version upgrade is needed when opening a database then during the
-{{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the
+{{domxref("IDBOpenDBRequest.upgradeneeded_event", "upgradeneeded")}} event handler the
 **`transaction`** property will be an
 {{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal
 to `"versionchange"`, and can be used to access existing object stores and
@@ -31,17 +31,11 @@ indexes, or abort the upgrade. Following the upgrade, the
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myTransaction = request.transaction;
-```
-
-### Value
+## Value
 
 An {{domxref("IDBTransaction")}}.
 
-## Example
+## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available
@@ -50,7 +44,7 @@ one property of the record, and then puts the updated record back into the objec
 store in another request. The source of the requests is logged to the developer
 console — both originate from the same transaction. For a full working example, see
 our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view example live](https://mdn.github.io/to-do-notifications/).)
+([View the example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";
@@ -125,5 +119,4 @@ openRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

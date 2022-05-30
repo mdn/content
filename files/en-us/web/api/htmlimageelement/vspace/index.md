@@ -27,14 +27,7 @@ The *obsolete* **`vspace`** property of the
 to leave empty on the top and bottom of the {{HTMLElement("img")}} element when laying
 out the page.
 
-## Syntax
-
-```js
-htmlImageElement.vspace = marginHeight;
-marginHeight = htmlImageElement.vspace;
-```
-
-### Value
+## Value
 
 An integer value specifying the height, in pixels, of the vertical margin to apply to
 the top and bottom sides of the image.

@@ -19,13 +19,7 @@ of the {{domxref("Navigator")}} interface returns a {{domxref('Keyboard')}} obje
 which provides access to functions that retrieve keyboard layout maps and toggle
 capturing of key presses from the physical keyboard.
 
-## Syntax
-
-```js
-var keyboard = navigator.keyboard
-```
-
-### Value
+## Value
 
 A {{domxref('Keyboard')}} object.
 

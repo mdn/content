@@ -27,13 +27,7 @@ falls within the scope of the registration (the `scope` option set when
 > runtime script error nor a force termination of the active worker prevents the active
 > worker from getting `activated`.
 
-## Syntax
-
-```js
-var serviceWorker = serviceWorkerRegistration.active;
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorker")}} object's property, if it is currently in an
 `activating` or `activated` state.

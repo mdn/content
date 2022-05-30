@@ -13,15 +13,9 @@ browser-compat: api.MIDIPort.manufacturer
 
 The **`manufacturer`** read-only property of the {{domxref("MIDIPort")}} interface returns the manufacturer of the port.
 
-## Syntax
+## Value
 
-```js
-let manufacturer = MIDIPort.manufacturer;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the manufacturer of the port.
+A string containing the manufacturer of the port.
 
 ## Examples
 

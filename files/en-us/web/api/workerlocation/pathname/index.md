@@ -13,11 +13,9 @@ browser-compat: api.WorkerLocation.pathname
 
 The **`pathname`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.pathname", "pathname")}} part of the worker's location.
 
-## Syntax
+## Value
 
-```js
-string = location.pathname;
-```
+A string.
 
 ## Examples
 

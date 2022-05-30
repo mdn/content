@@ -18,15 +18,9 @@ The **`icon`** read-only property of the
 part of the notification, as specified in the `icon` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
+## Value
 
-```js
-var icon = Notification.icon;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

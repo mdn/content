@@ -15,22 +15,16 @@ browser-compat: api.MediaDeviceInfo.groupId
 {{APIRef("Media Capture")}}
 
 The **`groupId`** readonly property of
-the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}} that
+the {{domxref("MediaDeviceInfo")}} interface returns a string that
 is a group identifier.
 
 Two devices have the same group identifier if they
 belong to the same physical device; for example, a monitor with both a built-in camera
 and microphone.
 
-## Syntax
+## Value
 
-```js
-var groupID = mediaDeviceInfo.groupId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which uniquely identifies the group of related devices to
+A string which uniquely identifies the group of related devices to
 which this device belongs.
 
 ## Specifications

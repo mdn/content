@@ -13,13 +13,7 @@ browser-compat: api.ElementInternals.validity
 
 The **`validity`** read-only property of the {{domxref("ElementInternals")}} interface returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
 
-## Syntax
-
-```js
-let validity = ElementInternals.validity;
-```
-
-### Value
+## Value
 
 A {{domxref("ValidityState")}} object.
 

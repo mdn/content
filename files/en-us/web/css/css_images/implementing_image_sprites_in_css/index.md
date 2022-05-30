@@ -30,7 +30,7 @@ Suppose an image is given to every item with class `toolbtn`:
 }
 ```
 
-A background position can be added either as two x, y values after the {{cssxref("url()")}} in the background, or as {{cssxref("background-position")}}. For example:
+A background position can be added either as two x, y values after the {{cssxref("url", "url()")}} in the background, or as {{cssxref("background-position")}}. For example:
 
 ```css
 #btn1 {
@@ -54,4 +54,4 @@ Similarly, you can also make hover states with:
 
 ## See also
 
-- [Full working demo at CSS Tricks](http://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [Full working demo at CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)

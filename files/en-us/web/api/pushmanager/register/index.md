@@ -19,10 +19,14 @@ a new endpoint for notifications.
 ## Syntax
 
 ```js
-var request = navigator.push.register();
+register()
 ```
 
-### Return
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
 
@@ -30,9 +34,9 @@ If the method call is successful, the request's `result` will be a string,
 which is the endpoint URL.
 
 > **Note:** if you do not need the URL any more, please use
-> {{domxref("Pushmanager.unregister()")}} to clean up after yourself.
+> {{domxref("PushManager.unregister()")}} to clean up after yourself.
 
-## Example
+## Examples
 
 ```js
 var req = navigator.push.register();

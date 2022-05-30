@@ -39,7 +39,7 @@ You can control the gaps between columns with the {{cssxref("column-gap")}} prop
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-multicol--download.html)
 
 Use multicol when:
 
@@ -57,7 +57,7 @@ There is currently no way to add a rule between flex items, and browser support 
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-flexbox--download.html)
 
 Flexbox can also be used to create layouts where the flex items wrap onto new rows, by setting the {{cssxref("flex-wrap")}} property on the container to `wrap`. These new flex lines will distribute space along that line only — the items in the new line will not line up with items in the line above, as you'll see in the example below. This is why flexbox is described as one-dimensional. It is designed for controlling layout as a row or a column, but not both at the same time.
 
@@ -65,7 +65,7 @@ Flexbox can also be used to create layouts where the flex items wrap onto new ro
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-flexbox-wrapping--download.html)
 
 Use flexbox:
 
@@ -81,7 +81,7 @@ If what you want is a layout where items line up in rows and columns then you sh
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-grid--download.html)
 
 Use Grid:
 

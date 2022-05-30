@@ -68,13 +68,13 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 > **Note:** If the current document isn't loaded securely,
 > `navigator.mediaDevices` will be `undefined`, and you cannot use
-> `getUserMedia()`. See {{anch("Security")}} for more information on this and
+> `getUserMedia()`. See [Security](#security) for more information on this and
 > other security issues related to using `getUserMedia()`.
 
 ## Syntax
 
 ```js
-var promise = navigator.mediaDevices.getUserMedia(constraints);
+getUserMedia(constraints)
 ```
 
 ### Parameters
@@ -236,7 +236,7 @@ object when the requested media has successfully been obtained.
   - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
     `getUserMedia()` was called. The mechanism by which user media support is
     enabled and disabled is left up to the individual user agent.
-- `TypeError`  {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the list of constraints specified is empty, or has all constraints set to
     `false`. This can also happen if you try to call
     `getUserMedia()` in an insecure context, since
@@ -352,7 +352,7 @@ isn't loaded in a secure context, the {{domxref("navigator.mediaDevices")}} prop
 `undefined`, making access to `getUserMedia()` impossible.
 
 Attempting to access `getUserMedia()` in this situation will result in a
-`TypeError`.
+{{jsxref("TypeError")}}.
 
 #### Document source security
 

@@ -19,13 +19,7 @@ silent, i.e., no sounds or vibrations should be issued, regardless of the device
 settings. This is specified in the `silent` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var silent = Notification.silent;
-```
-
-### Value
+## Value
 
 A boolean value. `false` is the default; `true` makes
 the notification silent.

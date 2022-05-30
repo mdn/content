@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.metaKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.metaKey`** read-only property is a boolean value that indicates whether the <kbd>meta</kbd> key was pressed or not when a given mouse event occurs.
 
@@ -25,7 +25,7 @@ On Windows, for example, this key may open the Start menu.
 
 A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
-## Example
+## Examples
 
 This example logs the `metaKey` property when you trigger a {{Event("click")}} event.
 

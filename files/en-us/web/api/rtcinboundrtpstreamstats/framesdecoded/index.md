@@ -26,13 +26,7 @@ The **`framesDecoded`** property of
 the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number of
 frames which have been decoded successfully for this media source.
 
-## Syntax
-
-```js
-var framesDecoded = rtcInboundRtpStreamStats.framesDecoded;
-```
-
-### Value
+## Value
 
 An integer value indicating the total number of video frames which have been decoded
 for this stream so far. This represents the number of frames that would have been

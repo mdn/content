@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.keys()
 slug: Web/API/CacheStorage/keys
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
@@ -29,9 +30,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.keys().then(function(keyList) {
-  //do something with your keyList
-});
+keys()
 ```
 
 ### Parameters
@@ -45,7 +44,7 @@ inside the {{domxref("CacheStorage")}} object.
 
 ## Examples
 
-In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate",
+In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.activate_event",
   "activate")}} event, and then run a
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
 unused caches before a new service worker is activated. Here we have an allowlist

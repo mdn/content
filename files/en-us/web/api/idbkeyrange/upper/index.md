@@ -19,17 +19,11 @@ The **`upper`** read-only property of the
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var upper = myKeyRange.upper
-```
-
-### Value
+## Value
 
 The upper bound of the key range (can be any type.)
 
-## Example
+## Examples
 
 The following example illustrates how you'd use a key range. Here we
 declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a
@@ -44,8 +38,7 @@ console, which should appear as "W".
 
 > **Note:** For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
-> ([view the example live
-> too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> ([view the example live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {

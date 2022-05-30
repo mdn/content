@@ -44,16 +44,18 @@ reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, ini
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array, taking four arguments:
+  - : Function to execute on each value in the array.
+
+    The function is called with the following arguments:
 
     - `accumulator`
       - : The value previously returned in the last invocation of the callback, or
         `initialValue`, if supplied. (See below.)
     - `currentValue`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array `reduceRight()` was called upon.
 
 - `initialValue` {{optional_inline}}
@@ -251,7 +253,7 @@ The value returned by `reduceRight` this time would be, of course,
 ### Sum up all values within an array
 
 ```js
-var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+const sum = [0, 1, 2, 3].reduceRight(function(a, b) {
   return a + b;
 });
 // sum is 6
@@ -260,7 +262,7 @@ var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
 ### Flatten an array of arrays
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+const flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
     return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
@@ -314,9 +316,9 @@ const computation2 = (input, callback) => {
 ### Difference between `reduce` and `reduceRight`
 
 ```js
-var a = ['1', '2', '3', '4', '5'];
-var left  = a.reduce(function(prev, cur)      { return prev + cur; });
-var right = a.reduceRight(function(prev, cur) { return prev + cur; });
+const a = ['1', '2', '3', '4', '5'];
+const left  = a.reduce(function(prev, cur)      { return prev + cur; });
+const right = a.reduceRight(function(prev, cur) { return prev + cur; });
 
 console.log(left);  // "12345"
 console.log(right); // "54321"

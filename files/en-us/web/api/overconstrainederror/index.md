@@ -21,7 +21,7 @@ The **`OverconstrainedError`** interface of the [Media Capture and Streams API](
 
 ## Constructor
 
-- {{domxref("OverconstrainedError.OverconstrainedError()")}}
+- {{domxref("OverconstrainedError.OverconstrainedError", "OverconstrainedError()")}}
   - : Creates a new `OverconstrainedError` object.
 
 ## Properties

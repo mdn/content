@@ -18,13 +18,7 @@ reference to the control (in the form of an object of type {{domxref("HTMLElemen
 one of its derivatives) with which the {{HTMLElement("label")}} element is associated,
 or `null` if the label isn't associated with a control.
 
-## Syntax
-
-```js
-control = HTMLLabelElement.control
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLElement")}} derived object representing the control with which the
 {{HTMLElement("label")}} is associated, or `null` if the label stands alone.

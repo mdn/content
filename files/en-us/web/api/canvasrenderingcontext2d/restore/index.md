@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -23,8 +24,16 @@ state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{d
 ## Syntax
 
 ```js
-void ctx.restore();
+restore()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

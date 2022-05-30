@@ -22,7 +22,7 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 - {{domxref('PaymentResponse.details')}} {{readonlyinline}} {{securecontext_inline}}
   - : Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used. Developers need to consult whomever controls the URL for the expected shape of the details object.
 - {{domxref('PaymentResponse.methodName')}} {{readonlyinline}} {{securecontext_inline}}
-  - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc..
+  - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc.
 - {{domxref('PaymentResponse.payerEmail')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
   - : Returns the email address supplied by the user. This option is only present when the `requestPayerEmail` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 - {{domxref('PaymentResponse.payerName')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
@@ -49,7 +49,6 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 - [`payerdetailchange`](/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event){{securecontext_inline}}{{deprecated_inline}}
   - : Fired during a retry when the user makes changes to their personal information while filling out a payment request form. Allows the developer to revalidate any requested user data (e.g., the phone number or the email address) if it changes.
-    Also available via the [`onpayerdetailchange`](/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange) property.
 
 ## Specifications
 

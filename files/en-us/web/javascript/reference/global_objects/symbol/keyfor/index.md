@@ -36,10 +36,10 @@ registry; otherwise, {{jsxref("undefined")}}.
 ### Using keyFor()
 
 ```js
-var globalSym = Symbol.for('foo'); // create a new global symbol
+const globalSym = Symbol.for('foo'); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
-var localSym = Symbol();
+const localSym = Symbol();
 Symbol.keyFor(localSym); // undefined
 
 // well-known symbols are not symbols registered

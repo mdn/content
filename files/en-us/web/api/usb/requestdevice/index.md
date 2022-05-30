@@ -21,12 +21,12 @@ triggers the user agent's pairing flow.
 ## Syntax
 
 ```js
-USB.requestDevice([filters])
+requestDevice(filters)
 ```
 
 ### Parameters
 
-- filters
+- `filters`
 
   - : An array of filter objects for possible devices you would like to pair. Each filter
     object can have the following properties:
@@ -42,7 +42,7 @@ USB.requestDevice([filters])
 
 A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")}}.
 
-## Example
+## Examples
 
 The following example looks for one of two USB devices. Notice that two product IDs are
 specified. Both are passed to `requestDevice()`. This triggers a user-agent

@@ -1,6 +1,7 @@
 ---
 title: AmbientLightSensor.illuminance
 slug: Web/API/AmbientLightSensor/illuminance
+page-type: web-api-instance-property
 tags:
   - API
   - Ambient Light Level API
@@ -23,7 +24,7 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 A {{jsxref('Number')}} indicating the current light level in lux.
 
-## Example
+## Examples
 
 ```js
 if ( 'AmbientLightSensor' in window ) {

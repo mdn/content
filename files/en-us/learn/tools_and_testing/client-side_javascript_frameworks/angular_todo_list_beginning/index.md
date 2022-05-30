@@ -55,7 +55,7 @@ Components are a central building block of Angular applications.
 This to-do application has two components — a component as a foundation for your application, and a component for handling to-do items.
 
 Each component is made up of a TypeScript class, HTML, and CSS.
-Typescript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
+TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
 
 ### Dynamically change the UI with \*ngIf and \*ngFor
 

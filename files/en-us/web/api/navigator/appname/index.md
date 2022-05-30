@@ -18,13 +18,7 @@ purposes.
 
 > **Note:** Do not rely on this property to return a real browser name. All browsers return "`Netscape`" as the value of this property.
 
-## Syntax
-
-```js
-appName = navigator.appName
-```
-
-### Value
+## Value
 
 The string "`Netscape`".
 

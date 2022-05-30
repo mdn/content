@@ -18,15 +18,11 @@ For block-level elements, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetH
 
 However, for inline-level elements (such as **span**) that can wrap from one line to the next, `offsetTop` and `offsetLeft` describe the positions of the _first_ border box (use {{domxref("Element.getClientRects()")}} to get its width and height), while `offsetWidth` and `offsetHeight` describe the dimensions of the _bounding_ border box (use {{domxref("Element.getBoundingClientRect()")}} to get its position). Therefore, a box with the left, top, width and height of `offsetLeft`, `offsetTop`, `offsetWidth` and `offsetHeight` will not be a bounding box for a span with wrapped text.
 
-## Syntax
+## Value
 
-```js
-left = element.offsetLeft;
-```
+An integer.
 
-`left` is an integer representing the offset to the left in pixels _from the closest relatively positioned_ parent element.
-
-## Example
+## Examples
 
 ```js
 var colorTable = document.getElementById("t1");

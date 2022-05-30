@@ -20,10 +20,18 @@ The returned clone is copied by value, not reference, so a change in either
 ## Syntax
 
 ```js
-clone = range.cloneRange();
+cloneRange()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 range = document.createRange();

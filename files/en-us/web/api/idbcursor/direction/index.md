@@ -15,23 +15,16 @@ browser-compat: api.IDBCursor.direction
 {{ APIRef("IndexedDB") }}
 
 The **`direction`** read-only property of the
-{{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
+{{domxref("IDBCursor")}} interface is a string that returns the
 direction of traversal of the cursor (set using
-{{domxref("IDBObjectStore.openCursor")}} for example). See the {{anch("Values")}}
+{{domxref("IDBObjectStore.openCursor")}} for example). See the [Values](#values)
 section below for possible values.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var direction = cursor.direction;
-```
-
-### Value
-
-A string (defined by the [`IDBCursorDirection`
-enum](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection)) indicating the direction in which the cursor is traversing the data.
+A string (defined by the [`IDBCursorDirection` enum](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection)) indicating the direction in which the cursor is traversing the data.
 Possible values are:
 
 <table class="no-markdown">
@@ -74,7 +67,7 @@ Possible values are:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
@@ -91,8 +84,7 @@ prev
 The cursor does not require us to select the data based on a key; we can just grab all
 of it. Also note that in each iteration of the loop, you can grab data from the current
 record under the cursor object using `cursor.value.foo`. For a complete
-working example, see our [IDBCursor
-example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
+working example, see our [IDBCursor example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([View the example live](https://mdn.github.io/indexeddb-examples/idbcursor/)).
 
 ```js
 function backwards() {
@@ -132,5 +124,4 @@ function backwards() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

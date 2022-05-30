@@ -25,7 +25,7 @@ Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 ## Syntax
 
 ```js
-instanceOfFileReader.readAsBinaryString(blob);
+readAsBinaryString(blob)
 ```
 
 ### Parameters
@@ -33,7 +33,11 @@ instanceOfFileReader.readAsBinaryString(blob);
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var canvas = document.createElement('canvas');

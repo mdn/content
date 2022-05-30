@@ -13,7 +13,7 @@ browser-compat: api.HTMLTimeElement.dateTime
 
 The
 **`HTMLTimeElement.dateTime`**
-property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("datetime",
+property is a string that reflects the {{ htmlattrxref("datetime",
   "time") }} HTML attribute, containing a machine-readable form of the element's date and
 time value.
 
@@ -152,14 +152,11 @@ The format of the string must follow one of the following HTML microsyntaxes:
   </tbody>
 </table>
 
-## Syntax
+## Value
 
-```js
-dateTimeString = timeElt.dateTime;
-timeElt.dateTime = dateTimeString
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 // Assumes there is <time id="t"> element in the HTML

@@ -13,13 +13,7 @@ browser-compat: api.MIDIAccess.sysexEnabled
 
 The **`sysexEnabled`** read-only property of the {{domxref("MIDIAccess")}} interface indicates whether system exclusive support is enabled on the current MIDIAccess instance.
 
-## Syntax
-
-```js
-let sysexEnabled = MIDIAccess.sysexEnabled;
-```
-
-### Value
+## Value
 
 A boolean value.
 

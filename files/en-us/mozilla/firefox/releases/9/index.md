@@ -80,8 +80,8 @@ _No change._
 
 ### Developer tools
 
-- The web console now supports basic [string substitutions](/en-US/docs/Tools/Web_Console#string_substitutions) in its logging methods.
-- You can now [create visually nested blocks of output](/en-US/docs/Tools/Web_Console#using_groups_in_the_console) in the web console, to help make it easier to read.
+- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
+- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
 
 ## Changes for Mozilla and add-on developers
 
@@ -96,7 +96,7 @@ See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Updating_add-on
 
 ### JavaScript code module changes
 
-- [`FileUtils.jsm`](/en-US/docs/JavaScript_code_modules/FileUtils.jsm) now has a `File` constructor that returns an {{ interface("nsIFile") }} object representing a file specified by its pathname.
+- [`FileUtils.jsm`](/en-US/docs/JavaScript_code_modules/FileUtils.jsm) now has a `File` constructor that returns an `nsIFile` object representing a file specified by its pathname.
 
 ### Service changes
 
@@ -110,19 +110,19 @@ See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Updating_add-on
 
 #### Removed interfaces
 
-- {{ interface("nsIGlobalHistory3") }} has been removed during streamlining of the Places and DocShell code.
+- `nsIGlobalHistory3` has been removed during streamlining of the Places and DocShell code.
 
 #### Miscellaneous interface changes
 
-- The {{ interface("nsISound") }} interface has a new constant, `EVENT_EDITOR_MAX_LEN`. The allows for playing the system sound for when more characters than the maximum allowed are typed into a text field. Currently, this is only used on Windows.
-- The {{ interface("nsIScriptError2") }} interface has new `timeStamp` and `innerWindowID` properties; in addition, the `initWithWindowID()` method now takes an inner window ID instead of an outer window ID.
-- The {{ ifattribute("nsIBidiKeyboard", "haveBidiKeyboards") }} attribute has been added; this lets you determine if the system has at least one keyboard installed for each direction: left-to-right and right-to-left.
-- The new {{ ifattribute("nsIEditor", "isSelectionEditable") }} attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.
-- The {{ ifmethod("nsIBrowserHistory", "registerOpenPage") }} and {{ ifmethod("nsIBrowserHistory", "unregisterOpenPage") }} methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in {{ interface("mozIPlacesAutoComplete") }} instead.
-- The {{ ifmethod("nsIDOMWindowUtils", "wrapDOMFile") }} method has been added; this returns a DOM {{ domxref("File") }} object for a given {{ interface("nsIFile") }}.
-- The {{ ifmethod("nsIChromeFrameMessageManager", "removeDelayedFrameScript") }} method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using {{ ifmethod("nsIChromeFrameMessageManager", "loadFrameScript") }} with the delayed load flag set. This is exposed to add-ons as `browser.messageManager.removeDelayedFrameScript()`.
-- The {{ interface("nsIAppStartup") }} interface has a new `interrupted` attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.
-- The {{ interface("nsIEditorSpellCheck") }} interface has been revised to support per-site selection of spell checker dictionaries.
+- The `nsISound` interface has a new constant, `EVENT_EDITOR_MAX_LEN`. The allows for playing the system sound for when more characters than the maximum allowed are typed into a text field. Currently, this is only used on Windows.
+- The `nsIScriptError2` interface has new `timeStamp` and `innerWindowID` properties; in addition, the `initWithWindowID()` method now takes an inner window ID instead of an outer window ID.
+- The `nsIBidiKeyboard.haveBidiKeyboards` attribute has been added; this lets you determine if the system has at least one keyboard installed for each direction: left-to-right and right-to-left.
+- The new `nsIEditor.isSelectionEditable` attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.
+- The `nsIBrowserHistory.registerOpenPage()` and `nsIBrowserHistory.unregisterOpenPage()` methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in `mozIPlacesAutoComplete` instead.
+- The `nsIDOMWindowUtils.wrapDOMFile()` method has been added; this returns a DOM {{ domxref("File") }} object for a given `nsIFile`.
+- The `nsIChromeFrameMessageManager.removeDelayedFrameScript()` method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using `nsIChromeFrameMessageManager.loadFrameScript()` with the delayed load flag set. This is exposed to add-ons as `browser.messageManager.removeDelayedFrameScript()`.
+- The `nsIAppStartup` interface has a new `interrupted` attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.
+- The `nsIEditorSpellCheck` interface has been revised to support per-site selection of spell checker dictionaries.
 
 ### IDL parser
 

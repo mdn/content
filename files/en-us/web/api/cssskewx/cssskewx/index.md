@@ -1,6 +1,7 @@
 ---
 title: CSSSkewX()
 slug: Web/API/CSSSkewX/CSSSkewX
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -22,7 +23,7 @@ value of the individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSSkewX = new CSSSkewX(ax);
+new CSSSkewX(ax)
 ```
 
 ### Parameters

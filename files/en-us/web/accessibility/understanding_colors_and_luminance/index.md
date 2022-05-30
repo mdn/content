@@ -40,7 +40,7 @@ While understanding these concepts are important for design and readability for 
 
 The [W3.org's](/en-US/docs/Glossary/W3C) [WAI](/en-US/docs/Glossary/WAI) publishes freely available guidelines, maintained by the AGWG (Accessibility Guidelines Working Group). Currently these are known as the [WCAG 2.1 accessibility guidelines](/en-US/docs/Glossary/WCAG). The next generation, [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/), is presently published as a public working draft, pending further development and approvals.
 
-The WCAG 2.x guidelines attempt to define adequate[luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
+The WCAG 2.x guidelines attempt to define adequate [luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
 
 ## Color basics
 
@@ -89,7 +89,7 @@ For web content, readability is one very important goal. Readability is not the 
 
 For normal vision, the contrast sensitivity (CS) JND legibility level is about 1%, while someone with a mild impairment might have a CS of 3%. 10% would be represent profound impairment in the area of low vision. These levels are for large, bold fonts on a special chart used for testing contrast sensitivity.
 
-But the threshold of 1% to 3% is wholly insufficient for fluent, easy reading. The minimum critical contrast level is ten times the CS JND, and 20 times the JND is considered the better target to allow for "contrast reserve." <cite>[(Visual requirements for reading, S G Whittaker, J Lovie-Kitchin)](https://pubmed.ncbi.nlm.nih.gov/8430009/)</cite>.
+But the threshold of 1% to 3% is wholly insufficient for fluent, easy reading. The minimum critical contrast level is ten times the CS JND, and 20 times the JND is considered the better target to allow for "contrast reserve." [(Visual requirements for reading, S G Whittaker, J Lovie-Kitchin)](https://pubmed.ncbi.nlm.nih.gov/8430009/).
 
 ### Spatial Frequency
 
@@ -109,7 +109,7 @@ While text that is too small is hard to read, so is text that is too big. Above 
 
 The current WCAG 2.x contrast guidelines 1.4.3 and 1.4.6 define "large" text as text that is 18pt (24px) or larger at a normal weight (400), or text that is 14pt (18.7px) at a bold weight (700). This may have been sufficient in 2008 when the standard was created. At that time, most "web fonts" such as Verdana were only available in a normal and bold weight.
 
-Today, the proliferation of easily available web fonts of all sizes and weights has complicated the issue. The emerging WCAG 3.0 standard on visual contrast is known as the [Advanced Perceptual Contrast Algorithm (APCA)](https://www.myndex.com/APCA/simple), and takes into account font weights and sizes in a variable manner, relative to the predicted contrast value.
+Today, the proliferation of easily available web fonts of all sizes and weights has complicated the issue. The emerging WCAG 3.0 standard on visual contrast is known as the [Advanced Perceptual Contrast Algorithm (APCA)](https://www.myndex.com/APCA/), and takes into account font weights and sizes in a variable manner, relative to the predicted contrast value.
 
 [Non text elements such as icons also need adequate contrast for perception](https://www.w3.org/WAI/WCAG21/Techniques/general/G207).
 
@@ -157,7 +157,7 @@ In some of the previous examples, you'll notice that some have a fourth value wh
 
 ### sRGB: the accessible colorspace
 
-For accessibility guidelines the **sRGB** colorspace is most commonly used. This is not only because sRGB is the current default standard for the the web, but also the sRGB color primaries are well suited for accessibility concerns. For instance, the "red" sRGB primary is actually a red-orange, with a dominant wavelength of 611nm which overlaps into the M cone (green) sensitivity.
+For accessibility guidelines the **sRGB** colorspace is most commonly used. This is not only because sRGB is the current default standard for the web, but also the sRGB color primaries are well suited for accessibility concerns. For instance, the "red" sRGB primary is actually a red-orange, with a dominant wavelength of 611nm which overlaps into the M cone (green) sensitivity.
 
 This is helpful for some impairments related to color vision deficiency (CVD). One form of CVD called protanopia means the eye has no red cones. But protanopia will still be able to perceive the sRGB red primary because the remaining green cones perceive it, though about 35% darker than normal vision. Nevertheless, both a protan (red deficient) and deutan (green deficient) type of CVD have difficulty distinguishing _between_ red and green.
 
@@ -317,7 +317,7 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - **Blue also has a significant effect on brightness and glare:** [Blue and glare & brightness](https://pubmed.ncbi.nlm.nih.gov/31288107/)
 - **Red tinted glasses can provide increased happiness or joy:** [Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing](https://pubmed.ncbi.nlm.nih.gov/31244627/)
 - **Red is well known to have significant effects on our behavior:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, S,Macknik
-- **Red Environment:** [Studies have shown that a red environment stimulates cognition](https://www.ncbi.nlm.nih.gov/pubmed/20649469), but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.
+- **Red Environment:** [Studies have shown that a red environment stimulates cognition](https://pubmed.ncbi.nlm.nih.gov/20649469/), but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.
 
 ### Flashing and Seizures
 
@@ -335,7 +335,7 @@ The Epilepsy Foundation of America researched photic-related seizures thoroughly
 1. Five light–dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast.
 2. Eight light–dark pairs of stripes, if the pattern is unchanging or continuously and smoothly drifting in one direction.
 
-The consensus recommendations are in this brief paper, [Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America](https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf). Some additional insights are available in this UK paper covering [guidelines for preventing seizures.](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf).
+The consensus recommendations are in this brief paper, [Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.31405.x). Some additional insights are available in this UK paper covering [guidelines for preventing seizures.](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf).
 
 Additional notes: The EFA recommendation from 2005 pre-dates smart phones, and was based on television set usage, defining a flash that _"occupies a solid visual angle of ≥0.006 steradians (∼10% of the central visual field or 25% of screen area at typical viewing distances)."_ This is essentially equivalent to a visual angle of 5° square. Since that time, mobile devices have substantially changed how we view media. For a typical smart phone viewed very close (5"-6" or 12cm-15cm) that would be an area about 50px to 70px square.
 
@@ -349,13 +349,13 @@ To help us in our work, be it content design or determining accessibility, or ca
 
 The IEC standard for calculating relative luminance (Y) from an sRGB color is as follows:
 
-#### Step one: 8 bit integer to float
+#### Step one: 8-bit integer to float
 
-Convert 8 bit sRGB values to float (0.0 to 1.0) by dividing by 255.0:
+Convert 8-bit sRGB values to float (0.0 to 1.0) by dividing by 255.0:
 
 **R´<sub>float</sub> = R´<sub>8bit</sub> / 255.0 G´<sub>float</sub> = G´<sub>8bit</sub> / 255.0 B´<sub>float</sub> = B´<sub>8bit</sub> / 255.0**
 
-If your sRGB values are 16 bit then convert to decimal by dividing by 65535.
+If your sRGB values are 16-bit then convert to decimal by dividing by 65535.
 
 #### Step two: Linearize
 
@@ -399,15 +399,15 @@ Raise each color channel to the power of 2.2, the same as an sRGB display. This 
 
 Within the W3 AGWG there is active discussion and investigation regarding the WCAG 2.x contrast method, math, and future proposals. The main discussion thread is on GitHub as [W3C/WCAG issue #695](https://github.com/w3c/wcag/issues/695).
 
-- <cite>[WCAG 2.x Contrast Checker](https://webaim.org/resources/contrastchecker/)</cite>
+- [WCAG 2.x Contrast Checker](https://webaim.org/resources/contrastchecker/)
 
   at WebAim.org. This popular and easy to use contrast check is for the WCAG 2.x guidelines 1.4.3 and 1.4.6
 
-- <cite>[APCA Contrast Calculator](https://www.myndex.com/APCA/)</cite>
+- [APCA Contrast Calculator](https://www.myndex.com/APCA/)
 
   The proposed method for assessing contrast and more.
 
-- <cite>[brucelindbloom.com](http://brucelindbloom.com)</cite>
+- [brucelindbloom.com](http://brucelindbloom.com)
 
   Bruce Lindbloom's site on colorspaces and the related math and transformations. It includes a very helpful calculator that converters between many color models, including the key CIE models.
 

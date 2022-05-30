@@ -16,15 +16,13 @@ returned object implements the {{domxref("DocumentType")}} interface. Use
 {{domxref("DOMImplementation.createDocumentType()")}} to create a
 `DocumentType`.
 
-## Syntax
-
-```js
-doctype = document.doctype;
-```
-
 - `doctype` is a read-only property.
 
-## Example
+## Value
+
+A {{domxref("DocumentType")}} object.
+
+## Examples
 
 ```js
 var doctypeObj = document.doctype;

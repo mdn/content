@@ -63,17 +63,15 @@ new Intl.PluralRules(locales, options)
       - : The minimum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number and percent formatting is 0; the
         default for currency formatting is the number of minor unit digits
-        provided by the [ISO
-        4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html) (2 if the list doesn't provide that
-        information).
+        provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number formatting is the larger of
         `minimumFractionDigits` and 3; the default for currency
         formatting is the larger of `minimumFractionDigits` and the
-        number of minor unit digits provided by the [ISO
-        4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html) (2 if the list doesn't provide that
-        information); the default for percent formatting is the larger of
+        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        (2 if the list doesn't provide that information); the default for percent formatting is the larger of
         `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
       - : The minimum number of significant digits to use. Possible values are from
@@ -91,7 +89,7 @@ with default options is returned. This is useful to distinguish between singular
 plural forms, e.g. "dog" and "dogs".
 
 ```js
-var pr = new Intl.PluralRules();
+const pr = new Intl.PluralRules();
 
 pr.select(0);
 // → 'other' if in US English locale
@@ -111,7 +109,7 @@ useful to figure out the ordinal indicator, e.g. "1st", "2nd", "3rd", "4th", "42
 and so forth.
 
 ```js
-var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
+const pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
 
 const suffixes = new Map([
   ['one',   'st'],

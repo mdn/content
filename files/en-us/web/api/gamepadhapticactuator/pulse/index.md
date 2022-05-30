@@ -19,14 +19,14 @@ The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface m
 ## Syntax
 
 ```js
-gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { /* ... */ });
+pulse(value, duration)
 ```
 
 ### Parameters
 
-- _value_
+- `value`
   - : A double representing the intensity of the pulse. This can vary depending on the hardware type, but generally takes a value between 0.0 (no intensity) and 1.0 (full intensity).
-- _duration_
+- `duration`
   - : A double representing the duration of the pulse, in milliseconds.
 
 > **Note:** Repeated calls to `pulse()` override the previous calls if they are still ongoing.
@@ -41,7 +41,7 @@ A promise that resolves with a value of `true` when the pulse has successfully c
 const gamepad = navigator.getGamepads()[0];
 
 gamepad.hapticActuators[0].pulse(1.0, 200);
-````
+```
 
 ## Specifications
 

@@ -123,7 +123,7 @@ One of the common possible errors when opening a database is `VER_ERR`. It indic
 
 ### Creating or updating the version of the database
 
-When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when {{ anch("Opening a database") }}), the `onupgradeneeded` event will be triggered and an [IDBVersionChangeEvent](/en-US/docs/Web/API/IDBVersionChangeEvent) object will be passed to any `onversionchange` event handler set up on `request.result` (i.e., `db` in the example). In the handler for the `upgradeneeded` event, you should create the object stores needed for this version of the database:
+When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when [Opening a database](#opening_a_database)), the `onupgradeneeded` event will be triggered and an [IDBVersionChangeEvent](/en-US/docs/Web/API/IDBVersionChangeEvent) object will be passed to any `onversionchange` event handler set up on `request.result` (i.e., `db` in the example). In the handler for the `upgradeneeded` event, you should create the object stores needed for this version of the database:
 
 ```js
 // This event is only implemented in recent browsers
@@ -318,7 +318,7 @@ var transaction = db.transaction(["customers"], "readwrite");
 
 The `transaction()` function takes two arguments (though one is optional) and returns a transaction object. The first argument is a list of object stores that the transaction will span. You can pass an empty array if you want the transaction to span all object stores, but don't do it because the spec says an empty array should generate an InvalidAccessError. If you don't specify anything for the second argument, you get a read-only transaction. Since you want to write to it here you need to pass the `"readwrite"` flag.
 
-Now that you have a transaction you need to understand its lifetime. Transactions are tied very closely to the event loop. If you make a transaction and return to the event loop without using it then the transaction will become inactive. The only way to keep the transaction active is to make a request on it. When the request is finished you'll get a DOM  event and, assuming that the request succeeded, you'll have another opportunity to extend the transaction during that callback. If you return to the event loop without extending the transaction then it will become inactive, and so on. As long as there are pending requests the transaction remains active. Transaction lifetimes are really very simple but it might take a little time to get used to. A few more examples will help, too. If you start seeing `TRANSACTION_INACTIVE_ERR` error codes then you've messed something up.
+Now that you have a transaction you need to understand its lifetime. Transactions are tied very closely to the event loop. If you make a transaction and return to the event loop without using it then the transaction will become inactive. The only way to keep the transaction active is to make a request on it. When the request is finished you'll get a DOM event and, assuming that the request succeeded, you'll have another opportunity to extend the transaction during that callback. If you return to the event loop without extending the transaction then it will become inactive, and so on. As long as there are pending requests the transaction remains active. Transaction lifetimes are really very simple but it might take a little time to get used to. A few more examples will help, too. If you start seeing `TRANSACTION_INACTIVE_ERR` error codes then you've messed something up.
 
 Transactions can receive DOM events of three different types: `error`, `abort`, and `complete`. We've talked about the way that `error` events bubble, so a transaction receives error events from any requests that are generated from it. A more subtle point here is that the default behavior of an error is to abort the transaction in which it occurred. Unless you handle the error by first calling `stopPropagation()` on the error event then doing something else, the entire transaction is rolled back. This design forces you to think about and handle errors, but you can always add a catchall error handler to the database if fine-grained error handling is too cumbersome. If you don't handle an error event or if you call `abort()` on the transaction, then the transaction is rolled back and an `abort` event is fired on the transaction. Otherwise, after all pending requests have completed, you'll get a `complete` event. If you're doing lots of database operations, then tracking the transaction rather than individual requests can certainly aid your sanity.
 
@@ -343,7 +343,7 @@ customerData.forEach(customer => {
 });
 ```
 
-The `result` of a request generated from a call to `add()` is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the `put()` function, as shown below in the {{ anch("Updating an entry in the database") }} section.
+The `result` of a request generated from a call to `add()` is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the `put()` function, as shown below in the [Updating an entry in the database](#updating_an_entry_in_the_database) section.
 
 ### Removing data from the database
 
@@ -625,7 +625,7 @@ You should also listen for `VersionError` errors to handle the situation where a
 
 IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.
 
-Third party window content (e.g. {{htmlelement("iframe")}} content) cannot access IndexedDB if the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (see {{bug("1147821")}}.)
+Third party window content (e.g. {{htmlelement("iframe")}} content) cannot access IndexedDB if the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection?redirectslug=disable-third-party-cookies&redirectlocale=en-US) (see {{bug("1147821")}}.)
 
 ## Warning about browser shutdown
 
@@ -686,12 +686,12 @@ Further reading for you to find out more information if desired.
 ### Tutorials and guides
 
 - [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
-- [IndexedDB — The Store in Your Browser](https://msdn.microsoft.com/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10))
 
 ### Libraries
 
 - [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to WebSQL and then localStorage in browsers that don't support IndexedDB.
-- [dexie.js](https://www.dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
+- [dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [IDB](https://github.com/jakearchibald/idb): A tiny library that mostly mirrors the IndexedDB API but with small usability improvements.
 - [ZangoDB](https://github.com/erikolson186/zangodb): A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.
 - [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.

@@ -150,7 +150,7 @@ If the viewer's avatar is meant to have physical form, it should have a model, e
 
 ### Realism in augmented reality
 
-Augmented reality introduces an additional level of complexity to lighting your objects, since your virtual objects need to exist within a physical world that has its own light sources. As such, you should try to match your lighting to the real world's light sources as much as possible. This is done using a technique known as {{anch("Lighting estimation")}}.
+Augmented reality introduces an additional level of complexity to lighting your objects, since your virtual objects need to exist within a physical world that has its own light sources. As such, you should try to match your lighting to the real world's light sources as much as possible. This is done using a technique known as [Lighting estimation](#lighting_estimation).
 
 Conversely, you should try to avoid having virtual objects that are themselves light sources, unless you're prepared to create code that can cast that lighting onto the real world setting. Casting light onto real-world objects is essentially the opposite of casting shadows. It can be done, but is not as widely implemented.
 
@@ -158,7 +158,7 @@ Conversely, you should try to avoid having virtual objects that are themselves l
 
 **Lighting estimation** is a technique used by augmented reality platforms to attempt to match the lighting of the virtual objects in the scene to the lighting of the real world surrounding the viewer. This involves the collection of data that may come from various sensors (including the accelerometer and compass, if available), cameras, and potentially others. Other data is collected using the [Geolocation API](/en-US/docs/Web/API/Geolocation_API), and then all this data is put through algorithms and machine learning engines to generate the estimated lighting information.
 
-At present, WebXR doesn't offer support for lighting estimation. However, a [specification is currently being drafted](https://github.com/immersive-web/lighting-estimation) under the auspices of the W3C. You can learn all about the proposed API and a fair amount about the concept of lighting estimation in the [explainer document](https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md) that's included in the specification's GitHub repository.
+At present, WebXR doesn't offer support for lighting estimation. However, a [specification is currently being drafted](https://github.com/immersive-web/lighting-estimation) under the auspices of the W3C. You can learn all about the proposed API and a fair amount about the concept of lighting estimation in the [explainer document](https://github.com/immersive-web/lighting-estimation/blob/main/lighting-estimation-explainer.md) that's included in the specification's GitHub repository.
 
 In essence, lighting estimation collects this information about the light sources and the shape and orientation of the objects in the scene, along with information about the materials they're made of, then returns data you can use to create virtual light source objects that approximately match the real world's lighting.
 
@@ -168,7 +168,7 @@ The specifics of how lighting estimation works, especially in the context of the
 
 There are a number of potential security issues involved with collecting all of this data in order to generate and apply lighting to your virtual objects using real-world data.
 
-Of course, many AR applications make it pretty clear where the user is located. If the user is running an app called _Touring the Louvre_, there's a very good chance the user is located in the [Musée du Louvre](https://louvre.fr/) in Paris, France. But browsers are required to take a number of steps to make it difficult to physically locate the user without their consent.
+Of course, many AR applications make it pretty clear where the user is located. If the user is running an app called _Touring the Louvre_, there's a very good chance the user is located in the [Musée du Louvre](https://www.louvre.fr/en) in Paris, France. But browsers are required to take a number of steps to make it difficult to physically locate the user without their consent.
 
 ### Ambient Light Sensor API
 
@@ -201,7 +201,7 @@ The Lighting Estimation API specification mandates that all {{Glossary("user age
 
 ## See also
 
-- [WebXR Lighting Estimation API explainer](https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md)
+- [WebXR Lighting Estimation API explainer](https://github.com/immersive-web/lighting-estimation/blob/main/lighting-estimation-explainer.md)
 - [WebXR Lighting Estimation API Level 1 specification](https://github.com/immersive-web/lighting-estimation)
 - [Using shaders to apply color in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL)
 - [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)

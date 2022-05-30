@@ -21,13 +21,7 @@ connections, excluding connections made to a private address space. In the absen
 recent bandwidth measurement data, the attribute value is determined by the properties
 of the underlying connection technology.
 
-## Syntax
-
-```js
-var downLink = NetworkInformation.downlink
-```
-
-### Value
+## Value
 
 A {{jsxref("double")}}.
 

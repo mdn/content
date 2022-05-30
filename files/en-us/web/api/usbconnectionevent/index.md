@@ -16,7 +16,7 @@ The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}
 
 ## Constructor
 
-- {{domxref("USBConnectionEvent.USBConnectionEvent()")}}
+- {{domxref("USBConnectionEvent.USBConnectionEvent", "USBConnectionEvent()")}}
   - : Returns a `USBConnectionEvent` object.
 
 ## Properties

@@ -22,24 +22,26 @@ If the value for _utfLabel_ is unknown, or is one of the two values leading to a
 ## Syntax
 
 ```js
-decoder = new TextDecoder(utfLabel, options);
+new TextDecoder()
+new TextDecoder(utfLabel)
+new TextDecoder(utfLabel, options)
 ```
 
 ### Parameters
 
 - `utfLabel`{{Optional_Inline}}
-  - : Is a {{DOMxRef("DOMString")}}, defaulting to `"utf-8"`, containing the
+  - : A string, defaulting to `"utf-8"`, containing the
     _label_ of the encoder. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
 - `options`{{Optional_Inline}}
 
-  - : Is a `TextDecoderOptions` dictionary with the property:
+  - : A `TextDecoderOptions` dictionary with the property:
 
     - `fatal`
       - : A [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
         flag indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a
         {{jsxref("TypeError")}} when an coding error is found. It defaults to `false`.
 
-## Example
+## Examples
 
 ```js
 var textDecoder1 = new TextDecoder("iso-8859-2");

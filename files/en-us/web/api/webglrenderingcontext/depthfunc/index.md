@@ -17,7 +17,7 @@ incoming pixel depth to the current depth buffer value.
 ## Syntax
 
 ```js
-void gl.depthFunc(func);
+depthFunc(func)
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ void gl.depthFunc(func);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -16,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.ongotpointercapture
 
 The **`ongotpointercapture`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("gotpointercapture")}} events.
+processes {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} events.
 
 ## Syntax
 

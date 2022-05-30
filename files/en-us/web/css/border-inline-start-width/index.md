@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-inline
   - border-inline-start
@@ -31,6 +30,7 @@ border-inline-start-width: thick;
 border-inline-start-width: inherit;
 border-inline-start-width: initial;
 border-inline-start-width: revert;
+border-inline-start-width: revert-layer;
 border-inline-start-width: unset;
 ```
 

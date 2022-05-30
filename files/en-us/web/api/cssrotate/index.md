@@ -1,6 +1,7 @@
 ---
 title: CSSRotate
 slug: Web/API/CSSRotate
+page-type: web-api-interface
 tags:
   - API
   - CSS
@@ -20,7 +21,7 @@ The **`CSSRotate`** interface of the {{domxref('CSS_Object_Model#css_typed_objec
 
 ## Constructor
 
-- {{domxref("CSSRotate.CSSRotate()")}}
+- {{domxref("CSSRotate.CSSRotate", "CSSRotate()")}}
   - : Creates a new `CSSRotate` object.
 
 ## Properties

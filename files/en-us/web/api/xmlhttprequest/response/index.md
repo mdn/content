@@ -20,18 +20,12 @@ browser-compat: api.XMLHttpRequest.response
 
 The {{domxref("XMLHttpRequest")}}
 **`response`** property returns the response's body content as
-an {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}},
-JavaScript {{jsxref("Object")}}, or {{domxref("DOMString")}}, depending on the value
+an {{jsxref("ArrayBuffer")}}, a {{domxref("Blob")}}, a {{domxref("Document")}},
+a JavaScript {{jsxref("Object")}}, or a string, depending on the value
 of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}}
 property.
 
-## Syntax
-
-```js
-var body = XMLHttpRequest.response;
-```
-
-### Value
+## Value
 
 An appropriate object based on the value of {{domxref("XMLHttpRequest.responseType",
   "responseType")}}. You may attempt to request the data be provided in a specific format
@@ -45,7 +39,7 @@ with the exception that when reading text data using a `responseType` of
 response so far while the request is still in the `LOADING`
 {{domxref("XMLHttpRequest.readyState", "readyState")}} (3).
 
-## Example
+## Examples
 
 This example presents a function, `load()`, which loads and processes a page
 from the server. It works by creating an {{domxref("XMLHttpRequest")}} object and

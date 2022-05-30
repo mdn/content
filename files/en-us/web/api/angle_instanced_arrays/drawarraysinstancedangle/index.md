@@ -1,6 +1,7 @@
 ---
 title: ANGLE_instanced_arrays.drawArraysInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE
+page-type: web-api-instance-method
 tags:
   - ANGLE_instanced_arrays
   - API
@@ -19,7 +20,7 @@ The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL
 ## Syntax
 
 ```js
-void ext.drawArraysInstancedANGLE(mode, first, count, primcount);
+drawArraysInstancedANGLE(mode, first, count, primcount)
 ```
 
 ### Parameters
@@ -36,16 +37,16 @@ void ext.drawArraysInstancedANGLE(mode, first, count, primcount);
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- first
+- `first`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.
-- primcount
+- `primcount`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the range of elements to execute.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

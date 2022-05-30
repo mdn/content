@@ -17,7 +17,7 @@ In the [DOM XPath API](/en-US/docs/Web/XPath) the **`XPathException`** interface
 ## Properties
 
 - {{domxref("XPathException.code")}} {{readOnlyInline}}
-  - : Returns a `short` that contains one of the {{anch("Error codes", "error code constants")}}.
+  - : Returns a `short` that contains one of the [error code constants](#error_codes).
 
 ## Constants
 

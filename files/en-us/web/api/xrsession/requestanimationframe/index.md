@@ -69,7 +69,7 @@ An integer value which serves as a unique, non-zero ID or handle you may pass to
 {{domxref("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}} if you need to
 remove the pending animation frame request.
 
-## Example
+## Examples
 
 The following example requests `XRSession` with "inline" mode so that it can
 be displayed in an HTML element (without the need for a separate AR or VR device).

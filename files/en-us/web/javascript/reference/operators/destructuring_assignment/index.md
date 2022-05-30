@@ -210,7 +210,7 @@ function parseProtocol(url) {
     return false;
   }
   console.log(parsedURL);
-  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
+  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   // "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
 
   const [, protocol, fullhost, fullpath] = parsedURL;
@@ -280,7 +280,7 @@ console.log(a); // 3
 console.log(b); // 5
 ```
 
-#### Assigning to new variables names and providing default values
+#### Assigning to new variable names and providing default values
 
 A property can be both
 

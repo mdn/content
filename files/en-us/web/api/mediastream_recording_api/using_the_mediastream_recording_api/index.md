@@ -9,6 +9,7 @@ tags:
   - MediaStream Recording API
   - NeedsUpdate
   - Tutorial
+browser-compat: api.MediaRecorder
 ---
 {{DefaultAPISidebar("MediaStream Recording")}}
 
@@ -26,11 +27,11 @@ You can see this [demo running live](https://mdn.github.io/web-dictaphone/), or 
 
 ## CSS goodies
 
-The HTML is pretty simple in this app, so we won't go through it here; there are a couple of slightly more interesting bits of CSS worth mentioning, however, so we'll discuss them below. If you are not interested in CSS and want to get straight to the JavaScript, skip to the {{anch("Basic app setup")}} section.
+The HTML is pretty simple in this app, so we won't go through it here; there are a couple of slightly more interesting bits of CSS worth mentioning, however, so we'll discuss them below. If you are not interested in CSS and want to get straight to the JavaScript, skip to the [Basic app setup](#basic_app_setup) section.
 
 ### Keeping the interface constrained to the viewport, regardless of device height, with calc()
 
-The {{cssxref("calc()")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.
+The {{cssxref("calc", "calc()")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.
 
 For example, in Web Dictaphone we have three main UI areas, stacked vertically. We wanted to give the first two (the header and the controls) fixed heights:
 
@@ -60,7 +61,7 @@ However, we wanted to make the third area (which contains the recorded samples y
 
 ### Checkbox hack for showing/hiding
 
-This is fairly well documented already, but we thought we'd give a mention to the checkbox hack, which abuses the fact that you can click on the {{htmlelement("label")}} of a checkbox to toggle it checked/unchecked. In Web Dictaphone this powers the Information screen, which is shown/hidden by clicking the question mark icon in the top right hand corner. First of all, we style the `<label>` how we want it, making sure that it has enough z-index to always sit above the other elements and therefore be focusable/clickable:
+This is fairly well documented already, but we thought we'd give a mention to the checkbox hack, which abuses the fact that you can click on the {{htmlelement("label")}} of a checkbox to toggle it checked/unchecked. In Web Dictaphone this powers the Information screen, which is shown/hidden by clicking the question mark icon in the top right-hand corner. First of all, we style the `<label>` how we want it, making sure that it has enough z-index to always sit above the other elements and therefore be focusable/clickable:
 
 ```css
 label {
@@ -176,7 +177,7 @@ record.onclick = function() {
 
 When the `MediaRecorder` is recording, the {{domxref("MediaRecorder.state")}} property will return a value of "recording".
 
-As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.ondataavailable")}}:
+As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.dataavailable_event", "ondataavailable")}}:
 
 ```js
 let chunks = [];
@@ -204,7 +205,7 @@ Note that the recording may also stop naturally if the media stream ends (e.g. i
 
 ## Grabbing and using the blob
 
-When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.onstop")}}, and finalize our blob there from all the chunks we have received:
+When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.stop_event", "onstop")}}, and finalize our blob there from all the chunks we have received:
 
 ```js
 mediaRecorder.onstop = function(e) {
@@ -259,18 +260,14 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 ## Specifications
 
-| Specification                                                                | Status                                       | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#MediaRecorderAPI")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `MediaRecorder`
-
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 
 - [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
-- `{{domxref("Navigator.getUserMedia()")}}`
-- [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)
+- {{domxref("Navigator.getUserMedia()")}}
+- [MediaRecorder API now supported by 65% of your website users](https://blog.addpipe.com/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

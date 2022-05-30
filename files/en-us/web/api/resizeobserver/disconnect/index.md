@@ -20,7 +20,7 @@ or {{domxref('SVGElement')}} targets.
 ## Syntax
 
 ```js
-resizeObserver.disconnect();
+disconnect()
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

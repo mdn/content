@@ -1,5 +1,5 @@
 ---
-title: Window.convertPointFromPageToNode
+title: Window.convertPointFromPageToNode()
 slug: Web/API/Window/webkitConvertPointFromPageToNode
 tags:
   - API
@@ -22,13 +22,13 @@ Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, th
 returns a `Point` object specifying the same location in the coordinate
 system of the specified DOM {{domxref("Node")}}.
 
-> **Warning:** Please review the {{anch("Browser compatibility")}} section before using this method,
+> **Warning:** Please review the [Browser compatibility](#browser_compatibility) section before using this method,
 > as it's not widely supported (nor is the {{domxref("WebKitPoint")}} object it uses).
 
 ## Syntax
 
 ```js
-Point = Window.convertPointFromPageToNode(node, pagePoint);
+convertPointFromPageToNode(node, pagePoint)
 ```
 
 ### Parameters

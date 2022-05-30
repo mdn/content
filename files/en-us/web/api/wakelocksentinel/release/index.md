@@ -21,7 +21,7 @@ once the sentinel has been successfully released.
 ## Syntax
 
 ```js
-WakeLockSentinel.release().then(...);
+release()
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`
 
 ### Exceptions
 
-No exceptions are thrown. You should always listen for the {{domxref('onrelease')}}
+No exceptions are thrown. You should always listen for the {{domxref("WakeLockSentinel/release_event", "release")}}
 event to check if a wake lock has been released.
 
 ## Examples

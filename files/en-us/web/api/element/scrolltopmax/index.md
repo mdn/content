@@ -17,11 +17,9 @@ The **`Element.scrollTopMax`** read-only property returns a
 number representing the maximum top scroll offset possible for the
 element.
 
-## Syntax
+## Value
 
-```js
-var pxl = elt.scrollTopMax;
-```
+A number.
 
 ## Specifications
 

@@ -17,12 +17,12 @@ front- or back-facing by setting a winding orientation.
 ## Syntax
 
 ```js
-void gl.frontFace(mode);
+frontFace(mode)
 ```
 
 ### Parameters
 
-- mode
+- `mode`
 
   - : A [GLenum](/en-US/docs/Web/API/WebGL_API/Types) type winding orientation.
     The default value is `gl.CCW`. Possible values:
@@ -32,7 +32,7 @@ void gl.frontFace(mode);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

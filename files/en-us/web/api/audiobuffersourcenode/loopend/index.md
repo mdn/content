@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.loopEnd
 slug: Web/API/AudioBufferSourceNode/loopEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -22,15 +23,7 @@ indicated by the {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} pro
 This is only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
 `true`.
 
-## Syntax
-
-```js
-AudioBufferSourceNode.loopEnd = endOffsetInSeconds;
-
-var endOffsetInSeconds = AudioBufferSourceNode.loopEnd;
-```
-
-### Value
+## Value
 
 A floating-point number indicating the offset, in seconds, into the audio buffer at
 which each loop will loop return to the beginning of the loop (that is, the current play
@@ -40,7 +33,7 @@ only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
 
 The default value is 0.
 
-## Example
+## Examples
 
 In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
 decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons

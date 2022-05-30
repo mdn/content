@@ -31,16 +31,10 @@ about container and codec support across browsers.
 > historical; these strings are now officially known as **media types**.
 > MDN Web Docs content uses the terms interchangeably.
 
-## Syntax
-
-```js
-var mimeType = mediaRecorder.mimeType
-```
-
-### Value
+## Value
 
 The MIME media type which describes the format of the recorded media, as a
-{{domxref("DOMString")}}. This string _may_ include the [`codecs`
+string. This string _may_ include the [`codecs`
 parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by
 the media recorder.
 
@@ -49,7 +43,7 @@ The media type strings are standardized by the Internet Assigned Numbers Authori
 on the IANA site. See also [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to learn more
 about media types and how they're used in web content and by web browsers.
 
-## Example
+## Examples
 
 ```js
 ...
@@ -105,7 +99,7 @@ by `m.mimeType` would then be
 - [The "codecs" parameter in
   common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording
-  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia()")}}

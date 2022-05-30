@@ -31,19 +31,13 @@ sender.
 An SLI packet is used by a decoder to let the encoder know that it's
 detected corruption of one or more consecutive macroblocks in the received media.
 
-## Syntax
-
-```js
-var sliCount = RTCRtpStreamStats.sliCount;
-```
-
-### Value
+## Value
 
 An unsigned long integer indicating the number of SLI packets the sender received from
 the receiver due to lost runs of macroblocks. A high value of `sliCount` may
 be an indication of an unreliable network.
 
-For technical details, see {{RFC(4585, "6.3.2")}}.
+For technical details, see {{RFC(4585, "", "6.3.2")}}.
 
 > **Note:** This value is sent by the sender to the receiver and is only
 > present for video media.
@@ -58,6 +52,6 @@ For technical details, see {{RFC(4585, "6.3.2")}}.
 
 ## See also
 
-- {{RFC(4585, "6.3.2")}}: Definition of "Slice Loss Indication" in the document
+- {{RFC(4585, "", "6.3.2")}}: Definition of "Slice Loss Indication" in the document
   _Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based
   Feedback (RTP/AVPF)_.

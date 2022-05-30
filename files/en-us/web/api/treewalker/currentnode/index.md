@@ -13,14 +13,11 @@ browser-compat: api.TreeWalker.currentNode
 The **`TreeWalker.currentNode`** property represents the
 {{domxref("Node")}} on which the {{domxref("TreeWalker")}} is currently pointing at.
 
-## Syntax
+## Value
 
-```js
-node = treeWalker.currentNode;
-treeWalker.currentNode = node;
-```
+A {{domxref("Node")}}.
 
-## Example
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

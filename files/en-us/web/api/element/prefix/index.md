@@ -16,11 +16,9 @@ The **`Element.prefix`** read-only property returns the
 namespace prefix of the specified element, or `null` if no prefix is
 specified.
 
-## Syntax
+## Value
 
-```js
-string = element.prefix
-```
+A string.
 
 ## Examples
 

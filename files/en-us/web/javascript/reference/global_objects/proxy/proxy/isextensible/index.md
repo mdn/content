@@ -18,7 +18,7 @@ The **`handler.isExtensible()`** method is a trap for
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   isExtensible: function(target) {
   }
 });
@@ -100,3 +100,4 @@ Object.isExtensible(p); // TypeError is thrown
 - {{jsxref("Proxy.handler", "handler")}}
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Reflect.isExtensible()")}}
+- {{jsxref("Reflect.preventExtensions()")}}

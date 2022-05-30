@@ -20,7 +20,7 @@ outside of the dialog.
 ## Syntax
 
 ```js
-dialogInstance.show();
+show()
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

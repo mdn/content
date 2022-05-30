@@ -58,7 +58,7 @@ for `monthValue`, the year is incremented by 1
 ### Using setUTCFullYear()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCFullYear(1997);
 ```
 

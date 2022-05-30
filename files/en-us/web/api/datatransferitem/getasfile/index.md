@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsFile()
 slug: Web/API/DataTransferItem/getAsFile
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItem
@@ -20,12 +21,12 @@ file, this method returns `null`.
 ## Syntax
 
 ```js
-File = DataTransferItem.getAsFile();
+getAsFile()
 ```
 
 ### Parameters
 
-_None._
+None.
 
 ### Return value
 
@@ -33,16 +34,16 @@ _None._
   - : If the drag data item is a file, a {{domxref("File")}} object is returned; otherwise
     `null` is returned.
 
-## Example
+## Examples
 
 This example shows the use of the `getAsFile()` method in a
-{{event("drop")}} event handler.
+{{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
- var data = event.dataTransfer.items;
+ var data = ev.dataTransfer.items;
  for (var i = 0; i < data.length; i += 1) {
    if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {

@@ -44,6 +44,7 @@ list-style-type: none;
 list-style-type: inherit;
 list-style-type: initial;
 list-style-type: revert;
+list-style-type: revert-layer;
 list-style-type: unset;
 ```
 
@@ -63,7 +64,7 @@ Note that:
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
-- {{cssxref("symbols()")}}
+- {{cssxref("symbols", "symbols()")}}
   - : Defines an anonymous style of the list.
 - {{cssxref("&lt;string&gt;")}}
   - : The specified string will be used as the item's marker.
@@ -200,7 +201,7 @@ ul li::before {
 }
 ```
 
-- [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
+- [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
@@ -449,8 +450,8 @@ ol.shortcut {
     <input type="radio" id="tamil" name="type" value="tamil">tamil
   </label>
 
-  <label for="telegu">
-    <input type="radio" id="telegu" name="type" value="telegu">telegu
+  <label for="telugu">
+    <input type="radio" id="telugu" name="type" value="telugu">telugu
   </label>
 
   <label for="thai">

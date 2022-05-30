@@ -28,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var settingIcon = browser.browserAction.setIcon(
+let settingIcon = browser.browserAction.setIcon(
   details         // object
 )
 ```
@@ -131,8 +131,8 @@ The code below sets the icon using an [`ImageData`](/en-US/docs/Web/API/ImageDat
 
 ```js
 function getImageData() {
-  var canvas = document.createElement("canvas");
-  var ctx = canvas.getContext("2d");
+  let canvas = document.createElement("canvas");
+  let ctx = canvas.getContext("2d");
 
   ctx.fillStyle = "green";
   ctx.fillRect(10, 10, 100, 100);
@@ -157,7 +157,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

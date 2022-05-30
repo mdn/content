@@ -28,7 +28,8 @@ providing statistics about either the overall connection or about the specified
 ## Syntax
 
 ```js
-promise = rtcPeerConnection.getStats(selector)
+getStats()
+getStats(selector)
 ```
 
 ### Parameters
@@ -63,7 +64,7 @@ This version of `getStats()` is obsolete; in addition, the data it returns
 is entirely different from the current specification, and the form of that data was
 never documented. This form of `getStats()` has been or will soon be removed
 from most browsers; you _should not use it, and should update existing code to use
-the new promise-based version_. Check the {{anch("Browser compatibility")}} table
+the new promise-based version_. Check the [Browser compatibility](#browser_compatibility) table
 to verify the state of this method.
 
 ```js
@@ -85,7 +86,7 @@ promise = rtcPeerConnection.getStats(selector, successCallback, failureCallback)
     callback receives as input the exception (a {{domxref("DOMException")}} object
     describing the error which occurred. No return value is expected from the callback.
 
-## Example
+## Examples
 
 This example creates a periodic function using
 {{domxref("setInterval()")}} that collects

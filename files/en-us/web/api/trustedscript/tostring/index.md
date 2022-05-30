@@ -16,12 +16,16 @@ The **`toString()`** method of the {{domxref("TrustedScript")}} interface return
 ## Syntax
 
 ```js
-var str = TrustedScript.toString();
+toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing the sanitized script.
+A string containing the sanitized script.
 
 ## Examples
 

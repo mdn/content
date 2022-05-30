@@ -1,6 +1,7 @@
 ---
-title: AudioWorkletProcessor.process
+title: AudioWorkletProcessor.process()
 slug: Web/API/AudioWorkletProcessor/process
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -43,7 +44,7 @@ invoked to do so.
 ## Syntax
 
 ```js
-var isActivelyProcessing = audioWorkletProcessor.process(inputs, outputs, parameters);
+process(inputs, outputs, parameters)
 ```
 
 ### Parameters

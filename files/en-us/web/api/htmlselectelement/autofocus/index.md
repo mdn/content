@@ -24,14 +24,11 @@ such element on the page, get the initial focus.
 > _the element is inserted_ in the document. Setting it after the insertion, that
 > is most of the time after the document load, has no visible effect.
 
-## Syntax
+## Value
 
-```js
-aBool = aSelectElement.autofocus; // Get the value of autofocus
-aSelectElement.autofocus = aBool; // Set the value of autofocus
-```
+A boolean value.
 
-## Example
+## Examples
 
 ### HTML
 

@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onpointerover
 
 The **`onpointerover`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("pointerover")}} events.
+processes {{domxref("HTMLElement/pointerover_event", "pointerover")}} events.
 
 ## Syntax
 

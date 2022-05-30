@@ -15,13 +15,7 @@ browser-compat: api.DOMRectReadOnly.bottom
 
 The **`bottom`** read-only property of the **`DOMRectReadOnly`** interface returns the bottom coordinate value of the `DOMRect.` (Has the same value as `y + height`, or `y` if `height` is negative.)
 
-## Syntax
-
-```js
-var recBottom = DOMRect.bottom;
-```
-
-### Value
+## Value
 
 A double.
 

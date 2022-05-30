@@ -30,23 +30,24 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{HTMLAttrDef("download")}}
 
-  - : Prompts the user to save the linked URL instead of navigating to it. Can be used with or without a value:
+  - : Causes the browser to treat the linked URL as a download. Can be used with or without a value:
 
     - Without a value, the browser will suggest a filename/extension, generated from various sources:
 
       - The {{HTTPHeader("Content-Disposition")}} HTTP header
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
-      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
 
     - Defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
     > **Note:**
     >
     > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
+    > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
     > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
     >
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
-    >   - If the header specifies a disposition of `inline`, Chrome, and Firefox 82 and later, prioritize the attribute and treat it as a download. Firefox versions before 82 prioritize the header and will display the content inline.
+    >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
 - {{HTMLAttrDef("href")}}
 
@@ -419,7 +420,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
 
 ```html
-<a  target="_blank" href="https://www.wikipedia.org">
+<a target="_blank" href="https://www.wikipedia.org">
   Wikipedia
   <img alt="(opens in new tab)" src="newtab.svg">
 </a>
@@ -482,7 +483,7 @@ Text-only links in prose content are exempt from this requirement, but it's stil
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets](https://www.a11yproject.com/posts/2018-11-21-large-touch-targets/)
+- [Quick test: Large touch targets](https://www.a11yproject.com/posts/large-touch-targets/)
 
 #### Proximity
 

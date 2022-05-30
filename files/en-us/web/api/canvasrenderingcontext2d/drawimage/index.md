@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -17,9 +18,9 @@ Canvas 2D API provides different ways to draw an image onto the canvas.
 ## Syntax
 
 ```js
-void ctx.drawImage(image, dx, dy);
-void ctx.drawImage(image, dx, dy, dWidth, dHeight);
-void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+drawImage(image, dx, dy)
+drawImage(image, dx, dy, dWidth, dHeight)
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```
 
 ![drawImage](canvas_drawimage.jpg)
@@ -63,6 +64,10 @@ void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
   - : The height to draw the `image` in the destination canvas. This allows
     scaling of the drawn image. If not specified, the image is not scaled in height when
     drawn. Note that this argument is not included in the 3-argument syntax.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

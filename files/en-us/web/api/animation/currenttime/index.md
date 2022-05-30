@@ -1,6 +1,7 @@
 ---
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -17,14 +18,7 @@ The **`Animation.currentTime`** property of the [Web Animations API](/en-US/docs
 
 If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive, or hasn't been played yet, `currentTime`'s return value is `null`.
 
-## Syntax
-
-```js
-var currentTime = Animation.currentTime;
-Animation.currentTime = newTime;
-```
-
-### Value
+## Value
 
 A number representing the current time in milliseconds, or `null` to deactivate the animation.
 

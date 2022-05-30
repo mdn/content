@@ -19,13 +19,7 @@ The read-only **`startOffset`**
 property of the {{domxref("StaticRange")}} interface returns the offset into the start
 node of the range's start position.
 
-## Syntax
-
-```js
-var startOffset = staticRange.startOffset
-```
-
-### Value
+## Value
 
 An integer value indicating the number of characters into the {{domxref("Node")}}
 indicated by {{domxref("StaticRange.startContainer", "startContainer")}} at which the

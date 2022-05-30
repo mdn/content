@@ -26,11 +26,9 @@ in milliseconds since the UNIX epoch, right after the prompt for unload terminat
 the previous document in the same browsing context. If there is no previous document,
 this value will be the same as {{domxref("PerformanceTiming.fetchStart")}}.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.navigationStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

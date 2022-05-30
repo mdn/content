@@ -1,5 +1,5 @@
 ---
-title: 'HTMLTableElement: createTHead()'
+title: HTMLTableElement.createTHead()
 slug: Web/API/HTMLTableElement/createTHead
 tags:
   - API
@@ -25,14 +25,18 @@ method creates it, and then returns it.
 ## Syntax
 
 ```js
-table.createTHead();
+createTHead()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}
 
-## Example
+## Examples
 
 ```js
 let myhead = mytable.createTHead();

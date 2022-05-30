@@ -28,13 +28,11 @@ For example, a PS2 controller returned **810-3-USB Gamepad**.
 This information is intended to allow you to find a mapping for the controls on the
 device as well as display useful feedback to the user.
 
-## Syntax
+## Value
 
-```js
-const id = gamepad.id;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 window.addEventListener("gamepadconnected", function() {

@@ -62,7 +62,7 @@ Each {{domxref("RTCPeerConnection")}} has methods which provide access to the li
 
 ### Leveraging RTP to implement a "hold" feature
 
-Because the streams for an `RTCPeerConnection` are implemented using RTP and the interfaces {{anch("RTCPeerConnection and RTP", "above")}}, you can take advantage of the access this gives you to the internals of streams to make adjustments. Among the simplest things you can do is to implement a "hold" feature, wherein a participant in a call can click a button and turn off their microphone, begin sending music to the other peer instead, and stop accepting incoming audio.
+Because the streams for an `RTCPeerConnection` are implemented using RTP and the interfaces [above](#rtcpeerconnection_and_rtp), you can take advantage of the access this gives you to the internals of streams to make adjustments. Among the simplest things you can do is to implement a "hold" feature, wherein a participant in a call can click a button and turn off their microphone, begin sending music to the other peer instead, and stop accepting incoming audio.
 
 > **Note:** This example makes use of modern JavaScript features including [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) expression. This enormously simplifies and makes far more readable the code dealing with the promises returned by WebRTC methods.
 
@@ -92,7 +92,7 @@ The three lines of code within the [`try`](/en-US/docs/Web/JavaScript/Reference/
 2. Disable the incoming audio track.
 3. Switch the audio transceiver into send-only mode.
 
-This triggers renegotiation of the `RTCPeerConnection` by sending it a {{event("negotiationneeded")}} event, which your code responds to generating an SDP offer using {{domxref("RTCPeerConnection.createOffer")}} and sending it through the signaling server to the remote peer.
+This triggers renegotiation of the `RTCPeerConnection` by sending it a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event, which your code responds to generating an SDP offer using {{domxref("RTCPeerConnection.createOffer")}} and sending it through the signaling server to the remote peer.
 
 The `audioStream`, containing the audio to play instead of the local peer's microphone audio, can come from anywhere. One possibility is to have a hidden {{HTMLElement("audio")}} element and use {{domxref("HTMLMediaElement.captureStream", "HTMLAudioElement.captureStream()")}} to get its audio stream.
 

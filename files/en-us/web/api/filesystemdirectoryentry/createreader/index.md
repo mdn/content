@@ -21,7 +21,7 @@ the directory.
 ## Syntax
 
 ```js
-directoryReader = FileSystemDirectoryEntry.createReader();
+createReader()
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ None.
 A {{domxref("FileSystemDirectoryReader")}} object which can be used to read the
 directory's entries.
 
-## Example
+## Examples
 
 This example creates a method called `readDirectory()`, which fetches all of
 the entries in the specified {{domxref("FileSystemDirectoryEntry")}} and returns them in
@@ -77,10 +77,8 @@ to `readDirectory()`, the array is returned to the caller.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystemFileEntry")}}

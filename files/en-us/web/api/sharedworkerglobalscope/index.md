@@ -17,7 +17,7 @@ The **`SharedWorkerGlobalScope`** object (the {{domxref("SharedWorker")}} global
 
 ## Properties
 
-_This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements properties from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
+_This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
 - {{domxref("SharedWorkerGlobalScope.name")}} {{readOnlyinline}}
   - : The name that the {{domxref("SharedWorker")}} was (optionally) given when it was created using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. This is mainly useful for debugging purposes.
@@ -37,16 +37,9 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
-### Event handlers
-
-_This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
-
-- {{domxref("SharedWorkerGlobalScope.onconnect")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("connect")}} event is raised — that is, when a {{domxref("MessagePort")}} connection is opened between the associated {{domxref("SharedWorker")}} and the main thread.
-
 ## Methods
 
-_This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements methods from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
+_This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
 - {{domxref("SharedWorkerGlobalScope.close()")}}
   - : Discards any tasks queued in the `SharedWorkerGlobalScope`'s event loop, effectively closing this particular scope.
@@ -79,7 +72,6 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 - [`connect`](/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event)
   - : Fired on shared workers when a new client connects.
-    Also available via the [`onconnect`](/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect) property.
 
 ## Specifications
 
@@ -94,4 +86,4 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 - {{domxref("SharedWorker")}}
 - {{domxref("WorkerGlobalScope")}}
 - [Using Web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Functions available to workers](/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers)
+- [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)

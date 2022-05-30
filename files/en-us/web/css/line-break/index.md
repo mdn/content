@@ -29,6 +29,7 @@ line-break: anywhere;
 line-break: inherit;
 line-break: initial;
 line-break: revert;
+line-break: revert-layer;
 line-break: unset;
 ```
 

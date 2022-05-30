@@ -26,7 +26,7 @@ The `display` member is a string that determines the developers' preferred displ
 
 > **Note:** The browser follows a pre-defined fallback chain if it does not support a given mode: `fullscreen` → `standalone` → `minimal-ui` → `browser`, with `browser` being the default value if the `display` member is not specified.
 
-> **Note:** You can selectively apply CSS to your app based on the display mode, using the {{cssxref("@media/display-mode", "display-mode")}} media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
+> **Note:** You can selectively apply CSS to your app based on the display mode, using the {{cssxref("@media/display-mode", "display-mode")}} media feature. This can be used to provide a consistent user experience between launching a site from a URL and launching it from a desktop icon.
 
 ## Values
 

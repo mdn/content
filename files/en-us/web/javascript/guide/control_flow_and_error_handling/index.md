@@ -25,8 +25,9 @@ The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Statements)
 contains exhaustive details about the statements in this chapter. The semicolon
 (`;`) character is used to separate statements in JavaScript code.
 
-Any JavaScript expression is also a statement. See [Expressions and
-operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) for complete information about expressions.
+Any JavaScript expression is also a statement.
+See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+for complete information about expressions.
 
 ## Block statement
 
@@ -297,8 +298,7 @@ are created equal. While it is common to throw numbers or strings as errors, it 
 frequently more effective to use one of the exception types specifically created for
 this purpose:
 
-- [ECMAScript
-  exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
+- [ECMAScript exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - [`DOMException`](/en-US/docs/Web/API/DOMException)
   and [`DOMError`](/en-US/docs/Web/API/DOMError)
 
@@ -506,9 +506,8 @@ If an inner `try` block does _not_ have a corresponding
 2. the enclosing `try...catch` statement's `catch` block is
     checked for a match.
 
-For more information, see [nested
-try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks) on the
-[`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
+on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 reference page.
 
 ### Utilizing Error objects

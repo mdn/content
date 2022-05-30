@@ -257,7 +257,7 @@ If you view these checkboxes in a browser that doesn't support {{cssxref("appear
 
 ## What can be done about the "ugly" elements?
 
-Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly  style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
 The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.
 
@@ -323,7 +323,7 @@ button {
 }
 ```
 
-> **Note:** If you want to test these examples across a number of browsers simultaneously, you can [find it live here](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (also [see here for the source code](https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html)).
+> **Note:** If you want to test these examples across a number of browsers simultaneously, you can [find it live here](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (also [see here for the source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)).
 >
 > Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file#examples) reference page.
 
@@ -353,7 +353,7 @@ input[type="text"], input[type="datetime-local"], input[type="color"], select {
 }
 ```
 
-on other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.
+On other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.
 
 Let's talk about some specifics of each of these types of control, highlighting difficulties along the way.
 
@@ -414,7 +414,7 @@ Of course, this might also not fit in with the design you are going for, but it'
 
 The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`time`](/en-US/docs/Web/HTML/Element/input/time), [`week`](/en-US/docs/Web/HTML/Element/input/week), [`month`](/en-US/docs/Web/HTML/Element/input/month)) all have the same major associated issue. The actual containing box is as easy to style as any text input, and what we've got in this demo looks fine.
 
-However, the internal parts of the control (e.g. the popup calendar that you use pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
+However, the internal parts of the control (e.g. the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
 
 > **Note:** It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `text` input type instead if desired (or `tel` if you want mobile browsers to show the numeric keypad).
 
@@ -487,7 +487,7 @@ label[for="file"]:active {
 }
 ```
 
-You can see the result of the above CSS styling in the below live example (see also [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) live, and the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html)).
+You can see the result of the above CSS styling in the below live example (see also [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) live, and the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/styled-file-picker.html)).
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}
 
@@ -503,7 +503,6 @@ As we've mentioned above a few times, if you want to gain full control over the 
 
 - [Uni-form](https://github.com/draganbabic/uni-form) is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.
 - [Formalize](https://formalize.me/) is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.
-- [Niceforms](https://www.emblematiq.com/lab/niceforms/) is a standalone JavaScript method that provides complete customization of web forms. You can use some of the built in themes, or create your own.
 
 The following libraries aren't just about forms, but they have very interesting features for dealing with HTML forms:
 

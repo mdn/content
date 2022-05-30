@@ -14,20 +14,17 @@ The **`NodeIterator.root`** read-only property represents the
 {{DOMxref("Node")}} that is the root of what the {{DOMxref("NodeIterator")}}
 traverses.
 
-## Syntax
+## Value
 
-```js
-root = nodeIterator.root;
-```
+A {{DOMxref("Node")}}.
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 root = nodeIterator.root; // document.body in this case
 ```

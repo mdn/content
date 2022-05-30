@@ -20,13 +20,11 @@ still connected to the system.
 If the gamepad is connected, the value is `true`; if not, it is
 `false`.
 
-## Syntax
+## Value
 
-```js
-const connected = gamepad.connected;
-```
+A boolean.
 
-## Example
+## Examples
 
 ```js
 var gp = navigator.getGamepads()[0];

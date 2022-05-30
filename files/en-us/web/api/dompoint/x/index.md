@@ -24,13 +24,7 @@ In general, positive values `x` mean to the right,
 and negative values of `x` means to the left, barring any transforms that may
 have altered the orientation of the axes.
 
-## Syntax
-
-```js
-var xPos = DOMPoint.x;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the x coordinate's value for the
 point. This value is **unrestricted**, meaning that it is allowed to be

@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsFileSystemHandle()
 slug: Web/API/DataTransferItem/getAsFileSystemHandle
+page-type: web-api-instance-method
 tags:
   - DataTransferItem
   - Directory
@@ -28,7 +29,7 @@ None.
 
 ### Return value
 
-A {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
+A {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
 
 ### Exceptions
 

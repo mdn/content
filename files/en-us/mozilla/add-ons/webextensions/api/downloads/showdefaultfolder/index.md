@@ -36,7 +36,7 @@ None.
 The following snippet contains a show button, which when clicked invokes `showDefaultFolder()` to open the default downloads folder in the platform's file manager:
 
 ```js
-var showBtn = document.querySelector('.show');
+let showBtn = document.querySelector('.show');
 
 showBtn.onclick = function() {
   browser.downloads.showDefaultFolder();
@@ -45,7 +45,7 @@ showBtn.onclick = function() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-showDefaultFolder) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-showDefaultFolder) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

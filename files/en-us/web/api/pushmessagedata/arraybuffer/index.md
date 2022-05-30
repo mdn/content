@@ -19,14 +19,14 @@ The **`arrayBuffer()`** method of the {{domxref("PushMessageData")}} interface e
 ## Syntax
 
 ```js
-var myArrayBuffer = PushEvent.data.arrayBuffer();
+arrayBuffer()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An {{jsxref("ArrayBuffer")}}.
 

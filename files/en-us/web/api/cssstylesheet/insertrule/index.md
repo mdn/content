@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -22,14 +23,15 @@ method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current s
 ## Syntax
 
 ```js
-stylesheet.insertRule(rule [, index])
+insertRule(rule)
+insertRule(rule, index)
 ```
 
 ### Parameters
 
 - `rule`
 
-  - : A {{domxref("DOMString")}} containing the rule to be inserted. What the inserted
+  - : A string containing the rule to be inserted. What the inserted
     rule must contain depends on its type:
 
     - **For [rule-sets](/en-US/docs/Web/CSS/Syntax#css_statements)**, both

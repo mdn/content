@@ -20,19 +20,19 @@ The **`has()`** method of the {{domxref("FormData")}} interface returns a boolea
 ## Syntax
 
 ```js
-formData.has(name);
+has(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("USVString")}} representing the name of the key you want to test for.
+  - : A string representing the name of the key you want to test for.
 
-### Returns
+### Return value
 
 A boolean value.
 
-## Example
+## Examples
 
 The following line creates an empty `FormData` object:
 

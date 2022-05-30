@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaElementSource()
 slug: Web/API/AudioContext/createMediaElementSource
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -19,8 +20,7 @@ For more details about media element audio source nodes, check out the {{ domxre
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);
+createMediaElementSource(myMediaElement)
 ```
 
 ### Parameters
@@ -28,11 +28,11 @@ var source = audioCtx.createMediaElementSource(myMediaElement);
 - `myMediaElement`
   - : An {{domxref("HTMLMediaElement")}} object that you want to feed into an audio processing graph to manipulate.
 
-### Returns
+### Return value
 
 A {{domxref("MediaElementAudioSourceNode")}}.
 
-## Example
+## Examples
 
 This simple example creates a source from an {{htmlelement("audio") }} element using `createMediaElementSource()`, then passes the audio through a {{ domxref("GainNode") }} before feeding it into the {{ domxref("AudioDestinationNode") }} for playback. When the mouse pointer is moved, the `updatePage()` function is invoked, which calculates the current gain as a ratio of mouse Y position divided by overall window height. You can therefore increase and decrease the volume of the playing music by moving the mouse pointer up and down.
 

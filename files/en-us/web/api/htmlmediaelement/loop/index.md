@@ -13,18 +13,11 @@ browser-compat: api.HTMLMediaElement.loop
 
 The **`HTMLMediaElement.loop`** property reflects the {{htmlattrxref("loop", "video")}} HTML attribute, which controls whether the media element should start over when it reaches the end.
 
-## Syntax
-
-```js
-var loop = video.loop;
-audio.loop = true;
-```
-
-### Value
+## Value
 
 A boolean value.
 
-## Example
+## Examples
 
 ```js
 var obj = document.createElement('video');

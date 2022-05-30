@@ -17,12 +17,14 @@ browser-compat: webextensions.api.tabs.removeCSS
 
 Removes from a page CSS which was previously injected by a call to {{WebExtAPIRef("tabs.insertCSS()")}}.
 
+> **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
+
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
 ```js
-var removing = browser.tabs.removeCSS(
+let removing = browser.tabs.removeCSS(
   tabId,           // optional integer
   details          // object
 )
@@ -58,17 +60,17 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example adds some CSS using {{WebExtAPIRef("tabs.insertCSS")}}, then removes it again when the user clicks a browser action:
 
 ```js
-var css = "body { border: 20px dotted pink; }";
+let css = "body { border: 20px dotted pink; }";
 
 function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var insertingCSS = browser.tabs.insertCSS(2, {code: css});
+let insertingCSS = browser.tabs.insertCSS(2, {code: css});
 insertingCSS.then(null, onError);
 
 browser.browserAction.onClicked.addListener(() => {
-  var removing = browser.tabs.removeCSS(2, {code: css});
+  let removing = browser.tabs.removeCSS(2, {code: css});
   removing.then(null, onError);
 });
 ```
@@ -79,7 +81,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

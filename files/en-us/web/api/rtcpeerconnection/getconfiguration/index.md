@@ -25,7 +25,7 @@ identity information.
 ## Syntax
 
 ```js
-var configuration = RTCPeerConnection.getConfiguration();
+getConfiguration()
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ This method takes no input parameters.
 
 An object describing the {{domxref("RTCPeerConnection")}}'s current configuration. See [`RTCPeerConnection()`](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) for more information on what options are allowed.
 
-## Example
+## Examples
 
 This example adds a new certificate to an active connection if it doesn't already have
 one in use.
@@ -80,5 +80,5 @@ certificate to the connection.
 ## See also
 
 - {{domxref("RTCPeerConnection.setConfiguration()")}}
-- {{domxref("RTCPeerConnection.RTCPeerConnection")}}
+- {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}}
 - {{domxref("RTCPeerConnection")}}

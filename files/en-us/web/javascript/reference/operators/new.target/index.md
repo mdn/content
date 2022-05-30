@@ -40,8 +40,8 @@ In ordinary functions, it refers to the function itself, assuming it was invoked
 the [new](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator;
 otherwise `new.target` is {{jsxref("undefined")}}.
 
-In [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `new.target` is inherited from the surrounding scope.
+In [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+`new.target` is inherited from the surrounding scope.
 
 ## Examples
 

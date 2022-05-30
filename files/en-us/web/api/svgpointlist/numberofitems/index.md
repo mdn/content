@@ -13,13 +13,7 @@ browser-compat: api.SVGPointList.numberOfItems
 
 The **`numberOfItems`** read-only property of the {{domxref("SVGPointList")}} interface returns the number of items in the list.
 
-## Syntax
-
-```js
-let numberOfItems = SVGPointList.numberOfItems;
-```
-
-### Value
+## Value
 
 The number of items in the list.
 

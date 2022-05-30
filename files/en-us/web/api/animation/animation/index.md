@@ -1,6 +1,7 @@
 ---
 title: Animation()
 slug: Web/API/Animation/Animation
+page-type: web-api-constructor
 tags:
   - API
   - Animation
@@ -17,7 +18,9 @@ The **`Animation()`** constructor of the [Web Animations API](/en-US/docs/Web/AP
 ## Syntax
 
 ```js
-var animation = new Animation([effect][, timeline]);
+new Animation()
+new Animation(effect)
+new Animation(effect, timeline)
 ```
 
 ### Parameters

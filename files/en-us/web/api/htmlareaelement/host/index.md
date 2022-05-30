@@ -11,18 +11,13 @@ browser-compat: api.HTMLAreaElement.host
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.host`** property is a
-{{domxref("USVString")}} containing the host, that is the _hostname_, and then,
+string containing the host, that is the _hostname_, and then,
 if the _port_ of the URL is nonempty, a `':'`, and the _port_
 of the URL.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.host;
-// Setter
-area.host = string;
-```
+A string.
 
 ## Examples
 

@@ -44,7 +44,9 @@ groupByToMap(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each element in the array, taking 3 arguments:
+  - : Function to execute on each element in the array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element in the array.
@@ -57,7 +59,9 @@ groupByToMap(function(element, index, array) { /* ... */ }, thisArg)
 
 - `thisArg` {{optional_inline}}
   - : Object to use as {{jsxref("Operators/this", "this")}} inside `callbackFn`.
-      If not specified, `undefined` will be used.
+
+     The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
+     Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Return value
 

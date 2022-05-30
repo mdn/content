@@ -17,17 +17,11 @@ methods to request credentials. The {{domxref("CredentialsContainer")}} interfac
 notifies the user agent when an interesting event occurs, such as a successful sign-in
 or sign-out. This interface can be used for feature detection.
 
-## Syntax
-
-```js
-var credentialsContainer = navigator.credentials
-```
-
-### Value
+## Value
 
 The {{domxref("CredentialsContainer")}} interface.
 
-## Example
+## Examples
 
 ```js
 if ('credentials' in navigator) {

@@ -1,6 +1,7 @@
 ---
 title: CSSMatrixComponent.matrix
 slug: Web/API/CSSMatrixComponent/matrix
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,13 +22,7 @@ The **`matrix`** property of the
 See the [matrix()](</en-US/docs/Web/CSS/transform-function/matrix()>) and [matrix3d()](</en-US/docs/Web/CSS/transform-function/matrix3d()>) pages for
 examples.
 
-## Syntax
-
-```js
-var matrix = CSSMatrixComponent.matrix;
-```
-
-### Value
+## Value
 
 a matrix.
 

@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -28,15 +29,15 @@ createChannelSplitter(numberOfOutputs)
 
 ### Parameters
 
-- numberOfOutputs
+- `numberOfOutputs`
   - : The number of channels in the input audio stream that you want to output separately;
     the default is 6 if this parameter is not specified.
 
-### Returns
+### Return value
 
 A {{domxref("ChannelSplitterNode")}}.
 
-## Example
+## Examples
 
 The following simple example shows how you could separate a stereo track (say, a piece
 of music), and process the left and right channel differently. To use them, you need to

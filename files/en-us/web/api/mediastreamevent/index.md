@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamEvent
 ---
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
-The **`MediaStreamEvent`** interface represents events that occurs in relation to a {{domxref("MediaStream")}}. Two events of this type can be thrown: {{event("addstream")}} and {{event("removestream")}}.
+The **`MediaStreamEvent`** interface represents events that occurs in relation to a {{domxref("MediaStream")}}. Two events of this type can be thrown: {{domxref("RTCPeerConnection.addstream_event", "addstream")}} and {{domxref("RTCPeerConnection.removestream_event", "removestream")}}.
 
 ## Properties
 
@@ -23,7 +23,7 @@ _A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event als
 ## Constructors
 
 - {{domxref("MediaStreamEvent.MediaStreamEvent()", "MediaStreamEvent()")}}
-  - : Returns a new `MediaStreamEvent`. It takes two parameters, the first being a {{domxref("DOMString")}} representing the type of the event; the second a dictionary containing the {{domxref("MediaStream")}} it refers to.
+  - : Returns a new `MediaStreamEvent`. It takes two parameters, the first being a string representing the type of the event; the second a dictionary containing the {{domxref("MediaStream")}} it refers to.
 
 ## Methods
 

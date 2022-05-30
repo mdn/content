@@ -15,8 +15,7 @@ tags:
   - paste
 browser-compat: api.Navigator.clipboard
 ---
-The [Clipboard
-API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
+The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
 read-only **`clipboard`** property, which returns the
 {{domxref("Clipboard")}} object used to read and write the clipboard's
 contents.
@@ -29,13 +28,7 @@ the web site or app permission to access the clipboard. This permission must be 
 from the [Permissions API](/en-US/docs/Web/API/Permissions_API) using the
 `"clipboard-read"` and/or `"clipboard-write"` permissions.
 
-## Syntax
-
-```js
-theClipboard = navigator.clipboard;
-```
-
-### Value
+## Value
 
 The {{domxref("Clipboard")}} object used to access the system clipboard.
 

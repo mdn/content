@@ -1,6 +1,7 @@
 ---
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,11 @@ When its value changes, the [`dischargingtimechange`](/en-US/docs/Web/API/Batter
 > **Note:** Even if the time returned is precise to the second, browsers round them to a higher
 > interval (typically to the closest 15 minutes) for privacy reasons.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ### HTML Content
 

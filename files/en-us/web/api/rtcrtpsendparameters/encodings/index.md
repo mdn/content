@@ -39,10 +39,7 @@ encodingParameterList = sendParameters.encodings;
 
 An array of objects conforming to the {{domxref("RTCRtpEncodingParameters")}}
 dictionary, each of which contains properties which provide settings and parameters that
-describe and configure the codec used for a single destination. Each object's properties
-are:
-
-{{page("/en-US/docs/Web/API/RTCRtpEncodingParameters", "Properties")}}
+describe and configure the codec used for a single destination.
 
 ## Description
 

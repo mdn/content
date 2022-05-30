@@ -110,13 +110,11 @@ children may be included, if relevant. The possible values are:
   </tbody>
 </table>
 
-## Syntax
+## Value
 
-```js
-nodeTypes = treeWalker.whatToShow;
-```
+A bitmask.
 
-## Example
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

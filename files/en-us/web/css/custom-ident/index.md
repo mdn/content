@@ -8,6 +8,11 @@ tags:
   - Layout
   - Reference
   - Web
+spec-urls:
+  - https://drafts.csswg.org/css-values/#custom-idents
+  - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident
+  - https://drafts.csswg.org/css-counter-styles/#typedef-counter-style-name
+  - https://drafts.csswg.org/css-lists/#counter-properties
 ---
 {{CSSRef}}
 
@@ -69,15 +74,7 @@ bili.bob          Only alphanumeric characters, _, and - needn't be escaped.
 
 ## Specifications
 
-| Specification                                                                                                                                                                        | Status                                       | Comment                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#custom-idents', '<code>&lt;custom-ident&gt;</code>')}}                                                                         | {{Spec2('CSS4 Values')}}             |                                                                                                                                                                                          |
-| {{SpecName('CSS Will Change', '#valdef-will-change-custom-ident', '<code>&lt;custom-ident&gt;</code> for <code>will-change</code>')}}     | {{Spec2('CSS Will Change')}}         | Defines which values are excluded for {{CSSxRef("will-change")}}.                                                                                                              |
-| {{SpecName('CSS3 Counter Styles', '#typedef-counter-style-name', '<code>&lt;custom-ident&gt;</code> for <code>list-style-type</code>')}} | {{Spec2('CSS3 Counter Styles')}} | Uses `<custom-ident>` instead of a finite list of keywords. Defines which values are excluded for {{CSSxRef("list-style-type")}} and {{CSSxRef("@counter-style")}}. |
-| {{SpecName('CSS3 Lists', '#counter-properties', '<code>&lt;custom-ident&gt;</code> for <code>counter-*</code>')}}                             | {{Spec2('CSS3 Lists')}}             | Renames `<identifier>` to `<custom-ident>`. Adds its usage to the new `counter-set` property.                                                                                            |
-| {{SpecName('CSS3 Animations', '#typedef-single-animation-name', '<code>&lt;custom-ident&gt;</code> for <code>animation-name</code>')}} | {{Spec2('CSS3 Animations')}}         | Defines which values are excluded for {{CSSxRef("animation-name")}}.                                                                                                          |
-| {{SpecName('CSS3 Values', '#custom-idents', '<code>&lt;custom-ident&gt;</code>')}}                                                                         | {{Spec2('CSS3 Values')}}             | Renames `<identifier>` to `<custom-ident>`. Makes it a pseudo-type and forbids the use of excluded values.                                                                               |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-identifier', '<code>&lt;identifier&gt;</code>')}}                                                         | {{Spec2('CSS2.1')}}                     | Initial definition.                                                                                                                                                                      |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -70,7 +70,7 @@ Rendering in your browser: <math><mfenced close="]" open separators="||||,"><mi>
 
 ## Specifications
 
-The \<mfenced> element is no longer part of the [latest MathML standard](https://github.com/mathml-refresh/mathml/issues/2). Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead, or, for backwards compatibility, see [mathml-polyfills/mfenced.](https://github.com/mathml-refresh/mathml-polyfills/tree/master/mfenced)
+The \<mfenced> element is no longer part of the [latest MathML standard](https://github.com/w3c/mathml/issues/2). Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead, or, for backwards compatibility, see [mathml-polyfills/mfenced.](https://github.com/mathml-refresh/mathml-polyfills/tree/main/mfenced)
 
 ## Browser compatibility
 

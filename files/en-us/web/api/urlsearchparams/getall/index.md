@@ -19,17 +19,17 @@ interface returns all the values associated with a given search parameter as an 
 ## Syntax
 
 ```js
-URLSearchParams.getAll(name)
+getAll(name)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to return.
 
 ### Return value
 
-An array of {{domxref("USVString")}}s.
+An array of strings.
 
 ## Examples
 

@@ -15,25 +15,25 @@ browser-compat: api.MessagePort.start
 The **`start()`** method of the {{domxref("MessagePort")}}
 interface starts the sending of messages queued on the port. This method is only needed
 when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
-{{domxref("MessageChannel.onmessage")}}.
+{{domxref("MessageChannel.message_event", "onmessage")}}.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
 ```js
-port.start()
+start()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
 None.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 In the following code block, you can see a `handleMessage` handler function,
 run when a message is sent back to this document using `onmessage`:

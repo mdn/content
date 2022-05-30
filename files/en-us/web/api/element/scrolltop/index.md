@@ -16,29 +16,19 @@ The **`Element.scrollTop`** property gets or sets the number of pixels that an e
 
 An element's `scrollTop` value is a measurement of the distance from the element's top to its topmost _visible_ content. When an element's content does not generate a vertical scrollbar, then its `scrollTop` value is `0`.
 
-When `scrollTop` is used on the root element (the `<html>` element), the `scrollY` of the window is returned. [This is a special case of `scrollTop`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop).
-
-> **Warning:** On systems using display scaling, `scrollTop` may give you a decimal value.
-
-## Syntax
-
-```js
-// Get the number of pixels scrolled.
-var intElemScrollTop = someElement.scrollTop;
-```
-
-After running this code, `intElemScrollTop` is an integer corresponding to the number of pixels that the {{domxref("element")}}'s content has been scrolled upwards.
-
-```js
-// Set the number of pixels scrolled.
-element.scrollTop = intValue;
-```
-
 `scrollTop` can be set to any integer value, with certain caveats:
 
 - If the element can't be scrolled (e.g. it has no overflow or if the element has a property of "**non-scrollable**"), `scrollTop` is `0`.
 - `scrollTop` doesn't respond to negative values; instead, it sets itself back to `0`.
 - If set to a value greater than the maximum available for the element, `scrollTop` settles itself to the maximum value.
+
+When `scrollTop` is used on the root element (the `<html>` element), the `scrollY` of the window is returned. [This is a special case of `scrollTop`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop).
+
+> **Warning:** On systems using display scaling, `scrollTop` may give you a decimal value.
+
+## Value
+
+A number.
 
 ## Examples
 

@@ -26,7 +26,7 @@ a ^ b
 
 The operands are converted to 32-bit integers and expressed by a series of bits (zeroes
 and ones). Numbers with more than 32 bits get their most significant bits discarded. For
-example, the following integer with more than 32 bits will be converted to a 32 bit
+example, the following integer with more than 32 bits will be converted to a 32-bit
 integer:
 
 ```js
@@ -81,7 +81,5 @@ Bitwise XORing any number `x` with `0` yields
 
 ## See also
 
-- [Bitwise
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
-- [Bitwise
-  XOR assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Bitwise XOR assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

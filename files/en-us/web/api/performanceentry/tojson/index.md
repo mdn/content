@@ -18,21 +18,18 @@ a JSON representation of the {{domxref("PerformanceEntry","performance entry")}}
 ## Syntax
 
 ```js
-json = perfEntry.toJSON();
+toJSON()
 ```
 
-### Arguments
+### Parameters
 
-- None
-  - :
+None.
 
 ### Return value
 
-- json
-  - : A JSON object that is the serialization of the {{domxref("PerformanceEntry")}}
-    object.
+A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} object.
 
-## Example
+## Examples
 
 The following example shows the use of the `toJSON()` method.
 

@@ -18,28 +18,28 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
 ## Syntax
 
 ```js
-void gl.texParameterf(GLenum target, GLenum pname, GLfloat param);
-void gl.texParameteri(GLenum target, GLenum pname, GLint param);
+texParameterf(target, GLenum pname, GLfloat param)
+texParameteri(target, GLenum pname, GLint param)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+    - `gl.TEXTURE_3D`: A three-dimensional texture.
+    - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-      - `gl.TEXTURE_3D`: A three-dimensional texture.
-      - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+- `param`
+  - : The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
+    {{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
 
-The `pname` parameter is a {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
-parameter to set. The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
-{{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
-`pname`.
+- `pname`
+  - : The `pname` parameter is a {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
+    parameter to set.
 
 <table class="standard-table">
   <thead>
@@ -149,7 +149,7 @@ parameter to set. The `param` parameter is a {{domxref("WebGL_API/Types", "GLflo
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

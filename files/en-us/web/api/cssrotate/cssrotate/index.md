@@ -1,6 +1,7 @@
 ---
 title: CSSRotate()
 slug: Web/API/CSSRotate/CSSRotate
+page-type: web-api-constructor
 tags:
   - API
   - CSS Types Object Model API
@@ -21,7 +22,7 @@ individual {{CSSXref('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSRotate = new CSSRotate(x,y,z,angle);
+new CSSRotate(x, y, z, angle)
 ```
 
 ### Parameters

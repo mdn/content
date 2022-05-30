@@ -306,7 +306,7 @@ const newLength = fruits.unshift('Strawberry');
 console.log(fruits);
 // ["Strawberry", "Banana", "Mango"]
 console.log(newLength);
-// 2
+// 3
 ```
 
 ### Remove a single item by index
@@ -368,7 +368,7 @@ for (const fruit of fruits) {
 // Cherry
 ```
 
-But `for...of` is just one of many ways to iterate over any array; for more ways, see [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), and see the documentation for the [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap), [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`reduce()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce), and [`reduceRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) methods — and see the next example, which uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method.
+But `for...of` is just one of many ways to iterate over any array; for more ways, see [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), and see the documentation for the [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap), [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`reduce()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), and [`reduceRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) methods — and see the next example, which uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method.
 
 ### Call a function on each element in an array
 
@@ -447,12 +447,12 @@ console.log(fruitsAlias);
 // ['Apple', 'Banana', 'Strawberry', 'Mango']
 ```
 
-
 ### Grouping the elements of an array
 
-The {{jsxref("Array.prototype.groupBy()")}} methods can be used group the elements of an array, using a test function that returns a string indicating the group of the current element.
+The {{jsxref("Array.prototype.groupBy()")}} methods can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
 
 Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
+
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables' },
@@ -467,7 +467,7 @@ To use `groupBy()`, you supply a callback function that is called with the curre
 
 The code below uses a arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object).
 The result is an object that has properties named after the unique strings returned by the callback.
-Each property is assigned an array containing the elements in the group. 
+Each property is assigned an array containing the elements in the group.
 
 ```js
 let result = inventory.groupBy( ({ type }) => type );
@@ -480,7 +480,6 @@ Changing the internal structure of these elements will be reflected in both the 
 
 If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Array.prototype.groupByToMap()")}}.
 This is very similar to `groupBy` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
-
 
 ## Other examples
 
@@ -634,7 +633,7 @@ console.log(fruits.length);       // 2
 
 This is explained further on the {{jsxref("Array.length")}} page.
 
-#### Creating an array using the result of a match
+### Creating an array using the result of a match
 
 The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}} and {{jsxref("String.match()")}}.
 

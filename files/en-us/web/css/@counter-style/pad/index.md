@@ -35,7 +35,14 @@ If a marker representation is smaller than the specified pad length, then the ma
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<integer> && <symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 
@@ -69,7 +76,7 @@ If a marker representation is smaller than the specified pad length, then the ma
 
 #### Result
 
-{{ EmbedLiveSample('Padding_a_counter', '', '', '', 'Web/CSS/@counter-style/pad') }}
+{{ EmbedLiveSample('Padding a counter') }}
 
 ## Specifications
 
@@ -82,4 +89,4 @@ If a marker representation is smaller than the specified pad length, then the ma
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.

@@ -348,4 +348,4 @@ The width is set by the CSS to 150px. The `auto` value for the height is compute
 ## See also
 
 - {{cssxref("background-size")}}
-- Blog post: [Properly resizing vector image backgrounds](http://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/)
+- Blog post: [Properly resizing vector image backgrounds](https://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/)

@@ -34,7 +34,9 @@ The user can engage this state by checking/selecting an element, or disengage it
 
 ## Syntax
 
-{{csssyntax}}
+```
+:checked
+```
 
 ## Examples
 

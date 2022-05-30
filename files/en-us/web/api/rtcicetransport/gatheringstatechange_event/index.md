@@ -23,30 +23,23 @@ A **`gatheringstatechange`** event is sent to an {{domxref("RTCIceTransport")}} 
 
 The gathering state, whose actual status can be found in the transport object's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property, indicates whether or not the ICE agent has begun gathering candidates, and if so, if it has finished doing so.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 The key difference between `gatheringstatechange` and {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} is that the latter represents the overall state of the connection including every {{domxref("RTCIceTransport")}} used by every {{domxref("RTCRtpSender")}} and every {{domxref("RTCRtpReceiver")}} on the entire connection. In contrast, `gatheringstatechange` represents changes to the candidate gathering state for a single transport.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('gatheringstatechange', event => { });
+
+ongatheringstatechange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -64,7 +57,7 @@ pc.getSenders().forEach(sender => {
 }, false);
 ```
 
-Likewise, you can use the {{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}} event handler property:
+Likewise, you can use the `ongatheringstatechange` event handler property:
 
 ```js
 pc.getSenders().forEach(sender => {
@@ -91,17 +84,16 @@ pc.getSenders().forEach(sender => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- {{domxref("RTCIceTransport.ongatheringstatechange")}}
 
 ### Related RTCIceTransport events
 
 - {{event("statechange")}}
-- {{event("selectedcandidatepairchange")}}
+- {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
 
 ### Related RTCPeerConnection events
 
-- {{event("negotiationneeded")}}
-- {{event("signalingstatechange")}}
-- {{event("iceconnectionstatechange")}}
-- {{event("icegatheringstatechange")}}
-- {{event("connectionstatechange")}}
+- {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+- {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
+- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}

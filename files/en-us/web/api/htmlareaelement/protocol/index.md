@@ -11,17 +11,12 @@ browser-compat: api.HTMLAreaElement.protocol
 
 The
 **`HTMLAreaElement.protocol`**
-property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
+property is a string representing the protocol scheme of the URL,
 including the final `':'`.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.protocol;
-// Setter
-area.protocol = string;
-```
+A string.
 
 ## Examples
 

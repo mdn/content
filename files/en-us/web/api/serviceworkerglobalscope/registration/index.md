@@ -15,13 +15,7 @@ browser-compat: api.ServiceWorkerGlobalScope.registration
 
 The **`registration`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("ServiceWorkerRegistration")}} object, which represents the service worker's registration.
 
-## Syntax
-
-```js
-serviceWorkerRegistration = self.registration
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorkerRegistration")}} object.
 

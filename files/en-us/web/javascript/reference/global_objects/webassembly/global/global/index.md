@@ -21,11 +21,11 @@ new WebAssembly.Global(descriptor, value)
 
 ### Parameters
 
-- _descriptor_
+- `descriptor`
 
-  - : A `GlobalDescriptor` dictionary object, which contains two properties:
+  - : An object, which contains two properties:
 
-    - `value`: A [`USVString`](/en-US/docs/Web/API/USVString) representing the
+    - `value`: A string representing the
       data type of the global. This can be any one of:
       - `i32`: A 32-bit integer.
       - `i64`: A 64-bit integer.
@@ -37,7 +37,7 @@ new WebAssembly.Global(descriptor, value)
     - `mutable`: A boolean value that determines whether the global is
       mutable or not. By default, this is `false`.
 
-- _value_
+- `value`
   - : The value the variable contains. This can be any value, as long as its type matches the variable's data type.
     If no value is specified, a typed 0 value is used where the value of `descriptor.value` is one of `i32`, `i64`, `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref` or `anyfunc` (as specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue)).
 

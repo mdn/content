@@ -16,7 +16,7 @@ The **`SerialPort.close()`** method of the {{domxref("SerialPort")}} interface r
 ## Syntax
 
 ```js
-var promise = SerialPort.close();
+close()
 ```
 
 ### Parameters

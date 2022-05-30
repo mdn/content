@@ -21,7 +21,7 @@ stream. The track is specified as a parameter of type {{domxref("MediaStreamTrac
 ## Syntax
 
 ```js
-stream.addTrack(track);
+addTrack(track)
 ```
 
 ### Parameters
@@ -31,9 +31,9 @@ stream.addTrack(track);
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ## Specifications
 

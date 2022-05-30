@@ -16,13 +16,7 @@ The **`desiredSize`** read-only property of the
 {{domxref("ReadableStreamDefaultController")}} interface returns the desired size
 required to fill the stream's internal queue.
 
-## Syntax
-
-```js
-var desiredSize = readableStreamDefaultController.desiredSize;
-```
-
-### Value
+## Value
 
 An integer. Note that this can be negative if the queue is over-full.
 

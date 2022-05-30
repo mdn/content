@@ -50,7 +50,7 @@ Caching directives follow the validation rules below:
 The following table lists the standard `Cache-Control` directives:
 
 | Request          | Response                 |
-| :--------------- | :----------------------- |
+| ---------------- | ------------------------ |
 | `max-age`        | `max-age`                |
 | `max-stale`      | -                        |
 | `min-fresh`      | -                        |
@@ -213,7 +213,7 @@ Some intermediaries transform content for various reasons. For example, some con
 
 `no-transform` indicates that any intermediary (regardless of whether it implements a cache) shouldn't transform the response contents.
 
-Note: [Google's Web Light](https://support.google.com/webmasters/answer/6211428) is one kind of such an intermediary. It converts images to minimize data for a cache store or slow connection and supports `no-transform` as an opt-out option.
+Note: [Google's Web Light](https://developers.google.com/search/docs/advanced/mobile/web-light?visit_id=637855965115455923-776951611&rd=1) is one kind of such an intermediary. It converts images to minimize data for a cache store or slow connection and supports `no-transform` as an opt-out option.
 
 #### `immutable`
 
@@ -293,7 +293,7 @@ The `max-age=N` request directive indicates that the client allows a stored resp
 Cache-Control: max-age=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was stored in caches 3 hours ago, the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
 
 Many browsers use this directive for **reloading**, as explained below.
 
@@ -317,7 +317,7 @@ The `max-stale=N` request directive indicates that the client allows a stored re
 Cache-Control: max-stale=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was stored on caches 3 hours ago, the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
 
 Clients can use this header when the origin server is down or too slow and can accept cached responses from caches even if they are a bit old.
 
@@ -333,7 +333,7 @@ Cache-Control: min-fresh=600
 
 In the case above, if the response with `Cache-Control: max-age=3600` was stored in caches 51 minutes ago, the cache couldn't reuse that response.
 
-Clients can use this header when the user requires the response to not only be [fresh](/en-US/docs/Web/HTTP/Caching#freshness), but also requires that it  won't be updated for a period of time.
+Clients can use this header when the user requires the response to not only be [fresh](/en-US/docs/Web/HTTP/Caching#freshness), but also requires that it won't be updated for a period of time.
 
 Note that the major browsers do not support requests with `min-fresh`.
 

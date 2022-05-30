@@ -76,10 +76,10 @@ There are many online linter applications, the best of which are probably [Dirty
 
 However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.
 
-Many code editors have linter plugins. Github's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
+Many code editors have linter plugins. GitHub's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
 
 1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left hand menu.
+2. Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
 3. In the _Search packages_ text field, type "lint" and press Enter/Return to search for linting-related packages.
 4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
 5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
@@ -96,7 +96,7 @@ Other popular editors have similar linting packages available. For example, see:
 
 The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.
 
-> **Note:** HTML errors don't tend to show up so easily in dev tools, as the browser will try to correct badly-formed markup automatically; the W3C validator is the best way to find HTML errors — see {{anch("Validation")}} above.
+> **Note:** HTML errors don't tend to show up so easily in dev tools, as the browser will try to correct badly-formed markup automatically; the W3C validator is the best way to find HTML errors — see [Validation](#validation) above.
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 
@@ -112,7 +112,7 @@ Now let's move on to look at some of the most common cross browser HTML and CSS 
 
 This is a common problem, especially when you need to support old browsers (such as old IE versions) or you are using features that are implemented using CSS prefixes. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across most browsers you'll want to support; more problems are uncovered when you start wanting to use newer features such as [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), or [HTML5 video/audio](/en-US/docs/Web/Guide/Audio_and_video_delivery), or even more nascent, [CSS Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids#native_css_grids_with_grid_layout) or [-webkit-background-clip: text](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects#-webkit-background-clip_text).
 
-Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See {{anch("Finding help")}} below.
+Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See [Finding help](#finding_help) below.
 
 #### HTML fallback behavior
 
@@ -120,7 +120,7 @@ Some problems can be solved by just taking advantage of the natural way in which
 
 Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting `display: block;` on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognize them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.
 
-> **Note:** See {{anch("IE conditional comments")}} for the best way to do this.
+> **Note:** See [IE conditional comments](#ie_conditional_comments) for the best way to do this.
 
 More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
 
@@ -159,7 +159,7 @@ The output of this code is as follows:
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
+> **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
 
 If you view the example on a supporting browser like desktop/Android Chrome or iOS Safari, you'll see the special widgets/features in action as you try to input data. On a non-supporting platform such as Firefox or Internet Explorer, the inputs will just fallback to normal text inputs, so at least the user can still enter some information.
 
@@ -218,7 +218,7 @@ IE conditional comments are a modified proprietary HTML comment syntax, which ca
 
 This block will apply the IE-specific CSS and JavaScript only if the browser viewing the page is IE 8 or older. `lte` means "less than or equal to", but you can also use lt, gt, gte, `!` for NOT, and other logical syntax.
 
-> **Note:** Sitepoint's [Internet Explorer Conditional Comments](https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/) provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.
+> **Note:** Sitepoint's [Internet Explorer Conditional Comments](https://www.sitepoint.com/internet-explorer-conditional-comments/) provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.
 
 As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements stylable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:
 
@@ -255,7 +255,7 @@ form > #date
 
 However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like [`:nth-of-type`](/en-US/docs/Web/CSS/:nth-of-type), [`:not`](/en-US/docs/Web/CSS/:not), [`::selection`](/en-US/docs/Web/CSS/::selection), etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's [Selectivizr](http://selectivizr.com/) library — this is a small JavaScript library that works on top of an existing JavaScript library like [jQuery](https://jquery.com/) or [MooTools](https://mootools.net/).
 
-1. To try this example, make a local copy of [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with `p:first-child`, which won't work in old versions of IE.
+1. To try this example, make a local copy of [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with `p:first-child`, which won't work in old versions of IE.
 2. Now download [MooTools](https://mootools.net/) and [Selectivizr](http://selectivizr.com/), and save them in the same directory as your sample HTML.
 3. Put the following code into the head of your HTML document, just before the opening `<style>` tag:
 
@@ -334,9 +334,9 @@ This ensures that all browsers that support any of the above forms of the proper
 
 Of course, doing this for lots of different CSS rules can get really tedious. It is better to use an automation tool to do it for you. And such tools exist:
 
-The [prefix-free JavaScript library](https://leaverou.github.io/prefixfree/) can be attached to a page, and will automatically detect what capabilities are possessed by browsers viewing the page and add prefixes as appropriate. It is really easy and convenient to use, although it does have some downsides (see the link above for details), and it is arguable that parsing every stylesheet in your site and add prefixes at run time can be a drain on the computer's processing power for a large site.
+The [prefix-free JavaScript library](https://projects.verou.me/prefixfree/) can be attached to a page, and will automatically detect what capabilities are possessed by browsers viewing the page and add prefixes as appropriate. It is really easy and convenient to use, although it does have some downsides (see the link above for details), and it is arguable that parsing every stylesheet in your site and add prefixes at run time can be a drain on the computer's processing power for a large site.
 
-Another solution is to add prefixes automatically during development, and this (and other things besides) can be done using tools like [Autoprefixer](https://github.com/postcss/autoprefixer) and [PostCSS](https://postcss.org/). These tools can be used in a variety of ways, for example [Autoprefixer](https://tools.hubsadda.com/autoprefixer/) has an [online version](https://autoprefixer.github.io/) that allows you to enter your non-prefixed CSS on the left, and gives you a prefix-added version on the right. You can choose which browsers you want to make sure you support using the notation outlined in [Autoprefixer options](https://github.com/postcss/autoprefixer#options); also see [Browserslist queries](https://github.com/ai/browserslist#queries), which this is based on, for more detail. As an example, the following query will select the last 2 versions of all major browsers and versions of IE above 9.
+Another solution is to add prefixes automatically during development, and this (and other things besides) can be done using tools like [Autoprefixer](https://github.com/postcss/autoprefixer) and [PostCSS](https://postcss.org/). These tools can be used in a variety of ways, for example [Autoprefixer](https://goonlinetools.com/autoprefixer/) has an [online version](https://autoprefixer.github.io/) that allows you to enter your non-prefixed CSS on the left, and gives you a prefix-added version on the right. You can choose which browsers you want to make sure you support using the notation outlined in [Autoprefixer options](https://github.com/postcss/autoprefixer#options); also see [Browserslist queries](https://github.com/browserslist/browserslist#queries), which this is based on, for more detail. As an example, the following query will select the last 2 versions of all major browsers and versions of IE above 9.
 
 ```
 last 2 versions, ie > 9

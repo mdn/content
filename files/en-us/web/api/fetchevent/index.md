@@ -48,30 +48,33 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
 ## Examples
 
-This fetch event uses the browser default for non-GET requests. For GET requests it tries to return a match in the cache, and falls back to the network. If it finds a match in the cache, it asynchronously updates the cache for next time.
+This fetch event uses the browser default for non-GET requests.
+For GET requests it tries to return a match in the cache, and falls back to the network. If it finds a match in the cache, it asynchronously updates the cache for next time.
 
 ```js
-self.addEventListener('fetch', event => {
+self.addEventListener("fetch", (event) => {
   // Let the browser do its default thing
   // for non-GET requests.
-  if (event.request.method != 'GET') return;
+  if (event.request.method != "GET") return;
 
   // Prevent the default, and handle the request ourselves.
-  event.respondWith(async function() {
-    // Try to get the response from a cache.
-    const cache = await caches.open('dynamic-v1');
-    const cachedResponse = await cache.match(event.request);
+  event.respondWith(
+    (async function () {
+      // Try to get the response from a cache.
+      const cache = await caches.open("dynamic-v1");
+      const cachedResponse = await cache.match(event.request);
 
-    if (cachedResponse) {
-      // If we found a match in the cache, return it, but also
-      // update the entry in the cache in the background.
-      event.waitUntil(cache.add(event.request));
-      return cachedResponse;
-    }
+      if (cachedResponse) {
+        // If we found a match in the cache, return it, but also
+        // update the entry in the cache in the background.
+        event.waitUntil(cache.add(event.request));
+        return cachedResponse;
+      }
 
-    // If we didn't find a match in the cache, use the network.
-    return fetch(event.request);
-  }());
+      // If we didn't find a match in the cache, use the network.
+      return fetch(event.request);
+    })()
+  );
 });
 ```
 

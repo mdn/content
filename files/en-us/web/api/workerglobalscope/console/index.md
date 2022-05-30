@@ -14,17 +14,11 @@ browser-compat: api.WorkerGlobalScope.console
 
 The **`console`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("console")}} object providing access to the browser console for the worker.
 
-## Syntax
-
-```js
-var consoleObj = self.console;
-```
-
-### Value
+## Value
 
 A {{domxref("console")}} object.
 
-## Example
+## Examples
 
 This property allows you to have access to a browser console for debugging purposes, inside a worker. So for example you could call
 

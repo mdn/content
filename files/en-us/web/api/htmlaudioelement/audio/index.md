@@ -23,13 +23,14 @@ offscreen to manage and play audio.
 ## Syntax
 
 ```js
-audioObj = new Audio(url);
+new Audio()
+new Audio(url)
 ```
 
 ### Parameters
 
 - `url` {{optional_inline}}
-  - : An optional {{domxref("DOMString")}} containing the URL of an audio file to be
+  - : An optional string containing the URL of an audio file to be
     associated with the new audio element.
 
 ### Return value

@@ -44,7 +44,7 @@ The script gets access to a number of objects that help the injected script inte
 ## Syntax
 
 ```js
-var evaluating = browser.devtools.inspectedWindow.eval(
+let evaluating = browser.devtools.inspectedWindow.eval(
   expression,       // string
   options           // object
 )
@@ -173,7 +173,7 @@ inspectButton.addEventListener("click", () => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

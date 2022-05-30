@@ -16,14 +16,14 @@ browser-compat: api.PeriodicSyncEvent
 
 The **`PeriodicSyncEvent`** interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to run tasks in the service worker with network connectivity.
 
-An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} handler. This happens periodically, at an interval greater than or equal to that set in the {{domxref('PeriodicSyncManager.register()')}} method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.
+An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.periodicsync_event', 'periodicsync')}} handler. This happens periodically, at an interval greater than or equal to that set in the {{domxref('PeriodicSyncManager.register()')}} method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.
 
 {{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("PeriodicSyncEvent.PeriodicSyncEvent()")}}
-  - : Creates a new `PeriodicSyncEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} callback.
+  - : Creates a new `PeriodicSyncEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to {{domxref('ServiceWorkerGlobalScope.periodicsync_event', 'onperiodicsync')}} callback.
 
 ## Properties
 

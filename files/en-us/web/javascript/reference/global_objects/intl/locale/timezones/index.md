@@ -23,7 +23,7 @@ The **`Intl.Locale.prototype.timeZones`** property is an accessor property which
 Returns an array with supported time zones for the associated `Locale`, returned time zones
 represents an [IANA time zone](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database).
 
-> **Note:** If the Unicode Language Identifier does not contain the the `-` for the Unicode region subtag sequence, the returned value is `undefined`
+> **Note:** If the Unicode Language Identifier does not contain the `-` for the Unicode region subtag sequence, the returned value is `undefined`
 
 ## Examples
 
@@ -38,12 +38,12 @@ console.log(arEG.timeZones); // logs ["Africa/Cairo"]
 
 ```js
 let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.hourCycles); // logs ["Asia/Tokyo"]
+console.log(jaJP.timeZones); // logs ["Asia/Tokyo"]
 ```
 
 ```js
 let ar = new Intl.Locale("ar");
-console.log(ar.hourCycles); // logs undefined
+console.log(ar.timeZones); // logs undefined
 ```
 
 ## Specifications

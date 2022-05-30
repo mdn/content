@@ -89,7 +89,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 - \<color>
   - : The basic type \<color> is a CSS2 compatible specification for a color in the sRGB color space. \<color> applies to SVG's use of the {{SVGAttr("color")}} attribute and is a component of the definitions of attributes {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}}, which also offer optional ICC-based color specifications.
 
-    SVG supports all of the syntax alternatives for \<color> defined in [CSS2 syntax and basic data types](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color), and (depend on the implementation) in the future [CSS Color Module Level 3](https://www.w3.org/TR/css3-color/).
+    SVG supports all of the syntax alternatives for \<color> defined in [CSS2 syntax and basic data types](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color), and (depend on the implementation) in the future [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/).
 
     A \<color> is either a keyword or a numerical RGB specification.
 
@@ -105,21 +105,21 @@ SVG makes use of a number of data types. This article lists these types along wi
     hexdigit ::= [0-9A-Fa-f]
     ```
 
-    where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](https://www.w3.org/TR/css3-color/), or one of the system color keywords listed in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
+    where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/), or one of the system color keywords listed in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
 
     The corresponding SVG DOM interface definitions for \<color> are defined the one defined by CSS. SVG's extension to color, including the ability to specify ICC-based colors, are represented using DOM interface {{domxref("SVGColor")}}.
 
 ## Coordinate
 
 - \<coordinate>
-  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](/en-US/docs/Web/SVG/Content_type#length).
+  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](#length).
 
     Within the SVG DOM, a \<coordinate> is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.
 
 ## Frequency
 
 - \<frequency>
-  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](/en-US/docs/Web/SVG/Content_type#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
+  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
 
     - `Hz`: Hertz
     - `kHz`: kilo Hertz
@@ -129,7 +129,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## FuncIRI
 
 - \<FuncIRI>
-  - : Functional notation for a reference. The syntax for this reference is the same as the {{cssxref("url()", "CSS URI")}}.
+  - : Functional notation for a reference. The syntax for this reference is the same as the {{cssxref("url", "CSS URI")}}.
 
 ## Integer
 
@@ -273,7 +273,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Opacity value
 
 - \<opacity-value>
-  - : The opacity of the color or the content the current object is filled with, as a [\<number>](/en-US/docs/Web/SVG/Content_type#number). Any values outside the range `0.0` (fully transparent) to `1.0` (fully opaque) will be clamped to this range.
+  - : The opacity of the color or the content the current object is filled with, as a [\<number>](#number). Any values outside the range `0.0` (fully transparent) to `1.0` (fully opaque) will be clamped to this range.
 
 ## Paint
 

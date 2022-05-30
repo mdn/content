@@ -19,21 +19,12 @@ The **`kind`** read-only property of the
 used to distinguish files from directories when iterating over the contents of a
 directory.
 
-## Syntax
+## Value
 
-```js
-var FileSystemHandleKind = FileSystemHandle.kind;
-```
+A string that can be:
 
-### Value
-
-- _FileSystemHandleKind_
-
-  - : Can be either:
-
-    - `'file'`: If handle is a {{domxref('FileSystemFileHandle')}}.
-    - `'directory'`: If handle is a
-      {{domxref('FileSystemDirectoryHandle')}}.
+- `'file'`: If the handle is a {{domxref('FileSystemFileHandle')}}.
+- `'directory'`: If the handle is a {{domxref('FileSystemDirectoryHandle')}}.
 
 ## Examples
 

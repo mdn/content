@@ -13,13 +13,7 @@ browser-compat: api.LayoutShiftAttribution.node
 
 The **`node`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("node")}} representing the object that has shifted.
 
-## Syntax
-
-```js
-let node = LayoutShiftAttribution.node;
-```
-
-### Value
+## Value
 
 A {{domxref("node")}}.
 

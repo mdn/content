@@ -24,14 +24,18 @@ a {{domxref("ImageBitmap")}} containing the snapshot.
 ## Syntax
 
 ```js
-const bitmapPromise = imageCapture.grabFrame()
+grabFrame()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.
 
-## Example
+## Examples
 
 This example is extracted from this [Simple
 Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by

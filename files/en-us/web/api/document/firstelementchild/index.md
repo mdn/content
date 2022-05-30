@@ -18,16 +18,11 @@ For HTML documents, this is usually the only child, the root `<html>` element.
 
 See {{domxref("Element.firstElementChild")}} for the first child element of specific elements within a document.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = document.firstElementChild;
+A {{domxref("Element")}} object, or `null`.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```js
 document.firstElementChild;

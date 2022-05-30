@@ -9,10 +9,9 @@ tags:
   - id
 browser-compat: html.global_attributes.id
 ---
-
 {{HTMLSidebar("Global_attributes")}}
 
-The **`id`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) defines an identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a [fragment identifier](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Fragment)), scripting, or styling (with {{glossary("CSS")}}).
+The **`id`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) defines an identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a [fragment identifier](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#fragment)), scripting, or styling (with {{glossary("CSS")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
 

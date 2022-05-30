@@ -21,25 +21,22 @@ durability when committing the transaction.
 
 The value of this property is defined in the `options` parameter when creating a transaction using {{domxref("IDBDatabase.transaction()")}}.
 
-## Syntax
-
-```js
-var transactionDurability = idbTransaction.durability;
-```
-
-### Value
+## Value
 
 Any of the following literal {{jsxref('String', 'strings')}}:
 
-- `"strict"`: The user agent may consider that the transaction has
-  successfully committed only after verifying that all outstanding changes have been
-  successfully written to a persistent storage medium.
-- `"relaxed"`: The user agent may consider that the transaction has
-  successfully committed as soon as all outstanding changes have been written to the
-  operating system, without subsequent verification.
-- `"default"`: The user agent should use its default durability behavior
-  for the storage bucket. This is the default for transactions if not otherwise
-  specified.
+- `"strict"`
+  - : The user agent may consider that the transaction has
+    successfully committed only after verifying that all outstanding changes have been
+    successfully written to a persistent storage medium.
+- `"relaxed"`
+  - : The user agent may consider that the transaction has
+    successfully committed as soon as all outstanding changes have been written to the
+    operating system, without subsequent verification.
+- `"default"`
+  - : The user agent should use its default durability behavior
+    for the storage bucket. This is the default for transactions if not otherwise
+    specified.
 
 ## Examples
 

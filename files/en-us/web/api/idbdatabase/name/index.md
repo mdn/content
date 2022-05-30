@@ -15,28 +15,22 @@ browser-compat: api.IDBDatabase.name
 {{ APIRef("IndexedDB") }}
 
 The **`name`** read-only property of the
-`IDBDatabase` interface is a {{ domxref("DOMString")}} that contains the
+`IDBDatabase` interface is a string that contains the
 name of the connected database.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var dbName = IDBDatabase.name;
-```
+A string containing the name of the connected database.
 
-### Value
-
-A {{ domxref("DOMString")}} containing the name of the connected database.
-
-## Example
+## Examples
 
 This example shows a database connection being opened, the resulting
 {{domxref("IDBDatabase")}} object being stored in a db variable, and the name property
 then being logged. For a full example, see our
-[To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages)
- app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/)).
+[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+ app ([view example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
 // Let us open our database

@@ -45,6 +45,7 @@ export { variable1 as name1, variable2 as name2, …, nameN };
 
 // Exporting destructured assignments with renaming
 export const { name1, name2: bar } = o;
+export const [ name1, name2 ] = array;
 
 // Default exports
 export default expression;
@@ -288,9 +289,6 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 
 - {{jsxref("Statements/import", "import")}}
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
-- [ES6 in Depth:
-  Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [ES
-  modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book:
-  "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

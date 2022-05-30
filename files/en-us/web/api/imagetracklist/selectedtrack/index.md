@@ -13,7 +13,7 @@ browser-compat: api.ImageTrackList.selectedTrack
 
 The **`selectedTrack`** property of the {{domxref("ImageTrackList")}} interface returns an {{domxref("ImageTrack")}} object representing the currently selected track.
 
-### Value
+## Value
 
 An {{domxref("ImageTrack")}} object.
 

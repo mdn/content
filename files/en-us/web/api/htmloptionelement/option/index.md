@@ -20,17 +20,21 @@ The **`Option()`** constructor creates a new
 ## Syntax
 
 ```js
-var optionElementReference = new Option(text, value, defaultSelected, selected);
+new Option()
+new Option(text)
+new Option(text, value)
+new Option(text, value, defaultSelected)
+new Option(text, value, defaultSelected, selected)
 ```
 
 ### Parameters
 
 - `text` {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the content of the element, i.e. the
+  - : A string representing the content of the element, i.e. the
     displayed text. If this is not specified, a default value of "" (empty string) is
     used.
 - `value` {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the value of the
+  - : A string representing the value of the
     {{domxref("HTMLOptionElement")}}, i.e. the value attribute of the equivalent
     {{htmlelement("option")}}. If this is not specified, the value of text is used as the
     value, e.g. for the associated {{htmlelement("select")}} element's value when the form

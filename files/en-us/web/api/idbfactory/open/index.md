@@ -30,18 +30,16 @@ May trigger `upgradeneeded`, `blocked` or
 
 ## Syntax
 
-For the current standard:
-
 ```js
-var IDBOpenDBRequest = indexedDB.open(name);
-var IDBOpenDBRequest = indexedDB.open(name, version);
+open(name)
+open(name, version)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the database.
-- version {{optional_inline}}
+- `version` {{optional_inline}}
   - : Optional. The version to open the database with. If the version is not provided and
     the database exists, then a connection to the database will be opened without changing
     its version. If the version is not provided and the database does not exist, then it
@@ -62,8 +60,7 @@ var IDBOpenDBRequest = indexedDB.open(name, version);
     > {{domxref("StorageManager.persist()")}} to get persistent storage instead.
 
 > **Note:** You can find out more information on the different available
-> storage types, and how Firefox handles client-side data storage, at [Browser
-> storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
+> storage types, and how Firefox handles client-side data storage, at [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
 
 ### Return value
 
@@ -72,13 +69,10 @@ request are fired.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- {{jsxref("TypeError")}}
+  - : Thrown if the value of `version` is not a number greater than zero.
 
-| Exception   | Description                                                        |
-| ----------- | ------------------------------------------------------------------ |
-| `TypeError` | The value of version is zero or a negative number or not a number. |
-
-## Example
+## Examples
 
 Example of calling `open` with the current specification's
 `version` parameter:
@@ -88,8 +82,7 @@ var request = window.indexedDB.open("toDoList", 4);
 ```
 
 In the following code snippet, we make a request to open a database, and include
-handlers for the success and error cases. For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+handlers for the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([View the example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
 var note = document.querySelector("ul");
@@ -139,5 +132,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

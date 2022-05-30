@@ -29,6 +29,7 @@ overflow-x: auto;
 overflow-x: inherit;
 overflow-x: initial;
 overflow-x: revert;
+overflow-x: revert-layer;
 overflow-x: unset;
 ```
 

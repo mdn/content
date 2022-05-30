@@ -44,17 +44,9 @@ This property cannot be changed during while the `SourceBuffer` is
 processing either an {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} or
 {{domxref("SourceBuffer.remove","remove()")}} call.
 
-## Syntax
+## Value
 
-```js
-var myMode = sourceBuffer.mode;
-
-sourceBuffer.mode = 'sequence';
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ### Exceptions
 
@@ -71,7 +63,7 @@ The following exceptions may be thrown when setting a new value for this propert
         `SourceBuffer` has been removed from the
         {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 This snippet sets the `sourceBuffer` mode to `'sequence'` if it
 is currently set to `'segments'`, thus setting the play order to the sequence

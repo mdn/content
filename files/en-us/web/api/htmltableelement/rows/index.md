@@ -25,20 +25,14 @@ contained within any {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, and
 Although the property itself is read-only, the returned object is live and allows the
 modification of its content.
 
-## Syntax
-
-```js
-HTMLCollectionObject = table.rows;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}} providing a live-updating list of the
 {{domxref("HTMLTableRowElement")}} objects representing all of the {{HTMLElement("tr")}}
 elements contained in the table. This provides quick access to all of the table rows,
 without having to manually search for them.
 
-## Example
+## Examples
 
 ```js
 myrows = mytable.rows;

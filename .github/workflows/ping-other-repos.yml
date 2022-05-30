@@ -19,7 +19,7 @@ jobs:
       - name: Ping w3c/mdn-spec-links
         # This is one of many possible repos we can ping. When adding other
         # repos, you can follow this w3c/mdn-spec-links one as an example.
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.REPO_PINGER_MDN_SPEC_LINKS }}
           repository: w3c/mdn-spec-links

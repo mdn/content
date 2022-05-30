@@ -1,6 +1,7 @@
 ---
 title: btoa()
 slug: Web/API/btoa
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -8,9 +9,6 @@ tags:
   - Reference
   - Polyfill
   - Web
-  - btoa
-  - data
-  - strings
 browser-compat: api.btoa
 ---
 {{APIRef("HTML DOM")}}
@@ -28,7 +26,7 @@ characters such as ASCII values 0 through 31.
 ## Syntax
 
 ```js
-var encodedData = btoa(stringToEncode);
+btoa(stringToEncode)
 ```
 
 ### Parameters
@@ -47,7 +45,7 @@ An ASCII string containing the Base64 representation of
   - : The string contained a character that did not fit in a single byte. See "Unicode
     strings" below for more detail.
 
-## Example
+## Examples
 
 ```js
 const encodedData = btoa('Hello, world'); // encode a string
@@ -126,7 +124,7 @@ const original = fromBinary(decoded);
 console.log(original);                // ☸☹☺☻☼☾☿
 ```
 
-See also the example `utf8_to_b64` and `b64_to_utf8` functions in the [Solution #1 – escaping the string before encoding it](https://developer.mozilla.org/en-US/docs/Glossary/Base64#solution_1_%E2%80%93_escaping_the_string_before_encoding_it) section of the {{Glossary("Base64")}} glossary entry.
+See also the example `utf8_to_b64` and `b64_to_utf8` functions in the [Solution #1 – escaping the string before encoding it](/en-US/docs/Glossary/Base64#solution_1_%E2%80%93_escaping_the_string_before_encoding_it) section of the {{Glossary("Base64")}} glossary entry.
 
 ## Specifications
 
@@ -139,7 +137,6 @@ See also the example `utf8_to_b64` and `b64_to_utf8` functions in the [Solution 
 ## See also
 
 - [A polyfill of `btoa`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("atob","atob()")}}
 - {{Glossary("Base64")}}
-- [Polyfill](https://github.com/MaxArt2501/base64-js/blob/master/base64.js)

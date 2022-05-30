@@ -18,7 +18,7 @@ The `USBInTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebU
 
 ## Constructor
 
-- {{domxref("USBInTransferResult.USBInTransferResult()")}}
+- {{domxref("USBInTransferResult.USBInTransferResult", "USBInTransferResult()")}}
   - : Creates a new `USBInTransferResult` object with the provided `status` and `data` fields.
 
 ## Properties

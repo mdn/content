@@ -1,6 +1,7 @@
 ---
 title: CSS.supports()
 slug: Web/API/CSS/supports
+page-type: web-api-static-method
 tags:
   - API
   - CSS
@@ -18,8 +19,8 @@ indicating if the browser supports a given CSS feature, or not.
 ## Syntax
 
 ```js
-CSS.supports(propertyName, value);
-CSS.supports(supportCondition);
+supports(propertyName, value)
+supports(supportCondition)
 ```
 
 ### Parameters
@@ -28,15 +29,15 @@ There are two distinct sets of parameters. The first one allows to test the supp
 a pair _property-value_:
 
 - `propertyName`
-  - : A {{domxref("DOMString")}} containing the name of the CSS property to check.
+  - : A string containing the name of the CSS property to check.
 - `value`
-  - : A {{domxref("DOMString")}} containing the value of the CSS property to check.
+  - : A string containing the value of the CSS property to check.
 
 The second syntax takes one parameter matching the condition of
 {{cssxref("@supports")}}:
 
 - `supportCondition`
-  - : A {{domxref("DOMString")}} containing the condition to check.
+  - : A string containing the condition to check.
 
 ### Return value
 

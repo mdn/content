@@ -30,14 +30,12 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 
 ## Events
 
-- `controllerchange`
+- [`controllerchange`](/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
   - : Occurs when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
-    Also available via the {{domxref("ServiceWorkerContainer.oncontrollerchange")}} property.
-- `error`
+- [`error`](/en-US/docs/Web/API/ServiceWorkerContainer/error_event)
   - : Fired whenever an error occurs in the associated service workers.
 - [`message`](/en-US/docs/Web/API/ServiceWorkerContainer/message_event)
-  - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
-    Also available via the {{domxref("ServiceWorkerContainer.onmessage")}} property.
+  - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
 
 ## Methods
 

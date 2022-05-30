@@ -9,6 +9,7 @@ tags:
   - Pointer Events
   - Web
   - events
+browser-compat: api.PointerEvent
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
@@ -28,7 +29,7 @@ Additionally, a pointer event contains the usual properties present in mouse eve
 
 ### active buttons state
 
-The condition when a _[pointer](#pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
+The condition when a _[pointer](#pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is pressed while hovering.
 
 ### active pointer
 
@@ -103,7 +104,7 @@ Below is a short description of each event type and its associated {{domxref("Gl
   </thead>
   <tbody>
     <tr>
-      <td>{{event('pointerover')}}</td>
+      <td>{{domxref('HTMLElement/pointerover_event', 'pointerover')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}
       </td>
@@ -113,7 +114,7 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerenter')}}</td>
+      <td>{{domxref('HTMLElement/pointerenter_event', 'pointerenter')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}
       </td>
@@ -125,14 +126,14 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerdown')}}</td>
+      <td>{{domxref('HTMLElement/pointerdown_event', 'pointerdown')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}
       </td>
       <td>Fired when a pointer becomes <em>active buttons state</em>.</td>
     </tr>
     <tr>
-      <td>{{event('pointermove')}}</td>
+      <td>{{domxref('HTMLElement/pointermove_event', 'pointermove')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}
       </td>
@@ -142,14 +143,14 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerup')}}</td>
+      <td>{{domxref('HTMLElement/pointerup_event', 'pointerup')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}
       </td>
       <td>Fired when a pointer is no longer <em>active buttons state</em>.</td>
     </tr>
     <tr>
-      <td>{{event('pointercancel')}}</td>
+      <td>{{domxref('HTMLElement/pointercancel_event', 'pointercancel')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}
       </td>
@@ -159,7 +160,7 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerout')}}</td>
+      <td>{{domxref('HTMLElement/pointerout_event', 'pointerout')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}
       </td>
@@ -173,7 +174,7 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('pointerleave')}}</td>
+      <td>{{domxref('HTMLElement/pointerleave_event', 'pointerleave')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}
       </td>
@@ -185,14 +186,14 @@ Below is a short description of each event type and its associated {{domxref("Gl
       </td>
     </tr>
     <tr>
-      <td>{{event('gotpointercapture')}}</td>
+      <td>{{domxref('HTMLElement/gotpointercapture_event', 'gotpointercapture')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}
       </td>
       <td>Fired when an element receives pointer capture.</td>
     </tr>
     <tr>
-      <td>{{event('lostpointercapture')}}</td>
+      <td>{{domxref('HTMLElement/lostpointercapture_event', 'lostpointercapture')}}</td>
       <td>
         {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}}
       </td>
@@ -259,7 +260,7 @@ This example registers a handler for every event type for the given element.
 
 ### Event properties
 
-This example illustrates accessing all of a touch event's properties.
+This example illustrates accessing all of a pointer event's properties.
 
 ```html
 <html>
@@ -340,7 +341,7 @@ For mouse there is only one pointer, so it will always be the primary pointer. F
 
 ## Determining button states
 
-Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. depressing an additional button while another button on the pointer device is already depressed.
+Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. pressing an additional button while another button on the pointer device is already pressed.
 
 To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).
 
@@ -385,7 +386,7 @@ The following example shows pointer capture being set on an element.
 </html>
 ```
 
-The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.
+The following example shows a pointer capture being released (when a {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event occurs. The browser does this automatically when a {{domxref("HTMLElement/pointerup_event", "pointerup")}} or {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event occurs.
 
 ```html
 <html>
@@ -467,15 +468,13 @@ Here are some _best practices_ to consider when using pointer events:
 
 ## Specifications
 
-| Specification                                          |
-| ------------------------------------------------------ |
-| [Pointer Events](https://w3c.github.io/pointerevents/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
-Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.
+Some additional values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
 
 ## Demos and examples
 

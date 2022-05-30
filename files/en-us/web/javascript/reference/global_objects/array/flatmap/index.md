@@ -43,14 +43,16 @@ flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function that produces an element of the new Array, taking three arguments:
+  - : Function that produces an element of the new Array.
+
+    The function is called with the following arguments:
 
     - `currentValue`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
-      - : The array `map` was called upon.
+    - `array`
+      - : The array `flatMap` was called upon.
 
 - `thisArg`{{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
@@ -74,14 +76,14 @@ of depth 1.
 #### Pre-allocate and explicitly iterate
 
 ```js
-var arr = [1, 2, 3, 4];
+let arr = [1, 2, 3, 4];
 
 arr.flatMap(x => [x, x * 2]);
 // is equivalent to
-var n = arr.length;
-var acc = new Array(n * 2);
+const n = arr.length;
+const acc = new Array(n * 2);
 for (let i = 0; i < n; i++){
-  var x = arr[i];
+  let x = arr[i];
   acc[i * 2] = x;
   acc[i * 2 + 1] = x * 2;
 }

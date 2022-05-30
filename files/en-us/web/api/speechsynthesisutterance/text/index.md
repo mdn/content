@@ -20,16 +20,9 @@ The **`text`** property of the
 The text may be provided as plain text, or a well-formed [SSML](https://www.w3.org/TR/speech-synthesis/) document.
 The SSML tags will be stripped away by devices that don't support SSML.
 
-## Syntax
+## Value
 
-```js
-var myText = speechSynthesisUtteranceInstance.text;
-speechSynthesisUtteranceInstance.text = 'Hello I am speaking';
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the text to the synthesized.
+A string representing the text to the synthesized.
 The maximum length of the text that can be spoken in each utterance is 32,767 characters.
 
 ## Examples

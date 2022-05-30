@@ -7,6 +7,7 @@ tags:
   - Performance
   - Overview
   - Reference
+browser-compat: api.PerformanceElementTiming
 ---
 {{DefaultAPISidebar("Element Timing")}}
 
@@ -47,15 +48,11 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Element Timing API')}} | {{Spec2('Element Timing API')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### PerformanceElementTiming
-
-{{Compat("api.PerformanceElementTiming")}}
+{{Compat}}
 
 ## See also
 

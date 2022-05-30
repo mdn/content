@@ -16,16 +16,9 @@ The **`innerHTML`** property of the {{domxref("ShadowRoot")}}
 interface sets or returns a reference to the DOM tree inside the
 `ShadowRoot`.
 
-## Syntax
+## Value
 
-```js
-var domString = shadowRoot.innerHTML
-shadowRoot.innerHTML = domString
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: console
 slug: Web/API/console
+page-type: web-api-interface
 tags:
   - API
   - Debugging
@@ -12,7 +13,7 @@ browser-compat: api.console
 {{APIRef("Console API")}}
 
 The **`console`** object provides access to the browser's
-debugging console (e.g. the [Web console](/en-US/docs/Tools/Web_Console) in Firefox).
+debugging console (e.g. the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox).
 The specifics of how it works varies from browser to browser, but there is a _de facto_
 set of features that are typically provided.
 
@@ -25,8 +26,8 @@ property console. It's exposed as {{domxref("Window.console")}}, and can be refe
 console.log("Failed to open the specified link")
 ```
 
-This page documents the {{anch("Methods")}} available on the `console` object and
-gives a few {{anch("Usage")}} examples.
+This page documents the [Methods](#methods) available on the `console` object and
+gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
@@ -48,7 +49,7 @@ gives a few {{anch("Usage")}} examples.
   - : Displays an XML/HTML Element representation of the specified object if possible or the JavaScript Object view if it is not possible.
 - {{domxref("console.error()")}}
   - : Outputs an error message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
-- {{domxref("console.exception()")}} {{Non-standard_inline}} {{deprecated_inline}}
+- `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : An alias for `error()`.
 - {{domxref("console.group()")}}
   - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `groupEnd()`.
@@ -61,9 +62,9 @@ gives a few {{anch("Usage")}} examples.
 - {{domxref("console.log()")}}
   - : For general output of logging information. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
 - {{domxref("console.profile()")}} {{Non-standard_inline}}
-  - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](/en-US/docs/Tools/Performance)). You can specify an optional name for the profile.
+  - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)). You can specify an optional name for the profile.
 - {{domxref("console.profileEnd()")}} {{Non-standard_inline}}
-  - : Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the [Firefox performance tool](/en-US/docs/Tools/Performance)).
+  - : Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
 - {{domxref("console.table()")}}
   - : Displays tabular data as a table.
 - {{domxref("console.time()")}}
@@ -73,7 +74,7 @@ gives a few {{anch("Usage")}} examples.
 - {{domxref("console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/devtools/docs/timeline) or [Waterfall](/en-US/docs/Tools/Performance/Waterfall) tool.
+  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) tool.
 - {{domxref("console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console.warn()")}}
@@ -83,7 +84,7 @@ gives a few {{anch("Usage")}} examples.
 
 ### Outputting text to the console
 
-The most frequently-used feature of the console is logging of text and other data. There are four categories of output you can generate, using the {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, and {{domxref("console.error()")}} methods respectively. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.
+The most frequently-used feature of the console is logging of text and other data. There are several categories of output you can generate, using the {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}}, or {{domxref("console.debug()")}} methods. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.
 
 There are two ways to use each of the output methods; you can pass in a list of objects whose string representations get concatenated into one string, then output to the console, or you can pass in a string containing zero or more substitution strings followed by a list of objects to replace them.
 
@@ -271,12 +272,12 @@ The output in the console looks something like this:
 
 ## See also
 
-- [Firefox Developer Tools](/en-US/docs/Tools)
-- [Web console](/en-US/docs/Tools/Web_Console) — how the Web console in Firefox handles console API calls
-- [Remote Debugging](/en-US/docs/Tools/Remote_Debugging) — how to see console output when the debugging target is a mobile device
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web console in Firefox handles console API calls
+- [Remote Debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device
 
 ### Other implementations
 
-- [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/microsoft-edge/devtools-guide/console/console-api)
-- [Safari Web Inspector](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
+- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
+- [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

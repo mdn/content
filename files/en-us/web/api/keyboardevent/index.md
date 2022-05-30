@@ -17,7 +17,7 @@ tags:
   - user input
 browser-compat: api.KeyboardEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ({{event('keydown')}}, {{event('keypress')}}, or {{event('keyup')}}) identifies what kind of keyboard activity occurred.
 
@@ -121,11 +121,11 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : Returns a boolean value that is `true` if the  <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) key was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the  <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
 
-  - : Returns a {{domxref("DOMString")}} with the code value of the physical key represented by the event.
+  - : Returns a string with the code value of the physical key represented by the event.
 
     > **Warning:** This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
 
@@ -136,15 +136,15 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} representing the key value of the key represented by the event.
+  - : Returns a string representing the key value of the key represented by the event.
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
 
-  - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
+  - : Returns a string representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
     > **Note:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
-  - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in {{anch("Keyboard locations")}}.
+  - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in [Keyboard locations](#keyboard_locations).
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
   - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
@@ -174,7 +174,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
 
-  - : Returns a {{domxref("DOMString")}} representing the character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string.
+  - : Returns a string representing the character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string.
 
     > **Note:** If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
 

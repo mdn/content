@@ -15,17 +15,11 @@ browser-compat: api.Element.localName
 The **`Element.localName`** read-only property returns the
 local part of the qualified name of an element.
 
-## Syntax
+## Value
 
-```js
-name = element.localName
-```
+A string representing the local part of the element's qualified name.
 
-### Return value
-
-A {{domxref("DOMString")}} representing the local part of the element's qualified name.
-
-## Example
+## Examples
 
 (Must be served with XML content type, such as `text/xml` or
 `application/xhtml+xml`.)

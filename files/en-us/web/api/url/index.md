@@ -31,47 +31,47 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 
 ## Constructor
 
-- {{domxref("URL.URL", "new URL()")}}
+- {{domxref("URL.URL", "URL()")}}
   - : Creates and returns a `URL` object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.
 
 ## Properties
 
 - {{domxref("URL.hash", "hash")}}
-  - : A {{domxref("USVString")}} containing a `'#'` followed by the fragment identifier of the URL.
+  - : A string containing a `'#'` followed by the fragment identifier of the URL.
 - {{domxref("URL.host", "host")}}
-  - : A {{domxref("USVString")}} containing the domain (that is the _hostname_) followed by (if a port was specified) a `':'` and the _port_ of the URL.
+  - : A string containing the domain (that is the _hostname_) followed by (if a port was specified) a `':'` and the _port_ of the URL.
 - {{domxref("URL.hostname", "hostname")}}
-  - : A {{domxref("USVString")}} containing the domain of the URL.
+  - : A string containing the domain of the URL.
 - {{domxref("URL.href", "href")}}
-  - : A {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the whole URL.
+  - : A {{Glossary("stringifier")}} that returns a string containing the whole URL.
 - {{domxref("URL.origin", "origin")}} {{readonlyInline}}
-  - : Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.
+  - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("URL.password", "password")}}
-  - : A {{domxref("USVString")}} containing the password specified before the domain name.
+  - : A string containing the password specified before the domain name.
 - {{domxref("URL.pathname", "pathname")}}
-  - : Is a {{domxref("USVString")}} containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+  - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("URL.port", "port")}}
-  - : A {{domxref("USVString")}} containing the port number of the URL.
+  - : A string containing the port number of the URL.
 - {{domxref("URL.protocol", "protocol")}}
-  - : A {{domxref("USVString")}} containing the protocol scheme of the URL, including the final `':'`.
+  - : A string containing the protocol scheme of the URL, including the final `':'`.
 - {{domxref("URL.search", "search")}}
-  - : A {{domxref("USVString")}} indicating the URL's parameter string; if any parameters are provided, this string includes all of them, beginning with the leading `?` character.
+  - : A string indicating the URL's parameter string; if any parameters are provided, this string includes all of them, beginning with the leading `?` character.
 - {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
   - : A {{domxref("URLSearchParams")}} object which can be used to access the individual query parameters found in `search`.
 - {{domxref("URL.username","username")}}
-  - : A {{domxref("USVString")}} containing the username specified before the domain name.
+  - : A string containing the username specified before the domain name.
 
 ## Methods
 
 - {{domxref("URL.toString", "toString()")}}
-  - : Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.
+  - : Returns a string containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.
 - {{domxref("URL.toJSON", "toJSON()")}}
-  - : Returns a {{domxref("USVString")}} containing the whole URL. It returns the same string as the `href` property.
+  - : Returns a string containing the whole URL. It returns the same string as the `href` property.
 
 ## Static methods
 
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : Returns a {{domxref("DOMString")}} containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
+  - : Returns a string containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
 

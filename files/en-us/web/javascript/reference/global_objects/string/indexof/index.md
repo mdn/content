@@ -27,7 +27,7 @@ indexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for. If the method is called with no arguments, `searchString` [is coerced](https://tc39.github.io/ecma262/#sec-tostring) to "`undefined`". Therefore,`'undefined'.indexOf()` returns `0` — because the substring `undefined` is found at position `0` in the string `undefined`. But `'undefine'.indexOf()`, returns `-1` — because the substring `undefined` is not found in the string `undefine`.
+  - : Substring to search for. If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to "`undefined`". Therefore,`'undefined'.indexOf()` returns `0` — because the substring `undefined` is found at position `0` in the string `undefined`. But `'undefine'.indexOf()`, returns `-1` — because the substring `undefined` is not found in the string `undefine`.
 
 - `position` {{optional_inline}}
 
@@ -35,7 +35,7 @@ indexOf(searchString, position)
 
     - `'hello world hello'.indexOf('o', -5)` returns `4` — because it causes the method to behave as if the second argument were `0`, and the first occurrence of `hello` at a position greater or equal to `0` is at position `4`.
 
-    - `'hello world hello'.lastIndexOf('world', 12)` returns `-1` — because, while it's true the substring `world` occurs at index `6`, that position is not greater than or equal to `12`.
+    - `'hello world hello'.indexOf('world', 12)` returns `-1` — because, while it's true the substring `world` occurs at index `6`, that position is not greater than or equal to `12`.
 
     - `'hello world hello'.indexOf('o', 99)` returns `-1`— because `99` is greater than the length of `hello world hello`, which causes the method to not search the string at all.
 

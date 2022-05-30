@@ -19,7 +19,7 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `OfflineAudioCompletionEv
 
 ## Constructor
 
-- {{domxref("OfflineAudioCompletionEvent.OfflineAudioCompletionEvent")}}
+- {{domxref("OfflineAudioCompletionEvent.OfflineAudioCompletionEvent", "OfflineAudioCompletionEvent()")}}
   - : Creates a new `OfflineAudioCompletionEvent` object instance.
 
 ## Properties

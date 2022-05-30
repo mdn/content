@@ -1,6 +1,7 @@
 ---
 title: CSSMatrixComponent()
 slug: Web/API/CSSMatrixComponent/CSSMatrixComponent
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,7 +22,8 @@ individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSMatrixComponent = new CSSMatrixComponent(matrix[,options]);
+new CSSMatrixComponent(matrix)
+new CSSMatrixComponent(matrix, options)
 ```
 
 ### Parameters

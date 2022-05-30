@@ -16,7 +16,7 @@ The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface
 ## Syntax
 
 ```js
-LargestContentfulPaint.toJSON();
+toJSON()
 ```
 
 ### Parameters

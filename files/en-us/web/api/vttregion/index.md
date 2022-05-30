@@ -19,7 +19,7 @@ The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on 
 ## Properties
 
 - {{domxref("VTTRegion.id")}}
-  - : A {{domxref("DOMString")}} that identifies the region.
+  - : A string that identifies the region.
 - {{domxref("VTTRegion.width")}}
   - : A `double` representing the width of the region, as a percentage of the video.
 - {{domxref("VTTRegion.lines")}}

@@ -20,22 +20,22 @@ with the associated stream to error.
 ## Syntax
 
 ```js
-readableByteStreamController.error(e);
+error(errorObject)
 ```
 
 ### Parameters
 
-- _e_
-  - : The error you want future interactions to fail with.
+- `errorObject`
+  - : Any object that you want future interactions to fail with.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableByteStreamController`, or the stream
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream
     is not readable for some other reason.
 
 ## Examples

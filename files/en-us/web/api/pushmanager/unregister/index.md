@@ -19,20 +19,20 @@ unregister and delete the specified endpoint.
 ## Syntax
 
 ```js
-var request = navigator.push.unregister(pushEndpoint);
+unregister(pushEndpoint)
 ```
 
-### Properties
+### Parameters
 
-- pushEndpoint
+- `pushEndpoint`
   - : A pushEndpoint to be unregistered.
 
-### Return
+### Return value
 
 A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
 
 If the method call is successful, the request's `result` will be a
-{{Anch("PushRegistration")}} object representing the endpoint that has been
+[PushRegistration](#pushregistration) object representing the endpoint that has been
 unregistered.
 
 ### PushRegistration
@@ -44,7 +44,7 @@ Those objects are anonymous JavaScript objects with the following properties:
 - `version`
   - : `Undefined` when `unregister.onsuccess` is called.
 
-## Example
+## Examples
 
 ```js
 var req = navigator.push.unregister(pushEndpoint);

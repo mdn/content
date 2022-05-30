@@ -1,6 +1,7 @@
 ---
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -8,14 +9,16 @@ tags:
   - barcode
   - barcode detection
   - shape detection
+  - Experimental
+browser-compat: api.BarcodeDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 
 ## Concepts and usage
 
-Support for barcode recognition within web apps unlocks a variety of use cases through supported barcode formats. QR codes can be used for online payments, web navigation or establishing social media connections, aztec codes can be used to scan boarding passes and shopping apps can use EAN or UPC barcodes to compare prices of physical items.
+Support for barcode recognition within web apps unlocks a variety of use cases through supported barcode formats. QR codes can be used for online payments, web navigation or establishing social media connections, Aztec codes can be used to scan boarding passes and shopping apps can use EAN or UPC barcodes to compare prices of physical items.
 
 Detection is achieved through the {{domxref('BarcodeDetector.detect()','detect()')}} method, which takes an image object; either an {{HTMLElement('img', ' element')}}, a {{domxref('Blob')}}, {{domxref('ImageData')}} or a {{domxref('CanvasImageSource')}}. Optional parameters can be passed to the {{domxref('BarcodeDetector')}} constructor to provide hints on which barcode formats to detect.
 
@@ -36,12 +39,12 @@ The Barcode Detection API supports the following barcode formats:
       <td>aztec</td>
       <td>
         A square two-dimensional matrix following iso24778 and with a square
-        bullseye pattern at their centre, thus resembling an Aztec pyramid. Does
+        bullseye pattern at their center, thus resembling an Aztec pyramid. Does
         not require a surrounding blank zone.
       </td>
       <td>
         <img
-          alt="A sample image of an aztec barcode. A square with smaller black and white squares inside"
+          alt="A sample image of an Aztec barcode. A square with smaller black and white squares inside"
           src="aztec.gif"
         />
       </td>
@@ -271,13 +274,11 @@ This example uses the `detect()` method to detect the barcodes within the given 
 
 ## Specifications
 
-| Specification                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------- |
-| [Accelerated Shape Detection in Images # barcode-detection-api](https://wicg.github.io/shape-detection-api/#barcode-detection-api) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.BarcodeDetector")}}
+{{Compat}}
 
 ## See also
 

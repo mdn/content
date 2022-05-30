@@ -50,6 +50,7 @@ place-self: stretch auto;
 place-self: inherit;
 place-self: initial;
 place-self: revert;
+place-self: revert-layer;
 place-self: unset;
 ```
 

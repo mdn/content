@@ -23,7 +23,7 @@ are made by passing options to the
 ## Syntax
 
 ```js
-var paymentRequestUpdateEvent = new PaymentRequestUpdateEvent()
+new PaymentRequestUpdateEvent()
 ```
 
 ### Parameters

@@ -247,7 +247,7 @@ const pendingRequests = [];
 // We can stop worrying about it.
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
-  var index = pendingRequests.indexOf(requestDetails.requestId);
+  let index = pendingRequests.indexOf(requestDetails.requestId);
   if (index > -1) {
     pendingRequests.splice(index, 1);
   }
@@ -294,7 +294,7 @@ const pendingRequests = [];
 */
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
-  var index = pendingRequests.indexOf(requestDetails.requestId);
+  let index = pendingRequests.indexOf(requestDetails.requestId);
   if (index > -1) {
     pendingRequests.splice(index, 1);
   }
@@ -336,7 +336,7 @@ browser.webRequest.onErrorOccurred.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onAuthRequired) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onAuthRequired) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

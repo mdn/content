@@ -20,8 +20,16 @@ This method will block while the print dialog is open.
 ## Syntax
 
 ```js
-window.print()
+print()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -34,5 +42,5 @@ window.print()
 ## See also
 
 - [Printing](/en-US/docs/Web/Guide/Printing)
-- {{ domxref("window.onbeforeprint") }}
-- {{ domxref("window.onafterprint") }}
+- {{ domxref("window.beforeprint_event", "beforeprint") }} event
+- {{ domxref("window.afterprint_event", "afterprint") }} event

@@ -1,6 +1,6 @@
 ---
 title: Robust
-slug: Web/Accessibility/Understanding_WCAG/Robust 
+slug: Web/Accessibility/Understanding_WCAG/Robust
 tags:
   - Accessibility
   - HTML

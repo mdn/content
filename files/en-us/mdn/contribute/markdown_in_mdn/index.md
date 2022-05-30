@@ -26,9 +26,10 @@ It's permissible for the info string to contain multiple words, like:
 ```
 ````
 
-In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words will be supported:
+In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
 - `bash`
+- `batch`
 - `cpp` (for C/C++)
 - `css`
 - `html`
@@ -249,11 +250,11 @@ Each of these top-level GFM `<li>` elements will be transformed into a
 For example, this is a `<dl>`:
 
 ````plain
-* term1
-    * : My description of term1
+- term1
+    - : My description of term1
 
-* `term2`
-    * : My description of term2
+- `term2`
+    - : My description of term2
 
       It can have multiple paragraphs, and code blocks too:
 
@@ -313,8 +314,8 @@ Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>
 As a workaround for cases where an author needs to associate multiple `<dt>` items with a single `<dd>`, consider providing them as a single `<dt>` that holds multiple terms, separated by commas, like this:
 
 ```plain
-* `param1`, `param2`, `param3`
-    * : My description of params 1, 2, and 3
+- `param1`, `param2`, `param3`
+    - : My description of params 1, 2, and 3
 ```
 
 The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.
@@ -391,7 +392,7 @@ Even when a table could be written in GFM it is sometimes better to use HTML, be
       <td>Something shortish</td>
       <td>Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
       <td>Something shortish</td>
-      <td>Another cell  with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
+      <td>Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
       <td>Something shortish</td>
       <td>Something shortish</td>
     </tr>
@@ -483,7 +484,7 @@ Writers will be able to include KumaScript macro calls in prose content:
 
 ```plain
 
-The **`margin`** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property
+The **`margin`** [CSS](/en-US/docs/Web/CSS) property
 sets the margin area on all four sides of an element. It is a shorthand for
 \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
 and \{{cssxref("margin-left")}}.

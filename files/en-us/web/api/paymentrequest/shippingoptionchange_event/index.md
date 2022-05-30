@@ -9,7 +9,7 @@ tags:
   - PaymentRequest
   - Reference
   - Shipping
-  - events
+  - Event
   - onshippingoptionchange
   - payment
   - shippingoptionchange
@@ -21,28 +21,27 @@ For payment requests that request shipping information, and for which shipping o
 
 The string identifying the currently-selected shipping option can be found in the {{domxref("PaymentRequest.shippingOption", "shippingOption")}} property.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PaymentRequestUpdateEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('shippingoptionchange', event => { });
+
+onshippingoptionchange = event => { };
+```
+
+## Event type
+
+An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PaymentRequestUpdateEvent")}}
+
+## Event properties
+
+_Provides only the properties inherited from {{domxref("Event")}}._
 
 ## Examples
 
@@ -62,7 +61,7 @@ paymentRequest.addEventListener("shippingoptionchange", event => {
 
 After calling a custom function, `calculateNewTotal()`, to compute the updated total based on the newly-selected shipping option as specified by the {{domxref("PaymentRequest.shippingOption", "shippingOption")}}. The revised total is submitted back to the payment request by calling the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method.
 
-You can also create an event handler for `shippingoptionchange` using its corresponding event handler property, {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}}:
+You can also create an event handler for `shippingoptionchange` using its corresponding event handler property, `onshippingoptionchange`:
 
 ```js
 paymentRequest.onshippingoptionchange = event => {
@@ -79,7 +78,3 @@ paymentRequest.onshippingoptionchange = event => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}} event handler property

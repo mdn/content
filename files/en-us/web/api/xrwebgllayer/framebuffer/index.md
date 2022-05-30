@@ -25,10 +25,10 @@ browser-compat: api.XRWebGLLayer.framebuffer
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebuffer`** is an opaque {{domxref("WebGLFramebuffer")}}
 which is used to buffer the rendered image if the [XR
-compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) is being used. Otherwise, this property's value is
+compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) is being used. Otherwise, this property's value is
 `null`. The opaque framebuffer is functionally nearly the same as a
 standard WebGL framebuffer, except for the differences covered in the section
-{{anch("How opaque framebuffers are special")}} below.
+[How opaque framebuffers are special](#how_opaque_framebuffers_are_special) below.
 
 ## Value
 

@@ -17,10 +17,18 @@ resources. The method has been kept for compatibility.
 ## Syntax
 
 ```js
-range.detach();
+detach()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var range = document.createRange();

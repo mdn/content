@@ -25,7 +25,7 @@ If the default values of the properties are acceptable, you can optionally use t
 ## Syntax
 
 ```js
-var oscillatorNode = new OscillatorNode(context, options)
+new OscillatorNode(context, options)
 ```
 
 ### Parameters

@@ -32,6 +32,7 @@ font-kerning: none;
 font-kerning: inherit;
 font-kerning: initial;
 font-kerning: revert;
+font-kerning: revert-layer;
 font-kerning: unset;
 ```
 

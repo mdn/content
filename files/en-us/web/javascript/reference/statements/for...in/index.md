@@ -9,8 +9,10 @@ browser-compat: javascript.statements.for_in
 ---
 {{jsSidebar("Statements")}}
 
-The **`for...in` statement** iterates over all [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object that are keyed by strings (ignoring ones keyed by [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)),
+The **`for...in` statement** iterates over all
+[enumerable properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+of an object that are keyed by strings
+(ignoring ones keyed by [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)),
 including inherited enumerable properties.
 
 {{EmbedInteractiveExample("pages/js/statement-forin.html")}}
@@ -79,11 +81,12 @@ not visit elements in a consistent order. Therefore, it is better to use a
 ### Iterating over own properties only
 
 If you only want to consider properties attached to the object itself, and not its
-prototypes, use {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} or
-perform a {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} check
-({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable()")}} can also
-be used). Alternatively, if you know there won't be any outside code interference, you
-can extend built-in prototypes with a check method.
+prototypes, you can use one of the following techniques:
+
+- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObject)")}}
+- {{jsxref("Object.hasOwn", "Object.hasOwn(myObject)")}}
+
+If `Object.hasOwn()` is not available, you can use {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} instead, but in this situation it's better to use the form `Object.prototype.hasOwnProperty.call(myObject, prop)`, in case `myObject` has overwritten the inherited `hasOwnProperty()` method.
 
 ## Why Use for...in?
 
@@ -167,9 +170,7 @@ for (var i = 0 in obj) {
 // 3
 ```
 
-This nonstandard behavior is now ignored in version 40 and later, and will present a
-{{jsxref("SyntaxError")}} ("[for-in
-loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)") error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) ([bug 748550](https://bugzilla.mozilla.org/show_bug.cgi?id=748550) and [bug 1164741](https://bugzilla.mozilla.org/show_bug.cgi?id=1164741)).
+This nonstandard behavior is now ignored in version 40 and later, and will present a {{jsxref("SyntaxError")}} ("[for-in loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)") error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) ([bug 748550](https://bugzilla.mozilla.org/show_bug.cgi?id=748550) and [bug 1164741](https://bugzilla.mozilla.org/show_bug.cgi?id=1164741)).
 
 Other engines such as v8 (Chrome), Chakra (IE/Edge), and JSC (WebKit/Safari) are
 investigating whether to remove the nonstandard behavior as well.
@@ -179,10 +180,8 @@ investigating whether to remove the nonstandard behavior as well.
 - {{jsxref("Statements/for...of", "for...of")}} – a similar statement that iterates
   over the property _values_
 - {{jsxref("Statements/for", "for")}}
-- [Iterators and
-  Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Iterators and Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Array.prototype.forEach()")}}

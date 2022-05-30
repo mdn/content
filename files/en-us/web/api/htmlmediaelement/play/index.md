@@ -26,7 +26,7 @@ permission issues, result in the promise being rejected.
 ## Syntax
 
 ```js
-var promise = HTMLMediaElement.play();
+play()
 ```
 
 ### Parameters
@@ -71,7 +71,7 @@ promise to be immediately rejected with a `NotAllowedError`. Web sites should
 be prepared to handle this situation. For example, a site should not present a user
 interface that assumes playback has begun automatically, but should instead update their
 UI based on whether the returned promise is fulfilled or rejected. See the
-{{anch("Example", "example")}} below for more information.
+[example](#example) below for more information.
 
 > **Note:** The `play()` method may cause the user to be asked
 > to grant permission to play the media, resulting in a possible delay before the
@@ -80,7 +80,7 @@ UI based on whether the returned promise is fulfilled or rejected. See the
 For even more in-depth information about autoplay and autoplay blocking, see our
 article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
-## Example
+## Examples
 
 This example demonstrates how to confirm that playback has begun and how to gracefully
 handle blocked automatic playback:

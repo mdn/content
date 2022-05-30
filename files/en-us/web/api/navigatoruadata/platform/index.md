@@ -15,7 +15,7 @@ The **`platform`** read-only property of the {{domxref("NavigatorUAData")}} inte
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the platform brand.
+A string containing the platform brand.
 For example, `"Windows"`.
 
 ## Examples

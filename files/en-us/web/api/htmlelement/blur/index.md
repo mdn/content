@@ -17,8 +17,16 @@ removes keyboard focus from the current element.
 ## Syntax
 
 ```js
-element.blur();
+blur()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

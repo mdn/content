@@ -21,23 +21,26 @@ This only works when the application is authorized to use the specified device.
 ## Syntax
 
 ```js
-HTMLMediaElement.setSinkId(sinkId).then(function() { /* ... */ })
+setSinkId(sinkId)
 ```
-
-### Returns
-
-A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ### Parameters
 
-- sinkId
+- `sinkId`
   - : The {{domxref("MediaDeviceInfo.deviceId")}} of the audio output device.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ### Exceptions
 
-| Exception                            | Explanation                               |
-| ------------------------------------ | ----------------------------------------- |
-| {{domxref("DOMException")}} | No permission to use the requested device |
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Returned if there is no permission to use the requested device.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Returned if the `deviceId` does not match any audio output device.
+- `AbortError` {{domxref("DOMException")}}
+  - : Returned if switching the audio output device to the new audio device failed.
 
 ## Examples
 

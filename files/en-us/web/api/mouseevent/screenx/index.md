@@ -11,25 +11,19 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.screenX
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`screenX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.
 
 > **Note:** In a multiscreen environment, screens aligned horizontally will be treated as a single device, and so the range of the `screenX` value will increase to the combined width of the screens.
 
-## Syntax
-
-```js
-var x = instanceOfMouseEvent.screenX
-```
-
-### Return value
+## Value
 
 A `double` floating point value.
 
 Early versions of the spec defined this as an integer referring to the number of pixels.
 
-## Example
+## Examples
 
 This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
 

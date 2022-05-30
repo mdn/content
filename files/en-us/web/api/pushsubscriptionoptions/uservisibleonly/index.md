@@ -13,13 +13,7 @@ browser-compat: api.PushSubscriptionOptions.userVisibleOnly
 
 The **`userVisibleOnly`** read-only property of the {{domxref("PushSubscriptionOptions")}} interface indicates if the returned push subscription will only be used for messages whose effect is made visible to the user.
 
-## Syntax
-
-```js
-let userVisibleOnly = PushSubscriptionOptions.userVisibleOnly;
-```
-
-### Value
+## Value
 
 A boolean value that indicates whether the returned push subscription will only be used for messages whose effect is made visible to the user.
 

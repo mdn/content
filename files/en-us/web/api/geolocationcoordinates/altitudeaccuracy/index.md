@@ -17,13 +17,7 @@ property is a strictly positive `double` representing the accuracy, with a
 95% confidence level, of the `altitude` expressed in meters. This value is
 `null` if the implementation doesn't support measuring altitude.
 
-## Syntax
-
-```js
-let altAcc = geolocationCoordinatesInstance.altitudeAccuracy
-```
-
-### Value
+## Value
 
 A positive `double` representing the accuracy, with a 95% confidence level,
 of the `altitude` expressed in meters.

@@ -10,8 +10,8 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing name after . operator" occurs when there is a problem
-with how the dot operator (`.`) is used for [property
-access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+with how the dot operator (`.`) is used
+for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
 
 ## Message
 
@@ -25,8 +25,8 @@ SyntaxError: missing name after . operator
 
 ## What went wrong?
 
-The dot operator (`.`) is used for [property
-access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). You will have to specify the name of the property that you want to access.
+The dot operator (`.`) is used for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+You will have to specify the name of the property that you want to access.
 For computed property access, you might need to change your property access from using a
 dot to using square brackets. These will allow you to compute an expression. Maybe you
 intended to do concatenation instead? A plus operator (`+`) is needed in that
@@ -36,9 +36,9 @@ case. Please see the examples below.
 
 ### Property access
 
-[Property
-accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) in JavaScript use either the dot (.) or square brackets
-(`[]`), but not both. Square brackets allow computed property access.
+[Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+in JavaScript use either the dot (.) or square brackets (`[]`), but not both.
+Square brackets allow computed property access.
 
 ```js example-bad
 var obj = { foo: { bar: "baz", bar2: "baz2" } };
@@ -81,5 +81,4 @@ console.log("Hello" + "World");
 
 ## See also
 
-- [Property
-  accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

@@ -23,7 +23,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Constructor
 
-- {{domxref("SyncEvent.SyncEvent()")}}
+- {{domxref("SyncEvent.SyncEvent", "SyncEvent()")}}
   - : Creates a new `SyncEvent` object.
 
 ## Properties

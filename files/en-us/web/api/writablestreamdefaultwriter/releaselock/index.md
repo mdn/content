@@ -22,7 +22,7 @@ in the same way from now on; otherwise, the writer will appear closed.
 ## Syntax
 
 ```js
-writableStreamDefaultWriter.releaseLock()
+releaseLock()
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

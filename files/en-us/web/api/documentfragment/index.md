@@ -5,7 +5,6 @@ tags:
   - API
   - DOM
   - DocumentFragment
-  - Documents
   - Interface
   - Reference
   - Web Components
@@ -42,9 +41,9 @@ _This interface has no specific properties, but inherits those of its parent, {{
 _This interface inherits the methods of its parent, {{domxref("Node")}}._
 
 - {{DOMxRef("DocumentFragment.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the document fragment.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document fragment.
 - {{DOMxRef("DocumentFragment.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the document fragment.
+  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document fragment.
 - {{domxref("DocumentFragment.querySelector()")}}
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
 - {{domxref("DocumentFragment.querySelectorAll()")}}
@@ -73,14 +72,14 @@ An empty `DocumentFragment` can be created using the {{domxref("document.createD
 ### JavaScript
 
 ```js
-var list = document.querySelector('#list')
-var fruits = ['Apple', 'Orange', 'Banana', 'Melon']
+const list = document.querySelector('#list')
+const fruits = ['Apple', 'Orange', 'Banana', 'Melon']
 
-var fragment = new DocumentFragment()
+const fragment = new DocumentFragment()
 
-fruits.forEach(function (fruit) {
-  var li = document.createElement('li')
-  li.innerHTML = fruit
+fruits.forEach((fruit) => {
+  const li = document.createElement('li')
+  li.textContent = fruit
   fragment.appendChild(li)
 })
 
@@ -98,7 +97,3 @@ list.appendChild(fragment)
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [The DOM interfaces index.](/en-US/docs/Web/API/Document_Object_Model)

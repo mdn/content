@@ -25,7 +25,7 @@ To use this API you must have the `"webRequestBlocking"` [API permission](/en-US
 ## Syntax
 
 ```js
-var filter = browser.webRequest.filterResponseData(
+let filter = browser.webRequest.filterResponseData(
   requestId       // string
 )
 ```

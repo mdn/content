@@ -29,7 +29,7 @@ new XSLTProcessor()
 - [Throws] void {{domxref("XSLTProcessor.importStylesheet")}}({{domxref("Node")}} styleSheet)
   - : Imports the XSLT stylesheet. If the given node is a document node, you can pass in a
     full XSL Transform or a [literal result element
-    transform](https://www.w3.org/TR/xslt#result-element-stylesheet); otherwise, it must be an `<xsl:stylesheet>` or
+    transform](https://www.w3.org/TR/xslt/#result-element-stylesheet); otherwise, it must be an `<xsl:stylesheet>` or
     `<xsl:transform>` element.
 - [Throws] {{domxref("DocumentFragment")}}
   {{domxref("XSLTProcessor.transformToFragment")}}({{domxref("Node")}} source, {{domxref("Document")}} owner)
@@ -43,7 +43,7 @@ new XSLTProcessor()
   - : Transforms the node source applying the stylesheet given importing using the
     {{domxref("XSLTProcessor.importStylesheet()")}} function.
 
-    The resultant object depends on the [output method](https://www.w3.org/TR/xslt#output) of the stylesheet:
+    The resultant object depends on the [output method](https://www.w3.org/TR/xslt/#output) of the stylesheet:
 
     | Output method | Result type                                                                                                      |
     | ------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -90,12 +90,9 @@ and not exposed to Web content:
 
 ## Examples
 
-1. [Basic
-    example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/Basic_Example)
-2. [Advanced
-    example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/Advanced_Example)
-3. [Additional
-    example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/JavaScript_XSLT_Bindings)
+1. [Basic example](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example)
+2. [Advanced example](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example)
+3. [Additional example](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings)
 
 ## Specifications
 
@@ -113,5 +110,4 @@ in Gecko.
 
 ## See also
 
-- [Using
-  the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+- [Using the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)

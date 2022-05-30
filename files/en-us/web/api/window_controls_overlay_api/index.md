@@ -44,7 +44,8 @@ PWAs can use the API to position content in this area, and avoid having content 
 
 ## CSS environment variables
 
-Progressive Web Apps can position their web content in the are that the title bar normally occupies by using the `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, and `titlebar-area-height` CSS environment variables. See [Using env() to ensure content is not obscured by window control buttons in desktop PWAs](/en-US/docs/Web/CSS/env()#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
+Progressive Web Apps can position their web content in the area that the title bar normally occupies by using the `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, and `titlebar-area-height` CSS environment variables.
+See [Using env() to ensure content is not obscured by window control buttons in desktop PWAs](/en-US/docs/Web/CSS/env#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
 
 ## Interfaces
 
@@ -63,4 +64,4 @@ Progressive Web Apps can position their web content in the are that the title ba
 
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)
-- [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
+- [Display content in the title bar](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)

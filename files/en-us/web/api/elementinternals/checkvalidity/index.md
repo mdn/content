@@ -18,7 +18,7 @@ If `checkValidity` returns `false` then a cancelable [invalid event](/en-US/docs
 ## Syntax
 
 ```js
-ElementInternals.checkValidity();
+checkValidity()
 ```
 
 ### Parameters

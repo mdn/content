@@ -1,6 +1,7 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,11 @@ discharging, its value is
 > browsers round them to a higher interval
 > (typically to the closest 15 minutes) for privacy reasons.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ### HTML Content
 

@@ -17,24 +17,15 @@ browser-compat: api.HTMLTableElement.align
 The **`HTMLTableElement.align`** property represents the
 alignment of the table.
 
-## Syntax
+## Value
 
-```js
-HTMLTableElement.align = alignment;
-var alignment = HTMLTableElement.align;
-```
+One of the following string values:
 
-### Parameters
+- `left`
+- `center`
+- `right`
 
-- `alignment`
-
-  - : {{DOMxRef("DOMString")}} with one of the following values:
-
-    - left
-    - center
-    - right
-
-## Example
+## Examples
 
 ```js
 // Set the alignment of a table

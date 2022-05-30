@@ -90,12 +90,12 @@ function onSet(result) {
 
 browser.browserAction.onClicked.addListener(() => {
 
-  var getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
+  let getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
   getting.then((got) => {
     console.log(got.value);
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
-      var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+      let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
         value: true
       });
       setting.then(onSet);
@@ -109,7 +109,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

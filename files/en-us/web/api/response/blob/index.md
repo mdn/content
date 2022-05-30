@@ -19,9 +19,7 @@ resolves with a {{domxref("Blob")}}.
 ## Syntax
 
 ```js
-response.blob().then(function(myBlob) {
-  // do something with myBlob
-});
+blob()
 ```
 
 ### Parameters
@@ -38,10 +36,9 @@ None.
 
 A promise that resolves with a {{domxref("Blob")}}.
 
-## Example
+## Examples
 
-In our [fetch
-request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)), we
+In our [fetch request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)), we
 create a new request using the {{domxref("Request.Request","Request()")}} constructor,
 then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}}
 out of the response using `blob()`, put it into an object URL using

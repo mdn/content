@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
@@ -26,9 +27,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-caches.delete(cacheName).then(function(boolean) {
-  // your cache is now deleted
-});
+delete(cacheName)
 ```
 
 ### Parameters

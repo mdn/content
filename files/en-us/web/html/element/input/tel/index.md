@@ -13,7 +13,7 @@ tags:
   - Input Type
   - Phone Numbers
   - Reference
-browser-compat: html.elements.input.input-tel
+browser-compat: html.elements.input.type_tel
 ---
 
 {{HTMLRef("Input_types")}}
@@ -29,9 +29,9 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a telephone number, or
+        A string representing a telephone number, or
         empty
       </td>
     </tr>
@@ -64,6 +64,10 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
       </td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -76,7 +80,7 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that either represents a telephone number or is an empty string (`""`).
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string that either represents a telephone number or is an empty string (`""`).
 
 ## Additional attributes
 
@@ -106,7 +110,7 @@ If the specified pattern is not specified or is invalid, no regular expression i
 
 > **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-See {{anch("Pattern validation")}} below for details and an example.
+See [Pattern validation](#pattern_validation) below for details and an example.
 
 ### placeholder
 
@@ -126,7 +130,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ## Non-standard attributes
 
@@ -143,17 +147,15 @@ A Safari extension, the `autocorrect` attribute is a string which indicates whet
 
 ### mozactionhint
 
-A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.
+A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
 
-> **Note:** This [has been standardized](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.
-
-Permitted values are: `go`, `done`, `next`, `search`, and `send`. The browser decides, using this hint, what label to put on the enter key.
+This attribute has been deprecated: use the {{htmlattrxref("enterkeyhint")}} global attribute instead.
 
 ## Using tel inputs
 
 Telephone numbers are a very commonly collected type of data on the web. When creating any kind of registration or e-commerce site, for example, you will likely need to ask the user for a telephone number, whether for business purposes or for emergency contact purposes. Given how commonly-entered phone numbers are, it's unfortunate that a "one size fits all" solution for validating phone numbers is not practical.
 
-Fortunately, you can consider the requirements of your own site and implement an appropriate level of validation yourself. See {{anch("Validation")}}, below, for details.
+Fortunately, you can consider the requirements of your own site and implement an appropriate level of validation yourself. See [Validation](#validation), below, for details.
 
 ### Custom keyboards
 
@@ -217,7 +219,7 @@ The example below creates a 20-character wide telephone number entry box, requir
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-> **Note:** The above attributes do affect {{anch("Validation")}} — the above example's inputs will count as invalid if the length of the value is less than 9 characters, or more than 14. Most browser won't even let you enter a value over the max length.
+> **Note:** The above attributes do affect [Validation](#validation) — the above example's inputs will count as invalid if the length of the value is less than 9 characters, or more than 14. Most browser won't even let you enter a value over the max length.
 
 ### Providing default options
 

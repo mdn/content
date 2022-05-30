@@ -54,7 +54,7 @@ The gain is a unitless value, changing with time, that is multiplied to each cor
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("GainNode.gain")}} {{readonlyinline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of gain to apply. You have to set {{domxref("AudioParam.value")}} or use the methods of `AudioParam` to change the effect of gain.
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of gain to apply. You have to set {{domxref("AudioParam.value")}} or use the methods of `AudioParam` to change the effect of gain.
 
 ## Methods
 

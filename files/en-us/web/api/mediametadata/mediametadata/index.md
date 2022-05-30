@@ -3,6 +3,7 @@ title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
 tags:
   - Audio
+  - Experimental
   - Media
   - Media Session API
   - MediaMetadata
@@ -21,12 +22,13 @@ The **`MediaMetadata()`** constructor creates a new
 ## Syntax
 
 ```js
-var mediaMetadata = new MediaMetadata([metadata])
+new MediaMetadata()
+new MediaMetadata(metadata)
 ```
 
 ### Parameters
 
-- _metadata_ {{optional_inline}}
+- `metadata` {{optional_inline}}
 
   - : The metadata parameters are as follows:
 

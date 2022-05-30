@@ -56,8 +56,9 @@ Blocks are commonly used in association with {{jsxref("Statements/if...else",
 
 ### Block scoping rules with var or function declaration in non-strict mode
 
-Variables declared with `var` or created by [function
-declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function) in non-strict mode **do not** have block scope.
+Variables declared with `var` or created by
+[function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+in non-strict mode **do not** have block scope.
 Variables introduced within a block are scoped to the containing function or script, and
 the effects of setting them persist beyond the block itself. In other words, block
 statements do not introduce a scope. For example:

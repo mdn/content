@@ -69,7 +69,7 @@ parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format
 `/documents/foo?format=xml`, and so on.
 
 Then the client could remember that the JSON version is available at that particular
-URL, skipping content negotation the next time it requests that document.
+URL, skipping content negotiation the next time it requests that document.
 
 The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, such
 as {{HTTPHeader("Accept-Language")}}.

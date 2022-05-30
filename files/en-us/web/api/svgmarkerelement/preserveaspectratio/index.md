@@ -13,13 +13,7 @@ browser-compat: api.SVGMarkerElement.preserveAspectRatio
 
 The **`preserveAspectRatio`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedPreserveAspectRatio")}} object containing the value of the {{SVGattr("preserveAspectRatio")}} attribute of the {{SVGElement("marker")}}.
 
-## Syntax
-
-```js
-let preserveAspectRatio = SVGMarkerElement.preserveAspectRatio;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedPreserveAspectRatio")}} object. The `baseVal` property of this object returns an {{domxref("SVGPreserveAspectRatio")}} object, with the following properties:
 

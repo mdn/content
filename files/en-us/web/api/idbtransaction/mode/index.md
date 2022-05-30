@@ -22,51 +22,26 @@ read-only, or do you want to write to the object stores?) The default value is
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var myCurrentMode = IDBTransaction.mode;
-```
-
-### Value
-
-An {{domxref("IDBTransactionMode")}} object defining the mode for isolating access to
+An object defining the mode for isolating access to
 data in the current object stores:
+A string defining the mode for isolating access to data in the current object stores.
+The following values are available:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Value</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>readonly</code></td>
-      <td>Allows data to be read but not changed.</td>
-    </tr>
-    <tr>
-      <td><code>readwrite</code></td>
-      <td>
-        Allows reading and writing of data in existing data stores to be
-        changed.
-      </td>
-    </tr>
-    <tr>
-      <td><code>versionchange</code></td>
-      <td>
-        Allows any operation to be performed, including ones that delete and
-        create object stores and indexes. This mode is for updating the version
-        number of transactions that were started using
-        {{domxref("IDBDatabase.setVersion()")}}. Transactions of
-        this mode cannot run concurrently with other transactions. Transactions
-        in this mode are known as "upgrade transactions."
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `readonly`
+  - : Allows data to be read but not changed.
+- `readwrite`
+  - : Allows reading and writing of data in existing data stores to be changed.
+- `versionchange`
+  - : Allows any operation to be performed, including ones that delete and
+    create object stores and indexes.
+    This mode is for updating the version number of transactions
+    that were started using {{domxref("IDBDatabase.setVersion()")}}.
+    Transactions of this mode cannot run concurrently with other transactions.
+    Transactions in this mode are known as _upgrade transactions_.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event

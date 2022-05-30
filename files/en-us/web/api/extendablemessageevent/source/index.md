@@ -17,13 +17,7 @@ The **`source`** read-only property of the
 {{domxref("ExtendableMessageEvent")}} interface returns a reference to the
 {{domxref("Client")}} object from which the message was sent.
 
-## Syntax
-
-```js
-var mySource = extendableMessageEvent.source;
-```
-
-### Value
+## Value
 
 A {{domxref("Client")}}, {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}}
 object.

@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.keys()
 slug: Web/API/CSSTransformValue/keys
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,12 +22,12 @@ for each index in the array.
 ## Syntax
 
 ```js
-CSSTransformValue.keys();
+keys()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

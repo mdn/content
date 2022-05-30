@@ -124,7 +124,7 @@ superHeroes['members'][1]['powers'][2]
 4. Inside this object, we want to access the `powers` property, so we use `["powers"]`.
 5. Inside the `powers` property is an array containing the selected hero's superpowers. We want the third one, so we use `[2]`.
 
-> **Note:** We've made the JSON seen above available inside a variable in our [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) example (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)). Try loading this up and then accessing data inside the variable via your browser's JavaScript console.
+> **Note:** We've made the JSON seen above available inside a variable in our [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)). Try loading this up and then accessing data inside the variable via your browser's JavaScript console.
 
 ### Arrays as JSON
 
@@ -171,7 +171,7 @@ So, let's work through an example to show how we could make use of some JSON for
 
 ### Getting started
 
-To begin with, make local copies of our [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) and [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css) files. The latter contains some simple CSS to style our page, while the former contains some very simple body HTML, plus a {{HTMLElement("script")}} element to contain the JavaScript code we will be writing in this exercise:
+To begin with, make local copies of our [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) and [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) files. The latter contains some simple CSS to style our page, while the former contains some very simple body HTML, plus a {{HTMLElement("script")}} element to contain the JavaScript code we will be writing in this exercise:
 
 ```html
 <header>
@@ -221,7 +221,7 @@ In our function, the first four lines use the Fetch API to fetch the JSON from t
 - we make the network request using the {{domxref("fetch", "fetch()")}} function, and this returns a {{domxref("Response")}} object
 - we retrieve the response as JSON using the {{domxref("Response/json", "json()")}} function of the `Response` object.
 
-> **Note:** The `fetch()` API is **asynchronous**. We'll learn a lot about asynchronous functions in [the next module](/en-US/docs/Learn/JavaScript/Asynchronous), but for now we'll just say that we need to add the keyword {{jsxref("Statements/async_function", "async")}} before the name of the function that uses the fetch API, and  add the keyword {{jsxref("Operators/await", "await")}} before the calls to any asynchronous functions.
+> **Note:** The `fetch()` API is **asynchronous**. We'll learn a lot about asynchronous functions in [the next module](/en-US/docs/Learn/JavaScript/Asynchronous), but for now we'll just say that we need to add the keyword {{jsxref("Statements/async_function", "async")}} before the name of the function that uses the fetch API, and add the keyword {{jsxref("Operators/await", "await")}} before the calls to any asynchronous functions.
 
 After all that, the `superHeroes` variable will contain the JavaScript object based on the JSON. We are then passing that object to two function calls — the first one fills the `<header>` with the correct data, while the second one creates an information card for each hero on the team, and inserts it into the `<section>`.
 
@@ -296,7 +296,7 @@ Next, we use a [for...of loop](/en-US/docs/Learn/JavaScript/Building_blocks/Loop
 5. Use another `for...of` loop to loop through the current hero's superpowers — for each one we create an `<li>` element, put the superpower inside it, then put the `listItem` inside the `<ul>` element (`myList`) using `appendChild()`.
 6. The very last thing we do is to append the `<h2>`, `<p>`s, and `<ul>` inside the `<article>` (`myArticle`), then append the `<article>` inside the `<section>`. The order in which things are appended is important, as this is the order they will be displayed inside the HTML.
 
-> **Note:** If you are having trouble getting the example to work, try referring to our [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) source code (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) also.)
+> **Note:** If you are having trouble getting the example to work, try referring to our [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) source code (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) also.)
 
 > **Note:** If you are having trouble following the dot/bracket notation we are using to access the JavaScript object, it can help to have the [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) file open in another tab or your text editor, and refer to it as you look at our JavaScript. You should also refer back to our [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article for more information on dot and bracket notation.
 
@@ -317,7 +317,7 @@ But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and
 - [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): Accepts a JSON string as a parameter, and returns the corresponding JavaScript object.
 - [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): Accepts an object as a parameter, and returns the equivalent JSON string.
 
-You can see the first one in action in our [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) example (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — this does exactly the same thing as the example we built up earlier, except that:
+You can see the first one in action in our [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)) — this does exactly the same thing as the example we built up earlier, except that:
 
 - we retrieve the response as text rather than JSON, by calling the {{domxref("Response/text", "text()")}} method of the response
 - we then use `parse()` to convert the text to a JavaScript object.

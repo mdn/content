@@ -13,13 +13,7 @@ browser-compat: api.MIDIAccess.outputs
 
 The **`outputs`** read-only property of the {{domxref("MIDIAccess")}} interface provides access to any available MIDI output ports.
 
-## Syntax
-
-```js
-let outputs = MIDIAccess.outputs;
-```
-
-### Value
+## Value
 
 A {{domxref("MIDIOutputMap")}} instance.
 

@@ -15,20 +15,17 @@ The **`NodeIterator.referenceNode`** read-only returns the
 {{domxref("Node")}} to which the iterator is anchored; as new nodes are inserted, the
 iterator remains anchored to the reference node as specified by this property.
 
-## Syntax
+## Value
 
-```js
-node = nodeIterator.referenceNode;
-```
+A {{domxref("Node")}}.
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 node = nodeIterator.referenceNode;
 ```

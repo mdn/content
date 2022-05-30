@@ -14,18 +14,12 @@ browser-compat: api.Touch.pageY
 The **`Touch.pageY`** read-only property returns the Y
 coordinate of the touch point relative to the viewport, including any scroll offset.
 
-## Syntax
-
-```js
-touchItem.pageY;
-```
-
-### Return value
+## Value
 
 A `long` value that represents the Y coordinate of the touch point relative
 to the viewport, including any scroll offset.
 
-## Example
+## Examples
 
 This example illustrates how to access the {{domxref("Touch")}} object's
 {{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}} properties. The

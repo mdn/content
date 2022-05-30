@@ -43,7 +43,7 @@ Before you get started with working on any particular repo, follow these steps:
 2. While you are at it, install the other required dependencies for working locally with MDN — [Node.js](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install).
 
     1. Install Node.js by following the above link and downloading and installing the latest version for your computer.
-    2. Once you've installed Node.js, install yarn by running `npm install --global yarn`.
+    2. Once you've installed Node.js, install Yarn by running `npm install --global yarn`.
 
 3. Create a separate directory somewhere on your computer to store all of your Git repos in, which is easy to find and navigate to on the command line. A directory called mdn-git inside your home/user directory would be suitable.
 4. [Sign up for a GitHub account](https://github.com/join) if you don't already have one. You'll need this to contribute to MDN's repos.
@@ -52,7 +52,7 @@ Before you get started with working on any particular repo, follow these steps:
 
 At this point you need to set up an SSH key on your GitHub account. This is basically a security mechanism that identifies you to GitHub, and means that you don't have to authenticate each time you use GitHub services.
 
-GitHub have created a useful guide to setting this up — see the starting point at [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh). Follow each of the steps here to get set up with SSH on Github.
+GitHub have created a useful guide to setting this up — see the starting point at [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh). Follow each of the steps here to get set up with SSH on GitHub.
 
 If you don't do this, you'll still be able to contribute to MDN, but you'll have to enter your username and password every time you interact with GitHub (e.g. whenever you submit a pull request, as seen below).
 
@@ -71,7 +71,7 @@ It is possible to do the two things separately, but in practice you will nearly 
 
 Let's fork <https://github.com/mdn/content> right now; you'll definitely be contributing to this repo at some point. Follow these steps:
 
-1. Locate the Fork button at the top-right hand corner of the content repo's page, and press it:
+1. Locate the Fork button at the top-right-hand corner of the content repo's page, and press it:
 
     ![Button labeled fork, with the number 609 next to it](fork-button.png)
 
@@ -84,7 +84,7 @@ Now you've forked the repo, it is time to clone your fork locally. To do this:
 1. Go to your fork's page on github.com (e.g. `https://github.com/<your-user-name>/content`).
 2. Press the green "Code" button at the top of the files list. Something similar to the following popup should appear as a result:
 
-    ![Popup window showing a clone URL along with options to open with github desktop and download zip](code-popup.png)
+    ![Popup window showing a clone URL along with options to open with GitHub Desktop and download zip](code-popup.png)
 
 3. If you set up SSH authentication as instructed above, click the "SSH" tab and copy the `git@github.com:<your-user-name>/content.git` URL from the text field in the box. If you didn't set up SSH authentication, copy the URL from the text field on the "HTTPS" tab instead, which should look like this: `https://github.com/<your-user-name>/content.git`.
 4. Now open up the command line on your computer, and navigate into the directory you set up earlier to store your local git repo clones in using the cd command, e.g.
@@ -211,7 +211,7 @@ Once you've got your main branch up to date in your fork, you must always create
 
 To create a new branch:
 
-1. Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left hand corner of the file list, which should say "main" on it:
+1. Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left-hand corner of the file list, which should say "main" on it:
 
     ![Button labeled main](branch-button.png)
 
@@ -428,5 +428,5 @@ If you think this troubleshooting guide should contain more information, please 
 
 - [MDN Learn > Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub)
 - [Dangit, Git](https://dangitgit.com/en) — additional useful troubleshooting techniques
-- [45 Github Issues Dos and Don'ts](https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612)
+- [45 GitHub Issues Dos and Don'ts](https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612)
 - [gh CLI tool](https://cli.github.com/) — once you are used to using the vanilla git CLI commands to control your repos, you might want to consider installing GitHub's own gh CLI tool, which provides commands to speed up a number of the processes discussed above.

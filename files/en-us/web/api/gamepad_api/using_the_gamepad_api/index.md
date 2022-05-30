@@ -7,6 +7,7 @@ tags:
   - Gamepad API
   - Games
   - Guide
+browser-compat: api.Gamepad
 ---
 {{DefaultAPISidebar("Gamepad API")}}
 
@@ -34,7 +35,7 @@ Each gamepad has a unique ID associated with it, which is available on the event
 
 ## Disconnecting a gamepad
 
-When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{ event("gamepaddisconnected") }}:
+When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
 
 ```js
 window.addEventListener("gamepaddisconnected", function(e) {
@@ -87,7 +88,7 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 
 - `id`: A string containing some information about the controller. This is not strictly specified, but in Firefox it will contain three pieces of information separated by dashes (`-`): two 4-digit hexadecimal strings containing the USB vendor and product id of the controller, and the name of the controller as provided by the driver. This information is intended to allow you to find a mapping for the controls on the device as well as display useful feedback to the user.
 - `index`: An integer that is unique for each gamepad currently connected to the system. This can be used to distinguish multiple controllers. Note that disconnecting a device and then connecting a new device may reuse the previous index.
-- `mapping`: A string indicating whether the browser has remapped the controls on the device to a known layout. Currently there is only one supported known layout — the [standard gamepad](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping). If the browser is able to map controls on the device to that layout the `mapping` property will be set to the string `standard`.
+- `mapping`: A string indicating whether the browser has remapped the controls on the device to a known layout. Currently there is only one supported known layout — the [standard gamepad](https://w3c.github.io/gamepad/gamepad.html#remapping). If the browser is able to map controls on the device to that layout the `mapping` property will be set to the string `standard`.
 - `connected`: A boolean indicating whether the gamepad is still connected to the system. If this is so the value is `True`; if not, it is `False`.
 - `buttons`: An array of {{ domxref("GamepadButton") }} objects representing the buttons present on the device. Each {{ domxref("GamepadButton") }} has a `pressed` and a `value` property:
 
@@ -101,7 +102,7 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 
 ### Using button information
 
-Let's look at a simple example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right hand side of the gamepad. You can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on Github.
+Let's look at a simple example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right-hand side of the gamepad. You can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.
 
 To start with, we declare some variables: The `gamepadInfo` paragraph that the connection info is written into, the `ball` that we want to move, the `start` variable that acts as the ID for `requestAnimation Frame`, the `a` and `b` variables that act as position modifiers for moving the ball, and the shorthand variables that will be used for the {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} and {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} cross browser forks.
 
@@ -197,7 +198,7 @@ function gameLoop() {
 
 ## Complete example: Displaying gamepad state
 
-This example shows how to use the {{ domxref("Gamepad") }} object, as well as the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events in order to display the state of all gamepads connected to the system. You can find a [working demo](https://luser.github.io/gamepadtest/) and look at the [full source code](https://github.com/luser/gamepadtest) on Github.
+This example shows how to use the {{ domxref("Gamepad") }} object, as well as the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events in order to display the state of all gamepads connected to the system. You can find a [working demo](https://luser.github.io/gamepadtest/) and look at the [full source code](https://github.com/luser/gamepadtest) on GitHub.
 
 ```js
 var haveEvents = 'ongamepadconnected' in window;
@@ -330,10 +331,8 @@ if (!haveEvents) {
 
 ## Specifications
 
-| Specification                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}} | {{Spec2("Gamepad")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Gamepad")}}
+{{Compat}}

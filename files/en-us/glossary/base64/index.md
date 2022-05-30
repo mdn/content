@@ -16,7 +16,7 @@ tags:
 
 Base64 encoding schemes are commonly used when there is a need to encode binary data that needs to be stored and transferred over media that are designed to deal with ASCII. This is to ensure that the data remain intact without modification during transport. Base64 is commonly used in a number of applications including email via [MIME](https://en.wikipedia.org/wiki/MIME), and storing complex data in [XML](/en-US/docs/Web/XML).
 
-One common application of Base64 encoding on the web is to encode binary data so it can be included in a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+One common application of Base64 encoding on the web is to encode binary data so it can be included in a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
 In JavaScript there are two functions respectively for decoding and encoding Base64 strings:
 
@@ -61,6 +61,9 @@ b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 This solution has been proposed by [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
 
 Another possible solution without utilizing the now deprecated 'unescape' and 'escape' functions.
+This alternative, though, does not perform base64 encoding of the input string.
+Note the differences in the outputs of `utf8_to_b64` and `b64EncodeUnicode`.
+Adopting this alternative may lead to interoperability issues with other applications.
 
 ```js
 function b64EncodeUnicode(str) {
@@ -77,7 +80,7 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### Solution #2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
 
-> **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or viceversa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
+> **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
 
 ```js
 "use strict";

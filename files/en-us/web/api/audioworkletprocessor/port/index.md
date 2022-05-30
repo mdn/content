@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor.port
 slug: Web/API/AudioWorkletProcessor/port
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -21,13 +22,7 @@ The read-only **`port`** property of the
 > **Note:** The port at the other end of the channel is
 > available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
 
-## Syntax
-
-```js
-AudioWorkletProcessorInstance.port;
-```
-
-### Value
+## Value
 
 The {{domxref("MessagePort")}} object that is connecting the `AudioWorkletProcessor` and the associated `AudioWorkletNode`.
 

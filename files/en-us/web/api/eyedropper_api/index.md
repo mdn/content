@@ -3,6 +3,7 @@ title: EyeDropper API
 slug: Web/API/EyeDropper_API
 tags:
   - API
+  - Experimental
   - EyeDropper
   - Overview
   - Reference
@@ -33,9 +34,7 @@ To prevent malicious websites from getting pixel data from a user's screen witho
 
 ## Specifications
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("EyeDropper")}}       | {{Spec2("EyeDropper")}}      | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

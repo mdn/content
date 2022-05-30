@@ -60,4 +60,4 @@ for (const cat of cats) {
 - {{domxref("AnimationTimeline")}}
 - {{domxref("AnimationTimeline.currentTime")}}
 - {{domxref("Document.timeline")}}
-- {{domxref("DocumentTimeline.DocumentTimeline()")}}
+- {{domxref("DocumentTimeline.DocumentTimeline", "DocumentTimeline()")}}

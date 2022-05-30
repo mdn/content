@@ -22,7 +22,7 @@ If you need to get access to an element which doesn't have an ID, you can use {{
 ## Syntax
 
 ```js
-var element = document.getElementById(id);
+getElementById(id)
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ var element = document.getElementById(id);
 
 An {{domxref("Element")}} object describing the DOM element object matching the specified ID, or `null` if no matching element was found in the document.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -62,7 +62,7 @@ function changeColor(newColor) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 250, 100) }}
+{{ EmbedLiveSample('Examples', 250, 120) }}
 
 ## Usage notes
 
@@ -70,7 +70,7 @@ The capitalization of `"Id"` in the name of this method _must_ be correct for th
 
 Unlike some other element-lookup methods such as {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, `getElementById()` is only available as a method of the global `document` object, and _not_ available as a method on all element objects in the DOM. Because ID values must be unique throughout the entire document, there is no need for "local" versions of the function.
 
-## Example
+### Example
 
 ```html
 <!doctype html>

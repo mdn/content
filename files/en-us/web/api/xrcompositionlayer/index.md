@@ -42,7 +42,7 @@ Several layer types inherit from `XRCompositionLayer`:
 - {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}}
   - : The number of mip levels in the color and texture data for the layer.
 - {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}}
-  - : A boolean signaling that the layer should be rerendered in the next frame.
+  - : A boolean signaling that the layer should be re-rendered in the next frame.
 
 ## Methods
 

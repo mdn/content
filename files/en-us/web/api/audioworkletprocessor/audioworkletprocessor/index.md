@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -25,7 +26,7 @@ represents an underlying audio processing mechanism of an
 > only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.
 
 ```js
-new AudioWorkletProcessor(options);
+new AudioWorkletProcessor(options)
 ```
 
 ### Parameters
@@ -60,7 +61,7 @@ new AudioWorkletProcessor(options);
 
 The newly constructed {{domxref("AudioWorkletProcessor")}} instance.
 
-## Example
+## Examples
 
 In this example we pass custom options to the
 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and

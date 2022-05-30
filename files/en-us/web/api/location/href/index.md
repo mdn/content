@@ -1,5 +1,5 @@
 ---
-title: 'Location: href'
+title: location.href
 slug: Web/API/Location/href
 tags:
   - API
@@ -11,7 +11,7 @@ browser-compat: api.Location.href
 {{ApiRef("Location")}}
 
 The **`href`** property of the {{domxref("Location")}}
-interface is a {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the whole
+interface is a {{Glossary("stringifier")}} that returns a string containing the whole
 URL, and allows the href to be updated.
 
 Setting the value of `href` _navigates_ to the provided URL. If you

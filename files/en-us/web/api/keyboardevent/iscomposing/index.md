@@ -10,20 +10,18 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.isComposing
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.isComposing`** read-only property returns
 a boolean value indicating if the event is fired within a composition
 session, i.e. after {{domxref("Element/compositionstart_event", "compositionstart")}}
 and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
-## Syntax
+## Value
 
-```js
-var bool = event.isComposing;
-```
+A boolean.
 
-## Example
+## Examples
 
 ```js
 var kbdEvent = new KeyboardEvent("syntheticKey", false);

@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.kind
 slug: Web/API/DataTransferItem/kind
+page-type: web-api-instance-property
 tags:
   - API
   - DataTransferItem
@@ -18,15 +19,9 @@ The read-only **`DataTransferItem.kind`** property returns a
 {{domxref("DataTransferItem")}} representing the _drag data item_ kind: some text
 or some file.
 
-## Syntax
+## Value
 
-```js
-var itemKind = DataTransferItem.kind;
-```
-
-### Return value
-
-A {{domxref("DOMString")}} representing the drag data item's kind. It must be one of
+A string representing the drag data item's kind. It must be one of
 the following values:
 
 - `'file'`
@@ -34,7 +29,7 @@ the following values:
 - `'string'`
   - : If the kind of drag data item is a _plain Unicode string_.
 
-## Example
+## Examples
 
 This example shows the use of the `kind` property.
 

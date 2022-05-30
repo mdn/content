@@ -26,15 +26,9 @@ The {{domxref("RTCRtpStreamStats")}} dictionary's
 the object that was inspected to produce the data in the {{domxref("RTCCodecStats")}}
 for the {{Glossary("RTP")}} stream.
 
-## Syntax
+## Value
 
-```js
-var codecID = RTCRtpStreamStats.codecId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which uniquely identifies the object from which the contents
+A string which uniquely identifies the object from which the contents
 of the stream's {{domxref("RTCCodecStats")}} are derived.
 
 ## Specifications

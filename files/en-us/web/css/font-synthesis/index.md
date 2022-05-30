@@ -26,6 +26,7 @@ font-synthesis: weight style small-caps;
 font-synthesis: inherit;
 font-synthesis: initial;
 font-synthesis: revert;
+font-synthesis: revert-layer;
 font-synthesis: unset;
 ```
 

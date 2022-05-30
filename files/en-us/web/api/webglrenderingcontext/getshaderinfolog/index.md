@@ -18,17 +18,17 @@ compile information.
 ## Syntax
 
 ```js
-gl.getShaderInfoLog(shader);
+getShaderInfoLog(shader)
 ```
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} to query.
 
 ### Return value
 
-A {{domxref("DOMString")}} that contains diagnostic messages, warning messages, and
+A string that contains diagnostic messages, warning messages, and
 other information about the last compile operation. When a {{domxref("WebGLShader")}}
 object is initially created, its information log will be a string of length 0.
 

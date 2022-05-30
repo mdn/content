@@ -17,17 +17,11 @@ browser-compat: api.File.lastModifiedDate
 
 The **`File.lastModifiedDate`** read-only property returns the last modified date of the file. Files without a known last modified date returns the current date .
 
-## Syntax
-
-```js
-var time = instanceOfFile.lastModifiedDate
-```
-
-### Value
+## Value
 
 A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indicating the date and time at which the file was last modified.
 
-## Example
+## Examples
 
 ```js
 // fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">

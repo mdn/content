@@ -17,13 +17,7 @@ The **`supportedContentEncodings`** read-only property of the
 {{domxref("PushManager")}} interface returns an array of supported content codings that
 can be used to encrypt the payload of a push message.
 
-## Syntax
-
-```js
-var encodings[] = PushManager.supportedContentEncodings
-```
-
-### Value
+## Value
 
 An array of strings.
 

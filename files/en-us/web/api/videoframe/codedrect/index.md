@@ -13,7 +13,7 @@ browser-compat: api.VideoFrame.codedRect
 
 The **`codedRect`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} with the width and height matching {{domxref("VideoFrame.codedWidth")}} and {{domxref("VideoFrame.codedHeight")}}.
 
-### Value
+## Value
 
 A {{domxref("DOMRectReadOnly")}}.
 

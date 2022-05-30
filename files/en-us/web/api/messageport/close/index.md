@@ -21,18 +21,18 @@ messages to that port.
 ## Syntax
 
 ```js
-port.close()
+close()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
 None.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 In the following code block, you can see a `handleMessage` handler function,
 run when a message is sent back to this document using

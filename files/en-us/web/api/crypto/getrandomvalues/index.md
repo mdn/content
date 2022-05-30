@@ -1,6 +1,7 @@
 ---
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
+page-type: web-api-instance-method
 tags:
   - API
   - Crypto
@@ -24,22 +25,23 @@ The array given as the parameter is filled with random numbers (random in its cr
 
 To guarantee enough performance, implementations are not using a truly random number generator, but they are using a pseudo-random number generator _seeded_ with a value with enough entropy.
 The pseudo-random number generator algorithm (PRNG) may vary across {{Glossary("user agent", "user agents")}}, but is suitable for cryptographic purposes.
-Implementations are required to use a seed with enough entropy, like a system-level entropy source.
 
 `getRandomValues()` is the only member of the `Crypto` interface which can be used from an insecure context.
 
 ## Syntax
 
 ```js
-crypto.getRandomValues(typedArray)
+getRandomValues(typedArray)
 ```
 
 ### Parameters
 
 - `typedArray`
-  - : An integer-based {{jsxref("TypedArray")}}, that is one of: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
-    {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, {{jsxref("BigUint64Array")}} (but **not** `Float32Array` nor `Float64Array`).
-    All elements in the array are overwritten with random numbers.
+  - : An integer-based {{jsxref("TypedArray")}}, that is one of: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
+    {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
+    {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}},
+    {{jsxref("BigUint64Array")}} (but **not** `Float32Array` nor `Float64Array`).
+    All elements in the array will be overwritten with random numbers.
 
 ### Return value
 
@@ -48,10 +50,8 @@ Note that `typedArray` is modified in-place, and no copy is made.
 
 ### Exceptions
 
-This method can throw an exception under error conditions.
-
-- {{domxref("DOMException")}} (name: {{exception("QuotaExceededError")}})
-  - : The requested length exceeds 65,536 bytes.
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : Thrown if the {{jsxref("TypedArray.byteLength", "byteLength")}} of `typedArray` exceeds 65,536.
 
 ## Usage notes
 
@@ -68,14 +68,12 @@ the Unix `/dev/urandom` device, or other source of random or pseudorandom data.
 ## Examples
 
 ```js
-/* Assuming that window.crypto.getRandomValues is available */
-
-var array = new Uint32Array(10);
+const array = new Uint32Array(10);
 self.crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
-for (var i = 0; i < array.length; i++) {
-  console.log(array[i]);
+for (const num of array) {
+  console.log(num);
 }
 ```
 
@@ -90,5 +88,5 @@ for (var i = 0; i < array.length; i++) {
 ## See also
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- {{ domxref("crypto_property", "crypto") }} to get a {{domxref("Crypto")}} object.
+- {{domxref("crypto_property", "crypto")}} to get a {{domxref("Crypto")}} object.
 - {{jsxref("Math.random")}}, a non-cryptographic source of random numbers.

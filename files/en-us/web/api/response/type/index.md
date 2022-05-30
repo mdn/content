@@ -15,7 +15,7 @@ browser-compat: api.Response.type
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
 It can be one of the following:
 
-- `basic`: Normal, same origin response, with all headers exposed except "Set-Cookie" and "Set-Cookie2″.
+- `basic`: Normal, same origin response, with all headers exposed except "Set-Cookie".
 - `cors`: Response was received from a valid cross-origin request. [Certain headers and the body](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) may be accessed.
 - `error`: Network error.
   No useful information describing the error is available.
@@ -32,7 +32,7 @@ It can be one of the following:
 
 A `ResponseType` string indicating the type of the response.
 
-## Example
+## Examples
 
 In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
 We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.

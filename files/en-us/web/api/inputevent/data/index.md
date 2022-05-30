@@ -4,7 +4,6 @@ slug: Web/API/InputEvent/data
 tags:
   - API
   - DOM Events
-  - Experimental
   - Input
   - InputEvent
   - Property
@@ -13,22 +12,16 @@ tags:
   - events
 browser-compat: api.InputEvent.data
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`data`** read-only property of the
-{{domxref("InputEvent")}} interface returns a {{domxref("DOMString")}} with inserted
+{{domxref("InputEvent")}} interface returns a string with inserted
 characters. This may be an empty string if the change doesn't insert text, such as when
 characters are deleted.
 
-## Syntax
+## Value
 
-```js
-var aString = inputEvent.data;
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

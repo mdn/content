@@ -22,13 +22,7 @@ degrees). If {{domxref("GeolocationCoordinates.speed")}} is `0`,
 [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). If
 the device is not able to provide heading information, this value is `null`.
 
-## Syntax
-
-```js
-let heading = geolocationCoordinatesInstance.heading
-```
-
-### Value
+## Value
 
 A `double` representing the direction in which the device is traveling.
 

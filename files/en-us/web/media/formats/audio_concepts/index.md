@@ -100,7 +100,7 @@ At 192 kBps, lower-end networks are already going to be strained just by a singl
 
 To solve this problem, the audio must be made smaller using compression.
 
-> **Note:** Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in {{anch("Sampling audio")}}, above.
+> **Note:** Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in [Sampling audio](#sampling_audio), above.
 
 ## Audio compression basics
 

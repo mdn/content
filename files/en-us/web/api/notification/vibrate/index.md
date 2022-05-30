@@ -15,21 +15,15 @@ browser-compat: api.Notification.vibrate
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The `vibrate` read-only property of the {{domxref("Notification")}}
-interface specifies a [vibration pattern](/en-US/docs/Web/Guide/API/Vibration#Vibration_patterns)
+interface specifies a [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns)
 for the device's vibration hardware to emit when the notification fires. This is
 specified in the `vibrate` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var vibrate = Notification.vibrate;
-```
-
-### Value
+## Value
 
 A [vibration
-pattern](/en-US/docs/Web/Guide/API/Vibration#Vibration_patterns), as specified in the [Vibration API spec](http://dev.w3.org/2009/dap/vibration/).
+pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns), as specified in the [Vibration API spec](https://w3c.github.io/vibration/).
 
 ## Examples
 

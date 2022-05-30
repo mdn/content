@@ -28,29 +28,23 @@ attribute set.
 Although this property is read-only, it will not throw if it is modified (even in
 strict mode); the setter is a no-operation and it will be ignored.
 
-## Syntax
-
-```js
-var isFullscreenAvailable = document.fullscreenEnabled;
-```
-
-### Value
+## Value
 
 A boolean value which is `true` if the document and the
 elements within can be placed into fullscreen mode by calling
 {{domxref("Element.requestFullscreen()")}}. If fullscreen mode isn't available, this
 value is `false`.
 
-## Example
+## Examples
 
 In this example, before attempting to request fullscreen mode for a
 {{htmlElement("video")}} element, the value of `fullscreenEnabled` is
 checked, in order to avoid making the attempt when not available.
 
 ```js
-function requestFullScreen() {
+function requestFullscreen() {
   if (document.fullscreenEnabled) {
-    videoElement.requestFullScreen();
+    videoElement.requestFullscreen();
   } else {
     console.log('Your browser cannot use fullscreen right now');
   }

@@ -56,7 +56,7 @@ Promise.resolve('Success').then(function(value) {
 ### Resolving an array
 
 ```js
-var p = Promise.resolve([1,2,3]);
+const p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
@@ -65,8 +65,8 @@ p.then(function(v) {
 ### Resolving another Promise
 
 ```js
-var original = Promise.resolve(33);
-var cast = Promise.resolve(original);
+const original = Promise.resolve(33);
+const cast = Promise.resolve(original);
 cast.then(function(value) {
   console.log('value: ' + value);
 });
@@ -84,7 +84,7 @@ are called asynchronously. See how `then` works [here](/en-US/docs/Web/JavaScrip
 
 ```js
 // Resolving a thenable object
-var p1 = Promise.resolve({
+const p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill('fulfilled!'); }
 });
 console.log(p1 instanceof Promise) // true, object casted to a Promise
@@ -97,12 +97,12 @@ p1.then(function(v) {
 
 // Thenable throws before callback
 // Promise rejects
-var thenable = { then: function(resolve) {
+const thenable = { then: function(resolve) {
   throw new TypeError('Throwing');
   resolve('Resolving');
 }};
 
-var p2 = Promise.resolve(thenable);
+const p2 = Promise.resolve(thenable);
 p2.then(function(v) {
   // not called
 }, function(e) {
@@ -111,12 +111,12 @@ p2.then(function(v) {
 
 // Thenable throws after callback
 // Promise resolves
-var thenable = { then: function(resolve) {
+const thenable = { then: function(resolve) {
   resolve('Resolving');
   throw new TypeError('Throwing');
 }};
 
-var p3 = Promise.resolve(thenable);
+const p3 = Promise.resolve(thenable);
 p3.then(function(v) {
   console.log(v); // "Resolving"
 }, function(e) {

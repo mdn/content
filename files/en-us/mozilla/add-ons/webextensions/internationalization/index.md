@@ -96,7 +96,7 @@ Let's now look at the structure of one of these files ([\_locales/en/messages.js
 }
 ```
 
-This file is standard JSON — each one of its members is an object with a name, which contains a `message` and a `description`. All of these items are strings; `$URL$` is a placeholder, which is replaced with a substring at the time the `notificationContent` member is called by the extension. You'll learn how to do this in the {{anch("Retrieving message strings from JavaScript")}} section.
+This file is standard JSON — each one of its members is an object with a name, which contains a `message` and a `description`. All of these items are strings; `$URL$` is a placeholder, which is replaced with a substring at the time the `notificationContent` member is called by the extension. You'll learn how to do this in the [Retrieving message strings from JavaScript](#retrieving_message_strings_from_javascript) section.
 
 > **Note:** You can find much more information about the contents of `messages.json` files in our [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
 
@@ -115,7 +115,7 @@ To internationalize strings, specify them like this:
 "description": "__MSG_extensionDescription__",
 ```
 
-Here, we are retrieving message strings dependant on the browser's locale, rather than just including static strings.
+Here, we are retrieving message strings dependent on the browser's locale, rather than just including static strings.
 
 To call a message string like this, you need to specify it like this:
 
@@ -137,7 +137,7 @@ Another field you should specify in your manifest.json is [default_locale](/en-U
 "default_locale": "en"
 ```
 
-This specifies a default locale to use if the extension doesn't include a localized string for the browser's current locale. Any message strings that are not available in the browser locale are taken from the default locale instead. There are some more details to be aware of in terms of how the browser selects strings — see {{anch("Localized string selection")}}.
+This specifies a default locale to use if the extension doesn't include a localized string for the browser's current locale. Any message strings that are not available in the browser locale are taken from the default locale instead. There are some more details to be aware of in terms of how the browser selects strings — see [Localized string selection](#localized_string_selection).
 
 ## Locale-dependent CSS
 
@@ -149,7 +149,7 @@ header {
 }
 ```
 
-This is useful, although you might be better off handling such a situation using {{anch("Predefined messages")}}.
+This is useful, although you might be better off handling such a situation using [Predefined messages](#predefined_messages).
 
 ## Retrieving message strings from JavaScript
 
@@ -162,8 +162,8 @@ So, you've got your message strings set up, and your manifest. Now you just need
 In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
 
 ```js
-var title = browser.i18n.getMessage("notificationTitle");
-var content = browser.i18n.getMessage("notificationContent", message.url);
+let title = browser.i18n.getMessage("notificationTitle");
+let content = browser.i18n.getMessage("notificationContent", message.url);
 ```
 
 The first one just retrieves the `notificationTitle message` field from the available `messages.json` file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the `$URL$` placeholder we see in the `notificationContent message` field:
@@ -268,7 +268,7 @@ Suppose the `default_locale` is set to `fr`, and the browser's current locale is
 
 ## Predefined messages
 
-The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in {{anch("Calling message strings from manifests and extension CSS")}}. For example:
+The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Retrieving localized strings in manifests](#retrieving_localized_strings_in_manifests) and [Locale-dependent CSS](#locale-dependent_css). For example:
 
 ```
 __MSG_extensionName__
@@ -282,7 +282,7 @@ __MSG_@@ui_locale__
 
 The following table shows the different available predefined messages:
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Message name</th>
@@ -404,6 +404,6 @@ To test your extension's localization, you use [Firefox](https://www.mozilla.org
 
 Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 
-Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place.
+Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place.
 
 If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.
