@@ -32,8 +32,7 @@ target.onkeypress = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
 sole argument.
 
 ## Examples
@@ -150,8 +149,7 @@ The following JavaScript function will do something after the user types the wor
 
 ### Browser compatibility notes
 
-- The `keypress` event is no longer fired for [non-printable
-  keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) (see {{bug(968056)}} for Firefox 65's implementation of this), except for
+- The `keypress` event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) (see {{bug(968056)}} for Firefox 65's implementation of this), except for
   the
 
   <kbd>Enter</kbd>

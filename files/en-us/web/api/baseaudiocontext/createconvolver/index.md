@@ -45,8 +45,7 @@ as an ambience to shape the convolution (called the _impulse response_,) and
 apply that to the convolver. The example below uses a short sample of a concert hall
 crowd, so the reverb effect applied is really deep and echoey.
 
-For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see
-app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
+For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

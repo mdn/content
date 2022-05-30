@@ -37,8 +37,7 @@ t.cellSpacing = "10";
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement_
-  .cellSpacing](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68907883).
+- W3C DOM 2 HTML Specification [_HTMLTableElement.cellSpacing_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68907883).
 
 ## Browser compatibility
 

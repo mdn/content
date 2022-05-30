@@ -42,8 +42,7 @@ It is also possible to add the event directly on to the HTML element. Like this:
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
 argument. Within the function, {{jsxref("Operators/this", "this")}} will be the object
 that `onclick` was bound to (which will also match
 `event.currentTarget`)
