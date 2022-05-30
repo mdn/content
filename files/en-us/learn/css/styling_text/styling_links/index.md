@@ -387,11 +387,7 @@ First, some HTML:
 
 ```html
 <ul>
-  <li><a href="#">Home</a></li><!--
-  --><li><a href="#">Pizza</a></li><!--
-  --><li><a href="#">Music</a></li><!--
-  --><li><a href="#">Wombats</a></li><!--
-  --><li><a href="#">Finland</a></li>
+  <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
 </ul>
 ```
 
