@@ -441,7 +441,7 @@ The CSS includes the styling for the container and the links it contains.
   - The container is a [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox). The items it contains — the links, in this case — will be *flex items*.
   - The gap between the flex items will be `0.625%` of the container's width.
 - The third rule styles the links.
-  - The first declaration, `flex: 1`, meaning that the items will expand so they use all the available space in the container.
+  - The first declaration, `flex: 1`, meaning that the widths of the items will be adjusted so they use all the available space in the container.
   - Next, we turn off the default {{cssxref("text-decoration")}} and {{cssxref("outline")}} — we don't want those spoiling our look.
   - The last three declarations are to center the text inside each link, set the {{cssxref("line-height")}} to 3 to give the buttons some height (which also has the advantage of centering the text vertically), and set the text color to black.
 
