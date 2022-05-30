@@ -27,6 +27,6 @@ To use this API you need to have the "find" [permission](/en-US/docs/Mozilla/Add
 
 ## Browser compatibility
 
-{{Compat}}
-
 {{WebExtExamples("h2")}}
+
+{{Compat}}

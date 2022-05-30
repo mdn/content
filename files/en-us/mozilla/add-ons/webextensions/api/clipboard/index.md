@@ -29,9 +29,9 @@ To use this API you need the `"clipboardWrite"` extension [permission](/en-US/do
 
 ## Browser compatibility
 
-{{Compat}}
-
 {{WebExtExamples("h2")}}
+
+{{Compat}}
 
 > **Note:**
 >

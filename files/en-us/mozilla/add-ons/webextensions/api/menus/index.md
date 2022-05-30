@@ -154,9 +154,9 @@ browser.menus.create({
 
 ## Browser compatibility
 
-{{Compat}}
-
 {{WebExtExamples("h2")}}
+
+{{Compat}}
 
 > **Note:**
 >

@@ -8,7 +8,6 @@ tags:
   - Extensions
   - Guide
   - WebExtensions
-browser-compat: webextensions.browser_style
 ---
 {{AddonSidebar}}
 
@@ -110,7 +109,7 @@ Most styles are automatically applied, but some elements require you to add the 
 
 ## Browser compatibility
 
-{{Compat}}
+For browser compatibility information refer to the browser compatibility sections of the [action](en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#browser_compatibility), ([browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#browser_compatibility), [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action#browser_compatibility), [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action#browser_compatibility), and [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui#browser_compatibility) manifest keys.
 
 ## Firefox Panel Components
 

@@ -36,9 +36,9 @@ Listen for the user executing commands that you have registered using the [`comm
 
 ## Browser compatibility
 
-{{Compat}}
-
 {{WebExtExamples("h2")}}
+
+{{Compat}}
 
 > **Note:**
 >

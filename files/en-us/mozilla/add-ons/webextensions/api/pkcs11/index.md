@@ -64,6 +64,6 @@ For details about the manifest file's contents and location, see [Native manifes
 
 ## Browser compatibility
 
-{{Compat}}
-
 {{WebExtExamples("h2")}}
+
+{{Compat}}
