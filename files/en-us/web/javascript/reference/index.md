@@ -311,12 +311,15 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 ## Functions
 
-This chapter documents how to work with [JavaScript functions](/en-US/docs/Web/JavaScript/Reference/Functions) to develop your applications.
+[JavaScript functions.](/en-US/docs/Web/JavaScript/Reference/Functions)
 
-- {{JSxRef("Functions/arguments", "arguments")}}
 - {{JSXRef("Functions/Arrow_functions", "Arrow Functions", "", 1)}}
 - {{JSxRef("Functions/Default_parameters", "Default parameters", "", 1)}}
 - {{JSxRef("Functions/rest_parameters", "Rest parameters", "", 1)}}
+- {{JSxRef("Functions/arguments", "arguments")}}
+- {{JSxRef("Functions/Method_definitions", "Method definitions", "", 1)}}
+- {{JSxRef("Functions/get", "getter", "", 1)}}
+- {{JSxRef("Functions/set", "setter", "", 1)}}
 
 ## Additional reference pages
 
