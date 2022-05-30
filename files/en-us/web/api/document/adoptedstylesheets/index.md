@@ -100,8 +100,9 @@ shadow.adoptedStyleSheets = [sheet];
 
 ## See also
 
-- [Using the shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
-
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet)
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{domxref("CSSStyleSheet.replace()")}}
 - {{domxref("CSSStyleSheet.insertRule()")}}
