@@ -71,7 +71,7 @@ multiple image candidate strings that specify the same descriptor. All of the fo
 are valid image candidate strings:
 
 ```html
-"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"
+"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full.jpg 2048w"
 ```
 
 This string provides versions of an image to be used at the standard pixel density
