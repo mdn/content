@@ -327,7 +327,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 ## Additional reference pages
 
-- {{JSxRef("Lexical_grammar", "", "", 1)}}
+- {{JSxRef("Lexical_grammar", "Lexical grammar", "", 1)}}
 - [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
 - {{JSxRef("Strict_mode", "Strict mode", "", 1)}}
 - {{JSxRef("Deprecated_and_obsolete_features", "Deprecated features", "", 1)}}
