@@ -6,6 +6,7 @@ tags:
   - Guide
   - overflow-anchor
   - scroll anchoring
+browser-compat: css.properties.overflow-anchor
 ---
 {{CSSRef}}
 
@@ -81,6 +82,9 @@ Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box 
 
 ## Browser compatibility
 
+{{Compat}}
+
+### Compatibility notes
+
 If you need to test whether scroll anchoring is available in a browser, use [Feature Queries](/en-US/docs/Web/CSS/@supports) to test support for the `overflow-anchor` property.
 
-{{Compat("css.properties.overflow-anchor")}}
