@@ -50,7 +50,7 @@ button.onclick = function() {
 
   // Get an AudioBufferSourceNode.
   // This is the AudioNode to use when we want to play an AudioBuffer
-  let source = audioCtx.createBufferSource();
+  const source = audioCtx.createBufferSource();
   // set the buffer in the AudioBufferSourceNode
   source.buffer = myArrayBuffer;
 ```
