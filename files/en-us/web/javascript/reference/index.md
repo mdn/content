@@ -313,10 +313,10 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 This chapter documents how to work with [JavaScript functions](/en-US/docs/Web/JavaScript/Reference/Functions) to develop your applications.
 
-- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- {{JSxRef("Functions/arguments", "arguments")}}
+- {{JSXRef("Functions/Arrow_functions", "Arrow Functions", "", 1)}}
+- {{JSxRef("Functions/Default_parameters", "Default parameters", "", 1)}}
+- {{JSxRef("Functions/rest_parameters", "Rest parameters", "", 1)}}
 
 ## Additional reference pages
 
