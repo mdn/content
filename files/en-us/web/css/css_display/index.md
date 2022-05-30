@@ -69,8 +69,6 @@ browser-compat: css.properties.display
 
 {{Specifications}}
 
-In addition to the CSS Display Specification Level 3, further specifications define the behavior of various values of display.
-
 ## Browser compatibility
 
-{{Compat("css.properties.display", 10)}}
+{{Compat}}
