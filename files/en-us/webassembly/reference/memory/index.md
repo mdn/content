@@ -1,5 +1,5 @@
 ---
-title: WebAssembly memory
+title: WebAssembly memory instructions
 slug: WebAssembly/Reference/Memory
 tags:
   - WebAssembly
