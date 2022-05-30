@@ -132,8 +132,6 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 
 ## Browser compatibility
 
-### `MediaRecorder`
-
 {{Compat}}
 
 ## See also
