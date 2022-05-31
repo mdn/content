@@ -31,7 +31,7 @@ lineWidth(width)
 
 ### Parameters
 
-- width
+- `width`
   - : A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the width of rasterized lines. Default value: 1.
 
 ### Return value

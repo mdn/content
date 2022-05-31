@@ -1,6 +1,7 @@
 ---
 title: HID.getDevices()
 slug: Web/API/HID/getDevices
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -18,7 +18,7 @@ The **`lineNumber`** property contains the line number in the file that raised t
 ### Using lineNumber
 
 ```js
-var e = new Error('Could not parse input');
+const e = new Error('Could not parse input');
 throw e;
 console.log(e.lineNumber) // 2
 ```
@@ -29,7 +29,7 @@ console.log(e.lineNumber) // 2
 window.addEventListener('error', function(e) {
   console.log(e.lineNumber); // 5
 });
-var e = new Error('Could not parse input');
+const e = new Error('Could not parse input');
 throw e;
 ```
 

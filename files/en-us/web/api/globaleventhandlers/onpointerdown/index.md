@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerdown
 slug: Web/API/GlobalEventHandlers/onpointerdown
+page-type: web-api-instance-property
 tags:
   - API
   - Document

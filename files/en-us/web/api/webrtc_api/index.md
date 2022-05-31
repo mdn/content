@@ -12,6 +12,10 @@ tags:
   - WebRTC
   - WebRTC API
   - streaming
+spec-urls:
+  - https://w3c.github.io/webrtc-pc/
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/mediacapture-fromelement/
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
@@ -192,11 +196,7 @@ These interfaces and events are related to interactivity with Public-Switched Te
 
 ## Specifications
 
-| Specification                                                                        |
-| ------------------------------------------------------------------------------------ |
-| [WebRTC: Real-Time Communication Between Browsers](https://w3c.github.io/webrtc-pc/) |
-| [Media Capture and Streams](https://w3c.github.io/mediacapture-main/)                |
-| [Media Capture from DOM Elements](https://w3c.github.io/mediacapture-fromelement/)   |
+{{Specifications}}
 
 ### WebRTC-proper protocols
 

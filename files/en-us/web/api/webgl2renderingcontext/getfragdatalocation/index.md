@@ -23,9 +23,9 @@ getFragDataLocation(program, name)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to query.
-- name
+- `name`
   - : A string specifying the name of the user-defined varying out
     variable.
 

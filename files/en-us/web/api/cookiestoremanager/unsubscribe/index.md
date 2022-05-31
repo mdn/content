@@ -1,6 +1,7 @@
 ---
 title: CookieStoreManager.unsubscribe()
 slug: Web/API/CookieStoreManager/unsubscribe
+page-type: web-api-instance-method
 tags:
   - API
   - Method

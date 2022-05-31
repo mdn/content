@@ -36,7 +36,7 @@ In addition to methods to read and alter individual components of the local date
 ## Constructor
 
 - {{jsxref("Date/Date", "Date()")}}
-  - : When called as a function, returns a string representation of the current date and time, exactly as `new Date().toString()` does.
+  - : When called as a function, returns a string representation of the current date and time. All arguments are ignored. The result is the same as executing `new Date().toString()`.
 - {{jsxref("Date/Date", "new Date()")}}
   - : When called as a constructor, returns a new `Date` object.
 

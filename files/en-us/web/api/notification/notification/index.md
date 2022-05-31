@@ -63,8 +63,7 @@ new Notification(title, options)
       - : Arbitrary data that you want associated with the
         notification. This can be of any data type.
     - `vibrate`
-      - : A [vibration
-        pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification.
+      - : A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification.
     - `renotify`
       - : A boolean value specifying whether the user
         should be notified after a new notification replaces an old one. The default is

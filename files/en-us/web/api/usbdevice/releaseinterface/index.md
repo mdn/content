@@ -26,7 +26,7 @@ releaseInterface(interfaceNumber)
 
 ### Parameters
 
-- interfaceNumber
+- `interfaceNumber`
   - : The device-specific index of the currently-claimed interface.
 
 ### Return value

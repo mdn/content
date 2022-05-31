@@ -1,6 +1,7 @@
 ---
 title: atob()
 slug: Web/API/atob
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM

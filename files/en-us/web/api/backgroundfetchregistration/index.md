@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration
 slug: Web/API/BackgroundFetchRegistration
+page-type: web-api-interface
 tags:
   - API
   - Interface

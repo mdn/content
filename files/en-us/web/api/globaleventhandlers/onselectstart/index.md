@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onselectstart
 slug: Web/API/GlobalEventHandlers/onselectstart
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

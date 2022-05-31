@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers
 slug: Web/API/GlobalEventHandlers
+page-type: web-api-interface
 tags:
   - API
   - GlobalEventHandlers
@@ -39,7 +40,7 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onblur")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("blur")}} event is raised.
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("error")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `error` event is raised.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("focus")}} event is raised.
 - {{domxref("GlobalEventHandlers.oncancel")}}
@@ -59,19 +60,19 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.ondblclick")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dblclick")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrag")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("drag")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/drag_event", "drag")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondragend")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dragend")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragend_event", "dragend")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondragenter")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dragenter")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondragleave")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dragleave")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragleave_event", "dragleave")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondragover")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dragover")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragover_event", "dragover")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondragstart")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dragstart")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrop")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("drop")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/drop_event", "drop")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondurationchange")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("durationchange")}} event is raised.
 - {{domxref("GlobalEventHandlers.onemptied")}}

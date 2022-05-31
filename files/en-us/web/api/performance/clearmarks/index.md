@@ -35,7 +35,7 @@ clearMarks(name)
 
 ### Return value
 
-void
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerleave
 slug: Web/API/GlobalEventHandlers/onpointerleave
+page-type: web-api-instance-property
 tags:
   - API
   - GlobalEventHandlers

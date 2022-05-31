@@ -49,9 +49,9 @@ const targetNode = document.getElementById('some-id');
 const config = { attributes: true, childList: true, subtree: true };
 
 // Callback function to execute when mutations are observed
-const callback = function(mutationsList, observer) {
+const callback = function(mutationList, observer) {
     // Use traditional 'for loops' for IE 11
-    for(const mutation of mutationsList) {
+    for(const mutation of mutationList) {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
         }

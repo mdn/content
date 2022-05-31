@@ -69,9 +69,7 @@ There are numerous available free and open source tools for transcoding content 
 
 ## Browser compatibility
 
-### MediaSource interface
-
-{{Compat("api.MediaSource", 0)}}
+{{Compat}}
 
 ## See also
 

@@ -7,6 +7,12 @@ tags:
   - Overview
   - Performance
   - Web Performance
+spec-urls:
+  - https://w3c.github.io/hr-time/
+  - https://w3c.github.io/navigation-timing/
+  - https://w3c.github.io/performance-timeline/
+  - https://w3c.github.io/resource-timing/
+  - https://w3c.github.io/user-timing/
 ---
 {{DefaultAPISidebar("High Resolution Time")}}
 
@@ -51,13 +57,7 @@ The {{domxref("Performance.navigation","navigation")}} property returns a {{domx
 
 ## Specifications
 
-| Specification                                                     |
-| ----------------------------------------------------------------- |
-| [High Resolution Time](https://w3c.github.io/hr-time/)            |
-| [Navigation Timing](https://w3c.github.io/navigation-timing/)     |
-| [Performance Timing](https://w3c.github.io/performance-timeline/) |
-| [Resource Timing](https://w3c.github.io/resource-timing/)         |
-| [User Timing](https://w3c.github.io/user-timing/)                 |
+{{Specifications}}
 
 ## Implementation status
 

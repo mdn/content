@@ -11,7 +11,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](/en-US/docs/Mozilla/Projects/Emscripten). Let's look at how it works.
+When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](https://emscripten.org/). Let's look at how it works.
 
 ## Emscripten Environment Setup
 

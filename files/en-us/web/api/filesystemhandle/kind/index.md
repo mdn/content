@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.kind
 slug: Web/API/FileSystemHandle/kind
+page-type: web-api-instance-property
 tags:
   - Directory
   - File
@@ -21,13 +22,10 @@ directory.
 
 ## Value
 
-- _FileSystemHandleKind_
+A string that can be:
 
-  - : Can be either:
-
-    - `'file'`: If handle is a {{domxref('FileSystemFileHandle')}}.
-    - `'directory'`: If handle is a
-      {{domxref('FileSystemDirectoryHandle')}}.
+- `'file'`: If the handle is a {{domxref('FileSystemFileHandle')}}.
+- `'directory'`: If the handle is a {{domxref('FileSystemDirectoryHandle')}}.
 
 ## Examples
 

@@ -32,10 +32,13 @@ decodingInfo(configuration)
     - `type`
       - : The type of media being tested. This takes one of three values:
 
-        - `file`: Represents a configuration that is meant to be used for a plain file playback.
-        - `media-source`: Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
-        - `webrtc`: Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
-    
+        - `file`
+          - : Represents a configuration that is meant to be used for a plain file playback.
+        - `media-source`
+          - : Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
+        - `webrtc`
+          - : Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
+
     - `video`
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
@@ -83,7 +86,6 @@ All supported audio codecs are reported to be power efficient.
 
 - {{jsxref("TypeError")}}
   - : Thrown if the `configuration` passed to the `decodingInfo()` method is invalid, either because the type is not video or audio, the `contentType` is not a valid codec MIME type, the media decoding configuration is not a valid value for the `type` (file, media-source, or webrtc), or any other error in the media configuration passed to the method, including omitting any values.
-
 
 ## Examples
 

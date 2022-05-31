@@ -27,7 +27,7 @@ requestPresent(layers)
 
 ### Parameters
 
-- layers
+- `layers`
   - : An array of {{domxref("VRLayerInit")}} objects representing the scene you want to present. At the moment, this can be a minimum of 0 and a maximum of 1.
 
 ### Return value

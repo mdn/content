@@ -50,7 +50,6 @@ The string will be one of the following values:
 - `maybe`
   - : There is not enough information to determine whether the media can play (until playback is actually attempted).
 
-
 ## Examples
 
 ```js

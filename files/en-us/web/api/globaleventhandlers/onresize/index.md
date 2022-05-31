@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onresize
 slug: Web/API/GlobalEventHandlers/onresize
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.buffer
 slug: Web/API/AudioBufferSourceNode/buffer
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -29,8 +30,7 @@ node will play.
 
 ## Examples
 
-> **Note:** For a full working example, see [this code running
-> live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> **Note:** For a full working example, see [this code running live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
 ```js
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);

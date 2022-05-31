@@ -1,6 +1,7 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

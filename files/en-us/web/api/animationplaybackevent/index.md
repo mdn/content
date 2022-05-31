@@ -1,6 +1,7 @@
 ---
 title: AnimationPlaybackEvent
 slug: Web/API/AnimationPlaybackEvent
+page-type: web-api-interface
 tags:
   - API
   - Animation

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.rules
 slug: Web/API/CSSStyleSheet/rules
+page-type: web-api-instance-property
 tags:
   - API
   - CSS

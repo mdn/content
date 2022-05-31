@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.port
 slug: Web/API/HTMLAreaElement/port
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement

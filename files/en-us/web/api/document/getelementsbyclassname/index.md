@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

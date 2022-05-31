@@ -111,8 +111,7 @@ details measures browsers are required to take in order to fully support
 In the example below, a `startCapture()` method is created which initiates
 screen capture given a set of options specified by the `displayMediaOptions`
 parameter. The options are specified in an object which specifies the preferred stream
-configuration and the [display
-surface](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#visible_vs_logical_display_surfaces) from which video is to be captured.
+configuration and the [display surface](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#visible_vs_logical_display_surfaces) from which video is to be captured.
 
 ```js
 async function startCapture(displayMediaOptions) {

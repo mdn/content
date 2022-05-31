@@ -1,6 +1,7 @@
 ---
 title: console.countReset()
 slug: Web/API/console/countReset
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

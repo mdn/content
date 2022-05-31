@@ -25,7 +25,9 @@ a::before {
 
 ## Syntax
 
-{{csssyntax}}
+```
+::before
+```
 
 > **Note:** CSS3 introduced the `::before` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept `:before`, introduced in CSS2.
 

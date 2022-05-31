@@ -21,15 +21,15 @@ new WebAssembly.Table(tableDescriptor)
 
 ### Parameters
 
-- _tableDescriptor_
+- `tableDescriptor`
 
   - : An object that can contain the following members:
 
-    - _element_
+    - `element`
       - : A string representing the type of value to be stored in the table. This can have a value of `"anyfunc"` (functions) or `"externref"` (host references).
-    - _initial_
+    - `initial`
       - : The initial number of elements of the WebAssembly Table.
-    - _maximum {{optional_inline}}_
+    - `maximum` {{optional_inline}}
       - : The maximum number of elements the WebAssembly Table is allowed to grow to.
 
 ### Exceptions

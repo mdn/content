@@ -29,7 +29,7 @@ uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding)
 - `uniformBlockIndex`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the active uniform block within the
     program.
-- uniformBlockBinding
+- `uniformBlockBinding`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the binding point to which to bind the uniform
     block.
 

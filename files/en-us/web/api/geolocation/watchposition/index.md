@@ -1,6 +1,7 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
+page-type: web-api-instance-method
 tags:
   - API
   - Geolocation

@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.speakAs
 slug: Web/API/CSSCounterStyleRule/speakAs
+page-type: web-api-instance-property
 tags:
   - API
   - Property

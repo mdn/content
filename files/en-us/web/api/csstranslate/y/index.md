@@ -1,6 +1,7 @@
 ---
 title: CSSTranslate.y
 slug: Web/API/CSSTranslate/y
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

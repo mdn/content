@@ -6,7 +6,7 @@ tags:
   - HTML
   - Reference
   - Web
-spec-urls: https://html.spec.whatwg.org/multipage/dom.html#global-attributes
+browser-compat: html.global_attributes
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -18,7 +18,7 @@ Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/E
 In addition to the basic HTML global attributes, the following global attributes also exist:
 
 - {{HTMLAttrDef("xml:lang")}} and {{HTMLAttrDef("xml:base")}} — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.
-- The multiple **[`aria-*`](/en-US/docs/Web/Accessibility/ARIA)** attributes, used for improving accessibility.
+- The ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute and the multiple **[`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Attributes)** states and properties, used for ensuring accessibility.
 - The [event handler](/en-US/docs/Web/Events/Event_handlers) attributes: **`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
 
 ## List of global attributes
@@ -101,7 +101,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
   - : An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
 
-    - `true`, which indicates that the element should be, if possible, checked for spelling errors;
+    - empty string or `true`, which indicates that the element should be, if possible, checked for spelling errors;
     - `false`, which indicates that the element should not be checked for spelling errors.
 
 - [`style`](/en-US/docs/Web/HTML/Global_attributes/style)
@@ -120,7 +120,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
   - : An enumerated attribute that is used to specify whether an element's attribute values and the values of its {{DOMxRef("Text")}} node children are to be translated when the page is localized, or whether to leave them unchanged. It can have the following values:
 
-    - empty string and `yes`, which indicates that the element will be translated.
+    - empty string or `yes`, which indicates that the element will be translated.
     - `no`, which indicates that the element will not be translated.
 
 ## Specifications
@@ -129,7 +129,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## Browser compatibility
 
-{{Compat("html.global_attributes")}}
+{{Compat}}
 
 ## See also
 

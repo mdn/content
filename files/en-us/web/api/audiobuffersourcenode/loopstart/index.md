@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.loopStart
 slug: Web/API/AudioBufferSourceNode/loopStart
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -40,9 +41,7 @@ last by altering `loopStart` and `loopEnd`. For example, if you
 set their values to 20 and 25, respectively, the audio will start to loop between 20 and
 25 seconds in to the track.
 
-> **Note:** For a full working example, see [this code running
-> live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view
-> the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+> **Note:** For a full working example, see [this code running live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
 ```js
 function getData() {

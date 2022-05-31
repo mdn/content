@@ -16,7 +16,9 @@ a:local-link {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:local-link
+```
 
 ## Examples
 

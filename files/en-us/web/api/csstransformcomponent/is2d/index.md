@@ -1,6 +1,7 @@
 ---
 title: CSSTransformComponent.is2D
 slug: Web/API/CSSTransformComponent/is2D
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

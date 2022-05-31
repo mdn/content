@@ -25,12 +25,12 @@ delete(name)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to be deleted.
 
 ### Return value
 
-Void
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

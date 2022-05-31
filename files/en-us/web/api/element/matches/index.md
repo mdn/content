@@ -1,6 +1,7 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selector

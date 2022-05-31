@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
@@ -43,8 +44,7 @@ A {{jsxref("Promise")}} that resolves to the requested {{domxref("Cache")}} obje
 
 ## Examples
 
-This example is from the MDN [sw-test
-example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
 Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
 the app. This consists of calling `CacheStorage.open()` to create a new

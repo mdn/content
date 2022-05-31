@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onselectionchange
 slug: Web/API/GlobalEventHandlers/onselectionchange
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

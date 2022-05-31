@@ -10,6 +10,7 @@ tags:
   - Parsing HTML
   - Web
   - XMLHttpRequest
+browser-compat: api.XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -137,11 +138,11 @@ oReq.send(null);
 
 ## Specifications
 
-{{Specifications("api.XMLHttpRequest")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## See also
 

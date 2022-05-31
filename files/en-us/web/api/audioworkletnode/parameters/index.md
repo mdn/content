@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode.parameters
 slug: Web/API/AudioWorkletNode/parameters
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

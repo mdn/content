@@ -1,6 +1,7 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
+page-type: web-api-instance-method
 tags:
   - API
   - Geolocation

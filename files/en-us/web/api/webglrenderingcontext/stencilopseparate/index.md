@@ -26,7 +26,7 @@ stencilOpSeparate(face, fail, zfail, zpass)
 The `fail`, `zfail` and `zpass` parameters accept all
 constants listed below.
 
-- face
+- `face`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
     updated. The possible values are:

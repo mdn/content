@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.uuid
 slug: Web/API/BluetoothRemoteGATTCharacteristic/uuid
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

@@ -1,6 +1,7 @@
 ---
 title: CompositionEvent.locale
 slug: Web/API/CompositionEvent/locale
+page-type: web-api-instance-property
 tags:
   - API
   - CompositionEvent

@@ -67,9 +67,7 @@ used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
 include `"A"` and `"F"`, only the values between them.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at the idbkeyrange directory [in the
-> indexeddb-examples](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo ([view the example live
-> too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> key range, have a look at the idbkeyrange directory in the [indexeddb-examples](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo. (View the example [live](https://mdn.github.io/indexeddb-examples/idbkeyrange/) too.
 
 ```js
 function displayData() {
@@ -109,5 +107,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

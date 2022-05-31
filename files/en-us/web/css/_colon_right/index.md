@@ -28,7 +28,9 @@ Whether a given page is "left" or "right" is determined by the major writing dir
 
 ## Syntax
 
-{{csssyntax}}
+```
+:right
+```
 
 ## Examples
 

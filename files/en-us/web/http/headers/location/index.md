@@ -18,7 +18,7 @@ In cases of redirection, the HTTP method used to make the new request to fetch t
 pointed to by `Location` depends on the original method and the kind of
 redirection:
 
-- {{HTTPStatus("303")}} (See Also) responses always lead to the use of a
+- {{HTTPStatus("303")}} (See Other) responses always lead to the use of a
   {{HTTPMethod("GET")}} method.
 - {{HTTPStatus("307")}} (Temporary Redirect) and
   {{HTTPStatus("308")}} (Permanent Redirect) don't change the method used in the

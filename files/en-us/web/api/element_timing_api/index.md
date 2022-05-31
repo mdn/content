@@ -1,13 +1,14 @@
 ---
 title: Element Timing API
 slug: Web/API/Element_timing_API
+page-type: web-api-overview
 tags:
   - API
   - ElementTiming
   - Performance
   - Overview
   - Reference
-spec-urls: https://wicg.github.io/element-timing/
+browser-compat: api.PerformanceElementTiming
 ---
 {{DefaultAPISidebar("Element Timing")}}
 
@@ -52,9 +53,7 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Browser compatibility
 
-### PerformanceElementTiming
-
-{{Compat("api.PerformanceElementTiming")}}
+{{Compat}}
 
 ## See also
 

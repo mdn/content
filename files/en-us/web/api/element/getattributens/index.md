@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -115,5 +116,4 @@ requested attribute does not exist on the specified element.
 
 ## See also
 
-- [Code
-  snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)
+- [Code snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)

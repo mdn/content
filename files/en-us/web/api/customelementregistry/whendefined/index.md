@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry

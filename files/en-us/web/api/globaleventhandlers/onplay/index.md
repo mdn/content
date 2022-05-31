@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onplay
 slug: Web/API/GlobalEventHandlers/onplay
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.add()
 slug: Web/API/DataTransferItemList/add
+page-type: web-api-instance-method
 tags:
   - API
   - Add

@@ -120,9 +120,7 @@ affects the selection.
 
 {{ EmbedLiveSample('Examples', '100%', 370) }}
 
-> **Note:** You can find this [example
-> on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see
-> it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
+> **Note:** You can find this [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 
 ## Specifications
 

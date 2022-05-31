@@ -1,6 +1,7 @@
 ---
 title: 'Document: touchend event'
 slug: Web/API/Document/touchend_event
+page-type: web-api-event
 tags:
   - API
   - Event

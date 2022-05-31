@@ -8,6 +8,7 @@ tags:
   - Navigation
   - cookbook
   - flexbox
+browser-compat: css.properties.flex
 ---
 {{CSSRef}}
 
@@ -37,11 +38,7 @@ In this case the left auto margin takes up any available space and pushes the it
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### Flexbox
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## See also
 

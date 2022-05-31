@@ -62,11 +62,11 @@ self.onsync = event => {
 
 ## Specifications
 
-{{Specifications("api.SyncEvent")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.SyncEvent")}}
+{{Compat}}
 
 ## See also
 

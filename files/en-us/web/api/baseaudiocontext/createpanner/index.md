@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext

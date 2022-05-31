@@ -1,6 +1,7 @@
 ---
 title: CSSValue.cssValueType
 slug: Web/API/CSSValue/cssValueType
+page-type: web-api-instance-property
 tags:
   - API
   - CSSValue

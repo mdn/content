@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

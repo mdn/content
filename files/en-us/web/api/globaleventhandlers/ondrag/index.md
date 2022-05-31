@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondrag
 slug: Web/API/GlobalEventHandlers/ondrag
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,7 +11,7 @@ browser-compat: api.GlobalEventHandlers.ondrag
 ---
 {{ApiRef("HTML DOM")}}
 
-A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("drag")}}
+A {{domxref("GlobalEventHandlers","global event handler")}} for the {{domxref("HTMLElement/drag_event", "drag")}}
 event.
 
 ## Syntax
@@ -93,4 +94,7 @@ function dragover_handler(ev) {
 
 ## See also
 
-- {{event("drag")}}
+- {{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} event
+- {{domxref("Document")}}: {{domxref("Document/drag_event", "drag")}} event
+- {{domxref("HTMLElement")}}: {{domxref("HTMLElement/drag_event", "drag")}} event
+- {{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} event

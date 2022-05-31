@@ -14,8 +14,7 @@ browser-compat: api.MediaRecorder.resume
 {{APIRef("MediaStream Recording")}}
 
 The **`MediaRecorder.resume()`**
-method (part of the [MediaRecorder
-API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used to resume media recording when it has been previously
+method (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used to resume media recording when it has been previously
 paused.
 
 When the `resume()` method is invoked, the browser queues a task that runs

@@ -26,7 +26,7 @@ stencilMaskSeparate(face, mask)
 
 ### Parameters
 
-- face
+- `face`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil writemask
     is updated. The possible values are:

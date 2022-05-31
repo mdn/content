@@ -1,6 +1,7 @@
 ---
 title: File()
 slug: Web/API/File/File
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

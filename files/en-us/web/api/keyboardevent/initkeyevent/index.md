@@ -29,65 +29,41 @@ this way must have been created with the
 ## Syntax
 
 ```js
-initKeyEvent (type, bubbles, cancelable, viewArg,
-                    ctrlKeyArg, altKeyArg, shiftKeyArg, metaKeyArg,
-                    keyCodeArg, charCodeArg)
+initKeyEvent (type, bubbles, cancelable, view,
+                    ctrlKey, altKey, shiftKey, metaKey,
+                    keyCode, charCode)
 ```
 
 ### Parameters
 
-- _`type`_
+- `type`
   - : A string representing the type of event.
-- _`bubbles`_
+- `bubbles`
   - : A boolean value indicating whether the event should bubble up through the
     event chain or not (see [bubbles](/en-US/docs/Web/API/Event/bubbles)).
-- _`cancelable`_
+- `cancelable`
   - : A boolean value indicating whether the event can be canceled (see [cancelable](/en-US/docs/Web/API/Event/cancelable)).
-- _`viewArg`_
+- `view`
   - : Specifies the {{domxref("UIEvent.view")}}; this value may be `null`.
-- _`ctrlKeyArg`_
-
+- `ctrlKey`
   - : A boolean value that is `true` if the virtual key to be
-    generated is a combination of keys containing the
-
-    <kbd>Ctrl</kbd>
-
-    key.
-
-- _`altKeyArg`_
-
+    generated is a combination of keys containing the <kbd>Ctrl</kbd> key.
+- `altKey`
   - : A boolean value that is `true` if the virtual key to be
-    generated is a combination of keys containing the
-
-    <kbd>Alt</kbd>
-
-    key.
-
-- _`shiftKeyArg`_
-
+    generated is a combination of keys containing the <kbd>Alt</kbd> key.
+- `shiftKey`
   - : A boolean value that is `true` if the virtual key to be generated
-    is a combination of keys containing the
-
-    <kbd>Shift</kbd>
-
-    key.
-
-- _`metaKeyArg`_
-
+    is a combination of keys containing the <kbd>Shift</kbd>key.
+- `metaKey`
   - : A boolean value that is `true` if the virtual key to be
-    generated is a combination of keys containing the
-
-    <kbd>Meta</kbd>
-
-    key.
-
-- _`keyCodeArg`_
-  - : A `unsigned long` representing the virtual key code value of the key
-    which was depressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
+    generated is a combination of keys containing the <kbd>Meta</kbd> key.
+- `keyCode`
+  - : An `unsigned long` representing the virtual key code value of the key
+    which was pressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
     }} for the list of key codes.
-- _`charCodeArg`_
-  - : A `unsigned long` representing the Unicode character associated with
-    the depressed key otherwise `0`.
+- `charCode`
+  - : An `unsigned long` representing the Unicode character associated with
+    the pressed key otherwise `0`.
 
 ### Return value
 

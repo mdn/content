@@ -1,6 +1,7 @@
 ---
 title: 'Element: touchmove event'
 slug: Web/API/Element/touchmove_event
+page-type: web-api-event
 tags:
   - Event
   - Touch Events

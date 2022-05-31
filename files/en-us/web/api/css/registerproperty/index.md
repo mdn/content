@@ -1,6 +1,7 @@
 ---
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
+page-type: web-api-static-method
 tags:
   - CSS
   - Houdini
@@ -8,6 +9,7 @@ tags:
 browser-compat: api.CSS.registerProperty
 ---
 {{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** method registers
 {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
@@ -122,8 +124,7 @@ We can add these styles to some buttons:
 
 ## See also
 
-- [Using the CSS
-  properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSS.supports()")}}
 - {{DOMxRef("CSS.escape()")}}

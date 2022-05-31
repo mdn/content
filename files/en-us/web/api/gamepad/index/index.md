@@ -1,6 +1,7 @@
 ---
 title: Gamepad.index
 slug: Web/API/Gamepad/index
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API

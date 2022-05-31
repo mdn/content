@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -35,8 +36,7 @@ getElementsByTagName(name)
 
 A live {{domxref("HTMLCollection")}} of found elements in the order they appear in the tree.
 
-> **Note:** [The
-> latest W3C specification](https://dom.spec.whatwg.org/#interface-document) says returned value is an
+> **Note:** [The latest W3C specification](https://dom.spec.whatwg.org/#interface-document) says returned value is an
 > `HTMLCollection`; however, this method returns a {{domxref("NodeList")}} in
 > WebKit browsers. See {{bug(14869)}} for details.
 

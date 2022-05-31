@@ -264,9 +264,7 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 ## Browser compatibility
 
-### `MediaRecorder`
-
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

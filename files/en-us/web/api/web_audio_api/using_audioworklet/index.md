@@ -14,7 +14,7 @@ tags:
   - WebAudio API
   - sound
 ---
-{{APIRef("Web Audio API")}}
+{{DefaultAPISidebar("Web Audio API")}}
 
 This article explains how to create an audio worklet processor and use it in a Web Audio application.
 
@@ -250,7 +250,7 @@ static get parameterDescriptors() {
     },
     {
       name: "frequency",
-      defaultValue: 440.0;
+      defaultValue: 440.0,
       minValue: 27.5,
       maxValue: 4186.009
     }

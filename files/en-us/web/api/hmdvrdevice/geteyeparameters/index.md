@@ -1,6 +1,7 @@
 ---
 title: HMDVRDevice.getEyeParameters()
 slug: Web/API/HMDVRDevice/getEyeParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

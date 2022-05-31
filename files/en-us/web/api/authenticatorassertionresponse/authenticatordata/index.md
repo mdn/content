@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAssertionResponse.authenticatorData
 slug: Web/API/AuthenticatorAssertionResponse/authenticatorData
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorAssertionResponse
@@ -39,14 +40,14 @@ An {{jsxref("ArrayBuffer")}} that has a {{jsxref("ArrayBuffer.byteLength")}} of 
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
   timeout: 60000
 };
 
 navigator.credentials.get({  publicKey: options })
   .then(function (assertionPKCred) {
-    var authenticatorData = assertionPKCred.response.authenticatorData;
+    const authenticatorData = assertionPKCred.response.authenticatorData;
     // Maybe try to convert the authenticatorData to see what's inside
 
     // Send response and client extensions to the server so that it can

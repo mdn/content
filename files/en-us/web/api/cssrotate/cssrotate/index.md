@@ -1,6 +1,7 @@
 ---
 title: CSSRotate()
 slug: Web/API/CSSRotate/CSSRotate
+page-type: web-api-constructor
 tags:
   - API
   - CSS Types Object Model API

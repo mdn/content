@@ -23,9 +23,9 @@ getAttribLocation(program, name)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} containing the attribute variable.
-- name
+- `name`
   - : A string specifying the name of the attribute variable whose
     location to get.
 

@@ -23,7 +23,7 @@ deleteBuffer(buffer)
 
 ### Parameters
 
-- buffer
+- `buffer`
   - : A {{domxref("WebGLBuffer")}} object to delete.
 
 ### Return value

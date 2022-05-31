@@ -1,6 +1,7 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -19,7 +20,7 @@ The local name is always in lower case, whatever case at the attribute creation.
 
 ### Value
 
-A {{jsxref("String")}} representing the local part of the attribute's qualified name.
+A string representing the local part of the attribute's qualified name.
 
 ## Example
 

@@ -22,7 +22,7 @@ isProgram(program)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to check.
 
 ### Return value

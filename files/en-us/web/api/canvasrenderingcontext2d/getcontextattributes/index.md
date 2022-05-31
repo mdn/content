@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getContextAttributes()
 slug: Web/API/CanvasRenderingContext2D/getContextAttributes
+page-type: web-api-instance-method
 tags:
   - API
   - Method

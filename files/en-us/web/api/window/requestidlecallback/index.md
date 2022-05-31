@@ -47,7 +47,8 @@ requestIdleCallback(callback, options)
 
   - : Contains optional configuration parameters. Currently only one property is defined:
 
-    - `timeout`: If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
+    - `timeout`
+      - : If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
 
 ### Return value
 
@@ -57,8 +58,7 @@ An ID which can be used to cancel the callback by passing it into the
 ## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
-in the article [Cooperative Scheduling
-of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 

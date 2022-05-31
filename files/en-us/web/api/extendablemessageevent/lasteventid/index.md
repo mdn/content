@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -14,8 +15,7 @@ browser-compat: api.ExtendableMessageEvent.lastEventId
 {{APIRef("Service Workers API")}}
 
 The **`lastEventID`** read-only property of the
-{{domxref("ExtendableMessageEvent")}} interface represents, in [server-sent
-events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source. This is an empty string.
+{{domxref("ExtendableMessageEvent")}} interface represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source. This is an empty string.
 
 ## Value
 
