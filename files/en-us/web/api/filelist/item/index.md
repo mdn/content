@@ -32,7 +32,7 @@ A [`File`](/en-US/docs/Web/API/File) object representing the requested file.
 
 ### Printing the name of a file
 
-In this example we use `item()` to select the first item in the `FileList`.
+In this example, we use `item()` to select the first item in the `FileList`.
 
 #### HTML
 
