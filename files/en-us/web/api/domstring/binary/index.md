@@ -1,6 +1,7 @@
 ---
 title: Binary strings
 slug: Web/API/DOMString/Binary
+page-type: guide
 tags:
   - DOM
   - JavaScript

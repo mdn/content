@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode()
 slug: Web/API/DynamicsCompressorNode/DynamicsCompressorNode
+page-type: web-api-constructor
 tags:
   - Audio
   - Constructor

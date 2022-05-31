@@ -1,6 +1,7 @@
 ---
 title: DOMMatrix (WebKitCSSMatrix)
 slug: Web/API/DOMMatrix
+page-type: web-api-interface
 tags:
   - API
   - DOMMatrix

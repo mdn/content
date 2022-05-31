@@ -1,6 +1,7 @@
 ---
 title: Element.ariaColSpan
 slug: Web/API/Element/ariaColSpan
+page-type: web-api-instance-property
 tags:
   - API
   - Property

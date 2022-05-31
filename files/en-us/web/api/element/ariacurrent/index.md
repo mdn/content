@@ -1,6 +1,7 @@
 ---
 title: Element.ariaCurrent
 slug: Web/API/Element/ariaCurrent
+page-type: web-api-instance-property
 tags:
   - API
   - Property
