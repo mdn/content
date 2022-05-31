@@ -12,7 +12,7 @@ browser-compat: api.CSSStyleDeclaration
 ---
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleDeclaration`** interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.
+The **`CSSStyleDeclaration`** interface represents an object that is a CSS declaration block, and exposes style information and constious style-related methods and properties.
 
 A `CSSStyleDeclaration` object can be exposed using three different APIs:
 
@@ -54,11 +54,11 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 ## Example
 
 ```js
-var styleObj = document.styleSheets[0].cssRules[0].style;
+const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (var i = styleObj.length; i--;) {
-  var nameString = styleObj[i];
+for (let i = styleObj.length; i--;) {
+  const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
 
