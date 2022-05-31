@@ -51,8 +51,7 @@ getContext(contextType, contextAttributes)
     **`"experimental-webgl2"`** are also used in implementations
     of WebGL. These implementations have not reached test suite conformance, or the
     graphic drivers situation on the platform is not yet stable. The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations
-    under certain [conformance
-    rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    under certain [conformance rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes`
 
