@@ -1,6 +1,7 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

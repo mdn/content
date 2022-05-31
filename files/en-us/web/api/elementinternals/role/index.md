@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.role
 slug: Web/API/ElementInternals/role
+page-type: web-api-instance-property
 tags:
   - API
   - Property

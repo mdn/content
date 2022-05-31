@@ -1,6 +1,7 @@
 ---
 title: EventSource()
 slug: Web/API/EventSource/EventSource
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

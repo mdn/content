@@ -1,6 +1,7 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

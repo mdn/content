@@ -1,6 +1,7 @@
 ---
 title: Element.msZoomTo()
 slug: Web/API/Element/msZoomTo
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions

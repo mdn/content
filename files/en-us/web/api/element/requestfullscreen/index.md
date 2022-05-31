@@ -1,6 +1,7 @@
 ---
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullscreen
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

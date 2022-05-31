@@ -1,6 +1,7 @@
 ---
 title: EncodedVideoChunk.byteLength
 slug: Web/API/EncodedVideoChunk/byteLength
+page-type: web-api-instance-property
 tags:
   - API
   - Property
