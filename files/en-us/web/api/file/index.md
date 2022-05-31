@@ -10,7 +10,7 @@ tags:
   - Web
 browser-compat: api.File
 ---
-{{APIRef}}
+{{APIRef("File API")}}
 
 The **`File`** interface provides information about files and allows JavaScript in a web page to access their content.
 
