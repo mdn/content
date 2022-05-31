@@ -22,7 +22,7 @@ Sets of files made available in this way are represented as {{domxref("FileList"
 ## Interfaces
 
 - {{domxref("Blob")}}
-  - : Represents a "Binary Large Object", meaning a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{domxref("ReadableStream")}} so its methods can be used for processing the data.
+  - : Represents a "Binary Large Object", meaning a file-like object of immutable, raw data; a {{domxref("Blob")}} can be read as text or binary data, or converted into a {{domxref("ReadableStream")}} so its methods can be used for processing the data.
 - {{domxref("File")}}
   - : Provides information about a file and allows JavaScript in a web page to access its content.
 - {{domxref("FileList")}}
