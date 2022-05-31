@@ -45,6 +45,8 @@ This article provides information about the changes in Firefox 102 that will aff
 
 #### Media, WebRTC, and Web Audio
 
+- [Transform streams](/en-US/docs/Web/API/Streams_API#transform_streams) are now supported, including the classes [`TransformStream`](/en-US/docs/Web/API/TransformStream) and [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController), and the method [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough) ({{bug(1767507)}}).
+
 #### Removals
 
 ### WebAssembly
