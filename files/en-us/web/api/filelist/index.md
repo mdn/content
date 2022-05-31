@@ -43,7 +43,7 @@ In this example we log the names of all the files selected by the user.
 
 ```html
 
-<!--multiple is set to allow multiple files to be selected-->
+<!--'multiple' is set to allow multiple files to be selected-->
 <input id="myfiles" multiple type="file">
 <div class="output"></div>
 ```
