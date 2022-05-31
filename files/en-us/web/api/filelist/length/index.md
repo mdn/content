@@ -21,7 +21,7 @@ A number indicating the number of files in the list.
 
 ### Printing the number of files selected
 
-In this example we use `length` to find the number of items in the `FileList`.
+In this example, we use `length` to find the number of items in the `FileList`.
 
 #### HTML
 
