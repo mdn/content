@@ -4,7 +4,6 @@ slug: Web/API/ReadableByteStreamController
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Fetch
   - Interface
   - ReadableByteStreamController
@@ -12,9 +11,10 @@ tags:
   - Streams
 browser-compat: api.ReadableByteStreamController
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}
+{{APIRef("Streams")}}
 
-The **`ReadableByteStreamController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Byte stream controllers are for byte streams.
+The **`ReadableByteStreamController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue.
+Byte stream controllers are for byte streams.
 
 ## Constructor
 
