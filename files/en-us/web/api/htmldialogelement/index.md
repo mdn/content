@@ -3,14 +3,13 @@ title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Interface
   - Reference
 browser-compat: api.HTMLDialogElement
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLElement("dialog")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.
 
