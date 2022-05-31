@@ -159,5 +159,4 @@ This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
   queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [Images in
   HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

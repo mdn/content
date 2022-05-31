@@ -1,6 +1,7 @@
 ---
 title: Document.currentScript
 slug: Web/API/Document/currentScript
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

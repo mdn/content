@@ -68,7 +68,7 @@ properties:
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -89,7 +89,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var attestationObj = newCredentialInfo.response.attestationObject;
+    const attestationObj = newCredentialInfo.response.attestationObject;
     // This will be a CBOR encoded ArrayBuffer
 
     // Do something with the response

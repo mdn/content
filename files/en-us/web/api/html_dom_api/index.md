@@ -1,6 +1,7 @@
 ---
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
+page-type: web-api-overview
 tags:
   - API
   - Beginner

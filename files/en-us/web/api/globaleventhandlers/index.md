@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers
 slug: Web/API/GlobalEventHandlers
+page-type: web-api-interface
 tags:
   - API
   - GlobalEventHandlers

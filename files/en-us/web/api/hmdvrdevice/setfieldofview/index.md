@@ -1,6 +1,7 @@
 ---
 title: HMDVRDevice.setFieldOfView()
 slug: Web/API/HMDVRDevice/setFieldOfView
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: Dragging and Dropping Multiple Items
 slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
+page-type: guide
 tags:
   - Gecko
   - Guide

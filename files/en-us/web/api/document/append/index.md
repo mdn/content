@@ -1,6 +1,7 @@
 ---
 title: Document.append()
 slug: Web/API/Document/append
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

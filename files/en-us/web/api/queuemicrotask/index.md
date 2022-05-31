@@ -71,8 +71,7 @@ queueMicrotask(() => {
 })
 ```
 
-Taken from the [queueMicrotask
-spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
+Taken from the [queueMicrotask spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
 
 ```js
 MyElement.prototype.loadData = function (url) {
@@ -120,7 +119,6 @@ if (typeof self.queueMicrotask !== "function") {
 - [Using microtasks in
   JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-- [queueMicrotask
-  explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
+- [queueMicrotask explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
 - [Tasks,
   microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald

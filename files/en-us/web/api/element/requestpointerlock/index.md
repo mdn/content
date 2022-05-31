@@ -1,6 +1,7 @@
 ---
 title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

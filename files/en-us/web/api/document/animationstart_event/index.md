@@ -1,6 +1,7 @@
 ---
 title: 'Document: animationstart event'
 slug: Web/API/Document/animationstart_event
+page-type: web-api-event
 tags:
   - API
   - Animation

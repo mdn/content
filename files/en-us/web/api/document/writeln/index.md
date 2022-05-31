@@ -1,6 +1,7 @@
 ---
 title: Document.writeln()
 slug: Web/API/Document/writeln
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

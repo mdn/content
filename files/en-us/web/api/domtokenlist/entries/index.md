@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

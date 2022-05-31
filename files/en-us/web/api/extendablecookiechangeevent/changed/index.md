@@ -1,6 +1,7 @@
 ---
 title: ExtendableCookieChangeEvent.changed
 slug: Web/API/ExtendableCookieChangeEvent/changed
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: fetch()
 slug: Web/API/fetch
+page-type: web-api-global-function
 tags:
   - API
   - Experimental

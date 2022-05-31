@@ -1,6 +1,7 @@
 ---
 title: Document.width
 slug: Web/API/Document/width
+page-type: web-api-instance-property
 tags:
   - API
   - Document

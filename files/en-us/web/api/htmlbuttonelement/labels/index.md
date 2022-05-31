@@ -1,6 +1,7 @@
 ---
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

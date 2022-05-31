@@ -1,6 +1,7 @@
 ---
 title: GeolocationPositionError.code
 slug: Web/API/GeolocationPositionError/code
+page-type: web-api-instance-property
 tags:
   - API
   - Code

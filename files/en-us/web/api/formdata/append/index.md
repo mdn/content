@@ -1,6 +1,7 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
+page-type: web-api-instance-method
 tags:
   - API
   - Append

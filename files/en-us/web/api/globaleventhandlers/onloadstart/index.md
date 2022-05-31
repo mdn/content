@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onloadstart
 slug: Web/API/GlobalEventHandlers/onloadstart
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

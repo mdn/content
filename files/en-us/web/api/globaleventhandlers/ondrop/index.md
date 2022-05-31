@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondrop
 slug: Web/API/GlobalEventHandlers/ondrop
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

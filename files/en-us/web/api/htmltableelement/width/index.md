@@ -29,8 +29,7 @@ mytable.width = "75%";
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement_
-  .width](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-77447361)
+- W3C DOM 2 HTML Specification [_HTMLTableElement.width_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-77447361)
 
 ## Browser compatibility
 

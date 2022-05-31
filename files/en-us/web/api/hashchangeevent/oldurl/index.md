@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent.oldURL
 slug: Web/API/HashChangeEvent/oldURL
+page-type: web-api-instance-property
 tags:
   - API
   - HashChangeEvent

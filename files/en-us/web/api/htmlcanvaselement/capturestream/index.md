@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
+page-type: web-api-instance-method
 tags:
   - Canvas
   - Experimental

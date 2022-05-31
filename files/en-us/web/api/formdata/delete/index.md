@@ -1,6 +1,7 @@
 ---
 title: FormData.delete()
 slug: Web/API/FormData/delete
+page-type: web-api-instance-method
 tags:
   - API
   - FormData

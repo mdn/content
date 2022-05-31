@@ -1,6 +1,7 @@
 ---
 title: 'EventSource: message event'
 slug: Web/API/EventSource/message_event
+page-type: web-api-event
 tags:
   - API
   - Event

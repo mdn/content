@@ -13,7 +13,7 @@ tags:
   - WebRTC API
   - streaming
 spec-urls:
-  - https://w3c.github.io/webrtc-pc/)
+  - https://w3c.github.io/webrtc-pc/
   - https://w3c.github.io/mediacapture-main/
   - https://w3c.github.io/mediacapture-fromelement/
 ---

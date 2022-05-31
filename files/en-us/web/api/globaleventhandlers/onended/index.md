@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onended
 slug: Web/API/GlobalEventHandlers/onended
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

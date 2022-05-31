@@ -76,8 +76,7 @@ For example, a `data-abc-def` attribute corresponds to
   the dataset: `element.dataset.keyname`.
 - Attributes can also be set and read using bracket syntax:
   `element.dataset['keyname']`.
-- The [`in`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
+- The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
   `'keyname' in element.dataset`.
 
 ### Setting values
@@ -86,8 +85,7 @@ For example, a `data-abc-def` attribute corresponds to
   For example: `element.dataset.example = null` is
   converted into `data-example="null"`.
 
-- To remove an attribute, you can use the [`delete`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`.
+- To remove an attribute, you can use the [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`.
 
 ## Value
 

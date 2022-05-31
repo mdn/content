@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API

@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly.height
 slug: Web/API/DOMRectReadOnly/height
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

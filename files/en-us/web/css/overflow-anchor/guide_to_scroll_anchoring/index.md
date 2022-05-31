@@ -87,4 +87,3 @@ Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box 
 ### Compatibility notes
 
 If you need to test whether scroll anchoring is available in a browser, use [Feature Queries](/en-US/docs/Web/CSS/@supports) to test support for the `overflow-anchor` property.
-

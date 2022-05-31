@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onwheel
 slug: Web/API/GlobalEventHandlers/onwheel
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

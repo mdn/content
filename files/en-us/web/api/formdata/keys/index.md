@@ -1,6 +1,7 @@
 ---
 title: FormData.keys()
 slug: Web/API/FormData/keys
+page-type: web-api-instance-method
 tags:
   - API
   - FormData

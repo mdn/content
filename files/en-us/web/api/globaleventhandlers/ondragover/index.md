@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondragover
 slug: Web/API/GlobalEventHandlers/ondragover
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

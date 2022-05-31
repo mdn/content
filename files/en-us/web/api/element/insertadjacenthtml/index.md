@@ -1,6 +1,7 @@
 ---
 title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

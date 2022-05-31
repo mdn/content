@@ -1,6 +1,7 @@
 ---
 title: 'Element: click event'
 slug: Web/API/Element/click_event
+page-type: web-api-event
 tags:
   - API
   - DOM
