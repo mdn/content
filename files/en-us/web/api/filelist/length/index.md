@@ -11,14 +11,11 @@ browser-compat: api.FileList.length
 ---
 {{APIRef("File API")}}
 
-The {{domxref("FileReader")}} **`error`** property returns the
-error that occurred while reading the file.
+The read-only {{domxref("FileList")}} **`length`** property returns the number of files in the `FileList`.
 
 ## Value
 
-A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
-property returns a {{domxref("DOMException")}} because `DOMError` has been
-removed from the DOM standard.
+A number indicating the number of files in the list.
 
 ## Examples
 
@@ -47,7 +44,7 @@ fileInput.addEventListener("change", () => {
 
 #### Result
 
-{{EmbedLiveSample("Printing the name of a file")}}
+{{EmbedLiveSample("Printing the number of files selected")}}
 
 ## Specifications
 
@@ -56,7 +53,3 @@ fileInput.addEventListener("change", () => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("FileReader")}}
