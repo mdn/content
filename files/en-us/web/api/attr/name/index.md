@@ -16,7 +16,7 @@ The qualified name is always in lower case, whatever case at the attribute creat
 
 ### Value
 
-A {{jsxref("String")}} representing the attribute's qualified name.
+A string representing the attribute's qualified name.
 
 ## Example
 
