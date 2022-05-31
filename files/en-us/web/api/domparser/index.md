@@ -1,7 +1,7 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-page-type: web-api-instance-method
+page-type: web-api-interface
 tags:
   - API
   - DOM
