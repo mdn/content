@@ -70,11 +70,11 @@ const output = document.querySelector('.output');
 
 fileInput.addEventListener("change", () => {
   const [file] = fileInput.files;
-  const reader = new FileReader();
-  reader.addEventListener("load", () => {
-    output.innerText = reader.result;
-  });
   if (file) {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      output.innerText = reader.result;
+    });
     reader.readAsText(file);
   }
 })
