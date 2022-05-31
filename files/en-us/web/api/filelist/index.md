@@ -37,7 +37,7 @@ const file = document.getElementById('fileItem').files[0];
 
 ### Logging filenames
 
-In this example we log the names of all the files selected by the user.
+In this example, we log the names of all the files selected by the user.
 
 #### HTML
 
