@@ -35,7 +35,7 @@ In an instance of a derived class from `Promise` (e.g. your custom `MyPromise`),
 
 ```js
 class MyPromise extends Promise {
-  // Overwrite MyPromise species to the parent Promise constructor
+  // Override MyPromise species to the parent Promise constructor
   static get [Symbol.species]() { return Promise; }
 }
 ```
