@@ -19,7 +19,7 @@ new {{domxref("ReadableStream")}} instances.
 
 This is useful for allowing two readers to read a stream sequentially or simultaneously,
 perhaps at different speeds.
-You might do this for example in a ServiceWorker if you want to fetch
+For example, you might do this in a ServiceWorker if you want to fetch
 a response from the server and stream it to the browser, but also stream it to the
 ServiceWorker cache. Since a response body cannot be consumed more than once, you'd need
 two copies to do this.
@@ -28,7 +28,7 @@ A teed stream will backpressure to the speed of the *faster* consumed `ReadableS
 and unread data is buffered onto the internal buffer
 of the slower consumed `ReadableStream` without any limit or backpressure.
 If only one branch is consumed, then the entire body will be buffered in memory.
-Therefore, you should not use the build-in `tee()` to read very large streams
+Therefore, you should not use the built-in `tee()` to read very large streams
 in parallel at different speeds.
 Instead, search for an implementation that backpressures
 to the speed of the *slower* consumed branch.

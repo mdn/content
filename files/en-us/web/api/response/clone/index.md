@@ -20,7 +20,7 @@ will backpressure to the speed of the *faster* consumed `ReadableStream`,
 and unread data is buffered onto the internal buffer
 of the slower consumed `ReadableStream` without any limit or backpressure.
 If only one branch is consumed, then the entire body will be buffered in memory.
-Therefore, you should not use the build-in `clone()` to read very large bodies
+Therefore, you should not use the built-in `clone()` to read very large bodies
 in parallel at different speeds.
 
 `clone()` throws a {{jsxref("TypeError")}} if the response body has already been used.
