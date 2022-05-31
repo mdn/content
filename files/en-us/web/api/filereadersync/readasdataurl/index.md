@@ -50,7 +50,7 @@ The following exceptions can be raised by this method:
 
 ## See also
 
-- [File API](/en-US/docs/API/File_API)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
