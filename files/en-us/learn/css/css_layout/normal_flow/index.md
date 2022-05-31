@@ -54,7 +54,7 @@ Inline elements behave differently. They don't appear on new lines; instead, the
 
 If two adjacent elements both have a margin set on them and the two margins touch, the larger of the two remains and the smaller one disappears. Recall that this is known as **margin collapsing**.
 
-> **Note:** The margin collapsing only works for vertical margins.
+Collapsing margins is only relevant in the **vertical direction**.
 
 Let's look at a simple example that explains all of this:
 
