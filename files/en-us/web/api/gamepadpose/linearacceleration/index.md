@@ -1,6 +1,7 @@
 ---
 title: GamepadPose.linearAcceleration
 slug: Web/API/GamepadPose/linearAcceleration
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

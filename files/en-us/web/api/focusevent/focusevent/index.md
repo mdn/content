@@ -1,6 +1,7 @@
 ---
 title: FocusEvent()
 slug: Web/API/FocusEvent/FocusEvent
+page-type: web-api-event
 tags:
   - API
   - Constructor

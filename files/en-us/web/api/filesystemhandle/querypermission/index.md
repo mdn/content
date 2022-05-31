@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.queryPermission()
 slug: Web/API/FileSystemHandle/queryPermission
+page-type: web-api-instance-method
 tags:
   - Directory
   - File

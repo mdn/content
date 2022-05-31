@@ -1,6 +1,7 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
+page-type: web-api-interface
 tags:
   - API
   - File API

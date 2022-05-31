@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream.write()
 slug: Web/API/FileSystemWritableFileStream/write
+page-type: web-api-instance-method
 tags:
   - File
   - File System Access API

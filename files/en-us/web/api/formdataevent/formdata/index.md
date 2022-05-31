@@ -1,6 +1,7 @@
 ---
 title: FormDataEvent.formData
 slug: Web/API/FormDataEvent/formData
+page-type: web-api-instance-property
 tags:
   - API
   - FormDataEvent

@@ -1,6 +1,7 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -1,6 +1,7 @@
 ---
 title: FormData.set()
 slug: Web/API/FormData/set
+page-type: web-api-instance-method
 tags:
   - API
   - FormData

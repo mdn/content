@@ -1,6 +1,7 @@
 ---
 title: FileList
 slug: Web/API/FileList
+page-type: web-api-interface
 tags:
   - API
   - File API

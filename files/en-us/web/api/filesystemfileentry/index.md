@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
+page-type: web-api-interface
 tags:
   - API
   - File and Directory Entries API
