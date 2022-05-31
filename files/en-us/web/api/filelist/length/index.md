@@ -38,7 +38,7 @@ const output = document.querySelector('.output');
 
 fileInput.addEventListener("change", () => {
   const fileList = fileInput.files;
-  output.textContent = `You selected: ${fileList.length} file(s)`;
+  output.textContent = `You've selected: ${fileList.length} file(s)`;
 });
 ```
 
