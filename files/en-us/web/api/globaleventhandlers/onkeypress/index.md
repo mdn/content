@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onkeypress
 slug: Web/API/GlobalEventHandlers/onkeypress
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

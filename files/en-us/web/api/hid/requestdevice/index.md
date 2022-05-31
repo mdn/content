@@ -1,6 +1,7 @@
 ---
 title: HID.requestDevice()
 slug: Web/API/HID/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Method

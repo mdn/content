@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ontouchmove
 slug: Web/API/GlobalEventHandlers/ontouchmove
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

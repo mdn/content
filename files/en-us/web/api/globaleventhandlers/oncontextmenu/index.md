@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/GlobalEventHandlers/oncontextmenu
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

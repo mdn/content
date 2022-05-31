@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onblur
 slug: Web/API/GlobalEventHandlers/onblur
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

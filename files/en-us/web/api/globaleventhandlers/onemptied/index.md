@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onemptied
 slug: Web/API/GlobalEventHandlers/onemptied
+page-type: web-api-instance-property
 browser-compat: api.GlobalEventHandlers.onemptied
 ---
 {{ ApiRef("HTML DOM") }}

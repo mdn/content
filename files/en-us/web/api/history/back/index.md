@@ -1,6 +1,7 @@
 ---
 title: History.back()
 slug: Web/API/History/back
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

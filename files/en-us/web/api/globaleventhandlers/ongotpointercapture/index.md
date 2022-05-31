@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ongotpointercapture
 slug: Web/API/GlobalEventHandlers/ongotpointercapture
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

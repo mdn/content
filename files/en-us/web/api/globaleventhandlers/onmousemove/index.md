@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmousemove
 slug: Web/API/GlobalEventHandlers/onmousemove
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

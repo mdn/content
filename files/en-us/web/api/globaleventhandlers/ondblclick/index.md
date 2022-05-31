@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondblclick
 slug: Web/API/GlobalEventHandlers/ondblclick
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: Web/API/GlobalEventHandlers/onchange
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

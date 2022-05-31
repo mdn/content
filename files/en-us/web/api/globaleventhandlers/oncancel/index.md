@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oncancel
 slug: Web/API/GlobalEventHandlers/oncancel
+page-type: web-api-instance-property
 tags:
   - API
   - Dialog

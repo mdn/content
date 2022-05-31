@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onreset
 slug: Web/API/GlobalEventHandlers/onreset
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

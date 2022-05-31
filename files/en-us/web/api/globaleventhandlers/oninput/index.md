@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oninput
 slug: Web/API/GlobalEventHandlers/oninput
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

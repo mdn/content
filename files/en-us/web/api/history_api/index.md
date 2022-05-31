@@ -1,6 +1,7 @@
 ---
 title: History API
 slug: Web/API/History_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onscroll
 slug: Web/API/GlobalEventHandlers/onscroll
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

@@ -1,6 +1,7 @@
 ---
 title: HIDConnectionEvent
 slug: Web/API/HIDConnectionEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

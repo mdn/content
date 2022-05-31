@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onkeyup
 slug: Web/API/GlobalEventHandlers/onkeyup
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

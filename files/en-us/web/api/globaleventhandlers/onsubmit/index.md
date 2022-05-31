@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onsubmit
 slug: Web/API/GlobalEventHandlers/onsubmit
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

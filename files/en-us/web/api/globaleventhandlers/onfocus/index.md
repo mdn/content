@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onfocus
 slug: Web/API/GlobalEventHandlers/onfocus
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

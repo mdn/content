@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onkeydown
 slug: Web/API/GlobalEventHandlers/onkeydown
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

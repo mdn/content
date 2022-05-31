@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oninvalid
 slug: Web/API/GlobalEventHandlers/oninvalid
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
