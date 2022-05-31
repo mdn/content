@@ -17,11 +17,21 @@ The **`tee()`** method of the
 two-element array containing the two resulting branches as
 new {{domxref("ReadableStream")}} instances.
 
-This is useful for allowing two readers to read a stream simultaneously, perhaps at
-different speeds. You might do this for example in a ServiceWorker if you want to fetch
+This is useful for allowing two readers to read a stream sequentially or simultaneously,
+perhaps at different speeds.
+You might do this for example in a ServiceWorker if you want to fetch
 a response from the server and stream it to the browser, but also stream it to the
 ServiceWorker cache. Since a response body cannot be consumed more than once, you'd need
 two copies to do this.
+
+A teed stream will backpressure to the speed of the *faster* consumed `ReadableStream`,
+and unread data is buffered onto the internal buffer
+of the slower consumed `ReadableStream` without any limit or backpressure.
+If only one branch is consumed, then the entire body will be buffered in memory.
+Therefore, you should not use the build-in `tee()` to read very large streams
+in parallel at different speeds.
+Instead, search for an implementation that backpressures
+to the speed of the *slower* consumed branch.
 
 To cancel the stream you then need to cancel both resulting branches. Teeing a stream
 will generally lock it for the duration, preventing other readers from locking it.

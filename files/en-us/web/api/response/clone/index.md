@@ -14,6 +14,15 @@ browser-compat: api.Response.clone
 
 The **`clone()`** method of the {{domxref("Response")}} interface creates a clone of a response object, identical in every way, but stored in a different variable.
 
+Like the underlying {{domxref("ReadableStream.tee")}} api,
+the {{domxref("Response.body", "body")}} of a cloned `Response`
+will backpressure to the speed of the *faster* consumed `ReadableStream`,
+and unread data is buffered onto the internal buffer
+of the slower consumed `ReadableStream` without any limit or backpressure.
+If only one branch is consumed, then the entire body will be buffered in memory.
+Therefore, you should not use the build-in `clone()` to read very large bodies
+in parallel at different speeds.
+
 `clone()` throws a {{jsxref("TypeError")}} if the response body has already been used.
 In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
 
