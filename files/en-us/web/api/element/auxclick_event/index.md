@@ -1,6 +1,7 @@
 ---
 title: 'Element: auxclick event'
 slug: Web/API/Element/auxclick_event
+page-type: web-api-event
 tags:
   - Element
   - Event

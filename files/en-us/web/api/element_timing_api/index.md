@@ -1,6 +1,7 @@
 ---
 title: Element Timing API
 slug: Web/API/Element_timing_API
+page-type: web-api-overview
 tags:
   - API
   - ElementTiming
