@@ -13,7 +13,9 @@ browser-compat: api.ReadableStreamBYOBRequest.respond
 ---
 {{APIRef("Streams")}}
 
-The **`error()`** method of the {{domxref("ReadableStreamBYOBRequest")}} interface xxx
+The **`respond()`** method of the {{domxref("ReadableStreamBYOBRequest")}} interface is used to signal to the associated readable byte stream that the specified number of bytes were written into the {{domxref("ReadableStreamBYOBRequest.view")}}.
+
+After this method is called, the {{domxref("ReadableStreamBYOBRequest/view","view")}} will be transferred and no longer modifiable.
 
 ## Syntax
 
@@ -24,7 +26,7 @@ respond(bytesWritten)
 ### Parameters
 
 - `bytesWritten`
-  - : xxx
+  - : The number of bytes written into {{domxref("ReadableStreamBYOBRequest.view")}}.
 
 ### Return value
 
@@ -32,8 +34,8 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no associated controller, or the associated internal array buffer is detached.
+- `TypeError`
+  - : The request does not have an associated {{domxref("ReadableByteStreamController")}} or the view buffer is not detached/cannot be transferred into.
 
 ## Examples
 

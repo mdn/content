@@ -29,7 +29,7 @@ None. `ReadableStreamBYOBRequest` instance is created automatically by `Readable
 ## Methods
 
 - {{domxref("ReadableStreamBYOBRequest.respond()")}}
-  - : xxx
+  - : Signals to the associated readable byte stream that the specified number of bytes were written into the current {{domxref("ReadableStreamBYOBRequest.view", "view")}}.
 - {{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}}
   - : xxx
 
