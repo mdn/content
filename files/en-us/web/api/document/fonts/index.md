@@ -1,6 +1,7 @@
 ---
 title: Document.fonts
 slug: Web/API/Document/fonts
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

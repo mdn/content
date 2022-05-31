@@ -1,6 +1,7 @@
 ---
 title: 'Document: drag event'
 slug: Web/API/Document/drag_event
+page-type: web-api-event
 tags:
   - API
   - DOM

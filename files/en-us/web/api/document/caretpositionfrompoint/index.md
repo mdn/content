@@ -1,6 +1,7 @@
 ---
 title: Document.caretPositionFromPoint()
 slug: Web/API/Document/caretPositionFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Document

@@ -1,6 +1,7 @@
 ---
 title: Document.rootElement
 slug: Web/API/Document/rootElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

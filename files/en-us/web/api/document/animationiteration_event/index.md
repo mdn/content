@@ -1,6 +1,7 @@
 ---
 title: 'Document: animationiteration event'
 slug: Web/API/Document/animationiteration_event
+page-type: web-api-event
 tags:
   - API
   - Animation

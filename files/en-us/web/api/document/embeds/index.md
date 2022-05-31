@@ -1,6 +1,7 @@
 ---
 title: Document.embeds
 slug: Web/API/Document/embeds
+page-type: web-api-instance-property
 tags:
   - API
   - Document

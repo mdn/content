@@ -1,6 +1,7 @@
 ---
 title: 'Document: readystatechange event'
 slug: Web/API/Document/readystatechange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

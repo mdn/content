@@ -1,6 +1,7 @@
 ---
 title: Document.elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Document

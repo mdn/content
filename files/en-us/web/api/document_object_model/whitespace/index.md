@@ -1,6 +1,7 @@
 ---
 title: How whitespace is handled by HTML, CSS, and in the DOM
 slug: Web/API/Document_Object_Model/Whitespace
+page-type: guide
 tags:
   - CSS
   - DOM

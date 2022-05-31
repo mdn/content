@@ -1,6 +1,7 @@
 ---
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

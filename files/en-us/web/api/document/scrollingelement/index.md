@@ -1,6 +1,7 @@
 ---
 title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document
