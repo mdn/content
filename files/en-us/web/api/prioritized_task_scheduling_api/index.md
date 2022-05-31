@@ -73,8 +73,8 @@ The same example as above with a priority option would look like this:
 
 ```js
 scheduler.postTask( ()=>{ return 'Task executing'; }, {priority: 'user-blocking'} )
- .then( (taskResult) => { mylog(`${taskResult}`); }) // Log the task result
- .catch( (error) => { mylog(`Error: ${error}`); });  // Log any errors
+ .then( (taskResult) => { console.log(`${taskResult}`); }) // Log the task result
+ .catch( (error) => { console.log(`Error: ${error}`); });  // Log any errors
 ```
 
 ### Task priorities
@@ -136,9 +136,9 @@ However for a task with an immutable priority, {{domxref("AbortSignal")}} more c
 
 The Prioritized Task Scheduling API extends the following APIs, adding the listed features:
 
-- `WindowOrWorkerGlobalScope.scheduler`
+- [`scheduler`](/en-US/docs/Web/API/Window/scheduler)
   - : This property is the entry point for using this API.
-    It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available in the `this` in most scopes.
+    It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available thorugh `this` in most scopes.
 
 ## Examples
 
@@ -156,7 +156,7 @@ function mylog(text) { log.textContent += `${text}\n`; }
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global "`this`" (such as ({{domxref("Window.scheduler")}} and the same property in worker scopes).
+Check whether prioritized task scheduling is supported by testing for the [`scheduler`](/en-US/docs/Web/API/Window/scheduler) property in the global "`this`" exposed to the current scope.
 
 The code below prints "Feature: Supported" if the API is supported on this browser.
 

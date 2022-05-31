@@ -139,8 +139,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object reference to the window object itself.
 - {{domxref("Window.sessionStorage")}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
-- {{domxref("Window.scheduler")}} {{readOnlyInline}}
-  - : Returns a reference to the {{domxref("Scheduler")}} object, which is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("Window.sidebar")}} {{deprecated_inline}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : Returns a reference to the window object of the sidebar.
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
@@ -167,7 +165,10 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("indexedDB")}} {{readonlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
 - {{domxref("origin")}} {{readOnlyinline}}
-  - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
+  - : Returns the global object's origin, serialized as a string.
+- {{domxref("Window.scheduler")}} {{readOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context.
+    This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
 ### Deprecated properties
 

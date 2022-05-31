@@ -44,7 +44,7 @@ if ('scheduler' in this) {
 }
 ```
 
-For more detailed example code see [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
+For more comprehensive example code see [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
 
 ## Specifications
 

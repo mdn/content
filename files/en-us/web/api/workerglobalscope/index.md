@@ -30,6 +30,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
+
 ### Non-standard properties
 
 - {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
@@ -46,7 +47,10 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("isSecureContext")}} {{readOnlyinline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("origin")}} {{readOnlyinline}}
-  - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
+  - : Returns the global object's origin, serialized as a string.
+- [`scheduler`](/en-US/docs/Web/API/Window/scheduler) {{readOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context.
+    This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
 ## Events
 
