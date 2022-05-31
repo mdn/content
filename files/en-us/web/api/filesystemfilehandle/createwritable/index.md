@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileHandle.createWritable()
 slug: Web/API/FileSystemFileHandle/createWritable
+page-type: web-api-instance-method
 tags:
   - Directory
   - File

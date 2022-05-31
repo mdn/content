@@ -1,6 +1,7 @@
 ---
 title: FontFace.load()
 slug: Web/API/FontFace/load
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Font Loading API

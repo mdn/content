@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.status
 slug: Web/API/FontFaceSet/status
+page-type: web-api-instance-property
 tags:
   - API
   - Property

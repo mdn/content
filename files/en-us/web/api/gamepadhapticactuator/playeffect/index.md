@@ -1,6 +1,7 @@
 ---
 title: GamepadHapticActuator.playEffect()
 slug: Web/API/GamepadHapticActuator/playEffect
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: FontFaceSetLoadEvent.fontfaces
 slug: Web/API/FontFaceSetLoadEvent/fontfaces
+page-type: web-api-instance-property
 tags:
   - API
   - CSSFontLoading
