@@ -27,9 +27,7 @@ A {{domxref("SourceBufferList")}}.
 
 ## Examples
 
-The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo
-live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
-the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
 function sourceOpen (_) {

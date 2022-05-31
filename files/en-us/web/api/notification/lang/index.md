@@ -18,8 +18,7 @@ as specified in the `lang` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
 The language itself is specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-See the Sitepoint [ISO 2
-letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
+See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
 
 ## Value
 
@@ -52,5 +51,4 @@ console.log(n.lang) // should return 'en-US'
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -37,8 +37,7 @@ A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.
 
 ## Examples
 
-This example is extracted from this [Simple
-Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by
+This example is extracted from this [Simple Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by
 `grabFrame()` to copy the returned frame to a {{htmlelement("canvas")}}
 element. For simplicity it does not show how to instantiate the
 {{domxref("ImageCapture")}} object.

@@ -41,8 +41,7 @@ new Notification(title, options)
       - : The notification's language, as specified using a
         string representing a language tag
         according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-        See the Sitepoint [ISO
-        2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
+        See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
     - `badge`
       - : A string containing the URL of the image
         used to represent the notification when there isn't enough space to display the
@@ -133,5 +132,4 @@ IE 11 and lower isn't supported.
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

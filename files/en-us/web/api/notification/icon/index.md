@@ -25,8 +25,7 @@ A string.
 ## Examples
 
 In our [To-do
-list app](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view the app running
-live](https://mdn.github.io/to-do-notifications/)), we use the {{domxref("Notification.Notification","Notification()")}}
+list app](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view the app running live](https://mdn.github.io/to-do-notifications/)), we use the {{domxref("Notification.Notification","Notification()")}}
 constructor to fire a notification, passing it arguments to specify the body, icon and
 title we want.
 
@@ -47,5 +46,4 @@ var notification = new Notification('To do list', {
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

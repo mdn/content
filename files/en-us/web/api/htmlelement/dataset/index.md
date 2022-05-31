@@ -37,8 +37,7 @@ they are read or written:
     when to capitalize the property's "camelCased" name.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
-attributes in our article [_Using data
-attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
+attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
 
 ### Name conversion
 

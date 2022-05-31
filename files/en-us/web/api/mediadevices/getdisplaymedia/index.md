@@ -26,11 +26,9 @@ grant permission to capture the contents of a display or portion thereof (such a
 window) as a {{domxref("MediaStream")}}.
 
 The resulting stream can then be
-recorded using the [MediaStream
-Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) or transmitted as part of a [WebRTC](/en-US/docs/Web/API/WebRTC_API) session.
+recorded using the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) or transmitted as part of a [WebRTC](/en-US/docs/Web/API/WebRTC_API) session.
 
-See [Using the
-Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for more details and an example.
+See [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for more details and an example.
 
 ## Syntax
 
@@ -143,8 +141,7 @@ add the video track from the stream.
 ## See also
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the
-  Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a
