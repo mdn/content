@@ -5,18 +5,15 @@ page-type: web-api-instance-method
 tags:
   - API
   - Error
-  - Experimental
   - Method
   - ReadableByteStreamController
   - Reference
   - Streams
 browser-compat: api.ReadableByteStreamController.error
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`error()`** method of the
-{{domxref("ReadableByteStreamController")}} interface causes any future interactions
-with the associated stream to error.
+The **`error()`** method of the {{domxref("ReadableByteStreamController")}} interface causes any future interactions with the associated stream to error.
 
 ## Syntax
 
@@ -36,8 +33,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream
-    is not readable for some other reason.
+  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream is not readable for some other reason.
 
 ## Examples
 

@@ -4,7 +4,6 @@ slug: Web/API/ReadableStreamBYOBReader/cancel
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - ReadableStreamBYOBReader
   - Reference
@@ -12,14 +11,12 @@ tags:
   - cancel
 browser-compat: api.ReadableStreamBYOBReader.cancel
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`cancel()`** method of the
-{{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.
+The **`cancel()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled.
+Calling this method signals a loss of interest in the stream by a consumer.
 
-> **Note:** If the reader is active, the `cancel()` method
-> behaves the same as that for the associated stream
-> ({{domxref("ReadableStream.cancel()")}}).
+> **Note:** If the reader is active, the `cancel()` method behaves the same as that for the associated stream ({{domxref("ReadableStream.cancel()")}}).
 
 ## Syntax
 
@@ -35,14 +32,12 @@ cancel(reason)
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills with the value given in the `reason`
-parameter.
+A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` parameter.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : The source object is not a `ReadableStreamBYOBReader`, or the stream has
-    no owner.
+  - : The source object is not a `ReadableStreamBYOBReader`, or the stream has no owner.
 
 ## Examples
 

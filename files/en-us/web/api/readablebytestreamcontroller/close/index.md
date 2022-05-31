@@ -4,7 +4,6 @@ slug: Web/API/ReadableByteStreamController/close
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - ReadableByteStreamController
   - Reference
@@ -12,13 +11,11 @@ tags:
   - close
 browser-compat: api.ReadableByteStreamController.close
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`close()`** method of the
-{{domxref("ReadableByteStreamController")}} interface closes the associated stream.
+The **`close()`** method of the {{domxref("ReadableByteStreamController")}} interface closes the associated stream.
 
-> **Note:** Readers will still be able to read any previously-enqueued
-> chunks from the stream, but once those are read, the stream will become closed.
+> **Note:** Readers will still be able to read any previously-enqueued chunks from the stream, but once those are read, the stream will become closed.
 
 ## Syntax
 
@@ -37,8 +34,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream
-    is not readable for some other reason.
+  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream is not readable for some other reason.
 
 ## Examples
 

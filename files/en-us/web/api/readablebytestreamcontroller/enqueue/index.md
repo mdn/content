@@ -4,7 +4,6 @@ slug: Web/API/ReadableByteStreamController/enqueue
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - ReadableByteStreamController
   - Reference
@@ -12,11 +11,9 @@ tags:
   - enqueue
 browser-compat: api.ReadableByteStreamController.enqueue
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`enqueue()`** method of the
-{{domxref("ReadableByteStreamController")}} interface enqueues a given chunk in the
-associated stream.
+The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk in the associated stream.
 
 ## Syntax
 
@@ -36,9 +33,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream
-    cannot be read for some other reason, or the chunk is not an object, or the chunk's
-    internal array buffer is non-existent or detached.
+  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream cannot be read for some other reason, or the chunk is not an object, or the chunk's internal array buffer is non-existent or detached.
 
 ## Examples
 

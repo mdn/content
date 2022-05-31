@@ -4,7 +4,6 @@ slug: Web/API/ReadableStreamBYOBRequest/respond
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - ReadableStreamBYOBRequest
   - Reference
@@ -12,10 +11,9 @@ tags:
   - respond
 browser-compat: api.ReadableStreamBYOBRequest.respond
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`error()`** method of the
-{{domxref("ReadableStreamBYOBRequest")}} interface xxx
+The **`error()`** method of the {{domxref("ReadableStreamBYOBRequest")}} interface xxx
 
 ## Syntax
 
@@ -35,8 +33,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no
-    associated controller, or the associated internal array buffer is detached.
+  - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no associated controller, or the associated internal array buffer is detached.
 
 ## Examples
 

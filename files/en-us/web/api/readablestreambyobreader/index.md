@@ -4,7 +4,6 @@ slug: Web/API/ReadableStreamBYOBReader
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Fetch
   - Interface
   - ReadableStreamBYOBReader
@@ -12,7 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamBYOBReader
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}
+{{APIRef("Streams")}}
 
 The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor).
 

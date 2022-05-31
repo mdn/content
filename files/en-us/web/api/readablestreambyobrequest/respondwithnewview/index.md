@@ -4,7 +4,6 @@ slug: Web/API/ReadableStreamBYOBRequest/respondWithNewView
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - ReadableStreamBYOBRequest
   - Reference
@@ -12,10 +11,9 @@ tags:
   - respondWithNewView
 browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`respondWithNewView()`** method of the
-{{domxref("ReadableStreamBYOBRequest")}} interface xxx
+The **`respondWithNewView()`** method of the {{domxref("ReadableStreamBYOBRequest")}} interface xxx
 
 ## Syntax
 
@@ -35,9 +33,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no
-    associated controller, or the associated internal array buffer is non-existent or
-    detached.
+  - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no associated controller, or the associated internal array buffer is non-existent or detached.
 
 ## Examples
 

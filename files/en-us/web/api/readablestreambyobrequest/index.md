@@ -4,7 +4,6 @@ slug: Web/API/ReadableStreamBYOBRequest
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Fetch
   - Interface
   - ReadableStreamBYOBRequest
@@ -12,7 +11,7 @@ tags:
   - Steams
 browser-compat: api.ReadableStreamBYOBRequest
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}
+{{APIRef("Streams")}}
 
 The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a pull request into a {{domxref("ReadableByteStreamController")}} view.
 
