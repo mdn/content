@@ -1,6 +1,7 @@
 ---
 title: HTMLAudioElement.msAudioDeviceType
 slug: Web/API/HTMLAudioElement/msAudioDeviceType
+page-type: web-api-instance-method
 tags:
   - msAudioDeviceType
 ---

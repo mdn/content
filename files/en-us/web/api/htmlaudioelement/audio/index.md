@@ -1,6 +1,7 @@
 ---
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
+page-type: web-api-constructor
 tags:
   - API
   - Audio

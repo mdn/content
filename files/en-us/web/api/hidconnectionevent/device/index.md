@@ -1,6 +1,7 @@
 ---
 title: HIDConnectionEvent.device
 slug: Web/API/HIDConnectionEvent/device
+page-type: web-api-instance-property
 tags:
   - API
   - Property

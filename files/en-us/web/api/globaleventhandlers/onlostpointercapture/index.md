@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/GlobalEventHandlers/onlostpointercapture
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

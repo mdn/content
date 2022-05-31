@@ -1,6 +1,7 @@
 ---
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onclose
 slug: Web/API/GlobalEventHandlers/onclose
+page-type: web-api-instance-property
 tags:
   - API
   - Dialog

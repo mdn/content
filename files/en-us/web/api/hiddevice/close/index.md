@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.close()
 slug: Web/API/HIDDevice/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method

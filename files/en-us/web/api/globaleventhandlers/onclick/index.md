@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onclick
 slug: Web/API/GlobalEventHandlers/onclick
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

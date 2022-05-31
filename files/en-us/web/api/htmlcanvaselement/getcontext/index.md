@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
