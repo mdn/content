@@ -1,22 +1,12 @@
 ---
 title: Using files from web applications
-slug: Web/API/File/Using_files_from_web_applications
+slug: Web/API/File_API/Using_files_from_web_applications
 tags:
-  - Files
-  - HTML5
-  - Intermediate
-  - NeedsUpdate
-  - ajax upload
-  - upload
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/input.html#concept-input-type-file-selected
-  - https://w3c.github.io/FileAPI/
+  - File API
 ---
 {{APIRef("File API")}}
 
 Using the File API, which was added to the DOM in HTML5, it's now possible for web content to ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
-
-If you want to use the DOM File API from extensions or other browser chrome code, you can; however, note there are some additional features to be aware of. See [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) for details.
 
 ## Accessing selected file(s)
 
@@ -525,10 +515,6 @@ video.src = obj_url;
 video.play();
 URL.revokeObjectURL(obj_url);
 ```
-
-## Specifications
-
-{{Specifications}}
 
 ## See also
 
