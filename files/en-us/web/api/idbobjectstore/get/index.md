@@ -61,8 +61,7 @@ one specific record from object store using `get()` — a sample record with
 the key "Walk dog". Once this data object is retrieved, you could then update it using
 normal JavaScript, then put it back into the database using a
 {{domxref("IDBObjectStore.put")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view
-example live](https://mdn.github.io/to-do-notifications/).)
+([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 // Let us open our database
