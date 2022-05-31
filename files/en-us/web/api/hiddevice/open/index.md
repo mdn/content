@@ -1,7 +1,7 @@
 ---
 title: HIDDevice.open()
 slug: Web/API/HIDDevice/open
-page-type: web-api-instance-property
+page-type: web-api-instance-method
 tags:
   - API
   - Method
