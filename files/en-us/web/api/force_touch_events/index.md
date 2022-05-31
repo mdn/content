@@ -1,7 +1,7 @@
 ---
 title: Force Touch events
 slug: Web/API/Force_Touch_events
-page-type: web-api-interface
+page-type: web-api-overview
 tags:
   - Advanced
   - DOM

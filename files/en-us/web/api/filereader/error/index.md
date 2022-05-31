@@ -1,7 +1,7 @@
 ---
 title: FileReader.error
 slug: Web/API/FileReader/error
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 tags:
   - API
   - File API
