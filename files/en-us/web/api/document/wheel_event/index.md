@@ -1,6 +1,7 @@
 ---
 title: 'Document: wheel event'
 slug: Web/API/Document/wheel_event
+page-type: web-api-event
 tags:
   - API
   - Document

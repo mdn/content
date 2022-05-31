@@ -1,6 +1,7 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

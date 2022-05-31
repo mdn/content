@@ -1,6 +1,7 @@
 ---
 title: Document.pictureInPictureElement
 slug: Web/API/Document/pictureInPictureElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document

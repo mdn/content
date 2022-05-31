@@ -1,6 +1,7 @@
 ---
 title: Document.mozSyntheticDocument
 slug: Web/API/Document/mozSyntheticDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: DocumentType.after()
 slug: Web/API/DocumentType/after
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

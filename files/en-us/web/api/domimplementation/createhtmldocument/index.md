@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
