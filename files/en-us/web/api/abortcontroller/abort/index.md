@@ -1,6 +1,7 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
+page-type: web-api-instance-method
 tags:
   - API
   - AbortController

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

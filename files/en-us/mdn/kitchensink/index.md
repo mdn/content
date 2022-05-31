@@ -218,13 +218,6 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
         </p>
       </td>
     </tr>
-    <tr>
-      <td>
-        {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}}
-      </td>
-      <td>{{spec2('Fetch')}}</td>
-      <td></td>
-    </tr>
   </tbody>
 </table>
 

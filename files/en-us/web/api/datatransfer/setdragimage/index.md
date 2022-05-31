@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
+page-type: web-api-instance-method
 tags:
   - API
   - H5 DnD
@@ -13,7 +14,7 @@ browser-compat: api.DataTransfer.setDragImage
 {{APIRef("HTML Drag and Drop API")}}
 
 When a drag occurs, a translucent image is generated from the drag target (the element
-the {{event("dragstart")}} event is fired at), and follows the mouse pointer during the
+the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired at), and follows the mouse pointer during the
 drag. This image is created automatically, so you do not need to create it yourself.
 However, if a custom image is desired, the
 **`DataTransfer.setDragImage()`** method can be used to set the
@@ -25,7 +26,7 @@ appear relative to the mouse pointer. These coordinates define the offset into t
 where the mouse cursor should be. For instance, to display the image so that the pointer
 is at its center, use values that are half the width and height of the image.
 
-This method must be called in the {{event("dragstart")}} event handler.
+This method must be called in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event handler.
 
 ## Syntax
 

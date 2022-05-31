@@ -1,6 +1,7 @@
 ---
 title: CountQueuingStrategy
 slug: Web/API/CountQueuingStrategy
+page-type: web-api-interface
 tags:
   - API
   - CountQueuingStrategy

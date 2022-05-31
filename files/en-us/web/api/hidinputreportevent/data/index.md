@@ -1,6 +1,7 @@
 ---
 title: HIDInputReportEvent.data
 slug: Web/API/HIDInputReportEvent/data
+page-type: web-api-instance-property
 tags:
   - API
   - Property

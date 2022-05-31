@@ -1,6 +1,7 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
+page-type: web-api-interface
 tags:
   - API
   - AudioNode

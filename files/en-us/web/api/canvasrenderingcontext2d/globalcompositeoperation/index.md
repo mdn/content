@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
+page-type: web-api-instance-property
 tags:
   - API
   - Blending
@@ -18,9 +19,7 @@ The
 property of the Canvas 2D API sets the type of compositing operation to apply when
 drawing new shapes.
 
-See also [Compositing and
-clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the [Canvas
-Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+See also [Compositing and clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 

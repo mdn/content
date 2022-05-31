@@ -1,6 +1,7 @@
 ---
 title: ContactsManager.getProperties()
 slug: Web/API/ContactsManager/getProperties
+page-type: web-api-instance-method
 tags:
   - Contact Picker API
   - Contacts

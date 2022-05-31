@@ -1,10 +1,10 @@
 ---
 title: GlobalEventHandlers.onabort
 slug: Web/API/GlobalEventHandlers/onabort
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
-  - Experimental
   - GlobalEventHandlers
   - NeedsContent
   - NeedsHelp
@@ -14,37 +14,28 @@ tags:
   - Window
 browser-compat: api.GlobalEventHandlers.onabort
 ---
-{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
+{{ApiRef("HTML DOM")}}
 
-The **`onabort`** property of the
-{{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("abort")}} events sent to the window.
+The **`onabort`** property of the {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for processing `abort` events.
 
-While the [standard
-for aborting a document load](https://html.spec.whatwg.org/multipage/browsing-the-web.html#abort-a-document) is defined, [HTML issue #3525](https://github.com/whatwg/html/issues/3525) suggests that
-browsers should not currently fire the `abort` event on a `Window`
-that would trigger `onabort` to be called.
+Currently, only the {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}} interfaces (which inherit the {{domxref("HTMLMediaElement")}} interface) fire the {{domxref("HTMLMediaElement/abort_event", "abort")}} event.
 
-TODO: define what "abort" is. Closing the window via window manager? Stopping the load
-of the page? By which means and reasons (user, network/server)? At which stages would it
-fire / be caught? For IE, `onabort` is only available with
-`<img>` tags.
+> **Note:** Previously the `abort` event was fired on `Window`, but has since been removed from the standard (see [HTML issue #3525](https://github.com/whatwg/html/issues/3525)).
 
 ## Syntax
 
 ```js
-window.onabort = functionRef;
+element.onabort = functionRef;
 ```
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
 ## Example
 
 ```js
-window.onabort = function() {
+element.onabort = function() {
   alert('Load aborted.');
 }
 ```
@@ -56,5 +47,3 @@ window.onabort = function() {
 ## Browser compatibility
 
 {{Compat}}
-
-This property is not available with Firefox 2 or Safari.

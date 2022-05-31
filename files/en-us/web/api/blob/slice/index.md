@@ -1,6 +1,7 @@
 ---
 title: Blob.slice()
 slug: Web/API/Blob/slice
+page-type: web-api-instance-method
 tags:
   - API
   - Blob

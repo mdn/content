@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream.truncate()
 slug: Web/API/FileSystemWritableFileStream/truncate
+page-type: web-api-instance-method
 tags:
   - File
   - File System Access API

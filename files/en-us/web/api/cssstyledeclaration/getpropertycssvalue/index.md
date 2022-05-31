@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM

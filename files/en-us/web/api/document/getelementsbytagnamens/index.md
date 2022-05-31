@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

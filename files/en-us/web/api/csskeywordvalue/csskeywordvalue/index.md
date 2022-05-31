@@ -1,6 +1,7 @@
 ---
 title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API

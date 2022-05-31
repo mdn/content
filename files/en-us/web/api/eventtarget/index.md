@@ -1,6 +1,7 @@
 ---
 title: EventTarget
 slug: Web/API/EventTarget
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

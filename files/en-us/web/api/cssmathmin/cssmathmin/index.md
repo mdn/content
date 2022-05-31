@@ -1,6 +1,7 @@
 ---
 title: CSSMathMin()
 slug: Web/API/CSSMathMin/CSSMathMin
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API

@@ -1,6 +1,7 @@
 ---
 title: CSSPerspective()
 slug: Web/API/CSSPerspective/CSSPerspective
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API

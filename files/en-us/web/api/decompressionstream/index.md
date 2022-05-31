@@ -1,6 +1,7 @@
 ---
 title: DecompressionStream
 slug: Web/API/DecompressionStream
+page-type: web-api-interface
 tags:
   - API
   - Interface

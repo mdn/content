@@ -1,6 +1,7 @@
 ---
 title: 'Document: dragleave event'
 slug: Web/API/Document/dragleave_event
+page-type: web-api-event
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: Document.registerElement()
 slug: Web/API/Document/registerElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,8 +20,7 @@ The **`document.registerElement()`** method registers a new [custom element](/en
 browser and returns a constructor for the new element.
 
 > **Note:** This is an experimental technology. The browser you use it in
-> must support Web Components. See [Enabling
-> Web Components in Firefox](/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox).
+> must support Web Components. See [Enabling Web Components in Firefox](/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox).
 
 ## Syntax
 

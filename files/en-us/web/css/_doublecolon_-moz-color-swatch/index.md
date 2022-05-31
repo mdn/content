@@ -18,7 +18,9 @@ The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-color-swatch
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: CSS Painting API
 slug: Web/API/CSS_Painting_API
+page-type: web-api-overview
 tags:
   - API
   - CSS
@@ -8,6 +9,7 @@ tags:
   - Houdini
   - Painting
   - Reference
+browser-compat: api.PaintWorkletGlobalScope
 ---
 {{DefaultAPISidebar("CSS Painting API")}}
 
@@ -144,11 +146,11 @@ While you can't play with the worklet's script, you can alter the custom propert
 
 ## Specifications
 
-{{Specifications("api.PaintWorkletGlobalScope")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-See the browser compatibility data for each CSS Painting API Interface.
+{{Compat}}
 
 ## See also
 

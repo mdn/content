@@ -1,6 +1,7 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

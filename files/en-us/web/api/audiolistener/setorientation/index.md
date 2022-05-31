@@ -1,6 +1,7 @@
 ---
 title: AudioListener.setOrientation()
 slug: Web/API/AudioListener/setOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - AudioListener

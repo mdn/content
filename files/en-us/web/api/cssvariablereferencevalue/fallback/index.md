@@ -1,6 +1,7 @@
 ---
 title: CSSVariableReferenceValue.fallback
 slug: Web/API/CSSVariableReferenceValue/fallback
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

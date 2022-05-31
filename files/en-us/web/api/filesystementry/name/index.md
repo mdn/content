@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.name
 slug: Web/API/FileSystemEntry/name
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API

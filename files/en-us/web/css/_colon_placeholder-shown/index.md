@@ -22,7 +22,9 @@ The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/do
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:placeholder-shown
+```
 
 ## Examples
 

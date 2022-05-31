@@ -2137,7 +2137,7 @@
 /en-US/docs/DOM/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/DOM/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/DOM/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/DOM/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/DOM/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/DOM/window.name	/en-US/docs/Web/API/Window/name
 /en-US/docs/DOM/window.navigator	/en-US/docs/Web/API/Window/navigator
@@ -3313,7 +3313,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Document_Object_Model_(DOM)/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Document_Object_Model_(DOM)/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/Document_Object_Model_(DOM)/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/Document_Object_Model_(DOM)/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator	/en-US/docs/Web/API/Window/navigator
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.appName	/en-US/docs/Web/API/Navigator/appName
@@ -7244,7 +7244,7 @@
 /en-US/docs/Using_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_an_External_Spell-checker	/en-US/docs/Mozilla/Firefox/Releases/3/Using_an_external_spell_checker
 /en-US/docs/Using_audio_and_video_in_Firefox	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/en-US/docs/Using_files_from_web_applications	/en-US/docs/Web/API/File/Using_files_from_web_applications
+/en-US/docs/Using_files_from_web_applications	/en-US/docs/Web/API/File_API/Using_files_from_web_applications
 /en-US/docs/Using_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Using_geolocation	/en-US/docs/Web/API/Geolocation_API
 /en-US/docs/Using_gradients	/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
@@ -8007,6 +8007,7 @@
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
+/en-US/docs/Web/API/File/Using_files_from_web_applications	/en-US/docs/Web/API/File_API/Using_files_from_web_applications
 /en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File/size	/en-US/docs/Web/API/Blob/size
@@ -9108,6 +9109,7 @@
 /en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCoun	/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
 /en-US/docs/Web/API/RTCIceCandidatePairStats/contentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
+/en-US/docs/Web/API/RTCIceCandidateStats/mozLocalTransport	/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol
 /en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
 /en-US/docs/Web/API/RTCIceComponent	/en-US/docs/Web/API/RTCIceCandidate/component
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
@@ -9735,6 +9737,7 @@
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
+/en-US/docs/Web/API/Window/mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
@@ -10347,7 +10350,7 @@
 /en-US/docs/Web/API/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Web/API/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/Web/API/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/Web/API/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/window.name	/en-US/docs/Web/API/Window/name
 /en-US/docs/Web/API/window.navigator	/en-US/docs/Web/API/Window/navigator

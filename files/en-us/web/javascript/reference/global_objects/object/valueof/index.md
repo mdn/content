@@ -90,7 +90,7 @@ MyNumberType.prototype.valueOf = function() {
     return this.number;
 };
 
-var myObj = new MyNumberType(4);
+const myObj = new MyNumberType(4);
 myObj + 3; // 7
 ```
 

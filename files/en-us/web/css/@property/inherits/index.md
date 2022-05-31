@@ -42,7 +42,9 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+true | false
+```
 
 ## Examples
 

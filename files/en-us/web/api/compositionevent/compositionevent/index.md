@@ -1,6 +1,7 @@
 ---
 title: CompositionEvent()
 slug: Web/API/CompositionEvent/CompositionEvent
+page-type: web-api-constructor
 tags:
   - API
   - CompositionEvent

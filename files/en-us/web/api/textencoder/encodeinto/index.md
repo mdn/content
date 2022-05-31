@@ -45,7 +45,7 @@ An object, which contains two members:
   - : The number of bytes modified in the destination `Uint8Array`. The bytes
     written are guaranteed to form complete UTF-8 byte sequences.
 
-## Encode Into A Specific Position
+## Encode into a specific position
 
 _encoder_.encodeInto always puts its output at the start of the array.
 However, it is sometimes useful to make the output start at a particular index. The
@@ -63,7 +63,7 @@ encodeIntoAtPosition("hello", u8array, 2);
 console.log( "" + u8array.join() ); // 0,0,104,101,108,108,111,0
 ```
 
-## Buffer Sizing
+## Buffer sizing
 
 To convert a JavaScript string `s`, the output space needed for full
 conversion is never less than `s.length` bytes and never greater than

@@ -25,7 +25,7 @@ get(index)
 
 ### Parameters
 
-- _index_
+- `index`
   - : The index of the function reference you want to retrieve.
 
 ### Return value

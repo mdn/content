@@ -1,6 +1,7 @@
 ---
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -63,8 +64,7 @@ storage access to...
   one.
 
   - Note that this number is also incremented when automatic access grants are given
-    through [Firefox
-    compatibility heuristics](/en-US/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction).
+    through [Firefox compatibility heuristics](/en-US/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction).
 
 - The ephemeral storage access grant is:
 
@@ -90,8 +90,7 @@ storage access to...
 When an ephemeral or persistent storage access grant expires, the number of sites the
 requesting origin has storage access to is decremented by one.
 
-> **Note:** If the requesting origin is not [classified
-> as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
+> **Note:** If the requesting origin is not [classified as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
 > storage access grant, which will go away when the page is reloaded. The user is never
 > shown a prompt in this case, and calling `requestStorageAccess()` won't
 > have any side effects besides changing the value returned by
@@ -151,9 +150,7 @@ document.requestStorageAccess().then(
 ## Specifications
 
 The API is currently only at the proposal stage — the standardization process has yet
-to begin. You can currently find specification details of the API at Apple's [Introducing
-Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
-Privacy CG](https://github.com/privacycg/storage-access).
+to begin. You can currently find specification details of the API at Apple's [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the Privacy CG](https://github.com/privacycg/storage-access).
 
 ## Browser compatibility
 

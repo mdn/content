@@ -1,6 +1,7 @@
 ---
 title: Document.getElementById()
 slug: Web/API/Document/getElementById
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

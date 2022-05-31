@@ -1,6 +1,7 @@
 ---
 title: CSSSkewX
 slug: Web/API/CSSSkewX
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API

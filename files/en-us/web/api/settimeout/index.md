@@ -75,7 +75,7 @@ To call a function repeatedly (e.g., every _N_ milliseconds), consider using
 
 ### Non-number delay values are silently coerced into numbers
 
-If `setTimeout()` is called with [_delay_](#delay) value that’s not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
+If `setTimeout()` is called with [_delay_](#delay) value that's not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
 
 ```js example-bad
 setTimeout(() => {
@@ -91,7 +91,7 @@ setTimeout(() => {
 }, "1 second")
 ```
 
-Therefore, don’t use strings for the _delay_ value but instead always use numbers:
+Therefore, don't use strings for the _delay_ value but instead always use numbers:
 
 ```js example-good
 setTimeout(() => {
@@ -128,8 +128,7 @@ To create a progression in which one function only fires after the completion of
 ### The "this" problem
 
 When you pass a method to `setTimeout()`, it will be invoked with a `this` value that may differ from your
-expectation. The general issue is explained in detail in the [JavaScript
-reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+expectation. The general issue is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 Code executed by `setTimeout()` is called from an execution context separate
 from the function from which `setTimeout` was called. The usual rules for
@@ -409,8 +408,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()`
-example](/en-US/docs/Web/API/clearTimeout#example).
+See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example).
 
 ## Specifications
 

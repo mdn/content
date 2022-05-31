@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.clear()
 slug: Web/API/DataTransferItemList/clear
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItemList
@@ -17,7 +18,7 @@ The {{domxref("DataTransferItemList")}} method
 objects from the drag data items list, leaving the list empty.
 
 The drag data store in which this list is kept is only writable while handling the
-{{event("dragstart")}} event. While handling {{event("drop")}}, the drag data store is
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} event. While handling {{domxref("HTMLElement/drop_event", "drop")}}, the drag data store is
 in read-only mode, and this method silently does nothing. No exception is thrown.
 
 ## Syntax

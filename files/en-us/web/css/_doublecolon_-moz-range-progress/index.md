@@ -18,7 +18,9 @@ The **`::-moz-range-progress`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-range-progress
+```
 
 ## Examples
 

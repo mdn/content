@@ -13,6 +13,7 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+browser-compat: api.Navigator.xr
 ---
 {{DefaultAPISidebar("WebXR Device API")}} {{SecureContext_Header}}
 
@@ -243,7 +244,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.xr")}}
+{{Compat}}
 
 ## See also
 

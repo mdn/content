@@ -1,6 +1,7 @@
 ---
 title: File.name
 slug: Web/API/File/name
+page-type: web-api-instance-property
 tags:
   - API
   - File API

@@ -1,6 +1,7 @@
 ---
 title: Document.write()
 slug: Web/API/Document/write
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -9,6 +9,7 @@ tags:
   - Media Streams API
   - Overview
   - Video
+browser-compat: api.MediaStream
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
@@ -67,7 +68,7 @@ The [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_
 
 ## Browser compatibility
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
+page-type: web-api-interface
 tags:
   - API
   - DOMRectReadOnly

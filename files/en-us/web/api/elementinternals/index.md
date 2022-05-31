@@ -1,6 +1,7 @@
 ---
 title: ElementInternals
 slug: Web/API/ElementInternals
+page-type: web-api-interface
 tags:
   - API
   - Interface

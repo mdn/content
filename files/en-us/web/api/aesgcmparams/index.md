@@ -1,6 +1,7 @@
 ---
 title: AesGcmParams
 slug: Web/API/AesGcmParams
+page-type: web-api-interface
 tags:
   - API
   - AesGcmParams

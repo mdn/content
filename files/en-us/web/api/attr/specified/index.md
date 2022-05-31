@@ -1,6 +1,7 @@
 ---
 title: Attr.specified
 slug: Web/API/Attr/specified
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

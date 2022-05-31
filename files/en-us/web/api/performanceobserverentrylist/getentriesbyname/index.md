@@ -33,9 +33,9 @@ getEntriesByName(name, type)
 
 ### Parameters
 
-- _`name`_
+- `name`
   - : A string representing the name of the entry to retrieve.
-- _`type`_ {{optional_inline}}
+- `type` {{optional_inline}}
   - : A string representing the type of entry to retrieve such as
     "`mark`". The valid entry types are listed in
     {{domxref("PerformanceEntry.entryType")}}.

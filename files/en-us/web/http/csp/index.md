@@ -8,6 +8,7 @@ tags:
   - Guide
   - Security
   - access
+browser-compat: http.headers.csp
 ---
 {{HTTPSidebar}}
 
@@ -231,7 +232,9 @@ In summary, this is done to prevent leaking sensitive information about cross-or
 
 ## Browser compatibility
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
+
+### Compatibility notes
 
 A specific incompatibility exists in some versions of the Safari web browser, whereby if a Content Security Policy header is set, but not a Same Origin header,
 the browser will block self-hosted content and off-site content, and incorrectly report that this is due to the Content Security Policy not allowing the content.

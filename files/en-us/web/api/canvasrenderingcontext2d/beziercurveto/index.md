@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.bezierCurveTo()
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

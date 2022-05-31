@@ -1,6 +1,7 @@
 ---
 title: CookieStoreManager
 slug: Web/API/CookieStoreManager
+page-type: web-api-interface
 tags:
   - API
   - Interface

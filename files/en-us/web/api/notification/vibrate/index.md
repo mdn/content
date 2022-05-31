@@ -22,8 +22,7 @@ specified in the `vibrate` option of the
 
 ## Value
 
-A [vibration
-pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns), as specified in the [Vibration API spec](https://w3c.github.io/vibration/).
+A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns), as specified in the [Vibration API spec](https://w3c.github.io/vibration/).
 
 ## Examples
 

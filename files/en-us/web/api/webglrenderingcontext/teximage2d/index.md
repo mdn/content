@@ -720,38 +720,38 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
     When using the {{domxref("EXT_sRGB")}} extension:
 
-      - `ext.SRGB_EXT`
-      - `ext.SRGB_ALPHA_EXT`
+    - `ext.SRGB_EXT`
+    - `ext.SRGB_ALPHA_EXT`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
       following values are available additionally:
 
-      - `gl.R8`
-      - `gl.R16F`
-      - `gl.R32F`
-      - `gl.R8UI`
-      - `gl.RG8`
-      - `gl.RG16F`
-      - `gl.RG32F`
-      - `gl.RG8UI`
-      - `gl.RG16UI`
-      - `gl.RG32UI`
-      - `gl.RGB8`
-      - `gl.SRGB8`
-      - `gl.RGB565`
-      - `gl.R11F_G11F_B10F`
-      - `gl.RGB9_E5`
-      - `gl.RGB16F`
-      - `gl.RGB32F`
-      - `gl.RGB8UI`
-      - `gl.RGBA8`
-      - `gl.SRGB8_ALPHA8`
-      - `gl.RGB5_A1`
-      - `gl.RGB10_A2`
-      - `gl.RGBA4`
-      - `gl.RGBA16F`
-      - `gl.RGBA32F`
-      - `gl.RGBA8UI`
+    - `gl.R8`
+    - `gl.R16F`
+    - `gl.R32F`
+    - `gl.R8UI`
+    - `gl.RG8`
+    - `gl.RG16F`
+    - `gl.RG32F`
+    - `gl.RG8UI`
+    - `gl.RG16UI`
+    - `gl.RG32UI`
+    - `gl.RGB8`
+    - `gl.SRGB8`
+    - `gl.RGB565`
+    - `gl.R11F_G11F_B10F`
+    - `gl.RGB9_E5`
+    - `gl.RGB16F`
+    - `gl.RGB32F`
+    - `gl.RGB8UI`
+    - `gl.RGBA8`
+    - `gl.SRGB8_ALPHA8`
+    - `gl.RGB5_A1`
+    - `gl.RGB10_A2`
+    - `gl.RGBA4`
+    - `gl.RGBA16F`
+    - `gl.RGBA32F`
+    - `gl.RGBA8UI`
 
 - `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.
@@ -787,23 +787,23 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
     When using the {{domxref("OES_texture_half_float")}} extension:
 
-      - `ext.HALF_FLOAT_OES` (constant provided by the extension)
+    - `ext.HALF_FLOAT_OES` (constant provided by the extension)
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.BYTE`
-      - `gl.UNSIGNED_SHORT`
-      - `gl.SHORT`
-      - `gl.UNSIGNED_INT`
-      - `gl.INT`
-      - `gl.HALF_FLOAT`
-      - `gl.FLOAT`
-      - `gl.UNSIGNED_INT_2_10_10_10_REV`
-      - `gl.UNSIGNED_INT_10F_11F_11F_REV`
-      - `gl.UNSIGNED_INT_5_9_9_9_REV`
-      - `gl.UNSIGNED_INT_24_8`
-      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
+    - `gl.BYTE`
+    - `gl.UNSIGNED_SHORT`
+    - `gl.SHORT`
+    - `gl.UNSIGNED_INT`
+    - `gl.INT`
+    - `gl.HALF_FLOAT`
+    - `gl.FLOAT`
+    - `gl.UNSIGNED_INT_2_10_10_10_REV`
+    - `gl.UNSIGNED_INT_10F_11F_11F_REV`
+    - `gl.UNSIGNED_INT_5_9_9_9_REV`
+    - `gl.UNSIGNED_INT_24_8`
+    - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
         {{jsxref("null")}})
 
 - `pixels`

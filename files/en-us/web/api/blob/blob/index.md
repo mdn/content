@@ -1,6 +1,7 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
+page-type: web-api-constructor
 tags:
   - API
   - Blob

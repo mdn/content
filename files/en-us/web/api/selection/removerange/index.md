@@ -22,7 +22,7 @@ removeRange(range)
 
 ### Parameters
 
-- _`range`_
+- `range`
   - : A range object that will be removed to the selection.
 
 ### Return value

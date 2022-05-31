@@ -245,13 +245,13 @@ with the {{jsxref("Operators/new", "new")}} operator. Calling a `TypedArray`
 constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
-var dv = Int8Array([1, 2, 3]);
+const dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var dv = new Int8Array([1, 2, 3]);
+const dv = new Int8Array([1, 2, 3]);
 ```
 
 ### Property access
@@ -265,7 +265,7 @@ objects.
 
 ```js
 // Setting and getting using standard array syntax
-var int16 = new Int16Array(2);
+const int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
 

@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -77,9 +78,7 @@ The buttons in the example run `getData()` to load the track and start it
 playing, and stop it playing, respectively. When the `stop()` method is
 called on the source, the source is cleared out.
 
-> **Note:** You can [run the example
-> live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
-> the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).)
+> **Note:** You can [run the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) and access the [source code](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
 ```js
 // define variables

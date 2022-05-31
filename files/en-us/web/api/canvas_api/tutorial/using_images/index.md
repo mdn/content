@@ -1,6 +1,7 @@
 ---
 title: Using images
 slug: Web/API/Canvas_API/Tutorial/Using_images
+page-type: guide
 tags:
   - Advanced
   - Canvas

@@ -1,6 +1,7 @@
 ---
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
+page-type: web-api-static-method
 tags:
   - CSS
   - Houdini
@@ -8,6 +9,7 @@ tags:
 browser-compat: api.CSS.registerProperty
 ---
 {{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** method registers
 {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default

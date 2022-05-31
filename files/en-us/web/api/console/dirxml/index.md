@@ -1,6 +1,7 @@
 ---
 title: console.dirxml()
 slug: Web/API/console/dirxml
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

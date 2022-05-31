@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.type()
 slug: Web/API/CSSNumericValue/type
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

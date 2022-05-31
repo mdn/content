@@ -23,7 +23,9 @@ custom-element::part(foo) {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::part( <ident>+ )
+```
 
 ## Examples
 

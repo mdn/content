@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor.parameterDescriptors (static getter)
 slug: Web/API/AudioWorkletProcessor/parameterDescriptors
+page-type: web-api-instance-property
 tags:
   - API
   - AudioWorkletProcessor

@@ -39,7 +39,7 @@ Add-ons and downloadable content are a good way to provide extra value to an alr
 
 Instead of actively selling the games you can also try to get yourself a passive income — showing adverts and relying on previous activities related to [promoting](/en-US/docs/Games/Publishing_games/Game_promotion) your game may benefit, but your game has to be addictive, which isn't as easy as it sounds. You still need to plan it out, and at some point you'll need a bit of luck too. If your game goes viral and people start sharing it, you can get a lot of downloads and money out of adverts.
 
-There are many companies offering advert systems — you sign up and allow them to show adverts in exchange for a percentage of the earnings. Google AdSense is said to be the most effective one, but it's not designed for games and it's a pretty bad practice to use it for that purpose. Instead of risking of having your account closed and all the money blocked try to use the usual, gamedev targeted portals like [LeadBolt](https://www.leadbolt.com/). They offer easy to implement systems to show the adverts in your games and split the earnings with you.
+There are many companies offering advert systems — you sign up and allow them to show adverts in exchange for a percentage of the earnings. Google AdSense is said to be the most effective one, but it's not designed for games and it's a pretty bad practice to use it for that purpose. Instead of risking of having your account closed and all the money blocked try to use the usual, gamedev targeted portals like [LeadBolt](https://www.leadboltapps.com/). They offer easy to implement systems to show the adverts in your games and split the earnings with you.
 
 Video ads are getting more and more popular, especially in the form of a pre-roll — they are shown at the beginning of your game while it's still loading. And on the topic of where to put the advertisements in your game it really depends on you. It should be as subtle as possible so as to not annoy the players too much, but visible enough to make them click it or at least take notice. Adding adverts between game sessions on game over screens is a popular approach.
 
@@ -87,7 +87,7 @@ It is possible to write articles about your games and even get paid for them. Ga
 
 ### Merchandise
 
-You can sell t-shirts, [stickers](https://www.stickermule.com/user/1070634890/stickers) or other gadgets — some devs make more money from the merchandise than from the games themselves, but it only works on very popular and recognizable games like Angry Birds. Still, it could be another small stream of passive income. The more diversified your earnings are, the better your business stability.
+You can sell t-shirts, [stickers](https://www.stickermule.com/custom-stickers) or other gadgets — some devs make more money from the merchandise than from the games themselves, but it only works on very popular and recognizable games like Angry Birds. Still, it could be another small stream of passive income. The more diversified your earnings are, the better your business stability.
 
 ### Donations
 

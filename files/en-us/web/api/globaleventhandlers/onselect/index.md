@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onselect
 slug: Web/API/GlobalEventHandlers/onselect
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

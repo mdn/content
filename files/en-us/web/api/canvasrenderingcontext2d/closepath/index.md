@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

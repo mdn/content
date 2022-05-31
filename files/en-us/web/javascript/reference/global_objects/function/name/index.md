@@ -119,7 +119,7 @@ To change it, use {{jsxref("Object.defineProperty()")}}.
 ### Shorthand method names
 
 ```js
-var o = {
+const o = {
   foo(){}
 };
 o.foo.name; // "foo";
@@ -144,7 +144,7 @@ let o = {
   set foo(x){}
 };
 
-var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
+const descriptor = Object.getOwnPropertyDescriptor(o, "foo");
 descriptor.get.name; // "get foo"
 descriptor.set.name; // "set foo";
 ```
@@ -156,7 +156,7 @@ You can use `obj.constructor.name` to check the "class" of an object (but be sur
 ```js
 function Foo() {}  // ES2015 Syntax: class Foo {}
 
-var fooInstance = new Foo();
+const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
 ```
 

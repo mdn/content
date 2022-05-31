@@ -1,6 +1,7 @@
 ---
 title: DOMPoint.y
 slug: Web/API/DOMPoint/y
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinate

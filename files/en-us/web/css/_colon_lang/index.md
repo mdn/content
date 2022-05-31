@@ -27,7 +27,9 @@ p:lang(en) {
 
 ### Formal syntax
 
-{{csssyntax}}
+```
+:lang( <language-code> )
+```
 
 ### Parameter
 

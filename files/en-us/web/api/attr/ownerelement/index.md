@@ -1,6 +1,7 @@
 ---
 title: Attr.ownerElement
 slug: Web/API/Attr/ownerElement
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

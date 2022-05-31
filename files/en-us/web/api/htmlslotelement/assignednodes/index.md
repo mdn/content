@@ -38,9 +38,7 @@ An array of nodes.
 
 ## Examples
 
-The following snippet is taken from our [slotchange
-example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([see
-it live also](https://mdn.github.io/web-components-examples/slotchange/)).
+The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([See it live](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');

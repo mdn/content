@@ -32,8 +32,7 @@ multi-column scenarios. Each object in the array contains two properties:
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
 > **Note:** For more explanation of writing modes and block and inline
-> dimensions, read [Handling
-> different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
 

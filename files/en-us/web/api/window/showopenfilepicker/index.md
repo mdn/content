@@ -18,29 +18,32 @@ or multiple files and returns a handle for the file(s).
 ## Syntax
 
 ```js
-window.showOpenFilePicker();
+showOpenFilePicker()
 ```
 
 ### Parameters
 
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
-  - : An optional object containing options, which are as follows:
+  - : An object containing options, which are as follows:
 
-    - `multiple`: A {{jsxref('Boolean')}}. Default `false`. When
-      set to `true` multiple files may be selected.
-    - `excludeAcceptAllOption`:A {{jsxref('Boolean')}}. Default
-      `false`. By default the picker should include an option to not apply
-      any file type filters (instigated with the type option below). Setting this option
-      to `true` means that option is _not_ available.
-    - `types`: An {{jsxref('Array')}} of allowed file types to pick. Each
-      item is an object with the following options:
+    - `multiple`
+      - : A boolean value that defaults to `false`. When
+        set to `true` multiple files may be selected.
+    - `excludeAcceptAllOption`
+      - : A boolean value that defaults to
+        `false`. By default the picker should include an option to not apply
+        any file type filters (instigated with the type option below). Setting this option
+        to `true` means that option is _not_ available.
+    - `types`
+      - : An {{jsxref('Array')}} of allowed file types to pick. Each
+        item is an object with the following options:
 
-      - `description`: An optional description of the category of files
-        types allowed.
-      - `accept`: An {{jsxref('Object')}} with the keys set to the [MIME
-        type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
-        for an example).
+        - `description`
+          - : An optional description of the category of files types allowed.
+        - `accept`
+          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
+            for an example).
 
 ### Return value
 

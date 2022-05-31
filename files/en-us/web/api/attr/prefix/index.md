@@ -1,6 +1,7 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

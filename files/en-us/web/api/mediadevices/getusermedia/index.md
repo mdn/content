@@ -149,8 +149,7 @@ getUserMedia(constraints)
 
     An `ideal` value, when used, has gravity, which means that the browser
     will try to find the setting (and camera, if you have more than one), with the
-    smallest [fitness
-    distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
+    smallest [fitness distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
 
     Plain values are inherently ideal, which means that the first of our resolution
     examples above could have been written like this:

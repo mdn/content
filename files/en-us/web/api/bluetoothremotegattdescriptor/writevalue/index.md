@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTDescriptor.writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth

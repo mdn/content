@@ -32,9 +32,12 @@ decodingInfo(configuration)
     - `type`
       - : The type of media being tested. This takes one of three values:
 
-        - `file`: Represents a configuration that is meant to be used for a plain file playback.
-        - `media-source`: Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
-        - `webrtc`: Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
+        - `file`
+          - : Represents a configuration that is meant to be used for a plain file playback.
+        - `media-source`
+          - : Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
+        - `webrtc`
+          - : Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
 
     - `video`
       - : Configuration object for a video media source.
