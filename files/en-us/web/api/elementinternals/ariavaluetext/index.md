@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaValueText
 slug: Web/API/ElementInternals/ariaValueText
+page-type: web-api-instance-property
 tags:
   - API
   - Property

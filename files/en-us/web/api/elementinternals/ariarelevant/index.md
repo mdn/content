@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRelevant
 slug: Web/API/ElementInternals/ariaRelevant
+page-type: web-api-instance-property
 tags:
   - API
   - Property

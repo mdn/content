@@ -1,6 +1,7 @@
 ---
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
+page-type: web-api-instance-method
 tags:
   - API
   - ExtendableEvent

@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

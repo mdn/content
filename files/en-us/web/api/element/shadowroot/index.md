@@ -1,6 +1,7 @@
 ---
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
+page-type: web-api-instance-property
 tags:
   - API
   - Element

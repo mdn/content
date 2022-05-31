@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

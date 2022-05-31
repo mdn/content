@@ -1,6 +1,7 @@
 ---
 title: EncodedVideoChunk.duration
 slug: Web/API/EncodedVideoChunk/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property

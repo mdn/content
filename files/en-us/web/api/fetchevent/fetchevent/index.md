@@ -1,6 +1,7 @@
 ---
 title: FetchEvent()
 slug: Web/API/FetchEvent/FetchEvent
+page-type: web-api-instance-property
 tags:
   - API
   - Communication
