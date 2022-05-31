@@ -28,8 +28,7 @@ target.onformdata = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FormDataEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FormDataEvent")}} object as its
 sole argument.
 
 ## Examples
@@ -77,8 +76,7 @@ formElem.onformdata = (e) => {
 
 ## See also
 
-- [`formdata`
-  event](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
+- [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
 - {{domxref("FormDataEvent")}}
 - [Using FormData
   Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)

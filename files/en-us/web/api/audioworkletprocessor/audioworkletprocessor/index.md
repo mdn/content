@@ -65,8 +65,7 @@ The newly constructed {{domxref("AudioWorkletProcessor")}} instance.
 
 In this example we pass custom options to the
 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
-observe how a [structured
-clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of them gets passed to our `AudioWorkletProcessor` constructor.
+observe how a [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of them gets passed to our `AudioWorkletProcessor` constructor.
 
 First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
 Note that this should be done in a separate file.

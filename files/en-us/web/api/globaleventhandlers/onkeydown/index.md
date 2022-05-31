@@ -27,8 +27,7 @@ target.onkeydown = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
 sole argument.
 
 ## Example
