@@ -181,7 +181,7 @@ transform the case and concatenate the hyphen before returning.
 
 ```js
 function styleHyphenFormat(propertyName) {
-  function upperToHyphenLower(match, offset, string) {
+  function upperToHyphenLower(match, string, offset) {
     return (offset > 0 ? '-' : '') + match.toLowerCase();
   }
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
