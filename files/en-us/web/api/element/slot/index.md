@@ -1,7 +1,7 @@
 ---
 title: Element.slot
 slug: Web/API/Element/slot
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 tags:
   - API
   - Element
