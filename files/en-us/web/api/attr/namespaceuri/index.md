@@ -25,7 +25,7 @@ is associated with a particular attribute node, cannot be changed.
 
 ## Value
 
-A {{jsxref("String")}} containing the URI of the namespace, or `null` if the attribute is not in a namespace.
+A string containing the URI of the namespace, or `null` if the attribute is not in a namespace.
 
 ## Example
 
