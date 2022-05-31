@@ -43,7 +43,7 @@ Sets of files made available in this way are represented as {{domxref("FileList"
 
 ### Reading a file
 
-In this example we provide a [file `<input>` element](/en-US/docs/Web/HTML/Element/input/file), and when the user selects a file we read the contents of the first file selected as text, and display the result in a {{HTMLElement("div")}}.
+In this example, we provide a [file `<input>` element](/en-US/docs/Web/HTML/Element/input/file), and when the user selects a file, we read the contents of the first file selected as text, and display the result in a {{HTMLElement("div")}}.
 
 #### HTML
 
