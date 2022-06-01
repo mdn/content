@@ -1,7 +1,7 @@
 ---
 title: HTMLHtmlElement.version
 slug: Web/API/HTMLHtmlElement/version
-page-type: web-api-interface
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
