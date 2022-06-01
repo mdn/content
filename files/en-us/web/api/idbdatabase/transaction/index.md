@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
+page-type: web-api-instance-method
 tags:
   - API
   - Database

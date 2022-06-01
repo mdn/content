@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserverEntry.time
 slug: Web/API/IntersectionObserverEntry/time
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer

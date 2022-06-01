@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.getAllKeys()
 slug: Web/API/IDBObjectStore/getAllKeys
+page-type: web-api-instance-method
 tags:
   - API
   - IDBObjectStore

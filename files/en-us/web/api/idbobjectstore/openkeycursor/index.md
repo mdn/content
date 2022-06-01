@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.openKeyCursor()
 slug: Web/API/IDBObjectStore/openKeyCursor
+page-type: web-api-instance-method
 tags:
   - API
   - Database

@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange.only()
 slug: Web/API/IDBKeyRange/only
+page-type: web-api-static-method
 tags:
   - API
   - Database

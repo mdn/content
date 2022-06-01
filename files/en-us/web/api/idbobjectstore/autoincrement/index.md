@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.autoIncrement
 slug: Web/API/IDBObjectStore/autoIncrement
+page-type: web-api-instance-property
 tags:
   - API
   - Database

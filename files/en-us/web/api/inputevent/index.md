@@ -1,6 +1,7 @@
 ---
 title: InputEvent
 slug: Web/API/InputEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

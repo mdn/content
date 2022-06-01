@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.keyPath
 slug: Web/API/IDBObjectStore/keyPath
+page-type: web-api-instance-property
 tags:
   - API
   - Database

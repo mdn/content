@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.decode()
 slug: Web/API/ImageDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.count()
 slug: Web/API/IDBIndex/count
+page-type: web-api-instance-method
 tags:
   - API
   - Database

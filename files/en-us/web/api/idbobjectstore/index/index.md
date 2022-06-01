@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.index()
 slug: Web/API/IDBObjectStore/index
+page-type: web-api-instance-method
 tags:
   - API
   - Database

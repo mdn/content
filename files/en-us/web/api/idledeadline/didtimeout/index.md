@@ -1,6 +1,7 @@
 ---
 title: IdleDeadline.didTimeout
 slug: Web/API/IdleDeadline/didTimeout
+page-type: web-api-instance-property
 tags:
   - API
   - Background Tasks

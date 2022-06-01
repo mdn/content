@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.error
 slug: Web/API/IDBTransaction/error
+page-type: web-api-instance-property
 tags:
   - API
   - Database

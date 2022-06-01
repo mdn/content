@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.getAll()
 slug: Web/API/IDBObjectStore/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - Database

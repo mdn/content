@@ -1,6 +1,7 @@
 ---
 title: IDBRequest.readyState
 slug: Web/API/IDBRequest/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - Database

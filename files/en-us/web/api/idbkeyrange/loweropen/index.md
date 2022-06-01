@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange.lowerOpen
 slug: Web/API/IDBKeyRange/lowerOpen
+page-type: web-api-instance-property
 tags:
   - API
   - Database

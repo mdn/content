@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.objectStore
 slug: Web/API/IDBIndex/objectStore
+page-type: web-api-instance-property
 tags:
   - API
   - Database

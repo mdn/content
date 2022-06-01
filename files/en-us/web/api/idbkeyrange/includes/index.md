@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange.includes()
 slug: Web/API/IDBKeyRange/includes
+page-type: web-api-instance-method
 tags:
   - API
   - Database

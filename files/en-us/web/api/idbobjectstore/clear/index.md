@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.clear()
 slug: Web/API/IDBObjectStore/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Database

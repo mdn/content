@@ -1,6 +1,7 @@
 ---
 title: 'IDBFileHandle: error_event'
 slug: Web/API/IDBFileHandle/error_event
+page-type: web-api-event
 tags:
   - API
   - Files

@@ -1,6 +1,7 @@
 ---
 title: ImageCapture.takePhoto()
 slug: Web/API/ImageCapture/takePhoto
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

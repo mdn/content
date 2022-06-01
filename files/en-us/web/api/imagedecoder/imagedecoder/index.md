@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.ImageDecoder()
 slug: Web/API/ImageDecoder/ImageDecoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

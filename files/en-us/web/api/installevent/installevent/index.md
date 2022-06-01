@@ -1,6 +1,7 @@
 ---
 title: InstallEvent()
 slug: Web/API/InstallEvent/InstallEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
