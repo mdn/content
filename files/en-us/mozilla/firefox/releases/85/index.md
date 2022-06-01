@@ -45,7 +45,7 @@ This article provides information about the changes in Firefox 85 that will affe
 
 ### Plugins
 
-- Flash support has been completely removed from Firefox ({{bug(1675349)}}). Read our [plugin roadmap](/en-US/docs/Plugins/Roadmap#schedule) for more information.
+- Flash support has been completely removed from Firefox ({{bug(1675349)}}). Read our [plugin roadmap](/en-US/docs/Glossary/Plugin#schedule) for more information.
 
 ### APIs
 

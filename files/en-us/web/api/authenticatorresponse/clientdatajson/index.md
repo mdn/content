@@ -43,7 +43,7 @@ After the `clientDataJSON` object is converted from an
 - `origin`
   - : The fully qualified origin of the requester which has been given by the
     client/browser to the authenticator. We should expect the [relying party's
-    id](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId) to be a suffix of this value.
+    id](/en-US/docs/Web/API/CredentialsContainer/get) to be a suffix of this value.
 - `tokenBindingId` {{optional_inline}}
 
   - : An object describing the state of [the

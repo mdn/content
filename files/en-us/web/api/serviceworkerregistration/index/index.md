@@ -43,7 +43,7 @@ if ('index' in registration) {
 }
 ```
 
-From the [service worker](/ja/docs/Web/API/ServiceWorker):
+From the [service worker](/en-US/docs/Web/API/ServiceWorker):
 
 ```js
 // service worker script

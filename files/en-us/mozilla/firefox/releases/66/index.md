@@ -65,7 +65,7 @@ _No additions._
 
 #### Removals
 
-- We removed support for the [`xml:base`](/en-US/docs/Web/XML/xml:base) attribute ({{Bug(903372)}}).
+- We removed support for the [`xml:base`](/en-US/docs/Web/API/Node/baseURI) attribute ({{Bug(903372)}}).
 
 ### JavaScript
 

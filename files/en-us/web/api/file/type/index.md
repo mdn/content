@@ -69,5 +69,5 @@ filepicker.addEventListener('change', (event) => {
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - Blog Post: [Be skeptical of client-reported MIME types](https://textslashplain.com/2018/07/26/be-skeptical-of-client-reported-mime-content-types/)

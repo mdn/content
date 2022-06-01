@@ -153,5 +153,5 @@ div {
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [File API](/en-US/docs/Web/API/File)
