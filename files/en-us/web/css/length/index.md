@@ -46,7 +46,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
   - : Represents the calculated {{Cssxref("font-size")}} of the element. If used on the {{Cssxref("font-size")}} property itself, it represents the _inherited_ font-size of the element.
 - `ex`
   - : Represents the [x-height](https://en.wikipedia.org/wiki/X-height) of the element's {{Cssxref("font")}}. In fonts with the `x` letter, this is generally the height of lowercase letters in the font; `1ex ≈ 0.5em` in many fonts.
-- `ic` {{experimental_inline}}
+- `ic`
   - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
 - `lh` {{experimental_inline}}
   - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.
@@ -106,12 +106,12 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svmin`, `lvmin`, and `dvmin`.
     `vmin` represents the viewport-percentage length unit based on the browser default viewport size.
-- `vb` {{experimental_inline}}
+- `vb`
   - : Represents percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svb`, `lvb`, and `dvb`, respectively.
     `vb` represents the viewport-percentage length unit based on the browser default viewport size.
-- `vi` {{experimental_inline}}
+- `vi`
   - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
@@ -133,7 +133,7 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
   - : One centimeter. `1cm` = `96px/2.54`.
 - `mm`
   - : One millimeter. `1mm` = 1/10th of `1cm`.
-- `Q` {{experimental_inline}}
+- `Q`
   - : One quarter of a millimeter. `1Q` = 1/40th of `1cm`.
 - `in`
   - : One inch. `1in` = `2.54cm` = `96px`.
