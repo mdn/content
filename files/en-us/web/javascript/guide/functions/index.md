@@ -57,7 +57,7 @@ y = mycar.make; // y gets the value "Toyota"
                 // (the make property was changed by the function)
 ```
 
-When you pass an array as a parameter, if the function changes any of the array's value, that change is visible outside the function, as shown in the following example:
+When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:
 
 ```js
 function myFunc(theArr) {
