@@ -23,7 +23,8 @@ A {{jsxref("boolean")}}, `true` if buffering is complete.
 The following example prints the value of `complete` to the console.
 
 ```js
-console.log(ImageDecoder.complete);
+let imageDecoder = new ImageDecoder(init);
+console.log(imageDecoder.complete);
 ```
 
 ## Specifications
