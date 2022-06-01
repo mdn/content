@@ -41,7 +41,7 @@ The basic properties of the "viewport" `<meta>` tag include:
 - `width`
   - : Controls the size of the viewport. It can be set to a specific number of pixels like `width=600` or to the special value `device-width`, which is [100vw](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), or 100% of the viewport width. Minimum: `1`. Maximum: `10000`. Negative values: ignored. 
 - `height`
-  - : Controls the size of the viewport. It can be set to a specific number of pixels like `height=400` or to the special value `device-height`, which is 100vh, or 100% of the viewport height. Minimum: `1`. Maximum: `10000`. Negative values: ignored. 
+  - : Controls the size of the viewport. It can be set to a specific number of pixels like `height=400` or to the special value `device-height`, which is [100vh](/en-US/docs/Web/CSS/length#vh), or 100% of the viewport height. Minimum: `1`. Maximum: `10000`. Negative values: ignored. 
 - `initial-scale`
   - : Controls the zoom level when the page is first loaded. Minimum: `0.1`. Maximum: `10`. Default:`1`. Negative values: ignored. 
 - `minimum-scale`
