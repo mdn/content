@@ -1,5 +1,5 @@
 ---
-title: IdleDetector.IdleDetector()
+title: IdleDetector()
 slug: Web/API/IdleDetector/IdleDetector
 page-type: web-api-constructor
 tags:

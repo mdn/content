@@ -1,5 +1,5 @@
 ---
-title: EncodedVideoChunk.EncodedVideoChunk()
+title: EncodedVideoChunk()
 slug: Web/API/EncodedVideoChunk/EncodedVideoChunk
 page-type: web-api-constructor
 tags:
