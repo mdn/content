@@ -24,13 +24,20 @@ a response from the server and stream it to the browser, but also stream it to t
 ServiceWorker cache. Since a response body cannot be consumed more than once, you'd need
 two copies to do this.
 
-A teed stream will backpressure to the speed of the *faster* consumed `ReadableStream`,
-and unread data is buffered onto the internal buffer
-of the slower consumed `ReadableStream` without any limit or backpressure.
-If only one branch is consumed, then the entire body will be buffered in memory.
+A teed stream will partially signal backpressure at the rate of the *faster* consumer
+of the two `ReadableStream` branches,
+and unread data is enqueued internally on the slower consumed `ReadableStream`
+without any limit or backpressure.
+That is, when *both* branches have an unread element in their internal queue,
+then the original `ReadableStream`’s controller’s queue will start to fill up,
+and once its {{domxref("ReadableStreamDefaultController.desiredSize", "desiredSize")}} ≤ 0
+or byte stream controller {{domxref("ReadableByteStreamController.desiredSize", "desiredSize")}} ≤ 0,
+then the controller will stop calling `pull(controller)` on the
+underlying source passed to {{domxref("ReadableStream.ReadableStream", "new ReadableStream()")}}.
+If only one branch is consumed, then the entire body will be enqueued in memory.
 Therefore, you should not use the built-in `tee()` to read very large streams
 in parallel at different speeds.
-Instead, search for an implementation that backpressures
+Instead, search for an implementation that fully backpressures
 to the speed of the *slower* consumed branch.
 
 To cancel the stream you then need to cancel both resulting branches. Teeing a stream

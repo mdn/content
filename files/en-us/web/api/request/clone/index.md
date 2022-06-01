@@ -15,10 +15,10 @@ browser-compat: api.Request.clone
 The **`clone()`** method of the {{domxref("Request")}} interface creates a copy of the current `Request` object.
 
 Like the underlying {{domxref("ReadableStream.tee")}} api,
-the {{domxref("Request.body", "body")}} of a cloned `Request`
-will backpressure to the speed of the *faster* consumed `ReadableStream`,
-and unread data is buffered onto the internal buffer
-of the slower consumed `ReadableStream` without any limit or backpressure.
+the {{domxref("Request.body", "body")}} of a cloned `Response`
+will signal backpressure at the rate of the *faster* consumer of the two bodies,
+and unread data is enqueued internally on the slower consumed `body`
+without any limit or backpressure.
 Beware when you construct a `Request` from a stream and then `clone` it.
 
 `clone()` throws a {{jsxref("TypeError")}} if the request body has already been used. In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
