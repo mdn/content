@@ -1,7 +1,7 @@
 ---
 title: indexedDB
 slug: Web/API/indexedDB
-page-type: web-api-interface
+page-type: web-api-global-property
 tags:
   - API
   - Database
