@@ -1,6 +1,7 @@
 ---
 title: 'MediaRecorder: pause event'
 slug: Web/API/MediaRecorder/pause_event
+page-type: web-api-event
 tags:
   - API
   - Audio

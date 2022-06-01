@@ -1,6 +1,7 @@
 ---
 title: location.password
 slug: Web/API/Location/password
+page-type: web-api-instance-property
 tags:
   - API
   - Location

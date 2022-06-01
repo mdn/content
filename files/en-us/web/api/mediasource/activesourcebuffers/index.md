@@ -1,6 +1,7 @@
 ---
 title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

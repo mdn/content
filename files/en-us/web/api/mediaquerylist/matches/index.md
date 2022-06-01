@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
+page-type: web-api-instance-property
 tags:
   - API
   - Adaptive Design

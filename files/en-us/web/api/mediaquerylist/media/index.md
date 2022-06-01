@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.media
 slug: Web/API/MediaQueryList/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

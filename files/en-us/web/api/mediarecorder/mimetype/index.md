@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.mimeType
 slug: Web/API/MediaRecorder/mimeType
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

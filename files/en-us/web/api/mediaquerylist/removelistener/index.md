@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

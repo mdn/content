@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect.setKeyframes()
 slug: Web/API/KeyframeEffect/setKeyframes
+page-type: web-api-instance-method
 tags:
   - API
   - Animations

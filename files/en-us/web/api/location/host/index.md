@@ -1,6 +1,7 @@
 ---
 title: location.host
 slug: Web/API/Location/host
+page-type: web-api-instance-property
 tags:
   - API
   - Location

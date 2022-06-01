@@ -1,6 +1,7 @@
 ---
 title: Media Capabilities API
 slug: Web/API/Media_Capabilities_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

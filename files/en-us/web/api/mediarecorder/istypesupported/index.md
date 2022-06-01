@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported
+page-type: web-api-static-method
 tags:
   - API
   - Audio

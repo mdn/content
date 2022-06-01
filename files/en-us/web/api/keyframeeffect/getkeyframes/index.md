@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect.getKeyframes()
 slug: Web/API/KeyframeEffect/getKeyframes
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

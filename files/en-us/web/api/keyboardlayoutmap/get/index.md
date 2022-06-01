@@ -1,6 +1,7 @@
 ---
 title: KeyboardLayoutMap.get()
 slug: Web/API/KeyboardLayoutMap/get
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

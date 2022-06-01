@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
+page-type: web-api-instance-method
 tags:
   - API
   - Capture

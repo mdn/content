@@ -1,6 +1,7 @@
 ---
 title: location.pathname
 slug: Web/API/Location/pathname
+page-type: web-api-instance-property
 tags:
   - API
   - Location

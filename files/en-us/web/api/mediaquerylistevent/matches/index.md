@@ -1,6 +1,7 @@
 ---
 title: MediaQueryListEvent.matches
 slug: Web/API/MediaQueryListEvent/matches
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

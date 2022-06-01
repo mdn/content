@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

@@ -1,6 +1,7 @@
 ---
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Error

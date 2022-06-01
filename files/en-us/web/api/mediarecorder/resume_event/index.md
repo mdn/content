@@ -1,6 +1,7 @@
 ---
 title: 'MediaRecorder: resume event'
 slug: Web/API/MediaRecorder/resume_event
+page-type: web-api-event
 tags:
   - API
   - Audio

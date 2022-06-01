@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.videoBitsPerSecond
 slug: Web/API/MediaRecorder/videoBitsPerSecond
+page-type: web-api-instance-property
 browser-compat: api.MediaRecorder.videoBitsPerSecond
 ---
 {{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
