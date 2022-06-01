@@ -132,7 +132,7 @@ _No change._
 
 ### Plugins
 
-- In preparation for future releases to switch over to multi-process content, [NPAPI](/en-US/docs/Plugins) plugins can no longer be run in the same process as the page content. The preferences starting with `dom.ipc.plugins` are no longer used.
+- In preparation for future releases to switch over to multi-process content, [NPAPI](/en-US/docs/Glossary/Plugin) plugins can no longer be run in the same process as the page content. The preferences starting with `dom.ipc.plugins` are no longer used.
 
 ### Other
 

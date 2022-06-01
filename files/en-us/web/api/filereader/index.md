@@ -27,7 +27,7 @@ File objects may be obtained from a {{domxref("FileList")}} object returned as a
 - {{domxref("FileReader.FileReader", "FileReader()")}}
   - : Returns a newly constructed `FileReader`.
 
-See [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) for details and examples.
+See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) for details and examples.
 
 ## Properties
 
@@ -86,7 +86,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("Blob")}}
 - {{domxref("FileReaderSync")}}

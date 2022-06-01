@@ -63,7 +63,7 @@ Firefox 75 sees numerous additions to the [Web Animations API](/en-US/docs/Web/A
 - [Implicit to/from keyframes](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes) are now supported, as is automatically removing filling animations that have been replaced by other indefinitely filling animations ({{bug(1618773)}}). This includes enabling of support for:
 
   - [`Animation.commitStyles()`](/en-US/docs/Web/API/Animation/commitStyles)
-  - [`Animation.onremove`](/en-US/docs/Web/API/Animation/onremove)
+  - [`Animation.onremove`](/en-US/docs/Web/API/Animation/remove_event)
   - [`Animation.persist()`](/en-US/docs/Web/API/Animation/persist)
   - [`Animation.replaceState`](/en-US/docs/Web/API/Animation/replaceState)
 

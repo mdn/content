@@ -79,7 +79,7 @@ _No change._
 ### Miscellaneous
 
 - [WOFF2](/en-US/docs/Web/Guide/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ({{bug(1084026)}}).
-- The [`-remote`](/en-US/docs/Mozilla/Command_Line_Options#-remote_remote_command) command-line option has been removed ({{bug(1080319)}}).
+- The [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) command-line option has been removed ({{bug(1080319)}}).
 - Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/news/newsbeat-32220611) ({{bug(1153460)}}).
 
 ## Networking

@@ -668,7 +668,7 @@ For example, a CDN that allows cache purging via an API or dashboard operation w
 
 A service worker could do the same if it could delete the contents in the Cache API when an update occurs on the server.
 
-For more information, see the documentation for your CDN, and consult the [service worker documentation](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API).
+For more information, see the documentation for your CDN, and consult the [service worker documentation](/en-US/docs/Web/API/Service_Worker_API).
 
 ## See also
 

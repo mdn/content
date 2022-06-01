@@ -234,7 +234,7 @@ You can even get more involved with the process by using the form's {{domxref("H
 
 If you use a {{domxref("FormData","FormData")}} object with a form that includes `<input type="file">` widgets, the data will be processed automatically. But to send binary data by hand, there's extra work to do.
 
-There are many sources for binary data, including {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement","Canvas")}}, and [WebRTC](/en-US/docs/Web/API/Navigator/getUserMedia). Unfortunately, some legacy browsers can't access binary data or require complicated workarounds. To learn more about the `FileReader` API, see [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+There are many sources for binary data, including {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement","Canvas")}}, and [WebRTC](/en-US/docs/Web/API/Navigator/getUserMedia). Unfortunately, some legacy browsers can't access binary data or require complicated workarounds. To learn more about the `FileReader` API, see [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
 The least complicated way of sending binary data is by using {{domxref("FormData","FormData")}}'s `append()` method, demonstrated above. If you have to do it by hand, it's trickier.
 
