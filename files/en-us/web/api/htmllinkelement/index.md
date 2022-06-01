@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

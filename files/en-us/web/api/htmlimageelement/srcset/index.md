@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

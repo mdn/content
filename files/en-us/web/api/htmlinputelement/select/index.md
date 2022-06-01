@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

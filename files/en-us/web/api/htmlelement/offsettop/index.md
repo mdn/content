@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

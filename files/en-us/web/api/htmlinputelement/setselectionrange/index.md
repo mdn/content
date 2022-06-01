@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

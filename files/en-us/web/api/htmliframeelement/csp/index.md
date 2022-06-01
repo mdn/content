@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.csp
 slug: Web/API/HTMLIFrameElement/csp
+page-type: web-api-instance-property
 tags:
   - API
   - CSP

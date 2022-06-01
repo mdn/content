@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

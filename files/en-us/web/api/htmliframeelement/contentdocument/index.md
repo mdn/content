@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.contentDocument
 slug: Web/API/HTMLIFrameElement/contentDocument
+page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.contentDocument
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: canplay event'
 slug: Web/API/HTMLMediaElement/canplay_event
+page-type: web-api-event
 tags:
   - Audio
   - Event

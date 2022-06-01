@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.submit()
 slug: Web/API/HTMLFormElement/submit
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

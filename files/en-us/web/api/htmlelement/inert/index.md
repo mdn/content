@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.inert
 ---
 {{ APIRef("HTML DOM") }}

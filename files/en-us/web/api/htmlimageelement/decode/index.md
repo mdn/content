@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.decode()
 slug: Web/API/HTMLImageElement/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Decode

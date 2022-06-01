@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

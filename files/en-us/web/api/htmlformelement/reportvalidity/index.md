@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
+page-type: web-api-instance-method
 tags:
   - HTML
   - HTMLFormElement

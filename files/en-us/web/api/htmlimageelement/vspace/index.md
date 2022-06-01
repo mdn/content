@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.vspace
 slug: Web/API/HTMLImageElement/vspace
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

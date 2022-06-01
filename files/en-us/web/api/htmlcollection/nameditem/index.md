@@ -1,6 +1,7 @@
 ---
 title: HTMLCollection.namedItem()
 slug: Web/API/HTMLCollection/namedItem
+page-type: web-api-instance-property
 tags:
   - API
   - Element Lists
