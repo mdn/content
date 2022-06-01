@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.objectStore()
 slug: Web/API/IDBTransaction/objectStore
+page-type: web-api-instance-method
 tags:
   - API
   - Database

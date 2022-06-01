@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.keyPath
 slug: Web/API/IDBIndex/keyPath
+page-type: web-api-instance-property
 tags:
   - API
   - Database

@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
+page-type: web-api-instance-method
 tags:
   - API
   - Database

@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
+page-type: web-api-instance-property
 tags:
   - API
   - Database

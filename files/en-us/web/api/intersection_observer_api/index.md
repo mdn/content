@@ -1,6 +1,7 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
+page-type: web-api-overview
 tags:
   - API
   - Clipping

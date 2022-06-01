@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
+page-type: web-api-instance-method
 tags:
   - API
   - Database

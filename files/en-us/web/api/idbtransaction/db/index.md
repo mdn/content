@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.db
 slug: Web/API/IDBTransaction/db
+page-type: web-api-instance-property
 tags:
   - API
   - Database

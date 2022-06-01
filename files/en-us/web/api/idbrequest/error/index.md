@@ -1,6 +1,7 @@
 ---
 title: IDBRequest.error
 slug: Web/API/IDBRequest/error
+page-type: web-api-instance-property
 tags:
   - API
   - Database

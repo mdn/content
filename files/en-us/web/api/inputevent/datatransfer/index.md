@@ -1,6 +1,7 @@
 ---
 title: InputEvent.dataTransfer
 slug: Web/API/InputEvent/dataTransfer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Events

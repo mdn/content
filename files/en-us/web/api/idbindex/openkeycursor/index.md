@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.openKeyCursor()
 slug: Web/API/IDBIndex/openKeyCursor
+page-type: web-api-instance-method
 tags:
   - API
   - Database

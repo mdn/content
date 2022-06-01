@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.complete
 slug: Web/API/ImageDecoder/complete
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: IdleDetector.IdleDetector()
 slug: Web/API/IdleDetector/IdleDetector
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

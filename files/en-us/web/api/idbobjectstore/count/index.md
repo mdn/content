@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.count()
 slug: Web/API/IDBObjectStore/count
+page-type: web-api-instance-method
 tags:
   - API
   - Database

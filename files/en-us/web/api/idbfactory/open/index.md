@@ -1,6 +1,7 @@
 ---
 title: IDBFactory.open()
 slug: Web/API/IDBFactory/open
+page-type: web-api-instance-method
 tags:
   - API
   - Database

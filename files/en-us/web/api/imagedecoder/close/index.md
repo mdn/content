@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.close()
 slug: Web/API/ImageDecoder/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method

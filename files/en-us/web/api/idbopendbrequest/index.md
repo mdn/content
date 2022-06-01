@@ -1,6 +1,7 @@
 ---
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
+page-type: web-api-interface
 tags:
   - API
   - DOM Reference

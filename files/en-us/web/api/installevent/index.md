@@ -1,6 +1,7 @@
 ---
 title: InstallEvent
 slug: Web/API/InstallEvent
+page-type: web-api-interface
 tags:
   - API
   - InstallEvent

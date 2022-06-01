@@ -1,6 +1,7 @@
 ---
 title: ImageCapture.grabFrame()
 slug: Web/API/ImageCapture/grabFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

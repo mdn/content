@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange.lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound
+page-type: web-api-static-method
 tags:
   - API
   - Database

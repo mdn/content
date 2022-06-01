@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.abort()
 slug: Web/API/IDBTransaction/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Database

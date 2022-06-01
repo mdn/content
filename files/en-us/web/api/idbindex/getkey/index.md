@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.getKey()
 slug: Web/API/IDBIndex/getKey
+page-type: web-api-instance-method
 tags:
   - API
   - Database

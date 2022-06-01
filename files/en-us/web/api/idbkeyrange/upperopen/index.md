@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange.upperOpen
 slug: Web/API/IDBKeyRange/upperOpen
+page-type: web-api-instance-property
 tags:
   - API
   - Database

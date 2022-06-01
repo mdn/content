@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.name
 slug: Web/API/IDBObjectStore/name
+page-type: web-api-instance-property
 tags:
   - API
   - Database

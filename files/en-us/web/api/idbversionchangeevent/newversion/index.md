@@ -1,6 +1,7 @@
 ---
 title: IDBVersionChangeEvent.newVersion
 slug: Web/API/IDBVersionChangeEvent/newVersion
+page-type: web-api-instance-property
 tags:
   - API
   - Database
