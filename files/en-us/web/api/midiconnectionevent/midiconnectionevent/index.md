@@ -1,5 +1,5 @@
 ---
-title: MIDIConnectionEvent.MIDIConnectionEvent()
+title: MIDIConnectionEvent()
 slug: Web/API/MIDIConnectionEvent/MIDIConnectionEvent
 page-type: web-api-constructor
 tags:

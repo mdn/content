@@ -1,5 +1,5 @@
 ---
-title: MediaStreamTrackProcessor.MediaStreamTrackProcessor()
+title: MediaStreamTrackProcessor()
 slug: Web/API/MediaStreamTrackProcessor/MediaStreamTrackProcessor
 page-type: web-api-constructor
 tags:
