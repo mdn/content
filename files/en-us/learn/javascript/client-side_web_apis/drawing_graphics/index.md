@@ -369,7 +369,7 @@ It is possible to render external images onto your canvas. These can be simple i
 3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `load` event, which will only be fired when the image has finished loading. Add the following block below the previous one:
 
     ```js
-    image.addEventListener('load', () => ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175));
+    image.addEventListener('load', () => ctx.drawImage(image, 20, 20));
     ```
 
     If you load your example in the browser now, you should see the image embedded in the canvas.
