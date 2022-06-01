@@ -66,14 +66,10 @@ for (var i in types) {
 
 ## See also
 
-- [MediaStream Recording
-  API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- [Using
-  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Guide to media types and formats on the
-  web](/en-US/docs/Web/Media/Formats)
-- [The "codecs" parameter in
-  common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaCapabilities")}}

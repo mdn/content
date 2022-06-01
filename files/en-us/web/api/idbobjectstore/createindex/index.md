@@ -20,8 +20,7 @@ The **`createIndex()`** method of the
 field/column defining a new data point for each database record to contain.
 
 Bear in mind that IndexedDB indexes can contain _any_ JavaScript data type;
-IndexedDB uses the [structured
-clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to serialize stored objects, which allows for storage of simple
+IndexedDB uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to serialize stored objects, which allows for storage of simple
 and complex objects.
 
 Note that this method must be called only from a `VersionChange` transaction

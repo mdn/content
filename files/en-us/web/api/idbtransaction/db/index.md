@@ -29,8 +29,7 @@ In the following code snippet, we open a read/write transaction on our database 
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
 failure. At the end, we return the associated database connection using `db`.
-For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view
-example live](https://mdn.github.io/to-do-notifications/).)/p>
+For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)/p>
 
 ```js
 // Let us open our database
