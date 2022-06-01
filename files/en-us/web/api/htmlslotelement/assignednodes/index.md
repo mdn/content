@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement.assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLSlotElement

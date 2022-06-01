@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
+page-type: web-api-instance-method
 tags:
   - API
   - Database

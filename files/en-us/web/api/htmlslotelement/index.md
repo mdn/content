@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
+page-type: web-api-interface
 tags:
   - API
   - HTMLSlotElement

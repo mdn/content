@@ -1,6 +1,7 @@
 ---
 title: HTMLModElement
 slug: Web/API/HTMLModElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

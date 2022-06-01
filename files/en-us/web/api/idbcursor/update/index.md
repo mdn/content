@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.update()
 slug: Web/API/IDBCursor/update
+page-type: web-api-instance-method
 tags:
   - API
   - Database

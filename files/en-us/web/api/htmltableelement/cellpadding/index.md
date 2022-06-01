@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.cellPadding
 slug: Web/API/HTMLTableElement/cellPadding
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

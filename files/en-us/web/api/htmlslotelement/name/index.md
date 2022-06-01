@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement.name
 slug: Web/API/HTMLSlotElement/name
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLSlotElement

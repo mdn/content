@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.willValidate
 slug: Web/API/HTMLObjectElement/willValidate
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

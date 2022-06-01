@@ -1,6 +1,7 @@
 ---
 title: 'HTMLSlotElement: slotchange event'
 slug: Web/API/HTMLSlotElement/slotchange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

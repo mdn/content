@@ -1,6 +1,7 @@
 ---
 title: IDBCursorWithValue.value
 slug: Web/API/IDBCursorWithValue/value
+page-type: web-api-instance-property
 tags:
   - API
   - Database

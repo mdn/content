@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase
 slug: Web/API/IDBDatabase
+page-type: web-api-interface
 tags:
   - API
   - Database
