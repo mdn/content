@@ -8,7 +8,7 @@ tags:
   - HTML
   - Input
   - Reference
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-accept
+browser-compat: html.elements.input.attributes.accept
 ---
 
 {{HTMLSidebar}}
@@ -149,7 +149,7 @@ div {
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## See also
 
