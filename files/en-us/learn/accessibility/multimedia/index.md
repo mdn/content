@@ -288,7 +288,7 @@ This is not a new concept — television services have had closed captioning ava
 
 ![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
 
-Whereas many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, for example:
+Many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, as shown below:
 
 ![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](subtitles_german.png)
 
