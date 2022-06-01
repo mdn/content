@@ -1,4 +1,4 @@
-const---
+---
 title: BaseAudioContext.createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
 page-type: web-api-instance-method
