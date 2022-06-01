@@ -1,6 +1,7 @@
 ---
 title: 'MediaRecorder: dataavailable event'
 slug: Web/API/MediaRecorder/dataavailable_event
+page-type: web-api-event
 tags:
   - API
   - Audio

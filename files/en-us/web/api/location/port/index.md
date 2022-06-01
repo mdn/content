@@ -1,6 +1,7 @@
 ---
 title: location.port
 slug: Web/API/Location/port
+page-type: web-api-instance-property
 tags:
   - API
   - Location

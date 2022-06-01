@@ -1,6 +1,7 @@
 ---
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
+page-type: web-api-overview
 tags:
   - API
   - Audio

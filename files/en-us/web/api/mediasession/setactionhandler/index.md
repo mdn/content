@@ -1,6 +1,7 @@
 ---
 title: MediaSession.setActionHandler()
 slug: Web/API/MediaSession/setActionHandler
+page-type: web-api-static-method
 tags:
   - API
   - Audio

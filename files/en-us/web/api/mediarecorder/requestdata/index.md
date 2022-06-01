@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder
 slug: Web/API/MediaRecorder
+page-type: web-api-interface
 tags:
   - API
   - Audio

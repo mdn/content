@@ -1,6 +1,7 @@
 ---
 title: KeyboardLayoutMap.has()
 slug: Web/API/KeyboardLayoutMap/has
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

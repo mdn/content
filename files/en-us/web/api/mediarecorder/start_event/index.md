@@ -1,6 +1,7 @@
 ---
 title: 'MediaRecorder: start event'
 slug: Web/API/MediaRecorder/start_event
+page-type: web-api-event
 tags:
   - API
   - Audio

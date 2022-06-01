@@ -1,6 +1,7 @@
 ---
 title: location.origin
 slug: Web/API/Location/origin
+page-type: web-api-instance-property
 tags:
   - API
   - Location

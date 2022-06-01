@@ -1,6 +1,7 @@
 ---
 title: location.href
 slug: Web/API/Location/href
+page-type: web-api-instance-property
 tags:
   - API
   - Location

@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

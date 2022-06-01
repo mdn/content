@@ -1,6 +1,7 @@
 ---
 title: MediaError
 slug: Web/API/MediaError
+page-type: web-api-interface
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: LayoutShiftAttribution.node
 slug: Web/API/LayoutShiftAttribution/node
+page-type: web-api-instance-method
 tags:
   - API
   - Property

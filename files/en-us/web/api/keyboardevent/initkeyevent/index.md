@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

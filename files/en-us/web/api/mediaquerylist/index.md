@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList
 slug: Web/API/MediaQueryList
+page-type: web-api-interface
 tags:
   - API
   - Adaptive Design

@@ -1,6 +1,7 @@
 ---
 title: location.hash
 slug: Web/API/Location/hash
+page-type: web-api-instance-property
 tags:
   - API
   - Location

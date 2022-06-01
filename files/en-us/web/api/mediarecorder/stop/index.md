@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.stop()
 slug: Web/API/MediaRecorder/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Media Capture

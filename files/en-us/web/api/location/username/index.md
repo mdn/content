@@ -1,6 +1,7 @@
 ---
 title: location.username
 slug: Web/API/Location/username
+page-type: web-api-instance-property
 tags:
   - API
   - Location

@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

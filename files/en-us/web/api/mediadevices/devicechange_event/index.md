@@ -1,6 +1,7 @@
 ---
 title: 'MediaDevices: devicechange event'
 slug: Web/API/MediaDevices/devicechange_event
+page-type: web-api-event
 tags:
   - API
   - Audio

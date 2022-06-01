@@ -1,6 +1,7 @@
 ---
 title: MediaKeySystemAccess.keySystem
 slug: Web/API/MediaKeySystemAccess/keySystem
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions

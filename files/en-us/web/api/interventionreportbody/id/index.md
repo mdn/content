@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody.id
 slug: Web/API/InterventionReportBody/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata.artist
 slug: Web/API/MediaMetadata/artist
+page-type: web-api-instance-property
 tags:
   - Audio
   - Media

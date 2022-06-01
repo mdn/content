@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect.target
 slug: Web/API/KeyframeEffect/target
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

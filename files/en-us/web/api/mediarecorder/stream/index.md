@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.stream
 slug: Web/API/MediaRecorder/stream
+page-type: web-api-instance-property
 tags:
   - API
   - Media Recorder API
