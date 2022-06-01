@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement.fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
+page-type: web-api-instance-property
 tags:
   - API
   - Element

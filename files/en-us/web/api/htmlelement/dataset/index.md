@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.dataset
 slug: Web/API/HTMLElement/dataset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

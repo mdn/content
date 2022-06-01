@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

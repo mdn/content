@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement.referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

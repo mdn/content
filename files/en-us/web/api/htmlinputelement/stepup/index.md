@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

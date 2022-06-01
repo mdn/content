@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.useMap
 slug: Web/API/HTMLImageElement/useMap
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

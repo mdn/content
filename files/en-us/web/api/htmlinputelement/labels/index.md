@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

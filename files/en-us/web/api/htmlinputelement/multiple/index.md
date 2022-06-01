@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

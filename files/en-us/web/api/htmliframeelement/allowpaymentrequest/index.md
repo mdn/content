@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.allowPaymentRequest
 slug: Web/API/HTMLIFrameElement/allowPaymentRequest
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

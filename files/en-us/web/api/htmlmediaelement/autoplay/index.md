@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

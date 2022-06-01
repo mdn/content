@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

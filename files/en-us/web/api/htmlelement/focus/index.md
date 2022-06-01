@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Focus
