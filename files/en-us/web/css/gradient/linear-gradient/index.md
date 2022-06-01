@@ -181,6 +181,9 @@ body {
 
 Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
 
+### Gradient Editor
+- [RedGradient](https://red-gradient.com/)
+
 ## Specifications
 
 {{Specifications}}
