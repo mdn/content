@@ -208,7 +208,7 @@ fwdBtn.onclick = function() {
 
 These are very simple, just adding or subtracting 3 seconds to the `currentTime` each time they are clicked. In a real video player, you'd probably want a more elaborate seeking bar, or similar.
 
-Note that we also check to see if the `currentTime` is more than the total media `duration`, or if the media is not playing, when the Fwd button is pressed. If either condition is true, we stop the video, to avoid the user interface going wrong if they attempt to fast-forward when the video is not playing or fast-forward past the end of the video.
+Note that we also check to see if the `currentTime` is more than the total media `duration` or if the media is not playing when the `fwdBtn` is pressed. If either condition is true, we stop the video to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.
 
 Last of all, add the following to the end of the code, to control the time elapsed display:
 
