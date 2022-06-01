@@ -1,6 +1,7 @@
 ---
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

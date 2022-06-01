@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.deviceId
 slug: Web/API/MediaTrackSettings/deviceId
+page-type: web-api-instance-property
 tags:
   - API
   - Media

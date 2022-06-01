@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.groupId
 slug: Web/API/MediaTrackConstraints/groupId
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

@@ -1,6 +1,7 @@
 ---
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

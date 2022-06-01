@@ -1,6 +1,7 @@
 ---
 title: MediaSource.isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
+page-type: web-api-static-method
 tags:
   - API
   - Audio

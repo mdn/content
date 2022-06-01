@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.width
 slug: Web/API/MediaTrackConstraints/width
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

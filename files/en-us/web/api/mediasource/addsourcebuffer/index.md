@@ -1,6 +1,7 @@
 ---
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

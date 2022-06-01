@@ -1,6 +1,7 @@
 ---
 title: MediaSource()
 slug: Web/API/MediaSource/MediaSource
+page-type: web-api-constructor
 tags:
   - API
   - Audio

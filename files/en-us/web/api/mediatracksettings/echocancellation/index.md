@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.echoCancellation
 slug: Web/API/MediaTrackSettings/echoCancellation
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

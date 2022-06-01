@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent.methodName
 slug: Web/API/MerchantValidationEvent/methodName
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce
