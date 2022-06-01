@@ -25,7 +25,7 @@ An {{domxref("RTCDtlsTransport")}} receives an `error` event when a transport-le
   <tbody>
     <tr>
       <th scope="row">Bubbles</th>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">Cancelable</th>
