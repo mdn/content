@@ -282,7 +282,7 @@ However, there are some edge cases. You might for example have an audio recordin
 
 To make video accessible for deaf, visually impaired, or other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
 
-> **Note:** text tracks are also useful for potentially any user, not just those with disabilities. For example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library.)
+> **Note:** Text tracks are also useful for potentially any user, not just those with disabilities. For example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library).
 
 This is not a new concept — television services have had closed captioning available for quite a long time:
 
