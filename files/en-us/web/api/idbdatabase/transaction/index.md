@@ -121,8 +121,7 @@ An {{domxref("IDBTransaction")}} object.
 
 In this example we open a database connection, then use transaction() to open a
 transaction on the database. For a complete example, see our
-[To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view
-example live](https://mdn.github.io/to-do-notifications/).)
+[To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 var db;
