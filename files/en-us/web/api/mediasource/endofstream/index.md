@@ -1,6 +1,7 @@
 ---
 title: MediaSource.endOfStream()
 slug: Web/API/MediaSource/endOfStream
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

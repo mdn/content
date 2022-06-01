@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.stop()
 slug: Web/API/MediaStreamTrack/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Media

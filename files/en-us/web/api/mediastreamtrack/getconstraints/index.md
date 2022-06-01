@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.getConstraints()
 slug: Web/API/MediaStreamTrack/getConstraints
+page-type: web-api-instance-method
 tags:
   - API
   - Media Capture and Streams

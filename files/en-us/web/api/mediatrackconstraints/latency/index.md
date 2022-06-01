@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.latency
 slug: Web/API/MediaTrackConstraints/latency
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

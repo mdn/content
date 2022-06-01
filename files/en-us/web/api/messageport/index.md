@@ -1,6 +1,7 @@
 ---
 title: MessagePort
 slug: Web/API/MessagePort
+page-type: web-api-interface
 tags:
   - API
   - Channel messaging

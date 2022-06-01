@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.height
 slug: Web/API/MediaTrackSettings/height
+page-type: web-api-instance-property
 tags:
   - API
   - Media

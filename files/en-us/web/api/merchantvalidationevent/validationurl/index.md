@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent.validationURL
 slug: Web/API/MerchantValidationEvent/validationURL
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce

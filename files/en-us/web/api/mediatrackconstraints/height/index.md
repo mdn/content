@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.height
 slug: Web/API/MediaTrackConstraints/height
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

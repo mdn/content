@@ -1,6 +1,7 @@
 ---
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
+page-type: web-api-instance-method
 tags:
   - API
   - Channel messaging

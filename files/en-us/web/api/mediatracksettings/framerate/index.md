@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.frameRate
 slug: Web/API/MediaTrackSettings/frameRate
+page-type: web-api-instance-property
 tags:
   - API
   - Media

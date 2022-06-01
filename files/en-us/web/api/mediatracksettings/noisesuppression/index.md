@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.noiseSuppression
 slug: Web/API/MediaTrackSettings/noiseSuppression
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

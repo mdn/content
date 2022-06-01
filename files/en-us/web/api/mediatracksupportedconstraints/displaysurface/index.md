@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.displaySurface
 slug: Web/API/MediaTrackSupportedConstraints/displaySurface
+page-type: web-api-instance-property
 tags:
   - API
   - Capture

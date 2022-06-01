@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.sampleRate
 slug: Web/API/MediaTrackConstraints/sampleRate
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

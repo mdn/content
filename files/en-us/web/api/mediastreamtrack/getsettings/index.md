@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
+page-type: web-api-instance-method
 tags:
   - API
   - Constraints

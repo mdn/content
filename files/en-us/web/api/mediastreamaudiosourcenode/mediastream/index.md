@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioSourceNode.mediaStream
 slug: Web/API/MediaStreamAudioSourceNode/mediaStream
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

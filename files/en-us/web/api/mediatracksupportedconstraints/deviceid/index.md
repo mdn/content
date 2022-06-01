@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.deviceId
 slug: Web/API/MediaTrackSupportedConstraints/deviceId
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

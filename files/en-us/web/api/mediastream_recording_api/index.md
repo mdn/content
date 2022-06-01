@@ -1,6 +1,7 @@
 ---
 title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
+page-type: web-api-overview
 tags:
   - API
   - Audio

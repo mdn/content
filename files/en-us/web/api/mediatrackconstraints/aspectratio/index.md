@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.aspectRatio
 slug: Web/API/MediaTrackConstraints/aspectRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
