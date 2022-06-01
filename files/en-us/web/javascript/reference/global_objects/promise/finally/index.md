@@ -50,28 +50,31 @@ The `finally()` method can be useful if you want to do some processing or
 cleanup once the promise is settled, regardless of its outcome.
 
 The `finally()` method is very similar to calling
-`.then(onFinally, onFinally)` however there are a couple of differences:
+`.then(onFinally, onFinally)`, however, there are a couple of differences:
 
 - When creating a function inline, you can pass it once, instead of being forced to
   either declare it twice, or create a variable for it
 - A `finally` callback will not receive any argument. This use case
   is for precisely when you _do not care_ about the rejection reason, or the
   fulfillment value, and so there's no need to provide it. 
-- A `finally` call will chain through an equivalent to the orignal promise.  
+- A `finally` call will usually chain through an equivalent to the orignal promise.  
   So for example:
   - Unlike `Promise.resolve(2).then(() => 77, () => {})` (which
     will return a promise which will be resolved with `77`), 
     `Promise.resolve(2).finally(() => {})` will return a 
     promise which will be resolved with `2`.
   - Similarly, unlike `Promise.reject(3).then(() => {}, () => 88)`
-    (which will, again, return a promise which will be rejected with `88`),
-    `Promise.reject(3).finally(() => {})` will return a promise 
-    which will be rejected with `3`.
+    (which will return a promise which will be rejected with `88`),
+    `Promise.reject(3).finally(() => 88)` will return a promise 
+    which will be rejected with `3`.  
+  - But, either `Promise.reject(3).finally(() => throw 99)` or
+    `Promise.reject(3).finally(() => Promise.reject(99))` will return a promise 
+    which will be rejected with `99`.
 
 > **Note:** A `throw` (or returning a rejected promise) in the
 > `finally` callback will reject the promise, which will, in that case, 
 > return a promise with the rejection reason
-> specified when calling `throw`.
+> specified when calling `throw`, as shown in the last example.
 
 ## Examples
 
