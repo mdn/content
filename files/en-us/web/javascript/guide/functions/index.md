@@ -65,7 +65,7 @@ function myFunc(theArr) {
 }
 
 const arr = [45];
-var a, b;
+let a, b;
 
 a = arr[0]; // a gets the value 45
 myFunc(arr);
