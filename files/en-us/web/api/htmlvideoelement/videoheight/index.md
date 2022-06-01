@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

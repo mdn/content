@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.disableRemotePlayback
 ---
 {{APIRef("HTML DOM")}}

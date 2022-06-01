@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

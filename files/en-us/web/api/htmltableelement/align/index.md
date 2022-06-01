@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

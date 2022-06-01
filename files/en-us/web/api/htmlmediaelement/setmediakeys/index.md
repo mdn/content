@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.setMediaKeys()
 slug: Web/API/HTMLMediaElement/setMediaKeys
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

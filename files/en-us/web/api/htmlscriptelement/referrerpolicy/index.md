@@ -1,6 +1,7 @@
 ---
 title: HTMLScriptElement.referrerPolicy
 slug: Web/API/HTMLScriptElement/referrerPolicy
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLScriptElement

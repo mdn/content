@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: timeupdate event'
 slug: Web/API/HTMLMediaElement/timeupdate_event
+page-type: web-api-event
 tags:
   - Audio
   - Event

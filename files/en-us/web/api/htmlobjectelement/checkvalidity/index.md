@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.checkValidity()
 slug: Web/API/HTMLObjectElement/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

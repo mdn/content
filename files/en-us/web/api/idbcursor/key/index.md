@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.key
 slug: Web/API/IDBCursor/key
+page-type: web-api-instance-property
 tags:
   - API
   - Database

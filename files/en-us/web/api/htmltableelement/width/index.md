@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.width
 slug: Web/API/HTMLTableElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

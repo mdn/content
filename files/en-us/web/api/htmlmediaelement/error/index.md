@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.error
 slug: Web/API/HTMLMediaElement/error
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

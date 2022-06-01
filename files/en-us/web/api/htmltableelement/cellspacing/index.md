@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
