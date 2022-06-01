@@ -65,12 +65,10 @@ function myFunc(theArr) {
 }
 
 const arr = [45];
-let a, b;
 
-a = arr[0]; // a gets the value 45
+console.log(arr[0]); // 45
 myFunc(arr);
-b = arr[0]; // b gets the value 30
-
+console.log(arr[0]); // 30
 ```
 
 ### Function expressions
