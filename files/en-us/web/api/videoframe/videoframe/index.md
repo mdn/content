@@ -37,7 +37,7 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
         - `"keep"`: Indicates that the user agent should preserve alpha channel data.
         - `"discard"`: Indicates that the user agent should ignore or remove alpha channel data.
     - `visibleRect`{{Optional_Inline}}
-      - : A dictionary representing the visible rectangle of the `VideoFrame`, contatining the following:
+      - : A dictionary representing the visible rectangle of the `VideoFrame`, containing the following:
         - `x`
           - : The x-coordinate.
         - `y`
@@ -47,9 +47,9 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
         - `height`
           - : The height of the frame.
     - `displayWidth`{{Optional_Inline}}
-      - : The width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
+      - : The width of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
     - `displayHeight`{{Optional_Inline}}
-      - : The height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
+      - : The height of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
 
 The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{domxref("ArrayBuffer")}}. Its parameters are:
 
@@ -77,13 +77,14 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
     - `duration`{{Optional_Inline}}
       - : An integer representing the duration of the frame in microseconds.
     - `layout`{{Optional_Inline}}
-      - : A list containing the following values for each plane in the `VideoFrame`. Planes may not overlap. If unspecified the planes will be tightly packed:
+      - : A list containing the following values for each plane in the `VideoFrame`:
         - `offset`
           - : An integer representing the offset in bytes where the given plane begins.
         - `stride`
           - : An integer representing the number of bytes, including padding, used by each row of the plane.
+        Planes may not overlap. If no `layout` is specified, the planes will be tightly packed.
     - `visibleRect`{{Optional_Inline}}
-      - : A dictionary representing the visible rectangle of the `VideoFrame`, contatining the following:
+      - : A dictionary representing the visible rectangle of the `VideoFrame`, containing the following:
         - `x`
           - : The x-coordinate.
         - `y`
@@ -97,7 +98,7 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
     - `displayHeight`{{Optional_Inline}}
       - : The height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
     - `colorSpace`
-      - : A dicationary representing the color space of the `VideoFrame`, containting the following:
+      - : A dictionary representing the color space of the `VideoFrame`, containing the following:
         - `primaries`
           - : A string representing the video color primaries, described on the page for the {{domxref("VideoColorSpace.primaries")}} property.
         - `transfer`
@@ -105,7 +106,7 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
         - `matrix`
           - : A string representing the video color matrix, described on the page for the {{domxref("VideoColorSpace.matrix")}} property.
         - `fullRange`
-          - : A Boolean. If `true` indicates that full-range color values are used.
+          - : A Boolean. If `true`, indicates that full-range color values are used.
 
 ## Examples
 
