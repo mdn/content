@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.setParameters()
 slug: Web/API/RTCRtpSender/setParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
+page-type: web-api-instance-method
 tags:
   - API
   - ICE

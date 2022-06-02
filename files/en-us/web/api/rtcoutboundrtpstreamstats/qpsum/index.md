@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.qpSum
 slug: Web/API/RTCOutboundRtpStreamStats/qpSum
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding

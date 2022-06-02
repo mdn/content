@@ -1,6 +1,7 @@
 ---
 title: RTCRemoteOutboundRtpStreamStats.localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
+page-type: web-api-instance-property
 tags:
   - API
   - Media

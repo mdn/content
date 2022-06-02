@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
+page-type: web-api-instance-method
 tags:
   - API
   - Media

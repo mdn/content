@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

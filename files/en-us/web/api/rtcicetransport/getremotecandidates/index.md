@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.getRemoteCandidates()
 slug: Web/API/RTCIceTransport/getRemoteCandidates
+page-type: web-api-instance-method
 tags:
   - API
   - Candidates
