@@ -22,8 +22,7 @@ The `WebGLTexture` object does not define any methods or properties of its own a
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}
 - {{domxref("WebGLRenderingContext.isTexture()")}}
 
-See also the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) on [Using textures
-in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+See also the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) on [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 ## WebXR opaque textures
 

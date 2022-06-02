@@ -48,8 +48,7 @@ send(body)
   - : A body of data to be sent in the XHR request. This can be:
 
     - A {{domxref("Document")}}, in which case it is serialized before being sent.
-    - An `XMLHttpRequestBodyInit`, which [per the
-      Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, {{domxref("BufferSource")}},
+    - An `XMLHttpRequestBodyInit`, which [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, {{domxref("BufferSource")}},
       {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, or
       string object.
     - `null`
@@ -117,7 +116,5 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
