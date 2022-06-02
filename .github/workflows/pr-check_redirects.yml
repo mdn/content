@@ -5,6 +5,8 @@ on:
     branches:
       - main
     paths:
+      - package.json
+      - yarn.lock
       - files/**
       - .github/workflows/pr-check_redirects.yml
 
