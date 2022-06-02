@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
+page-type: web-api-instance-method
 tags:
   - API
   - Method

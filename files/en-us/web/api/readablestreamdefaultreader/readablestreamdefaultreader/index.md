@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

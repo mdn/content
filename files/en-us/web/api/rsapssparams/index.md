@@ -1,6 +1,7 @@
 ---
 title: RsaPssParams
 slug: Web/API/RsaPssParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

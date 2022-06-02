@@ -1,6 +1,7 @@
 ---
 title: Range.setStartBefore()
 slug: Web/API/Range/setStartBefore
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

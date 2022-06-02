@@ -1,6 +1,7 @@
 ---
 title: ResizeObserver.observe()
 slug: Web/API/ResizeObserver/observe
+page-type: web-api-instance-property
 tags:
   - API
   - Method

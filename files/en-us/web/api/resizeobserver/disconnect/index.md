@@ -1,6 +1,7 @@
 ---
 title: ResizeObserver.disconnect()
 slug: Web/API/ResizeObserver/disconnect
+page-type: web-api-instance-property
 tags:
   - API
   - Method

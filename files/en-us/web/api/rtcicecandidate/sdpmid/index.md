@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.sdpMid
 slug: Web/API/RTCIceCandidate/sdpMid
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

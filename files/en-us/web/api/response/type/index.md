@@ -1,6 +1,7 @@
 ---
 title: Response.type
 slug: Web/API/Response/type
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
