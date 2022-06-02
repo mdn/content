@@ -22,11 +22,9 @@ determine, for example, whenever the document is being framed by a site which yo
 expect it to be framed by. You can also use it to vary the behavior of the document
 based on what site or list of sites is framing it.
 
-## Syntax
+## Value
 
-```js
-const ancestors = location.ancestorOrigins;
-```
+A {{domxref("DOMStringList")}}.
 
 ## Specifications
 

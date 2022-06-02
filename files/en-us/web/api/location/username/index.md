@@ -17,12 +17,9 @@ The **`username`** property of the {{domxref("Location")}}
 interface is a string containing the username specified before the
 domain name.
 
-## Syntax
+## Value
 
-```js
-string = object.username;
-object.username = string;
-```
+A string.
 
 ## Examples
 

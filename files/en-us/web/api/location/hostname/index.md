@@ -14,12 +14,9 @@ browser-compat: api.Location.hostname
 The **`hostname`** property of the {{domxref("Location")}}
 interface is a string containing the domain of the URL.
 
-## Syntax
+## Value
 
-```js
-string = object.hostname;
-object.hostname = string;
-```
+A string.
 
 ## Examples
 

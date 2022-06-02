@@ -15,12 +15,9 @@ The **`port`** property of the {{domxref("Location")}}
 interface is a string containing the port number of the URL. If the
 URL does not contain an explicit port number, it will be set to `''`.
 
-## Syntax
+## Value
 
-```js
-string = object.port;
-object.port = string;
-```
+A string.
 
 ## Examples
 

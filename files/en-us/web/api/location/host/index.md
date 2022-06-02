@@ -16,12 +16,9 @@ interface is a string containing the host, that is the
 _hostname_, and then, if the _port_ of the URL is nonempty, a
 `':'`, and the _port_ of the URL.
 
-## Syntax
+## Value
 
-```js
-string = object.host;
-object.host = string;
-```
+A string.
 
 ## Examples
 
