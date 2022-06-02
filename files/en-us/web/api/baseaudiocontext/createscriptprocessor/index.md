@@ -80,7 +80,7 @@ const playButton = document.querySelector('button');
 
 // Create AudioContext and buffer source
 const audioCtx = new AudioContext();
-source = audioCtx.createBufferSource();
+const source = audioCtx.createBufferSource();
 
 // Create a ScriptProcessorNode with a bufferSize of 4096 and a single input and output channel
 const scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
