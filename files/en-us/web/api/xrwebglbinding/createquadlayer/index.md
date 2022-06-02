@@ -1,6 +1,7 @@
 ---
 title: XRWebGLBinding.createQuadLayer()
 slug: Web/API/XRWebGLBinding/createQuadLayer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
