@@ -1,6 +1,7 @@
 ---
 title: XRJointPose
 slug: Web/API/XRJointPose
+page-type: web-api-interface
 tags:
   - API
   - Interface

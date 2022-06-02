@@ -1,6 +1,7 @@
 ---
 title: XPathResult.singleNodeValue
 slug: Web/API/XPathResult/singleNodeValue
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API

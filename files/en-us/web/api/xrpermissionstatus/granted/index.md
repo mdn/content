@@ -1,6 +1,7 @@
 ---
 title: XRPermissionStatus.granted
 slug: Web/API/XRPermissionStatus/granted
+page-type: web-api-instance-property
 tags:
   - API
   - AR

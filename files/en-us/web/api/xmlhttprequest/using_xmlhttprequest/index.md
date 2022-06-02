@@ -1,6 +1,7 @@
 ---
 title: Using XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
+page-type: guide
 tags:
   - AJAX
   - AJAXfile

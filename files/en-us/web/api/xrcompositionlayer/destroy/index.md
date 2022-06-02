@@ -1,6 +1,7 @@
 ---
 title: XRCompositionLayer.destroy()
 slug: Web/API/XRCompositionLayer/destroy
+page-type: web-api-instance-method
 tags:
   - API
   - Method

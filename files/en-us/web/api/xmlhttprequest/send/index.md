@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
+page-type: web-api-instance-method
 tags:
   - AJAX
   - API

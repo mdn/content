@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getViewerPose()
 slug: Web/API/XRFrame/getViewerPose
+page-type: web-api-instance-method
 tags:
   - API
   - AR

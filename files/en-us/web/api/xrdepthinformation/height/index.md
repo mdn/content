@@ -1,6 +1,7 @@
 ---
 title: XRDepthInformation.height
 slug: Web/API/XRDepthInformation/height
+page-type: web-api-instance-property
 tags:
   - API
   - AR

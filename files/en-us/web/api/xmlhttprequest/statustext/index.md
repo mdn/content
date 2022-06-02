@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
