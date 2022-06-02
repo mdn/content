@@ -80,7 +80,7 @@ _No change._
 
 ## Security
 
-- [Privileged code now gets Xray vision for `Date` instances](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#Xrays_for_JavaScript_objects).
+- [Privileged code now gets Xray vision for `Date` instances](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects).
 
 ## Changes for add-on and Mozilla developers
 
