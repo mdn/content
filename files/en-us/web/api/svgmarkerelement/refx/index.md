@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.refX
 slug: Web/API/SVGMarkerElement/refX
+page-type: web-api-instance-property
 tags:
   - API
   - Property

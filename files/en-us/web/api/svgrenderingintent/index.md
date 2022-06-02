@@ -1,6 +1,7 @@
 ---
 title: SVGRenderingIntent
 slug: Web/API/SVGRenderingIntent
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

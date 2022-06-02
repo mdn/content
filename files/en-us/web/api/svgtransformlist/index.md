@@ -1,6 +1,7 @@
 ---
 title: SVGTransformList
 slug: Web/API/SVGTransformList
+page-type: web-api-interface
 tags:
   - API
   - Reference
