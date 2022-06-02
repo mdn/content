@@ -1,5 +1,5 @@
 ---
-title: RTCIceCandidate. toJSON()
+title: RTCIceCandidate.toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
 page-type: web-api-instance-method
 tags:
