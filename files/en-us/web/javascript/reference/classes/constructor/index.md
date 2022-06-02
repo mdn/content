@@ -170,8 +170,8 @@ class Rectangle {}
 
 Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
 
-console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //false
-console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
+console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //true
+console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //false
 
 let newInstance = new Square();
 console.log(newInstance.name); //Polygon
