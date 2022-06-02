@@ -7,7 +7,7 @@ tags:
   - Protocol
   - WebMechanics
 ---
-A **domain name** is a website's address on the {{Glossary("Internet")}}. Domain names are used in {{Glossary("URL","URLs")}} to identify to which server belong a specific webpage. The domain name consists of a hierarchical sequence of names (labels) separated by periods (dots) and ending with an {{glossary("TLD","extension")}}.
+A **domain name** is a website's address on the {{Glossary("Internet")}}. Domain names are used in {{Glossary("URL","URLs")}} to identify to which server belong a specific webpage. The domain name consists of a hierarchical sequence of names (labels) separated by periods (dots) and ending with an {{glossary("TLD","extension")}}.
 
 ## See also
 

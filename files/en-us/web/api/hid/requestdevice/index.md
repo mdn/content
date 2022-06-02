@@ -1,6 +1,7 @@
 ---
 title: HID.requestDevice()
 slug: Web/API/HID/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ The user agent will present a permission dialog including a list of connected de
 ## Syntax
 
 ```js
-HID.requestDevice(options);
+requestDevice(options)
 ```
 
 ### Parameters
@@ -35,7 +36,7 @@ HID.requestDevice(options);
 
       - : An integer representing the usage page component of the HID usage of the requested device. The usage for a top level collection is used to identify the device type.
 
-        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-122) document
+        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-13) document
 
     - `usage`{{Optional_Inline}}
       - : An integer representing the usage ID component of the HID usage of the requested device.

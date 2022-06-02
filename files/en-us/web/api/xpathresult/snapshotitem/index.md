@@ -21,8 +21,13 @@ current document if it is mutated.
 ## Syntax
 
 ```js
-var node = result.snapshotItem(i);
+snapshotItem(i)
 ```
+
+### Parameters
+
+- `i`
+  - : A number, the index of the item.
 
 ### Return value
 
@@ -37,7 +42,7 @@ In case {{domxref("XPathResult.resultType")}} is not
 `UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, an
 {{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-## Example
+## Examples
 
 The following example shows the use of the `snapshotItem()` method.
 
@@ -57,14 +62,14 @@ var node = null;
 var tagNames = [];
 for(var i = 0; i < result.snapshotLength; i++) {
   var node = result.snapshotItem(i);
-  tagNames.push(node.localName);
+  tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

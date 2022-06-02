@@ -13,7 +13,7 @@ browser-compat: api.SVGFEFloodElement
 
 The **`SVGFEFloodElement`** interface corresponds to the {{SVGElement("feFlood")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

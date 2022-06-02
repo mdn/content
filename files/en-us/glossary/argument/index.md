@@ -6,7 +6,7 @@ tags:
   - Glossary
   - JavaScript
 ---
-An **argument** is a {{glossary("value")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}.
+An **argument** is a {{glossary("value")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}.
 
 ## See also
 

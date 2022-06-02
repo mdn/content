@@ -15,20 +15,20 @@ Firefox 39 was released on July 2, 2015. This article lists key changes that are
 
 Highlights:
 
-- [WebIDE now supports debugging Firefox OS devices over Wi-Fi](/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Connecting_over_WiFi)
-- [WebIDE now supports Cordova projects](/en-US/docs/Tools/WebIDE/Working_with_Cordova_apps_in_WebIDE)
-- [Animations view: rewind, fast-forward, and jump to a specific time](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_39)
-- [The cubic Bézier curve editor now includes 31 presets](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_39)
-- [Drag and drop elements in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#drag_and_drop)
-- [Web console command history is now persisted across sessions](/en-US/docs/Tools/Web_Console#command_history)
-- [$\_ console command to print the last result evaluated](/en-US/docs/Tools/Web_Console#helper_commands)
-- [Better box model highlighting for inline elements](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#firefox_39)
+- _WebIDE_ now supports debugging Firefox OS devices over Wi-Fi
+- _WebIDE_ now supports Cordova projects
+- [Animations view: rewind, fast-forward, and jump to a specific time](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-39)
+- [The cubic Bézier curve editor now includes 31 presets](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-39)
+- [Drag and drop elements in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#drag-and-drop)
+- [Web console command history is now persisted across sessions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#command-history)
+- [$\_ console command to print the last result evaluated](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#helper-commands)
+- [Better box model highlighting for inline elements](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html#firefox-39)
 
 [All devtools bugs fixed between Firefox 38 and Firefox 39](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&query_based_on=devtools_resolved_week&chfieldto=2015-03-31&chfield=resolution&query_format=advanced&chfieldfrom=2015-02-22&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&known_name=devtools_resolved_week&list_id=12157026).
 
 ### CSS
 
-- Support of the {{cssxref("&lt;string&gt;")}} type on {{cssxref("list-style-type")}}, as well as its shorthand property {{cssxref("list-style")}} has been implemented ({{bug(1144607)}}).
+- Support of the {{cssxref("&lt;string&gt;")}} type on {{cssxref("list-style-type")}}, as well as its shorthand property {{cssxref("list-style")}} has been implemented ({{bug(1144607)}}).
 - CSS Scroll Snapping has been implemented ({{bug(945584)}} and {{bug(1138658)}}).
 - Cascading of CSS Animations and CSS Transitions has been rewritten to match the latest specification ({{bug(1125455)}}).
 - Support for vertical scripts, with the {{cssxref("writing-mode")}} is now turned on by default on Nightly and Developer Edition, but not on Firefox Beta and Firefox Release ({{bug(1099032)}}). Note that implementation is not yet complete and some widgets, like tables, will not obey to all values.
@@ -50,8 +50,8 @@ Highlights:
 
 - When using [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`), a line terminator (`\n`) is no longer allowed after arrow function arguments (`() \n => {}`) ({{bug(1141392)}}).
 - {{jsxref("RegExp.prototype.toString")}} is now a generic function ({{bug(1079919)}}).
-- The non-standard `flags` argument of {{jsxref("String.prototype.match()")}}, {{jsxref("String.prototype.search()")}}, and {{jsxref("String.prototype.replace()")}} is now deprecated and throws a console warning ({{bug(1142351)}}).
-- The try/catch behavior of {{jsxref("Object.assign()")}} has been removed to conform with the latest ES2015 draft ({{bug(1103344)}}).
+- The non-standard `flags` argument of {{jsxref("String.prototype.match()")}}, {{jsxref("String.prototype.search()")}}, and {{jsxref("String.prototype.replace()")}} is now deprecated and throws a console warning ({{bug(1142351)}}).
+- The try/catch behavior of {{jsxref("Object.assign()")}} has been removed to conform with the latest ES2015 draft ({{bug(1103344)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -79,8 +79,8 @@ _No change._
 ### Miscellaneous
 
 - [WOFF2](/en-US/docs/Web/Guide/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ({{bug(1084026)}}).
-- The [`-remote`](/en-US/docs/Mozilla/Command_Line_Options#-remote_remote_command) command-line option has been removed ({{bug(1080319)}}).
-- Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) ({{bug(1153460)}}).
+- The [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) command-line option has been removed ({{bug(1080319)}}).
+- Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/news/newsbeat-32220611) ({{bug(1153460)}}).
 
 ## Networking
 

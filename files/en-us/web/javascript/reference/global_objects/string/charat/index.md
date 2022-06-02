@@ -35,7 +35,7 @@ charAt(index)
 
 A string representing the character (exactly one UTF-16 code unit) at the specified
 `index`. If `index` is out of range,
-`charAt()` returns an empty string.
+`charAt()` returns an empty string.
 
 ## Description
 
@@ -56,7 +56,7 @@ The following example displays characters at different locations in the string
 "`Brave new world`":
 
 ```js
-var anyString = 'Brave new world';
+const anyString = 'Brave new world';
 console.log("The character at index 0   is '" + anyString.charAt()   + "'");
 // No index was provided, used 0 as default
 
@@ -88,8 +88,8 @@ provides a whole character, even if the string contains characters that are not 
 Basic Multi-lingual Plane.
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
-for (var i = 0, chr; i < str.length; i++) {
+const str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
+for (let i = 0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
   }
@@ -101,7 +101,7 @@ for (var i = 0, chr; i < str.length; i++) {
 }
 
 function getWholeChar(str, i) {
-  var code = str.charCodeAt(i);
+  const code = str.charCodeAt(i);
 
   if (Number.isNaN(code)) {
     return ''; // Position not found
@@ -116,7 +116,7 @@ function getWholeChar(str, i) {
     if (str.length <= (i + 1)) {
       throw 'High surrogate without following low surrogate';
     }
-    var next = str.charCodeAt(i + 1);
+    const next = str.charCodeAt(i + 1);
       if (0xDC00 > next || next > 0xDFFF) {
         throw 'High surrogate without following low surrogate';
       }
@@ -126,7 +126,7 @@ function getWholeChar(str, i) {
   if (i === 0) {
     throw 'Low surrogate without preceding high surrogate';
   }
-  var prev = str.charCodeAt(i - 1);
+  const prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
@@ -149,7 +149,7 @@ let str = 'A\uD87E\uDC04Z'  // We could also use a non-BMP character directly
 for (let i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i)
 
-  // Adapt this line at the top of each loop, passing in the whole string and
+  // Adapt this line at the top of each loop, passing in the whole string and
   // the current iteration and returning an array with the individual character
   // and 'i' value (only changed if a surrogate pair)
 
@@ -179,12 +179,12 @@ function getWholeCharAndI(str, i) {
       return [str.charAt(i) + str.charAt(i + 1), i + 1]
   }
 
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
+  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
     throw 'Low surrogate without preceding high surrogate'
   }
 
-  let prev = str.charCodeAt(i - 1)
+  let prev = str.charCodeAt(i - 1)
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
@@ -192,14 +192,14 @@ function getWholeCharAndI(str, i) {
     throw 'Low surrogate without preceding high surrogate'
   }
 
-  // Return the next character instead (and increment)
+  // Return the next character instead (and increment)
   return [str.charAt(i + 1), i + 1]
 }
 ```
 
 ### Fixing charAt() to support non-Basic-Multilingual-Plane (BMP) characters
 
-While the previous example may be more useful for programs that must support non-BMP
+While the previous example may be more useful for programs that must support non-BMP
 characters (since it does not require the caller to know where any non-BMP character
 might appear), in the event that one _does_ wish, in choosing a character by
 index, to treat the surrogate pairs within a string as the single characters they
@@ -251,5 +251,4 @@ function fixedCharAt(str, idx) {
 - {{jsxref("String.prototype.codePointAt()")}}
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("String.fromCodePoint()")}}
-- [JavaScript has a Unicode
-  problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)
+- [JavaScript has a Unicode problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)

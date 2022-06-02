@@ -17,7 +17,7 @@ buffer is enabled or disabled.
 ## Syntax
 
 ```js
-void gl.depthMask(flag);
+depthMask(flag)
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ void gl.depthMask(flag);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

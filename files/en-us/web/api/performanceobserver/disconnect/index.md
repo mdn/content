@@ -1,5 +1,5 @@
 ---
-title: PeformanceObserver.disconnect()
+title: PerformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
 tags:
   - API
@@ -22,10 +22,18 @@ events.
 ## Syntax
 
 ```js
-performanceObserver.disconnect();
+disconnect()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var observer = new PerformanceObserver(function(list, obj) {

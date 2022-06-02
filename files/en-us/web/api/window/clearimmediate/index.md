@@ -15,27 +15,35 @@ This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
 > **Note:** This method is not expected to become standard, and is only implemented by recent
 > builds of Internet Explorer and Node.js 0.10+. It meets resistance both from [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and
-> [Webkit](http://code.google.com/p/chromium/issues/detail?id=146172)
+> [Webkit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172)
 > (Google/Apple).
 
 ## Syntax
 
 ```js
-window.clearImmediate( immediateID )
+clearImmediate(immediateID)
 ```
 
-where immediateID is a ID returned by {{DOMxRef("window.setImmediate")}}.
+### Parameters
+
+- `immediateID`
+
+  - : The ID returned by {{DOMxRef("window.setImmediate")}}.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 let immediateID = setImmediate(() => {
-  // Run some code
+  // Run some code
 }
 
 document.getElementById("button")
   .addEventListener(() => {
-  clearImmediate(immediateID);
+  clearImmediate(immediateID);
 });
 ```
 
@@ -51,5 +59,5 @@ specification is no longer being worked on.
 
 ## See also
 
-- A polyfill of `clearImmediate` is available in [`core-js`](https://github.com/zloirock/core-js#setimmediate)
+- [Polyfill of `clearImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
 - {{DOMxRef("Window.setImmediate()")}}

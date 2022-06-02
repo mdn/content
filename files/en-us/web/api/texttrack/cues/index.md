@@ -13,13 +13,7 @@ browser-compat: api.TextTrack.cues
 
 The **`cues`** read-only property of the {{domxref("TextTrack")}} interface returns a {{domxref("TextTrackCueList")}} object containing all of the track's cues.
 
-## Syntax
-
-```js
-let cues = TextTrack.cues;
-```
-
-### Value
+## Value
 
 A {{domxref("TextTrackCueList")}} object.
 

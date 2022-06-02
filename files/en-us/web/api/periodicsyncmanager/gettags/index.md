@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncManager.getTags()
 slug: Web/API/PeriodicSyncManager/getTags
+page-type: web-api-instance-method
 tags:
   - Background Sync
   - Method
@@ -12,7 +13,7 @@ tags:
   - periodic sync
 browser-compat: api.PeriodicSyncManager.getTags
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`getTags()`** method of the
 {{domxref("PeriodicSyncManager")}} interface returns a {{jsxref('Promise')}} that

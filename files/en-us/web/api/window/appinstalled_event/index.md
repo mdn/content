@@ -14,28 +14,21 @@ browser-compat: api.Window.appinstalled_event
 
 The **`appinstalled`** event of the [Web Manifest API](/en-US/docs/Web/Manifest) is fired when the browser has successfully installed a page as an application.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        {{domxref("Window/onappinstalled", "onappinstalled")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('appinstalled', event => { });
+
+onappinstalled = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -47,7 +40,7 @@ window.addEventListener('appinstalled', function() {
 });
 ```
 
-Or use the {{domxref("Window/onappinstalled", "onappinstalled")}} event handler property:
+Or use the `onappinstalled` event handler property:
 
 ```js
 window.onappinstalled = function() {
@@ -58,7 +51,3 @@ window.onappinstalled = function() {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- The associated event handler, {{domxref("Window.onappinstalled")}}

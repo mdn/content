@@ -25,18 +25,22 @@ using these methods.
 
 ```js
 // WebGL 1:
-void gl.compressedTexImage2D(target, level, internalformat, width, height, border, ArrayBufferView? pixels);
+compressedTexImage2D(target, level, internalformat, width, height, border)
+compressedTexImage2D(target, level, internalformat, width, height, border, pixels)
 
 // Additionally available in WebGL 2:
 // read from buffer bound to gl.PIXEL_UNPACK_BUFFER
-void gl.compressedTexImage2D(target, level, internalformat, width, height, border, GLsizei imageSize, GLintptr offset);
-void gl.compressedTexImage2D(target, level, internalformat, width, height, border,
-                             ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
+compressedTexImage2D(target, level, internalformat, width, height, border, imageSize, offset)
+compressedTexImage2D(target, level, internalformat, width, height, border, srcData)
+compressedTexImage2D(target, level, internalformat, width, height, border, srcData, srcOffset)
+compressedTexImage2D(target, level, internalformat, width, height, border, srcData, srcOffset, srcLengthOverride)
 
- // read from buffer bound to gl.PIXEL_UNPACK_BUFFER
-void gl.compressedTexImage3D(target, level, internalformat, width, height, depth, border, GLsizei imageSize, GLintptr offset);
-void gl.compressedTexImage3D(target, level, internalformat, width, height, depth, border,
-                             ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
+// read from buffer bound to gl.PIXEL_UNPACK_BUFFER
+compressedTexImage3D(target, level, internalformat, width, height, depth, border, imageSize, offset)
+
+compressedTexImage3D(target, level, internalformat, width, height, depth, border, srcData)
+compressedTexImage3D(target, level, internalformat, width, height, depth, border, srcData, srcOffset)
+compressedTexImage3D(target, level, internalformat, width, height, depth, border, srcData, srcOffset, srcLengthOverride)
 ```
 
 ### Parameters
@@ -166,7 +170,7 @@ void gl.compressedTexImage3D(target, level, internalformat, width, height, depth
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

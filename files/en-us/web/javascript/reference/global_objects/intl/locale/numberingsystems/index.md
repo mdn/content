@@ -123,7 +123,6 @@ let arEG = new Intl.Locale("ar-EG");
 console.log(arEG.numberingSystems); // logs ["arab"]
 ```
 
-
 ```js
 let ja = new Intl.Locale("ja");
 console.log(ja.numberingSystems); // logs ["latn"]
@@ -140,4 +139,4 @@ console.log(ja.numberingSystems); // logs ["latn"]
 ## See also
 
 - {{jsxref("Intl/Locale", "Intl.Locale")}}
-- [Details on the standard Unicode numeral systems](https://github.com/unicode-org/cldr/blob/master/common/supplemental/numberingSystems.xml)
+- [Details on the standard Unicode numeral systems](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)

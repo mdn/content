@@ -17,7 +17,7 @@ browser-compat: api.OverconstrainedError.OverconstrainedError
 
 The **`OverconstrainedError`** constructor
 creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of
-desired capabilities for the current {{domxref("MediaStreamTrack")}} cannot currently be
+desired capabilities for the current {{domxref("MediaStreamTrack")}} cannot currently be
 met. When this event is thrown on a `MediaStreamTrack`, it is muted until
 either the current constraints can be established or until satisfiable constraints are
 applied.
@@ -25,14 +25,14 @@ applied.
 ## Syntax
 
 ```js
-var OverconstrainedError = new OverconstrainedError()
+new OverconstrainedError()
 ```
 
 ### Parameters
 
-- constraint
-  - : The constraint that was not satified.
-- message
+- `constraint`
+  - : The constraint that was not satisfied.
+- `message`
   - : Text for the error's `message` property.
 
 ## Specifications

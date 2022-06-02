@@ -57,11 +57,11 @@ The original pseudo-classes available to us (as of [CSS 2.1](https://www.w3.org/
 
   key is being pressed down in the case of a keyboard activation).
 
-These basic pseudo-classes should be familiar to you now. More recently, the [CSS Selector Level 3](https://www.w3.org/TR/css3-selectors/) and [CSS Basic UI Level 3](https://dev.w3.org/csswg/css3-ui/#pseudo-classes) added more pseudo-classes related to HTML forms that provide several other useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
+These basic pseudo-classes should be familiar to you now. More recently, the [CSS Selector Level 3](https://www.w3.org/TR/selectors-3/) and [CSS Basic UI Level 3](https://drafts.csswg.org/css-ui-3/#pseudo-classes) added more pseudo-classes related to HTML forms that provide several other useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
-- {{cssxref(':required')}} and {{cssxref(':optional')}}: Targets required or optional form controls.
+- {{cssxref(':required')}} and {{cssxref(':optional')}}: Targets required or optional form controls.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
-- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target enabled or disabled form controls (e.g. with the `disabled` HTML attribute set), and read-write or read-only form controls (e.g. with the `readonly` HTML attribute set).
+- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target enabled or disabled form controls (e.g. with the `disabled` HTML attribute set), and read-write or read-only form controls (e.g. with the `readonly` HTML attribute set).
 - {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the `checked` attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the `selected` attribute set).
 
 There are many others too, but the ones listed above are the most obviously useful. Some of the others are aimed at solving very specific niche problems, or not very well supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
@@ -127,7 +127,7 @@ In the next section, we'll look at a better example of indicating required field
 
 In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), but we thought now would be a good time to talk about it in a bit more detail.
 
-The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so is invisible to screenreaders; it is part of the document's styles. Because it is a pseudo element, it can be targeted with styles in the same way that any actual DOM node can.
+The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it's invisible to screenreaders; it is part of the document's styles. Because it is a pseudo element, it can be targeted with styles in the same way that any actual DOM node can.
 
 This is really useful when you want to add a visual indicator to an element, such as a label or icon, but don't want it to be picked up by assistive technologies. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the inner circle when a radio button is selected:
 
@@ -155,7 +155,7 @@ This is really useful — screenreaders already let their users know when a radi
 
 > **Note:** This also shows how you can combine a pseudo-class and pseudo-element if required.
 
-Back to our required/optional example from before, this time we'll not alter the appearance of the input itself — we'll use generated content to add an indicating label ([see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), and see the [source code here](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/required-optional-generated.html)).
+Back to our required/optional example from before, this time we'll not alter the appearance of the input itself — we'll use generated content to add an indicating label ([see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), and see the [source code here](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)).
 
 First of all, we'll add a paragraph to the top of the form to say what you are looking for:
 
@@ -163,7 +163,7 @@ First of all, we'll add a paragraph to the top of the form to say what you are l
 <p>Required fields are labelled with "required".</p>
 ```
 
-Screenreader users will get "required" read out as an extra bit of information when they get to each required input, which sighted users will get our label.
+Screenreader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
 
 Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
 
@@ -185,7 +185,7 @@ fieldset > div {
 }
 ```
 
-The effect this has is that the label and input sit on separate lines because they are both `width: 100%`, but the `<span>` has a width of 0 so can sit on the same line as the input.
+The effect this has is that the label and input sit on separate lines because they are both `width: 100%`, but the `<span>` has a width of 0 so it can sit on the same line as the input.
 
 Now onto the generated content. We create it using this CSS:
 
@@ -214,7 +214,7 @@ Then we give the generated content the content "required", which is what we want
 
 ## Styling controls based on whether their data is valid
 
-The other really important, fundamental concept in form validation is whether a form control's data is valid or not (in the case of numerical data, we can also talk about in-range and out-of-range data). Form controls with [constraint limitations](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) can be targeted based on these states.
+The other really important, fundamental concept in form validation is whether a form control's data is valid or not (in the case of numerical data, we can also talk about in-range and out-of-range data). Form controls with [constraint limitations](/en-US/docs/Web/Guide/HTML/Constraint_validation) can be targeted based on these states.
 
 ### :valid and :invalid
 
@@ -226,7 +226,7 @@ You can target form controls using the {{cssxref(":valid")}} and {{cssxref(":inv
 - Controls whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes are (matched with) `:invalid`, but also matched by {{cssxref(":out-of-range")}}, as you'll see later on.
 - There are some other ways to make an element matched by `:valid`/`:invalid`, as you'll see in the [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article. But we'll keep things simple for now.
 
-Let's go in and look at a simple example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/valid-invalid.html)).
+Let's go in and look at a simple example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
 
 As in the previous example, we've got extra `<span>`s to generate content on, which we'll use to provide indicators of valid/invalid data:
 
@@ -278,13 +278,13 @@ Notice how the required text inputs are invalid when empty, but valid when they 
 
 ### In-range and out-of-range data
 
-As we hinted at above, there are two other related pseudo-classes to consider — {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}. These match numeric inputs where range limits are specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}}, when their data is inside or outside the specified range, respectvely.
+As we hinted at above, there are two other related pseudo-classes to consider — {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}. These match numeric inputs where range limits are specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}}, when their data is inside or outside the specified range, respectively.
 
 > **Note:** Numeric input types are `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`.
 
 It is worth noting that inputs whose data is in-range will also be matched by the `:valid` pseudo-class and inputs whose data is out-of-range will also be matched by the `:invalid` pseudo-class. So why have both? The issue is really one of semantics — out-of-range is a more specific type of invalid communication, so you might want to provide a different message for out-of-range inputs, which will be more helpful to users than just saying "invalid". You might even want to provide both.
 
-Let's look at an example that does exactly this. Our [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) demo (see also the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/out-of-range.html)) builds on top of the previous example to provide out-of-range messages for the numeric inputs, as well as saying whether they are required.
+Let's look at an example that does exactly this. Our [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) demo (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html)) builds on top of the previous example to provide out-of-range messages for the numeric inputs, as well as saying whether they are required.
 
 The numeric input looks like this:
 
@@ -338,7 +338,7 @@ This works quite nicely — when the page first loads, "Required" is shown, alon
 
 ## Styling enabled and disabled inputs, and read-only and read-write
 
-An enabled element is an element that can be activated; it can be selected, clicked on, typed into, etc.  A disabled element on the other hand cannot be interacted with in any way, and its data isn't even sent to the server
+An enabled element is an element that can be activated; it can be selected, clicked on, typed into, etc. A disabled element on the other hand cannot be interacted with in any way, and its data isn't even sent to the server.
 
 These two states can be targeted using {{cssxref(":enabled")}} and {{cssxref(":disabled")}}. Why are disabled inputs useful? Well, sometimes if some data does not apply to a certain user, you might not even want to submit that data when they submit the form. A classic example is a shipping form — commonly you'll get asked if you want to use the same address for billing and shipping; if so, you can just send a single address to the server, and might as well just disable the billing address fields.
 
@@ -431,7 +431,7 @@ function toggleBilling() {
 
 It uses the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) to let the user enable/disable the billing fields, and toggle the styling of the associated labels.
 
-You can see the example in action below (also [see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html), and see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/enabled-disabled-shipping.html)):
+You can see the example in action below (also [see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html), and see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/enabled-disabled-shipping.html)):
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html", '100%', 600)}}
 
@@ -441,7 +441,7 @@ In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-w
 
 An input is set to read-only using the `readonly` attribute. As an example, imagine a confirmation page where the developer has sent the details filled in on previous pages over to this page, with the aim of getting the user to check them all in one place, add any final data that is needed, and then confirm the order by submitting. At this point, all the final form data can be sent to the server in one go.
 
-Let's look at what a form might look like (see [readonly-confirmation.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html) for the live example; also [see the source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html)).
+Let's look at what a form might look like (see [readonly-confirmation.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html) for the live example; also [see the source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/readonly-confirmation.html)).
 
 A fragment of the HTML is as follows — note the readonly attribute:
 
@@ -458,15 +458,15 @@ If you try the live example, you'll see that the top set of form elements are no
 ```css
 input:-moz-read-only, textarea:-moz-read-only,
 input:read-only, textarea:read-only {
-  border: 0;
-  box-shadow: none;
-  background-color: white;
+  border: 0;
+  box-shadow: none;
+  background-color: white;
 }
 
 textarea:-moz-read-write,
 textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
 }
 ```
 
@@ -485,11 +485,11 @@ As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "r
 
 ### :checked
 
-When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
+When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
 
 The most common use of this is to add a different style onto the checkbox/radiobutton when it is checked, in cases where you've removed the system default styling with `appearance: none;` and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Using `appearance: none` on radios/checkboxes](/en-US/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes).
 
-As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
+As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
 
 ```css
 input[type="radio"]::before {
@@ -521,7 +521,7 @@ Basically, we build the styling for the radio button "inner circle" using the `:
 
 As mentioned above, the {{cssxref(":default")}} pseudo-class matches radios/checkboxes that are checked by default, on page load, even when unchecked. This could be useful for adding an indicator to a list of options to remind the user what the defaults (or starting options) were, in case they want to reset their choices.
 
-Also mentioned above radios/checkboxes will be matched by the {{cssxref(":indeterminate")}} pseudo-class when they are in a state where they are neither checked nor unchecked. But what does this mean? Elements that are indeterminate include:
+Also, the radios/checkboxes mentioned above will be matched by the {{cssxref(":indeterminate")}} pseudo-class when they are in a state where they are neither checked nor unchecked. But what does this mean? Elements that are indeterminate include:
 
 - {{HTMLElement("input/radio")}} inputs, when all radio buttons in a same-named group are unchecked
 - {{HTMLElement("input/checkbox")}} inputs whose `indeterminate` property is set to `true` via JavaScript
@@ -564,7 +564,7 @@ See the live result below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **Note:** You can also find the example live on GitHub at [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-default.html).)
+> **Note:** You can also find the example live on GitHub at [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html).)
 
 For the `:indeterminate` example, we've got no default selected radio button — this is important — if there was, then there would be no indeterminate state to style. We style the indeterminate radio buttons with the following CSS:
 
@@ -591,7 +591,7 @@ See the live result below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **Note:** You can also find the example live on GitHub at [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-indeterminate.html).)
+> **Note:** You can also find the example live on GitHub at [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html).)
 
 > **Note:** You can find an [interesting example involving `indeterminate` states](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) on the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) reference page.
 
@@ -603,11 +603,11 @@ The following are fairly well-supported in modern browsers:
 
 - The {{cssxref(":focus-within")}} pseudo-class matches an element that has received focus or _contains_ an element that has received focus. This is useful if you want a whole form to highlight in some way when an input inside it is focused.
 - The {{cssxref(":focus-visible")}} pseudo-class matches focused elements that received focus via keyboard interaction (rather than touch or mouse) — useful if you want to show a different style for keyboard focus compared to mouse (or other) focus.
-- The {{cssxref(":placeholder-shown")}} pseudo-class matches {{htmlelement('input')}} and {{htmlelement('textarea')}} elements that have their placeholder showing (i.e. the contents of the [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder) attribute) because the value of the element is empty.
+- The {{cssxref(":placeholder-shown")}} pseudo-class matches {{htmlelement('input')}} and {{htmlelement('textarea')}} elements that have their placeholder showing (i.e. the contents of the [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder) attribute) because the value of the element is empty.
 
 The following are also interesting, but as yet not well-supported in browsers:
 
-- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other empty elements like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it not yet supported in any browser.
+- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other empty elements like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it not yet supported in any browser.
 - The [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
 
 ## Test your skills!

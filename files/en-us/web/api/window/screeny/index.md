@@ -16,15 +16,9 @@ The **`Window.screenY`** read-only property returns the vertical distance, in CS
 
 > **Note:** An alias of `screenY` was implemented across modern browsers in more recent times — {{domxref("Window.screenTop")}}. This was originally supported only in IE but was introduced everywhere due to popularity.
 
-## Syntax
+## Value
 
-```js
-topWindowPos = window.screenY
-```
-
-### Returns
-
-A number equal to the number of CSS pixels from the top edge of the browser viewport to the  top edge of the screen.
+A number equal to the number of CSS pixels from the top edge of the browser viewport to the top edge of the screen.
 
 ## Examples
 

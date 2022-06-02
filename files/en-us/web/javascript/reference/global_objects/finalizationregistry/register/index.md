@@ -40,10 +40,9 @@ register(target, heldValue, unregisterToken);
 
 ## Notes
 
-See the [Avoid
-where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible) and [Notes
-on cleanup callbacks](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks) sections of the {{jsxref("FinalizationRegistry")}} page for
-important caveats.
+See the [Avoid where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible)
+and [Notes on cleanup callbacks](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks)
+sections of the {{jsxref("FinalizationRegistry")}} page for important caveats.
 
 ## Examples
 

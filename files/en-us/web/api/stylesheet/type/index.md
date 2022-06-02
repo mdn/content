@@ -14,13 +14,11 @@ browser-compat: api.StyleSheet.type
 The **`type`** property of the {{domxref("StyleSheet")}}
 interface specifies the style sheet language for the given style sheet.
 
-## Syntax
+## Value
 
-```js
-string = stylesheet.type
-```
+A string.
 
-## Example
+## Examples
 
 ```js
  myStyleSheet.type = 'text/css';

@@ -1,6 +1,7 @@
 ---
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
+page-type: web-api-instance-method
 tags:
   - Method
 
@@ -19,7 +20,7 @@ whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node
 hasChildNodes();
 ```
 
-### Paramenters
+### Parameters
 
 None.
 

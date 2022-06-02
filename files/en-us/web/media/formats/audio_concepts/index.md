@@ -100,11 +100,11 @@ At 192 kBps, lower-end networks are already going to be strained just by a singl
 
 To solve this problem, the audio must be made smaller using compression.
 
-> **Note:** Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in {{anch("Sampling audio")}}, above.
+> **Note:** Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in [Sampling audio](#sampling_audio), above.
 
 ## Audio compression basics
 
-Unlike text and many other kinds of data, audio data tends to be **noisy**, meaning the data rarely consists of a series of exactly repeated bytes or byte sequences. As a result, audio data is difficult to compress using traditional algorithms such as those used by generral-purpose tools like `zip`, which usually work by replacing repeating sequences of data with a shorthand representation.
+Unlike text and many other kinds of data, audio data tends to be **noisy**, meaning the data rarely consists of a series of exactly repeated bytes or byte sequences. As a result, audio data is difficult to compress using traditional algorithms such as those used by general-purpose tools like `zip`, which usually work by replacing repeating sequences of data with a shorthand representation.
 
 There are several techniques which can be applied when compressing audio. Most codecs use a combination of these, and may use other techniques as well.
 
@@ -116,7 +116,7 @@ You can apply a filter that narrows the audio bandwidth, removing any audio freq
 
 If you know what kind of audio you're most likely to handle, you can potentially find special filtering techniques applicable specifically to that kind of sound, that will optimize the encoding.
 
-The most commonly-used compression methods for audio apply the science of **{{interwiki("wikipedia", "psychoacoustics")}}**. This is the science that studies how humans percieve sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing versus the frequencies of the audio signal, audio localization, and so forth all can be considered by a codec.
+The most commonly-used compression methods for audio apply the science of **{{interwiki("wikipedia", "psychoacoustics")}}**. This is the science that studies how humans perceive sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing versus the frequencies of the audio signal, audio localization, and so forth all can be considered by a codec.
 
 By using a sound (no pun intended) understanding of psychoacoustics, it's possible to design a compression method that will minimize the compressed size of the audio while maximizing the perceived fidelity of the sound. An algorithm employing psychoacoustics may use any of the techniques mentioned here, and will almost certainly apply others as well.
 
@@ -152,13 +152,13 @@ Lossy compression algorithms generally use psychoacoustics to determine which co
 
 The type of content being encoded can affect the choice of codec. In particular, the waveform for music is almost always more complex than that of an audio sample that contains only human voices. In addition, the human voice uses a small portion of the range of audio frequencies the human ear can detect.
 
-> **Note:** Telephone networks, which were originally designed specifically to transmit human voices, can only carry audio (or any other kind of signal) in the frequency band from 300 Hz to 3,000 Hz. This doesn't quite cover the entire range of human speech at the low end, but enough of the waveform is available that the human ear and brain compensate easily. This also means that humans are generally acclimated to hearing speech constrainted to so narrow an audio bandwidth.
+> **Note:** Telephone networks, which were originally designed specifically to transmit human voices, can only carry audio (or any other kind of signal) in the frequency band from 300 Hz to 3,000 Hz. This doesn't quite cover the entire range of human speech at the low end, but enough of the waveform is available that the human ear and brain compensate easily. This also means that humans are generally acclimated to hearing speech constrained to so narrow an audio bandwidth.
 
 Human speech uses a relatively narrow frequency band (around 300 Hz to 18,000 Hz, though the exact range varies from person to person due to factors including gender). In addition, the vast majority of human speech sounds tend to lie between 500 Hz and 3,000 Hz or so, making it possible to drop substantial portions of the overall waveform without compromising the listener's ability to understand the words being said. You can even adjust the audio bandwidth to factor in the pitch of the individual speaker's voice.
 
 Because of all these factors, and because speech waveforms are typically less complex than music, high (and more specifically "high enough") fidelity reproduction of speech can be achieved at a relatively low bit rate.
 
-When a compression algorithm designed to compress general audio analyzes an audio waveform, it can discard anything outside the range of human hearing (or possibly even more, depending on how willing the algorithm is willing to risk losing detail at the high and/or low end of the frequency band. That means that the codec can discard audio whose frequency is lower than about 20 Hz or higher than about 20,000 Hz (20 kHz). This narrows the audio bandwidth of the sound, thereby reducing the amoung of data required to represent the signal in its compressed form. The audio bandwidth can't be reduced nearly as much as for a speech-only codec, but it is still a helpful start.
+When a compression algorithm designed to compress general audio analyzes an audio waveform, it can discard anything outside the range of human hearing (or possibly even more, depending on how willing the algorithm is willing to risk losing detail at the high and/or low end of the frequency band). That means that the codec can discard audio whose frequency is lower than about 20 Hz or higher than about 20,000 Hz (20 kHz). This narrows the audio bandwidth of the sound, thereby reducing the amount of data required to represent the signal in its compressed form. The audio bandwidth can't be reduced nearly as much as for a speech-only codec, but it is still a helpful start.
 
 Some people can hear outside this range to some extent. More often, people's ability to hear higher frequencies is rather lower than this; in particular, it's worth noting that by middle age, the high end of that frequency range usually falls from 20 kHz down to around 12 kHz to 14 kHz. This suggests that the higher frequencies can often be discarded without overly affecting comprehensibility of the sound, so you can substantially reduce how much of the audio space you need to retain, thereby making your sound simpler and easier to compress.
 
@@ -172,7 +172,7 @@ On top of simplifying the sound through psychoacoustic analysis, codecs use othe
 
 Importantly, codecs do all the hard work for you. It's why so much engineering and scientific study goes into the creation of new algorithms and codecs. All you need to do is consider the options and your use case, then choose the appropriate codec for your needs.
 
-> **Note:** For a more detailed guide to choosing audio codecs, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing a codec")}}.
+> **Note:** For a more detailed guide to choosing audio codecs, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}}.
 
 ## Lossless encoder parameters
 

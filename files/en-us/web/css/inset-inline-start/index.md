@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.inset-inline-start
@@ -13,6 +12,10 @@ browser-compat: css.properties.inset-inline-start
 {{CSSRef}}
 
 The **`inset-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+{{EmbedInteractiveExample("pages/css/inset-inline-start.html")}}
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -29,12 +32,11 @@ inset-inline-start: auto;
 inset-inline-start: inherit;
 inset-inline-start: initial;
 inset-inline-start: revert;
+inset-inline-start: revert-layer;
 inset-inline-start: unset;
 ```
 
-The shorthand for `inset-inline-start` and {{cssxref("inset-inline-end")}} is {{cssxref("inset-inline")}}.
-
-## Syntax
+The shorthand for `inset-inline-start` and {{cssxref("inset-inline-end")}} is {{cssxref("inset-inline")}}.
 
 ### Values
 

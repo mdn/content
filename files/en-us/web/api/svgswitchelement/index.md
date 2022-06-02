@@ -13,7 +13,7 @@ browser-compat: api.SVGSwitchElement
 
 The **`SVGSwitchElement`** interface corresponds to the {{SVGElement("switch")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

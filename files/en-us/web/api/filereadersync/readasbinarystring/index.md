@@ -1,6 +1,7 @@
 ---
 title: FileReaderSync.readAsBinaryString()
 slug: Web/API/FileReaderSync/readAsBinaryString
+page-type: web-api-instance-method
 tags:
   - Reference
   - Deprecated
@@ -10,7 +11,7 @@ browser-compat: api.FileReaderSync.readAsBinaryString
 
 > **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
 
-The `readAsBinaryString()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{DOMxRef("DOMString")}}. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+The `readAsBinaryString()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
 ## Syntax
 
@@ -26,7 +27,7 @@ readAsBinaryString(Blob);
 
 ### Return value
 
-A {{DOMxRef("DOMString")}} representing the input data.
+A string representing the input data.
 
 ## Exceptions
 

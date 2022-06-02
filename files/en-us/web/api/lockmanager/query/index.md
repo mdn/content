@@ -1,6 +1,7 @@
 ---
 title: LockManager.query()
 slug: Web/API/LockManager/query
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -13,12 +14,12 @@ browser-compat: api.LockManager.query
 ---
 {{APIRef("Web Locks")}}{{SeeCompatTable}}
 
-The **`query()`** method of the {{domxref("LockManager")}} interface returns a {{jsxref('Promise')}} that resolves with an object containing information about held and pending locks.
+The **`query()`** method of the {{domxref("LockManager")}} interface returns a {{jsxref('Promise')}} that resolves with an object containing information about held and pending locks.
 
 ## Syntax
 
 ```js
-LockManager.query()
+query()
 ```
 
 ### Parameters
@@ -42,7 +43,7 @@ This method may return a promise rejected with a {{domxref("DOMException")}} of 
 - `SecurityError` {{domxref("DOMException")}}
   - : If a lock manager cannot be obtained for the current environment.
 
-## Example
+## Examples
 
 ```js
 const state = await navigator.locks.query();

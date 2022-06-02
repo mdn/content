@@ -1,6 +1,7 @@
 ---
-title: 'Location: port'
+title: location.port
 slug: Web/API/Location/port
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -11,15 +12,12 @@ browser-compat: api.Location.port
 {{ApiRef("Location")}}
 
 The **`port`** property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} containing the port number of the URL. If the
-URL does not contain an explicit port number, it will be set to `''`.
+interface is a string containing the port number of the URL. If the
+URL does not contain an explicit port number, it will be set to `''`.
 
-## Syntax
+## Value
 
-```js
-string = object.port;
-object.port = string;
-```
+A string.
 
 ## Examples
 

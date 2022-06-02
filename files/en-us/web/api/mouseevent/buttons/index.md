@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,13 +12,13 @@ tags:
   - UIEvent
 browser-compat: api.MouseEvent.buttons
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.buttons`** read-only property indicates which buttons are pressed on the mouse (or other input device) when a mouse event is triggered.
 
 Each button that can be pressed is represented by a given number (see below).
 If more than one button is pressed, the button values are added together to produce a new number.
-For example, if the secondary (`2`) and auxilary (`4`) buttons are pressed simultaneously, the value is `6` (i.e., `2 + 4`).
+For example, if the secondary (`2`) and auxiliary (`4`) buttons are pressed simultaneously, the value is `6` (i.e., `2 + 4`).
 
 > **Note:** Do not confuse this property with the {{domxref("MouseEvent.button")}} property.
 > The {{domxref("MouseEvent.buttons")}} property indicates the state of buttons pressed during any kind of mouse event,
@@ -36,9 +37,9 @@ For more than one button pressed simultaneously, the values are combined (e.g., 
 - `8`: 4th button (typically the "Browser Back" button)
 - `16` : 5th button (typically the "Browser Forward" button)
 
-## Example
+## Examples
 
-This example logs the `buttons` property when you trigger a {{Event("mousedown")}} event.
+This example logs the `buttons` property when you trigger a {{domxref("Element/mousedown_event", "mousedown")}} event.
 
 ### HTML
 

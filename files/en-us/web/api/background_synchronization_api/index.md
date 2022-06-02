@@ -1,6 +1,7 @@
 ---
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
+page-type: web-api-overview
 tags:
   - API
   - Background
@@ -11,6 +12,7 @@ tags:
   - Service Workers
   - Sync
   - Web Background Synchronization API
+browser-compat: api.SyncManager
 ---
 {{securecontext_header}}
 
@@ -20,7 +22,7 @@ The Background Synchronization API provides a way to defer tasks to be run in a 
 
 ## Background Synchronization Concepts and Usage
 
-The Background Sync API allows web applications to defer server synchronization work to their service worker to handle at a later time, if the device is offline. Uses may include sending requests in the background if they couldn't be sent while the application was being used.
+The Background Sync API allows web applications to defer server synchronization work to their service worker to handle at a later time, if the device is offline. Uses may include sending requests in the background if they couldn't be sent while the application was being used.
 
 For example, an email client application could let its users compose and send messages at any time, even when the device has no network connection. The application frontend just registers a sync request and the service worker gets alerted when the network is present again and handles the sync.
 
@@ -43,7 +45,7 @@ The following additions to the {{domxref('Service Worker API')}} are specified i
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run with network connectivity.
-- {{domxref("ServiceWorkerGlobalScope.onsync")}}
+- {{domxref("ServiceWorkerGlobalScope.sync_event", "onsync")}}
   - : An event handler fired whenever a {{Event("sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
 
 ## Examples
@@ -92,12 +94,12 @@ self.addEventListener('sync', event => {
 
 ## Specifications
 
-{{Specifications("api.SyncManager")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.SyncManager")}}
+{{Compat}}
 
 ## See also
 
-- [Introducing Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
+- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/)

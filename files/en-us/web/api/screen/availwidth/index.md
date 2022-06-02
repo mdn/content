@@ -13,13 +13,11 @@ browser-compat: api.Screen.availWidth
 The **`Screen.availWidth`** property returns the amount of
 horizontal space (in pixels) available to the window.
 
-## Syntax
+## Value
 
-```js
-var width = window.screen.availWidth
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 var screenAvailWidth = window.screen.availWidth;

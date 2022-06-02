@@ -1,6 +1,7 @@
 ---
 title: CSSValueList.item()
 slug: Web/API/CSSValueList/item
+page-type: web-api-instance-method
 tags:
   - API
   - CSSValueList
@@ -30,12 +31,12 @@ this method returns `null`.
 ## Syntax
 
 ```js
-var cssValue = cssValueList.item(index);
+item(index)
 ```
 
 ### Parameters
 
-- index
+- `index`
   - : An `unsigned long` representing the index of the CSS value within the
     collection.
 
@@ -46,7 +47,7 @@ A {{domxref("CSSValue")}} object at the `index` position in the
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

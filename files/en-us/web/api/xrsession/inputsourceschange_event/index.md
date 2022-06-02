@@ -20,14 +20,16 @@ The **`inputsourceschange`** event is sent to an {{domxref("XRSession")}} when t
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('inputsourceschange', (event) => { });
+addEventListener('inputsourceschange', event => { })
 
-oninputsourceschange = (event) => { });
+oninputsourceschange = event => { }
 ```
 
 ## Event type
 
 An {{domxref("XRInputSourcesChangeEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("XRInputSourcesChangeEvent")}}
 
 ## Event properties
 
@@ -71,6 +73,7 @@ You can also add a handler for `inputsourceschange` events by setting the `oninp
 ```js
 xrSession.oninputsourceschange = onInputSourcesChange;
 ```
+
 ## Specifications
 
 {{Specifications}}

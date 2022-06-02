@@ -31,34 +31,38 @@ If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to
 
 A response containing one single range:
 
-    HTTP/1.1 206 Partial Content
-    Date: Wed, 15 Nov 2015 06:25:24 GMT
-    Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-    Content-Range: bytes 21010-47021/47022
-    Content-Length: 26012
-    Content-Type: image/gif
+```
+HTTP/1.1 206 Partial Content
+Date: Wed, 15 Nov 2015 06:25:24 GMT
+Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
+Content-Range: bytes 21010-47021/47022
+Content-Length: 26012
+Content-Type: image/gif
 
-    ... 26012 bytes of partial image data ...
+... 26012 bytes of partial image data ...
+```
 
 A response containing several ranges:
 
-    HTTP/1.1 206 Partial Content
-    Date: Wed, 15 Nov 2015 06:25:24 GMT
-    Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-    Content-Length: 1741
-    Content-Type: multipart/byteranges; boundary=String_separator
+```
+HTTP/1.1 206 Partial Content
+Date: Wed, 15 Nov 2015 06:25:24 GMT
+Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
+Content-Length: 1741
+Content-Type: multipart/byteranges; boundary=String_separator
 
-    --String_separator
-    Content-Type: application/pdf
-    Content-Range: bytes 234-639/8000
+--String_separator
+Content-Type: application/pdf
+Content-Range: bytes 234-639/8000
 
-    ...the first range...
-    --String_separator
-    Content-Type: application/pdf
-    Content-Range: bytes 4590-7999/8000
+...the first range...
+--String_separator
+Content-Type: application/pdf
+Content-Range: bytes 4590-7999/8000
 
-    ...the second range
-    --String_separator--
+...the second range
+--String_separator--
+```
 
 ## Specifications
 

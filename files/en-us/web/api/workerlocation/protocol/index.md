@@ -11,13 +11,11 @@ browser-compat: api.WorkerLocation.protocol
 ---
 {{ApiRef("WorkerLocation")}}
 
-The **`protocol`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.protocol", "protocol")}} part of the worker’s location.
+The **`protocol`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.protocol", "protocol")}} part of the worker's location.
 
-## Syntax
+## Value
 
-```js
-string = location.protocol;
-```
+A string.
 
 ## Examples
 

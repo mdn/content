@@ -52,7 +52,7 @@ In the previous article we learned about Svelte's TypeScript support, and how to
 
 ### Git
 
-Clone the github repo (if you haven't already done it) with:
+Clone the GitHub repo (if you haven't already done it) with:
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
@@ -78,15 +78,19 @@ So far we've been running our app in development mode with `npm run dev`. As we 
 
 Your generated `bundle.js` and `bundle.css` files will be something like this (file size on the left):
 
-      504 Jul 13 02:43 bundle.css
-    95981 Jul 13 02:43 bundle.js
+```
+  504 Jul 13 02:43 bundle.css
+95981 Jul 13 02:43 bundle.js
+```
 
 To compile our application for production we have to run `npm run build` instead. In this case, Svelte won't launch a web server or keep watching for changes. It will however minify and compress our JavaScript files using [terser](https://terser.org/).
 
 So, after running `npm run build`, our generated `bundle.js` and `bundle.css` files will be more like this:
 
-      504 Jul 13 02:43 bundle.css
-    21782 Jul 13 02:43 bundle.js
+```
+  504 Jul 13 02:43 bundle.css
+21782 Jul 13 02:43 bundle.js
+```
 
 Try running `npm run build` in your app's root directory now. You might get a warning, but you can ignore this for now.
 
@@ -170,17 +174,17 @@ One of the easiest ways to deploy a Svelte application is using [Vercel](https:/
 
 To deploy our app, follow these steps.
 
-1.  [register for an account with Vercel](https://vercel.com/signup).
-2.  Navigate to the root of your app and run `npx vercel`; the first time you do it, you'll be prompted to enter your email address, and follow the steps in the email sent to that address, for security purposes.
-3.  Run `npx vercel` again, and you'll be prompted to answer a few questions, like this:
+1. [register for an account with Vercel](https://vercel.com/signup).
+2. Navigate to the root of your app and run `npx vercel`; the first time you do it, you'll be prompted to enter your email address, and follow the steps in the email sent to that address, for security purposes.
+3. Run `npx vercel` again, and you'll be prompted to answer a few questions, like this:
 
     ```bash
     > npx vercel
     Vercel CLI 19.1.2
-    ? Set up and deploy “./mdn-svelte-tutorial”? [Y/n] y
+    ? Set up and deploy "./mdn-svelte-tutorial"? [Y/n] y
     ? Which scope do you want to deploy to? opensas
     ? Link to existing project? [y/N] n
-    ? What’s your project’s name? mdn-svelte-tutorial
+    ? What's your project's name? mdn-svelte-tutorial
     ? In which directory is your code located? ./
     Auto-detected Project Settings (Svelte):
     - Build Command: `npm run build` or `rollup -c`
@@ -194,8 +198,8 @@ To deploy our app, follow these steps.
        To change the domain or build command, go to https://zeit.co/opensas/mdn-svelte-tutorial/settings
     ```
 
-4.  Accept all the defaults, and you'll be fine.
-5.  Once it has finished deploying, go to the "Production" URL in your browser, and you'll see the app deployed!
+4. Accept all the defaults, and you'll be fine.
+5. Once it has finished deploying, go to the "Production" URL in your browser, and you'll see the app deployed!
 
 You can also [import a Svelte git project](https://vercel.com/import/svelte) into Vercel from [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product).
 
@@ -207,14 +211,14 @@ For hosting static files there are several online services that allow you to aut
 
 To demonstrate this, we will deploy our todos app to [GitLab Pages](https://about.gitlab.com/stages-devops-lifecycle/pages/).
 
-1.  First you'll have to [register at GitLab](https://gitlab.com/users/sign_up) and then [create a new project](https://gitlab.com/projects/new). Give you new project a short, easy name like "mdn-svelte-todo". You will have a remote url that points to your new GitLab git repository, like `git@gitlab.com:[your-user]/[your-project].git`.
-2.  Before you start to upload content to your git repository, it is a good practice to add a `.gitignore` file to tell git which files to exclude from source control. In our case we will tell git to exclude files in the `node_modules` directory by creating a `.gitignore` file in the root folder of your local project, with the following content:
+1. First you'll have to [register at GitLab](https://gitlab.com/users/sign_up) and then [create a new project](https://gitlab.com/projects/new). Give you new project a short, easy name like "mdn-svelte-todo". You will have a remote URL that points to your new GitLab git repository, like `git@gitlab.com:[your-user]/[your-project].git`.
+2. Before you start to upload content to your git repository, it is a good practice to add a `.gitignore` file to tell git which files to exclude from source control. In our case we will tell git to exclude files in the `node_modules` directory by creating a `.gitignore` file in the root folder of your local project, with the following content:
 
     ```bash
     node_modules/
     ```
 
-3.  Now let's go back to GitLab. After creating a new repo GitLab will greet you with a message explaining different options to upload your existing files. Follow the steps listed under the _Push an existing folder_ heading:
+3. Now let's go back to GitLab. After creating a new repo GitLab will greet you with a message explaining different options to upload your existing files. Follow the steps listed under the _Push an existing folder_ heading:
 
     ```bash
     cd your_root_directory # Go into your project's root directory
@@ -225,7 +229,7 @@ To demonstrate this, we will deploy our todos app to [GitLab Pages](https://abou
     git push -u origin master
     ```
 
-    > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
+    > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/index.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
 
 With these instructions we initialize a local git repository, then set our remote origin (where we will push our code to) as our repo on GitLab. Next we commit all the files to the local git repo, and then push those to the remote origin on GitLab.
 
@@ -233,23 +237,25 @@ GitLab uses a built-in tool called GitLab CI/CD to build your site and publish i
 
 Let's have a go at doing this now.
 
-1.  Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
+1. Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
 
-        image: node:latest
-        pages:
-          stage: deploy
-          script:
-            - npm install
-            - npm run build
-          artifacts:
-            paths:
-              - public
-          only:
-            - master
+    ```
+    image: node:latest
+    pages:
+      stage: deploy
+      script:
+        - npm install
+        - npm run build
+      artifacts:
+        paths:
+          - public
+      only:
+        - master
+    ```
 
     Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our master branch.
 
-2.  Since our app will be published at a subdirectory (like `https://your-user.gitlab.io/mdn-svelte-todo`), we'll have to make the references to the JavaScript and CSS files in our `public/index.html` file relative. To do this, we just remove the leading slashes (`/`) from the `/global.css`, `/build/bundle.css`, and `/build/bundle.js` URLs, like this:
+2. Since our app will be published at a subdirectory (like `https://your-user.gitlab.io/mdn-svelte-todo`), we'll have to make the references to the JavaScript and CSS files in our `public/index.html` file relative. To do this, we just remove the leading slashes (`/`) from the `/global.css`, `/build/bundle.css`, and `/build/bundle.js` URLs, like this:
 
     ```html
     <title>Svelte To-Do list</title>
@@ -263,7 +269,7 @@ Let's have a go at doing this now.
 
     Do this now.
 
-3.  Now we just have to commit and push our changes to GitLab. Do this by running the following commands:
+3. Now we just have to commit and push our changes to GitLab. Do this by running the following commands:
 
     ```bash
     > git add public/index.html
@@ -299,7 +305,7 @@ In this section we'll give you some resources and projects to go and check out, 
 
 To go further and learn more about Svelte, you should definitely visit the [Svelte homepage](https://svelte.dev/). There you'll find [many articles](https://svelte.dev/blog) explaining Svelte's philosophy. If you haven't already done it, make sure you go through the [Svelte interactive tutorial](https://svelte.dev/tutorial/basics). We already covered most of its content, so it won't take you much time to complete it — you should consider it as practice!
 
-You can also consult the [Svelte API docs](https://svelte.dev/docs) and the available [examples](https://svelte.dev/examples#hello-world).
+You can also consult the [Svelte API docs](https://svelte.dev/docs) and the available [examples](https://svelte.dev/examples/hello-world).
 
 To understand the motivations behind Svelte, you should read [Rich Harris](https://twitter.com/Rich_Harris)'s [Rethinking reactivity](https://www.youtube.com/watch?v=AdNJ3fydeao&t=47s) presentation on YouTube. He is the creator of Svelte, so he has a couple of things to say about it. You also have the interactive slides available here which are, unsurprisingly, built with Svelte. If you liked it, you will also enjoy [The Return of 'Write Less, Do More'](https://www.youtube.com/watch?v=BzX4aTRPzno) presentation, which Rich Harris gave at [JSCAMP 2019](https://jscamp.tech/2019/).
 
@@ -324,7 +330,7 @@ There are other projects related to Svelte that are worth checking out:
 
 There are a number of different ways to get support and interact with the Svelte community:
 
-- [svelte.dev/chat](https://svelte.dev/chat): Svelte's Discord server.
+- [svelte.dev/chat](https://discord.com/invite/yy75DKs): Svelte's Discord server.
 - [@sveltejs](https://twitter.com/sveltejs): The official Twitter account.
 - [@sveltesociety](https://twitter.com/sveltesociety): Svelte community Twitter account.
 - [Svelte Recipes](https://github.com/svelte-society/recipes-mvp#recipes-mvp): Community-driven repository of recipes, tips, and best practices to solve common problems.

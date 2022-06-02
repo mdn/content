@@ -18,7 +18,7 @@ transform feedback operation.
 ## Syntax
 
 ```js
-void gl.resumeTransformFeedback();
+resumeTransformFeedback()
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -13,13 +13,7 @@ browser-compat: api.TextTrackCue.track
 
 The **`track`** read-only property of the {{domxref("TextTrackCue")}} interface returns the {{domxref("TextTrack")}} object that this cue belongs to.
 
-## Syntax
-
-```js
-let track = TextTrackCue.track;
-```
-
-### Value
+## Value
 
 A {{domxref("TextTrack")}} object.
 

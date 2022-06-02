@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -17,7 +18,8 @@ a new value for a property on a CSS style declaration object.
 ## Syntax
 
 ```js
-style.setProperty(propertyName, value, priority);
+setProperty(propertyName, value)
+setProperty(propertyName, value, priority)
 ```
 
 ### Parameters
@@ -38,7 +40,7 @@ style.setProperty(propertyName, value, priority);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -62,7 +64,7 @@ example at the end of this section).
 
 We know that the rule we want to alter to do this is contained inside the second
 stylesheet applied to the page, so we grab a reference to it using
-[`document.styleSheets[1]`](/en-US/docs/Web/API/Document/styleSheetSets).
+[`document.styleSheets[1]`](/en-US/docs/Web/API/Document/styleSheets).
 We then loop through the different rules contained inside the stylesheet, which are
 contained in the array found at
 [`stylesheet.cssRules`](/en-US/docs/Web/API/CSSStyleSheet/cssRules);
@@ -74,7 +76,7 @@ want.
 If so, we store a reference to this `CSSStyleRule` object in a variable. We
 then use three functions to generate random values for the properties in question, and
 update the rule with these values. In each case, this is done with the
-`setProperty()` method, for example `boxParaRule.style.setProperty('border', newBorder);`
+`setProperty()` method, for example `boxParaRule.style.setProperty('border', newBorder);`.
 
 ### HTML
 

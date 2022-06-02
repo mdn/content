@@ -1,6 +1,7 @@
 ---
 title: FormData.has()
 slug: Web/API/FormData/has
+page-type: web-api-instance-method
 tags:
   - API
   - FormData
@@ -20,19 +21,19 @@ The **`has()`** method of the {{domxref("FormData")}} interface returns a boolea
 ## Syntax
 
 ```js
-formData.has(name);
+has(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("USVString")}} representing the name of the key you want to test for.
+  - : A string representing the name of the key you want to test for.
 
-### Returns
+### Return value
 
 A boolean value.
 
-## Example
+## Examples
 
 The following line creates an empty `FormData` object:
 
@@ -59,6 +60,6 @@ formData.has('username'); // Returns true
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -20,7 +20,7 @@ This article defines some conventions and definitions that are commonly used on 
 
 - Deprecated
   - : On MDN, the term **deprecated** is used to mark an API or technology that is no longer recommended, but is still implemented and may still work.
-    More recently, we've updated it to the definition used in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information), which is that "the feature is no longer recommended. It might be removed in the future or might only be kept for compatibility purposes. Avoid using this functionality."
+    More recently, we've updated it to the definition used in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md), which is that "the feature is no longer recommended. It might be removed in the future or might only be kept for compatibility purposes. Avoid using this functionality."
 - Obsolete
   - : On MDN, the term **obsolete** was used to mark an API or technology that is not only no longer recommended, but also no longer implemented in browsers.
     This was, however, confusing — it is similar to **deprecated**, and the distinction is not very helpful (you still shouldn't use it in a production site).
@@ -37,7 +37,7 @@ One or both of these will be true:
 - Its defining spec is likely to change significantly, in backwards-incompatible ways (i.e. it may break existing code that relies on the feature).
 
 If one or both of these definitions is true, then you should think carefully before you start using that technology in any kind of production project (i.e. not just a demo or experiment).
-See also the definition of experimental in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information).
+See also the definition of experimental in our [browser-compat-data project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
 
 Conversely, an item is no longer experimental when:
 
@@ -60,7 +60,7 @@ A good example is the [B2G (Firefox OS) project](/en-US/docs/Archive/B2G_OS).
 
 A page should be archived if it fits the above description.
 To archive a page, you should use the "Move page feature" (_Advanced > Move this article_) to move the page into the Archive page tree (/en-US/docs/Archive).
-You might not have the permissions to use this feature, and before you start archiving pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
+You might not have the permissions to use this feature, and before you start archiving pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Deleted pages
 
@@ -73,13 +73,13 @@ These might be:
 - Articles covering techniques that were later shown to be bad practice and superseded by better techniques.
 - Articles containing information that were later replaced by other, better quality articles.
 - Articles containing content that is inappropriate for MDN.
-- Translations that are old, out-of-date, and difficult to fix, meaning that the English version is preferrable and starting a new translation would be an easier option.
+- Translations that are old, out-of-date, and difficult to fix, meaning that the English version is preferable and starting a new translation would be an easier option.
 
 #### When should a page be deleted?
 
 A page should be deleted if it fits the above description.
 To delete a page, you should use the "Delete this page feature" (_Advanced > Delete this page_) to delete the page.
-You will probably not have the permissions to use this feature, and when thinking about deleting pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
+You will probably not have the permissions to use this feature, and when thinking about deleting pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### When to document new technologies
 
@@ -139,12 +139,12 @@ Here are some guidelines to help you decide what to do.
 - If the item was implemented in any release version of any one or more browsers—but _only_ behind a preference or flag—do not delete the item from the documentation immediately.
   Instead, mark the item as deprecated as follows:
 
-  - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the {{tag("Deprecated")}} tag to the page's list of tags.
+  - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the `Deprecated` tag to the page's list of tags.
   - On the overview page for the element, interface, or API, find the list of items which includes the item that's been removed from the specification and add the [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) macro after the item's name in that list.
   - Search the informative text of the overview page for that interface, element, etc. for any references to the removed item.
     Add warning boxes in appropriate places with text along the lines of "\[whatever] has been removed from the specification and will be removed from browsers soon.
     See \[link to page] for a new way to do this."
-  - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
+  - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
   - Search MDN for references to the removed item, in case there are discussions elsewhere.
     Add similar warning boxes there as well.
   - At some point in the future, a decision may be made to actually remove the item from the documentation; we don't normally do this but if the item was especially unutilized or uninteresting, we may decide to do so.
@@ -152,13 +152,13 @@ Here are some guidelines to help you decide what to do.
 
 - If the item was implemented in one or more release builds of browsers—without requiring a preference or flag to be changed—mark the item as deprecated, as follows:
 
-  - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the {{tag("Deprecated")}} tag to the page's list of tags.
+  - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the `Deprecated` tag to the page's list of tags.
   - On the overview page for the element, interface, or API, find the list of items which includes the item that's been removed from the specification and add the [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) macro after the item's name in that list.
   - Search the informative text of the overview page for that interface, element, etc. for any references to the removed item.
     Add warning boxes in appropriate places with text along the lines of "\[whatever] has been removed from the specification and is deprecated.
     It may be removed from browsers in the future, so you should not use it.
     See \[link to page] for a new way to do this."
-  - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
+  - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
   - Search MDN for references to the removed item, in case there are discussions elsewhere.
     Add similar warning boxes there as well.
   - It's unlikely that these items will be removed from the documentation anytime soon, if ever.
@@ -167,7 +167,7 @@ Here are some guidelines to help you decide what to do.
 
 Please use common sense with wording of warning messages and other changes to text suggested by the guidelines above.
 Different items will require different wording and handling of the situation.
-When in doubt, feel free to ask for advice on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix), or on the [MDN Web Docs discussion forum](https://discourse.mozilla.org/c/mdn).
+When in doubt, feel free to ask for advice on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix), or on the [MDN Web Docs discussion forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Copying content within MDN
 
@@ -176,7 +176,7 @@ You have three options:
 
 - If you want to copy an entire page:
 
-  1. While viewing the page you want to copy, on the **Advanced** (gear) menu, choose  **[Clone this page](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#clone_of_an_existing_page)**.
+  1. While viewing the page you want to copy, on the **Advanced** (gear) menu, choose  **[Clone this page](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#clone_of_an_existing_page)**.
      This opens the editor UI for a new page, with the contents of the cloned page already populated.
   2. Enter a new **Title** and **Slug** for the cloned page.
   3. Edit the contents of the page as needed, and save as usual.
@@ -223,5 +223,5 @@ In such cases, consider what the reality is — i.e. what browsers are actually 
 For example, as of Jan 2019 the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute has a conflict, which was summarized like so:
 
 > **Warning:** Spec conflict: The [WHATWG spec lists `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode), and modern browsers are working towards supporting it.
-> The [W3C HTML 5.2 spec](https://www.w3.org/TR/html52/index.html#contents) however no longer lists it (i.e. marks it as obsolete).
+> The [W3C HTML 5.2 spec](https://html.spec.whatwg.org/multipage/index.html#contents) however no longer lists it (i.e. marks it as obsolete).
 > You should consider the WHATWG definition as correct, until a consensus is reached.=

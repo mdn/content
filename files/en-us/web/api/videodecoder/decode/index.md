@@ -16,7 +16,7 @@ The **`decode()`** method of the {{domxref("VideoDecoder")}} interface enqueues 
 ## Syntax
 
 ```js
-VideoDecoder.decode(chunk)
+decode(chunk)
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ VideoDecoder.decode(chunk)
 - `chunk`
   - : An {{domxref("EncodedVideoChunk")}} object representing a chunk of encoded video.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 
@@ -57,4 +57,3 @@ for (let i = 0; i < responses.length; i++) {
 ## Browser compatibility
 
 {{Compat}}
-

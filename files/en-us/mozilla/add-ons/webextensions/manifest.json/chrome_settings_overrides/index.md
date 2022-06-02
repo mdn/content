@@ -21,6 +21,11 @@ browser-compat: webextensions.manifest.chrome_settings_overrides
       <th scope="row">Mandatory</th>
       <td>No</td>
     </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+
   <tr>
       <th scope="row">Example</th>
       <td><pre class="brush:json">
@@ -33,7 +38,6 @@ browser-compat: webextensions.manifest.chrome_settings_overrides
 </table>
 
 Use the `chrome_settings_overrides` key to override the browser's home page and add a new search engine.
-
 
 ## Syntax
 
@@ -140,8 +144,10 @@ The `chrome_settings_overrides` key is an object that may have the following pro
           </dd>
           <dt><code>favicon_url {{optional_inline}}</code></dt>
           <dd>
-            String: URL pointing to an icon for the search engine. This must be
-            a absolute HTTP or HTTPS URL.
+            String: URL pointing to an icon for the search engine. In Manifest V2,
+            this must be an absolute HTTP or HTTPS URL. In Manifest V3, this must
+            reference an icon provided in the extension as a path relative to the
+            extension's root.
           </dd>
           <dt><code>image_url {{optional_inline}}</code></dt>
           <dd>String: URL used for image search.</dd>
@@ -170,8 +176,8 @@ The `chrome_settings_overrides` key is an object that may have the following pro
 </table>
 
 ## Example
-This example shows how to set a search provider.
 
+This example shows how to set a search provider.
 
 ```json
 "chrome_settings_overrides": {

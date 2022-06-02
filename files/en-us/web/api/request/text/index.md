@@ -1,6 +1,7 @@
 ---
 title: Request.text()
 slug: Web/API/Request/text
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -14,14 +15,12 @@ browser-compat: api.Request.text
 
 The **`text()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with a {{jsxref("String")}}.
-The response is *always* decoded using UTF-8.
+The response is *always* decoded using UTF-8.
 
 ## Syntax
 
 ```js
-request.text().then(function (text) {
-  // do something with the text sent in the request
-});
+text()
 ```
 
 ### Parameters

@@ -31,9 +31,9 @@ parseFloat(string)
 
 ### Return value
 
-A floating point number parsed from the given `string`.
+A floating point number parsed from the given `string`.
 
-Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a
+Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a
 number.
 
 ## Description
@@ -48,11 +48,11 @@ number.
 - A _second_ decimal point also stops parsing (characters up to that point
   will still be parsed).
 - Leading and trailing spaces in the argument are ignored.
-- If the argument’s first character can’t be converted to a number (it’s not any of
+- If the argument's first character can't be converted to a number (it's not any of
   the above characters), `parseFloat` returns {{jsxref("NaN")}}.
-- `parseFloat` can also parse and return {{jsxref("Infinity")}}.
-- `parseFloat` converts {{jsxref("BigInt")}} syntax to {{jsxref("Number",
-		"Numbers")}}, losing precision. This happens because the trailing `n`
+- `parseFloat` can also parse and return {{jsxref("Infinity")}} if the string starts with "Infinity" preceded by none or more white spaces.
+- For numbers outside the `-1.7976931348623158e+308 - 1.7976931348623158e+308` range `-Infinity` or `Infinity` is returned.
+- `parseFloat` converts {{jsxref("BigInt")}} syntax to {{jsxref("Number", "Numbers")}}, losing precision. This happens because the trailing `n`
   character is discarded.
 
 Consider {{jsxref("Number", "Number(value)")}} for stricter parsing, which converts to
@@ -87,7 +87,16 @@ The following example returns `NaN`:
 parseFloat('FF2');
 ```
 
-### `parseFloat` and `BigInt`
+### Returning infinity
+
+Infinity values are returned when the number is outside the double-precision 64-bit IEEE 754-2019 format range:
+
+```js
+parseFloat('1.7976931348623159e+308');  //  Infinity
+parseFloat('-1.7976931348623159e+308'); // -Infinity
+```
+
+### Interaction with BigInt values
 
 The following examples both return `900719925474099300`, losing precision as
 the integer is too large to be represented as a float:

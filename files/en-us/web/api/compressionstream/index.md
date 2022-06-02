@@ -1,6 +1,7 @@
 ---
 title: CompressionStream
 slug: Web/API/CompressionStream
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,7 +15,7 @@ The **`CompressionStream`** interface of the {{domxref('Compression Streams API'
 
 ## Constructor
 
-- {{domxref("CompressionStream.CompressionStream()")}}
+- {{domxref("CompressionStream.CompressionStream", "CompressionStream()")}}
   - : Creates a new `CompressionStream`
 
 ## Properties

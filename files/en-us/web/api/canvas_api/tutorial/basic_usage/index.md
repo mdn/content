@@ -1,6 +1,7 @@
 ---
 title: Basic usage of canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -44,7 +45,7 @@ For example, we could provide a text description of the canvas content or provid
 </canvas>
 ```
 
-Telling the user to use a different browser that supports canvas does not help users who can't read the canvas at all, for example. Providing a useful fallback text or sub DOM helps to make the canvas more accessible.
+Telling the user to use a different browser that supports canvas does not help users who can't read the canvas at all, for example. Providing a useful fallback text or sub DOM helps to make the canvas more accessible.
 
 ### Required `</canvas>` tag
 
@@ -54,7 +55,7 @@ If fallback content is not needed, a simple `<canvas id="foo" ...></canvas>` is 
 
 ## The rendering context
 
-The {{HTMLElement("canvas")}} element creates a fixed-size drawing surface that exposes one or more **rendering contexts**, which are used to create and manipulate the content shown. In this tutorial, we focus on the 2D rendering context. Other contexts may provide different types of rendering; for example, [WebGL](/en-US/docs/Web/API/WebGL_API) uses a 3D context based on [OpenGL ES](http://www.khronos.org/opengles/).
+The {{HTMLElement("canvas")}} element creates a fixed-size drawing surface that exposes one or more **rendering contexts**, which are used to create and manipulate the content shown. In this tutorial, we focus on the 2D rendering context. Other contexts may provide different types of rendering; for example, [WebGL](/en-US/docs/Web/API/WebGL_API) uses a 3D context based on [OpenGL ES](https://www.khronos.org/opengles/).
 
 The canvas is initially blank. To display something, a script first needs to access the rendering context and draw on it. The {{HTMLElement("canvas")}} element has a method called {{domxref("HTMLCanvasElement.getContext", "getContext()")}}, used to obtain the rendering context and its drawing functions. `getContext()` takes one parameter, the type of context. For 2D graphics, such as those covered by this tutorial, you specify `"2d"` to get a {{domxref("CanvasRenderingContext2D")}}.
 
@@ -110,7 +111,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 </html>
 ```
 
-The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{event("load")}} event on the document. This function, or one like it, could also be called using {{domxref("setTimeout()")}}, {{domxref("setInterval()")}}, or any other event handler, as long as the page has been loaded first.
+The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{domxref("Window/load_event", "load")}} event on the document. This function, or one like it, could also be called using {{domxref("setTimeout()")}}, {{domxref("setInterval()")}}, or any other event handler, as long as the page has been loaded first.
 
 Here is how a template would look in action. As shown here, it is initially blank.
 

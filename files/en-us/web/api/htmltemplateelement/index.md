@@ -1,6 +1,7 @@
 ---
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -14,7 +15,7 @@ browser-compat: api.HTMLTemplateElement
 
 The **`HTMLTemplateElement`** interface enables access to the contents of an HTML {{HTMLElement("template")}} element.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

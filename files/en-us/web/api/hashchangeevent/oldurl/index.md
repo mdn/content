@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent.oldURL
 slug: Web/API/HashChangeEvent/oldURL
+page-type: web-api-instance-property
 tags:
   - API
   - HashChangeEvent
@@ -15,17 +16,11 @@ The **`oldURL`** read-only property of the
 {{domxref("HashChangeEvent")}} interface returns the previous URL from which the window
 was navigated.
 
-## Syntax
+## Value
 
-```js
-let oldEventUrl = event.oldURL;
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 ```js
 window.addEventListener('hashchange', function(event) {

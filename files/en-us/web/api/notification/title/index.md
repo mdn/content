@@ -18,15 +18,9 @@ The **`title`** read-only property of the
 specified in the `title` parameter of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
+## Value
 
-```js
-var title = Notification.title;
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
@@ -53,5 +47,4 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

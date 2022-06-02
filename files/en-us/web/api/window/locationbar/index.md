@@ -15,13 +15,11 @@ browser-compat: api.Window.locationbar
 
 Returns the `locationbar` object, whose visibility can be checked.
 
-## Syntax
+## Value
 
-```js
-objRef = window.locationbar
-```
+A `locationbar` object.
 
-## Example
+## Examples
 
 The following complete HTML example shows how the `visible` property of the
 `locationbar` object is used.

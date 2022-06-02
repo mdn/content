@@ -44,8 +44,8 @@ concatenating.
 
 ## Performance
 
-It is strongly recommended that the {{jsxref("Operators/Assignment_Operators",
-  "assignment operators", "", 1)}} (`+`, `+=`) are used instead of
+It is strongly recommended to use the {{jsxref("Operators/Assignment_Operators",
+  "assignment operators", "", 1)}} (`+`, `+=`) instead of
 the `concat()` method.
 
 ## Examples

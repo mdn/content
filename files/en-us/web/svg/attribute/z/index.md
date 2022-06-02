@@ -5,6 +5,9 @@ tags:
   - Filters
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-z
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-z
 ---
 {{SVGRef}}
 
@@ -12,8 +15,8 @@ The **`z`** attribute defines the location along the z-axis for a light source i
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("fePointLight")}}
-*   {{SVGElement("feSpotLight")}}
+- {{SVGElement("fePointLight")}}
+- {{SVGElement("feSpotLight")}}
 
 ## Example
 
@@ -87,42 +90,4 @@ For {{SVGElement("feSpotLight")}}, `z` defines the location along the z-axis for
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fepointlight-z", "z for &lt;fePointLight&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fespotlight-z", "z for &lt;feSpotLight&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#fePointLightZAttribute", "z for &lt;fePointLight&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;fePointLight></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feSpotLightZAttribute", "z for &lt;feSpotLight&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feSpotLight></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

@@ -1,12 +1,14 @@
 ---
 title: History API
 slug: Web/API/History_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
   - HTML DOM
   - History
   - History API
+browser-compat: api.History
 ---
 {{DefaultAPISidebar("History API")}}
 
@@ -90,42 +92,18 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("HTML WHATWG", "browsers.html#history", "History")}}
-      </td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML5 W3C", "browsers.html#history", "History")}}
-      </td>
-      <td>{{Spec2("HTML5 W3C")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## See also
 
 ### References
 
 - {{ domxref("window.history") }}
-- {{ domxref("WindowEventHandlers.onpopstate") }}
+- {{domxref("Window/popstate_event", "popstate")}} event
 
 ### Guides
 

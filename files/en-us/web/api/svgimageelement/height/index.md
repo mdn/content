@@ -20,13 +20,7 @@ The **`height`** read-only property of the
 corresponding to the {{SVGAttr("height")}} attribute of the given
 {{SVGElement("image")}} element.
 
-## Syntax
-
-```js
-var height = svgImageElement.height
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}}.
 

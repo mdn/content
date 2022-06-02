@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.close()
 slug: Web/API/RTCPeerConnection/close
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection
@@ -32,7 +33,7 @@ stopping, but for all intents and purposes, they're stopped).
 Once this method returns, the signaling state as returned by
 {{domxref("RTCPeerConnection.signalingState")}} is `closed`.
 
-Make sure that you `delete` all references to the previous
+Make sure that you `delete` all references to the previous
 {{domxref("RTCPeerConnection")}} before attempting to create a new one that connects
 to the same remote peer, as not doing so might result in some errors depending on the
 browser.

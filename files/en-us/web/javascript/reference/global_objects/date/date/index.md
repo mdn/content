@@ -52,17 +52,18 @@ There are five basic forms for the `Date()` constructor:
     - `value`
       - : An integer value representing the number of milliseconds since January 1, 1970,
         00:00:00 UTC (the ECMAScript epoch, equivalent to the UNIX epoch), with leap
-        seconds ignored. Keep in mind that most [UNIX
-        Timestamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
+        seconds ignored. Keep in mind that most
+        [UNIX Timestamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
 
 3. Timestamp string
 
     - `dateString`
 
       - : A string value representing a date, specified in a format recognized by the
-        {{jsxref("Date.parse()")}} method. (These formats are [IETF-compliant RFC 2822
-        timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14), and also strings in a [version
-        of ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
+        {{jsxref("Date.parse()")}} method. (These formats are
+        [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14),
+        and also strings in a
+        [version of ISO8601](https://262.ecma-international.org/11.0/#sec-date.parse).)
 
         > **Note:** Parsing of date strings with the `Date`
         > constructor (and `Date.parse()`, which works the same way) is
@@ -78,8 +79,7 @@ There are five basic forms for the `Date()` constructor:
     - `dateObject`
 
       - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time.
-          This is equivalent to using the `new Date(value)` constuctor, where `value` is the can be obtained using the `valueOf()` method.
-
+          This is equivalent to using the `new Date(value)` constructor, where `value` can be obtained using the `valueOf()` method.
 
 5. Individual date and time component values
 
@@ -96,7 +96,7 @@ There are five basic forms for the `Date()` constructor:
 
         Values from `0` to `99` map to the years
         `1900` to `1999`. All other values are the actual year.
-        See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#two_digit_years_map_to_1900_%e2%80%93_1999).
+        See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#interpretation_of_two-digit_years).
 
     - `monthIndex`
       - : Integer value representing the month, beginning with `0` for January
@@ -120,7 +120,7 @@ There are five basic forms for the `Date()` constructor:
 
 Calling `new Date()` (the `Date()`constructor) returns a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object. If called with an invalid date string, it returns a `Date` object whose [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString) method returns the literal string `Invalid Date`.
 
-Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it’s called with an invalid date string — or even called wth any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
+Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it's called with an invalid date string — or even called wth any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
 
 ## Examples
 

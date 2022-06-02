@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.reduction
 slug: Web/API/DynamicsCompressorNode/reduction
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode
@@ -12,21 +13,15 @@ browser-compat: api.DynamicsCompressorNode.reduction
 ---
 {{ APIRef("Web Audio API") }}
 
-The **`reduction`** read-only property of the {{ domxref("DynamicsCompressorNode") }} interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
+The **`reduction`** read-only property of the {{ domxref("DynamicsCompressorNode") }} interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
 
 Intended for metering purposes, it returns a value in dB, or `0` (no gain reduction) if no signal is fed into the `DynamicsCompressorNode`. The range of this value is between `-20` and `0` (in dB).
 
-## Syntax
-
-```js
-var myReduction = compressorNodeInstance.reduction;
-```
-
-### Value
+## Value
 
 A float.
 
-## Example
+## Examples
 
 ```js
 var audioCtx = new AudioContext();

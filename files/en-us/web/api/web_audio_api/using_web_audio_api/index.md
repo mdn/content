@@ -104,7 +104,7 @@ We've already created an input node by passing our audio element into the API. F
 track.connect(audioContext.destination);
 ```
 
-A good way to visualise these nodes is by drawing an audio graph so you can visualize it. This is what our current audio graph looks like:
+A good way to visualize these nodes is by drawing an audio graph so you can visualize it. This is what our current audio graph looks like:
 
 ![an audio graph with an audio element source connected to the default destination](graph1.jpg)
 
@@ -192,10 +192,10 @@ Let's add another modification node to practice what we've just learnt.
 There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.
 
 > **Note:** The `StereoPannerNode` is for simple cases in which you just want stereo panning from left to right.
-> There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialisation_, for creating more complex effects.
+> There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialization_, for creating more complex effects.
 > This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.
 
-To visualise it, we will be making our audio graph look like this:
+To visualize it, we will be making our audio graph look like this:
 
 ![An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node.](graphpan.jpg)
 

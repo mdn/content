@@ -14,22 +14,15 @@ browser-compat: api.TouchEvent.altKey
 
 ## Summary
 
-A boolean value indicating whether or not the <kbd>alt</kbd> (Alternate) key is enabled when the touch event is created. If the <kbd>alt</kbd> key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
+A boolean value indicating whether or not the <kbd>alt</kbd> (Alternate) key is enabled when the touch event is created. If the <kbd>alt</kbd> key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
 
 This property is {{readonlyInline}}.
 
-## Syntax
+## Value
 
-```js
-var altEnabled = touchEvent.altKey;
-```
+A boolean value that is `true` if the <kbd>alt</kbd> key is enabled for this event; and `false` if the <kbd>alt</kbd> is not enabled.
 
-### Return value
-
-- `altEnabled`
-  - : `true` if the <kbd>alt</kbd> key is enabled for this event; and `false` if the <kbd>alt</kbd> is not enabled.
-
-## Example
+## Examples
 
 This example illustrates how to access the {{domxref("TouchEvent")}} key modifier properties: {{domxref("TouchEvent.altKey")}}, {{domxref("TouchEvent.ctrlKey")}}, {{domxref("TouchEvent.metaKey")}} and {{domxref("TouchEvent.shiftKey")}}.
 

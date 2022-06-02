@@ -24,39 +24,39 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 ### Global attributes
 
-*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
-*   {{SVGAttr("transform")}}
+- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("transform")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGSwitchElement")}} interface.
 
 ## SVG \<switch> example
 
-This example demonstrates showing different text content depending on the browser's language settings. The `switch` element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
+This example demonstrates showing different text content depending on the browser's language settings. The `switch` element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
 
 ### HTML Content
 
 ```html
 <svg viewBox="0 -20 100 50">
-   <switch>
-      <text systemLanguage="ar">مرحبا</text>
-      <text systemLanguage="de,nl">Hallo!</text>
-      <text systemLanguage="en-us">Howdy!</text>
-      <text systemLanguage="en-gb">Wotcha!</text>
-      <text systemLanguage="en-au">G'day!</text>
-      <text systemLanguage="en">Hello!</text>
-      <text systemLanguage="es">Hola!</text>
-      <text systemLanguage="fr">Bonjour!</text>
-      <text systemLanguage="ja">こんにちは</text>
-      <text systemLanguage="ru">Привет!</text>
-      <text>☺</text>
-   </switch>
+  <switch>
+    <text systemLanguage="ar">مرحبا</text>
+    <text systemLanguage="de,nl">Hallo!</text>
+    <text systemLanguage="en-us">Howdy!</text>
+    <text systemLanguage="en-gb">Wotcha!</text>
+    <text systemLanguage="en-au">G'day!</text>
+    <text systemLanguage="en">Hello!</text>
+    <text systemLanguage="es">Hola!</text>
+    <text systemLanguage="fr">Bonjour!</text>
+    <text systemLanguage="ja">こんにちは</text>
+    <text systemLanguage="ru">Привет!</text>
+    <text>☺</text>
+  </switch>
 </svg>
 ```
 

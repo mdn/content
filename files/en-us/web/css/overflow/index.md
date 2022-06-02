@@ -41,6 +41,7 @@ overflow: hidden visible;
 overflow: inherit;
 overflow: initial;
 overflow: revert;
+overflow: revert-layer;
 overflow: unset;
 ```
 
@@ -51,7 +52,7 @@ The `overflow` property is specified as one or two keywords chosen from the list
 - `visible`
   - : Content is not clipped and may be rendered outside the padding box.
 - `hidden`
-  - : Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content _can_ be scrolled programmatically (for example, by setting the value of a property such as {{domxref("HTMLElement.offsetLeft", "offsetLeft")}}), so the element is still a scroll container.
+  - : Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content _can_ be scrolled programmatically (for example, by setting the value of a property such as {{domxref("Element.scrollLeft", "scrollLeft")}} or the {{domxref("Element.scrollTo", "scrollTo()")}} method), so the element is still a scroll container.
 - `clip`
   - : Similar to `hidden`, the content is clipped to the element's padding box. The difference between `clip` and `hidden` is that the `clip` keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.
 - `scroll`
@@ -59,7 +60,7 @@ The `overflow` property is specified as one or two keywords chosen from the list
 - `auto`
   - : Depends on the {{Glossary("user agent")}}. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block formatting context. Desktop browsers provide scrollbars if content overflows.
 - `overlay` {{deprecated_inline}}
-  - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space. Only supported in WebKit-based (e.g., Safari) and Blink-based (e.g., Chrome or Opera) browsers.
+  - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space.
 
 #### Mozilla extensions
 
@@ -180,5 +181,5 @@ p.auto {
 
 ## See also
 
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS Overflow](/en-US/docs/Web/CSS/CSS_Overflow) and [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow)
+- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- [CSS Overflow](/en-US/docs/Web/CSS/CSS_Overflow) and [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)

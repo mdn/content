@@ -8,27 +8,27 @@ browser-compat: svg.attributes.href
 ---
 {{SVGRef}}
 
-The **`href`** attribute defines a link to a resource as a reference [URL](/en-US/docs/Web/SVG/Content_type#URL). The exact meaning of that link depends on the context of each element using it.
+The **`href`** attribute defines a link to a resource as a reference [URL](/en-US/docs/Web/SVG/Content_type#url). The exact meaning of that link depends on the context of each element using it.
 
-> **Note:** Specifications before SVG 2 defined an {{SVGAttr("xlink:href")}} attribute, which is now rendered obsolete by the `href` attribute.
+> **Note:** Specifications before SVG 2 defined an {{SVGAttr("xlink:href")}} attribute, which is now rendered obsolete by the `href` attribute. If you need to support earlier browser versions, the deprecated `xlink:href` attribute can be used as a fallback in addition to the `href` attribute, e.g. `<use href="some-id" xlink:href="some-id x="5" y="5" />`.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("discard")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("mpath")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("script")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("discard")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("image")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("mpath")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("use")}}
 
 ## Example
 
@@ -40,7 +40,7 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a href="https://developer.mozilla.org/"><text x="10" y="25">MDN Web Docs</text></a>
+  <a href="https://developer.mozilla.org/"><text x="10" y="25">MDN Web Docs</text></a>
 </svg>
 ```
 
@@ -380,132 +380,7 @@ The `<use>` element can reference an entire SVG document by specifying an `href`
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "linking.html#AElementHrefAttribute", "href for &lt;a&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("a")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#HrefAttribute", "href for &lt;animate&gt;, &lt;animateMotion&gt;, &lt;animateTransform&gt;, and &lt;set&gt;")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>Defines <code>href</code> for animation elements.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#DiscardElementHrefAttribute", "href for &lt;discard&gt;")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("discard")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feimage-href", "href for &lt;feImage&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("feImage")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "embedded.html#ImageElementHrefAttribute", "href for &lt;image&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("image")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#LinearGradientElementHrefAttribute", "href for &lt;linearGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the
-        {{SVGElement("linearGradient")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#MPathElementHrefAttribute", "href for &lt;mpath&gt;")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("mpath")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#PatternElementHrefAttribute", "href for &lt;pattern&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("pattern")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#RadialGradientElementHrefAttribute", "href for &lt;radialGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the
-        {{SVGElement("radialGradient")}} element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "interact.html#ScriptElementHrefAttribute", "href for &lt;script&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("script")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "text.html#TextPathElementHrefAttribute", "href for &lt;textPath&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("textPath")}}
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "struct.html#UseElementHrefAttribute", "href for &lt;use&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Defines <code>href</code> for the {{SVGElement("use")}} element.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -513,4 +388,4 @@ The `<use>` element can reference an entire SVG document by specifying an `href`
 
 ## See also
 
-*   {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}}

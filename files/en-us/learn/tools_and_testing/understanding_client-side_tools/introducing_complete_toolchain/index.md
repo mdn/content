@@ -45,7 +45,7 @@ The toolchain that we are creating in this article will be used to build and dep
 
 ![screenshot of the sample will it miss website](will-it-miss-screenshot.png)
 
-You can see a live version of the site at [near-misses.netlify.com](https://near-misses.netlify.com/).
+You can see a live version of the site at [near-misses.netlify.com](https://near-misses.netlify.app/).
 
 ## Tools used in our toolchain
 
@@ -53,7 +53,7 @@ In this article we're going to use the following tools and features:
 
 - [JSX](https://reactjs.org/docs/introducing-jsx.html), a [React](https://reactjs.org)-related set of syntax extensions that allow you to do things like defining component structures inside JavaScript. You won't need to know React to follow this tutorial, but we've included this to give you an idea of how a non-native web language could be integrated into a toolchain.
 - The latest built-in JavaScript features (at time of writing), such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
-- Useful development tools such as [Prettier](https://prettier.io/) for formatting and [eslint](https://eslint.org/) for linting.
+- Useful development tools such as [Prettier](https://prettier.io/) for formatting and [ESLint](https://eslint.org/) for linting.
 - [PostCSS](https://postcss.org/) to provide CSS nesting capabilities.
 - [Parcel](https://parceljs.org/) to build and minify our code, and to write a bunch of configuration file content automatically for us.
 - [GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) to manage our source code control.
@@ -73,7 +73,7 @@ However, more complicated software requirements will likely benefit from the usa
 
 For our sample project, we'll be using a toolchain specifically designed to aid our software development and support the technical choices made during the software design phase. We will however be avoiding any superfluous tooling, with the aim of keeping complexity to a minimum.
 
-For  example, we _could_ have included a tool to minimize our SVG file sizes during build. However, this project has only 4 SVG images, which were [manually minified using SVGO](https://www.npmjs.com/package/svgo) before adding them to the project.
+For example, we _could_ have included a tool to minimize our SVG file sizes during build. However, this project has only 4 SVG images, which were [manually minified using SVGO](https://www.npmjs.com/package/svgo) before adding them to the project.
 
 ## A couple of prerequisites
 
@@ -100,7 +100,7 @@ Let's start working on these, beginning with our development environment.
 
 This part of the toolchain is sometimes seen to be delaying the actual work, and it can be very easy to fall into a "rabbit hole" of tooling where you spend a lot of time trying to get the environment "just right".
 
-But you can look at this in the same way as setting up your physical work environment. The chair needs to be comfortable, and set up in a good position to help with your posture. You need power, Wifi, and USB ports! There might be important decorations or music that help with your mental state — these are all important to doing your best work possible, and they should also only need to be set up once, if done properly.
+But you can look at this in the same way as setting up your physical work environment. The chair needs to be comfortable, and set up in a good position to help with your posture. You need power, Wi-Fi, and USB ports! There might be important decorations or music that help with your mental state — these are all important to doing your best work possible, and they should also only need to be set up once, if done properly.
 
 In the same way, setting up your development environment, if done well, needs doing only once and should be reusable in many future projects. You will probably want to review this part of the toolchain semi-regularly and consider if there's any upgrades or changes you should introduce, but this shouldn't be required too often.
 
@@ -115,7 +115,7 @@ Your toolchain will depend on your own needs, but for this example of a (possibl
 
 We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, [refer back to that section](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups).
 
-> **Note:** Though it's not clear from the install process, installing npm also installs a complimentary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.
+> **Note:** Though it's not clear from the install process, installing npm also installs a complementary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.
 
 npm will be used to install subsequent parts of our toolchain. First of all, however, we'll install git to help with revision control.
 
@@ -131,11 +131,11 @@ Revision control can also allow you to _branch_ out your project code, creating 
 
 Finally, it can help you undo changes or revert your code back to a time "when it was working" if a mistake has been introduced somewhere and you are having trouble fixing it — something all developers need to do once in a while!
 
-Git can be [downloaded and installed via the git-scm website](https://git-scm.com/downloads) — download the relevant installer for your system, run it, and follow the on-screen prompts.  This is all you need to do for now.
+Git can be [downloaded and installed via the git-scm website](https://git-scm.com/downloads) — download the relevant installer for your system, run it, and follow the on-screen prompts. This is all you need to do for now.
 
 You can interact with git in a number of different ways, from using the command line to issue commands, to using a [git GUI app](https://git-scm.com/downloads/guis) to issue the same commands by pushing buttons, or even from directly inside your code editor, as seen in the Visual Studio Code example below:
 
-![github integration shown in VS Code](vscode-git.png)
+![GitHub integration shown in VS Code](vscode-git.png)
 
 Anyway, installing git is all we need to do for now. Let's move on.
 
@@ -161,7 +161,7 @@ Now that Prettier is installed, running and tidying your code can be done on the
 prettier --write ./src/index.html
 ```
 
-> **Note:** In the command above, I use Prettier with the `--write` flag. Prettier understands this to mean "if there's problems in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use prettier without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."
+> **Note:** In the command above, I use Prettier with the `--write` flag. Prettier understands this to mean "if there's problems in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."
 
 It can be arduous to run the initial command against each file, and it would be useful to have a single command to do this for us (and the same will go for our linting tools).
 
@@ -169,7 +169,7 @@ There's many different ways to solve this problem; here's just a few:
 
 - Using npm scripts to run multiple commands from the command line in one go, such as `npm run tidy-code`.
 - Using special "git hooks" to test if the code is formatted before a commit.
-- Using code editor plugins to run prettier commands each time a file is saved.
+- Using code editor plugins to run Prettier commands each time a file is saved.
 
 > **Note:** What is a git hook? Git (not GitHub) provides a system that lets us attach pre- and post- actions to the tasks you perform with git (such as committing your code). Although git hooks can be a bit overly complicated (in this author's opinion), once they're in place they can be very powerful. If you're interested in using hooks, [Husky](https://github.com/typicode/husky) is a greatly simplified route into using hooks.
 
@@ -183,18 +183,18 @@ Linting helps with code quality but also is a way to catch potential errors earl
 
 Web development linting tools mostly exist for JavaScript (though there are a few available for HTML and CSS). This makes sense: if an unknown HTML element or invalid CSS property is used, due to the resilient nature of these two languages nothing is likely to break. JavaScript is a lot more fragile — mistakenly calling a function that doesn't exist for example causes your JavaScript to break; linting JavaScript is therefore very important, especially for larger projects.
 
-The go to tool for JavaScript linting is [eslint](https://eslint.org/). It's an extremely powerful and versatile tool but can be tricky to configure correctly and you could easily consume many hours trying to get a configuration _just right_!
+The go to tool for JavaScript linting is [ESLint](https://eslint.org/). It's an extremely powerful and versatile tool but can be tricky to configure correctly and you could easily consume many hours trying to get a configuration _just right_!
 
-Out of the box, eslint is going to complain that it can't find the configuration file if you run it. The configuration file supports multiple formats but for this project we'll use `.eslintrc.json` (the leading period means the file is hidden by default).
+Out of the box, ESLint is going to complain that it can't find the configuration file if you run it. The configuration file supports multiple formats but for this project we'll use `.eslintrc.json` (the leading period means the file is hidden by default).
 
-eslint is installed via npm, so as per discussions in Chapter 2, you have the choice to install this tool locally or globally. Using both is recommended:
+ESLint is installed via npm, so as per discussions in Chapter 2, you have the choice to install this tool locally or globally. Using both is recommended:
 
-- For projects you intend to share, you should always include eslint as a local dependency so that anyone making their own copy can follow the rules you've applied to the project.
-- You should also consider having eslint installed globally so that you can quickly use it to check any file you want.
+- For projects you intend to share, you should always include ESLint as a local dependency so that anyone making their own copy can follow the rules you've applied to the project.
+- You should also consider having ESLint installed globally so that you can quickly use it to check any file you want.
 
-For the sake of simplicity, in this chapter we're not going to explore all the features of eslint, but we will put a configuration in place that works for our particular project and its requirements. However, bear in mind that if you want to refine and enforce a rule about how your code looks (or validates), it's very likely that it can be done with the right eslint configuration.
+For the sake of simplicity, in this chapter we're not going to explore all the features of ESLint, but we will put a configuration in place that works for our particular project and its requirements. However, bear in mind that if you want to refine and enforce a rule about how your code looks (or validates), it's very likely that it can be done with the right ESLint configuration.
 
-A little later in this chapter, we'll provide the eslint config. Once a working configuration is in place, running the command can generate some useful information. Here is an example eslint output:
+A little later in this chapter, we'll provide the ESLint config. Once a working configuration is in place, running the command can generate some useful information. Here is an example ESLint output:
 
 ```bash
 ./my-project/src/index.js
@@ -205,11 +205,11 @@ A little later in this chapter, we'll provide the eslint config. Once a working 
 ✖ 3 problems (3 errors, 0 warnings)
 ```
 
-> **Note:** We'll install eslint in the next section; don't worry about this for now.
+> **Note:** We'll install ESLint in the next section; don't worry about this for now.
 
-As with other tools, code editor integration support is typically good for eslint, and potentially more useful as it can give us real-time feedback when issues crop up:
+As with other tools, code editor integration support is typically good for ESLint, and potentially more useful as it can give us real-time feedback when issues crop up:
 
-![eslint error integration shown in VS Code](eslint-error.png)
+![ESLint error integration shown in VS Code](eslint-error.png)
 
 ## Configuring the initial project
 
@@ -221,15 +221,15 @@ Using the command line, we can create the project, install the initial tooling, 
 
 OK, let's get the initial project setup out the way.
 
-1.  Start off by opening your terminal, and navigating to a place that you'll be able to find and get to easily. The Desktop perhaps, or your home or documents folder?
-2.  Next, run the following commands to create a folder to keep your project in, and go inside the folder:
+1. Start off by opening your terminal, and navigating to a place that you'll be able to find and get to easily. The Desktop perhaps, or your home or documents folder?
+2. Next, run the following commands to create a folder to keep your project in, and go inside the folder:
 
     ```bash
     mkdir will-it-miss
     cd will-it-miss
     ```
 
-3.  Now we will create a new directory for all of our web site's development code to live in. Run the following now:
+3. Now we will create a new directory for all of our web site's development code to live in. Run the following now:
 
     ```bash
     mkdir src
@@ -237,7 +237,7 @@ OK, let's get the initial project setup out the way.
 
     Code organization tends to be quite subjective from team to team. For this project, the source code will live in `src`.
 
-4.  Making sure you are inside the root of the `will-it-miss` directory, enter the following command to start git’s source control functionality working on the directory:
+4. Making sure you are inside the root of the `will-it-miss` directory, enter the following command to start git's source control functionality working on the directory:
 
     ```bash
     git init
@@ -245,7 +245,7 @@ OK, let's get the initial project setup out the way.
 
     This means that you'll now be able to start storing revisions to the folder's contents, saving it to a remote repository, etc. More on this later!
 
-5.  Next, enter the following command to turn your directory into an npm package, with the advantages that we discussed in the previous article:
+5. Next, enter the following command to turn your directory into an npm package, with the advantages that we discussed in the previous article:
 
     ```bash
     npm init --force
@@ -257,13 +257,13 @@ OK, let's get the initial project setup out the way.
 
 At this point, we'll get hold of the project's code files (HTML, CSS, JavaScript, etc.), and put them in our `src` directory. We won't teach you how they work, as that is not the point of this chapter. They are merely here to run the tools on, to teach you about how _they_ work.
 
-1.  To get hold of the code files, visit <https://github.com/remy/mdn-will-it-miss> and download and unzip the contents of this repo onto your local drive somewhere. You can download the entire project as a zip file by selecting _Clone or download_ > _Download ZIP_.
+1. To get hold of the code files, visit <https://github.com/remy/mdn-will-it-miss> and download and unzip the contents of this repo onto your local drive somewhere. You can download the entire project as a zip file by selecting _Clone or download_ > _Download ZIP_.
 
-    ![The github will it miss repo](github-will-it-miss.png)
+    ![The GitHub will it miss repo](github-will-it-miss.png)
 
-2.  Now copy the contents of the project's `src` directory to your currently empty `src` directory.
+2. Now copy the contents of the project's `src` directory to your currently empty `src` directory.
 
-We have our project files in place. That’s all we need to do for now!
+We have our project files in place. That's all we need to do for now!
 
 > **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all of the project dependencies that are stored in the \`package.json\` file.
 
@@ -279,14 +279,14 @@ There's two important things to note about the command you just ran. The first i
 
 The second important part of this install command is the `--save-dev` option. This tells the npm tool that these particular dependencies are only needed for development (npm therefore lists them in the `package.json` file under `devDependencies`, not `dependencies`). This means that if this project is installed in production mode these dependencies will not be installed. A "typical" project can have many development dependencies which are not needed to actually run the code in production. Keeping them as separate dependencies reduces any unnecessary work when deploying to production (which we will look at in the next chapter).
 
-Before starting on the development of the actual application code, a little configuration is required for our tools to work properly. It's not a prerequisite of developing for the web, but it's useful to have the tools configured correctly if they’re going to help catch errors during development — which eslint is particularly useful for.
+Before starting on the development of the actual application code, a little configuration is required for our tools to work properly. It's not a prerequisite of developing for the web, but it's useful to have the tools configured correctly if they're going to help catch errors during development — which ESLint is particularly useful for.
 
 ### Configuring our tools
 
-In the root of the project (not in the `src` directory), we will add configuration files to configure some of our tools, namely Prettier and eslint. This is general practice for tool configuration — you tend to find the config files in the project root, which more often than not contain configuration options expressed in a JSON structure (though our tools and many others also support YAML, which you can switch to if that's your preferred flavor of configuration file).
+In the root of the project (not in the `src` directory), we will add configuration files to configure some of our tools, namely Prettier and ESLint. This is general practice for tool configuration — you tend to find the config files in the project root, which more often than not contain configuration options expressed in a JSON structure (though our tools and many others also support YAML, which you can switch to if that's your preferred flavor of configuration file).
 
-1.  First of all, create a file in the root of your `will-it-miss` directory called `.prettierrc.json`.
-2.  To configure prettier, give `.prettierrc.json` the following contents:
+1. First of all, create a file in the root of your `will-it-miss` directory called `.prettierrc.json`.
+2. To configure Prettier, give `.prettierrc.json` the following contents:
 
     ```json
     {
@@ -295,9 +295,9 @@ In the root of the project (not in the `src` directory), we will add configurati
     }
     ```
 
-    With these settings, when prettier formats JavaScript for you it will use single quotes for all your quoted values, and it won't use trailing commas (a newer feature of ECMAScript that will cause errors in older browsers). You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
+    With these settings, when Prettier formats JavaScript for you it will use single quotes for all your quoted values, and it won't use trailing commas (a newer feature of ECMAScript that will cause errors in older browsers). You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
 
-3.  Next up, we’ll configure eslint — create another file in the root of your `will-it-miss` directory called `.eslintrc.json`, and give it the following contents:
+3. Next up, we'll configure ESLint — create another file in the root of your `will-it-miss` directory called `.eslintrc.json`, and give it the following contents:
 
     ```json
     {
@@ -316,11 +316,11 @@ In the root of the project (not in the `src` directory), we will add configurati
     }
     ```
 
-    The above eslint configuration says that we want to use the "recommended" eslint settings, that we're going to allow usage of ES6 features (such as [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) or [`Set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)), that we can use module [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements, and that using [`console.log()`](/en-US/docs/Web/API/console/log) is allowed.
+    The above ESLint configuration says that we want to use the "recommended" ESLint settings, that we're going to allow usage of ES6 features (such as [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) or [`Set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)), that we can use module [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements, and that using [`console.log()`](/en-US/docs/Web/API/console/log) is allowed.
 
-4.  However, in the project's source files we are using React JSX syntax (for your real projects you might use React or Vue or any other framework, or no framework at all!).
+4. However, in the project's source files we are using React JSX syntax (for your real projects you might use React or Vue or any other framework, or no framework at all!).
 
-    Putting JSX syntax in the middle of our JavaScript is going to cause eslint to complain pretty quickly with the current configuration, so we'll need to add a little more configuration to the eslint settings to get it to accept JSX features.
+    Putting JSX syntax in the middle of our JavaScript is going to cause ESLint to complain pretty quickly with the current configuration, so we'll need to add a little more configuration to the ESLint settings to get it to accept JSX features.
 
     The final config file should look like this — add in the bolded parts and save it:
 
@@ -349,15 +349,15 @@ In the root of the project (not in the `src` directory), we will add configurati
 
     As the configuration now uses a plugin called "React", this development dependency also needs to be installed, so that the code is there to actually run that part of the linting process.
 
-5.  Run the following terminal command in the root of your project folder:
+5. Run the following terminal command in the root of your project folder:
 
     ```bash
     npm install --save-dev eslint-plugin-react
     ```
 
-There’s a complete [list of eslint rules](https://eslint.org/docs/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own eslint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: eslint configuration is a very deep rabbit hole!
+There's a complete [list of ESLint rules](https://eslint.org/docs/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own ESLint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: ESLint configuration is a very deep rabbit hole!
 
-That’s our dev environment setup complete at this point. Now, finally we're (very nearly) ready to code.
+That's our dev environment setup complete at this point. Now, finally we're (very nearly) ready to code.
 
 ## Build and transformation tools
 
@@ -383,14 +383,14 @@ npm install --save-dev parcel-bundler
 
 ### Using future features
 
-The code for our project is using some new web features including features that are so new they aren't fully standardised yet. For example, instead of reaching for a tool like [Sass](https://sass-lang.com/), this particular project uses the W3C proposal for [CSS nesting](https://drafts.csswg.org/css-nesting/). CSS nesting allows us to nest CSS selectors and properties inside one another thus creating more specific selector scope. Sass was one of the first preprocessors to support nesting (if not the first) but now after many years, nesting looks like it will soon be standardised, which means that we will have it available in our browsers without needing build tools.
+The code for our project is using some new web features including features that are so new they aren't fully standardized yet. For example, instead of reaching for a tool like [Sass](https://sass-lang.com/), this particular project uses the W3C proposal for [CSS nesting](https://drafts.csswg.org/css-nesting/). CSS nesting allows us to nest CSS selectors and properties inside one another thus creating more specific selector scope. Sass was one of the first preprocessors to support nesting (if not the first) but now after many years, nesting looks like it will soon be standardized, which means that we will have it available in our browsers without needing build tools.
 
 Until then, Parcel will do the transformation between nested CSS and natively supported CSS with the help of [PostCSS](https://postcss.org/), which Parcel works with out of the box. Since we've specifically decided this project should use CSS nesting (instead of Sass), the project will need to include a PostCSS plugin.
 
 Let's use the [postcss-preset-env](https://preset-env.cssdb.org/), which lets us "use tomorrow's CSS today". To do so, follow these steps:
 
-1.  Add a single file called `.postcssrc` to the root of your project directory.
-2.  Add the following contents to the new file, which will automagically give us full access to the latest CSS features:
+1. Add a single file called `.postcssrc` to the root of your project directory.
+2. Add the following contents to the new file, which will automagically give us full access to the latest CSS features:
 
     ```json
     {
@@ -402,7 +402,7 @@ Let's use the [postcss-preset-env](https://preset-env.cssdb.org/), which lets us
     }
     ```
 
-That’s all we need to do — remember that Parcel installs the dependencies for us by default!
+That's all we need to do — remember that Parcel installs the dependencies for us by default!
 
 Although this stage of our toolchain can be quite painful, because we've chosen a tool that purposely tries to reduce configuration and complexity, there's really nothing more we need to do during the development phase. Modules are correctly imported, nested CSS is correctly transformed to "regular CSS", and our development is unimpeded by the build process.
 
@@ -410,9 +410,9 @@ Now our software is ready to be written!
 
 ## Running the transformation
 
-To start working with our project, we’ll run the Parcel server on the command line. In its default mode it will watch for changes in your code and automatically install your dependencies. This is nice because we don't have to flit back and forth between the code and the command line.
+To start working with our project, we'll run the Parcel server on the command line. In its default mode it will watch for changes in your code and automatically install your dependencies. This is nice because we don't have to flit back and forth between the code and the command line.
 
-1.  To start Parcel off in the background, go to your terminal and run the following command:
+1. To start Parcel off in the background, go to your terminal and run the following command:
 
     ```bash
     npx parcel src/index.html
@@ -431,23 +431,23 @@ To start working with our project, we’ll run the Parcel server on the command 
 
     The server is now running on the URL that was printed (in this case localhost:1234).
 
-2.  Go to this URL in your browser and you will see the example app running!
+2. Go to this URL in your browser and you will see the example app running!
 
 Another clever trick Parcel has up its sleeve is that any changes to your source code will now trigger an update in the browser. To try this out:
 
-1.  Load up the file `src/components/App.js` in your favorite text editor.
-2.  Search for the text "near misses", and replace it with something silly like "flying pigs".
-3.  Save the file, then go straight back to the app running in your browser. You’ll notice that the browser has automatically refreshed, and the line “\<date> there will be \<number> near misses” at the top of the page has been changed!
+1. Load up the file `src/components/App.js` in your favorite text editor.
+2. Search for the text "near misses", and replace it with something silly like "flying pigs".
+3. Save the file, then go straight back to the app running in your browser. You'll notice that the browser has automatically refreshed, and the line "\<date> there will be \<number> near misses" at the top of the page has been changed!
 
-You could also try using eslint and Prettier too — try deliberately removing a load of the whitespace from one of your files and try put prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors eslint gives you when you try to use Parcel to build it again.
+You could also try using ESLint and Prettier too — try deliberately removing a load of the whitespace from one of your files and try put Prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors ESLint gives you when you try to use Parcel to build it again.
 
 ## Summary
 
 We've come a long way in this chapter, building up a rather nice local development environment to create an application in.
 
-At this point during web software development you would usually be crafting your code for the software you intend to build. Since this module is all about learning the tools around web development, not web development code itself, we won’t be teaching you any actual coding — you’ll find that information in the rest of MDN!
+At this point during web software development you would usually be crafting your code for the software you intend to build. Since this module is all about learning the tools around web development, not web development code itself, we won't be teaching you any actual coding — you'll find that information in the rest of MDN!
 
-Instead, we’ve written an example project for you to use your tools on. We’d suggest that you work through the rest of the chapter using our example code, and then you can try changing the contents of the src directory to your own project and publishing that on Netlify instead! And indeed, deploying to Netlify will be the end goal of the next chapter!
+Instead, we've written an example project for you to use your tools on. We'd suggest that you work through the rest of the chapter using our example code, and then you can try changing the contents of the src directory to your own project and publishing that on Netlify instead! And indeed, deploying to Netlify will be the end goal of the next chapter!
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 

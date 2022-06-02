@@ -53,11 +53,11 @@ property described by a getter-setter pair of functions. A descriptor must be on
 these two flavors; it cannot be both.
 
 Both data and accessor descriptors are objects. They share the following optional keys
-(please note: the **defaults** mentioned here are in the case of defining
+(please note: the **defaults** mentioned here are in the case of defining
 properties using `Object.defineProperty()`):
 
 - `configurable`
-  - : `true` if the type of this property descriptor may be changed and if the
+  - : `true` if the type of this property descriptor may be changed and if the
     property may be deleted from the corresponding object.
     **Defaults to `false`.**
 - `enumerable`
@@ -72,7 +72,7 @@ A **data descriptor** also has the following optional keys:
     object, function, etc).
     **Defaults to {{jsxref("undefined")}}.**
 - `writable`
-  - : `true` if the value associated with the property may be changed with an
+  - : `true` if the value associated with the property may be changed with an
     {{jsxref("Operators#assignment_operators", "assignment operator", "", 1)}}.
     **Defaults to `false`.**
 
@@ -94,8 +94,7 @@ An **accessor descriptor** also has the following optional keys:
 
 If a descriptor has neither of `value`, `writable`,
 `get` and `set` keys, it is treated as a data descriptor. If a
-descriptor has both \[`value` or `writable`] and \[`get`
-or `set`] keys, an exception is thrown.
+descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
 
 Bear in mind that these attributes are not necessarily the descriptor's own properties.
 Inherited properties will be considered as well. In order to ensure these defaults are
@@ -105,8 +104,8 @@ options explicitly, or point to {{jsxref("null")}} with {{jsxref("Object.create"
 
 ```js
 // using __proto__
-var obj = {};
-var descriptor = Object.create(null); // no inherited properties
+const obj = {};
+const descriptor = Object.create(null); // no inherited properties
 descriptor.value = 'static';
 
 // not enumerable, not configurable, not writable as defaults
@@ -122,7 +121,7 @@ Object.defineProperty(obj, 'key', {
 
 // recycling same object
 function withValue(value) {
-  var d = withValue.d || (
+  const d = withValue.d || (
     withValue.d = {
       enumerable: false,
       writable: false,
@@ -132,7 +131,7 @@ function withValue(value) {
   );
 
   // avoiding duplicate operation for assigning value
-  if (d.value !== value) d.value = value;
+  if (d.value !== value) d.value = value;
 
   return d;
 }
@@ -154,7 +153,7 @@ When the property specified doesn't exist in the object,
 omitted from the descriptor, and default values for those fields are inputted.
 
 ```js
-var o = {}; // Creates a new object
+const o = {}; // Creates a new object
 
 // Example of an object property added
 // with defineProperty with a data property descriptor
@@ -168,7 +167,7 @@ Object.defineProperty(o, 'a', {
 
 // Example of an object property added
 // with defineProperty with an accessor property descriptor
-var bValue = 38;
+const bValue = 38;
 Object.defineProperty(o, 'b', {
   // Using shorthand method names (ES2015 feature).
   // This is equivalent to:
@@ -199,7 +198,7 @@ Object.defineProperty(o, 'conflict', {
 When the property already exists, `Object.defineProperty()` attempts to
 modify the property according to the values in the descriptor and the object's current
 configuration. If the old descriptor had its `configurable` attribute set to
-`false` the property is said to be “non-configurable”. It is not possible to
+`false` the property is said to be "non-configurable". It is not possible to
 change any attribute of a non-configurable accessor property. For data properties which are configurable, it is
 possible to modify the value if the property is writable, and it is possible to change the
 `writable` attribute from `true` to `false`. It is not
@@ -213,10 +212,10 @@ unless the current and new values are the same.
 #### Writable attribute
 
 When the `writable` property attribute is set to `false`, the
-property is said to be “non-writable”. It cannot be reassigned.
+property is said to be "non-writable". It cannot be reassigned.
 
 ```js
-var o = {}; // Creates a new object
+const o = {}; // Creates a new object
 
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -232,7 +231,7 @@ console.log(o.a); // logs 37. The assignment didn't work.
 // strict mode
 (function() {
   'use strict';
-  var o = {};
+  const o = {};
   Object.defineProperty(o, 'b', {
     value: 2,
     writable: false
@@ -248,13 +247,13 @@ it but doesn't throw an error either.
 #### Enumerable attribute
 
 The `enumerable` property attribute defines whether the property is picked
-by {{jsxref("Object.assign()")}} or [spread
-](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)operator. For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties it also defines whether it shows
+by {{jsxref("Object.assign()")}} or [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)operator.
+For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties it also defines whether it shows
 up in a {{jsxref("Statements/for...in", "for...in")}} loop and
 {{jsxref("Object.keys()")}} or not.
 
 ```js
-var o = {};
+const o = {};
 Object.defineProperty(o, 'a', {
   value: 1,
   enumerable: true
@@ -269,15 +268,15 @@ Object.defineProperty(o, 'c', {
 o.d = 4; // enumerable defaults to true
          // when creating a property by setting it
 Object.defineProperty(o, Symbol.for('e'), {
-  value: 5,
-  enumerable: true
+  value: 5,
+  enumerable: true
 });
 Object.defineProperty(o, Symbol.for('f'), {
-  value: 6,
-  enumerable: false
+  value: 6,
+  enumerable: false
 });
 
-for (var i in o) {
+for (const i in o) {
   console.log(i);
 }
 // logs 'a' and 'd' (in undefined order)
@@ -291,7 +290,7 @@ o.propertyIsEnumerable('d'); // true
 o.propertyIsEnumerable(Symbol.for('e')); // true
 o.propertyIsEnumerable(Symbol.for('f')); // false
 
-var p = { ...o }
+const p = { ...o }
 p.a // 1
 p.b // undefined
 p.c // undefined
@@ -307,7 +306,7 @@ can be deleted from the object and whether its attributes (other than `value`
 and `writable`) can be changed.
 
 ```js
-var o = {};
+const o = {};
 Object.defineProperty(o, 'a', {
   get() { return 1; },
   configurable: false
@@ -346,7 +345,7 @@ often a difference between using dot notation to assign a value and using
 `Object.defineProperty()`, as shown in the example below.
 
 ```js
-var o = {};
+const o = {};
 
 o.a = 1;
 // is equivalent to:
@@ -376,8 +375,8 @@ entry.
 
 ```js
 function Archiver() {
-  var temperature = null;
-  var archive = [];
+  const temperature = null;
+  const archive = [];
 
   Object.defineProperty(this, 'temperature', {
     get() {
@@ -393,7 +392,7 @@ function Archiver() {
   this.getArchive = function() { return archive; };
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
@@ -403,7 +402,7 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 In this example, a getter always returns the same value.
 
 ```js
-var pattern = {
+const pattern = {
     get() {
         return 'I always return this string, ' +
                'whatever you have assigned';
@@ -417,7 +416,7 @@ function TestDefineSetAndGet() {
     Object.defineProperty(this, 'myproperty', pattern);
 }
 
-var instance = new TestDefineSetAndGet();
+const instance = new TestDefineSetAndGet();
 instance.myproperty = 'test';
 console.log(instance.myproperty);
 // I always return this string, whatever you have assigned
@@ -436,7 +435,7 @@ objects.
 function myclass() {
 }
 
-var value;
+const value;
 Object.defineProperty(myclass.prototype, "x", {
   get() {
     return value;
@@ -446,8 +445,8 @@ Object.defineProperty(myclass.prototype, "x", {
   }
 });
 
-var a = new myclass();
-var b = new myclass();
+const a = new myclass();
+const b = new myclass();
 a.x = 1;
 console.log(b.x); // 1
 ```
@@ -469,8 +468,8 @@ Object.defineProperty(myclass.prototype, "x", {
   }
 });
 
-var a = new myclass();
-var b = new myclass();
+const a = new myclass();
+const b = new myclass();
 a.x = 1;
 console.log(b.x); // undefined
 ```
@@ -489,7 +488,7 @@ Object.defineProperty(myclass.prototype, "y", {
   value: 1
 });
 
-var a = new myclass();
+const a = new myclass();
 a.x = 2;
 console.log(a.x); // 2
 console.log(myclass.prototype.x); // 1
@@ -508,8 +507,7 @@ console.log(myclass.prototype.y); // 1
 
 ## See also
 
-- [Enumerability and
-  ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

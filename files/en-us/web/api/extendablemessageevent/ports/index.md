@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent.ports
 slug: Web/API/ExtendableMessageEvent/ports
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -18,13 +19,7 @@ The **`ports`** read-only property of the
 {{domxref("MessagePort")}} objects representing the ports of the associated message
 channel (the channel the message is being sent through.)
 
-## Syntax
-
-```js
-var myPorts = extendableMessageEvent.ports;
-```
-
-### Value
+## Value
 
 An array of {{domxref("MessagePort")}} objects.
 

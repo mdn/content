@@ -39,15 +39,15 @@ Before starting this module, you should have some familiarity with the basics of
 ## Guides
 
 - [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-  - : In any programming language, code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is night. In this article we'll explore how conditional structures work in JavaScript.
+  - : In any programming language, code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is night. In this article we'll explore how conditional structures work in JavaScript.
 - [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-  - : Sometimes you need a task done more than once in a row. For example, looking through a list of names. In programming, loops perform this job very well. Here we will look at loop structures in JavaScript.
+  - : Sometimes you need a task done more than once in a row. For example, looking through a list of names. In programming, loops perform this job very well. Here we will look at loop structures in JavaScript.
 - [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-  - : Another essential concept in coding is **functions. Functions** allow you to store a piece of code that does a single task inside a defined block, and then call that code whenever you need it using a single short command — rather than having to type out the same code multiple times. In this article we'll explore fundamental concepts behind functions such as basic syntax, how to invoke and define functions, scope, and parameters.
+  - : Another essential concept in coding is **functions. Functions** allow you to store a piece of code that does a single task inside a defined block, and then call that code whenever you need it using a single short command — rather than having to type out the same code multiple times. In this article we'll explore fundamental concepts behind functions such as basic syntax, how to invoke and define functions, scope, and parameters.
 - [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-  - : With most of the essential theory dealt with previously, this article provides a practical experience. Here you'll get some practice with building up your own custom function. Along the way, we'll also explain some further useful details of dealing with functions.
+  - : With most of the essential theory dealt with previously, this article provides a practical experience. Here you'll get some practice with building up your own custom function. Along the way, we'll also explain some further useful details of dealing with functions.
 - [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-  - : The last essential concept you must know about a function is return values. Some functions don't return a significant value after completion, but others do. It's important to understand what their values are, how to make use of them in your code, and how to make your own custom functions return useful values.
+  - : The last essential concept you must know about a function is return values. Some functions don't return a significant value after completion, but others do. It's important to understand what their values are, how to make use of them in your code, and how to make your own custom functions return useful values.
 - [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
   - : Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. For example if the user clicks a button on a webpage, you might want to respond to that action by displaying an information box. In this final article we will discuss some important concepts surrounding events, and look at how they work in browsers.
 
@@ -56,7 +56,7 @@ Before starting this module, you should have some familiarity with the basics of
 The following assessment will test your understanding of the JavaScript basics covered in the guides above.
 
 - [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)
-  - : Now that we've looked at the fundamental building blocks of JavaScript, we'll test your knowledge of loops, functions, conditionals and events by building a fairly common item you'll see on a lot of websites — a JavaScript-powered image gallery.
+  - : Now that we've looked at the fundamental building blocks of JavaScript, we'll test your knowledge of loops, functions, conditionals and events by building a fairly common item you'll see on a lot of websites — a JavaScript-powered image gallery.
 
 ## See also
 

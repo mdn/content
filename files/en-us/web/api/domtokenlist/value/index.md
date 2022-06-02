@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -9,7 +10,7 @@ browser-compat: api.DOMTokenList.value
 {{APIRef("DOM")}}
 
 The **`value`** property of the {{domxref("DOMTokenList")}}
-interface is a stringifier that returns the value of the list serialized as a
+interface is a {{Glossary("stringifier")}} that returns the value of the list serialized as a
 string, or clears and sets the list to the given value.
 
 ## Value

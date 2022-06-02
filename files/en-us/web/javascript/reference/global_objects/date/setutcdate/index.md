@@ -45,7 +45,7 @@ incremented to July.
 ### Using setUTCDate()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCDate(20);
 ```
 

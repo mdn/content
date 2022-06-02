@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAttestationResponse.getTransports()
 slug: Web/API/AuthenticatorAttestationResponse/getTransports
+page-type: web-api-instance-method
 tags:
   - API
   - AuthenticatorAttestationResponse
@@ -30,7 +31,7 @@ not removable from the device).
 ## Syntax
 
 ```js
-arrTransports = authenticatorAttestationResponse.getTransports()
+getTransports()
 ```
 
 ### Parameters
@@ -40,8 +41,7 @@ None.
 ### Return value
 
 An {{jsxref("Array")}} containing the different transports supported by the
-authenticator or nothing if this information is not available.of the processing of the
-different extensions by the client. The elements of this array are supposed to be in
+authenticator or nothing if this information is not available. The elements of this array are supposed to be in
 lexicographical order. Their values may be :
 
 - `"usb"`: the authenticator can be contacted via a removable USB link
@@ -55,7 +55,7 @@ lexicographical order. Their values may be :
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -76,7 +76,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var transports = newCredentialInfo.response.getTransports();
+    const transports = newCredentialInfo.response.getTransports();
     console.table(transports); // may be something like ["internal", "nfc", "usb"]
   }).catch(function (err) {
      console.error(err);

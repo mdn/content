@@ -15,17 +15,11 @@ browser-compat: api.ServiceWorkerRegistration.pushManager
 
 The **`pushManager`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
-{{domxref("PushManager")}} interface for managing push subscriptions; this includes
+{{domxref("PushManager")}} interface for managing push subscriptions; this includes
 support for subscribing, getting an active subscription, and accessing push permission
 status.
 
-## Syntax
-
-```js
-var pushManager = serviceWorkerRegistration.pushManager;
-```
-
-### Value
+## Value
 
 A {{domxref("PushManager")}} object.
 

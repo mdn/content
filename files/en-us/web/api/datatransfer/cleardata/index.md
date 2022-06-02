@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransfer
@@ -18,29 +19,34 @@ operation's {{domxref("DataTransfer","drag data")}} for the given type. If data 
 given type does not exist, this method does nothing.
 
 If this method is called with no arguments or the format is an empty
-{{domxref("DOMString","string")}}, the data of all types will be removed.
+string, the data of all types will be removed.
 
 This method does _not_ remove files from the drag operation, so it's possible
 for there still to be an entry with the type `"Files"` left in the object's
 {{domxref("DataTransfer.types")}} list if there are any files included in the drag.
 
-> **Note:** This method can only be used in the handler for the {{event("dragstart")}} event,
+> **Note:** This method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event,
 > because that's the only time the drag operation's data store is writeable.
 
 ## Syntax
 
 ```js
-DataTransfer.clearData([format]);
+clearData()
+clearData(format)
 ```
 
 ### Parameters
 
 - `format` {{optional_inline}}
-  - : A {{domxref("DOMString","string")}} which specifies the type of data to remove. If
+  - : A string which specifies the type of data to remove. If
     this parameter is an empty string or is not provided, the data for all types is
     removed.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.getData()","getData()")}},
@@ -83,7 +89,7 @@ span.tweaked {
 window.addEventListener('DOMContentLoaded', function () {
   // Select HTML elements
   var draggable = document.getElementById('source');
-  var dropable = document.getElementById('target');
+  var droppable = document.getElementById('target');
   var status = document.getElementById('status');
   var data = document.getElementById('data');
   var dropped = false;
@@ -91,9 +97,9 @@ window.addEventListener('DOMContentLoaded', function () {
   // Register event handlers
   draggable.addEventListener('dragstart', dragStartHandler);
   draggable.addEventListener('dragend', dragEndHandler);
-  dropable.addEventListener('dragover', dragOverHandler);
-  dropable.addEventListener('dragleave', dragLeaveHandler);
-  dropable.addEventListener('drop', dropHandler);
+  droppable.addEventListener('dragover', dragOverHandler);
+  droppable.addEventListener('dragleave', dragLeaveHandler);
+  droppable.addEventListener('drop', dropHandler);
 
   function dragStartHandler (event) {
     status.textContent = 'Drag in process';
@@ -126,9 +132,9 @@ window.addEventListener('DOMContentLoaded', function () {
       // Remove all event listeners
       draggable.removeEventListener('dragstart', dragStartHandler);
       draggable.removeEventListener('dragend', dragEndHandler);
-      dropable.removeEventListener('dragover', dragOverHandler);
-      dropable.removeEventListener('dragleave', dragLeaveHandler);
-      dropable.removeEventListener('drop', dropHandler);
+      droppable.removeEventListener('dragover', dragOverHandler);
+      droppable.removeEventListener('dragleave', dragLeaveHandler);
+      droppable.removeEventListener('drop', dropHandler);
     }
   }
 
@@ -165,7 +171,7 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 ```
 
-{{EmbedLiveSample('Example', 300, 250)}}
+{{EmbedLiveSample('Examples', 300, 300)}}
 
 ## Specifications
 

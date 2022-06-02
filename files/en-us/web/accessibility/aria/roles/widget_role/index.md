@@ -1,19 +1,16 @@
 ---
 title: 'ARIA: widget role'
 slug: Web/Accessibility/ARIA/Roles/widget_role
-tags: 
+tags:
   - widget
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
+spec-urls: https://w3c.github.io/aria/#widget
 ---
-
-
-
-The **`widget`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles), is an interactive component of a graphical user interface (GUI).
-
+The **`widget`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles), is an interactive component of a graphical user interface (GUI).
 
 > **Note:**  The `widget` role is an abstract role used for the ontology. It is included here for completeness of documentation. It should not be used by web authors.
 
@@ -25,18 +22,13 @@ The `widget` role is a superclass role several abstract interactive GUI roles, i
 
 The abstract `widget` role is also a superclass role for some grouping roles which can be used by web authors, including [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (when not focusable), and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), which can and should be used when appropriate.  When the user navigates to one of these non-abstract roles of widget, keyboard events can switch to an application browsing mode, and pass keyboard events through to the browser.
 
-
 ## Best Practices
 
 Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#widget","ARIA: widget role")}}                                             | {{Spec2('ARIA')}}                         |
-
-
+{{Specifications}}
 
 ## See Also
 

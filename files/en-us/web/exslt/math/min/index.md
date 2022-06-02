@@ -15,7 +15,9 @@ To compute the minimum value of the node-set, the node set is sorted into ascend
 
 ## Syntax
 
-    math:min(nodeSet)
+```
+math:min(nodeSet)
+```
 
 ### Parameters
 
@@ -28,4 +30,4 @@ A result tree fragment representing the lowest valued node's numeric value as a 
 
 ## Specifications
 
-[EXSLT - MATH:MIN](http://www.exslt.org/regexp/functions/min/index.html)
+[EXSLT - MATH:MIN](http://exslt.org/regexp/functions/min/index.html)

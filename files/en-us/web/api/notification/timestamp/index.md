@@ -24,13 +24,7 @@ arbitrary timestamp that you want associated with the notification. For example,
 timestamp for an upcoming meeting could be set in the future, whereas a timestamp for a
 missed message could be set in the past.
 
-## Syntax
-
-```js
-var timestamp = Notification.timestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMTimeStamp")}}.
 
@@ -63,5 +57,4 @@ console.log(n.timestamp) // should log original timestamp
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

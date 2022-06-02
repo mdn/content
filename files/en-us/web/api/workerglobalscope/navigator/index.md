@@ -14,17 +14,11 @@ browser-compat: api.WorkerGlobalScope.navigator
 
 The **`navigator`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 
-## Syntax
-
-```js
-var navigatorObj = self.navigator;
-```
-
-### Value
+## Value
 
 A {{domxref("WorkerNavigator")}} object.
 
-## Example
+## Examples
 
 If you call the following
 
@@ -32,7 +26,7 @@ If you call the following
 console.log(navigator);
 ```
 
-inside a worker (which would basically be the equivalent of `self.console.log(self.navigator);`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerNavigator")}} object written to the console — something like the following:
+inside a worker (which would basically be the equivalent of `self.console.log(self.navigator);`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerNavigator")}} object written to the console — something like the following:
 
 ```js
 Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) Ap…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36", product: "Gecko", platform: "MacIntel", appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKi…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"…}
@@ -47,7 +41,7 @@ Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1
     __proto__: Object
 ```
 
-You could use this navigator object to return more information about the runtime envinronment, as you might do with a normal {{domxref("Navigator")}} object.
+You could use this navigator object to return more information about the runtime environment, as you might do with a normal {{domxref("Navigator")}} object.
 
 ## Specifications
 

@@ -11,6 +11,7 @@ tags:
   - Screen Capture API
   - Screen Sharing
   - getDisplayMedia
+browser-compat: api.MediaDevices.getDisplayMedia
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 
@@ -93,13 +94,11 @@ See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Pol
 
 ## Specifications
 
-| Specification                                                      |
-| ------------------------------------------------------------------ |
-| [Screen Capture](https://w3c.github.io/mediacapture-screen-share/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## See also
 

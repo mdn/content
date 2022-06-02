@@ -8,11 +8,12 @@ tags:
   - NeedsCompatTable
   - Reference
   - structuredClone
+  - Polyfill
 browser-compat: api.structuredClone
 ---
 {{APIRef("HTML DOM")}}
 
-The global **`structuredClone()`** method creates a deep clone of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+The global **`structuredClone()`** method creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 The method also allows {{Glossary("transferable objects")}} in the original value to be _transferred_ rather than cloned to the new object.
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
@@ -21,20 +22,20 @@ Transferred objects are detached from the original object and attached to the ne
 
 ```js
 structuredClone(value)
-structuredClone(value, { transfer })
+structuredClone(value, transferables)
 ```
 
 ### Parameters
 
 - `value`
   - : The object to be cloned.
-    This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-- `transfer` {{optional_inline}}
+    This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
+- `transferables` {{optional_inline}}
   - : An array of {{Glossary("transferable objects")}} in `value` that will be moved rather than cloned to the returned object.
 
 ### Return value
 
-The returned value is a deep copy of the original `value`.
+The returned value is a [deep copy](/en-US/docs/Glossary/Deep_copy) of the original `value`.
 
 ### Exceptions
 
@@ -43,7 +44,7 @@ The returned value is a deep copy of the original `value`.
 
 ## Description
 
-This function can be used to deep copy JavaScript values.
+This function can be used to [deep copy](/en-US/docs/Glossary/Deep_copy) JavaScript values.
 It also supports circular references, as shown below:
 
 ```js
@@ -59,7 +60,7 @@ console.assert(clone.name === "MDN"); // they do have the same values
 console.assert(clone.itself === clone); // and the circular reference is preserved
 ```
 
-### Transfering values
+### Transferring values
 
 {{Glossary("Transferable objects")}} (only) can be transferred rather than duplicated in the cloned object, using the optional parameter's `transfer` value.
 Transferring makes the original object unusable.
@@ -77,7 +78,7 @@ for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 
-const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] }).
+const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
 console.log(uInt8Array.byteLength);  // 0
 ```
 
@@ -90,7 +91,6 @@ const transferred = structuredClone(
    { transfer: [arrayBuffer1] });
 ```
 
-
 ## Specifications
 
 {{Specifications}}
@@ -101,5 +101,6 @@ const transferred = structuredClone(
 
 ## See also
 
+- [A polyfill of `structuredClone`](https://github.com/zloirock/core-js#structuredclone) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
 - [Structured clone polyfill](https://github.com/ungap/structured-clone)

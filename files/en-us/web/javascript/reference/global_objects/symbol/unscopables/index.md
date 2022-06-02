@@ -26,10 +26,10 @@ Setting a property to `true` in an `unscopables` object will make it _unscopable
 
 ### Scoping in with statements
 
-The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside `with` environment "keys" would now be the method and not the variable. That's when the `unscopable`s symbol was introduced. A built-in `unscopables` setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent that some of the Array methods are being scoped into the `with` statement.
+The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside `with` environment "keys" would now be the method and not the variable. That's when the `unscopable`s symbol was introduced. A built-in `unscopables` setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent that some of the Array methods are being scoped into the `with` statement.
 
 ```js
-var keys = [];
+const keys = [];
 
 with (Array.prototype) {
   keys.push('something');
@@ -45,7 +45,7 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 You can also set `unscopables` for your own objects.
 
 ```js
-var obj = {
+const obj = {
   foo: 1,
   bar: 2
 };

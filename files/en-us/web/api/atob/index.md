@@ -1,11 +1,13 @@
 ---
 title: atob()
 slug: Web/API/atob
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
   - Method
   - Reference
+  - Polyfill
   - atob
 browser-compat: api.atob
 ---
@@ -24,14 +26,14 @@ for {{domxref("btoa", "btoa()")}}.
 ## Syntax
 
 ```js
-var decodedData = atob(encodedData);
+atob(encodedData)
 ```
 
 ### Parameters
 
 - `encodedData`
-  - : A [binary string](/en-US/docs/Web/API/DOMString/Binary) contains an
-    base64 encoded data.
+  - : A [binary string](/en-US/docs/Web/API/DOMString/Binary) containing
+    base64-encoded data.
 
 ### Return value
 
@@ -42,17 +44,12 @@ An ASCII string containing decoded data from `encodedData`.
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if `encodedData` is not valid base64.
 
-## Example
+## Examples
 
 ```js
 const encodedData = btoa('Hello, world'); // encode a string
 const decodedData = atob(encodedData); // decode the string
 ```
-
-## Polyfill
-
-You can use a polifill from <https://github.com/MaxArt2501/base64-js/blob/master/base64.js>
-for browsers that don't support it.
 
 ## Specifications
 
@@ -64,5 +61,6 @@ for browsers that don't support it.
 
 ## See also
 
-- [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
+- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("btoa","btoa()")}}

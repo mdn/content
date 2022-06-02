@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent.data
 slug: Web/API/ExtendableMessageEvent/data
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -17,13 +18,7 @@ The **`data`** read-only property of the
 {{domxref("ExtendableMessageEvent")}} interface returns the event's data. It can be any
 data type.
 
-## Syntax
-
-```js
-var myData = extendableMessageEvent.data;
-```
-
-### Value
+## Value
 
 Any data type.
 

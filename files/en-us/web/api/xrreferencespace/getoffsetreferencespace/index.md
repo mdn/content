@@ -27,23 +27,23 @@ browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRReferenceSpace")}}
-interface's **`getOffsetReferenceSpace()`** method returns a
+interface's **`getOffsetReferenceSpace()`** method returns a
 new reference space object which describes the relative difference in position between
 the object on which the method is called and a given point in 3D space. The
-object returned by `getOffsetReferenceSpace()` is an
-{{domxref("XRReferenceSpace")}} if called on an `XRReferenceSpace`, or an
+object returned by `getOffsetReferenceSpace()` is an
+{{domxref("XRReferenceSpace")}} if called on an `XRReferenceSpace`, or an
 {{domxref("XRBoundedReferenceSpace")}} if called on an object of that type.
 
 In other words, when you have an object in 3D space and need to position another object
-relative to that one, you can call `getOffsetReferenceSpace()`, passing into
-it the position and orientation you want the second object to have *relative to the
+relative to that one, you can call `getOffsetReferenceSpace()`, passing into
+it the position and orientation you want the second object to have *relative to the
 position and orientation of the object on which you
-call `getOffsetReferenceSpace()`*.
+call `getOffsetReferenceSpace()`*.
 
-Then, when drawing the scene, you can use the offset reference space to not only
+Then, when drawing the scene, you can use the offset reference space to not only
 position objects relative to one another, but to apply the needed transforms to render
 objects properly based upon the viewer's position. This is demonstrated in the example
-{{anch("Implementing rotation based on non-XR inputs")}}, which demonstrates a way to
+[Implementing rotation based on non-XR inputs](#implementing_rotation_based_on_non-xr_inputs), which demonstrates a way to
 use this method to let the user use their mouse to pitch and yaw their viewing angle.
 
 ## Syntax
@@ -63,24 +63,24 @@ getOffsetReferenceSpace(originOffset)
 ### Return value
 
 A new {{domxref("XRReferenceSpace")}} object describing a reference space with the same
-native origin as the reference space on which the method was called, but with an origin
+native origin as the reference space on which the method was called, but with an origin
 offset indicating the distance from the object to the point given
-by `originOffset`.
+by `originOffset`.
 
 If the object on which you call this method is an
 {{domxref("XRBoundedReferenceSpace")}}, the returned object is one as well. The
 {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} of the new
-reference space is set to the original object's `boundsGeometry` with each of
-its points multiplied by the inverse of `originOffset`.
+reference space is set to the original object's `boundsGeometry` with each of
+its points multiplied by the inverse of `originOffset`.
 
 ## Examples
 
-Below are some examples showing how to use `getOffsetReferenceSpace()`.
+Below are some examples showing how to use `getOffsetReferenceSpace()`.
 
 ### Teleporting or setting the position of the viewer
 
 Upon first creating a scene, you may need to set the user's position within the 3D
-world. You can do that using `getOffsetReferenceSpace()`.
+world. You can do that using `getOffsetReferenceSpace()`.
 
 ```js
 xrSession.requestReferenceSpace("local")
@@ -93,8 +93,8 @@ xrSession.requestReferenceSpace("local")
 ```
 
 In this code, we obtain a local reference space, then
-use `getOffsetReferenceSpace()` to create a new space whose origin is
-adjusted to a position given by `startPosition` and whose orientation is
+use `getOffsetReferenceSpace()` to create a new space whose origin is
+adjusted to a position given by `startPosition` and whose orientation is
 looking directly along the Z axis. Then the first animation frame is requested using
 {{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame",
   "requestAnimationFrame()")}}.
@@ -102,11 +102,11 @@ looking directly along the Z axis. Then the first animation frame is requested u
 ### Implementing rotation based on non-XR inputs
 
 The input controls supported directly by WebXR are all dedicated VR or AR input
-devices. In order to use mouse, keyboard, or other input devices to move or otherwise
+devices. In order to use mouse, keyboard, or other input devices to move or otherwise
 transform objects in the 3D space—or to allow the user to move through the space—you'll
 need to write some code to read the inputs and move perform the movements.
 
-This is another good use case for `getOffsetReferenceSpace()`. In this
+This is another good use case for `getOffsetReferenceSpace()`. In this
 example, we'll show code that lets the user look around by right-clicking and moving the
 mouse to change the viewing angle.
 
@@ -120,17 +120,17 @@ the browser.
 ```js
 canvas.oncontextmenu = (event) => { event.preventDefault(); };
 canvas.addEventListener("mousemove", (event) => {
-  if (event.buttons & 2) {
-    rotateViewBy(event.movementX, event.movementY);
-  }
+  if (event.buttons & 2) {
+    rotateViewBy(event.movementX, event.movementY);
+  }
 });
 ```
 
-Next, the `rotateViewBy()` function, which updates the mouse look
-direction's yaw and pitch based on the mouse delta values from
-the `mousemove` event. The pitch is restricted so that you can't look beyond
-straight up and straight down. Each time this is called, the new offsets are used to
-update the current values of `mousePitch` and `mouseYaw`.
+Next, the `rotateViewBy()` function, which updates the mouse look
+direction's yaw and pitch based on the mouse delta values from
+the `mousemove` event. The pitch is restricted so that you can't look beyond
+straight up and straight down. Each time this is called, the new offsets are used to
+update the current values of `mousePitch` and `mouseYaw`.
 
 ```js
 let mouseYaw = 0.0;
@@ -151,7 +151,7 @@ function rotateViewBy(dx, dy) {
 ```
 
 Finally, we need code that actually applies the computed yaw and pitch to the viewer's
-orientation. This function, `applyMouseMovement()`, handles that:
+orientation. This function, `applyMouseMovement()`, handles that:
 
 ```js
 function applyMouseMovement(refSpace) {
@@ -179,7 +179,7 @@ to the caller.
 
 This new reference space is one in which the viewer's position is unchanged, but their
 orientation has been altered based on the pitch and yaw values generated from the
-accumulated mouse inputs. `applyMouseMovement()` should be called when
+accumulated mouse inputs. `applyMouseMovement()` should be called when
 drawing a frame, immediately before fetching the viewer's pose using
 {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}, and the rendering should be
 performed in this reference space.

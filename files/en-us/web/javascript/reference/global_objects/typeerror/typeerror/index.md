@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.TypeError.TypeError
 {{JSRef}}
 
 The **`TypeError()`** constructor creates a new error when an
-operation could not be performed, typically (but not exclusively) when a value is not of
+operation could not be performed, typically (but not exclusively) when a value is not of
 the expected type.
 
 ## Syntax

@@ -21,8 +21,16 @@ called.
 ## Syntax
 
 ```js
-gl.getExtension('WEBGL_lose_context').loseContext();
+loseContext()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

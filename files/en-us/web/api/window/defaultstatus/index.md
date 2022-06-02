@@ -21,24 +21,19 @@ tags:
 
 Gets/sets the status bar text for the given window.
 
-## Syntax
+## Value
 
-```js
-var sMsg = window.defaultStatus;
-window.defaultStatus = sMsg;
+A string containing the text to be displayed by default in the statusbar.
+
+## Examples
+
+```html
+<html>
+  <body onload="window.defaultStatus='hello!';"/>
+  <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
+  </body>
+</html>
 ```
-
-### Parameters
-
-- `sMsg` is a string containing the text to be displayed by default in the statusbar.
-
-## Example
-
-    <html>
-     <body onload="window.defaultStatus='hello!';"/>
-      <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
-     </body>
-    </html>
 
 ## Notes
 

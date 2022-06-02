@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.sendReport()
 slug: Web/API/HIDDevice/sendReport
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ The `reportId` for each of the report formats that this device supports can be r
 ## Syntax
 
 ```js
-HIDDevice.sendReport(reportId, data);
+sendReport(reportId, data)
 ```
 
 ### Parameters

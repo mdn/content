@@ -17,7 +17,7 @@ browser-compat: webextensions.api.browserAction.onClicked
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 
-To define a right-click action, use the [`contextMenus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus "Add items to the browser's context menu, to be displayed in the contexts you specify. For example, you can show the item only when the user clicks on an image, or on an editable element, or when part of a page is selected.") API with the "browser_action" [context type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType "The different contexts a menu can appear in.").
+To define a right-click action, use the [`contextMenus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus) API with the "browser_action" [context type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
 
 ## Syntax
 
@@ -76,7 +76,7 @@ Events have three functions:
 
     > **Note:**
     >
-    > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#event-onClicked) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+    > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#event-onClicked) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
     >
     > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

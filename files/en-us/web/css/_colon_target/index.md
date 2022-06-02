@@ -23,7 +23,9 @@ The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 For example, the following URL has a fragment (denoted by the _#_ sign) that points to an element called `section2`:
 
-    http://www.example.com/index.html#section2
+```
+http://www.example.com/index.html#section2
+```
 
 The following element would be selected by a `:target` selector when the current URL is equal to the above:
 
@@ -33,7 +35,9 @@ The following element would be selected by a `:target` selector when the current
 
 ## Syntax
 
-{{csssyntax}}
+```
+:target
+```
 
 ## Examples
 

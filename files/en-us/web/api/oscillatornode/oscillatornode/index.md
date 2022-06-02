@@ -25,7 +25,7 @@ If the default values of the properties are acceptable, you can optionally use t
 ## Syntax
 
 ```js
-var oscillatorNode = new OscillatorNode(context, options)
+new OscillatorNode(context, options)
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ var oscillatorNode = new OscillatorNode(context, options)
         '`sine`'.
     - `detune`
       - : A detuning value (in cents) which will offset
-        the `frequency` by the given amount. Its default is 0.
+        the `frequency` by the given amount. Its default is 0.
     - `frequency`
       - : The frequency (in {{interwiki("wikipedia", "hertz")}}) of the periodic
         waveform. Its default is 440.

@@ -31,6 +31,7 @@ font-variant-east-asian: ruby full-width jis83;
 font-variant-east-asian: inherit;
 font-variant-east-asian: initial;
 font-variant-east-asian: revert;
+font-variant-east-asian: revert-layer;
 font-variant-east-asian: unset;
 ```
 
@@ -83,20 +84,20 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 <thead></thead>
 <tbody style="border:0;">
   <tr>
-    <th>normal/jis78:</th>
-    <td>麹町</td>
-    <td class="jis78">麹町</td>
-  </tr>
+    <th>normal/jis78:</th>
+    <td>麹町</td>
+    <td class="jis78">麹町</td>
+  </tr>
   <tr>
-    <th>normal/ruby:</th>
-    <td>しんかんせん</td>
-    <td class="ruby">しんかんせん</td>
-  </tr>
+    <th>normal/ruby:</th>
+    <td>しんかんせん</td>
+    <td class="ruby">しんかんせん</td>
+  </tr>
   <tr>
-    <th>normal/traditional:</th>
-    <td>大学</td>
-    <td class="traditional">大学</td>
-  </tr>
+    <th>normal/traditional:</th>
+    <td>大学</td>
+    <td class="traditional">大学</td>
+  </tr>
 </tbody>
 </table>
 ```
@@ -106,11 +107,11 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 ```css
 td{
   font-family:"Yu Gothic";
-  font-size:20px;
+  font-size:20px;
 }
 th{
   color:grey;
-  padding-right:10px;
+  padding-right:10px;
 }
 
 .ruby {
@@ -118,11 +119,11 @@ th{
 }
 
 .jis78 {
-  font-variant-east-asian: jis78;
+  font-variant-east-asian: jis78;
 }
 
 .traditional{
-  font-variant-east-asian: traditional;
+  font-variant-east-asian: traditional;
 }
 ```
 

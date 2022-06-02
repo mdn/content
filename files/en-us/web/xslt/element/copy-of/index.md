@@ -13,7 +13,9 @@ The `<xsl:copy-of>` element makes a deep copy (including descendant nodes) of wh
 
 ### Syntax
 
-    <xsl:copy-of select=EXPRESSION />
+```xml
+<xsl:copy-of select=EXPRESSION />
+```
 
 ### Required Attributes
 

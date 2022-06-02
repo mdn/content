@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.filter
 slug: Web/API/CanvasRenderingContext2D/filter
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,27 +10,20 @@ tags:
   - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
 The
 **`CanvasRenderingContext2D.filter`**
 property of the Canvas 2D API provides filter effects such as blurring and grayscaling.
 It is similar to the CSS {{cssxref("filter")}} property and accepts the same values.
 
-## Syntax
-
-```js
-ctx.filter = "<filter-function1> [<filter-function2>] [<filter-functionN>]";
-ctx.filter = "none";
-```
-
-### Values
+## Value
 
 The `filter` property accepts a value of `"none"` or one or more
-of the following filter functions in a {{domxref("DOMString")}}.
+of the following filter functions in a string.
 
 - [`url()`](</en-US/docs/Web/CSS/filter#url()>)
-  - : A CSS {{cssxref("url()")}}. Takes an IRI pointing to an SVG filter element,
+  - : A CSS {{cssxref("url", "url()")}}. Takes an IRI pointing to an SVG filter element,
     which may be embedded in an external XML file.
 - [`blur()`](</en-US/docs/Web/CSS/filter#blur()>)
   - : A CSS {{cssxref("&lt;length&gt;")}}. Applies a Gaussian blur to the drawing. It
@@ -52,14 +46,18 @@ of the following filter functions in a {{domxref("DOMString")}}.
     offset version of the drawing's alpha mask drawn in a particular color, composited
     below the drawing. This function takes up to five arguments:
 
-    - `<offset-x>`: See {{cssxref("&lt;length&gt;")}} for possible
-      units. Specifies the horizontal distance of the shadow.
-    - `<offset-y>`: See {{cssxref("&lt;length&gt;")}} for possible
-      units. Specifies the vertical distance of the shadow.
-    - `<blur-radius>`: The larger this value, the bigger the blur, so
-      the shadow becomes bigger and lighter. Negative values are not allowed.
-    - `<color>`: See {{cssxref("&lt;color&gt;")}} values for possible
-      keywords and notations.
+    - `<offset-x>`
+      - : See {{cssxref("&lt;length&gt;")}} for possible
+        units. Specifies the horizontal distance of the shadow.
+    - `<offset-y>`
+      - : See {{cssxref("&lt;length&gt;")}} for possible
+        units. Specifies the vertical distance of the shadow.
+    - `<blur-radius>`
+      - : The larger this value, the bigger the blur, so
+        the shadow becomes bigger and lighter. Negative values are not allowed.
+    - `<color>`
+      - : See {{cssxref("&lt;color&gt;")}} values for possible
+        keywords and notations.
 
 - [`grayscale()`](</en-US/docs/Web/CSS/filter#grayscale()>)
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Converts the drawing to grayscale. A value
@@ -128,8 +126,8 @@ photo of a rhino.
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
 <div style="display:none;">
-  <img id="source"
-       src="rhino.jpg">
+  <img id="source"
+       src="rhino.jpg">
 </div>
 ```
 

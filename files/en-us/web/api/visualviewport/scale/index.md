@@ -17,13 +17,7 @@ The **`scale`** read-only property of the
 {{domxref("VisualViewport")}} interface returns the pinch-zoom scaling factor applied
 to the visual viewport.
 
-## Syntax
-
-```js
-var scale = VisualViewport.scale
-```
-
-### Value
+## Value
 
 A double.
 

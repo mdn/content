@@ -1,6 +1,7 @@
 ---
 title: ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -13,24 +14,28 @@ browser-compat: api.ExtendableEvent.ExtendableEvent
 ---
 {{APIRef("Service Workers API")}}
 
-The **`ExtendableEvent()`** constructor creates a new
-{{domxref("ExtendableEvent")}} object.
+The **`ExtendableEvent()`** constructor creates a new {{domxref("ExtendableEvent")}} object.
 
 ## Syntax
 
 ```js
-var extendableEvent = new ExtendableEvent(type, init);
+new ExtendableEvent(type)
+new ExtendableEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : The type of the ExtendableEvent, for example {{Event("install")}},
-    {{Event("activate")}}.
-- `init` {{optional_inline}}
-  - : An options object containing any custom settings that you want to apply to the event
-    object. Currently no possible options exist inside the spec, but this has been defined
-    for forward compatibility across the different derived events.
+  - : A string with the name of the event. It is case-sensitive.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can contain any custom settings
+    that you want to apply to the event object.
+    Currently no possible options are mandatory,
+    but this has been defined for forward compatibility across the different derived events.
+
+### Return value
+
+A new {{domxref("ExtendableEvent")}} object.
 
 ## Specifications
 
@@ -42,12 +47,8 @@ var extendableEvent = new ExtendableEvent(type, init);
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service
-  workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web
-  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

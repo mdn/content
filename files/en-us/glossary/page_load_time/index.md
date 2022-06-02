@@ -16,7 +16,7 @@ let time = performance.timing;
 let pageloadtime = time.loadEventStart - time.navigationStart;
 ```
 
-While page load time 'sounds' like the perfect web performance metric, it isn't. Load times can vary greatly between users depending on device capabilities, network conditions, and, to a lesser extent, distance from the server. The development environment, where page load time is measured, is likely an optimal experience, not reflective of your users' reality. In addition, web performance isn't just about when the load event happens. It's also about [perceived performance](/en-US/docs/Glossary/Perceived_performance), responsiveness, [jank](/en-US/docs/Glossary/Jank) and jitter.
+While page load time 'sounds' like the perfect web performance metric, it isn't. Load times can vary greatly between users depending on device capabilities, network conditions, and, to a lesser extent, distance from the server. The development environment, where page load time is measured, is likely an optimal experience, not reflective of your users' reality. In addition, web performance isn't just about when the load event happens. It's also about [perceived performance](/en-US/docs/Glossary/Perceived_performance), responsiveness, [jank](/en-US/docs/Glossary/Jank) and jitter.
 
 ## See also
 

@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-conditional/
 ---
 {{CSSRef}}
 
@@ -23,9 +24,7 @@ tags:
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment            |
-| -------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

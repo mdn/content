@@ -41,7 +41,7 @@ src: local(font), url(path/to/font.svg) format("svg"),
 - `<url> [ format( <string># ) ]?`
   - : Specifies an external reference consisting of a {{cssxref("&lt;url&gt;")}}, followed by an optional hint using the `format()` function to describe the format of the font resource referenced by that URL. The format hint contains a comma-separated list of format strings that denote well-known font formats. If a user agent doesn't support the specified formats, it skips downloading the font resource. If no format hints are supplied, the font resource is always downloaded.
 - `<font-face-name>`
-  - : Specifies the name of a locally-installed font face using the `local()` function, which uniquely identifies a single font face within a larger family. The name can optionally be enclosed in quotes.
+  - : Specifies the full name or postscript name of a locally-installed font face using the `local()` function, which uniquely identifies a single font face within a larger family. The name can optionally be enclosed in quotes.
 
 ## Description
 
@@ -55,18 +55,35 @@ As with other URLs in CSS, the URL may be relative, in which case it is resolved
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+[ <url> [ format( <string># ) ]? | local( <family-name> ) ]#
+
+<family-name> =
+  <string>        |
+  <custom-ident>+
+```
 
 ## Examples
 
 ### Specifying font resources using url() and local()
 
 ```css
+/* a regular font face: */
 @font-face {
   font-family: examplefont;
   src: local(Example Font),
        url('examplefont.woff') format("woff"),
        url('examplefont.otf') format("opentype");
+}
+
+/* a bold font face of the same family: */
+@font-face {
+  font-family: examplefont;
+  src: local(Example Font Bold), /* full font name */
+       local(Example Font-Bold), /* postscript name */
+       url('examplefont.woff') format("woff"),
+       url('examplefont.otf') format("opentype");
+  font-weight: bold;
 }
 ```
 

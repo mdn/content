@@ -18,7 +18,7 @@ by a specified amount.
 ## Syntax
 
 ```js
-window.resizeBy(xDelta, yDelta)
+resizeBy(xDelta, yDelta)
 ```
 
 ### Parameters
@@ -26,7 +26,11 @@ window.resizeBy(xDelta, yDelta)
 - `xDelta` is the number of pixels to grow the window horizontally.
 - `yDelta` is the number of pixels to grow the window vertically.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Shrink the window
@@ -41,7 +45,7 @@ absolute terms, use {{domxref("window.resizeTo()")}}.
 ### Creating and resizing an external window
 
 For security reasons, it's no longer possible in Firefox for a website to change the
-default size of a window in a browser if the window wasn’t created by
+default size of a window in a browser if the window wasn't created by
 `window.open()`, or contains more than one tab. See the compatibility table
 for details on the change.
 
@@ -61,7 +65,7 @@ myExternalWindow.resizeBy(-100, -100);
 ```
 
 The window you create must respect the Same Origin Policy. If the window you open is
-not in the same orgin as the current window, you will not be able to resize, or access
+not in the same origin as the current window, you will not be able to resize, or access
 any information on, that window/tab.
 
 ## Specifications

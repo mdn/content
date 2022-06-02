@@ -41,6 +41,7 @@ break-before: region;
 break-before: inherit;
 break-before: initial;
 break-before: revert;
+break-before: revert-layer;
 break-before: unset;
 ```
 
@@ -48,8 +49,8 @@ Each possible break point (in other words, each element boundary) is affected by
 
 To determine if a break must be done, the following rules are applied:
 
-1.  If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the one of the element that appears the latest in the flow is taken (i.e., the `break-before` value has precedence over the `break-after` value, which itself has precedence over the `break-inside` value).
-2.  If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
+1. If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the one of the element that appears the latest in the flow is taken (i.e., the `break-before` value has precedence over the `break-after` value, which itself has precedence over the `break-inside` value).
+2. If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
 
 Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding `avoid` value.
 
@@ -77,9 +78,9 @@ The `break-before` property is specified as one of the keyword values from the l
 - `page`
   - : Forces a page break right before the principal box.
 - `left`
-  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a left page.
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
-  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a right page.
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
 - `recto` {{experimental_inline}}
   - : Forces one or two page breaks right before the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)
 - `verso` {{experimental_inline}}
@@ -189,7 +190,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.break-before.multicol_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -40,7 +40,7 @@ Values of this type are objects. They contain the following properties:
 - `estimatedEndTime`{{optional_inline}}
   - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the estimated number of milliseconds between the UNIX epoch and when this download is estimated to be completed. This is undefined if it is not known (in particular, it is undefined in the `DownloadItem` that's passed into {{WebExtAPIRef("downloads.onCreated")}}).
 - `exists`
-  - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.
+  - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.
 - `filename`
   - : A `string` representing the file's absolute local path.
 - `fileSize`
@@ -70,7 +70,7 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-DownloadItem) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-DownloadItem) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

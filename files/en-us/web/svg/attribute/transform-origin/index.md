@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.transform-origin
 ---
 {{SVGRef()}}
 
-The **`transform-origin`** SVG attribute sets the origin for an item’s transformations.
+The **`transform-origin`** SVG attribute sets the origin for an item's transformations.
 
 You can use this attribute with any SVG element.
 
@@ -33,38 +33,38 @@ You can use this attribute with any SVG element.
   </tbody>
 </table>
 
-> **Note:** The default value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose transform-origin is `50% 50%`, like other CSS elements.
+> **Note:** The default value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose transform-origin is `50% 50%`, like other CSS elements.
 
 The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/initial_value).
 
-If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.
+If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.
 
 If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
 
-*   One-value syntax:
+- One-value syntax:
 
-    *   The value must be a [`<length>`](/en-US/docs/Web/CSS/length "The \<length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."), a [`<percentage>`](/en-US/docs/Web/CSS/percentage "The \<percentage> CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."), or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
-*   Two-value syntax:
+  - The value must be a [`<length>`](/en-US/docs/Web/CSS/length), or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
+- Two-value syntax:
 
-    *   One value must be a [`<length>`](/en-US/docs/Web/CSS/length "The \<length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."), a [`<percentage>`](/en-US/docs/Web/CSS/percentage "The \<percentage> CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."), or one of the keywords `left`, `center`, and `right`.
-    *   The other value must be a [`<length>`](/en-US/docs/Web/CSS/length "The \<length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."), a [`<percentage>`](/en-US/docs/Web/CSS/percentage "The \<percentage> CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."), or one of the keywords `top`, `center`, and `bottom`.
-*   Three-value syntax:
+  - One value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `left`, `center`, and `right`.
+  - The other value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `top`, `center`, and `bottom`.
+- Three-value syntax:
 
-    *   The first two values are the same as for the two-value syntax.
-    *   The third value must be a [`<length>`](/en-US/docs/Web/CSS/length "The \<length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."). It always represents the Z offset.
+  - The first two values are the same as for the two-value syntax.
+  - The third value must be a [`<length>`](/en-US/docs/Web/CSS/length). It always represents the Z offset.
 
 ## Example
 
 This example shows the code for one PNG image and three SVG images:
 
-1.  A PNG reference image.
-2.  An SVG reference image that uses no transformation.
-3.  An SVG image that uses `transform-origin` to do a transformation, with the expected result being an image identical to the reference image.
-4.  An SVG image that does not use `transform-origin` but does the same transformation using just [`transform`](/en-US/docs/Web/SVG/Attribute/transform), with the expected result being an image identical to the reference image.
+1. A PNG reference image.
+2. An SVG reference image that uses no transformation.
+3. An SVG image that uses `transform-origin` to do a transformation, with the expected result being an image identical to the reference image.
+4. An SVG image that does not use `transform-origin` but does the same transformation using just [`transform`](/en-US/docs/Web/SVG/Attribute/transform), with the expected result being an image identical to the reference image.
 
-The fourth image image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
+The fourth image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
 
-> **Note:** These examples use a modified version of a code snippet in a Stack Overflow [question](https://stackoverflow.com/q/67057190) from [Maxim Kulikov](https://stackoverflow.com/users/1033939/maxim-kulikov), as well as a modified version of a code snippet in an [answer](https://stackoverflow.com/a/67057754) from [Michael Mullany](https://stackoverflow.com/users/271353/michael-mullany) that accompanies the question. Both code snippets are used under the terms of the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.)
+> **Note:** These examples use a modified version of a code snippet in a Stack Overflow [question](https://stackoverflow.com/questions/67057190/safari-doesnt-respect-transform-origin-svg-attribute) from [Maxim Kulikov](https://stackoverflow.com/users/1033939/maxim-kulikov), as well as a modified version of a code snippet in an [answer](https://stackoverflow.com/questions/67057190/safari-doesnt-respect-transform-origin-svg-attribute/67057754) from [Michael Mullany](https://stackoverflow.com/users/271353/michael-mullany) that accompanies the question. Both code snippets are used under the terms of the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.)
 
 ### HTML
 
@@ -197,29 +197,7 @@ The fourth image image shows how to do the transformation in browsers that don't
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <td><strong>Specification</strong></td>
-      <td><strong>Status</strong></td>
-      <td><strong>Comment</strong></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Transforms", "#transform-origin-property", "transform-origin")}}
-      </td>
-      <td>{{Spec2("CSS3 Transforms")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "styling.html#PresentationAttributes", "transform-origin")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

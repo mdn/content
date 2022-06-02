@@ -1,15 +1,15 @@
 ---
-title: 'aria-invalid'
+title: aria-invalid
 slug: Web/Accessibility/ARIA/Attributes/aria-invalid
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-invalid
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
-
 The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
 
 ## Description
@@ -34,7 +34,7 @@ If there is a {{htmlattrxref("required")}} attribute on a form control that isn'
 <input type="number" step="2" min="0" max="100" required>
 ```
 
-If the user had entered a value in the preceding input example above the maximum, below the minimum, or that doesn't match the step value, an error message would appear. If the user had entered "3", the native error message would be similar to "Please enter a valid value."  
+If the user had entered a value in the preceding input example above the maximum, below the minimum, or that doesn't match the step value, an error message would appear. If the user had entered "3", the native error message would be similar to "Please enter a valid value."
 
 If you are creating your own form validation scripts, make sure to include `aria-invalid` on invalid form controls, along with styling (use the `[aria-invalid="true"]` attribute selector) and messaging (with [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)) to help users understand where the mistake is and how they can fix it.
 
@@ -51,6 +51,67 @@ If you are creating your own form validation scripts, make sure to include `aria
 
 Any value not in this list will be treated as `true`.
 
+## Example
+
+The following snippet shows a simplified version of two form fields with a validation function attached to the blur event. Note that since the default value for `aria-invalid` is `false`, it is not strictly necessary to add the attribute to input.
+
+```html
+<ul>
+  <li>
+    <label for="name">Full Name</label>
+   <input type="text" name="name" id="name"
+      aria-required="true" aria-invalid="false"
+      onblur="checkValidity('name', ' ', 'Invalid name entered (requires both first and last name)');"/>
+ </li>
+ <li>
+   <label for="email">Email Address</label>
+   <input type="email" name="email" id="email"
+      aria-required="true" aria-invalid="false"
+      onblur="checkValidity('email', '@', 'Invalid e-mail address');"/>
+  </li>
+</ul>
+```
+
+Note that it is not necessary to validate the fields immediately on blur; the application could wait until the form is submitted (though this is not necessarily recommended).
+
+The snippet below shows a very simple validation function, which only checks for the presence of a particular character (in the real world, validation will likely be more sophisticated):
+
+```js
+function checkValidity(aID, aSearchTerm, aMsg){
+  let elem = document.getElementById(aID);
+  let invalid = (elem.value.indexOf(aSearchTerm) < 0);
+  if (invalid) {
+    elem.setAttribute("aria-invalid", "true");
+    updateAlert(aMsg);
+  } else {
+    elem.setAttribute("aria-invalid", "false");
+    updateAlert();
+  }
+}
+```
+
+The snippet below shows the alert functions, which add (or remove) the error message:
+
+```js
+function updateAlert(msg) {
+    let oldAlert = document.getElementById("alert");
+    if (oldAlert) {
+      document.body.removeChild(oldAlert);
+    }
+
+    if (msg) {
+      let newAlert = document.createElement("div");
+      newAlert.setAttribute("role", "alert");
+      newAlert.setAttribute("id", "alert");
+      let content = document.createTextNode(msg);
+      newAlert.appendChild(content);
+      document.body.appendChild(newAlert);
+    }
+}
+```
+
+Note that the alert has the ARIA role attribute set to [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
+
 ## Associated roles
 
 Used in roles:
@@ -60,7 +121,7 @@ Used in roles:
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
@@ -76,9 +137,7 @@ Inherited into role:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-invalid","ARIA: aria-invalid Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

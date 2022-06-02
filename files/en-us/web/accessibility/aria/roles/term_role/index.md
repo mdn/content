@@ -1,16 +1,16 @@
 ---
 title: 'ARIA: term role'
 slug: Web/Accessibility/ARIA/Roles/term_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
   - document structure role
+spec-urls: https://w3c.github.io/aria/#term
 ---
 The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
-
 
 ## Description
 
@@ -38,7 +38,7 @@ None.
 
 ```html
 <p>
-  <span role="term">Mansplaining</span>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. 
+  <span role="term">Mansplaining</span>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>.
 </p>
 ```
 
@@ -46,14 +46,16 @@ Including better semantics, the above could also be written:
 
 ```html
 <p>
-  <dfn role="term">Mansplaining</dfn>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. 
+  <dfn role="term">Mansplaining</dfn>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>.
 </p>
 ```
+
 or without any ARIA (but possibly not how you want it presented)
+
 ```html
 <dl>
   <dt>Mansplaining</dt>
-  <dd>A portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it.</dd> 
+  <dd>A portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it.</dd>
 </dl>
 ```
 
@@ -67,14 +69,9 @@ Allow the term itself to define the accessible name. Do not use `aria-label` or 
 
 ### Prefer HTML
 
-
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#term","ARIA: term role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_term_role","term role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
+{{Specifications}}
 
 ## See Also
 

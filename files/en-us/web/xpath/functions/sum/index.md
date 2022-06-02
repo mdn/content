@@ -11,7 +11,9 @@ The `sum` function returns a number that is the sum of the numeric values of eac
 
 ### Syntax
 
-    sum(node-set )
+```
+sum(node-set)
+```
 
 ### Arguments
 
@@ -28,7 +30,7 @@ _(None)_
 
 ### Defined
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-sum)
+[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-sum)
 
 ### Gecko support
 

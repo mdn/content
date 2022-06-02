@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.textTracks
 slug: Web/API/HTMLMediaElement/textTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -28,7 +29,7 @@ You can detect when tracks are added to and removed from an
 [`<video>`](/en-US/docs/Web/HTML/Element/video) element
 using the `addtrack` and `removetrack` events. However, these
 events aren't sent directly to the media element itself. Instead, they're sent to the
-track list object of the [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement "The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support basic media-related capabilities that are common to audio and video.")
+track list object of the [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement)
 that corresponds to the type of track that was added to the element
 
 The returned list is _live_; that is, as tracks are added to and removed from
@@ -39,18 +40,9 @@ existing ones removed.
 See {{SectionOnPage("/en-US/docs/Web/API/TextTrackList", "Event handlers")}} to learn
 more about watching for changes to a media element's track list.
 
-## Syntax
+## Value
 
-```js
-var textTracks = mediaElement.textTracks;
-```
-
-### Value
-
-A {{DOMxRef("TextTrackList")}} object representing the list of text tracks included in
-the media element. The list of tracks can be accessed using array notation, or using the
-object's
-[`getTrackById()`](/en-US/docs/Web/API/VideoTrackList/getTrackById)
+A {{DOMxRef("TextTrackList")}} object representing the list of text tracks included in the media element. The list of tracks can be accessed using `textTracks[n]` to get the *n*th text track from the object's list of text tracks, or using the `textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById)
 method.
 
 Each track is represented by a {{DOMxRef("TextTrack")}} object which provides
@@ -81,7 +73,7 @@ children
 ```
 
 The `HTMLMediaElement.textTracks` returns a
-`textTracksList` thru which we can iterate.  Here we print all the properties
+`textTracksList` thru which we can iterate. Here we print all the properties
 of each English track to the console.
 
 ```js

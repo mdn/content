@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserverEntryList
 slug: Web/API/PerformanceObserverEntryList
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -10,7 +11,7 @@ browser-compat: api.PerformanceObserverEntryList
 ---
 {{APIRef("Performance Timeline API")}}
 
-The **`PerformanceObserverEntryList`** interface is a list of {{domxref("PerformanceEntry","peformance events", '', 'true')}} that were explicitly _observed_ via the {{domxref("PerformanceObserver.observe","observe()")}} method.
+The **`PerformanceObserverEntryList`** interface is a list of {{domxref("PerformanceEntry","performance events", '', 'true')}} that were explicitly _observed_ via the {{domxref("PerformanceObserver.observe","observe()")}} method.
 
 Note: this interface is exposed to {{domxref("Window")}} and {{domxref("Worker")}}.
 

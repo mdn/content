@@ -15,13 +15,13 @@ browser-compat: api.USB.getDevices
 
 The **`getDevices`** method of the {{DOMxRef("USB")}} interface
 returns a {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("USBDevice")}}
-objects for paired attached devices. For information on pairing devices, see
+objects for paired attached devices. For information on pairing devices, see
 {{DOMxRef("USB.requestDevice()")}}.
 
 ## Syntax
 
 ```js
-USB.getDevices()
+getDevices()
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ None.
 A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("USBDevice")}}
 objects.
 
-## Example
+## Examples
 
 The following example logs the product name and serial number of paired devices to the
 console. For information on pairing devices, see
@@ -42,10 +42,10 @@ console. For information on pairing devices, see
 ```js
 navigator.usb.getDevices()
 .then(devices => {
-  console.log("Total devices: " + devices.length);
-  devices.forEach(device => {
-    console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
-  });
+  console.log("Total devices: " + devices.length);
+  devices.forEach(device => {
+    console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
+  });
 });
 ```
 

@@ -6,14 +6,15 @@ tags:
   - HTTP
   - HTTP Header
   - Response Header
+spec-urls: https://www.w3.org/TR/ldp/#header-accept-post
 ---
 {{HTTPSidebar}}
 
-The **`Accept-Post`** response HTTP header advertises which [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) are accepted by the server for HTTP post requests.
+The **`Accept-Post`** response HTTP header advertises which [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) are accepted by the server for HTTP post requests.
 
-**`Accept-Post`** in response to any method means that `POST` is allowed on the requested resource (any document/media format in the header further indicates that the document format is allowed).
+**`Accept-Post`** in response to any method means that `POST` is allowed on the requested resource (any document/media format in the header further indicates that the document format is allowed).
 
-For example, a server receiving a `POST` request with an unsupported media type could reply with {{HTTPStatus("415")}} `Unsupported Media Type` and an **`Accept-Post`** header referencing one or more supported media types.
+For example, a server receiving a `POST` request with an unsupported media type could reply with {{HTTPStatus("415")}} `Unsupported Media Type` and an **`Accept-Post`** header referencing one or more supported media types.
 
 > **Note:** An IANA registry maintains [a complete list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
 
@@ -33,9 +34,9 @@ For example, a server receiving a `POST` request with an unsupported media type
 ## Syntax
 
 ```
-Accept: <MIME_type>/<MIME_subtype>
-Accept: <MIME_type>/*
-Accept: */*
+Accept-Post: <MIME_type>/<MIME_subtype>
+Accept-Post: <MIME_type>/*
+Accept-Post: */*
 ```
 
 > **Note:** The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept-Language")}}, except that it has no notion of preference (i.e. "accept-params" or "q" arguments are not significant).
@@ -54,9 +55,7 @@ Accept-Post: */*
 
 ## Specifications
 
-| Specification                                                                                                           | Title       |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [Linked Data Platform 1.0, Section 7.1: The Accept-Post Response Header](https://www.w3.org/TR/ldp/#header-accept-post) | ACCEPT POST |
+{{Specifications}}
 
 ## Browser compatibility
 

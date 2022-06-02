@@ -25,13 +25,7 @@ The {{domxref("VideoPlaybackQuality")}} interface's
 number of video frames that have been displayed or dropped since the media was
 loaded.
 
-## Syntax
-
-```js
-value = videoPlaybackQuality.totalVideoFrames;
-```
-
-### Value
+## Value
 
 The total number of frames that the {{HTMLElement("video")}} element has displayed or
 dropped since the media was loaded into it. Essentially, this is the number of frames
@@ -39,7 +33,7 @@ the element _would have presented_ had no problems occurred.
 
 This value is reset when the media is reloaded or replaced.
 
-## Example
+## Examples
 
 This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
   "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,

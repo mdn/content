@@ -17,11 +17,11 @@ The **`arguments.callee`** property contains the currently executing function.
 
 `callee` is a property of the `arguments` object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, such as within a function expression with no name (also called "anonymous functions").
 
-> **Warning:** The 5th edition of ECMAScript (ES5) forbids use of `arguments.callee()` in [strict mode](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode). Avoid using `arguments.callee()` by either giving function expressions a name or use a function declaration where a function must call itself.
+> **Warning:** The 5th edition of ECMAScript (ES5) forbids use of `arguments.callee()` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Avoid using `arguments.callee()` by either giving function expressions a name or use a function declaration where a function must call itself.
 
 ### Why was `arguments.callee` removed from ES5 strict mode?
 
-(adapted from [a Stack Overflow answer by olliej](http://stackoverflow.com/a/235760/578288))
+(adapted from [a Stack Overflow answer by olliej](https://stackoverflow.com/questions/103598/why-was-the-arguments-callee-caller-property-deprecated-in-javascript/235760))
 
 Early versions of JavaScript did not allow named function expressions, and for this reason you could not make a recursive function expression.
 
@@ -80,7 +80,7 @@ This has numerous benefits:
 
 - the function can be called like any other from inside your code
 - it does not create a variable in the outer scope ([except for IE 8 and below](https://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope))
-- it has better performance than accessing the arguments object
+- it has better performance than accessing the arguments object
 
 Another feature that was deprecated was `arguments.callee.caller`, or more specifically `Function.caller`. Why is this? Well, at any point in time you can find the deepest caller of any function on the stack, and as I said above looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much more difficult. For example, if you cannot guarantee that a function `f` will not call an unknown function, it is not possible to inline `f`. Basically it means that any call site that may have been trivially inlinable accumulates a large number of guards:
 
@@ -112,7 +112,7 @@ var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
 
 ### A use of `arguments.callee` with no good alternative
 
-However, in a case like the following, there are not alternatives to `arguments.callee`, so its deprecation could be a bug (see [bug 725398](https://bugzilla.mozilla.org/show_bug.cgi?id=725398)):
+However, in a case like the following, there are not alternatives to `arguments.callee`, so its deprecation could be a bug (see [bug 725398](https://bugzilla.mozilla.org/show_bug.cgi?id=725398)):
 
 ```js
 function createPerson(sIdentity) {

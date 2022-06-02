@@ -71,7 +71,7 @@ CSS to size the canvas and render a crisp image:
 ```css
 canvas {
   width: 512px;
-  height: 512px;
+  height: 512px;
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;
@@ -97,4 +97,4 @@ This code used together produces the following result:
 
 {{ EmbedLiveSample('An_example', '100%', 520) }}
 
-> **Note:** You can check out the [original code on Github](https://github.com/belen-albeza/retro-canvas) ([and a live example](https://belen-albeza.github.io/retro-canvas/).)
+> **Note:** You can check out the [original code on GitHub](https://github.com/belen-albeza/retro-canvas) ([and a live example](https://belen-albeza.github.io/retro-canvas/).)

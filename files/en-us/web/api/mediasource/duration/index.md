@@ -1,6 +1,7 @@
 ---
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,15 +20,7 @@ browser-compat: api.MediaSource.duration
 The **`duration`** property of the {{domxref("MediaSource")}}
 interface gets and sets the duration of the current media being presented.
 
-## Syntax
-
-```js
-mediaSource.duration = 5.5; // 5.5 seconds
-
-var myDuration = mediaSource.duration;
-```
-
-### Value
+## Value
 
 A double. A value in seconds is expected.
 
@@ -45,11 +38,9 @@ The following exceptions may be thrown when setting a new value for this propert
         (i.e. their {{domxref("SourceBuffer.updating")}} property is
       `true`.)
 
-## Example
+## Examples
 
-The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo
-live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
-the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
 function sourceOpen (_) {

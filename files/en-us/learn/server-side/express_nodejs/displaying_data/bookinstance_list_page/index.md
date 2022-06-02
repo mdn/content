@@ -67,7 +67,7 @@ This view is much the same as all the others. It extends the layout, replacing t
 
 ## What does it look like?
 
-Run the application, open your browser to <http://localhost:3000/>, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
+Run the application, open your browser to `http://localhost:3000/`, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
 ![BookInstance List Page - Express Local Library site](locallibary_express_bookinstance_list.png)
 

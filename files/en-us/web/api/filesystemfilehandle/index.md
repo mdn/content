@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileHandle
 slug: Web/API/FileSystemFileHandle
+page-type: web-api-interface
 tags:
   - Directory
   - File
@@ -15,6 +16,8 @@ browser-compat: api.FileSystemFileHandle
 The **`FileSystemFileHandle`** interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed through the {{domxref('window.showOpenFilePicker()')}} method.
 
 Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

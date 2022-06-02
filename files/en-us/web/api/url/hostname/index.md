@@ -12,20 +12,13 @@ browser-compat: api.URL.hostname
 {{ApiRef("URL API")}}
 
 The **`hostname`** property of the {{domxref("URL")}} interface
-is a {{domxref("USVString")}} containing the {{glossary("domain name")}} of the URL.
+is a string containing the {{glossary("domain name")}} of the URL.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-const domain = url.hostname
-url.hostname = domain
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.entries()
 slug: Web/API/FileSystemDirectoryHandle/entries
+page-type: web-api-instance-method
 tags:
   - Directories
   - File System Access API
@@ -10,7 +11,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.entries
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`entries()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns an array of a given object's
@@ -21,12 +22,12 @@ enumerates properties in the prototype chain as well).
 ## Syntax
 
 ```js
- FileSystemDirectoryHandle.entries();
+ entries()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

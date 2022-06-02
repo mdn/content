@@ -1,6 +1,7 @@
 ---
 title: EncodedVideoChunk.duration
 slug: Web/API/EncodedVideoChunk/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -40,4 +41,3 @@ console.log(chunk.duration); //2000000
 ## Browser compatibility
 
 {{Compat}}
-

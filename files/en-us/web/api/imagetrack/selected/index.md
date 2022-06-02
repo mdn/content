@@ -1,6 +1,7 @@
 ---
 title: ImageTrack.selected
 slug: Web/API/ImageTrack/selected
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.ImageTrack.selected
 
 The **`selected`** property of the {{domxref("ImageTrack")}} interface returns `true` if the track is selected for decoding.
 
-### Value
+## Value
 
 A {{jsxref("boolean")}}, if `true` the track is selected for decoding.
 
@@ -33,5 +34,3 @@ console.log(track.selected); // this is the selected track so should return true
 ## Browser compatibility
 
 {{Compat}}
-
-

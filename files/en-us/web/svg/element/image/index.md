@@ -26,24 +26,24 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
 
 ### Global attributes
 
-*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
-*   {{SVGAttr("transform")}}
+- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("transform")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("x")}}: Positions the image horizontally from the origin.
-*   {{SVGAttr("y")}}: Positions the image vertically from the origin.
-*   {{SVGAttr("width")}}: The width the image renders at. Unlike HTML's `<img>`, this attribute is required.
-*   {{SVGAttr("height")}}: The height the image renders at. Unlike HTML's `<img>`, this attribute is required.
-*   {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.
-*   {{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.
-*   {{SVGAttr("crossorigin")}}: Defines the value of the credentials flag for CORS requests.
+- {{SVGAttr("x")}}: Positions the image horizontally from the origin.
+- {{SVGAttr("y")}}: Positions the image vertically from the origin.
+- {{SVGAttr("width")}}: The width the image renders at. Unlike HTML's `<img>`, this attribute is required.
+- {{SVGAttr("height")}}: The height the image renders at. Unlike HTML's `<img>`, this attribute is required.
+- {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.
+- {{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.
+- {{SVGAttr("crossorigin")}}: Defines the value of the credentials flag for CORS requests.
 
 ## DOM Interface
 

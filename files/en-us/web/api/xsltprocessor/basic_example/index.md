@@ -11,7 +11,6 @@ The example takes an XML document that contains information about an article (ti
 
 The XML document (**example.xml**) is shown below.
 
-
 ```xml
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="example.xsl"?>
@@ -52,12 +51,13 @@ The example above has two templates - one that matches the root node and one tha
 The template that matches the root node outputs the article's title and then says to process all templates (via `apply-templates`) that match `Author` nodes which are children of the `Authors` node.
 
 To try out the example:
+
 1. Create a directory in your file system and inside it create the files **example.xml** and **example.xsl** listed above
 1. [Start a local server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server) in the directory containing the files.
    This allows you to browse the files in the directory as though they were hosted on the internet.
 
    > **Warning:** Opening the XML file directly from the file system will not work, because loading the stylesheet from the file system is a [cross-origin request](/en-US/docs/Web/HTTP/CORS), and will be disallowed by default.
-   > Hosting the xml and stylesheet on the same local server ensures that they have the same origin.
+   > Hosting the XML and stylesheet on the same local server ensures that they have the same origin.
 1. Open **example.xml** from the browser.
 1. The browser output is then as shown below:
 

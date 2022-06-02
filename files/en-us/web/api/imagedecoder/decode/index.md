@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.decode()
 slug: Web/API/ImageDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,8 @@ The **`decode()`** method of the {{domxref("ImageDecoder")}} interface enqueues 
 ## Syntax
 
 ```js
-ImageDecoder.decode(options)
+decode()
+decode(options)
 ```
 
 ### Parameters
@@ -28,7 +30,7 @@ ImageDecoder.decode(options)
     - `completeFramesOnly`{{Optional_Inline}}
       - : A {{jsxref("boolean")}} defaulting to `true`. When `false` indicates that for progressive images the decoder may output an image with reduced detail.
 
-### Return Value
+### Return value
 
 A {{jsxref("promise")}} that resolves with an object containing the following members:
 

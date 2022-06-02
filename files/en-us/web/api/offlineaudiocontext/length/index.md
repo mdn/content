@@ -16,13 +16,7 @@ The **`length`** property of the
 {{domxref("OfflineAudioContext")}} interface returns an integer representing the size of
 the buffer in sample-frames.
 
-## Syntax
-
-```js
-var length = OfflineAudioContext.length;
-```
-
-### Value
+## Value
 
 An integer representing the size of the buffer in sample-frames.
 

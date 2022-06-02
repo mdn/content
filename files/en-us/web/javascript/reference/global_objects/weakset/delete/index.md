@@ -38,8 +38,8 @@ the `WeakSet` or if the `value` is not an object.
 ### Using the delete() method
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+const ws = new WeakSet();
+const obj = {};
 
 ws.add(window);
 

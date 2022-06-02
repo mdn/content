@@ -1,6 +1,7 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selectors
@@ -25,23 +26,21 @@ document's elements that match the specified group of selectors.
 ## Syntax
 
 ```js
-elementList = parentNode.querySelectorAll(selectors);
+querySelectorAll(selectors)
 ```
 
 ### Parameters
 
 - `selectors`
-  - : A {{domxref("DOMString")}} containing one or more selectors to match against. This
+  - : A string containing one or more selectors to match against. This
     string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
-    string; if it's not, a `SyntaxError` exception is thrown. See [Locating
-    DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
+    string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
     identify elements. Multiple selectors may be specified by separating them using
     commas.
 
 > **Note:** Characters which are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping,
-> special care must be taken when writing string literals using these characters. See [Escaping
-> special characters](/en-US/docs/Web/API/Document/querySelector#escaping_special_characters) for more information.
+> special care must be taken when writing string literals using these characters. See [Escaping special characters](/en-US/docs/Web/API/Document/querySelector#escaping_special_characters) for more information.
 
 ### Return value
 
@@ -54,8 +53,8 @@ each element that matches at least one of the specified selectors or an empty
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified `selectors` string is not valid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified `selectors` string is not valid.
 
 ## Examples
 
@@ -84,8 +83,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-This example uses an [attribute
-selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the
+This example uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the
 document that contain an attribute named `data-src`:
 
 ```js
@@ -170,12 +168,10 @@ inner.length; // 0
 
 ## See also
 
-- [Locating
-  DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
   Guide
-- [Attribute
-  selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} and

@@ -13,27 +13,27 @@ The **`xlink:type`** attribute identifies the type of {{Glossary("XLink")}} bein
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("cursor")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("filter")}}
-*   {{SVGElement("font-face-uri")}}
-*   {{SVGElement("glyphRef")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("mpath")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("script")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("cursor")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("filter")}}
+- {{SVGElement("font-face-uri")}}
+- {{SVGElement("glyphRef")}}
+- {{SVGElement("image")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("mpath")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("use")}}
 
 ## Usage notes
 
@@ -54,29 +54,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `simple`
-    *   : This value specifies that the referred resource is a simple link.
+- `simple`
+  - : This value specifies that the referred resource is a simple link.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "linking.html#XLinkShowAttribute", "xlink:type")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -84,4 +67,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [Definition of the `xlink:type` attribute in the XLink specification](https://www.w3.org/TR/xlink/#link-types)
+- [Definition of the `xlink:type` attribute in the XLink specification](https://www.w3.org/TR/xlink/#link-types)

@@ -1,6 +1,7 @@
 ---
 title: RTCError.sctpCauseCode
 slug: Web/API/RTCError/sctpCauseCode
+page-type: web-api-instance-property
 tags:
   - API
   - Error
@@ -22,13 +23,7 @@ The read-only **`sctpCauseCode`** property in an
 {{domxref("RTCError")}} object provides the {{Glossary("SCTP")}} cause code explaining
 why the SCTP negotiation failed, if the `RTCError` represents an SCTP error.
 
-## Syntax
-
-```js
-let sctpCause = rtcError.sctpCauseCode;
-```
-
-### Value
+## Value
 
 An unsigned long integer value specifying SCTP cause code explaining why the error
 occurred. This property is `null` if the error isn't an SCTP error, with its

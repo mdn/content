@@ -1,6 +1,7 @@
 ---
 title: CSSValue.cssText
 slug: Web/API/CSSValue/cssText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSValue
@@ -23,17 +24,11 @@ interface represents the current computed CSS property value.
 > - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
+## Value
 
-```js
-cssText = cssValue.cssText;
-```
+A string representing the current CSS property value.
 
-### Value
-
-A {{domxref("DOMString")}} representing the current CSS property value.
-
-## Example
+## Examples
 
 ```js
 var styleDeclaration = document.styleSheets[0].cssRules[0].style;
@@ -43,14 +38,14 @@ console.log(cssValue.cssText);
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
 ## Browser compatibility
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](CSS_Typed_OM_API) that is now on the standard track.

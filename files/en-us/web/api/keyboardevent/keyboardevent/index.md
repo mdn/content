@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,54 +10,53 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.KeyboardEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent()`** constructor creates a new
-{{domxref("KeyboardEvent")}}.
+{{domxref("KeyboardEvent")}} object.
 
 ## Syntax
 
 ```js
- event = new KeyboardEvent(typeArg, KeyboardEventInit);
+new KeyboardEvent(type)
+new KeyboardEvent(type, options)
 ```
 
-### Values
+### Parameters
 
-- _typeArg_
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
-- _KeyboardEventInit_{{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to `keydown`, `keyup`, or `keypress`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("UIEvent/UIEvent", "UIEvent()")}}_, can have the following properties:
+    - `key` {{optional_inline}}
+      - : A string, defaulting to `""`, that sets the value of {{domxref("KeyboardEvent.key")}}.
+    - `code` {{optional_inline}}
+      - : A string, defaulting to `""`, that sets the value of {{domxref("KeyboardEvent.code")}}.
+    - `location` {{optional_inline}}
+      - : A string, defaulting to `0`, that sets the value of {{domxref("KeyboardEvent.location")}}.
+    - `repeat` {{optional_inline}}
+      - : A boolean value, defaulting to `false`, that sets the value of {{domxref("KeyboardEvent.repeat")}}.
+    - `isComposing` {{optional_inline}}
+      - : A boolean value, defaulting to `false`, that sets the value of {{domxref("KeyboardEvent.isComposing")}}.
+    - `charCode` {{optional_inline}} {{deprecated_inline}}
+      - : A number, defaulting to `0`, that sets the value of the deprecated {{domxref("KeyboardEvent.charCode")}}.
+    - `keyCode` {{optional_inline}} {{deprecated_inline}}
+      - : A number, defaulting to `0`, that sets the value of the deprecated {{domxref("KeyboardEvent.keyCode")}}.
+    - `which` {{optional_inline}} {{deprecated_inline}}
+      - : A number, defaulting to `0`, that sets the value of the deprecated {{domxref("UIEvent.which")}}.
+    - `ctrlKey` {{optional_inline}}
+      - : A boolean value, defaulting to `false`, that sets the value of {{domxref("KeyboardEvent.ctrlKey")}}.
+    - `shiftKey` {{optional_inline}}
+      - : A boolean value, defaulting to `false`, that sets the value of {{domxref("KeyboardEvent.shiftKey")}}.
+    - `altKey` {{optional_inline}}
+      - : A boolean value, defaulting to `false`, that sets the value of {{domxref("KeyboardEvent.altKey")}}.
+    - `metaKey` {{optional_inline}}
+      - : A boolean value, defaulting to `false`, that sets the value of {{domxref("KeyboardEvent.metaKey")}}.
 
-  - : Is a `KeyboardEventInit` dictionary, having the following fields:
+### Return value
 
-    - `"key"`, optional {{domxref("DOMString")}}, defaulting to `""`,
-      that sets the value of {{domxref("KeyboardEvent.key")}}.
-    - `"code"`, optional {{domxref("DOMString")}}, defaulting to `""`,
-      that sets the value of {{domxref("KeyboardEvent.code")}}.
-    - `"location"`, optional `unsigned long`, defaulting to `0`,
-      that sets the value of {{domxref("KeyboardEvent.location")}}.
-    - `"ctrlKey"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.ctrlKey")}}.
-    - `"shiftKey"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.shiftKey")}}.
-    - `"altKey"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.altKey")}}.
-    - `"metaKey"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.metaKey")}}.<
-      /li>
-    - `"repeat"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.repeat")}}.
-    - `"isComposing"`, optional boolean value, defaulting to `false`,
-      that sets the value of {{domxref("KeyboardEvent.isComposing")}}.
-    - `"charCode"`, optional `unsigned long`, defaulting to `0`,
-      that sets the value of the deprecated {{domxref("KeyboardEvent.charCode")}}.
-    - `"keyCode"`, optional `unsigned long`, defaulting to `0`,
-      that sets the value of the deprecated {{domxref("KeyboardEvent.keyCode")}}.
-    - `"which"`, optional `unsigned long`, defaulting to `0`,
-      that sets the value of the deprecated {{domxref("KeyboardEvent.which")}}.
-
-    > **Note:** The `KeyboardEventInit` dictionary also accepts fields from
-    > the {{domxref("UIEvent.UIEvent", "UIEventInit")}} and
-    > {{domxref("Event.Event", "EventInit")}} dictionaries.
+A new {{domxref("KeyboardEvent")}} object.
 
 ## Specifications
 

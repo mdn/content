@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-start-start-radius
   - recipe:css-property
@@ -14,7 +13,13 @@ browser-compat: css.properties.border-start-start-radius
 ---
 {{CSSRef}}
 
-The **`border-start-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes).
+The **`border-start-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes).
+
+{{EmbedInteractiveExample("pages/css/border-start-start-radius.html")}}
+
+This property affects the corner between the block-start and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-top-left-radius")}} property.
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -29,12 +34,9 @@ border-start-start-radius: 1em 2em;
 border-start-start-radius: inherit;
 border-start-start-radius: initial;
 border-start-start-radius: revert;
+border-start-start-radius: revert-layer;
 border-start-start-radius: unset;
 ```
-
-This property affects the corner between the block-start and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-top-left-radius")}} property.
-
-## Syntax
 
 ### Values
 
@@ -68,14 +70,14 @@ div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
-  border-start-start-radius: 10px;
+  border-start-start-radius: 10px;
 }
 
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
   background-color: #fff;
-  border-start-start-radius: 10px;
+  border-start-start-radius: 10px;
 }
 ```
 

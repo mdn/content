@@ -17,9 +17,9 @@ The `message` event is fired when data is received through a `WebSocket`.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', event => { })
 
-onmessage = event => { };
+onmessage = event => { }
 ```
 
 ## Event type
@@ -35,9 +35,9 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
   - : The data sent by the message emitter.
 - {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
-  - : A {{domxref("USVString")}} representing the origin of the message emitter.
+  - : A string representing the origin of the message emitter.
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing a unique ID for the event.
+  - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
   - : A `MessageEventSource` (which can be a {{domxref("Window")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}

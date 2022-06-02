@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController.close()
 slug: Web/API/ReadableStreamDefaultController/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ rid of the stream and discard any enqueued chunks, you'd use
 ## Syntax
 
 ```js
-readableStreamDefaultController.close();
+close()
 ```
 
 ### Parameters
@@ -33,12 +34,12 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 

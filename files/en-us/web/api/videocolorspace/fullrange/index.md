@@ -33,5 +33,3 @@ console.log(colorSpace.fullRange);
 ## Browser compatibility
 
 {{Compat}}
-
-

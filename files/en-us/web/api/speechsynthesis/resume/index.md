@@ -24,13 +24,13 @@ resumes it if it was already paused.
 resume()
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -40,6 +40,7 @@ text-indent: 5em hanging each-line;
 text-indent: inherit;
 text-indent: initial;
 text-indent: revert;
+text-indent: revert-layer;
 text-indent: unset;
 ```
 
@@ -90,7 +91,7 @@ p {
 
 ### Skipping indentation on the first paragraph
 
-A common typographic practice when paragraph indentation is present is to skip the indentation for the first paragraph. As the _The Chicago Manual of Style_ puts it, “the first line of text following a subhead may begin flush left or be indented by the usual paragraph indention.”
+A common typographic practice when paragraph indentation is present is to skip the indentation for the first paragraph. As the _The Chicago Manual of Style_ puts it, "the first line of text following a subhead may begin flush left or be indented by the usual paragraph indention."
 
 Treating first paragraphs differently from subsequent paragraphs can be done using the [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), as in the following example:
 
@@ -189,6 +190,7 @@ p {
   - [`text-overflow`](/en-US/docs/Web/CSS/text-overflow)
   - [`text-rendering`](/en-US/docs/Web/CSS/text-rendering)
   - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
+  - {{cssxref('hanging-punctuation')}}
 
 - [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module
 - [CSS Text module](/en-US/docs/Web/CSS/CSS_Text)

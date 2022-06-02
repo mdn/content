@@ -1,6 +1,7 @@
 ---
 title: ImageBitmap.close()
 slug: Web/API/ImageBitmap/close
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -18,8 +19,16 @@ method disposes of all graphical resources associated with an `ImageBitmap`.
 ## Syntax
 
 ```js
-void ImageBitmap.close()
+close()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

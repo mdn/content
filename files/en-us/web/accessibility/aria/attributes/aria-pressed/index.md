@@ -1,13 +1,14 @@
 ---
 title: 'aria-pressed'
 slug: Web/Accessibility/ARIA/Attributes/aria-pressed
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-pressed
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-pressed
 ---
 
 The `aria-pressed` attribute indicates the current "pressed" state of a toggle button.
@@ -46,21 +47,19 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 ## ARIAMixin API
 
 - {{domxref("Element.ariaPressed")}}
-  - : The  [`ariaPressed`](/en-US/docs/Web/API/Element/ariaPressed) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-pressed` attribute.
+  - : The [`ariaPressed`](/en-US/docs/Web/API/Element/ariaPressed) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-pressed` attribute.
 - {{domxref("ElementInternals.ariaPressed")}}
-  - : The  [`ariaPressed`](/en-US/docs/Web/API/ElementInternals/ariaPressed) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-pressed` attribute.
+  - : The [`ariaPressed`](/en-US/docs/Web/API/ElementInternals/ariaPressed) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-pressed` attribute.
 
 ## Associated roles
 
 Used in roles:
 
- - [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-pressed","ARIA: aria-pressed Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -21,7 +21,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 >
 > This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-> **Note:** On iOS devices, this extension is named `WEBKIT_WEBGL_compressed_texture_pvrtc`.
+> **Note:** On iOS devices, this extension is named `WEBKIT_WEBGL_compressed_texture_pvrtc`.
 
 ## Constants
 

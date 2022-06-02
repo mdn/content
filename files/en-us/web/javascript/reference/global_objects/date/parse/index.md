@@ -39,9 +39,8 @@ new Date(dateString)
 ### Parameters
 
 - `dateString`
-  - : A string representing [a simplification of the
-    ISO 8601 calendar date extended format](#date_time_string_format). (Other formats may be used, but results
-    are implementation-dependent.)
+  - : A string representing [a simplification of the ISO 8601 calendar date extended format](#date_time_string_format).
+    (Other formats may be used, but results are implementation-dependent.)
 
 ### Return value
 
@@ -62,8 +61,9 @@ conjunction with the {{jsxref("Date.prototype.setTime()", "setTime()")}} method 
 ### Date Time String Format
 
 The standard string representation of a date time string is a simplification of the ISO
-8601 calendar date extended format. (See the section [Date Time String
-Format](https://tc39.github.io/ecma262/#sec-date-time-string-format) in the ECMAScript specification for more details.)
+8601 calendar date extended format.
+(See the section [Date Time String Format](https://tc39.es/ecma262/#sec-date-time-string-format)
+in the ECMAScript specification for more details.)
 
 For example, "`2011-10-10`" (_date-only_ form),
 "`2011-10-10T14:48:00`" (_date-time_ form), or
@@ -111,7 +111,7 @@ new Date('2014-25-23').toISOString();
 // throws "RangeError: invalid date" in all ES5-compliant browsers
 ```
 
-SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://dxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
+SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://searchfox.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
 The string "`10 06 2014`" is an example of a non-conforming ISO format and
 thus falls back to a custom routine. See also this [rough outline](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) on
 how the parsing works.
@@ -148,7 +148,7 @@ format of the string that is being converted.
 
 ## Examples
 
-### Using `Date.parse()`
+### Using Date.parse()
 
 The following calls all return `1546300800000`. The first according to ES5
 will imply UTC time, and the others are specifying UTC timezone via the ISO date

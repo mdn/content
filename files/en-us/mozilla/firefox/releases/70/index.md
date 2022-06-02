@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 70 that will affect developers. Firefox 70 was released on October 22, 2019.
+This article provides information about the changes in Firefox 70 that will affect developers. Firefox 70 was released on October 22, 2019.
 
 ## Changes for web developers
 
@@ -17,11 +17,11 @@ This article provides information about the changes in Firefox 70 that will aff
 
 #### Debugger updates
 
-- In the [Debugger](/en-US/docs/Tools/Debugger) you can now set breakpoints for [DOM Mutation](/en-US/docs/Tools/Debugger/Break_on_DOM_mutation), so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ({{bug(1576219)}}).
+- In the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) you can now set breakpoints for [DOM Mutation](https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html), so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ({{bug(1576219)}}).
 - The Debugger now shows an overlay on the page when it is paused, with basic stepping buttons to let you step and continue ({{bug(1574646)}}).
 - The Debugger now shows sources that already got discarded by the engine (usually scripts that execute once during page load), so you can properly set breakpoints to debug when they execute next ({{bug(1572280)}}).
-- The Debugger's [scopes panel](/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature) grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with), or [`if`/`else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) ({{bug(1448166)}})
-- The Debugger now retains the currently selected and expanded variables in the [scopes panel](/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature) while stepping ({{bug(1405402)}}).
+- The Debugger's [scopes panel](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with), or [`if`/`else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) ({{bug(1448166)}})
+- The Debugger now retains the currently selected and expanded variables in the [scopes panel](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) while stepping ({{bug(1405402)}}).
 - The Debugger now handles stepping over async functions correctly, making [asynchronous function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) debugging easier ({{bug(1570178)}}).
 - When debugging in [Container sessions](https://support.mozilla.org/en-US/kb/containers) (useful for testing different logins), the sources in the debugger are now shown correctly ({{bug(1375036)}}).
 - [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statements can be now disabled in the Debugger by setting a breakpoint on them and switching the breakpoints to "Never pause here" ({{bug(925269)}}).
@@ -29,9 +29,9 @@ This article provides information about the changes in Firefox 70 that will aff
 
 #### Other updates
 
-- An icon will be displayed next to inactive CSS properties in the [Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view) of the [Page Inspector](/en-US/docs/Tools/Page_Inspector), which you can hover over to get information on why it is inactive ({{bug(1306054)}}).
-- In the [CSS Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view), the [color picker](/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors) on foreground colors now tells you whether its contrast with the background color meets accessibility conformance criteria ({{bug(1478156)}}).
-- The [Accessibility inspector](/en-US/docs/Tools/Accessibility_inspector)'s [Check for issues](/en-US/docs/Tools/Accessibility_inspector#check_for_accessibility_issues) dropdown now includes keyboard accessibility checks ({{bug(1564968)}}).
+- An icon will be displayed next to inactive CSS properties in the [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view) of the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), which you can hover over to get information on why it is inactive ({{bug(1306054)}}).
+- In the [CSS Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view), the [color picker](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/inspect_and_select_colors/index.html) on foreground colors now tells you whether its contrast with the background color meets accessibility conformance criteria ({{bug(1478156)}}).
+- The [Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)'s [Check for issues](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#check-for-accessibility-issues) dropdown now includes keyboard accessibility checks ({{bug(1564968)}}).
 
 ### HTML
 
@@ -50,17 +50,17 @@ This article provides information about the changes in Firefox 70 that will aff
   - {{cssxref("text-underline-offset")}}.
   - {{cssxref("text-decoration-skip-ink")}}. The default value is `auto`, which means that by default underlines and overlines are now interrupted where they would otherwise cross over a {{Glossary("glyph")}}.
 
-- The {{cssxref("display")}} property now accepts two keyword values representing the inner and outer display type ({{Bug(1038294)}}, {{Bug(1105868)}} and {{Bug(1557825)}}).
+- The {{cssxref("display")}} property now accepts two keyword values representing the inner and outer display type ({{Bug(1038294)}}, {{Bug(1105868)}} and {{Bug(1557825)}}).
 - The {{cssxref("font-size")}} property now accepts the new keyword value `xxx-large`. ({{Bug(1553545)}}).
 - The {{cssxref(":visited")}} pseudo-class no longer matches {{htmlelement("link")}} elements, for logic and performance reasons ({{bug(1572246)}}; see [Intent to ship: Make \<link> elements always unvisited](https://groups.google.com/forum/#!msg/mozilla.dev.platform/1NP6oJzK6zg/ftAz_TajAAAJ) and [\[selectors\] :link and \<link>](https://github.com/w3c/csswg-drafts/issues/3817) for more reasoning as to why).
 - We now support an `auto` value for the {{cssxref("quotes")}} property ({{bug(1421938)}}).
 - Stylesheets contained in {{htmlelement("style")}} elements are now cached for reuse, to improve performance ({{bug(1480146)}}). Note that this currently doesn't include stylesheets that contain `@import` rules.
-- The `<ratio>` type now accepts `<number>/<number>` or a single `<number>` as a value. ({{bug(1565562)}}).
+- The `<ratio>` type now accepts `<number>/<number>` or a single `<number>` as a value. ({{bug(1565562)}}).
 
 #### Removals
 
 - We have retired support for 3-valued \<position> (excluding background)({{Bug(1559276)}}).
-- The `none` value is now invalid in {{cssxref("counter()")}} / {{cssxref("counters()")}} — a change which makes the Level 3 spec match CSS 2.1 {{Bug(1576821)}}).
+- The `none` value is now invalid in {{cssxref("counter", "counter()")}} / {{cssxref("counters", "counters()")}} — a change which makes the Level 3 spec match CSS 2.1 {{Bug(1576821)}}).
 
 ### SVG
 
@@ -68,7 +68,7 @@ This article provides information about the changes in Firefox 70 that will aff
 
 ### MathML
 
-- The deprecated `mode` attribute on {{MathMLElement("math")}} elements has been removed ({{bug(1573438)}}).
+- The deprecated `mode` attribute on {{MathMLElement("math")}} elements has been removed ({{bug(1573438)}}).
 - Non-zero unitless length values, such as `5` for `500%`, are no longer supported.
 - Length values ending with a dot, such as `2.` or `34.px`, are also unsupported now.
 
@@ -84,20 +84,20 @@ This article provides information about the changes in Firefox 70 that will aff
 
 #### DOM
 
-- The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the `{{domxref("Window/popstate_event", "popstate")}}` event to get notification that navigation has completed {{Bug(1563587)}}.
-- We've added support {{DOMxRef("DOMMatrix")}}, {{DOMxRef("DOMPoint")}}, etc. in web workers ({{bug(1420580)}}).
-- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including  {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clearEvents")}} ({{bug(1558570)}}, {{bug(1558571)}}).
+- The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the {{domxref("Window/popstate_event", "popstate")}} event to get notification that navigation has completed {{Bug(1563587)}}.
+- We've added support {{DOMxRef("DOMMatrix")}}, {{DOMxRef("DOMPoint")}}, etc. in web workers ({{bug(1420580)}}).
+- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clearEvents")}} ({{bug(1558570)}}, {{bug(1558571)}}).
 - [Notification](/en-US/docs/Web/API/Notifications_API) permission can no longer be requested from inside a cross-origin {{htmlelement("iframe")}} ({{bug(1560741)}}).
 
 #### Media, Web Audio, and WebRTC
 
-- The {{domxref("RTCPeerConnection.restartIce()")}} method has been added. This is one of the four changes needed to implement the new "perfect negotiation" mechanism; the rest will come in future Firefox updates ({{bug(1551316)}}).
+- The {{domxref("RTCPeerConnection.restartIce()")}} method has been added. This is one of the four changes needed to implement the new "perfect negotiation" mechanism; the rest will come in future Firefox updates ({{bug(1551316)}}).
 - The {{domxref("RTCPeerConnection.setRemoteDescription()")}} method can now be called with no parameters. This is another "perfect negotiation" update ({{bug(1568292)}}).
-- {{domxref("MediaTrackSupportedConstraints.groupId")}} is now supported, and returns `true` since the {{domxref("MediaTrackConstraints.groupId")}} property is now supported ({{bug(1561254)}}).
+- {{domxref("MediaTrackSupportedConstraints.groupId")}} is now supported, and returns `true` since the {{domxref("MediaTrackConstraints.groupId")}} property is now supported ({{bug(1561254)}}).
 - Several new Web Audio API features have been implemented/updated:
 
   - {{domxref("AudioContext.getOutputTimestamp()")}} implemented ({{bug(1324545)}}).
-  - {{domxref("AudioContext.baseLatency")}} and {{domxref("AudioContext.outputLatency")}} implemented ({{bug(1324552)}}).
+  - {{domxref("AudioContext.baseLatency")}} and {{domxref("AudioContext.outputLatency")}} implemented ({{bug(1324552)}}).
   - {{domxref("MediaElementAudioSourceNode.mediaElement")}} and {{domxref("MediaStreamAudioSourceNode.mediaStream")}} implemented ({{bug(1350973)}}).
   - The {{domxref("ChannelMergerNode.ChannelMergerNode()", "ChannelMergerNode()")}} constructor now throws errors if you try to set `channelCount` and `channelCountMode` to invalid values ({{bug(1456263)}}).
 
@@ -107,7 +107,7 @@ This article provides information about the changes in Firefox 70 that will aff
 
 ### HTTP
 
-- The default referrer policy for third-party tracking resources is now `strict-origin-when-cross-origin` when [Enhanced Tracking Protection](/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection) is turned on ({{bug(1569996)}}).
+- The default referrer policy for third-party tracking resources is now `strict-origin-when-cross-origin` when [Enhanced Tracking Protection](/en-US/docs/Web/Privacy/Tracking_Protection) is turned on ({{bug(1569996)}}).
 - The size of the {{httpheader("Referer")}} request header is now limited to 4 KB (4,096 bytes). If an overly long referer exceeds the defined limit, only the origin part will be sent ({{bug(1557346)}}).
 - The [HTTP cache](/en-US/docs/Web/HTTP/Caching) is now partitioned per the top-level document's origin ({{bug(1536058)}}).
 

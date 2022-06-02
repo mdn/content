@@ -22,7 +22,7 @@ You do not have to create a {{jsxref("Number")}} object to access this static pr
 ### Checking whether values are numeric
 
 ```js
-function sanitise(x) {
+function sanitize(x) {
   if (isNaN(x)) {
     return Number.NaN;
   }

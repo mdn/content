@@ -21,15 +21,15 @@ The **`<noembed>`** [HTML](/en-US/docs/Web/HTML) element is an obsolete, non-sta
 
 ## Examples
 
-The message inside `<noembed>` tag will appear only when your browser does not support `<embed>` tag.
+The message inside `<noembed>` tag will appear only when your browser does not support `<embed>` tag.
 
 ### Show an alternative content
 
 ```html
 <embed type="vide/webm" src="/media/examples/flower.mp4" width="200" height="200">
   <noembed>
-    <h1>Alternative content</h1>
-  </noembed>
+    <h1>Alternative content</h1>
+  </noembed>
 </embed>
 ```
 

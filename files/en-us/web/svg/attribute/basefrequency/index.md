@@ -13,9 +13,11 @@ The **`baseFrequency`** attribute represents the base frequency parameter for th
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feTurbulence")}}
+- {{SVGElement("feTurbulence")}}
 
 ## Example
+
+### Example 1
 
 ```css hidden
 html, body, svg {
@@ -37,7 +39,26 @@ html, body, svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "220", "220")}}
+{{EmbedLiveSample("Example 1", "220", "220")}}
+
+### Example 2
+
+```html
+<svg width="200" height="200" viewBox="0 0 220 220"
+     xmlns="http://www.w3.org/2000/svg">
+  <filter id="displacementFilter">
+    <feTurbulence type="turbulence" baseFrequency="0.05"
+        numOctaves="2" result="turbulence"/>
+    <feDisplacementMap in2="turbulence" in="SourceGraphic"
+        scale="50" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+
+  <circle cx="100" cy="100" r="100"
+      style="filter: url(#displacementFilter)"/>
+</svg>
+```
+
+{{EmbedLiveSample("Example 2", "220", "250")}}
 
 ## Usage notes
 
@@ -62,57 +83,14 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number-optional-number>`
-    *   : If two numbers are provided, the first one represents the base frequency in the horizontal direction and the second one the base frequency in the vertical direction. If one number is provided, then that value is used for both x and y.
+- `<number-optional-number>`
+  - : If two numbers are provided, the first one represents the base frequency in the horizontal direction and the second one the base frequency in the vertical direction. If one number is provided, then that value is used for both x and y.
 
-        Negative values are forbidden.
-
-## Example
-
-```html
-<svg width="200" height="200" viewBox="0 0 220 220"
-     xmlns="http://www.w3.org/2000/svg">
-  <filter id="displacementFilter">
-    <feTurbulence type="turbulence" baseFrequency="0.05"
-        numOctaves="2" result="turbulence"/>
-    <feDisplacementMap in2="turbulence" in="SourceGraphic"
-        scale="50" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
-
-  <circle cx="100" cy="100" r="100"
-      style="filter: url(#displacementFilter)"/>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "220", "220")}}
+    Negative values are forbidden.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feturbulence-basefrequency", "baseFrequency")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feTurbulenceBaseFrequencyAttribute", "baseFrequency")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

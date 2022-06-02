@@ -7,7 +7,7 @@ tags:
   - Reference
   - Tutorial
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}} {{draft}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
 
 Painting an unstyled page, and then repainting it once styles are parsed would be bad user experience. For this reason, CSS is render blocking, unless the browser knows the CSS is not currently needed. The browser can paint the page once it has downloaded the CSS and built the CSS object model. Browsers follow a specific rendering path: paint only occurs after layout, which occurs after the render tree is created, which in turn requires both the DOM and the CSSOM trees. To optimize the CSSOM construction, remove unnecessary styles, minify, compress and cache it, and split CSS not required at page load into additional files to reduce CSS render blocking.
 
@@ -65,7 +65,7 @@ The {{cssxref('contain')}} CSS property allows an author to indicate that an ele
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
 - [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)

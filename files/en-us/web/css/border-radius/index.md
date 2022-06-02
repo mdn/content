@@ -63,6 +63,7 @@ border-radius: 10px 5% / 20px 25em 30px 35em;
 border-radius: inherit;
 border-radius: initial;
 border-radius: revert;
+border-radius: revert-layer;
 border-radius: unset;
 ```
 
@@ -131,7 +132,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>bottom-right</em></td>
-      <td><img alt="bottom-rigth.png" src="bottom-rigth.png" /></td>
+      <td><img alt="bottom-right.png" src="bottom-right.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use

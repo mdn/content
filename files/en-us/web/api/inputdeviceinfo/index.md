@@ -1,6 +1,7 @@
 ---
 title: InputDeviceInfo
 slug: Web/API/InputDeviceInfo
+page-type: web-api-interface
 tags:
   - API
   - Media Streams API
@@ -14,6 +15,8 @@ browser-compat: api.InputDeviceInfo
 The **`InputDeviceInfo`** interface of the {{domxref('Media Streams API','','',' ')}} gives access to the capabilities of the input device that it represents.
 
 `InputDeviceInfo` objects are returned by {{domxref("MediaDevices.enumerateDevices()")}} if the returned device is an audio or video input device.
+
+{{InheritanceDiagram}}
 
 ## Methods
 

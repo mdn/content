@@ -1,6 +1,7 @@
 ---
 title: MediaKeySession.update()
 slug: Web/API/MediaKeySession/update
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -20,12 +21,12 @@ CDM, and then returns a {{jsxref('Promise')}} .
 ## Syntax
 
 ```js
-mediaKeySession.update(response).then(function() { /* ... */ });
+update(response)
 ```
 
 ### Parameters
 
-- response
+- `response`
   - : An instance of type BufferSource.
 
 ### Return value

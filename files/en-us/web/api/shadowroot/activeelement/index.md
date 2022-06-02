@@ -15,13 +15,7 @@ browser-compat: api.ShadowRoot.activeElement
 The **`activeElement`** read-only property of the
 {{domxref("ShadowRoot")}} interface returns the element within the shadow tree that has focus.
 
-## Syntax
-
-```js
-shadowRoot.activeElement
-```
-
-### Value
+## Value
 
 The {{domxref('Element')}} which currently has focus, or `null` if there is no focused element.
 

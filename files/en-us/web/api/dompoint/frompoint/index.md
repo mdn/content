@@ -1,6 +1,7 @@
 ---
 title: DOMPoint.fromPoint()
 slug: Web/API/DOMPoint/fromPoint
+page-type: web-api-static-method
 tags:
   - API
   - Coordinates
@@ -31,10 +32,10 @@ the properties within may be changed at will.
 ## Syntax
 
 ```js
-var point = DOMPoint.fromPoint(sourcePoint);
+fromPoint(sourcePoint)
 ```
 
-### Properties
+### Parameters
 
 - `sourcePoint`
 

@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var uninstalling = browser.pkcs11.uninstallModule(
+let uninstalling = browser.pkcs11.uninstallModule(
   name              // string
 )
 ```

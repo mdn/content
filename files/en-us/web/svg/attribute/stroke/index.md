@@ -14,18 +14,18 @@ The **`stroke`** attribute is a presentation attribute defining the color (*or a
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('line')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('line')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -35,20 +35,20 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple color stroke -->
-  <circle cx="5" cy="5" r="4" fill="none"
-          stroke="green" />
+  <!-- Simple color stroke -->
+  <circle cx="5" cy="5" r="4" fill="none"
+          stroke="green" />
 
-  <!-- Stroke a circle with a gradient -->
-  <defs>
-    <linearGradient id="myGradient">
-      <stop offset="0%"   stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </linearGradient>
-  </defs>
+  <!-- Stroke a circle with a gradient -->
+  <defs>
+    <linearGradient id="myGradient">
+      <stop offset="0%"   stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </linearGradient>
+  </defs>
 
-  <circle cx="15" cy="5" r="4" fill="none"
-          stroke="url(#myGradient)" />
+  <circle cx="15" cy="5" r="4" fill="none"
+          stroke="url(#myGradient)" />
 </svg>
 ```
 
@@ -81,37 +81,8 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeProperty", "stroke")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Definition for shapes and texts.<br />Adds <code>context-fill</code> and
-        <code>context-stroke</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeProperty", "stroke")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** For information on using the `context-stroke` (and `context-fill`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.

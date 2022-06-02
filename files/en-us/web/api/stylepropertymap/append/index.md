@@ -14,28 +14,28 @@ browser-compat: api.StylePropertyMap.append
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`append()`** method of the
-{{domxref("StylePropertyMap")}} interface adds the passed CSS value to the
+{{domxref("StylePropertyMap")}} interface adds the passed CSS value to the
 `StylePropertyMap` with the given property.
 
 ## Syntax
 
 ```js
-StylePropertyMap.append(property,value)
+append(property, value)
 ```
 
 ### Parameters
 
-- property
-  - : An identifier indicating the stylistic feature (e.g. font, width, background
-    color) to add.
-- value
+- `property`
+  - : An identifier indicating the stylistic feature (e.g. font, width, background
+    color) to add.
+- `value`
   - : The value the given property should have.
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example shows an extra background image value being added to the
 {{cssxref('background-image')}} property of the element, using

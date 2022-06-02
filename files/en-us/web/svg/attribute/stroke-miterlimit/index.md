@@ -14,15 +14,15 @@ The **`stroke-miterlimit`** attribute is a presentation attribute defining a lim
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -103,34 +103,10 @@ For example, a miter limit of 1.414 converts miters to bevels for theta less tha
 
 The value of `stroke-miterlimit` must be greater than or equal to 1.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-## Specifications
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeMiterlimitProperty", "stroke-miterlimit")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for shapes and texts</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeMiterlimitProperty", "stroke-miterlimit")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>

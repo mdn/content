@@ -6,6 +6,9 @@ tags:
   - Property
   - Reference
   - Template
+spec-urls:
+  - https://w3c.github.io/aria/#foo
+  - https://w3c.github.io/aria-practices/#bar
 ---
 {{MDNSidebar}}
 
@@ -13,7 +16,7 @@ tags:
 
 ### Title and slug
 
-An ARIA role page should have a _title_ and _slug_ of *ARIA:Name*Of*TheRole*. For example, the [button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) has a _title_ and _slug_ of _ARIA/NameOfTheRole_role_ and the [aria-labelledby ](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)attribute has a title of _ARIA-labelledby Attribute._
+An ARIA role page should have a _title_ and _slug_ of *ARIA:Name*Of*TheRole*. For example, the [button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) has a _title_ and _slug_ of _ARIA/NameOfTheRole_role_ and the [aria-labelledby](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute has a title of _ARIA-labelledby Attribute._
 
 ### Top macros
 
@@ -28,10 +31,10 @@ In ARIA role or attribute subpages, you need to include the following tags (see 
 
 ### Specifications
 
-Update the fragment link within the following specifications to the correct section:
+In the value of the `spec_urls` frontmatter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
 
-- ARIA: https\://www\.w3.org/TR/wai-aria-1.1/
-- ARIA Authoring Practices: https\://www\.w3.org/TR/wai-aria-practices-1.1/
+- ARIA: https\://w3c\.github.io/aria/
+- ARIA Authoring Practices: https\://w3c\.github.io/aria-practices/
 
 Additional resources:
 
@@ -101,10 +104,7 @@ Any additional benefits this feature has for non-typical screen reader users, li
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#direct-document-fragment-link","NameOfRoleOrAttribute")}}                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#direct-document-fragment-link","NameOfRoleOrAttribute")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## Precedence order
 

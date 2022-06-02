@@ -1,6 +1,7 @@
 ---
 title: CSSMatrixComponent()
 slug: Web/API/CSSMatrixComponent/CSSMatrixComponent
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,7 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMatrixComponent.CSSMatrixComponent
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMatrixComponent()`** constructor
 creates a new {{domxref("CSSMatrixComponent")}} object representing the [matrix()](</en-US/docs/Web/CSS/transform-function/matrix()>) and [matrix3d()](</en-US/docs/Web/CSS/transform-function/matrix()>) values of the
@@ -21,7 +22,8 @@ individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSMatrixComponent = new CSSMatrixComponent(matrix[,options]);
+new CSSMatrixComponent(matrix)
+new CSSMatrixComponent(matrix, options)
 ```
 
 ### Parameters

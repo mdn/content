@@ -21,8 +21,9 @@ audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 ## Syntax
 
 ```js
-new OfflineAudioContext(options);
-new OfflineAudioContext(numberOfChannels, length, sampleRate);
+new OfflineAudioContext(options)
+
+new OfflineAudioContext(numberOfChannels, length, sampleRate)
 ```
 
 ### Parameters
@@ -43,7 +44,7 @@ as either the same set of parameters as are inputs into the
     `5 * 48000 = 240000` sample-frames.
 - `sampleRate`
   - : The sample-rate of the linear audio data in sample-frames per second. All user
-    agents are required to support a range of 22050Hz to 96000Hz, and may support a wider
+    agents are required to support a range of 8000Hz to 96000Hz, and may support a wider
     range than that. The most commonly-used rate is 44100Hz, which is the sample rate used
     by CD audio.
 
@@ -65,7 +66,7 @@ Like a regular `AudioContext`, an
 `OfflineAudioContext` can be the target of events, therefore it implements
 the {{domxref("EventTarget")}} interface.
 
-## Example
+## Examples
 
 ```js
 const offlineCtx = new OfflineAudioContext({
@@ -78,7 +79,7 @@ const source = offlineCtx.createBufferSource();
 ```
 
 For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-Github repo (see the [source
+GitHub repo (see the [source
 code](https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html) too.)
 
 ## Specifications

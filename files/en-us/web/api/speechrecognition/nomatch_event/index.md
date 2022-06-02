@@ -13,32 +13,34 @@ The **`nomatch`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_A
 
 This may involve some degree of recognition, which doesn't meet or exceed the {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("SpeechRecognitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SpeechRecognition/onnomatch"
-            >onnomatch</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('nomatch', event => { })
+
+onnomatch = event => { }
+```
+
+## Event type
+
+An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("SpeechRecognitionEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("SpeechRecognitionEvent.emma")}} {{readonlyinline}}
+  - : Returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.
+- {{domxref("SpeechRecognitionEvent.interpretation")}} {{readonlyinline}}
+  - : Returns the semantic meaning of what the user said.
+- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{readonlyinline}}
+  - : Returns the lowest index value result in the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.
+- {{domxref("SpeechRecognitionEvent.results")}} {{readonlyinline}}
+  - : Returns a {{domxref("SpeechRecognitionResultList")}} object representing all the speech recognition results for the current session.
 
 ## Examples
 
@@ -52,7 +54,7 @@ recognition.addEventListener('nomatch', function() {
 });
 ```
 
-Or use the [`onnomatch`](/en-US/docs/Web/API/SpeechRecognition/onnomatch) event handler property:
+Or use the `onnomatch` event handler property:
 
 ```js
 recognition.onnomatch = function() {

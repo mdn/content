@@ -1,6 +1,7 @@
 ---
-title: MediaStreamTrackProcessor.MediaStreamTrackProcessor()
+title: MediaStreamTrackProcessor()
 slug: Web/API/MediaStreamTrackProcessor/MediaStreamTrackProcessor
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("Media
 ## Syntax
 
 ```js
-new MediaStreamTrackProcessor(init);
+new MediaStreamTrackProcessor(options)
 ```
 
 ### Parameters
@@ -42,4 +43,3 @@ const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
 ## Browser compatibility
 
 {{Compat}}
-

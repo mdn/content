@@ -16,10 +16,10 @@ The **`initMSManipulationEvent`** method is used to create a {{DOMxRef("MSManipu
 
 This proprietary method is specific to Internet Explorer. Beginning with the Microsoft Edge browser, the [initEvent()](/en-US/docs/Web/API/Event/initEvent) constructor pattern for synthetic events is deprecated.
 
-### Syntax
+## Syntax
 
 ```js
-MSManipulationEvent.initMSManipulationEvent(typeArg, canBubbleArg, cancelableArg, viewArg, detailArg, lastState, currentState);
+initMSManipulationEvent(typeArg, canBubbleArg, cancelableArg, viewArg, detailArg, lastState, currentState)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ Indicates whether the event can bubble. When true the event should propagate upw
 
 Type: _boolean_
 
-Indicates whether the event’s default action can be prevented. When true, the default action can be canceled. When false, the default action cannot be canceled.
+Indicates whether the event's default action can be prevented. When true, the default action can be canceled. When false, the default action cannot be canceled.
 
 **viewArg** \[in]
 
@@ -70,7 +70,7 @@ Indicates the current state of the manipulation event.
 
 This method does not return a value.
 
-### Example
+## Examples
 
 ```js
 interface MSManipulationEvent extends UIEvent {

@@ -1,6 +1,7 @@
 ---
 title: ReadableByteStreamController.byobRequest
 slug: Web/API/ReadableByteStreamController/byobRequest
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -11,19 +12,13 @@ tags:
   - byobRequest
 browser-compat: api.ReadableByteStreamController.byobRequest
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`byobRequest`** read-only property of the
 {{domxref("ReadableByteStreamController")}} interface returns the current BYOB pull
 request, or `undefined` if there are no pending requests.
 
-## Syntax
-
-```js
-var request = readableByteStreamController.byobRequest;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStreamBYOBRequest")}} object instance, or `undefined`.
 

@@ -55,7 +55,7 @@ Components are a central building block of Angular applications.
 This to-do application has two components — a component as a foundation for your application, and a component for handling to-do items.
 
 Each component is made up of a TypeScript class, HTML, and CSS.
-Typescript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
+TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
 
 ### Dynamically change the UI with \*ngIf and \*ngFor
 
@@ -91,12 +91,11 @@ export interface Item {
 }
 ```
 
-The `Item` `interface` creates an `item` object model so that your application understands what an `item` is.
-For this to-do list, an `item` is an object that has a description and can be done.
+You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component#add_logic_to_itemcomponent), but it is a good time to know and record your knowledge of what an `item` is. The `Item` `interface` creates an `item` object model so that your application will understand what an `item` is. For this to-do list, an `item` is an object that has a description and can be done.
 
 ## Add logic to AppComponent
 
-Now that your application knows what an `item` is, you can give it some items by adding them to the TypeScript file, `app.component.ts`.
+Now that you know what an `item` is, you can give your application some items by adding them to the TypeScript file, `app.component.ts`.
 In `app.component.ts`, replace the contents with the following:
 
 ```js
@@ -173,13 +172,15 @@ The double curly braces that contain `item.description` instructs Angular to pop
 
 In the browser, you should see the list of items as follows:
 
-    My To Do List
-    What would you like to do today?
+```
+My To Do List
+What would you like to do today?
 
-    * eat
-    * sleep
-    * play
-    * laugh
+* eat
+* sleep
+* play
+* laugh
+```
 
 ## Add items to the list
 

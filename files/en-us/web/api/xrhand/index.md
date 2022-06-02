@@ -13,7 +13,7 @@ browser-compat: api.XRHand
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`XRHand`** interface is pair iterator (an ordered map) with the key being the hand joints and the value being an {{domxref("XRJointSpace")}}.
+The **`XRHand`** interface is pair iterator (an ordered map) with the key being the hand joints and the value being an {{domxref("XRJointSpace")}}.
 
 `XRHand` is returned by {{domxref("XRInputSource.hand")}}.
 

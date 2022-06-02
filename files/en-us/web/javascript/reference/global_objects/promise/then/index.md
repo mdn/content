@@ -21,7 +21,7 @@ takes up to two arguments: callback functions for the success and failure cases 
 > `then` will be missing the handler(s), but will not generate any errors. If
 > the `Promise` that `then` is called on adopts a state
 > (`fulfillment` or `rejection`) for which `then` has
-> no handler, the returned promise adopts the final state of the original
+> no handler, the returned promise adopts the final state of the original
 > `Promise` on which `then` was called.
 
 ## Syntax
@@ -100,16 +100,16 @@ setTimeout(() => {
 
 ## Description
 
-As the `then` and {{jsxref("Promise.prototype.catch()")}} methods return
-promises, they [can be
-chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining) — an operation called _composition_.
+As the `then` and {{jsxref("Promise.prototype.catch()")}} methods return promises,
+they [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining)
+— an operation called _composition_.
 
 ## Examples
 
 ### Using the `then` method
 
 ```js
-var p1 = new Promise((resolve, reject) => {
+const p1 = new Promise((resolve, reject) => {
   resolve('Success!');
   // or
   // reject(new Error("Error!"));
@@ -177,7 +177,7 @@ return
 `Promise.resolve(<value returned by whichever handler was called>)`.
 
 ```js
-var p2 = new Promise(function(resolve, reject) {
+const p2 = new Promise(function(resolve, reject) {
   resolve(1);
 });
 
@@ -249,7 +249,7 @@ function fetch_current_data() {
     if (response.headers.get('content-type') != 'application/json') {
       throw new TypeError();
     }
-    var j = response.json();
+    const j = response.json();
     // maybe do something with j
     return j; // fulfillment value given to user of
               // fetch_current_data().then()
@@ -272,8 +272,8 @@ function rejectLater(resolve, reject) {
   }, 1000);
 }
 
-var p1 = Promise.resolve('foo');
-var p2 = p1.then(function() {
+const p1 = Promise.resolve('foo');
+const p2 = p1.then(function() {
   // Return promise here, that will be resolved to 10 after 1 second
   return new Promise(resolveLater);
 });
@@ -284,7 +284,7 @@ p2.then(function(v) {
   console.error('rejected', e);
 });
 
-var p3 = p1.then(function() {
+const p3 = p1.then(function() {
   // Return promise here, that will be rejected with 'Error' after 1 second
   return new Promise(rejectLater);
 });

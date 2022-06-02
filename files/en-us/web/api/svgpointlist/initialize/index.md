@@ -16,7 +16,7 @@ The **`initialize()`** method of the {{domxref("SVGPointList")}} interface clear
 ## Syntax
 
 ```js
-SVGPointList.initialize(obj);
+initialize(obj)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ The added {{domxref("SVGPoint")}} object.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModicationAllowedError`
+- {{domxref("DOMException")}} `NoModificationAllowedError`
   - : Thrown if the list is read-only.
 
 ## Examples

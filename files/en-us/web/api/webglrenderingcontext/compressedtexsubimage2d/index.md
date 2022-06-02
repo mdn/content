@@ -24,11 +24,13 @@ using this method or a {{domxref("WebGL2RenderingContext")}} must be used.
 
 ```js
 // WebGL 1:
-void gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, ArrayBufferView? pixels);
+compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, srcData)
 
 // Additionally available in WebGL 2:
-void gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, offset);
-void gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
+compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, offset)
+compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, srcData)
+compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, srcData, srcOffset)
+compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, srcData, srcOffset, srcLengthOverride)
 ```
 
 ### Parameters
@@ -142,13 +144,13 @@ void gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, 
 - `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the offset in bytes from which to read from the
     buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
-- `pixels`
+- `srcData`
   - : An {{domxref("ArrayBufferView")}} that be used as a data store for the compressed
     image data in memory.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

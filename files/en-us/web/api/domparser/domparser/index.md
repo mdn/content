@@ -1,6 +1,7 @@
 ---
 title: DOMParser()
 slug: Web/API/DOMParser/DOMParser
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,12 +10,14 @@ tags:
   - Reference
 browser-compat: api.DOMParser.DOMParser
 ---
-The **`DOMParser()`** constructor creates a new [`DOMParser`](/en-US/docs/Web/API/DOMParser) object.
+{{APIRef("DOM")}}
+
+The **`DOMParser()`** constructor creates a new [`DOMParser`](/en-US/docs/Web/API/DOMParser) object. This object can be used to parse the text of a document using the `parseFromString()` method.
 
 ## Syntax
 
 ```js
-const parser = new DOMParser();
+new DOMParser()
 ```
 
 ### Parameters

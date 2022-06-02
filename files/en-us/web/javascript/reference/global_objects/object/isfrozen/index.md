@@ -47,12 +47,12 @@ Object.isFrozen({}); // === false
 
 // An empty object which is not extensible
 // is vacuously frozen.
-var vacuouslyFrozen = Object.preventExtensions({});
+const vacuouslyFrozen = Object.preventExtensions({});
 Object.isFrozen(vacuouslyFrozen); // === true
 
 // A new object with one property is also extensible,
 // ergo not frozen.
-var oneProp = { p: 42 };
+const oneProp = { p: 42 };
 Object.isFrozen(oneProp); // === false
 
 // Preventing extensions to the object still doesn't
@@ -68,7 +68,7 @@ Object.isFrozen(oneProp); // === true
 
 // A non-extensible object with a non-writable
 // but still configurable property is not frozen.
-var nonWritable = { e: 'plep' };
+const nonWritable = { e: 'plep' };
 Object.preventExtensions(nonWritable);
 Object.defineProperty(nonWritable, 'e', {
   writable: false
@@ -84,7 +84,7 @@ Object.isFrozen(nonWritable); // === true
 
 // A non-extensible object with a non-configurable
 // but still writable property also isn't frozen.
-var nonConfigurable = { release: 'the kraken!' };
+const nonConfigurable = { release: 'the kraken!' };
 Object.preventExtensions(nonConfigurable);
 Object.defineProperty(nonConfigurable, 'release', {
   configurable: false
@@ -100,7 +100,7 @@ Object.isFrozen(nonConfigurable); // === true
 
 // A non-extensible object with a configurable
 // accessor property isn't frozen.
-var accessor = { get food() { return 'yum'; } };
+const accessor = { get food() { return 'yum'; } };
 Object.preventExtensions(accessor);
 Object.isFrozen(accessor); // === false
 
@@ -113,7 +113,7 @@ Object.isFrozen(accessor); // === true
 
 // But the easiest way for an object to be frozen
 // is if Object.freeze has been called on it.
-var frozen = { 1: 81 };
+const frozen = { 1: 81 };
 Object.isFrozen(frozen); // === false
 Object.freeze(frozen);
 Object.isFrozen(frozen); // === true

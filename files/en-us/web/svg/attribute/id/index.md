@@ -50,40 +50,16 @@ You can use this attribute with any SVG element.
   </tbody>
 </table>
 
-*   \<id>
-    *   : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
+- \<id>
+  - : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
 
-        > **Note:** You should avoid the use of `id` values that would be parsed as an SVG view specification (e.g., `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) or a basic media fragment when used as a URL target fragment.
+    > **Note:** You should avoid the use of `id` values that would be parsed as an SVG view specification (e.g., `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) or a basic media fragment when used as a URL target fragment.
 
-        It must be valid in XML documents. A stand-alone SVG document uses XML 1.0 syntax, which specifies that valid IDs only include designated characters (letters, digits, and a few punctuation marks), and do not start with a digit, a full stop (.) character, or a hyphen-minus (-) character.
+    It must be valid in XML documents. A stand-alone SVG document uses XML 1.0 syntax, which specifies that valid IDs only include designated characters (letters, digits, and a few punctuation marks), and do not start with a digit, a full stop (.) character, or a hyphen-minus (-) character.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "struct.html#IDAttribute", "id")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Defines the allowed values in more detail.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#IDAttribute", "id")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -91,5 +67,5 @@ You can use this attribute with any SVG element.
 
 ## See also
 
-*   [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
-*   {{SVGAttr("class")}}
+- [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
+- {{SVGAttr("class")}}

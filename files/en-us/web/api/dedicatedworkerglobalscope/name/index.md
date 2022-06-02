@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.name
 slug: Web/API/DedicatedWorkerGlobalScope/name
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -16,20 +17,14 @@ browser-compat: api.DedicatedWorkerGlobalScope.name
 The **`name`** read-only property of the
 {{domxref("DedicatedWorkerGlobalScope")}} interface returns the name that the
 {{domxref("Worker")}} was (optionally) given when it was created. This is the name that
-the {{domxref("Worker.Worker", "Worker()")}} constructor can pass to get a reference to
+the {{domxref("Worker.Worker", "Worker()")}} constructor can pass to get a reference to
 the {{domxref("DedicatedWorkerGlobalScope")}}.
 
-## Syntax
+## Value
 
-```js
-var nameObj = self.name;
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 If a worker is created using a constructor with a `name` option:
 

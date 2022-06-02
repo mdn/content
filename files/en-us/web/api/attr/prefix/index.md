@@ -1,6 +1,7 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -13,14 +14,13 @@ The read-only **`prefix`** property of the {{domxref("Attr")}} returns the names
 
 The prefix is always in lower case, whatever case is used at the attribute creation.
 
-
 > **Note:** Only XML supports namespaces. HTML does not. That means that the prefix of an attribute of an HTML element will always be `null`.
 
 Also, only the `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:href`, `xlink:show`, `xlink:target` and `xlink:title` attributes) and `xpath` namespaces are supported, and only on SVG and MathML elements.
 
 ## Value
 
-A {{jsxref("String")}} containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
+A string containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
 
 ## Example
 
@@ -58,8 +58,6 @@ for (let button of buttons) {
 ```
 
 {{ EmbedLiveSample('Example','100%',100) }}
-
-
 
 ## Specifications
 

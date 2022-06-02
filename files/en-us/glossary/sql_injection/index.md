@@ -12,7 +12,7 @@ SQL injection takes advantage of Web apps that fail to validate user input. Hack
 
 SQL injection can gain unauthorized access to a database or to retrieve information directly from the database. Many data breaches are due to SQL injection.
 
-[![](sql_inj_xss.gif)](https://www.acunetix.com/wp-content/uploads/2010/09/sql_inj_xss.gif)
+[![](sql_inj_xss.gif)](https://cdn.acunetix.com/wp_content/uploads/2010/09/sql_inj_xss.gif)
 
 ## How It Works
 
@@ -46,7 +46,9 @@ After clicking on the login button, the SQL query will work as follows:
 
 Just take a closer look at the above query's password section.
 
-    Password=' anything 'or'1'='1 '
+```
+Password=' anything 'or'1'='1 '
+```
 
 The password is not 'anything', hence password=anything results in FALSE, but '1'='1' is a TRUE statement and hence returns a TRUE value. Finally, due to the OR operator, the value ( FALSE OR TRUE ) is TRUE, so authentication bypasses successfully. Just due to a simple string (Magical String) the entire database is compromised.
 
@@ -67,4 +69,4 @@ So due to (1) each single quote (') in the input string is replaced with double 
 ## See also
 
 - {{Interwiki("wikipedia", "SQL injection")}} on Wikipedia
-- [Explanation of SQL injection ](https://www.owasp.org/index.php/SQL_Injection)on OWASP (Open Web Application Security Project)
+- [Explanation of SQL injection](https://owasp.org/www-community/attacks/SQL_Injection) on OWASP (Open Web Application Security Project)

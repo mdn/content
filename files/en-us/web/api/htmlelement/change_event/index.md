@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: change event'
 slug: Web/API/HTMLElement/change_event
+page-type: web-api-event
 tags:
   - Change
   - Event
@@ -9,6 +10,7 @@ tags:
   - HTMLElement
   - Reference
   - Web
+browser-compat: api.GlobalEventHandlers.onchange
 ---
 {{APIRef}}
 
@@ -39,7 +41,8 @@ The `change` event is fired for {{HTMLElement("input")}}, {{HTMLElement("select"
 
 Depending on the kind of element being changed and the way the user interacts with the element, the `change` event fires at a different moment:
 
-- When the element is `:checked` (by clicking or using the keyboard) for `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` and `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}`;
+- When a `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` element is checked or unchecked (by clicking or using the keyboard);
+- When a `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` element is checked (but not when unchecked);
 - When the user commits the change explicitly (e.g., by selecting a value from a {{HTMLElement("select")}}'s dropdown with a mouse click, by selecting a date from a date picker for `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}`, by selecting a file in the file picker for `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}`, etc.);
 - When the element loses focus after its value was changed, but not committed (e.g., after editing the value of {{HTMLElement("textarea")}} or `{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}`).
 
@@ -120,14 +123,14 @@ function updateValue(e) {
 
 #### Result
 
-{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}
+{{ EmbedLiveSample('Text_input_element', '100%', '90px') }}
 
 ## Specifications
 
-{{Specifications("api.GlobalEventHandlers.onchange")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}
 
 Different browsers do not always agree whether a `change` event should be fired for certain types of interaction. For example, keyboard navigation in {{HTMLElement("select")}} elements used to never fire a `change` event in Gecko until the user hit Enter or switched the focus away from the `<select>` (see {{bug("126379")}}). Since Firefox 63 (Quantum), this behavior is consistent between all major browsers, however.

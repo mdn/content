@@ -25,13 +25,7 @@ created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has 
 removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent
 media source.
 
-## Syntax
-
-```js
-var sourceBuffer = VideoTrack.sourceBuffer;
-```
-
-### Value
+## Value
 
 A {{domxref("SourceBuffer")}} or null.
 

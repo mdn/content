@@ -19,6 +19,8 @@ You don't create {{DOMxRef("RTCSctpTransport")}} objects yourself; instead, you 
 
 Possibly the most useful property on this interface is its {{DOMxRef("RTCSctpTransport.maxMessageSize", "maxMessageSize")}} property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Also inherits properties from: {{DOMxRef("EventTarget")}}_
@@ -28,7 +30,7 @@ _Also inherits properties from: {{DOMxRef("EventTarget")}}_
 - {{DOMxRef("RTCSctpTransport.maxMessageSize")}}{{ReadOnlyInline}}
   - : An integer value indicating the maximum size, in bytes, of a message which can be sent using the {{DOMxRef("RTCDataChannel.send()")}} method.
 - {{DOMxRef("RTCSctpTransport.state")}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} enumerated value indicating the state of the SCTP transport.
+  - : A string enumerated value indicating the state of the SCTP transport.
 - {{DOMxRef("RTCSctpTransport.transport")}}{{ReadOnlyInline}}
   - : An {{DOMxRef("RTCDtlsTransport")}} object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.
 

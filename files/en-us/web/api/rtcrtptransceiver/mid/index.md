@@ -22,15 +22,9 @@ The read-only {{domxref("RTCRtpTransceiver")}} interface's
 (`mid`) which the local and remote peers have agreed upon to uniquely
 identify the stream's pairing of sender and receiver.
 
-## Syntax
+## Value
 
-```js
-var mediaID = RTCRtpTransceiver.mid;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which uniquely identifies the pairing of source and
+A string which uniquely identifies the pairing of source and
 destination of the transceiver's stream. Its value is taken from the media ID of the SDP
 m-line. This value is `null` if negotiation has not completed.
 

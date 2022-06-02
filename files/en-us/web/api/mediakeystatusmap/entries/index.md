@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap.entries()
 slug: Web/API/MediaKeyStatusMap/entries
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -12,7 +13,7 @@ browser-compat: api.MediaKeyStatusMap.entries
 ---
 {{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
 
-The **`entries()`** read-only property
+The **`entries()`** read-only property
 of the {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object,
 containing an array of \[key, value] pairs for each element in the status map, in
 insertion order.
@@ -20,14 +21,14 @@ insertion order.
 ## Syntax
 
 ```js
-// TBD
+entries()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 ### Exceptions
 

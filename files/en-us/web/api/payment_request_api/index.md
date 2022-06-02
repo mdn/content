@@ -14,6 +14,7 @@ tags:
   - Reference
   - Secure context
   - payment
+browser-compat: api.PaymentRequest
 ---
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
@@ -55,16 +56,11 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 
 ## Specifications
 
-| Specification                                                                  |
-| ------------------------------------------------------------------------------ |
-| [Payment Request API](https://w3c.github.io/payment-request/)                  |
-| [Payment Method Identifiers](https://w3c.github.io/payment-method-id/)         |
+{{Specifications}}
 
 ## Browser compatibility
 
-### PaymentRequest interface
-
-{{Compat("api.PaymentRequest", 0)}}
+{{Compat}}
 
 ## See also
 

@@ -21,15 +21,9 @@ The **`sortingCode`** read-only property of the
 {{domxref('PaymentAddress')}} interface returns a string containing a postal sorting
 code such as is used in France.
 
-## Syntax
+## Value
 
-```js
-var sortingCode = PaymentAddress.sortingCode;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the sorting code portion of the address.
+A string containing the sorting code portion of the address.
 
 ## Browser compatibility
 

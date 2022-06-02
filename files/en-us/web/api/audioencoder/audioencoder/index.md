@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder.AudioEncoder()
 slug: Web/API/AudioEncoder/AudioEncoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`AudioEncoder()`** constructor creates a new {{domxref("AudioEncoder")}} o
 ## Syntax
 
 ```js
-new AudioEncoder(init);
+new AudioEncoder(init)
 ```
 
 ### Parameters
@@ -25,7 +26,7 @@ new AudioEncoder(init);
     - `output`
       - : A callback which takes a {{domxref("EncodedAudioChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has one member, `decoderConfig` which has an object as its value containing:
         - `codec`
-          - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+          - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
         - `sampleRate`
           - : An integer representing the number of frame samples per second.
         - `numberOfChannels`
@@ -53,4 +54,3 @@ const audioEncoder = new AudioEncoder({
 ## Browser compatibility
 
 {{Compat}}
-

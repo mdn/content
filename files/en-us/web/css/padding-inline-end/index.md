@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - padding-inline
   - padding-inline-end
@@ -32,6 +31,7 @@ padding-inline-end: 5%;       /* A padding relative to the block container's wid
 padding-inline-end: inherit;
 padding-inline-end: initial;
 padding-inline-end: revert;
+padding-inline-end: revert-layer;
 padding-inline-end: unset;
 ```
 
@@ -40,11 +40,11 @@ padding-inline-end: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the _inline-size_ of the containing block. Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the [inline-size](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) (_width_ in a horizontal language) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
 
 ## Description
 
-The `padding-inline-end` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the phsyical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}
+The `padding-inline-end` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the physical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}
 
 It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-start")}}, which define the other paddings of the element.
 

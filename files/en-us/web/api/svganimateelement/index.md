@@ -13,7 +13,7 @@ browser-compat: api.SVGAnimateElement
 
 The **`SVGAnimateElement`** interface corresponds to the {{SVGElement("animate")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

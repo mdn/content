@@ -4,6 +4,9 @@ slug: Web/SVG/Attribute/points
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/svg2-draft/shapes.html#PolygonElementPointsAttribute
+  - https://svgwg.org/svg2-draft/shapes.html#PolylineElementPointsAttribute
 ---
 {{SVGRef}}
 
@@ -11,8 +14,8 @@ The **`points`** attribute defines a list of points. Each point is defined by a 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("polyline")}}
-*   {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("polygon")}}
 
 ## Example
 
@@ -23,7 +26,7 @@ html,body,svg { height:100% }
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polyline is an open shape -->
-  <polyline stroke="black" fill="none"
+  <polyline stroke="black" fill="none"
    points="50,0 21,90 98,35 2,35 79,90"/>
 
   <!-- polygon is a closed shape -->
@@ -70,7 +73,7 @@ html,body,svg { height:100% }
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polyline is an open shape -->
-  <polyline stroke="black" fill="none"
+  <polyline stroke="black" fill="none"
    points="50,0 21,90 98,35 2,35 79,90"/>
 </svg>
 ```
@@ -107,7 +110,7 @@ html,body,svg { height:100% }
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polygon is an closed shape -->
-  <polygon stroke="black" fill="none"
+  <polygon stroke="black" fill="none"
    points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
@@ -116,42 +119,4 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "shapes.html#PolygonElementPointsAttribute", "points")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;polygon></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "shapes.html#PolylineElementPointsAttribute", "points")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;polyline></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#PolygonElementPointsAttribute", "points")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;polygon></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#PolylineElementPointsAttribute", "points")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;polyline></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

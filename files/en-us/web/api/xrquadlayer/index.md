@@ -21,24 +21,27 @@ The **`XRQuadLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/We
 
 `XRQuadLayer` requires the `layers` feature to be enabled for the {{domxref("XRSession")}}. You can request it in {{domxref("XRSystem.requestSession()")}}.
 
-To create a new `XRQuadLayer`, call either
+To create a new `XRQuadLayer`, call either:
+
 - {{domxref("XRWebGLBinding.createQuadLayer()")}} for a WebGL opaque texture quad layer, or
 - {{domxref("XRMediaBinding.createQuadLayer()")}} for an HTML {{HTMLElement("video")}} playback quad layer.
 
 To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
 - {{domxref("XRQuadLayer.height")}}
-   - : Represents the height of the layer in meters.
+  - : Represents the height of the layer in meters.
 - {{domxref("XRQuadLayer.space")}}
-   - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
+  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user's physical environment.
 - {{domxref("XRQuadLayer.transform")}}
-   - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
+  - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
 - {{domxref("XRQuadLayer.width")}}
-   - : Represents the width of the layer in meters.
+  - : Represents the width of the layer in meters.
 
 ## Methods
 

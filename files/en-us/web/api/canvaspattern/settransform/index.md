@@ -1,6 +1,7 @@
 ---
 title: CanvasPattern.setTransform()
 slug: Web/API/CanvasPattern/setTransform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -20,14 +21,18 @@ pattern's transformation matrix and invokes it on the pattern.
 ## Syntax
 
 ```js
-void pattern.setTransform(matrix);
+setTransform(matrix)
 ```
 
 ### Parameters
 
 - `matrix`
-  - : An {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} to use as the pattern's
+  - : An {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} to use as the pattern's
     transformation matrix.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

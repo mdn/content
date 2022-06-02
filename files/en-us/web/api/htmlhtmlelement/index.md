@@ -1,6 +1,7 @@
 ---
 title: HTMLHtmlElement
 slug: Web/API/HTMLHtmlElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -15,14 +16,14 @@ The **`HTMLHtmlElement`** interface serves as the root node for a given HTML doc
 
 You can retrieve the `HTMLHtmlElement` object for a given document by reading the value of the {{domxref("document.documentElement")}} property.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHtmlElement.version")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the version of the HTML Document Type Definition (DTD) that governs this document. This property should not be used any more as it is non-conforming. Omit it.
+  - : A string representing the version of the HTML Document Type Definition (DTD) that governs this document. This property should not be used any more as it is non-conforming. Omit it.
 
 ## Methods
 

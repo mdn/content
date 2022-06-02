@@ -10,7 +10,7 @@ browser-compat: api.OTPCredential
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
-The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} contains the attributes that are returned when a new one-time password is retreived.
+The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} contains the attributes that are returned when a new one-time password is retrieved.
 
 {{InheritanceDiagram}}
 

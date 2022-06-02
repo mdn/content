@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.displaySurface
 slug: Web/API/MediaTrackSupportedConstraints/displaySurface
+page-type: web-api-instance-property
 tags:
   - API
   - Capture
@@ -31,23 +32,17 @@ The supported constraints list is obtained by calling
 {{domxref("MediaDevices.getSupportedConstraints",
   "navigator.mediaDevices.getSupportedConstraints()")}}.
 
-## Syntax
-
-```js
-isDisplaySurfaceSupported = supportedConstraints.displaySurface;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the
 {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
 supported by the device and user agent.
 
-## Example
+## Examples
 
 This method sets up the constraints object specifying the options for the call to
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the
-`displaySurface` constraint (requesting that only full-screen sharing be
+`displaySurface` constraint (requesting that only fullscreen sharing be
 allowed) only if it is known to be supported by the browser. Capturing is then started
 by calling `getDisplayMedia()` and attaching the returned stream to the video
 element referenced by the variable `videoElem`.

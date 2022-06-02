@@ -1,6 +1,7 @@
 ---
 title: Accelerometer()
 slug: Web/API/Accelerometer/Accelerometer
+page-type: web-api-constructor
 tags:
   - API
   - Accelerometer
@@ -22,17 +23,20 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 ## Syntax
 
 ```js
-var accelerometer = new Accelerometer([options])
+new Accelerometer()
+new Accelerometer(options)
 ```
 
 ### Parameters
 
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Options are as follows:
 
-    - `frequency`: The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends on the device hardware and consequently may be less than requested.
-    - `referenceFrame`: Either `'device'` or `'screen'`. The default is `'device'`.
+    - `frequency`
+      - : The desired number of times per second a sample should be taken, meaning the number of times per second the {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends on the device hardware and consequently may be less than requested.
+    - `referenceFrame`
+      - : Either `'device'` or `'screen'`. The default is `'device'`.
 
 ## Specifications
 
@@ -41,3 +45,7 @@ var accelerometer = new Accelerometer([options])
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref('sensor.reading_event', 'reading')}} event

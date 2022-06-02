@@ -11,7 +11,9 @@ The `round` function returns a number that is the nearest integer to the given n
 
 ### Syntax
 
-    round(decimal )
+```
+round( decimal )
+```
 
 ### Arguments
 
@@ -28,7 +30,7 @@ The nearest integer less then, greater than, or equal to*`decimal`*.
 
 ### Defined
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-round)
+[XPath 1.0 4.4](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-round)
 
 ### Gecko support
 

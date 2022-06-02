@@ -1,6 +1,7 @@
 ---
 title: CharacterData.deleteData()
 slug: Web/API/CharacterData/deleteData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -23,7 +24,7 @@ characterData.deleteData(offset, count)
   - : The number of bytes from the start of the data to remove from.
     `0` is the first character of the string.
 - `count`
-  - : Tthe number of bytes to remove.
+  - : The number of bytes to remove.
 
 ### Return value
 

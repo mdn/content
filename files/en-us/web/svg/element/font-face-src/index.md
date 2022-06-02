@@ -22,13 +22,13 @@ The **`<font-face-src>`** [SVG](/en-US/docs/Web/SVG) element corresponds to the 
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
 ### Specific attributes
 
 *None*
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFontFaceSrcElement")}} interface.
 
@@ -42,7 +42,7 @@ This element implements the {{domxref("SVGFontFaceSrcElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("font-face")}}
-*   {{SVGElement("font-face-name")}}
-*   {{SVGElement("font-face-uri")}}
-*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- {{SVGElement("font-face")}}
+- {{SVGElement("font-face-name")}}
+- {{SVGElement("font-face-uri")}}
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

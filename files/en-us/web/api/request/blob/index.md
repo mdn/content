@@ -1,6 +1,7 @@
 ---
 title: Request.blob()
 slug: Web/API/Request/blob
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
@@ -18,9 +19,7 @@ reads the request body and returns it as a promise that resolves with a {{domxre
 ## Syntax
 
 ```js
-request.blob().then(function(myBlob) {
-  // do something with myBlob
-});
+blob()
 ```
 
 ### Parameters

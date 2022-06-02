@@ -16,8 +16,10 @@ The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface remov
 ## Syntax
 
 ```js
-SVGPointList.removeItem(index);
+removeItem(index)
 ```
+
+### Parameters
 
 - `index`
   - : The index of the item to remove.
@@ -28,7 +30,7 @@ The removed {{domxref("SVGPoint")}} object.
 
 ### Exceptions
 
-- `NoModicationAllowedError` {{domxref("DOMException")}}
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if the index passed in is greater than the number of items in the list.

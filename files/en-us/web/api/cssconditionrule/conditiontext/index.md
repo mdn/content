@@ -1,6 +1,7 @@
 ---
 title: CSSConditionRule.conditionText
 slug: Web/API/CSSConditionRule/conditionText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,16 +16,9 @@ The **`conditionText`** property of
 the {{domxref("CSSConditionRule")}} interface returns or sets the text of the CSS
 rule.
 
-## Syntax
+## Value
 
-```js
-var text = CSSConditionRule.conditionText
-cssConditionRule.conditionText = text
-```
-
-### Value
-
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Examples
 
@@ -58,5 +52,4 @@ console.log(text);  // "(min-width: 400px)"
 
 ## See also
 
-- [Using dynamic styling
-  information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

@@ -11,7 +11,7 @@ tags:
   - close
 browser-compat: api.WritableStreamDefaultWriter.close
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`close()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface closes the associated writable
@@ -24,7 +24,7 @@ invoking the close behavior. During this time any further attempts to write will
 ## Syntax
 
 ```js
-var promise = writableStreamDefaultWriter.close();
+close()
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ a problem was encountered during the process.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The stream you are trying to close is not a {{domxref("WritableStream")}}.
 
 ## Examples
@@ -94,8 +94,8 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      var buffer = new ArrayBuffer(1);
+      var view = new Uint8Array(buffer);
       view[0] = chunk;
       var decoded = decoder.decode(view, { stream: true });
       var listItem = document.createElement('li');

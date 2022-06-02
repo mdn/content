@@ -44,7 +44,7 @@ An {{domxref("XRCPUDepthInformation")}} object.
 ### Obtaining CPU depth information
 
 ```js
-// Make sure  to request a session with depth-sensing enabled
+// Make sure to request a session with depth-sensing enabled
 const session = navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {

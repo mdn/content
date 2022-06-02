@@ -50,6 +50,7 @@ border-bottom: medium dashed blue;
 border-bottom: inherit;
 border-bottom: initial;
 border-bottom: revert;
+border-bottom: revert-layer;
 border-bottom: unset;
 ```
 

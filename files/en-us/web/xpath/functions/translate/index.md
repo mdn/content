@@ -11,7 +11,9 @@ The `translate` function evaluates a string and a set of characters to translate
 
 ### Syntax
 
-    translate(string, abc, XYZ)
+```
+translate(string, abc, XYZ)
+```
 
 ### Arguments
 
@@ -34,27 +36,35 @@ However, this is the closest we have at present to a function that can convert a
 
 Example
 
-    <xsl:value-of select="translate('The quick brown fox.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
+```xml
+<xsl:value-of select="translate('The quick brown fox.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
+```
 
 Output
 
-    THE QUICK BROWN FOX.
+```
+THE QUICK BROWN FOX.
+```
 
-- If *`abc`* is longer than *`XYZ`*, then every occurrence of characters in *`abc`* that do not have a corresponding character in *`XYZ`* will be removed.
+- If *`abc`* is longer than *`XYZ`*, then every occurrence of characters in *`abc`* that do not have a corresponding character in *`XYZ`* will be removed.
 
 Example
 
-    <xsl:value-of select="translate('The quick brown fox.', 'brown', 'red')" />
+```xml
+<xsl:value-of select="translate('The quick brown fox.', 'brown', 'red')" />
+```
 
 Output
 
-    The quick red fdx.
+```
+The quick red fdx.
+```
 
-- If *`XYZ`* contains more characters than *`abc`*, the extra characters are ignored.
+- If *`XYZ`* contains more characters than *`abc`*, the extra characters are ignored.
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-translate)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-translate)
 
 ### Gecko support
 

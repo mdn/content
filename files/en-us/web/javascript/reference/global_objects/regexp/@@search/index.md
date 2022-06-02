@@ -58,9 +58,9 @@ This method can be used in almost the same way as
 different arguments order.
 
 ```js
-var re = /-/g;
-var str = '2016-01-02';
-var result = re[Symbol.search](str);
+const re = /-/g;
+const str = '2016-01-02';
+const result = re[Symbol.search](str);
 console.log(result);  // 4
 ```
 
@@ -80,9 +80,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('a+b');
-var str = 'ab a+b';
-var result = str.search(re); // String.prototype.search calls re[@@search].
+const re = new MyRegExp('a+b');
+const str = 'ab a+b';
+const result = str.search(re); // String.prototype.search calls re[@@search].
 console.log(result); // 3
 ```
 
@@ -96,7 +96,7 @@ console.log(result); // 3
 
 ## See also
 
-- A polyfill of `RegExp.prototype[@@search]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[@@search]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.search()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
 - {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}

@@ -13,13 +13,7 @@ browser-compat: api.SVGMarkerElement.refY
 
 The **`refY`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refY")}} attribute of the {{SVGElement("marker")}}.
 
-## Syntax
-
-```js
-let refY = SVGMarkerElement.refY;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}} object. The `baseVal` property of this object returns an {{domxref("SVGLength")}}, the value of which returns the `refY`.
 

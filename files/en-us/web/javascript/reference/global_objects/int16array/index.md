@@ -104,28 +104,28 @@ The **`Int16Array`** typed array represents an array of twos-complement 16-bit s
 
 ```js
 // From a length
-var int16 = new Int16Array(2);
+const int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
 console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // From an array
-var arr = new Int16Array([21,31]);
+const arr = new Int16Array([21,31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
-var x = new Int16Array([21, 31]);
-var y = new Int16Array(x);
+const x = new Int16Array([21, 31]);
+const y = new Int16Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(8);
-var z = new Int16Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(8);
+const z = new Int16Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
-var int16 = new Int16Array(iterable);
+const iterable = function*(){ yield* [1,2,3]; }();
+const int16_from_iterable = new Int16Array(iterable);
 // Int16Array[1, 2, 3]
 ```
 
@@ -139,7 +139,7 @@ var int16 = new Int16Array(iterable);
 
 ## See also
 
-- A polyfill of `Int16Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Int16Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

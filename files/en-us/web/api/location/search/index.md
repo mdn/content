@@ -1,6 +1,7 @@
 ---
-title: 'Location: search'
+title: location.search
 slug: Web/API/Location/search
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -11,7 +12,7 @@ browser-compat: api.Location.search
 
 The **`search`** property of the {{domxref("Location")}}
 interface is a search string, also called a _query string_; that is, a
-{{domxref("USVString")}} containing a `'?'` followed by the parameters of the
+string containing a `'?'` followed by the parameters of the
 URL.
 
 Modern browsers provide
@@ -20,12 +21,9 @@ and
 [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams#examples)
 to make it easy to parse out the parameters from the querystring.
 
-## Syntax
+## Value
 
-```js
-string = object.search;
-object.search = string;
-```
+A string.
 
 ## Examples
 

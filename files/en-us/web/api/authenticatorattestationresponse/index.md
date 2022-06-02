@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAttestationResponse
 slug: Web/API/AuthenticatorAttestationResponse
+page-type: web-api-interface
 tags:
   - API
   - Authentication
@@ -15,7 +16,9 @@ browser-compat: api.AuthenticatorAttestationResponse
 
 The **`AuthenticatorAttestationResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is returned by {{domxref('CredentialsContainer.create()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides a cryptographic root of trust for the new key pair that has been generated. This response should be sent to the relying party's server to complete the creation of the credential.
 
-This interface inherites from {{domxref("AuthenticatorResponse")}}.
+This interface inherits from {{domxref("AuthenticatorResponse")}}.
+
+{{InheritanceDiagram}}
 
 > **Note:** This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
@@ -34,7 +37,7 @@ This interface inherites from {{domxref("AuthenticatorResponse")}}.
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -55,7 +58,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var response = newCredentialInfo.response;
+    const response = newCredentialInfo.response;
     // Do something with the response
     // (sending it back to the relying party server maybe?)
   }).catch(function (err) {

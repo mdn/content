@@ -41,11 +41,11 @@ WebAssembly.instantiate(bufferSource, importObject);
 
 #### Parameters
 
-- _bufferSource_
+- `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to
     compile.
-- _importObject_ {{optional_inline}}
+- `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
     There must be one matching property for each declared import of the compiled module or
@@ -60,8 +60,7 @@ fields:
   compiled WebAssembly module. This `Module` can be instantiated again,
   shared via {{domxref("Worker.postMessage", "postMessage()")}} or [cached in IndexedDB](/en-US/docs/WebAssembly/Caching_modules).
 - `instance`: A {{jsxref("WebAssembly.Instance")}} object that contains all
-  the [Exported WebAssembly
-  functions](/en-US/docs/WebAssembly/Exported_functions).
+  the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
 #### Exceptions
 
@@ -79,9 +78,9 @@ WebAssembly.instantiate(module, importObject);
 
 #### Parameters
 
-- _module_
+- `module`
   - : The {{jsxref("WebAssembly.Module")}} object to be instantiated.
-- _importObject_ {{optional_inline}}
+- `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
     There must be one matching property for each declared import of `module` or
@@ -120,23 +119,22 @@ var importObject = {
 };
 
 fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
+  WebAssembly.instantiate(bytes, importObject)
 ).then(result =>
-  result.instance.exports.exported_func()
+  result.instance.exports.exported_func()
 );
 ```
 
 > **Note:** You can also find this example at [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html)
-> on GitHub ([view
-> it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)).
+> on GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)).
 
 ### Second overload example
 
 The following example (see our [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html)
-demo on GitHub, and [view
-it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also) compiles the loaded simple.wasm byte code using the
+demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also)
+compiles the loaded simple.wasm byte code using the
 {{jsxref("WebAssembly.compileStreaming()")}} method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using
 {{domxref("Worker.postMessage", "postMessage()")}}.
 
@@ -145,7 +143,7 @@ var worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(mod =>
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );
 ```
 
@@ -187,5 +185,4 @@ onmessage = function(e) {
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

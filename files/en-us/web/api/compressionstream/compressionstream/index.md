@@ -1,6 +1,7 @@
 ---
 title: CompressionStream()
 slug: Web/API/CompressionStream/CompressionStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`CompressionStream()`** constructor creates a new {{domxref("CompressionSt
 ## Syntax
 
 ```js
-let CompressionStream = new CompressionStream(format);
+new CompressionStream(format)
 ```
 
 ### Parameters

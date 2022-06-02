@@ -18,7 +18,7 @@ representing the visual viewport for a given window.
 
 ## Value
 
-A {{domxref("VisualViewport")}} object.
+A {{domxref("VisualViewport")}} object.
 
 ## Specifications
 

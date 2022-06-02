@@ -11,7 +11,7 @@ tags:
   - PaymentRequestUpdateEvent
   - Reference
   - Shipping
-  - events
+  - Event
   - payment
   - shippingaddresschange
 browser-compat: api.PaymentRequest.shippingaddresschange_event
@@ -20,28 +20,27 @@ browser-compat: api.PaymentRequest.shippingaddresschange_event
 
 The **`shippingaddresschange`** event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PaymentRequestUpdateEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('shippingaddresschange', event => { });
+
+onshippingaddresschange = event => { };
+```
+
+## Event type
+
+An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PaymentRequestUpdateEvent")}}
+
+## Event properties
+
+_Provides only the properties inherited from {{domxref("Event")}}._
 
 ## Usage notes
 
@@ -68,7 +67,7 @@ const checkAddress = theAddress => {
 };
 ```
 
-You can also establish a handler for `shippingaddresschange` using the {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property:
+You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property:
 
 ```js
 paymentRequest.onshippingaddresschange = event => {
@@ -80,7 +79,3 @@ paymentRequest.onshippingaddresschange = event => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property

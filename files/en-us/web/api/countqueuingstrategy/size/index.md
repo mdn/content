@@ -1,6 +1,7 @@
 ---
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
+page-type: web-api-instance-method
 tags:
   - API
   - CountQueuingStrategy
@@ -11,7 +12,7 @@ tags:
   - size
 browser-compat: api.CountQueuingStrategy.size
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`size()`** method of the
 {{domxref("CountQueuingStrategy")}} interface always returns `1`, so that the
@@ -20,7 +21,7 @@ total queue size is a count of the number of chunks in the queue.
 ## Syntax
 
 ```js
-var size = countQueuingStrategy.size();
+size()
 ```
 
 ### Parameters

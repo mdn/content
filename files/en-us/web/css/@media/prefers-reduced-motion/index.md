@@ -27,9 +27,9 @@ For Firefox, the `reduce` request is honoured if:
 
 - In GTK/GNOME: GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
 
-  - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/index.php/GTK#Configuration).
+  - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
 
-- In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > “Animation speed” is set all the way to right to “Instant”.
+- In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
 - In Windows 10: Settings > Ease of Access > Display > Show animations in Windows.
 - In Windows 11: Settings > Accessibility > Visual Effects > Animation Effects
 - In Windows 7: Control Panel > Ease of Access > Make the computer easier to see > Turn off all unnecessary animations (when possible).

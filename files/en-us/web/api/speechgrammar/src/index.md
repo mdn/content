@@ -19,15 +19,9 @@ The **`src`** property of the {{domxref("SpeechGrammar")}}
 interface sets and returns a string containing the grammar from within in the
 `SpeechGrammar` object.
 
-## Syntax
+## Value
 
-```js
-var myGrammar = speechGrammarInstance.src;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the grammar.
+A string representing the grammar.
 
 ## Examples
 

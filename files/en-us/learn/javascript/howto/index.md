@@ -106,7 +106,7 @@ const myObject = {
 
 - [How do you declare a variable?](/en-US/docs/Learn/JavaScript/First_steps/Variables#declaring_a_variable)
 - [How do you initialize a variable with a value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#initializing_a_variable)
-- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
+- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
 - [What data types can values have in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Variables#variable_types)
 - [What does 'loosely typed' mean?](/en-US/docs/Learn/JavaScript/First_steps/Variables#loose_typing)
 
@@ -184,9 +184,9 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [What is bracket notation?](/en-US/docs/Learn/JavaScript/Objects/Basics#bracket_notation)
 - [How do you get and set the methods and properties of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#setting_object_members)
 - [What is `this`, in the context of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#what_is_this)
-- [What is object-oriented programming?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#object-oriented_programming_from_10000_meters)
-- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#constructors_and_object_instances)
-- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#other_ways_to_create_object_instances)
+- [What is object-oriented programming?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)
+- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#constructors_and_object_instances)
+- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
 
 ### JSON
 
@@ -210,8 +210,8 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [What are object prototypes?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 - [What is the constructor property, and how can you use it?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#the_constructor_property)
 - [How do you add methods to the constructor?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#modifying_prototypes)
-- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn/JavaScript/Objects/Inheritance)
-- [When should you use inheritance in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Inheritance#object_member_summary)
+- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [When should you use inheritance in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object_member_summary)
 
 ### Web APIs
 

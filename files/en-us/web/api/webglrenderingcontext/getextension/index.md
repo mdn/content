@@ -17,12 +17,12 @@ The **`WebGLRenderingContext.getExtension()`** method enables a
 ## Syntax
 
 ```js
-gl.getExtension(name);
+getExtension(name)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : A {{jsxref("String")}} for the name of the WebGL extension to enable.
 
 ### Return value
@@ -46,9 +46,8 @@ gl.getExtension('WEBGL_lose_context').loseContext();
 ## WebGL extensions
 
 Extensions for the WebGL API are registered in the [WebGL Extension
-Registry](https://www.khronos.org/registry/webgl/extensions/). The current extensions are:
-
-{{page("en-US/docs/Web/API/WebGL_API", "Extensions")}}
+Registry](https://www.khronos.org/registry/webgl/extensions/). They are also
+listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
 
 ## Specifications
 
@@ -61,4 +60,4 @@ Registry](https://www.khronos.org/registry/webgl/extensions/). The current exten
 ## See also
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-- [webglreport.com](http://webglreport.com)
+- [webglreport.com](https://webglreport.com)

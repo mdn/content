@@ -19,17 +19,17 @@ has already been deleted.
 ## Syntax
 
 ```js
-void gl.deleteRenderbuffer(renderbuffer);
+deleteRenderbuffer(renderbuffer)
 ```
 
 ### Parameters
 
-- renderbuffer
+- `renderbuffer`
   - : A {{domxref("WebGLRenderbuffer")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

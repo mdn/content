@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.mozFetchAsStream()
 slug: Web/API/HTMLCanvasElement/mozFetchAsStream
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,20 +20,21 @@ canvas as image data. However, this non-standard and internal method has been re
 ## Syntax
 
 ```js
-void canvas.mozFetchAsStream(callback, type);
+mozFetchAsStream(callback)
+mozFetchAsStream(callback, type)
 ```
 
 ### Parameters
 
 - `callback`
-  - : An {{interface("nsIInputStreamCallback")}}.
+  - : An `nsIInputStreamCallback`.
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} indicating the image format. The default type is
+  - : A string indicating the image format. The default type is
     `image/png`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: FormData()
 slug: Web/API/FormData/FormData
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -19,6 +20,7 @@ The **`FormData()`** constructor creates a new {{domxref("FormData")}} object.
 ## Syntax
 
 ```js
+new FormData()
 new FormData(form)
 ```
 
@@ -27,7 +29,7 @@ new FormData(form)
 - `form` {{optional_inline}}
   - : An HTML {{HTMLElement("form")}} element — when specified, the {{domxref("FormData")}} object will be populated with the form's current keys/values using the name property of each element for the keys and their submitted value for the values. It will also encode file input content.
 
-## Example
+## Examples
 
 The following line creates an empty {{domxref("FormData")}} object:
 
@@ -61,7 +63,7 @@ Or you can specify the optional `form` argument when creating the `FormData` obj
 </form>
 ```
 
-> **Note:** Only successful form controls are included in a FormData object, i.e. those with a name, not disabled and checked (radio buttons and checkboxes) or selected (one or more options within a select).
+> **Note:** Only successful form controls are included in a FormData object, i.e. those with a name, not disabled and checked (radio buttons and checkboxes) or selected (one or more options within a select).
 
 ```js
 let myForm = document.getElementById('myForm');
@@ -79,6 +81,6 @@ let formData = new FormData(myForm);
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

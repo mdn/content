@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.result
 slug: Web/API/BackgroundFetchRegistration/result
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,13 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.result
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}
 
 The **`result`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string indicating whether the background fetch was successful or failed.
 
-## Syntax
+If the value of this property changes, the [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
 
-```js
-let theResult = BackgroundFetchRegistration.result;
-```
-
-### Value
+## Value
 
 One of the following strings:
 
@@ -32,7 +29,7 @@ One of the following strings:
 
 ## Examples
 
-Logging {{domxref("BackgroundFetchRegistration.result")}} to the console returns a string indicating the status, or an empty string if the fetch is still active.
+Logging this property to the console returns a string indicating the status, or an empty string if the fetch is still active.
 
 ```js
 console.log(bgFetch.result);

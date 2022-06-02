@@ -4,7 +4,7 @@ slug: Web/CSS/offset-anchor
 tags:
   - CSS
   - CSS Motion Path
-  - Experimental
+  - CSS Property
   - Motion Path
   - Reference
   - offset-anchor
@@ -13,7 +13,7 @@ browser-compat: css.properties.offset-anchor
 ---
 {{CSSRef}}
 
-The **`offset-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the point inside the box of an element travelling along an {{cssxref("offset-path")}} that is actually moving along the path.
+The **`offset-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the point inside the box of an element traveling along an {{cssxref("offset-path")}} that is actually moving along the path.
 
 {{EmbedInteractiveExample("pages/css/offset-anchor.html")}}
 
@@ -143,5 +143,5 @@ section {
 
 - {{cssxref("offset")}}
 - {{cssxref("offset-distance")}}
-- {{cssxref("offset-rotation")}}
+- {{cssxref("offset-rotate")}}
 - [SVG `<path>`](/en-US/docs/Web/SVG/Tutorial/Paths)

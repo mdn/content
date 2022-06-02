@@ -1,6 +1,7 @@
 ---
 title: MathMLElement
 slug: Web/API/MathMLElement
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -12,6 +13,8 @@ browser-compat: api.MathMLElement
 {{APIRef("MathML")}}
 
 The **`MathMLElement`** interface represents any [MathML](/en-US/docs/Web/MathML) element.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

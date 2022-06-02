@@ -28,17 +28,18 @@ font-smooth: 2em;
 font-smooth: inherit;
 font-smooth: initial;
 font-smooth: revert;
+font-smooth: revert-layer;
 font-smooth: unset;
 ```
 
-> **Note:** WebKit implements a similar property, but with different values: **`-webkit-font-smoothing`**. It only works on Mac OS X/macOS.
+> **Note:** WebKit implements a similar property, but with different values: **`-webkit-font-smoothing`**. It only works on macOS.
 >
-> - `auto` - Let the browser decide (Uses subpixel anti-aliasing when available; this is the default)
+> - `auto` - Let the browser decide (Uses subpixel anti-aliasing when available; this is the default)
 > - `none` - Turn font smoothing off; display text with jagged sharp edges.
 > - `antialiased` - Smooth the font on the level of the pixel, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.
 > - `subpixel-antialiased` - On most non-retina displays, this will give the sharpest text.
 
-> **Note:** Firefox implements a similar property, but with different values: **`-moz-osx-font-smoothing`**. It only works on Mac OS X/macOS.
+> **Note:** Firefox implements a similar property, but with different values: **`-moz-osx-font-smoothing`**. It only works on macOS.
 >
 > - `auto` - Allow the browser to select an optimization for font smoothing, typically `grayscale`.
 > - `grayscale` - Render text with grayscale antialiasing, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.
@@ -102,5 +103,5 @@ Not part of any standard.
 
 ## See also
 
-- [Please Stop "Fixing" Font Smoothing – UsabilityPost](http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
+- [Please Stop "Fixing" Font Smoothing – UsabilityPost](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
 - [Laissez-faire font smoothing and anti-aliasing](https://www.zachleat.com/web/font-smooth/)

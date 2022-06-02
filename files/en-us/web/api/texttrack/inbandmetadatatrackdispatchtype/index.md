@@ -17,15 +17,9 @@ An in-band metadata dispatch type is a string extracted from a media resource sp
 
 The value of this attribute could be used to attach these tracks to dedicated script modules as they are loaded.
 
-## Syntax
+## Value
 
-```js
-let label = TextTrack.label;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the `inBandMetadataTrackDispatchType`, or an empty string.
+A string containing the `inBandMetadataTrackDispatchType`, or an empty string.
 
 ## Examples
 

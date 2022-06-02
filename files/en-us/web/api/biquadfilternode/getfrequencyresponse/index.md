@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode.getFrequencyResponse()
 slug: Web/API/BiquadFilterNode/getFrequencyResponse
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -26,7 +27,7 @@ must be the same size as the array of input frequency values
 ## Syntax
 
 ```js
-BiquadFilterNode.getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput);
+getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
 ### Parameters
@@ -42,7 +43,7 @@ BiquadFilterNode.getFrequencyResponse(frequencyArray, magResponseOutput, phaseRe
     is the sample rate of the {{domxref("AudioContext")}}), the corresponding value in
     this array is {{jsxref("NaN")}}. These are unitless values.
 - `phaseResponseOutput`
-  - : A {{jsxref("Float32Array")}} to receive the computed phase response values in
+  - : A {{jsxref("Float32Array")}} to receive the computed phase response values in
     radians for each frequency value in the input `frequencyArray`. For any
     frequency in `frequencyArray` whose value is outside the range 0.0 to
     `sampleRate`/2 (where {{domxref("BaseAudioContext/sampleRate", "sampleRate")}}
@@ -51,19 +52,17 @@ BiquadFilterNode.getFrequencyResponse(frequencyArray, magResponseOutput, phaseRe
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `InvalidAccessError`
   - : The three arrays provided are not all of the same length.
 
-## Example
+## Examples
 
 In the following example we are using a biquad filter on a media stream (for the full
-demo, see our [stream-source-buffer
-demo](https://mdn.github.io/stream-source-buffer/) live, or [read the
-source](https://github.com/mdn/stream-source-buffer/blob/gh-pages/index.html).) As part of this demo, we get the frequency responses for this biquad
+demo, see our [stream-source-buffer demo](https://mdn.github.io/stream-source-buffer/) live, or [read the source](https://github.com/mdn/stream-source-buffer/blob/gh-pages/index.html).) As part of this demo, we get the frequency responses for this biquad
 filter, for five sample frequencies. We first create the {{jsxref("Float32Array")}}s we
 need, one containing the input frequencies, and two to receive the output magnitude and
 phase values:
@@ -95,7 +94,7 @@ var freqResponseOutput = document.querySelector('.freq-response-output');
 
 Finally, after creating our biquad filter, we use `getFrequencyResponse()`
 to generate the response data and put it in our arrays, then loop through each data set
-and output  them in a human-readable list at the bottom of the page:
+and output them in a human-readable list at the bottom of the page:
 
 ```js
 var biquadFilter = audioCtx.createBiquadFilter();

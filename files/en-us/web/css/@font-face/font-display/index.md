@@ -66,7 +66,9 @@ The font display timeline is based on a timer that begins the moment the user ag
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+[ auto | block | swap | fallback | optional ]
+```
 
 ## Examples
 

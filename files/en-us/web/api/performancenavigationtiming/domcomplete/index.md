@@ -10,24 +10,18 @@ browser-compat: api.PerformanceNavigationTiming.domComplete
 ---
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`domComplete`** read-only property returns a
+The **`domComplete`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
 time immediately before the user agent sets the current document readiness of the
 current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.
 
-## Syntax
-
-```js
-perfEntry.domComplete;
-```
-
-### Return Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the
 time immediately before the user agent sets the current document readiness of the
 current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 
@@ -39,7 +33,7 @@ function print_nav_timing_data() {
   for (var i=0; i < perfEntries.length; i++) {
     console.log("= Navigation entry[" + i + "]");
     var p = perfEntries[i];
-    // dom Properties
+    // DOM Properties
     console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
     console.log("DOM complete = " + p.domComplete);
     console.log("DOM interactive = " + p.interactive);

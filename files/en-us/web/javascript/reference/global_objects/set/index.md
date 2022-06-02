@@ -28,7 +28,7 @@ Because each value in the `Set` has to be unique, the value equality will be che
 
 ### Performance
 
-The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a `Set` object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the `Set` object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an `Array` object has a `length` equal to a `Set` object’s `size`.
+The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a `Set` object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the `Set` object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an `Array` object has a `length` equal to a `Set` object's `size`.
 
 ## Constructor
 
@@ -62,7 +62,7 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
 
@@ -259,9 +259,9 @@ new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 
 ```js
 const array = Array
-  .from(document.querySelectorAll('[id]'))
-  .map(function(e) {
-      return e.id
+  .from(document.querySelectorAll('[id]'))
+  .map(function(e) {
+      return e.id
   });
 
 const set = new Set(array);
@@ -278,7 +278,7 @@ console.assert(set.size == array.length);
 
 ## See also
 
-- A polyfill of `Set` is available in [`core-js`](https://github.com/zloirock/core-js#set)
+- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

@@ -13,7 +13,7 @@ tags:
   - Video
 browser-compat: api.SourceBufferList
 ---
-{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`SourceBufferList`** interface represents a simple container list for multiple {{domxref("SourceBuffer")}} objects.
 

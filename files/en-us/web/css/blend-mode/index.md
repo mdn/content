@@ -82,7 +82,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 
 ## Examples
 
-### normal
+### Example using "normal"
 
 ```html hidden
 <div id="div"></div>
@@ -98,9 +98,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('normal', "300", "350") }}
+{{ EmbedLiveSample('Example using "normal"', "300", "350") }}
 
-### multiply
+### Example using "multiply"
 
 ```html hidden
 <div id="div"></div>
@@ -116,9 +116,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('multiply', "300", "350") }}
+{{ EmbedLiveSample('Example using "multiply"', "300", "350") }}
 
-### screen
+### Example using "screen"
 
 ```html hidden
 <div id="div"></div>
@@ -134,9 +134,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('screen', "300", "350") }}
+{{ EmbedLiveSample('Example using "screen"', "300", "350") }}
 
-### overlay
+### Example using "overlay"
 
 ```html hidden
 <div id="div"></div>
@@ -152,9 +152,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('overlay', "300", "350") }}
+{{ EmbedLiveSample('Example using "overlay"', "300", "350") }}
 
-### darken
+### Example using "darken"
 
 ```html hidden
 <div id="div"></div>
@@ -170,9 +170,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('darken', "300", "350") }}
+{{ EmbedLiveSample('Example using "darken"', "300", "350") }}
 
-### lighten
+### Example using "lighten"
 
 ```html hidden
 <div id="div"></div>
@@ -188,9 +188,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('lighten', "300", "350") }}
+{{ EmbedLiveSample('Example using "lighten"', "300", "350") }}
 
-### color-dodge
+### Example using "color-dodge"
 
 ```html hidden
 <div id="div"></div>
@@ -206,9 +206,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('color-dodge', "300", "350") }}
+{{ EmbedLiveSample('Example using "color-dodge"', "300", "350") }}
 
-### color-burn
+### Example using "color-burn"
 
 ```html hidden
 <div id="div"></div>
@@ -224,9 +224,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('color-burn', "300", "350") }}
+{{ EmbedLiveSample('Example using "color-burn"', "300", "350") }}
 
-### hard-light
+### Example using "hard-light"
 
 ```html hidden
 <div id="div"></div>
@@ -242,9 +242,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('hard-light', "300", "350") }}
+{{ EmbedLiveSample('Example using "hard-light"', "300", "350") }}
 
-### soft-light
+### Example using "soft-light"
 
 ```html hidden
 <div id="div"></div>
@@ -260,9 +260,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('soft-light', "300", "350") }}
+{{ EmbedLiveSample('Example using "soft-light"', "300", "350") }}
 
-### difference
+### Example using "difference"
 
 ```html hidden
 <div id="div"></div>
@@ -278,9 +278,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('difference', "300", "350") }}
+{{ EmbedLiveSample('Example using "difference"', "300", "350") }}
 
-### exclusion
+### Example using "exclusion"
 
 ```html hidden
 <div id="div"></div>
@@ -296,9 +296,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('exclusion', "300", "350") }}
+{{ EmbedLiveSample('Example using "exclusion"', "300", "350") }}
 
-### hue
+### Example using "hue"
 
 ```html hidden
 <div id="div"></div>
@@ -314,9 +314,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('hue', "300", "350") }}
+{{ EmbedLiveSample('Example using "hue"', "300", "350") }}
 
-### saturation
+### Example using "saturation"
 
 ```html hidden
 <div id="div"></div>
@@ -332,9 +332,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('saturation', "300", "350") }}
+{{ EmbedLiveSample('Example using "saturation"', "300", "350") }}
 
-### color
+### Example using "color"
 
 ```html hidden
 <div id="div"></div>
@@ -350,9 +350,9 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('color', "300", "350") }}
+{{ EmbedLiveSample('Example using "color"', "300", "350") }}
 
-### luminosity
+### Example using "luminosity"
 
 ```html hidden
 <div id="div"></div>
@@ -368,11 +368,11 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 }
 ```
 
-{{ EmbedLiveSample('luminosity', "300", "350") }}
+{{ EmbedLiveSample('Example using "luminosity"', "300", "350") }}
 
 ### Blend mode comparison
 
-In the following example, we have a `<div>` with two background images set on it — a Firefox logo on top of a linear gradient. Below it we have a provided a `<select>` menu that allows you to change the `background-blend-mode` applied to the `<div>`, allowing you to compare the different blend mode effects.
+In the following example, we have a `<div>` with two background images set on it — a Firefox logo on top of a linear gradient. Below it, we have a provided a `<select>` menu that allows you to change the `background-blend-mode` applied to the `<div>`, allowing you to compare the different blend mode effects.
 
 #### HTML
 
@@ -380,22 +380,22 @@ In the following example, we have a `<div>` with two background images set on it
 <div></div>
 <p>Choose a blend-mode:</p>
 <select>
-  <option selected>normal</option>
-  <option>multiply</option>
-  <option>screen</option>
-  <option>overlay</option>
-  <option>darken</option>
-  <option>lighten</option>
-  <option>color-dodge</option>
-  <option>color-burn</option>
-  <option>hard-light</option>
-  <option>soft-light</option>
-  <option>difference</option>
-  <option>exclusion</option>
-  <option>hue</option>
-  <option>saturation</option>
-  <option>color</option>
-  <option>luminosity</option>
+  <option selected>normal</option>
+  <option>multiply</option>
+  <option>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
 </select>
 ```
 
@@ -403,10 +403,10 @@ In the following example, we have a `<div>` with two background images set on it
 
 ```css
 div {
-  width: 300px;
-  height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
-  linear-gradient(to bottom, blue, orange);
+  width: 300px;
+  height: 300px;
+  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
+  linear-gradient(to bottom, blue, orange);
 }
 ```
 

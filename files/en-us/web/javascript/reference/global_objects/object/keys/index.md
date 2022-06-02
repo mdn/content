@@ -136,7 +136,7 @@ if (!Object.keys) {
 
 Please note that the above code includes non-enumerable keys in IE7 (and maybe IE8), when passing in an object from a different window.
 
-For a simple Browser Polyfill, see [Javascript \- Object.keys Browser Compatibility](https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
+For a simple Browser Polyfill, see [Javascript \- Object.keys Browser Compatibility](https://tokenposts.blogspot.com/2012/04/javascript-objectkeys-browser.html).
 
 ## Specifications
 
@@ -148,9 +148,8 @@ For a simple Browser Polyfill, see [Javascript \- Object.keys Browser Compatibil
 
 ## See also
 
-- A polyfill of `Object.keys` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Polyfill of `Object.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

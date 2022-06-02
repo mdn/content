@@ -1,9 +1,9 @@
 ---
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
+page-type: web-api-interface
 tags:
   - API
-  - DOM Reference
   - DOMRectReadOnly
   - Geometry
   - Geometry Interfaces
@@ -20,7 +20,7 @@ The **`DOMRectReadOnly`** interface specifies the standard properties used by {{
 ## Constructor
 
 - {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
-  - : Defined to create a new `DOMRectReadOnly` object. Note that this constructor cannot be called by 3rd party JavaScript; doing so returns an `"Illegal constructor"` {{jsxref('TypeError')}}.
+  - : Defined to create a new `DOMRectReadOnly` object. Note that this constructor cannot be called by 3rd party JavaScript; doing so returns an `"Illegal constructor"` {{jsxref('TypeError')}}.
 
 ## Properties
 
@@ -44,7 +44,7 @@ The **`DOMRectReadOnly`** interface specifies the standard properties used by {{
 ## Static methods
 
 - {{domxref("DOMRectReadOnly.fromRect()")}}
-  - : Creates a new `DOMRect` object with a given location and dimensions.
+  - : Creates a new `DOMRect` object with a given location and dimensions.
 
 ## Specifications
 

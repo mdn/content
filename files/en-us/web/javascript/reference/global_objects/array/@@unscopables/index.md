@@ -11,11 +11,11 @@ browser-compat: javascript.builtins.Array.@@unscopables
 ---
 {{JSRef}}
 
-The **`@@unscopable`** symbol property contains property names that were not included in the ECMAScript standard prior to the ES2015 version. These properties are excluded from [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement bindings.
+The **`@@unscopables`** data property contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
 ## Description
 
-The default array properties that are excluded from `with` bindings are:
+The default `Array` properties that are ignored for `with` statement-binding purposes are:
 
 - {{jsxref("Array.prototype.at()", "at()")}}
 - {{jsxref("Array.prototype.copyWithin()", "copyWithin()")}}
@@ -31,11 +31,13 @@ See {{jsxref("Symbol.unscopables")}} for how to set `unscopables` for your own o
 
 {{js_property_attributes(0,0,1)}}
 
-## Examples
+## Example
 
-### Use in with environments
+Imagine the `keys.push('something')` call below is in code that was written prior to ECMAScript 2015.
 
-The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside `with` environments, "keys" would now be the method and not the variable. This is where now the built-in `@@unscopables` `Array.prototype[@@unscopables]` symbol property comes into play and prevents that some of the Array methods are being scoped into the `with` statement.
+When ECMAScript 2015 introduced the {{jsxref("Array.prototype.keys()")}} method, if the `@@unscopables` data property had not also been introduced, that `keys.push('something')` call would break — because the JavaScript runtime would have interpreted `keys` as being the {{jsxref("Array.prototype.keys()")}} method, rather than the `keys` array defined in the example code.
+
+So the `@@unscopables` data property for `Array.prototype` causes the `Array` properties introduced in ECMAScript 2015 to be ignored for `with` statement-binding purposes — allowing code that was written prior to ECMAScript 2015 to continue working as expected, rather than breaking.
 
 ```js
 var keys = [];

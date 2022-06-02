@@ -38,7 +38,7 @@ Shortcut objects may contain the following values (only `name` and `url` are req
   <tbody>
     <tr>
       <td><code>name</code></td>
-      <td> A string that can be displayed to the user in a context menu.</td>
+      <td> A string that can be displayed to the user in a context menu.</td>
     </tr>
     <tr>
       <td><code>short_name</code></td>
@@ -50,14 +50,14 @@ Shortcut objects may contain the following values (only `name` and `url` are req
     <tr>
       <td><code>description</code></td>
       <td>
-         A string that describes the purpose of the shortcut. It may be exposed
+         A string that describes the purpose of the shortcut. It may be exposed
         to assistive technology.
       </td>
     </tr>
     <tr>
       <td><code>url</code></td>
       <td>
-         A URL within the application that opens when the shortcut is activated.
+         A URL within the application that opens when the shortcut is activated.
       </td>
     </tr>
     <tr>

@@ -45,7 +45,7 @@ As we near the end of our React journey (for now at least), we'll add the finish
 
 ## Editing the name of a task
 
-We don’t have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.js`. It’ll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
+We don't have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.js`. It'll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
 
 Add the `editTask()` function inside your App component, in the same place as the other functions:
 
@@ -79,7 +79,7 @@ const taskList = tasks.map(task => (
 ));
 ```
 
-Now open `Todo.js`. We’re going to do some refactoring.
+Now open `Todo.js`. We're going to do some refactoring.
 
 ## A UI for editing
 
@@ -95,9 +95,9 @@ We'll now use this to set an `isEditing` state, the default state of which shoul
 const [isEditing, setEditing] = useState(false);
 ```
 
-Next, we're going to rethink the `<Todo />` component — from now on, we want it to display one of two possible “templates", rather than the single template it's used so far:
+Next, we're going to rethink the `<Todo />` component — from now on, we want it to display one of two possible "templates", rather than the single template it's used so far:
 
-- The "view" template, when we are just viewing a todo; this is what we’ve used in the tutorial thus far.
+- The "view" template, when we are just viewing a todo; this is what we've used in the tutorial thus far.
 - The "editing" template, when we are editing a todo. We're about to create this.
 
 Copy this block of code into the `Todo()` function, beneath your `useState()` hook but above the `return` statement:
@@ -231,7 +231,7 @@ Now we'll update our `editingTemplate`'s `<input />` field, setting a `value` at
 />
 ```
 
-Finally, we need to create a function to handle the edit form’s `onSubmit` event; add the following just below the previous function you added:
+Finally, we need to create a function to handle the edit form's `onSubmit` event; add the following just below the previous function you added:
 
 ```js
 function handleSubmit(e) {
@@ -244,7 +244,7 @@ function handleSubmit(e) {
 
 Remember that our `editTask()` callback prop needs the ID of the task we're editing as well as its new name.
 
-Bind this function to the form’s `submit` event by adding the following `onSubmit` handler to the `editingTemplate`'s `<form>`:
+Bind this function to the form's `submit` event by adding the following `onSubmit` handler to the `editingTemplate`'s `<form>`:
 
 ```js
 <form className="stack-small" onSubmit={handleSubmit}>
@@ -298,7 +298,7 @@ Beneath our previous addition, add the following — here we are using the [`Obj
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 ```
 
-> **Note:** We are defining these constants outside our `App()` function because if they were defined inside it, they would be recalculated every time the `<App />` component re-renders, and we don’t want that. This information will never change no matter what our application does.
+> **Note:** We are defining these constants outside our `App()` function because if they were defined inside it, they would be recalculated every time the `<App />` component re-renders, and we don't want that. This information will never change no matter what our application does.
 
 ### Rendering the filters
 
@@ -352,7 +352,7 @@ In the same way as we did earlier with our `<Todo />` component, we now have to 
 
 - Replace `all` with `{props.name}`.
 - Set the value of `aria-pressed` to `{props.isPressed}`.
-- Add an `onClick` handler that calls `props.setFilter()` with the filter’s name.
+- Add an `onClick` handler that calls `props.setFilter()` with the filter's name.
 
 With all of that done, your `FilterButton()` function should read like this:
 
@@ -373,7 +373,7 @@ function FilterButton(props) {
 }
 ```
 
-Visit your browser again. You should see that the different buttons have been given their respective names. When you press a filter button, you should see its text take on a new outline — this tells you it has been selected. And if you look at your DevTool’s Page Inspector while clicking the buttons, you'll see the `aria-pressed` attribute values change accordingly.
+Visit your browser again. You should see that the different buttons have been given their respective names. When you press a filter button, you should see its text take on a new outline — this tells you it has been selected. And if you look at your DevTool's Page Inspector while clicking the buttons, you'll see the `aria-pressed` attribute values change accordingly.
 
 ![The three filter buttons of the app - all, active, and completed - with a focus highlight around completed](filter-buttons.png)
 
@@ -409,7 +409,7 @@ Choosing a filter in your browser will now remove the tasks that do not meet its
 
 ## Summary
 
-So that's it — our app is now functionally complete. However, now that we’ve implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.
+So that's it — our app is now functionally complete. However, now that we've implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

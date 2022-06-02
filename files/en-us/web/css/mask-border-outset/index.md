@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - NeedsCompatTable
   - NeedsExample
   - Reference
@@ -38,6 +37,7 @@ mask-border-outset: 7px 12px 14px 5px;
 mask-border-outset: inherit;
 mask-border-outset: initial;
 mask-border-outset: revert;
+mask-border-outset: revert-layer;
 mask-border-outset: unset;
 ```
 

@@ -8,16 +8,16 @@ browser-compat: svg.elements.animate.from
 ---
 {{SVGRef}}
 
-The **`from`** attribute indicates the initial value of the attribute that will be modified during the animation.
+The **`from`** attribute indicates the initial value of the attribute that will be modified during the animation.
 
 When used with the {{SVGAttr("to")}} attribute, the animation will change the modified attribute from the `from` value to the `to` value. When used with the {{SVGAttr("by")}} attribute, the animation will change the attribute relatively from the `from` value by the value specified in `by`.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
 
 ## Example
 
@@ -29,9 +29,9 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" height="100">
-    <animate attributeName="width" fill="freeze" from="100" to="150" dur="3s"/>
-  </rect>
+  <rect x="10" y="10" height="100">
+    <animate attributeName="width" fill="freeze" from="100" to="150" dur="3s"/>
+  </rect>
 </svg>
 ```
 
@@ -62,31 +62,7 @@ When a list of values is defined via the {{SVGAttr("values")}} attribute, the `f
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#FromAttribute", "from")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#FromAttribute", "from")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

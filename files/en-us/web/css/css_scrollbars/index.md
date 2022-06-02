@@ -6,6 +6,7 @@ tags:
   - Guide
   - Overview
   - css scrollbars
+spec-urls: https://drafts.csswg.org/css-scrollbars/
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -50,15 +51,13 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS Scrollbars")}} | {{Spec2("CSS Scrollbars")}} | Initial definition. |
+{{Specifications}}
 
 ## Accessibility concerns
 
 When you customize scrollbars, consider they have enough contrast and that their hit area is large enough for people who use touch input.
 
-- [Baseline Rules for Scrollbar Usability | Adrian Roselli](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
+- [Baseline Rules for Scrollbar Usability | Adrian Roselli](https://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
 
 ## Browser compatibility
 

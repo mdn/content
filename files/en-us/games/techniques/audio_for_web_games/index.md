@@ -203,7 +203,7 @@ All this is possible using the standard {{htmlelement("audio")}} element and ass
 
 ### Web Audio API for games
 
-The Web Audio API is supported across all modern desktop and mobile browsers, with the exception of Opera Mini. With that in mind, it's an acceptable approach for many situations to use the Web Audio API (see the [Can I use Web Audio API](https://caniuse.com/#feat=audio-api) page[ ](https://caniuse.com/#feat=audio-api)for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.
+The Web Audio API is supported across all modern desktop and mobile browsers, with the exception of Opera Mini. With that in mind, it's an acceptable approach for many situations to use the Web Audio API (see the [Can I use Web Audio API page](https://caniuse.com/#feat=audio-api) for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.
 
 A feasible cross-browser strategy would be to provide basic audio using the standard `<audio>` element and, where supported, enhance the experience using the Web Audio API.
 
@@ -272,7 +272,7 @@ To see this in action, let's lay out some separate tracks:
 </section>
 ```
 
-All of these tracks are the same tempo and are designed to be synchronized with each other, so we need to make sure they are loaded and available to the api _before_ we are able to play them. We can do this with JavaScript's [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) functionality.
+All of these tracks are the same tempo and are designed to be synchronized with each other, so we need to make sure they are loaded and available to the API _before_ we are able to play them. We can do this with JavaScript's [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) functionality.
 
 Once they are available to play, we need to make sure they start at the correct point that other tracks might be playing at, so they sync up.
 

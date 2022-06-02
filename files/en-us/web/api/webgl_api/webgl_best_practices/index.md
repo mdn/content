@@ -47,18 +47,20 @@ Similarly to extensions, the limits of your system will be different than your c
 
 The minimum requirements for WebGL are quite low. In practice, effectively all systems support at least the following:
 
-        MAX_CUBE_MAP_TEXTURE_SIZE: 4096
-        MAX_RENDERBUFFER_SIZE: 4096
-        MAX_TEXTURE_SIZE: 4096
-        MAX_VIEWPORT_DIMS: [4096,4096]
-        MAX_VERTEX_TEXTURE_IMAGE_UNITS: 4
-        MAX_TEXTURE_IMAGE_UNITS: 8
-        MAX_COMBINED_TEXTURE_IMAGE_UNITS: 8
-        MAX_VERTEX_ATTRIBS: 16
-        MAX_VARYING_VECTORS: 8
-        MAX_VERTEX_UNIFORM_VECTORS: 128
-        MAX_FRAGMENT_UNIFORM_VECTORS: 64
-        ALIASED_POINT_SIZE_RANGE: [1,100]
+```
+MAX_CUBE_MAP_TEXTURE_SIZE: 4096
+MAX_RENDERBUFFER_SIZE: 4096
+MAX_TEXTURE_SIZE: 4096
+MAX_VIEWPORT_DIMS: [4096,4096]
+MAX_VERTEX_TEXTURE_IMAGE_UNITS: 4
+MAX_TEXTURE_IMAGE_UNITS: 8
+MAX_COMBINED_TEXTURE_IMAGE_UNITS: 8
+MAX_VERTEX_ATTRIBS: 16
+MAX_VARYING_VECTORS: 8
+MAX_VERTEX_UNIFORM_VECTORS: 128
+MAX_FRAGMENT_UNIFORM_VECTORS: 64
+ALIASED_POINT_SIZE_RANGE: [1,100]
+```
 
 Your desktop may support 16k textures, or maybe 16 texture units in the vertex shader, but most other systems don't, and content that works for you will not work for them!
 
@@ -88,8 +90,10 @@ Flush tells the implementation to push all pending commands out for execution, f
 
 For example, it is possible for the following to never complete without context loss:
 
-    sync = glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
-    glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
+```js
+sync = glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
+glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
+```
 
 WebGL doesn't have a SwapBuffers call by default, so a flush can help fill the gap, as well.
 
@@ -293,16 +297,20 @@ If you have a float texture, iOS requires that you use `highp sampler2D foo;`, o
 
 The vertex language has the following predeclared globally scoped default precision statements:
 
-    precision highp float;
-    precision highp int;
-    precision lowp sampler2D;
-    precision lowp samplerCube;
+```
+precision highp float;
+precision highp int;
+precision lowp sampler2D;
+precision lowp samplerCube;
+```
 
 The fragment language has the following predeclared globally scoped default precision statements:
 
-    precision mediump int;
-    precision lowp sampler2D;
-    precision lowp samplerCube;
+```
+precision mediump int;
+precision lowp sampler2D;
+precision lowp samplerCube;
+```
 
 ### In WebGL 1, "highp float" support is optional in fragment shaders
 
@@ -316,11 +324,13 @@ If `highp float` is available, `GL_FRAGMENT_PRECISION_HIGH` will be defined as `
 
 A good pattern for "always give me the highest precision":
 
-    #ifdef GL_FRAGMENT_PRECISION_HIGH
-    precision highp float;
-    #else
-    precision mediump float;
-    #endif
+```
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+```
 
 ### ESSL100 minimum requirements (WebGL 1)
 
@@ -394,7 +404,7 @@ A number of formats (particularly three-channel formats) are emulated. For examp
 
 ## Avoid alpha:false, which can be expensive
 
-Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://crbug.com/1045643) that all of these techniques have approximately equal performance impact on affected platforms.
+Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://bugs.chromium.org/p/chromium/issues/detail?id=1045643) that all of these techniques have approximately equal performance impact on affected platforms.
 
 Most applications, even those requiring alpha blending, can be structured to produce `1.0` for the alpha channel. The primary exception is any application requiring destination alpha in the blending function. If feasible, it is recommended to do this rather than using `alpha:false`.
 
@@ -427,81 +437,89 @@ Depth and stencil attachments and formats are actually inseparable on many devic
 
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
-Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Progams internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan\[[1](https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo)] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
+Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan\[[1](https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo)] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
 
 In WebGL:
 
-        ...
-        useProgram(prog1)
-    <pipeline flush>
-        bindFramebuffer(target)
-        drawArrays()
-        bindTexture(webgl_texture)
-        texImage2D(HTMLVideoElement)
-        drawArrays()
-        ...
+```
+    ...
+    useProgram(prog1)
+<pipeline flush>
+    bindFramebuffer(target)
+    drawArrays()
+    bindTexture(webgl_texture)
+    texImage2D(HTMLVideoElement)
+    drawArrays()
+    ...
+```
 
 Behind the scenes in the browser:
 
-        ...
-        useProgram(prog1)
-    <pipeline flush>
-        bindFramebuffer(target)
-        drawArrays()
-        bindTexture(webgl_texture)
-        -texImage2D(HTMLVideoElement):
-            +useProgram(_internal_tex_tranform_prog)
-    <pipeline flush>
-            +bindFramebuffer(webgl_texture._internal_framebuffer)
-            +bindTexture(HTMLVideoElement._internal_video_tex)
-            +drawArrays() // y-flip/colorspace-transform/alpha-(un)premultiply
-            +bindTexture(webgl_texture)
-            +bindFramebuffer(target)
-            +useProgram(prog1)
-    <pipeline flush>
-        drawArrays()
-        ...
+```
+    ...
+    useProgram(prog1)
+<pipeline flush>
+    bindFramebuffer(target)
+    drawArrays()
+    bindTexture(webgl_texture)
+    -texImage2D(HTMLVideoElement):
+        +useProgram(_internal_tex_tranform_prog)
+<pipeline flush>
+        +bindFramebuffer(webgl_texture._internal_framebuffer)
+        +bindTexture(HTMLVideoElement._internal_video_tex)
+        +drawArrays() // y-flip/colorspace-transform/alpha-(un)premultiply
+        +bindTexture(webgl_texture)
+        +bindFramebuffer(target)
+        +useProgram(prog1)
+<pipeline flush>
+    drawArrays()
+    ...
+```
 
 Prefer doing uploads before starting drawing, or at least between pipelines:
 
 In WebGL:
 
-        ...
-        bindTexture(webgl_texture)
-        texImage2D(HTMLVideoElement)
-        useProgram(prog1)
-    <pipeline flush>
-        bindFramebuffer(target)
-        drawArrays()
-        bindTexture(webgl_texture)
-        drawArrays()
-        ...
+```
+    ...
+    bindTexture(webgl_texture)
+    texImage2D(HTMLVideoElement)
+    useProgram(prog1)
+<pipeline flush>
+    bindFramebuffer(target)
+    drawArrays()
+    bindTexture(webgl_texture)
+    drawArrays()
+    ...
+```
 
 Behind the scenes in the browser:
 
-        ...
-        bindTexture(webgl_texture)
-        -texImage2D(HTMLVideoElement):
-            +useProgram(_internal_tex_tranform_prog)
-    <pipeline flush>
-            +bindFramebuffer(webgl_texture._internal_framebuffer)
-            +bindTexture(HTMLVideoElement._internal_video_tex)
-            +drawArrays() // y-flip/colorspace-transform/alpha-(un)premultiply
-            +bindTexture(webgl_texture)
-            +bindFramebuffer(target)
-        useProgram(prog1)
-    <pipeline flush>
-        bindFramebuffer(target)
-        drawArrays()
-        bindTexture(webgl_texture)
-        drawArrays()
-        ...
+```
+    ...
+    bindTexture(webgl_texture)
+    -texImage2D(HTMLVideoElement):
+        +useProgram(_internal_tex_tranform_prog)
+<pipeline flush>
+        +bindFramebuffer(webgl_texture._internal_framebuffer)
+        +bindTexture(HTMLVideoElement._internal_video_tex)
+        +drawArrays() // y-flip/colorspace-transform/alpha-(un)premultiply
+        +bindTexture(webgl_texture)
+        +bindFramebuffer(target)
+    useProgram(prog1)
+<pipeline flush>
+    bindFramebuffer(target)
+    drawArrays()
+    bindTexture(webgl_texture)
+    drawArrays()
+    ...
+```
 
 ## Use texStorage to create textures
 
-The WebGL 2.0 `texImage*` API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.
+The WebGL 2.0 `texImage*` API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.
 
-Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.
+Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.
 
 So, prefer `texStorage`+`texSubImage` for textures in WebGL 2
 

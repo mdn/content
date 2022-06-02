@@ -19,7 +19,7 @@ tags:
 ---
 {{DefaultAPISidebar("WebXR Device API")}}
 
-WebXR, with the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as **mixed reality (MR)** or **cross reality (XR)**. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together to create an engaging experience for users.
+WebXR, with the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as **mixed reality (MR)** or **cross reality (XR)**. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together to create an engaging experience for users.
 
 This guide provides an overview of what WebXR is and how it works, as well as the preliminary foundation needed to start developing augmented and virtual reality experiences for the web.
 
@@ -29,7 +29,7 @@ WebXR is an API for web content and apps to use to interface with mixed reality 
 
 WebXR additionally provides support for accepting inputs from control devices such as handheld VR controllers or specialized mixed reality gamepads.
 
-*WebXR is not a rendering technology and does not provide features for managing 3D data or rendering it to the display.* This is an important fact to keep in mind. While WebXR manages the timing, scheduling, and the various points of view relevant when drawing the scene, it does *not* know how to load and manage models, nor how to render and texture them, and so forth. That part is entirely up to you. Fortunately, WebGL and the various WebGL-based frameworks and libraries are available to make it much easier to deal with all of that.
+*WebXR is not a rendering technology and does not provide features for managing 3D data or rendering it to the display.* This is an important fact to keep in mind. While WebXR manages the timing, scheduling, and the various points of view relevant when drawing the scene, it does *not* know how to load and manage models, nor how to render and texture them, and so forth. That part is entirely up to you. Fortunately, WebGL and the various WebGL-based frameworks and libraries are available to make it much easier to deal with all of that.
 
 ### How is WebXR different from WebVR?
 
@@ -45,7 +45,7 @@ Before getting into too much detail, let's consider some basic concepts that you
 
 ### Field of view
 
-The term **field of view** (**FOV**) is one which applies to any visual technology, from old film cameras to modern digital video cameras, including the cameras in computers and mobile devices.
+The term **field of view** (**FOV**) is one which applies to any visual technology, from old film cameras to modern digital video cameras, including the cameras in computers and mobile devices.
 
 ![](binocular-vision.svg)
 
@@ -57,7 +57,7 @@ A human eye is able to take in a FOV of around 135°. Assuming a person has two 
 
 The drawing shown here demonstrates the concept of FOV: blue wedge for the left eye, red wedge for the right eye. The light brown overlapping area is where the viewer has binocular vision and can perceive depth. If you look carefully, you'll see that each eye sees the die slightly differently, and the combined view blends the two into a 3D shape.
 
-Generally, applications only define and manage the horizontal FOV. For more details, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Rendering", "The optics of 3D")}}.
+Generally, applications only define and manage the horizontal FOV. For more details, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Rendering", "The optics of 3D")}}.
 
 #### Field of view and mixed reality devices
 
@@ -100,16 +100,16 @@ WebXR offers support for both augmented reality (AR) and virtual reality (VR) se
 
 In a VR environment, the entire image is digitally created by your app or site, from foreground objects all the way to the background or skybox. Your frame drawing code will have to redraw every pixel of each view during each frame in order to avoid the potential of artifacts being left behind. Some platforms may provide previously-cleared frames to you, while others may optimize performance by not erasing the framebuffers in order to avoid having to touch each pixel twice per frame.
 
-There are two VR session modes available in WebXR: **inline** and **immersive**. The former, specified by the session mode string `inline`, presents the rendered scene within the context of a document in a web browser, and doesn't require special XR hardware to view. The immersive session mode is indicated using the session mode `immersive-vr`. This session mode requires an XR device such as a headset, and replaces the entire world with the rendered scene using the displays shown to each of the user's eyes.
+There are two VR session modes available in WebXR: **inline** and **immersive**. The former, specified by the session mode string `inline`, presents the rendered scene within the context of a document in a web browser, and doesn't require special XR hardware to view. The immersive session mode is indicated using the session mode `immersive-vr`. This session mode requires an XR device such as a headset, and replaces the entire world with the rendered scene using the displays shown to each of the user's eyes.
 
 #### Augmented reality
 
-In augmented reality (AR), the user sees the imagery you render presented on top of the physical, real-world environment around them. Because AR is always an immersive experience, in which the scene is the entire world around the user (rather than being enclosed in a box on a screen), the only AR session mode is `immersive-ar`.
+In augmented reality (AR), the user sees the imagery you render presented on top of the physical, real-world environment around them. Because AR is always an immersive experience, in which the scene is the entire world around the user (rather than being enclosed in a box on a screen), the only AR session mode is `immersive-ar`.
 
 There are two basic types of AR device:
 
 - Devices which use cameras to capture the world in front of the user, render the WebXR content atop that image, then display the image on a screen. These devices include phones, which show the resulting scene on the device's screen in a 2D presentation, as well as goggles that use a pair of cameras, one for each eye, to capture the scene in stereo in order to retain the world's depth, with the WebXR scene then rendered for each eye with that eye's captured background in place.
-- Devices which use transparent glasses to allow the user to see the world, while overlaying the rendered image atop the scene. The user is, thus, directly viewing the real world instead of a series of digital photos of it.
+- Devices which use transparent glasses to allow the user to see the world, while overlaying the rendered image atop the scene. The user is, thus, directly viewing the real world instead of a series of digital photos of it.
 
 Both types of device should be capable of also presenting VR sessions. WebXR doesn't generally care which type of device you're using, and the rendering process is almost exactly the same as for VR, except you don't erase the background or skybox before rendering each frame.
 
@@ -119,7 +119,7 @@ For more information about using WebXR to create augmented reality experiences, 
 
 The simplest XR presentation involves rendering the scene directly to the user's screen, either in the context of a web document, or in full screen mode. This is most common when the user either doesn't have a dedicated XR device, or when the user is viewing the AR or VR app on a phone or other handheld device.
 
-Simpler and lower-priced XR devices typically use an integrated computer or connect to a smartphone, essentially using the mobile CPU and GPU to run apps, render images, and display them to the user. Higher-powered solutions typically offload application execution and graphics processing to an external device such as a desktop computer, and are either tethered to the computer using a cable or use a wireless network to receive the imagery to display to the user.
+Simpler and lower-priced XR devices typically use an integrated computer or connect to a smartphone, essentially using the mobile CPU and GPU to run apps, render images, and display them to the user. Higher-powered solutions typically offload application execution and graphics processing to an external device such as a desktop computer, and are either tethered to the computer using a cable or use a wireless network to receive the imagery to display to the user.
 
 ### Headsets
 
@@ -133,7 +133,7 @@ The vast majority of headsets use a single display whose frame is divided in hal
 
 The simplest headsets have no integrated sensors, and focus each half of the screen into the corresponding eye. A common example of this is [Google Cardboard](https://arvr.google.com/cardboard/), a type of headset first created by Google which can be cheaply created using cardboard or other inexpensive materials. These devices often work by snapping your phone into the headset so that its screen and onboard graphics processor can be used to render and display the XR scene.
 
-More advanced headsets have integrated displays and are strapped to the head using an elastic or strap or a strap with Velcro closure.  These headsets may include integrated speakers and microphone, and/or connectors to attach external ones. Additionally, these headsets may have various sensors for detecting when the headset moves through space. The types and number of sensors included will determine how many {{anch("degrees of freedom")}} the user has.
+More advanced headsets have integrated displays and are strapped to the head using an elastic or strap or a strap with Velcro closure.  These headsets may include integrated speakers and microphone, and/or connectors to attach external ones. Additionally, these headsets may have various sensors for detecting when the headset moves through space. The types and number of sensors included will determine how many [degrees of freedom](#degrees_of_freedom) the user has.
 
 ### Goggles and glasses
 
@@ -143,9 +143,9 @@ The difference is that the goggles pass through the real world, overlaying the r
 
 ### CAVEs
 
-A **Cave Automated Virtual Environment** (**CAVE**) is an immersive VR environment in which the scene is projected or otherwise displayed on the walls (as well as possibly the ceiling and/or floor), thus completely surrounding the user with the simulation and allowing them to be immersed in the scene. The user wears 3D glasses that both add the 3D effect to the projected image, but provide a means for the system to render foreground objects into the world.
+A **Cave Automated Virtual Environment** (**CAVE**) is an immersive VR environment in which the scene is projected or otherwise displayed on the walls (as well as possibly the ceiling and/or floor), thus completely surrounding the user with the simulation and allowing them to be immersed in the scene. The user wears 3D glasses that both add the 3D effect to the projected image, but provide a means for the system to render foreground objects into the world.
 
-The user's activity may be monitored using motion sensors that are worn or held by the user, or, increasingly commonly, using infrared cameras that detect the user's movements. Speakers placed around the chamber provide immersive sound as well.
+The user's activity may be monitored using motion sensors that are worn or held by the user, or, increasingly commonly, using infrared cameras that detect the user's movements. Speakers placed around the chamber provide immersive sound as well.
 
 These are not common among everyday users; they're mostly either experimental, used for demonstration purposes, or used by larger organizations. One drawback is that the CAVE can't simulate anything closer than the wall.
 
@@ -155,7 +155,7 @@ Because the entire act of creating a virtual 3D world is, in essence, a trick wh
 
 ### Virtual reality sickness
 
-**{{interwiki("wikipedia", "Virtual reality sickness")}}** is a condition in which a person experiencing virtual reality feels discomfort, disorientation, or even serious nausea during and sometimes for a short time after the experience.
+**{{interwiki("wikipedia", "Virtual reality sickness")}}** is a condition in which a person experiencing virtual reality feels discomfort, disorientation, or even serious nausea during and sometimes for a short time after the experience.
 
 There are a number of theories surrounding exactly what about virtual reality causes some people to feel uncomfortable or sick, most of which focusing on the idea that even subtle differences between what the brain thinks should be happening and what is being seen can cause these symptoms.
 
@@ -171,7 +171,7 @@ If you have any content that may be of risk to any users, you should provide a w
 
 ## The role of frameworks
 
-Because 3D graphics—and mixed reality in particular—involve a lot of often intricate math, data management, and other complex tasks, it's unlikely that you'll directly use WebGL to render your scene in most cases. Instead, you'll probably do most of your work making use of one of the frameworks or libraries that are built atop WebGL to make it more convenient to use.
+Because 3D graphics—and mixed reality in particular—involve a lot of often intricate math, data management, and other complex tasks, it's unlikely that you'll directly use WebGL to render your scene in most cases. Instead, you'll probably do most of your work making use of one of the frameworks or libraries that are built atop WebGL to make it more convenient to use.
 
 A particular benefit to using a framework rather than directly using the WebGL API is that libraries tend to implement virtual camera functionality. OpenGL (and thus WebGL by extension) does not directly offer a camera view, using a library that simulates one on your behalf can make your job much, much easier, especially when building code that allows free movement through your virtual world.
 
@@ -181,7 +181,7 @@ Since [WebGL](/en-US/docs/Web/API/WebGL_API) is used for rendering the 3D world 
 
 These frameworks are good for general-purpose programming as well as for game development when you want to do the logic yourself. They're designed for creating and animating 3D scenes regardless of context.
 
-- [A-Frame](https://aframe.io/) (specifically designed for creating WebXR-based apps)
+- [A-Frame](https://aframe.io/) (specifically designed for creating WebXR-based apps)
 - [Babylon.js](https://www.babylonjs.com/)
 - [Three.js](https://threejs.org/)
 

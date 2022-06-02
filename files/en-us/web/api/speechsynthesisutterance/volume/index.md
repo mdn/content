@@ -18,14 +18,7 @@ The **`volume`** property of the {{domxref("SpeechSynthesisUtterance")}} interfa
 
 If not set, the default value 1 will be used.
 
-## Syntax
-
-```js
-var myVolume = speechSynthesisUtteranceInstance.volume;
-speechSynthesisUtteranceInstance.volume = 0.5;
-```
-
-### Value
+## Value
 
 A float that represents the volume value, between 0 (lowest) and 1 (highest.)
 

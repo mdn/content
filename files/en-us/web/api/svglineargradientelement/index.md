@@ -13,7 +13,7 @@ browser-compat: api.SVGLinearGradientElement
 
 The **`SVGLinearGradientElement`** interface corresponds to the {{SVGElement("linearGradient")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

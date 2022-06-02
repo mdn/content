@@ -12,14 +12,14 @@ browser-compat: api.WebGLRenderingContext.linkProgram
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} interface's
-**`linkProgram()`** method links a given
+**`linkProgram()`** method links a given
 {{domxref("WebGLProgram")}}, completing the process of preparing the GPU code for the
 program's fragment and vertex shaders.
 
 ## Syntax
 
 ```js
-void gl.linkProgram(program);
+linkProgram(program)
 ```
 
 ### Parameters
@@ -29,7 +29,7 @@ void gl.linkProgram(program);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

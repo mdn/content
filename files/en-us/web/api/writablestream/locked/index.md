@@ -3,7 +3,6 @@ title: WritableStream.locked
 slug: Web/API/WritableStream/locked
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Streams
@@ -11,19 +10,11 @@ tags:
   - locked
 browser-compat: api.WritableStream.locked
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`locked`** read-only property of the
-{{domxref("WritableStream")}} interface returns a boolean indicating whether the
-`WritableStream` is locked to a writer.
+The **`locked`** read-only property of the {{domxref("WritableStream")}} interface returns a boolean indicating whether the `WritableStream` is locked to a writer.
 
-## Syntax
-
-```js
-var locked = writableStream.locked;
-```
-
-### Value
+## Value
 
 A boolean value indicating whether or not the writable stream is locked.
 

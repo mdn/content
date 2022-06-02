@@ -17,7 +17,7 @@ browser-compat: http.headers.Accept-CH-Lifetime
 > **Warning:** The header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-08).
 
 The **`Accept-CH-Lifetime`** header is set by the server to
-specify the persistence of the [client hint headers](/en-US/docs/Glossary/Client_hints) it specified using {{HTTPHeader("Accept-CH")}}, that the client should
+specify the persistence of the [client hint headers](/en-US/docs/Web/HTTP/Client_hints) it specified using {{HTTPHeader("Accept-CH")}}, that the client should
 include in subsequent requests.
 
 <table class="properties">

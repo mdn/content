@@ -1,6 +1,7 @@
 ---
 title: 'Element: mouseleave event'
 slug: Web/API/Element/mouseleave_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -60,7 +61,7 @@ The [`mouseout`](/en-US/docs/Web/API/Element/mouseout_event#examples) documentat
 
 ### mouseleave
 
-The following trivial example uses the `mouseenter` event to change the border on the `<div>` when the mouse enters the space alloted to it. It then adds an item to the list with the number of the `mouseenter` or `mouseleave` event.
+The following trivial example uses the `mouseenter` event to change the border on the `<div>` when the mouse enters the space allotted to it. It then adds an item to the list with the number of the `mouseenter` or `mouseleave` event.
 
 #### HTML
 

@@ -20,14 +20,25 @@ provided function once for each element of {{domxref('StylePropertyMapReadOnly')
 ## Syntax
 
 ```js
-StylePropertyMapReadOnly.forEach(function callback(currentValue[, index[, array]]) {
-    //your code
-}[, thisArg]);
+// Arrow function
+forEach((currentValue) => { /* ... */ } )
+forEach((currentValue, index) => { /* ... */ } )
+forEach((currentValue, index, array) => { /* ... */ } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function(currentValue) { /* ... */ })
+forEach(function(currentValue, index) { /* ... */ })
+forEach(function(currentValue, index, array){ /* ... */ })
+forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : The function to execute for each element, taking three arguments:
 
@@ -44,9 +55,9 @@ StylePropertyMapReadOnly.forEach(function callback(currentValue[, index[, array]
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 Here is an example of using `forEach()` on a retrieved
 {{domxref('Element.computedStyleMap()')}}.
@@ -60,7 +71,7 @@ const allComputedStyles = buttonEl.computedStyleMap();
 
 // forEach will allow us to run code over each prop/val pair
 allComputedStyles.forEach((elem, index, arr) => {
-  // oode to run for each pair
+  // code to run for each pair
 })
 ```
 

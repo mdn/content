@@ -1,12 +1,14 @@
 ---
 title: Presentation API
 slug: Web/API/Presentation_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
   - NeedsContent
   - Presentation API
   - Reference
+browser-compat: api.Presentation
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
@@ -30,7 +32,7 @@ Depending on the connection mechanism provided by the presentation device, any c
 - {{domxref("PresentationAvailability")}}
   - : A [PresentationAvailability](/en-US/docs/Web/API/PresentationAvailability) object is associated with available presentation displays and represents the _presentation display availability_ for a presentation request.
 - {{domxref("PresentationConnectionAvailableEvent")}}
-  - : The `PresentationConnectionAvailableEvent` is fired on a [`PresentationRequest`](/en-US/docs/Web/API/PresentationRequest "The PresentationRequest interface of the Presentation API provides methods for starting a new presentation or joining an active one.") when a connection associated with the object is created.
+  - : The `PresentationConnectionAvailableEvent` is fired on a [`PresentationRequest`](/en-US/docs/Web/API/PresentationRequest) when a connection associated with the object is created.
 - {{domxref("PresentationConnection")}}
   - : Each presentation connection is represented by a [PresentationConnection](/en-US/docs/Web/API/PresentationConnection) object.
 - {{domxref("PresentationConnectionCloseEvent")}}
@@ -258,16 +260,12 @@ Example codes below highlight the usage of main features of the Presentation API
 
 ## Specifications
 
-| Specification                                               |
-| ----------------------------------------------------------- |
-| [Presentation API](https://w3c.github.io/presentation-api/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Presentation`
-
-{{Compat("api.Presentation")}}
+{{Compat}}
 
 ## See also
 
-[Presentation API polyfill](https://mediascape.github.io/presentation-api-polyfill/) contains a JavaScript polyfill of the [Presentation API](https://w3c.github.io/presentation-api/) specification under standardisation within the [Second Screen Working Group](https://www.w3.org/2014/secondscreen/) at W3C. The polyfill is mostly intended for exploring how the Presentation API may be implemented on top of different presentation mechanisms.
+[Presentation API polyfill](https://mediascape.github.io/presentation-api-polyfill/) contains a JavaScript polyfill of the [Presentation API](https://w3c.github.io/presentation-api/) specification under standardization within the [Second Screen Working Group](https://www.w3.org/2014/secondscreen/) at W3C. The polyfill is mostly intended for exploring how the Presentation API may be implemented on top of different presentation mechanisms.

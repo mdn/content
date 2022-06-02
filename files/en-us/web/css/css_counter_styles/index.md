@@ -8,6 +8,7 @@ tags:
   - NeedsContent
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-counter-styles/
 ---
 {{CSSRef}}
 
@@ -22,7 +23,7 @@ tags:
 
 ### Functions
 
-- {{cssxref("symbols()")}}
+- {{cssxref("symbols", "symbols()")}}
 
 ### At-rules
 
@@ -45,9 +46,7 @@ tags:
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Counter Styles')}} | {{Spec2('CSS3 Counter Styles')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

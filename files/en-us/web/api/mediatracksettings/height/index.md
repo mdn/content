@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.height
 slug: Web/API/MediaTrackSettings/height
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -30,18 +31,12 @@ the value of {{domxref("MediaTrackSupportedConstraints.height")}} as returned by
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var height = MediaTrackSettings.height;
-```
-
-### Value
+## Value
 
 An integer value indicating the height, in pixels, of the video track as currently
 configured.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

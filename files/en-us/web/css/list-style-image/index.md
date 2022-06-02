@@ -17,7 +17,7 @@ It is often more convenient to use the shorthand {{ cssxref("list-style") }}.
 
 {{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
-> **Note:** This property is applied to list items, i.e. elements with `{{cssxref("display")}}: list-item;` [by default](https://www.w3.org/TR/html5/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
+> **Note:** This property is applied to list items, i.e. elements with `{{cssxref("display")}}: list-item;` [by default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
 
 ## Syntax
 
@@ -35,6 +35,7 @@ list-style-image: linear-gradient(to left bottom, red, blue);
 list-style-image: inherit;
 list-style-image: initial;
 list-style-image: revert;
+list-style-image: revert-layer;
 list-style-image: unset;
 ```
 
@@ -113,4 +114,4 @@ ul {
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("url", "url()")}} function

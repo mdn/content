@@ -13,7 +13,7 @@ browser-compat: api.SVGMPathElement
 
 The **`SVGMPathElement`** interface corresponds to the {{SVGElement("mpath")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

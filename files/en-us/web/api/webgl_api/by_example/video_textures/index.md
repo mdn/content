@@ -10,8 +10,6 @@ tags:
   - Tutorial
   - WebGL
 ---
-{{ draft() }}
-
 {{Previous("Learn/WebGL/By_example/Textures_from_code")}}
 
 This example demonstrates how to use video files as textures for WebGL surfaces.

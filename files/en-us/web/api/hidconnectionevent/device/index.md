@@ -1,6 +1,7 @@
 ---
 title: HIDConnectionEvent.device
 slug: Web/API/HIDConnectionEvent/device
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.HIDConnectionEvent.device
 
 The **`device`** read-only property of the {{domxref("HIDConnectionEvent")}} interface returns the {{domxref("HIDDevice")}} associated with this connection event.
 
-## Syntax
-
-```js
-let device = HIDConnectionEvent.device;
-```
-
-### Value
+## Value
 
 A {{domxref("HIDDevice")}}.
 

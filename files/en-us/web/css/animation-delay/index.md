@@ -32,6 +32,7 @@ animation-delay: 2.1s, 480ms;
 animation-delay: inherit;
 animation-delay: initial;
 animation-delay: revert;
+animation-delay: revert-layer;
 animation-delay: unset;
 ```
 
@@ -57,7 +58,9 @@ animation-delay: unset;
 
 ## Examples
 
-### The animation has a delay of 2 seconds
+### Setting an animation delay
+
+This animation has a delay of 2 seconds.
 
 #### HTML
 
@@ -69,26 +72,33 @@ animation-delay: unset;
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  background-color: rebeccapurple;
+  border-radius: 10px;
   width: 100px;
-  height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
   animation-delay: 2s;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 ```
 
-{{EmbedLiveSample("Examples","100%","250")}}
+#### Result
+
+Hover over the rectangle to start the animation.
+
+{{EmbedLiveSample("Setting an animation delay","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 
@@ -102,5 +112,5 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) fo
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

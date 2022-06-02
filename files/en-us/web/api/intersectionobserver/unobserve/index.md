@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.unobserve()
 slug: Web/API/IntersectionObserver/unobserve
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer
@@ -21,7 +22,7 @@ element.
 ## Syntax
 
 ```js
-IntersectionObserver.unobserve(target);
+unobserve(target)
 ```
 
 ### Parameters
@@ -32,9 +33,9 @@ IntersectionObserver.unobserve(target);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This snippet shows an observer being created, an element being observed, and then being
 unobserved.

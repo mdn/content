@@ -17,7 +17,7 @@ parameter name.
 ## Syntax
 
 ```js
-any gl.getParameter(pname);
+getParameter(pname)
 ```
 
 ### Parameters
@@ -416,7 +416,7 @@ You can query the following `pname` parameters when using a
     </tr>
     <tr>
       <td><code>gl.RENDERER</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>
@@ -451,7 +451,7 @@ You can query the following `pname` parameters when using a
     </tr>
     <tr>
       <td><code>gl.SHADING_LANGUAGE_VERSION</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>
@@ -576,12 +576,12 @@ You can query the following `pname` parameters when using a
     </tr>
     <tr>
       <td><code>gl.VENDOR</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>
       <td><code>gl.VERSION</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>

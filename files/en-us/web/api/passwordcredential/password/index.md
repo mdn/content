@@ -14,18 +14,12 @@ browser-compat: api.PasswordCredential.password
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`password`** read-only property
-of the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}
+of the {{domxref("PasswordCredential")}} interface returns a string
 containing the password of the credential.
 
-## Syntax
+## Value
 
-```js
-password = passwordCredential.password
-```
-
-### Value
-
-A {{domxref("USVString")}} containing a password.
+A string containing a password.
 
 ## Specifications
 

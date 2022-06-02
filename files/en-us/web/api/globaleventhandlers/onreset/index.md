@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onreset
 slug: Web/API/GlobalEventHandlers/onreset
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -27,8 +28,7 @@ target.onreset = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
 argument.
 
 ## Example

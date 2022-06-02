@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.requestStart
 slug: Web/API/PerformanceResourceTiming/requestStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -20,18 +21,12 @@ There is no _end_ property for `requestStart`.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.requestStart;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the
 browser starts requesting the resource from the server
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

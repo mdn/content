@@ -74,7 +74,7 @@ for (let view of xrPose.views) {
 }
 ```
 
-For each of the views, the value of `eye` is checked and  if it's either
+For each of the views, the value of `eye` is checked and if it's either
 `left` or `right`, we check to see if the
 `body.leftEye.injured` or `body.rightEye.injured` property is
 `true`; if so, we call a function `updateInjury()` on that eye to
@@ -82,7 +82,7 @@ do things such as allow a bit of healing to occur, track the progress of a poiso
 effect, or the like, as appropriate for the game's needs.
 
 `updateInjury()` returns `true` if the eye is still injured or
-`false` if the eye has been restored to health by the function,. If the
+`false` if the eye has been restored to health by the function. If the
 result is `false`, indicating that the eye is now healthy, we render the
 scene for that eye. Otherwise, we don't.
 

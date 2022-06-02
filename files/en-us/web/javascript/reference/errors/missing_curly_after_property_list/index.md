@@ -10,9 +10,8 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after property list" occurs when there is a mistake
-in the [object
-initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax somewhere. Might be in fact a missing curly bracket, but could
-also be a missing comma.
+in the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax somewhere.
+Might be in fact a missing curly bracket, but could also be a missing comma.
 
 ## Message
 
@@ -27,8 +26,8 @@ SyntaxError: missing } after property list (Firefox)
 
 ## What went wrong?
 
-There is a mistake in the [object
-initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax somewhere. Might be in fact a missing curly bracket, but could
+There is a mistake in the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+syntax somewhere. Might be in fact a missing curly bracket, but could
 also be a missing comma, for example. Also check if any closing curly brackets or
 parenthesis are in the correct order. Indenting or formatting the code a bit nicer might
 also help you to see through the jungle.
@@ -59,5 +58,4 @@ var obj = {
 
 ## See also
 
-- [Object
-  initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)

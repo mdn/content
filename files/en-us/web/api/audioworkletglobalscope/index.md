@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletGlobalScope
 slug: Web/API/AudioWorkletGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -23,6 +24,8 @@ The **`AudioWorkletGlobalScope`** interface of the [Web Audio API](/en-US/docs/W
 Each {{domxref("BaseAudioContext")}} has a single {{domxref("AudioWorklet")}} available under the {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, which runs its code in a single `AudioWorkletGlobalScope`.
 
 As the global execution context is shared across the current `BaseAudioContext`, it's possible to define any other variables and perform any actions allowed in worklets — apart from defining `AudioWorkletProcessor`-derived classes.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -55,7 +58,7 @@ class TestProcessor extends AudioWorkletProcessor {
     console.log(currentTime)
   }
   // the process method is required - output silence,
-  // which the outputs are already filled with
+  // which the outputs are already filled with
   process (inputs, outputs, parameters) {
     return true
   }
@@ -95,3 +98,4 @@ testNode.connect(audioContext.destination)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using AudioWorklet](/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet)

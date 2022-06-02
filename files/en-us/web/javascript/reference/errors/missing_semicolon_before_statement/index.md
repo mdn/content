@@ -9,10 +9,10 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "missing ; before statement" occurs when there is a semicolon
-(`;`) missing somewhere and can't be added by [automatic
-semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion). You need to provide a semicolon, so that JavaScript can
-parse the source code correctly.
+The JavaScript exception "missing ; before statement" occurs when there is a semicolon (`;`)
+missing somewhere and can't be added
+by [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion).
+You need to provide a semicolon, so that JavaScript can parse the source code correctly.
 
 ## Message
 
@@ -28,9 +28,10 @@ SyntaxError: missing ; before statement (Firefox)
 ## What went wrong?
 
 There is a semicolon (`;`) missing somewhere. [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) must
-be terminated with semicolons. Some of them are affected by [automatic
-semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), but in this case you need to provide a semicolon, so
-that JavaScript can parse the source code correctly.
+be terminated with semicolons. Some of them are affected
+by [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion),
+but in this case you need to provide a semicolon,
+so that JavaScript can parse the source code correctly.
 
 However, oftentimes, this error is only a consequence of another error, like not
 escaping strings properly, or using `var` wrongly. You might also have too
@@ -99,6 +100,5 @@ function print(info){
 
 ## See also
 
-- [Automatic
-  semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
+- [Automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
 - [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)

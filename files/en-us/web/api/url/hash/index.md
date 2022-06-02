@@ -12,7 +12,7 @@ browser-compat: api.URL.hash
 {{ APIRef("URL API") }}
 
 The **`hash`** property of the
-{{domxref("URL")}} interface is a {{domxref("USVString")}} containing a
+{{domxref("URL")}} interface is a string containing a
 `'#'` followed by the fragment identifier of the URL.
 
 The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
@@ -20,16 +20,9 @@ have a fragment identifier, this property contains an empty string — `""`.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-const string = url.hash
-url.hash = newHash
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

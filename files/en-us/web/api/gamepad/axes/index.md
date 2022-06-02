@@ -1,6 +1,7 @@
 ---
 title: Gamepad.axes
 slug: Web/API/Gamepad/axes
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -20,13 +21,11 @@ interface returns an array representing the controls with axes present on the de
 Each entry in the array is a floating point value in the range -1.0 – 1.0, representing
 the axis position from the lowest value (-1.0) to the highest value (1.0).
 
-## Syntax
+## Value
 
-```js
-const axes = gamepad.axes;
-```
+An array.
 
-## Example
+## Examples
 
 ```js
 function gameLoop() {

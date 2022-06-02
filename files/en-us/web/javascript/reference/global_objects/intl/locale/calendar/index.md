@@ -57,7 +57,7 @@ The `calendar` property returns the part of the `Locale` that indicates the `Loc
 - `persian`
   - : Persian calendar
 - `roc`
-  - : Civil (algorithmic) Arabic calendar
+  - : Minguo Calendar (Republic of China)
 - `islamicc`
   - : Civil (algorithmic) Arabic calendar
     > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.

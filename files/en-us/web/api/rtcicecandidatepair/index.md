@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePair
 slug: Web/API/RTCIceCandidatePair
+page-type: web-api-interface
 tags:
   - API
   - Candidate
@@ -28,7 +29,7 @@ The **`RTCIceCandidatePair`** dictionary describes a pair of ICE candidates whic
 
 ## Examples
 
-See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange#example) for example code.
+See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event#example) for example code.
 
 ## Specifications
 

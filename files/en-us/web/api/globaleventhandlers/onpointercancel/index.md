@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointercancel
 slug: Web/API/GlobalEventHandlers/onpointercancel
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -15,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.onpointercancel
 
 The **`onpointercancel`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("pointercancel")}} events.
+processes {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} events.
 
 ## Syntax
 

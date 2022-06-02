@@ -1,6 +1,7 @@
 ---
 title: Document.links
 slug: Web/API/Document/links
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -13,17 +14,11 @@ browser-compat: api.Document.links
 
 The **`links`** read-only property of the {{domxref("Document")}} interface returns a collection of all {{HTMLElement("area")}} elements and {{HTMLElement("a")}} elements in a document with a value for the [href](/en-US/docs/Web/API/URLUtils.href) attribute.
 
-## Syntax
-
-```js
-nodeList = document.links
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}}.
 
-## Example
+## Examples
 
 ```js
 var links = document.links;

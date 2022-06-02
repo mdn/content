@@ -1,6 +1,7 @@
 ---
 title: CompressionStream.readable
 slug: Web/API/CompressionStream/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.CompressionStream.readable
 
 The **`readable`** read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("ReadableStream")}}.
 
-## Syntax
-
-```js
-let stream = CompressionStream.readable;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 

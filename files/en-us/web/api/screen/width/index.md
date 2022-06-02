@@ -11,15 +11,13 @@ browser-compat: api.Screen.width
 {{APIRef("CSSOM")}}
 
 The **`Screen.width`** read-only property returns the width of
-the screen in pixels.
+the screen in CSS pixels.
 
-## Syntax
+## Value
 
-```js
-lWidth = window.screen.width
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 // Crude way to check that the screen is at least 1024x768

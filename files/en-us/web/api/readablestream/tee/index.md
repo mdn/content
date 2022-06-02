@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -13,23 +14,23 @@ browser-compat: api.ReadableStream.tee
 {{APIRef("Streams")}}
 
 The **`tee()`** method of the
-{{domxref("ReadableStream")}} interface [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) the current readable stream, returning a
+{{domxref("ReadableStream")}} interface [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) the current readable stream, returning a
 two-element array containing the two resulting branches as
-new {{domxref("ReadableStream")}} instances.
+new {{domxref("ReadableStream")}} instances.
 
 This is useful for allowing two readers to read a stream simultaneously, perhaps at
 different speeds. You might do this for example in a ServiceWorker if you want to fetch
 a response from the server and stream it to the browser, but also stream it to the
-ServiceWorker cache. Since a response body cannot be consumed more than once, you’d need
+ServiceWorker cache. Since a response body cannot be consumed more than once, you'd need
 two copies to do this.
 
-To cancel the stream you then need to cancel both resulting branches. Teeing a stream
+To cancel the stream you then need to cancel both resulting branches. Teeing a stream
 will generally lock it for the duration, preventing other readers from locking it.
 
 ## Syntax
 
 ```js
-var teedStreams = readableStream.tee();
+tee()
 ```
 
 ### Parameters
@@ -42,16 +43,15 @@ An {{jsxref("Array")}} containing two {{domxref("ReadableStream")}} instances.
 
 ### Exceptions
 
-- TypeError
-  - : The source stream is not a `ReadableStream`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source stream is not a `ReadableStream`.
 
 ## Examples
 
 In the following simple example, a previously-created stream is teed, then both
 resulting streams (contained in two members of a generated array) are passed to a
 function that reads the data out of the two streams and prints each stream's chunks
-sequentially to a different part of the UI. See [Simple tee
-example](https://mdn.github.io/dom-examples/streams/simple-tee-example/) for the full code.
+sequentially to a different part of the UI. See [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/) for the full code.
 
 ```js
 function teeStream() {

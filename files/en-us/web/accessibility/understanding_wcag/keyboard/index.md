@@ -1,6 +1,6 @@
 ---
 title: Keyboard
-slug: Web/Accessibility/Understanding_WCAG/Keyboard 
+slug: Web/Accessibility/Understanding_WCAG/Keyboard
 tags:
   - Accessibility
   - keyboard
@@ -11,7 +11,7 @@ To be fully accessible, a web page must be operable by someone using only a keyb
 
 If an element can be focused using the keyboard, then it should be interactive; that is, the user should be able to do something to it and produce a change of some kind (for example, activating a link or changing an option).
 
-> **Note:** One important exception to this rule is if the element has `role="document" `applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
+> **Note:** One important exception to this rule is if the element has `role="document"` applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
 
 Most interactive elements are focusable by default; you can make an element focusable by adding a `tabindex=0` attribute value to it. However, you should only add `tabindex` if you have also made the element interactive, for example, by defining appropriate event handlers keyboard events.
 

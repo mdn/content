@@ -4,6 +4,9 @@ slug: Web/SVG/Attribute/y1
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/svg2-draft/shapes.html#LineElementY1Attribute
+  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementY1Attribute
 ---
 {{SVGRef}}
 
@@ -11,8 +14,8 @@ The **`y1`** attribute is used to specify the first y-coordinate for drawing an 
 
 You can use this attribute with the following SVG elements:
 
-*   {{ SVGElement("line") }}
-*   {{ SVGElement("linearGradient") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("linearGradient") }}
 
 ## Example
 
@@ -22,9 +25,9 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="9" y1="1" y2="5" stroke="red" />
-  <line x1="1" x2="9" y1="5" y2="5" stroke="green" />
-  <line x1="1" x2="9" y1="9" y2="5" stroke="blue" />
+  <line x1="1" x2="9" y1="1" y2="5" stroke="red" />
+  <line x1="1" x2="9" y1="5" y2="5" stroke="green" />
+  <line x1="1" x2="9" y1="9" y2="5" stroke="blue" />
 </svg>
 ```
 
@@ -50,6 +53,12 @@ For {{SVGElement('line')}}, `y1` defines the y coordinate of the starting point 
             >&#x3C;percentage></a
           ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -69,9 +78,9 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="9" y1="1" y2="5" stroke="red"   />
-  <line x1="1" x2="9" y1="5" y2="5" stroke="green" />
-  <line x1="1" x2="9" y1="9" y2="5" stroke="blue"  />
+  <line x1="1" x2="9" y1="1" y2="5" stroke="red"   />
+  <line x1="1" x2="9" y1="5" y2="5" stroke="green" />
+  <line x1="1" x2="9" y1="9" y2="5" stroke="blue"  />
 </svg>
 ```
 
@@ -97,6 +106,12 @@ For {{SVGElement('linearGradient')}}, `y1` defines the y coordinate of the start
             >&#x3C;percentage></a
           ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -120,25 +135,25 @@ html,body,svg { height:100% }
   By default the gradient vector start at the top left
   corner of the bounding box of the shape it is applied to.
   -->
-  <linearGradient y1="0%" id="g0">
-    <stop offset="5%"  stop-color="black" />
-    <stop offset="50%" stop-color="red"   />
-    <stop offset="95%" stop-color="black" />
-  </linearGradient>
+  <linearGradient y1="0%" id="g0">
+    <stop offset="5%"  stop-color="black" />
+    <stop offset="50%" stop-color="red"   />
+    <stop offset="95%" stop-color="black" />
+  </linearGradient>
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
+  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
 
   <!--
   Here the gradient vector start at the bottom left
   corner of the bounding box of the shape it is applied to.
   -->
-  <linearGradient y1="100%" id="g1">
-    <stop offset="5%"  stop-color="black" />
-    <stop offset="50%" stop-color="red"   />
-    <stop offset="95%" stop-color="black" />
-  </linearGradient>
+  <linearGradient y1="100%" id="g1">
+    <stop offset="5%"  stop-color="black" />
+    <stop offset="50%" stop-color="red"   />
+    <stop offset="95%" stop-color="black" />
+  </linearGradient>
 
-  <rect x="11" y="1" width="8" height="8" fill="url(#g1)" />
+  <rect x="11" y="1" width="8" height="8" fill="url(#g1)" />
 </svg>
 ```
 
@@ -146,42 +161,4 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "shapes.html#LineElementY1Attribute", "y1")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;line></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#LinearGradientElementY1Attribute", "y1")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#LineElementY1Attribute", "y1")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;line></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#LinearGradientElementY1Attribute", "y1")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

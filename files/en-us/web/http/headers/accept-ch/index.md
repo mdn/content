@@ -12,7 +12,7 @@ browser-compat: http.headers.Accept-CH
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`Accept-CH`** header may be set by a server to specify
-which [client hints](/en-US/docs/Glossary/Client_hints) headers a client
+which [client hints](/en-US/docs/Web/HTTP/Client_hints) headers a client
 should include in subsequent requests.
 
 <table class="properties">
@@ -50,7 +50,7 @@ Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
 
-> **Note:** Remember to [vary the response](/en-US/docs/Glossary/Client_hints#varying_client_hints)
+> **Note:** Remember to [vary the response](/en-US/docs/Web/HTTP/Client_hints#varying_client_hints)
 > based on the accepted client hints.
 
 ## Specifications

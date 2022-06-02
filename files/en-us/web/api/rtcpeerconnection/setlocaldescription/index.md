@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
+page-type: web-api-instance-method
 tags:
   - API
   - Descriptions
@@ -35,9 +36,9 @@ negotiation is complete. Only then does the agreed-upon configuration take effec
 ## Syntax
 
 ```js
-aPromise = RTCPeerConnection.setLocalDescription(sessionDescription);
-
-pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{deprecated_inline}}
+setLocalDescription()
+setLocalDescription(sessionDescription)
+setLocalDescription(sessionDescription, successCallback, errorCallback) // deprecated
 ```
 
 ### Parameters
@@ -48,9 +49,13 @@ pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{de
     the description is omitted, the WebRTC runtime tries to automatically do the right
     thing.
 
+### Return value
+
+A {{jsxref("Promise")}}.
+
 #### Implicit description
 
-If you don't explicity provide a session description, the WebRTC runtime will try to
+If you don't explicitly provide a session description, the WebRTC runtime will try to
 handle it correctly. If the signaling state is one of `stable`,
 `have-local-offer`, or `have-remote-pranswer`, the WebRTC runtime
 automatically creates a new offer and sets that as the new local description. Otherwise,

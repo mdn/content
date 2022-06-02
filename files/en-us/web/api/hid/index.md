@@ -1,6 +1,7 @@
 ---
 title: HID
 slug: Web/API/HID
+page-type: web-api-interface
 tags:
   - API
   - Advanced
@@ -11,6 +12,8 @@ browser-compat: api.HID
 {{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
 The **`HID`** interface provides methods for connecting to _HID devices_, listing attached HID devices and event handlers for connected HID devices.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

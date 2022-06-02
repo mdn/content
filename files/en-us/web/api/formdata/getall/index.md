@@ -1,6 +1,7 @@
 ---
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - FormData
@@ -19,19 +20,19 @@ The **`getAll()`** method of the {{domxref("FormData")}} interface returns all t
 ## Syntax
 
 ```js
-formData.getAll(name);
+getAll(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("USVString")}} representing the name of the key you want to retrieve.
+  - : A string representing the name of the key you want to retrieve.
 
-### Returns
+### Return value
 
 An array of {{domxref("FormDataEntryValue")}}s whose key matches the value passed in the `name` parameter. If the key doesn't exist, the method returns an empty list.
 
-## Example
+## Examples
 
 The following line creates an empty `FormData` object:
 
@@ -63,6 +64,6 @@ formData.getAll('username'); // Returns ["Chris", "Bob"]
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

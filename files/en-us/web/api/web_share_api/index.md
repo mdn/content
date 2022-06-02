@@ -18,12 +18,12 @@ The **Web Share API** provides a mechanism for sharing text, links, files, and o
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
-> **Note:** This API should not be confused with the [Web Share Target API](/en-US/docs/Web/API/Web_Share_Target_API), which allows a website to specify itself as a share target.
+> **Note:** This API should not be confused with the [Web Share Target API](https://w3c.github.io/web-share-target/), which allows a website to specify itself as a share target.
 
 ## Concepts and usage
 
 The **Web Share API** allows a site to share text, links, files, and other content to user-selected share targets, utilizing the sharing mechanisms of the underlying operating system.
-These share targets typically include the system clipboard, email, contacts or messaging applications, and Bluetooth or WiFi channels.
+These share targets typically include the system clipboard, email, contacts or messaging applications, and Bluetooth or Wi-Fi channels.
 
 The API has just two methods.
 The {{domxref("navigator.canShare()")}} method may be used to first validate whether some data is "sharable", prior to passing it to {{domxref("navigator.share()")}} for sending.

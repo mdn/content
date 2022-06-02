@@ -18,7 +18,7 @@ three-dimensional texture or two-dimensional array texture.
 ## Syntax
 
 ```js
-void gl.texStorage3D(target, levels, internalformat, width, height, depth);
+texStorage3D(target, levels, internalformat, width, height, depth)
 ```
 
 ### Parameters
@@ -54,12 +54,14 @@ void gl.texStorage3D(target, levels, internalformat, width, height, depth);
     - `gl.RGB32F`
     - `gl.RGB8UI`
     - `gl.RGBA8`
-    - `gl.SRGB_APLHA8`
+    - `gl.SRGB_ALPHA8`
     - `gl.RGB5_A1`
     - `gl.RGBA4444`
     - `gl.RGBA16F`
     - `gl.RGBA32F`
     - `gl.RGBA8UI`
+
+    In addition if the {{domxref("WEBGL_compressed_texture_etc")}} extension is supported, the following values are also possible:
     - `gl.COMPRESSED_R11_EAC`
     - `gl.COMPRESSED_SIGNED_R11_EAC`
     - `gl.COMPRESSED_RG11_EAC`
@@ -80,7 +82,7 @@ void gl.texStorage3D(target, levels, internalformat, width, height, depth);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

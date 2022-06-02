@@ -6,6 +6,7 @@ tags:
   - CSS Box Model
   - Guide
   - Layout
+spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
 {{CSSRef}}
 
@@ -31,7 +32,7 @@ The thickness of the padding is determined by the {{cssxref("padding-top")}}, {{
 
 The **border area**, bounded by the border edge, extends the padding area to include the element's borders. Its dimensions are the _border-box width_ and the _border-box height_.
 
-The thickness of the borders are determined by the {{cssxref("border-width")}} and shorthand {{cssxref("border")}} properties. If the {{cssxref("box-sizing")}} property is set to `border-box`, the border area's size can be explicitly defined with the {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, and {{cssxref("max-height")}} properties. When there is a background ({{cssxref("background-color")}} or {{cssxref("background-image")}}) set on a box, it extends to the outer edge of the border (i.e. extends underneath the border in z-ordering). This default behavior can be altered with the {{cssxref("background-clip")}} css property.
+The thickness of the borders are determined by the {{cssxref("border-width")}} and shorthand {{cssxref("border")}} properties. If the {{cssxref("box-sizing")}} property is set to `border-box`, the border area's size can be explicitly defined with the {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, and {{cssxref("max-height")}} properties. When there is a background ({{cssxref("background-color")}} or {{cssxref("background-image")}}) set on a box, it extends to the outer edge of the border (i.e. extends underneath the border in z-ordering). This default behavior can be altered with the {{cssxref("background-clip")}} CSS property.
 
 ## Margin area
 
@@ -49,11 +50,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 
 ## Specifications
 
-| Specification                                                    | Status                       | Comment                                                     |
-| ---------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#intro')}}                     | {{Spec2('CSS3 Box')}} |                                                             |
-| {{ SpecName("CSS2.1","box.html#box-dimensions")}} | {{ Spec2('CSS2.1') }} | Though more precisely worded, there is no practical change. |
-| {{ SpecName("CSS1","#formatting-model")}}         | {{ Spec2('CSS1') }}     | Initial definition.                                         |
+{{Specifications}}
 
 ## See also
 

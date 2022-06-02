@@ -13,20 +13,14 @@ browser-compat: api.URL.searchParams
 {{APIRef("URL API")}}
 
 The **`searchParams`** readonly property of the
-{{domxref("URL")}} interface returns a {{domxref("URLSearchParams")}} object allowing
+{{domxref("URL")}} interface returns a {{domxref("URLSearchParams")}} object allowing
 access to the {{httpmethod("GET")}} decoded query arguments contained in the URL.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-const urlSearchParams = url.searchParams
-```
-
-### Value
-
-A {{domxref("URLSearchParams")}} object.
+A {{domxref("URLSearchParams")}} object.
 
 ## Examples
 

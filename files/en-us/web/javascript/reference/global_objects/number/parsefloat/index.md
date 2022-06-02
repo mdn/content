@@ -28,9 +28,9 @@ Number.parseFloat(string)
 
 ### Return value
 
-A floating point number parsed from the given `string`.
+A floating point number parsed from the given `string`.
 
-Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a number.
+Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a number.
 
 ## Examples
 
@@ -56,7 +56,6 @@ See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 
 ## See also
 
-- A polyfill of `Number.parseFloat` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- - {{jsxref("Number")}}
-    - : The object this method belongs to.
+- [Polyfill of `Number.parseFloat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- {{jsxref("Number")}}: The object this method belongs to.
 - The global {{jsxref("parseFloat", "parseFloat()")}} method.

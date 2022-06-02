@@ -87,9 +87,9 @@ The `preload` attribute allows you to specify a preference for how the browser p
 
 `preload` can take 3 different values:
 
-1.  `none`: Don't download anything before the play button is pressed.
-2.  `metadata`: Download the audio metadata; this is usually the best option, as it allows you to access and display information such as audio length, and allow the browser to work out which audio file it should use.
-3.  `auto`: Download the whole audio file as soon as possible. This is generally not a good option unless you can guarantee your users will have a fast network connection.
+1. `none`: Don't download anything before the play button is pressed.
+2. `metadata`: Download the audio metadata; this is usually the best option, as it allows you to access and display information such as audio length, and allow the browser to work out which audio file it should use.
+3. `auto`: Download the whole audio file as soon as possible. This is generally not a good option unless you can guarantee your users will have a fast network connection.
 
 > **Note:** This value is often ignored on mobile platforms.
 
@@ -192,7 +192,7 @@ The `pause()` method is used to tell the audio to pause. It takes no parameters.
 myAudio.pause();
 ```
 
-> **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the `{{ anch("currentTime") }}` property value to 0.
+> **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the [`currentTime`](#currenttime) property value to 0.
 
 #### canPlayType
 
@@ -207,9 +207,9 @@ if (myAudio.canPlayType('audio/mpeg')) {
 
 `canPlayType()` returns one of three values:
 
-1.  `probably`
-2.  `maybe`
-3.  "" (an empty string)
+1. `probably`
+2. `maybe`
+3. "" (an empty string)
 
 In practice, we usually check if the result is true or false. Non-empty strings are true.
 
@@ -335,7 +335,7 @@ myAudio.addEventListener("progress", function() {
 
 ### canplay
 
-`canplay` is a useful event to detect should you want to determine whether the media is ready to play. You could, for example, disable custom controls until this event occurs.
+`canplay` is a useful event to detect should you want to determine whether the media is ready to play. You could, for example, disable custom controls until this event occurs.
 
 ```js
 myAudio.addEventListener("canplay", function() {
@@ -382,9 +382,11 @@ We also have another set of events that are useful for reacting to the state of 
 
 The `timeupdate` event is triggered every time the `currentTime` property changes. In practice, this occurs every 250 milliseconds. This event can be used to trigger the displaying of playback progress.
 
-    myAudio.addEventListener("timeupdate", function() {
-      //update something related to playback progress
-    });
+```js
+myAudio.addEventListener("timeupdate", function() {
+  //update something related to playback progress
+});
+```
 
 ### playing
 
@@ -625,4 +627,4 @@ The following tables list basic audio support across desktop and mobile browsers
 - [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
 - [jPlayer](https://jPlayer.org): An open source audio and video library for jQuery and Zepto.
-- [Media Event Inspector](https://jplayer.org/HTML5.Media.Event.Inspector)
+- [Media Event Inspector](https://jplayer.org/HTML5.Media.Event.Inspector/)

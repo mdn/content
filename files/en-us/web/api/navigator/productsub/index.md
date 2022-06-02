@@ -1,6 +1,7 @@
 ---
 title: Navigator.productSub
 slug: Web/API/Navigator/productSub
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -15,15 +16,11 @@ browser-compat: api.Navigator.productSub
 The **`Navigator.productSub`** read-only property returns the
 build number of the current browser.
 
-## Syntax
+## Value
 
-```js
-prodSub = navigator.productSub
-```
+A string.
 
-- `prodSub` is a string.
-
-## Example
+## Examples
 
 ```js
 <script>

@@ -33,7 +33,7 @@ No changes
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} and {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} are now supported in release builds. The `formatRange()` method returns a localized and formatted string for the range between two {{jsxref("Date")}} objects (e.g. "1/05/21 – 1/10/21"). The `formatRangeToParts()` method returns an array containing the locale-specific _parts_ of a formatted date range ({{bug(1653024)}}).
 - The {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat() constructor")}} allows four new `timeZoneName` options for formatting how the timezone is displayed. These include the localized GMT formats `shortOffset` and `longOffset`, and the generic non-location formats `shortGeneric` and `longGeneric` ({{bug(1653024)}}).
 - The {{jsxref("Global_Objects/Error/Error", "Error() constructor")}} can now take the error `cause` as value in the `option` parameter.
-  This allows code to catch errors and throw new/modifed versions that retain the original error and stack trace ({{bug(1679653)}}).
+  This allows code to catch errors and throw new/modified versions that retain the original error and stack trace ({{bug(1679653)}}).
 
 ### HTTP
 
@@ -48,7 +48,7 @@ No changes
   It also provides events that allow changes to the viewport to be monitored. ({{bug(1551302)}}).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}.
   If disallowed by the [feature policy](/en-US/docs/Web/HTTP/Feature_Policy), calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}},
-  and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
+  and the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
   The default `allowlist` is `*`; this default will be updated to `self` in a future release, in order to match the specification. ({{bug(1704005)}}).
 - `Window.clientInformation` has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ({{bug(1717072)}}).
 

@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder
 slug: Web/API/ImageDecoder
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,7 +15,7 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Constructor
 
-- {{domxref("ImageDecoder.ImageDecoder()")}}
+- {{domxref("ImageDecoder.ImageDecoder", "ImageDecoder()")}}
   - : Creates a new `ImageDecoder` object.
 
 ## Properties
@@ -42,4 +43,3 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 ## Browser compatibility
 
 {{Compat}}
-

@@ -76,7 +76,7 @@ You can specify a different `<repeat-style>` for each mask image, separated by c
 ```css
 .examplethree {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
-  -webkit-mask-repeat-x: repeat, space;
+  -webkit-mask-repeat-x: repeat, space;
 }
 ```
 

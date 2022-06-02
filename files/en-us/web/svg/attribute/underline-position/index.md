@@ -13,7 +13,7 @@ The `underline-position` attribute represents the ideal vertical position of the
 
 You can use this attribute with the following SVG elements:
 
-*   {{ SVGElement("font-face") }}
+- {{ SVGElement("font-face") }}
 
 ## Usage context
 

@@ -10,6 +10,7 @@ tags:
   - Reference
   - Shape
   - wrapping
+spec-urls: https://drafts.csswg.org/css-shapes/
 ---
 {{CSSRef}}
 
@@ -39,20 +40,18 @@ The example below shows an image that has been floated left, and the `shape-outs
 - [Shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values)
 - [Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
 - [Shapes from Images](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
-- [Edit Shape Paths in CSS — Firefox Developer Tools](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)
+- [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
 
 ## External Resources
 
 - [A list of CSS Shapes resources](https://codepen.io/KristopherVanSant/post/css-shapes-resources)
-- [CSS Shapes 101](https://alistapart.com/article/css-shapes-101)
+- [CSS Shapes 101](https://alistapart.com/article/css-shapes-101/)
 - [Creating non-rectangular layouts with CSS Shapes](https://www.sarasoueidan.com/blog/css-shapes/)
 - [How To Use CSS Shapes In Your Web Design](https://webdesign.tutsplus.com/tutorials/how-to-use-css-shapes-in-your-web-design--cms-27498)
 - [How To Get Started With CSS Shapes](https://www.webdesignerdepot.com/2015/03/how-to-get-started-with-css-shapes/)
 - [What I Learned In One Weekend With CSS Shapes](https://medium.com/@MHarreither/what-i-learned-in-one-weekend-with-css-shapes-66ae9be69cc5)
-- [CSS vs. SVG: Shapes and Arbitrarily-Shaped UI Components](https://theblog.adobe.com/css-vs-svg-shapes-and-arbitrarily-shaped-ui-components/)
+- [CSS vs. SVG: Shapes and Arbitrarily-Shaped UI Components](https://blog.adobe.com/en/2015/09/01/css-vs-svg-shapes-and-arbitrarily-shaped-ui-components)
 
 ## Specifications
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSS Shapes")}} | {{Spec2("CSS Shapes")}} | Initial definition |
+{{Specifications}}

@@ -11,13 +11,13 @@ browser-compat: css.at-rules.media.any-pointer
 ---
 {{CSSRef}}
 
-The **`any-pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) tests whether the user has _any_ pointing device (such as a mouse), and if so, how accurate it is.
+The **`any-pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) tests whether the user has _any_ pointing device (such as a mouse), and if so, how accurate it is.
 
 > **Note:** If you want to test the accuracy of the _primary_ pointing device, use [`pointer`](/en-US/docs/Web/CSS/@media/pointer) instead.
 
 ## Syntax
 
-The `any-pointer` feature is specified as a keyword value chosen from the list below.
+The `any-pointer` feature is specified as a keyword value chosen from the list below.
 
 - `none`
   - : No pointing device is available.
@@ -26,7 +26,7 @@ The `any-pointer` feature is specified as a keyword value chosen from the list
 - `fine`
   - : At least one input mechanism includes an accurate pointing device.
 
-> **Note:** More than one value can match if the available devices have different characteristics, although `none` only matches when none of them are pointing devices.
+> **Note:** More than one value can match if the available devices have different characteristics, although `none` only matches when none of them are pointing devices.
 
 ## Examples
 

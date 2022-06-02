@@ -55,9 +55,9 @@ The controller gets the id of the `Book` to be updated from the URL parameter (`
 
 When the operations complete it checks for any errors in the find operation, and also whether any books were found.
 
-> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`results==null`) in the callback, but it could equally well have daisy chained the method [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) to the query.
+> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`results==null`) in the callback, but it could equally well have daisy chained the method [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) to the query.
 
-We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
+We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
 ## Controller—post route
 
@@ -78,7 +78,7 @@ exports.book_update_post = [
         next();
     },
 
-    // Validate and sanitise fields.
+    // Validate and sanitize fields.
     body('title', 'Title must not be empty.').trim().isLength({ min: 1 }).escape(),
     body('author', 'Author must not be empty.').trim().isLength({ min: 1 }).escape(),
     body('summary', 'Summary must not be empty.').trim().isLength({ min: 1 }).escape(),
@@ -141,7 +141,7 @@ This is very similar to the post route used when creating a Book. First we valid
 
 ## View
 
-Open **/views/book_form.pug** and update the section where the author form control is set to have the conditional code shown below.
+Open **/views/book_form.pug** and update the section where the author form control is set to have the conditional code shown below.
 
 ```plain
     div.form-group
@@ -180,7 +180,7 @@ You should now be able to update books from the _Book detail_ page.
 
 ## What does it look like?
 
-Run the application, open your browser to <http://localhost:3000/>, select the _All books_ link, then select a particular book. Finally select the _Update Book_ link.
+Run the application, open your browser to `http://localhost:3000/`, select the _All books_ link, then select a particular book. Finally select the _Update Book_ link.
 
 The form should look just like the _Create book_ page, only with a title of 'Update book', and pre-populated with record values.
 

@@ -1,12 +1,15 @@
 ---
 title: Locating DOM elements using selectors
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+page-type: guide
 tags:
   - Beginner
   - DOM
   - NeedsBeginnerUpdate
 ---
-The Selectors API provides methods that make it quick and easy to retrieve {{domxref("Element")}} nodes from the DOM by matching against a set of {{cssxref("CSS_Selectors", "selectors")}}. This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.
+{{DefaultAPISidebar("DOM")}}
+
+The Selectors API provides methods that make it quick and easy to retrieve {{domxref("Element")}} nodes from the DOM by matching against a set of [selectors](/en-US/docs/Web/CSS/CSS_Selectors). This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.
 
 ## The NodeSelector interface
 
@@ -23,11 +26,11 @@ You may find examples and details by reading the documentation for the {{domxref
 
 ## Selectors
 
-The selector methods accept {{cssxref("CSS_Selectors", "selectors")}} to determine what element or elements should be returned. This includes {{cssxref("Selector_list", "selector lists")}} so you can group multiple selectors in a single query.
+The selector methods accept [selectors](/en-US/docs/Web/CSS/CSS_Selectors) to determine what element or elements should be returned. This includes [selector lists](/en-US/docs/Web/CSS/Selector_list) so you can group multiple selectors in a single query.
 
-To protect the user's privacy, some {{cssxref("Pseudo-classes")}} are not supported or behave differently. For example {{cssxref(":visited")}} will return no matches and {{cssxref(":link")}} is treated as {{cssxref(":any-link")}}.
+To protect the user's privacy, some [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are not supported or behave differently. For example {{cssxref(":visited")}} will return no matches and {{cssxref(":link")}} is treated as {{cssxref(":any-link")}}.
 
-Only elements can be selected, so {{cssxref("Pseudo-elements")}} are not supported.
+Only elements can be selected, so [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are not supported.
 
 ## Examples
 

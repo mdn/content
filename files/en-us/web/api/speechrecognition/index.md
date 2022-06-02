@@ -17,9 +17,11 @@ The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/AP
 
 > **Note:** On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("SpeechRecognition.SpeechRecognition()")}}
+- {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}}
   - : Creates a new `SpeechRecognition` object.
 
 ## Properties
@@ -36,8 +38,6 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
   - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
-- {{domxref("SpeechRecognition.serviceURI")}} {{deprecated_inline}}
-  - : Specifies the location of the speech recognition service used by the current `SpeechRecognition` to handle the actual recognition. The default is the user agent's default speech service.
 
 ## Methods
 
@@ -56,43 +56,43 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`audiostart`](/en-US/docs/Web/API/SpeechRecognition/audiostart_event)
   - : Fired when the user agent has started to capture audio.
-    Also available via the [`onaudiostart`](/en-US/docs/Web/API/SpeechRecognition/onaudiostart) property.
+    Also available via the `onaudiostart` property.
 - [`audioend`](/en-US/docs/Web/API/SpeechRecognition/audioend_event)
   - : Fired when the user agent has finished capturing audio.
-    Also available via the [`onaudioend`](/en-US/docs/Web/API/SpeechRecognition/onaudioend) property.
+    Also available via the `onaudioend` property.
 - [`end`](/en-US/docs/Web/API/SpeechRecognition/end_event)
   - : Fired when the speech recognition service has disconnected.
-    Also available via the [`onend`](/en-US/docs/Web/API/SpeechRecognition/onend) property.
+    Also available via the `onend` property.
 - [`error`](/en-US/docs/Web/API/SpeechRecognition/error_event)
   - : Fired when a speech recognition error occurs.
-    Also available via the [`onerror`](/en-US/docs/Web/API/SpeechRecognition/onerror) property.
+    Also available via the `onerror` property.
 - [`nomatch`](/en-US/docs/Web/API/SpeechRecognition/nomatch_event)
   - : Fired when the speech recognition service returns a final result with no significant recognition. This may involve some degree of recognition, which doesn't meet or exceed the {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.
-    Also available via the [`onnomatch`](/en-US/docs/Web/API/SpeechRecognition/onnomatch) property.
+    Also available via the `onnomatch` property.
 - [`result`](/en-US/docs/Web/API/SpeechRecognition/result_event)
   - : Fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app.
-    Also available via the [`onresult`](/en-US/docs/Web/API/SpeechRecognition/onresult) property.
+    Also available via the `onresult` property.
 - [`soundstart`](/en-US/docs/Web/API/SpeechRecognition/soundstart_event)
-  - : Fired when any sound — recognisable speech or not — has been detected.
-    Also available via the [`onsoundstart`](/en-US/docs/Web/API/SpeechRecognition/onsoundstart) property.
+  - : Fired when any sound — recognizable speech or not — has been detected.
+    Also available via the `onsoundstart` property.
 - [`soundend`](/en-US/docs/Web/API/SpeechRecognition/soundend_event)
-  - : Fired when any sound — recognisable speech or not — has stopped being detected.
-    Also available via the [`onsoundend`](/en-US/docs/Web/API/SpeechRecognition/onsoundend) property.
+  - : Fired when any sound — recognizable speech or not — has stopped being detected.
+    Also available via the `onsoundend` property.
 - [`speechstart`](/en-US/docs/Web/API/SpeechRecognition/speechstart_event)
   - : Fired when sound that is recognized by the speech recognition service as speech has been detected.
-    Also available via the [`onspeechstart`](/en-US/docs/Web/API/SpeechRecognition/onspeechstart) property.
+    Also available via the `onspeechstart` property.
 - [`speechend`](/en-US/docs/Web/API/SpeechRecognition/speechend_event)
   - : Fired when speech recognized by the speech recognition service has stopped being detected.
-    Also available via the [`onspeechend`](/en-US/docs/Web/API/SpeechRecognition/onspeechend) property.
+    Also available via the `onspeechend` property.
 - [`start`](/en-US/docs/Web/API/SpeechRecognition/start_event)
   - : Fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current `SpeechRecognition`.
-    Also available via the [`onstart`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart) property.
+    Also available via the `onstart` property.
 
 ## Examples
 
 In our simple [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognized by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
 
-After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognized, the {{domxref("SpeechRecognition.onresult")}} handler fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that color.
+After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognized, the {{domxref("SpeechRecognition.result_event", "result")}} event fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that color.
 
 ```js
 var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'

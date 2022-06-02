@@ -1,6 +1,7 @@
 ---
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
+page-type: web-api-overview
 tags:
   - API
   - Background Tasks API
@@ -9,8 +10,9 @@ tags:
   - Overview
   - cancelIdleCallback
   - requestIdleCallback
+browser-compat: api.Window.requestIdleCallback
 ---
-{{DefaultAPISidebar("Background Tasks")}}{{draft}}
+{{DefaultAPISidebar("Background Tasks")}}
 
 The **Cooperative Scheduling of Background Tasks API** (also referred to as the Background Tasks API or the `requestIdleCallback()` API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.
 
@@ -96,11 +98,11 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 
 <div id="container">
   <div class="label">Decoding quantum filament tachyon emissions...</div>
-  
+
   <progress id="progress" value="0"></progress>
-  
+
   <button class="button" id="startButton">Start</button>
-  
+
   <div class="label counter">
     Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
   </div>
@@ -203,7 +205,7 @@ let taskHandle = null;
 These variables are used to manage the list of tasks that are waiting to be performed, as well as status information about the task queue and its execution:
 
 - `taskList` is an {{jsxref("Array")}} of objects, each representing one task waiting to be run.
-- `totalTaskCount` is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a precentage of total work to do.
+- `totalTaskCount` is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a percentage of total work to do.
 - `currentTaskNumber` is used to track how many tasks have been processed so far.
 - `taskHandle` is a reference to the task currently being processed.
 
@@ -312,10 +314,10 @@ function runTaskQueue(deadline) {
 
 For each task in the queue that we have time to execute, we do the following:
 
-1.  We [remove the task object from the queue](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift).
-2.  We increment `currentTaskNumber` to track how many tasks we've executed.
-3.  We call the task's handler, `task.handler`, passing into it the task's data object (`task.data`).
-4.  We call a function, `scheduleStatusRefresh()`, to handle scheduling a screen update to reflect changes to our progress.
+1. We [remove the task object from the queue](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift).
+2. We increment `currentTaskNumber` to track how many tasks we've executed.
+3. We call the task's handler, `task.handler`, passing into it the task's data object (`task.data`).
+4. We call a function, `scheduleStatusRefresh()`, to handle scheduling a screen update to reflect changes to our progress.
 
 When time runs out, if there are still tasks left in the list, we call {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}} again so that we can continue to process the tasks the next time there's idle time available. If the queue is empty, we set taskHandle to 0 to indicate that we don't have a callback scheduled. That way, we'll know to request a callback next time `enqueueTask()` is called.
 
@@ -375,8 +377,8 @@ First, `scrolledToEnd` is set to `true` if the text in the log is scrolled to th
 
 Next, we update the progress and status information if any tasks have been enqueued.
 
-1.  If the current maximum value of the progress bar is different from the current total number of enqueued tasks (`totalTaskCount`), then we update the contents of the displayed total number of tasks (`totalTaskCountElem`) and the maximum value of the progress bar, so that it scales properly.
-2.  We do the same thing with the number of tasks processed so far; if `progressBarElem.value` is different from the task number currently being processed (`currentTaskNumber`), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.
+1. If the current maximum value of the progress bar is different from the current total number of enqueued tasks (`totalTaskCount`), then we update the contents of the displayed total number of tasks (`totalTaskCountElem`) and the maximum value of the progress bar, so that it scales properly.
+2. We do the same thing with the number of tasks processed so far; if `progressBarElem.value` is different from the task number currently being processed (`currentTaskNumber`), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.
 
 Then, if there's text waiting to be added to the log (that is, if `logFragment` isn't `null`), we append it to the log element using {{domxref("Node.appendChild", "Element.appendChild()")}} and set `logFragment` to `null` so we don't add it again.
 
@@ -384,7 +386,7 @@ If the log was scrolled to the end when we started, we make sure it still is. Th
 
 #### Adding text to the log
 
-The `log()` function adds the specified text to the log. Since we don't know at the time `log()` is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for ` updateDisplay``() `, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.
+The `log()` function adds the specified text to the log. Since we don't know at the time `log()` is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for `updateDisplay()`, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.
 
 ```js
 function log(text) {
@@ -412,7 +414,7 @@ The function we'll be using as our task handler—that is, the function that wil
 
 ```js
 function logTaskHandler(data) {
-  log("<strong>Running task #" + currentTaskNumber + "</strong>");
+  log("Running task #" + currentTaskNumber);
 
   for (i=0; i<data.count; i+=1) {
     log((i+1).toString() + ". " + data.text);
@@ -462,7 +464,7 @@ Then we start a loop to create the actual tasks. For each task, we create an obj
 - `count` is the number of strings to output into the log from the task.
 - `text` is the text to output to the log the number of times specified by `count`.
 
-Each task is then enqueued by calling `enqueueTask()`, passing in ` logTaskHandler``() ` as the handler function and the `taskData` object as the object to pass into the function when it's called.
+Each task is then enqueued by calling `enqueueTask()`, passing in `logTaskHandler()` as the handler function and the `taskData` object as the object to pass into the function when it's called.
 
 ### Result
 
@@ -472,11 +474,11 @@ Below is the actual functioning result of the code above. Try it out, play with 
 
 ## Specifications
 
-{{Specifications("api.Window.requestIdleCallback")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.IdleDeadline")}}
+{{Compat}}
 
 ## See also
 

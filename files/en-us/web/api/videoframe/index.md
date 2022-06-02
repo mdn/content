@@ -12,6 +12,8 @@ browser-compat: api.VideoFrame
 
 The **`VideoFrame`** interface of the {{domxref('Web Codecs API','','',' ')}} represents a frame of a video.
 
+`VideoFrame` is a {{glossary("Transferable objects","transferable object")}}.
+
 ## Description
 
 A `VideoFrame` object can be created or accessed in a number of ways. The {{domxref("MediaStreamTrackProcessor")}} breaks a media track into individual `VideoFrame` objects.
@@ -24,11 +26,10 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Constructor
 
-- {{domxref("VideoFrame.VideoFrame()")}}
+- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}}
   - : Creates a new `VideoFrame` object.
 
 ## Properties
-
 
 - {{domxref("VideoFrame.format")}}{{ReadOnlyInline}}
   - : Returns the pixel format of the `VideoFrame`.
@@ -55,6 +56,8 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 - {{domxref("VideoFrame.allocationSize()")}}
   - : Returns the number of bytes required to hold the `VideoFrame` as filtered by options passed into the method.
+- {{domxref("VideoFrame.copyTo()")}}
+  - : Copies the contents of the `VideoFrame` to an `ArrayBuffer`.
 - {{domxref("VideoFrame.clone()")}}
   - : Creates a new `VideoFrame` object with reference to the same media resource as the original.
 - {{domxref("VideoFrame.close()")}}
@@ -102,4 +105,3 @@ while (true) {
 
 - [Video processing with WebCodecs](https://web.dev/webcodecs/)
 - [WebCodecs examples](https://w3c.github.io/webcodecs/samples/)
-

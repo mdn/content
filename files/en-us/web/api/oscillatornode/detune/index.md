@@ -14,20 +14,13 @@ browser-compat: api.OscillatorNode.detune
 
 The `detune` property of the {{ domxref("OscillatorNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-## Syntax
+> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
 
-```js
-var oscillator = audioCtx.createOscillator();
-oscillator.detune.setValueAtTime(100, audioCtx.currentTime); // value in cents
-```
-
-> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
-
-### Value
+## Value
 
 An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
 

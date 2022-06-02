@@ -14,7 +14,7 @@ browser-compat: api.XREquirectLayer.space
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`space`** property of the {{domxref("XREquirectLayer")}} interface represents the layer's spatial relationship with the user’s physical environment.
+The **`space`** property of the {{domxref("XREquirectLayer")}} interface represents the layer's spatial relationship with the user's physical environment.
 
 ## Value
 

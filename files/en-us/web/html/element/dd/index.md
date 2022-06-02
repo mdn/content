@@ -51,11 +51,10 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        A {{HTMLElement("dl")}} or (in {{Glossary("WHATWG")}} HTML,
-        {{Glossary("W3C")}} HTML 5.2 and later) a
+        A {{HTMLElement("dl")}} or a
         {{HTMLElement("div")}} that is a child of a
         {{HTMLElement("dl")}}.<br />This element can be used after a
-        {{HTMLElement("dt")}} or another {{HTMLElement("dl")}}
+        {{HTMLElement("dt")}} or another {{HTMLElement("dd")}}
         element.
       </td>
     </tr>

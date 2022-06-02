@@ -27,7 +27,7 @@ returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appe
 ## Syntax
 
 ```js
-appendPromise = sourceBuffer.appendBufferAsync(source);
+appendBufferAsync(source)
 ```
 
 ### Parameters
@@ -43,7 +43,7 @@ A {{jsxref("Promise")}} which is fulfilled when the buffer has been added succes
 to the `SourceBuffer`, or `null` if the request could not be
 initiated.
 
-## Example
+## Examples
 
 This simplified example async function, `fillSourceBuffer()`, takes as input
 parameters {{domxref("BufferSource")}}, `buffer`, and a
@@ -71,8 +71,7 @@ This feature is not part of any specification. It is not on track to become a st
 
 ## See also
 
-- [Media Source Extensions
-  API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
 - {{domxref("SourceBuffer.appendBuffer()")}}
 - {{domxref("MediaSource")}}
 - {{domxref("SourceBufferList")}}

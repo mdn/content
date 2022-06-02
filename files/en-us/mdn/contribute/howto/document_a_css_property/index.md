@@ -29,7 +29,7 @@ Several characteristics of a CSS property, such as its syntax or if it can be an
 
 Preparations finished! Now we can add the actual CSS property page. The easiest way to create a new CSS property page is to copy the content of an existing page and to edit it to suit the new property. You can find out how to add a new page in our [GitHub README](https://github.com/mdn/content#adding-a-new-document).
 
-When creating a reference page, you'll want to add _Examples_. To do that follow this [tutorial about live samples](/en-US/docs/MDN/Structures/Live_samples). Don't forget that we are in a document explaining one single property: you need to add examples that show how this property is working in isolation, not how the whole specification is used. That means that examples for `list-style-type` should show what the different property values generate, not how to combine it with other properties, pseudo-classes, or pseudo-elements to generate nice effects. Tutorials and guides can be written to show more.
+When creating a reference page, you'll want to add _Examples_. To do that follow this [tutorial about live samples](/en-US/docs/MDN/Structures/Live_samples). Don't forget that we are in a document explaining one single property: you need to add examples that show how this property is working in isolation, not how the whole specification is used. That means that examples for `list-style-type` should show what the different property values generate, not how to combine it with other properties, pseudo-classes, or pseudo-elements to generate nice effects. Tutorials and guides can be written to show more.
 
 ## Step 4 — Getting a review
 

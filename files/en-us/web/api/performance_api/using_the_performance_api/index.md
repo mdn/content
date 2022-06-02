@@ -10,11 +10,11 @@ tags:
 
 A fundamental requirement of web performance is a precise and consistent definition of _time._ The {{domxref("DOMHighResTimeStamp")}} type (a `double`) is used by all performance interfaces to hold such time values. Additionally, there must be a way to create a _timestamp_ for a specific point in time; this is done with the {{domxref("Performance.now","now()")}} method.
 
-Web performance interfaces are defined in a [suite of standards](https://www.w3.org/wiki/Web_Performance/Publications). The _base_ interface for these standards is the {{domxref("Performance")}} interface and its methods and properties are extended by different standards. This guide describes how to use the {{domxref("Performance")}} interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard. Other web performance guides (listed in the {{anch("See_also","See also")}} section) describe how to use additional methods and properties of the {{domxref("Performance")}} interface.
+Web performance interfaces are defined in a [suite of standards](https://www.w3.org/wiki/Web_Performance/Publications). The _base_ interface for these standards is the {{domxref("Performance")}} interface and its methods and properties are extended by different standards. This guide describes how to use the {{domxref("Performance")}} interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard. Other web performance guides (listed in the [See also](#see_also) section) describe how to use additional methods and properties of the {{domxref("Performance")}} interface.
 
 ## High precision timing
 
-_High precision timing_ is achieved by using the {{domxref("DOMHighResTimeStamp")}} type for time values. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (because of hardware or software constraints, for example), the browser can represent the value as a time in milliseconds accurate to a millisecond.
+_High precision timing_ is achieved by using the {{domxref("DOMHighResTimeStamp")}} type for time values. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (because of hardware or software constraints, for example), the browser can represent the value as a time in milliseconds accurate to a millisecond.
 
 The following code example shows the use of {{domxref("DOMHighResTimeStamp")}} and the {{domxref("Performance.now","Performance.now()")}} method. The {{domxref("Performance.now","now()")}} method returns a _timestamp_ (of type {{domxref("DOMHighResTimeStamp")}}) that is a discrete point in time. By calling this method before and after a task, the time it takes to do the task can be measured.
 
@@ -55,10 +55,10 @@ function print_json() {
     var perf = JSON.parse(s);
 
     var timing = perf.timing;
-    o.innerHTML += "<p>peformance.timing = " + JSON.stringify(timing) + "</p>";
+    o.innerHTML += "<p>performance.timing = " + JSON.stringify(timing) + "</p>";
 
     var navigation = perf.navigation;
-    o.innerHTML += "<p>peformance.navigation = " + JSON.stringify(navigation) + "</p>";
+    o.innerHTML += "<p>performance.navigation = " + JSON.stringify(navigation) + "</p>";
   }
 }
 ```

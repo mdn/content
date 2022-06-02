@@ -8,6 +8,7 @@ tags:
   - elementtiming
   - Performance
   - Reference
+spec-urls: https://wicg.github.io/element-timing/forms.html#attr-label-for
 ---
 
 {{HTMLSidebar}}
@@ -39,24 +40,7 @@ Good contenders for elements you might want to observe are:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('Element Timing API', 'forms.html#attr-label-for', 'for as used with label')}}
-      </td>
-      <td>{{Spec2('Element Timing API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

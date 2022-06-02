@@ -7,7 +7,7 @@ tags:
 ---
 {{JsSidebar("More")}}
 
-Enumerable properties are those properties whose internal enumerable flag is set to true, which is the default for properties created via simple assignment or via a property initializer. Properties defined via [Object.defineProperty](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) and such default enumerable to false.
+Enumerable properties are those properties whose internal enumerable flag is set to true, which is the default for properties created via simple assignment or via a property initializer. Properties defined via [Object.defineProperty](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) and such default enumerable to false.
 
 Enumerable properties show up in [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops unless the property's key is a [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Ownership of properties is determined by whether the property belongs to the object directly and not to its prototype chain. Properties of an object can also be retrieved in total.
 
@@ -154,7 +154,7 @@ There are a number of built-in means of detecting, iterating/enumerating, and re
             >getOwnPropertySymbols</a
           ></code
         >
-        – filtered to exclude enumerables using <code
+        – filtered to exclude enumerables using <code
           ><a
             href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
             >propertyIsEnumerable</a
@@ -257,7 +257,7 @@ There are a number of built-in means of detecting, iterating/enumerating, and re
             >getOwnPropertySymbols</a
           ></code
         >
-        – filtered to exclude enumerables using <code
+        – filtered to exclude enumerables using <code
           ><a
             href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
             >propertyIsEnumerable</a
@@ -374,7 +374,7 @@ var SimplePropertyRetriever = {
       <th>Enumerable</th>
       <th>Nonenumerable</th>
       <th>Symbols keys</th>
-      <th>Inherited Enumerable</th>
+      <th>Inherited Enumerable</th>
       <th>Inherited Nonenumerable</th>
       <th>Inherited Symbols keys</th>
     </tr>

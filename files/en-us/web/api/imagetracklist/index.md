@@ -1,6 +1,7 @@
 ---
 title: ImageTrackList
 slug: Web/API/ImageTrackList
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -30,4 +31,3 @@ The **`ImageTrackList`** interface of the {{domxref('WebCodecs API','','','true'
 ## Browser compatibility
 
 {{Compat}}
-

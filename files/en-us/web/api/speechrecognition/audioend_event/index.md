@@ -11,32 +11,19 @@ browser-compat: api.SpeechRecognition.audioend_event
 
 The **`audioend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the user agent has finished capturing audio for speech recognition.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SpeechRecognition/onaudioend"
-            >onaudioend</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('audioend', event => { })
+
+onaudioend = event => { }
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 
@@ -50,7 +37,7 @@ recognition.addEventListener('audioend', function() {
 });
 ```
 
-Or use the [onaudioend](/en-US/docs/Web/API/SpeechRecognition/onaudioend) event handler property:
+Or use the `onaudioend` event handler property:
 
 ```js
 recognition.onaudioend = function() {
@@ -69,4 +56,3 @@ recognition.onaudioend = function() {
 ## See also
 
 - [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
-- [`onaudioend`](/en-US/docs/Web/API/SpeechRecognition/onaudioend) event handler

@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/repeatDur
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.repeatDur
+spec-urls: https://svgwg.org/specs/animations/#RepeatDurAttribute
 ---
 {{SVGRef}}
 
@@ -12,11 +12,11 @@ The **`repeatDur`** attribute specifies the total duration for repeating an anim
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 
@@ -67,39 +67,11 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<clock-value>`
-    *   : This value specifies the duration in presentation time to repeat the animation.
-*   `indefinite`
-    *   : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
+- `<clock-value>`
+  - : This value specifies the duration in presentation time to repeat the animation.
+- `indefinite`
+  - : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#RepeatDurAttribute", "repeatDur")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#RepeatDurAttribute", "repeatDur")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
-
-## Browser compatibility
-
-{{Compat}}
+{{Specifications}}

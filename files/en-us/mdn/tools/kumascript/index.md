@@ -11,13 +11,13 @@ tags:
 ---
 {{MDNSidebar}}
 
-On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/master/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript
+On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/main/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript
 
 ### What is KumaScript?
 
 - A way to reuse and localize content that appears repeatedly between documents (e.g., compatibility labels, section navigation, warning banners).
 - A way to build documents out of content pulled from other documents.
-- A way to fetch and include content from other web sites and services (e.g., Bugzilla).
+- A way to fetch and include content from other websites and services (e.g., Bugzilla).
 
 ### What KumaScript is not
 
@@ -32,7 +32,7 @@ KumaScript does not
 
 KumaScript is used on MDN via [embedded JavaScript templates](https://github.com/mde/ejs). These templates can be invoked in document content by any MDN author, through the use of macros.
 
-A script in KumaScript is a _template_, and each template is a file in [the macros directory](https://github.com/mdn/yari/tree/master/kumascript/macros) of the yari/kumascript repository on GitHub. A sample template might look like this:
+A script in KumaScript is a _template_, and each template is a file in [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the yari/kumascript repository on GitHub. A sample template might look like this:
 
 ```js
 <% for (let i = 0; i < $0; i++) { %>
@@ -89,7 +89,7 @@ Note that this parameter style is very picky — it must adhere to [JSON syntax]
 
 ### Template syntax
 
-Each KumaScript template is a file under [the macros directory](https://github.com/mdn/yari/tree/master/kumascript/macros) of the yari/kumascript repository on GitHub. You create and edit these files as you would the files of any open-source project on GitHub.
+Each KumaScript template is a file under [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the yari/kumascript repository on GitHub. You create and edit these files as you would the files of any open-source project on GitHub.
 
 KumaScript templates are processed by an [embedded JavaScript template engine](https://ejs.co) with a few simple rules:
 
@@ -129,7 +129,7 @@ When the wiki makes a call to the KumaScript service, it passes along some conte
 - `env.id`
   - : A short, unique ID for the current MDN document
 - `env.files`
-  - : An array of the files attached to the current MDN document; each object in the array is as described under {{ anch("File objects") }} below
+  - : An array of the files attached to the current MDN document; each object in the array is as described under [File objects](#file_objects) below
 - `env.review_tags`
   - : An array of the review tags on the article ("technical", "editorial", etc.)
 - `env.locale`
@@ -197,7 +197,7 @@ KumaScript offers some built-in methods and APIs for KumaScript macros. Macros c
 
 #### Built-in methods
 
-This manually-maintained documentation is likely to fall out of date with the code. With that in mind, [you can always check out the latest state of built-in APIs in the KumaScript source](https://github.com/mdn/yari/tree/master/kumascript/src/api). But here is a selection of useful methods exposed to templates:
+This manually-maintained documentation is likely to fall out of date with the code. With that in mind, [you can always check out the latest state of built-in APIs in the KumaScript source](https://github.com/mdn/yari/tree/main/kumascript/src/api). But here is a selection of useful methods exposed to templates:
 
 - `md5(string)`
   - : Returns an MD5 hex digest of the given string.
@@ -226,13 +226,13 @@ There are a set of built-in APIs that are automatically loaded and made availabl
 
 These are used to share common variables and methods between templates:
 
-- `kuma.*` - [Kuma](https://github.com/mdn/kumascript/blob/master/src/api/kuma.js)
-- `MDN.*` - [MDN:Common](https://github.com/mdn/kumascript/blob/master/src/api/mdn.js)
-- `page.*` - [DekiScript:Page](https://github.com/mdn/kumascript/blob/master/src/api/page.js)
-- `string.*` - [DekiScript:String](https://github.com/mdn/kumascript/blob/master/src/api/string.js)
-- `uri.*` - [DekiScript:Uri](https://github.com/mdn/kumascript/blob/master/src/api/uri.js)
-- `web.*` - [DekiScript:Web](https://github.com/mdn/kumascript/blob/master/src/api/web.js)
-- `wiki.*` - [DekiScript:Wiki](https://github.com/mdn/kumascript/blob/master/src/api/wiki.js)
+- `kuma.*` - [Kuma](https://github.com/mdn/yari/blob/main/kumascript/src/api/kuma.js)
+- `MDN.*` - [MDN:Common](https://github.com/mdn/yari/blob/main/kumascript/src/api/mdn.js)
+- `page.*` - [DekiScript:Page](https://github.com/mdn/yari/blob/main/kumascript/src/api/page.js)
+- `string.*` - [DekiScript:String](https://github.com/mdn/yari/blob/main/kumascript/src/api/string.js)
+- `uri.*` - [DekiScript:Uri](https://github.com/mdn/yari/blob/main/kumascript/src/api/uri.js)
+- `web.*` - [DekiScript:Web](https://github.com/mdn/yari/blob/main/kumascript/src/api/web.js)
+- `wiki.*` - [DekiScript:Wiki](https://github.com/mdn/yari/blob/main/kumascript/src/api/wiki.js)
 
 Other available APIs include:
 
@@ -243,7 +243,7 @@ Other available APIs include:
 - `kuma.url`
   - : See also: [node.js `url` module](https://nodejs.org/api/url.html).
 - `kuma.fetchFeed(url)`
-  - : Fetch an RSS feed and parse it into a JS object. See also: [`InsertFeedLinkList`](https://github.com/mdn/kumascript/blob/master/macros/InsertFeedLinkList.ejs)
+  - : Fetch an RSS feed and parse it into a JS object.
 
 #### Creating modules
 
@@ -319,7 +319,7 @@ On some pages, you'll see a scripting error like this:
 Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
 ```
 
-If you edit the page, you’ll probably see a macro like this at the bottom of the page:
+If you edit the page, you'll probably see a macro like this at the bottom of the page:
 
 ```plain
 \{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}

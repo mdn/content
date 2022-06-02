@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncManager.unregister()
 slug: Web/API/PeriodicSyncManager/unregister
+page-type: web-api-instance-method
 tags:
   - Background Sync
   - Method
@@ -11,7 +12,7 @@ tags:
   - Web Periodic Background Synchronization API
 browser-compat: api.PeriodicSyncManager.unregister
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`unregister()`** method of the
 {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
@@ -21,7 +22,7 @@ when unregistration completes.
 ## Syntax
 
 ```js
-var unregister = PeriodicSyncManager.unregister(tag);
+unregister(tag)
 ```
 
 ### Parameters

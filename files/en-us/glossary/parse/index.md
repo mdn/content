@@ -16,7 +16,7 @@ The [browser parses HTML](/en-US/docs/Learn/HTML) into a {{glossary('DOM')}} tre
 
 When the HTML parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but `<script>` tags—particularly those without an [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or `defer` attribute—blocks rendering, and pauses parsing of HTML.
 
-When the browser encounters CSS styles, it parses the text into the CSS Object Model (or {{glossary('CSSOM')}}), a data structure it then uses for styling layouts and painting. The browser then creates a render tree from both these structures to be able to paint the content to the screen. JavaScript is also downloaded, parsed, and then execute.
+When the browser encounters CSS styles, it parses the text into the CSS Object Model (or {{glossary('CSSOM')}}), a data structure it then uses for styling layouts and painting. The browser then creates a render tree from both these structures to be able to paint the content to the screen. JavaScript is also downloaded, parsed, and then executed.
 
 JavaScript parsing is done during {{glossary("compile time")}} or whenever the {{glossary("parser")}} is invoked, such as during a call to a method.
 

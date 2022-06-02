@@ -44,9 +44,9 @@ This convention has several advantages. We will explore each one.
 
 Unlike old-fashioned _passed-in_ callbacks, a promise comes with some guarantees:
 
-- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/EventLoop#run-to-completion) of the JavaScript event loop.
+- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/EventLoop#run-to-completion) of the JavaScript event loop.
 - These callbacks will be invoked even if they were added _after_ the success or failure of the asynchronous operation that the promise represents.
-- Multiple callbacks may be added by calling [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) several times. They will be invoked one after another, in the order in which they were inserted.
+- Multiple callbacks may be added by calling [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) several times. They will be invoked one after another, in the order in which they were inserted.
 
 One of the great things about using promises is **chaining**.
 
@@ -111,7 +111,7 @@ doSomething()
 .catch(failureCallback);
 ```
 
-**Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions `() => x` is short for `() => { return x; }`).
+**Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions `() => x` is short for `() => { return x; }`).
 
 ### Chaining after a catch
 
@@ -144,7 +144,7 @@ Do that
 Do this, no matter what happened before
 ```
 
-> **Note:** The text "Do this" is not displayed because the "Something failed" error caused a rejection.
+> **Note:** The text "Do this" is not displayed because the "Something failed" error caused a rejection.
 
 ## Error propagation
 
@@ -158,7 +158,7 @@ doSomething()
 .catch(failureCallback);
 ```
 
-If there's an exception, the browser will look down the chain for `.catch()` handlers or `onRejected`. This is very much modeled after how synchronous code works:
+If there's an exception, the browser will look down the chain for `.catch()` handlers or `onRejected`. This is very much modeled after how synchronous code works:
 
 ```js
 try {
@@ -186,20 +186,20 @@ async function foo() {
 }
 ```
 
-It builds on promises, e.g. `doSomething()` is the same function as before. You can read more about the syntax [here](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions).
+It builds on promises, e.g. `doSomething()` is the same function as before. You can read more about the syntax [here](https://web.dev/javascript-async-functions/).
 
 Promises solve a fundamental flaw with the callback pyramid of doom, by catching all errors, even thrown exceptions and programming errors. This is essential for functional composition of asynchronous operations.
 
 ## Promise rejection events
 
-Whenever a promise is rejected, one of two events is sent to the global scope (generally, this is either the [`window`](/en-US/docs/Web/API/Window "The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.") or, if being used in a web worker, it's the [`Worker`](/en-US/docs/Web/API/Worker "The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator.") or other worker-based interface). The two events are:
+Whenever a promise is rejected, one of two events is sent to the global scope (generally, this is either the [`window`](/en-US/docs/Web/API/Window) or, if being used in a web worker, it's the [`Worker`](/en-US/docs/Web/API/Worker) or other worker-based interface). The two events are:
 
-- [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event "The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled.")
+- [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)
   - : Sent when a promise is rejected, after that rejection has been handled by the executor's `reject` function.
-- [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event "The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker.")
+- [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
   - : Sent when a promise is rejected but there is no rejection handler available.
 
-In both cases, the event (of type [`PromiseRejectionEvent`](/en-US/docs/Web/API/PromiseRejectionEvent "The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected.")) has as members a [`promise`](/en-US/docs/Web/API/PromiseRejectionEvent/promise "The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected.") property indicating the promise that was rejected, and a [`reason`](/en-US/docs/Web/API/PromiseRejectionEvent/reason "The read-only PromiseRejection property reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected.") property that provides the reason given for the promise to be rejected.
+In both cases, the event (of type [`PromiseRejectionEvent`](/en-US/docs/Web/API/PromiseRejectionEvent)) has as members a [`promise`](/en-US/docs/Web/API/PromiseRejectionEvent/promise) property indicating the promise that was rejected, and a [`reason`](/en-US/docs/Web/API/PromiseRejectionEvent/reason) property that provides the reason given for the promise to be rejected.
 
 These make it possible to offer fallback error handling for promises, as well as to help debug issues with your promise management. These handlers are global per context, so all errors will go to the same event handlers, regardless of source.
 
@@ -212,7 +212,7 @@ process.on("unhandledRejection", (reason, promise) => {
 });
 ```
 
-For Node.js, to prevent the error from being logged to the console (the default action that would otherwise occur), adding that `process.on()` listener is all that’s necessary; there's no need for an equivalent of the browser runtime’s [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) method.
+For Node.js, to prevent the error from being logged to the console (the default action that would otherwise occur), adding that `process.on()` listener is all that's necessary; there's no need for an equivalent of the browser runtime's [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) method.
 
 However, if you add that `process.on` listener but don't also have code within it to handle rejected promises, they will just be dropped on the floor and silently ignored. So ideally, you should add code within that listener to examine each rejected promise and make sure it was not caused by an actual code bug.
 
@@ -242,7 +242,7 @@ Basically, the promise constructor takes an executor function that lets us resol
 
 {{jsxref("Promise.resolve()")}} and {{jsxref("Promise.reject()")}} are shortcuts to manually create an already resolved or rejected promise respectively. This can be useful at times.
 
-{{jsxref("Promise.all()")}} and {{jsxref("Promise.race()")}} are two composition tools for running asynchronous operations in parallel.
+{{jsxref("Promise.all()")}} and {{jsxref("Promise.race()")}} are two composition tools for running asynchronous operations in parallel.
 
 We can start operations in parallel and wait for them all to finish like this:
 
@@ -250,6 +250,8 @@ We can start operations in parallel and wait for them all to finish like this:
 Promise.all([func1(), func2(), func3()])
 .then(([result1, result2, result3]) => { /* use result1, result2 and result3 */ });
 ```
+
+It is important to note that if one of the promises in the array rejects, `Promise.all()` will throw the error and abort the other operations. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
 
 Sequential composition is possible using some clever JavaScript:
 
@@ -305,18 +307,18 @@ console.log(1); // 1, 2, 3, 4
 
 #### Task queues vs microtasks
 
-Promise callbacks are handled as a [Microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as Task queues.
+Promise callbacks are handled as a [Microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as Task queues.
 
 ```js
 const promise = new Promise(function(resolve, reject) {
-  console.log("Promise callback");
-  resolve();
+  console.log("Promise callback");
+  resolve();
 }).then(function(result) {
-  console.log("Promise callback (.then)");
+  console.log("Promise callback (.then)");
 });
 
 setTimeout(function() {
-  console.log("event-loop cycle: Promise (fulfilled)", promise)
+  console.log("event-loop cycle: Promise (fulfilled)", promise)
 }, 0);
 
 console.log("Promise (pending)", promise);
@@ -350,7 +352,7 @@ doSomethingCritical()
 
 Note that the optional steps here are nested, not from the indentation, but from the precarious placement of the outer `(` and `)` around them.
 
-The inner neutralizing `catch` statement only catches failures from `doSomethingOptional()` and `doSomethingExtraNice()`, after which the code resumes with `moreCriticalStuff()`. Importantly, if `doSomethingCritical()` fails, its error is caught by the final (outer) `catch` only.
+The inner neutralizing `catch` statement only catches failures from `doSomethingOptional()` and `doSomethingExtraNice()`, after which the code resumes with `moreCriticalStuff()`. Importantly, if `doSomethingCritical()` fails, its error is caught by the final (outer) `catch` only.
 
 ## Common mistakes
 
@@ -366,7 +368,7 @@ doSomething().then(function(result) {
 // Forgot to terminate chain with a catch!
 ```
 
-The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken, or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for   `doSomethingElse()` or `doThirdThing()` to finish, and will run in parallel with them, likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
+The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken, or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run in parallel with them, likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
 
 The second mistake is to nest unnecessarily, enabling the first mistake. Nesting also limits the scope of inner error handlers, which—if unintended—can lead to uncaught errors. A variant of this is the [promise constructor anti-pattern](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), which combines nesting with redundant use of the promise constructor to wrap code that already uses promises.
 
@@ -394,16 +396,16 @@ Using [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_fu
 
 If you run into situations in which you have promises and tasks (such as events or callbacks) which are firing in unpredictable orders, it's possible you may benefit from using a microtask to check status or balance out your promises when promises are created conditionally.
 
-If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use [`queueMicrotask()`](/en-US/docs/Web/API/queueMicrotask "The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.") to enqueue a function as a microtask.
+If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use [`queueMicrotask()`](/en-US/docs/Web/API/queueMicrotask) to enqueue a function as a microtask.
 
 ## See also
 
 - {{jsxref("Promise.then()")}}
 - [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-- [Promises/A+ specification](http://promisesaplus.com/)
+- [Promises/A+ specification](https://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
 - [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
-- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
+- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
 {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}

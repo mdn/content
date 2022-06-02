@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -32,26 +33,18 @@ directionality of its parent element.
 > **Note:** Browsers might allow users to change the directionality of {{ HTMLElement("input") }}
 > and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome
 > and Safari provide a directionality option in the contextual menu of input fields
-> while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update
+> while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update
 > the **`dir`** attribute value.
 
-## Syntax
+## Value
 
-```js
-var currentWritingDirection = elementNodeReference.dir;
-elementNodeReference.dir = newWritingDirection;
-```
+One of the following:
 
-- `currentWritingDirection` is a string variable representing
-  the text writing direction of the current element.
-- `newWritingDirection` is a string variable representing the
-  text writing direction value.
+- `ltr`, for left-to-right;
+- `rtl`, for right-to-left;
+- `auto` for specifying that the direction of the element must be determined based on the contents of the element.
 
-Possible values for `dir` are `ltr`, for left-to-right,
-`rtl`, for right-to-left, and `auto` for specifying that the
-direction of the element must be determined based on the contents of the element.
-
-## Example
+## Examples
 
 ```js
 var parg = document.getElementById("para1");

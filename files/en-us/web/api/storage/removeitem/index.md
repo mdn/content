@@ -14,27 +14,27 @@ browser-compat: api.Storage.removeItem
 The **`removeItem()`** method of the {{domxref("Storage")}}
 interface, when passed a key name, will remove that key from the given
 `Storage` object if it exists.
-The **`Storage`** interface of the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides access to a
-particular domain's session or local storage.
+The **`Storage`** interface of the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides access to a
+particular domain's session or local storage.
 
 If there is no item associated with the given key, this method will do nothing.
 
 ## Syntax
 
 ```js
-storage.removeItem(keyName);
+removeItem(keyName)
 ```
 
 ### Parameters
 
 - `keyName`
-  - : A {{domxref("DOMString")}} containing the name of the key you want to remove.
+  - : A string containing the name of the key you want to remove.
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following function creates three data items inside local storage, then removes the
 `image` data item.
@@ -53,11 +53,11 @@ We can do the same for the session storage.
 
 ```js
 function populateStorage() {
-  sessionStorage.setItem('bgcolor', 'red');
-  sessionStorage.setItem('font', 'Helvetica');
+  sessionStorage.setItem('bgcolor', 'red');
+  sessionStorage.setItem('font', 'Helvetica');
   sessionStorage.setItem('image', 'myCat.png');
 
-  sessionStorage.removeItem('image');
+  sessionStorage.removeItem('image');
 }
 ```
 
@@ -73,5 +73,4 @@ function populateStorage() {
 
 ## See also
 
-[Using the Web
-Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

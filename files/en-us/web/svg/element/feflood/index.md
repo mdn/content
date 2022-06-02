@@ -19,18 +19,18 @@ The **`<feFlood>`** SVG filter primitive fills the filter subregion with the col
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("flood-color")}}
-*   {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("flood-color")}}
+- {{SVGAttr("flood-opacity")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFEFloodElement")}} interface.
 
@@ -65,23 +65,23 @@ This element implements the {{domxref("SVGFEFloodElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

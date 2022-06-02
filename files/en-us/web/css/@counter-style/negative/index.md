@@ -38,7 +38,14 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol> <symbol>?
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 
@@ -49,10 +56,10 @@ If the counter value is negative, the symbol provided as value for the descripto
 ```html
 <ol class="list" start="-3">
   <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ol>
 ```
 
@@ -72,7 +79,7 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 #### Result
 
-{{ EmbedLiveSample('Rendering_negative_counters', '', '', '', 'Web/CSS/@counter-style/negative') }}
+{{ EmbedLiveSample('Rendering negative counters') }}
 
 ## Specifications
 
@@ -85,4 +92,4 @@ If the counter value is negative, the symbol provided as value for the descripto
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.

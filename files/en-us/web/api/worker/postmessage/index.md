@@ -1,5 +1,5 @@
 ---
-title: Worker.prototype.postMessage()
+title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
 tags:
   - API
@@ -22,28 +22,29 @@ The `Worker` can send back information to the thread that spawned it using the {
 ## Syntax
 
 ```js
-worker.postMessage(message, [transfer]);
+postMessage(message)
+postMessage(message, transfer)
 ```
 
 ### Parameters
 
-- _message_
+- `message`
 
-  - : The object to deliver to the worker; this will be in the `data` field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
+  - : The object to deliver to the worker; this will be in the `data` field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.message_event")}} event. This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
-    If the `message` parameter is _not_ provided, a `TypeError` will be thrown. If the data to be passed to the worker is unimportant, `null` or `undefined` can be passed explicitly.
+    If the `message` parameter is _not_ provided, a {{jsxref("SyntaxError")}} will be thrown by the parser. If the data to be passed to the worker is unimportant, `null` or `undefined` can be passed explicitly.
 
-- _transfer_ {{optional_inline}}
+- `transfer` {{optional_inline}}
 
-  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of {{Glossary("Transferable Objects")}} to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.
 
     Transferable objects are instances of classes like {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects that can be transferred. `null` is not an acceptable value for `transfer`.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{event("change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
 
@@ -56,12 +57,12 @@ first.onchange = function() {
 }
 
 second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
 }
 ```
 
-For a full example, see our [simple worker example](https://github.com/mdn/simple-web-worker) ([run example](https://mdn.github.io/simple-web-worker/)).
+For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 > **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 
@@ -134,11 +135,11 @@ self.onmessage = function handleMessageFromMain(msg) {
 buf.byteLength in main BEFORE transfer to worker:        8                     main.js:19
 buf.byteLength in main AFTER transfer to worker:         0                     main.js:27
 
-message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
+message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
 buf.byteLength in worker BEFORE transfer back to main:   8                     myWorker.js:7
 buf.byteLength in worker AFTER transfer back to main:    0                     myWorker.js:15
 
-message from worker received in main:                    MessageEvent { ... }  main.js:6
+message from worker received in main:                    MessageEvent { ... }  main.js:6
 buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
 ```
 

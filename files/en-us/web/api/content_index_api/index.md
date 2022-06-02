@@ -1,6 +1,7 @@
 ---
 title: Content Index API
 slug: Web/API/Content_Index_API
+page-type: web-api-overview
 tags:
   - API
   - Content
@@ -9,8 +10,9 @@ tags:
   - Landing
   - PWA
   - content indexing
+browser-compat: api.ContentIndex
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The Content Index API allows developers to register their offline enabled content with the browser.
 
@@ -37,8 +39,8 @@ The following additions to the {{domxref('ServiceWorker')}} have been specified 
 
 - {{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface for indexing cached pages.
-- {{domxref("ServiceWorkerGlobalScope.oncontentdelete")}}
-  - : An event handler fired whenever a {{Event("contentdelete")}} event occurs. This happens when content is removed by the user agent.
+- {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event
+  - : An event fired when content is removed by the user agent.
 
 ## Examples
 
@@ -85,13 +87,13 @@ async function registerContent(data) {
   const registration = await navigator.serviceWorker.ready;
 
   // feature detect Content Index
-	if (!registration.index) {
-		return;
-	}
+  if (!registration.index) {
+    return;
+  }
 
   // register content
   try {
-		await registration.index.add(data);
+    await registration.index.add(data);
   } catch (e) {
     console.log('Failed to register content: ', e.message);
   }
@@ -192,11 +194,11 @@ The {{Event('contentdelete')}} event is only fired when the deletion happens due
 
 ## Specifications
 
-{{Specifications("api.ContentIndex")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ContentIndex")}}
+{{Compat}}
 
 ## See also
 

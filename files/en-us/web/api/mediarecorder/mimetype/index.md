@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.mimeType
 slug: Web/API/MediaRecorder/mimeType
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,7 +18,7 @@ browser-compat: api.MediaRecorder.mimeType
 {{APIRef("MediaStream Recording")}}
 
 The **`mimeType`** read-only
-property returns the {{Glossary("MIME")}} media type that was specified when creating
+property returns the {{Glossary("MIME")}} media type that was specified when creating
 the {{domxref("MediaRecorder")}} object, or, if none was specified, which was chosen
 by the browser. This is the file format of the file that would result from
 writing all of the recorded data to disk.
@@ -31,17 +32,10 @@ about container and codec support across browsers.
 > historical; these strings are now officially known as **media types**.
 > MDN Web Docs content uses the terms interchangeably.
 
-## Syntax
-
-```js
-var mimeType = mediaRecorder.mimeType
-```
-
-### Value
+## Value
 
 The MIME media type which describes the format of the recorded media, as a
-{{domxref("DOMString")}}. This string _may_ include the [`codecs`
-parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by
+string. This string _may_ include the [`codecs` parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by
 the media recorder.
 
 The media type strings are standardized by the Internet Assigned Numbers Authority
@@ -49,7 +43,7 @@ The media type strings are standardized by the Internet Assigned Numbers Authori
 on the IANA site. See also [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to learn more
 about media types and how they're used in web content and by web browsers.
 
-## Example
+## Examples
 
 ```js
 ...
@@ -100,12 +94,9 @@ by `m.mimeType` would then be
 
 ## See also
 
-- [Using
-  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [The "codecs" parameter in
-  common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording
-  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia()")}}

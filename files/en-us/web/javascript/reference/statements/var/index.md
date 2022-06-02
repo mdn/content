@@ -27,8 +27,8 @@ var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]];
   - : Initial value of the variable. It can be any legal expression. Default value is
     `undefined`.
 
-Alternatively, the [Destructuring
-Assignment ](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)syntax can also be used to declare variables.
+Alternatively, the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+syntax can also be used to declare variables.
 
 ```js
 var { bar } = foo; // where foo = { bar:10, baz:12 };
@@ -38,7 +38,8 @@ var { bar } = foo; // where foo = { bar:10, baz:12 };
 ## Description
 
 `var` declarations, wherever they occur, are processed before any code is
-executed. This is called _hoisting_, and is discussed further below.
+executed. This is called {{Glossary("Hoisting", "hoisting")}} and is
+discussed further below.
 
 The scope of a variable declared with `var` is its current _execution
 context and closures thereof_, which is either the enclosing function and
@@ -79,8 +80,9 @@ console.log('still going...'); // still going...
 In the global context, a variable declared using `var` is added as a
 non-configurable property of the global object. This means its property descriptor
 cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. The corresponding
-name is also added to a list on the internal `[[VarNames]]` slot on the [global
-environment record](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records) (which forms part of the global lexical environment). The list
+name is also added to a list on the internal `[[VarNames]]` slot on the
+[global environment record](https://262.ecma-international.org/10.0/#sec-global-environment-records)
+(which forms part of the global lexical environment). The list
 of names in `[[VarNames]]` enables the runtime to distinguish between global
 variables and straightforward properties on the global object.
 
@@ -98,7 +100,7 @@ delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x;  // SyntaxError in strict mode. Fails silently otherwise.
 ```
 
-Note that in both NodeJS [CommonJS](http://www.commonjs.org/) modules and
+Note that in both NodeJS [CommonJS](https://www.commonjs.org/) modules and
 native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules),
 top-level variable declarations are scoped to the module, and are not, therefore added
 as properties to the global object.
@@ -135,8 +137,8 @@ foo = 'f' // In non-strict mode, assumes you want to create a property named `fo
 globalThis.hasOwnProperty('foo') // true
 ```
 
-In ECMAScript 5, this behavior was changed for [strict
-mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Assignment to an unqualified identifier in strict mode will result in a
+In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+Assignment to an unqualified identifier in strict mode will result in a
 `ReferenceError`, to avoid the accidental creation of properties on the
 global object.
 
@@ -146,7 +148,7 @@ looks like it does.
 
 ### var hoisting
 
-Because variable declarations (and declarations in general) are processed before any
+Because `var` declarations are processed before any
 code is executed, declaring a variable anywhere in the code is equivalent to declaring
 it at the top. This also means that a variable can appear to be used before it's
 declared. This behavior is called "_hoisting_", as it appears that the variable
@@ -166,9 +168,9 @@ For that reason, it is recommended to always declare variables at the top of the
 scope (the top of global code and the top of function code) so it's clear which
 variables are function scoped (local) and which are resolved on the scope chain.
 
-It's important to point out that the hoisting will affect the variable declaration, but
-not its value's initialization. The value will be indeed assigned when the assignment
-statement is reached:
+It's important to point out that only a variable's declaration is hoisted,
+not its initialization. The initialization happens only when the assignment
+statement is reached. Until then the variable remains `undefined` (but declared):
 
 ```js
 function do_something() {

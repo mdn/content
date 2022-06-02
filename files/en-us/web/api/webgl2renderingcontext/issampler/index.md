@@ -17,7 +17,7 @@ passed object is a valid {{domxref("WebGLSampler")}} object.
 ## Syntax
 
 ```js
-GLboolean gl.isSampler(sampler);
+isSampler(sampler)
 ```
 
 ### Parameters

@@ -46,7 +46,7 @@ The structure of a WebVTT consists of the following components, some of them opt
 
   - There must be at least one space after `WEBVTT`.
   - You could use this to add a description to the file.
-  - You may use anything in the text header except newlines or the string "`-->`".
+  - You may use anything in the text header except newlines or the string "`-->`".
 
 - A blank line, which is equivalent to two consecutive newlines.
 - Zero or more cues or comments.
@@ -108,13 +108,13 @@ In the case of each cue:
 
 We can also place comments in our `.vtt` file, to help us remember important information about the parts of our file. These should be on separate lines, starting with the string `NOTE`. You'll find more about these in the below section.
 
-It is important to not use "extra" blank lines within a cue, for example between the timings line and the cue payload. WebVTT is line based; a blank line will close the cue.
+It is important to not use "extra" blank lines within a cue, for example between the timings line and the cue payload. WebVTT is line based; a blank line will close the cue.
 
 ## WebVTT comments
 
 Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.
 
-A comment cannot contain the string "`-->`", the ampersand character (&), or the less-than sign (<). If you wish to use such characters, you need to escape them using for example `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence (`&gt;`) instead of the greater-than character (`>`) to avoid confusion with tags.
+A comment cannot contain the string "`-->`", the ampersand character (&), or the less-than sign (<). If you wish to use such characters, you need to escape them using for example `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence (`&gt;`) instead of the greater-than character (`>`) to avoid confusion with tags.
 
 A comment consists of three parts:
 
@@ -194,7 +194,7 @@ The HTML snippet below actually handles displaying the media itself.
 
 ### Within the WebVTT file itself
 
-You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string `"STYLE"` all by itelf on a line of text, as shown below:
+You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string `"STYLE"` all by itself on a line of text, as shown below:
 
 ```plain
 WEBVTT
@@ -226,7 +226,7 @@ WEBVTT
 
 1
 00:00.000 --> 00:02.000
-That’s an, an, that’s an L!
+That's an, an, that's an L!
 
 crédit de transcription
 00:04.000 --> 00:05.000
@@ -238,7 +238,7 @@ Transcrit par Célestes™
 ::cue(#crédit\ de\ transcription) { color: red; }
 ```
 
-Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):
+Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
 
 ```plain
 WEBVTT
@@ -568,7 +568,7 @@ The first line demonstrates no settings. The second line might be used to overla
 
 ### Cue payload
 
-The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
+The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
 
 A cue text payload cannot contain the string "`-->"`, the ampersand character (&), or the less-than sign (<). Instead use the escape sequence "\&amp;" for ampersand and "\&lt;" for less-than. It is also recommended that you use the greater-than escape sequence "\&gt;" instead of the greater-than character (>) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
 
@@ -613,7 +613,7 @@ In addition to the three escape sequences mentioned above, there are fours other
     </tr>
     <tr>
       <td>Non-breaking space</td>
-      <td><code> </code></td>
+      <td><code>&nbsp;</code></td>
       <td><code>&#x26;nbsp;</code></td>
     </tr>
   </tbody>
@@ -625,9 +625,9 @@ There are a number of tags, such as `<bold>`, that can be used. However, if the 
 
 - **Timestamp tag**
 
-  - The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The *active text* is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the *active text* in the payload is *previous text* . Any text beyond the *active text* is *future text* . This enables karaoke style captions.
+  - The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The *active text* is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the *active text* in the payload is *previous text* . Any text beyond the *active text* is *future text* . This enables karaoke style captions.
 
-  ##### Example 12 - Karaoke style text
+  ##### Example 14 - Karaoke style text
 
   ```plain
   1
@@ -643,13 +643,13 @@ There are a number of tags, such as `<bold>`, that can be used. However, if the 
   That's <00:00:21.000>amore
   ```
 
-The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
+The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
 
 - **Class tag** (`<c></c>`)
 
   - Style the contained text using a CSS class.
 
-  ##### Example 14 - Class tag
+  ##### Example 15 - Class tag
 
   ```html
   <c.classname>text</c>
@@ -659,7 +659,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Italicize the contained text.
 
-  ##### Example 15 - Italics tag
+  ##### Example 16 - Italics tag
 
   ```html
   <i>text</i>
@@ -669,7 +669,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Bold the contained text.
 
-  ##### Example 16 - Bold tag
+  ##### Example 17 - Bold tag
 
   ```html
   <b>text</b>
@@ -679,7 +679,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Underline the contained text.
 
-  ##### Example 17 - Underline tag
+  ##### Example 18 - Underline tag
 
   ```html
   <u>text</u>
@@ -689,7 +689,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
-  ##### Example 18 - Ruby tag
+  ##### Example 19 - Ruby tag
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -699,7 +699,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
-  ##### Example 19 - Ruby text tag
+  ##### Example 20 - Ruby text tag
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -709,7 +709,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
   - Similar to class tag, also used to style the contained text using CSS.
 
-  ##### Example 20 - Voice tag
+  ##### Example 21 - Voice tag
 
   ```html
   <v Bob>text</v>
@@ -719,43 +719,43 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 
 The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
 
-- ### VTTCue
+### VTTCue
 
-  - The methods which are available in this interface are:
+- The methods which are available in this interface are:
 
-    - GetCueAsHTML to get the HTML of that Cue.
-    - VTT Constructor for creating new objects of Cues.
-    - Autokeyword.
-    - DirectionSetting: to set the direction of caption or text in a file.
-    - LineAlignment: to adjust the line alignment.
-    - PositionAlignSetting: to adjust the position of text.
+  - GetCueAsHTML to get the HTML of that Cue.
+  - VTT Constructor for creating new objects of Cues.
+  - Autokeyword.
+  - DirectionSetting: to set the direction of caption or text in a file.
+  - LineAlignment: to adjust the line alignment.
+  - PositionAlignSetting: to adjust the position of text.
 
-- ### VTTRegion
+### VTTRegion
 
-  - The methods used for region are listed below along with description of their functionality:
+- The methods used for region are listed below along with description of their functionality:
 
-    - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
-    - VTT Region Constructor: for construction of new VTT Regions.
+  - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
+  - VTT Region Constructor: for construction of new VTT Regions.
 
 ## Tutorial on how to write a WebVTT file
 
-There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as ‘.vtt’ file. Steps are given below:
+There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as '.vtt' file. Steps are given below:
 
-1.  Open a notepad.
-2.  The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
+1. Open a notepad.
+2. The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
 
-```plain
-WEBVTT
-```
+    ```plain
+    WEBVTT
+    ```
 
-3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:
+3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:
 
 ```plain
 00:01.000 --> 00:05.000
 ```
 
-1.  On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.
-2.  Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
+1. On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.
+2. Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
 
 ## CSS pseudo-classes
 
@@ -767,7 +767,7 @@ It is one of the good features supported by WebVTT is the localization and use o
 WEBVTT
 
 04:02.500 --> 04:05.000
-J’ai commencé le basket à l'âge de 13, 14 ans
+J'ai commencé le basket à l'âge de 13, 14 ans
 
 04:05.001 --> 04:07.800
 Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
@@ -804,6 +804,6 @@ Where p and a are the tags which are used in HTML for paragraph and link, respec
 
 Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value `"middle"` instead of `"center"`. This has been corrected.
 
-WebVTT was implemented in Firefox 24 behind the preference {{pref("media.webvtt.enabled")}}, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
+WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
 
 Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.getPropertyPriority()
 slug: Web/API/CSSStyleDeclaration/getPropertyPriority
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -17,23 +18,23 @@ property.
 ## Syntax
 
 ```js
-var priority = style.getPropertyPriority(property);
+getPropertyPriority(property)
 ```
 
 ### Parameters
 
-- *`property`* is a {{domxref('DOMString')}} representing the
+- *`property`* is a {{domxref('DOMString')}} representing the
   property name to be checked.
 
 ### Return value
 
-- `priority` is a {{domxref('DOMString')}} that represents the
-  priority (e.g. `"important"`) if one exists. If none exists, returns the
+- `priority` is a {{domxref('DOMString')}} that represents the
+  priority (e.g. `"important"`) if one exists. If none exists, returns the
   empty string.
 
-## Example
+## Examples
 
-The following JavaScript code checks whether `margin` is marked as important
+The following JavaScript code checks whether `margin` is marked as important
 in a CSS selector rule:
 
 ```js

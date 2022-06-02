@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-mode
@@ -27,6 +26,7 @@ mask-mode: alpha, match-source;
 mask-mode: inherit;
 mask-mode: initial;
 mask-mode: revert;
+mask-mode: revert-layer;
 mask-mode: unset;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -38,7 +39,7 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 ## Syntax
 
 ```js
-ctx.getImageData(sx, sy, sw, sh);
+getImageData(sx, sy, sw, sh)
 ```
 
 ### Parameters
@@ -61,7 +62,7 @@ ctx.getImageData(sx, sy, sw, sh);
 An {{domxref("ImageData")}} object containing the image data for the rectangle of the
 canvas specified. The coordinates of the rectangle's top-left corner are
 `(sx, sy)`, while the coordinates of the bottom corner are
-`(sx + sw, sy + sh)`.
+`(sx + sw - 1, sy + sh - 1)`.
 
 ### Exceptions
 
@@ -74,7 +75,7 @@ canvas specified. The coordinates of the rectangle's top-left corner are
     configure CORS to allow the source image to be used in this way.
     See [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image).
 
-## Example
+## Examples
 
 ### Getting image data from a canvas
 

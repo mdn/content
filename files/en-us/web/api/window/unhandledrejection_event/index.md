@@ -23,41 +23,41 @@ The **`unhandledrejection`** event is sent to the global scope of a script when 
 
 This is useful for debugging and for providing fallback error handling for unexpected situations.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PromiseRejectionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('unhandledrejection', event => { });
+onunhandledrejection = event => { };
+```
+
+## Event type
+
+A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PromiseRejectionEvent")}}
+
+## Event properties
+
+- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+  - : The JavaScript {{jsxref("Promise")}} that was rejected.
+- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+  - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onunhandledrejection` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Usage notes
 
-Allowing the `unhandledrejection` event to bubble will eventually result in an error message being output to the console. You can prevent this by calling {{domxref("Event.preventDefault", "preventDefault()")}} on the {{domxref("PromiseRejectionEvent")}}; see {{anch("Preventing default handling")}} below for an example.
+Allowing the `unhandledrejection` event to bubble will eventually result in an error message being output to the console. You can prevent this by calling {{domxref("Event.preventDefault", "preventDefault()")}} on the {{domxref("PromiseRejectionEvent")}}; see [Preventing default handling](#preventing_default_handling) below for an example.
 
 ## Examples
-
-Here we have a few examples showing ways you can make use of the `unhandledrejection` event. The event includes two useful pieces of information:
-
-- `promise`
-  - : The actual {{jsxref("Promise")}} which was rejected with no handler available to deal with the rejection.
-- `reason`
-  - : The reason that would have been passed into the rejection handler if one had existed. See {{jsxref("Promise.catch", "catch()")}} for details.
 
 ### Basic error logging
 
@@ -69,7 +69,7 @@ window.addEventListener("unhandledrejection", event => {
 });
 ```
 
-You can also use the {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property to set up the event listener:
+You can also use the `onunhandledrejection` event handler property to set up the event listener:
 
 ```js
 window.onunhandledrejection = event => {
@@ -103,6 +103,5 @@ window.addEventListener('unhandledrejection', function (event) {
 ## See also
 
 - {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
-- {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}} event
 - {{jsxref("Promise")}}

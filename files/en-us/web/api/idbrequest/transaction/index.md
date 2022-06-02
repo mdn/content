@@ -1,6 +1,7 @@
 ---
 title: IDBRequest.transaction
 slug: Web/API/IDBRequest/transaction
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -14,43 +15,37 @@ browser-compat: api.IDBRequest.transaction
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`transaction`** read-only property of the IDBRequest
-interface returns the transaction for the request, that is, the transaction the
+The **`transaction`** read-only property of the IDBRequest
+interface returns the transaction for the request, that is, the transaction the
 request is being made inside.
 
 This property can be `null` for requests not made within transactions,
 such as for requests returned from {{domxref("IDBFactory.open")}} — in this case
-you're just connecting to a database, so there is no transaction to return. If a
-version upgrade is needed when opening a database then during the
-{{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the
+you're just connecting to a database, so there is no transaction to return. If a
+version upgrade is needed when opening a database then during the
+{{domxref("IDBOpenDBRequest.upgradeneeded_event", "upgradeneeded")}} event handler the
 **`transaction`** property will be an
-{{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal
-to `"versionchange"`, and can be used to access existing object stores and
+{{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal
+to `"versionchange"`, and can be used to access existing object stores and
 indexes, or abort the upgrade. Following the upgrade, the
-**`transaction`** property will again be `null`.
+**`transaction`** property will again be `null`.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myTransaction = request.transaction;
-```
-
-### Value
+## Value
 
 An {{domxref("IDBTransaction")}}.
 
-## Example
+## Examples
 
-The following example requests a given record title, `onsuccess` gets the
+The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available
-as `objectStoreTitleRequest.result`), updates
+as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
 store in another request. The source of the requests is logged to the developer
 console — both originate from the same transaction. For a full working example, see
-our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view example live](https://mdn.github.io/to-do-notifications/).)
+our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+([View the example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";
@@ -69,14 +64,14 @@ objectStoreTitleRequest.onsuccess = function() {
   data.notified = "yes";
 
   // Create another request that inserts the item back
-  // into the database
+  // into the database
   var updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
   console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
 
   // When this new request succeeds, run the displayData()
-  // function again to update the display
+  // function again to update the display
   updateTitleRequest.onsuccess = function() {
     displayData();
   };
@@ -125,5 +120,4 @@ openRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

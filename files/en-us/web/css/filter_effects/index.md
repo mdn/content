@@ -7,10 +7,11 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.fxtf.org/filter-effects/#FilterProperty
 ---
 {{CSSRef}}
 
-**Filter Effects** is a module of CSS that defines a way of processing an element’s rendering before it is displayed in the document.
+**Filter Effects** is a module of CSS that defines a way of processing an element's rendering before it is displayed in the document.
 
 ## Reference
 
@@ -25,9 +26,7 @@ tags:
 
 ## Specifications
 
-| Specification                                                                | Status                               | Comment             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#FilterProperty', 'filter') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

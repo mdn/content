@@ -13,23 +13,17 @@ tags:
   - videoTracks
 browser-compat: api.SourceBuffer.videoTracks
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`videoTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the video tracks currently
 contained inside the `SourceBuffer`.
 
-## Syntax
-
-```js
-var myVideoTracks = sourceBuffer.videoTracks;
-```
-
-### Value
+## Value
 
 An {{domxref("VideoTrackList")}} object.
 
-## Example
+## Examples
 
 TBD
 

@@ -1,6 +1,7 @@
 ---
 title: Image()
 slug: Web/API/HTMLImageElement/Image
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -25,15 +26,17 @@ equivalent to {{DOMxRef("Document.createElement()",
 ## Syntax
 
 ```js
-var htmlImageElement = new Image(width, height);
+new Image()
+new Image(width)
+new Image(width, height)
 ```
 
 ### Parameters
 
-- `width`
+- `width` {{optional_inline}}
   - : The width of the image (i.e., the value for the {{HTMLAttrxRef("width", "img")}}
     attribute).
-- `height`
+- `height` {{optional_inline}}
   - : The height of the image (i.e., the value for the {{HTMLAttrxRef("height", "img")}}
     attribute).
 

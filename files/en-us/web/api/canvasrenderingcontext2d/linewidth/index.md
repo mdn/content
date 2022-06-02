@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -17,21 +18,12 @@ property of the Canvas 2D API sets the thickness of lines.
 
 > **Note:** Lines can be drawn with the
 > {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-## Syntax
+## Value
 
-```js
-ctx.lineWidth = value;
-```
-
-### Options
-
-- `value`
-  - : A number specifying the line width, in coordinate space units. Zero, negative,
-    {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored. This value is
-    `1.0` by default.
+A number specifying the line width, in coordinate space units. Zero, negative, {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored. This value is `1.0` by default.
 
 ## Examples
 
@@ -66,9 +58,7 @@ ctx.stroke();
 
 ### More examples
 
-For more examples and explanation about this property, see [Applying
-styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
-Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+For more examples and explanation about this property, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Specifications
 

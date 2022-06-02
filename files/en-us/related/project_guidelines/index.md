@@ -53,21 +53,23 @@ If you went through the submission process then you should already have a rough 
 
 Each project will be different, but we'd roughly recommend something like this:
 
-    Landing page
-    |
-    ------Reference
-          |
-          --------Elements
-          |
-          --------Methods
-          |
-          --------Other reference page type(s)?
-    |
-    ------Guides/tutorials
-    |
-    ------Examples
-    |
-    ------Project metadata
+```
+Landing page
+|
+------Reference
+      |
+      --------Elements
+      |
+      --------Methods
+      |
+      --------Other reference page type(s)?
+|
+------Guides/tutorials
+|
+------Examples
+|
+------Project metadata
+```
 
 ### Page templates
 

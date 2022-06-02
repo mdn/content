@@ -1,6 +1,7 @@
 ---
 title: HIDConnectionEvent
 slug: Web/API/HIDConnectionEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -12,9 +13,11 @@ browser-compat: api.HIDConnectionEvent
 
 The **`HIDConnectionEvent`** interface of the {{domxref('WebHID API')}} represents HID connection events, and is the event type passed to {{domxref("HID.onconnect")}} and {{domxref("HID.ondisconnect")}} when an input report is received.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("HIDConnectionEvent.HIDConnectionEvent()")}}
+- {{domxref("HIDConnectionEvent.HIDConnectionEvent", "HIDConnectionEvent()")}}
   - : Returns a new `HIDConnectionEvent` object. Typically this constructor is not used as events are created when an input report is received.
 
 ## Properties

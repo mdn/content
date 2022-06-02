@@ -13,10 +13,7 @@ browser-compat: javascript.operators.unsigned_right_shift
 
 The **unsigned right shift operator (`>>>`)**
 (zero-fill right shift) shifts the first operand the specified number of bits to the
-right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from
-the left. The sign bit becomes `0`, so the result is always non-negative.
-Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit
-integer.
+right.
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
 
@@ -38,7 +35,7 @@ the same result. For example, `9 >>> 2` yields 2, the same as
 `9 >> 2`:
 
 ```js
-.     9 (base 10): 00000000000000000000000000001001 (base 2)
+      9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
 9 >>> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 ```
@@ -48,14 +45,14 @@ However, this is not the case for negative numbers. For example,
 `-9 >> 2` (which yields `-3`):
 
 ```js
-.     -9 (base 10): 11111111111111111111111111110111 (base 2)
+      -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
 -9 >>> 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
 ```
 
 ## Examples
 
-### Using unsigned right shift
+### Using unsigned right shift
 
 ```js
  9 >>> 2; // 2
@@ -72,7 +69,5 @@ However, this is not the case for negative numbers. For example,
 
 ## See also
 
-- [Bitwise
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
-- [Unsigned
-  right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Unsigned right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.fetchStart
 slug: Web/API/PerformanceResourceTiming/fetchStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,18 +20,12 @@ agent starts to fetch the final resource in the redirection.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.fetchStart;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the
 resource.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

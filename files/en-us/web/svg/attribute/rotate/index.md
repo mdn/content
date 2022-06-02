@@ -8,12 +8,13 @@ tags:
   - Reference
   - Rotate
   - SVG
+spec-urls: https://svgwg.org/specs/animations/#RotateAttribute
 ---
 The `rotate` attribute specifies how the animated element rotates as it travels along a path specified in an {{SVGElement("animateMotion")}} element.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animateMotion")}}
+- {{SVGElement("animateMotion")}}
 
 ## Usage notes
 
@@ -47,53 +48,53 @@ Setting `rotate`'s value to a number specifies a constant rotation, in degrees, 
 
 ```html
 <svg width="400" height="120" viewBox="0 0 480 120"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg">
 
-  <!-- Draw the outline of the motion path in grey -->
-  <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
-      stroke="lightgrey" stroke-width="2"
-      fill="none" id="theMotionPath"/>
+  <!-- Draw the outline of the motion path in grey -->
+  <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+      stroke="lightgrey" stroke-width="2"
+      fill="none" id="theMotionPath"/>
 
-  <!-- Red arrow which will not rotate -->
-  <path fill="red" d="M-5,-5 L10,0 -5,5 0,0 Z">
-    <!-- Define the motion path animation -->
-    <animateMotion dur="6s" repeatCount="indefinite" rotate="0">
-      <mpath href="#theMotionPath"/>
-    </animateMotion>
-  </path>
+  <!-- Red arrow which will not rotate -->
+  <path fill="red" d="M-5,-5 L10,0 -5,5 0,0 Z">
+    <!-- Define the motion path animation -->
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="0">
+      <mpath href="#theMotionPath"/>
+    </animateMotion>
+  </path>
 
-  <g transform="translate(100, 0)">
-    <use href="#theMotionPath"/>
-  <!-- Green arrow which will rotate along the motion path -->
-  <path fill="green" d="M-5,-5 L10,0 -5,5 0,0 Z">
-    <!-- Define the motion path animation -->
-    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#theMotionPath"/>
-    </animateMotion>
-  </path>
-  </g>
+  <g transform="translate(100, 0)">
+    <use href="#theMotionPath"/>
+  <!-- Green arrow which will rotate along the motion path -->
+  <path fill="green" d="M-5,-5 L10,0 -5,5 0,0 Z">
+    <!-- Define the motion path animation -->
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#theMotionPath"/>
+    </animateMotion>
+  </path>
+  </g>
 
-  <g transform="translate(200, 0)">
-    <use href="#theMotionPath"/>
-  <!-- Blue arrow which will rotate backwards along the motion path -->
-  <path fill="blue" d="M-5,-5 L10,0 -5,5 0,0 Z">
-    <!-- Define the motion path animation -->
-    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto-reverse">
-      <mpath href="#theMotionPath"/>
-    </animateMotion>
-  </path>
-  </g>
+  <g transform="translate(200, 0)">
+    <use href="#theMotionPath"/>
+  <!-- Blue arrow which will rotate backwards along the motion path -->
+  <path fill="blue" d="M-5,-5 L10,0 -5,5 0,0 Z">
+    <!-- Define the motion path animation -->
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto-reverse">
+      <mpath href="#theMotionPath"/>
+    </animateMotion>
+  </path>
+  </g>
 
-  <g transform="translate(300, 0)">
-    <use href="#theMotionPath"/>
-  <!-- Purple arrow which will have a static rotation of 210 degrees -->
-  <path fill="purple" d="M-5,-5 L10,0 -5,5 0,0 Z">
-    <!-- Define the motion path animation -->
-    <animateMotion dur="6s" repeatCount="indefinite" rotate="210">
-      <mpath href="#theMotionPath"/>
-    </animateMotion>
-  </path>
-  </g>
+  <g transform="translate(300, 0)">
+    <use href="#theMotionPath"/>
+  <!-- Purple arrow which will have a static rotation of 210 degrees -->
+  <path fill="purple" d="M-5,-5 L10,0 -5,5 0,0 Z">
+    <!-- Define the motion path animation -->
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="210">
+      <mpath href="#theMotionPath"/>
+    </animateMotion>
+  </path>
+  </g>
 </svg>
 ```
 
@@ -103,21 +104,4 @@ Setting `rotate`'s value to a number specifies a constant rotation, in degrees, 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#RotateAttribute", "rotate")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

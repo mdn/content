@@ -21,30 +21,30 @@ array, reading input values from a specified array.
 
 ```js
 set(array)
-set(array, offset)
+set(array, targetOffset)
 
 set(typedarray)
-set(typedarray, offset)
+set(typedarray, targetOffset)
 ```
 
 ### Parameters
 
 - `array`
   - : The array from which to copy values. All values from the source array are copied
-    into the target array, unless the length of the source array plus the offset exceeds
+    into the target array, unless the length of the source array plus the target offset exceeds
     the length of the target array, in which case an exception is thrown.
 - `typedarray`
   - : If the source array is a typed array, the two arrays may share the same underlying
     {{jsxref("ArrayBuffer")}}; the JavaScript engine will intelligently
     **copy** the source range of the buffer to the destination range.
-- `offset` {{optional_inline}}
+- `targetOffset` {{optional_inline}}
   - : The offset into the target array at which to begin writing values from the source
-    array. If this value is omitted, 0 is assumed (that is, the source array will
+    array. If this value is omitted, 0 is assumed (that is, the source array will
     overwrite values in the target array starting at index 0).
 
 ### Exceptions
 
-A {{jsxref("RangeError")}}, if the `offset` is set such as it would store
+A {{jsxref("RangeError")}}, if the `targetOffset` is set such as it would store
 beyond the end of the typed array.
 
 ## Examples
@@ -70,7 +70,7 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.set` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

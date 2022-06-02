@@ -29,19 +29,19 @@ SyntaxError: Invalid or unexpected token (Chrome)
 There is an invalid or unexpected token that doesn't belong at this position in the
 code. Use an editor that supports syntax highlighting and carefully check your code
 against mismatches like a minus sign (` - `) versus a dash (` – `)
-or simple quotes (` " `) vs non-standard quotation marks (` “ `).
+or simple quotes (` " `) vs non-standard quotation marks (` " `).
 
 ## Examples
 
 ### Mismatched characters
 
 Some characters look similar, but will cause the parser to fail interpreting your code.
-Famous examples of this are quotes, the minus or semicolon ([greek
-questionmark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
+Famous examples of this are quotes, the minus or semicolon
+([greek question mark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
 
 ```js example-bad
-“This looks like a string”;  // SyntaxError: illegal character
-                             // “ and ” are not " but look like this
+"This looks like a string";  // SyntaxError: illegal character
+                             // " and " are not " but look like this
 
 42 – 13;                     // SyntaxError: illegal character
                              // – is not - but looks like this
@@ -86,8 +86,7 @@ var foo = 'bar';​
 ```
 
 When inspecting this code in an editor like Vim, you can see that there is actually a
-[zero-width space (ZWSP)
-(U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
+[zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
 
 ```js
 var foo = 'bar';<200b>

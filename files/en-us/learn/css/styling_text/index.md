@@ -1,5 +1,5 @@
 ---
-title: Styling text
+title: CSS styling text
 slug: Learn/CSS/Styling_text
 tags:
   - Beginner
@@ -34,7 +34,7 @@ With the basics of the CSS language covered, the next CSS topic for you to conce
 
 Before starting this module, you should already have basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module, and be comfortable with CSS fundamentals, as discussed in [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
 
-> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/),[ CodePen](https://codepen.io/) or [Glitch](https://glitch.com/).
+> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 
@@ -51,7 +51,7 @@ This module contains the following articles, which will teach you all of the ess
 
 ## Assessments
 
-The following assessments will test your understanding of the text styling techniques covered in the guides above.
+The following assessment will test your understanding of the text styling techniques covered in the guides above.
 
 - [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
   - : In this assessment we'll test your understanding of styling text by getting you to style the text for a community school's homepage.

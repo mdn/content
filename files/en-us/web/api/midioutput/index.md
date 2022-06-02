@@ -1,6 +1,7 @@
 ---
 title: MIDIOutput
 slug: Web/API/MIDIOutput
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -11,6 +12,8 @@ browser-compat: api.MIDIOutput
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIOutput`** interface of the {{domxref('Web MIDI API','','',' ')}} provides methods to add messages to the queue of an output device, and to clear the queue of messages.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

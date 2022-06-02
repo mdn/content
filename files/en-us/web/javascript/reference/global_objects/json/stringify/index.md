@@ -34,10 +34,8 @@ JSON.stringify(value, replacer, space)
   - : The value to convert to a JSON string.
 - `replacer` {{optional_inline}}
   - : A function that alters the behavior of the stringification process, or an array of
-    {{JSxRef("String")}} and {{JSxRef("Number")}} that serve as an allowlist for
-    selecting/filtering the properties of the value object to be included in the JSON
-    string. If this value is {{JSxRef("null")}} or not provided, all properties of the
-    object are included in the resulting JSON string.
+    strings or numbers naming properties of `value` that should be included in the output. If `replacer` is {{JSxRef("null")}} or not provided,
+    all properties of the object are included in the resulting JSON string.
 - `space` {{optional_inline}}
 
   - : A {{JSxRef("String")}} or {{JSxRef("Number")}} object that's used to insert white space (including indentation, line break characters, etc.) into the output JSON string for readability purposes.
@@ -75,7 +73,7 @@ A JSON string representing the given value, or undefined.
   valid JSON values. If any such values are encountered during conversion they are
   either omitted (when found in an object) or changed to {{JSxRef("null")}} (when found
   in an array). `JSON.stringify()` can return `undefined` when
-  passing in "pure" values like `JSON.stringify(function(){})` or
+  passing in "pure" values like `JSON.stringify(function() {})` or
   `JSON.stringify(undefined)`.
 - All {{JSxRef("Symbol")}}-keyed properties will be completely ignored, even when
   using the `replacer` function.
@@ -100,7 +98,7 @@ JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
 JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
 JSON.stringify({ x: 5 });              // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5))
+JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
 // '"2006-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
@@ -114,7 +112,7 @@ a['baz'] = 'quux';      // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
 JSON.stringify(a);
 // '["foo","bar"]'
 
-JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] });
+JSON.stringify({ x: [10, undefined, function() {}, Symbol('')] });
 // '{"x":[10,null,null,null]}'
 
 // Standard data structures
@@ -199,7 +197,7 @@ function replacer(key, value) {
   return value;
 }
 
-var foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
+const foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
 JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}'
 ```
@@ -256,7 +254,7 @@ behavior: instead of the object being serialized, the value returned by the
 For example:
 
 ```js
-var obj = {
+const obj = {
     data: 'data',
 
     toJSON (key) {
@@ -280,8 +278,8 @@ JSON.stringify([ obj ]);
 ### Issue with JSON.stringify() when serializing circular references
 
 Note that since the [JSON format](https://www.json.org/) doesn't support
-object references (although an [IETF draft
-exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an
+object references (although an [IETF draft exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)),
+a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an
 object with circular references.
 
 ```js example-bad
@@ -318,7 +316,7 @@ function jsFriendlyJSONStringify (s) {
         replace(/\u2029/g, '\\u2029');
 }
 
-var s = {
+const s = {
     a: String.fromCharCode(0x2028),
     b: String.fromCharCode(0x2029)
 };
@@ -341,9 +339,9 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 > same object within the stringification.
 
 ```js
-var a = JSON.stringify({ foo: "bar", baz: "quux" })
+const a = JSON.stringify({ foo: "bar", baz: "quux" })
 //'{"foo":"bar","baz":"quux"}'
-var b = JSON.stringify({ baz: "quux", foo: "bar" })
+const b = JSON.stringify({ baz: "quux", foo: "bar" })
 //'{"baz":"quux","foo":"bar"}'
 console.log(a !== b) // true
 
@@ -359,7 +357,7 @@ the applicability of `JSON.stringify()`:
 
 ```js
 // Creating an example of JSON
-var session = {
+const session = {
   'screens': [],
   'state': true
 };
@@ -376,7 +374,7 @@ localStorage.setItem('session', JSON.stringify(session));
 
 // Example of how to transform the String generated through
 // JSON.stringify() and saved in localStorage in JSON object again
-var restoredSession = JSON.parse(localStorage.getItem('session'));
+const restoredSession = JSON.parse(localStorage.getItem('session'));
 
 // Now restoredSession variable contains the object that was saved
 // in localStorage
@@ -385,8 +383,8 @@ console.log(restoredSession);
 
 ### Well-formed JSON.stringify()
 
-Engines implementing the [well-formed
-JSON.stringify specification](https://github.com/tc39/proposal-well-formed-stringify) will stringify lone surrogates, any code point from
+Engines implementing the [well-formed JSON.stringify specification](https://github.com/tc39/proposal-well-formed-stringify)
+will stringify lone surrogates, any code point from
 U+D800 to U+DFFF, using Unicode escape sequences rather than literally. Before this
 change `JSON.stringify` would output lone surrogates if the input contained
 any lone surrogates; such strings could not be encoded in valid UTF-8 or UTF-16:
@@ -419,5 +417,5 @@ result of `JSON.stringify` do you need to carefully handle
 
 ## See also
 
-- A polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [Polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) in `core-js`](https://github.com/zloirock/core-js#ecmascript-json)
 - {{JSxRef("JSON.parse()")}}

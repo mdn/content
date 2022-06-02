@@ -14,7 +14,7 @@ To use WebAssembly in JavaScript, you first need to pull your module into memory
 
 ## What are the options?
 
-WebAssembly is not yet integrated with `<script type='module'>` or ES2015 `import` statements, thus there is not a path to have the browser fetch modules for you using imports.
+WebAssembly is not yet integrated with `<script type='module'>` or ES2015 `import` statements, thus there is not a path to have the browser fetch modules for you using imports.
 
 The older {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} methods require you to create an {{jsxref("ArrayBuffer")}} containing your WebAssembly module binary after fetching the raw bytes, and then compile/instantiate it. This is analogous to `new Function(string)`, except that we are substituting a string of characters (JavaScript source code) with an array buffer of bytes (WebAssembly source code).
 
@@ -58,9 +58,9 @@ The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — 
 }
 ```
 
-> **Note:** Usually we only care about the instance, but it’s useful to have the module in case we want to cache it, share it with another worker or window via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), or create more instances.
+> **Note:** Usually we only care about the instance, but it's useful to have the module in case we want to cache it, share it with another worker or window via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), or create more instances.
 
-> **Note:** The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the [Second overload example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example).
+> **Note:** The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the [Second overload example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example).
 
 ### Running your WebAssembly code
 
@@ -87,10 +87,10 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) is somewhat older than Fetch, but can still be happily used to get a typed array. Again, assuming our module is called `simple.wasm`:
 
-1.  Create a new {{domxref("XMLHttpRequest()")}} instance, and use its {{domxref("XMLHttpRequest.open","open()")}} method to open a request, setting the request method to `GET`, and declaring the path to the file we want to fetch.
-2.  The key part of this is to set the response type to `'arraybuffer'` using the {{domxref("XMLHttpRequest.responseType","responseType")}} property.
-3.  Next, send the request using {{domxref("XMLHttpRequest.send()")}}.
-4.  We then use the {{domxref("XMLHttpRequest.onload", "onload")}} event handler to invoke a function when the response has finished downloading — in this function we get the array buffer from the {{domxref("XMLHttpRequest.response", "response")}} property, and then feed that into our {{jsxref("WebAssembly.instantiate()")}} method as we did with Fetch.
+1. Create a new {{domxref("XMLHttpRequest()")}} instance, and use its {{domxref("XMLHttpRequest.open","open()")}} method to open a request, setting the request method to `GET`, and declaring the path to the file we want to fetch.
+2. The key part of this is to set the response type to `'arraybuffer'` using the {{domxref("XMLHttpRequest.responseType","responseType")}} property.
+3. Next, send the request using {{domxref("XMLHttpRequest.send()")}}.
+4. We then use the {{domxref("XMLHttpRequest.load_event", "load")}} event handler to invoke a function when the response has finished downloading — in this function we get the array buffer from the {{domxref("XMLHttpRequest.response", "response")}} property, and then feed that into our {{jsxref("WebAssembly.instantiate()")}} method as we did with Fetch.
 
 The final code looks like this:
 

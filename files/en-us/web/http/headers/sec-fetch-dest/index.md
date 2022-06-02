@@ -14,7 +14,7 @@ browser-compat: http.headers.Sec-Fetch-Dest
 
 The **`Sec-Fetch-Dest`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the request's _destination_. That is the initiator of the original fetch request, which is where (and how) the fetched data will be used.
 
-This allows servers determine whether to service a request based on whether it is appropriate for how it is _expected_ to be used. For example, a request with an `audio` destination should request audio data, not some other type of resource (for example, a document that includes senstive user information).
+This allows servers determine whether to service a request based on whether it is appropriate for how it is _expected_ to be used. For example, a request with an `audio` destination should request audio data, not some other type of resource (for example, a document that includes sensitive user information).
 
 <table class="properties">
   <tbody>
@@ -108,7 +108,7 @@ Servers should ignore this header if it contains any other value.
 - `worker`
   - : The destination is a {{domxref("Worker")}}.
 - `xslt`
-  - : The destination is an XLST transform.
+  - : The destination is an XSLT transform.
 
 ## Examples
 

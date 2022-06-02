@@ -13,9 +13,11 @@ The `<xsl:comment>` element writes a comment to the output document. It must inc
 
 ### Syntax
 
-    <xsl:comment>
-    	TEMPLATE
-    </xsl:comment>
+```xml
+<xsl:comment>
+  TEMPLATE
+</xsl:comment>
+```
 
 ### Required Attributes
 

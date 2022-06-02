@@ -1,6 +1,7 @@
 ---
 title: Clipboard API
 slug: Web/API/Clipboard_API
+page-type: web-api-overview
 tags:
   - API
   - Async Clipboard API
@@ -17,7 +18,7 @@ tags:
 ---
 {{DefaultAPISidebar("Clipboard API")}}
 
-The **Clipboard API** provides the ability to respond to clipboard commands (cut, copy, and paste) as well as to asynchronously read from and write to the system clipboard. Access to the contents of the clipboard is gated behind the [Permissions API](/en-US/docs/Web/API/Permissions_API): The `clipboard-write` permission is granted automatically to pages when they are in the active tab. The `clipboard-read` permission must be requested, which you can do by trying to read data from the clipboard.
+The **Clipboard API** provides the ability to respond to clipboard commands (cut, copy, and paste) as well as to asynchronously read from and write to the system clipboard.
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
@@ -64,6 +65,4 @@ This snippet fetches the text from the clipboard and appends it to the first ele
 ## See also
 
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/image-support-for-async-clipboard/)
-- [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

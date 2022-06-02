@@ -46,7 +46,7 @@ browser.extension.getURL(
 Given a file packaged with the add-on at "beasts/frog.html", get the full URL like this:
 
 ```js
-var fullURL = browser.extension.getURL("beasts/frog.html");
+let fullURL = browser.extension.getURL("beasts/frog.html");
 
 // -> something like:
 // moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html
@@ -54,7 +54,7 @@ var fullURL = browser.extension.getURL("beasts/frog.html");
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#method-getURL) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-getURL) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -39,13 +39,13 @@ localeCompare(compareString, locales, options)
 - `locales` and `options`
 
   - : These arguments customize the behavior of the function and let applications specify
-    the language whose formatting conventions should be used. In implementations which
+    the language whose formatting conventions should be used. In implementations which
     ignore the `locales` and
-    `options` arguments, the locale used and the form of the
+    `options` arguments, the locale used and the form of the
     string returned are entirely implementation-dependent.
 
-    See the [`Intl.Collator()`
-    constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator) for details on these parameters and how to use them.
+    See the [`Intl.Collator()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)
+    for details on these parameters and how to use them.
 
 ### Return value
 
@@ -95,11 +95,11 @@ function provided by its {{jsxref("Collator.prototype.compare", "compare")}} pro
 
 ### Sort an array
 
-`localeCompare()` enables case-insensitive sorting for an array.
+`localeCompare()` enables case-insensitive sorting for an array.
 
 ```js
 let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
+items.sort( (a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -155,7 +155,7 @@ console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // a positi
 console.log("2".localeCompare("10")); // 1
 
 // numeric using options:
-console.log("2".localeCompare("10", undefined, {numeric: true})); // -1
+console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
 
 // numeric using locales tag:
 console.log("2".localeCompare("10", "en-u-kn-true")); // -1

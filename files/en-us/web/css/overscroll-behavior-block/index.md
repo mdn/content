@@ -13,7 +13,7 @@ browser-compat: css.properties.overscroll-behavior-block
 ---
 {{CSSRef}}
 
-The **`overscroll-behavior-block`** CSS property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
+The **`overscroll-behavior-block`** CSS property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
 
@@ -27,12 +27,13 @@ overscroll-behavior-block: none;
 overscroll-behavior-block: inherit;
 overscroll-behavior-block: initial;
 overscroll-behavior-block: revert;
+overscroll-behavior-block: revert-layer;
 overscroll-behavior-block: unset;
 ```
 
 ## Syntax
 
-The `overscroll-behavior-block` property is specified as a keyword chosen from the list of values below.
+The `overscroll-behavior-block` property is specified as a keyword chosen from the list of values below.
 
 ### Values
 
@@ -63,11 +64,11 @@ By default, when the inner box is scrolled and a scroll boundary is reached, the
 
 ```html
 <main>
-  <div>
-    <div>
-      <p><code>overscroll-behavior-block</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
-    </div>
-  </div>
+  <div>
+    <div>
+      <p><code>overscroll-behavior-block</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
+    </div>
+  </div>
 </main>
 ```
 
@@ -123,4 +124,4 @@ p {
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#full-demo)

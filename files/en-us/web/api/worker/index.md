@@ -20,7 +20,9 @@ Creating a worker is done by calling the `Worker("path/to/worker/script")` const
 
 Workers may themselves spawn new workers, as long as those workers are hosted at the same [origin](/en-US/docs/Web/Security/Same-origin_policy) as the parent page. (Note: [nested workers are not yet implemented in WebKit](https://bugs.webkit.org/show_bug.cgi?id=22723)).
 
-[Not all interfaces and functions are available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers "Functions and classes available to Web Workers") to scripts inside a `Worker`. Workers may use {{domxref("XMLHttpRequest")}} for network communication, but its `responseXML` and `channel` attributes are always `null`. ([`fetch`](/en-US/docs/Web/API/Fetch_API) is also available, with no such restrictions.)
+[Not all interfaces and functions are available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) to scripts inside a `Worker`. Workers may use {{domxref("XMLHttpRequest")}} for network communication, but its `responseXML` and `channel` attributes are always `null`. ([`fetch`](/en-US/docs/Web/API/Fetch_API) is also available, with no such restrictions.)
+
+{{InheritanceDiagram}}
 
 ## Constructors
 
@@ -30,15 +32,6 @@ Workers may themselves spawn new workers, as long as those workers are hosted at
 ## Properties
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
-
-### Event handlers
-
-- {{domxref("Worker.onerror")}}
-  - : An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type `error` event occurs.
-- {{domxref("Worker.onmessage")}}
-  - : An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type `message` occurs — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.
-- {{domxref("Worker.onmessageerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("messageerror")}} event is raised.
 
 ## Methods
 
@@ -51,18 +44,16 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 
 ## Events
 
+- [`error`](/en-US/docs/Web/API/Worker/error_event)
+  - : Fires when an error occurs in the worker.
 - [`message`](/en-US/docs/Web/API/Worker/message_event)
   - : Fires when the worker's parent receives a message from that worker.
-    Also available via the [`onmessage`](/en-US/docs/Web/API/Worker/onmessage) property.
 - [`messageerror`](/en-US/docs/Web/API/Worker/messageerror_event)
   - : Fires when a `Worker` object receives a message that can't be [deserialized](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-    Also available via the [`onmessageerror`](/en-US/docs/Web/API/Worker/onmessageerror) property.
 - [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)
   - : Fires every time a {{jsxref("Promise")}} rejects, regardless of whether or not there is a handler to catch the rejection.
-    Also available through the [`onrejectionhandled`](/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled) event handler property.
 - [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
   - : Fires when a {{jsxref("Promise")}} rejects with no handler to catch the rejection.
-    Also available using the [`onunhandledrejection`](/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection) event handler property.
 
 ## Example
 
@@ -79,7 +70,7 @@ first.onchange = function() {
 }
 ```
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 ## Specifications
 
@@ -93,7 +84,7 @@ Support varies for different types of workers. See each worker type's page for s
 
 ### Cross-origin worker error behavior
 
-In early versions of the spec, loading a cross-origin worker script threw a `SecurityError`. Nowadays, an {{event("error")}} event is thrown instead.
+In early versions of the spec, loading a cross-origin worker script threw a `SecurityError`. Nowadays, an {{domxref("Worker/error_event", "error")}} event is thrown instead.
 
 ## See also
 

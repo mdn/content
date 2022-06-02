@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream
 slug: Web/API/FileSystemWritableFileStream
+page-type: web-api-interface
 tags:
   - File
   - File System Access API
@@ -10,9 +11,11 @@ tags:
   - write file
 browser-compat: api.FileSystemWritableFileStream
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`FileSystemWritableFileStream`** interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

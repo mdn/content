@@ -14,7 +14,7 @@ browser-compat: api.SVGAnimateColorElement
 
 The **`SVGAnimateColorElement`** interface corresponds to the {{SVGElement("animateColor")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

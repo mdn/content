@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.checkValidity()
 slug: Web/API/HTMLInputElement/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -19,8 +20,12 @@ The **`HTMLInputElement.checkValidity()`** method returns a boolean value which 
 ## Syntax
 
 ```js
-element.checkValidity();
+checkValidity()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -11,7 +11,7 @@ The browser extensions API is still an [emerging standard](https://browserext.gi
 
 Among the various browsers supporting the extensions API, Firefox is the most compliant with the emerging standard, and is, therefore, your best place to start when developing browser extensions.
 
-The differences between browsers’ extensions API implementations fall into four areas: namespace, asynchronous event handling, API coverage, and manifest keys.
+The differences between browsers' extensions API implementations fall into four areas: namespace, asynchronous event handling, API coverage, and manifest keys.
 
 ## Namespace
 
@@ -34,8 +34,8 @@ Firefox is the only major browser that has implemented promises for the extensio
 
 The differences in the extensions API function implementations among the browsers fall into three broad categories:
 
-- Lack of support for an entire function. For example, at the time of writing, Edge doesn’t provide support for the [`privacy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy) function.
-- Variations in the support for features within a function. For example, at the time of writing, Firefox doesn’t support the [`notification`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications) function method [`onButtonClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked), while Firefox is the only browser that supports [`onShown`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown).
+- Lack of support for an entire function. For example, at the time of writing, Edge doesn't provide support for the [`privacy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy) function.
+- Variations in the support for features within a function. For example, at the time of writing, Firefox doesn't support the [`notification`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications) function method [`onButtonClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked), while Firefox is the only browser that supports [`onShown`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown).
 - Proprietary functions, supporting browser-specific features. For example, at the time of writing, containers is a Firefox-specific feature supported by the [`contextualIdentities`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities) function.
 
 ## Manifest keys

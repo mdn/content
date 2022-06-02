@@ -13,17 +13,7 @@ browser-compat: api.PageTransitionEvent.persisted
 
 The **`persisted`** read-only property indicates if a webpage is loading from a cache.
 
-## Syntax
-
-```js
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted) {
-    console.log('Page was loaded from cache.');
-  }
-});
-```
-
-### Value
+## Value
 
 A boolean value.
 

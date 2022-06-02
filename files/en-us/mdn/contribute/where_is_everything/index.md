@@ -11,7 +11,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-MDN is a complex project with lots of moving parts. Contributing to the site is easy to begin with, if you have a bit of GitHub knowledge and are starting out on some simple typo fixes or code snippet improvements. However, when you start making more significant contributions such as adding entire new pages, you'll notice that there are quite a few bits of the content that aren't stored in the page sources and instead come from somewhere else.
+MDN is a complex project with lots of moving parts. Contributing to the site is easy to begin with if you have a bit of GitHub knowledge and are starting out on some simple typo fixes or code snippet improvements. However, when you start making more significant contributions such as adding entirely new pages, you'll notice that there are quite a few bits of the content that aren't stored in the page sources and instead come from somewhere else.
 
 This article acts as a quick guide to finding the different repos you need to edit to update the different parts of MDN content.
 
@@ -19,10 +19,10 @@ This article acts as a quick guide to finding the different repos you need to ed
 
 - **Core content**: <https://github.com/mdn/content>. The most important repo for MDN content — this is where all the core English content of the site is stored, and where you'll make all standard changes to page content.
 - **MDN Platform**: <https://github.com/mdn/yari>. This is where the MDN platform is stored, and where you'll go if you want to make changes to MDN's high level page structure or rendering machinery.
-- **Browser compat data**: <https://github.com/mdn/browser-compat-data>. This is where the data used to generate the browser compatibility tables found on our reference pages is stored (example). Go here to make compat data changes!
-- **Interactive examples**: <https://github.com/mdn/interactive-examples>. This repo stores the rendering code and example code blocks that together produce the nice editable, copyable examples found at the top of many of our reference pages (example). Edit those examples here.
+- **Browser compat data**: <https://github.com/mdn/browser-compat-data>. This is where the data used to generate the browser compatibility tables found on our reference pages is stored ([example](/en-US/docs/Web/HTML/Element/progress#browser_compatibility)). Go here to make compat data changes!
+- **Interactive examples**: <https://github.com/mdn/interactive-examples>. This repo stores the rendering code and example code blocks that together produce the nice editable, copyable examples found at the top of many of our reference pages ([example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)). Edit those examples here.
 - **Translated content**: <https://github.com/mdn/translated-content>. This is where localized content lives. Go here if you want to help translate pages into any of our actively maintained locales.
-- **CSS data**: <https://github.com/mdn/data>. Originally envisaged as a hold-all repo for general purpose MDN data, the data repo now serves the purpose of holding data about CSS features such as formal syntax, inheritance, computed value, animation type, etc. This is used to generate sections on CSS reference pages such as formal definition (example) and formal syntax (example).
+- **CSS data**: <https://github.com/mdn/data>. Originally envisaged as a hold-all repo for general purpose MDN data, the data repo now serves the purpose of holding data about CSS features such as formal syntax, inheritance, computed value, animation type, etc. This is used to generate sections on CSS reference pages such as formal definition ([example](/en-US/docs/Web/CSS/font-variant-caps#formal_definition)) and formal syntax ([example](/en-US/docs/Web/CSS/font-variant-caps#formal_syntax)).
 
 ## Other repos
 

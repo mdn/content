@@ -48,7 +48,6 @@ class Rectangle {}
 
 This occurs because while the class is {{Glossary("Hoisting", "hoisted")}} its values are not initialized.
 
-
 ### Class expressions
 
 A **class expression** is another way to define a class.
@@ -97,13 +96,11 @@ A {{jsxref("SyntaxError")}} will be thrown if the class contains more than one o
 
 A constructor can use the `super` keyword to call the constructor of the super class.
 
-
 ### Static initialization blocks
 
 [Class `static` initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) allow flexible initialization of [class `static` properties](#static_methods_and_properties) including the evaluation of statements during initialization, and granting access to private scope.
 
 Multiple static blocks can be declared, and these can be interleaved with the declaration of static properties and methods (all static items are evaluated in declaration order).
-
 
 ### Prototype methods
 
@@ -137,13 +134,13 @@ See also [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_a
 ```js
 class Polygon {
   constructor(...sides) {
-    this.sides = sides;
+    this.sides = sides;
   }
   // Method
   *getSides() {
     for(const side of this.sides){
       yield side;
-    }
+    }
   }
 }
 
@@ -165,7 +162,7 @@ class Point {
     this.y = y;
   }
 
-  static displayName = "Point";
+  static displayName = "Point";
   static distance(a, b) {
     const dx = a.x - b.x;
     const dy = a.y - b.y;
@@ -210,7 +207,7 @@ let eat = Animal.eat;
 eat(); // undefined
 ```
 
-If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to the initial `this` value, which by default is the {{Glossary("Global_object", "global object")}}.
+If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to the initial `this` value, which by default is the {{Glossary("Global_object", "global object")}}.
 In strict mode, autobinding will not happen; the value of `this` remains as passed.
 
 ```js
@@ -346,7 +343,7 @@ d.speak(); // Mitzie barks.
 // For similar methods, the child's method takes precedence over parent's method
 ```
 
-Note that classes cannot extend regular (non-constructible) objects
+Note that classes cannot extend regular (non-constructible) objects.
 If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:
 
 ```js

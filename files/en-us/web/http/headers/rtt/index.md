@@ -13,7 +13,7 @@ browser-compat: http.headers.rtt
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The **`RTT`** {{Glossary("Client hints","network client hint")}} request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time.
+The **`RTT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time.
 
 <table class="properties">
   <tbody>
@@ -21,7 +21,7 @@ The **`RTT`** {{Glossary("Client hints","network client hint")}} request header 
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -35,7 +35,7 @@ The RTT value is rounded to the nearest 25 milliseconds to prevent fingerprintin
 
 The hint allows a server to choose what information is sent based on the network responsiveness/latency. For example, it might choose to send fewer resources.
 
-> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses)). Even if {{HTTPHeader("RTT")}} is used to configure what resources are sent consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncachable.
+> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses)). Even if {{HTTPHeader("RTT")}} is used to configure what resources are sent consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncacheable.
 
 ## Syntax
 

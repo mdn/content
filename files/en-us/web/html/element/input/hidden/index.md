@@ -10,7 +10,7 @@ tags:
   - Input Types
   - Reference
   - hidden
-browser-compat: html.elements.input.input-hidden
+browser-compat: html.elements.input.type_hidden
 ---
 
 {{HTMLRef}}
@@ -20,9 +20,9 @@ browser-compat: html.elements.input.input-hidden
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the value of the hidden
+        A string representing the value of the hidden
         data you want to pass back to the server.
       </td>
     </tr>
@@ -39,6 +39,10 @@ browser-compat: html.elements.input.input-hidden
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>None.</td>
     </tr>
@@ -49,7 +53,7 @@ browser-compat: html.elements.input.input-hidden
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute holds a {{domxref("DOMString")}} that contains the hidden data you want to include when the form is submitted to the server. This specifically can't be edited or seen by the user via the user interface, although you could edit the value via browser developer tools.
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute holds a string that contains the hidden data you want to include when the form is submitted to the server. This specifically can't be edited or seen by the user via the user interface, although you could edit the value via browser developer tools.
 
 > **Warning:** While the value isn't displayed to the user in the page's content, it is visible—and can be edited—using any browser's developer tools or "View Source" functionality. Do not rely on `hidden` inputs as a form of security.
 
@@ -69,13 +73,13 @@ As mentioned above, hidden inputs can be used anywhere that you want to include 
 
 One of the most common uses for hidden inputs is to keep track of what database record needs to be updated when an edit form is submitted. A typical workflow looks like this:
 
-1.  User decides to edit some content they have control over, such as a blog post, or a product entry. They get started by pressing the edit button.
-2.  The content to be edited is taken from the database and loaded into an HTML form to allow the user to make changes.
-3.  After editing, the user submits the form, and the updated data is sent back to the server to be updated in the database.
+1. User decides to edit some content they have control over, such as a blog post, or a product entry. They get started by pressing the edit button.
+2. The content to be edited is taken from the database and loaded into an HTML form to allow the user to make changes.
+3. After editing, the user submits the form, and the updated data is sent back to the server to be updated in the database.
 
 The idea here is that during step 2, the ID of the record being updated is kept in a hidden input. When the form is submitted in step 3, the ID is automatically sent back to the server with the record content. The ID lets the site's server-side component know exactly which record needs to be updated with the submitted data.
 
-You can see a full example of what this might look like in the {{anch("Examples")}} section below.
+You can see a full example of what this might look like in the [Examples](#examples) section below.
 
 ### Improving website security
 
@@ -91,7 +95,7 @@ Hidden inputs don't participate in constraint validation; they have no real valu
 
 ## Examples
 
-Let's look at how we might implement a simple version of the edit form we described earlier (see {{anch("Tracking edited content")}}), using a hidden input to remember the ID of the record being edited.
+Let's look at how we might implement a simple version of the edit form we described earlier (see [Tracking edited content](#tracking_edited_content)), using a hidden input to remember the ID of the record being edited.
 
 The edit form's HTML might look a little bit like this:
 
@@ -155,7 +159,7 @@ The output looks like this:
 
 {{ EmbedLiveSample('Examples', '100%', 200) }}
 
-> **Note:** You can also find the example on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
+> **Note:** You can also find the example on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
 
 When submitted, the form data sent to the server will look something like this:
 

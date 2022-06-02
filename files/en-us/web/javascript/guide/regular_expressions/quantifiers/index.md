@@ -17,7 +17,7 @@ Quantifiers indicate numbers of characters or expressions to match.
 
 ## Types
 
-> **Note:** In the following, *item* refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+> **Note:** In the following, *item* refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
 
 <table class="standard-table">
   <thead>
@@ -190,13 +190,13 @@ console.table(americanText.match(regexpEnding));
 ### Greedy versus non-greedy
 
 ```js
-var text = "I must be getting somewhere near the centre of the earth.";
+var text = "I must be getting somewhere near the center of the earth.";
 var greedyRegexp = /[\w ]+/;
 // [\w ]      a letter of the latin alphabet or a whitespace
 //      +     one or several times
 
 console.log(text.match(greedyRegexp)[0]);
-// "I must be getting somewhere near the centre of the earth"
+// "I must be getting somewhere near the center of the earth"
 // almost all of the text matches (leaves out the dot character)
 
 var nonGreedyRegexp = /[\w ]+?/; // Notice the question mark

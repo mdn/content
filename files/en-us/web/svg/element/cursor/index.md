@@ -25,17 +25,17 @@ The PNG format is recommended because it supports the ability to define a transp
 
 ### Global attributes
 
-*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
+- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("x")}}
-*   {{SVGAttr("y")}}
-*   {{SVGAttr("xlink:href")}}
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("xlink:href")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{DOMxRef("SVGCursorElement")}} interface.
 

@@ -13,7 +13,7 @@ The **`stdDeviation`** attribute defines the standard deviation for the blur ope
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feGaussianBlur")}}
 
 ## Example
 
@@ -68,38 +68,14 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number-optional-number>`
-    *   : If two numbers are provided, the first number represents a standard deviation value along the x-axis. The second value represents a standard deviation along the y-axis. If one number is provided, then that value is used for both X and Y.
+- `<number-optional-number>`
+  - : If two numbers are provided, the first number represents a standard deviation value along the x-axis. The second value represents a standard deviation along the y-axis. If one number is provided, then that value is used for both X and Y.
 
-        A negative value is forbidden. A value of zero disables the effect of the given filter primitive (i.e., the result is the filter input image). If `stdDeviation` is 0 in only one of X or Y, then the effect is that the blur is only applied in the direction that has a non-zero value.
+    A negative value is forbidden. A value of zero disables the effect of the given filter primitive (i.e., the result is the filter input image). If `stdDeviation` is 0 in only one of X or Y, then the effect is that the blur is only applied in the direction that has a non-zero value.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fegaussianblur-stddeviation", "stdDeviation")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feGaussianBlurStdDeviationAttribute", "stdDeviation")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

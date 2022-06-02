@@ -28,18 +28,12 @@ by the statistics was received at the corresponding endpoint.
 The time is given in milliseconds elapsed since the UNIX epoch (the first moment of
 January 1, 1970, UTC).
 
-## Syntax
-
-```js
-var timestamp = RTCStats.timestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the activity
 described by the statistics in this object was recorded, in milliseconds elapsed since
 the beginning of January 1, 1970, UTC. This should be accurate to within a few
-milliseconds but may not be entirely pricise, either because of hardware or operating
+milliseconds but may not be entirely precise, either because of hardware or operating
 system limitations or because of fingerprinting protection in the form of reduced clock
 precision or accuracy.
 

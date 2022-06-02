@@ -13,7 +13,7 @@ browser-compat: api.SVGAnimateTransformElement
 
 The `SVGAnimateTransformElement` interface corresponds to the {{SVGElement("animateTransform")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

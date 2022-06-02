@@ -27,8 +27,10 @@ cannot be made and this error response is sent back.
 
 ## Examples
 
-    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-    ETag: W/"0815"
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+ETag: W/"0815"
+```
 
 ### Avoiding mid-air collisions
 
@@ -38,13 +40,17 @@ can detect mid-air edit collisions.
 For example, when editing MDN, the current wiki content is hashed and put into an
 `Etag` in the response:
 
-    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 When saving changes to a wiki page (posting data), the {{HTTPMethod("POST")}} request
 will contain the {{HTTPHeader("If-Match")}} header containing the `ETag`
 values to check freshness against.
 
-    If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 If the hashes don't match, it means that the document has been edited in-between and a
 {{HTTPStatus("412")}} `Precondition Failed` error is thrown.

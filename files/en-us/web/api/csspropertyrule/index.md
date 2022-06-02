@@ -1,6 +1,7 @@
 ---
 title: CSSPropertyRule
 slug: Web/API/CSSPropertyRule
+page-type: web-api-interface
 tags:
   - API
   - CSS

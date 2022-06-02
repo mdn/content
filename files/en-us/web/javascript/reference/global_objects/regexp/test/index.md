@@ -16,6 +16,13 @@ The **`test()`** method executes a search for a match between a
 regular expression and a specified string. Returns `true` or
 `false`.
 
+JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
+the {{jsxref("RegExp.global", "global")}} or {{jsxref("RegExp.sticky", "sticky")}} flags
+set (e.g., `/foo/g` or `/foo/y`). They store a
+{{jsxref("RegExp.lastIndex", "lastIndex")}} from the previous match. Using this
+internally, `test()` can be used to iterate over multiple matches in a string
+of text (with capture groups).
+
 {{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
 
 ## Syntax
@@ -79,10 +86,9 @@ function testInput(re, str) {
 
 ### Using test() on a regex with the "global" flag
 
-When a regex has the [global
-flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2) set, `test()` will advance the {{jsxref("RegExp.lastIndex",
-  "lastIndex")}} of the regex. ({{jsxref("RegExp.prototype.exec()")}} also advances the
-`lastIndex` property.)
+When a regex has the [global flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2) set,
+`test()` will advance the {{jsxref("RegExp.lastIndex", "lastIndex")}} of the regex.
+({{jsxref("RegExp.prototype.exec()")}} also advances the `lastIndex` property.)
 
 Further calls to `test(str)` will resume searching
 `str` starting from `lastIndex`. The
@@ -126,8 +132,7 @@ regex.test('foobar')  //false
 
 ## See also
 
-- [Regular
-  Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript
-  Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the
+  [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype")}}

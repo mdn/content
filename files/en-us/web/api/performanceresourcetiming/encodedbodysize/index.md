@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.encodedBodySize
 slug: Web/API/PerformanceResourceTiming/encodedBodySize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,7 +11,7 @@ browser-compat: api.PerformanceResourceTiming.encodedBodySize
 ---
 {{APIRef("Resource Timing API")}}
 
-The **`encodedBodySize`** read-only property represents the
+The **`encodedBodySize`** read-only property represents the
 size (in octets) received from the fetch (HTTP or cache), of the _payload body_,
 before removing any applied content-codings.
 
@@ -19,18 +20,12 @@ before removing any applied content-codings.
 If the resource is retrieved from an application cache or a local resource, it must
 return the size of the payload body before removing any applied content-codings.
 
-## Syntax
-
-```js
-resource.encodedBodySize;
-```
-
-### Return value
+## Value
 
 A `number` representing the size (in octets) received from the fetch (HTTP
 or cache), of the _payload body_, before removing any applied content-codings.
 
-## Example
+## Examples
 
 The following example, the value of the size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.

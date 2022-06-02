@@ -1,6 +1,7 @@
 ---
 title: Document.currentScript
 slug: Web/API/Document/currentScript
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -17,13 +18,11 @@ It's important to note that this will not reference the {{HTMLElement("script")}
 element if the code in the script is being called as a callback or event handler; it
 will only reference the element while it's initially being processed.
 
-## Syntax
+## Value
 
-```js
-var curScriptElement = document.currentScript;
-```
+A {{HTMLElement("script")}} or null.
 
-## Example
+## Examples
 
 This example checks to see if the script is being executed asynchronously:
 
@@ -49,5 +48,5 @@ if (document.currentScript.async) {
 
 - [import.meta](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
 - {{HTMLElement("script")}}
-- {{DOMxRef("document.onafterscriptexecute")}}
-- {{DOMxRef("document.onbeforescriptexecute")}}
+- {{DOMxRef("document.afterscriptexecute_event")}}
+- {{DOMxRef("document.beforescriptexecute_event")}}

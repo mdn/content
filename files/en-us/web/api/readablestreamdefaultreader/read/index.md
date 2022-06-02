@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader.read()
 slug: Web/API/ReadableStreamDefaultReader/read
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,7 +20,7 @@ to the next chunk in the stream's internal queue.
 ## Syntax
 
 ```js
-var promise = readableStreamDefaultReader.read();
+read()
 ```
 
 ### Parameters
@@ -39,7 +40,7 @@ the stream. The different possibilities are as follows:
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The source object is not a `ReadableStreamDefaultReader`, or the stream
     has no owner.
 
@@ -50,7 +51,7 @@ the stream. The different possibilities are as follows:
 This example shows the basic API usage, but doesn't try to deal with complications like
 stream chunks not ending on line boundaries for example.
 
-In this example `stream` is a previously-created custom
+In this example `stream` is a previously-created custom
 `ReadableStream`. It is read using a
 {{domxref("ReadableStreamDefaultReader")}} created using `getReader()`. (see
 our [Simple

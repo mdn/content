@@ -1,6 +1,7 @@
 ---
 title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -12,14 +13,14 @@ browser-compat: api.HTMLHeadElement
 
 The **`HTMLHeadElement`** interface contains the descriptive information, or metadata, for a document. This object inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the URIs of one or more metadata profiles (white space separated).
+  - : A string representing the URIs of one or more metadata profiles (white space separated).
 
 ## Methods
 

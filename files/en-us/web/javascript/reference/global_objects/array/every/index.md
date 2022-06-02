@@ -41,13 +41,15 @@ every(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : A function to test for each element, taking three arguments:
+  - : A function to test for each element.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index` {{Optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array` {{Optional_inline}}
+    - `array`
       - : The array `every` was called upon.
 
 - `thisArg` {{Optional_inline}}
@@ -82,8 +84,8 @@ If a `thisArg` parameter is provided to `every`, it
 will be used as callback's `this` value. Otherwise, the value
 `undefined` will be used as its `this` value. The
 `this` value ultimately observable by `callback` is
-determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `every` does not mutate the array on which it is called.
 
@@ -96,88 +98,8 @@ the time `every` visits them. Elements that are deleted are not visited.
 
 `every` acts like the "for all" quantifier in mathematics. In particular,
 for an empty array, it returns `true`. (It is [vacuously true](https://en.wikipedia.org/wiki/Vacuous_truth) that all
-elements of the [empty
-set](https://en.wikipedia.org/wiki/Empty_set#Properties) satisfy any given condition.)
-
-## Polyfill
-
-`every` was added to the ECMA-262 standard in the 5th edition,
-and it may not be present in other implementations of the standard. You can work around
-this by inserting the following code at the beginning of your scripts, allowing use of
-`every` in implementations which do not natively support it.
-
-This algorithm is exactly the one specified in ECMA-262, 5th edition,
-assuming `Object` and `TypeError` have their original values, and
-that `callbackfn.call` evaluates to the original value of
-{{jsxref("Function.prototype.call")}}.
-
-```js
-if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
-    var T, k;
-
-    if (this == null) {
-      throw new TypeError('this is null or not defined');
-    }
-
-    // 1. Let O be the result of calling ToObject passing the this
-    //    value as the argument.
-    var O = Object(this);
-
-    // 2. Let lenValue be the result of calling the Get internal method
-    //    of O with the argument "length".
-    // 3. Let len be ToUint32(lenValue).
-    var len = O.length >>> 0;
-
-    // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-    if (typeof callbackfn !== 'function' && Object.prototype.toString.call(callbackfn) !== '[object Function]') {
-      throw new TypeError();
-    }
-
-    // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length > 1) {
-      T = thisArg;
-    }
-
-    // 6. Let k be 0.
-    k = 0;
-
-    // 7. Repeat, while k < len
-    while (k < len) {
-
-      var kValue;
-
-      // a. Let Pk be ToString(k).
-      //   This is implicit for LHS operands of the in operator
-      // b. Let kPresent be the result of calling the HasProperty internal
-      //    method of O with argument Pk.
-      //   This step can be combined with c
-      // c. If kPresent is true, then
-      if (k in O) {
-        var testResult;
-        // i. Let kValue be the result of calling the Get internal method
-        //    of O with argument Pk.
-        kValue = O[k];
-
-        // ii. Let testResult be the result of calling the Call internal method
-        // of callbackfn with T as the this value if T is not undefined
-        // else is the result of calling callbackfn
-        // and argument list containing kValue, k, and O.
-        if(T) testResult = callbackfn.call(T, kValue, k, O);
-        else testResult = callbackfn(kValue,k,O)
-
-        // iii. If ToBoolean(testResult) is false, return false.
-        if (!testResult) {
-          return false;
-        }
-      }
-      k++;
-    }
-    return true;
-  };
-}
-```
+elements of the [empty set](https://en.wikipedia.org/wiki/Empty_set#Properties)
+satisfy any given condition.)
 
 ## Examples
 
@@ -198,13 +120,7 @@ function isBigEnough(element, index, array) {
 The following example tests if all the elements of an array are present in another array.
 
 ```js
-function isSubset(array1, array2) {
-  // returns true if array2 is a subset of array1
-
-  return array2.every(function (element) {
-    return array1.includes(element);
-  });
-}
+const isSubset = (array1, array2) => array2.every(element => array1.includes(element));
 
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
@@ -212,8 +128,7 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 
 ### Using arrow functions
 
-[Arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
 [12, 5, 8, 130, 44].every(x => x >= 10);   // false
@@ -286,7 +201,7 @@ arr.every( (elem, index, arr) => {
 
 ## See also
 
-- A polyfill of `Array.prototype.every` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.find()")}}

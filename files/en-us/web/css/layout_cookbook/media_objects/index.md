@@ -33,7 +33,7 @@ Media Object pattern needs some or all of the following characteristics:
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects--download.html)
 
 ## Choices made
 
@@ -55,11 +55,11 @@ There are a number of possible fallbacks for this pattern, depending on the brow
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects-fallback--download.html)
 
-Once floated elements become grid items the float no longer applies so you don’t need to do anything special to clear the float.
+Once floated elements become grid items the float no longer applies so you don't need to do anything special to clear the float.
 
-What you will need to do is remove any margins applied to the item, and any widths which we don’t need in a grid context (we have the {{cssxref("gap")}} property to control it in grids, and the track takes control of the sizing).
+What you will need to do is remove any margins applied to the item, and any widths which we don't need in a grid context (we have the {{cssxref("gap")}} property to control it in grids, and the track takes control of the sizing).
 
 ## Relevant resources on MDN
 
@@ -73,10 +73,10 @@ What you will need to do is remove any margins applied to the item, and any widt
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### grid-template-areas
+### grid-template-areas
 
 {{Compat("css.properties.grid-template-areas")}}
 
-#### float
+### float
 
 {{Compat("css.properties.float")}}

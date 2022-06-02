@@ -24,13 +24,13 @@ In Chrome a policy with a name of "default" creates a special policy that will b
 ## Syntax
 
 ```js
-var policy = TrustedTypePolicyFactory.createPolicy(policyName,policyOptions);
+createPolicy(policyName, policyOptions)
 ```
 
 ### Parameters
 
 - `policyName`
-  - : A {{domxref("DOMString")}} with the name of the policy.
+  - : A string with the name of the policy.
 - `policyOptions`{{optional_inline}}
 
   - : User-defined functions for converting strings into trusted values.

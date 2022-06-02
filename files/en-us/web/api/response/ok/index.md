@@ -1,6 +1,7 @@
 ---
 title: Response.ok
 slug: Web/API/Response/ok
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -18,7 +19,7 @@ The **`ok`** read-only property of the {{domxref("Response")}} interface contain
 
 A boolean value.
 
-## Example
+## Examples
 
 In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
 we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.

@@ -15,16 +15,18 @@ The **`WorkerGlobalScope`** interface of the [Web Workers API](/en-US/docs/Web/A
 
 This interface is usually specialized by each worker type: {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API). The `self` property returns the specialized scope for each context.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
-_This interface inherits properties from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
 ### Standard properties
 
 - {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}
-  - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
+  - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
 - {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
@@ -49,27 +51,21 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 ## Events
 
 - `error`
-  - : Fired when an error occurred.
-    Also available via the {{domxref("WorkerGlobalScope.onerror")}} property.
+  - : Fires when an error occurred.
 - `offline`
-  - : Fired when the browser has lost access to the network and the value of `navigator.onLine` switched to `false`.
-    Also available via the {{domxref("WorkerGlobalScope.onoffline")}} property.
+  - : Fires when the browser has lost access to the network and the value of `navigator.onLine` switched to `false`.
 - `online`
-  - : Fired when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
-    Also available via the {{domxref("WorkerGlobalScope.ononline")}} property.
+  - : Fires when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
 - [`languagechange`](/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event)
-  - : Fired at the global/worker scope object when the user's preferred languages change.
-    Also available via the {{domxref("WorkerGlobalScope.onlanguagechange")}} property.
+  - : Fires at the global/worker scope object when the user's preferred languages change.
 - `rejectionhandled` {{non-standard_inline}}
-  - : An event handler for handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") rejection events.
-    Also available via the {{domxref("WorkerGlobalScope.onrejectionhandled")}} property.
+  - : Fires on handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
 - `unhandledrejection` {{non-standard_inline}}
-  - : An event handler for unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") rejection events.
-    Also available via the {{domxref("WorkerGlobalScope.onunhandledrejection")}} property.
+  - : Fires on unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
 
 ## Methods
 
-_This interface inherits methods from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
+_This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ### Standard methods
 
@@ -101,7 +97,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
-  
+
 ## Example
 
 You won't access `WorkerGlobalScope` directly in your code; however, its properties and methods are inherited by more specific global scopes such as {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. For example, you could import another script into the worker and print out the contents of the worker scope's `navigator` object using the following two lines:
@@ -123,6 +119,6 @@ console.log(navigator);
 
 ## See also
 
-- Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, , {{domxref("ServiceWorkerGlobalScope")}}
+- Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, {{domxref("ServiceWorkerGlobalScope")}}
 - Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}.
 - [Using web workers.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -24,7 +24,7 @@ You need to take the following three steps to create your API sidebar:
 
 1. Create your API reference pages.
 2. Add an entry for your particular API into the [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) file.
-3. Use the [`APIRef`](https://github.com/mdn/yari/blob/master/kumascript/macros/APIRef.ejs) macro to insert the sidebar into each page you want to display it on.
+3. Use the [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) macro to insert the sidebar into each page you want to display it on.
 
 Let's run through each of these steps in turn.
 The example we'll refer to in this article is the [Fetch API](/en-US/docs/Web/API/Fetch_API).
@@ -70,7 +70,7 @@ As you can see, we've used "Fetch API" for the name, and inside the object value
 
 This section lists all the sub-members you could include in a `GroupData` entry.
 
-Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  `https://developer.mozilla.org/<language-code>/docs/Web/API` — to create the final URL for the displayed link.
+Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  `https://developer.mozilla.org/<language-code>/docs/Web/API` — to create the final URL for the displayed link.
 So for example, "Response" will result in a link being created like so:
 
 ```html
@@ -127,9 +127,9 @@ Some sub-members are automatically discovered from child pages, based on page ta
 Pages under the top-level API are crawled each time the sidebar is rendered, and entries are automatically created for methods ("Method" tag), properties ("Property" tag), and constructors ("Constructor" tag).
 
 Sub-members are automatically decorated with warning icons based on tags as well.
-Decorations are added for experimental ("Experimental" tag), non-standard ("Non Standard" or "Non-standard" tag), or deprecated ("Deprecated" tag) sub-members.
+Decorations are added for experimental ("Experimental" tag), non-standard ("Non Standard" or "Non-standard" tag), or deprecated ("Deprecated" tag) sub-members.
 
-Further information about tag-based processing is available [in the APIRef source](https://github.com/mdn/yari/blob/master/kumascript/macros/APIRef.ejs).
+Further information about tag-based processing is available [in the APIRef source](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs).
 
 ## Inserting the sidebar
 

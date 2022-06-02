@@ -1,6 +1,7 @@
 ---
 title: NDEFReader()
 slug: Web/API/NDEFReader/NDEFReader
+page-type: web-api-constructor
 tags:
   - NDEF
   - Reference
@@ -19,7 +20,7 @@ field.
 ## Syntax
 
 ```js
-let reader = new NDEFReader();
+new NDEFReader();
 ```
 
 ### Parameters

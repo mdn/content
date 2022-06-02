@@ -11,13 +11,13 @@ tags:
 
 ## Advantages
 
-1.  Games built with HTML5 work on smartphones, tablets, PCs and Smart TVs.
-2.  Advertise and promote your game all over the Web as well as other media.
-3.  Payments. Charge what you want and use whatever payment processing service you like.
-4.  Update your game whenever you want.
-5.  Collect your own analytics!
-6.  Connect with your customers more closely,
-7.  Players can play the game anywhere, anytime.
+1. Games built with HTML5 work on smartphones, tablets, PCs and Smart TVs.
+2. Advertise and promote your game all over the Web as well as other media.
+3. Payments. Charge what you want and use whatever payment processing service you like.
+4. Update your game whenever you want.
+5. Collect your own analytics!
+6. Connect with your customers more closely,
+7. Players can play the game anywhere, anytime.
 
 ## Web Technologies
 
@@ -58,7 +58,7 @@ tags:
       <td><strong>Language</strong></td>
       <td>
         <a href="/en-US/docs/Web/JavaScript">JavaScript</a> (or C/C++ using
-        <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> to
+        <a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten</a> to
         compile to JavaScript)
       </td>
     </tr>
@@ -99,7 +99,7 @@ tags:
   - : Store user data on their own computer or device.
 - [JavaScript](/en-US/docs/Web/JavaScript)
   - : Fast web programming language to write the code for your game.
-    To easily port your existing games [Emscripten](https://github.com/kripken/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/)
+    To easily port your existing games [Emscripten](https://github.com/emscripten-core/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/)
 - [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
   - : Lock the mouse or other pointing device within your game's interface.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
@@ -109,7 +109,7 @@ tags:
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
   - : Control the playback, synthesis, and manipulation of audio in real time.
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
-  - : Create high-performance, hardware-accelerated 3D (and 2D) graphics. [OpenGL ES](https://www.khronos.org/opengles/) 2.0.
+  - : Create high-performance, hardware-accelerated 3D (and 2D) graphics. [OpenGL ES](https://www.khronos.org/opengles/) 2.0.
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
   - : Real-Time Communications to control audio and video data, including teleconferencing and transmitting other application data back and forth between two users like chat.
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)

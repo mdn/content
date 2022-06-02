@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.state
 slug: Web/API/AudioDecoder/state
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -39,5 +40,3 @@ console.log(AudioDecoder.state);
 ## Browser compatibility
 
 {{Compat}}
-
-

@@ -12,7 +12,7 @@ tags:
 The JavaScript exception "radix must be an integer at least 2 and no greater than 36"
 occurs when the optional `radix` parameter of the
 {{jsxref("Number.prototype.toString()")}} or
-the {{jsxref("BigInt.prototype.toString()")}} method was specified and is not between 2
+the {{jsxref("BigInt.prototype.toString()")}} method was specified and is not between 2
 and 36.
 
 ## Message
@@ -31,7 +31,7 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 
 The optional `radix` parameter of the
 {{jsxref("Number.prototype.toString()")}} or
-the {{jsxref("BigInt.prototype.toString()")}} method was specified. Its value must be an
+the {{jsxref("BigInt.prototype.toString()")}} method was specified. Its value must be an
 integer (a number) between 2 and 36, specifying the base of the number system to be used
 for representing numeric values. For example, the decimal (base 10) number 169 is
 represented in hexadecimal (base 16) as A9.

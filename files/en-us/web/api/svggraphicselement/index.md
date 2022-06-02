@@ -13,7 +13,7 @@ browser-compat: api.SVGGraphicsElement
 
 The **`SVGGraphicsElement`** interface represents SVG elements whose primary purpose is to directly render graphics into a group.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -39,7 +39,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGElement")}}
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("WindowEventHandlers")}}.
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}}.
 
 - [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event)
   - : Fired when the user initiates a copy action through the browser's user interface.

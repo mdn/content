@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.displaySurface
 slug: Web/API/MediaTrackSettings/displaySurface
+page-type: web-api-instance-property
 tags:
   - API
   - Capture
@@ -27,20 +28,14 @@ The {{domxref("MediaTrackSettings")}} dictionary's
 **`displaySurface`** property indicates the type of display
 surface being captured.
 
-## Syntax
-
-```js
-displaySurface = mediaTrackSettings.displaySurface;
-```
-
-### Value
+## Value
 
 The value of `displaySurface` is a string that comes from the
 `DisplayCaptureSurfaceType` enumerated type, and is one of the following:
 
 - `application`
   - : The stream's video track contains all of the windows belonging to the application
-    chosen by the user. The windows are aggragated into a single video track, with any
+    chosen by the user. The windows are aggregated into a single video track, with any
     empty space filled with a backdrop; that backdrop is selected by the {{Glossary("user
     agent")}}.
 - `browser`

@@ -29,11 +29,11 @@ This guide introduces the video codecs you're most likely to encounter or consid
 Due to the sheer size of uncompressed video data, it's necessary to compress it significantly in order to store it, let alone transmit it over a network. Imagine the amount of data needed to store uncompressed video:
 
 - A single frame of high definition (1920x1080) video in full color (4 bytes per pixel) is 8,294,400 bytes.
-- At a typical 30 frames per second, each second of HD video would occupy 248,832,000 bytes (\~249 MB).
-- A minute of HD video would need 14.93 GB of storage.
-- A fairly typical 30 minute video conference would need about 447.9 GB of storage, and a 2-hour movie would take _almost 1.79 **TB** (that is, 1790 GB)_.
+- At a typical 30 frames per second, each second of HD video would occupy 248,832,000 bytes (\~249 MB).
+- A minute of HD video would need 14.93 GB of storage.
+- A fairly typical 30 minute video conference would need about 447.9 GB of storage, and a 2-hour movie would take _almost 1.79 **TB** (that is, 1790 GB)_.
 
-Not only is the required storage space enormous, but the network bandwidth needed to transmit an uncompressed video like that would be enormous, at 249 MB/sec—not including audio and overhead. This is where video codecs come in. Just as audio codecs do for the sound data, video codecs compress the video data and encode it into a format that can later be decoded and played back or edited.
+Not only is the required storage space enormous, but the network bandwidth needed to transmit an uncompressed video like that would be enormous, at 249 MB/sec—not including audio and overhead. This is where video codecs come in. Just as audio codecs do for the sound data, video codecs compress the video data and encode it into a format that can later be decoded and played back or edited.
 
 Most video codecs are **lossy**, in that the decoded video does not precisely match the source. Some details may be lost; the amount of loss depends on the codec and how it's configured, but as a general rule, the more compression you achieve, the more loss of detail and fidelity will occur. Some lossless codecs do exist, but they are typically used for archival and storage for local playback rather than for use on a network.
 
@@ -54,7 +54,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#av1">AV1</a></th>
       <td>AOMedia Video 1</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
@@ -63,7 +63,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <td>Advanced Video Coding</td>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -74,14 +74,14 @@ The following video codecs are those which are most commonly used on the web. Fo
     <tr>
       <th scope="row"><a href="#hevc_h.265">HEVC (H.265)</a></th>
       <td>High Efficiency Video Coding</td>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a></td>
+      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#mp4v-es">MP4V-ES</a></th>
       <td>MPEG-4 Video Elemental Stream</td>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -98,7 +98,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#mpeg-2_part_2_video">MPEG-2</a></th>
       <td>MPEG-2 Part 2 Visual</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
@@ -123,7 +123,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#vp9">VP9</a></th>
       <td>Video Processor 9</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
@@ -621,7 +621,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
           >ISOBMFF</a
         >, MPEG-TS,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
@@ -795,7 +795,7 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -923,7 +923,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
@@ -964,7 +964,7 @@ The **[High Efficiency Video Coding](http://hevc.info/)** (**HEVC**) codec is de
 
 For example, each coding tree unit (CTU)—similar to the macroblock used in previous codecs—consists of a tree of luma values for each sample as well as a tree of chroma values for each chroma sample used in the same coding tree unit, as well as any required syntax elements. This structure supports easy processing by multiple cores.
 
-An interesting feature of HEVC is that the main profile supports only 8 bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.
+An interesting feature of HEVC is that the main profile supports only 8-bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.
 
 HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by MPEG LA](https://www.mpegla.com/programs/hevc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or web site!
 
@@ -1098,7 +1098,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
     </tr>
     <tr>
       <th scope="row">Container support</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a></td>
+      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row">
@@ -1219,7 +1219,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -1502,7 +1502,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
         MPEG-TS (MPEG Transport Stream),
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
@@ -1552,7 +1552,7 @@ Theora was originally based upon the VC3 codec by On2 Technologies. The codec an
 
 One drawback to Theora is that it only supports 8 bits per color component, with no option to use 10 or more in order to avoid color banding. That said, 8 bits per component is still the most commonly-used color format in use today, so this is only a minor inconvenience in most cases. Also, Theora can only be used in an Ogg container. The biggest drawback of all, however, is that it is not supported by Safari, leaving Theora unavailable not only on macOS but on all those millions and millions of iPhones and iPads.
 
-The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/) offers additional details about Theora as well as the Ogg container format it is used within.
+The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers additional details about Theora as well as the Ogg container format it is used within.
 
 <table class="standard-table">
   <tbody>
@@ -1930,7 +1930,7 @@ This is especially true if you wish to use an open codec rather than a proprieta
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
@@ -1967,21 +1967,21 @@ The decision as to which codec or codecs to use begins with a series of question
 - Are there any browsers you're willing to sacrifice compatibility with?
 - How old is the oldest version of web browser you need to support? For example, do you need to work on every browser shipped in the past five years, or just the past one year?
 
-In the sections below, we offer recommended codec selections for specific use cases. For each use case, you'll find up to two reccommendations. If the codec which is considered best for the use case is proprietary or may require royalty payments, then two options are provided: first, an open and royalty-free option, followed by the proprietary one.
+In the sections below, we offer recommended codec selections for specific use cases. For each use case, you'll find up to two recommendations. If the codec which is considered best for the use case is proprietary or may require royalty payments, then two options are provided: first, an open and royalty-free option, followed by the proprietary one.
 
-If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs.The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, preformance, and/or size.
+If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs.The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
 
 ### Recommendations for everyday videos
 
 First, let's look at the best options for videos presented on a typical web site such as a blog, informational site, small business web site where videos are used to demonstrate products (but not where the videos themselves are a product), and so forth.
 
-1.  A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
+1. A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
 
     ```js
     <video controls src="filename.webm"></video>
     ```
 
-2.  An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
+2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
     ```html
     <video controls>
@@ -1998,13 +1998,13 @@ First, let's look at the best options for videos presented on a typical web site
 
 If your mission is to present video at the highest possible quality, you will probably benefit from offering as many formats as possible, as the codecs capable of the best quality tend also to be the newest, and thus the most likely to have gaps in browser compatibility.
 
-1.  A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
+1. A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
 
     ```js
     <video controls src="filename.webm"></video>
     ```
 
-2.  An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
+2. An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
 
     ```html
     <video controls>
@@ -2051,17 +2051,17 @@ This example creates a `MediaRecorder` configured to record [AV1](#av1) video us
 
 Breaking down the value of the `codecs` parameter into its dot-delineated properties, we see the following:
 
-| Value  | Desccription                                                                                                                                                                                                                                                                             |
+| Value  | Description                                                                                                                                                                                                                                                                             |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `av01` | The four-character code (4CC) designation identifying the [AV1](#av1) codec.                                                                                                                                                                                                             |
 | `2`    | The profile. A value of 2 indicates the Professional profile. A value of 1 is the High profile, while a value of 0 would specify the Main profile.                                                                                                                                       |
 | `19H`  | The level and tier. This value comes from the table in section [A.3](https://aomediacodec.github.io/av1-spec/#levels) of the AV1 specification, and indicates the high tier of Level 6.3.                                                                                                |
 | `12`   | The color depth. This indicates 12 bits per component. Other possible values are 8 and 10, but 12 is the highest-accuracy color representation available in AV1.                                                                                                                         |
-| `0`    | The monochrome mode flag. If 1, then no chroma planes would be recorded, and all data should be structly luma data, resulting in a greyscale image. We've specified 0 because we want color.                                                                                             |
+| `0`    | The monochrome mode flag. If 1, then no chroma planes would be recorded, and all data should be strictly luma data, resulting in a greyscale image. We've specified 0 because we want color.                                                                                             |
 | `000`  | The chroma subsampling mode, taken from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification. A value of 000, combined with the monochrome mode value 0, indicates that we want 4:4:4 chroma subsampling, or no loss of color data. |
 | `09`   | The color primaries to use. This value comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification; 9 indicates that we want to use BT.2020 color, which is used for HDR.                                                       |
 | `16`   | The transfer characteristics to use. This comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) as well; 16 indicates that we want to use the characteristics for BT.2100 PQ color.                                                                |
-| `09`   | The matrix coefficents to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
+| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
 | `1`    | The video "full range" flag. A value of 1 indicates that we want the full color range to be used.                                                                                                                                                                                        |
 
 The documentation for your codec choices will probably offer information you'll use when constructing your `codecs` parameter.
@@ -2077,6 +2077,6 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(3839)}}: MIME Type Registrations for 3GPP Multimedia Files
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
-- [Video codecs in Opera](https://dev.opera.com/articles/view/introduction-html5-video/#codecs)
-- [Video](https://msdn.microsoft.com/en-us/library/ff975073%28v=VS.85%29.aspx) and [audio](https://msdn.microsoft.com/en-us/library/ff975061%28v=vs.85%29.aspx) codecs in Internet Explorer
-- [Video and audio codecs in Chrome](https://www.chromium.org/audio-video)
+- [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
+- [Video](/en-US/docs/Web/API/HTMLVideoElement) and [audio](/en-US/docs/Web/HTML/Element/audio) codecs in Internet Explorer
+- [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)

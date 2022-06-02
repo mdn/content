@@ -11,11 +11,11 @@ This document outlines the criteria for inclusion that a technology must pass be
 
 The MDN Web Docs remit is to document web standards technologies, or more specifically technologies that follow our standard guidelines of [when to document new technologies](/en-US/docs/MDN/Guidelines/Conventions_definitions#when_to_document_new_technologies) — the short version of this is that we document technologies on MDN Web Docs when they are specified in a specification published by a reliable standards body, and are supported in at least one browser.
 
-These criteria signify enough interest, stability, and intent to implement by the web industry at large that we think they are a safe bet to document without wasting our time. Any earlier than that, and they may be cancelled due to lack of interest, or be so unstable that they will change significantly, meaning lots of rewriting (which we try to avoid where possible).
+These criteria signify enough interest, stability, and intent to be implemented by the web industry at large that we think they are a safe bet to document without wasting our time. Any earlier than that, and they may be cancelled due to lack of interest, or be so unstable that they will change significantly, which means lots of rewriting (which we try to avoid where possible).
 
 ## Non-web standards technologies
 
-Non-web standards technologies are technologies that do not follow our criteria summarised above. We would not normally consider them for documentation on MDN. However, there are many technologies that are not web standards, but are useful and interesting to web developers — think about developer tools, libraries, and frameworks as some of the more obvious examples.
+Non-web standards technologies are technologies that do not follow our criteria summarized above. We would not normally consider them for documentation on MDN. However, there are many technologies that are not web standards, but are useful and interesting to web developers — think about developer tools, libraries, and frameworks as some of the more obvious examples.
 
 Our mission statement is _"to provide developers with the information they need to easily build projects on the open Web"_. This suggests that we should consider documenting technologies that are useful to web developers, even if they are not open web standards, on the standards track, etc. Hence the creation of the Web-related technologies section as a place to house such documentation.
 

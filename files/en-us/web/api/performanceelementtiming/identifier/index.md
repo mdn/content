@@ -13,19 +13,13 @@ browser-compat: api.PerformanceElementTiming.identifier
 
 The **`identifier`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
 
-## Syntax
+## Value
 
-```js
-var identifier = PerformanceElementTiming.identifier;
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
-In this example the value of [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) is `big-image`. Calling `entry.indentifier` therefore returns the string `big-image`.
+In this example the value of [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) is `big-image`. Calling `entry.identifier` therefore returns the string `big-image`.
 
 ```html
 <img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">

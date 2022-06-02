@@ -52,7 +52,7 @@ let re = new RegExp('\\w+')
 
 ### Perl-like RegExp properties
 
-Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.). See also [deprecated `RegExp` properties.](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties)
+Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties).
 
 ## Constructor
 
@@ -244,7 +244,7 @@ Note that due to web compatibility, `RegExp.$N` will still return an empty strin
 
 ## See also
 
-- A polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

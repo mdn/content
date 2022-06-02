@@ -1,6 +1,7 @@
 ---
 title: Range.toString()
 slug: Web/API/Range/toString
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ browser-compat: api.Range.toString
 ---
 {{ApiRef("DOM")}}
 
-The **`Range.toString()`** method is a stringifier returning
+The **`Range.toString()`** method is a {{Glossary("stringifier")}} returning
 the text of the {{domxref("Range")}}.
 
 Alerting the contents of a {{domxref("Range")}} makes an implicit
@@ -21,10 +22,18 @@ ineffective.
 ## Syntax
 
 ```js
-text = range.toString();
+toString()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A string.
+
+## Examples
 
 ### HTML
 
@@ -45,7 +54,7 @@ document.getElementById('log').textContent = range.toString();
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

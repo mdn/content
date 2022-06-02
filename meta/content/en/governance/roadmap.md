@@ -1,6 +1,6 @@
 ---
 title: "What we document"
-weight: 2
+weight: 10
 description: >
   This page needs a description.
 ---

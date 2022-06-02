@@ -29,7 +29,7 @@ sanitize(input)
 ### Parameters
 
 - `input`
-  - : A  {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
+  - : A {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
 
 ### Return value
 
@@ -67,4 +67,3 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 - {{domxref('HTML Sanitizer API')}}
 - {{domxref("Element.setHTML()")}}
-

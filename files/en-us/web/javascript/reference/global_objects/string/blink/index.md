@@ -43,7 +43,7 @@ element: "`<blink>str</blink>`".
 The following example uses string methods to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
 console.log(worldString.blink());   // <blink>Hello, world</blink>
 console.log(worldString.bold());    // <b>Hello, world</b>
@@ -61,7 +61,7 @@ console.log(worldString.strike());  // <strike>Hello, world</strike>
 
 ## See also
 
-- A polyfill of `String.prototype.blink` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.blink` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.bold()")}}
 - {{jsxref("String.prototype.italics()")}}
 - {{jsxref("String.prototype.strike()")}}

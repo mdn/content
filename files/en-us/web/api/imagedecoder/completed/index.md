@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.completed
 slug: Web/API/ImageDecoder/completed
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -33,5 +34,3 @@ console.log(completed);
 ## Browser compatibility
 
 {{Compat}}
-
-

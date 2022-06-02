@@ -13,9 +13,11 @@ The `<xsl:attribute-set>` element creates a named set of attributes, which can t
 
 ### Syntax
 
-    <xsl:attribute-set name=NAME use-attribute-sets=LIST-OF-NAMES>
-    	<xsl:attribute>
-    </xsl:attribute-set>
+```xml
+<xsl:attribute-set name=NAME use-attribute-sets=LIST-OF-NAMES>
+  <xsl:attribute>
+</xsl:attribute-set>
+```
 
 ### Required Attributes
 

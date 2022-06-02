@@ -36,8 +36,8 @@ Promise.all(iterable);
 - An **already resolved** {{jsxref("Promise")}} if the
   _iterable_ passed is empty.
 - An **asynchronously resolved** {{jsxref("Promise")}} if the
-  _iterable_ passed contains no promises. Note, Google Chrome 58 returns
-  an **already resolved** promise in this case.
+  _iterable_ passed contains no promises. Note, Google Chrome 58 returns
+  an **already resolved** promise in this case.
 - A **pending** {{jsxref("Promise")}} in all other cases. This returned
   promise is then resolved/rejected **asynchronously** (as soon as the
   stack is empty) when all the promises in the given _iterable_ have resolved,
@@ -57,6 +57,8 @@ input promises rejecting. In comparison, the promise returned by
 {{jsxref("Promise.allSettled()")}} will wait for all input promises to complete,
 regardless of whether or not one rejects. Consequently, it will always return the final
 result of every promise and function from the input iterable.
+
+> **Note:** The order of the promise array is preserved upon completion of this method.
 
 ### Fulfillment
 
@@ -83,9 +85,9 @@ have resolved.
 `Promise.all` waits for all fulfillments (or the first rejection).
 
 ```js
-var p1 = Promise.resolve(3);
-var p2 = 1337;
-var p3 = new Promise((resolve, reject) => {
+const p1 = Promise.resolve(3);
+const p2 = 1337;
+const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("foo");
   }, 100);
@@ -101,11 +103,11 @@ counted in the returned promise array value (if the promise is fulfilled):
 
 ```js
 // this will be counted as if the iterable passed is empty, so it gets fulfilled
-var p = Promise.all([1,2,3]);
+const p = Promise.all([1,2,3]);
 // this will be counted as if the iterable passed contains only the resolved promise with value "444", so it gets fulfilled
-var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
+const p2 = Promise.all([1,2,3, Promise.resolve(444)]);
 // this will be counted as if the iterable passed contains only the rejected promise with value "555", so it gets rejected
-var p3 = Promise.all([1,2,3, Promise.reject(555)]);
+const p3 = Promise.all([1,2,3, Promise.reject(555)]);
 
 // using setTimeout we can execute code after the stack is empty
 setTimeout(function() {
@@ -128,9 +130,9 @@ _iterable_ passed is empty) of `Promise.all`:
 ```js
 // we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.all as soon as possible
-var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
+const resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
-var p = Promise.all(resolvedPromisesArray);
+const p = Promise.all(resolvedPromisesArray);
 // immediately logging the value of p
 console.log(p);
 
@@ -149,8 +151,8 @@ setTimeout(function() {
 The same thing happens if `Promise.all` rejects:
 
 ```js
-var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
-var p = Promise.all(mixedPromisesArray);
+const mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
+const p = Promise.all(mixedPromisesArray);
 console.log(p);
 setTimeout(function() {
     console.log('the stack is now empty');
@@ -167,8 +169,8 @@ But, `Promise.all` resolves synchronously **if and only if**
 the _iterable_ passed is empty:
 
 ```js
-var p = Promise.all([]); // will be immediately resolved
-var p2 = Promise.all([1337, "hi"]); // non-promise values will be ignored, but the evaluation will be done asynchronously
+const p = Promise.all([]); // will be immediately resolved
+const p2 = Promise.all([1337, "hi"]); // non-promise values will be ignored, but the evaluation will be done asynchronously
 console.log(p);
 console.log(p2)
 setTimeout(function() {
@@ -190,19 +192,19 @@ if you pass in four promises that resolve after a timeout and one promise that r
 immediately, then `Promise.all` will reject immediately.
 
 ```js
-var p1 = new Promise((resolve, reject) => {
+const p1 = new Promise((resolve, reject) => {
   setTimeout(() => resolve('one'), 1000);
 });
-var p2 = new Promise((resolve, reject) => {
+const p2 = new Promise((resolve, reject) => {
   setTimeout(() => resolve('two'), 2000);
 });
-var p3 = new Promise((resolve, reject) => {
+const p3 = new Promise((resolve, reject) => {
   setTimeout(() => resolve('three'), 3000);
 });
-var p4 = new Promise((resolve, reject) => {
+const p4 = new Promise((resolve, reject) => {
   setTimeout(() => resolve('four'), 4000);
 });
-var p5 = new Promise((resolve, reject) => {
+const p5 = new Promise((resolve, reject) => {
   reject(new Error('reject'));
 });
 
@@ -222,11 +224,11 @@ Promise.all([p1, p2, p3, p4, p5])
 It is possible to change this behavior by handling possible rejections:
 
 ```js
-var p1 = new Promise((resolve, reject) => {
+const p1 = new Promise((resolve, reject) => {
   setTimeout(() => resolve('p1_delayed_resolution'), 1000);
 });
 
-var p2 = new Promise((resolve, reject) => {
+const p2 = new Promise((resolve, reject) => {
   reject(new Error('p2_immediate_rejection'));
 });
 
@@ -234,8 +236,8 @@ Promise.all([
   p1.catch(error => { return error }),
   p2.catch(error => { return error }),
 ]).then(values => {
-  console.log(values[0]) // "p1_delayed_resolution"
-  console.error(values[1]) // "Error: p2_immediate_rejection"
+  console.log(values[0]) // "p1_delayed_resolution"
+  console.error(values[1]) // "Error: p2_immediate_rejection"
 })
 ```
 

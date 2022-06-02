@@ -26,8 +26,7 @@ Object.fromEntries(iterable);
 
 - `iterable`
   - : An iterable such as {{jsxref("Array")}} or {{jsxref("Map")}} or other objects
-    implementing the [iterable
-    protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+    implementing the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
 
 ### Return value
 
@@ -72,8 +71,8 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 ### Object transformations
 
 With `Object.fromEntries`, its reverse method
-{{jsxref("Object.entries()")}}, and [array
-manipulation methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#methods_2), you are able to transform objects like this:
+{{jsxref("Object.entries()")}},
+and [array manipulation methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#methods_2), you are able to transform objects like this:
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };
@@ -97,7 +96,7 @@ console.log(object2);
 
 ## See also
 
-- A polyfill of `Object.fromEntries` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.fromEntries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}

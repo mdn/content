@@ -1,6 +1,7 @@
 ---
 title: Navigator.msSaveOrOpenBlob
 slug: Web/API/Navigator/msSaveOrOpenBlob
+page-type: web-api-instance-method
 browser-compat: api.Navigator.msSaveOrOpenBlob
 ---
 {{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}
@@ -33,9 +34,11 @@ failure occurred.
 When a site calls this method, the behavior is the same as when Windows Internet
 Explorer downloads a file with the following in the header:
 
-    Content-Length: <blob.size>
-    Content-Type: <blob.type>
-    Content-Disposition: attachment;filename=<defaultName>
+```
+Content-Length: <blob.size>
+Content-Type: <blob.type>
+Content-Disposition: attachment;filename=<defaultName>
+```
 
 ## Specifications
 

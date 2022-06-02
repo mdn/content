@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent.source
 slug: Web/API/ExtendableMessageEvent/source
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -17,15 +18,9 @@ The **`source`** read-only property of the
 {{domxref("ExtendableMessageEvent")}} interface returns a reference to the
 {{domxref("Client")}} object from which the message was sent.
 
-## Syntax
+## Value
 
-```js
-var mySource = extendableMessageEvent.source;
-```
-
-### Value
-
-A {{domxref("Client")}}, {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}}
+A {{domxref("Client")}}, {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}}
 object.
 
 ## Examples

@@ -31,6 +31,7 @@ overflow-wrap: anywhere;
 overflow-wrap: inherit;
 overflow-wrap: initial;
 overflow-wrap: revert;
+overflow-wrap: revert-layer;
 overflow-wrap: unset;
 ```
 
@@ -128,4 +129,4 @@ p {
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text)

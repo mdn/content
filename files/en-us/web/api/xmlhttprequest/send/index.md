@@ -37,7 +37,8 @@ If no {{HTTPHeader("Accept")}} header has been set using the
 ## Syntax
 
 ```js
-XMLHttpRequest.send(body)
+send()
+send(body)
 ```
 
 ### Parameters
@@ -47,10 +48,9 @@ XMLHttpRequest.send(body)
   - : A body of data to be sent in the XHR request. This can be:
 
     - A {{domxref("Document")}}, in which case it is serialized before being sent.
-    - An `XMLHttpRequestBodyInit`, which [per the
-      Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, {{domxref("BufferSource")}},
+    - An `XMLHttpRequestBodyInit`, which [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, {{domxref("BufferSource")}},
       {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, or
-      {{domxref("USVString")}} object.
+      string object.
     - `null`
 
     If no value is specified for the body, a default value of `null` is used.
@@ -61,7 +61,7 @@ The best way to send binary content (e.g. in file uploads) is by using an
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -116,7 +116,5 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

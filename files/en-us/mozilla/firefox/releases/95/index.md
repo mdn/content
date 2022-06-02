@@ -36,7 +36,6 @@ No notable changes
 
 - {{domxref("SpeechSynthesisEvent.elapsedTime")}} now returns the elapsed time in seconds rather than milliseconds, matching an update to the specification (see {{bug(1732498)}}).
 
-
 ### WebDriver conformance (Marionette)
 
 - The `port` used by Marionette is now written to the `MarionetteActivePort` file in the profile directory. This can be used to easily retrieve the `port`, which before was only possible by parsing the `prefs.js` file of the profile. ({{bug(1735162)}}).

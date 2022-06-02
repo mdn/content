@@ -14,7 +14,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn’t have any hard rules for what is and isn’t a component – that’s up to you! In this article we will show you a sensible way to break our app up into components.
+At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn't have any hard rules for what is and isn't a component – that's up to you! In this article we will show you a sensible way to break our app up into components.
 
 <table>
   <tbody>
@@ -49,7 +49,7 @@ Defining a component can seem tricky until you have some practice, but the gist 
 - If it represents an obvious "chunk" of your app, it's probably a component
 - If it gets reused often, it's probably a component.
 
-That second bullet is especially valuable: making a component out of common UI elements allows you to change your code in one place and see those changes everywhere that component is used. You don't have to break everything out into components right away, either. Let's take the second bullet point as inspiration and make a component out of the most reused, most important piece of the UI: a todo list item.
+That second bullet is especially valuable: making a component out of common UI elements allows you to change your code in one place and see those changes everywhere that component is used. You don't have to break everything out into components right away, either. Let's take the second bullet point as inspiration and make a component out of the most reused, most important piece of the UI: a todo list item.
 
 ## Make a `<Todo />`
 
@@ -137,7 +137,7 @@ Components are powerful because they let us re-use pieces of our UI, and refer t
 
 In order to track the names of tasks we want to complete, we should ensure that each `<Todo />` component renders a unique name.
 
-In `App.js`, give each `<Todo />` a name prop. Let’s use the names of our tasks that we had before:
+In `App.js`, give each `<Todo />` a name prop. Let's use the names of our tasks that we had before:
 
 ```js
 <Todo name="Eat" />
@@ -182,7 +182,7 @@ _Now_ your browser should show three unique tasks. Another problem remains thoug
 
 ### Is it `completed`?
 
-In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />`  component, but change one thing. That's a good job for another prop!  Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
+In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />`  component, but change one thing. That's a good job for another prop!  Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
 
 ```js
 <Todo name="Eat" completed={true} />
@@ -190,7 +190,7 @@ In our original static list, only `Eat` was checked. Once again, we want to reus
 <Todo name="Repeat" completed={false} />
 ```
 
-As before, we must go back to `Todo.js` to actually use these props. Change the `defaultChecked` attribute on the `<input />` so that its value is equal to the `completed` prop. Once you’re done, the Todo component's `<input />` element will read like this:
+As before, we must go back to `Todo.js` to actually use these props. Change the `defaultChecked` attribute on the `<input />` so that its value is equal to the `completed` prop. Once you're done, the Todo component's `<input />` element will read like this:
 
 ```js
 <input id="todo-0" type="checkbox" defaultChecked={props.completed} />
@@ -200,7 +200,7 @@ And your browser should update to show only `Eat` being checked:
 
 ![Our todo list app, now with differing checked states - some checkboxes are checked, others not](todo-list-differing-checked-states.png)
 
-If you change each `<Todo />` component’s `completed` prop, your browser will check or uncheck the equivalent rendered checkboxes accordingly.
+If you change each `<Todo />` component's `completed` prop, your browser will check or uncheck the equivalent rendered checkboxes accordingly.
 
 ### Gimme some `id`, please
 
@@ -227,7 +227,7 @@ Now go back to `Todo.js` and make use of the `id` prop. It needs to replace the 
 
 ## So far, so good?
 
-We’re making good use of React so far, but we could do better! Our code is repetitive. The three lines that render our `<Todo />` component are almost identical, with only one difference: the value of each prop.
+We're making good use of React so far, but we could do better! Our code is repetitive. The three lines that render our `<Todo />` component are almost identical, with only one difference: the value of each prop.
 
 We can clean up our code with one of JavaScript's core abilities: iteration. To use iteration, we should first re-think our tasks.
 
@@ -251,9 +251,9 @@ Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final line o
 ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 ```
 
-This array is now available to the App component as `props.tasks`. You can `console.log()` it to check, if you’d like.
+This array is now available to the App component as `props.tasks`. You can `console.log()` it to check, if you'd like.
 
-> **Note:** `ALL_CAPS` constant names have no special meaning in JavaScript; they’re a convention that tells other developers "this data will never change after being defined here”.
+> **Note:** `ALL_CAPS` constant names have no special meaning in JavaScript; they're a convention that tells other developers "this data will never change after being defined here".
 
 ## Rendering with iteration
 
@@ -265,7 +265,7 @@ Above the return statement of `App()`, make a new `const` called `taskList` and 
 const taskList = props.tasks?.map(task => task.name);
 ```
 
-Let’s try replacing all the children of the `<ul>` with `taskList`:
+Let's try replacing all the children of the `<ul>` with `taskList`:
 
 ```js
 <ul
@@ -277,7 +277,7 @@ Let’s try replacing all the children of the `<ul>` with `taskList`:
 </ul>
 ```
 
-This gets us some of the way towards showing all the components again, but we’ve got more work to do: the browser currently renders each task's name as unstructured text. We’re missing our HTML structure — the `<li>` and its checkboxes and buttons!
+This gets us some of the way towards showing all the components again, but we've got more work to do: the browser currently renders each task's name as unstructured text. We're missing our HTML structure — the `<li>` and its checkboxes and buttons!
 
 ![Our todo list app with the todo item labels just shown bunched up on one line](todo-list-unstructured-names.png)
 
@@ -287,7 +287,7 @@ To fix this, we need to return a `<Todo />` component from our `map()` function 
  const taskList = props.tasks.map(task => <Todo />);
 ```
 
-Look again at your app; now our tasks look more like they used to, but they’re missing the names of the tasks themselves.  Remember that each task we map over has the `id`, `name`, and `checked` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
+Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves.  Remember that each task we map over has the `id`, `name`, and `checked` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
 
 ```js
 const taskList = props.tasks.map(task => (
@@ -305,13 +305,13 @@ Because keys should be unique, we're going to re-use the `id` of each task objec
 
 ```js
 const taskList = props.tasks.map(task => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
+    <Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  )
 );
 ```
 
@@ -336,7 +336,7 @@ Open `components/Form.js` and do the following:
 
 - Import `React` at the top of the file, like we did in `Todo.js`.
 - Make yourself a new `Form()` component with the same basic structure as `Todo()`, and export that component.
-- Copy the `<form>` tags and everything between them from inside `App.js`, and paste them inside `Form()`’s `return` statement.
+- Copy the `<form>` tags and everything between them from inside `App.js`, and paste them inside `Form()`'s `return` statement.
 - Export `Form` at the end of the file.
 
 Your `Form.js` file should read like this:
@@ -391,7 +391,7 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **Note:** You might notice that we are making the same mistake here as we first made for the `<Todo />` component, in that each button will be the same. That’s fine! We’re going to fix up this component later on, in [Back to the filter buttons](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
+> **Note:** You might notice that we are making the same mistake here as we first made for the `<Todo />` component, in that each button will be the same. That's fine! We're going to fix up this component later on, in [Back to the filter buttons](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
 
 ## Importing all our components
 
@@ -399,7 +399,7 @@ Let's make use of our new components.
 
 Add some more `import` statements to the top of `App.js`, to import them.
 
-Then, update the `return` statement of `App()` so that it renders our components. When you’re done, `App.js` will read like this:
+Then, update the `return` statement of `App()` so that it renders our components. When you're done, `App.js` will read like this:
 
 ```js
 import React from "react";
@@ -441,7 +441,7 @@ function App(props) {
 export default App;
 ```
 
-With this in place, we’re _almost_ ready to tackle some interactivity in our React app!
+With this in place, we're _almost_ ready to tackle some interactivity in our React app!
 
 ## Summary
 

@@ -35,7 +35,7 @@ Next, we'll turn our attention to strings — this is what pieces of text are ca
 
 ## The power of words
 
-Words are very important to humans — they are a large part of how we communicate. Since the Web is a largely text-based medium designed to allow humans to communicate and share information, it is useful for us to have control over the words that appear on it. {{glossary("HTML")}} provides structure and meaning to our text, {{glossary("CSS")}} allows us to precisely style it, and JavaScript contains a number of features for manipulating strings, creating custom welcome messages and prompts, showing the right text labels when needed, sorting terms into the desired order, and much more.
+Words are very important to humans — they are a large part of how we communicate. Since the Web is a largely text-based medium designed to allow humans to communicate and share information, it is useful for us to have control over the words that appear on it. {{glossary("HTML")}} provides structure and meaning to our text, {{glossary("CSS")}} allows us to precisely style it, and JavaScript contains a number of features for manipulating strings, creating custom welcome messages and prompts, showing the right text labels when needed, sorting terms into the desired order, and much more.
 
 Pretty much all of the programs we've shown you so far in the course have involved some string manipulation.
 
@@ -45,7 +45,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 ### Creating a string
 
-1.  To start with, enter the following lines:
+1. To start with, enter the following lines:
 
     ```js
     const string = 'The revolution will not be televised.';
@@ -54,7 +54,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
     Just like we did with numbers, we are declaring a variable, initializing it with a string value, and then returning the value. The only difference here is that when writing a string, you need to surround the value with quotes.
 
-2.  If you don't do this, or miss one of the quotes, you'll get an error. Try entering the following lines:
+2. If you don't do this, or miss one of the quotes, you'll get an error. Try entering the following lines:
 
     ```js example-bad
     const badString1 = This is a test;
@@ -64,7 +64,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
     These lines don't work because any text without quotes around it is assumed to be a variable name, property name, a reserved word, or similar. If the browser can't find it, then an error is raised (e.g. "missing; before statement"). If the browser can see where a string starts, but can't find the end of the string, as indicated by the 2nd quote, it complains with an error (with "unterminated string literal"). If your program is raising such errors, then go back and check all your strings to make sure you have no missing quote marks.
 
-3.  The following will work if you previously defined the variable `string` — try it now:
+3. The following will work if you previously defined the variable `string` — try it now:
 
     ```js
     const badString = string;
@@ -75,7 +75,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 ### Single quotes vs. double quotes
 
-1.  In JavaScript, you can choose single quotes or double quotes to wrap your strings in. Both of the following will work okay:
+1. In JavaScript, you can choose single quotes or double quotes to wrap your strings in. Both of the following will work okay:
 
     ```js
     const sgl = 'Single quotes.';
@@ -84,13 +84,13 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
     console.log(dbl);
     ```
 
-2.  There is very little difference between the two, and which you use is down to personal preference. You should choose one and stick to it, however; differently quoted code can be confusing, especially if you use two different quotes on the same string! The following will return an error:
+2. There is very little difference between the two, and which you use is down to personal preference. You should choose one and stick to it, however; differently quoted code can be confusing, especially if you use two different quotes on the same string! The following will return an error:
 
     ```js example-bad
     const badQuotes = 'What on earth?";
     ```
 
-3.  The browser will think the string has not been closed because the other type of quote you are not using to contain your strings can appear in the string. For example, both of these are okay:
+3. The browser will think the string has not been closed because the other type of quote you are not using to contain your strings can appear in the string. For example, both of these are okay:
 
     ```js
     const sglDbl = 'Would you eat a "fish supper"?';
@@ -99,7 +99,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
     console.log(dblSgl);
     ```
 
-4.  However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
+4. However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
 
     ```js example-bad
     const bigmouth = 'I've got no right to take my place...';
@@ -116,7 +116,7 @@ const bigmouth = 'I\'ve got no right to take my place...';
 console.log(bigmouth);
 ```
 
-This works fine. You can escape other characters in the same way, e.g. `\"`,  and there are some special codes besides. See [Escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more details.
+This works fine. You can escape other characters in the same way, e.g. `\"`, and there are some special codes besides. See [Escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more details.
 
 ## Concatenating strings
 
@@ -196,7 +196,7 @@ const number = 242;
 console.log(`${name}${number}`); // "Front 242"
 ```
 
-You might expect this to return an error,  but it works just fine. Trying to represent a string as a number doesn't really make sense, but representing a number as a string does, so the browser converts the number to a string and concatenates the two strings.
+You might expect this to return an error, but it works just fine. Trying to represent a string as a number doesn't really make sense, but representing a number as a string does, so the browser converts the number to a string and concatenates the two strings.
 
 If you have a numeric variable that you want to convert to a string but not change otherwise, or a string variable that you want to convert to a number but not change otherwise, you can use the following two constructs:
 
@@ -216,7 +216,7 @@ If you have a numeric variable that you want to convert to a string but not chan
   console.log(typeof myString2);
   ```
 
-These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through `Number()` to handle this. We did exactly this in our [Number Guessing Game, in line 54](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54).
+These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through `Number()` to handle this. We did exactly this in our [Number Guessing Game, in line 54](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54).
 
 ## Including expressions in strings
 
@@ -245,15 +245,11 @@ To have the equivalent output using a normal string you'd have to include line b
 
 ```js
 const output = 'I like the song.\nI gave it a score of 90%.';
-console.log(output);  // I like the song".
+console.log(output);  // I like the song.
                       // I gave it a score of 90%.
 ```
 
-See our [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) reference page for more examples and details of advanced features.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Strings](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). Note that this also requires knowledge from the next article, so you might want to read that first.
+See our [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) reference page for more examples and details of advanced features.
 
 ## Conclusion
 

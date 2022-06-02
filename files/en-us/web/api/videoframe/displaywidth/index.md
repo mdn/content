@@ -13,7 +13,7 @@ browser-compat: api.VideoFrame.displayWidth
 
 The **`displayWidth`** property of the {{domxref("VideoFrame")}} interface returns the width of the `VideoFrame` after applying aspect ratio adjustments.
 
-### Value
+## Value
 
 An integer.
 
@@ -32,5 +32,3 @@ console.log(VideoFrame.displayWidth);
 ## Browser compatibility
 
 {{Compat}}
-
-

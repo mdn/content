@@ -33,8 +33,7 @@ new Intl.DisplayNames(locales, options)
 
   - : A string with a BCP 47 language tag, or an array of such strings. For the
     general form and interpretation of the `locales`
-    argument, see the {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
+    argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
     extension key is allowed:
 
     - `nu`
@@ -76,10 +75,10 @@ new Intl.DisplayNames(locales, options)
         - "`region`"
         - "`script`"
 
-     - `languageDisplay`
-       - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
-         - "`dialect`"
-         - "`standard`"
+    - `languageDisplay`
+      - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
+        - "`dialect`"
+        - "`standard`"
 
     - `fallback`
 

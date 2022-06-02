@@ -13,7 +13,7 @@ The **`scale`** attribute defines the displacement scale factor to be used on a 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDisplacementMap")}}
 
 ## Example
 
@@ -60,38 +60,14 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value defines the scale factor for the displacement.
+- `<number>`
+  - : This value defines the scale factor for the displacement.
 
-        When the value of this attribute is `0`, this operation has no effect on the source image.
+    When the value of this attribute is `0`, this operation has no effect on the source image.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fedisplacementmap-scale", "scale")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feDisplacementMapScaleAttribute", "scale")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode()
 slug: Web/API/BiquadFilterNode/BiquadFilterNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -21,14 +22,14 @@ low-order filter.
 ## Syntax
 
 ```js
-var biquadFilterNode = new BiquadFilterNode(context, options)
+new BiquadFilterNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : A reference to an {{domxref("AudioContext")}}.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object with the following properties:
 

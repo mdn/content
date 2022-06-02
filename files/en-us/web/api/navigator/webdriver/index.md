@@ -1,13 +1,13 @@
 ---
 title: Navigator.webdriver
 slug: Web/API/Navigator/webdriver
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator
   - Property
   - Reference
   - WebDriver
-  - weblock
 browser-compat: api.Navigator.webdriver
 ---
 {{SeeCompatTable}}{{APIRef("WebDriver")}}
@@ -20,7 +20,7 @@ It defines a standard way for co-operating user agents to inform the document th
 is controlled by [WebDriver](/en-US/docs/Web/WebDriver), for example, so that
 alternate code paths can be triggered during automation.
 
-The ` navigator.``webdriver ` property is true when in:
+The `navigator.webdriver` property is true when in:
 
 - Chrome
   - : The `--enable-automation` or the `--headless` flag or the
@@ -29,13 +29,7 @@ The ` navigator.``webdriver ` property is true when in:
   - : The `marionette.enabled` preference or `--marionette` flag is
     passed.
 
-## Syntax
-
-```js
-var isAutomated = navigator.webdriver
-```
-
-### Value
+## Value
 
 A {{JSxRef("Boolean")}}
 

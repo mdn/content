@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.keyIdentifier
 slug: Web/API/KeyboardEvent/keyIdentifier
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ tags:
   - events
 browser-compat: api.KeyboardEvent.keyIdentifier
 ---
-{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{non-standard_header}}{{deprecated_header}}
 
 The deprecated **`KeyboardEvent.keyIdentifier`** read-only property returns a "key identifier" string that can be used to determine what key was pressed. Its non-deprecated replacement is {{domxref("KeyboardEvent.key")}}.
 

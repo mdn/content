@@ -50,7 +50,9 @@ print(search_box.get_attribute("id"))
 
 Output:
 
-    q
+```
+q
+```
 
 ## Specifications
 

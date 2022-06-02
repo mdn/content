@@ -13,7 +13,7 @@ browser-compat: api.SVGStopElement
 
 The **`SVGStopElement`** interface corresponds to the {{SVGElement("stop")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

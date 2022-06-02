@@ -1,6 +1,7 @@
 ---
 title: CSSSkewY()
 slug: Web/API/CSSSkewY/CSSSkewY
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,7 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSSkewY.CSSSkewY
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSSkewY()`** constructor creates a new
 {{domxref("CSSSkewY")}} object which represents the
@@ -22,7 +23,7 @@ of the individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSSkewY = new CSSSkewY(ay);
+new CSSSkewY(ay)
 ```
 
 ### Parameters

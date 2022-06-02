@@ -1,6 +1,7 @@
 ---
 title: NDEFMessage.NDEFMessage()
 slug: Web/API/NDEFMessage/NDEFMessage
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,14 +9,14 @@ tags:
   - NDEFMessage
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{APIRef()}}
 
 The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.
 
 ## Syntax
 
 ```js
-new NDEFMessage(records);
+new NDEFMessage(records)
 ```
 
 ### Parameters

@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder
 slug: Web/API/AudioDecoder
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,13 +9,13 @@ tags:
   - AudioDecoder
 browser-compat: api.AudioDecoder
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
 The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} decodes chunks of audio.
 
 ## Constructor
 
-- {{domxref("AudioDecoder.AudioDecoder()")}}
+- {{domxref("AudioDecoder.AudioDecoder", "AudioDecoder()")}}
   - : Creates a new `AudioDecoder` object.
 
 ## Properties
@@ -37,7 +38,6 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 - {{domxref("AudioDecoder.close()")}}
   - : Ends all pending work and releases system resources.
 
-
 ## Specifications
 
 {{Specifications}}
@@ -45,4 +45,3 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 ## Browser compatibility
 
 {{Compat}}
-

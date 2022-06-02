@@ -22,7 +22,7 @@ The MathML **`<maction>`** element provides a possibility to bind actions to (su
     - `toggle`: When there is a click on the subexpression, the rendering alternates the display of selected subexpressions. Therefore each click increments the `selection` value.
       The syntax is: `<maction actiontype="toggle" selection="positive-integer" > expression1 expression2 expressionN </maction>`.
     - `tooltip`: When the pointer moves over the _expression_, a tooltip box with a _message_ is displayed near the expression.
-      The syntax is:` <maction actiontype="tooltip"> expression message </maction>.`
+      The syntax is: `<maction actiontype="tooltip"> expression message </maction>.`
 
 - class, id, style
   - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).

@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: log role'
 slug: Web/Accessibility/ARIA/Roles/log_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -10,6 +10,7 @@ tags:
   - log
   - log role
   - ARIA log
+spec-urls: https://w3c.github.io/aria/#log
 ---
 
 The `log` role is used to identify an element that creates a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) where new information is added in a meaningful order and old information may disappear.
@@ -21,7 +22,6 @@ A log is a type of live region where new information is added in meaningful orde
 In contrast to other types of live region, a log is sequentially ordered and new information is only added to the end of the log. When this role is added to an element, the browser will send out an accessible log event to assistive technology products which can then notify the user about it.
 
 By default, updates contain only the changes to the live region and these are announced when the user is idle. Elements with the role `log` have an implicit `aria-live` value of `polite`.  Where the user needs to hear the entire live region upon a change `aria-atomic="true"` should be set. To have announcements made as soon as possible and where the user may be interrupted, `aria-live="assertive"` can be set for more aggressive updates.
-
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -43,9 +43,7 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#log","ARIA: log role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 
@@ -55,7 +53,6 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-
 
 <section id="Quick_links">
 

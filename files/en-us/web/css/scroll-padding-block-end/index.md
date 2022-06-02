@@ -32,13 +32,14 @@ scroll-padding-block-end: 10%;
 scroll-padding-block-end: inherit;
 scroll-padding-block-end: initial;
 scroll-padding-block-end: revert;
+scroll-padding-block-end: revert-layer;
 scroll-padding-block-end: unset;
 ```
 
 ### Values
 
 - `<length-percentage>`
-  - : An inwards offset from the block end edge of the scrollport, as a valid length or a percentage.
+  - : An inwards offset from the block end edge of the scrollport, as a valid length or a percentage.
 - `auto`
   - : The offset is determined by the user agent. This will generally be 0px, but a user agent is able to detect and do something else if a non-zero value is more appropriate.
 

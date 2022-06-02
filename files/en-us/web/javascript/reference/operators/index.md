@@ -100,7 +100,7 @@ A unary operation is an operation with only one operand.
 
 Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value.
 
-- {{JSxRef("Operators/Addition", "+")}}
+- {{JSxRef("Operators/Addition", "+")}} (Plus)
   - : Addition operator.
 - {{JSxRef("Operators/Subtraction", "-")}}
   - : Subtraction operator.
@@ -121,9 +121,9 @@ A comparison operator compares its operands and returns a boolean value based on
   - : The `in` operator determines whether an object has a given property.
 - {{JSxRef("Operators/instanceof", "instanceof")}}
   - : The `instanceof` operator determines whether an object is an instance of another object.
-- {{JSxRef("Operators/Less_than", "&lt;")}}
+- {{JSxRef("Operators/Less_than", "&lt;")}} (Less than)
   - : Less than operator.
-- {{JSxRef("Operators/Greater_than", "&gt;")}}
+- {{JSxRef("Operators/Greater_than", "&gt;")}} (Greater than)
   - : Greater than operator.
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
   - : Less than or equal operator.
@@ -186,7 +186,7 @@ Logical operators are typically used with boolean (logical) values, and when the
 ### Optional Chaining operator
 
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-  - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+  - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ### Assignment operators
 

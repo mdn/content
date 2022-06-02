@@ -33,7 +33,9 @@ Elements targeted by this selector are:
 
 ## Syntax
 
-{{csssyntax}}
+```
+:indeterminate
+```
 
 ## Examples
 
@@ -97,6 +99,8 @@ for (let i = 0; i < inputs.length; i++) {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Checkbox_radio_button', 'auto', 230)}}
 
 ### Progress bar
@@ -120,7 +124,7 @@ progress:indeterminate {
 }
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample('Progress_bar', 'auto', 30)}}
 

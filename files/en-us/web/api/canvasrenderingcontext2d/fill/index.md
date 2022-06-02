@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,8 +20,10 @@ method of the Canvas 2D API fills the current or given path with the current
 ## Syntax
 
 ```js
-void ctx.fill([fillRule]);
-void ctx.fill(path [, fillRule]);
+fill()
+fill(path)
+fill(fillRule)
+fill(path, fillRule)
 ```
 
 ### Parameters
@@ -38,6 +41,10 @@ void ctx.fill(path [, fillRule]);
 
 - `path`
   - : A {{domxref("Path2D")}} path to fill.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

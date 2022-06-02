@@ -6,7 +6,7 @@ tags:
 ---
 {{AddonSidebar}}
 
-Extensions developed with WebExtension APIs have a Content Security Policy (CSP) applied to them by default. This restricts the sources from which they can load**[ ](/en-US/docs/Web/HTML/Element/script)**[\<script>](/en-US/docs/Web/HTML/Element/script) and [\<object>](/en-US/docs/Web/HTML/Element/object) resources, and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).This article explains briefly what a CSP is, what the default policy is and what it means for an extension, and how an extension can change the default CSP.
+Extensions developed with WebExtension APIs have a Content Security Policy (CSP) applied to them by default. This restricts the sources from which they can load [\<script>](/en-US/docs/Web/HTML/Element/script) and [\<object>](/en-US/docs/Web/HTML/Element/object) resources, and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).This article explains briefly what a CSP is, what the default policy is and what it means for an extension, and how an extension can change the default CSP.
 
 [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) is a mechanism to help prevent websites from inadvertently executing malicious content. A website specifies a CSP using an HTTP header sent from the server. The CSP is mostly concerned with specifying legitimate sources of various types of content, such as scripts or embedded plugins. For example, a website can use it to specify that the browser should only execute JavaScript served from the website itself, and not from any other sources. A CSP can also instruct the browser to disallow potentially unsafe practices, such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
@@ -50,7 +50,9 @@ Compared to a website, extensions have access to additional privileged APIs, so 
 
 The default content security policy for extensions is:
 
-    "script-src 'self'; object-src 'self';"
+```
+"script-src 'self'; object-src 'self';"
+```
 
 This will be applied to any extension that has not explicitly set its own content security policy using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key. It has the following consequences:
 
@@ -69,7 +71,7 @@ Under the default CSP you may only load [\<script>](/en-US/docs/Web/HTML/Element
 This will no longer load the requested resource: it will fail silently, and any object which you expected to be present from the resource will not be found. There are two main solutions to this:
 
 - download the resource, package it in your extension, and refer to this version of the resource
-- use the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key to allow the remote origin you need.
+- use the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key or in Manifest V3 the `content_scripts` property, to allow the remote origin you need.
 
 ### eval() and friends
 
@@ -84,7 +86,7 @@ window.setTimeout("alert('Hello World!');", 500);
 ```
 
 ```js
-var f = new Function("console.log('foo');");
+let f = new Function("console.log('foo');");
 ```
 
 ### Inline JavaScript

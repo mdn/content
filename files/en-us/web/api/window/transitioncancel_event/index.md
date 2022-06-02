@@ -48,7 +48,7 @@ This code adds a listener to the `transitioncancel` event:
 
 ```js
 window.addEventListener('transitioncancel', () => {
-  console.log('Transition canceled');
+  console.log('Transition canceled');
 });
 ```
 
@@ -60,7 +60,7 @@ window.ontransitioncancel = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitioncancel_event#Live_example)
+[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitioncancel_event#live_example)
 
 ## Specifications
 

@@ -15,7 +15,7 @@ The **`Number.MIN_VALUE`** property represents the smallest positive numeric val
 
 ## Description
 
-`Number.MIN_VALUE` is the smallest positive number (not the most negative number) that can be represented within float precision — in other words, the number closest to 0. That’s approximately `5E-324`. The ECMAScript spec doesn’t define a precise value that implementations are required to support — instead the spec says, _“must be the smallest non-zero positive value that can actually be represented by the implementation”_. But in practice, its precise value in browsers and in Node.js is `2^-1074`.
+`Number.MIN_VALUE` is the smallest positive number (not the most negative number) that can be represented within float precision — in other words, the number closest to 0. That's approximately `5E-324`. The ECMAScript spec doesn't define a precise value that implementations are required to support — instead the spec says, _"must be the smallest non-zero positive value that can actually be represented by the implementation"_. But in practice, its precise value in browsers and in Node.js is `2^-1074`.
 
 Because `MIN_VALUE` is a static property of {{jsxref("Number")}}, you always use it as `Number.MIN_VALUE`, rather than as a property of a {{jsxref("Number")}} object you created.
 

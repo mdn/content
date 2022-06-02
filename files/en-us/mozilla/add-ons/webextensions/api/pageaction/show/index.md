@@ -19,7 +19,7 @@ Shows the {{WebExtAPIRef("pageAction")}} for a given {{WebExtAPIRef("tabs/Tab", 
 
 `show()` overrides pattern matching, so the page action will be shown in the specified tab even if [`show_matches`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) does not match the URL or [`hide_matches`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) does.
 
-Note that calling `show()` has no effect on a tab with no content loaded.
+Note that calling `show()` has no effect on a tab with no content loaded.
 
 ## Syntax
 
@@ -63,7 +63,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

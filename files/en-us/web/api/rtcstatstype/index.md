@@ -19,12 +19,12 @@ browser-compat: api.RTCStatsType
 
 The **`RTCStatsType`** enumerated type (enum) is a set of strings which define the {{domxref("RTCStats.type", "type")}} of statistics reported in a record found in the {{domxref("RTCStatsReport")}} object.
 
-This type determines which of the {{domxref("RTCStats")}}-based dictionaries the record is based upon.
+This type determines which of the {{domxref("RTCStats")}}-based dictionaries the record is based upon.
 
 ## Values
 
 - `candidate-pair`
-  - : An {{domxref("RTCIceCandidatePairStats")}} object providing statistics related to an {{domxref("RTCIceTransport")}}. Candidate pairs other than the currently active pair for the transport are deleted when the {{domxref("RTCPeerConnection")}} changes its {{domxref("RTCPeerConnection.iceGatheringState")}} to `new` during an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart). The active candidate pair is deleted after the transport switches to another candidate pair; this change cannot be detected otherwise.
+  - : An {{domxref("RTCIceCandidatePairStats")}} object providing statistics related to an {{domxref("RTCIceTransport")}}. Candidate pairs other than the currently active pair for the transport are deleted when the {{domxref("RTCPeerConnection")}} changes its {{domxref("RTCPeerConnection.iceGatheringState")}} to `new` during an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart). The active candidate pair is deleted after the transport switches to another candidate pair; this change cannot be detected otherwise.
 - `certificate`
   - : An {{domxref("RTCCertificateStats")}} object providing statistics related to a certificate being used by an {{domxref("RTCIceTransport")}}.
 - `codec`
@@ -46,15 +46,18 @@ This type determines which of the {{domxref("RTCStats")}}-based dictionaries th
 - `remote-candidate`
   - : The report is an {{domxref("RTCIceCandidateStats")}} object containing statistics about the remote candidate's {{domxref("RTCIceTransport")}}. This may include information such as the type of network, the protocol, the URL, the type of relay being used, and so forth.
 - `remote-inbound-rtp`
-  - : The report is an {{domxref("RTCRemoteInboundRtpStreamStats")}} object providing statistics about your outbound RTP data stream, but from the perspective of the remote peer. That is, this information is about your `outbound-rtp` stream, but as seen by the remote device that's handling the stream. You can use this information to do things like determine how well the remote peer is receiving data.
+  - : The report is an {{domxref("RTCRemoteInboundRtpStreamStats")}} object providing statistics about your outbound RTP data stream, but from the perspective of the remote peer. That is, this information is about your `outbound-rtp` stream, but as seen by the remote device that's handling the stream. You can use this information to do things like determine how well the remote peer is receiving data.
 - `remote-outbound-rtp`
   - : The report is an {{domxref("RTCRemoteOutboundRtpStreamStats")}} object that contains statistics about your inbound RTP (`inbound-rtp`) stream, but from the perspective of the remote peer.
 - `sender`
   - : An object containing statistics about the {{domxref("RTCRtpSender")}} for a stream on the {{domxref("RTCPeerConnection")}}. If {{domxref("RTCStats.kind", "kind")}} is `"audio"`, this object is of type {{domxref("RTCAudioSenderStats")}}; if `kind` is `"video"`, this is an {{domxref("RTCVideoSenderStats")}} object.
-- `stream`
+- `stream` {{deprecated_inline}}
   - : An object of type {{domxref("RTCMediaStreamStats")}}, providing statistics and information about a {{domxref("MediaStream")}} which is part of the {{domxref("RTCPeerConnection")}}.
-- `track`
+- `track` {{deprecated_inline}}
   - : The object is one of the types based on {{domxref("RTCMediaHandlerStats")}}: for audio tracks, the type is {{domxref("RTCSenderAudioTrackAttachmentStats")}} and for video tracks, the type is {{domxref("RTCSenderVideoTrackAttachmentStats")}}. The data within provides statistics related to a particular {{domxref("MediaStreamTrack")}}'s attachment to an {{domxref("RTCRtpSender")}}; also included are the media level metrics that go along with the track.
+
+> **Note:** All "track" stats have been made obsolete. The relevant metrics have been moved to "media-source", "sender", "outbound-rtp", "receiver" and "inbound-rtp" stats.
+
 - `transport`
   - : An object that contains statistics related to a transport for an `RTCPeerConnection`. The object is of type {{domxref("RTCTransportStats")}}.
 

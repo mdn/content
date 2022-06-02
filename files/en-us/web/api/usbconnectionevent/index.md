@@ -12,9 +12,11 @@ browser-compat: api.USBConnectionEvent
 
 The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}} is the event type passed to {{domxref("USB.onconnect")}} and {{domxref("USB.ondisconnect")}} when the user agent detects that a new USB device has been connected or disconnected.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("USBConnectionEvent.USBConnectionEvent()")}}
+- {{domxref("USBConnectionEvent.USBConnectionEvent", "USBConnectionEvent()")}}
   - : Returns a `USBConnectionEvent` object.
 
 ## Properties

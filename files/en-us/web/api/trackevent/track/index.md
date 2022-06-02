@@ -24,13 +24,7 @@ event applies.
 The media track will be an {{domxref("AudioTrack")}},
 {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}} object.
 
-## Syntax
-
-```js
-track = TrackEvent.track;
-```
-
-### Value
+## Value
 
 An object which is one of the types {{domxref("AudioTrack")}},
 {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}, depending on the type of media

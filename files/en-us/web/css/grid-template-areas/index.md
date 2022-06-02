@@ -32,15 +32,16 @@ grid-template-areas: "a b b"
 grid-template-areas: inherit;
 grid-template-areas: initial;
 grid-template-areas: revert;
+grid-template-areas: revert-layer;
 grid-template-areas: unset;
 ```
 
 ### Values
 
 - `none`
-  - : The grid container doesn’t define any named grid areas.
+  - : The grid container doesn't define any named grid areas.
 - `{{cssxref("&lt;string&gt;")}}+`
-  - : A row is created for every separate string listed, and a column is created for each cell in the string. Multiple named cell tokens within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
+  - : A row is created for every separate string listed, and a column is created for each cell in the string. Multiple cell tokens with the same name within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
 
 ## Formal definition
 
@@ -102,7 +103,7 @@ grid-template-areas: unset;
 
 #### Result
 
-{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "250px")}}
+{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "285px")}}
 
 ## Specifications
 
@@ -116,4 +117,4 @@ grid-template-areas: unset;
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
 - Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
+- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

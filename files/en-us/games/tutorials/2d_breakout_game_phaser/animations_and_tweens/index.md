@@ -24,7 +24,7 @@ To make the game look more juicy and alive we can use animations and tweens. Thi
 
 In Phaser, animations, involve taking a spritesheet from an external source and displaying the sprites sequentially. As an example, we will make the ball wobble when it hits something.
 
-First of all, [grab the spritesheet from Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png) and save it in your `/img` directory.
+First of all, [grab the spritesheet from GitHub](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png) and save it in your `/img` directory.
 
 Next, we will load the spritesheet — put the following line at the bottom of your `preload()` function:
 
@@ -47,7 +47,7 @@ To add an animation to the object we use the `animations.add()` method, which co
 
 - The name we chose for the animation
 - An array defining the order in which to display the frames during the animation. If you look again at the `wobble.png` image, you'll see there are three frames. Phaser extracts these and stores references to them in an array — positions 0, 1, and 2. The above array says that we are displaying frame 0, then 1, then 0, etc.
-- The framerate, in fps. Since we are running the animation at 24fps and there are 9 frames, the animation will display just under three times per second.
+- The frame rate, in fps. Since we are running the animation at 24fps and there are 9 frames, the animation will display just under three times per second.
 
 ## Applying the animation when the ball hits the paddle
 
@@ -75,7 +75,7 @@ The animation is played every time the ball hits the paddle. You can add the `an
 
 Whereas animations play external sprites sequentially, tweens smoothly animate properties of an object in the gameworld, such as width or opacity.
 
-Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your `ballhitBrick()` function, find your `brick.kill();` line, and replace it with the following:
+Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your `ballHitBrick()` function, find your `brick.kill();` line, and replace it with the following:
 
 ```js
 var killTween = game.add.tween(brick.scale);
@@ -88,10 +88,10 @@ killTween.start();
 
 Let's walk through this so you can see what's happening here:
 
-1.  When defining a new tween you have to specify which property will be tweened — in our case, instead of hiding the bricks instantly when hit by the ball, we will make their width and height scale to zero, so they will nicely disappear. To the end, we use the `add.tween()` method, specifying `brick.scale` as the argument as this is what we want to tween.
-2.  The `to()` method defines the state of the object at the end of the tween. It takes an object containing the chosen parameter's desired ending values (scale takes a scale value, 1 being 100% of size, 0 being 0% of size, etc.), the time of the tween in milliseconds and the type of easing to use for the tween.
-3.  We will also add the optional `onComplete` event handler, which defines a function to be executed when the tween finishes.
-4.  The last thing do to is to start the tween right away using `start()`.
+1. When defining a new tween you have to specify which property will be tweened — in our case, instead of hiding the bricks instantly when hit by the ball, we will make their width and height scale to zero, so they will nicely disappear. To the end, we use the `add.tween()` method, specifying `brick.scale` as the argument as this is what we want to tween.
+2. The `to()` method defines the state of the object at the end of the tween. It takes an object containing the chosen parameter's desired ending values (scale takes a scale value, 1 being 100% of size, 0 being 0% of size, etc.), the time of the tween in milliseconds and the type of easing to use for the tween.
+3. We will also add the optional `onComplete` event handler, which defines a function to be executed when the tween finishes.
+4. The last thing do to is to start the tween right away using `start()`.
 
 That's the expanded version of the tween definition, but we can also use the shorthand syntax:
 

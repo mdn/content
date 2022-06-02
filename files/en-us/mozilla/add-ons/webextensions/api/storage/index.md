@@ -27,9 +27,9 @@ To use this API you need to include the `"storage"` [permission](/en-US/docs/Moz
 
 Each extension has its own storage area, which can be split into different types of storage.
 
-Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in the extension code to store extension-related data. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API will be correctly persisted in these scenarios.
+Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in the extension code to store extension-related data. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API will be correctly persisted in these scenarios.
 
-You can examine the stored data under the Extension Storage item in the [Storage Inspector](/en-US/docs/Tools/Storage_Inspector) tab of the [developer toolbox](https://extensionworkshop.com/documentation/develop/debugging/), accessible from `about:debugging`.
+You can examine the stored data under the Extension Storage item in the [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) tab of the [developer toolbox](https://extensionworkshop.com/documentation/develop/debugging/), accessible from `about:debugging`.
 
 > **Note:** The storage area is not encrypted and shouldn't be used for storing confidential user information.
 
@@ -62,7 +62,7 @@ You can examine the stored data under the Extension Storage item in the [Storage
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

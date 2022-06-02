@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBRequest.view
 slug: Web/API/ReadableStreamBYOBRequest/view
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -11,18 +12,12 @@ tags:
   - View
 browser-compat: api.ReadableStreamBYOBRequest.view
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`view`** getter property of the
 {{domxref("ReadableStreamBYOBRequest")}} interface returns the current view.
 
-## Syntax
-
-```js
-var view = readableStreamBYOBRequestInstance.view;
-```
-
-### Value
+## Value
 
 A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) representing the
 destination region to which the controller can write generated data.

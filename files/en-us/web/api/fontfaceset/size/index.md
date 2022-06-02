@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.size
 slug: Web/API/FontFaceSet/size
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -32,4 +33,3 @@ console.log(document.fonts.size);
 ## Browser compatibility
 
 {{Compat}}
-

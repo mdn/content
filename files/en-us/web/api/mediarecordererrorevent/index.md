@@ -1,6 +1,7 @@
 ---
 title: MediaRecorderErrorEvent
 slug: Web/API/MediaRecorderErrorEvent
+page-type: web-api-interface
 tags:
   - AV
   - Audio
@@ -22,6 +23,8 @@ browser-compat: api.MediaRecorderErrorEvent
 {{APIRef("MediaStream Recording")}}
 
 The `MediaRecorderErrorEvent` interface represents errors returned by the [MediaStream Recording API.](/en-US/docs/Web/API/MediaStream_Recording_API) It is an {{domxref("Event")}} object that encapsulates a reference to a {{domxref("DOMException")}} describing the error that occurred.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

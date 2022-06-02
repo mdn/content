@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer
@@ -28,7 +29,7 @@ call to the observer's callback.
 ## Syntax
 
 ```js
-intersectionObserverEntries = intersectionObserver.takeRecords();
+takeRecords()
 ```
 
 ### Parameters

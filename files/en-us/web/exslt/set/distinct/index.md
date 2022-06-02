@@ -27,4 +27,4 @@ A node-set containing the nodes that have unique string values.
 
 ## Specifications
 
-[EXSLT - SET:DISTINCT](http://www.exslt.org/set/functions/distinct/index.html)
+[EXSLT - SET:DISTINCT](http://exslt.org/set/functions/distinct/index.html)

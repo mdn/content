@@ -19,7 +19,7 @@ interface removes all declarations in the `StylePropertyMap`.
 ## Syntax
 
 ```js
-StylePropertMap.clear()
+clear()
 ```
 
 ### Parameters
@@ -28,11 +28,11 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-The following example removes all styles within the elements [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
+The following example removes all styles within the elements [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```js
 // get the button element

@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
+page-type: web-api-interface
 tags:
   - API
   - BiquadFilterNode
@@ -12,6 +13,8 @@ browser-compat: api.BiquadFilterNode
 {{APIRef("Web Audio API")}}
 
 The `BiquadFilterNode` interface represents a simple low-order filter, and is created using the {{ domxref("BaseAudioContext/createBiquadFilter") }} method. It is an {{domxref("AudioNode")}} that can represent different kinds of filters, tone control devices, and graphic equalizers. A `BiquadFilterNode` always has exactly one input and one output.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -50,16 +53,16 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 > **Note:** Though the `AudioParam` objects returned are read-only, the values they represent are not.
 
 - {{domxref("BiquadFilterNode.frequency")}} {{readonlyInline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
 - {{domxref("BiquadFilterNode.detune")}} {{readonlyInline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of the frequency in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of the frequency in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 - {{domxref("BiquadFilterNode.Q")}} {{readonlyInline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](https://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](https://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
 - {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](https://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](https://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 - {{domxref("BiquadFilterNode.type")}}
 
-  - : Is a string value defining the kind of filtering algorithm the node is implementing.
+  - : A string value defining the kind of filtering algorithm the node is implementing.
 
     <table class="standard-table">
       <caption>

@@ -7,6 +7,7 @@ tags:
   - Landing
   - Reference
   - Web Animations
+spec-urls: https://drafts.csswg.org/web-animations/
 ---
 {{DefaultAPISidebar("Web Animations")}}
 
@@ -49,9 +50,7 @@ The Web Animations API adds some new features to {{domxref("document")}} and {{d
 
 ## Specifications
 
-| Specification                                                |
-| ------------------------------------------------------------ |
-| [Web Animations](https://drafts.csswg.org/web-animations-1/) |
+{{Specifications}}
 
 ## See also
 

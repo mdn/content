@@ -1,6 +1,7 @@
 ---
 title: InputEvent.getTargetRanges()
 slug: Web/API/InputEvent/getTargetRanges
+page-type: web-api-instance-method
 tags:
   - API
   - DOM Events
@@ -12,7 +13,7 @@ tags:
   - getTargetRanges()
 browser-compat: api.InputEvent.getTargetRanges
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`getTargetRanges()`** method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.
 
@@ -21,7 +22,7 @@ This allows web apps to override text edit behavior before the browser modifies 
 ## Syntax
 
 ```js
-var staticRanges[] = inputEvent.getTargetRanges()
+getTargetRanges()
 ```
 
 ### Parameters

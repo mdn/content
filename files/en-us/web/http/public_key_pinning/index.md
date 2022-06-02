@@ -8,6 +8,7 @@ tags:
   - HTTP
   - Deprecated
   - Security
+browser-compat: http.headers.Public-Key-Pins
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 
@@ -48,7 +49,7 @@ First you need to extract the public key information from your certificate or ke
 
 The following commands will help you extract the Base64 encoded information from a key file, a certificate signing request, or a certificate.
 
-```
+```bash
 openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
 
 openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
@@ -60,7 +61,7 @@ openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outfor
 
 The following command will extract the Base64 encoded information for a website.
 
-```
+```bash
 openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 ```
 
@@ -122,7 +123,7 @@ server.modules += ( "mod_setenv" )
 
 Add the following line to the Web.config file to send the `Public-Key-Pins` header:
 
-```
+```xml
 <system.webServer>
   ...
 
@@ -138,13 +139,11 @@ Add the following line to the Web.config file to send the `Public-Key-Pins` head
 
 ## Specifications
 
-| Specification                                            | Title                                 |
-| -------------------------------------------------------- | ------------------------------------- |
-| {{RFC("7469", "Public-Key-Pins", "2.1")}} | Public Key Pinning Extension for HTTP |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Public-Key-Pins")}}
+{{Compat}}
 
 ## See also
 

@@ -17,7 +17,7 @@ specifies a value to be returned to the function caller.
 ## Syntax
 
 ```js
-return [expression]; 
+return [expression];
 ```
 
 - `expression`
@@ -53,9 +53,9 @@ return x + y / 3;
 
 ### Automatic Semicolon Insertion
 
-The `return` statement is affected by [automatic
-semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). No line terminator is allowed between the
-`return` keyword and the expression.
+The `return` statement is affected by
+[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion).
+No line terminator is allowed between the `return` keyword and the expression.
 
 ```js
 return
@@ -78,7 +78,7 @@ To avoid this problem (to prevent ASI), you could use parentheses:
 
 ```js
 return (
-  a + b
+  a + b
 );
 ```
 
@@ -137,5 +137,5 @@ answer(1337); // 56154
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Closures](/en-US/docs/Web/JavaScript/Closures)

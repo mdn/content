@@ -30,13 +30,7 @@ The corresponding {{domxref("Window.pageXOffset", "pageXOffset")}} property, whi
 returns the number of pixels scrolled along the horizontal axis (left and right), is an
 alias for {{domxref("Window.scrollX", "scrollX")}}.
 
-## Syntax
-
-```js
-yOffset = window.pageYOffset;
-```
-
-### Value
+## Value
 
 A floating-point number specifying the number of pixels the {{domxref("Document")}} is
 scrolled vertically within its containing {{domxref("Window")}}. This number is subpixel
@@ -47,7 +41,7 @@ window's content area.
 Since this property is an alias for {{domxref("Window.scrollY")}}, see that article for
 additional details on this value and its use.
 
-## Example
+## Examples
 
 ```js hidden
 var contentHTML = `

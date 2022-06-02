@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue
 slug: Web/API/CSSNumericValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -14,6 +15,8 @@ browser-compat: api.CSSNumericValue
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSNumericValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents operations that all numeric values can perform.
+
+{{InheritanceDiagram}}
 
 ## Interfaces based on CSSNumericValue
 

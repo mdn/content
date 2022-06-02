@@ -1,6 +1,7 @@
 ---
 title: HTMLLabelElement.htmlFor
 slug: Web/API/HTMLLabelElement/htmlFor
+page-type: web-api-instance-property
 tags:
   - Forms
   - HTML DOM
@@ -26,7 +27,7 @@ HTMLLabelElement.htmlFor = newId
 
 ### Value
 
-A {{domxref("DOMString")}} which contains the ID string of the element which is
+A string which contains the ID string of the element which is
 associated with the control.
 
 > **Note:** If this property has a value, the {{domxref("HTMLLabelElement.control")}} property

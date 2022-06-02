@@ -26,7 +26,9 @@ p:first-of-type {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:first-of-type
+```
 
 ## Examples
 

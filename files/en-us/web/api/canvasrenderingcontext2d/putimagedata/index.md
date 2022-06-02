@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.putImageData()
 slug: Web/API/CanvasRenderingContext2D/putImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -25,8 +26,8 @@ manipulation of canvas contents in the article [Pixel manipulation with canvas](
 ## Syntax
 
 ```js
-void ctx.putImageData(imageData, dx, dy);
-void ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+putImageData(imageData, dx, dy)
+putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 ```
 
 ### Parameters
@@ -49,6 +50,10 @@ void ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
   - : Width of the rectangle to be painted. Defaults to the width of the image data.
 - `dirtyHeight` {{optional_inline}}
   - : Height of the rectangle to be painted. Defaults to the height of the image data.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -142,7 +147,7 @@ The output might look like:
 ```plain
 before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
 after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
-````
+```
 
 ## Specifications
 

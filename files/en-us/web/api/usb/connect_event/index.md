@@ -18,16 +18,16 @@ The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connect', event => { });
+addEventListener('connect', event => { })
 
-onconnect = event => { };
+onconnect = event => { }
 ```
 
 ## Event type
 
 A {{domxref("USBConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram(500, 70, 50, "USBConnectionEvent")}}
+{{InheritanceDiagram("USBConnectionEvent")}}
 
 ## Event properties
 
@@ -46,7 +46,7 @@ navigator.usb.addEventListener('connect', event => {
 });
 ```
 
-Alternatively, you can use the `USB.onconnect` event handler property to establish a handler for the `connect` event:
+Alternatively, you can use the `USB.onconnect` event handler property to establish a handler for the `connect` event:
 
 ```js
 navigator.usb.onconnect = event => {

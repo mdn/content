@@ -15,18 +15,12 @@ browser-compat: api.RTCRtpTransceiver.sender
 ---
 {{APIRef("WebRTC")}}
 
-The read-only  **`sender`** property
+The read-only  **`sender`** property
 of WebRTC's {{domxref("RTCRtpTransceiver")}} interface indicates the
 {{domxref("RTCRtpSender")}} responsible for encoding and sending outgoing media data
 for the transceiver's stream.
 
-## Syntax
-
-```js
-var rtpSender = RTCRtpTransceiver.sender;
-```
-
-### Value
+## Value
 
 An {{domxref("RTCRtpSender")}} object used to encode and send media whose media ID
 matches the current value of {{domxref("RTCRtpTransceiver.mid", "mid")}}.

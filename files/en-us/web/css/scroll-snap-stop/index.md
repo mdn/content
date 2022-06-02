@@ -20,9 +20,11 @@ scroll-snap-stop: normal;
 scroll-snap-stop: always;
 
 /* Global values */
-scroll-snap-type: inherit;
-scroll-snap-type: initial;
-scroll-snap-type: unset;
+scroll-snap-stop: inherit;
+scroll-snap-stop: initial;
+scroll-snap-stop: revert;
+scroll-snap-stop: revert-layer;
+scroll-snap-stop: unset;
 ```
 
 ## Syntax
@@ -30,7 +32,7 @@ scroll-snap-type: unset;
 ### Values
 
 - `normal`
-  - : When the visual {{Glossary("viewport")}} of this element's scroll container is scrolled, it may "pass over" possible snap positions.
+  - : When the visual {{Glossary("viewport")}} of this element's scroll container is scrolled, it may "pass over" possible snap positions.
 - `always`
   - : The scroll container must not "pass over" a possible snap position; and must snap to the first of this elements' snap positions.
 

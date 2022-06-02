@@ -34,6 +34,7 @@ text-underline-offset: 20%;
 text-underline-offset: inherit;
 text-underline-offset: initial;
 text-underline-offset: revert;
+text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 

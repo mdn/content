@@ -29,7 +29,7 @@ Modern JavaScript — as described in the next sections — thankfully makes it 
 
 JavaScript works best with events and callback functions. Modern browsers strive to call methods right as they are needed and idle (or do their other tasks) in the gaps. It is an excellent idea to attach your code to the moments that are appropriate for them. Think about whether your function really needs to be called on a strict interval of time, every frame, or only after something else happens. Being more specific with the browser about when your function needs to be called allows the browser to optimize when it is called. Also, it will probably make your job easier.
 
-Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, `{{ domxref("window.requestAnimationFrame()") }}` will be the foundation of most well-programmed per-frame main loops.  A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
+Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, `{{ domxref("window.requestAnimationFrame()") }}` will be the foundation of most well-programmed per-frame main loops. A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
 
 ```js
 window.main = function () {
@@ -43,7 +43,7 @@ main(); // Start the cycle
 
 > **Note:** In each of the `main()` methods discussed here, we schedule a new `requestAnimationFrame` before performing our loop contents. That is not by accident and it is considered best practice. Calling the next `requestAnimationFrame` early ensures the browser receives it on time to plan accordingly even if your current frame misses its VSync window.
 
-The above chunk of code has two statements. The first statement creates a function as a global variable called `main()`. This function does some work and also tells the browser to call itself next frame with `window.requestAnimationFrame()`. The second statement calls the `main()` function, defined in the first statement. Because `main()` is called once in the second statement and every call of it places itself in the queue of things to do next frame, `main()` is synchronized to your framerate.
+The above chunk of code has two statements. The first statement creates a function as a global variable called `main()`. This function does some work and also tells the browser to call itself next frame with `window.requestAnimationFrame()`. The second statement calls the `main()` function, defined in the first statement. Because `main()` is called once in the second statement and every call of it places itself in the queue of things to do next frame, `main()` is synchronized to your frame rate.
 
 Of course this loop is not perfect. Before we discuss ways to change it, let us discuss what it already does well.
 
@@ -115,10 +115,10 @@ Ultimately, in JavaScript, the browser is running its own main loop and your cod
 
 Modern versions of Firefox and Google Chrome (and probably others) _attempt_ to connect `requestAnimationFrame` callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus _tries_ to look like the following:
 
-1.  Start a new frame (while the previous frame is handled by the display).
-2.  Go through the list of `requestAnimationFrame` callbacks and invoke them.
-3.  Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
-4.  Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](https://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
+1. Start a new frame (while the previous frame is handled by the display).
+2. Go through the list of `requestAnimationFrame` callbacks and invoke them.
+3. Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
+4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](https://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
 
 You can think about developing realtime applications as having a budget of time to do work. All of the above steps must take place every 16-and-a-half milliseconds to keep up with a 60 Hz display. Browsers invoke your code as early as possible to give it maximum computation time. Your main thread will often start workloads that are not even on the main thread (such as rasterization or shaders in WebGL). Long calculations can be performed on a Web Worker or a GPU at the same time as the browser uses its main thread to manage garbage collection, its other tasks, or handle asynchronous events.
 
@@ -254,7 +254,7 @@ A separate update and draw method could look like the following example. For the
 *          the DOMHighResTimeStamp for the time it represents (which, again, is always
 *          last update + MyGame.tickLength unless a pause feature is added, etc.)
 *
-* setInitialState() Performs whatever tasks are leftover before the mainloop must run.
+* setInitialState() Performs whatever tasks are leftover before the main loop must run.
 *                   It is just a generic example function that you might have added.
 */
 

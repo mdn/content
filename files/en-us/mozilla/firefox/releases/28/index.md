@@ -41,7 +41,7 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 
 ### JavaScript
 
-- [ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues:
+- [ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues:
 
   - New `Array` methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ({{bug("894658")}}).
 
@@ -52,7 +52,7 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 - `HTMLVideoElement.canPlayType('video/webm')` now reports `maybe`. ({{bug("884275")}}).
 - The {{domxref("DocumentFragment.getElementById()")}} method has been implemented. E.g. `document.createDocumentFragment().getElementById()` ({{bug("933193")}}).
 - The {{domxref("KeyboardEvent.repeat")}} attribute has been implemented ({{bug("600117")}}).
-- The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ({{bug("819900")}}).
+- The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ({{bug("819900")}}).
 - The {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ({{bug(757726)}}).
 - The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ({{bug(943668)}}).
 - The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D/drawFocusIfNeeded", "CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference `canvas.focusring.enabled` must be set to `true` to activate both ({{bug(540456)}}).

@@ -18,13 +18,7 @@ The **`productName`** read only property of the
 {{domxref("USBDevice")}} interface the manufacturer-defined name that identifies a USB
 device.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.productName
-```
-
-### Value
+## Value
 
 The manufacturer-defined name that identifies a USB device.
 

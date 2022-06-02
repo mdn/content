@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -20,14 +21,18 @@ to {{domxref("Element.scrollIntoView()")}}.
 ## Syntax
 
 ```js
-void ctx.scrollPathIntoView();
-void ctx.scrollPathIntoView(path);
+scrollPathIntoView()
+scrollPathIntoView(path)
 ```
 
 ### Parameters
 
 - `path`
   - : A {{domxref("Path2D")}} path to use.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -61,8 +66,8 @@ Edit the code below to see your changes update live in the canvas:
 <input id="button" type="range" min="1" max="12">
 </canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();

@@ -1,15 +1,17 @@
 ---
 title: Cookie Store API
 slug: Web/API/Cookie_Store_API
+page-type: web-api-overview
 tags:
   - API
   - Cookie Store
   - Overview
   - Reference
+browser-compat: api.CookieStore
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The Cookie Store API provides an asychronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "service workers")}}.
+The Cookie Store API provides an asynchronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "service workers")}}.
 
 ## Concepts and Usage
 
@@ -35,8 +37,8 @@ The Cookie Store API provides an updated method of managing cookies. It is {{Glo
 
 ## Specifications
 
-{{Specifications("api.CookieStore")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.CookieStore")}}
+{{Compat}}

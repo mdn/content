@@ -17,14 +17,14 @@ browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
 
 Displays a JSON object in the extension's sidebar pane.
 
-The object is displayed as an expandable tree, as in the [JSON viewer](/en-US/docs/Tools/JSON_viewer) in Firefox. You can optionally specify a `rootTitle` string: this will be displayed as the title of the tree's root.
+The object is displayed as an expandable tree, as in the [JSON viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) in Firefox. You can optionally specify a `rootTitle` string: this will be displayed as the title of the tree's root.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
 ```js
-var setting = browser.devtools.panels.setObject(
+let setting = browser.devtools.panels.setObject(
   jsonObject,       // string, array, or JSON object
   rootTitle         // string
 )
@@ -66,7 +66,7 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

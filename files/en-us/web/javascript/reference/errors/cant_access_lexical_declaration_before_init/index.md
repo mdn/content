@@ -45,11 +45,11 @@ In this case, the variable "foo" is accessed, even before it is declared which t
 ```js example-bad
 function test() {
 
-  // Accessing the variable foo before it's declared 
+  // Accessing the variable foo before it's declared
 
   console.log(foo);     // ReferenceError: can't access lexical
   let foo = 33;         // 'foo' is declared here using the 'let' keyword
-   
+
 }
 test();
 ```
@@ -71,5 +71,4 @@ test();
 
 ## See also
 
-- [Temporal
-  Dead Zone and errors with let](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)
+- [Temporal Dead Zone and errors with let](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)

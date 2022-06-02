@@ -16,13 +16,7 @@ The **`renderedBuffer`** read-only property of the
 {{domxref("OfflineAudioCompletionEvent")}} interface is an {{domxref("AudioBuffer")}}
 containing the result of processing an {{domxref("OfflineAudioContext")}}.
 
-## Syntax
-
-```js
-var buffer = offlineAudioCompletionEventInstance.renderedBuffer;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioBuffer")}}.
 

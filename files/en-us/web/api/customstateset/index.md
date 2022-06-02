@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet
 slug: Web/API/CustomStateSet
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -80,4 +81,3 @@ labeled-checkbox:--checked { border: solid; }
 ## Browser compatibility
 
 {{Compat}}
-

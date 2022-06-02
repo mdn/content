@@ -1,6 +1,7 @@
 ---
 title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -18,7 +19,7 @@ The **`PromiseRejectionEvent`** interface represents events which are sent to th
 
 For details on promise rejection events, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -68,5 +69,5 @@ window.onunhandledrejection = function(e) {
 - [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - {{jsxref("Promise")}}
-- {{domxref("WindowEventHandlers.onrejectionhandled")}}
-- {{domxref("WindowEventHandlers.onunhandledrejection")}}
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

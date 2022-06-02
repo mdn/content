@@ -8,7 +8,7 @@ tags:
   - Web Performance
   - performance APIs
 ---
-**Navigation timings** are metrics measuring a browser's document navigation events. **Resource timings** are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
+**Navigation timings** are metrics measuring a browser's document navigation events. **Resource timings** are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
 
 The general performance timings below have been deprecated in favor of the Performance Entry API, which provides for marking and measuring times along the navigation and resource loading process. While deprecated, they are supported in all browsers.
 
@@ -22,7 +22,7 @@ The performance timing API provided read only times, in milliseconds(ms), descri
 
 With the metrics above, and a little bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
 
-To help measure the time it takes to complete all the steps, the Performance Timing API  provides read only measurements of navigation timings. To view and capture our app's timing we enter:
+To help measure the time it takes to complete all the steps, the Performance Timing API provides read only measurements of navigation timings. To view and capture our app's timing we enter:
 
 ```js
 let time = window.performance.timing
@@ -378,7 +378,7 @@ In supporting browsers, you can use `performance.getEntriesByType('paint')` to q
 
 ## Navigation Timing
 
-When a user requests a web site or application,[ to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
+When a user requests a web site or application, [to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
 
 ```js
 let navigationTimings = performance.getEntriesByType('navigation');

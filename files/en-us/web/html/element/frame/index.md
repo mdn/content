@@ -23,7 +23,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 - {{htmlattrdef("src")}}
   - : This attribute specifies the document that will be displayed by the frame.
 - {{htmlattrdef("name")}}
-  - : This attribute is used for labeling frames. Without labeling, every link will open in the frame that it’s in – the closest parent frame. See the {{htmlattrxref("target","a")}} attribute for more information.
+  - : This attribute is used for labeling frames. Without labeling, every link will open in the frame that it's in – the closest parent frame. See the {{htmlattrxref("target","a")}} attribute for more information.
 - {{htmlattrdef("noresize")}}
   - : This attribute prevents resizing of frames by users.
 - {{htmlattrdef("scrolling")}}
@@ -33,7 +33,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 - {{htmlattrdef("marginwidth")}}
   - : This attribute defines the width of the margin between frames.
 - {{htmlattrdef("frameborder")}}
-  - : This attribute allows you to specify a frame’s border.
+  - : This attribute allows you to specify a frame's border.
 
 ## Example
 

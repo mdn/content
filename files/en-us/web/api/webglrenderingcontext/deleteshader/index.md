@@ -14,23 +14,23 @@ browser-compat: api.WebGLRenderingContext.deleteShader
 The **`WebGLRenderingContext.deleteShader()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) marks a given
 {{domxref("WebGLShader")}} object for deletion. It will then be deleted whenever the
 shader is no longer in use. This method has no effect if the shader has already been
-deleted, and the {{domxref("WebGLShader")}} is automatically marked for deletion when it
+deleted, and the {{domxref("WebGLShader")}} is automatically marked for deletion when it
 is destroyed by the garbage collector.
 
 ## Syntax
 
 ```js
-void gl.deleteShader(shader);
+deleteShader(shader)
 ```
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

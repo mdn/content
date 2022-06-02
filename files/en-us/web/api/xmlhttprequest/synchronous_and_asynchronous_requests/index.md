@@ -17,11 +17,11 @@ Synchronous requests block the execution of code which causes "freezing" on the 
 
 ## Asynchronous request
 
-If you use an asynchronous {{domxref('XMLHttpRequest')}}, you receive a callback when the data has been received. This lets the browser continue to work as normal while your request is being handled.
+If you use an asynchronous {{domxref('XMLHttpRequest')}}, you receive a callback when the data has been received. This lets the browser continue to work as normal while your request is being handled.
 
 ### Example: send a file to the console log
 
-This is the simplest usage of asynchronous {{domxref('XMLHttpRequest')}}.
+This is the simplest usage of asynchronous {{domxref('XMLHttpRequest')}}.
 
 ```js
 var xhr = new XMLHttpRequest();
@@ -81,13 +81,13 @@ function showMessage(message) {
 loadFile("message.txt", showMessage, "New message!\n\n");
 ```
 
-The signature of the utility function **_loadFile_** declares (i) a target URL to read (via an HTTP GET request), (ii) a function to execute on successful completion of the XHR operation, and (iii) an arbitrary list of additional arguments that are passed through the XHR object (via the `arguments` property) to the success callback function.
+The signature of the utility function **_loadFile_** declares (i) a target URL to read (via an HTTP GET request), (ii) a function to execute on successful completion of the XHR operation, and (iii) an arbitrary list of additional arguments that are passed through the XHR object (via the `arguments` property) to the success callback function.
 
 Line 1 declares a function invoked when the XHR operation completes successfully. It, in turn, invokes the callback function specified in the invocation of the `loadFile` function (in this case, the function `showMessage`) which has been assigned to a property of the XHR object (Line 11). The additional arguments (if any) supplied to the invocation of function loadFile are "applied" to the running of the callback function.
 
 Line 5 declares a function invoked when the XHR operation fails to complete successfully.
 
-Line 11 stores the success callback given as the second argument to `loadFile` in the XHR object's `callback` property.
+Line 11 stores the success callback given as the second argument to `loadFile` in the XHR object's `callback` property.
 
 Line 12 slices the arguments array given to the invocation of `loadFile`. Starting with the third argument, all remaining arguments are collected, assigned to the arguments property of the variable `xhr`, passed to the success callback function `xhrSuccess`., and ultimately supplied to the callback function (in this case, `showMessage`) which is invoked by function `xhrSuccess`.
 
@@ -97,7 +97,7 @@ Line 16 actually initiates the request.
 
 ### Example: using a timeout
 
-You can use a timeout to prevent your code from hanging while waiting for a read to finish. This is done by setting the value of the `timeout` property on the {{domxref('XMLHttpRequest')}} object, as shown in the code below:
+You can use a timeout to prevent your code from hanging while waiting for a read to finish. This is done by setting the value of the `timeout` property on the {{domxref('XMLHttpRequest')}} object, as shown in the code below:
 
 ```js
 function loadFile(url, timeout, callback) {
@@ -143,7 +143,7 @@ Here, we're specifying a timeout of 2000 ms.
 
 Synchronous XHR requests often cause hangs on the web. But developers typically don't notice the problem because the hang only manifests with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now in deprecation state. The recommendation is that developers move away from the synchronous API and instead use asynchronous requests.
 
-All new XHR features such as `timeout` or `abort` are not allowed for synchronous XHR. Doing so will raise an `InvalidAccessError`.
+All new XHR features such as `timeout` or `abort` are not allowed for synchronous XHR. Doing so will raise an `InvalidAccessError`.
 
 ### Example: HTTP synchronous request
 
@@ -165,7 +165,7 @@ Line 5 checks the status code after the transaction is completed. If the result 
 
 ### Example: Synchronous HTTP request from a Worker
 
-One of the few cases in which a synchronous request does not usually block execution is the use of {{domxref('XMLHttpRequest')}} within a [`Worker`](/en-US/docs/Web/API/Worker).
+One of the few cases in which a synchronous request does not usually block execution is the use of {{domxref('XMLHttpRequest')}} within a [`Worker`](/en-US/docs/Web/API/Worker).
 
 **`example.html`** (the main page):
 
@@ -188,9 +188,11 @@ One of the few cases in which a synchronous request does not usually block execu
 </html>
 ```
 
-**`myFile.txt`** (the target of the synchronous {{domxref('XMLHttpRequest')}} invocation):
+**`myFile.txt`** (the target of the synchronous {{domxref('XMLHttpRequest')}} invocation):
 
-    Hello World!!
+```
+Hello World!!
+```
 
 **`myTask.js`** (the [`Worker`](/en-US/docs/Web/API/Worker)):
 
@@ -207,7 +209,7 @@ self.onmessage = function (event) {
 
 > **Note:** The effect is asynchronous, because of the use of the `Worker`.
 
-This pattern can be useful, for example in order to interact with the server in the background, or to preload content. See [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) for examples and details.
+This pattern can be useful, for example in order to interact with the server in the background, or to preload content. See [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) for examples and details.
 
 ### Adapting Sync XHR use cases to the Beacon API
 

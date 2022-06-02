@@ -32,25 +32,27 @@ Fiddle: <https://jsfiddle.net/jonathansampson/mqcHA/1/>
 
 ## Example 2
 
-    <html>
-    <head>
-        <title>msCapsLockWarningOff example</title>
-        <script type="text/javascript">
+```html
+<html>
+<head>
+    <title>msCapsLockWarningOff example</title>
+    <script type="text/javascript">
 
-            function capsOff() {
-                      if (document.msCapsLockWarningOff == false) {
-                    document.msCapsLockWarningOff = true;
-                    document.getElementById("caps").innerHTML = "Warning off";
-                } else {
-                    document.msCapsLockWarningOff = false;
-                    document.getElementById("caps").innerHTML = "Warning on";
-                }
+        function capsOff() {
+                  if (document.msCapsLockWarningOff == false) {
+                document.msCapsLockWarningOff = true;
+                document.getElementById("caps").innerHTML = "Warning off";
+            } else {
+                document.msCapsLockWarningOff = false;
+                document.getElementById("caps").innerHTML = "Warning on";
             }
+        }
 
-        </script>
-    </head>
-    <body>
-    <label>Type a password: input type="password" /></label><br />
-    <button id="caps" onclick="capsOff();">Warning off</button>
-    </body>
-    </html>
+    </script>
+</head>
+<body>
+<label>Type a password: input type="password" /></label><br />
+<button id="caps" onclick="capsOff();">Warning off</button>
+</body>
+</html>
+```

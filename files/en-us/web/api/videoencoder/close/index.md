@@ -16,16 +16,16 @@ The **`close()`** method of the {{domxref("VideoEncoder")}} interface ends all p
 ## Syntax
 
 ```js
-VideoEncoder.close()
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

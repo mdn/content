@@ -12,19 +12,19 @@ Starting with Firefox 3 (as well as Thunderbird 3 and SeaMonkey 2), you can now 
 
 This is _not_ for extensions who wants to add a dictionary to the built in Hunspell spell checker.
 
-An [example](https://voikko.svn.sourceforge.net/viewvc/voikko/trunk/mozvoikko/) of a spell checker extension can be found as part of the [Voikko](http://voikko.sourceforge.net/) project.
+An [example](https://sourceforge.net/projects/voikko/) of a spell checker extension can be found as part of the [Voikko](https://voikko.puimula.org/) project.
 
 ## Implementing spell checker support
 
 Implementing a spell checker requires the following steps be taken:
 
-1.  Implement a class derived from {{ interface("mozISpellCheckingEngine") }} that implements the required functionality or accesses an external spell checker.
-2.  The {{ interface("mozISpellCheckingEngine") }} method {{ ifmethod("mozISpellCheckingEngine", "getDictionaryList") }} should be implemented to return a list of dictionaries supported by the spell checker.
-3.  The extension needs to provide a registration callback.  The registration callback must use {{ interface("nsICategoryManager") }} to install into the category "spell-check-engine" an entry with a name equal to the contract ID of the class implementing the spell check functionality.
-4.  The extension also needs to provide an unregistration callback, which must remove the category entry.
+1. Implement a class derived from `mozISpellCheckingEngine` that implements the required functionality or accesses an external spell checker.
+2. The `mozISpellCheckingEngine` method `mozISpellCheckingEngine.getDictionaryList()` should be implemented to return a list of dictionaries supported by the spell checker.
+3. The extension needs to provide a registration callback. The registration callback must use `nsICategoryManager` to install into the category "spell-check-engine" an entry with a name equal to the contract ID of the class implementing the spell check functionality.
+4. The extension also needs to provide an unregistration callback, which must remove the category entry.
 
-The value of the category entry may be chosen as desired.  You may, for example, choose to use it to record the path to the shared library used by the extension to handle spell checking, to make it easy to locate by other components of the extension.
+The value of the category entry may be chosen as desired. You may, for example, choose to use it to record the path to the shared library used by the extension to handle spell checking, to make it easy to locate by other components of the extension.
 
 ## Spell check dictionary prioritization
 
-Dictionaries provided by spell check extensions override built-in dictionaries.  If multiple extensions supply dictionaries for the same language, the first one found is used.
+Dictionaries provided by spell check extensions override built-in dictionaries. If multiple extensions supply dictionaries for the same language, the first one found is used.

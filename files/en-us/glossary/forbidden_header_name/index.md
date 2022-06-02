@@ -14,31 +14,30 @@ Modifying such headers is forbidden because the user agent retains full control 
 
 Forbidden header names start with `Proxy-` or `Sec-`, or are one of the following names:
 
-- `Accept-Charset`
-- `Accept-Encoding`
-- `Access-Control-Request-Headers`
-- `Access-Control-Request-Method`
-- `Connection`
-- `Content-Length`
-- `Cookie`
-- `Cookie2`
-- `Date`
-- `DNT`
-- `Expect`
-- `Feature-Policy`
-- `Host`
-- `Keep-Alive`
-- `Origin`
+- {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Access-Control-Request-Headers")}}
+- {{HTTPHeader("Access-Control-Request-Method")}}
+- {{HTTPHeader("Connection")}}
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Cookie")}}
+- {{HTTPHeader("Date")}}
+- {{HTTPHeader("DNT")}}
+- {{HTTPHeader("Expect")}}
+- {{HTTPHeader("Feature-Policy")}}
+- {{HTTPHeader("Host")}}
+- {{HTTPHeader("Keep-Alive")}}
+- {{HTTPHeader("Origin")}}
 - `Proxy-`
 - `Sec-`
-- `Referer`
-- `TE`
-- `Trailer`
-- `Transfer-Encoding`
-- `Upgrade`
-- `Via`
+- {{HTTPHeader("Referer")}}
+- {{HTTPHeader("TE")}}
+- {{HTTPHeader("Trailer")}}
+- {{HTTPHeader("Transfer-Encoding")}}
+- {{HTTPHeader("Upgrade")}}
+- {{HTTPHeader("Via")}}
 
-> **Note:** The `User-Agent` header is no longer forbidden, [as per spec](https://fetch.spec.whatwg.org/#terminology-headers) — see forbidden header name list (this was implemented in Firefox 43) — it can now be set in a Fetch [Headers](/en-US/docs/Web/API/Headers) object, or via XHR [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest#setrequestheader%28%29).  However, Chrome will silently drop the header from Fetch requests (see [Chromium bug 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722)).
+> **Note:** The {{HTTPHeader("User-Agent")}} header is no longer forbidden, [as per spec](https://fetch.spec.whatwg.org/#terminology-headers) — see forbidden header name list (this was implemented in Firefox 43) — it can now be set in a Fetch [Headers](/en-US/docs/Web/API/Headers) object, or via XHR [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest#setrequestheader%28%29). However, Chrome will silently drop the header from Fetch requests (see [Chromium bug 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722)).
 
 ## See also
 

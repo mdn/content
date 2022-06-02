@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -34,7 +35,7 @@ respectively given by {{domxref("PublicKeyCredentialCreationOptions.extensions")
 ## Syntax
 
 ```js
-mapArrayBuffer = publicKeyCredential.getClientExtensionResults()
+getClientExtensionResults()
 ```
 
 ### Parameters
@@ -49,10 +50,8 @@ and their results from the processing.
 
 > **Warning:** As of March 2019, only `appId` (used during
 > creation with {{domxref("PublicKeyCredentialRequestOptions.extensions")}}) is
-> supported by [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) and
-> [Edge](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface).
-> Firefox does not seem to [support any
-> extension](https://bugzilla.mozilla.org/show_bug.cgi?id=1370728).
+> supported by [Chromium](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) and
+> Firefox does not seem to [support any extension](https://bugzilla.mozilla.org/show_bug.cgi?id=1370728).
 
 ## Examples
 

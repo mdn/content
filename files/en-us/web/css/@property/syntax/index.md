@@ -11,7 +11,7 @@ browser-compat: css.at-rules.property.syntax
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and describes the allowable syntax for the property.
+The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and describes the allowable syntax for the property.
 
 ## Syntax
 
@@ -44,7 +44,7 @@ A string with a supported syntax as defined by the specification. Supported synt
 - `"<image>"`
   - : Any valid {{cssxref("&lt;image&gt;")}} values.
 - `"<url>"`
-  - : Any valid {{cssxref("url()","url()")}} values.
+  - : Any valid {{cssxref("url","url()")}} values.
 - `"<integer>"`
   - : Any valid {{cssxref("&lt;integer&gt;")}} values.
 - `"<angle>"`
@@ -66,7 +66,9 @@ A string with a supported syntax as defined by the specification. Supported synt
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<string>
+```
 
 ## Examples
 
@@ -106,4 +108,4 @@ window.CSS.registerProperty({
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/Houdini)
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleValue
 slug: Web/API/CSSStyleValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -31,7 +32,7 @@ Below is a list of interfaces based on the `CSSStyleValue` interface.
 - {{domxref("CSSStyleValue.parse()")}}
   - : Sets a specific CSS property to the specified values and returns the first value as a {{domxref('CSSStyleValue')}} object.
 - {{domxref("CSSStyleValue.parseAll()")}}
-  - : Sets all occurrences of a specific CSS property to the specified valueand returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the supplied values.
+  - : Sets all occurrences of a specific CSS property to the specified value and returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the supplied values.
 
 ## Specifications
 

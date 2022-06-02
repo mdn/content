@@ -18,13 +18,7 @@ The **`deviceVersionSubminor`** read only property of the
 {{domxref("USBDevice")}} interface the patch version number of the device in a semantic
 versioning scheme.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.deviceVersionSubminor
-```
-
-### Value
+## Value
 
 A number.
 

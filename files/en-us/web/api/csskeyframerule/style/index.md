@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframeRule.style
 slug: Web/API/CSSkeyframeRule/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -14,13 +15,7 @@ browser-compat: api.CSSKeyframeRule.style
 
 The read-only **`CSSKeyframeRule.style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) of the {{ domxref("CSSKeyframeRule") }}.
 
-## Syntax
-
-```js
-styleObj = cssKeyframeRule.style
-```
-
-### Value
+## Value
 
 A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 
@@ -33,7 +28,7 @@ A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 - owner node
   - : Null.
 
-## Example
+## Examples
 
 The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual `CSSKeyFrame` objects for each keyframe.

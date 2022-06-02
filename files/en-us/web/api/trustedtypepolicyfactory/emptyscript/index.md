@@ -15,13 +15,7 @@ The **`emptyScript`** read-only property of the {{domxref("TrustedTypePolicyFact
 
 This object can be used when the application requires an empty string to be inserted into an injection sink which is expecting a `TrustedScript` object.
 
-## Syntax
-
-```js
-var emptyScript = TrustedTypePolicyFactory.emptyScript;
-```
-
-### Value
+## Value
 
 A {{domxref("TrustedScript")}} object.
 

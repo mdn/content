@@ -18,7 +18,7 @@ The **`isScript()`** method of the {{domxref("TrustedTypePolicyFactory")}} inter
 ## Syntax
 
 ```js
-var isScript = TrustedTypePolicyFactory.isScript(value);
+isScript(value)
 ```
 
 ### Parameters

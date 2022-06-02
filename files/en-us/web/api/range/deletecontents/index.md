@@ -1,6 +1,7 @@
 ---
 title: Range.deleteContents()
 slug: Web/API/Range/deleteContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,10 +20,18 @@ Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
 ## Syntax
 
 ```js
-range.deleteContents()
+deleteContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 range = document.createRange();

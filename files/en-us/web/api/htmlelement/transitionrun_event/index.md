@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: transitionrun event'
 slug: Web/API/HTMLElement/transitionrun_event
+page-type: web-api-event
 tags:
   - CSS Transitions
   - Event
@@ -97,7 +98,7 @@ el.addEventListener('transitionstart', function() {
 });
 
 el.addEventListener('transitionend', function() {
-  message.textContent = 'transitionend fired';
+  message.textContent = 'transitionend fired';
 });
 ```
 

@@ -13,7 +13,7 @@ browser-compat: webextensions.api.runtime
 ---
 {{AddonSidebar}}
 
-This module provides information about your extension and the environment it's running in.
+This module provides information about your extension and the environment it's running in.
 
 It also provides messaging APIs enabling you to:
 
@@ -53,6 +53,8 @@ It also provides messaging APIs enabling you to:
   - : Retrieves the [Window](/en-US/docs/Web/API/Window) object for the background page running inside the current extension.
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : Opens your extension's [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages).
+- {{WebExtAPIRef("runtime.getFrameId()")}}
+  - : Gets the frame ID of any window global or frame element.
 - {{WebExtAPIRef("runtime.getManifest()")}}
   - : Gets the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, serialized as an object.
 - {{WebExtAPIRef("runtime.getURL()")}}
@@ -109,7 +111,7 @@ It also provides messaging APIs enabling you to:
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

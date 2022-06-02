@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.close()
 slug: Web/API/ImageDecoder/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,16 +17,16 @@ The **`close()`** method of the {{domxref("ImageDecoder")}} interface ends all p
 ## Syntax
 
 ```js
-ImageDecoder.close()
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

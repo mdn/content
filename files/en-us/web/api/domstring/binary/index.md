@@ -1,6 +1,7 @@
 ---
 title: Binary strings
 slug: Web/API/DOMString/Binary
+page-type: guide
 tags:
   - DOM
   - JavaScript
@@ -14,7 +15,7 @@ Binary strings are not part of the JavaScript language design. However at least 
 
 The reason that brought to use UTF-16 code units as placeholders for `uint8` numbers is that as web applications become more and more powerful (adding features such as audio and video manipulation, access to raw data using WebSockets, and so forth) it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data.
 
-In the past, this had to be simulated by treating the raw data as a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "JavaScript/Reference/Global Objects/String") and using the [`charCodeAt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt "JavaScript/Reference/Global Objects/String/charCodeAt") method to read the bytes from the data buffer (i.e., using binary strings). However, this is slow and error-prone, due to the need for multiple conversions (especially if the binary data is not actually byte-format data, but, for example, 32-bit integers or floats).
+In the past, this had to be simulated by treating the raw data as a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) and using the [`charCodeAt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) method to read the bytes from the data buffer (i.e., using binary strings). However, this is slow and error-prone, due to the need for multiple conversions (especially if the binary data is not actually byte-format data, but, for example, 32-bit integers or floats).
 
 [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) provide a mechanism for accessing raw binary data much more efficiently.
 

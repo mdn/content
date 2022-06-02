@@ -13,15 +13,9 @@ browser-compat: api.TextTrack.id
 
 The **`id`** read-only property of the {{domxref("TextTrack")}} interface returns the ID of the track if it has one.
 
-## Syntax
+## Value
 
-```js
-let id = TextTrack.id;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the ID, or an empty string.
+A string containing the ID, or an empty string.
 
 ## Examples
 

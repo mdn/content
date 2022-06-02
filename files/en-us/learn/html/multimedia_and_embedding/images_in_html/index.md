@@ -51,7 +51,7 @@ In the beginning, the Web was just text, and it was really quite boring. Fortuna
 
 ## How do we put an image on a webpage?
 
-In order to put a simple image on a webpage, we use the {{htmlelement("img")}} element. This is an {{glossary("empty element")}} (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — `src` (sometimes spoken as its full title, _source_). The `src` attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as `href` attribute values in {{htmlelement("a")}} elements.
+In order to put a simple image on a webpage, we use the {{htmlelement("img")}} element. This is an {{glossary("empty element")}} (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — `src` (sometimes spoken as its full title, _source_). The `src` attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as `href` attribute values in {{htmlelement("a")}} elements.
 
 > **Note:** You should read [A quick primer on URLs and paths](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths) to refresh your memory on relative and absolute URLs before continuing.
 
@@ -82,7 +82,7 @@ But this is pointless, as it just makes the browser do more work, looking up the
 > **Warning:** Most images are copyrighted. Do **not** display an image on your webpage unless:
 >
 > - You own the image.
-> - You have received explicit, written permission from the image owner.
+> - You have received explicit, written permission from the image owner.
 > - You have ample proof that the image is, in fact, in the public domain.
 >
 > Copyright violations are illegal and unethical. In addition, **never** point your `src` attribute at an image hosted on someone else's website that you don't have permission to link to. This is called "hotlinking". Again, stealing someone's bandwidth is illegal. It also slows down your page, leaving you with no control over whether the image is removed or replaced with something embarrassing.
@@ -91,9 +91,9 @@ Our above code would give us the following result:
 
 ![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
-> **Note:** Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as **replaced elements**. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at [Replaced elements](/en-US/docs/Web/CSS/Replaced_element).
+> **Note:** Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as **replaced elements**. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at [Replaced elements](/en-US/docs/Web/CSS/Replaced_element).
 
-> **Note:** You can find the finished example from this section [running on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html) too.)
+> **Note:** You can find the finished example from this section [running on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html) too.)
 
 ### Alternative text
 
@@ -105,7 +105,7 @@ The next attribute we'll look at is `alt`. Its value is supposed to be a textual
           it has a large head with long sharp teeth">
 ```
 
-The easiest way to test your `alt` text is to purposely misspell your filename. If for example our image name was spelled `dinosooooor.jpg`, the browser wouldn't display the image, and would display the alt text instead:
+The easiest way to test your `alt` text is to purposely misspell your filename. If for example our image name was spelled `dinosooooor.jpg`, the browser wouldn't display the image, and would display the alt text instead:
 
 ![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
@@ -119,9 +119,9 @@ So, why would you ever see or need alt text? It can come in handy for a number o
 
 What exactly should you write inside your `alt` attribute? It depends on _why_ the image is there in the first place. In other words, what you lose if your image doesn't show up:
 
-- **Decoration.** You should use {{anch("CSS background images")}} for decorative images, but if you must use HTML, add a blank `alt=""`. If the image isn't part of the content, a screen reader shouldn't waste time reading it.
+- **Decoration.** You should use [CSS background images](#css_background_images) for decorative images, but if you must use HTML, add a blank `alt=""`. If the image isn't part of the content, a screen reader shouldn't waste time reading it.
 - **Content.** If your image provides significant information, provide the same information in a _brief_ `alt` text – or even better, in the main text which everybody can see. Don't write redundant `alt` text. How annoying would it be for a sighted user if all paragraphs were written twice in the main content? If the image is described adequately by the main text body, you can just use `alt=""`.
-- **Link.** If you put an image inside {{htmlelement("a")}} tags, to turn an image into a link, you still must provide [accessible link text](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#use_clear_link_wording). In such cases you may, either, write it inside the same `<a>` element, or inside the image's `alt` attribute – whichever works best in your case.
+- **Link.** If you put an image inside {{htmlelement("a")}} tags, to turn an image into a link, you still must provide [accessible link text](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#use_clear_link_wording). In such cases you may, either, write it inside the same `<a>` element, or inside the image's `alt` attribute – whichever works best in your case.
 - **Text.** You should not put your text into images. If your main heading needs a drop shadow, for example, [use CSS](/en-US/docs/Web/CSS/text-shadow) for that rather than putting the text into an image. However, If you _really can't avoid doing this_, you should supply the text inside the `alt` attribute.
 
 Essentially, the key is to deliver a usable experience, even when the images can't be seen. This ensures all users are not missing any of the content. Try turning off images in your browser and see how things look. You'll soon realize how helpful alt text is if the image cannot be seen.
@@ -344,7 +344,7 @@ A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmleleme
 
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
-> **Note:** From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> **Note:** From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 
@@ -358,8 +358,8 @@ A figure could be several images, a code snippet, audio, video, equations, a tab
 
 In this active learning section, we'd like you to take the finished code from the previous active learning section, and turn it into a figure:
 
-1.  Wrap it in a {{htmlelement("figure")}} element.
-2.  Copy the text out of the `title` attribute, remove the `title` attribute, and put the text inside a {{htmlelement("figcaption")}} element below the image.
+1. Wrap it in a {{htmlelement("figure")}} element.
+2. Copy the text out of the `title` attribute, remove the `title` attribute, and put the text inside a {{htmlelement("figcaption")}} element below the image.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see an answer:
 
@@ -495,7 +495,7 @@ p {
 }
 ```
 
-The resulting embedded image is arguably easier to position and control than HTML images. So why bother with HTML images? As hinted to above, CSS background images are for decoration only. If you just want to add something pretty to your page to enhance the visuals, this is fine. Though, such images have no semantic meaning at all. They can't have any text equivalents, are invisible to screen readers, and so on. This is where HTML images shine!
+The resulting embedded image is arguably easier to position and control than HTML images. So why bother with HTML images? As hinted to above, CSS background images are for decoration only. If you just want to add something pretty to your page to enhance the visuals, this is fine. Though, such images have no semantic meaning at all. They can't have any text equivalents, are invisible to screen readers, and so on. This is where HTML images shine!
 
 Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.
 
@@ -507,12 +507,13 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-That's all for now. We have covered images and captions in detail. In the next article we'll move it up a gear, looking at how to use HTML to embed video and audio in web pages.
+That's all for now. We have covered images and captions in detail. In the next article, we'll move it up a gear, looking at how to use HTML to embed [video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) in web pages.
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 ## In this module
 
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
 - [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)

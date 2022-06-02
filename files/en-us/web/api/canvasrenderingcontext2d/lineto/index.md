@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -24,7 +25,7 @@ anything. To draw the path onto a canvas, you can use the
 ## Syntax
 
 ```js
-ctx.lineTo(x, y);
+lineTo(x, y)
 ```
 
 ### Parameters
@@ -36,7 +37,7 @@ ctx.lineTo(x, y);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

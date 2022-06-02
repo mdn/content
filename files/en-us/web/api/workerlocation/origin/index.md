@@ -11,13 +11,11 @@ browser-compat: api.WorkerLocation.origin
 ---
 {{ApiRef("WorkerLocation")}}
 
-The **`origin`** property of a {{domxref("WorkerLocation")}} object returns the worker’s {{domxref("URL.origin", "origin")}}.
+The **`origin`** property of a {{domxref("WorkerLocation")}} object returns the worker's {{domxref("URL.origin", "origin")}}.
 
-## Syntax
+## Value
 
-```js
-string = object.origin;
-```
+A string.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment.firstElementChild
 slug: Web/API/DocumentFragment/firstElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,16 +15,11 @@ The **`DocumentFragment.firstElementChild`** read-only property
 returns the document fragment's first child {{domxref("Element")}}, or `null` if there
 are no child elements.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = fragment.firstElementChild;
+An {{domxref("Element")}} that is the first child `Element` of the object, or `null` if there are none.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```js
 let fragment = new DocumentFragment();

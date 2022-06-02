@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - NeedsContent
   - NeedsExample
   - Reference
@@ -26,7 +25,8 @@ mask-border-mode: alpha;
 /* Global values */
 mask-border-mode: inherit;
 mask-border-mode: initial;
-mask-border-mode: repeat;
+mask-border-mode: revert;
+mask-border-mode: revert-layer;
 mask-border-mode: unset;
 ```
 

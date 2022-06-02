@@ -15,12 +15,7 @@ browser-compat: api.OffscreenCanvas.width
 The **`width`** property returns and sets the width of an
 {{domxref("OffscreenCanvas")}} object.
 
-## Syntax
-
-```js
-var pxl = offscreen.width;
-offscreen.width = pxl;
-```
+## Value
 
 ## Examples
 

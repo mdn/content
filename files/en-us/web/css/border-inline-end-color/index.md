@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-inline
   - border-inline-color
@@ -30,6 +29,7 @@ border-inline-end-color: #663399;
 border-inline-end-color: inherit;
 border-inline-end-color: initial;
 border-inline-end-color: revert;
+border-inline-end-color: revert-layer;
 border-inline-end-color: unset;
 ```
 

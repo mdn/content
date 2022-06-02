@@ -23,7 +23,7 @@ The **`caret-color`** CSS property sets the color of the **insertion caret**, th
 
 {{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
-Note that the insertion caret is only one type of caret. For example, many browsers have a “navigation caret,” which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is `auto`, or when hovering over an element where the `cursor` property is `text` or `vertical-text`, though it sometimes looks like a caret, is not a caret (it’s a cursor).
+Note that the insertion caret is only one type of caret. For example, many browsers have a "navigation caret," which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is `auto`, or when hovering over an element where the `cursor` property is `text` or `vertical-text`, though it sometimes looks like a caret, is not a caret (it's a cursor).
 
 ## Syntax
 
@@ -43,6 +43,7 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 caret-color: inherit;
 caret-color: initial;
 caret-color: revert;
+caret-color: revert-layer;
 caret-color: unset;
 ```
 
@@ -113,6 +114,6 @@ p.custom {
 - The {{HTMLElement("input")}} element
 - The HTML {{htmlattrxref("contenteditable")}} attribute, which can be used to make any element's text editable
 - [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -18,8 +19,8 @@ specified dimensions. All of the pixels in the new object are transparent black.
 ## Syntax
 
 ```js
-ImageData ctx.createImageData(width, height);
-ImageData ctx.createImageData(imagedata);
+createImageData(width, height)
+createImageData(imagedata)
 ```
 
 ### Parameters

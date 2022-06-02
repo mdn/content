@@ -48,18 +48,18 @@ The {{SVGElement("rect")}} element draws a rectangle on the screen. There are 6 
 <rect x="60" y="10" rx="10" ry="10" width="30" height="30"/>
 ```
 
-*   `x`
-    *   : The x position of the top left corner of the rectangle.
-*   `y`
-    *   : The y position of the top left corner of the rectangle.
-*   `width`
-    *   : The width of the rectangle
-*   `height`
-    *   : The height of the rectangle
-*   `rx`
-    *   : The x radius of the corners of the rectangle
-*   `ry`
-    *   : The y radius of the corners of the rectangle
+- `x`
+  - : The x position of the top left corner of the rectangle.
+- `y`
+  - : The y position of the top left corner of the rectangle.
+- `width`
+  - : The width of the rectangle
+- `height`
+  - : The height of the rectangle
+- `rx`
+  - : The x radius of the corners of the rectangle
+- `ry`
+  - : The y radius of the corners of the rectangle
 
 ## Circle
 
@@ -69,12 +69,12 @@ The {{SVGElement("circle")}} element draws a circle on the screen. It takes 3 ba
 <circle cx="25" cy="75" r="20"/>
 ```
 
-*   `r`
-    *   : The radius of the circle.
-*   `cx`
-    *   : The x position of the center of the circle.
-*   `cy`
-    *   : The y position of the center of the circle.
+- `r`
+  - : The radius of the circle.
+- `cx`
+  - : The x position of the center of the circle.
+- `cy`
+  - : The y position of the center of the circle.
 
 ## Ellipse
 
@@ -84,14 +84,14 @@ An {{SVGElement("ellipse")}} is a more general form of the {{SVGElement("circle"
 <ellipse cx="75" cy="75" rx="20" ry="5"/>
 ```
 
-*   `rx`
-    *   : The x radius of the ellipse.
-*   `ry`
-    *   : The y radius of the ellipse.
-*   `cx`
-    *   : The x position of the center of the ellipse.
-*   `cy`
-    *   : The y position of the center of the ellipse.
+- `rx`
+  - : The x radius of the ellipse.
+- `ry`
+  - : The y radius of the ellipse.
+- `cx`
+  - : The x position of the center of the ellipse.
+- `cy`
+  - : The y position of the center of the ellipse.
 
 ## Line
 
@@ -101,14 +101,14 @@ The {{SVGElement("line")}} element takes the positions of two points as paramete
 <line x1="10" x2="50" y1="110" y2="150" stroke="black" stroke-width="5"/>
 ```
 
-*   `x1`
-    *   : The x position of point 1.
-*   `y1`
-    *   : The y position of point 1.
-*   `x2`
-    *   : The x position of point 2.
-*   `y2`
-    *   : The y position of point 2.
+- `x1`
+  - : The x position of point 1.
+- `y1`
+  - : The y position of point 1.
+- `x2`
+  - : The x position of point 2.
+- `y2`
+  - : The y position of point 2.
 
 ## Polyline
 
@@ -118,8 +118,8 @@ A {{SVGElement("polyline")}} is a group of connected straight lines. Since the l
 <polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/>
 ```
 
-*   `points`
-    *   : A list of points. Each number must be separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers: an x coordinate and a y coordinate. So, the list `(0,0)`, `(1,1)`, and `(2,2)` would be written as `0, 0 1, 1 2, 2`.
+- `points`
+  - : A list of points. Each number must be separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers: an x coordinate and a y coordinate. So, the list `(0,0)`, `(1,1)`, and `(2,2)` would be written as `0, 0 1, 1 2, 2`.
 
 ## Polygon
 
@@ -131,8 +131,8 @@ A {{SVGElement("polygon")}} is similar to a {{SVGElement("polyline")}}, in that 
 <polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>
 ```
 
-*   `points`
-    *   : A list of points, each number separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers: an x coordinate and a y coordinate. So, the list `(0,0)`, `(1,1)`, and `(2,2)` would be written as `0, 0 1, 1 2, 2`. The drawing then closes the path, so a final straight line would be drawn from `(2,2)` to `(0,0)`.
+- `points`
+  - : A list of points, each number separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers: an x coordinate and a y coordinate. So, the list `(0,0)`, `(1,1)`, and `(2,2)` would be written as `0, 0 1, 1 2, 2`. The drawing then closes the path, so a final straight line would be drawn from `(2,2)` to `(0,0)`.
 
 ## Path
 
@@ -144,7 +144,7 @@ For this reason, [the next section](/en-US/docs/Web/SVG/Tutorial/Paths) in this 
 <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
 ```
 
-*   `d`
-    *   : A list of points and other information about how to draw the path. See the [Paths](/en-US/docs/Web/SVG/Tutorial/Paths) section for more information.
+- `d`
+  - : A list of points and other information about how to draw the path. See the [Paths](/en-US/docs/Web/SVG/Tutorial/Paths) section for more information.
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

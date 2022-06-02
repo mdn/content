@@ -19,17 +19,11 @@ The **`visibilityState`** read-only property of the
 This value can be one of `"hidden"`, `"visible"`, or
 `"prerender"`.
 
-## Syntax
+## Value
 
-```js
-var myVisState = windowClient.visibilityState;
-```
+A string (See {{domxref("Document.visibilityState")}} for values).
 
-### Value
-
-A {{domxref("DOMString")}} (See {{domxref("Document.visibilityState")}} for values).
-
-## Example
+## Examples
 
 ```js
 event.waitUntil(clients.matchAll({

@@ -20,8 +20,8 @@ The **`DataView`** view provides a low-level interface for reading and writing m
 Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness.
 
 ```js
-var littleEndian = (function() {
-  var buffer = new ArrayBuffer(2);
+const littleEndian = (function() {
+  const buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
   return new Int16Array(buffer)[0] === 256;
@@ -31,7 +31,7 @@ console.log(littleEndian); // true or false
 
 ### 64-bit Integer Values
 
-Some browsers don’t have support for {{jsxref("DataView.prototype.setBigInt64()")}} and {{jsxref("DataView.prototype.setBigUint64()")}}. So to enable 64-bit operations in your code that will work across browsers, you could implement your own `getUint64()` function, to obtain values with precision up to {{jsxref("Number.MAX_SAFE_INTEGER")}} — which could suffice for certain cases.
+Some browsers don't have support for {{jsxref("DataView.prototype.setBigInt64()")}} and {{jsxref("DataView.prototype.setBigUint64()")}}. So to enable 64-bit operations in your code that will work across browsers, you could implement your own `getUint64()` function, to obtain values with precision up to {{jsxref("Number.MAX_SAFE_INTEGER")}} — which could suffice for certain cases.
 
 ```js
 function getUint64(dataview, byteOffset, littleEndian) {
@@ -125,8 +125,8 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 ### Using DataView
 
 ```js
-var buffer = new ArrayBuffer(16);
-var view = new DataView(buffer, 0);
+const buffer = new ArrayBuffer(16);
+const view = new DataView(buffer, 0);
 
 view.setInt16(1, 42);
 view.getInt16(1); // 42
@@ -142,7 +142,7 @@ view.getInt16(1); // 42
 
 ## See also
 
-- A polyfill of `DataView` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `DataView` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [jDataView](https://github.com/jDataView/jDataView): JavaScript library that polyfills and extends the `DataView` API to all browsers and Node.js.
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("SharedArrayBuffer")}}

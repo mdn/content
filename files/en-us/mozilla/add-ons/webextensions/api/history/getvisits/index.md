@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = browser.history.getVisits(
+let getting = browser.history.getVisits(
   details                // object
 )
 ```
@@ -59,14 +59,14 @@ function gotVisits(visits) {
 function listVisits(historyItems) {
   if (historyItems.length) {
     console.log("URL " + historyItems[0].url);
-    var gettingVisits = browser.history.getVisits({
+    let gettingVisits = browser.history.getVisits({
       url: historyItems[0].url
     });
     gettingVisits.then(gotVisits);
   }
 }
 
-var searching = browser.history.search({
+let searching = browser.history.search({
   text: "",
   startTime: 0,
   maxResults: 1
@@ -77,7 +77,7 @@ searching.then(listVisits);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-getVisits) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-getVisits) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

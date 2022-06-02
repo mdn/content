@@ -14,22 +14,22 @@ browser-compat: api.OES_vertex_array_object.bindVertexArrayOES
 
 The **`OES_vertex_array_object.bindVertexArrayOES()`** method
 of the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a
-passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
+passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
 
 ## Syntax
 
 ```js
-void ext.bindVertexArrayOES(arrayObject);
+bindVertexArrayOES(arrayObject)
 ```
 
 ### Parameters
 
-- arrayObject
+- `arrayObject`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to bind.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

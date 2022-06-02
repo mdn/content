@@ -11,6 +11,8 @@ tags:
   - SVG
   - Web
 ---
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+
 This page illustrates the application of CSS to the specialized language for creating graphics: [SVG](/en-US/docs/Web/SVG).
 
 Below you'll create a simple demonstration that runs in your SVG-enabled browser.
@@ -25,6 +27,9 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
 <svg width="600px" height="600px" viewBox="-300 -300 600 600"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+  <link rel="stylesheet"
+    href="style8.css" type="text/css"/>
+
   <title>SVG demonstration</title>
   <desc>Mozilla CSS Getting Started - SVG demonstration</desc>
 
@@ -37,7 +42,7 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
   </defs>
 
   <text id="heading" x="-280" y="-270">SVG demonstration</text>
-  <text  id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
+  <text id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
 
   <g id="flower">
     <circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/>
@@ -233,7 +238,7 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
 </svg>
 ```
 
-Make a new CSS file, `style8.css`. Copy and paste the content from here, making sure that you scroll to get all of it:
+Make a new CSS file, `style8.css` in the same directory as `doc8.svg`. Copy and paste the content from here, making sure that you scroll to get all of it:
 
 ```css
 /*** SVG demonstration ***/
@@ -285,7 +290,7 @@ svg {
 }
 
 .segment-edge:hover {
-	stroke: var(--segment-edge-stroke-hover);
+  stroke: var(--segment-edge-stroke-hover);
 }
 
 /* outer petals */
@@ -366,7 +371,7 @@ svg {
 }
 ```
 
-Open the document in your SVG-enabled browser. Move your mouse pointer over the graphic to see what happens.
+Open the `doc8.svg` document in your SVG-enabled browser. Move your mouse pointer over the graphic to see what happens.
 
 ### Result
 
@@ -374,8 +379,22 @@ Open the document in your SVG-enabled browser. Move your mouse pointer over the 
 
 Notes about this demonstration:
 
-*   The SVG document links the stylesheet in the usual way.
-*   SVG has its own CSS properties and values. Some of them are similar to CSS properties for HTML.
+- The SVG document links the stylesheet using the following HTML `<link>` tag:
+
+  ```html
+  <link rel="stylesheet"
+    href="style8.css" type="text/css"/>
+  ```
+
+  It can also be linked with the `@import` rule inside a `<style>` tag:
+
+  ```html
+  <style>
+    @import url(style8.css);
+  </style>
+  ```
+
+- SVG has its own CSS properties and values. Some of them are similar to CSS properties for HTML.
 
 ### Challenge
 
@@ -422,7 +441,7 @@ See below how the structure then looks like.
   </defs>
 
   <text id="heading" x="-280" y="-270">SVG demonstration</text>
-  <text  id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
+  <text id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
 
   <g id="flower">
     <circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/>
@@ -434,6 +453,8 @@ See below how the structure then looks like.
 </svg>
 ```
 
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+
 ## What next?
 
-In this demonstration, your SVG-enabled browser already knows how to display SVG elements. The stylesheet only modifies the display in certain ways. This is also true for HTML and XUL documents. But you can use CSS for general-purpose XML documents, where there is no predefined way to display the elements. The next page demonstrates this: [XML data](/en-US/docs/Archive/Beginner_tutorials/XML_data)
+In this demonstration, your SVG-enabled browser already knows how to display SVG elements. The stylesheet only modifies the display in certain ways. This is also true for HTML and XUL documents. But you can use CSS for general-purpose XML documents, where there is no predefined way to display the elements. The next page demonstrates this: [XML introduction](/en-US/docs/Web/XML/XML_introduction)

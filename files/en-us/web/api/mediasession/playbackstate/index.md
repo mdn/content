@@ -1,6 +1,7 @@
 ---
 title: MediaSession.playbackState
 slug: Web/API/MediaSession/playbackState
+page-type: web-api-instance-property
 tags:
   - Audio
   - Media
@@ -27,7 +28,7 @@ mediaSession.playbackState = playbackState;
 
 ### Value
 
-A {{domxref("DOMString")}} indicating the current playback state of the media session.
+A string indicating the current playback state of the media session.
 The value may be one of the following:
 
 - `none`

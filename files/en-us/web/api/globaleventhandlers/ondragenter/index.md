@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondragenter
 slug: Web/API/GlobalEventHandlers/ondragenter
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,7 +12,7 @@ browser-compat: api.GlobalEventHandlers.ondragenter
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the
-{{event("dragenter")}} event.
+{{domxref("HTMLElement/dragenter_event", "dragenter")}} event.
 
 ## Syntax
 
@@ -28,7 +29,7 @@ var dragenterHandler = targetElement.ondragenter;
 
 This example demonstrates using the
 {{domxref("GlobalEventHandlers.ondragenter","ondragenter")}} global event handler to set an
-element's {{event("dragenter")}} event handler.
+element's {{domxref("HTMLElement/dragenter_event", "dragenter")}} event handler.
 
 ### HTML
 
@@ -143,4 +144,4 @@ button.addEventListener("click", () => {
 
 ## See also
 
-- {{event("dragenter")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}

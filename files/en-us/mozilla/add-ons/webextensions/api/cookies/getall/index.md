@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = browser.cookies.getAll(
+let getting = browser.cookies.getAll(
   details                // object
 )
 ```
@@ -59,9 +59,9 @@ var getting = browser.cookies.getAll(
     - `path`{{optional_inline}}
       - : A `string` representing a path — the cookies' path must be identical to this one.
     - `secure`{{optional_inline}}
-      - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies..
+      - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies.
     - `session`{{optional_inline}}
-      - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
+      - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
     - `storeId`{{optional_inline}}
       - : A `string` representing the cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.
     - `url`{{optional_inline}}
@@ -69,7 +69,7 @@ var getting = browser.cookies.getAll(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of  `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of  `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
 
 ## Browser compatibility
 
@@ -86,7 +86,7 @@ function logCookies(cookies) {
   }
 }
 
-var gettingAll = browser.cookies.getAll({
+let gettingAll = browser.cookies.getAll({
   name: "favorite-color"
 });
 gettingAll.then(logCookies);
@@ -94,7 +94,7 @@ gettingAll.then(logCookies);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-getAll) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-getAll) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

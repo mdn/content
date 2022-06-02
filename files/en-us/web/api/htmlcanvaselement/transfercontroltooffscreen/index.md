@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.transferControlToOffscreen()
 slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -20,8 +21,12 @@ thread or on a worker.
 ## Syntax
 
 ```js
-OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
+transferControlToOffscreen()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

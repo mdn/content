@@ -42,7 +42,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 ## Syntax
 
 ```js
-var toggling = browser.tabs.toggleReaderMode(
+let toggling = browser.tabs.toggleReaderMode(
   tabId            // optional integer
 )
 ```
@@ -54,7 +54,7 @@ var toggling = browser.tabs.toggleReaderMode(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tab has been updated. If any error occurs (for example, because the page was not an article), the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tab has been updated. If any error occurs (for example, because the page was not an article), the promise will be rejected with an error message.
 
 ## Examples
 

@@ -41,14 +41,14 @@ As all objects have no own symbol properties initially, `Object.getOwnPropertySy
 ### Using getOwnPropertySymbols
 
 ```js
-var obj = {};
-var a = Symbol('a');
-var b = Symbol.for('b');
+const obj = {};
+const a = Symbol('a');
+const b = Symbol.for('b');
 
 obj[a] = 'localSymbol';
 obj[b] = 'globalSymbol';
 
-var objectSymbols = Object.getOwnPropertySymbols(obj);
+const objectSymbols = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymbols.length); // 2
 console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
@@ -65,6 +65,6 @@ console.log(objectSymbols[0]);     // Symbol(a)
 
 ## See also
 
-- A polyfill of `Object.getOwnPropertySymbols` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Object.getOwnPropertySymbols` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Symbol")}}

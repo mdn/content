@@ -15,16 +15,10 @@ browser-compat: api.PaymentResponse.requestId
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`requestId`** read-only property of the
-{{domxref("PaymentResponse")}} interface rreturns the free-form identifier supplied by
-the `PaymentResponse()` constructor by details.id.
+{{domxref("PaymentResponse")}} interface returns the free-form identifier supplied by
+the `PaymentResponse()` constructor by details.id.
 
-## Syntax
-
-```js
-var id = paymentRequest.id
-```
-
-### Value
+## Value
 
 A {{domxref('DOMString')}}.
 

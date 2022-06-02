@@ -5,38 +5,35 @@ tags:
   - API
   - Reference
   - events
+  - Event
 browser-compat: api.VideoTrackList.addtrack_event
 ---
 {{APIRef}}
 
-The `addtrack` event is fired when a track is added to a [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList).
+The `addtrack` event is fired when a video track is added to a [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TrackEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/VideoTrackList/onaddtrack"
-            >onaddtrack</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('addtrack', event => { })
+
+onaddtrack = event => { }
+```
+
+## Event type
+
+An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TrackEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
+  - : The newly-added {{domxref("VideoTrack")}} the event is in reference to.
 
 ## Examples
 

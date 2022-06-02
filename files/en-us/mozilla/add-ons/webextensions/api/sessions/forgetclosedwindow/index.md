@@ -12,14 +12,14 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.forgetClosedWindow
 ---
-{{AddonSidebar()}}Removes a closed window from the browser's list of recently closed windows.Note that the sites visited by that window are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
+{{AddonSidebar()}}Removes a closed window from the browser's list of recently closed windows.Note that the sites visited by that window are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
 ```js
-var forgettingWindow = browser.sessions.forgetClosedWindow(
+let forgettingWindow = browser.sessions.forgetClosedWindow(
   sessionId            // string
 )
 ```

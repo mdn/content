@@ -20,7 +20,7 @@ multipass rendering to achieve special effects.
 ## Syntax
 
 ```js
-void gl.stencilFunc(func, ref, mask);
+stencilFunc(func, ref, mask)
 ```
 
 ### Parameters
@@ -55,7 +55,7 @@ void gl.stencilFunc(func, ref, mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

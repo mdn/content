@@ -34,6 +34,7 @@ animation-fill-mode: both, forwards, none;
 animation-fill-mode: inherit;
 animation-fill-mode: initial;
 animation-fill-mode: revert;
+animation-fill-mode: revert-layer;
 animation-fill-mode: unset;
 ```
 
@@ -78,19 +79,21 @@ animation-fill-mode: unset;
 
 ## Examples
 
+### Setting fill mode
+
 You can see the effect of `animation-fill-mode` in the following example. It demonstrates how, for an animation that runs for an infinite time, you can cause it to remain in its final state rather than reverting to the original state (which is the default).
 
-### HTML
+#### HTML
 
 ```html
 <p>Move your mouse over the gray box!</p>
 <div class="demo">
- <div class="growsandstays">This grows and stays big.</div>
+ <div class="growsandstays">This grows and stays big.</div>
   <div class="grows">This just grows.</div>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .demo {
@@ -115,7 +118,9 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 }
 ```
 
-{{EmbedLiveSample('Examples',700,300)}}
+#### Result
+
+{{EmbedLiveSample('Setting fill mode',700,300)}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
 
@@ -129,5 +134,5 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) fo
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

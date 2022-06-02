@@ -1,6 +1,7 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
+page-type: web-api-instance-method
 tags:
   - API
   - Append
@@ -21,11 +22,9 @@ The difference between {{domxref("FormData.set")}} and `append()` is that if the
 
 ## Syntax
 
-There are two versions of this method: a two and a three parameter version:
-
 ```js
-formData.append(name, value);
-formData.append(name, value, filename);
+append(name, value)
+append(name, value, filename)
 ```
 
 ### Parameters
@@ -33,17 +32,17 @@ formData.append(name, value, filename);
 - `name`
   - : The name of the field whose data is contained in `value`.
 - `value`
-  - : The field's value. This can be a {{domxref("USVString")}} or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.
+  - : The field's value. This can be a string or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.
 - `filename` {{optional_inline}}
-  - : The filename reported to the server (a {{domxref("USVString")}}), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
+  - : The filename reported to the server (a string), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
 
 > **Note:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following line creates an empty `FormData` object:
 
@@ -67,7 +66,7 @@ formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');
 
 This technique makes it simpler to process multi-file uploads because the resultant data structure is more conducive to looping.
 
-If the sent value is different than String or Blob it will be automatically converted to String:
+If the sent value is different than String or Blob it will be automatically converted to String:
 
 ```js
 formData.append('name', true);
@@ -88,6 +87,6 @@ formData.getAll('name'); // ["true", "74", "John"]
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

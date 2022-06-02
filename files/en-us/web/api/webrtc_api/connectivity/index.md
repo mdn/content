@@ -11,7 +11,7 @@ tags:
   - Video
   - WebRTC
 ---
-{{WebRTCSidebar}}{{draft}}
+{{WebRTCSidebar}}
 
 This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.
 
@@ -19,7 +19,7 @@ This article describes how the various WebRTC-related protocols interact with on
 
 ## Signaling
 
-Unfortunately, WebRTC can’t create connections without some sort of server in the middle. We call this the **signal channel** or **signaling service**. It’s any sort of channel of communication to exchange information before setting up a connection, whether by email, post card or a carrier pigeon... it’s up to you.
+Unfortunately, WebRTC can't create connections without some sort of server in the middle. We call this the **signal channel** or **signaling service**. It's any sort of channel of communication to exchange information before setting up a connection, whether by email, post card or a carrier pigeon... it's up to you.
 
 The information we need to exchange is the Offer and Answer which just contains the {{Glossary("SDP")}} mentioned below.
 
@@ -35,15 +35,15 @@ Each peer, then, keeps two descriptions on hand: the **local description**, desc
 
 The offer/answer process is performed both when a call is first established, but also any time the call's format or other configuration needs to change. Regardless of whether it's a new call, or reconfiguring an existing one, these are the basic steps which must occur to exchange the offer and answer, leaving out the ICE layer for the moment:
 
-1.  The caller captures local Media via {{domxref("MediaDevices.getUserMedia")}}
-2.  The caller creates `RTCPeerConnection` and calls {{domxref("RTCPeerConnection.addTrack()")}} (Since `addStream` is deprecating)
-3.  The caller calls {{domxref("RTCPeerConnection.createOffer()")}} to create an offer.
-4.  The caller calls {{domxref("RTCPeerConnection.setLocalDescription()")}} to set that offer as the _local description_ (that is, the description of the local end of the connection).
-5.  After setLocalDescription(), the caller asks STUN servers to generate the ice candidates
-6.  The caller uses the signaling server to transmit the offer to the intended receiver of the call.
-7.  The recipient receives the offer and calls {{domxref("RTCPeerConnection.setRemoteDescription()")}} to record it as the _remote description_ (the description of the other end of the connection).
-8.  The recipient does any setup it needs to do for its end of the call: capture its local media, and attach each media tracks into the peer connection via {{domxref("RTCPeerConnection.addTrack()")}}
-9.  The recipient then creates an answer by calling {{domxref("RTCPeerConnection.createAnswer()")}}.
+1. The caller captures local Media via {{domxref("MediaDevices.getUserMedia")}}
+2. The caller creates `RTCPeerConnection` and calls {{domxref("RTCPeerConnection.addTrack()")}} (Since `addStream` is deprecating)
+3. The caller calls {{domxref("RTCPeerConnection.createOffer()")}} to create an offer.
+4. The caller calls {{domxref("RTCPeerConnection.setLocalDescription()")}} to set that offer as the _local description_ (that is, the description of the local end of the connection).
+5. After setLocalDescription(), the caller asks STUN servers to generate the ice candidates
+6. The caller uses the signaling server to transmit the offer to the intended receiver of the call.
+7. The recipient receives the offer and calls {{domxref("RTCPeerConnection.setRemoteDescription()")}} to record it as the _remote description_ (the description of the other end of the connection).
+8. The recipient does any setup it needs to do for its end of the call: capture its local media, and attach each media tracks into the peer connection via {{domxref("RTCPeerConnection.addTrack()")}}
+9. The recipient then creates an answer by calling {{domxref("RTCPeerConnection.createAnswer()")}}.
 10. The recipient calls {{domxref("RTCPeerConnection.setLocalDescription()")}}, passing in the created answer, to set the answer as its local description. The recipient now knows the configuration of both ends of the connection.
 11. The recipient uses the signaling server to send the answer to the caller.
 12. The caller receives the answer.
@@ -55,7 +55,7 @@ Taking one step deeper into the process, we find that `localDescription` and `re
 
 The **current description** (which is returned by the {{domxref("RTCPeerConnection.currentLocalDescription")}} and {{domxref("RTCPeerConnection.currentRemoteDescription")}} properties) represents the description currently in actual use by the connection. This is the most recent connection that both sides have fully agreed to use.
 
-The **pending description** (returned by {{domxref("RTCPeerConnection.pendingLocalDescription")}} and {{domxref("RTCPeerConnection.pendingRemoteDescription")}}) indicates a description which is currently under consideration following a call to  `setLocalDescription()` or `setRemoteDescription()`, respectively.
+The **pending description** (returned by {{domxref("RTCPeerConnection.pendingLocalDescription")}} and {{domxref("RTCPeerConnection.pendingRemoteDescription")}}) indicates a description which is currently under consideration following a call to `setLocalDescription()` or `setRemoteDescription()`, respectively.
 
 When reading the description (returned by {{domxref("RTCPeerConnection.localDescription")}} and {{domxref("RTCPeerConnection.remoteDescription")}}), the returned value is the value of `pendingLocalDescription`/`pendingRemoteDescription` if there's a pending description (that is, the pending description isn't `null`); otherwise, the current description (`currentLocalDescription`/`currentRemoteDescription`) is returned.
 
@@ -123,7 +123,7 @@ Instead, you can initiate an **ICE rollback**. A rollback restores the SDP offer
 
 To programmatically initiate a rollback, send a description whose {{domxref("RTCSessionDescription.type", "type")}} is `rollback`. Any other properties in the description object are ignored.
 
-In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously *sent* an offer, calling `setRemoteDescription()` with a *received* offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
+In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously *sent* an offer, calling `setRemoteDescription()` with a *received* offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
 
 ### ICE restarts
 

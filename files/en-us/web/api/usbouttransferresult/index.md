@@ -13,13 +13,13 @@ tags:
   - WebUSB API
 browser-compat: api.USBOutTransferResult
 ---
-{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}
+{{securecontext_header}}{{APIRef("WebUSB API")}}
 
 The `USBOutTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides the result from a call to the `transferOut()` and `controlTransferOut()` methods of the `USBDevice` interface. It represents the result from requesting a transfer of data from the USB host to the USB device.
 
 ## Constructor
 
-- {{domxref("USBOutTransferResult.USBOutTransferResult()")}}
+- {{domxref("USBOutTransferResult.USBOutTransferResult", "USBOutTransferResult()")}}
   - : Creates a new `USBOutTransferResult` object with the provided `status` and `bytesWritten` fields.
 
 ## Properties

@@ -1,6 +1,7 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -13,7 +14,6 @@ The **`type`** read-only property of the {{domxref("Event")}}
 interface returns a string containing the event's type. It is set when the event is
 constructed and is the name commonly used to refer to the specific event, such as
 `click`, `load`, or `error`.
-
 
 ## Value
 

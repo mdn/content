@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingRecent = browser.bookmarks.getRecent(
+let gettingRecent = browser.bookmarks.getRecent(
   numberOfItems          // integer
 )
 ```
@@ -34,7 +34,7 @@ var gettingRecent = browser.bookmarks.getRecent(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of [`BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders.") objects.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of [`BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) objects.
 
 ## Examples
 
@@ -51,7 +51,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var gettingRecent = browser.bookmarks.getRecent(1);
+let gettingRecent = browser.bookmarks.getRecent(1);
 gettingRecent.then(onFulfilled, onRejected);
 ```
 
@@ -61,7 +61,7 @@ gettingRecent.then(onFulfilled, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getRecent) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getRecent) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

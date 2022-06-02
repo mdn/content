@@ -36,7 +36,7 @@ The _directionality-capable members_ are:
 - [`short_name`](/en-US/docs/Web/Manifest/short_name)
 - [`description`](/en-US/docs/Web/Manifest/description)
 
-> **Note:** If the value is omitted or set to `auto`, the browser will use the [Unicode bidirectional algorithm](/en-US/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm) to make a best guess about the text's direction.
+> **Note:** If the value is omitted or set to `auto`, the browser will use the [Unicode bidirectional algorithm](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) to make a best guess about the text's direction.
 
 ## Example
 

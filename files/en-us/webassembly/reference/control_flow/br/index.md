@@ -14,7 +14,7 @@ The **`br`** statement branches to a loop, block, or if.
 
 Other variants of `br` are `br_if` for branching on condition, and `br_table` for branching to different blocks based on an argument.
 
-{{EmbedInteractiveExample("pages/wat/br.html")}}
+{{EmbedInteractiveExample("pages/wat/br.html", "tabbed-taller")}}
 
 ## Syntax
 

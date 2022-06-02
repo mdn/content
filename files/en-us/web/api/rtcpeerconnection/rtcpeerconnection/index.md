@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -18,7 +19,8 @@ a connection between the local device and a remote peer.
 ## Syntax
 
 ```js
-pc = new RTCPeerConnection([configuration]);
+new RTCPeerConnection()
+new RTCPeerConnection(configuration)
 ```
 
 ### Parameters
@@ -106,7 +108,7 @@ pc = new RTCPeerConnection([configuration]);
           - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a STUN or TURN server, will be considered.
 
     - `peerIdentity` {{optional_inline}}
-      - : A {{domxref("DOMString")}}
+      - : A string
         which specifies the target peer identity for the {{domxref("RTCPeerConnection")}}.
         If this value is set
         (it defaults to `null`),

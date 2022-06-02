@@ -39,6 +39,11 @@ No notable changes
 
 - `WebDriver:GetWindowHandle` and `WebDriver:GetWindowHandles` now return handles for browser windows instead of tabs, when chrome scope is enabled ({{bug(1729291)}})
 
+### HTTP
+
+- The `cache` directive of the [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) response header has been disabled by default.
+  It can be enabled using the preference `privacy.clearsitedata.cache.enabled` ({{bug(1729291)}}).
+
 ## Changes for add-on developers
 
 - Support for `partitionKey`, the first-party URL of a cookie when it's in storage that is partitioned by top-level site, is added to {{WebExtAPIRef('cookies.get')}}, {{WebExtAPIRef('cookies.getAll')}}, {{WebExtAPIRef('cookies.set')}}, {{WebExtAPIRef('cookies.remove')}}, and {{WebExtAPIRef('cookies.cookie')}}. ({{bug(1669716)}})

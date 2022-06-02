@@ -1,6 +1,7 @@
 ---
 title: Using channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
+page-type: guide
 tags:
   - API
   - Channel messaging
@@ -27,7 +28,7 @@ Message channels on the other hand can provide a secure channel that allows you 
 
 ## Simple examples
 
-To get your started, we have published a couple of demos on Github. First up, check out our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
+To get your started, we have published a couple of demos on GitHub. First up, check out our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
 
 Secondly, have a look at our [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between the main page and an IFrame.
 
@@ -81,9 +82,9 @@ When the IFrame has loaded, we register an `onclick` handler for our button and 
 
 Let's explore how the `iframe.contentWindow.postMessage` line works in a bit more detail. It takes three arguments:
 
-1.  The message being sent. For this initial port transfering this message could be an empty string but in this example it is set to `'init'`.
-2.  The origin the message is to be sent to. `*` means "any origin".
-3.  An object, the ownership of which is transferred to the receiving browsing context. In this case, we are transferring {{domxref("MessageChannel.port2")}} to the IFrame, so it can be used to communicate with the main page.
+1. The message being sent. For this initial port transferring this message could be an empty string but in this example it is set to `'init'`.
+2. The origin the message is to be sent to. `*` means "any origin".
+3. An object, the ownership of which is transferred to the receiving browsing context. In this case, we are transferring {{domxref("MessageChannel.port2")}} to the IFrame, so it can be used to communicate with the main page.
 
 When our button is clicked, we prevent the form from submitting as normal and then send the value entered in our text input to the IFrame via the {{domxref("MessageChannel")}}.
 

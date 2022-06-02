@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.readable
 slug: Web/API/RTCIceCandidatePairStats/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -23,13 +24,7 @@ property **`readable`** reports whether or not the connection
 described by the candidate pair has received at least one valid incoming ICE
 request.
 
-## Syntax
-
-```js
-isReadable = rtcIceCandidatePairStats.readable;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the connection described by this
 candidate pair has received at least one valid ICE request, and is therefore ready to be

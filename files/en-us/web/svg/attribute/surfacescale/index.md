@@ -6,6 +6,9 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fediffuselighting-surfacescale
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-surfacescale
 ---
 {{SVGRef}}
 
@@ -13,8 +16,8 @@ The **`surfaceScale`** attribute represents the height of the surface for a ligh
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feSpecularLighting")}}
 
 ## Example
 
@@ -88,46 +91,8 @@ For {{SVGElement("feDiffuseLighting")}}, `surfaceScale` defines the height of th
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fediffuselighting-surfacescale", "surfaceScale for &lt;feDiffuseLighting&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fespecularlighting-surfacescale", "surfaceScale for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feDiffuseLightingSurfaceScaleAttribute", "surfaceScale for &lt;feDiffuseLighting&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feDiffuseLighting></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feSpecularLightingSurfaceScaleAttribute", "surfaceScale for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feSpecularLighting></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 
-*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)
+- [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

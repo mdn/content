@@ -20,62 +20,62 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### Matrix transformation
 
-- [`matrix()`](/en-US/docs/Web/CSS/transform-function/matrix())
+- [`matrix()`](/en-US/docs/Web/CSS/transform-function/matrix)
   - : Describes a homogeneous 2D transformation matrix.
-- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d())
+- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
   - : Describes a 3D transformation as a 4×4 homogeneous matrix.
 
 ### Perspective
 
-- [`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective())
+- [`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective)
   - : Sets the distance between the user and the z=0 plane.
 
 ### Rotation
 
-- [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate())
+- [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate)
   - : Rotates an element around a fixed point on the 2D plane.
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d())
+- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)
   - : Rotates an element around a fixed axis in 3D space.
-- [`rotateX()`](/en-US/docs/Web/CSS/transform-function/rotateX())
+- [`rotateX()`](/en-US/docs/Web/CSS/transform-function/rotateX)
   - : Rotates an element around the horizontal axis.
-- [`rotateY()`](/en-US/docs/Web/CSS/transform-function/rotateY())
+- [`rotateY()`](/en-US/docs/Web/CSS/transform-function/rotateY)
   - : Rotates an element around the vertical axis.
-- [`rotateZ()`](/en-US/docs/Web/CSS/transform-function/rotateZ())
+- [`rotateZ()`](/en-US/docs/Web/CSS/transform-function/rotateZ)
   - : Rotates an element around the z-axis.
 
 ### Scaling (resizing)
 
-- [`scale()`](/en-US/docs/Web/CSS/transform-function/scale())
+- [`scale()`](/en-US/docs/Web/CSS/transform-function/scale)
   - : Scales an element up or down on the 2D plane.
-- [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d())
+- [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d)
   - : Scales an element up or down in 3D space.
-- [`scaleX()`](/en-US/docs/Web/CSS/transform-function/scaleX())
+- [`scaleX()`](/en-US/docs/Web/CSS/transform-function/scaleX)
   - : Scales an element up or down horizontally.
-- [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY())
+- [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
   - : Scales an element up or down vertically.
-- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ())
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
   - : Scales an element up or down along the z-axis.
 
 ### Skewing (distortion)
 
-- [`skew()`](/en-US/docs/Web/CSS/transform-function/skew())
+- [`skew()`](/en-US/docs/Web/CSS/transform-function/skew)
   - : Skews an element on the 2D plane.
-- [`skewX()`](/en-US/docs/Web/CSS/transform-function/skewX())
+- [`skewX()`](/en-US/docs/Web/CSS/transform-function/skewX)
   - : Skews an element in the horizontal direction.
-- [`skewY()`](/en-US/docs/Web/CSS/transform-function/skewY())
+- [`skewY()`](/en-US/docs/Web/CSS/transform-function/skewY)
   - : Skews an element in the vertical direction.
 
 ### Translation (moving)
 
-- [`translate()`](/en-US/docs/Web/CSS/transform-function/translate())
+- [`translate()`](/en-US/docs/Web/CSS/transform-function/translate)
   - : Translates an element on the 2D plane.
-- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d())
+- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
   - : Translates an element in 3D space.
-- [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX())
+- [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX)
   - : Translates an element horizontally.
-- [`translateY()`](/en-US/docs/Web/CSS/transform-function/translateY())
+- [`translateY()`](/en-US/docs/Web/CSS/transform-function/translateY)
   - : Translates an element vertically.
-- [`translateZ()`](/en-US/docs/Web/CSS/transform-function/translateZ())
+- [`translateZ()`](/en-US/docs/Web/CSS/transform-function/translateZ)
   - : Translates an element along the z-axis.
 
 ## Description
@@ -94,15 +94,15 @@ In CSS (and most computer graphics), the origin `(0, 0)` represents the _top-lef
 
 Transformation functions alter the appearance of an element by manipulating the values of its coordinates. A linear transformation function is described using a 2×2 matrix, like this:
 
-<math><mfenced><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced></math>
+<math><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow></math>
 
 The function is applied to an element by using matrix multiplication. Thus, each coordinate changes based on the values in the matrix:
 
-<math><mfenced><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable></mfenced><mfenced><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr> </mtable></mfenced><mo>=</mo> <mfenced><mtable><mtr><mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtr><mtr><mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd></mtr></mtable></mfenced></math>
+<math><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr> </mtable><mo>)</mo></mrow><mo>=</mo> <mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtr><mtr><mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></math>
 
 It is even possible to apply several transformations in a row:
 
-<math><mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtr></mtable></mfenced><mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtr></mtable></mfenced><mo>=</mo> <mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub></mtd></mtr></mtable></mfenced></math>
+<math><mrow><mo>(</mo><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable><mtr><mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtr></mtable><mo>)</mo></mrow><mo>=</mo> <mrow><mo>(</mo><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></math>
 
 With this notation, it is possible to describe, and therefore compose, most common transformations: rotations, scaling, or skewing. (In fact, all transformations that are linear functions can be described.) Composite transformations are effectively applied in order from right to left.
 

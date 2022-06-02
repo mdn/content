@@ -1,6 +1,7 @@
 ---
 title: DecompressionStream
 slug: Web/API/DecompressionStream
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,7 +15,7 @@ The **`DecompressionStream`** interface of the {{domxref('Compression Streams AP
 
 ## Constructor
 
-- {{domxref("DecompressionStream.DecompressionStream()")}}
+- {{domxref("DecompressionStream.DecompressionStream", "DecompressionStream()")}}
   - : Creates a new `DecompressionStream`
 
 ## Properties

@@ -13,7 +13,7 @@ browser-compat: api.SVGLineElement
 
 The **`SVGLineElement`** interface provides access to the properties of {{ SVGElement("line") }} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

@@ -57,7 +57,7 @@ The listener function will be passed two parameters: a string `text`, and a call
 
 This example interprets the user's input as a CSS property name and populates the drop-down list with one {{WebExtAPIRef("omnibox.SuggestResult")}} object for each CSS property matching the input. The `SuggestResult` `description` is the full name of the property, and the `content` is the MDN page for that property.
 
-The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and opens the MDN page corresponding to the selection, according to the  {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.
+The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and opens the MDN page corresponding to the selection, according to the {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.
 
 ```js
 browser.omnibox.setDefaultSuggestion({
@@ -95,7 +95,7 @@ Return an array of SuggestResult objects,
 one for each CSS property that matches the user's input.
 */
 function getMatchingProperties(input) {
-  var result = [];
+  let result = [];
   for (prop of props) {
     if (prop.indexOf(input) === 0) {
       console.log(prop);
@@ -134,6 +134,6 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox) API.
+> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

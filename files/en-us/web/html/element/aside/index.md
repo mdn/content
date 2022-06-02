@@ -13,7 +13,6 @@ tags:
   - Web
 browser-compat: html.elements.aside
 ---
-
 {{HTMLRef}}
 
 The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
@@ -64,7 +63,7 @@ The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a
       </td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">Implicit ARIA role</th>
       <td>
         <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
@@ -76,7 +75,7 @@ The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("feed")}}, {{ARIARole("none")}},
+        {{ARIARole("feed")}}, {{ARIARole("none")}},
         {{ARIARole("note")}}, {{ARIARole("presentation")}},
         {{ARIARole("region")}}, {{ARIARole("search")}}
       </td>
@@ -133,4 +132,4 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 
 - Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
+- [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)

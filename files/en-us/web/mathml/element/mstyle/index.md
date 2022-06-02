@@ -29,10 +29,10 @@ The MathML `<mstyle>` element is used change the style of its children. It accep
 
 The `<mstyle>` element accepts [all attributes](/en-US/docs/Web/MathML/Attribute) of all presentation elements with the following exceptions:
 
-- `height`, `depth` or `width` do not apply to {{ MathMLELement("mpadded") }} or {{ MathMLELement("mtable") }}.
-- `rowalign`, `columnalign`, or `groupalign` do not apply to {{ MathMLELement("mtr") }}, {{ MathMLELement("mtd") }} or {{ MathMLELement("maligngroup") }}.
-- `lspace` or `voffset` do not apply to {{ MathMLELement("mpadded") }}.
-- `align` does not apply to {{ MathMLELement("mtable") }} or {{ MathMLELement("mstack") }}.
+- `height`, `depth` or `width` do not apply to {{ MathMLElement("mpadded") }} or {{ MathMLElement("mtable") }}.
+- `rowalign`, `columnalign`, or `groupalign` do not apply to {{ MathMLElement("mtr") }}, {{ MathMLElement("mtd") }} or {{ MathMLElement("maligngroup") }}.
+- `lspace` or `voffset` do not apply to {{ MathMLElement("mpadded") }}.
+- `align` does not apply to {{ MathMLElement("mtable") }} or {{ MathMLElement("mstack") }}.
 - `index` cannot be set on `<mstyle>`.
 - `actiontype` on {{ MathMLElement("maction") }} cannot be set on `<mstyle>`.
 
@@ -56,14 +56,14 @@ Using `displaystyle` and `mathcolor` to effect style changes in the layout of th
         <mi>n</mi>
       </munderover>
 
-      <mstyle displaystyle="true">
+      <mstyle displaystyle="true">
         <mfrac>
           <mn>1</mn>
           <mi>n</mi>
         </mfrac>
       </mstyle>
 
-    </mrow>
+    </mrow>
   </mstyle>
 
 </math>

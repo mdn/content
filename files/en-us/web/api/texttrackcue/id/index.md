@@ -13,16 +13,9 @@ browser-compat: api.TextTrackCue.id
 
 The **`id`** property of the {{domxref("TextTrackCue")}} interface returns and sets the identifier for this cue.
 
-## Syntax
+## Value
 
-```js
-let id = TextTrackCue.id;
-TextTrackCue.id = a;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the ID of this cue.
+A string containing the ID of this cue.
 
 ## Examples
 

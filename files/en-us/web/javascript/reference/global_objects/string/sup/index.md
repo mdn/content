@@ -40,8 +40,8 @@ The following example uses the {{jsxref("String.prototype.sub()", "sub()")}} and
 `sup()` methods to format a string:
 
 ```js
-var superText = 'superscript';
-var subText = 'subscript';
+const superText = 'superscript';
+const subText = 'subscript';
 
 console.log('This is what a ' + superText.sup() + ' looks like.');
 // "This is what a <sup>superscript</sup> looks like."
@@ -60,5 +60,5 @@ console.log('This is what a ' + subText.sub() + ' looks like.');
 
 ## See also
 
-- A polyfill of `String.prototype.sup` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.sup` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.sub()")}}

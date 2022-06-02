@@ -1,6 +1,7 @@
 ---
 title: Request.arrayBuffer()
 slug: Web/API/Request/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - ArrayBuffer
@@ -18,9 +19,7 @@ reads the request body and returns it as a promise that resolves with an {{jsxre
 ## Syntax
 
 ```js
-request.arrayBuffer().then(function(buffer) {
-   // do something with the buffer
-});
+arrayBuffer()
 ```
 
 ### Parameters

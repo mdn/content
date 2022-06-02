@@ -11,8 +11,9 @@ browser-compat: javascript.builtins.unescape
 {{jsSidebar("Objects")}}
 
 > **Warning:** Although `unescape()` is not strictly deprecated
-> (as in "removed from the Web standards"), it is defined in [Annex
-> B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) of the ECMA-262 standard, whose introduction states:
+> (as in "removed from the Web standards"), it is defined in
+> [Annex B](https://262.ecma-international.org/9.0/#sec-additional-ecmascript-features-for-web-browsers)
+> of the ECMA-262 standard, whose introduction states:
 >
 > > … All of the language features and behaviors specified in this annex have
 > > one or more undesirable characteristics and in the absence of legacy usage would be
@@ -68,7 +69,7 @@ unescape('%u0107');     // "ć"
 
 ## See also
 
-- A polyfill of `unescape` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `unescape` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("decodeURI")}}
 - {{jsxref("decodeURIComponent")}}
 - {{jsxref("escape")}}

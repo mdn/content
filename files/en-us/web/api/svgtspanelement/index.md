@@ -13,7 +13,7 @@ browser-compat: api.SVGTSpanElement
 
 The **`SVGTSpanElement`** interface represents a {{SVGElement("tspan")}} element.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer
@@ -27,13 +28,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root e
   and root margin")}} for a more in-depth look at the root margin and how it works with
 the root's bounding box.
 
-## Syntax
-
-```js
-var marginString = IntersectionObserver.rootMargin;
-```
-
-### Value
+## Value
 
 A string, formatted similarly to the CSS {{cssxref("margin")}} property's value, which
 contains offsets for one or more sides of the root's bounding box. These offsets are
@@ -47,7 +42,7 @@ the values
 If `rootMargin` isn't specified when the object was instantiated, it
 defaults to the string `"0px 0px 0px 0px"`, meaning that the intersection
 will be computed between the root element's unmodified bounds rectangle and the target's
-bounds.  {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root
+bounds.  {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root
   element and root margin")}} describes how the `rootMargin` is used in more
 detail.
 

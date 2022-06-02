@@ -36,29 +36,12 @@ You can use this attribute with any SVG element.
   </tbody>
 </table>
 
-*   `<iri>`
-    *   : This value specifies the base IRI of the element.
+- `<iri>`
+  - : This value specifies the base IRI of the element.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#XMLBaseAttribute", "xml:base")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -66,4 +49,4 @@ You can use this attribute with any SVG element.
 
 ## See also
 
-*   [XML Base](https://www.w3.org/TR/xmlbase/) specification
+- [XML Base](https://www.w3.org/TR/xmlbase/) specification

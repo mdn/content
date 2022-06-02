@@ -34,7 +34,7 @@ The array **iterator** function, which is the
 ### Iteration using for...of loop
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
 // your browser must support for..of loop
 // and let-scoped variables in for loops
 for (let n of arr) {
@@ -45,8 +45,8 @@ for (let n of arr) {
 ### Alternative iteration
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr[Symbol.iterator]();
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // 10
 console.log(eArr.next().value); // 20
 console.log(eArr.next().value); // 30
@@ -64,7 +64,7 @@ console.log(eArr.next().value); // 50
 
 ## See also
 
-- A polyfill of `TypedArray.prototype[@@iterator]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}

@@ -1,6 +1,7 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -11,6 +12,8 @@ browser-compat: api.CustomEvent
 The **`CustomEvent`** interface represents events initialized by an application for any purpose.
 
 {{AvailableInWorkers}}
+
+{{InheritanceDiagram}}
 
 ## Constructor
 

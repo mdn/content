@@ -1,6 +1,7 @@
 ---
 title: 'Element: mouseenter event'
 slug: Web/API/Element/mouseenter_event
+page-type: web-api-event
 tags:
   - API
   - Cursor
@@ -66,7 +67,7 @@ The [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event#example) documenta
 
 ### mouseenter
 
-The following trivial example uses the `mouseenter` event to change the border on the `div` when the mouse enters the space alloted to it. It then adds an item to the list with the number of the `mouseenter` or `mouseleave` event.
+The following trivial example uses the `mouseenter` event to change the border on the `div` when the mouse enters the space allotted to it. It then adds an item to the list with the number of the `mouseenter` or `mouseleave` event.
 
 #### HTML
 

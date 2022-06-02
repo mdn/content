@@ -31,7 +31,7 @@ For more details read [animating with JavaScript from setInterval to requestAnim
 
 ## Performance comparison:<br>transitions vs. requestAnimationFrame
 
-The fact is that, in most cases, the performance of CSS-based animations is almost the same as JavaScripted animations — in Firefox at least. Some JavaScript-based animation libraries, like [GSAP](http://greensock.com/gsap) and [Velocity.JS](http://velocityjs.org/), even claim that they are able to achieve better performance than [native CSS transitions/animations](https://css-tricks.com/myth-busting-css-animations-vs-javascript/). This can occur because CSS transitions/animations are resampling element styles in the main UI thread before each repaint event happens, which is almost the same as resampling element styles via a `requestAnimationFrame()` callback, also triggered before the next repaint. If both animations are made in the main UI thread, there is no difference performance-wise.
+The fact is that, in most cases, the performance of CSS-based animations is almost the same as JavaScripted animations — in Firefox at least. Some JavaScript-based animation libraries, like [GSAP](https://greensock.com/gsap/) and [Velocity.JS](http://velocityjs.org/), even claim that they are able to achieve better performance than [native CSS transitions/animations](https://css-tricks.com/myth-busting-css-animations-vs-javascript/). This can occur because CSS transitions/animations are resampling element styles in the main UI thread before each repaint event happens, which is almost the same as resampling element styles via a `requestAnimationFrame()` callback, also triggered before the next repaint. If both animations are made in the main UI thread, there is no difference performance-wise.
 
 In this section we'll walk you through a performance test, using Firefox, to see what animation method seems better overall.
 
@@ -39,10 +39,10 @@ In this section we'll walk you through a performance test, using Firefox, to see
 
 Before going through the example, please enable FPS tools first to see the current frame rate:
 
-1.  In the URL bar, enter _about:config_; click the _I’ll be careful, I promise!_ button to enter the config screen.
+1. In the URL bar, enter _about:config_; click the _I'll be careful, I promise!_ button to enter the config screen.
     ![](pic1.png)
-2.  In the search bar, search for the `layers.acceleration.draw-fps` preference.
-3.  Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes at the upper left corner of the Firefox window. The first box represents FPS.
+2. In the search bar, search for the `layers.acceleration.draw-fps` preference.
+3. Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes at the upper left corner of the Firefox window. The first box represents FPS.
     ![](pic2.png)
 
 ### Running the performance test
@@ -57,7 +57,7 @@ Try running them both now, comparing the FPS for each (the first purple box.) Yo
 
 ### Off main thread animation
 
-Even given the test results above, we'd argue that CSS animations are the better choice. But how? The key is that as long as the properties we want to animate do not trigger reflow/repaint (read [CSS triggers](http://csstriggers.com/) for more information), we can move those sampling operations out of the main thread. The most common property is the CSS transform. If an element is promoted as a [layer](https://wiki.mozilla.org/Gecko:Overview#Graphics), animating transform properties can be done in the GPU, meaning better  performance/efficiency, especially on mobile. Find out more details in [OffMainThreadCompositing](https://wiki.mozilla.org/Platform/GFX/OffMainThreadCompositing).
+Even given the test results above, we'd argue that CSS animations are the better choice. But how? The key is that as long as the properties we want to animate do not trigger reflow/repaint (read [CSS triggers](https://csstriggers.com/) for more information), we can move those sampling operations out of the main thread. The most common property is the CSS transform. If an element is promoted as a [layer](https://wiki.mozilla.org/Gecko:Overview#Graphics), animating transform properties can be done in the GPU, meaning better performance/efficiency, especially on mobile. Find out more details in [OffMainThreadCompositing](https://wiki.mozilla.org/Platform/GFX/OffMainThreadCompositing).
 
 To enable the OMTA (Off Main Thread Animation) in Firefox, you can go to _about:config_ and search for the `layers.offmainthreadcomposition.async-animations`. Toggle its value to `true`.
 

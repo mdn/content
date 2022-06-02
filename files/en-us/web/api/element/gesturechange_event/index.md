@@ -1,6 +1,7 @@
 ---
 title: 'Element: gesturechange event'
 slug: Web/API/Element/gesturechange_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard
@@ -55,4 +56,4 @@ Not part of any specification.
   - [`gesturestart`](/en-US/docs/Web/API/Element/gesturestart_event)
   - [`gestureend`](/en-US/docs/Web/API/Element/gestureend_event)
 
-- [GestureEventClassReference at the Safari Developer Library](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html)
+- [GestureEventClassReference at the Safari Developer Library](https://developer.apple.com/documentation/webkitjs/gestureevent)

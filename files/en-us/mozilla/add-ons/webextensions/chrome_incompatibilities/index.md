@@ -28,7 +28,7 @@ The rest of this page summarizes these and other incompatibilities.
 
 ## JavaScript APIs
 
-### \*chrome.\** and *browser.\*\* namespace
+### _chrome.\*_ and _browser.\*_ namespace
 
 - **In Firefox:** The equivalent APIs are accessed using the `browser` namespace.
 
@@ -78,7 +78,7 @@ The rest of this page summarizes these and other incompatibilities.
   );
   ```
 
-### Firefox supports both the *chrome* and *browser* namespaces
+### Firefox supports both the *chrome* and *browser* namespaces
 
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome`, using callbacks, as well as `browser`, using promises. This means that many Chrome extensions will just work in Firefox without any changes.
 
@@ -148,7 +148,7 @@ When calling `tabs.remove()`:
 
   - Requests can be redirected only if their original URL uses the `http:` or `https:` scheme.
   - The `activeTab` permission does not allow intercepting network requests in the current tab. (See [bug 1617479](https://bugzilla.mozilla.org/show_bug.cgi?id=1617479))
-  - Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
+  - Events are not fired for system requests (for example, extension upgrades or search bar suggestions).
 
     - **From Firefox 57 onwards:** Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 
@@ -168,7 +168,7 @@ When calling `tabs.remove()`:
 
 #### DeclarativeContent API
 
-- **In Firefox:** Chrome's [declarativeContent](https://developer.chrome.com/extensions/declarativeContent) API [has not yet been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864). In addition, Firefox [will not be supporting](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) the `declarativeContent.RequestContentScript` API (which is rarely used, and is unavailable in stable releases of Chrome).
+- **In Firefox:** Chrome's [declarativeContent](https://developer.chrome.com/docs/extensions/reference/declarativeContent/) API [has not yet been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864). In addition, Firefox [will not be supporting](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) the `declarativeContent.RequestContentScript` API (which is rarely used, and is unavailable in stable releases of Chrome).
 
 ### Miscellaneous incompatibilities
 
@@ -189,7 +189,7 @@ When calling `tabs.remove()`:
 #### Manifest "key" property
 
 - **In Firefox:** Since Firefox uses random UUIDs for `web_accessible_resources`, this property is unsupported.
-- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/extensions/manifest/key) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
+- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/docs/extensions/mv3/manifest/key/) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
 
 #### Content script HTTP(S) requests
 
@@ -202,7 +202,7 @@ When calling `tabs.remove()`:
 
 #### Content script lifecycle during navigation
 
-- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"`  and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in {{bug(1525400)}}.
+- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"` and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in {{bug(1525400)}}.
 
   To mimic the behavior of Chrome, listen for the [pageshow](/en-US/docs/Web/API/Window/pageshow_event) and [pagehide](/en-US/docs/Web/API/Window/pagehide_event) events. Then simulate the injection or destruction of the content script.
 
@@ -229,8 +229,8 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 
 **On Windows:** Chrome passes two arguments:
 
-1.  The origin of the extension
-2.  A handle to the Chrome native window that started the app
+1. The origin of the extension
+2. A handle to the Chrome native window that started the app
 
 ### allowed_extensions
 
@@ -239,7 +239,7 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 
 ### App manifest location
 
-- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location) in the Chrome docs.
+- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location) in the Chrome docs.
 
 ## Data cloning algorithm
 

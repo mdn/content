@@ -35,6 +35,7 @@ scale: 2 0.5 2;
 scale: inherit;
 scale: initial;
 scale: revert;
+scale: revert-layer;
 scale: unset;
 ```
 
@@ -65,7 +66,7 @@ scale: unset;
 
 ```html
 <div>
-  <p class="scale">Scaling</p>
+  <p class="scale">Scaling</p>
 </div>
 ```
 

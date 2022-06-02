@@ -102,12 +102,12 @@ let result = someInterface.customMethod?.();
 > function, using `?.` will still raise a {{JSxRef("TypeError")}} exception
 > (`someInterface.customMethod is not a function`).
 
-> **Note:** If `someInterface` itself is `null` or
-> `undefined`, a {{JSxRef("TypeError")}} exception will still be
-> raised (`someInterface is null`). If you expect that
-> `someInterface` itself may be `null` or `undefined`,
-> you have to use `?.` at this position as
-> well: `someInterface?.customMethod?.()`
+> **Note:** If `someInterface` itself is `null` or
+> `undefined`, a {{JSxRef("TypeError")}} exception will still be
+> raised (`someInterface is null`). If you expect that
+> `someInterface` itself may be `null` or `undefined`,
+> you have to use `?.` at this position as
+> well: `someInterface?.customMethod?.()`
 
 #### Dealing with optional callbacks or event handlers
 
@@ -152,6 +152,8 @@ let nestedProp = obj?.['prop' + 'Name'];
 
 ### Optional chaining not valid on the left-hand side of an assignment
 
+It is invalid to try to assign to the result of an optional chaining expression:
+
 ```js
 let object = {};
 object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
@@ -159,7 +161,10 @@ object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignm
 
 ### Array item access with optional chaining
 
+You can use [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation) for optional chaining on arrays:
+
 ```js
+const arr = ['a', 'b', 'c', 'd']
 let arrayItem = arr?.[42];
 ```
 

@@ -16,6 +16,8 @@ The **`ScreenOrientation`** interface of the [Screen Orientation API](/en-US/doc
 
 A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("screen.orientation")}} property.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{DOMxRef("ScreenOrientation.type")}}{{ReadOnlyInline}}

@@ -1,6 +1,7 @@
 ---
 title: Notification.image
 slug: Web/API/Notification/image
+page-type: web-api-instance-property
 tags:
   - API
   - Image
@@ -18,15 +19,9 @@ The `image` read-only property of the
 part of the notification, as specified in the `image` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
+## Value
 
-```js
-var image = Notification.image;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Specifications
 
@@ -38,5 +33,4 @@ A {{domxref("USVString")}}.
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

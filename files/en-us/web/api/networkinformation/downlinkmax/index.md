@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -14,21 +15,14 @@ browser-compat: api.NetworkInformation.downlinkMax
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.downlinkMax`** read-only property
-returns the maximum downlink speed, in megabits per second (Mbps), for the underlying
+returns the maximum downlink speed, in megabits per second (Mbps), for the underlying
 connection technology.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var max = NetworkInformation.downlinkMax
-```
-
-### Return value
-
-- an `unrestricted double` representing the maximum downlink speed,
-  in megabits per second (Mb/s), for the underlying connection technology.
+An `unrestricted double` representing the maximum downlink speed, in megabits per second (Mb/s), for the underlying connection technology.
 
 ## Examples
 

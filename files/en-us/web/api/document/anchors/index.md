@@ -1,6 +1,7 @@
 ---
 title: Document.anchors
 slug: Web/API/Document/anchors
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -15,17 +16,11 @@ browser-compat: api.Document.anchors
 The **`anchors`** read-only property of the
 {{domxref("Document")}} interface returns a list of all of the anchors in the document.
 
-## Syntax
-
-```js
-nodeList = document.anchors;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}}.
 
-## Example
+## Examples
 
 ```js
 if (document.anchors.length >= 5) {

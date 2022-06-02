@@ -1,6 +1,7 @@
 ---
 title: ImageTrack
 slug: Web/API/ImageTrack
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -11,6 +12,8 @@ browser-compat: api.ImageTrack
 {{DefaultAPISidebar("WebCodecs API")}}
 
 The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} represents an individual image track.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -35,4 +38,3 @@ The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} 
 ## Browser compatibility
 
 {{Compat}}
-

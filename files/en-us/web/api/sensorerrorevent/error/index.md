@@ -17,15 +17,9 @@ browser-compat: api.SensorErrorEvent.error
 
 The **`error`** read-only property of
 the {{domxref("SensorErrorEvent")}} interface returns the {{domxref('DOMException')}}
-object passed in the event's contructor.
+object passed in the event's constructor.
 
-## Syntax
-
-```js
-var domException = sensorErrorEvent.error;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMException')}}.
 

@@ -1,5 +1,5 @@
 ---
-title: Concurrency model and the event loop
+title: The event loop
 slug: Web/JavaScript/EventLoop
 tags:
   - Advanced
@@ -13,7 +13,7 @@ tags:
 ---
 {{JsSidebar("Advanced")}}
 
-JavaScript has a concurrency model based on an **event loop**, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
+JavaScript has a runtime model based on an **event loop**, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
 
 ## Runtime concepts
 
@@ -48,7 +48,7 @@ Order of operations:
 3. When `foo` returns, the top frame element is popped out of the stack (leaving only `bar`'s call frame).
 4. When `bar` returns, the stack is empty.
 
-Note that the arguments and local variables may continue to exist, as they are stored outside the stack — so they can be accessed by any [nested functions](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) long after their outer function has returned.
+Note that the arguments and local variables may continue to exist, as they are stored outside the stack — so they can be accessed by any [nested functions](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) long after their outer function has returned.
 
 ### Heap
 
@@ -78,15 +78,15 @@ while (queue.waitForMessage()) {
 
 Each message is processed completely before any other message is processed.
 
-This offers some nice properties when reasoning about your program, including the fact that whenever a function runs, it cannot be pre-empted and will run entirely before any other code runs (and can modify data the function manipulates). This differs from C, for instance, where if a function runs in a thread, it may be stopped at any point by the runtime system to run some other code in another thread.
+This offers some nice properties when reasoning about your program, including the fact that whenever a function runs, it cannot be preempted and will run entirely before any other code runs (and can modify data the function manipulates). This differs from C, for instance, where if a function runs in a thread, it may be stopped at any point by the runtime system to run some other code in another thread.
 
 A downside of this model is that if a message takes too long to complete, the web application is unable to process user interactions like click or scroll. The browser mitigates this with the "a script is taking too long to run" dialog. A good practice to follow is to make message processing short and if possible cut down one message into several messages.
 
 ### Adding messages
 
-In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost. So a click on an element with a click event handler will add a message—likewise with any other event.
+In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost. So a click on an element with a click event handler will add a message — likewise with any other event.
 
-The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to `0`). The _time value_ represents the (minimum) delay after which the message will be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the `setTimeout` message will have to wait for other messages to be processed. For this reason, the second argument indicates a _minimum_ time—not a _guaranteed_ time.
+The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to `0`). The _time value_ represents the (minimum) delay after which the message will be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the `setTimeout` message will have to wait for other messages to be processed. For this reason, the second argument indicates a _minimum_ time — not a _guaranteed_ time.
 
 Here is an example that demonstrates this concept (`setTimeout` does not run immediately after its timer expires):
 
@@ -148,7 +148,7 @@ A web worker or a cross-origin `iframe` has its own stack, heap, and message que
 
 A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for an [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) query to return or an [XHR](/en-US/docs/Web/API/XMLHttpRequest) request to return, it can still process other things like user input.
 
-Legacy exceptions exist like `alert` or synchronous XHR, but it is considered good practice to avoid them. Beware: [exceptions to the exception do exist](http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (but are usually implementation bugs, rather than anything else).
+Legacy exceptions exist like `alert` or synchronous XHR, but it is considered good practice to avoid them. Beware: [exceptions to the exception do exist](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (but are usually implementation bugs, rather than anything else).
 
 ## See also
 

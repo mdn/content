@@ -1,6 +1,7 @@
 ---
 title: HID.getDevices()
 slug: Web/API/HID/getDevices
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`getDevices()`** method of the {{domxref("HID")}} interface gets a list of
 ## Syntax
 
 ```js
-HID.getDevices();
+getDevices()
 ```
 
 ### Parameters

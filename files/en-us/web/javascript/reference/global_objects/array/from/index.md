@@ -54,18 +54,18 @@ A new {{jsxref("Array")}} instance.
 `Array.from()` lets you create `Array`s from:
 
 - array-like objects (objects with a `length` property and indexed
-  elements); or
+  elements); or
 - [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (objects
   such as {{jsxref("Map")}} and {{jsxref("Set")}}).
 
 `Array.from()` has an optional parameter `mapFn`,
 which allows you to execute a {{jsxref("Array.prototype.map()", "map()")}} function on
-each element of the array being created.
+each element of the array being created.
 
 More clearly,
 `Array.from(obj, mapFn, thisArg)`
 has the same result
-as `Array.from(obj).map(mapFn, thisArg)`,
+as `Array.from(obj).map(mapFn, thisArg)`,
 except that it does not create an intermediate array, and _mapFn_ only receives
 two arguments (_element_, _index_).
 
@@ -76,7 +76,7 @@ two arguments (_element_, _index_).
 The `length` property of the `from()` method is `1`.
 
 In ES2015, the class syntax allows sub-classing of both built-in and user-defined
-classes. As a result, static methods such as `Array.from()` are "inherited"
+classes. As a result, static methods such as `Array.from()` are "inherited"
 by subclasses of `Array`, and create new instances _of the
 subclass_, not `Array`.
 
@@ -178,7 +178,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
 ## Polyfill
 
 `Array.from()` was added to the ECMA-262 standard in the 6th
-Edition (ES2015). As such, it may not be present in other implementations of the
+Edition (ES2015). As such, it may not be present in other implementations of the
 standard.
 
 You can work around this by inserting the following code at the beginning of your
@@ -335,7 +335,7 @@ if (!Array.from) {
 
 ## See also
 
-- A polyfill of `Array.from` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("Array.of()")}}
 - {{jsxref("Array.prototype.map()")}}

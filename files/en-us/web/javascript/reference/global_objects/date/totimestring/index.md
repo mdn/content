@@ -31,9 +31,7 @@ English.
 
 {{jsxref("Date")}} instances refer to a specific point in time. Calling
 {{jsxref("Date.prototype.toString()", "toString()")}} will return the date formatted in
-a human readable form in English. In [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), this consists of
-the date portion (day, month, and year) followed by the time portion (hours, minutes,
-seconds, and time zone). Sometimes it is desirable to obtain a string of the time
+a human readable form in English. Sometimes it is desirable to obtain a string of the time
 portion; such a thing can be accomplished with the `toTimeString()` method.
 
 The `toTimeString()` method is especially useful because compliant engines
@@ -47,7 +45,7 @@ slicing approaches may not produce consistent results across multiple engines.
 ### A basic usage of toTimeString()
 
 ```js
-var d = new Date(1993, 6, 28, 14, 39, 7);
+const d = new Date(1993, 6, 28, 14, 39, 7);
 
 console.log(d.toString());     // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)

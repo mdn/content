@@ -18,7 +18,7 @@ operation.
 ## Syntax
 
 ```js
-void gl.endTransformFeedback();
+endTransformFeedback()
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

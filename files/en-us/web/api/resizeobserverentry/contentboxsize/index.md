@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverEntry.contentBoxSize
 slug: Web/API/ResizeObserverEntry/contentBoxSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -31,8 +32,7 @@ The array is necessary to support elements that have multiple fragments, which o
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
 > **Note:** For more explanation of writing modes and block and inline
-> dimensions, read [Handling
-> different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
 

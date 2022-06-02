@@ -1,6 +1,7 @@
 ---
 title: MediaSession.metadata
 slug: Web/API/MediaSession/metadata
+page-type: web-api-instance-property
 tags:
   - Audio
   - Media
@@ -15,7 +16,7 @@ browser-compat: api.MediaSession.metadata
 {{SeeCompatTable}}{{APIRef("Media Session API")}}
 
 The **`metadata`** property of the {{domxref("MediaSession")}}
-interface contains a {{domxref("MediaMetadata")}} object  providing descriptive
+interface contains a {{domxref("MediaMetadata")}} object providing descriptive
 information about the currently playing media, or `null` if the metadata has
 not been set. This metadata is provided by the browser to the device for presentation in
 any standard media control user interface the device might offer.

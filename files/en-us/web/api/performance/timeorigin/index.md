@@ -19,13 +19,7 @@ start time of the performance measurement.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var timeOrigin = performance.timeOrigin
-```
-
-### Value
+## Value
 
 A high resolution timestamp.
 

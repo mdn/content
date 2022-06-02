@@ -29,7 +29,7 @@ The HTML specification defines the following set of standard metadata names:
 - `description`: a short and accurate summary of the content of the page. Several browsers, like Firefox and Opera, use this as the default description of bookmarked pages.
 - `generator`: the identifier of the software that generated the page.
 - `keywords`: words relevant to the page's content separated by commas.
-- `referrer`: controls the HTTP {{httpheader("Referer")}} header for to requests sent from the document:
+- `referrer`: controls the HTTP {{httpheader("Referer")}} header of requests sent from the document:
 
   <table class="standard-table">
     <caption>
@@ -126,7 +126,7 @@ The HTML specification defines the following set of standard metadata names:
 
 The CSS Device Adaptation specification defines the following metadata name:
 
-- `viewport`: gives hints about the size of the initial size of the {{glossary("viewport")}}. Used by mobile devices only.
+- `viewport`: gives hints about the size of the initial size of the {{glossary("viewport")}}.
 
   <table class="fullwidth-table">
     <caption>
@@ -195,7 +195,7 @@ The CSS Device Adaptation specification defines the following metadata name:
         <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
         <td>
           <p>
-            The <code>auto</code> value doesn’t affect the initial layout
+            The <code>auto</code> value doesn't affect the initial layout
             viewport, and the whole web page is viewable.
           </p>
           <p>
@@ -213,22 +213,12 @@ The CSS Device Adaptation specification defines the following metadata name:
     </tbody>
   </table>
 
-  > **Note:**
-  >
-  > - Though unstandardized, this declaration is respected by most mobile browsers due to de-facto dominance.
-  > - The default values may vary between devices and browsers.
-  > - To learn about this declaration in Firefox for Mobile, see [this article](/en-US/docs/Mobile/Viewport_meta_tag "Mobile/Viewport meta tag").
-
   ##### Accessibility concerns with viewport scaling
 
   Disabling zooming capabilities by setting `user-scalable` to a value of `no` prevents people experiencing low vision conditions from being able to read and understand page content.
 
   - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
   - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
-
-  ##### See also
-
-  The [`@viewport`](/en-US/docs/Web/CSS/@viewport) CSS at-rule.
 
 ### Other metadata names
 
@@ -245,12 +235,12 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   | `noindex`      | Requests the robot to not index the page.                                   | All                                                                                                                                                                                                                                                                                              |
   | `follow`       | Allows the robot to follow the links on the page (default).                 | All                                                                                                                                                                                                                                                                                              |
   | `nofollow`     | Requests the robot to not follow the links on the page.                     | All                                                                                                                                                                                                                                                                                              |
-  | `all`          | Equivalent to `index, follow`                                               | [Google](https://support.google.com/webmasters/answer/79812)                                                                                                                                                                                                                                     |
-  | `none`         | Equivalent to `noindex, nofollow`                                           | [Google](https://support.google.com/webmasters/answer/79812)                                                                                                                                                                                                                                     |
-  | `noarchive`    | Requests the search engine not to cache the page content.                   | [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240) |
-  | `nosnippet`    | Prevents displaying any description of the page in search engine results.   | [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives), [Bing](https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240)                                                                     |
-  | `noimageindex` | Requests this page not to appear as the referring page of an indexed image. | [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives)                                                                                                                                                                   |
-  | `nocache`      | Synonym of `noarchive`.                                                     | [Bing](https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                                                                     |
+  | `all`          | Equivalent to `index, follow`                                               | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965067987211-415685194&rd=1)                                                                                                                                                                                                                                     |
+  | `none`         | Equivalent to `noindex, nofollow`                                           | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965074074862-574753619&rd=1)                                                                                                                                                                                                                                     |
+  | `noarchive`    | Requests the search engine not to cache the page content.                   | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240) |
+  | `nosnippet`    | Prevents displaying any description of the page in search engine results.   | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                     |
+  | `noimageindex` | Requests this page not to appear as the referring page of an indexed image. | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)                                                                                                                                                                   |
+  | `nocache`      | Synonym of `noarchive`.                                                     | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                                                                     |
 
   > **Note:**
   >

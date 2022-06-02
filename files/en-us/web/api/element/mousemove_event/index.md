@@ -1,6 +1,7 @@
 ---
 title: 'Element: mousemove event'
 slug: Web/API/Element/mousemove_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -87,8 +88,8 @@ const context = myPics.getContext('2d');
 
 // Add the event listeners for mousedown, mousemove, and mouseup
 myPics.addEventListener('mousedown', e => {
-  x = e.offsetX;
-  y = e.offsetY;
+  x = e.offsetX;
+  y = e.offsetY;
   isDrawing = true;
 });
 

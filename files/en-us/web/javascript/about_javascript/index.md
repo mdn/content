@@ -31,14 +31,14 @@ Several major runtime optimizations such as TraceMonkey (Firefox 3.5), JägerMon
 
 Besides the above implementations, there are other popular JavaScript engines such as:-
 
-- Google's [V8](https://code.google.com/p/v8/), which is used in the Google Chrome browser and recent versions of Opera browser. This is also the engine used by [Node.js](http://nodejs.org).
-- The [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) used in some WebKit browsers such as Apple Safari.
-- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq) in old versions of Opera.
+- Google's [V8](https://v8.dev/), which is used in the Google Chrome browser and recent versions of Opera browser. This is also the engine used by [Node.js](https://nodejs.org).
+- The [JavaScriptCore](https://webkit.org/project/) (SquirrelFish/Nitro) used in some WebKit browsers such as Apple Safari.
+- [Carakan](https://dev.opera.com/blog/carakan-faq/) in old versions of Opera.
 - The [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) engine used in Internet Explorer (although the language it implements is formally called "JScript" in order to avoid trademark issues).
 
-Each of Mozilla's JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://www.w3.org/DOM/) into JavaScript.
+Each of Mozilla's JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://dom.spec.whatwg.org/) into JavaScript.
 
-Another common application for JavaScript is as a (Web) server side scripting language. A JavaScript web server would expose host objects representing a HTTP request and response objects, which could then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](http://nodejs.org) is a popular example of this.
+Another common application for JavaScript is as a (Web) server side scripting language. A JavaScript web server would expose host objects representing a HTTP request and response objects, which could then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org) is a popular example of this.
 
 ## JavaScript resources
 

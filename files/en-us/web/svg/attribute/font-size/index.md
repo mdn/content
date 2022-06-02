@@ -14,11 +14,11 @@ The **`font-size`** attribute refers to the size of the font from {{Glossary("ba
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -30,8 +30,8 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-size="smaller">smaller</text>
-  <text x="100" y="20" font-size="2em">2em</text>
+  <text y="20" font-size="smaller">smaller</text>
+  <text x="100" y="20" font-size="2em">2em</text>
 </svg>
 ```
 
@@ -59,35 +59,11 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-size`](/en-US/docs/Web/CSS/font-size#Values) property.
+For a description of the values, please refer to the [CSS `font-size`](/en-US/docs/Web/CSS/font-size#values) property.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Fonts", "#font-size-prop", "font-size")}}
-      </td>
-      <td>{{Spec2("CSS3 Fonts")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#FontSizeProperty", "font-size")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -95,4 +71,4 @@ For a description of the values, please refer to the [CSS `font-size`](/en-US/do
 
 ## See also
 
-*   {{cssxref("font-size", "CSS font-size")}}
+- {{cssxref("font-size", "CSS font-size")}}

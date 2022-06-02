@@ -19,7 +19,7 @@ The **`WebGLRenderingContext.createTexture()`** method of the
 ## Syntax
 
 ```js
-WebGLTexture gl.createTexture();
+createTexture()
 ```
 
 ### Parameters

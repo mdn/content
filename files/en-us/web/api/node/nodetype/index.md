@@ -1,6 +1,7 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -9,7 +10,7 @@ browser-compat: api.Node.nodeType
 ---
 {{APIRef("DOM")}}
 
-The read-only **`nodeType`** property of a {{domxref("Node")}} element is an integer
+The read-only **`nodeType`** property of a {{domxref("Node")}} interface is an integer
 that identifies what the node is. It distinguishes different kind of nodes from each other,
 such as {{domxref("Element", "elements")}}, {{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.
 

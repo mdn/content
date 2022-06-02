@@ -33,7 +33,7 @@ replaceAll(substr, newSubstr)
 replaceAll(substr, replacerFunction)
 ```
 
-> **Note:** When using a \`_regexp_\` you have to set the global ("g") flag; otherwise, it
+> **Note:** When using a \`_regexp_\` you have to set the global ("g") flag; otherwise, it
 > will throw a `TypeError`: "replaceAll must be called with a global RegExp".
 
 ### Parameters
@@ -91,7 +91,7 @@ The arguments to the function are as follows:
 | Possible name | Supplied value                                                                                                                                                                                                                                                                         |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `match`       | The matched substring. (Corresponds to `$&` above.)                                                                                                                                                                                                                                    |
-| `p1, p2, ...` | The *n*th string found by a parenthesized capture group, provided the first argument to `replaceAll()` was a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if `/(\a+)(\b+)/`, was given, `p1` is the match for `\a+`, and `p2` for `\b+`. |
+| `p1, p2, ...` | The *n*th string found by a parenthesized capture group, provided the first argument to `replaceAll()` was a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if `/(\a+)(\b+)/`, was given, `p1` is the match for `\a+`, and `p2` for `\b+`. |
 | `offset`      | The offset of the matched substring within the whole string being examined. (For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be `1`.)                                                                                     |
 | `string`      | The whole string being examined.                                                                                                                                                                                                                                                       |
 | `namedGroups` | An object of all named capturing groups. The keys are the names of the capturing groups and each value is the substring matching the named capture group. If the regular expression doesn't contain any capturing groups, `namedGroups` is undefined.                               |
@@ -134,7 +134,7 @@ This will work:
 
 ## See also
 
-- A polyfill of `String.prototype.replaceAll` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.replaceAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}

@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.WebAssembly.Memory.grow
 ---
 {{JSRef}}
 
-The **`grow()`** protoype method of the
+The **`grow()`** prototype method of the
 [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
 object increases the size of the memory instance by a specified number of WebAssembly
 pages.
@@ -26,7 +26,7 @@ grow(number)
 
 ### Parameters
 
-- _number_
+- `number`
   - : The number of WebAssembly pages you want to grow the memory by (each one is 64KiB in
     size).
 
@@ -69,5 +69,4 @@ pages.
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

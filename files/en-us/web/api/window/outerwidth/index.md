@@ -11,7 +11,7 @@ browser-compat: api.Window.outerWidth
 ---
 {{APIRef}}
 
-**`Window.outerWidth`** read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.
+**`Window.outerWidth`** read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.
 
 ## Notes
 

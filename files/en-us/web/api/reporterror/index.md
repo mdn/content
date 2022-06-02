@@ -1,6 +1,7 @@
 ---
 title: reportError()
 slug: Web/API/reportError
+page-type: web-api-global-function
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ This ensures that an exception in one callback will not prevent others from bein
 ## Syntax
 
 ```js
-self.reportError(throwable);
+reportError(throwable)
 ```
 
 ### Parameters
@@ -32,16 +33,14 @@ self.reportError(throwable);
 
 ### Return value
 
-Void.
-
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
   - : The method is called without an error argument.
 
-
-## Example
+## Examples
 
 Feature test for the method using:
 
@@ -72,7 +71,6 @@ self.addEventListener('error', (error) => {
 // > "someFile.js"
 ```
 
-
 ## Specifications
 
 {{Specifications}}
@@ -80,7 +78,6 @@ self.addEventListener('error', (error) => {
 ## Browser compatibility
 
 {{Compat}}
-
 
 ## See also
 

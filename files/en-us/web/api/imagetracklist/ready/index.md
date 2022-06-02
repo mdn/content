@@ -1,6 +1,7 @@
 ---
 title: ImageTrackList.ready
 slug: Web/API/ImageTrackList/ready
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.ImageTrackList.ready
 
 The **`ready`** property of the {{domxref("ImageTrackList")}} interface returns a {{jsxref("Promise")}} that resolves when the `ImageTrackList` is populated with {{domxref("ImageTrack","tracks")}}.
 
-### Value
+## Value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}}.
 
@@ -34,5 +35,3 @@ console.log(ready);
 ## Browser compatibility
 
 {{Compat}}
-
-

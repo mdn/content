@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream.truncate()
 slug: Web/API/FileSystemWritableFileStream/truncate
+page-type: web-api-instance-method
 tags:
   - File
   - File System Access API
@@ -10,7 +11,7 @@ tags:
   - write
 browser-compat: api.FileSystemWritableFileStream.truncate
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`truncate()`** method of the
 {{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with
@@ -43,9 +44,9 @@ A {{jsxref('Promise')}} which returns undefined.
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError`{{domxref("DOMException")}}
   - : If the {{domxref('PermissionState')}} is not 'granted'.
-- TypeError
+- {{jsxref("TypeError")}}
   - : If the size is undefined or not an unsigned long.
 
 ## Examples

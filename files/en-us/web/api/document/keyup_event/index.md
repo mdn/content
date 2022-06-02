@@ -1,6 +1,7 @@
 ---
 title: 'Document: keyup event'
 slug: Web/API/Document/keyup_event
+page-type: web-api-event
 tags:
   - DOM
   - Document

@@ -37,7 +37,7 @@ WebGL measures all distances and lengths in **meters**. WebXR inherits this stan
 
 ![Diagram showing a WebXR space whose X, Y, and Z coordinate axes each have a minimum value of -1 and a maximum of 1.](defaultspacedimensions.svg)
 
-This two cubic meter space encompasses the entire universe for the purposes of your code. Everything you draw must have its coordinates mapped to fit into this space, either explicitly within your code, or by using a transform to adjust the coordinates of all vertices. The most efficient way, of course, is to design your objects and code to use the same coordinate system as WebGL does.
+This eight cubic meter space encompasses the entire universe for the purposes of your code. Everything you draw must have its coordinates mapped to fit into this space, either explicitly within your code, or by using a transform to adjust the coordinates of all vertices. The most efficient way, of course, is to design your objects and code to use the same coordinate system as WebGL does.
 
 The WebGL coordinates and lengths are transformed automatically at render time to the size of the viewport in which the scene is being rendered.
 
@@ -76,13 +76,13 @@ Note that when we say that a transform applies to a point, it also, by extension
 
 A complete XR-enhanced scene—whether virtual or augmented—is a composite of anywhere from one to potentially dozens of frames of reference. Each object within the scene that needs to directly exchange position and orientation data with the WebXR system needs to be able to report that information in a way that can be understood and adapted as needed to be comprehensible by other objects within the scene.
 
-In augmented reality (AR), this is because of the need to insert virtual objects into the real world, not only placing them correctly but also ensuring that they don't seem to wander around on their own as the user's perspective shifts. In virtual reality (VR), it's all about creating a sense of space in which the user's movements are precisely matched by the imagery presented on the virtual display, to prevent disjoints and disconnects that could cause discomfort or worse.
+In augmented reality (AR), this is because of the need to insert virtual objects into the real world, not only placing them correctly but also ensuring that they don't seem to wander around on their own as the user's perspective shifts. In virtual reality (VR), it's all about creating a sense of space in which the user's movements are precisely matched by the imagery presented on the virtual display, to prevent disjoints and disconnects that could cause discomfort or worse.
 
-Thus it's all about creating a sense of space. From the perspective of an XR developer, designing the stage is the part that matters most to your users. Like an architect or a set designer, you have the power to create moods and experiences through a physical environment. How you structure that space will both depend on and influence how users can interact and explore it.
+Thus it's all about creating a sense of space. From the perspective of an XR developer, designing the stage is the part that matters most to your users. Like an architect or a set designer, you have the power to create moods and experiences through a physical environment. How you structure that space will both depend on and influence how users can interact and explore it.
 
 > **Note:** A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.
 
-In WebXR, the fundamental concept of a **space**—as in, a coordinate space in which a scene takes place—is represented by an instance of {{domxref("XRSpace")}}. The space is used to make determinations about the relative positions and motion of objects and other entities (such as light sources and cameras) within the user's environment.
+In WebXR, the fundamental concept of a **space**—as in, a coordinate space in which a scene takes place—is represented by an instance of {{domxref("XRSpace")}}. The space is used to make determinations about the relative positions and motion of objects and other entities (such as light sources and cameras) within the user's environment.
 
 As mentioned earlier, any given 3D point consists of three components, each identifying the distance from the center of the space along one of the three axes.
 
@@ -108,15 +108,15 @@ To be useful for spatial tracking and scene geometry, though, you need to be abl
 
 Because of the variety of XR hardware available, coming in a wide variety of form factors from many developers, it's impractical and non-scalable to expect developers to have to directly communicate with the tracking technology being used. Instead, the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is designed to have developers plan their users' experiences and request an appropriate reference space that best represents those needs. This is done by asking the {{Glossary("user agent")}} for an **{{domxref("XRReferenceSpace")}}** matching those needs.
 
-An `XRReferenceSpace` object acts as a means to adapt one coordinate system reference frame to another. After putting on a headset, consider the virtual world around you to have a coordinate system in which your position is (0, 0, 0)—that is, you're at the center of everything. Doesn't that feel empowering? Forward, directly in front of your headset, is the -Z axis, with +Z behind you. X is positive to your right and negative to your left. Y is negative as you go downward and positive as you go upward. This indicates the position of the headset in space at the start of your use of the XR system, with the origin (0, 0, 0) being positioned basically at the bridge of your nose. This space is the **world space**.
+An `XRReferenceSpace` object acts as a means to adapt one coordinate system reference frame to another. After putting on a headset, consider the virtual world around you to have a coordinate system in which your position is (0, 0, 0)—that is, you're at the center of everything. Doesn't that feel empowering? Forward, directly in front of your headset, is the -Z axis, with +Z behind you. X is positive to your right and negative to your left. Y is negative as you go downward and positive as you go upward. This indicates the position of the headset in space at the start of your use of the XR system, with the origin (0, 0, 0) being positioned basically at the bridge of your nose. This space is the **world space**.
 
-Next, consider the XR controller you have in your left hand. It has the ability to report movement and its orientation, but it doesn't know anything about the position of the headset or, more crucially, its coordinate system. But the controller still needs a way to report its position to your app. Thus, it has its own coordinate system. This is a reference space which is provided to your app when input events occur. This reference space internally knows how to map the coordinates of the controller to the headset's coordinates, so WebXR can translate coordinates back and forth for you.
+Next, consider the XR controller you have in your left hand. It has the ability to report movement and its orientation, but it doesn't know anything about the position of the headset or, more crucially, its coordinate system. But the controller still needs a way to report its position to your app. Thus, it has its own coordinate system. This is a reference space which is provided to your app when input events occur. This reference space internally knows how to map the coordinates of the controller to the headset's coordinates, so WebXR can translate coordinates back and forth for you.
 
-Once created, an `XRReferenceSpace` guarantees a certain level of support for motion and orientation tracking, and provides a mechanism for obtaining an {{domxref("XRViewerPose")}} from which you can get a matrix which represents the position and facing direction of the space relative to the world space, if the space represents a viewer such as the user's headset, an observer's headset, or a virtual camera.
+Once created, an `XRReferenceSpace` guarantees a certain level of support for motion and orientation tracking, and provides a mechanism for obtaining an {{domxref("XRViewerPose")}} from which you can get a matrix which represents the position and facing direction of the space relative to the world space, if the space represents a viewer such as the user's headset, an observer's headset, or a virtual camera.
 
-All of this is the browser's responsibility to handle, providing consistent behavior regardless of how capable each of the underlying reference spaces are. No matter how powerful or simple the individual XR device is, code written using WebXR will still work, within the limitations of the available hardware.
+All of this is the browser's responsibility to handle, providing consistent behavior regardless of how capable each of the underlying reference spaces are. No matter how powerful or simple the individual XR device is, code written using WebXR will still work, within the limitations of the available hardware.
 
-Regardless of the type of reference space you choose, its type is {{domxref("XRReferenceSpace")}} or is a type derived from `XRReferenceSpace`. The currently available reference space types, are shown below.
+Regardless of the type of reference space you choose, its type is {{domxref("XRReferenceSpace")}} or is a type derived from `XRReferenceSpace`. The currently available reference space types, are shown below.
 
 - `bounded-floor`
   - : An {{domxref("XRBoundedReferenceSpace")}} similar to the `local` type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.
@@ -133,7 +133,7 @@ The remainder of this guide explores how to select the right reference space for
 
 ## Defining spatial relationships with reference spaces
 
-There are a number of commonly used ways to reference the positions and orientations of objects relative to their environment, as well as to constrain the environment itself. To that end, WebXR defines a set of standard spaces, called **reference spaces**, each of which supports a different technique for correlating its local space's reference frame coordinate system to the coordinate system of the space in which it exists.
+There are a number of commonly used ways to reference the positions and orientations of objects relative to their environment, as well as to constrain the environment itself. To that end, WebXR defines a set of standard spaces, called **reference spaces**, each of which supports a different technique for correlating its local space's reference frame coordinate system to the coordinate system of the space in which it exists.
 
 However, regardless of which type of reference space is being used, you can use the same functions to convert coordinates from space to parent space.
 
@@ -143,17 +143,17 @@ Straight off, let's state the simplest step in the process of deciding which ref
 
 #### Floor level reference spaces
 
-The reference space types with `-floor` in their names work just like the corresponding non-floor spaces, except that they attempt to automatically ensure that the viewer is positioned in a safe place at or near (but always above) ground level. This is the plane at which the `y` coordinate is always 0, unless a floor is otherwise established. These space types are _not_ viable if the rooms have uneven floors or floors whose height above ground level vary, since they don't support the avatar's vertical position changing.
+The reference space types with `-floor` in their names work just like the corresponding non-floor spaces, except that they attempt to automatically ensure that the viewer is positioned in a safe place at or near (but always above) ground level. This is the plane at which the `y` coordinate is always 0, unless a floor is otherwise established. These space types are _not_ viable if the rooms have uneven floors or floors whose height above ground level vary, since they don't support the avatar's vertical position changing.
 
 #### The primary reference space types
 
 The `viewer` reference space corresponds to the viewer's position in space; it's used by the {{domxref("XRViewerPose")}} returned by the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}. It's not typically used directly otherwise. The only real exception is that you are likely to use the `viewer` reference space when performing the XR scene inline within web content.
 
-The `local` reference space is typically used to describe a relatively small area, such as a single room. It is not only always available when using an immersive session mode (`immersive-vr` or `immersive-ar`), but is always included among the optional features when requesting a new session; thus, every session created by {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} supports the `local` reference space type.
+The `local` reference space is typically used to describe a relatively small area, such as a single room. It is not only always available when using an immersive session mode (`immersive-vr` or `immersive-ar`), but is always included among the optional features when requesting a new session; thus, every session created by {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} supports the `local` reference space type.
 
 To represent a large area—potentially involving multiple rooms or beyond—you can use the `unbounded` reference space type, which specifies no constraints on the viewer's movement. If you wish to prevent the user from moving into certain areas, you must handle that yourself.
 
-The `bounded-floor` reference space type doesn't have a corresponding one that isn't floor-bound. If the user's XR hardware permits them to move about their real-world space, and you are able to do so, it may be useful to use a `bounded-floor` reference space, which lets you specifically define the boundaries of the area in which passage is allowed and safe. See the article [Using bounded reference spaces](/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces) to learn more about the use of bounded reference spaces.
+The `bounded-floor` reference space type doesn't have a corresponding one that isn't floor-bound. If the user's XR hardware permits them to move about their real-world space, and you are able to do so, it may be useful to use a `bounded-floor` reference space, which lets you specifically define the boundaries of the area in which passage is allowed and safe. See the article [Using bounded reference spaces](/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces) to learn more about the use of bounded reference spaces.
 
 By using a reference space to describe the position and orientation of objects, WebXR is able to standardize the form of the data you use to describe these things, regardless of the underlying XR hardware. The reference space's configuration is then able to provide you with the view matrices and object poses needed to correctly render the contents of the space.
 
@@ -177,11 +177,11 @@ Some XR devices can't be made to support a given experience, despite the efforts
 
 To support progressive enhancement—and thus broaden the availability of your app or site—you should choose a reference space that offers the lowest amount of functionality needed, or provide a fallback mechanism that detects failed attempts to obtain reference spaces and tries again with a less powerful alternative.
 
-The compatibility issues that arise may be as fundamental as being unable to support `immersive-ar` mode (augmented reality sessions) on a VR-only headset, or may involve a request for one or more required options which cannot be met when attempting to create the XR session.
+The compatibility issues that arise may be as fundamental as being unable to support `immersive-ar` mode (augmented reality sessions) on a VR-only headset, or may involve a request for one or more required options which cannot be met when attempting to create the XR session.
 
-XR sessions are created using the {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} method. One of its optional parameters is an object which you can use to specify required and/or optional features that the session must (or should ideally) support. Currently, the only supported options are strings identifying the standard reference spaces. Using these, you can ensure before your code even runs that you have access to a WebXR session that can support the reference space type you require or prefer.
+XR sessions are created using the {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} method. One of its optional parameters is an object which you can use to specify required and/or optional features that the session must (or should ideally) support. Currently, the only supported options are strings identifying the standard reference spaces. Using these, you can ensure before your code even runs that you have access to a WebXR session that can support the reference space type you require or prefer.
 
-> **Note:** At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.
+> **Note:** At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.
 
 ## Positioning and orienting objects
 

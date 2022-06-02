@@ -40,27 +40,27 @@ The SVG `script` element allows to add scripts to an SVG document.
 
 ## Attributes
 
-*   {{htmlattrxref("crossorigin", "script")}}
-    *   : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
-        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `?`; *Animatable*: **yes**
-*   {{SVGAttr("href")}}
-    *   : The {{Glossary("URL")}} to the script to load.
-        *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
-*   {{SVGAttr("type")}}
-    *   : This attribute defines type of the script language to use.
-        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `application/ecmascript`; *Animatable*: **no**
-*   {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-    *   : The {{Glossary("URL")}} to the script to load.
-        *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
+- {{htmlattrxref("crossorigin", "script")}}
+  - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
+    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `?`; *Animatable*: **yes**
+- {{SVGAttr("href")}}
+  - : The {{Glossary("URL")}} to the script to load.
+    *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
+- {{SVGAttr("type")}}
+  - : This attribute defines type of the script language to use.
+    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `application/ecmascript`; *Animatable*: **no**
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+  - : The {{Glossary("URL")}} to the script to load.
+    *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
 
 ### Global attributes
 
-*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-    *   : Most notably: {{SVGAttr('id')}}
-*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-*   Event Attributes
-    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}
+- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- Event Attributes
+  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
 ## Usage notes
 
@@ -76,6 +76,6 @@ The SVG `script` element allows to add scripts to an SVG document.
 
 ## See also
 
-*   [`script` element in HTML](/en-US/docs/Web/HTML/Element/script)
+- [`script` element in HTML](/en-US/docs/Web/HTML/Element/script)
 
 {{SVGRef}}

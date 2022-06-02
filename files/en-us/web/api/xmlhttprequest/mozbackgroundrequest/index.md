@@ -12,7 +12,7 @@ tags:
   - XMLHttpRequest
   - mozBackgroundRequest
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+{{APIRef('XMLHttpRequest')}}
 
 > **Note:** This method is not available from Web content. It requires elevated privileges to access.
 

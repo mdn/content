@@ -17,24 +17,24 @@ destination blending factors.
 ## Syntax
 
 ```js
-void gl.blendColor(red, green, blue, alpha);
+blendColor(red, green, blue, alpha)
 ```
 
 ### Parameters
 
 - `red`
-  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the red component in the range of 0 to 1.
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the red component in the range of 0 to 1. Default value is 0.
 - `green`
-  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the green component in the range of 0 to 1.
-- blue
-  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the blue component in the range of 0 to 1.
-- alpha
-  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the alpha component (transparency) in the range of 0
-    to 1.
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the green component in the range of 0 to 1. Default value is 0.
+- `blue`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the blue component in the range of 0 to 1. Default value is 0.
+- `alpha`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the alpha component (transparency) in the range of 0.
+    to 1. Default value is 0.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

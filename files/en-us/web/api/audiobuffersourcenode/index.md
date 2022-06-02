@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -17,7 +18,7 @@ The **`AudioBufferSourceNode`** interface is an {{domxref("AudioScheduledSourceN
 
 This interface is especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network. To play sounds which require accurate timing but must be streamed from the network or played from disk, use a {{domxref("AudioWorkletNode")}} to implement its playback.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 An `AudioBufferSourceNode` has no inputs and exactly one output, which has the same number of channels as the `AudioBuffer` indicated by its {{domxref("AudioBufferSourceNode.buffer", "buffer")}} property. If there's no buffer set—that is, if `buffer` is `null`—the output contains a single channel of silence (every sample is 0).
 
@@ -56,7 +57,7 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 - {{domxref("AudioBufferSourceNode.buffer")}}
   - : An {{domxref("AudioBuffer")}} that defines the audio asset to be played, or when set to the value `null`, defines a single channel of silence (in which every sample is 0.0).
 - {{domxref("AudioBufferSourceNode.detune")}}
-  - : Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing detuning of playback in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29). This value is compounded with `playbackRate` to determine the speed at which the sound is played. Its default value is `0` (meaning no detuning), and its nominal range is -∞ to ∞.
+  - : A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing detuning of playback in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29). This value is compounded with `playbackRate` to determine the speed at which the sound is played. Its default value is `0` (meaning no detuning), and its nominal range is -∞ to ∞.
 - {{domxref("AudioBufferSourceNode.loop")}}
   - : A Boolean attribute indicating if the audio asset must be replayed when the end of the {{domxref("AudioBuffer")}} is reached. Its default value is `false`.
 - {{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}

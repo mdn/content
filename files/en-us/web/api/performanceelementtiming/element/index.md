@@ -13,13 +13,7 @@ browser-compat: api.PerformanceElementTiming.element
 
 The **`element`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns an {{domxref("Element")}} which is a literal representation of the associated element.
 
-## Syntax
-
-```js
-var element = PerformanceElementTiming.element;
-```
-
-### Value
+## Value
 
 An {{domxref("Element")}}.
 

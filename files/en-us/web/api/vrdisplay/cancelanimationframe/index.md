@@ -3,7 +3,7 @@ title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Reference
   - VR
@@ -22,17 +22,17 @@ The **`cancelAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfac
 ## Syntax
 
 ```js
-vrDisplayInstance.cancelAnimationFrame(handle);
+cancelAnimationFrame(handle)
 ```
 
 ### Parameters
 
-- handle
+- `handle`
   - : The handle returned by the {{domxref("VRDisplay.requestAnimationFrame()")}} call that you want to unregister.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -88,8 +88,8 @@ if(navigator.getVRDisplays) {
 }
 
 function drawVRScene() {
-  // WebVR: Request the next frame of the animation
-  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
+  // WebVR: Request the next frame of the animation
+  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
 
   ...
 }
@@ -101,7 +101,7 @@ function drawVRScene() {
 
 This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

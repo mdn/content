@@ -13,7 +13,7 @@ browser-compat: api.SVGFEConvolveMatrixElement
 
 The **`SVGFEConvolveMatrixElement`** interface corresponds to the {{SVGElement("feConvolveMatrix")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

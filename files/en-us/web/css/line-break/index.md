@@ -29,6 +29,7 @@ line-break: anywhere;
 line-break: inherit;
 line-break: initial;
 line-break: revert;
+line-break: revert-layer;
 line-break: unset;
 ```
 
@@ -65,11 +66,11 @@ See whether the text is wrapped before "々", "ぁ" and "。".
 
 ```html
 <div lang="ja">
-  <p class="wrapbox auto">auto:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox loose">loose:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox normal">normal:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox strict">strict:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox anywhere">anywhere:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
+  <p class="wrapbox auto">auto:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
+  <p class="wrapbox loose">loose:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
+  <p class="wrapbox normal">normal:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
+  <p class="wrapbox strict">strict:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
+  <p class="wrapbox anywhere">anywhere:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
 </div>
 ```
 

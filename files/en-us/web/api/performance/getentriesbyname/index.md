@@ -21,28 +21,28 @@ _marks_ or _measures_ (for example by calling the
 ## Syntax
 
 ```js
-entries = window.performance.getEntriesByName(name, type);
+getEntriesByName(name)
+getEntriesByName(name, type)
 ```
 
-### Arguments
+### Parameters
 
-- name
+- `name`
   - : The name of the entry to retrieve.
-- type {{optional_inline}}
+- `type` {{optional_inline}}
   - : The type of entry to retrieve such as "`mark`". The valid entry types are
     listed in {{domxref("PerformanceEntry.entryType")}}.
 
 ### Return value
 
-- entries
-  - : A list of {{domxref("PerformanceEntry")}} objects that have the specified
+A list of {{domxref("PerformanceEntry")}} objects that have the specified
     `name` and `type`. If the `type` argument is not
     specified, only the `name` will be used to determine the entries to return.
     The items will be in chronological order based on the entries'
     {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects meet the
     specified criteria, an empty list is returned.
 
-## Example
+## Examples
 
 ```js
 function use_PerformanceEntry_methods() {

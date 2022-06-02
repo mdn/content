@@ -26,13 +26,14 @@ font-synthesis: weight style small-caps;
 font-synthesis: inherit;
 font-synthesis: initial;
 font-synthesis: revert;
+font-synthesis: revert-layer;
 font-synthesis: unset;
 ```
 
 ### Values
 
 - `none`
-  - : Indicates that bold, italic, nor small-caps typeface may be synthesized.
+  - : Indicates that no bold, italic, nor small-caps typeface may be synthesized.
 - `weight`
   - : Indicates that a bold typeface may be synthesized if needed.
 - `style`
@@ -68,13 +69,13 @@ Most standard Western fonts include italic and bold variants, and some fonts inc
 
 ```css
 em {
-  font-weight: bold;
+  font-weight: bold;
 }
 .syn {
-  font-synthesis: style weight small-caps;
+  font-synthesis: style weight small-caps;
 }
 .no-syn {
-  font-synthesis: none;
+  font-synthesis: none;
 }
 ```
 

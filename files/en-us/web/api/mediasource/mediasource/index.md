@@ -1,6 +1,7 @@
 ---
 title: MediaSource()
 slug: Web/API/MediaSource/MediaSource
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -22,18 +23,16 @@ The **`MediaSource()`** constructor of the
 ## Syntax
 
 ```js
-var mediaSource = new MediaSource();
+new MediaSource()
 ```
 
 ### Parameters
 
 None.
 
-## Example
+## Examples
 
-The following snippet is taken from a simple example written by Nick Desaulniers ([view the full demo
-live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
-the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is taken from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
 var video = document.querySelector('video');

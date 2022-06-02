@@ -16,14 +16,14 @@ The **`flush()`** method of the {{domxref("VideoEncoder")}} interface returns a 
 ## Syntax
 
 ```js
-VideoEncoder.flush()
+flush()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}} that resolves with undefined.
 
@@ -47,4 +47,3 @@ VideoEncoder.flush();
 ## Browser compatibility
 
 {{Compat}}
-

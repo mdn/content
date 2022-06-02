@@ -13,7 +13,7 @@ browser-compat: api.ServiceWorkerRegistration.update
 {{APIRef("Service Workers API")}}
 
 The **`update()`** method of the
-{{domxref("ServiceWorkerRegistration")}} interface attempts to update the service
+{{domxref("ServiceWorkerRegistration")}} interface attempts to update the service
 worker. It fetches the worker's script URL, and if the new worker is not byte-by-byte
 identical to the current worker, it installs the new worker. The fetch of the worker
 bypasses any browser caches if the previous fetch occurred over 24 hours ago.
@@ -23,7 +23,7 @@ bypasses any browser caches if the previous fetch occurred over 24 hours ago.
 ## Syntax
 
 ```js
-serviceWorkerRegistration.update();
+update()
 ```
 
 ### Parameters
@@ -35,9 +35,9 @@ None.
 A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}}
 object.
 
-## Example
+## Examples
 
-The following simple example registers a service worker example then adds an event
+The following simple example registers a service worker example then adds an event
 handler to a button so you can explicitly update the service worker whenever desired:
 
 ```js

@@ -1,6 +1,7 @@
 ---
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
+page-type: web-api-interface
 tags:
   - API
   - DOM Reference
@@ -14,7 +15,7 @@ browser-compat: api.IDBOpenDBRequest
 ---
 {{APIRef("IndexedDB")}}
 
-The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.
+The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.
 
 {{AvailableInWorkers}}
 
@@ -37,9 +38,9 @@ Listen to these generic and specific events using `addEventListener()` or by ass
 Events specific to this interface are:
 
 - [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event)
-  - : Fired when an open connection to a database is blocking a `versionchange` transaction on the same database. Also available via the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/onblocked) property.
+  - : Fired when an open connection to a database is blocking a `versionchange` transaction on the same database. Also available via the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) property.
 - [`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
-  - : Fired when an attempt was made to open a database with a version number higher than its current version. Also available via the [`onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded) property.
+  - : Fired when an attempt was made to open a database with a version number higher than its current version. Also available via the [`onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) property.
 
 ## Example
 
@@ -57,14 +58,14 @@ DBOpenRequest.onerror = function(event) {
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db
-  // variable. This is used a lot below
+  // variable. This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the displayData() function to populate the task
-  // listwith all the to-do list data already in the IDB
+  // list with all the to-do list data already in the IDB
   displayData();
 };
 
@@ -85,12 +86,12 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   // define what data items the objectStore will contain
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
+  objectStore.createIndex("notified", "notified", { unique: false });
 };
 ```
 

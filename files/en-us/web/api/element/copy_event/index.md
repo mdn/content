@@ -1,6 +1,7 @@
 ---
 title: 'Element: copy event'
 slug: Web/API/Element/copy_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -37,7 +38,7 @@ The **`copy`** event fires when the user initiates a copy action through the bro
 
 The event's default action is to copy the selection (if any) to the clipboard.
 
-A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's  {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the event's default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
+A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the event's default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
 
 However, the handler cannot _read_ the clipboard data.
 
@@ -78,7 +79,7 @@ source.addEventListener('copy', (event) => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('Live_example', '100%', '120px') }}
 
 ## Specifications
 

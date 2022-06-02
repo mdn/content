@@ -159,14 +159,14 @@ console.log(x = f()); // Logs the return value directly.
 
 // An assignment expression can be nested in any place
 // where expressions are generally allowed,
-// such as as array literals’ elements or as function calls’ arguments.
+// such as array literals' elements or as function calls' arguments.
 console.log([ 0, x = f(), 0 ]);
 console.log(f(0, x = f(), 0));
 ```
 
 The evaluation result matches the expression to the right of the `=` sign in the
-“Meaning” column of the table above. That means that `x = f()` evaluates into
-whatever `f()`’s result is, `x += f()` evaluates into the resulting sum `x + f()`,
+"Meaning" column of the table above. That means that `x = f()` evaluates into
+whatever `f()`'s result is, `x += f()` evaluates into the resulting sum `x + f()`,
 `x **= f()` evaluates into the resulting power `x ** y`, and so on.
 
 In the case of logical assignments, `x &&= f()`,
@@ -181,7 +181,7 @@ like array literals, the assignment expressions are **grouped right to left**
 [right-associative]: https://en.wikipedia.org/wiki/Operator_associativity
 
 Note that, for all assignment operators other than `=` itself,
-the resulting values are always based on the operands’ values _before_
+the resulting values are always based on the operands' values _before_
 the operation.
 
 For example, assume that the following functions `f` and `g`
@@ -202,7 +202,7 @@ let x, y;
 Consider these three examples:
 
 ```js
-y = x = g()
+y = x = f()
 y = [ f(), x = g() ]
 x[f()] = g()
 ```
@@ -214,11 +214,11 @@ because the assignment operator `=` is [right-associative][].
 However, it evaluates from left to right:
 
 1. The assignment expression `y = x = f()` starts to evaluate.
-    1. The `y` on this assignment’s left-hand side evaluates
+    1. The `y` on this assignment's left-hand side evaluates
        into a reference to the variable named `y`.
     2. The assignment expression `x = f()` starts to evaluate.
-        1. The `x` on this assignment’s left-hand side evaluates
-           into a reference to the variable named `y`.
+        1. The `x` on this assignment's left-hand side evaluates
+           into a reference to the variable named `x`.
         2. The function call `f()` prints "F!" to the console and
            then evaluates to the number `2`.
         3. That `2` result from `f()` is assigned to `x`.
@@ -235,25 +235,25 @@ However, it evaluates from left to right:
 `y = [ f(), x = g() ]` also evaluates from left to right:
 
 1. The assignment expression `y = [ f(), x = g() ]` starts to evaluate.
-    1. The `y` on this assignment’s left-hand evaluates
+    1. The `y` on this assignment's left-hand evaluates
        into a reference to the variable named `y`.
     2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
-      1. The function call `f()` prints "F!" to the console and
-         then evaluates to the number `2`.
-      2. The assignment expression `x = g()` starts to evaluate.
-          1. The `x` on this assignment’s left-hand side evaluates
-             into a reference to the variable named `x`.
-          2. The function call `g()` prints "3!" to the console and
-             then evaluates to the number `3`.
-          3. That `3` result from `f()` is assigned to `x`.
-      3. The assignment expression `x = g()` has now finished evaluating;
-         its result is the new value of `x`, which is `3`.
-         That `3` result becomes the next element
-         in the inner array literal (after the `2` from the `f()`).
-    2. The inner array literal `[ f(), x = g() ]`
+        1. The function call `f()` prints "F!" to the console and
+           then evaluates to the number `2`.
+        2. The assignment expression `x = g()` starts to evaluate.
+            1. The `x` on this assignment's left-hand side evaluates
+               into a reference to the variable named `x`.
+            2. The function call `g()` prints "G!" to the console and
+               then evaluates to the number `3`.
+            3. That `3` result from `g()` is assigned to `x`.
+        3. The assignment expression `x = g()` has now finished evaluating;
+           its result is the new value of `x`, which is `3`.
+           That `3` result becomes the next element
+           in the inner array literal (after the `2` from the `f()`).
+    3. The inner array literal `[ f(), x = g() ]`
        has now finished evaluating;
        its result is an array with two values: `[ 2, 3 ]`.
-    3. That `[ 2, 3 ]` array is now assigned to `y`.
+    4. That `[ 2, 3 ]` array is now assigned to `y`.
 2. The assignment expression `y = [ f(), x = g() ]` has
    now finished evaluating;
    its result is the new value of `y` – which happens to be `[ 2, 3 ]`.
@@ -268,7 +268,7 @@ However, it evaluates from left to right:
 For more information about objects, read [Working with Objects][object].)
 
 1. The assignment expression `x[f()] = g()` starts to evaluate.
-    1. The `x[f()]` property access on this assignment’s left-hand
+    1. The `x[f()]` property access on this assignment's left-hand
        starts to evaluate.
         1. The `x` in this property access evaluates
            into a reference to the variable named `x`.
@@ -277,9 +277,9 @@ For more information about objects, read [Working with Objects][object].)
     2. The `x[f()]` property access on this assignment
        has now finished evaluating;
        its result is a variable property reference: `x[2]`.
-    2. Then the function call `g()` prints "G!" to the console and
+    3. Then the function call `g()` prints "G!" to the console and
        then evaluates to the number `3`.
-    3. That `3` is now assigned to `x[2]`.
+    4. That `3` is now assigned to `x[2]`.
        (This step will succeed only if `x` is assigned to an [object][].)
 2. The assignment expression `x[f()] = g()` has
    now finished evaluating;
@@ -290,8 +290,8 @@ For more information about objects, read [Working with Objects][object].)
 #### Avoid assignment chains
 
 Chaining assignments or nesting assignments in other expressions can
-result in surprising behavior. For this reason, [chaining assignments
-in the same statement is discouraged][discourage assign chain]).
+result in surprising behavior. For this reason,
+[chaining assignments in the same statement is discouraged][discourage assign chain]).
 
 In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does *not* work.
 Only the outermost/leftmost variable would get declared;
@@ -382,7 +382,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#nonidentity"
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality"
           >Strict not equal</a
         >
         (<code>!==</code>)
@@ -463,8 +463,7 @@ var var2 = 4;
 </table>
 
 > **Note:** `=>` is not a comparison operator but rather is the notation
-> for [Arrow
-> functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Arithmetic operators
 
@@ -610,10 +609,12 @@ Conceptually, the bitwise logical operators work as follows:
 
 - The operands are converted to thirty-two-bit integers and expressed by a series of bits (zeros and ones).
   Numbers with more than 32 bits get their most significant bits discarded.
-  For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
+  For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 
-      Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-      After:               1010 0000 0000 0000 0110 0000 0000 0001
+  ```
+  Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+  After:                 1010 0000 0000 0000 0110 0000 0000 0001
+  ```
 
 - Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.
 - The operator is applied to each pair of bits, and the result is constructed bitwise.
@@ -819,7 +820,7 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null "The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations.")
+Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
 It is one of JavaScript's primitive types.").
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
@@ -845,8 +846,8 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
 
 ### Conditional (ternary) operator
 
-The [conditional
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is the only JavaScript operator that takes three operands.
+The [conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+is the only JavaScript operator that takes three operands.
 The operator can have one of two values based on a condition.
 The syntax is:
 
@@ -869,8 +870,8 @@ This statement assigns the value "adult" to the variable `status` if
 
 ### Comma operator
 
-The [comma
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`) evaluates both of its operands and returns the value of the last operand.
+The [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`)
+evaluates both of its operands and returns the value of the last operand.
 This operator is primarily used inside a `for` loop, to allow multiple variables to be updated each time through the loop.
 It is regarded bad style to use it elsewhere, when it is not necessary.
 Often two separate statements can and should be used instead.
@@ -912,7 +913,7 @@ The `delete` operator returns `true` if the operation is possible; it returns `f
 delete Math.PI; // returns false (cannot delete non-configurable properties)
 
 const myObj = {h: 4};
-delete myobj.h; // returns true (can delete user-defined properties)
+delete myObj.h; // returns true (can delete user-defined properties)
 ```
 
 ##### Deleting array elements
@@ -1002,8 +1003,7 @@ typeof String;   // returns "function"
 
 #### `void`
 
-The [`void`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/void) is used in either of the following ways:
+The [`void` operator](/en-US/docs/Web/JavaScript/Reference/Operators/void) is used in either of the following ways:
 
 ```js
 void (expression)
@@ -1053,9 +1053,8 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 
 #### `instanceof`
 
-The [`instanceof`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) returns `true` if the specified object is of the specified
-object type. The syntax is:
+The [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) returns `true`
+if the specified object is of the specified object type. The syntax is:
 
 ```js
 objectName instanceof objectType
@@ -1082,28 +1081,29 @@ You can override operator precedence by using parentheses.
 
 The following table describes the precedence of operators, from highest to lowest.
 
-| Operator type          | Individual operators                                    |
-| ---------------------- | ------------------------------------------------------- |
-| member                 | `. []`                                                  |
-| call / create instance | `() new`                                                |
-| negation/increment     | `! ~ - + ++ -- typeof void delete`                      |
-| multiply/divide        | `* / %`                                                 |
-| addition/subtraction   | `+ -`                                                   |
-| bitwise shift          | `<< >> >>>`                                             |
-| relational             | `< <= > >= in instanceof`                               |
-| equality               | `== != === !==`                                         |
-| bitwise-and            | `&`                                                     |
-| bitwise-xor            | `^`                                                     |
-| bitwise-or             | `\|`                                                    |
-| logical-and            | `&&`                                                    |
-| logical-or             | `\|\|`                                                  |
-| conditional            | `?:`                                                    |
-| assignment             | `= += -= *= /= %= <<= >>= >>>= &= ^= \|= &&= \|\|= ??=` |
-| comma                  | `,`                                                     |
+| Operator type          | Individual operators                                                                      |
+| ---------------------- | ----------------------------------------------------------------------------------------- |
+| member                 | `.` `[]`                                                                                  |
+| call / create instance | `()` `new`                                                                                |
+| negation/increment     | `!` `~` `-` `+` `++` `--` `typeof` `void` `delete`                                        |
+| exponentiate           | `**`                                                                                      |
+| multiply/divide        | `*` `/` `%`                                                                               |
+| addition/subtraction   | `+` `-`                                                                                   |
+| bitwise shift          | `<<` `>>` `>>>`                                                                           |
+| relational             | `<` `<=` `>` `>=` `in` `instanceof`                                                       |
+| equality               | `==` `!=` `===` `!==`                                                                     |
+| bitwise-and            | `&`                                                                                       |
+| bitwise-xor            | `^`                                                                                       |
+| bitwise-or             | `\|`                                                                                      |
+| logical-and            | `&&`                                                                                      |
+| logical-or             | `\|\|`                                                                                    |
+| conditional            | `?:`                                                                                      |
+| assignment             | `=` `+=` `-=` `**=` `*=` `/=` `%=` `<<=` `>>=` `>>>=` `&=` `^=` `\|=` `&&=` `\|\|=` `??=` |
+| comma                  | `,`                                                                                       |
 
 A more detailed version of this table, complete with links to additional details about
-each operator, may be found in [JavaScript
-Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
+each operator, may be found in the
+[JavaScript Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
 
 ## Expressions
 

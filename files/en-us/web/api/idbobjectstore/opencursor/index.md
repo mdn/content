@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.openCursor()
 slug: Web/API/IDBObjectStore/openCursor
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -19,7 +20,7 @@ The **`openCursor()`** method of the
 and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}} object.
 Used for iterating through an object store with a cursor.
 
-To determine if the add operation has completed successfully, listen for the results’s
+To determine if the add operation has completed successfully, listen for the results's
 `success` event.
 
 {{AvailableInWorkers}}
@@ -27,21 +28,21 @@ To determine if the add operation has completed successfully, listen for the res
 ## Syntax
 
 ```js
-var request = ObjectStore.openCursor();
-var request = ObjectStore.openCursor(query);
-var request = ObjectStore.openCursor(query, direction);
+openCursor()
+openCursor(query)
+openCursor(query, direction)
 ```
 
 ### Parameters
 
-- query {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to be queried. If a single valid key is passed,
     this will default to a range containing only that key. If nothing is passed, this will
     default to a key range that selects all the records in this object store.
-- direction {{optional_inline}}
+- `direction` {{optional_inline}}
   - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
     Valid values are `"next"`, `"nextunique"`, `"prev"`,
-    and `"prevunique"`. The default is `"next"`.
+    and `"prevunique"`. The default is `"next"`.
 
 ### Return value
 
@@ -59,7 +60,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the specified key or key range is invalid.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store:
@@ -96,5 +97,4 @@ request.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

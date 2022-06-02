@@ -40,6 +40,7 @@ transition-property: all, -moz-specific, sliding;
 transition-property: inherit;
 transition-property: initial;
 transition-property: revert;
+transition-property: revert-layer;
 transition-property: unset;
 ```
 
@@ -88,7 +89,7 @@ This example performs a four-second font size transition when the user hovers ov
 
 {{EmbedLiveSample('Simple_example', 600, 100)}}
 
-You will find more examples of `transition-property` included in the main [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) article.
+You will find more examples of `transition-property` included in the main [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) article.
 
 ## Specifications
 

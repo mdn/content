@@ -12,13 +12,13 @@ tags:
   - WebUSB API
 browser-compat: api.USBAlternateInterface
 ---
-{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}
+{{securecontext_header}}{{APIRef("WebUSB API")}}
 
-The `USBAlternateInterface` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about a particular configuration of an interface provided by the USB device. An interface includes one or more alternate settings which can configure a set of endpoints based on the operating mode of the device.
+The `USBAlternateInterface` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about a particular configuration of an interface provided by the USB device. An interface includes one or more alternate settings which can configure a set of endpoints based on the operating mode of the device.
 
 ## Constructor
 
-- {{domxref("USBAlternateInterface.USBAlternateInterface")}}
+- {{domxref("USBAlternateInterface.USBAlternateInterface", "USBAlternateInterface()")}}
   - : Creates a new `USBAlternateInterface` object which will be populated with information about the alternate interface of the provided `USBInterface` with the given alternate setting number.
 
 ## Properties

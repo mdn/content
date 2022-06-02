@@ -1,6 +1,7 @@
 ---
 title: 'HTMLInputElement: invalid event'
 slug: Web/API/HTMLInputElement/invalid_event
+page-type: web-api-event
 tags:
   - API
   - Constraint Validation API
@@ -48,11 +49,17 @@ If a form is submitted with an invalid value, the submittable elements are check
 
 ```html
 <form action="#">
-  <ul>
-    <li><label>Enter an integer between 1 and 10: <input type="number" min="1" max="10" required></label></li>
-    <li><input type="submit" value="submit"></li>
-  </ul>
-</form><p id="log"></p>
+  <div>
+    <label>
+      Enter an integer between 1 and 10:
+      <input type="number" min="1" max="10" required>
+    </label>
+  </div>
+  <div><input type="submit" value="submit"></div>
+</form>
+<hr>
+Invalid values:
+<ul id="log"></ul>
 ```
 
 ### JavaScript
@@ -61,11 +68,12 @@ If a form is submitted with an invalid value, the submittable elements are check
 const input = document.querySelector('input')
 const log = document.getElementById('log')
 
-input.addEventListener('invalid', logValue)
-
-function logValue(e) {
-  log.textContent += e.target.value
-}
+input.addEventListener('invalid', (e) => {
+  log.appendChild(Object.assign(
+    document.createElement('li'),
+    { textContent: JSON.stringify(e.target.value) }
+  ))
+})
 ```
 
 ### Result

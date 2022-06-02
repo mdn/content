@@ -11,7 +11,7 @@ tags:
   - Web Audio
   - Web Audio API
 ---
-{{APIRef("Web Audio API")}}
+{{DefaultAPISidebar("Web Audio API")}}
 
 This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.
 
@@ -25,9 +25,9 @@ This is actually a really easy way to do something that sounds like it might be 
 
 The diagram below shows how this works; an input value, `N`, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The `ConstantSourceNode` can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So `N` becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.
 
-![Dagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes.](customsourcenode-as-splitter.svg)
+![Diagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes.](customsourcenode-as-splitter.svg)
 
-As a result, every time you change `N` (the value of the input {{domxref("AudioParam")}}, the values of the two `GainNode`s' `gain` properties and the value of the `StereoPannerNode`'s `pan` propertry are all set to `N` as well.
+As a result, every time you change `N` (the value of the input {{domxref("AudioParam")}}, the values of the two `GainNode`s' `gain` properties and the value of the `StereoPannerNode`'s `pan` properties are all set to `N` as well.
 
 ## Example
 
@@ -143,7 +143,7 @@ These variables are:
 - `playing`
   - : A boolean value that we'll use to keep track of whether or not we're currently playing the tones.
 
-Now let's look at the `setup()` function, which is our handler for the window's {{event("load")}} event; it handles all the initialization tasks that require the DOM to be in place.
+Now let's look at the `setup()` function, which is our handler for the window's {{domxref("Window/load_event", "load")}} event; it handles all the initialization tasks that require the DOM to be in place.
 
 ```js
 function setup() {
@@ -179,7 +179,7 @@ window.addEventListener("load", setup, false);
 
 First, we get access to the window's {{domxref("AudioContext")}}, stashing the reference in `context`. Then we get references to the control widgets, setting `playButton` to reference the play button and `volumeControl` to reference the slider control that the user will use to adjust the gain on the linked pair of oscillators.
 
-Then we assign a handler for the play button's {{event("click")}} event (see {{anch("Toggling the oscillators on and off")}} for more on the `togglePlay()` method), and for the volume slider's {{event("input")}} event (see {{anch("Controlling the linked oscillators")}} to see the very short `changeVolume()` method).
+Then we assign a handler for the play button's {{event("click")}} event (see [Toggling the oscillators on and off](#toggling_the_oscillators_on_and_off) for more on the `togglePlay()` method), and for the volume slider's {{event("input")}} event (see [Controlling the linked oscillators](#controlling_the_linked_oscillators) to see the very short `changeVolume()` method).
 
 Next, the {{domxref("GainNode")}} `gainNode1` is created to handle the volume for the non-linked oscillator (`oscNode1`). We set that gain to 0.5. We also create `gainNode2` and `gainNode3`, setting their values to match `gainNode1`, then set the value of the volume slider to the same value, so it is synchronized with the gain level it controls.
 
@@ -187,7 +187,7 @@ Once all the gain nodes are created, we create the {{domxref("ConstantSourceNode
 
 Finally, we connect all the gain nodes to the {{domxref("AudioContext")}}'s {{domxref("BaseAudioContext/destination", "destination")}}, so that any sound delivered to the gain nodes will reach the output, whether that output be speakers, headphones, a recording stream, or any other destination type.
 
-After setting the window's {{event("load")}} event handler to be the `setup()` function, the stage is set. Let's see how the action plays out.
+After setting the window's {{domxref("Window/load_event", "load")}} event handler to be the `setup()` function, the stage is set. Let's see how the action plays out.
 
 #### Toggling the oscillators on and off
 
@@ -205,9 +205,9 @@ function togglePlay(event) {
 }
 ```
 
-If the `playing` variable indicates we're already playing the oscillators, we change the `playButton`'s content to be the Unicode character "right-pointing triangle" (▶️) and call `stopOscillators()` to shut down the oscillators. See {{anch("Stopping the oscillators")}} below for that code.
+If the `playing` variable indicates we're already playing the oscillators, we change the `playButton`'s content to be the Unicode character "right-pointing triangle" (▶️) and call `stopOscillators()` to shut down the oscillators. See [Stopping the oscillators](#stopping_the_oscillators) below for that code.
 
-If `playing` is false, indicating that we're currently paused, we change the play button's content to be the Unicode character "pause symbol" (⏸) and call `startOscillators()` to start the oscillators playing their tones. That code is covered under {{anch("Starting the oscillators")}} below.
+If `playing` is false, indicating that we're currently paused, we change the play button's content to be the Unicode character "pause symbol" (⏸) and call `startOscillators()` to start the oscillators playing their tones. That code is covered under [Starting the oscillators](#starting_the_oscillators) below.
 
 #### Controlling the linked oscillators
 
@@ -254,10 +254,10 @@ function startOscillators() {
 
 Each of the three oscillators is set up the same way:
 
-1.  Create the {{domxref("OscillatorNode")}} by calling {{domxref("BaseAudioContext.createOscillator")}}.
-2.  Set the oscillator's type to `"sine"` to use a sine wave as the audio waveform.
-3.  Set the oscillator's frequency to the desired value; in this case, `oscNode1` is set to a middle C, while `oscNode2` and `oscNode3` round out the chord by playing the E and G notes.
-4.  Connect the new oscillator to the corresponding gain node.
+1. Create the {{domxref("OscillatorNode")}} by calling {{domxref("BaseAudioContext.createOscillator")}}.
+2. Set the oscillator's type to `"sine"` to use a sine wave as the audio waveform.
+3. Set the oscillator's frequency to the desired value; in this case, `oscNode1` is set to a middle C, while `oscNode2` and `oscNode3` round out the chord by playing the E and G notes.
+4. Connect the new oscillator to the corresponding gain node.
 
 Once all three oscillators have been created, they're started by calling each one's {{domxref("AudioScheduledSourceNode.start", "ConstantSourceNode.start()")}} method in turn, and `playing` is set to `true` to track that the tones are playing.
 

@@ -13,7 +13,7 @@ browser-compat: html.elements.body
 
 {{HTMLRef}}
 
-The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of an HTML document. There can be only one `<body>` element in a document.
+The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of an HTML document. There can be only one `<body>` element in a document.
 
 <table class="properties">
   <tbody>
@@ -57,8 +57,10 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role"
-          >document</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>
@@ -90,17 +92,23 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("alink")}} {{deprecated_inline}}
-  - : Color of text for hyperlinks when selected. _This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead._
+  - : Color of text for hyperlinks when selected.
+    **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead.**
 - {{htmlattrdef("background")}} {{deprecated_inline}}
-  - : URI of a image to use as a background. _This method is non-conforming, use CSS {{cssxref("background")}} property on the element instead._
+  - : URI of a image to use as a background.
+    **Do not use this attribute! Use the CSS {{cssxref("background")}} property on the element instead.**
 - {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
-  - : Background color for the document. _This method is non-conforming, use CSS {{cssxref("background-color")}} property on the element instead._
+  - : Background color for the document.
+    **Do not use this attribute! Use the CSS {{cssxref("background-color")}} property on the element instead.**
 - {{htmlattrdef("bottommargin")}} {{deprecated_inline}}
-  - : The margin of the bottom of the body. _This method is non-conforming, use CSS {{cssxref("margin-bottom")}} property on the element instead._
+  - : The margin of the bottom of the body.
+    **Do not use this attribute! Use the CSS {{cssxref("margin-bottom")}} property on the element instead.**
 - {{htmlattrdef("leftmargin")}} {{deprecated_inline}}
-  - : The margin of the left of the body. _This method is non-conforming, use CSS {{cssxref("margin-left")}} property on the element instead._
+  - : The margin of the left of the body.
+    **Do not use this attribute! Use the CSS {{cssxref("margin-left")}} property on the element instead.**
 - {{htmlattrdef("link")}} {{deprecated_inline}}
-  - : Color of text for unvisited hypertext links. _This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead._
+  - : Color of text for unvisited hypertext links.
+    **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead.**
 - {{htmlattrdef("onafterprint")}}
   - : Function to call after the user has printed the document.
 - {{htmlattrdef("onbeforeprint")}}
@@ -115,7 +123,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Function to call when the document receives focus.
 - {{htmlattrdef("onhashchange")}}
   - : Function to call when the fragment identifier part (starting with the hash (`'#'`) character) of the document's current address has changed.
-- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
+- {{htmlattrdef("onlanguagechange")}}
   - : Function to call when the preferred languages changed.
 - {{htmlattrdef("onload")}}
   - : Function to call when the document has finished loading.
@@ -138,13 +146,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{htmlattrdef("onunload")}}
   - : Function to call when the document is going away.
 - {{htmlattrdef("rightmargin")}} {{deprecated_inline}}
-  - : The margin of the right of the body. _This method is non-conforming, use CSS {{cssxref("margin-right")}} property on the element instead._
+  - : The margin of the right of the body.
+    **Do not use this attribute! Use the CSS {{cssxref("margin-right")}} property on the element instead.**
 - {{htmlattrdef("text")}} {{deprecated_inline}}
-  - : Foreground color of text. _This method is non-conforming, use CSS {{cssxref("color")}} property on the element instead._
+  - : Foreground color of text.
+    **Do not use this attribute! Use CSS {{cssxref("color")}} property on the element instead.**
 - {{htmlattrdef("topmargin")}} {{deprecated_inline}}
-  - : The margin of the top of the body. _This method is non-conforming, use CSS {{cssxref("margin-top")}} property on the element instead._
+  - : The margin of the top of the body.
+    **Do not use this attribute! Use the CSS {{cssxref("margin-top")}} property on the element instead.**
 - {{htmlattrdef("vlink")}} {{deprecated_inline}}
-  - : Color of text for visited hypertext links. _This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead._
+  - : Color of text for visited hypertext links.
+    **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead.**
 
 ## Example
 

@@ -29,7 +29,7 @@ There are different ways to choose which website is _canonical_.
 
 ### Using HTTP 301 redirects
 
-In this case, you need to configure the server receiving the HTTP requests (which is most likely the same for www and non-www URLs) to respond with an adequate HTTP {{HTTPStatus(301)}} response to any request to the non-canonical domain. This will redirect the browser trying to access the non-canonical URLs to their canonical equivalent. For example, if you've chosen to use non-www URLs as the canonical type, you should redirect all www URLs to their equivalent URL without the www.
+In this case, you need to configure the server receiving the HTTP requests (which is most likely the same for www and non-www URLs) to respond with an adequate HTTP {{HTTPStatus(301)}} response to any request to the non-canonical domain. This will redirect the browser trying to access the non-canonical URLs to their canonical equivalent. For example, if you've chosen to use non-www URLs as the canonical type, you should redirect all www URLs to their equivalent URL without the www.
 
 Example:
 
@@ -57,7 +57,7 @@ With these techniques, you can configure your server to respond correctly for bo
 
 ## Deciding the case
 
-This is a very subjective topic it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, please see some of the [many](https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/) [articles](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on the subject.
+This is a very subjective topic it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, please see some of the [many](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) [articles](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on the subject.
 
 ## See also
 

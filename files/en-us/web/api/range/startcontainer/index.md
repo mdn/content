@@ -1,6 +1,7 @@
 ---
 title: Range.startContainer
 slug: Web/API/Range/startContainer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,13 +15,11 @@ The **`Range.startContainer`** read-only property returns the
 {{domxref("Node")}} within which the `Range` starts. To change the start
 position of a node, use one of the {{domxref("Range.setStart()")}} methods.
 
-## Syntax
+## Value
 
-```js
-startRangeNode = range.startContainer;
-```
+A {{domxref("Node")}} object.
 
-## Example
+## Examples
 
 ```js
 range = document.createRange();

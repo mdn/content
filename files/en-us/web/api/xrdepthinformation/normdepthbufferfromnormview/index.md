@@ -15,11 +15,11 @@ browser-compat: api.XRDepthInformation.normDepthBufferFromNormView
 ---
 {{APIRef("WebXR Device API")}}
 
-The *read-only* **`normDepthBufferFromNormView`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the 3D geometric transform that needs to be applied when indexing into the depth buffer.
+The *read-only* **`normDepthBufferFromNormView`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the 3D geometric transform that needs to be applied when indexing into the depth buffer.
 
 ## Value
 
-An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer’s `width` and `height` to obtain the absolute depth buffer coordinates.
+An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer's `width` and `height` to obtain the absolute depth buffer coordinates.
 
 ## Examples
 

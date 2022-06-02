@@ -1,6 +1,7 @@
 ---
 title: FormData.values()
 slug: Web/API/FormData/values
+page-type: web-api-instance-method
 tags:
   - API
   - FormData
@@ -14,7 +15,7 @@ browser-compat: api.FormData.values
 
 The **`FormData.values()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values
-contained in this object. The values are {{domxref("USVString")}} or
+contained in this object. The values are string or
 {{domxref("Blob")}} objects.
 
 > **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
@@ -22,14 +23,18 @@ contained in this object. The values are {{domxref("USVString")}} or
 ## Syntax
 
 ```js
-formData.values();
+values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test FormData object
@@ -45,8 +50,10 @@ for (var value of formData.values()) {
 
 The result is:
 
-    value1
-    value2
+```
+value1
+value2
+```
 
 ## Specifications
 
@@ -59,7 +66,6 @@ The result is:
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using
-  FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

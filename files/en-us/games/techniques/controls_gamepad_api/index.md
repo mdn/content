@@ -23,17 +23,17 @@ The [Gamepad API](https://www.w3.org/TR/gamepad/) is still at the Working Draft 
 
 ## Which gamepads are best?
 
-The most popular gamepads right now are those from the Xbox 360, Xbox One, PS3 and PS4 — they have been heavily tested and work well with the Gamepad API implementation in browsers across Windows and Mac OS X.
+The most popular gamepads right now are those from the Xbox 360, Xbox One, PS3 and PS4 — they have been heavily tested and work well with the Gamepad API implementation in browsers across Windows and macOS.
 
-There's also a number of other devices with various different button layouts that more or less work across browser implementations. The code discussed in this article was tested with a few gamepads, but the author's favorite configuration is a wireless Xbox 360 controller and the Firefox browser on Mac OS X.
+There's also a number of other devices with various different button layouts that more or less work across browser implementations. The code discussed in this article was tested with a few gamepads, but the author's favorite configuration is a wireless Xbox 360 controller and the Firefox browser on macOS.
 
 ## Case Study: Hungry Fridge
 
-The [GitHub Game Off II](https://github.com/blog/1674-github-game-off-ii) competition ran in November 2013 and [Enclave Games](https://enclavegames.com/) decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.
+The [GitHub Game Off II](https://github.blog/2013-10-30-github-game-off-ii/) competition ran in November 2013 and [Enclave Games](https://enclavegames.com/) decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.
 
 The second, hidden "change" implementation is the ability to transform the static Fridge into a full-blown moving, shooting and eating machine. When you connect the controller, the game significantly changes (Hungry Fridge turns into the Super Turbo Hungry Fridge) and you're able to control the armored fridge using the Gamepad API. You have to shoot down the food, but once again you also have to find the type of food the Fridge wants to eat at each point, or else you'll lose energy.
 
-The game encapsulates two totally different types of "change" — good food vs. bad food, and mobile vs. desktop.
+The game encapsulates two totally different types of "change" — good food vs. bad food, and mobile vs. desktop.
 
 ## Demo
 

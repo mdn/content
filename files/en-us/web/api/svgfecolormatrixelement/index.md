@@ -15,7 +15,7 @@ browser-compat: api.SVGFEColorMatrixElement
 
 The **`SVGFEColorMatrixElement`** interface corresponds to the {{SVGElement("feColorMatrix")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

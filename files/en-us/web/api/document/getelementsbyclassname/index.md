@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -31,16 +32,17 @@ descendants of the specified root element with the given class name(s).
 ## Syntax
 
 ```js
-var elements = document.getElementsByClassName(names); // or:
-var elements = rootElement.getElementsByClassName(names);
+getElementsByClassName(names)
 ```
 
-- _elements_ is a live {{domxref("HTMLCollection")}} of found elements.
-- _names_ is a string representing the class name(s) to match; multiple class
-  names are separated by whitespace
-- {{domxref("Element.getElementsByClassName", "getElementsByClassName")}} can be
-  called on any element, not only on the {{domxref("document")}}. The element on which
-  it is called will be used as the root of the search.
+### Parameters
+
+- `names`
+  - : A string representing the class name(s) to match; multiple class names are separated by whitespace.
+
+### Return value
+
+A live {{domxref("HTMLCollection")}} of found elements.
 
 ## Examples
 
@@ -130,15 +132,15 @@ elements with ALL of the classNames specified are selected.
 // getElementsByClassName only selects elements that have both given classes
 var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
 var result = "document.getElementsByClassName('orange juice')";
-for (var i=0, len=allOrangeJuiceByClass.length|0; i<len; i=i+1|0) {
+for (var i=0; i < allOrangeJuiceByClass.length; i++) {
     result += "\n  " + allOrangeJuiceByClass[i].textContent;
 }
 
 // querySelector only selects full complete matches
 var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (var i=0, len=allOrangeJuiceQuery.length|0; i<len; i=i+1|0) {
-    result += "\n  " + allOrangeJuiceQuery[i].textContent;
+for (var i=0; i < allOrangeJuiceQuery.length; i++) {
+    result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
 document.getElementById("resultArea").value = result;

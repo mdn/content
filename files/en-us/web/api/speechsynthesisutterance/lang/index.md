@@ -18,16 +18,9 @@ The **`lang`** property of the {{domxref("SpeechSynthesisUtterance")}} interface
 
 If unset, the app's (i.e. the {{htmlelement("html")}} {{htmlattrxref("lang", "html")}} value) lang will be used, or the user-agent default if that is unset too.
 
-## Syntax
+## Value
 
-```js
-var myLang = speechSynthesisUtteranceInstance.lang;
-speechSynthesisUtteranceInstance.lang = 'en-US';
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing a BCP 47 language tag.
+A string representing a BCP 47 language tag.
 
 ## Examples
 

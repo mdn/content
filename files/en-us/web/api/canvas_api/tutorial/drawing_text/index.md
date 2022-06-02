@@ -1,6 +1,7 @@
 ---
 title: Drawing text
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -79,7 +80,7 @@ In the examples above we are already making use of the `font` property to make t
 
 These properties might be familiar to you, if you have worked with CSS before.
 
-The following diagram from the [WHATWG](https://www.whatwg.org/) demonstrates the various baselines supported by the `textBaseline` property.![The top of the em square is
+The following diagram from the [WHATWG](https://whatwg.org/) demonstrates the various baselines supported by the `textBaseline` property.![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -97,8 +98,8 @@ Edit the code below and see your changes update live in the canvas:
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";

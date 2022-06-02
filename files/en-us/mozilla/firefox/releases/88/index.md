@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
+This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
 
 > **Note:** See also [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) on Mozilla Hacks.
 
@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 88 that will aff
 
 ### Developer Tools
 
-- The toggle button for switching between raw and formatted response views has been implemented ({{bug(1693147)}}). For examples, see [Network request details > Response tab](/en-US/docs/Tools/Network_Monitor/request_details#response_tab).
+- The toggle button for switching between raw and formatted response views has been implemented ({{bug(1693147)}}). For examples, see [Network request details > Response tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab).
 
 ### HTML
 
@@ -26,7 +26,7 @@ _No changes._
 ### CSS
 
 - The {{cssxref(":user-valid")}} and {{cssxref(":user-invalid")}} pseudo-classes have been implemented ({{bug(1694141)}}).
-- The {{cssxref("image-set()")}} functional notation is now enabled ({{bug(1698133)}}), and was made available for {{cssxref("content")}} and {{cssxref("cursor")}} in {{bug(1695402)}} and {{bug(1695403)}}.
+- The {{cssxref("image-set", "image-set()")}} functional notation is now enabled ({{bug(1698133)}}), and was made available for {{cssxref("content")}} and {{cssxref("cursor")}} in {{bug(1695402)}} and {{bug(1695403)}}.
 - The default `monospace` font for MacOS has been changed to Menlo ({{bug(1342741)}}).
 - The `collapse` value of {{cssxref("visibility")}} is now implemented for ruby annotations ({{bug(1697529)}}).
 - The `alternate` value for {{cssxref("ruby-position")}} has been implemented, and is the new initial value for the property ({{bug(1694748)}}).

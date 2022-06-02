@@ -1,6 +1,7 @@
 ---
 title: Node
 slug: Web/API/Node
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -34,7 +35,7 @@ _In addition to the properties below, `Node` inherits properties from its
 parent, {{DOMxRef("EventTarget")}}_.
 
 - {{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}
-  - : Returns a {{jsxref("String")}} representing the base URL of the document
+  - : Returns a string representing the base URL of the document
     containing the `Node`.
 - {{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}
   - : Returns a live {{DOMxRef("NodeList")}} containing all the children of this node
@@ -55,7 +56,7 @@ parent, {{DOMxRef("EventTarget")}}_.
   - : Returns a `Node` representing the next node in the tree, or
     `null` if there isn't such node.
 - {{DOMxRef("Node.nodeName")}}{{ReadOnlyInline}}
-  - : Returns a {{jsxref("String")}} containing the name of the `Node`. The
+  - : Returns a string containing the name of the `Node`. The
     structure of the name will differ with the node type. E.g. An
     {{DOMxRef("HTMLElement")}} will contain the name of the corresponding tag, like
     `'audio'` for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}}
@@ -135,7 +136,7 @@ parent, {{DOMxRef("EventTarget")}}._
   - : Returns a boolean value indicating whether or not the two nodes are
     the same (that is, they reference the same object).
 - {{DOMxRef("Node.lookupPrefix()")}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the prefix for a given namespace URI,
+  - : Returns a string containing the prefix for a given namespace URI,
     if present, and `null` if not. When multiple prefixes are possible, the
     result is implementation-dependent.
 - {{DOMxRef("Node.lookupNamespaceURI()")}}
@@ -178,7 +179,7 @@ Using this function is a single call. Here we empty the body of the document:
 removeAllChildren(document.body)
 ```
 
-An alternative could be to  set the textContent to the empty string: `document.body.textContent = ""`.
+An alternative could be to set the textContent to the empty string: `document.body.textContent = ""`.
 
 ### Recurse through child nodes
 

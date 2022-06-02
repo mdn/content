@@ -1,6 +1,7 @@
 ---
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iteration
@@ -47,9 +48,11 @@ for(var entry of list.entries()) {
 
 results in:
 
-    Array [ 0, <p> ]
-    Array [ 1, #text "hey" ]
-    Array [ 2, <span> ]
+```
+Array [ 0, <p> ]
+Array [ 1, #text "hey" ]
+Array [ 2, <span> ]
+```
 
 ## Browser compatibility
 
@@ -57,6 +60,6 @@ results in:
 
 ## See also
 
-- A polyfill of `NodeList.prototype.entries` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

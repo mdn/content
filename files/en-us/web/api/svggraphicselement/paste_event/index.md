@@ -51,10 +51,10 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 140 30" width="600" height="320" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject x="5" y="-10" width="90" height="20">
-        <input xmlns="http://www.w3.org/1999/xhtml" value="Copy this text"/>
-    </foreignObject>
-    <text x="5" y="30" id="element-to-paste-text" tabindex="1">Paste it here</text>
+    <foreignObject x="5" y="-10" width="90" height="20">
+        <input xmlns="http://www.w3.org/1999/xhtml" value="Copy this text"/>
+    </foreignObject>
+    <text x="5" y="30" id="element-to-paste-text" tabindex="1">Paste it here</text>
 </svg>
 ```
 
@@ -95,5 +95,5 @@ document.getElementById("element-to-paste-text").addEventListener("paste", evt =
 
 - Related events: [`cut`](/en-US/docs/Web/API/SVGGraphicsElement/cut_event), [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event)
 - This event on HTML {{domxref("Element")}} targets: [`paste`](/en-US/docs/Web/API/Element/paste_event)
-- This event on {{domxref("Document")}} targets: [`paste`](Web/API/Document/paste_event)
-- This event on {{domxref("Window")}} targets: [`paste`](Web/API/Window/paste_event)
+- This event on {{domxref("Document")}} targets: [`paste`](Web/API/Document/paste_event)
+- This event on {{domxref("Window")}} targets: [`paste`](Web/API/Window/paste_event)

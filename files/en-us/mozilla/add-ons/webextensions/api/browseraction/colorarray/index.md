@@ -19,10 +19,10 @@ browser-compat: webextensions.api.browserAction.ColorArray
 
 An `array` of four integers in the range 0-255, defining an RGBA color. The four values specify the following channels:
 
-1.  Red
-2.  Green
-3.  Blue
-4.  Alpha (opacity).
+1. Red
+2. Green
+3. Blue
+4. Alpha (opacity).
 
 For example, opaque red is `[255, 0, 0, 255]`.
 
@@ -32,7 +32,7 @@ For example, opaque red is `[255, 0, 0, 255]`.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#type-ColorArray) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

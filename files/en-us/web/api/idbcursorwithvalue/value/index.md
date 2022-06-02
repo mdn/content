@@ -1,6 +1,7 @@
 ---
 title: IDBCursorWithValue.value
 slug: Web/API/IDBCursorWithValue/value
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -14,23 +15,17 @@ browser-compat: api.IDBCursorWithValue.value
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`value`** read-only property of the
-{{domxref("IDBCursorWithValue")}} interface returns the value of the current cursor,
+The **`value`** read-only property of the
+{{domxref("IDBCursorWithValue")}} interface returns the value of the current cursor,
 whatever that is.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var value = myIDBCursorWithValue.value;
-```
-
-### Value
+## Value
 
 The value of the current cursor.
 
-## Example
+## Examples
 
 In this example we create a transaction, retrieve an object store, then use a cursor to
 iterate through all the records in the object store. Within each iteration we log the
@@ -38,8 +33,8 @@ value of the cursor with `cursor.value`.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
-you can grab data from the current record under the cursor object using `cursor.value.foo`.
-For a complete working example, see our [IDBCursor example](https://github.com/mdn/IDBcursor-example/)
+you can grab data from the current record under the cursor object using `cursor.value.foo`.
+For a complete working example, see our [IDBCursor example](https://github.com/mdn/IDBcursor-example/)
 ([view example live](https://mdn.github.io/IDBcursor-example/).)
 
 ```js

@@ -27,7 +27,7 @@ animation: slidein 3s linear 1s;
 animation: slidein 3s;
 ```
 
-A [description of which properties are animatable](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#which_css_properties_are_animatable) is available; it's worth noting that this description is also valid for [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
+A [description of which properties are animatable](/en-US/docs/Web/CSS/CSS_animated_properties) is available; it's worth noting that this description is also valid for [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
 ## Constituent properties
 
@@ -51,10 +51,10 @@ Each individual animation is specified as:
 - zero or one occurrences of the following values:
 
   - {{cssxref("&lt;single-transition-easing-function&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#&lt;single-animation-direction&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#&lt;single-animation-fill-mode&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#&lt;single-animation-play-state&gt;")}}
+  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
+  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
+  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#single-animation-fill-mode")}}
+  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}
 
 - an optional name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}
 - zero, one, or two {{cssxref("&lt;time&gt;")}} values
@@ -76,11 +76,11 @@ The order within each animation definition is also important for distinguishing 
 
 ## Accessibility concerns
 
-Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
 Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for no animated experiences.
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
+- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
 - [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
@@ -150,12 +150,6 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animatio
 ## Browser compatibility
 
 {{Compat}}
-
-### Quantum CSS notes
-
-- Gecko has a bug whereby when you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g. Windows ({{bug(1383239)}}). This has been fixed in Firefox's new parallel CSS engine (also known as [Quantum CSS](https://wiki.mozilla.org/Quantum) or [Stylo](https://wiki.mozilla.org/Quantum/Stylo), planned for release in Firefox 57).
-- Another Gecko bug means that {{htmlelement("details")}} elements can't be made open by default using the `open` attribute if they have an animation active on them ({{bug(1382124)}}). Quantum CSS fixes this.
-- A further bug means that animations using em units are not affected by changes to the {{cssxref("font-size")}} on the animated element's parent, whereas they should be ({{bug(1254424)}}). Quantum CSS fixes this.
 
 ## See also
 

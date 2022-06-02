@@ -1,6 +1,7 @@
 ---
 title: AmbientLightSensor()
 slug: Web/API/AmbientLightSensor/AmbientLightSensor
+page-type: web-api-constructor
 tags:
   - API
   - Ambient Light Sensor API
@@ -18,16 +19,18 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 ## Syntax
 
 ```js
-var ambientLightSensor = new AmbientLightSensor(options)
+new AmbientLightSensor()
+new AmbientLightSensor(options)
 ```
 
 ### Parameters
 
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Currently only one option is supported:
 
-    - `frequency`: The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends on the device hardware and consequently may be less than requested.
+    - `frequency`
+      - : The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends on the device hardware and consequently may be less than requested.
 
 ## Specifications
 
@@ -36,3 +39,7 @@ var ambientLightSensor = new AmbientLightSensor(options)
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref('sensor.reading_event', 'reading')}} event

@@ -11,7 +11,7 @@ tags:
   - management
 browser-compat: webextensions.api.management.getPermissionWarningsById
 ---
-{{AddonSidebar()}}When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardised across browsers.
+{{AddonSidebar()}}When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
 
 Given the ID of an add-on, this function returns the permission warnings for it as an array of strings.
 
@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingWarnings = browser.management.getPermissionWarningsById(
+let gettingWarnings = browser.management.getPermissionWarningsById(
   id                  // string
 )
 ```
@@ -45,7 +45,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Log the permission warnings for the add-on whose ID is "my-add-on":
 
 ```js
-var id = "my-add-on";
+let id = "my-add-on";
 
 function gotWarnings(warnings) {
   for (warning of warnings) {
@@ -53,13 +53,13 @@ function gotWarnings(warnings) {
   }
 }
 
-var gettingWarnings = browser.management.getPermissionWarningsById(id);
+let gettingWarnings = browser.management.getPermissionWarningsById(id);
 gettingWarnings.then(gotWarnings);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#method-getPermissionWarningsById) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-getPermissionWarningsById) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

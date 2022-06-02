@@ -1,6 +1,7 @@
 ---
 title: CSSSkew()
 slug: Web/API/CSSSkew/CSSSkew
+page-type: web-api-constructor
 tags:
   - API
   - CSS
@@ -13,7 +14,7 @@ tags:
   - Houdini
 browser-compat: api.CSSSkew.CSSSkew
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSSkew()`** constructor creates a new
 {{domxref("CSSSkew")}} object which represents the
@@ -23,7 +24,7 @@ of the individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSSkew = new CSSSkew(ax, ay);
+new CSSSkew(ax, ay)
 ```
 
 ### Parameters

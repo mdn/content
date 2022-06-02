@@ -14,7 +14,7 @@ In the previous [Cross browser video player article](/en-US/docs/Web/Guide/Audio
 
 ![A video player with play, stop, volume and fullscreen controls, showing an image of a soldier.](video-player-styled.png)
 
-You can find the code for the [updated, styled example](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled) on Github, and [view it live](https://iandevlin.github.io/mdn/video-player-styled/).
+You can find the code for the [updated, styled example](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled) on GitHub, and [view it live](https://iandevlin.github.io/mdn/video-player-styled/).
 
 ## Preliminary modifications from the original example
 
@@ -44,7 +44,7 @@ The markup for the custom controls now looks as follows:
 
 ### Related CSS alteration
 
-The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
+The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
 
 This "data-state" idea is also used for setting the current state of buttons within the video control set, which allows specific state styling.
 
@@ -173,17 +173,19 @@ When the `data-state` of the button is changed, the appropriate image will also 
 
 The {{htmlelement("progress") }} element has the following basic style set up:
 
-    .controls progress {
-       display:block;
-       width:100%;
-       height:81%;
-       margin-top:0.125rem;
-       border:none;
-       color:#0095dd;
-       -moz-border-radius:2px;
-       -webkit-border-radius:2px;
-       border-radius:2px;
-    }
+```css
+.controls progress {
+    display:block;
+    width:100%;
+    height:81%;
+    margin-top:0.125rem;
+    border:none;
+    color:#0095dd;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+```
 
 Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The `color` property is also defined here as Internet Explorer uses this defined color for styling the progress bar's background color as it increases.
 
@@ -202,7 +204,7 @@ As mentioned in the [previous article](/en-US/docs/Web/Guide/Audio_and_video_del
 }
 ```
 
-A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
+A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
 
 There are some browser-specific properties that need to be set to ensure that Firefox and Chrome use the required color for the progress bar:
 

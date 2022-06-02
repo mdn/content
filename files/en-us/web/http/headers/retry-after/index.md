@@ -15,12 +15,12 @@ The **`Retry-After`** response HTTP header indicates how long
 the user agent should wait before making a follow-up request. There are three main cases
 this header is used:
 
-- When sent with a {{HTTPStatus(503)}} (Service Unavailable) response, this indicates
+- When sent with a {{HTTPStatus(503)}} (Service Unavailable) response, this indicates
   how long the service is expected to be unavailable.
-- When sent with a {{HTTPStatus(429)}} (Too Many Requests) response, this indicates
+- When sent with a {{HTTPStatus(429)}} (Too Many Requests) response, this indicates
   how long to wait before making a new request.
 - When sent with a redirect response, such as {{HTTPStatus(301)}} (Moved Permanently),
-  this indicates the minimum time that the user agent is asked to wait before issuing
+  this indicates the minimum time that the user agent is asked to wait before issuing
   the redirected request.
 
 <table class="properties">
@@ -58,7 +58,7 @@ Retry-After: <delay-seconds>
 
 Support for the `Retry-After` header on both clients and servers is still
 inconsistent. However, some crawlers and spiders, like the Googlebot, honor the
-`Retry-After` header. It is useful to send it along with a
+`Retry-After` header. It is useful to send it along with a
 {{HTTPStatus(503)}} (Service Unavailable) response, so that search engines will keep
 indexing your site when the downtime is over.
 

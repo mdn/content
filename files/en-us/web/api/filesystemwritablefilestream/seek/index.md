@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream.seek()
 slug: Web/API/FileSystemWritableFileStream/seek
+page-type: web-api-instance-method
 tags:
   - File
   - File System Access API
@@ -10,7 +11,7 @@ tags:
   - write
 browser-compat: api.FileSystemWritableFileStream.seek
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`seek()`** method of the
 {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor
@@ -33,9 +34,9 @@ FileSystemWritableStream.seek(position).then(...);
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : If the {{domxref('PermissionStatus.state')}} is not 'granted'.
-- TypeError
+- {{jsxref("TypeError")}}
   - : If `position` is not defined or of type unsigned long.
 
 ## Examples

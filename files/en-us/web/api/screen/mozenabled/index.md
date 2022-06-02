@@ -16,11 +16,9 @@ browser-compat: api.Screen.mozEnabled
 This Boolean attribute controls the device's screen. Setting it to `false`
 will turn off the screen.
 
-## Syntax
+## Value
 
-```js
-let screenEnabled = window.screen.mozEnabled
-```
+A boolean.
 
 ## Specifications
 

@@ -13,7 +13,7 @@ browser-compat: api.SVGPolygonElement
 
 The **`SVGPolygonElement`** interface provides access to the properties of {{SVGElement("polygon")}} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

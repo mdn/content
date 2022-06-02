@@ -16,7 +16,7 @@ The **`item()`** method of the {{domxref("StyleSheetList")}} interface returns a
 ## Syntax
 
 ```js
-StyleSheetList.item(index);
+item(index)
 ```
 
 ### Parameters

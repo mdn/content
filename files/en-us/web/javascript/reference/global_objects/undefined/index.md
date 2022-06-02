@@ -49,7 +49,7 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 >
 > //  logs "foo string"
 > (function() {
->   var undefined = 'foo';
+>   const undefined = 'foo';
 >   console.log(undefined, typeof undefined);
 > })();
 >
@@ -68,7 +68,7 @@ determine whether a variable has a value. In the following code, the variable
 `x` is not initialized, and the `if` statement evaluates to true.
 
 ```js
-var x;
+let x;
 if (x === undefined) {
   // these statements execute
 }
@@ -91,7 +91,7 @@ else {
 Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 
 ```js
-var x;
+let x;
 if (typeof x === 'undefined') {
    // these statements execute
 }
@@ -131,7 +131,7 @@ if ('x' in window) {
 The {{jsxref("Operators/void", "void")}} operator is a third alternative.
 
 ```js
-var x;
+let x;
 if (x === void 0) {
   //  these statements execute
 }

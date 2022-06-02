@@ -21,12 +21,12 @@ and only if the given URL is on the same origin as the calling page. It returns 
 ## Syntax
 
 ```js
-var aPromise = paymentRequestEvent.openWindow(url)
+openWindow(url)
 ```
 
 ### Parameters
 
-- url
+- `url`
   - : The URL to open in the new window. It must be on the same origin as the calling
     page.
 

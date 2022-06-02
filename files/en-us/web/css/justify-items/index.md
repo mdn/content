@@ -27,7 +27,6 @@ The effect of this property is dependent of the layout mode we are in:
 
 ```css
 /* Basic keywords */
-justify-items: auto;
 justify-items: normal;
 justify-items: stretch;
 
@@ -60,30 +59,26 @@ justify-items: legacy center;
 justify-items: inherit;
 justify-items: initial;
 justify-items: revert;
+justify-items: revert-layer;
 justify-items: unset;
 ```
 
 This property can take one of four different forms:
 
-- Basic keywords: one of the keyword values `normal`, `auto`, or `stretch`.
+- Basic keywords: one of the keyword values `normal` or `stretch`.
 - Baseline alignment: the `baseline` keyword, plus optionally one of `first` or `last`.
 - Positional alignment: one of: `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left`, or `right`. Plus optionally `safe` or `unsafe`.
 - Legacy alignment: the `legacy` keyword, followed by one of `left` or `right`.
 
 ### Values
 
-- `auto`
-  - : The value used is the value of the `justify-items` property of the parents box, unless the box has no parent, or is absolutely positioned, in these cases, `auto` represents `normal`.
 - `normal`
-
   - : The effect of this keyword is dependent of the layout mode we are in:
-
     - In block-level layouts, the keyword is a synonym of `start`.
     - In absolutely-positioned layouts, the keyword behaved like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In table cell layouts, this keyword has no meaning as this property is _ignored_.
     - In flexbox layouts, this keyword has no meaning as this property is _ignored._
     - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
-
 - `start`
   - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
 - `end`
@@ -97,7 +92,7 @@ This property can take one of four different forms:
 - `self-end`
   - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
 - `center`
-  - : The items are packed flush to each other toward the center of the of the alignment container.
+  - : The items are packed flush to each other toward the center of the alignment container.
 - `left`
   - : The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
 - `right`
@@ -186,7 +181,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.justify-items.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

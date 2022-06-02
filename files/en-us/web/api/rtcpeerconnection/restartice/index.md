@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
+page-type: web-api-instance-method
 tags:
   - API
   - ICE
@@ -48,7 +49,7 @@ This process continues until an ICE restart has been successfully completed.
 ## Syntax
 
 ```js
-rtcPeerConnection.restartIce();
+restartIce()
 ```
 
 ### Parameters
@@ -57,7 +58,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -71,7 +72,7 @@ For details about how ICE restart works, see
 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} and
 {{RFC(5245, "ICE specification", "9.1.1.1")}}.
 
-## Example
+## Examples
 
 This example creates a handler for the
 {{domxref("RTCPeerConnection.iceconnectionstatechange_event",

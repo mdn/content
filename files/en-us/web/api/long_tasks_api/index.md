@@ -1,6 +1,7 @@
 ---
 title: Long Tasks API
 slug: Web/API/Long_Tasks_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -13,13 +14,14 @@ tags:
   - Reference
   - TaskAttributionTiming
   - Web Performance
+spec-urls: https://w3c.github.io/longtasks/
 ---
 {{DefaultAPISidebar("Long Tasks")}}
 
 ## Motivation
 
 The experimental Long Tasks API gives us visibility into tasks that take 50 milliseconds or more.
-The 50 ms threshold comes from the [RAIL Model](https://web.dev/rail/), in particular the ["Response: process events in under 50 ms"](https://web.dev/rail/#response:-process-events-in-under-50ms) section.
+The 50 ms threshold comes from the [RAIL Model](https://web.dev/rail/), in particular the ["Response: process events in under 50 ms"](https://web.dev/rail/#response:-process-events-in-under-50ms) section.
 
 Tasks that block the main thread for 50 ms or more cause, among other issues:
 
@@ -46,7 +48,7 @@ The "culprit browsing context container", or "the container" for short, is the t
 
 ### Attributions
 
-A list of containers that the task occurred within. For tasks that don't occur within the top level page, the `containerId`, `containerName` and `containerSrc` fields may provide information as to the source of the task.
+A list of containers that the task occurred within. For tasks that don't occur within the top level page, the `containerId`, `containerName` and `containerSrc` fields may provide information as to the source of the task.
 
 ## Usage
 
@@ -74,9 +76,7 @@ observer.observe({entryTypes: ["longtask"]});
 
 ## Specifications
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Long Tasks')}} | {{Spec2('Long Tasks')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

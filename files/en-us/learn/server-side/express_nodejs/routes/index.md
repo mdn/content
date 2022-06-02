@@ -59,7 +59,7 @@ The first section below provides a brief "primer" on how to use the Express [Rou
 
 ## Routes primer
 
-A route is a section of Express code that associates an HTTP verb (`GET`, `POST`, `PUT`, `DELETE`, etc.), a URL path/pattern, and a function that is called to handle that pattern.
+A route is a section of Express code that associates an HTTP verb (`GET`, `POST`, `PUT`, `DELETE`, etc.), a URL path/pattern, and a function that is called to handle that pattern.
 
 There are several ways to create routes. For this tutorial we're going to use the [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.
 
@@ -116,9 +116,9 @@ router.get('/about', function (req, res) {
 
 The callback takes three arguments (usually named as shown: `req`, `res`, `next`), that will contain the HTTP Request object, HTTP response, and the _next_ function in the middleware chain.
 
-> **Note:** Router functions are [Express middleware](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#using_middleware), which means that they must either complete (respond to) the request or call the `next` function in the chain. In the case above we complete the request using `send()`, so the `next` argument is not used (and we choose not to specify it).
+> **Note:** Router functions are [Express middleware](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#using_middleware), which means that they must either complete (respond to) the request or call the `next` function in the chain. In the case above we complete the request using `send()`, so the `next` argument is not used (and we choose not to specify it).
 >
-> The  router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
+> The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
 
 The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "About this wiki" when we receive a GET request with the path ('`/about'`). There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle. For example, you could call [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) to send a file. The response method that we'll be using most often as we build up the library is [render()](https://expressjs.com/en/4x/api.html#res.render), which creates and returns HTML files using templates and data—we'll talk a lot more about that in a later article!
 
@@ -126,7 +126,7 @@ The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html
 
 The example routes above use the `Router.get()` method to respond to HTTP GET requests with a certain path.
 
-The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 For example, the code below behaves just like the previous `/about` route, but only responds to HTTP POST requests.
 
@@ -145,9 +145,9 @@ Route paths can also be string patterns. String patterns use a form of regular e
 - `?` : The endpoint must have 0 or 1 of the preceding character (or group), e.g. a route path of `'/ab?cd'` will match endpoints `acd` or `abcd`.
 - `+` : The endpoint must have 1 or more of the preceding character (or group), e.g. a route path of `'/ab+cd'` will match endpoints `abcd`, `abbcd`, `abbbcd`, and so on.
 - `*` : The endpoint may have an arbitrary string where the `*` character is placed. E.g. a route path of `'/ab*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
-- `()` : Grouping match on a set of characters to perform another operation on, e.g. `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)`—it will match `abe` and `abcde`.
+- `()` : Grouping match on a set of characters to perform another operation on, e.g. `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)`—it will match `abe` and `abcde`.
 
-The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
+The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
 
 ```js
 app.get(/.*fish$/, function (req, res) {
@@ -171,9 +171,9 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 })
 ```
 
-The names of route parameters must be made up of “word characters” (A-Z, a-z, 0-9, and \_).
+The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and \_).
 
-> **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
+> **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
 
 That's all you need to get started with routes - if needed you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
 
@@ -190,7 +190,7 @@ The URLs that we're ultimately going to need for our pages are listed below, whe
 
 The first home page and list pages don't encode any additional information. While the results returned will depend on the model type and the content in the database, the queries run to get the information will always be the same (similarly the code run for object creation will always be similar).
 
-By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as `<id>` above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g. one route to handle the display of every single book item).
+By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as `<id>` above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g. one route to handle the display of every single book item).
 
 > **Note:** Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g. `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 
@@ -261,7 +261,7 @@ exports.author_update_post = function(req, res) {
 
 The module first requires the model that we'll later be using to access and update our data. It then exports functions for each of the URLs we wish to handle (the create, update and delete operations use forms, and hence also have additional methods for handling form post requests — we'll discuss those methods in the "forms article" later on).
 
-All the functions have the standard form of an _Express middleware function_, with arguments for the request and response. We could also include the `next` function to be called if the method does not complete the request cycle, but in all these cases it does, so we've omitted it. The methods return a string indicating that the associated page has not yet been created. If a controller function is expected to receive path parameters, these are output in the message string (see `req.params.id` above).
+All the functions have the standard form of an _Express middleware function_, with arguments for the request and response. We could also include the `next` function to be called if the method does not complete the request cycle, but in all these cases it does, so we've omitted it. The methods return a string indicating that the associated page has not yet been created. If a controller function is expected to receive path parameters, these are output in the message string (see `req.params.id` above).
 
 #### BookInstance controller
 
@@ -422,9 +422,9 @@ Create another route file — **catalog.js** — inside this folder, as shown.
 ```plain
 /express-locallibrary-tutorial //the project root
   /routes
-    index.js
-    users.js
-    catalog.js
+    index.js
+    users.js
+    catalog.js
 ```
 
 Open **/routes/catalog.js** and copy in the code below:
@@ -620,18 +620,18 @@ To test the routes, first start the website using your usual approach
 
 Then navigate to a number of LocalLibrary URLs, and verify that you don't get an error page (HTTP 404). A small set of URLs are listed below for your convenience:
 
-- <http://localhost:3000/>
-- <http://localhost:3000/catalog>
-- <http://localhost:3000/catalog/books>
-- <http://localhost:3000/catalog/bookinstances/>
-- <http://localhost:3000/catalog/authors/>
-- <http://localhost:3000/catalog/genres/>
-- [http://localhost:3000/catalog/book/5846437593935e2f8c2aa226](http://localhost:3000/catalog/book/5846437593935e2f8c2aa226/)
-- <http://localhost:3000/catalog/book/create>
+- `http://localhost:3000/`
+- `http://localhost:3000/catalog`
+- `http://localhost:3000/catalog/books`
+- `http://localhost:3000/catalog/bookinstances/`
+- `http://localhost:3000/catalog/authors/`
+- `http://localhost:3000/catalog/genres/`
+- `http://localhost:3000/catalog/book/5846437593935e2f8c2aa226`
+- `http://localhost:3000/catalog/book/create`
 
 ## Summary
 
-We've now created all the routes for our site, along with dummy controller functions that we can populate with a full implementation in later articles. Along the way we've learned a lot of fundamental information about Express routes, and some approaches for structuring our routes and controllers.
+We've now created all the routes for our site, along with dummy controller functions that we can populate with a full implementation in later articles. Along the way we've learned a lot of fundamental information about Express routes, and some approaches for structuring our routes and controllers.
 
 In our next article we'll create a proper welcome page for the site, using views (templates) and information stored in our models.
 

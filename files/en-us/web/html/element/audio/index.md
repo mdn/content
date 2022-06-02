@@ -17,7 +17,6 @@ tags:
   - sound
 browser-compat: html.elements.audio
 ---
-
 {{HTMLRef}}
 
 The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
@@ -256,7 +255,7 @@ Other usage notes:
 - If you don't specify the `controls` attribute, the audio player won't include the browser's default controls. You can, however, create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API.
 - To allow precise control over your audio content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.
 - You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.
-- `<audio>` elements can't have subtitles or captions associated with them in the same way that `<video>` elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio) by Ian Devlin for some useful information and workarounds.
+- `<audio>` elements can't have subtitles or captions associated with them in the same way that `<video>` elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/) by Ian Devlin for some useful information and workarounds.
 
 A good general source of information on using HTML `<audio>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
 
@@ -353,17 +352,19 @@ The `<audio>` element doesn't directly support WebVTT. You will have to find a l
 
 In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone. For example, in the WebVTT below, note the use of square brackets to provide tone and emotional insight to the viewer; this can help establish the mood otherwise provided using music, nonverbal sounds and crucial sound effects, and so forth.
 
-    1
-    00:00:00 --> 00:00:45
-    [Energetic techno music]
+```
+1
+00:00:00 --> 00:00:45
+[Energetic techno music]
 
-    2
-    00:00:46 --> 00:00:51
-    Welcome to the Time Keeper's podcast! In this episode we're discussing which Swisswatch is a wrist switchwatch?
+2
+00:00:46 --> 00:00:51
+Welcome to the Time Keeper's podcast! In this episode we're discussing which Swisswatch is a wrist switchwatch?
 
-    16
-    00:00:52 --> 00:01:02
-    [Laughing] Sorry! I mean, which wristwatch is a Swiss wristwatch?
+16
+00:00:52 --> 00:01:02
+[Laughing] Sorry! I mean, which wristwatch is a Swiss wristwatch?
+```
 
 Also it's a good practice to provide some content (such as the direct download link) as a fallback for viewers who use a browser in which the `<audio>` element is not supported:
 
@@ -378,7 +379,6 @@ Also it's a good practice to provide some content (such as the direct download l
 </audio>
 ```
 
-- [MDN Subtitles and closed caption — Plugins](/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)

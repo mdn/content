@@ -9,7 +9,7 @@ tags:
 ---
 {{CSSRef}}
 
-CSS Shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type, and in this guide I’ll explain how each of the different values accepted by this type work. They range from simple circles to complex polygons.
+CSS Shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type, and in this guide I'll explain how each of the different values accepted by this type work. They range from simple circles to complex polygons.
 
 Before looking at the shapes, it is worth understanding two pieces of information that go together to make these shapes possible:
 
@@ -90,7 +90,7 @@ The keyword **`closest-side`** uses the length from the center of the shape to t
 
 The keyword **`farthest-side`** uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the farthest side in any dimension. For ellipses, this is the farthest side in the radius dimension.
 
-The second argument is a `position`. If omitted this will be set to `center`. However you can use any valid position here to indicate the position of the centre of the circle.
+The second argument is a `position`. If omitted this will be set to `center`. However you can use any valid position here to indicate the position of the center of the circle.
 
 Our circle therefore accepts one radius value, which may be a length, a percentage or the closest-side or farthest side keyword then optionally the keyword **at** followed by a position value.
 
@@ -106,7 +106,7 @@ As an additional example, if you use the keywords `top left` for position, you c
 
 ### The shape will be clipped by the margin box
 
-When describing Reference Boxes I explained that the margin-box will clip the shape. You can see this by moving the centre of our circle towards the content by setting the position to 60%. The centre of the circle is now nearer the content and the circle extends past the margin-box. This means that the extension becomes clipped and squared off.
+When describing Reference Boxes I explained that the margin-box will clip the shape. You can see this by moving the center of our circle towards the content by setting the position to 60%. The center of the circle is now nearer the content and the circle extends past the margin-box. This means that the extension becomes clipped and squared off.
 
 ```css
 img {
@@ -121,7 +121,7 @@ img {
 
 An ellipse is essentially a squashed circle and so `ellipse()` acts in a very similar way to `circle()` except that we have to specify two radii x and y in that order.
 
-These may then be followed by position values as with `circle()` to move the centre of the ellipse around. In the example below we have an ellipse with an x radius of 40%, a y radius of 50% and the position being left. This means that the centre of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around. You can change these values to see how the ellipse changes.
+These may then be followed by position values as with `circle()` to move the center of the ellipse around. In the example below we have an ellipse with an x radius of 40%, a y radius of 50% and the position being left. This means that the center of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around. You can change these values to see how the ellipse changes.
 
 {{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse.html", '100%', 800)}}
 
@@ -141,4 +141,4 @@ You may well find the Firefox Shape Inspector very useful here to create your po
 
 ![The polygon basic shape, highlighted with the Shapes Inspector.](shapes-polygon.png)
 
-Another useful resource is [Clippy](http://bennettfeely.com/clippy/) - a tool for creating shapes for `clip-path`, as the values for Basic Shapes are the same as those used for `clip-path`.
+Another useful resource is [Clippy](https://bennettfeely.com/clippy/) - a tool for creating shapes for `clip-path`, as the values for Basic Shapes are the same as those used for `clip-path`.

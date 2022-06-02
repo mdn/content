@@ -57,14 +57,14 @@ var importObj = {
 };
 ```
 
-Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.  The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)).  So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions) which we can call from JS.
+Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.  The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)).  So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions) which we can call from JS.
 
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
+  console.log(tbl.length);
+  console.log(tbl.get(0)());
+  console.log(tbl.get(1)());
 });
 ```
 

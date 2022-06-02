@@ -4,20 +4,21 @@ slug: Web/SVG/Attribute/viewBox
 tags:
   - SVG
   - SVG Attribute
+spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
 ---
 {{SVGRef}}
 
 The **`viewBox`** attribute defines the position and dimension, in user space, of an SVG viewport.
 
-The value of the `viewBox` attribute is a list of four numbers: `min-x`, `min-y`, `width` and `height`. The numbers separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the [browser viewport](/en-US/docs/Glossary/Viewport)).
+The value of the `viewBox` attribute is a list of four numbers: `min-x`, `min-y`, `width` and `height`. The numbers, which are separated by whitespace and/or a comma, specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the [browser viewport](/en-US/docs/Glossary/Viewport)).
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("marker")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("svg")}}
-*   {{SVGElement("symbol")}}
-*   {{SVGElement("view")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("view")}}
 
 ## Example
 
@@ -28,49 +29,49 @@ svg:not(:root) { display: inline-block; }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!--
-  with relative unit such as percentage, the visual size
-  of the square looks unchanged regardless of the viewBox
-  -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <!--
+  with relative unit such as percentage, the visual size
+  of the square looks unchanged regardless of the viewBox
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  <!--
-  with a large viewBox the circle looks small
-  as it is using user units for the r attribute:
-  4 resolved against 100 as set in the viewBox
-  -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <!--
+  with a large viewBox the circle looks small
+  as it is using user units for the r attribute:
+  4 resolved against 100 as set in the viewBox
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
 </svg>
 
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <!--
-  with relative unit such as percentage, the visual size
-  of the square looks unchanged regardless of the viewBox
-  -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <!--
+  with relative unit such as percentage, the visual size
+  of the square looks unchanged regardless of the viewBox
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  <!--
-  with a small viewBox the circle looks large
-  as it is using user units for the r attribute:
-  4 resolved against 10 as set in the viewBox
-  -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <!--
+  with a small viewBox the circle looks large
+  as it is using user units for the r attribute:
+  4 resolved against 10 as set in the viewBox
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
 </svg>
 
 <svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
-  <!--
-  The point of coordinate 0,0 is now in the center of the viewport,
-  and 100% is still resolve to a width or height of 10 user units so
-  the rectangle looks shifted to the bottom/right corner of the viewport
-  -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <!--
+  The point of coordinate 0,0 is now in the center of the viewport,
+  and 100% is still resolve to a width or height of 10 user units so
+  the rectangle looks shifted to the bottom/right corner of the viewport
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  <!--
-  With the point of coordinate 0,0 in the center of the viewport the
-  value 50% is resolve to 5 which means the center of the circle is
-  in the bottom/right corner of the viewport.
-  -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <!--
+  With the point of coordinate 0,0 in the center of the viewport the
+  value 50% is resolve to 5 which means the center of the circle is
+  in the bottom/right corner of the viewport.
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
 </svg>
 ```
 
@@ -292,28 +293,4 @@ For {{SVGElement('view')}}, `viewBox` defines the position and dimension for the
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "coords.html#ViewBoxAttribute", "viewBox")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "coords.html#ViewBoxAttribute", "viewBox")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

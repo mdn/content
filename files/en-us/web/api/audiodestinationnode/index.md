@@ -1,6 +1,7 @@
 ---
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
+page-type: web-api-interface
 tags:
   - API
   - AudioDestinationNode
@@ -16,6 +17,8 @@ The `AudioDestinationNode` interface represents the end destination of an audio 
 `AudioDestinationNode` has no output (as it _is_ the output, no more `AudioNode` can be linked after it in the audio graph) and one input. The number of channels in the input must be between `0` and the `maxChannelCount` value or an exception is raised.
 
 The `AudioDestinationNode` of a given `AudioContext` can be retrieved using the {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} property.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -47,7 +50,7 @@ The `AudioDestinationNode` of a given `AudioContext` can be retrieved using the 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AudioDestinationNode.maxChannelCount")}}
-  - : Is an `unsigned long` defining the maximum number of channels that the physical device can handle.
+  - : An `unsigned long` defining the maximum number of channels that the physical device can handle.
 
 ## Methods
 

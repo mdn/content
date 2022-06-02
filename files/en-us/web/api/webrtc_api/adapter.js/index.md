@@ -30,11 +30,11 @@ The WebRTC adapter currently supports Mozilla Firefox, Google Chrome, Apple Safa
 
 In order to use adapter.js, you need to include adapter.js on any page that uses WebRTC APIs:
 
-1.  Download a copy of the [latest version of adapter.js](https://github.com/webrtc/adapter/tree/master/release) from GitHub.
-2.  Place it in your site's directory structure (such as in your scripts directory).
-3.  Include adapter.js in your project: `<script src="adapter.js"></script>`
-4.  Write your code, using WebRTC APIs per the specification, knowing that your code should work on all browsers.
-5.  Keep in mind that even a good shim like this one doesn't mean you don't need to test your code on different browsers (and ideally different versions of each browser).
+1. Download a copy of the [latest version of adapter.js](https://github.com/webrtc/adapter/tree/master/release) from GitHub.
+2. Place it in your site's directory structure (such as in your scripts directory).
+3. Include adapter.js in your project: `<script src="adapter.js"></script>`
+4. Write your code, using WebRTC APIs per the specification, knowing that your code should work on all browsers.
+5. Keep in mind that even a good shim like this one doesn't mean you don't need to test your code on different browsers (and ideally different versions of each browser).
 
 ## See also
 

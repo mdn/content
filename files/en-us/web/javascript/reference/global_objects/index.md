@@ -35,7 +35,6 @@ These global properties return a simple value. They have no properties or method
 These global functions—functions which are called globally, rather than on an object—directly return their results to the caller.
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{Non-Standard_Inline}} {{JSxRef("Global_Objects/uneval", "uneval()")}}
 - {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
 - {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
 - {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
@@ -46,8 +45,9 @@ These global functions—functions which are called globally, rather than on an 
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - **Deprecated**
 
-  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/escape", "escape()")}}
-  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/unescape", "unescape()")}}
+  - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("Global_Objects/uneval", "uneval()")}} {{Deprecated_Inline}}
 
 ### Fundamental objects
 
@@ -60,12 +60,12 @@ These are the fundamental, basic objects upon which all other objects are based.
 
 ### Error objects
 
-Error objects are a special type of fundamental object. They include the basic {{JSxRef("Error")}} type, as well as several specialized error types.
+Error objects are a special type of fundamental object. They include the basic {{JSxRef("Error")}} type, as well as several specialized error types.
 
 - {{JSxRef("Error")}}
 - {{JSxRef("AggregateError")}}
 - {{JSxRef("EvalError")}}
-- {{JSxRef("InternalError")}}
+- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
 - {{JSxRef("RangeError")}}
 - {{JSxRef("ReferenceError")}}
 - {{JSxRef("SyntaxError")}}
@@ -107,7 +107,7 @@ These objects represent collections of data which are ordered by an index value.
 
 ### Keyed collections
 
-These objects represent collections which use keys. The iterable collections ({{JSxRef("Map")}} and {{JSxRef("Set")}}) contain elements which are easily iterated in the order of insertion.
+These objects represent collections which use keys. The iterable collections ({{JSxRef("Map")}} and {{JSxRef("Set")}}) contain elements which are easily iterated in the order of insertion.
 
 - {{JSxRef("Map")}}
 - {{JSxRef("Set")}}

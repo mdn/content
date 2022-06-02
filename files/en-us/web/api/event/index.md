@@ -1,6 +1,7 @@
 ---
 title: Event
 slug: Web/API/Event
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -98,7 +99,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("Event.timeStamp")}} {{readonlyinline}}
   - : The time at which the event was created (in milliseconds). By specification, this value is time since epoch—but in reality, browsers' definitions vary. In addition, work is underway to change this to be a {{domxref("DOMHighResTimeStamp")}} instead.
 - {{domxref("Event.type")}} {{readonlyinline}}
-  - : The case-insensitive name indentifying the type of the event.
+  - : The case-insensitive name identifying the type of the event.
 
 ### Legacy and non-standard properties
 

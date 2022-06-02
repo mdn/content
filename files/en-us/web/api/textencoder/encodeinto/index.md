@@ -1,5 +1,5 @@
 ---
-title: TextEncoder.prototype.encodeInto()
+title: TextEncoder.encodeInto()
 slug: Web/API/TextEncoder/encodeInto
 tags:
   - API
@@ -12,8 +12,8 @@ browser-compat: api.TextEncoder.encodeInto
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
-The **`TextEncoder.prototype.encodeInto()`** method takes a
-{{domxref("USVString")}} to encode and a destination {{jsxref("Uint8Array")}} to put
+The **`TextEncoder.encodeInto()`** method takes a
+string to encode and a destination {{jsxref("Uint8Array")}} to put
 resulting UTF-8 encoded text into, and returns a dictionary object indicating the
 progress of the encoding. This is potentially more performant than the older
 `encode()` method especially when the target buffer is a view into a Wasm
@@ -22,20 +22,20 @@ heap.
 ## Syntax
 
 ```js
-b1 = encoder.encodeInto(string, uint8Array);
+encodeInto(string, uint8Array)
 ```
 
 ### Parameters
 
 - `string`
-  - : Is a {{DOMxRef("USVString")}} containing the text to encode.
+  - : A string containing the text to encode.
 - `uint8Array`
-  - : Is a {{jsxref("Uint8Array")}} object instance to place the resulting UTF-8
+  - : A {{jsxref("Uint8Array")}} object instance to place the resulting UTF-8
     encoded text into.
 
 ### Return value
 
-A `TextEncoderEncodeIntoResult` dictionary, which contains two members:
+An object, which contains two members:
 
 - `read`
   - : The number of UTF-16 units of code from the source that has been converted over to
@@ -45,7 +45,7 @@ A `TextEncoderEncodeIntoResult` dictionary, which contains two members:
   - : The number of bytes modified in the destination `Uint8Array`. The bytes
     written are guaranteed to form complete UTF-8 byte sequences.
 
-## Encode Into A Specific Position
+## Encode into a specific position
 
 _encoder_.encodeInto always puts its output at the start of the array.
 However, it is sometimes useful to make the output start at a particular index. The
@@ -63,7 +63,7 @@ encodeIntoAtPosition("hello", u8array, 2);
 console.log( "" + u8array.join() ); // 0,0,104,101,108,108,111,0
 ```
 
-## Buffer Sizing
+## Buffer sizing
 
 To convert a JavaScript string `s`, the output space needed for full
 conversion is never less than `s.length` bytes and never greater than
@@ -71,7 +71,7 @@ conversion is never less than `s.length` bytes and never greater than
 is expected to be short-lived, it makes sense to allocate `s.length * 3`
 bytes for the output, in which case the first conversion attempt is guaranteed to
 convert the whole string. Note that the `s.length * 3` is rare because the
-string would have to be packed with some of the few characters that expant into 3
+string would have to be packed with some of the few characters that expand into 3
 bytes. It is unlikely that long text will exceed `s.length * 2` bytes in
 length. Thus, a more optimistic approach might be to allocate
 `s.length * 2 + 5` bytes, and perform reallocation in the rare circumstance

@@ -13,7 +13,7 @@ the `preserveAlpha` attribute indicates how a {{SVGElement("feConvolveMatrix")}}
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feConvolveMatrix")}}
 
 ## Example
 
@@ -60,38 +60,14 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `true`
-    *   : This value indicates that the convolution will only apply to the color channels. In this case, the filter will temporarily unpremultiply the color component values and apply the kernel.
-*   `false`
-    *   : This value indicates that the convolution will apply to all channels, including the alpha channel.
+- `true`
+  - : This value indicates that the convolution will only apply to the color channels. In this case, the filter will temporarily unpremultiply the color component values and apply the kernel.
+- `false`
+  - : This value indicates that the convolution will apply to all channels, including the alpha channel.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-preservealpha", "preserveAlpha")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementPreserveAlphaAttribute", "preserveAlpha")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

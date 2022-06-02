@@ -14,19 +14,19 @@ browser-compat: api.USBDevice.selectConfiguration
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-The **`selectConfiguration()`** method of the
+The **`selectConfiguration()`** method of the
 {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when
 the specified configuration is selected.
 
 ## Syntax
 
 ```js
-var promise = USBDevice.selectConfiguration(configurationValue)
+selectConfiguration(configurationValue)
 ```
 
 ### Parameters
 
-- configurationValue
+- `configurationValue`
   - : The number of a device-specific configuration.
 
 ### Return value

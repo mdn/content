@@ -34,7 +34,7 @@ affected {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}}'s
 native origin after the changes the event represents are applied. The
 `transform` is defined using the old coordinate system, which allows it to be
 used to convert coordinates from the pre-event coordinate system to the post-event
-coordiante system.
+coordinate system.
 
 ## Value
 

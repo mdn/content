@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.cookies.remove(
+let removing = browser.cookies.remove(
   details               // object
 )
 ```
@@ -53,7 +53,7 @@ var removing = browser.cookies.remove(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the `details` parameter could not be found, the promise is fulfilled with `null`.  If the call fails for any reason, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the `details` parameter could not be found, the promise is fulfilled with `null`.  If the call fails for any reason, the promise will be rejected with an error message.
 
 ## Browser compatibility
 
@@ -73,20 +73,20 @@ function onError(error) {
 }
 
 function removeCookie(tabs) {
-  var removing = browser.cookies.remove({
+  let removing = browser.cookies.remove({
     url: tabs[0].url,
     name: "favorite-color"
   });
   removing.then(onRemoved, onError);
 }
 
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(removeCookie);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-remove) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-remove) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

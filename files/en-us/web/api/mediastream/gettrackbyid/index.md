@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
+page-type: web-api-instance-method
 tags:
   - Media
   - MediaStream
@@ -27,7 +28,7 @@ var track = MediaStream.getTrackById(id);
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} which identifies the track to be returned.
+  - : A string which identifies the track to be returned.
 
 ### Return value
 

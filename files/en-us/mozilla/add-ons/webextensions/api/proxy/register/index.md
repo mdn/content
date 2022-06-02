@@ -41,9 +41,9 @@ To send a message to the PAC file, you must set the `toProxyScript` option:
 
 // Log any messages from the proxy.
 browser.runtime.onMessage.addListener((message, sender) => {
-  if (sender.url === browser.extension.getURL(proxyScriptURL)) {
-    console.log(message);
-  }
+  if (sender.url === browser.extension.getURL(proxyScriptURL)) {
+    console.log(message);
+  }
 });
 
 let messageToProxy = {
@@ -73,7 +73,7 @@ The basic PAC file syntax is described in the [PAC documentation](/en-US/docs/We
 
 The standard `FindProxyForURL()` [returns a string](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#return_value_format). In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 _only_, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.
 
-From Firefox 57 onwards, `FindProxyForURL()` may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.
+From Firefox 57 onwards, `FindProxyForURL()` may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.
 
 If the array contains more than one object, then all `ProxyInfo` objects after the first one represent failovers: if the proxy at position N in the array is not reachable when its `ProxyInfo.failoverTimeout` expires, then the browser will try the proxy at position N+1.
 
@@ -132,7 +132,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 ## Syntax
 
 ```js
-var registering = browser.proxy.register(
+let registering = browser.proxy.register(
   url   // string
 )
 ```

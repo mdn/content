@@ -1,6 +1,7 @@
 ---
 title: FormDataEvent
 slug: Web/API/FormDataEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -15,6 +16,8 @@ browser-compat: api.FormDataEvent
 The **`FormDataEvent`** interface represents a [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event) — such an event is fired on an {{domxref("HTMLFormElement")}} object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.
 
 This allows a {{domxref("FormData")}} object to be quickly obtained in response to a `formdata` event firing, rather than needing to put it together yourself when you wish to submit form data via a method like {{domxref("XMLHttpRequest")}} (see [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)).
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -61,7 +64,7 @@ formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // modifies the form data
-  const formData = e.formData; 
+  const formData = e.formData;
   formData.set('field1', formData.get('field1').toLowerCase());
   formData.set('field2', formData.get('field2').toLowerCase());
 });

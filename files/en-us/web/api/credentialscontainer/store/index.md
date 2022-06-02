@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer.store()
 slug: Web/API/CredentialsContainer/store
+page-type: web-api-instance-method
 tags:
   - API
   - Credential Management API
@@ -23,19 +24,19 @@ The **`store()`** method of the
 ## Syntax
 
 ```js
-CredentialsContainer.store(Credential).then(function(Credential) { /* ... */ } )
+store(credentials)
 ```
 
 ### Parameters
 
-- Credentials
+- `credentials`
   - : A valid {{domxref("Credential")}} instance.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to `undefined`.
 
-## Example
+## Examples
 
 ### Storing a password credential at successful authentication
 

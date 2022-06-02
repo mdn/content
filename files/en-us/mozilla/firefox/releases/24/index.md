@@ -53,11 +53,11 @@ tags:
 ## Changes for add-on and Mozilla developers
 
 - Doc Shells have now the `allowMedia` attribute to disable media playing ({{bug(759964)}}).
-- Sherlock search plugins in the application directory or profile  won't be loaded anymore ({{bug(862143)}}).
+- Sherlock search plugins in the application directory or profile won't be loaded anymore ({{bug(862143)}}).
 
 ## See also
 
-- [Firefox 24 Aurora Notes](https://www.mozilla.org/en-US/firefox/24.0a2/auroranotes/)
+- [Firefox 24 Aurora Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/24.0a2/auroranotes/)
 
 ## Older versions
 

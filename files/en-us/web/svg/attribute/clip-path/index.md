@@ -14,25 +14,25 @@ The **`clip-path`** presentation attribute defines or associates a clipping path
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('a')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('clipPath')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('g')}}
-*   {{SVGElement('glyph')}}
-*   {{SVGElement('image')}}
-*   {{SVGElement('line')}}
-*   {{SVGElement('marker')}}
-*   {{SVGElement('mask')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('pattern')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('svg')}}
-*   {{SVGElement('symbol')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('use')}}
+- {{SVGElement('a')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('clipPath')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('g')}}
+- {{SVGElement('glyph')}}
+- {{SVGElement('image')}}
+- {{SVGElement('line')}}
+- {{SVGElement('marker')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('path')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('symbol')}}
+- {{SVGElement('text')}}
+- {{SVGElement('use')}}
 
 ## Example
 
@@ -92,47 +92,19 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-*   \<geometry-box>
-    *   : An extra information to tell how a {{cssxref('basic-shape')}} is applied to an element: `fill-box` indicates to use the object bounding box; `stroke-box` indicates to use the object bounding box extended with the stroke; `view-box` indicates to use the nearest SVG viewport as the reference box.
+- \<geometry-box>
+  - : An extra information to tell how a {{cssxref('basic-shape')}} is applied to an element: `fill-box` indicates to use the object bounding box; `stroke-box` indicates to use the object bounding box extended with the stroke; `view-box` indicates to use the nearest SVG viewport as the reference box.
 
 > **Note:** For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-## Specifications
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS Masks", "#the-clip-path", 'clip-path')}}
-      </td>
-      <td>{{Spec2('CSS Masks')}}</td>
-      <td>
-        Extends its application to HTML elements. The
-        <code>clip-path</code> property replaces the deprecated
-        {{cssxref("clip")}} property.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('SVG1.1', 'masking.html#ClipPathProperty', 'clip-path')}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Initial definition (applies to SVG elements only).</td>
-    </tr>
-  </tbody>
-</table>
-
 ## See also
 
-*   The CSS {{cssxref("clip-path")}} property
+- The CSS {{cssxref("clip-path")}} property

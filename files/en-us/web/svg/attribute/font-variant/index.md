@@ -14,11 +14,11 @@ The **`font-variant`** attribute indicates whether the text is to be rendered us
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -30,8 +30,8 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-variant="normal">Normal text</text>
-  <text x="100" y="20" font-variant="small-caps">Small-caps text</text>
+  <text y="20" font-variant="normal">Normal text</text>
+  <text x="100" y="20" font-variant="small-caps">Small-caps text</text>
 </svg>
 ```
 
@@ -80,42 +80,11 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/font-variant#Values) property.
+For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/font-variant#values) property.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS4 Fonts", "#font-variant-prop", "font-variant")}}
-      </td>
-      <td>{{Spec2("CSS4 Fonts")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Fonts", "#font-variant-prop", "font-variant")}}
-      </td>
-      <td>{{Spec2("CSS3 Fonts")}}</td>
-      <td>Added many more keywords for different types of variations.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#FontVariantProperty", "font-variant")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -123,4 +92,4 @@ For a description of the values, please refer to the [CSS `font-variant`](/en-US
 
 ## See also
 
-*   {{cssxref("font-variant", "CSS font-variant")}}
+- {{cssxref("font-variant", "CSS font-variant")}}

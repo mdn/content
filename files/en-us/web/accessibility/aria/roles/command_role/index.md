@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: command role'
 slug: Web/Accessibility/ARIA/Roles/command_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -9,6 +9,7 @@ tags:
   - ARIA command
   - ARIA widget
   - Reference
+spec-urls: https://w3c.github.io/aria/#command
 ---
 
 The `command` role defines a widget that performs an action but does not receive input data.
@@ -25,20 +26,14 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#command","ARIA: command role")}}                                             | {{Spec2('ARIA')}}                         |
-
+{{Specifications}}
 
 ## See Also
-
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
 - [ARIA: `button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
 - [ARIA: `link` role](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
 - [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-
-
 
 <section id="Quick_links">
 

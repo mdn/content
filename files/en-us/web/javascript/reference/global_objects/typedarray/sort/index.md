@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.TypedArray.sort
 The **`sort()`** method sorts the elements of a typed array
 numerically _in place_ and returns the typed array. This method has the same
 algorithm as {{jsxref("Array.prototype.sort()")}}, except that sorts the values
-numerically instead of as strings. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+numerically instead of as strings. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-sort.html","shorter")}}
 
@@ -28,13 +28,13 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 sort()
 
 // Arrow function
-sort((firstEl, secondEl) => { /* ... */ } )
+sort((a, b) => { /* ... */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(firstEl, secondEl) { /* ... */ })
+sort(function compareFn(a, b) { /* ... */ })
 ```
 
 ### Parameters
@@ -78,5 +78,5 @@ numbers.sort((a, b) => a - b); // compare numbers
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.sort` with modern behavior like stable sort is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("Array.prototype.sort()")}}

@@ -1,6 +1,7 @@
 ---
 title: GainNode
 slug: Web/API/GainNode
+page-type: web-api-interface
 tags:
   - API
   - GainNode
@@ -16,6 +17,8 @@ The `GainNode` interface represents a change in volume. It is an {{domxref("Audi
 The gain is a unitless value, changing with time, that is multiplied to each corresponding sample of all input channels. If modified, the new gain is instantly applied, causing unaesthetic 'clicks' in the resulting audio. To prevent this from happening, never change the value directly but use the exponential interpolation methods on the {{domxref("AudioParam")}} interface.
 
 ![The GainNode is increasing the gain of the output.](webaudiogainnode.png)
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -52,7 +55,7 @@ The gain is a unitless value, changing with time, that is multiplied to each cor
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("GainNode.gain")}} {{readonlyinline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of gain to apply. You have to set {{domxref("AudioParam.value")}} or use the methods of `AudioParam` to change the effect of gain.
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of gain to apply. You have to set {{domxref("AudioParam.value")}} or use the methods of `AudioParam` to change the effect of gain.
 
 ## Methods
 

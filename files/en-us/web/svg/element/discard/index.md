@@ -23,14 +23,14 @@ The `<discard>` element may occur wherever the {{SVGElement("animate")}} element
 
 ### Global attributes
 
-*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Aria attributes](/en-US/docs/Web/SVG/Attribute#aria_attributes)
+- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Aria attributes](/en-US/docs/Web/SVG/Attribute#aria_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("begin")}}
-*   {{SVGAttr("href")}} (but note that `<discard>` has never supported `xlink:href`)
+- {{SVGAttr("begin")}}
+- {{SVGAttr("href")}} (but note that `<discard>` has never supported `xlink:href`)
 
 ## Specifications
 

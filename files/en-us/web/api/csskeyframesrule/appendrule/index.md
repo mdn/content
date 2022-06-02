@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.appendRule()
 slug: Web/API/CSSKeyframesRule/appendRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -17,19 +18,19 @@ The **`appendRule()`** method of the {{domxref("CSSKeyframeRule")}} interface ap
 ## Syntax
 
 ```js
-CSSKeyframesRule.appendRule(rule);
+appendRule(rule)
 ```
 
 ### Parameters
 
 - `rule`
-  - : A {{domxref("CSSOMString")}} containing a keyframe rule.
+  - : A string containing a keyframe rule.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. Returning the `cssRules` property would return a {{domxref("CSSRuleList")}} containing one rule.

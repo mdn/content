@@ -184,6 +184,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
+- {{htmlattrdef("fetchpriority")}}
+
+  - : Provides a hint of the relative priority to use when fetching a preloaded resource. Allowed values:
+
+    - `high`
+      - : Signals a high-priority fetch relative to other resources of the same type.
+    - `low`
+      - : Signals a low-priority fetch relative to other resources of the same type.
+    - `auto`
+      - : Default: Signals automatic determination of fetch priority relative to other resources of the same type.
+
 - {{HTMLAttrDef("href")}}
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
 - {{HTMLAttrDef("hreflang")}}
@@ -194,9 +205,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{HTMLAttrDef("imagesizes")}}
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute is [a sizes attribute](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - {{HTMLAttrDef("imagesrcset")}}
-  - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute is [a sourceset attribute ](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
-- {{HTMLAttrDef("integrity")}} {{Experimental_Inline}}
-  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you’re telling the browser to fetch.
+  - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute is [a sourceset attribute](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
+- {{HTMLAttrDef("integrity")}} {{Experimental_Inline}}
+  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
     The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation.
     See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - {{HTMLAttrDef("media")}}
@@ -213,13 +224,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{HTMLAttrDef("prefetch")}} {{secureContext_inline}} {{experimental_inline}}
   - : Identifies a resource that might be required by the next navigation and that the user agent should retrieve it.
     This allows the user agent to respond faster when the resource is requested in the future.
-- {{HTMLAttrDef("referrerpolicy")}} {{Experimental_Inline}}
+- {{HTMLAttrDef("referrerpolicy")}} {{Experimental_Inline}}
 
   - : A string indicating which referrer to use when fetching the resource:
 
     - `no-referrer` means that the {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade` means that no {{HTTPHeader("Referer")}} header will be sent when navigating to an origin without TLS (HTTPS).
-      This is a user agent’s default behavior, if no policy is otherwise specified.
+      This is a user agent's default behavior, if no policy is otherwise specified.
     - `origin` means that the referrer will be the origin of the page, which is roughly the scheme, the host, and the port.
     - `origin-when-cross-origin` means that navigating to other origins will be limited to the scheme, the host, and the port, while navigating on the same origin will include the referrer's path.
     - `unsafe-url` means that the referrer will include the origin and the path (but not the fragment, password, or username).
@@ -250,13 +261,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Non-standard attributes
 
-- {{HTMLAttrDef("methods")}} {{Non-standard_Inline}}
+- {{HTMLAttrDef("methods")}} {{Non-standard_Inline}}
   - : The value of this attribute provides information about the functions that might be performed on an object.
     The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link.
     For example, the browser might choose a different rendering of a link as a function of the methods specified;
     something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site.
     This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4.
-- {{HTMLAttrDef("target")}} {{Non-standard_Inline}}
+- {{HTMLAttrDef("target")}} {{Non-standard_Inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
 
 ### Obsolete attributes
@@ -275,11 +286,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
     [Link type values](/en-US/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.
 
-    > **Note:** This attribute is considered obsolete by the WHATWG HTML living standard (which is the specification MDN treats as canonical).
-    > However, it's worth noting that `rev` is _not_ considered obsolete in the W3C specification.
-    > That said, given the uncertainty, relying on `rev` is unwise.
-
-    > **Note:** Instead, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Link_types).
+    > **Note:** Instead of `rev`, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Link_types).
     > For example, to establish the reverse link for `made`, specify `author`. Also this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 
 ## Examples

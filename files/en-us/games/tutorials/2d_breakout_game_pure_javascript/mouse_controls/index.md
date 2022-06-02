@@ -28,7 +28,7 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 
 ## Anchoring the paddle movement to the mouse movement
 
-We can update the paddle position based on the pointer coordinates — the following handler function will do exactly that. Add the following function to your code, below the previous line you added:
+We can update the paddle position based on the pointer coordinates — the following handler function will do exactly that. Add the following function to your code, below the previous line you added:
 
 ```js
 function mouseMoveHandler(e) {

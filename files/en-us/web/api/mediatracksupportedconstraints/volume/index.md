@@ -1,13 +1,14 @@
 ---
 title: MediaTrackSupportedConstraints.volume
 slug: Web/API/MediaTrackSupportedConstraints/volume
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
   - Media
   - Media Capture and Streams API
   - Media Streams API
-  - MediaTrackSupportedConstriants
+  - MediaTrackSupportedConstraints
   - Property
   - Reference
   - Volume
@@ -27,20 +28,14 @@ constraint isn't supported, it's not included in the list, so this value will ne
 You can access the supported constraints dictionary by calling
 `navigator.mediaDevices.getSupportedConstraints()`.
 
-## Syntax
-
-```js
-volumeConstraintSupported = supportedConstraintsDictionary.volume;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary (and its value is always `true`)
 if the user agent supports the `volume` constraint. If the property isn't
 present, this property is missing from the supported constraints dictionary, and you'll
 get {{jsxref("undefined")}} if you try to look at its value.
 
-## Example
+## Examples
 
 ```html hidden
 <div id="result">

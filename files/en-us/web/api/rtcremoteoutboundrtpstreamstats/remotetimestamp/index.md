@@ -1,6 +1,7 @@
 ---
 title: RTCRemoteOutboundRtpStreamStats.remoteTimestamp
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/remoteTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -25,13 +26,7 @@ The {{domxref("RTCRemoteOutboundRtpStreamStats")}} property
 at which these statistics were sent. This differs from `timestamp`, which
 indicates the time at which the statistics were generated or received locally.
 
-## Syntax
-
-```js
-let remoteTimestamp = rtcRemoteOutboundRtpStreamStats.remoteTimestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} value indicating the timestamp on the remote peer
 at which it sent these statistics. This is different from the value

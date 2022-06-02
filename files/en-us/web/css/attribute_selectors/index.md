@@ -91,7 +91,7 @@ a[href*="insensitive" i] {
 /* Links with "cAsE" anywhere in the URL,
 with matching capitalization */
 a[href*="cAsE" s] {
-  color: pink;
+  color: pink;
 }
 
 /* Links that end in ".org" */
@@ -101,7 +101,7 @@ a[href$=".org"] {
 
 /* Links that start with "https" and end in ".org" */
 a[href^="https"][href$=".org"] {
-  color: green;
+  color: green;
 }
 ```
 
@@ -177,25 +177,31 @@ div[data-lang="zh-TW"] {
 
 ### HTML ordered lists
 
-The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively due to it primarily being used in the {{HTMLElement("input")}} element, trying to use attribute selectors to with the {{htmlattrxref("type", "ol")}} attribute of an {{HTMLElement("ol", "ordered list")}} doesn't work without the [case-sensitive](#case-sensitive) modifier.
+The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
+Note that if the modifiers are not supported by the user agent, then the selector will not match.
 
 #### CSS
 
 ```css
-/* List types require the case sensitive flag due to a quirk in how HTML treats the type attribute. */
+/* Case-sensitivity depends on document language */
 ol[type="a"] {
   list-style-type: lower-alpha;
   background: red;
 }
 
-ol[type="a" s] {
+ol[type="b" s] {
   list-style-type: lower-alpha;
   background: lime;
 }
 
-ol[type="A" s] {
+ol[type="B" s] {
   list-style-type: upper-alpha;
-  background: lime;
+  background: grey;
+}
+
+ol[type="c" i] {
+  list-style-type: upper-alpha;
+  background: green;
 }
 ```
 
@@ -203,7 +209,16 @@ ol[type="A" s] {
 
 ```html
 <ol type="A">
-  <li>Example list</li>
+  <li>Red background for case-insensitive matching (default for the type selector)</li>
+</ol>
+<ol type="b">
+  <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
+</ol>
+<ol type="B">
+  <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
+</ol>
+<ol type="C">
+  <li>Green background if `i` modifier is supported (case-insensitive match)</li>
 </ol>
 ```
 

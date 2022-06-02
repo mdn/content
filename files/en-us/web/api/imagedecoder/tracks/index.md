@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.tracks
 slug: Web/API/ImageDecoder/tracks
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.ImageDecoder.tracks
 
 The **`tracks`** read-only property of the {{domxref("ImageDecoder")}} interface returns a list of the tracks in the encoded image data.
 
-### Value
+## Value
 
 An {{domxref("ImageTrackList")}}.
 
@@ -32,5 +33,3 @@ console.log(ImageDecoder.tracks);
 ## Browser compatibility
 
 {{Compat}}
-
-

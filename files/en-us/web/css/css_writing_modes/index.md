@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-writing-modes/
 ---
 {{CSSRef}}
 
@@ -25,8 +26,4 @@ tags:
 
 ## Specifications
 
-| Specification                                    | Status                                   | Comment            |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Writing Modes')}}     | {{Spec2('CSS3 Writing Modes')}} |                    |
-| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                 |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                 | Initial definition |
+{{Specifications}}

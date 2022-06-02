@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.locale
 slug: Web/API/IDBIndex/locale
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -17,20 +18,13 @@ browser-compat: api.IDBIndex.locale
 
 The **`locale`** read-only property of the {{domxref("IDBIndex")}} interface returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).) Note that this property always returns the current locale being used in this index, in other words, it never returns `"auto"`.
 
-## Syntax
+## Value
 
-```js
-var myIndex = objectStore.index('index');
-console.log(myIndex.locale);
-```
+A string.
 
-### Value
+## Examples
 
-A {{domxref("DOMString")}}.
-
-## Example
-
-In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
+In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
 
 The `locale` value is logged to the console.
 
