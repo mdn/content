@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.tiltX
 slug: Web/API/PointerEvent/tiltX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

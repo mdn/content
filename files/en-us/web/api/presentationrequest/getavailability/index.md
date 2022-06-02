@@ -1,6 +1,7 @@
 ---
 title: PresentationRequest.getAvailability()
 slug: Web/API/PresentationRequest/getAvailability
+page-type: web-api-instance-method
 browser-compat: api.PresentationRequest.getAvailability
 ---
 

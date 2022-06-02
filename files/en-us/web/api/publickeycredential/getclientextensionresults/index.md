@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
+page-type: web-api-instance-method
 tags:
   - API
   - Method

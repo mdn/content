@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.secureConnectionStart
 slug: Web/API/PerformanceTiming/secureConnectionStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

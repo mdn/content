@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.rawId
 slug: Web/API/PublicKeyCredential/rawId
+page-type: web-api-instance-property
 tags:
   - API
   - Property

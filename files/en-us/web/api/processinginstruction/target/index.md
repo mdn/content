@@ -1,6 +1,7 @@
 ---
 title: ProcessingInstruction.target
 slug: Web/API/ProcessingInstruction/target
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

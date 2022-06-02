@@ -1,6 +1,7 @@
 ---
 title: Proximity Events
 slug: Web/API/Proximity_Events
+page-type: web-api-overview
 tags:
   - API
   - Experimental

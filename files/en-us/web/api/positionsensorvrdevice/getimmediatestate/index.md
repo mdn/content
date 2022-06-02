@@ -1,6 +1,7 @@
 ---
 title: PositionSensorVRDevice.getImmediateState()
 slug: Web/API/PositionSensorVRDevice/getImmediateState
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

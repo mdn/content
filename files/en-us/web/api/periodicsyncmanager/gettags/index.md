@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncManager.getTags()
 slug: Web/API/PeriodicSyncManager/getTags
+page-type: web-api-instance-method
 tags:
   - Background Sync
   - Method

@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.getKey()
 slug: Web/API/PushSubscription/getKey
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

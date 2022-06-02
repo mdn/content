@@ -1,6 +1,7 @@
 ---
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
