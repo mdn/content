@@ -25,6 +25,7 @@ based on what site or list of sites is framing it.
 ## Value
 
 A {{domxref("DOMStringList")}}.
+
 ## Specifications
 
 {{Specifications}}
