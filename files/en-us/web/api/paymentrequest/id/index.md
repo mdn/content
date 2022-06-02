@@ -1,5 +1,5 @@
 ---
-title: PaymentRequest.prototype.id
+title: PaymentRequest.id
 slug: Web/API/PaymentRequest/id
 tags:
   - API
