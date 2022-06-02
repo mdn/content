@@ -1,6 +1,7 @@
 ---
 title: Window.ondragdrop
 slug: Web/API/Window/ondragdrop
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

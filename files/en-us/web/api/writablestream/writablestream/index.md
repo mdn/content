@@ -1,6 +1,7 @@
 ---
 title: WritableStream()
 slug: Web/API/WritableStream/WritableStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

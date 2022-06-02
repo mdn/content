@@ -1,6 +1,7 @@
 ---
 title: 'WorkerGlobalScope: offline event'
 slug: Web/API/WorkerGlobalScope/offline_event
+page-type: web-api-instance-method
 tags:
   - API
   - Event

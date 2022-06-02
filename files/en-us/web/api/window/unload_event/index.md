@@ -1,6 +1,7 @@
 ---
 title: 'Window: unload event'
 slug: Web/API/Window/unload_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: WritableStream.getWriter()
 slug: Web/API/WritableStream/getWriter
+page-type: web-api-instance-method
 tags:
   - API
   - Method

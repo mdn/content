@@ -1,6 +1,7 @@
 ---
 title: Window.convertPointFromNodeToPage()
 slug: Web/API/Window/webkitConvertPointFromNodeToPage
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

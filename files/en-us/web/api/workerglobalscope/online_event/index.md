@@ -1,6 +1,7 @@
 ---
 title: 'WorkerGlobalScope: online event'
 slug: Web/API/WorkerGlobalScope/online_event
+page-type: web-api-instance-method
 tags:
   - API
   - Event
