@@ -1,6 +1,7 @@
 ---
 title: USBDevice.reset()
 slug: Web/API/USBDevice/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method

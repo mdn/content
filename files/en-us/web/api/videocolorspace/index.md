@@ -1,6 +1,7 @@
 ---
 title: VideoColorSpace
 slug: Web/API/VideoColorSpace
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: VRPose.hasOrientation
 slug: Web/API/VRPose/hasOrientation
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

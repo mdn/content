@@ -1,6 +1,7 @@
 ---
 title: VideoFrame
 slug: Web/API/VideoFrame
+page-type: web-api-interface
 tags:
   - API
   - Interface

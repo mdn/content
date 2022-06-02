@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters.offset
 slug: Web/API/VREyeParameters/offset
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
