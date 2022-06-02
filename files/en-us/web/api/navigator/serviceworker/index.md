@@ -1,6 +1,7 @@
 ---
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator

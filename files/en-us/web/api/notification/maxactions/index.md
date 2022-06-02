@@ -1,6 +1,7 @@
 ---
 title: Notification.maxActions
 slug: Web/API/Notification/maxActions
+page-type: web-api-static-property
 tags:
   - API
   - Notification

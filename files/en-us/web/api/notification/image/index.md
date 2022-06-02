@@ -1,6 +1,7 @@
 ---
 title: Notification.image
 slug: Web/API/Notification/image
+page-type: web-api-instance-property
 tags:
   - API
   - Image

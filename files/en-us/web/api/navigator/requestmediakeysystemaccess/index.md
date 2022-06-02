@@ -1,6 +1,7 @@
 ---
 title: Navigator.requestMediaKeySystemAccess()
 slug: Web/API/Navigator/requestMediaKeySystemAccess
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

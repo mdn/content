@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

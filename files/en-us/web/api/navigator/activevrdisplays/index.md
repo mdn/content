@@ -1,6 +1,7 @@
 ---
 title: Navigator.activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
