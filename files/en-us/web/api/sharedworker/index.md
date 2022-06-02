@@ -1,6 +1,7 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
+page-type: web-api-interface
 tags:
   - API
   - Interface

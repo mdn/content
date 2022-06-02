@@ -1,6 +1,7 @@
 ---
 title: Selection.removeRange()
 slug: Web/API/Selection/removeRange
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing

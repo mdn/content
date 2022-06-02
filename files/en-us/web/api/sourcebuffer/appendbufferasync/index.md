@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.appendBufferAsync()
 slug: Web/API/SourceBuffer/appendBufferAsync
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

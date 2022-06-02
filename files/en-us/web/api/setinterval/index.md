@@ -1,6 +1,7 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
+page-type: web-api-global-function
 tags:
   - API
   - Gecko

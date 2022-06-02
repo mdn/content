@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerGlobalScope.clients
 slug: Web/API/ServiceWorkerGlobalScope/clients
+page-type: web-api-instance-property
 tags:
   - API
   - Clients

@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: sync event'
 slug: Web/API/ServiceWorkerGlobalScope/sync_event
+page-type: web-api-event
 tags:
   - Offline
   - PWA
