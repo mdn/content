@@ -1,6 +1,7 @@
 ---
 title: PerformanceMark
 slug: Web/API/PerformanceMark
+page-type: web-api-interface
 tags:
   - API
   - Interface

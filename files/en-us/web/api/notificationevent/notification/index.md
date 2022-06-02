@@ -1,6 +1,7 @@
 ---
 title: NotificationEvent.notification
 slug: Web/API/NotificationEvent/notification
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

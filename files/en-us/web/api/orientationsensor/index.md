@@ -1,6 +1,7 @@
 ---
 title: OrientationSensor
 slug: Web/API/OrientationSensor
+page-type: web-api-interface
 tags:
   - API
   - Generic Sensor API

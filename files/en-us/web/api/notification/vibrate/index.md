@@ -1,6 +1,7 @@
 ---
 title: Notification.vibrate
 slug: Web/API/Notification/vibrate
+page-type: web-api-instance-property
 tags:
   - API
   - Device

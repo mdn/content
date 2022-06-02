@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas.width
 slug: Web/API/OffscreenCanvas/width
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

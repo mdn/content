@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
+page-type: web-api-instance-property
 tags:
   - API
   - Performance Timeline API

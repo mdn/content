@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.retry()
 slug: Web/API/PaymentResponse/retry
+page-type: web-api-instance-method
 tags:
   - API
   - Commerce

@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.domInteractive
 slug: Web/API/PerformanceNavigationTiming/domInteractive
+page-type: web-api-instance-property
 tags:
   - API
   - Property
