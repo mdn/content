@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSendParameters
 slug: Web/API/RTCRtpSendParameters
+page-type: web-api-interface
 tags:
   - API
   - Audio

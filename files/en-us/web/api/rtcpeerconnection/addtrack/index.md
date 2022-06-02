@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

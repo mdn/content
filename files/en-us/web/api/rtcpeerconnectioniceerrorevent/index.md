@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnectionIceErrorEvent
 slug: Web/API/RTCPeerConnectionIceErrorEvent
+page-type: web-api-interface
 tags:
   - API
   - Communication

@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.receiverId
 slug: Web/API/RTCInboundRtpStreamStats/receiverId
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

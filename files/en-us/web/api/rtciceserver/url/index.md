@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.url
 slug: Web/API/RTCIceServer/url
+page-type: web-api-instance-property
 tags:
   - Experimental
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.fecPacketsDiscarded
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded
+page-type: web-api-instance-property
 tags:
   - API
   - Errors
