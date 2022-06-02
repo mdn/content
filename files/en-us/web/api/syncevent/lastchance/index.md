@@ -1,6 +1,7 @@
 ---
 title: SyncEvent.lastChance
 slug: Web/API/SyncEvent/lastChance
+page-type: web-api-interface
 tags:
   - API
   - Background Sync

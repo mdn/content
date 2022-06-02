@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.markerUnits
 slug: Web/API/SVGMarkerElement/markerUnits
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: TextTrack
 slug: Web/API/TextTrack
+page-type: web-api-interface
 tags:
   - API
   - Interface
