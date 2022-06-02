@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.getStats()
 slug: Web/API/RTCRtpSender/getStats
+page-type: web-api-instance-method
 tags:
   - API
   - Media

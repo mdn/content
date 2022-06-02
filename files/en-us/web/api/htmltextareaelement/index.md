@@ -1,6 +1,7 @@
 ---
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

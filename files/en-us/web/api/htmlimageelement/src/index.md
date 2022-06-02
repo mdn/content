@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.src
 slug: Web/API/HTMLImageElement/src
+page-type: web-api-instance-property
 tags:
   - 1x
   - API

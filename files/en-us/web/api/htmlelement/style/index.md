@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.style
 slug: Web/API/HTMLElement/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

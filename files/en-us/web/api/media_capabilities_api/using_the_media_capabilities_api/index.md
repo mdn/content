@@ -1,6 +1,7 @@
 ---
 title: Using the Media Capabilities API
 slug: Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
+page-type: guide
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - Media Capabilities API
   - Video
   - capabilities
+browser-compat: api.MediaCapabilities
 ---
 {{APIRef("Media Capabilities API")}}
 
@@ -242,7 +244,7 @@ document.getElementById('try-it').addEventListener('click', mc.tryIt);
 
 ## Browser compatibility
 
-{{Compat("api.MediaCapabilities")}}
+{{Compat}}
 
 ## See also
 

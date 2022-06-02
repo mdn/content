@@ -1,6 +1,7 @@
 ---
 title: CookieChangeEvent.deleted
 slug: Web/API/CookieChangeEvent/deleted
+page-type: web-api-instance-property
 tags:
   - API
   - Property

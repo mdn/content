@@ -1,6 +1,7 @@
 ---
 title: Long Tasks API
 slug: Web/API/Long_Tasks_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

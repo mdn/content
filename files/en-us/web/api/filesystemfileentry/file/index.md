@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileEntry.file()
 slug: Web/API/FileSystemFileEntry/file
+page-type: web-api-instance-method
 tags:
   - API
   - File

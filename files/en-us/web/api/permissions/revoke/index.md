@@ -1,6 +1,7 @@
 ---
 title: Permissions.revoke()
 slug: Web/API/Permissions/revoke
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

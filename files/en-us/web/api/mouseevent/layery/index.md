@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.layerY
 slug: Web/API/MouseEvent/layerY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

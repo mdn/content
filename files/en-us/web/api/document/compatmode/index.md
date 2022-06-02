@@ -1,6 +1,7 @@
 ---
 title: Document.compatMode
 slug: Web/API/Document/compatMode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

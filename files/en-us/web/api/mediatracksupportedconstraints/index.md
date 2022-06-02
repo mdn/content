@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
+page-type: web-api-interface
 tags:
   - API
   - Capture

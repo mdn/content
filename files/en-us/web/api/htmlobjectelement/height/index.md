@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.height
 slug: Web/API/HTMLObjectElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

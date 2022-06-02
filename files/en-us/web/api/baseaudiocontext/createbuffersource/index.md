@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext

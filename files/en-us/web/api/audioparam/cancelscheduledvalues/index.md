@@ -1,6 +1,7 @@
 ---
 title: AudioParam.cancelScheduledValues()
 slug: Web/API/AudioParam/cancelScheduledValues
+page-type: web-api-instance-method
 tags:
   - API
   - AudioParam

@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
+page-type: web-api-instance-method
 tags:
   - API
   - Database

@@ -16,7 +16,7 @@ Note that most of these instructions may as well apply to other Web rendering en
 
 Install the _Latin Modern Math_ and _STIX_ fonts as follows:
 
-1. Download [latinmodern-math-1959.zip](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip).
+1. Download [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip).
 2. Open the ZIP archive, move inside the `latinmodern-math-1959` directory and then inside the `otf` directory. You will find a `latinmodern-math` font file.
 3. Open the `latinmodern-math` font file and click the `Install` button.
 4. Download [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip).
@@ -29,7 +29,7 @@ Install the _Latin Modern Math_ and _STIX_ fonts as follows:
 
 Install the _Latin Modern Math_ and _STIX_ fonts as follows:
 
-1. Download [latinmodern-math-1959.zip](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip).
+1. Download [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip).
 2. Extract the ZIP archive, move inside the `latinmodern-math-1959` directory and then inside the `otf` directory. You will find a `latinmodern-math` font file.
 3. Double-click the `latinmodern-math` font file click the "Install the font" button from the window that opens.
 4. Download [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip).
@@ -108,7 +108,7 @@ Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Al
 
 ### Installation without Administrator Privilege
 
-If you need to install fonts on a system without administrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [STIX](https://github.com/stipub/stixfonts) into some local font folder and (if necessary) to run `fc-cache` on it. On macOS and Linux, the standard paths are `~/Library/Fonts/` and `~/.fonts`.
+If you need to install fonts on a system without administrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [STIX](https://github.com/stipub/stixfonts) into some local font folder and (if necessary) to run `fc-cache` on it. On macOS and Linux, the standard paths are `~/Library/Fonts/` and `~/.fonts`.
 
 ### Fonts with a MATH table
 
@@ -118,13 +118,13 @@ You can actually render MathML using any font with a MATH table and related Open
 - [Cambria Math](https://docs.microsoft.com/en-us/typography/font-list/?FID=360)
 - [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
 - [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math) (under development)
-- [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math)
+- [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math)
 - [Libertinus Math](https://github.com/alerque/libertinus)
 - [STIX Math](https://github.com/stipub/stixfonts)
-- [TeX Gyre Bonum Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Bonum_Math)
-- [TeX Gyre Pagella Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Pagella_Math)
-- [TeX Gyre Schola Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Schola_Math)
-- [TeX Gyre Termes Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Termes_Math)
+- [TeX Gyre Bonum Math](https://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Bonum_Math)
+- [TeX Gyre Pagella Math](https://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Pagella_Math)
+- [TeX Gyre Schola Math](https://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Schola_Math)
+- [TeX Gyre Termes Math](https://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Termes_Math)
 - [XITS Math](https://github.com/aliftype/xits/releases)
 - [Fira Math](https://github.com/firamath/firamath) (sans-serif typeface, under development)
 - [GFS Neohellenic Math](https://greekfontsociety-gfs.gr/typefaces/Math) (sans-serif typeface)

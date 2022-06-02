@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.password
 slug: Web/API/HTMLAreaElement/password
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement

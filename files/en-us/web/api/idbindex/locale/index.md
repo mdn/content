@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.locale
 slug: Web/API/IDBIndex/locale
+page-type: web-api-instance-property
 tags:
   - API
   - Database

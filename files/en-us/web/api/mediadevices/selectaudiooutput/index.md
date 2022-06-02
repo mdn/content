@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.selectAudioOutput()
 slug: Web/API/MediaDevices/selectAudioOutput
+page-type: web-api-instance-method
 tags:
   - API
   - MediaDevices

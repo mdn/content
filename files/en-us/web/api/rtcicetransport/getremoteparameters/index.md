@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.getRemoteParameters()
 slug: Web/API/RTCIceTransport/getRemoteParameters
+page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getRemoteParameters
 ---
 {{APIRef("WebRTC")}}

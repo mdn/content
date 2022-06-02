@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.maxRetransmits
 slug: Web/API/RTCDataChannel/maxRetransmits
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel

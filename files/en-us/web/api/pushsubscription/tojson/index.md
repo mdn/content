@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.toJSON()
 slug: Web/API/PushSubscription/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

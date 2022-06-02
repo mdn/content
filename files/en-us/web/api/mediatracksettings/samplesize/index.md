@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.sampleSize
 slug: Web/API/MediaTrackSettings/sampleSize
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

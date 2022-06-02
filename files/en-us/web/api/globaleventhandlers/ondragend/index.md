@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondragend
 slug: Web/API/GlobalEventHandlers/ondragend
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

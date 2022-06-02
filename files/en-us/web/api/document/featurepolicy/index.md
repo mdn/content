@@ -1,6 +1,7 @@
 ---
 title: Document.featurePolicy
 slug: Web/API/Document/featurePolicy
+page-type: web-api-instance-property
 tags:
   - API
   - Document

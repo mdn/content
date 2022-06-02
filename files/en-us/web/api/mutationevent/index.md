@@ -1,6 +1,7 @@
 ---
 title: MutationEvent
 slug: Web/API/MutationEvent
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

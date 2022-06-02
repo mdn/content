@@ -1,6 +1,7 @@
 ---
 title: ContactAddress
 slug: Web/API/ContactAddress
+page-type: web-api-interface
 tags:
   - API
   - Interface

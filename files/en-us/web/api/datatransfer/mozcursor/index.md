@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozCursor
 slug: Web/API/DataTransfer/mozCursor
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard

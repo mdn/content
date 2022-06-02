@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.name
 slug: Web/API/HTMLObjectElement/name
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

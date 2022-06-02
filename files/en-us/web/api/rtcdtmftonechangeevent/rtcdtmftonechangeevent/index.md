@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFToneChangeEvent()
 slug: Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - DTMF

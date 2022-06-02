@@ -1,6 +1,7 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
+page-type: web-api-interface
 tags:
   - API
   - Audio

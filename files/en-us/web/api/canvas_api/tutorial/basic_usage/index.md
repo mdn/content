@@ -1,6 +1,7 @@
 ---
 title: Basic usage of canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
+page-type: guide
 tags:
   - Canvas
   - Graphics

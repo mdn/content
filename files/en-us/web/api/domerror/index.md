@@ -1,6 +1,7 @@
 ---
 title: DOMError
 slug: Web/API/DOMError
+page-type: web-api-interface
 tags:
   - API
   - DOM

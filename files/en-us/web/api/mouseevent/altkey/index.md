@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

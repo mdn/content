@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.mimeType
 slug: Web/API/MediaRecorder/mimeType
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -34,8 +35,7 @@ about container and codec support across browsers.
 ## Value
 
 The MIME media type which describes the format of the recorded media, as a
-string. This string _may_ include the [`codecs`
-parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by
+string. This string _may_ include the [`codecs` parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by
 the media recorder.
 
 The media type strings are standardized by the Internet Assigned Numbers Authority
@@ -94,12 +94,9 @@ by `m.mimeType` would then be
 
 ## See also
 
-- [Using
-  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [The "codecs" parameter in
-  common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording
-  demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia()")}}

@@ -1,6 +1,7 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
+page-type: web-api-instance-method
 tags:
   - API
   - FormData

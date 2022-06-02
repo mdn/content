@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.lastPacketSentTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

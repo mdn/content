@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.isSameEntry()
 slug: Web/API/FileSystemHandle/isSameEntry
+page-type: web-api-instance-method
 tags:
   - Directory
   - File

@@ -1,6 +1,7 @@
 ---
 title: caches
 slug: Web/API/caches
+page-type: web-api-global-property
 tags:
   - API
   - Experimental

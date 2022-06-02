@@ -1,6 +1,7 @@
 ---
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

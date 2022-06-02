@@ -21,7 +21,7 @@ open(options)
 
 ### Parameters
 
-- _`options`_
+- `options`
 
   - : An object with any of the following values:
 

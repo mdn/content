@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection

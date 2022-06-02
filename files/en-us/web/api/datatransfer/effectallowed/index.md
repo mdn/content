@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

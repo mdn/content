@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.volume
 slug: Web/API/MediaTrackConstraints/volume
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

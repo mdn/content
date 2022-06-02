@@ -1,6 +1,7 @@
 ---
 title: 'Element: webkitmouseforceup event'
 slug: Web/API/Element/webkitmouseforceup_event
+page-type: web-api-event
 tags:
   - Element
   - Event

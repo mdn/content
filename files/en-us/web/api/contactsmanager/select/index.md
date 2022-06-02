@@ -1,6 +1,7 @@
 ---
 title: ContactsManager.select()
 slug: Web/API/ContactsManager/select
+page-type: web-api-instance-method
 tags:
   - Contact Picker API
   - Contacts

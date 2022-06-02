@@ -11,7 +11,7 @@ tags:
   - Layout
   - Reference
   - easing-function
-spec-urls: https://drafts.csswg.org/css-easing/#typedef-easing-function
+browser-compat: css.types.easing-function
 ---
 {{CSSRef}}
 
@@ -321,7 +321,7 @@ steps(0, jump-none)
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 

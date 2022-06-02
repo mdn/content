@@ -1,6 +1,7 @@
 ---
 title: FocusEvent.relatedTarget
 slug: Web/API/FocusEvent/relatedTarget
+page-type: web-api-instance-property
 tags:
   - API
   - Event

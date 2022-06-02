@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController.error()
 slug: Web/API/ReadableStreamDefaultController/error
+page-type: web-api-instance-method
 tags:
   - API
   - Error

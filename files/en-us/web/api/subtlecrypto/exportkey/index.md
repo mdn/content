@@ -19,8 +19,7 @@ and gives you the key in an external, portable format.
 To export a key, the key must have {{domxref("CryptoKey.extractable")}} set to
 `true`.
 
-Keys can be exported in several formats: see [Supported
-formats](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats) in the
+Keys can be exported in several formats: see [Supported formats](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats) in the
 [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey)
 page for details.
 
@@ -79,7 +78,7 @@ The promise is rejected when one of the following exceptions is encountered:
 ### Raw export
 
 This example exports an AES key as an `ArrayBuffer` containing the bytes for
-the key. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/raw.js)
+the key. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/raw.js).
 
 ```js
 /*
@@ -118,7 +117,7 @@ window.crypto.subtle.generateKey(
 ### PKCS #8 export
 
 This example exports an RSA private signing key as a PKCS #8 object. The exported key
-is then PEM-encoded. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/pkcs8.js)
+is then PEM-encoded. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/pkcs8.js).
 
 ```js
 /*
@@ -171,7 +170,7 @@ window.crypto.subtle.generateKey(
 ### SubjectPublicKeyInfo export
 
 This example exports an RSA public encryption key as a PEM-encoded SubjectPublicKeyInfo
-object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/spki.js)
+object. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/spki.js).
 
 ```js
 /*
@@ -222,7 +221,7 @@ window.crypto.subtle.generateKey(
 
 ### JSON Web Key export
 
-This code exports an ECDSA private signing key as a JSON Web Key object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/jwk.js)
+This code exports an ECDSA private signing key as a JSON Web Key object. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/jwk.js).
 
 ```js
 /*

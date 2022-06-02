@@ -1,6 +1,7 @@
 ---
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

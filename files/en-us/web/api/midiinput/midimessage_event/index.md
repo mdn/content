@@ -1,6 +1,7 @@
 ---
 title: 'MIDIInput: midimessage event'
 slug: Web/API/MIDIInput/midimessage_event
+page-type: web-api-event
 tags:
   - midimessage
   - API

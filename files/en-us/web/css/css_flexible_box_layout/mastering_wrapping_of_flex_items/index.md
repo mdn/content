@@ -58,9 +58,7 @@ If you need flex items to line up in the cross axis, controlling the width in th
 
 ## Creating gutters between items
 
-When wrapping flex items, the need to space them out is likely to arise. At the current time we do not have any implementations of the gap properties from the [Box Alignment module](https://www.w3.org/TR/css-align-3/) for Flexbox. In the future we will be able to use `row-gap` and `column-gap` for flexbox as we do for CSS Grid. At the current time you will need to use margins to achieve this.
-
-You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
+When wrapping flex items, the need to space them out is likely to arise. You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
 
 It is this requirement that the gap properties, once implemented, will solve for us. Proper gaps only happen on the inside edges of items.
 

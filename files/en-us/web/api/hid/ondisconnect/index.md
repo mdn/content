@@ -1,6 +1,7 @@
 ---
 title: HID.ondisconnect
 slug: Web/API/HID/ondisconnect
+page-type: web-api-instance-property
 tags:
   - API
   - Property

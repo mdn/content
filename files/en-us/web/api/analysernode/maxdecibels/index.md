@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
+page-type: web-api-instance-property
 tags:
   - API
   - AnalyserNode

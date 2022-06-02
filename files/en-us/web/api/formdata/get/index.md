@@ -1,6 +1,7 @@
 ---
 title: FormData.get()
 slug: Web/API/FormData/get
+page-type: web-api-instance-method
 tags:
   - API
   - FormData

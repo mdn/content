@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getStats()
 slug: Web/API/RTCPeerConnection/getStats
+page-type: web-api-instance-method
 tags:
   - API
   - Connection

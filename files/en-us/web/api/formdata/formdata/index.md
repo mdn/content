@@ -1,6 +1,7 @@
 ---
 title: FormData()
 slug: Web/API/FormData/FormData
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

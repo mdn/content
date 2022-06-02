@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
+page-type: web-api-instance-method
 tags:
   - API
   - Media

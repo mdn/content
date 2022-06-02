@@ -1,6 +1,7 @@
 ---
 title: EventSource.withCredentials
 slug: Web/API/EventSource/withCredentials
+page-type: web-api-instance-property
 tags:
   - API
   - EventSource

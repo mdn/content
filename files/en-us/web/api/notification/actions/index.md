@@ -1,6 +1,7 @@
 ---
 title: Notification.actions
 slug: Web/API/Notification/actions
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -40,6 +41,5 @@ A read-only array of actions. Each element in the array is an object with the fo
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{DOMxRef("Notification.maxActions")}}

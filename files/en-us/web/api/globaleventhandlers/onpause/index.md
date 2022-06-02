@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpause
 slug: Web/API/GlobalEventHandlers/onpause
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

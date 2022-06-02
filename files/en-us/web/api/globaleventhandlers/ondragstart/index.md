@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondragstart
 slug: Web/API/GlobalEventHandlers/ondragstart
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

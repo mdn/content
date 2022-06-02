@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats
 slug: Web/API/RTCRtpStreamStats
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

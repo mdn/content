@@ -1,6 +1,7 @@
 ---
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

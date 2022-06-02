@@ -17,11 +17,11 @@ The **`markerUnits`** read-only property of the {{domxref("SVGMarkerElement")}} 
 
 An {{domxref("SVGAnimatedEnumeration")}} object. The `baseVal` property of this object contains one of the following values:
 
-- 0
+- `0`
   - : `SVG_MARKERUNITS_UNKNOWN` which means that the {{SVGattr("markerUnits")}} attribute has a value other than the two predefined keywords.
-- 1
+- `1`
   - : `SVG_MARKERUNITS_USERSPACEONUSE` which means that the {{SVGattr("markerUnits")}} attribute has the keyword value `userSpaceOnUse`.
-- 2
+- `2`
   - : `SVG_MARKERUNITS_STROKEWIDTH` which means that the {{SVGattr("markerUnits")}} attribute has the keyword value `strokeWidth`.
 
 ## Examples

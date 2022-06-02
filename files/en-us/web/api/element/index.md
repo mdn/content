@@ -1,6 +1,7 @@
 ---
 title: Element
 slug: Web/API/Element
+page-type: web-api-interface
 tags:
   - API
   - DOM

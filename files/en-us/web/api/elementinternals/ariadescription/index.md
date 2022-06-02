@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaDescription
 slug: Web/API/ElementInternals/ariaDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Property

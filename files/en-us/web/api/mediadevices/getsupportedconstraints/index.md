@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.getSupportedConstraints()
 slug: Web/API/MediaDevices/getSupportedConstraints
+page-type: web-api-instance-method
 tags:
   - API
   - Media

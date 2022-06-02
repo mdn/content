@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msZoom
 slug: Web/API/HTMLVideoElement/msZoom
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions

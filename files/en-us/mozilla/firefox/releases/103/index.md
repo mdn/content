@@ -37,9 +37,7 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ### APIs
 
-
 #### DOM
-
 
 #### Media, WebRTC, and Web Audio
 
@@ -54,7 +52,6 @@ This article provides information about the changes in Firefox 103 that will aff
 #### Removals
 
 ## Changes for add-on developers
-
 
 #### Removals
 

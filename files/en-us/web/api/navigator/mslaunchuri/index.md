@@ -1,6 +1,7 @@
 ---
 title: Navigator.msLaunchUri()
 slug: Web/API/Navigator/msLaunchUri
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions

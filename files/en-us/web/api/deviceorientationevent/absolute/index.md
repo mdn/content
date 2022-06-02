@@ -1,6 +1,7 @@
 ---
 title: DeviceOrientationEvent.absolute
 slug: Web/API/DeviceOrientationEvent/absolute
+page-type: web-api-instance-property
 tags:
   - API
   - Device Orientation API

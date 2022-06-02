@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
+page-type: web-api-instance-method
 tags:
   - API
   - H5 DnD

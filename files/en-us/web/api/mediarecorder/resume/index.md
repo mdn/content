@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.resume()
 slug: Web/API/MediaRecorder/resume
+page-type: web-api-instance-method
 tags:
   - API
   - Media Capture
@@ -14,8 +15,7 @@ browser-compat: api.MediaRecorder.resume
 {{APIRef("MediaStream Recording")}}
 
 The **`MediaRecorder.resume()`**
-method (part of the [MediaRecorder
-API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used to resume media recording when it has been previously
+method (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used to resume media recording when it has been previously
 paused.
 
 When the `resume()` method is invoked, the browser queues a task that runs
@@ -78,10 +78,8 @@ effect.
 
 ## See also
 
-- [Using
-  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording
-  demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

@@ -1,6 +1,7 @@
 ---
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

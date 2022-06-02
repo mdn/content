@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.enabled
 slug: Web/API/MediaStreamTrack/enabled
+page-type: web-api-instance-property
 tags:
   - Media
   - Media Capture and Streams

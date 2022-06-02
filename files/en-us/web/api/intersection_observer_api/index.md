@@ -1,6 +1,7 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
+page-type: web-api-overview
 tags:
   - API
   - Clipping
@@ -11,7 +12,7 @@ tags:
   - Performance
   - Reference
   - Web
-spec-urls: https://w3c.github.io/IntersectionObserver/
+browser-compat: api.IntersectionObserver
 ---
 {{DefaultAPISidebar("Intersection Observer API")}}
 
@@ -586,7 +587,7 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## See also
 

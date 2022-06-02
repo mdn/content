@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.binaryType
 slug: Web/API/PresentationConnection/binaryType
+page-type: web-api-instance-property
 tags:
   - API
   - NeedsBrowserCompatibility

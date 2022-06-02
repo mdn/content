@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: gotpointercapture event'
 slug: Web/API/HTMLElement/gotpointercapture_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM

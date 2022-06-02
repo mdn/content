@@ -63,8 +63,7 @@ if (viewerPose) {
 }
 ```
 
-To see a complete example, take a look at [Movement, orientation,
-and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
+To see a complete example, take a look at [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
 
 ## Specifications
 

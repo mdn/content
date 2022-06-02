@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver
 slug: Web/API/RTCRtpReceiver
+page-type: web-api-interface
 tags:
   - API
   - Interface

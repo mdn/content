@@ -1,6 +1,7 @@
 ---
 title: Animation.playbackRate
 slug: Web/API/Animation/playbackRate
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

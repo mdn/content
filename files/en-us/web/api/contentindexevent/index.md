@@ -1,6 +1,7 @@
 ---
 title: ContentIndexEvent
 slug: Web/API/ContentIndexEvent
+page-type: web-api-interface
 tags:
   - Content
   - Content Index API

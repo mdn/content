@@ -1,6 +1,7 @@
 ---
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
+page-type: web-api-static-method
 tags:
   - CSS
   - Houdini

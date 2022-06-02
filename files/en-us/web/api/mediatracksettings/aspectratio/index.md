@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.aspectRatio
 slug: Web/API/MediaTrackSettings/aspectRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Media

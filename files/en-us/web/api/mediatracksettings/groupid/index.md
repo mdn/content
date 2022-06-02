@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.groupId
 slug: Web/API/MediaTrackSettings/groupId
+page-type: web-api-instance-property
 tags:
   - API
   - Media

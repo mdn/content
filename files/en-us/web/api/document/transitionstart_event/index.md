@@ -1,6 +1,7 @@
 ---
 title: 'Document: transitionstart event'
 slug: Web/API/Document/transitionstart_event
+page-type: web-api-event
 tags:
   - DOM
   - Document

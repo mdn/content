@@ -1,6 +1,7 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
+page-type: web-api-interface
 tags:
   - API
   - Communications

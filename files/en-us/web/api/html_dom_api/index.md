@@ -1,6 +1,7 @@
 ---
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
+page-type: web-api-overview
 tags:
   - API
   - Beginner
@@ -14,7 +15,7 @@ tags:
   - Web
   - Windows
   - hierarchy
-spec-urls: https://html.spec.whatwg.org/multipage/
+browser-compat: api.HTMLElement
 ---
 {{DefaultAPISidebar("HTML DOM")}}
 
@@ -370,7 +371,7 @@ The HTML for the form looks like this:
 
 ## Browser compatibility
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## See also
 

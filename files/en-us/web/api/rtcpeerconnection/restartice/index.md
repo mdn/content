@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
+page-type: web-api-instance-method
 tags:
   - API
   - ICE

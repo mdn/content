@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

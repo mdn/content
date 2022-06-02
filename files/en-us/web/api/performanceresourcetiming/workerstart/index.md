@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
+page-type: web-api-instance-property
 tags:
   - API
   - PerformanceResourceTiming

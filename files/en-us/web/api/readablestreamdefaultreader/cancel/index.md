@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader.cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Method

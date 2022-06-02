@@ -1,6 +1,7 @@
 ---
 title: RTCError.sdpLineNumber
 slug: Web/API/RTCError/sdpLineNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Error

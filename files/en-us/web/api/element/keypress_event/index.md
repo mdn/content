@@ -1,6 +1,7 @@
 ---
 title: 'Element: keypress event'
 slug: Web/API/Element/keypress_event
+page-type: web-api-event
 tags:
   - API
   - Element

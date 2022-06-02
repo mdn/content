@@ -1,6 +1,7 @@
 ---
 title: 'Document: transitionrun event'
 slug: Web/API/Document/transitionrun_event
+page-type: web-api-event
 tags:
   - Document
   - Event

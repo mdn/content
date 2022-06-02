@@ -1,6 +1,7 @@
 ---
 title: BarcodeDetector
 slug: Web/API/BarcodeDetector
+page-type: web-api-interface
 tags:
   - Barcode Detection API
   - BarcodeDetector

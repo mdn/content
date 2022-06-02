@@ -1,6 +1,7 @@
 ---
 title: History.state
 slug: Web/API/History/state
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

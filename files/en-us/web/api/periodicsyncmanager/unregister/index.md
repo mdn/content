@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncManager.unregister()
 slug: Web/API/PeriodicSyncManager/unregister
+page-type: web-api-instance-method
 tags:
   - Background Sync
   - Method

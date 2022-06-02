@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.ready
 slug: Web/API/FontFaceSet/ready
+page-type: web-api-instance-property
 tags:
   - API
   - CSSFontLoading API

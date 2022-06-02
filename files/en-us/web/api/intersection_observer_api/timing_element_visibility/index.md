@@ -1,6 +1,7 @@
 ---
 title: Timing element visibility with the Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
+page-type: guide
 tags:
   - API
   - Example

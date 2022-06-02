@@ -1,6 +1,7 @@
 ---
 title: PushEvent
 slug: Web/API/PushEvent
+page-type: web-api-interface
 tags:
   - API
   - ExtendableEvent

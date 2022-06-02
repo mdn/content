@@ -29,8 +29,10 @@ for the current session.
 
 Possible values are:
 
-- `screen-space`: indicating that the UI should be drawn directly to the screen without projection. This is typically the mode reported from handheld devices.
-- `world-space`: indicating that the UI should be drawn in the world, some distance from the user, so that they may interact with it using controllers. This is typically the mode reported from headworn devices.
+- `screen-space`
+  - : Indicates that the UI should be drawn directly to the screen without projection. This is typically the mode reported from handheld devices.
+- `world-space`
+  - : Indicates that the UI should be drawn in the world, some distance from the user, so that they may interact with it using controllers. This is typically the mode reported from headworn devices.
 
 ## Examples
 

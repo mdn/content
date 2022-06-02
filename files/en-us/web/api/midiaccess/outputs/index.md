@@ -1,6 +1,7 @@
 ---
 title: MIDIAccess.outputs
 slug: Web/API/MIDIAccess/outputs
+page-type: web-api-instance-property
 tags:
   - API
   - Property

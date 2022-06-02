@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozSourceNode
 slug: Web/API/DataTransfer/mozSourceNode
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard

@@ -1,6 +1,7 @@
 ---
 title: 'Element: focusin event'
 slug: Web/API/Element/focusin_event
+page-type: web-api-event
 tags:
   - API
   - DOM

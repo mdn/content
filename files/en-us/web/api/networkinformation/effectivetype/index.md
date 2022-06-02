@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.effectiveType
 slug: Web/API/NetworkInformation/effectiveType
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

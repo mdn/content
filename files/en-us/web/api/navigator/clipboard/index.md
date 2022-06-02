@@ -1,6 +1,7 @@
 ---
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
+page-type: web-api-instance-property
 tags:
   - API
   - Clip
@@ -15,8 +16,7 @@ tags:
   - paste
 browser-compat: api.Navigator.clipboard
 ---
-The [Clipboard
-API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
+The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
 read-only **`clipboard`** property, which returns the
 {{domxref("Clipboard")}} object used to read and write the clipboard's
 contents.

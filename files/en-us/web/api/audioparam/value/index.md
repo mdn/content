@@ -1,6 +1,7 @@
 ---
 title: AudioParam.value
 slug: Web/API/AudioParam/value
+page-type: web-api-instance-property
 tags:
   - API
   - AudioParam

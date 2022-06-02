@@ -1,6 +1,7 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
+page-type: web-api-instance-property
 tags:
   - API
   - Blob
@@ -77,4 +78,4 @@ input.addEventListener('change', (event) => {
 ## See also
 
 - {{domxref("Blob")}}
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

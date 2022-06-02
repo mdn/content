@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.clear()
 slug: Web/API/CustomStateSet/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method

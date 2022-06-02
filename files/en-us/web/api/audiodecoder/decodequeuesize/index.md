@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.decodeQueueSize
 slug: Web/API/AudioDecoder/decodeQueueSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property

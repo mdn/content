@@ -1,6 +1,7 @@
 ---
 title: Document.implementation
 slug: Web/API/Document/implementation
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.volume
 slug: Web/API/MediaTrackSettings/volume
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

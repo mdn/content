@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -71,7 +72,7 @@ multiple image candidate strings that specify the same descriptor. All of the fo
 are valid image candidate strings:
 
 ```html
-"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"
+"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full.jpg 2048w"
 ```
 
 This string provides versions of an image to be used at the standard pixel density
@@ -163,8 +164,7 @@ reloading the page to see the results change.
 
 {{EmbedLiveSample("Example", 640, 320)}}
 
-For additional examples, see our guide to [responsive
-images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+For additional examples, see our guide to [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 ## Specifications
 
@@ -176,9 +176,6 @@ images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 ## See also
 
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Image file type and format
-  guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)

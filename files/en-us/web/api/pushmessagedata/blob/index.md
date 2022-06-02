@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.blob()
 slug: Web/API/PushMessageData/blob
+page-type: web-api-instance-method
 tags:
   - API
   - Blob

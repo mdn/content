@@ -1,6 +1,7 @@
 ---
 title: AnimationEffect
 slug: Web/API/AnimationEffect
+page-type: web-api-interface
 tags:
   - API
   - Animation

@@ -1,6 +1,7 @@
 ---
 title: Using the MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
+page-type: guide
 tags:
   - API
   - Example
@@ -264,9 +265,7 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 ## Browser compatibility
 
-### `MediaRecorder`
-
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

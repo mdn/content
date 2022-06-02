@@ -1,6 +1,7 @@
 ---
 title: CookieStore.delete()
 slug: Web/API/CookieStore/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: Media Session API
 slug: Web/API/Media_Session_API
+page-type: web-api-overview
 tags:
   - Audio
   - Media
@@ -10,7 +11,7 @@ tags:
   - Overview
   - Reference
   - Video
-spec-urls: https://w3c.github.io/mediasession/
+browser-compat: api.MediaSession
 ---
 {{DefaultAPISidebar("Media Session API")}}
 
@@ -97,4 +98,4 @@ playButton.addEventListener('pointerup', function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaSession")}}
+{{Compat}}

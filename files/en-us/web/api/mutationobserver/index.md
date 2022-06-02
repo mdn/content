@@ -1,6 +1,7 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
+page-type: web-api-interface
 tags:
   - API
   - DOM

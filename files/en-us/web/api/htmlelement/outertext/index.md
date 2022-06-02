@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

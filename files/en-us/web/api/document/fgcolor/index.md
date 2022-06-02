@@ -1,6 +1,7 @@
 ---
 title: Document.fgColor
 slug: Web/API/Document/fgColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.values()
 slug: Web/API/CustomStateSet/values
+page-type: web-api-instance-method
 tags:
   - API
   - Method

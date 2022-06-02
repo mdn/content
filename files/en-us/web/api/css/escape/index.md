@@ -1,6 +1,7 @@
 ---
 title: CSS.escape()
 slug: Web/API/CSS/escape
+page-type: web-api-static-method
 tags:
   - API
   - CSS

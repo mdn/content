@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: ended event'
 slug: Web/API/HTMLMediaElement/ended_event
+page-type: web-api-event
 tags:
   - Audio
   - Event

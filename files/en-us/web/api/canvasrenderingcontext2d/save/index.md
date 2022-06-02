@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
+page-type: web-api-interface
 tags:
   - API
   - DOM

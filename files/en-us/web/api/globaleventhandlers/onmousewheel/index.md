@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmousewheel
 slug: Web/API/GlobalEventHandlers/onmousewheel
+page-type: web-api-instance-property
 tags:
   - Deprecated
 browser-compat: api.GlobalEventHandlers.onmousewheel

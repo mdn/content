@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect.composite
 slug: Web/API/KeyframeEffect/composite
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

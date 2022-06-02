@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor.process()
 slug: Web/API/AudioWorkletProcessor/process
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

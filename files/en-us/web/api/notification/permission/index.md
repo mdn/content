@@ -1,6 +1,7 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission
+page-type: web-api-static-property
 tags:
   - API
   - Notification
