@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.delete()
 slug: Web/API/StylePropertyMap/delete
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

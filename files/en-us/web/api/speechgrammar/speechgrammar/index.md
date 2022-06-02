@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammar()
 slug: Web/API/SpeechGrammar/SpeechGrammar
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

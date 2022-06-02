@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.unwrapKey()
 slug: Web/API/SubtleCrypto/unwrapKey
+page-type: web-api-instance-method
 tags:
   - API
   - Method
