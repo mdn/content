@@ -76,7 +76,7 @@ function draw() {
       canvasCtx.beginPath();
 
       const sliceWidth = WIDTH * 1.0 / bufferLength;
-      const x = 0;
+      let x = 0;
 
       for(let i = 0; i < bufferLength; i++) {
 
