@@ -84,7 +84,7 @@ called on the source, the source is cleared out.
 // define variables
 
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const source;
+let source;
 
 const pre = document.querySelector('pre');
 const myScript = document.querySelector('script');
