@@ -119,7 +119,6 @@ This obtains the value of the {{httpheader("Content-Type")}} header into the var
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader",
     "setRequestHeader()")}}

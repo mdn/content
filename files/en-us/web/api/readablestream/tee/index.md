@@ -51,8 +51,7 @@ An {{jsxref("Array")}} containing two {{domxref("ReadableStream")}} instances.
 In the following simple example, a previously-created stream is teed, then both
 resulting streams (contained in two members of a generated array) are passed to a
 function that reads the data out of the two streams and prints each stream's chunks
-sequentially to a different part of the UI. See [Simple tee
-example](https://mdn.github.io/dom-examples/streams/simple-tee-example/) for the full code.
+sequentially to a different part of the UI. See [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/) for the full code.
 
 ```js
 function teeStream() {

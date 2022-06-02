@@ -45,8 +45,7 @@ subscribe(options)
         server. If specified, all messages from your application server must use the [VAPID](https://datatracker.ietf.org/doc/html/rfc8292) authentication scheme, and
         include a JWT signed with the corresponding private key. This key **_IS
         NOT_** the same ECDH key that you use to encrypt the data. For more
-        information, see "[Using
-        VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)".
+        information, see "[Using VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)".
 
     > **Note:** This parameter is required in some browsers like
     > Chrome and Edge.
