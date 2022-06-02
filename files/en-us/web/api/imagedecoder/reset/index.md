@@ -12,7 +12,7 @@ browser-compat: api.ImageDecoder.reset
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`reset()`** method of the {{domxref("ImageDecoder")}} interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
+The **`reset()`** method of the {{domxref("ImageDecoder")}} interface aborts all pending `decode()` operations; rejecting all pending promises. All other state will be unchanged. Class methods can continue to be invoked after `reset()`. E.g., calling `decode()` after `reset()` is permitted.
 
 ## Syntax
 
@@ -33,7 +33,10 @@ None.
 The following example resets the `ImageDecoder`.
 
 ```js
-ImageDecoder.reset();
+for (let i = 0; i < imageDecoder.tracks.selectedTrack.frameCount; ++i)
+  imageDecoder.decode({frameIndex: i}).catch(console.log);
+imageDecoder.reset();
+imageDecoder.decode({frameIndex: 0}).then(console.log);
 ```
 
 ## Specifications
