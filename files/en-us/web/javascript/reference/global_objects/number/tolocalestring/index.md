@@ -26,7 +26,7 @@ toLocaleString(locales, options)
 
 ### Parameters
 
-The `locales` and `options` arguments customize the behavior of
+The `locales` and `options` parameters customize the behavior of
 the function and let applications specify the language whose formatting conventions
 should be used. In implementations, which ignore the `locales` and
 `options` arguments, the locale used and the form of the string returned are
@@ -196,8 +196,9 @@ console.log(number.toLocaleString(['ban', 'id']));
 ```
 
 ### Using `options`
+
 The results provided by `toLocaleString` can be customized using the
-`options` argument:
+`options` parameter:
 
 ```js
 const number = 123456.789;
