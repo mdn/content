@@ -1,6 +1,7 @@
 ---
 title: 'PaymentRequest: merchantvalidation event'
 slug: Web/API/PaymentRequest/merchantvalidation_event
+page-type: web-api-event
 tags:
   - API
   - Commerce

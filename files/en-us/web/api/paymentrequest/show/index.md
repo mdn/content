@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.show()
 slug: Web/API/PaymentRequest/show
+page-type: web-api-instance-method
 tags:
   - API
   - Commerce

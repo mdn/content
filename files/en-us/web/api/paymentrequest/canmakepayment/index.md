@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.canMakePayment()
 slug: Web/API/PaymentRequest/canMakePayment
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

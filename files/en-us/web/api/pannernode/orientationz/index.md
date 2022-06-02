@@ -1,6 +1,7 @@
 ---
 title: PannerNode.orientationZ
 slug: Web/API/PannerNode/orientationZ
+page-type: web-api-instance-property
 tags:
   - Audio
   - PannerNode

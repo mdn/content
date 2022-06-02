@@ -1,6 +1,7 @@
 ---
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Notification

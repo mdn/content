@@ -1,6 +1,7 @@
 ---
 title: performance.clearMarks()
 slug: Web/API/Performance/clearMarks
+page-type: web-api-instance-method
 tags:
   - API
   - Method

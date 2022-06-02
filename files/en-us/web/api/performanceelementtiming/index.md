@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming
 slug: Web/API/PerformanceElementTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface

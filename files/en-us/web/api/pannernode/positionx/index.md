@@ -1,6 +1,7 @@
 ---
 title: PannerNode.positionX
 slug: Web/API/PannerNode/positionX
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode

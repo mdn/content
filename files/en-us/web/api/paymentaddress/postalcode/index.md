@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.postalCode
 slug: Web/API/PaymentAddress/postalCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address
