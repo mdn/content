@@ -9,10 +9,6 @@ on:
       - yarn.lock
 
 jobs:
-  scripts:
-    strategy:
-      matrix:
-      
   up-to-date-check:
     runs-on: ubuntu-latest
 
