@@ -1,6 +1,7 @@
 ---
 title: TextTrackList
 slug: Web/API/TextTrackList
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

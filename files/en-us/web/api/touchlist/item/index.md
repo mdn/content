@@ -1,6 +1,7 @@
 ---
 title: TouchList.item()
 slug: Web/API/TouchList/item
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

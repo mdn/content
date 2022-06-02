@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

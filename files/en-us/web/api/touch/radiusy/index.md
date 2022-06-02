@@ -1,6 +1,7 @@
 ---
 title: Touch.radiusY
 slug: Web/API/Touch/radiusY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

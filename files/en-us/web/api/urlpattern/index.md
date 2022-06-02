@@ -1,6 +1,7 @@
 ---
 title: URLPattern
 slug: Web/API/URLPattern
+page-type: web-api-interface
 tags:
   - API
   - Interface

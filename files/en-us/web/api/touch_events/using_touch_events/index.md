@@ -1,6 +1,7 @@
 ---
 title: Using Touch Events
 slug: Web/API/Touch_events/Using_Touch_Events
+page-type: guide
 tags:
   - Guide
   - TouchEvent
