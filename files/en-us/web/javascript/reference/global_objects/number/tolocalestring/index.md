@@ -33,7 +33,7 @@ should be used. In implementations, which ignore the `locales` and
 entirely implementation-dependent.
 
 - `locales` {{optional_inline}}
-  - : A string containing the {{Glossary("locale")}} to convert too.
+  - : A string containing the {{Glossary("locale")}} to convert to.
 
 - `options` {{optional_inline}}
 
