@@ -1,6 +1,7 @@
 ---
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference

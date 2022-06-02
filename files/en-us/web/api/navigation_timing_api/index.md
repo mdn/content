@@ -1,6 +1,7 @@
 ---
 title: Navigation Timing API
 slug: Web/API/Navigation_timing_API
+page-type: web-api-overview
 tags:
   - API
   - Navigation Timing

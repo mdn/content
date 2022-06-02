@@ -1,6 +1,7 @@
 ---
 title: Notification.actions
 slug: Web/API/Notification/actions
+page-type: web-api-instance-property
 tags:
   - API
   - Notification

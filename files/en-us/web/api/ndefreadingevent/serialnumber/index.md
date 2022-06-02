@@ -1,6 +1,7 @@
 ---
 title: NDEFReadingEvent.serialNumber
 slug: Web/API/NDEFReadingEvent/serialNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property

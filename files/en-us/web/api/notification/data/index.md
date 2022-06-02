@@ -1,6 +1,7 @@
 ---
 title: Notification.data
 slug: Web/API/Notification/data
+page-type: web-api-instance-property
 tags:
   - API
   - Notification

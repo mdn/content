@@ -1,6 +1,7 @@
 ---
 title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute Changes

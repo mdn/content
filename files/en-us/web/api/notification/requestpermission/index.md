@@ -1,6 +1,7 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission
+page-type: web-api-static-method
 tags:
   - API
   - Method
