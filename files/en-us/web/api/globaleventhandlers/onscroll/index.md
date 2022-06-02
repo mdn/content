@@ -36,8 +36,7 @@ target.onscroll = functionRef
 ### Value
 
 - `functionRef`
-  - : A function name, or a [function
-    expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("UIEvent")}} object as its sole
+  - : A function name, or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("UIEvent")}} object as its sole
     argument.
 
 Only one `onscroll` handler can be assigned to an object at a time.

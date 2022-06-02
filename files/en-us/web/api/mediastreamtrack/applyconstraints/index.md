@@ -97,5 +97,4 @@ navigator.mediaDevices.getUserMedia({ video: true })
 
 ## See also
 
-- [MediaStream Image
-  Capture API](/en-US/docs/Web/API/MediaStream_Image_Capture_API)
+- [MediaStream Image Capture API](/en-US/docs/Web/API/MediaStream_Image_Capture_API)

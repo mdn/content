@@ -46,7 +46,6 @@ validation error that occurred and, if possible, suggests how to fix it.
 
 ## See also
 
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref("PaymentRequestUpdateEvent.updateWith")}}
 - {{domxref("AddressErrors.country")}}

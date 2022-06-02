@@ -17,8 +17,7 @@ The **`tiltX`** read-only property of the
 plane_ of the pointer and the screen. This property is typically only useful for a
 pen/stylus pointer type.
 
-For an illustration of this property see [Figure 2 in the
-specification](https://w3c.github.io/pointerevents/#dom-pointerevent-tiltx).
+For an illustration of this property see [Figure 2 in the specification](https://w3c.github.io/pointerevents/#dom-pointerevent-tiltx).
 
 ## Value
 

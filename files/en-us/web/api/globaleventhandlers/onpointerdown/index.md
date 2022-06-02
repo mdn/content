@@ -161,8 +161,7 @@ what happens. For full effect, try it with a variety of pointer types.
 ## See also
 
 - [Pointer events](/en-US/docs/Web/API/Pointer_events)
-- [Using Pointer
-  Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
+- [Using Pointer Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
 - [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems)
 - [`Document: pointerdown`](/en-US/docs/Web/API/Document/pointerdown_event)
   event
