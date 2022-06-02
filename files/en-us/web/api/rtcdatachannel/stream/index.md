@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.stream
 slug: Web/API/RTCDataChannel/stream
+page-type: web-api-instance-property
 tags:
   - Non-standard
   - Deprecated

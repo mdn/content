@@ -1,6 +1,7 @@
 ---
 title: 'RTCDtlsTransport: error event'
 slug: Web/API/RTCDtlsTransport/error_event
+page-type: web-api-event
 tags:
   - API
   - Connection

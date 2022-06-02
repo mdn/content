@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver()
 slug: Web/API/ReportingObserver/ReportingObserver
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

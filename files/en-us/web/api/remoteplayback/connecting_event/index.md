@@ -1,6 +1,7 @@
 ---
 title: 'RemotePlayback: connecting event'
 slug: Web/API/RemotePlayback/connecting_event
+page-type: web-api-event
 tags:
   - API
   - Event

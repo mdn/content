@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
+page-type: web-api-interface
 tags:
   - API
   - Communication

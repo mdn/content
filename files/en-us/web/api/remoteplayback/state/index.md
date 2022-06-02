@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.state
 slug: Web/API/RemotePlayback/state
+page-type: web-api-instance-property
 tags:
   - API
   - Property

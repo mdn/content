@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.negotiated
 slug: Web/API/RTCDataChannel/negotiated
+page-type: web-api-instance-property
 tags:
   - Networking
   - Property

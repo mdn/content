@@ -1,6 +1,7 @@
 ---
 title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

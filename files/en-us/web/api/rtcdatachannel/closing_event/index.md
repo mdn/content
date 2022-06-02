@@ -1,6 +1,7 @@
 ---
 title: 'RTCDataChannel: closing event'
 slug: Web/API/RTCDataChannel/closing_event
+page-type: web-api-event
 tags:
   - API
   - Communications

@@ -1,6 +1,7 @@
 ---
 title: ReadableStream
 slug: Web/API/ReadableStream
+page-type: web-api-interface
 tags:
   - API
   - Fetch

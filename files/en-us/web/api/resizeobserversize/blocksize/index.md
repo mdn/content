@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverSize.blockSize
 slug: Web/API/ResizeObserverSize/blockSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property

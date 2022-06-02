@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.bufferedAmountLowThreshold
 slug: Web/API/RTCDataChannel/bufferedAmountLowThreshold
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
