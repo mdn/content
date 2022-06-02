@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
+page-type: web-api-instance-method
 tags:
   - API
   - Crypto

@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisVoice
 slug: Web/API/SpeechSynthesisVoice
+page-type: web-api-instance-property
 tags:
   - API
   - Interface
