@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

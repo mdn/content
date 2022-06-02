@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
+page-type: web-api-constructor
 tags:
   - API
   - Canvas

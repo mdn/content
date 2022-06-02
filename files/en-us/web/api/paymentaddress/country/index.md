@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.country
 slug: Web/API/PaymentAddress/country
+page-type: web-api-instance-property
 tags:
   - API
   - Address

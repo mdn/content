@@ -1,6 +1,7 @@
 ---
 title: OverconstrainedError
 slug: Web/API/OverconstrainedError
+page-type: web-api-interface
 tags:
   - API
   - Audio

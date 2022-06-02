@@ -1,6 +1,7 @@
 ---
 title: 'PaymentRequest: shippingoptionchange event'
 slug: Web/API/PaymentRequest/shippingoptionchange_event
+page-type: web-api-event
 tags:
   - API
   - Commerce

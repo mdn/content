@@ -1,6 +1,7 @@
 ---
 title: performance.getEntriesByName()
 slug: Web/API/Performance/getEntriesByName
+page-type: web-api-instance-method
 tags:
   - API
   - Method

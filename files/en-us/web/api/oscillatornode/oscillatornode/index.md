@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode()
 slug: Web/API/OscillatorNode/OscillatorNode
+page-type: web-api-constructor
 tags:
   - Audio
   - Constructor

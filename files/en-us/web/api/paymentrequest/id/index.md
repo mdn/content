@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.id
 slug: Web/API/PaymentRequest/id
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
