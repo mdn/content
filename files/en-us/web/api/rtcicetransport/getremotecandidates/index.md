@@ -7,7 +7,7 @@ tags:
   - Connectivity
   - ICE
   - Negotiation
-  - Property
+  - Method
   - RTCIceTransport
   - Reference
   - Remote
@@ -32,7 +32,7 @@ returned by this function.
 ## Syntax
 
 ```js
-remoteCandidates = RTCIceTransport.getRemoteCandidates();
+getRemoteCandidates()
 ```
 
 ### Parameters

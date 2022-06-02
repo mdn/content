@@ -18,12 +18,9 @@ URL, and allows the href to be updated.
 Setting the value of `href` _navigates_ to the provided URL. If you
 want _redirection_, use {{domxref("Location/replace","location.replace()")}}. The difference from setting the `href` property value is that when using the `location.replace()` method, after navigating to the given URL, the current page will not be saved in session [history](/en-US/docs/Web/API/History_API) — meaning the user won't be able to use the back button to navigate to it.
 
-## Syntax
+## Value
 
-```js
-string = object.href;
-object.href = string;
-```
+A string.
 
 ## Examples
 

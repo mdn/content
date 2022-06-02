@@ -28,11 +28,9 @@ That is:
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-string = object.origin;
-```
+A string.
 
 ## Examples
 
