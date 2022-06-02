@@ -30,7 +30,10 @@ The `locales` and `options` parameters customize the behavior of
 the function and let applications specify the language whose formatting conventions
 should be used. In implementations, which ignore the `locales` and
 `options` arguments, the locale used and the form of the string returned are
-entirely implementation dependent.
+entirely implementation-dependent.
+
+- `locales` {{optional_inline}}
+  - : A string containing the {{Glossary("locale")}} to convert too.
 
 - `options` {{optional_inline}}
 
