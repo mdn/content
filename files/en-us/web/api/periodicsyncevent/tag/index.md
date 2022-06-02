@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncEvent.tag
 slug: Web/API/PeriodicSyncEvent/tag
+page-type: web-api-instance-property
 tags:
   - Offline
   - PWA

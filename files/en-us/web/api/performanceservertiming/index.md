@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming
 slug: Web/API/PerformanceServerTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface

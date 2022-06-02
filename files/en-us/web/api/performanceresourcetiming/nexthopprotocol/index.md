@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property

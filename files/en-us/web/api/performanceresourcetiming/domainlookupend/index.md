@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Property
