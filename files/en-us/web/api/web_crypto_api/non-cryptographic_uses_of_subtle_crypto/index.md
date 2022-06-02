@@ -1,6 +1,7 @@
 ---
 title: Non-cryptographic uses of SubtleCrypto
 slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
+page-type: guide
 tags:
   - Web Crypto API
 ---

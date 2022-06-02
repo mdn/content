@@ -1,6 +1,7 @@
 ---
 title: Web Authentication API
 slug: Web/API/Web_Authentication_API
+page-type: web-api-overview
 tags:
   - 2FA
   - API

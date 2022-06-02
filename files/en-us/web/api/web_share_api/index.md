@@ -1,6 +1,7 @@
 ---
 title: Web Share API
 slug: Web/API/Web_Share_API
+page-type: web-api-overview
 tags:
   - API
   - Apps

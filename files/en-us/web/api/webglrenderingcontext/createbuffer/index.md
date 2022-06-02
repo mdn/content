@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

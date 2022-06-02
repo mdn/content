@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.renderbufferStorageMultisample()
 slug: Web/API/WebGL2RenderingContext/renderbufferStorageMultisample
+page-type: web-api-instance-method
 tags:
   - API
   - Method
