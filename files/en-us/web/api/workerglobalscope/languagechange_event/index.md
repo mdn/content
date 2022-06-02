@@ -1,7 +1,7 @@
 ---
 title: 'WorkerGlobalScope: languagechange event'
 slug: Web/API/WorkerGlobalScope/languagechange_event
-page-type: web-api-instance-method
+page-type: web-api-instance-event
 tags:
   - API
   - Event
