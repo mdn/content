@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: install event'
 slug: Web/API/ServiceWorkerGlobalScope/install_event
+page-type: web-api-event
 tags:
   - API
   - Event

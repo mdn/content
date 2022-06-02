@@ -1,6 +1,7 @@
 ---
 title: RTCSctpTransport.state
 slug: Web/API/RTCSctpTransport/state
+page-type: web-api-instance-property
 tags:
   - API
   - Draft

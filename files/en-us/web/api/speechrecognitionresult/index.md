@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResult
 slug: Web/API/SpeechRecognitionResult
+page-type: web-api-interface
 tags:
   - API
   - Experimental

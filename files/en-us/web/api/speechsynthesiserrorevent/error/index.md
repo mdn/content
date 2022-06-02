@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisErrorEvent.error
 slug: Web/API/SpeechSynthesisErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Error

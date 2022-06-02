@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorker: statechange event'
 slug: Web/API/ServiceWorker/statechange_event
+page-type: web-api-event
 tags:
   - API
   - Event

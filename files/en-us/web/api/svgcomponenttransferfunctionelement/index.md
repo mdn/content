@@ -1,6 +1,7 @@
 ---
 title: SVGComponentTransferFunctionElement
 slug: Web/API/SVGComponentTransferFunctionElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
