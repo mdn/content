@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.abort()
 slug: Web/API/SourceBuffer/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

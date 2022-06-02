@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

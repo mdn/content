@@ -1,6 +1,7 @@
 ---
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
