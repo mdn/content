@@ -29,8 +29,7 @@ window.onresize = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
 argument.
 
 ## Examples
@@ -67,5 +66,4 @@ window.onresize = resize;
 
 ## See also
 
-- [Window: `resize`
-  event](/en-US/docs/Web/API/Window/resize_event)
+- [Window: `resize` event](/en-US/docs/Web/API/Window/resize_event)

@@ -61,8 +61,7 @@ function init() {
 </html>
 ```
 
-See [Using Pointer
-Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events) for additional details.
+See [Using Pointer Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events) for additional details.
 
 ## Specifications
 
@@ -75,8 +74,7 @@ Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events) for additional 
 ## See also
 
 - [Pointer events](/en-US/docs/Web/API/Pointer_events)
-- [Using pointer
-  events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
+- [Using pointer events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
 - [`Document: pointerleave`](/en-US/docs/Web/API/Document/pointerleave_event)
   event
 - [`HTMLElement: pointerleave`](/en-US/docs/Web/API/HTMLElement/pointerleave_event)

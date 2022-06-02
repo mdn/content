@@ -45,8 +45,7 @@ getDisplayMedia(constraints)
     a video track, the returned stream will have one even if no video track is expressly
     requested by the `constraints` object. For more details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the {{domxref("MediaDevices.getUserMedia()")}} method, as well
-    as the article [Capabilities,
-    constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
 
 ### Return value
 

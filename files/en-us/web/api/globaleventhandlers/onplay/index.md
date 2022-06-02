@@ -57,5 +57,4 @@ function alertPlay() {
 ## See also
 
 - {{event("play")}}
-- [Information on working with
-  event handlers](/en-US/docs/Web/Events/Event_handlers)
+- [Information on working with event handlers](/en-US/docs/Web/Events/Event_handlers)

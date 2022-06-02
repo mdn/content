@@ -20,8 +20,7 @@ The **`get()`** method of the
 {{domxref('KeyboardLayoutMap')}} interface returns the element with the given
 key.
 
-A list of valid keys is found in the [UI Events
-KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
+A list of valid keys is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
 ## Syntax
 

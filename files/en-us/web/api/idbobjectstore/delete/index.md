@@ -66,8 +66,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 The following code snippet shows the `deleteItem()` function,
 which is part of the To-do Notifications example app. This app stores to-do
 list items using IndexedDB. You can
-[see the app's complete
-code on GitHub](https://github.com/mdn/to-do-notifications/), and
+[see the app's complete code on GitHub](https://github.com/mdn/to-do-notifications/), and
 [try out the app live](https://mdn.github.io/to-do-notifications/).
 
 The `deleteItem()` function is called when the user clicks the

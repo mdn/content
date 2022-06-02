@@ -33,5 +33,4 @@ A {{domxref("DOMTokenList")}}.
 
 ## See also
 
-- [Chrome HTMLMediaElement
-  controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)
+- [Chrome HTMLMediaElement controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)
