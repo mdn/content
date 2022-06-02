@@ -1,6 +1,7 @@
 ---
 title: WebSocket.extensions
 slug: Web/API/WebSocket/extensions
+page-type: web-api-instance-method
 tags:
   - API
   - Property

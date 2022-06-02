@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.depthFunc()
 slug: Web/API/WebGLRenderingContext/depthFunc
+page-type: web-api-instance-method
 tags:
   - API
   - Method

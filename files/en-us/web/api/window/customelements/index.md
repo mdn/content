@@ -1,6 +1,7 @@
 ---
 title: Window.customElements
 slug: Web/API/Window/customElements
+page-type: web-api-instance-property
 tags:
   - API
   - CustomElementRegistry

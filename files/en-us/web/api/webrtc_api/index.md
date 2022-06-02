@@ -1,6 +1,7 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
+page-type: web-api-overview
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getProgramParameter()
 slug: Web/API/WebGLRenderingContext/getProgramParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method

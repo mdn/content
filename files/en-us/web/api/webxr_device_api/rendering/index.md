@@ -1,6 +1,7 @@
 ---
 title: Rendering and the WebXR frame animation callback
 slug: Web/API/WebXR_Device_API/Rendering
+page-type: guide
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: 'Window: deviceorientationabsolute event'
 slug: Web/API/Window/deviceorientationabsolute_event
+page-type: web-api-event
 tags:
   - API
   - Device Orientation

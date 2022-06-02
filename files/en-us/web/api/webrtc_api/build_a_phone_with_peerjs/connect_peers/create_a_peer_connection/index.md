@@ -1,6 +1,7 @@
 ---
 title: Creating a peer connection
 slug: >-
+page-type: guide
   Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection
 ---
 {{WebRTCSidebar}}

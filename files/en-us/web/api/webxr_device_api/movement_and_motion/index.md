@@ -1,6 +1,7 @@
 ---
 title: 'Movement, orientation, and motion: A WebXR example'
 slug: Web/API/WebXR_Device_API/Movement_and_motion
+page-type: guide
 tags:
   - 3D
   - API
