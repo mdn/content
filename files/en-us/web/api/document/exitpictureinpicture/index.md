@@ -73,4 +73,4 @@ Note that if you want to track which video on your page is currently playing in 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}
 - {{CSSxRef(":picture-in-picture")}}
-- TODO: I want to link to Web/API/Picture-in-Picture_API#events
+- [Picture-in-Picture events](/en-US/docs/Web/API/Picture-in-Picture_API#events)
