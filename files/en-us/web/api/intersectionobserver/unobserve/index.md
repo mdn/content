@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.unobserve()
 slug: Web/API/IntersectionObserver/unobserve
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer

@@ -1,6 +1,7 @@
 ---
 title: Selection
 slug: Web/API/Selection
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: 'IDFileHandle: abort event'
 slug: Web/API/IDBFileHandle/abort_event
+page-type: web-api-event
 tags:
   - API
   - Files

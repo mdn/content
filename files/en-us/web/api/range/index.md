@@ -1,6 +1,7 @@
 ---
 title: Range
 slug: Web/API/Range
+page-type: web-api-interface
 tags:
   - API
   - DOM

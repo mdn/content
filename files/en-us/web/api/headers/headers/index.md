@@ -1,6 +1,7 @@
 ---
 title: Headers()
 slug: Web/API/Headers/Headers
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

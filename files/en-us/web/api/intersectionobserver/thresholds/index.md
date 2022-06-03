@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.thresholds
 slug: Web/API/IntersectionObserver/thresholds
+page-type: web-api-instance-property
 tags:
   - API
   - Draft

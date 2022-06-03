@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.facingMode
 slug: Web/API/MediaTrackConstraints/facingMode
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

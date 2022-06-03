@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.sampleSize
 slug: Web/API/MediaTrackConstraints/sampleSize
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

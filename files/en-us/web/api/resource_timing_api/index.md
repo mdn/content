@@ -1,6 +1,7 @@
 ---
 title: Resource Timing API
 slug: Web/API/Resource_Timing_API
+page-type: web-api-overview
 tags:
   - API
   - Guide

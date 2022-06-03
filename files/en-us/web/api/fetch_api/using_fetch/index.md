@@ -1,6 +1,7 @@
 ---
 title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
+page-type: guide
 tags:
   - API
   - BODY

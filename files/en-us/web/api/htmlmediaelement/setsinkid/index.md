@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.setSinkId()
 slug: Web/API/HTMLMediaElement/setSinkId
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

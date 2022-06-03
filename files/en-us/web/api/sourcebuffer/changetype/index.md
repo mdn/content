@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.changeType()
 slug: Web/API/SourceBuffer/changeType
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

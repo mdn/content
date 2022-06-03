@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncManager.register()
 slug: Web/API/PeriodicSyncManager/register
+page-type: web-api-instance-method
 tags:
   - Background Sync
   - Method

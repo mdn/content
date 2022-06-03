@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent.complete()
 slug: Web/API/MerchantValidationEvent/complete
+page-type: web-api-instance-method
 tags:
   - API
   - Commerce

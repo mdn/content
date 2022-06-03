@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.qpSum
 slug: Web/API/RTCInboundRtpStreamStats/qpSum
+page-type: web-api-instance-property
 tags:
   - API
   - Property

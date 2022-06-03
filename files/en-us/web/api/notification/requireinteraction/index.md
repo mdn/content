@@ -1,6 +1,7 @@
 ---
 title: Notification.requireInteraction
 slug: Web/API/Notification/requireInteraction
+page-type: web-api-instance-property
 tags:
   - API
   - Notification

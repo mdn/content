@@ -1,6 +1,7 @@
 ---
 title: SVGFESpecularLightingElement
 slug: Web/API/SVGFESpecularLightingElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

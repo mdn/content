@@ -1,6 +1,7 @@
 ---
 title: TextDecoder.decode()
 slug: Web/API/TextDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Encoding

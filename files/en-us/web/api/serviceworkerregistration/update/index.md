@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
+page-type: web-api-instance-method
 tags:
   - API
   - Method

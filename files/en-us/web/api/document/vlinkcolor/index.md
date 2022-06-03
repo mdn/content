@@ -1,6 +1,7 @@
 ---
 title: Document.vlinkColor
 slug: Web/API/Document/vlinkColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondurationchange
 slug: Web/API/GlobalEventHandlers/ondurationchange
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

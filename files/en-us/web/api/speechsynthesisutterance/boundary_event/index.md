@@ -1,6 +1,7 @@
 ---
 title: 'SpeechSynthesisUtterance: boundary event'
 slug: Web/API/SpeechSynthesisUtterance/boundary_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

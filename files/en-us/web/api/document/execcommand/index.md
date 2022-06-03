@@ -1,6 +1,7 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

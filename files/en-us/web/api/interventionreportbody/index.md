@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody
 slug: Web/API/InterventionReportBody
+page-type: web-api-interface
 tags:
   - API
   - Experimental

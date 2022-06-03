@@ -1,6 +1,7 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

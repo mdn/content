@@ -1,6 +1,7 @@
 ---
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
+page-type: web-api-overview
 tags:
   - HTML Sanitizer API
   - Experimental

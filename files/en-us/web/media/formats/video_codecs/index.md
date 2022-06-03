@@ -938,7 +938,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
     </tr>
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
-      <td><a href="https://www.itu.net/">ITU</a></td>
+      <td><a href="https://www.itu.int/">ITU</a></td>
     </tr>
     <tr>
       <th scope="row">Specification</th>
@@ -1110,7 +1110,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
       <td>
-        <a href="https://www.itu.net/">ITU</a> /
+        <a href="https://www.itu.int/">ITU</a> /
         <a href="https://mpeg.chiariglione.org/">MPEG</a>
       </td>
     </tr>

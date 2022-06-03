@@ -7244,7 +7244,7 @@
 /en-US/docs/Using_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_an_External_Spell-checker	/en-US/docs/Mozilla/Firefox/Releases/3/Using_an_external_spell_checker
 /en-US/docs/Using_audio_and_video_in_Firefox	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/en-US/docs/Using_files_from_web_applications	/en-US/docs/Web/API/File/Using_files_from_web_applications
+/en-US/docs/Using_files_from_web_applications	/en-US/docs/Web/API/File_API/Using_files_from_web_applications
 /en-US/docs/Using_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Using_geolocation	/en-US/docs/Web/API/Geolocation_API
 /en-US/docs/Using_gradients	/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
@@ -8007,6 +8007,7 @@
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
+/en-US/docs/Web/API/File/Using_files_from_web_applications	/en-US/docs/Web/API/File_API/Using_files_from_web_applications
 /en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File/size	/en-US/docs/Web/API/Blob/size
@@ -11006,6 +11007,8 @@
 /en-US/docs/Web/CSS/color_value/hwb()	/en-US/docs/Web/CSS/color_value/hwb
 /en-US/docs/Web/CSS/color_value/lab()	/en-US/docs/Web/CSS/color_value/lab
 /en-US/docs/Web/CSS/color_value/lch()	/en-US/docs/Web/CSS/color_value/lch
+/en-US/docs/Web/CSS/color_value/oklab()	/en-US/docs/Web/CSS/color_value/oklab
+/en-US/docs/Web/CSS/color_value/oklch()	/en-US/docs/Web/CSS/color_value/oklch
 /en-US/docs/Web/CSS/color_value/rgb()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgba
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient

@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.logicalSurface
 slug: Web/API/MediaTrackConstraints/logicalSurface
+page-type: web-api-instance-property
 tags:
   - API
   - Capture

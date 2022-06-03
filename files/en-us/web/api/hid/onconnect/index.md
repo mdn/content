@@ -1,6 +1,7 @@
 ---
 title: HID.onconnect
 slug: Web/API/HID/onconnect
+page-type: web-api-instance-property
 tags:
   - API
   - Property

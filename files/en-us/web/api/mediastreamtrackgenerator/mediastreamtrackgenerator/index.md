@@ -1,6 +1,7 @@
 ---
-title: MediaStreamTrackGenerator.MediaStreamTrackGenerator()
+title: MediaStreamTrackGenerator()
 slug: Web/API/MediaStreamTrackGenerator/MediaStreamTrackGenerator
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

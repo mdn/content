@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent.source
 slug: Web/API/ExtendableMessageEvent/source
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

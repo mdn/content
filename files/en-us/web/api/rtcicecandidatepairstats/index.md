@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats
 slug: Web/API/RTCIceCandidatePairStats
+page-type: web-api-interface
 tags:
   - API
   - Candidate

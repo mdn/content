@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.isMap
 slug: Web/API/HTMLImageElement/isMap
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

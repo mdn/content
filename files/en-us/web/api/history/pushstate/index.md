@@ -1,6 +1,7 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

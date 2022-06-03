@@ -1,6 +1,7 @@
 ---
 title: 'Element: DOMActivate event'
 slug: Web/API/Element/DOMActivate_event
+page-type: web-api-event
 tags:
   - API
   - DOM

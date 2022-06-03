@@ -1,6 +1,7 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
+page-type: web-api-instance-property
 tags:
   - API
   - Document

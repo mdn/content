@@ -1,6 +1,7 @@
 ---
 title: Response.ok
 slug: Web/API/Response/ok
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch

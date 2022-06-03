@@ -1,6 +1,7 @@
 ---
 title: InputEvent()
 slug: Web/API/InputEvent/InputEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

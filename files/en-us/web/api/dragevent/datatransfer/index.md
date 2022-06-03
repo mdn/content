@@ -1,6 +1,7 @@
 ---
 title: DragEvent.dataTransfer
 slug: Web/API/DragEvent/dataTransfer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

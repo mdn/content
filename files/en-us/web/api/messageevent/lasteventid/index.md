@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.lastEventId
 slug: Web/API/MessageEvent/lastEventId
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

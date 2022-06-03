@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.channelCount
 slug: Web/API/MediaTrackSettings/channelCount
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

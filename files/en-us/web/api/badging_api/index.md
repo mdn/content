@@ -7,6 +7,7 @@ tags:
   - Overview
   - Reference
   - Badging API
+browser-compat: api.Navigator.setAppBadge
 ---
 {{DefaultAPISidebar("Badging API")}}
 
@@ -92,7 +93,11 @@ navigator.setAppBadge(12)
 
 ## Specifications
 
-{{Specifications("api.Navigator.setAppBadge")}}
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

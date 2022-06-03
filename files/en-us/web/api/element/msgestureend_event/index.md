@@ -1,6 +1,7 @@
 ---
 title: 'Element: MSGestureEnd event'
 slug: Web/API/Element/MSGestureEnd_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard

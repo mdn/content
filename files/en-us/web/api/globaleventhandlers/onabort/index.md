@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onabort
 slug: Web/API/GlobalEventHandlers/onabort
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

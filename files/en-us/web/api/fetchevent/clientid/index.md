@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.clientId
 slug: Web/API/FetchEvent/clientId
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

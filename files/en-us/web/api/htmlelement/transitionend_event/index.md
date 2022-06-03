@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: transitionend event'
 slug: Web/API/HTMLElement/transitionend_event
+page-type: web-api-event
 tags:
   - CSS Transitions
   - Event

@@ -1,6 +1,7 @@
 ---
 title: EventSource.url
 slug: Web/API/EventSource/url
+page-type: web-api-instance-property
 tags:
   - API
   - EventSource

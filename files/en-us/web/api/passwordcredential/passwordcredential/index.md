@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential()
 slug: Web/API/PasswordCredential/PasswordCredential
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

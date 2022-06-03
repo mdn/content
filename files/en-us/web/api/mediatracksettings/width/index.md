@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.width
 slug: Web/API/MediaTrackSettings/width
+page-type: web-api-instance-property
 tags:
   - API
   - Media

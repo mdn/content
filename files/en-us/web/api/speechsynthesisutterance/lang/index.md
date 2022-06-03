@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.lang
 slug: Web/API/SpeechSynthesisUtterance/lang
+page-type: web-api-instance-property
 tags:
   - API
   - Property

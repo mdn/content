@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ontransitioncancel
 slug: Web/API/GlobalEventHandlers/ontransitioncancel
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Transitions

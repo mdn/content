@@ -1,6 +1,7 @@
 ---
 title: Request.mode
 slug: Web/API/Request/mode
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -39,8 +40,7 @@ to determine if cross-origin requests lead to valid responses, and which propert
         data across domains.
     - `cors`
       - : Allows cross-origin requests, for example to access various
-        APIs offered by 3rd party vendors. These are expected to adhere to the [CORS protocol](/en-US/docs/Web/HTTP/CORS). Only a [limited
-        set](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) of headers are exposed in the {{domxref("Response")}}, but the body is
+        APIs offered by 3rd party vendors. These are expected to adhere to the [CORS protocol](/en-US/docs/Web/HTTP/CORS). Only a [limited set](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) of headers are exposed in the {{domxref("Response")}}, but the body is
         readable.
     - `navigate`
       - : A mode for supporting navigation. The `navigate` value is intended to be used only by HTML navigation. A navigate request is created only while navigating between documents.

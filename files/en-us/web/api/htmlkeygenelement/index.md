@@ -1,6 +1,7 @@
 ---
 title: HTMLKeygenElement
 slug: Web/API/HTMLKeygenElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

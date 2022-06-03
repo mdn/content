@@ -1,6 +1,7 @@
 ---
 title: MediaSession.metadata
 slug: Web/API/MediaSession/metadata
+page-type: web-api-instance-property
 tags:
   - Audio
   - Media

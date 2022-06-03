@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.options
 slug: Web/API/PushSubscription/options
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

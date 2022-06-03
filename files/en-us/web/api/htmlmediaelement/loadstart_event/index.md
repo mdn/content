@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: loadstart event'
 slug: Web/API/HTMLMediaElement/loadstart_event
+page-type: web-api-event
 tags:
   - API
   - Event

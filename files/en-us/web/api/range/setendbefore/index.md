@@ -1,6 +1,7 @@
 ---
 title: Range.setEndBefore()
 slug: Web/API/Range/setEndBefore
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

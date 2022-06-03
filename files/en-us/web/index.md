@@ -29,7 +29,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [CSS](/en-US/docs/Web/CSS)
   - : Cascading Style Sheets are used to describe the appearance of Web documents and apps.
 - [JavaScript](/en-US/docs/Web/JavaScript)
-  - : JavaScript is the Web’s native programming language.
+  - : JavaScript is the Web's native programming language.
 - [WebAssembly](/en-US/docs/WebAssembly)
   - : WebAssembly allows programs written in C, C++, Rust, Swift, C#, Go, and more to run on the Web.
 - [Events](/en-US/docs/Web/Events)
@@ -45,7 +45,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [Web Components](/en-US/docs/Web/Web_Components)
   - : Web Components are custom elements that you can define and reuse in your Web apps.
 - [WebDriver](/en-US/docs/Web/WebDriver)
-  - : WebDriver is a browser-automation mechanism for remotely controlling a browser by emulating the actions of a real person using the browser. It’s widely used for cross-browser testing of Web apps.
+  - : WebDriver is a browser-automation mechanism for remotely controlling a browser by emulating the actions of a real person using the browser. It's widely used for cross-browser testing of Web apps.
 - [Web Extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions)
   - : Web Extensions are a way for you to give users enhanced capabilities in their browsers — for doing things such as blocking ads and other content, customizing the appearance of pages, and more.
 - [Web App Manifests](/en-US/docs/Web/Manifest)

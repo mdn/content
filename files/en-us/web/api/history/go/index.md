@@ -1,6 +1,7 @@
 ---
 title: History.go()
 slug: Web/API/History/go
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

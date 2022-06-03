@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.toString()
 slug: Web/API/HTMLAreaElement/toString
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLAreaElement

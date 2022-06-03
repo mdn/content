@@ -1,6 +1,7 @@
 ---
 title: PaintWorkletGlobalScope.devicePixelRatio
 slug: Web/API/PaintWorklet/devicePixelRatio
+page-type: web-api-instance-property
 tags:
   - CSS Paint API
   - DPI

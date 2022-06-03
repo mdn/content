@@ -62,7 +62,7 @@ Used in roles:
 - [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`link`](/en-US/docs/Web/Accessibility/ARIA/Roles/:ink_role)
+- [`link`](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

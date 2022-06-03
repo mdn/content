@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.candidateType
 slug: Web/API/RTCIceCandidateStats/candidateType
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

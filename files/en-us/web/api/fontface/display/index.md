@@ -1,6 +1,7 @@
 ---
 title: FontFace.display
 slug: Web/API/FontFace/display
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API

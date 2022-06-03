@@ -1,6 +1,7 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

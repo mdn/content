@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.autoGainControl
 slug: Web/API/MediaTrackConstraints/autoGainControl
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

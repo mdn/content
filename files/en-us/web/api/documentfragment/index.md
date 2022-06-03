@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
+page-type: web-api-interface
 tags:
   - API
   - DOM

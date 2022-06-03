@@ -1,6 +1,7 @@
 ---
 title: Keyboard.getLayoutMap()
 slug: Web/API/Keyboard/getLayoutMap
+page-type: web-api-instance-method
 tags:
   - API
   - Keyboard API

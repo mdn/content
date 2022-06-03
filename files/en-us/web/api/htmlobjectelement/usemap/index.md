@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.useMap
 slug: Web/API/HTMLObjectElement/useMap
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

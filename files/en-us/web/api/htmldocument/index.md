@@ -1,6 +1,7 @@
 ---
 title: HTMLDocument
 slug: Web/API/HTMLDocument
+page-type: web-api-interface
 tags:
   - API
   - Document

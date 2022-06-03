@@ -1,6 +1,7 @@
 ---
 title: TextDecoder()
 slug: Web/API/TextDecoder/TextDecoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -1,6 +1,7 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

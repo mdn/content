@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.displaySurface
 slug: Web/API/MediaTrackSettings/displaySurface
+page-type: web-api-instance-property
 tags:
   - API
   - Capture

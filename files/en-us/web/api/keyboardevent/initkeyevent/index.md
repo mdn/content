@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -90,8 +91,7 @@ document.getElementById('blah').dispatchEvent(event);
 
 ## Specifications
 
-This implementation of keyboard events is based on the key events spec in the [early versions
-of DOM 2 Events](https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html), later removed from that spec.
+This implementation of keyboard events is based on the key events spec in the [early versions of DOM 2 Events](https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html), later removed from that spec.
 
 The `initKeyEvent` is the current Gecko equivalent of the DOM Level 3 Events
 (initially drafted and also deprecated in favor of

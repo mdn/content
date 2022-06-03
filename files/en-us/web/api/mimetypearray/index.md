@@ -1,6 +1,7 @@
 ---
 title: MimeTypeArray
 slug: Web/API/MimeTypeArray
+page-type: web-api-interface
 tags:
   - API
   - Interface

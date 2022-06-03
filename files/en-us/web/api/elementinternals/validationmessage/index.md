@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.validationMessage
 slug: Web/API/ElementInternals/validationMessage
+page-type: web-api-instance-property
 tags:
   - API
   - Property

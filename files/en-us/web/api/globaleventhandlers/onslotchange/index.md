@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onslotchange
 slug: Web/API/GlobalEventHandlers/onslotchange
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

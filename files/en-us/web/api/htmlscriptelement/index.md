@@ -1,6 +1,7 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

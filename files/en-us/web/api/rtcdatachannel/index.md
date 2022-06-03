@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
+page-type: web-api-interface
 tags:
   - API
   - Communication
@@ -76,7 +77,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCDataChannel.readyState", "readyState")}} {{ReadOnlyInline}}
   - : Returns a string
     which indicates the state of the data channel's underlying data connection.
-    It can have on of the following values:
+    It can have one of the following values:
     `connecting`, `open`, `closing`, or `closed`.
 
 ### Obsolete properties

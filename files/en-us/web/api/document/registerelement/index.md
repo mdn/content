@@ -1,6 +1,7 @@
 ---
 title: Document.registerElement()
 slug: Web/API/Document/registerElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

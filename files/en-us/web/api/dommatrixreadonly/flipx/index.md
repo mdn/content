@@ -1,6 +1,7 @@
 ---
 title: DOMMatrixReadOnly.flipX()
 slug: Web/API/DOMMatrixReadOnly/flipX
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

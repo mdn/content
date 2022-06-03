@@ -1,6 +1,7 @@
 ---
 title: PositionSensorVRDevice.resetSensor()
 slug: Web/API/PositionSensorVRDevice/resetSensor
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

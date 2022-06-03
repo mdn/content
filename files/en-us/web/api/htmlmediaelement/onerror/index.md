@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.onerror
 slug: Web/API/HTMLMediaElement/onerror
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

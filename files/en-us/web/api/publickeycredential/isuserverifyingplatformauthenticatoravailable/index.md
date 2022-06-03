@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable
+page-type: web-api-static-method
 tags:
   - API
   - Method

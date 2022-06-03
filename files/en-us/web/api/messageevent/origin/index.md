@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.origin
 slug: Web/API/MessageEvent/origin
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

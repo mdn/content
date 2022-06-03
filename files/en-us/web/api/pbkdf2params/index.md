@@ -1,6 +1,7 @@
 ---
 title: Pbkdf2Params
 slug: Web/API/Pbkdf2Params
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

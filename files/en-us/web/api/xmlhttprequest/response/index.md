@@ -77,7 +77,6 @@ function load(url, callback) {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - Getting text and HTML/XML data: {{domxref("XMLHttpRequest.responseText")}} and
   {{domxref("XMLHttpRequest.responseXML")}}

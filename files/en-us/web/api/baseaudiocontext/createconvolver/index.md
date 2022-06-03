@@ -16,8 +16,7 @@ browser-compat: api.BaseAudioContext.createConvolver
 
 The `createConvolver()` method of the {{ domxref("BaseAudioContext") }}
 interface creates a {{ domxref("ConvolverNode") }}, which is commonly used to apply
-reverb effects to your audio. See the [spec definition of
-Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more information.
+reverb effects to your audio. See the [spec definition of Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more information.
 
 > **Note:** The {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}}
 > constructor is the recommended way to create a {{domxref("ConvolverNode")}}; see
@@ -45,8 +44,7 @@ as an ambience to shape the convolution (called the _impulse response_,) and
 apply that to the convolver. The example below uses a short sample of a concert hall
 crowd, so the reverb effect applied is really deep and echoey.
 
-For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see
-app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
+For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

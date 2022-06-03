@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.frameRate
 slug: Web/API/MediaTrackConstraints/frameRate
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

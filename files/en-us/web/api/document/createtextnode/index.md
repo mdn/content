@@ -1,6 +1,7 @@
 ---
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
+page-type: web-api-interface
 tags:
   - API
   - Geolocation API

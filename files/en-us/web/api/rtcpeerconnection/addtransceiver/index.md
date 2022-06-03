@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addTransceiver()
 slug: Web/API/RTCPeerConnection/addTransceiver
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

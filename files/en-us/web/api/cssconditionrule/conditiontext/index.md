@@ -52,5 +52,4 @@ console.log(text);  // "(min-width: 400px)"
 
 ## See also
 
-- [Using dynamic styling
-  information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

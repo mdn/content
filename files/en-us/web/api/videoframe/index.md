@@ -56,6 +56,8 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 - {{domxref("VideoFrame.allocationSize()")}}
   - : Returns the number of bytes required to hold the `VideoFrame` as filtered by options passed into the method.
+- {{domxref("VideoFrame.copyTo()")}}
+  - : Copies the contents of the `VideoFrame` to an `ArrayBuffer`.
 - {{domxref("VideoFrame.clone()")}}
   - : Creates a new `VideoFrame` object with reference to the same media resource as the original.
 - {{domxref("VideoFrame.close()")}}

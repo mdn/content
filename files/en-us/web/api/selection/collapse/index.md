@@ -1,6 +1,7 @@
 ---
 title: Selection.collapse()
 slug: Web/API/Selection/collapse
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing

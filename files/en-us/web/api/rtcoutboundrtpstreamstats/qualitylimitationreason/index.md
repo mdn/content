@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.qualityLimitationReason
 slug: Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason
+page-type: web-api-instance-property
 tags:
   - API
   - Media

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondragenter
 slug: Web/API/GlobalEventHandlers/ondragenter
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

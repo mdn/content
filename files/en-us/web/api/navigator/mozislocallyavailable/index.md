@@ -1,6 +1,7 @@
 ---
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
+page-type: web-api-instance-method
 tags:
   - API
   - Method

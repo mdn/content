@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property

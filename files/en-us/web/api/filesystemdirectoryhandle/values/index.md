@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.values()
 slug: Web/API/FileSystemDirectoryHandle/values
+page-type: web-api-instance-method
 tags:
   - Directory
   - File

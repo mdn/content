@@ -712,6 +712,6 @@ There are few limitations on what can be done if you set yourself to it.
 
 ## See also
 
-- [Learn WebGL](http://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
+- [Learn WebGL](https://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
 - [WebGL Fundamentals](https://webglfundamentals.org)
 - [Learn OpenGL](https://learnopengl.com/)

@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.id
 slug: Web/API/PublicKeyCredential/id
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API

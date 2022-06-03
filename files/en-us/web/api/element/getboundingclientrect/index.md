@@ -1,6 +1,7 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
+page-type: web-api-instance-method
 tags:
   - API
   - Boundary
