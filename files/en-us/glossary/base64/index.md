@@ -35,10 +35,10 @@ This means that the Base64 version of a string or file will be at least 133% the
 
 ## The "Unicode Problem"
 
-Since [`DOMString`](/en-US/docs/Web/API/DOMString)s are 16-bit-encoded strings, in most browsers calling `window.btoa` on a Unicode string will cause a `Character Out Of Range` exception if a character exceeds the range of a 8-bit ASCII-encoded character. There are two possible methods to solve this problem:
+Since JavaScript strings are 16-bit-encoded strings, in most browsers calling `window.btoa` on a Unicode string will cause a `Character Out Of Range` exception if a character exceeds the range of a 8-bit ASCII-encoded character. There are two possible methods to solve this problem:
 
 - the first one is to escape the whole string and then encode it;
-- the second one is to convert the UTF-16 [`DOMString`](/en-US/docs/Web/API/DOMString) to an UTF-8 array of characters and then encode it.
+- the second one is to convert the UTF-16 string to an UTF-8 array of characters and then encode it.
 
 Here are the two possible methods.
 
@@ -170,7 +170,7 @@ function base64EncArr (aBytes) {
 
 }
 
-/* UTF-8 array to DOMString and vice versa */
+/* UTF-8 array to JS string and vice versa */
 
 function UTF8ArrToStr (aBytes) {
 

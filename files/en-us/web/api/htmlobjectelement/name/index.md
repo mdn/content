@@ -21,7 +21,7 @@ the browsing context.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

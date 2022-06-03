@@ -59,7 +59,7 @@ var id = paymentRequest.id
 
 ### Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 
