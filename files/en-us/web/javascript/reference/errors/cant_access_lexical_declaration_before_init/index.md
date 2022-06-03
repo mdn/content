@@ -15,9 +15,8 @@ This happens within any block statement, when [`let`](/en-US/docs/Web/JavaScript
 ## Message
 
 ```plain
-ReferenceError: Cannot access 'X' before initialization (Edge)
+ReferenceError: Cannot access 'X' before initialization (Chrome and Edge)
 ReferenceError: can't access lexical declaration 'X' before initialization (Firefox)
-ReferenceError: 'x' is not defined (Chrome)
 ```
 
 ## Error type
