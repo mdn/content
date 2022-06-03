@@ -1,6 +1,7 @@
 ---
 title: XRTransientInputHitTestSource
 slug: Web/API/XRTransientInputHitTestSource
+page-type: web-api-interface
 tags:
   - API
   - Interface

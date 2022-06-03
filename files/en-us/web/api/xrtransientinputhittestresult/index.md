@@ -1,6 +1,7 @@
 ---
 title: XRTransientInputHitTestResult
 slug: Web/API/XRTransientInputHitTestResult
+page-type: web-api-interface
 tags:
   - API
   - Interface

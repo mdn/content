@@ -1,6 +1,7 @@
 ---
 title: XRSession.requestReferenceSpace()
 slug: Web/API/XRSession/requestReferenceSpace
+page-type: web-api-instance-method
 tags:
   - API
   - AR

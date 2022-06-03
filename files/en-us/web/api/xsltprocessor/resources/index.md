@@ -1,6 +1,7 @@
 ---
 title: Resources
 slug: Web/API/XSLTProcessor/Resources
+page-type: guide
 ---
 ## Resources
 

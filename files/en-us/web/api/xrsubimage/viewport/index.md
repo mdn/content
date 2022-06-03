@@ -1,6 +1,7 @@
 ---
 title: XRSubImage.viewport
 slug: Web/API/XRSubImage/viewport
+page-type: web-api-instance-property
 tags:
   - API
   - Property

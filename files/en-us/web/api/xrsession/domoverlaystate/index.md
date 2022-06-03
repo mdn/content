@@ -1,6 +1,7 @@
 ---
 title: XRSession.domOverlayState
 slug: Web/API/XRSession/domOverlayState
+page-type: web-api-instance-property
 tags:
   - API
   - AR

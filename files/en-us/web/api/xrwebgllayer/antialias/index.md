@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.antialias
 slug: Web/API/XRWebGLLayer/antialias
+page-type: web-api-instance-property
 tags:
   - API
   - AR

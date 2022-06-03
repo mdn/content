@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: devicechange event'
 slug: Web/API/XRSystem/devicechange_event
+page-type: web-api-event
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer()
 slug: Web/API/XRWebGLLayer/XRWebGLLayer
+page-type: web-api-constructor
 tags:
   - API
   - AR
