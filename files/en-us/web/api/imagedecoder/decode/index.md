@@ -50,10 +50,25 @@ If an error occurs, the promise will resolve with following exception:
 
 ## Examples
 
+### Synchronous decoding of a completed image frame
+
 The following example decodes the second frame (at index `1`) and prints the resulting {{domxref("VideoFrame")}} to the console.
 
 ```js
-console.log(imageDecoder.decode({frameIndex: 1}));
+let result = await imageDecoder.decode({frameIndex: 1});
+console.log(result.image);
+```
+
+### Partial decoding of a progressive image frame
+
+The following example decodes the first frame repeatedly until its complete:
+
+```js
+let complete = false;
+while (!complete) {
+  let result = await imageDecode.decode({completeFramesOnly: false});
+  complete = result.complete;
+}
 ```
 
 ## Specifications
