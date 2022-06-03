@@ -25,7 +25,7 @@ Not to be confused with stylesheet style-rule {{domxref("CSSRule.cssText")}}.
 </span>
 
 <script>
-  var elem = document.getElementById("s1");
+  const elem = document.getElementById("s1");
   alert(elem.style.cssText); // "color: red;"
 </script>
 ```
