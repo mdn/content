@@ -14,8 +14,6 @@ browser-compat: css.selectors.nth-last-child
 
 The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings, counting from the end.
 
-> **Note:** This pseudo-class is essentially the same as {{Cssxref(":nth-child")}}, except it counts items backwards from the _end_, not forwards from the beginning.
-
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-child.html", "tabbed-shorter")}}
 
 ## Syntax

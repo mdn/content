@@ -14,8 +14,6 @@ browser-compat: css.selectors.nth-last-of-type
 
 The **`:nth-last-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name), counting from the end.
 
-> **Note:** This pseudo-class is essentially the same as {{Cssxref(":nth-of-type")}}, except it counts items backwards from the _end_, not forwards from the beginning.
-
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-of-type.html", "tabbed-shorter")}}
 
 ## Syntax
