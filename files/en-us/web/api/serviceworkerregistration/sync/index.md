@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.sync
 slug: Web/API/ServiceWorkerRegistration/sync
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

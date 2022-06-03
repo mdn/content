@@ -1,7 +1,6 @@
 ---
 title: Sanitizer
 slug: Web/API/Sanitizer
-page-type: web-api-interface
 tags:
   - HTML Sanitizer API
   - Interface

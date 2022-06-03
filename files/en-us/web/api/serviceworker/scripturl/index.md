@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
-page-type: web-api-instance-property
 tags:
   - API
   - Property

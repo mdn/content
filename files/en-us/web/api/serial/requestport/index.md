@@ -1,7 +1,6 @@
 ---
 title: Serial.requestPort()
 slug: Web/API/Serial/requestPort
-page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,7 +1,6 @@
 ---
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
-page-type: web-api-instance-property
 tags:
   - API
   - Property

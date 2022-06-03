@@ -1,7 +1,6 @@
 ---
 title: 'SerialPort: connect event'
 slug: Web/API/SerialPort/connect_event
-page-type: web-api-event
 tags:
   - API
   - Event

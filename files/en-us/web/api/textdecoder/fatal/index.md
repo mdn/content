@@ -1,7 +1,6 @@
 ---
 title: TextDecoder.fatal
 slug: Web/API/TextDecoder/fatal
-page-type: web-api-instance-property
 tags:
   - API
   - TextDecoder

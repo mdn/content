@@ -1,7 +1,6 @@
 ---
 title: SVGMatrix
 slug: Web/API/SVGMatrix
-page-type: web-api-interface
 tags:
   - API
   - Deprecated

@@ -1,7 +1,6 @@
 ---
 title: SVGGeometryElement.isPointInFill()
 slug: Web/API/SVGGeometryElement/isPointInFill
-page-type: web-api-instance-method
 tags:
   - API
   - DOM

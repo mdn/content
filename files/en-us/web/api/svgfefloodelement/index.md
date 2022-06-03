@@ -1,7 +1,6 @@
 ---
 title: SVGFEFloodElement
 slug: Web/API/SVGFEFloodElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

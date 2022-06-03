@@ -1,7 +1,6 @@
 ---
 title: SVGFEMergeNodeElement
 slug: Web/API/SVGFEMergeNodeElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

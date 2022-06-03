@@ -1,7 +1,6 @@
 ---
 title: Selection.type
 slug: Web/API/Selection/type
-page-type: web-api-instance-property
 tags:
   - API
   - Property

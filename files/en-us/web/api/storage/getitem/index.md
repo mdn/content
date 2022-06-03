@@ -1,7 +1,6 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
-page-type: web-api-instance-method
 tags:
   - API
   - Method

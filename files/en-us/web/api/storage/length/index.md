@@ -1,7 +1,6 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-page-type: web-api-instance-property
 tags:
   - API
   - Property

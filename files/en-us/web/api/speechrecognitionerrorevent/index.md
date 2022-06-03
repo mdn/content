@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognitionErrorEvent
 slug: Web/API/SpeechRecognitionErrorEvent
-page-type: web-api-interface
 browser-compat: api.SpeechRecognitionErrorEvent
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

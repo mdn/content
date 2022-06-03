@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisVoice.localService
 slug: Web/API/SpeechSynthesisVoice/localService
-page-type: web-api-instance-property
 tags:
   - API
   - Property

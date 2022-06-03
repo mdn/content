@@ -1,7 +1,6 @@
 ---
 title: SubmitEvent
 slug: Web/API/SubmitEvent
-page-type: web-api-interface
 tags:
   - API
   - Form Submission

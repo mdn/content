@@ -1,7 +1,6 @@
 ---
 title: SVGElement
 slug: Web/API/SVGElement
-page-type: web-api-interface
 tags:
   - API
   - Interface

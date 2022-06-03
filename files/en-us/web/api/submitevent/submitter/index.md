@@ -1,7 +1,6 @@
 ---
 title: SubmitEvent.submitter
 slug: Web/API/SubmitEvent/submitter
-page-type: web-api-instance-property
 tags:
   - API
   - Forms

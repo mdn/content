@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.registration
 slug: Web/API/ServiceWorkerGlobalScope/registration
-page-type: web-api-instance-property
 tags:
   - API
   - Property

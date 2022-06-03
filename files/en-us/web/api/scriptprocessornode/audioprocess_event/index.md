@@ -1,7 +1,6 @@
 ---
 title: 'ScriptProcessorNode: audioprocess event'
 slug: Web/API/ScriptProcessorNode/audioprocess_event
-page-type: web-api-event
 tags:
   - ScriptProcessorNode
   - Web Audio API

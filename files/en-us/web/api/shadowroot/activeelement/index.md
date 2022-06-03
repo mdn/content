@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.activeElement
 slug: Web/API/ShadowRoot/activeElement
-page-type: web-api-instance-property
 tags:
   - API
   - Property

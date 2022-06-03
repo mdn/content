@@ -1,7 +1,6 @@
 ---
 title: SVGAnimateMotionElement
 slug: Web/API/SVGAnimateMotionElement
-page-type: web-api-interface
 tags:
   - API
   - Reference

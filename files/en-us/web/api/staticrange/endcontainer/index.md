@@ -1,7 +1,6 @@
 ---
 title: StaticRange.endContainer
 slug: Web/API/StaticRange/endContainer
-page-type: web-api-instance-property
 tags:
   - API
   - DOM

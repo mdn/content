@@ -1,7 +1,6 @@
 ---
 title: SVGTextElement
 slug: Web/API/SVGTextElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

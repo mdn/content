@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

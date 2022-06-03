@@ -1,7 +1,6 @@
 ---
 title: SpeechGrammarList.item()
 slug: Web/API/SpeechGrammarList/item
-page-type: web-api-instance-method
 tags:
   - API
   - Experimental

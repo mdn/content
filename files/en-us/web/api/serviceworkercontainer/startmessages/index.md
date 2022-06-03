@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.startMessages()
 slug: Web/API/ServiceWorkerContainer/startMessages
-page-type: web-api-instance-method
 tags:
   - API
   - Experimental

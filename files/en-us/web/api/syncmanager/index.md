@@ -1,7 +1,6 @@
 ---
 title: SyncManager
 slug: Web/API/SyncManager
-page-type: web-api-interface
 tags:
   - API
   - Interface

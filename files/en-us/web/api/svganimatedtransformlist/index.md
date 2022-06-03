@@ -1,7 +1,6 @@
 ---
 title: SVGAnimatedTransformList
 slug: Web/API/SVGAnimatedTransformList
-page-type: web-api-interface
 tags:
   - API
   - Reference

@@ -1,7 +1,6 @@
 ---
 title: StorageManager.persisted()
 slug: Web/API/StorageManager/persisted
-page-type: web-api-instance-method
 tags:
   - Method
   - Reference

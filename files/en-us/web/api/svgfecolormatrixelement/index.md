@@ -1,7 +1,6 @@
 ---
 title: SVGFEColorMatrixElement
 slug: Web/API/SVGFEColorMatrixElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsBrowserCompatibility

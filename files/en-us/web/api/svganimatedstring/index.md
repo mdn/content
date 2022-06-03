@@ -1,7 +1,6 @@
 ---
 title: SVGAnimatedString
 slug: Web/API/SVGAnimatedString
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

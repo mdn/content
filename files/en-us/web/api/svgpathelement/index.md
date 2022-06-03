@@ -1,7 +1,6 @@
 ---
 title: SVGPathElement
 slug: Web/API/SVGPathElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

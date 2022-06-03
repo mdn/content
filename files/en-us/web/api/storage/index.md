@@ -1,7 +1,6 @@
 ---
 title: Storage
 slug: Web/API/Storage
-page-type: web-api-interface
 tags:
   - API
   - Interface

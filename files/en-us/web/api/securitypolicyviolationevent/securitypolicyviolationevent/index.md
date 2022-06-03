@@ -1,7 +1,6 @@
 ---
 title: SecurityPolicyViolationEvent()
 slug: Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent
-page-type: web-api-constructor
 tags:
   - API
   - CSP

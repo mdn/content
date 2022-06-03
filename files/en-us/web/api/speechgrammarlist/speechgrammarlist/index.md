@@ -1,7 +1,6 @@
 ---
 title: SpeechGrammarList()
 slug: Web/API/SpeechGrammarList/SpeechGrammarList
-page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -1,7 +1,6 @@
 ---
 title: SecurityPolicyViolationEvent.disposition
 slug: Web/API/SecurityPolicyViolationEvent/disposition
-page-type: web-api-instance-property
 tags:
   - API
   - CSP

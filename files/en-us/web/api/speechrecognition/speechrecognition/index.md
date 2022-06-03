@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognition()
 slug: Web/API/SpeechRecognition/SpeechRecognition
-page-type: web-api-constructor
 tags:
   - API
   - Constructor

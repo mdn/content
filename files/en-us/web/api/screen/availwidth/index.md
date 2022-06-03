@@ -1,7 +1,6 @@
 ---
 title: Screen.availWidth
 slug: Web/API/Screen/availWidth
-page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

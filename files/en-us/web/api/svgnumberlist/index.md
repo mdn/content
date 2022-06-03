@@ -1,7 +1,6 @@
 ---
 title: SVGNumberList
 slug: Web/API/SVGNumberList
-page-type: web-api-interface
 tags:
   - API
   - Reference

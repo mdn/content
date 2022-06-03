@@ -1,7 +1,6 @@
 ---
 title: Screen.height
 slug: Web/API/Screen/height
-page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

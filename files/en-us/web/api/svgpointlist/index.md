@@ -1,7 +1,6 @@
 ---
 title: SVGPointList
 slug: Web/API/SVGPointList
-page-type: web-api-interface
 tags:
   - API
   - Interface

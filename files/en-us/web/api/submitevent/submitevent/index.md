@@ -1,7 +1,6 @@
 ---
 title: SubmitEvent()
 slug: Web/API/SubmitEvent/SubmitEvent
-page-type: web-api-constructor
 tags:
   - API
   - Allocate

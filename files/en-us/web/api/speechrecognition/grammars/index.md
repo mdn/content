@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognition.grammars
 slug: Web/API/SpeechRecognition/grammars
-page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,7 +1,6 @@
 ---
 title: TextMetrics.emHeightAscent
 slug: Web/API/TextMetrics/emHeightAscent
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

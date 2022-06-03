@@ -1,7 +1,6 @@
 ---
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
-page-type: web-api-instance-property
 tags:
   - API
   - Audio

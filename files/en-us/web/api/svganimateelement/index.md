@@ -1,7 +1,6 @@
 ---
 title: SVGAnimateElement
 slug: Web/API/SVGAnimateElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

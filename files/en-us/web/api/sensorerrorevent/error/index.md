@@ -1,7 +1,6 @@
 ---
 title: SensorErrorEvent.error
 slug: Web/API/SensorErrorEvent/error
-page-type: web-api-instance-property
 tags:
   - API
   - Error

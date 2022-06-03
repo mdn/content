@@ -1,7 +1,6 @@
 ---
 title: StylePropertyMap.clear()
 slug: Web/API/StylePropertyMap/clear
-page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

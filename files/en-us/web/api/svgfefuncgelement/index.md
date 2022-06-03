@@ -1,7 +1,6 @@
 ---
 title: SVGFEFuncGElement
 slug: Web/API/SVGFEFuncGElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

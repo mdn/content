@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognition
 slug: Web/API/SpeechRecognition
-page-type: web-api-interface
 tags:
   - API
   - Interface

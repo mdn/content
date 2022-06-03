@@ -1,7 +1,6 @@
 ---
 title: RTCTrackEvent.track
 slug: Web/API/RTCTrackEvent/track
-page-type: web-api-instance-property
 tags:
   - API
   - Media

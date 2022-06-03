@@ -1,7 +1,6 @@
 ---
 title: Screen.colorDepth
 slug: Web/API/Screen/colorDepth
-page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

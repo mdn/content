@@ -1,7 +1,6 @@
 ---
 title: SourceBufferList.length
 slug: Web/API/SourceBufferList/length
-page-type: web-api-instance-property
 tags:
   - API
   - Audio

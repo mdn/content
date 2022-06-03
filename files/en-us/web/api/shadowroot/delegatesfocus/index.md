@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
-page-type: web-api-instance-property
 tags:
   - API
   - Property

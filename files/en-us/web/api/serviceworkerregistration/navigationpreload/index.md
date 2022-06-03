@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
-page-type: web-api-instance-property
 tags:
   - API
   - NavigationPreloadManager

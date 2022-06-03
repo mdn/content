@@ -1,7 +1,6 @@
 ---
 title: Selection.extend()
 slug: Web/API/Selection/extend
-page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing

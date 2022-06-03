@@ -1,7 +1,6 @@
 ---
 title: Text.splitText()
 slug: Web/API/Text/splitText
-page-type: web-api-instance-method
 tags:
   - Method
   - Reference

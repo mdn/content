@@ -1,7 +1,6 @@
 ---
 title: SVGFESpotLightElement
 slug: Web/API/SVGFESpotLightElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
-page-type: web-api-instance-property
 tags:
   - API
   - DOM

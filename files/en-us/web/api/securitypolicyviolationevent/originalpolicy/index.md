@@ -1,7 +1,6 @@
 ---
 title: SecurityPolicyViolationEvent.originalPolicy
 slug: Web/API/SecurityPolicyViolationEvent/originalPolicy
-page-type: web-api-instance-property
 tags:
   - API
   - CSP

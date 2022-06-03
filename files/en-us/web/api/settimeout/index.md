@@ -1,7 +1,6 @@
 ---
 title: setTimeout()
 slug: Web/API/setTimeout
-page-type: web-api-global-function
 tags:
   - API
   - HTML DOM

@@ -43,7 +43,8 @@ Not Escaped:
     A-Z a-z 0-9 - _ . ! ~ * ' ( )
 ```
 
-`encodeURIComponent()` differs from {{jsxref("encodeURI", "encodeURI()")}} as follows:
+`encodeURIComponent()` differs from **`encodeURI`**
+as follows:
 
 ```js
 const set1 = ";,/?:@&=+$";  // Reserved Characters

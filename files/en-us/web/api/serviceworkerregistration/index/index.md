@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
-page-type: web-api-instance-property
 tags:
   - Content
   - Content Index API

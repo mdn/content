@@ -1,7 +1,6 @@
 ---
 title: 'Sensor: activate event'
 slug: Web/API/Sensor/activate_event
-page-type: web-api-event
 tags:
   - API
   - Generic Sensor API

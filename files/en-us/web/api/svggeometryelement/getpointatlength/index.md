@@ -1,7 +1,6 @@
 ---
 title: SVGGeometryElement.getPointAtLength()
 slug: Web/API/SVGGeometryElement/getPointAtLength
-page-type: web-api-instance-method
 tags:
   - API
   - DOM

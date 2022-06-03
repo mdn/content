@@ -1,7 +1,6 @@
 ---
 title: TextDecoderStream
 slug: Web/API/TextDecoderStream
-page-type: web-api-interface
 tags:
   - API
   - Interface

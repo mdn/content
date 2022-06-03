@@ -1,7 +1,6 @@
 ---
 title: SVGTitleElement
 slug: Web/API/SVGTitleElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

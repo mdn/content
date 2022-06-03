@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognitionEvent.resultIndex
 slug: Web/API/SpeechRecognitionEvent/resultIndex
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

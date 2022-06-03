@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognition.continuous
 slug: Web/API/SpeechRecognition/continuous
-page-type: web-api-instance-property
 tags:
   - API
   - Property

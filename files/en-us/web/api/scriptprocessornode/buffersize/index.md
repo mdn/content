@@ -1,7 +1,6 @@
 ---
 title: ScriptProcessorNode.bufferSize
 slug: Web/API/ScriptProcessorNode/bufferSize
-page-type: web-api-instance-property
 tags:
   - API
   - Property

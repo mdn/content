@@ -1,7 +1,6 @@
 ---
 title: SecurityPolicyViolationEvent.statusCode
 slug: Web/API/SecurityPolicyViolationEvent/statusCode
-page-type: web-api-instance-property
 tags:
   - API
   - CSP

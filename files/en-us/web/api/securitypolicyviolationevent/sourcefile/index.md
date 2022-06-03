@@ -1,7 +1,6 @@
 ---
 title: SecurityPolicyViolationEvent.sourceFile
 slug: Web/API/SecurityPolicyViolationEvent/sourceFile
-page-type: web-api-instance-property
 tags:
   - API
   - CSP

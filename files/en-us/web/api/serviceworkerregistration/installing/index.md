@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.installing
 slug: Web/API/ServiceWorkerRegistration/installing
-page-type: web-api-instance-property
 tags:
   - API
   - Installing

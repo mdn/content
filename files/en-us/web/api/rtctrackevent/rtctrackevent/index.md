@@ -1,7 +1,6 @@
 ---
 title: RTCTrackEvent()
 slug: Web/API/RTCTrackEvent/RTCTrackEvent
-page-type: web-api-constructor
 tags:
   - API
   - Constructor

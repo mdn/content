@@ -1,7 +1,6 @@
 ---
 title: StereoPannerNode.pan
 slug: Web/API/StereoPannerNode/pan
-page-type: web-api-instance-property
 tags:
   - API
   - Property

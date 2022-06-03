@@ -1,7 +1,6 @@
 ---
 title: SVGForeignObjectElement
 slug: Web/API/SVGForeignObjectElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

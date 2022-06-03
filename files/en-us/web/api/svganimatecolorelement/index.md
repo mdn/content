@@ -1,7 +1,6 @@
 ---
 title: SVGAnimateColorElement
 slug: Web/API/SVGAnimateColorElement
-page-type: web-api-interface
 tags:
   - API
   - Deprecated

@@ -1,7 +1,6 @@
 ---
 title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
-page-type: web-api-instance-property
 tags:
   - API
   - CSS

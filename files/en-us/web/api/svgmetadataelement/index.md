@@ -1,7 +1,6 @@
 ---
 title: SVGMetadataElement
 slug: Web/API/SVGMetadataElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

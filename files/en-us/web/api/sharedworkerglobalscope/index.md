@@ -1,7 +1,6 @@
 ---
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
-page-type: web-api-interface
 tags:
   - API
   - Interface

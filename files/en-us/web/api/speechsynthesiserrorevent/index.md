@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisErrorEvent
 slug: Web/API/SpeechSynthesisErrorEvent
-page-type: web-api-interface
 tags:
   - API
   - Experimental

@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.verify()
 slug: Web/API/SubtleCrypto/verify
-page-type: web-api-instance-method
 tags:
   - API
   - Method

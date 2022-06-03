@@ -1,7 +1,6 @@
 ---
 title: Using writable streams
 slug: Web/API/Streams_API/Using_writable_streams
-page-type: guide
 tags:
   - API
   - Controller

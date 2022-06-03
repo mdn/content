@@ -1,7 +1,6 @@
 ---
 title: TextMetrics.alphabeticBaseline
 slug: Web/API/TextMetrics/alphabeticBaseline
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

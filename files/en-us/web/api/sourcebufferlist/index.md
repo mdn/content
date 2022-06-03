@@ -1,7 +1,6 @@
 ---
 title: SourceBufferList
 slug: Web/API/SourceBufferList
-page-type: web-api-interface
 tags:
   - API
   - Audio

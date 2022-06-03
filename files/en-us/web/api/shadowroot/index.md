@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot
 slug: Web/API/ShadowRoot
-page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,7 +1,6 @@
 ---
 title: 'SVGGraphicsElement: copy event'
 slug: Web/API/SVGGraphicsElement/copy_event
-page-type: web-api-event
 tags:
   - API
   - Event

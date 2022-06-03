@@ -1,7 +1,6 @@
 ---
 title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
-page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

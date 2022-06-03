@@ -1,7 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: activate event'
 slug: Web/API/ServiceWorkerGlobalScope/activate_event
-page-type: web-api-event
 tags:
   - API
   - Event

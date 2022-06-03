@@ -1,7 +1,6 @@
 ---
 title: 'SpeechRecognition: speechstart event'
 slug: Web/API/SpeechRecognition/speechstart_event
-page-type: web-api-event
 tags:
   - Event
   - Reference

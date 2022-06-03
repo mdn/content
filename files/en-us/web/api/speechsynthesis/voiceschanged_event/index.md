@@ -1,7 +1,6 @@
 ---
 title: 'SpeechSynthesis: voiceschanged event'
 slug: Web/API/SpeechSynthesis/voiceschanged_event
-page-type: web-api-event
 tags:
   - Event
   - Reference

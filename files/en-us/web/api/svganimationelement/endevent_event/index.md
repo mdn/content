@@ -1,7 +1,6 @@
 ---
 title: 'SVGAnimationElement: endEvent event'
 slug: Web/API/SVGAnimationElement/endEvent_event
-page-type: web-api-event
 tags:
   - API
   - Reference

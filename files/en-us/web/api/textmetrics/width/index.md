@@ -1,7 +1,6 @@
 ---
 title: TextMetrics.width
 slug: Web/API/TextMetrics/width
-page-type: web-api-instance-property
 tags:
   - API
   - Canvas

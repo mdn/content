@@ -1,7 +1,6 @@
 ---
 title: StylePropertyMap.set()
 slug: Web/API/StylePropertyMap/set
-page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

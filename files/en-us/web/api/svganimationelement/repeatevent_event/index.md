@@ -1,7 +1,6 @@
 ---
 title: 'SVGAnimationElement: repeatEvent event'
 slug: Web/API/SVGAnimationElement/repeatEvent_event
-page-type: web-api-event
 tags:
   - API
   - Reference

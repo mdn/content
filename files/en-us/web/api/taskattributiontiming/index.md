@@ -1,7 +1,6 @@
 ---
 title: TaskAttributionTiming
 slug: Web/API/TaskAttributionTiming
-page-type: web-api-interface
 tags:
   - API
   - Experimental

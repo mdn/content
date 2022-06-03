@@ -1,7 +1,6 @@
 ---
 title: SVGMarkerElement.preserveAspectRatio
 slug: Web/API/SVGMarkerElement/preserveAspectRatio
-page-type: web-api-instance-property
 tags:
   - API
   - Property

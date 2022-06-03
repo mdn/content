@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.deriveBits()
 slug: Web/API/SubtleCrypto/deriveBits
-page-type: web-api-instance-method
 tags:
   - API
   - Crypto

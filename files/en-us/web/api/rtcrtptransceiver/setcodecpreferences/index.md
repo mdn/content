@@ -1,7 +1,6 @@
 ---
 title: RTCRtpTransceiver.setCodecPreferences()
 slug: Web/API/RTCRtpTransceiver/setCodecPreferences
-page-type: web-api-instance-method
 tags:
   - API
   - Codec

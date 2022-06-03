@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.ready
 slug: Web/API/ServiceWorkerContainer/ready
-page-type: web-api-instance-property
 tags:
   - API
   - Property
