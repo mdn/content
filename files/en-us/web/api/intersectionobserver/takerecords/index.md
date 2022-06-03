@@ -52,5 +52,4 @@ intersections were checked.
 
 ## See also
 
-- [Intersection Observer
-  API](/en-US/docs/Web/API/Intersection_Observer_API)
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
