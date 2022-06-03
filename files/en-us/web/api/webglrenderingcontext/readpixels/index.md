@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.readPixels()
 slug: Web/API/WebGLRenderingContext/readPixels
+page-type: web-api-instance-method
 tags:
   - API
   - Method

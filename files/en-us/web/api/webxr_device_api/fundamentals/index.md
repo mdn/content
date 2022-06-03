@@ -1,6 +1,7 @@
 ---
 title: Fundamentals of WebXR
 slug: Web/API/WebXR_Device_API/Fundamentals
+page-type: guide
 tags:
   - API
   - AR

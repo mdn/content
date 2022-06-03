@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method

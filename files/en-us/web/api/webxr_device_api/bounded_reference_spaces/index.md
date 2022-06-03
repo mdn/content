@@ -1,6 +1,7 @@
 ---
 title: Using bounded reference spaces
 slug: Web/API/WebXR_Device_API/Bounded_reference_spaces
+page-type: guide
 tags:
   - 3D
   - Graphics

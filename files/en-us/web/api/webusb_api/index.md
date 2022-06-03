@@ -1,6 +1,7 @@
 ---
 title: WebUSB API
 slug: Web/API/WebUSB_API
+page-type: web-api-overview
 tags:
   - API
   - Web USB

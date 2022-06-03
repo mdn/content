@@ -1,6 +1,7 @@
 ---
 title: Writing WebSocket servers
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
+page-type: guide
 tags:
   - Guide
   - HTML5

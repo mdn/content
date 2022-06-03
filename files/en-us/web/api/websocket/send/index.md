@@ -1,6 +1,7 @@
 ---
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
+page-type: web-api-instance-method
 tags:
   - API
   - Method

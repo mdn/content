@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.useProgram()
 slug: Web/API/WebGLRenderingContext/useProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
