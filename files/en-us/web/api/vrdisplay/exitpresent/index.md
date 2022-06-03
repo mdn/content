@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.exitPresent()
 slug: Web/API/VRDisplay/exitPresent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

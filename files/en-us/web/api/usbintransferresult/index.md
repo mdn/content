@@ -1,6 +1,7 @@
 ---
 title: USBInTransferResult
 slug: Web/API/USBInTransferResult
+page-type: web-api-interface
 tags:
   - API
   - Experimental

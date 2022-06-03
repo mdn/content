@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters.renderRect
 slug: Web/API/VREyeParameters/renderRect
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

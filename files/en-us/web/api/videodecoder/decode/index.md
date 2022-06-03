@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.decode()
 slug: Web/API/VideoDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Method

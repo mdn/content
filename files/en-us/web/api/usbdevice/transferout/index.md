@@ -1,6 +1,7 @@
 ---
 title: USBDevice.transferOut()
 slug: Web/API/USBDevice/transferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method
