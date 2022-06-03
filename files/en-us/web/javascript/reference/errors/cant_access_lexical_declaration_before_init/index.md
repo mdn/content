@@ -14,10 +14,9 @@ This happens within any block statement, when [`let`](/en-US/docs/Web/JavaScript
 
 ## Message
 
-```js
-ReferenceError: Cannot access 'X' before initialization (Edge)
+```plain
+ReferenceError: Cannot access 'X' before initialization (Chrome and Edge)
 ReferenceError: can't access lexical declaration 'X' before initialization (Firefox)
-ReferenceError: 'x' is not defined (Chrome)
 ```
 
 ## Error type
@@ -43,9 +42,9 @@ At this point is has not been initialized with a value, so accessing the variabl
 
 ```js example-bad
 function test() {
-  // Accessing the 'let' variable foo before it's declared
+  // Accessing the 'const' variable foo before it's declared
   console.log(foo);     // ReferenceError: foo is not initialized
-  let foo = 33;         // 'foo' is declared and initialized here using the 'let' keyword
+  const foo = 33;         // 'foo' is declared and initialized here using the 'const' keyword
 }
 
 test();
@@ -53,12 +52,12 @@ test();
 
 ### Valid cases
 
-In the following example, we correctly declare a variable using the `let` keyword before accessing it.
+In the following example, we correctly declare a variable using the `const` keyword before accessing it.
 
 ```js example-good
 function test(){
    // Declaring variable foo
-   let foo = 33;
+   const foo = 33;
    console.log(foo);    // 33
 }
 test();
