@@ -1,6 +1,7 @@
 ---
 title: PositionSensorVRDevice
 slug: Web/API/PositionSensorVRDevice
+page-type: web-api-interface
 tags:
   - API
   - Experimental

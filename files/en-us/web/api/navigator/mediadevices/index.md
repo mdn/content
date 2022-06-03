@@ -1,6 +1,7 @@
 ---
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
+page-type: web-api-instance-property
 tags:
   - Media
   - Media Capture and Streams API

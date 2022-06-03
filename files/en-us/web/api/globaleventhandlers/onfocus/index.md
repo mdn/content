@@ -20,8 +20,7 @@ processes {{event("focus")}} events on the given element.
 The `focus` event is raised when the user sets focus on an element.
 
 For `onfocus` to fire on non-input elements, they must be given the
-{{htmlattrxref("tabindex")}} attribute (see [Building
-keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in) for more details).
+{{htmlattrxref("tabindex")}} attribute (see [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in) for more details).
 
 > **Note:** The opposite of `onfocus` is
 > {{domxref("GlobalEventHandlers.onblur", "onblur")}}.

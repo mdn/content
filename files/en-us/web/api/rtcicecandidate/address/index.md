@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.address
 slug: Web/API/RTCIceCandidate/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address

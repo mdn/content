@@ -1,6 +1,7 @@
 ---
 title: 'SpeechRecognition: error event'
 slug: Web/API/SpeechRecognition/error_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

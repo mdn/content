@@ -176,8 +176,6 @@ For additional examples, see our guide to [responsive images](/en-US/docs/Learn/
 
 ## See also
 
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Image file type and format
-  guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)

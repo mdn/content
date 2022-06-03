@@ -1,6 +1,7 @@
 ---
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
+page-type: web-api-instance-method
 tags:
   - API
   - Beacon

@@ -1,6 +1,7 @@
 ---
 title: TextEncoder.encodeInto()
 slug: Web/API/TextEncoder/encodeInto
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

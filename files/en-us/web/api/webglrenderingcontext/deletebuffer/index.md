@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteBuffer()
 slug: Web/API/WebGLRenderingContext/deleteBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

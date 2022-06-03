@@ -1,6 +1,7 @@
 ---
 title: 'Window: online event'
 slug: Web/API/Window/online_event
+page-type: web-api-event
 tags:
   - API
   - Event

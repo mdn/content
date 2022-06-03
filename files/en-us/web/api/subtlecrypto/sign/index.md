@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.sign()
 slug: Web/API/SubtleCrypto/sign
+page-type: web-api-instance-method
 tags:
   - API
   - Method

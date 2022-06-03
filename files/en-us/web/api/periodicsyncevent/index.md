@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncEvent
 slug: Web/API/PeriodicSyncEvent
+page-type: web-api-interface
 tags:
   - API
   - Background Sync

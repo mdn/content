@@ -1,6 +1,7 @@
 ---
 title: PerformancePaintTiming
 slug: Web/API/PerformancePaintTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface

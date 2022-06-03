@@ -1,6 +1,7 @@
 ---
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

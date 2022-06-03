@@ -1,6 +1,7 @@
 ---
 title: Notification()
 slug: Web/API/Notification/Notification
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

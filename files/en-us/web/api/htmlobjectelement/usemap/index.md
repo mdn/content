@@ -21,7 +21,7 @@ reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: Window.requestFileSystem()
 slug: Web/API/Window/requestFileSystem
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

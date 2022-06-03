@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

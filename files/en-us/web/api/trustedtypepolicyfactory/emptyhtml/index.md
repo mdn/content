@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.emptyHTML
 slug: Web/API/TrustedTypePolicyFactory/emptyHTML
+page-type: web-api-instance-property
 tags:
   - API
   - Property

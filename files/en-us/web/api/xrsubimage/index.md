@@ -1,6 +1,7 @@
 ---
 title: XRSubImage
 slug: Web/API/XRSubImage
+page-type: web-api-interface
 tags:
   - API
   - Interface

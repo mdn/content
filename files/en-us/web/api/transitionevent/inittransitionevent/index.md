@@ -1,6 +1,7 @@
 ---
 title: TransitionEvent.initTransitionEvent()
 slug: Web/API/TransitionEvent/initTransitionEvent
+page-type: web-api-instance-method
 tags:
   - API
   - CSS

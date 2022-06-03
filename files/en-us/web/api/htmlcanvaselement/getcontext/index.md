@@ -169,8 +169,7 @@ var ctx = canvas.getContext('2d');
 console.log(ctx); // CanvasRenderingContext2D { /* ... */ }
 ```
 
-Now you have the [2D rendering
-context](/en-US/docs/Web/API/CanvasRenderingContext2D) for a canvas and you can draw within it.
+Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingContext2D) for a canvas and you can draw within it.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode.type
 slug: Web/API/OscillatorNode/type
+page-type: web-api-instance-property
 tags:
   - API
   - OscillatorNode

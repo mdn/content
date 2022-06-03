@@ -1,6 +1,7 @@
 ---
 title: Range.getBoundingClientRect()
 slug: Web/API/Range/getBoundingClientRect
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

@@ -1,6 +1,7 @@
 ---
 title: 'Window: animationcancel event'
 slug: Web/API/Window/animationcancel_event
+page-type: web-api-event
 tags:
   - API
   - Animation

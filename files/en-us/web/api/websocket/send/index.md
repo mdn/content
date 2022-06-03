@@ -1,6 +1,7 @@
 ---
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -43,8 +44,7 @@ send(data)
         a binary frame. The value of `bufferedAmount` is increased by the byte
         size of that raw data.
     - {{domxref("ArrayBufferView")}}
-      - : You can send any [JavaScript
-        typed array](/en-US/docs/Web/JavaScript/Typed_arrays) object as a binary frame; its binary data contents are queued in
+      - : You can send any [JavaScript typed array](/en-US/docs/Web/JavaScript/Typed_arrays) object as a binary frame; its binary data contents are queued in
         the buffer, increasing the value of `bufferedAmount` by the requisite
         number of bytes.
 

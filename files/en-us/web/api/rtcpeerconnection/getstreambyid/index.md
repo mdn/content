@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getStreamById()
 slug: Web/API/RTCPeerConnection/getStreamById
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection

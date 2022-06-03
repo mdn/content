@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.isConnected
 slug: Web/API/VRDisplay/isConnected
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: Notification.silent
 slug: Web/API/Notification/silent
+page-type: web-api-instance-property
 tags:
   - API
   - Notification

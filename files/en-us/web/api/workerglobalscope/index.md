@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.viewport()
 slug: Web/API/WebGLRenderingContext/viewport
+page-type: web-api-instance-method
 tags:
   - API
   - Method

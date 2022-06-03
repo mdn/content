@@ -1,6 +1,7 @@
 ---
 title: USBDevice.deviceVersionMajor
 slug: Web/API/USBDevice/deviceVersionMajor
+page-type: web-api-instance-property
 tags:
   - API
   - Property

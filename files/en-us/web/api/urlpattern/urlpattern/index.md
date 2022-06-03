@@ -1,6 +1,7 @@
 ---
 title: URLPattern()
 slug: Web/API/URLPattern/URLPattern
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

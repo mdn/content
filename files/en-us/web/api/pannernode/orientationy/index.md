@@ -1,6 +1,7 @@
 ---
 title: PannerNode.orientationY
 slug: Web/API/PannerNode/orientationY
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode

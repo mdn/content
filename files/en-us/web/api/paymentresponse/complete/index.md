@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.complete()
 slug: Web/API/PaymentResponse/complete
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

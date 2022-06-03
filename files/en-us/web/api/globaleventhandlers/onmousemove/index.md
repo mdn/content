@@ -98,8 +98,7 @@ links.forEach(link => {
 ### Draggable elements
 
 We also have an example available showing the use of the `onmousemove` event
-handler with draggable objects — [view the
-example in action](https://media.prod.mdn.mozit.cloud/attachments/2013/03/05/5031/5692db994e59bae0b1c9e66f7df259b9/draggable_elements.html).
+handler with draggable objects — [view the example in action](https://media.prod.mdn.mozit.cloud/attachments/2013/03/05/5031/5692db994e59bae0b1c9e66f7df259b9/draggable_elements.html).
 
 ## Specifications
 

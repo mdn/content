@@ -1,6 +1,7 @@
 ---
 title: XPathExpression.evaluate()
 slug: Web/API/XPathExpression/evaluate
+page-type: web-api-instance-method
 tags:
   - API
   - DOM XPath API

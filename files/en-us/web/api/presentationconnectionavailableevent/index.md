@@ -1,6 +1,7 @@
 ---
 title: PresentationConnectionAvailableEvent
 slug: Web/API/PresentationConnectionAvailableEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

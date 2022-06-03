@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator
 slug: Web/API/XPathEvaluator
+page-type: web-api-interface
 tags:
   - API
   - DOM

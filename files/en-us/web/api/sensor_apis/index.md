@@ -1,6 +1,7 @@
 ---
 title: Sensor APIs
 slug: Web/API/Sensor_APIs
+page-type: web-api-overview
 tags:
   - API
   - Generic Sensor API

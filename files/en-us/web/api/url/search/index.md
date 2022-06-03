@@ -1,6 +1,7 @@
 ---
 title: URL.search
 slug: Web/API/URL/search
+page-type: web-api-instance-property
 tags:
   - API
   - Property

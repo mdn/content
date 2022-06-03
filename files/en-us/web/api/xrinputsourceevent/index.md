@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceEvent
 slug: Web/API/XRInputSourceEvent
+page-type: web-api-interface
 tags:
   - 3D
   - API

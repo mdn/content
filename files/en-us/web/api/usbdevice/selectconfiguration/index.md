@@ -1,6 +1,7 @@
 ---
 title: USBDevice.selectConfiguration()
 slug: Web/API/USBDevice/selectConfiguration
+page-type: web-api-instance-method
 tags:
   - API
   - Method

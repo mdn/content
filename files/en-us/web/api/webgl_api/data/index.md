@@ -1,6 +1,7 @@
 ---
 title: Data in WebGL
 slug: Web/API/WebGL_API/Data
+page-type: guide
 tags:
   - 3D
   - 3D Graphics

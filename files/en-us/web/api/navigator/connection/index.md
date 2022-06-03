@@ -1,6 +1,7 @@
 ---
 title: Navigator.connection
 slug: Web/API/Navigator/connection
+page-type: web-api-instance-property
 tags:
   - API
   - Connection

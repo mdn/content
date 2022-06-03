@@ -1,6 +1,7 @@
 ---
 title: SerialPort.writable
 slug: Web/API/SerialPort/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property

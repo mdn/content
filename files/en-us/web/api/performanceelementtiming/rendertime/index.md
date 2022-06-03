@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.renderTime
 slug: Web/API/PerformanceElementTiming/renderTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property

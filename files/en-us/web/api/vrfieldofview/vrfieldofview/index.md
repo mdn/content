@@ -1,6 +1,7 @@
 ---
 title: VRFieldOfView()
 slug: Web/API/VRFieldOfView/VRFieldOfView
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

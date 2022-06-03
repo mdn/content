@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.circuitBreakerTriggerCount
 slug: Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
+page-type: web-api-instance-property
 tags:
   - API
   - Circuit-Breaker

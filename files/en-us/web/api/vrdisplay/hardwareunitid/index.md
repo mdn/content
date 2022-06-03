@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.hardwareUnitId
 slug: Web/API/VRDisplay/hardwareUnitId
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

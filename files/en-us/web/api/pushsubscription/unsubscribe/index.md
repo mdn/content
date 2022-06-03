@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

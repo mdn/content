@@ -1,6 +1,7 @@
 ---
 title: NDEFReadingEvent.message
 slug: Web/API/NDEFReadingEvent/message
+page-type: web-api-instance-property
 tags:
   - API
   - Property

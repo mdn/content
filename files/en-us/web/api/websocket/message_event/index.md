@@ -1,6 +1,7 @@
 ---
 title: 'WebSocket: message event'
 slug: Web/API/WebSocket/message_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

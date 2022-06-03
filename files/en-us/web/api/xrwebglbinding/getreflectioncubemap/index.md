@@ -1,6 +1,7 @@
 ---
 title: XRWebGLBinding.getReflectionCubeMap()
 slug: Web/API/XRWebGLBinding/getReflectionCubeMap
+page-type: web-api-instance-method
 tags:
   - API
   - Method

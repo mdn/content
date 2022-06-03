@@ -1,6 +1,7 @@
 ---
 title: WebOTP API
 slug: Web/API/WebOTP_API
+page-type: web-api-overview
 tags:
   - API
   - WebOTP

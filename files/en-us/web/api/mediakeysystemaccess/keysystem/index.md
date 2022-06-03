@@ -16,7 +16,7 @@ browser-compat: api.MediaKeySystemAccess.keySystem
 {{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
 The `MediaKeySystemAccess.keySystem` read-only property returns a
-{{domxref('DOMString')}} identifying the key system being used.
+string identifying the key system being used.
 
 ## Value
 

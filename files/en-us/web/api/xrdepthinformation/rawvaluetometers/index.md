@@ -1,6 +1,7 @@
 ---
 title: XRDepthInformation.rawValueToMeters
 slug: Web/API/XRDepthInformation/rawValueToMeters
+page-type: web-api-instance-property
 tags:
   - API
   - AR

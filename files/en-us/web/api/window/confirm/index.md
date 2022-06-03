@@ -1,6 +1,7 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

@@ -42,7 +42,7 @@ updateUI(options)
           - : A string providing a name for the associated image.
 
     - `title`{{optional_inline}}
-      - : A {{domxref("DOMString", "string")}} containing text to update the title of the user interface.
+      - : A string containing the new title of the user interface.
 
 ### Return value
 

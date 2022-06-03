@@ -1,6 +1,7 @@
 ---
 title: Notification.body
 slug: Web/API/Notification/body
+page-type: web-api-instance-property
 tags:
   - API
   - BODY

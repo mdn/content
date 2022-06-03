@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: signalingstatechange event'
 slug: Web/API/RTCPeerConnection/signalingstatechange_event
+page-type: web-api-event
 tags:
   - API
   - Event

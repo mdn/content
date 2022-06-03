@@ -1,6 +1,7 @@
 ---
 title: URLPattern.search
 slug: Web/API/URLPattern/search
+page-type: web-api-instance-property
 tags:
   - API
   - Property

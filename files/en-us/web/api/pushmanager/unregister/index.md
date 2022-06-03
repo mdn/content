@@ -1,6 +1,7 @@
 ---
 title: PushManager.unregister()
 slug: Web/API/PushManager/unregister
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

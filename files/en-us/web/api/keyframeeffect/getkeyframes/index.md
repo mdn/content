@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Animation
-  - Experimental
   - KeyframeEffect
   - Method
   - Reference
@@ -14,7 +13,7 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.getKeyframes
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations API") }}
 
 The **`getKeyframes()`** method of a {{domxref("KeyframeEffect")}} returns an Array of the computed keyframes that make up this animation along with their computed offsets.
 

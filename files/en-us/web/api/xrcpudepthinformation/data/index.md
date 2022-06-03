@@ -1,6 +1,7 @@
 ---
 title: XRCPUDepthInformation.data
 slug: Web/API/XRCPUDepthInformation/data
+page-type: web-api-instance-property
 tags:
   - API
   - AR

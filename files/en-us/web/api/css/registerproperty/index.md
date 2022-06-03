@@ -31,16 +31,16 @@ A `PropertyDefinition` dictionary object, which can contain the following
 members:
 
 - `name`
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) indicating the
+  - : A string representing the
     name of the property being defined.
 - `syntax` {{optional_inline}}
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing
+  - : A string representing
     the expected syntax of the defined property. Defaults to `"*"`.
 - `inherits`
   - : A boolean value defining whether the defined property should be inherited
     (`true`), or not (`false`). Defaults to `false`.
 - `initialValue` {{optional_inline}}
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing
+  - : A string representing
     the initial value of the defined property.
 
 ### Return value

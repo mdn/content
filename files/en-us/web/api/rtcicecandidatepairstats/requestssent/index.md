@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.requestsSent
 slug: Web/API/RTCIceCandidatePairStats/requestsSent
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity

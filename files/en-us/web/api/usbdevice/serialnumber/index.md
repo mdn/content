@@ -1,6 +1,7 @@
 ---
 title: USBDevice.serialNumber
 slug: Web/API/USBDevice/serialNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property

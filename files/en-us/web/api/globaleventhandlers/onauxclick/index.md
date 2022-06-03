@@ -53,9 +53,7 @@ In this example we define functions for two event handlers —
 {{domxref("GlobalEventHandlers.onclick", "onclick")}} and `onauxclick`. The
 former changes the color of the button background, while the latter changes the button
 foreground (text) color. You can see the two functions in action by trying the demo out
-with a multi-button mouse ([see it
-live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the
-source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
+with a multi-button mouse ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
 
 ```js
 var button = document.querySelector('button');

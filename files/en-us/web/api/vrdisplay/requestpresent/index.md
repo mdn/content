@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.deleted
 slug: Web/API/RTCIceCandidateStats/deleted
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

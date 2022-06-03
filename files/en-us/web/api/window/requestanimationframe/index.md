@@ -1,6 +1,7 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Animations

@@ -1,6 +1,7 @@
 ---
 title: VTTRegion
 slug: Web/API/VTTRegion
+page-type: web-api-interface
 tags:
   - API
   - VTTRegion

@@ -1,6 +1,7 @@
 ---
 title: Web Animations API
 slug: Web/API/Web_Animations_API
+page-type: web-api-overview
 tags:
   - API
   - Animation

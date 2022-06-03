@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
+page-type: web-api-instance-property
 tags:
   - API
   - Host

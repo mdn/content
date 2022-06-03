@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.fetchStart
 slug: Web/API/PerformanceResourceTiming/fetchStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property

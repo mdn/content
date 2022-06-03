@@ -1,6 +1,7 @@
 ---
 title: SVGCircleElement.cy
 slug: Web/API/SVGCircleElement/cy
+page-type: web-api-instance-property
 tags:
   - API
   - Property

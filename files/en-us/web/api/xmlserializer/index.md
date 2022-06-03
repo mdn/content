@@ -1,6 +1,7 @@
 ---
 title: XMLSerializer
 slug: Web/API/XMLSerializer
+page-type: web-api-interface
 tags:
   - Converting
   - DOM Parsing

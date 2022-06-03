@@ -1,6 +1,7 @@
 ---
 title: Matrix math for the web
 slug: Web/API/WebGL_API/Matrix_math_for_the_web
+page-type: guide
 tags:
   - 3D
   - 3D2D

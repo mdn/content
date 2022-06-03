@@ -1,6 +1,7 @@
 ---
 title: Touch.pageY
 slug: Web/API/Touch/pageY
+page-type: web-api-instance-property
 tags:
   - API
   - Property

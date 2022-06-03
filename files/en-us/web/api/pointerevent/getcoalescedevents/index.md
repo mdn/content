@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

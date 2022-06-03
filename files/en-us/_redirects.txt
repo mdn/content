@@ -2174,7 +2174,7 @@
 /en-US/docs/DOM/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/DOM/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
 /en-US/docs/DOM/window.navigator.vibrate	/en-US/docs/Web/API/Navigator/vibrate
-/en-US/docs/DOM/window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/DOM/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/DOM/window.onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/DOM/window.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/DOM/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
@@ -2613,7 +2613,7 @@
 /en-US/docs/DOM:window.navigator.userAgent	/en-US/docs/Web/API/Navigator/userAgent
 /en-US/docs/DOM:window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/DOM:window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
-/en-US/docs/DOM:window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/DOM:window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/DOM:window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/DOM:window.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/DOM:window.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
@@ -3334,7 +3334,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.userAgent	/en-US/docs/Web/API/Navigator/userAgent
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
-/en-US/docs/Document_Object_Model_(DOM)/window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Document_Object_Model_(DOM)/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Document_Object_Model_(DOM)/window.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
@@ -7820,7 +7820,7 @@
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/Web/API/Document/namespaceURI	/en-US/docs/Web/API/Element/namespaceURI
-/en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/Document/onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
 /en-US/docs/Web/API/Document/onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/Web/API/Document/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
@@ -8090,7 +8090,7 @@
 /en-US/docs/Web/API/Geolocation/Using_geolocation	/en-US/docs/Web/API/Geolocation_API
 /en-US/docs/Web/API/Geolocation_API/Using	/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /en-US/docs/Web/API/GlobalEventHandlers.click	/en-US/docs/Web/API/Element/click_event
-/en-US/docs/Web/API/GlobalEventHandlers.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/GlobalEventHandlers.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/GlobalEventHandlers.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/GlobalEventHandlers.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Web/API/GlobalEventHandlers.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -8131,6 +8131,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay	/en-US/docs/Web/API/GlobalEventHandlers/onplay
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ontouchend	/en-US/docs/Web/API/GlobalEventHandlers/ontouchend
 /en-US/docs/Web/API/GlobalEventHandlers/dragexit_event	/en-US/docs/Web/API/Document/dragleave_event
+/en-US/docs/Web/API/GlobalEventHandlers/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
@@ -8194,7 +8195,7 @@
 /en-US/docs/Web/API/HTMLElement/HTMLElement.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
-/en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/HTMLElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/HTMLElement/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Web/API/HTMLElement/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -9219,7 +9220,7 @@
 /en-US/docs/Web/API/SVGAnimationElement/onend	/en-US/docs/Web/API/SVGAnimationElement/endEvent_event
 /en-US/docs/Web/API/SVGAnimationElement/onrepeat	/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event
 /en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
-/en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/SVGElement/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Web/API/SVGElement/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -9739,7 +9740,7 @@
 /en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/Window/mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
-/en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/Window/onappinstalled	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/API/Window/onbeforeinstallprompt	/en-US/docs/Web/API/Window/beforeinstallprompt_event
@@ -10201,6 +10202,8 @@
 /en-US/docs/Web/API/mozRTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/mozRTCSessionDescription/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription/toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
+/en-US/docs/Web/API/msCaching	/en-US/docs/Web/API/XMLHttpRequest/msCaching
+/en-US/docs/Web/API/msCachingEnabled	/en-US/docs/Web/API/XMLHttpRequest/msCachingEnabled
 /en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
@@ -10386,7 +10389,7 @@
 /en-US/docs/Web/API/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/Web/API/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
 /en-US/docs/Web/API/window.navigator.vibrate	/en-US/docs/Web/API/Navigator/vibrate
-/en-US/docs/Web/API/window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/window.onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/window.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/API/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
@@ -11007,6 +11010,8 @@
 /en-US/docs/Web/CSS/color_value/hwb()	/en-US/docs/Web/CSS/color_value/hwb
 /en-US/docs/Web/CSS/color_value/lab()	/en-US/docs/Web/CSS/color_value/lab
 /en-US/docs/Web/CSS/color_value/lch()	/en-US/docs/Web/CSS/color_value/lch
+/en-US/docs/Web/CSS/color_value/oklab()	/en-US/docs/Web/CSS/color_value/oklab
+/en-US/docs/Web/CSS/color_value/oklch()	/en-US/docs/Web/CSS/color_value/oklch
 /en-US/docs/Web/CSS/color_value/rgb()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgba
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient
@@ -12895,7 +12900,7 @@
 /en-US/docs/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/window.moveTo	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/window.navigator	/en-US/docs/Web/API/Window/navigator
-/en-US/docs/window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/window.open	/en-US/docs/Web/API/Window/open
 /en-US/docs/window.opener	/en-US/docs/Web/API/Window/opener
 /en-US/docs/window.outerHeight	/en-US/docs/Web/API/Window/outerHeight

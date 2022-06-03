@@ -1,6 +1,7 @@
 ---
 title: VRFrameData.pose
 slug: Web/API/VRFrameData/pose
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: Response.blob()
 slug: Web/API/Response/blob
+page-type: web-api-instance-method
 tags:
   - API
   - Blob

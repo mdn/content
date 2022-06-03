@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
+page-type: web-api-interface
 tags:
   - API
   - Interface

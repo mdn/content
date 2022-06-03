@@ -18,7 +18,7 @@ The local name is always in lower case, whatever case at the attribute creation.
 >
 > That means that the local name of an attribute of an HTML element is always be equal to its qualified name: Colons are treated as regular characters. In XML, like in SVG or MathML, the colon denotes the end of the prefix and what is before is the namespace; the local name may be different from the qualified name.
 
-### Value
+## Value
 
 A string representing the local part of the attribute's qualified name.
 

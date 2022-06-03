@@ -51,10 +51,10 @@ to add compression to an audio track. For a more complete example, have a look a
 ```js
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a compressor node
-var compressor = audioCtx.createDynamicsCompressor();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
 compressor.knee.setValueAtTime(40, audioCtx.currentTime);
 compressor.ratio.setValueAtTime(12, audioCtx.currentTime);
@@ -65,7 +65,7 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 source.connect(audioCtx.destination);
 
 button.onclick = function() {
-  var active = button.getAttribute('data-active');
+  const active = button.getAttribute('data-active');
   if(active == 'false') {
     button.setAttribute('data-active', 'true');
     button.textContent = 'Remove compression';

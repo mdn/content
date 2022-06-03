@@ -1,6 +1,7 @@
 ---
 title: SerialPort.close()
 slug: Web/API/SerialPort/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
