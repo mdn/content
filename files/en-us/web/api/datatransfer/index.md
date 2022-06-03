@@ -37,7 +37,7 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 - {{domxref("DataTransfer.items")}} {{readonlyInline}}
   - : Gives a {{domxref("DataTransferItemList")}} object which is a list of all of the drag data.
 - {{domxref("DataTransfer.types")}} {{readonlyInline}}
-  - : An array of {{domxref("DOMString","strings")}} giving the formats that were set in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
+  - : An array of strings giving the formats that were set in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
 
 ### Gecko properties
 

@@ -25,7 +25,7 @@ The virtual machine can then attach a stack trace to the exception when it is th
 
 ## Value
 
-A {{domxref("DOMString")}} containing the stack trace, or {{jsxref("undefined")}} if no trace has been assigned.
+A string containing the stack trace, or {{jsxref("undefined")}} if no trace has been assigned.
 
 The stack trace string lists the locations of each operation on the stack in WebAssembly format.
 This is a human readable string indicating the URL, name of the function type called, the function index, and its offset in the module binary.

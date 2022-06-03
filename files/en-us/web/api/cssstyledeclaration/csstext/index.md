@@ -17,6 +17,10 @@ To be able to set a **stylesheet** rule dynamically, see [Using dynamic styling 
 
 Not to be confused with stylesheet style-rule {{domxref("CSSRule.cssText")}}.
 
+## Value
+
+A string containing the text of the element's inline style declaration.
+
 ## Example
 
 ```html

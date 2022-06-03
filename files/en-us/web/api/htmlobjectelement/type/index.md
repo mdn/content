@@ -21,7 +21,7 @@ of the resource.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 
