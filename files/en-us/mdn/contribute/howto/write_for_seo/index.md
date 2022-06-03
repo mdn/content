@@ -24,8 +24,8 @@ Since most readers reach content on MDN through search engines, as writers, we h
 
 The following is a list of things you should check while writing and reviewing content to help ensure that the page and its neighbors will be indexed properly by search engines.
 
-- Make sure the page's contents are [different enough from other pages](/en-US/docs/MDN/Contribute/Howto/Write_for_SEO#ensure_pages_aren't_too_similar) that search engines don't assume they're about the same thing.
-- [Avoid pages that are too short](/en-US/docs/MDN/Contribute/Howto/Write_for_SEO#avoid_pages_that_are_too_short). Articles that are too short (called "thin pages" in SEO parlance) are difficult to catalog accurately. Whenever possible, pages on MDN should avoid being shorter than around 300 words or so.
+- Make sure the page's contents are [different enough from other pages](#ensure_pages_aren't_too_similar) that search engines don't assume they're about the same thing.
+- [Avoid pages that are too short](#avoid_pages_that_are_too_short). Articles that are too short (called "thin pages" in SEO parlance) are difficult to catalog accurately. Whenever possible, pages on MDN should avoid being shorter than around 300 words or so.
 
 ## Ensure pages aren't too similar
 

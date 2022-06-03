@@ -22,7 +22,7 @@ Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs,
 
 ### HTML
 
-- [Meet the HTML5 parser](/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser)
+- [Meet the HTML5 parser](/en-US/docs/Learn/HTML)
   - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
 - [Forms in HTML5](/en-US/docs/Learn/Forms)
   - : A look at improvements to web forms in HTML5. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
