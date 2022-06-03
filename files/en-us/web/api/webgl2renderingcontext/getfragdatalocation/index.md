@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getFragDataLocation()
 slug: Web/API/WebGL2RenderingContext/getFragDataLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method

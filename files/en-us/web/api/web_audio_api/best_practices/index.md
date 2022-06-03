@@ -1,6 +1,7 @@
 ---
 title: Web Audio API best practices
 slug: Web/API/Web_Audio_API/Best_practices
+page-type: guide
 tags:
   - Audio
   - Best practices

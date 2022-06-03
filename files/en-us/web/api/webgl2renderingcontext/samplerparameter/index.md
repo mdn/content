@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.samplerParameter[if]()
 slug: Web/API/WebGL2RenderingContext/samplerParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method

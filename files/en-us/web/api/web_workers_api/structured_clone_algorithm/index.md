@@ -1,6 +1,7 @@
 ---
 title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
+page-type: guide
 tags:
   - Advanced
   - DOM

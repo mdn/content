@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.clientWaitSync()
 slug: Web/API/WebGL2RenderingContext/clientWaitSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method

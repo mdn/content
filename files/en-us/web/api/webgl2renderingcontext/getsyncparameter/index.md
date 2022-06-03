@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getSyncParameter()
 slug: Web/API/WebGL2RenderingContext/getSyncParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method

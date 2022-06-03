@@ -1,6 +1,7 @@
 ---
 title: Using Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
+page-type: guide
 tags:
   - Advanced
   - Firefox
