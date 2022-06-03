@@ -48,13 +48,26 @@ Compared to a website, extensions have access to additional privileged APIs, so 
 
 ## Default content security policy
 
-The default content security policy for extensions is:
+The default content security policy for an extension depends on whether it's implemented under Manifest V2 or V3.
+
+For Manifest V2 extensions, the default content security policy is:
+
+```
+"script-src 'self'; object-src 'self'; 'wasm-unsafe-eval';"
+```
+
+For Manifest V3 extensions, the default content security policy is:
 
 ```
 "script-src 'self'; object-src 'self';"
 ```
 
-This will be applied to any extension that has not explicitly set its own content security policy using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key. It has the following consequences:
+> **Note:** 
+>In Firefox 102 and later, `wasm-unsafe-eval` can be included in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key for Manifest V3 extensions to enable the use of [WebAssembly](/en-US/docs/WebAssembly).
+>
+>For Chrome, extensions cannot use WebAssembly in version 101 or earlier. In 102, extensions can use WebAssembly (the same behavior as Firefox 101 and earlier). From version 103, extensions can use WebAssembly if they include `wasm-unsafe-eval` in the `content_security_policy` in the manifest key. 
+
+These policies are applied to any extension that has not explicitly set its own content security policy using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key. It has the following consequences:
 
 - [You may only load \<script> and \<object> resources that are local to the extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#location_of_script_and_object_resources)
 - [The extension is not allowed to evaluate strings as JavaScript.](</en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends>)
@@ -68,14 +81,14 @@ Under the default CSP you may only load [\<script>](/en-US/docs/Web/HTML/Element
  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 ```
 
-This will no longer load the requested resource: it will fail silently, and any object which you expected to be present from the resource will not be found. There are two main solutions to this:
+This doesn't load the requested resource: it fails silently, and any object that you expect to be present from the resource is not be found. There are two main solutions to this:
 
 - download the resource, package it in your extension, and refer to this version of the resource
-- use the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key or in Manifest V3 the `content_scripts` property, to allow the remote origin you need.
+- allow the remote origin you need using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key or, in Manifest V3, the `content_scripts` property.
 
 ### eval() and friends
 
-Under the default CSP extensions are not allowed to evaluate strings as JavaScript. This means that the following are not permitted:
+Under the default CSP, extensions cannot evaluate strings as JavaScript. This means that the following are not permitted:
 
 ```js
 eval("console.log('some output');");
@@ -91,7 +104,7 @@ let f = new Function("console.log('foo');");
 
 ### Inline JavaScript
 
-Under the default CSP inline JavaScript is not executed. This disallows both JavaScript placed directly in `<script>` tags and inline event handlers, meaning that the following are not permitted:
+Under the default CSP, inline JavaScript is not executed. This disallows both JavaScript placed directly in `<script>` tags and inline event handlers, meaning that the following are not permitted:
 
 ```html
 <script>console.log("foo");</script>

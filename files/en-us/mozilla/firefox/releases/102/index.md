@@ -58,6 +58,7 @@ This article provides information about the changes in Firefox 102 that will aff
 ## Changes for add-on developers
 
 - The {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts is now available to Manifest V2 extensions ({{bug(1766615)}}).
+- The 'wasm-unsafe-eval' directive has been added to the [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest key to enable a Manifest V3 extension to use [WebAssembly](/en-US/docs/WebAssembly) ({{bug1766615)}}).
 
 #### Removals
 
