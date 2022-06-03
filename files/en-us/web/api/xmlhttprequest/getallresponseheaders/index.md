@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch Headers

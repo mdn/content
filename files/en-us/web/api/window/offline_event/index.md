@@ -1,6 +1,7 @@
 ---
 title: 'Window: offline event'
 slug: Web/API/Window/offline_event
+page-type: web-api-event
 tags:
   - API
   - Event

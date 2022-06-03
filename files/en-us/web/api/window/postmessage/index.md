@@ -1,6 +1,7 @@
 ---
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - Cross-origin Communication

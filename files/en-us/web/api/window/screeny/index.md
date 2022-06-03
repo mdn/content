@@ -1,6 +1,7 @@
 ---
 title: Window.screenY
 slug: Web/API/Window/screenY
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

@@ -1,6 +1,7 @@
 ---
 title: Window.sidebar
 slug: Web/API/Window/sidebar
+page-type: web-api-instance-property
 tags:
   - HTML DOM
   - Property
