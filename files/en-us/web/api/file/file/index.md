@@ -17,7 +17,7 @@ object instance.
 ## Syntax
 
 ```js
-new File(bits, name)
+new File(bits, name
 new File(bits, name, options)
 ```
 
@@ -26,8 +26,8 @@ new File(bits, name, options)
 - `bits`
   - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
     {{domxref("Blob")}}, string objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("File")}}. `USVString`
-    objects are encoded as UTF-8.
+    objects, that will be put inside the {{domxref("File")}}.
+    Note that strings objects here are encoded as UTF-8, unlike the usual JS UTF-16 strings.
 - `name`
   - : A string representing the file name or the path to the file.
 - `options` {{optional_inline}}
