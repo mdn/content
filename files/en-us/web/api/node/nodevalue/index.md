@@ -1,6 +1,7 @@
 ---
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: ConstantSourceNode
 slug: Web/API/ConstantSourceNode
+page-type: web-api-interface
 tags:
   - API
   - Audio

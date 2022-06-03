@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.accuracy
 slug: Web/API/GeolocationCoordinates/accuracy
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API

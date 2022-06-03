@@ -1,6 +1,7 @@
 ---
 title: XRRay
 slug: Web/API/XRRay
+page-type: web-api-interface
 tags:
   - API
   - Interface

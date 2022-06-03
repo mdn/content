@@ -1,6 +1,7 @@
 ---
 title: Drawing text
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
+page-type: guide
 tags:
   - Canvas
   - Graphics

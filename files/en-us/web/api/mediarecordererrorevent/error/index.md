@@ -1,6 +1,7 @@
 ---
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Error
@@ -22,7 +23,7 @@ by a {{domxref("MediaRecorder")}} instance.
 When a `MediaRecorderErrorEvent` occurs, you can determine to some extent
 what went wrong by examining the `error` property within the
 `MediaRecorderErrorEvent` received by the `MediaRecorder`'s
-{{event("error")}} event handler, {{domxref("MediaRecorder.error_event", "onerror")}}.
+{{domxref("MediaRecorder/error_event", "error")}} event handler, {{domxref("MediaRecorder/error_event", "onerror")}}.
 
 ## Value
 

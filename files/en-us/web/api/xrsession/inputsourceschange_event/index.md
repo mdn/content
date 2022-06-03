@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: inputsourceschange event'
 slug: Web/API/XRSession/inputsourceschange_event
+page-type: web-api-event
 tags:
   - API
   - Event

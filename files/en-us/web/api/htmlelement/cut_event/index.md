@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: cut event'
 slug: Web/API/HTMLElement/cut_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -40,8 +41,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
 sole argument.
 
 ## Example

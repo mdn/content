@@ -1,6 +1,7 @@
 ---
 title: 'Document: animationcancel event'
 slug: Web/API/Document/animationcancel_event
+page-type: web-api-event
 tags:
   - API
   - Animation
@@ -59,7 +60,7 @@ document.onanimationcancel = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/animationcancel_event#live_example)
+[See a live example of this event](/en-US/docs/Web/API/HTMLElement/animationcancel_event#live_example).
 
 ## Specifications
 

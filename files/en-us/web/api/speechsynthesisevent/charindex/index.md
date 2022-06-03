@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisEvent.charIndex
 slug: Web/API/SpeechSynthesisEvent/charIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property

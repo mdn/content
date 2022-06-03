@@ -277,24 +277,40 @@ let mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-Note that {{jsxref("Object.assign()")}} triggers {{jsxref("Functions/set",
-   "setters")}}, whereas spread syntax doesn't.
-
-Note that you cannot replace or mimic the {{jsxref("Object.assign()")}} function:
+Note that {{jsxref("Object.assign()")}} can be used to mutate an object, whereas spread syntax can't.
 
 ```js
-let obj1 = { foo: 'bar', x: 42 };
-let obj2 = { foo: 'baz', y: 13 };
-const merge = ( ...objects ) => ( { ...objects } );
+const objectAssign = Object.assign({ set foo(val) { console.log(val); } }, { foo: 1 });
+// Logs "1"; objectAssign.foo is still the original setter
 
-let mergedObj1 = merge (obj1, obj2);
+const spread = { set foo(val) { console.log(val); }, ...{ foo: 1 } };
+// Nothing is logged; spread.foo is 1
+```
+
+You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spread operator:
+
+```js
+const obj1 = { foo: 'bar', x: 42 };
+const obj2 = { foo: 'baz', y: 13 };
+const merge = (...objects) => ({ ...objects });
+
+const mergedObj1 = merge(obj1, obj2);
 // Object { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
 
-let mergedObj2 = merge ({}, obj1, obj2);
+const mergedObj2 = merge({}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter.
+In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread operator, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
+
+```js
+const obj1 = { foo: 'bar', x: 42 };
+const obj2 = { foo: 'baz', y: 13 };
+const merge = (...objects) => objects.reduce((acc, cur) => ({ ...acc, ...cur }));
+
+const mergedObj1 = merge(obj1, obj2);
+// Object { foo: 'baz', x: 42, y: 13 }
+```
 
 ### Only for iterables
 

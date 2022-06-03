@@ -1,6 +1,7 @@
 ---
 title: XRInputSource
 slug: Web/API/XRInputSource
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -30,7 +31,7 @@ The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`
 - {{domxref('XRInputSource.hand', 'hand')}}{{readonlyInline}}
   - : An {{domxref("XRHand")}} object providing access to the underlying hand-tracking device.
 - {{domxref('XRInputSource.handedness', 'handedness')}}{{readonlyInline}}
-  - : A {{domxref("DOMString")}} that indicates which hand the device represented by this `XRInputSource` is being used in, if any. The value will be `left`, `right`, or `none`.
+  - : A string that indicates which hand the device represented by this `XRInputSource` is being used in, if any. The value will be `left`, `right`, or `none`.
 - {{domxref('XRInputSource.profiles', 'profiles')}}{{readonlyInline}}
   - : An array of `DOMString` objects, each specifying the name of an input profile describing the preferred visual representation and behavior of this input source.
 - {{domxref('XRInputSource.targetRayMode', 'targetRayMode')}}{{readonlyInline}}

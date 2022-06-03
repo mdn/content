@@ -1,6 +1,7 @@
 ---
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

@@ -1,13 +1,14 @@
 ---
 title: History API
 slug: Web/API/History_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
   - HTML DOM
   - History
   - History API
-spec-urls: https://html.spec.whatwg.org/multipage/browsers.html#history
+browser-compat: api.History
 ---
 {{DefaultAPISidebar("History API")}}
 
@@ -95,7 +96,7 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 
 ## Browser compatibility
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## See also
 

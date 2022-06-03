@@ -1,16 +1,21 @@
 ---
 title: IDBFileHandle.location
 slug: Web/API/IDBFileHandle/location
+page-type: web-api-instance-property
 tags:
   - API
   - Files
-  - Non-standard
   - Property
   - Reference
   - WebAPI
+  - Non-standard
+  - Deprecated
 browser-compat: api.IDBFileHandle.location
 ---
-{{APIRef("IndexedDB")}}{{non-standard_header}}
+{{APIRef("IndexedDB")}}{{deprecated_header}}
+
+> **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
+> Consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 The **`location`** property of the {{domxref("IDBFileHandle")}} is a zero-based index
 representing the position of the read/write pointer within the file.
@@ -20,10 +25,6 @@ This value is changed automatically after every read and write operation. The sp
 value `null` means end-of-file.
 
 This property can be changed at will.
-
-> **Note:** The three interfaces `IDBMutableFile`, `IDBFileHandle`, and `IDBFileRequest` are deprecated and only implemented
-> for backward compatibility in Firefox. _Do not use them anymore_:
-> consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Value
 
@@ -35,7 +36,8 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## Browser compatibility
 
-{{Compat}}
+This property is not supported by any current browser.
+From Firefox 102 it is behind the preference `dom.fileHandle.enabled`.
 
 ## See also
 

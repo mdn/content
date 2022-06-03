@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.add()
 slug: Web/API/CSSNumericValue/add
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,14 +22,13 @@ The **`add()`** method of the
 ## Syntax
 
 ```js
-add(double)
-add(CSSNumericValue)
+add(number)
 ```
 
 ### Parameters
 
-- number
-  - : either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 

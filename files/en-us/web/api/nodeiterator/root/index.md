@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.root
 slug: Web/API/NodeIterator/root
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

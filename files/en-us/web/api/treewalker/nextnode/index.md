@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.nextNode()
 slug: Web/API/TreeWalker/nextNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.logicalSurface
 slug: Web/API/MediaTrackSettings/logicalSurface
+page-type: web-api-instance-property
 tags:
   - API
   - Capture
@@ -65,10 +66,8 @@ of `true`), or just the currently visible portion of the document (where the
 ## See also
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the
-  screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Using the screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}

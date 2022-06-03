@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.setCustomValidity()
 slug: Web/API/HTMLObjectElement/setCustomValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,12 +21,12 @@ element.
 ## Syntax
 
 ```js
-setCustomValidity(message)
+setCustomValidity(errorMessage)
 ```
 
 ### Parameters
 
-- error
+- `errorMessage`
   - : The message to use for validity errors.
 
 ### Return value

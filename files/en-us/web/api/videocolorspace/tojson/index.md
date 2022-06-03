@@ -1,6 +1,7 @@
 ---
 title: VideoColorSpace.toJSON()
 slug: Web/API/VideoColorSpace/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

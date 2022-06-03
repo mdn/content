@@ -1,6 +1,7 @@
 ---
 title: XRFrame.session
 slug: Web/API/XRFrame/session
+page-type: web-api-instance-property
 tags:
   - API
   - AR

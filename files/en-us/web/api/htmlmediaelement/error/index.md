@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.error
 slug: Web/API/HTMLMediaElement/error
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -18,7 +19,7 @@ browser-compat: api.HTMLMediaElement.error
 
 The **`HTMLMediaElement.error`** is the
 {{domxref("MediaError")}} object for the most recent error, or `null` if
-there has not been an error. When an {{event("error")}} event is received by the
+there has not been an error. When an {{domxref("HTMLMediaElement/error_event", "error")}} event is received by the
 element, you can determine details about what happened by examining this object.
 
 ## Value

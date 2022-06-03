@@ -1,6 +1,7 @@
 ---
 title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
+page-type: web-api-constructor
 tags:
   - Sanitizer
   - Constructor

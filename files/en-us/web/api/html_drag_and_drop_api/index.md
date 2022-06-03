@@ -1,6 +1,7 @@
 ---
 title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
+page-type: web-api-overview
 tags:
   - Advanced
   - Guide
@@ -187,7 +188,7 @@ For more information, see:
 
 ### Define the drag's data
 
-The application is free to include any number of data items in a drag operation. Each data item is a {{domxref("DOMString","string")}} of a particular `type` — typically a MIME type such as `text/html`.
+The application is free to include any number of data items in a drag operation. Each data item is a string of a particular `type` — typically a MIME type such as `text/html`.
 
 Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that _holds_ the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to _manage_ drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.
 

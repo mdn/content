@@ -1,6 +1,7 @@
 ---
 title: CompressionStream.writable
 slug: Web/API/CompressionStream/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property

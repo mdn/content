@@ -1,6 +1,7 @@
 ---
 title: RTCRtpCodecParameters
 slug: Web/API/RTCRtpCodecParameters
+page-type: web-api-interface
 tags:
   - API
   - Codec Configuration

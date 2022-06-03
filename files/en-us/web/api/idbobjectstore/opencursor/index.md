@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.openCursor()
 slug: Web/API/IDBObjectStore/openCursor
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -34,11 +35,11 @@ openCursor(query, direction)
 
 ### Parameters
 
-- query {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to be queried. If a single valid key is passed,
     this will default to a range containing only that key. If nothing is passed, this will
     default to a key range that selects all the records in this object store.
-- direction {{optional_inline}}
+- `direction` {{optional_inline}}
   - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
     Valid values are `"next"`, `"nextunique"`, `"prev"`,
     and `"prevunique"`. The default is `"next"`.
@@ -96,5 +97,4 @@ request.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

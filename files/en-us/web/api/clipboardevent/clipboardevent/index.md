@@ -1,6 +1,7 @@
 ---
 title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
+page-type: web-api-constructor
 tags:
   - API
   - Clipboard

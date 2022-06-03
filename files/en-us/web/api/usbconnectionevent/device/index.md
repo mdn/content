@@ -1,6 +1,7 @@
 ---
 title: USBConnectionEvent.device
 slug: Web/API/USBConnectionEvent/device
+page-type: web-api-instance-property
 tags:
   - API
   - Property

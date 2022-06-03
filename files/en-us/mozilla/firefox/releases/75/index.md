@@ -36,8 +36,8 @@ This article provides information about the changes in Firefox 75 that will affe
 The new roles and objects related to [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations) are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screenreaders start to support them):
 
 - `aria-description` ({{bug(1608961)}}).
-- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Suggestion_role) ({{bug(1608965)}}).
-- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Comment_role) ({{bug(1608969)}}).
+- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role) ({{bug(1608965)}}).
+- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role) ({{bug(1608969)}}).
 - Multiple IDs on `aria-details` ({{bug(1608883)}}).
 
 > **Note:** On macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.
@@ -63,7 +63,7 @@ Firefox 75 sees numerous additions to the [Web Animations API](/en-US/docs/Web/A
 - [Implicit to/from keyframes](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes) are now supported, as is automatically removing filling animations that have been replaced by other indefinitely filling animations ({{bug(1618773)}}). This includes enabling of support for:
 
   - [`Animation.commitStyles()`](/en-US/docs/Web/API/Animation/commitStyles)
-  - [`Animation.onremove`](/en-US/docs/Web/API/Animation/onremove)
+  - [`Animation.onremove`](/en-US/docs/Web/API/Animation/remove_event)
   - [`Animation.persist()`](/en-US/docs/Web/API/Animation/persist)
   - [`Animation.replaceState`](/en-US/docs/Web/API/Animation/replaceState)
 

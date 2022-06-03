@@ -1,6 +1,7 @@
 ---
 title: 'Document: visibilitychange event'
 slug: Web/API/Document/visibilitychange_event
+page-type: web-api-event
 tags:
   - API
   - Document

@@ -154,7 +154,7 @@ _No change._
 
 ### Other
 
-- Firefox `-remote` [command line option](/en-US/docs/Mozilla/Command_Line_Options) has been removed ({{bug(1080319)}}).
+- Firefox `-remote` [command line option](https://wiki.mozilla.org/Firefox/CommandLineOptions) has been removed ({{bug(1080319)}}).
 
 ## Older versions
 

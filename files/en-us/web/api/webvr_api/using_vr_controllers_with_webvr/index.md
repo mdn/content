@@ -1,6 +1,7 @@
 ---
 title: Using VR controllers with WebVR
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
+page-type: guide
 tags:
   - Experimental
   - Gamepad API
@@ -29,7 +30,7 @@ The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is a fairly well-supported AP
 
 You can find more about basic Gamepad API usage in [Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), and [Implementing controls using the Gamepad API](/en-US/docs/Games/Techniques/Controls_Gamepad_API).
 
-However, in this article we will mainly be concentrating on some of the new features provided by the {{specname("GamepadExtensions")}} API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g. vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.
+However, in this article we will mainly be concentrating on some of the new features provided by the [Gamepad Extensions](https://w3c.github.io/gamepad/extensions.html) API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g. vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.
 
 ## Types of controller
 

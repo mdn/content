@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode.buffer
 slug: Web/API/ConvolverNode/buffer
+page-type: web-api-instance-property
 tags:
   - API
   - Buffer

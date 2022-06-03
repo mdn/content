@@ -1,6 +1,7 @@
 ---
 title: TimeRanges.end()
 slug: Web/API/TimeRanges/end
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

@@ -20,7 +20,6 @@ tags:
   - Web
 browser-compat: html.elements.video
 ---
-
 {{HTMLRef}}
 
 The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player which supports video playback into the document. You can use `<video>` for audio content as well, but the {{HTMLElement("audio")}} element may provide a more appropriate user experience.
@@ -416,7 +415,7 @@ This example builds on the last one, offering three different sources for the me
 
 {{EmbedLiveSample('Multiple sources', '', '400')}}
 
-First [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) is tried. If that can't be played, then [MP4](/en-US/docs/Web/Media/Formats/Containers#mp4) is tried. Finally, [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
+First [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) is tried. If that can't be played, then [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. Finally, [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
 Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) for audio.
 
@@ -450,7 +449,6 @@ It's… it's a…
 
 Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
 
-- [MDN Subtitles and closed caption — Plugins](/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)

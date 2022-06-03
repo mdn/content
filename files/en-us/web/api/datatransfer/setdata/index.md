@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -30,10 +31,10 @@ setData(format, data)
 
 ### Parameters
 
-- _format_
+- `format`
   - : A string representing the type of the drag data to add to the
     {{domxref("DataTransfer","drag object")}}.
-- _data_
+- `data`
   - : A string representing the data to add to the
     {{domxref("DataTransfer","drag object")}}.
 

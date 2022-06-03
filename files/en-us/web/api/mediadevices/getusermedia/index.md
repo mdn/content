@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -149,8 +150,7 @@ getUserMedia(constraints)
 
     An `ideal` value, when used, has gravity, which means that the browser
     will try to find the setting (and camera, if you have more than one), with the
-    smallest [fitness
-    distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
+    smallest [fitness distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
 
     Plain values are inherently ideal, which means that the first of our resolution
     examples above could have been written like this:
@@ -340,8 +340,7 @@ microphone:
 </iframe>
 ```
 
-Read our guide, [Using Feature
-Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy), to learn more about how it works.
+Read our guide, [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy), to learn more about how it works.
 
 #### Encryption based security
 
@@ -489,6 +488,5 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
   screen contents as a {{domxref("MediaStream")}}
 - {{domxref("mediaDevices.getDisplayMedia()")}}: Getting a stream containing screen
   contents
-- [Taking webcam
-  photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
+- [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
   rather than video

@@ -1,6 +1,7 @@
 ---
 title: Gyroscope
 slug: Web/API/Gyroscope
+page-type: web-api-interface
 tags:
   - API
   - Generic Sensor API

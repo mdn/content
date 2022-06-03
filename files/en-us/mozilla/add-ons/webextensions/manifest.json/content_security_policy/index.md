@@ -62,7 +62,7 @@ In Manifest V2 there is one content security policy specified against the key, l
 "content_security_policy": "default-src 'self'"
 ```
 
-## Manifest V2 syntax
+## Manifest V3 syntax
 
 In Manifest V3, the `content_security_policy` key is an object that may have any of the following properties, all optional:
 
@@ -105,7 +105,6 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
 > However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions as per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to major security issues.
 
 Require that all types of content should be packaged with the extension:
-
 
 **Manifest V2**
 

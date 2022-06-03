@@ -1,6 +1,7 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
+page-type: web-api-instance-method
 tags:
   - API
   - Method

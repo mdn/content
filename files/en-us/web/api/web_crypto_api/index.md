@@ -1,11 +1,13 @@
 ---
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - Reference
   - Web Crypto API
+browser-compat: api.Crypto
 ---
 {{DefaultAPISidebar("Web Crypto API")}}
 
@@ -27,12 +29,8 @@ Some browsers implemented an interface called {{domxref("Crypto")}} without havi
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| [Web Cryptography API](https://w3c.github.io/webcrypto/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Crypto`
-
-{{Compat("api.Crypto")}}
+{{Compat}}

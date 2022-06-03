@@ -1,6 +1,7 @@
 ---
 title: HTMLBaseFontElement
 slug: Web/API/HTMLBaseFontElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

@@ -148,7 +148,7 @@ first argument. If the first argument is not passed, the value of `this` is
 bound to the global object.
 
 ```js
-var sData = 'Wisen';
+const sData = 'Wisen';
 
 function display() {
   console.log('sData value is %s ', this.sData);
@@ -163,7 +163,7 @@ display.call();  // sData value is Wisen
 ```js
 'use strict';
 
-var sData = 'Wisen';
+const sData = 'Wisen';
 
 function display() {
   console.log('sData value is %s ', this.sData);

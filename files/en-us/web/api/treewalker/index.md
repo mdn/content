@@ -1,6 +1,7 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
+page-type: web-api-interface
 tags:
   - API
   - DOM

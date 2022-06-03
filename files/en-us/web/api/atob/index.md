@@ -1,6 +1,7 @@
 ---
 title: atob()
 slug: Web/API/atob
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -61,5 +62,5 @@ const decodedData = atob(encodedData); // decode the string
 ## See also
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("btoa","btoa()")}}

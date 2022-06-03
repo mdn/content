@@ -1,6 +1,7 @@
 ---
 title: PannerNode.coneOuterGain
 slug: Web/API/PannerNode/coneOuterGain
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode

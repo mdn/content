@@ -1,6 +1,7 @@
 ---
 title: PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -11,7 +11,7 @@ tags:
 
 The modern web has quickly become a viable platform not only for creating stunning, high quality games, but also for distributing those games.
 
-The range of games that can be created is on par with desktop and native OS counterparts. With modern Web technologies and a recent browser, it's entirely possible to make stunning, top-notch games for the Web. And we're not talking about simple card games or multi-player social games that have in the olden days been done using Flash®. We're talking about kick-ass 3D action shooters, RPGs, and more. Thanks to massive performance improvements in [JavaScript](/en-US/docs/Web/JavaScript) just-in-time compiler technology and new APIs, you can build games that run in the browser (or on [HTML5](/en-US/docs/Web/Guide/HTML/HTML5)-powered devices like those based on [Firefox OS](/en-US/docs/Glossary/Firefox_OS)) without making compromises.
+The range of games that can be created is on par with desktop and native OS counterparts. With modern Web technologies and a recent browser, it's entirely possible to make stunning, top-notch games for the Web. And we're not talking about simple card games or multi-player social games that have in the olden days been done using Flash®. We're talking about 3D action shooters, RPGs, and more. Thanks to massive performance improvements in [JavaScript](/en-US/docs/Web/JavaScript) just-in-time compiler technology and new APIs, you can build games that run in the browser (or on [HTML5](/en-US/docs/Glossary/HTML5)-powered devices) without making compromises.
 
 ## The HTML5 game platform
 

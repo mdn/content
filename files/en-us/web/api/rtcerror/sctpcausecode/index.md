@@ -1,6 +1,7 @@
 ---
 title: RTCError.sctpCauseCode
 slug: Web/API/RTCError/sctpCauseCode
+page-type: web-api-instance-property
 tags:
   - API
   - Error

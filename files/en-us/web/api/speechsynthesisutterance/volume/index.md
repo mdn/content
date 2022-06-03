@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.volume
 slug: Web/API/SpeechSynthesisUtterance/volume
+page-type: web-api-instance-property
 tags:
   - API
   - Property

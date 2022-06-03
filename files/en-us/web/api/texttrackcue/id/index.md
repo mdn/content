@@ -1,6 +1,7 @@
 ---
 title: TextTrackCue.id
 slug: Web/API/TextTrackCue/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`id`** property of the {{domxref("TextTrackCue")}} interface returns and s
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the ID of this cue.
+A string containing the ID of this cue.
 
 ## Examples
 

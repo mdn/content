@@ -1,6 +1,7 @@
 ---
 title: Response.error()
 slug: Web/API/Response/error
+page-type: web-api-static-method
 tags:
   - API
   - Error

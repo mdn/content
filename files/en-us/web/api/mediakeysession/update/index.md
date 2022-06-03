@@ -1,6 +1,7 @@
 ---
 title: MediaKeySession.update()
 slug: Web/API/MediaKeySession/update
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -25,7 +26,7 @@ update(response)
 
 ### Parameters
 
-- response
+- `response`
   - : An instance of type BufferSource.
 
 ### Return value

@@ -1,6 +1,7 @@
 ---
 title: VRLayerInit
 slug: Web/API/VRLayerInit
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

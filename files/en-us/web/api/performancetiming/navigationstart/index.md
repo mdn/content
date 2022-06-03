@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.navigationStart
 slug: Web/API/PerformanceTiming/navigationStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

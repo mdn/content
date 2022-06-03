@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.details
 slug: Web/API/PaymentResponse/details
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: HTMLContentElement.getDistributedNodes()
 slug: Web/API/HTMLContentElement/getDistributedNodes
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

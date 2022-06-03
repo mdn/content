@@ -1,6 +1,7 @@
 ---
 title: RTCTrackEvent.transceiver
 slug: Web/API/RTCTrackEvent/transceiver
+page-type: web-api-instance-property
 tags:
   - API
   - Media

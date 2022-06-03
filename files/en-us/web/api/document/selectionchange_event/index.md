@@ -1,6 +1,7 @@
 ---
 title: 'Document: selectionchange event'
 slug: Web/API/Document/selectionchange_event
+page-type: web-api-event
 tags:
   - API
   - Event

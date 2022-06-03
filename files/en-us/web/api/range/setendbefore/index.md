@@ -1,6 +1,7 @@
 ---
 title: Range.setEndBefore()
 slug: Web/API/Range/setEndBefore
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ setEndBefore(referenceNode)
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} to end the `Range` before.
 
 ### Return value

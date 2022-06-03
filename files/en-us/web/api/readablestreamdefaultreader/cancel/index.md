@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader.cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -34,7 +35,7 @@ cancel(reason)
 
 ### Parameters
 
-- reason {{optional_inline}}
+- `reason` {{optional_inline}}
   - : A human-readable reason for the cancellation. This value may or may not be used.
 
 ### Return value

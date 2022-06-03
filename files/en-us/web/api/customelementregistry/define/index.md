@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry

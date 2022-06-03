@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.currentTime
 slug: Web/API/HTMLMediaElement/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

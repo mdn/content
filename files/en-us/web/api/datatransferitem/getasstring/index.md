@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsString()
 slug: Web/API/DataTransferItem/getAsString
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItem
@@ -46,7 +47,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example shows the use of the `getAsString()` method as an _inline
-function_ in a {{event("drop")}} event handler.
+function_ in a {{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function drop_handler(ev) {

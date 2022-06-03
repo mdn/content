@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress
 slug: Web/API/PaymentAddress
+page-type: web-api-interface
 tags:
   - API
   - Interface

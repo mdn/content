@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
+page-type: web-api-interface
 tags:
   - API
   - Interface

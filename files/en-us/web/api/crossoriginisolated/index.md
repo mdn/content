@@ -1,6 +1,7 @@
 ---
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
+page-type: web-api-global-property
 tags:
   - API
   - Experimental
@@ -42,5 +43,5 @@ if(crossOriginIsolated) {
 
 ## See also
 
-- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
+- [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)

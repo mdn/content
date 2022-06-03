@@ -1,6 +1,7 @@
 ---
 title: Drawing shapes with canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -293,7 +294,7 @@ function draw() {
 
 ### Bezier and quadratic curves
 
-The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bézier_curve), available in both cubic and quadratic varieties. These are generally used to draw complex organic shapes.
+The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bezier_curve), available in both cubic and quadratic varieties. These are generally used to draw complex organic shapes.
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Draws a quadratic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control point specified by `cp1x` and `cp1y`.

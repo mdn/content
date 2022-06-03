@@ -1,6 +1,7 @@
 ---
 title: VRFrameData.leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

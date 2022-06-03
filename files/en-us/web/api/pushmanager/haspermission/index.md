@@ -1,6 +1,7 @@
 ---
 title: PushManager.hasPermission()
 slug: Web/API/PushManager/hasPermission
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

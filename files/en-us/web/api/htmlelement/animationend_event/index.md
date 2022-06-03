@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: animationend event'
 slug: Web/API/HTMLElement/animationend_event
+page-type: web-api-event
 tags:
   - API
   - Animation

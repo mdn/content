@@ -1,6 +1,7 @@
 ---
 title: Lighting a WebXR setting
 slug: Web/API/WebXR_Device_API/Lighting
+page-type: guide
 tags:
   - 3D
   - API

@@ -389,48 +389,6 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Ma
   </tbody>
 </table>
 
-### Media feature: prefers-contrast
-
-The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature is used to detect whether the user has specified a preference for higher (or lower) contrast in the presentation of web content. Refer to {{bug("1506364")}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <p><code>layout.css.prefers-contrast.enabled</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### Property: math-style
 
 The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See {{bug(1665975)}} for more details.)
@@ -942,7 +900,6 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
   </tbody>
 </table>
 
-
 #### Streams API: TransformStreams
 
 Support for [transform streams](/en-US/docs/Web/API/Streams_API#transform_streams), including the classes [`TransformStream`](/en-US/docs/Web/API/TransformStream) and [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController), and the method [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough).
@@ -982,7 +939,6 @@ Support for [transform streams](/en-US/docs/Web/API/Streams_API#transform_stream
     </tr>
   </tbody>
 </table>
-
 
 ### Service Workers
 
@@ -1480,48 +1436,6 @@ The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides supp
         <code>dom.payments.request.enabled</code> and<br /><code
           >dom.payments.request.supportedRegions</code
         >
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### Constructable stylesheets
-
-The addition of a constructor to the {{domxref("CSSStyleSheet")}} interface as well as a variety of related changes makes it possible to directly create new stylesheets without having to add the sheet to the HTML. This makes it much easier to create reusable stylesheets for use with [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). Our implementation is not yet complete; see {{bug(1520690)}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>layout.css.constructable-stylesheets.enabled</code>
       </td>
     </tr>
   </tbody>

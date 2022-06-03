@@ -1,6 +1,7 @@
 ---
 title: CanvasCaptureMediaStreamTrack.canvas
 slug: Web/API/CanvasCaptureMediaStreamTrack/canvas
+page-type: web-api-instance-property
 tags:
   - Canvas
   - CanvasCaptureMediaStreamTrack

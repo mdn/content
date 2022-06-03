@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ontouchcancel
 slug: Web/API/GlobalEventHandlers/ontouchcancel
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

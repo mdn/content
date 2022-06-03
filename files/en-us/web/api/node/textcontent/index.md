@@ -1,6 +1,7 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

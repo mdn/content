@@ -1,6 +1,7 @@
 ---
 title: CSSTransformComponent
 slug: Web/API/CSSTransformComponent
+page-type: web-api-interface
 tags:
   - API
   - CSS

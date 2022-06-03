@@ -1,6 +1,7 @@
 ---
 title: Pointer events
 slug: Web/API/Pointer_events
+page-type: web-api-overview
 tags:
   - API
   - Interface
@@ -9,6 +10,7 @@ tags:
   - Pointer Events
   - Web
   - events
+browser-compat: api.PointerEvent
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
@@ -28,7 +30,7 @@ Additionally, a pointer event contains the usual properties present in mouse eve
 
 ### active buttons state
 
-The condition when a _[pointer](#pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
+The condition when a _[pointer](#pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is pressed while hovering.
 
 ### active pointer
 
@@ -259,7 +261,7 @@ This example registers a handler for every event type for the given element.
 
 ### Event properties
 
-This example illustrates accessing all of a touch event's properties.
+This example illustrates accessing all of a pointer event's properties.
 
 ```html
 <html>
@@ -340,7 +342,7 @@ For mouse there is only one pointer, so it will always be the primary pointer. F
 
 ## Determining button states
 
-Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. depressing an additional button while another button on the pointer device is already depressed.
+Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. pressing an additional button while another button on the pointer device is already pressed.
 
 To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).
 
@@ -467,15 +469,13 @@ Here are some _best practices_ to consider when using pointer events:
 
 ## Specifications
 
-| Specification                                          |
-| ------------------------------------------------------ |
-| [Pointer Events](https://w3c.github.io/pointerevents/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
-Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.
+Some additional values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
 
 ## Demos and examples
 

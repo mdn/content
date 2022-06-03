@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

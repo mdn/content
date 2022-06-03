@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.audioTracks
 slug: Web/API/SourceBuffer/audioTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

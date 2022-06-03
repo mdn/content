@@ -1,6 +1,7 @@
 ---
 title: Window.showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -59,6 +60,5 @@ async function getDir() {
 
 ## See also
 
-- [File System Access API](/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

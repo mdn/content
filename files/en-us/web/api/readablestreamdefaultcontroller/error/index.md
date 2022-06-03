@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController.error()
 slug: Web/API/ReadableStreamDefaultController/error
+page-type: web-api-instance-method
 tags:
   - API
   - Error
@@ -27,7 +28,7 @@ error(e)
 
 ### Parameters
 
-- _e_
+- `e`
   - : The error you want future interactions to fail with.
 
 ### Return value

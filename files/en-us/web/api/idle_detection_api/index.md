@@ -1,6 +1,7 @@
 ---
 title: Idle Detection API
 slug: Web/API/Idle_Detection_API
+page-type: web-api-overview
 tags:
   - API
   - IdleDetector

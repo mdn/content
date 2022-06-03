@@ -24,7 +24,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{JSxRef("EvalError")}}
   - : Creates an instance representing an error that occurs regarding the global function {{JSxRef("Global_Objects/eval", "eval()")}}.
 - {{JSxRef("RangeError")}}
-  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.
+  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside its valid range.
 - {{JSxRef("ReferenceError")}}
   - : Creates an instance representing an error that occurs when de-referencing an invalid reference.
 - {{JSxRef("SyntaxError")}}
@@ -54,6 +54,9 @@ Besides the generic `Error` constructor, there are other core error constructors
   - : Error message.
 - {{jsxref("Error.prototype.name")}}
   - : Error name.
+- {{jsxref("Error.prototype.cause")}}
+  - : Error cause.
+     If an error is caught and re-thrown, this property should contain the original error.
 - {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
@@ -142,7 +145,7 @@ try {
 }
 ```
 
-You can also use the `cause` property in [custom error types](#custom_error_types), provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+[Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
 
 ```js
 class MyError extends Error {
@@ -153,13 +156,13 @@ class MyError extends Error {
 }
 ```
 
-### Custom Error Types
+### Custom error types
 
 You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler. This results in cleaner and more consistent error handling code.
 
 See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
 
-#### ES6 Custom Error Class
+#### ES6 CustomError class
 
 > **Warning:** Versions of Babel prior to 7 can handle `CustomError` class methods, but only when they are declared with [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
@@ -193,13 +196,13 @@ try {
 }
 ```
 
-#### ES5 Custom Error Object
+#### ES5 CustomError object
 
 > **Warning:** All browsers include the `CustomError` constructor in the stack trace when using a prototypal declaration.
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
-  var instance = new Error(message, fileName, lineNumber);
+  let instance = new Error(message, fileName, lineNumber);
   instance.name = 'CustomError';
   instance.foo = foo;
   Object.setPrototypeOf(instance, Object.getPrototypeOf(this));

@@ -1,6 +1,7 @@
 ---
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -103,7 +104,7 @@ addEventListener(type, listener, useCapture);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -494,8 +495,7 @@ my_element.addEventListener('click', function (e) {
 })
 ```
 
-As a reminder, [arrow
-functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#no_separate_this).
+As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#no_separate_this).
 
 ```js
 my_element.addEventListener('click', (e) => {

@@ -14,7 +14,6 @@ tags:
   - Web
 browser-compat: html.elements.input
 ---
-
 {{HTMLRef}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
@@ -567,7 +566,7 @@ A few additional non-standard attributes are listed following the descriptions o
     If not explicitly included:
 
     - `step` defaults to 1 for `number` and `range`.
-    - For the date/time input types, `step` is expressed in seconds, with the **default step being 60 seconds**. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in other algorithms).
+    - Each date/time input type has a default `step` value appropriate for the type; see the individual input pages: [`date`](/en-US/docs/Web/HTML/Element/input/date#step), [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local#step), [`month`](/en-US/docs/Web/HTML/Element/input/month#step), [`time`](/en-US/docs/Web/HTML/Element/input/time#step), and [`week`](/en-US/docs/Web/HTML/Element/input/week#step).
 
     The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
@@ -944,7 +943,7 @@ In certain cases (typically involving non-textual inputs and specialized interfa
 
 For more information about adding color to elements in HTML, see:
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color).
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
 
 Also see:
 

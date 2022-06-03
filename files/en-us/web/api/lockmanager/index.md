@@ -1,6 +1,7 @@
 ---
 title: LockManager
 slug: Web/API/LockManager
+page-type: web-api-interface
 tags:
   - API
   - Experimental

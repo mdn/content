@@ -1,6 +1,7 @@
 ---
 title: DOMException
 slug: Web/API/DOMException
+page-type: web-api-interface
 tags:
   - API
   - DOM

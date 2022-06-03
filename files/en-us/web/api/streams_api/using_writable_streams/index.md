@@ -1,6 +1,7 @@
 ---
 title: Using writable streams
 slug: Web/API/Streams_API/Using_writable_streams
+page-type: guide
 tags:
   - API
   - Controller
@@ -15,7 +16,7 @@ tags:
 As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.
 
 > **Note:** This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts.
-> If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
+> If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
 
 > **Note:** If you are looking for information about readable streams, try [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) instead.
 
@@ -53,7 +54,7 @@ const stream = new WritableStream({
 });
 ```
 
-The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying sink the data is being written to. The second object is optional, and allows you to specify a [custom queueing strategy](/en-US/docs/Web/API/Streams_API/Concepts#Internal_queues_and_queuing_strategies) to use for your stream, which takes the form of an instance of {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}.
+The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying sink the data is being written to. The second object is optional, and allows you to specify a [custom queueing strategy](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) to use for your stream, which takes the form of an instance of {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}.
 
 The first object can contain up to four members, all of which are optional:
 

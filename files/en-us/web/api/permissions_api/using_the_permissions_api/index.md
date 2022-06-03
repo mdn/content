@@ -1,6 +1,7 @@
 ---
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
+page-type: guide
 tags:
   - API
   - Experimental

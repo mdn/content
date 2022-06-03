@@ -22,14 +22,14 @@ If the property is inherited, or does not exist, the method returns `false`.
 ## Syntax
 
 ```js
-Object.hasOwn(instance,prop)
+hasOwn(instance, prop)
 ```
 
 ### Parameters
 
-- _instance_
+- `instance`
   - : The JavaScript object instance to test.
-- _prop_
+- `prop`
   - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
     the property to test.
 

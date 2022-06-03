@@ -1,6 +1,7 @@
 ---
 title: HIDDevice
 slug: Web/API/HIDDevice
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -25,7 +26,7 @@ This interface also inherits properties from {{domxref("EventTarget")}}.
 - {{domxref("HIDDevice.productId")}}{{ReadOnlyInline}}
   - : Returns the productID of the HID device.
 - {{domxref("HIDDevice.productName")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the product name of the HID device.
+  - : Returns a string containing the product name of the HID device.
 - {{domxref("HIDDevice.collections")}}{{ReadOnlyInline}}
   - : Returns an array of report formats for the HID device.
 

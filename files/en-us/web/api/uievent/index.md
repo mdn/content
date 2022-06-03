@@ -1,6 +1,7 @@
 ---
 title: UIEvent
 slug: Web/API/UIEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.autoGainControl
 slug: Web/API/MediaTrackConstraints/autoGainControl
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,7 +18,7 @@ browser-compat: api.MediaTrackConstraints.autoGainControl
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`autoGainControl`** property is a
-[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) describing the requested or mandatory constraints placed
+[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
 upon the value of the {{domxref("MediaTrackSettings.autoGainControl",
   "autoGainControl")}} constrainable property.
 

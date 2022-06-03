@@ -1,6 +1,7 @@
 ---
 title: 'Window: popstate event'
 slug: Web/API/Window/popstate_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -41,7 +42,7 @@ A {{domxref("PopStateEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event handler aliases
 
-In addition to the `Window` interface, the event handler property `onhashchange` is also available on the following targets:
+In addition to the `Window` interface, the event handler property `onpopstate` is also available on the following elements:
 
 - {{domxref("HTMLBodyElement")}}
 - {{domxref("HTMLFrameSetElement")}}

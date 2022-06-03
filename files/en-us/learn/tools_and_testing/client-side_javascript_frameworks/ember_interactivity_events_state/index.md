@@ -78,7 +78,7 @@ Add the new line shown below to your `header.hbs` file:
 >
 ```
 
-This new attribute is inside double curly braces, which tells you it is part of Ember's dynamic templating syntax. The first argument passed to `on` is the type of event to respond to (`keydown`), and the last argument is the event handler — the code that will run in response to the `keydown` event firing. As you may expect from dealing with [vanilla JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS), the `this` keyword refers to the "context" or "scope" of the component. One component's `this` will be different from another component's `this`.
+This new attribute is inside double curly braces, which tells you it is part of Ember's dynamic templating syntax. The first argument passed to `on` is the type of event to respond to (`keydown`), and the last argument is the event handler — the code that will run in response to the `keydown` event firing. As you may expect from dealing with [vanilla JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Basics#what_is_this), the `this` keyword refers to the "context" or "scope" of the component. One component's `this` will be different from another component's `this`.
 
 We can define what is available inside `this` by generating a component class to go along with your component. This is a vanilla JavaScript class and has no special meaning to Ember, other than _extending_ from the `Component` super-class.
 

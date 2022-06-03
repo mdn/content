@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplaypointerrestricted event'
 slug: Web/API/Window/vrdisplaypointerrestricted_event
+page-type: web-api-event
 tags:
   - Reference
   - Web VR
@@ -53,7 +54,7 @@ window.addEventListener('vrdisplaypointerrestricted', function() {
 });
 ```
 
-Or use the [`onvrdisplaypointerrestricted`](/en-US/docs/Web/API/Window/onvrdisplaypointerrestricted) event handler property:
+Or use the `onvrdisplaypointerrestricted` event handler property:
 
 ```js
 window.onvrdisplaypointerrestricted = function() {

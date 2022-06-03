@@ -1,6 +1,7 @@
 ---
 title: TimeRanges.length
 slug: Web/API/TimeRanges/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

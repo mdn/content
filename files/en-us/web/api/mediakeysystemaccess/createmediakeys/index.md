@@ -1,6 +1,7 @@
 ---
 title: MediaKeySystemAccess.createMediaKeys()
 slug: Web/API/MediaKeySystemAccess/createMediaKeys
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

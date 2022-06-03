@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
+page-type: web-api-interface
 tags:
   - API
   - Authentication

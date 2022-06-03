@@ -1,6 +1,7 @@
 ---
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
+page-type: web-api-interface
 tags:
   - API
   - Event Timing API
@@ -21,12 +22,12 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{event("compositionupdate")}}
 - {{event("contextmenu")}}
 - {{event("dblclick")}}
-- {{event("dragend")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
-- {{event("dragover")}}
-- {{event("dragstart")}}
-- {{event("drop")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}
 - {{event("input")}}
 - {{event("keydown")}}
 - {{event("keypress")}}

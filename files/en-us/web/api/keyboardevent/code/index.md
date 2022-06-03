@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
+page-type: web-api-instance-property
 tags:
   - API
   - Code
@@ -27,7 +28,7 @@ To determine what character corresponds with the key event, use the {{domxref("K
 
 ## Value
 
-The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: code values](/en-US/docs/Web/API/KeyboardEvent/code/code_values) page.
+The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: code values](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) page.
 
 ## Examples
 

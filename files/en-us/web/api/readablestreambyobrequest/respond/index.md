@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBRequest.respond()
 slug: Web/API/ReadableStreamBYOBRequest/respond
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -24,12 +25,12 @@ respond(bytesWritten)
 
 ### Parameters
 
-- _bytesWritten_
+- `bytesWritten`
   - : xxx
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

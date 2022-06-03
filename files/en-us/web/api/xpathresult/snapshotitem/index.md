@@ -1,6 +1,7 @@
 ---
 title: XPathResult.snapshotItem()
 slug: Web/API/XPathResult/snapshotItem
+page-type: web-api-instance-method
 tags:
   - API
   - DOM XPath API

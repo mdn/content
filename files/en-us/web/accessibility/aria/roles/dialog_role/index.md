@@ -128,7 +128,7 @@ Coming soon
 
 ## See also
 
-- [ARIA: alertdialog role](/en-US/docs/web/Accessibility/ARIA/roles/alertdialog_role)
+- [ARIA: alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [Using the alertdialog role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
 - {{HTMLElement('dialog', 'The HTML <code>&lt;dialog&gt;</code> element')}}
 

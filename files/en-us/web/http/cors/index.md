@@ -13,7 +13,7 @@ tags:
   - Security
   - XMLHttpRequest
   - l10n:priority
-spec-urls: https://fetch.spec.whatwg.org/#cors-protocol
+browser-compat: http.headers.Access-Control-Allow-Origin
 ---
 {{HTTPSidebar}}
 
@@ -59,7 +59,7 @@ We present three scenarios that demonstrate how Cross-Origin Resource Sharing wo
 
 ### Simple requests
 
-Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_, though the {{SpecName("Fetch")}} spec (which defines CORS) doesn't use that term. A _simple request_ is one that **meets all the following conditions**:
+Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_, though the [Fetch](https://fetch.spec.whatwg.org/) spec (which defines CORS) doesn't use that term. A _simple request_ is one that **meets all the following conditions**:
 
 - One of the allowed methods:
 
@@ -343,7 +343,7 @@ Although line 10 contains the Cookie destined for the content on `https://bar.ot
 
 CORS-preflight requests must never include credentials. The _response_ to a preflight request must specify `Access-Control-Allow-Credentials: true` to indicate that the actual request can be made with credentials.
 
-> **Note:** Some enterprise authentication services require that TLS client certificates be sent in preflight requests, in contravention of the {{SpecName("Fetch","#cors-protocol-and-credentials")}} specification.
+> **Note:** Some enterprise authentication services require that TLS client certificates be sent in preflight requests, in contravention of the [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) specification.
 >
 > Firefox 87 allows this non-compliant behavior to be enabled by setting the preference: `network.cors_preflight.allow_client_cert` to `true` ({{bug(1511151)}}). Chromium-based browsers currently always send TLS client certificates in CORS preflight requests ([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
 
@@ -492,7 +492,7 @@ Examples of this usage can be [found above](#preflighted_requests).
 
 ## Browser compatibility
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: RTCSessionDescription.sdp
 slug: Web/API/RTCSessionDescription/sdp
+page-type: web-api-instance-property
 tags:
   - Experimental
   - Property

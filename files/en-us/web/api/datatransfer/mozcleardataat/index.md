@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozClearDataAt()
 slug: Web/API/DataTransfer/mozClearDataAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -37,10 +38,10 @@ mozClearDataAt(type, index)
 
 ### Parameters
 
-- _type_
-  - : A {{domxref("DOMString","string")}} representing the type of the drag data to remove
+- `type`
+  - : A string representing the type of the drag data to remove
     from the {{domxref("DataTransfer","drag data object")}}.
-- _index_
+- `index`
   - : A `unsigned long` representing the index of the data to remove.
 
 ### Return value
@@ -50,7 +51,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example shows the use of the `mozClearDataAt()` method in a
-{{event("dragend")}} event handler.
+{{domxref("HTMLElement/dragend_event", "dragend")}} event handler.
 
 ```js
 function dragend_handler(event)

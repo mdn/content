@@ -1,6 +1,7 @@
 ---
 title: Basic scissoring
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
+page-type: guide
 tags:
   - Beginner
   - Example

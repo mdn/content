@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.domContentLoadedEventEnd
 slug: Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Property

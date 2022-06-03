@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

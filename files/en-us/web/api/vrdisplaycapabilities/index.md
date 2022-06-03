@@ -1,6 +1,7 @@
 ---
 title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

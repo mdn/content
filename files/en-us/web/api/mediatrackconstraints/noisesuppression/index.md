@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.noiseSuppression
 slug: Web/API/MediaTrackConstraints/noiseSuppression
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,7 +18,7 @@ browser-compat: api.MediaTrackConstraints.noiseSuppression
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`noiseSuppression`** property is a
-[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) describing the requested or mandatory constraints placed
+[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
 upon the value of the {{domxref("MediaTrackSettings.noiseSuppression",
   "noiseSuppression")}} constrainable property.
 

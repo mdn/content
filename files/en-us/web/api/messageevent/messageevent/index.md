@@ -1,6 +1,7 @@
 ---
 title: MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

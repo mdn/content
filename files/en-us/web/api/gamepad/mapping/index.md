@@ -1,6 +1,7 @@
 ---
 title: Gamepad.mapping
 slug: Web/API/Gamepad/mapping
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API

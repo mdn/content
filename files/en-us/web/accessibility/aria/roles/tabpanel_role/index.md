@@ -12,7 +12,6 @@ spec-urls:
   - https://w3c.github.io/aria/#tabpanel
   - https://w3c.github.io/aria-practices/#tabpanel
 ---
-
 The ARIA `tabpanel` is a container for the resources of layered content associated with a `tab`.
 
 ## Description
@@ -66,7 +65,7 @@ See the [`tablist` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Rol
 
 ## Example
 
-See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#Example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
+See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
 
 ## Specifications
 
@@ -75,7 +74,7 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 ## See Also
 
 - [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-- [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/)
+- [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - [Example: Tabs with Automatic Activation](https://w3c.github.io/aria-practices/examples/tabs/tabs-1/tabs.html) - W3C
 - [Example: Tabs with Manual Activation](https://w3c.github.io/aria-practices/examples/tabs/tabs-2/tabs.html) -W3C
 - [Example: Codepen of tab interface](https://codepen.io/heydon/pen/veeaEa/) - Heydon Pickering

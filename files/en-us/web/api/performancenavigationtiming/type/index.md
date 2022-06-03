@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.type
 slug: Web/API/PerformanceNavigationTiming/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,7 +15,7 @@ The **`type`** read-only property returns the type of navigation.
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"navigate"`
   - : Navigation started by clicking a link, entering the URL in the browser's address

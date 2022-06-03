@@ -1,6 +1,7 @@
 ---
 title: Request()
 slug: Web/API/Request/Request
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -27,7 +28,7 @@ new Request(input, options)
 
   - : Defines the resource that you wish to fetch. This can either be:
 
-    - A {{domxref("USVString")}} containing the direct URL of the resource you want to
+    - A string containing the direct URL of the resource you want to
       fetch.
     - A {{domxref("Request")}} object, effectively creating a copy. Note the following
       behavioral updates to retain security while making the constructor less likely to
@@ -52,9 +53,9 @@ new Request(input, options)
         {{jsxref("String")}} values.
     - `body`
       - : Any body that you want to add to your request: this can be a
-        {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
-        {{domxref("ReadableStream")}} object. Note that a request using the
+        {{domxref("Blob")}}, a {{domxref("BufferSource")}}, a {{domxref("FormData")}},
+        a {{domxref("URLSearchParams")}}, a string, or
+        a {{domxref("ReadableStream")}} object. Note that a request using the
         `GET` or `HEAD` method cannot have a body.
     - `mode`
       - : The mode you want to use for the request, e.g.,
@@ -65,13 +66,12 @@ new Request(input, options)
         request: `omit`, `same-origin`, or `include`. The
         default is `same-origin`.
     - `cache`
-      - : The [cache
-        mode](/en-US/docs/Web/API/Request/cache) you want to use for the request.
+      - : The [cache mode](/en-US/docs/Web/API/Request/cache) you want to use for the request.
     - `redirect`
       - : The redirect mode to use: `follow`,
         `error`, or `manual`. The default is `follow`.
     - `referrer`
-      - : A {{domxref("USVString")}} specifying
+      - : A string specifying
         `no-referrer`, `client`, or a URL. The default is
         `about:client`.
     - `integrity`
@@ -113,8 +113,7 @@ new Request(input, options)
 
 ## Examples
 
-In our [Fetch
-Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
+In our [Fetch Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
 create a new `Request` object using the constructor, then fetch it using a
 {{domxref("fetch()")}} call. Since we are fetching an image, we run
 {{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
@@ -134,9 +133,7 @@ fetch(myRequest).then(function(response) {
 });
 ```
 
-In our [Fetch
-Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (see [Fetch Request
-init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) we do the same thing except that we pass in an init object when we
+In our [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) we do the same thing except that we pass in an init object when we
 invoke `fetch()`:
 
 ```js

@@ -1,6 +1,7 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

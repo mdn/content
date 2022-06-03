@@ -1,6 +1,7 @@
 ---
 title: ImageTrackList.ready
 slug: Web/API/ImageTrackList/ready
+page-type: web-api-instance-property
 tags:
   - API
   - Property

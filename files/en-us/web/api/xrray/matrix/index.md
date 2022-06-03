@@ -1,6 +1,7 @@
 ---
 title: XRRay.matrix
 slug: Web/API/XRRay/matrix
+page-type: web-api-instance-property
 tags:
   - API
   - AR

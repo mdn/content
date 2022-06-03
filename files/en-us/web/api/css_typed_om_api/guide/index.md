@@ -1,6 +1,7 @@
 ---
 title: Using the CSS Typed Object Model
 slug: Web/API/CSS_Typed_OM_API/Guide
+page-type: guide
 tags:
   - CSS
   - CSS Typed OM

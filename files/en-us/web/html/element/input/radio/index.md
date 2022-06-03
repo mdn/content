@@ -18,7 +18,7 @@ tags:
   - form
   - radio
   - radio button
-browser-compat: html.elements.input.input-radio
+browser-compat: html.elements.input.type_radio
 ---
 
 {{HTMLRef("Input_types")}}
@@ -40,7 +40,7 @@ They are called radio buttons because they look and operate in a similar manner 
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the value of the radio
+        A string representing the value of the radio
         button.
       </td>
     </tr>
@@ -77,7 +77,7 @@ They are called radio buttons because they look and operate in a similar manner 
 
 ## Value
 
-The `value` attribute is a {{domxref("DOMString")}} containing the radio button's value. The value is never shown to the user by their {{Glossary("user agent")}}. Instead, it's used to identify which radio button in a group is selected.
+The `value` attribute is a string containing the radio button's value. The value is never shown to the user by their {{Glossary("user agent")}}. Instead, it's used to identify which radio button in a group is selected.
 
 ### Defining a radio group
 

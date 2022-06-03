@@ -1,6 +1,7 @@
 ---
 title: Notification.body
 slug: Web/API/Notification/body
+page-type: web-api-instance-property
 tags:
   - API
   - BODY
@@ -46,5 +47,4 @@ function spawnNotification(theBody, theIcon, theTitle) {
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -1,6 +1,7 @@
 ---
 title: DirectoryReaderSync
 slug: Web/API/DirectoryReaderSync
+page-type: web-api-interface
 tags:
   - API
   - Reference

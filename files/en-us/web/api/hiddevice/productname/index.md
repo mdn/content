@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.productName
 slug: Web/API/HIDDevice/productName
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`productName`** read-only property of the {{domxref("HIDDevice")}} interfa
 
 ## Value
 
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: RTCRtcpParameters
 slug: Web/API/RTCRtcpParameters
+page-type: web-api-interface
 tags:
   - API
   - Configuration

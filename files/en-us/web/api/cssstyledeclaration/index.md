@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

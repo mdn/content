@@ -1,6 +1,7 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -140,9 +141,9 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
       - : Changes the browser auto-link behavior (Internet Explorer only)
 
 - `aShowDefaultUI`
-    - : A boolean value indicating whether the default user interface should be shown. This is not implemented in Mozilla.
+  - : A boolean value indicating whether the default user interface should be shown. This is not implemented in Mozilla.
 - `aValueArgument`
-    - : For commands which require an input argument, is a string providing that information. For example, `insertImage` requires the URL of the image to insert. Specify `null` if no argument is needed.
+  - : For commands which require an input argument, is a string providing that information. For example, `insertImage` requires the URL of the image to insert. Specify `null` if no argument is needed.
 
 ### Return value
 
@@ -155,8 +156,7 @@ A boolean value that is `false` if the command is unsupported or disabled.
 
 ## Examples
 
-An example of [how to use
-execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
+An example of [how to use execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
 
 ### Using insertText
 

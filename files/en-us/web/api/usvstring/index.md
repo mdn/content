@@ -13,7 +13,7 @@ spec-urls:
 ---
 {{APIRef("DOM")}}
 
-A **`USVString`** is a sequence of [Unicode scalar values](http://www.unicode.org/glossary/#unicode_scalar_value). This definition differs from that of {{domxref("DOMString")}} or the JavaScript {{jsxref("String")}} type in that it always represents a valid sequence suitable for text processing, while the latter can contain surrogate code points. The `USVString` type is generally found in APIs that perform text processing, while {{domxref("DOMString")}} is used by most other APIs.
+A **`USVString`** is a sequence of [Unicode scalar values](https://www.unicode.org/glossary/#unicode_scalar_value). This definition differs from that of {{domxref("DOMString")}} or the JavaScript {{jsxref("String")}} type in that it always represents a valid sequence suitable for text processing, while the latter can contain surrogate code points. The `USVString` type is generally found in APIs that perform text processing, while {{domxref("DOMString")}} is used by most other APIs.
 
 When a `USVString` is provided to JavaScript, it maps to the JavaScript primitive {{jsxref("String")}} with the UTF-16 encoding of its sequence of Unicode scalar values.
 

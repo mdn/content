@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
+page-type: web-api-instance-method
 tags:
   - API
   - Media

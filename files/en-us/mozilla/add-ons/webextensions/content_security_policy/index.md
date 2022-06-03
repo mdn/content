@@ -43,7 +43,7 @@ Like websites, extensions can load content from different sources. For example, 
 
 Compared to a website, extensions have access to additional privileged APIs, so if they are compromised by malicious code, the risks are greater. For this reason:
 
-- a fairly strict content security policy is applied to extensions by default. See [default content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy).
+- a fairly strict content security policy is applied to extensions by default. See [default content security policy](#default_content_security_policy).
 - the extension's author can change the default policy using the `content_security_policy` manifest.json key, but there are restrictions on the policies that are allowed. See [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy).
 
 ## Default content security policy
@@ -56,9 +56,9 @@ The default content security policy for extensions is:
 
 This will be applied to any extension that has not explicitly set its own content security policy using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key. It has the following consequences:
 
-- [You may only load \<script> and \<object> resources that are local to the extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#location_of_script_and_object_resources)
+- [You may only load \<script> and \<object> resources that are local to the extension.](#location_of_script_and_object_resources)
 - [The extension is not allowed to evaluate strings as JavaScript.](</en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends>)
-- [Inline JavaScript is not executed.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#inline_javascript)
+- [Inline JavaScript is not executed.](#inline_javascript)
 
 ### Location of script and object resources
 

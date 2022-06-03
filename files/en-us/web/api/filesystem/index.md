@@ -1,6 +1,7 @@
 ---
 title: FileSystem
 slug: Web/API/FileSystem
+page-type: web-api-interface
 tags:
   - API
   - File API

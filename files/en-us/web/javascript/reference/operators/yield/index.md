@@ -24,7 +24,7 @@ The `yield` keyword is used to pause and resume a [generator function](/en-US/do
 
 - `expression` {{optional_inline}}
   - : Defines the value to return from the generator function via
-    [the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol).
+    [the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
     If omitted, `undefined` is returned instead.
 - `rv` {{optional_inline}}
   - : Retrieves the optional value passed to the generator's `next()` method
@@ -141,7 +141,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## See also
 
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

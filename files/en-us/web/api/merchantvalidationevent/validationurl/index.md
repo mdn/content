@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent.validationURL
 slug: Web/API/MerchantValidationEvent/validationURL
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce
@@ -16,7 +17,7 @@ tags:
   - validationURL
 browser-compat: api.MerchantValidationEvent.validationURL
 ---
-{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
+{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`validationURL`** is a read-only string value providing the

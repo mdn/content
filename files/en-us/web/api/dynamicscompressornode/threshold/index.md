@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.threshold
 slug: Web/API/DynamicsCompressorNode/threshold
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode

@@ -1,6 +1,7 @@
 ---
 title: Document.exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

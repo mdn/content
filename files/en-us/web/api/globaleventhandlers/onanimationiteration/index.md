@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onanimationiteration
 slug: Web/API/GlobalEventHandlers/onanimationiteration
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

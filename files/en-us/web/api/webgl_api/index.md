@@ -1,6 +1,7 @@
 ---
 title: 'WebGL: 2D and 3D graphics for the web'
 slug: Web/API/WebGL_API
+page-type: web-api-overview
 tags:
   - 3D
   - 3D Graphics

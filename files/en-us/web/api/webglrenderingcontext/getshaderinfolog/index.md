@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getShaderInfoLog()
 slug: Web/API/WebGLRenderingContext/getShaderInfoLog
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ getShaderInfoLog(shader)
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} to query.
 
 ### Return value

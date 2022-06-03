@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.onwarning
 slug: Web/API/MediaRecorder/warning_event
+page-type: web-api-event
 tags:
   - API
   - Audio

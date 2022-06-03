@@ -218,7 +218,6 @@ Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into
 
 There are a number of useful tools available for HLS encoding
 
-- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](http://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
 - Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.cssFloat
 slug: Web/API/CSSStyleDeclaration/cssFloat
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -23,7 +24,7 @@ CSSStyleDeclaration.cssFloat = "right"
 
 ### Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Example
 

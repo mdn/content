@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEvent.accelerationIncludingGravity
 slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
+page-type: web-api-instance-property
 tags:
   - API
   - Device Orientation

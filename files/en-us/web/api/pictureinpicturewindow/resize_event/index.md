@@ -1,6 +1,7 @@
 ---
 title: 'PictureInPictureWindow: resize event'
 slug: Web/API/PictureInPictureWindow/resize_event
+page-type: web-api-event
 tags:
   - API
   - Event

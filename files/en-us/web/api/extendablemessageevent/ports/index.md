@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent.ports
 slug: Web/API/ExtendableMessageEvent/ports
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

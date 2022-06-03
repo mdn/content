@@ -1,6 +1,7 @@
 ---
 title: Using images
 slug: Web/API/Canvas_API/Tutorial/Using_images
+page-type: guide
 tags:
   - Advanced
   - Canvas
@@ -79,7 +80,7 @@ If you're only using one external image this can be a good approach, but once yo
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 var img = new Image();   // Create new img element

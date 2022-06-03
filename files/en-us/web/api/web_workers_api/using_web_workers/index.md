@@ -1,6 +1,7 @@
 ---
 title: Using Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
+page-type: guide
 tags:
   - Advanced
   - Firefox
@@ -149,7 +150,7 @@ The browser loads each listed script and executes it. Any global objects from ea
 
 ## Shared workers
 
-A shared worker is accessible by multiple scripts — even if they are being accessed by different windows, iframes or even workers. In this section we'll discuss the JavaScript found in our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)): This is very similar to the basic dedicated worker example, except that it has two functions available handled by different script files: _multiplying two numbers_, or _squaring a number_. Both scripts use the same worker to do the actual calculation required.
+A shared worker is accessible by multiple scripts — even if they are being accessed by different windows, iframes or even workers. In this section we'll discuss the JavaScript found in our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)): This is very similar to the basic dedicated worker example, except that it has two functions available handled by different script files: _multiplying two numbers_, or _squaring a number_. Both scripts use the same worker to do the actual calculation required.
 
 Here we'll concentrate on the differences between dedicated and shared workers. Note that in this example we have two HTML pages, each with JavaScript applied that uses the same single worker file.
 
@@ -159,7 +160,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 ### Spawning a shared worker
 
-Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html) and [index2.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index2.html)) — each one has to spin up the worker using code like the following:
+Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
 
 ```js
 var myWorker = new SharedWorker('worker.js');
@@ -173,7 +174,7 @@ The port connection needs to be started either implicitly by use of the `onmessa
 
 ### Sending messages to and from a shared worker
 
-Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) and [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/square.js)):
 
 ```js
 squareNumber.onchange = function() {
@@ -182,7 +183,7 @@ squareNumber.onchange = function() {
 }
 ```
 
-Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)):
+Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/worker.js)):
 
 ```js
 onconnect = function(e) {
@@ -201,7 +202,7 @@ We use the `ports` attribute of this event object to grab the port and store it 
 
 Next, we add a `message` handler on the port to do the calculation and return the result to the main thread. Setting up this `message` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
 
-Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) and [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/square.js)):
 
 ```js
 myWorker.port.onmessage = function(e) {
@@ -749,19 +750,12 @@ In addition to dedicated and shared web workers, there are other types of worker
 
 ## Debugging worker threads
 
-Most browsers support debugging of worker threads in their JavaScript debuggers in _exactly the same way_ as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.
+Most browsers enable you to debug web workers in their JavaScript debuggers in _exactly the same way_ as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.
 
-The screenshot below shows this on Firefox. The _sources list_ shows `worker.js` running in a separate worker thread. When selected this file is opened in the [source pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source-pane), just like code running in the main thread.
+To learn how to debug web workers, see the documentation for each browser's JavaScript debugger:
 
-![](worker-source.png)
-
-> **Note:** Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.
-
-In the source pane you can [set a breakpoint](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html) (or [logpoint](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html)) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct [breakpoints](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html), [inline variable preview](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html#inline-variable-preview), [call stack](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call-stack), etc., just as you'd expect.
-
-![](worker-breakpoints-callstack.png)
-
-> **Note:** For more information see [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
+- [Chrome Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/)
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
 
 ## Functions and interfaces available in workers
 

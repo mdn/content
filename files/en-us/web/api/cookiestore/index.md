@@ -1,6 +1,7 @@
 ---
 title: CookieStore
 slug: Web/API/CookieStore
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplayblur event'
 slug: Web/API/Window/vrdisplayblur_event
+page-type: web-api-event
 tags:
   - Reference
   - WebVR
@@ -53,7 +54,7 @@ window.addEventListener('vrdisplayblur', function() {
 });
 ```
 
-Or use the [`onvrdisplayblur`](/en-US/docs/Web/API/Window/onvrdisplayblur) event handler property:
+Or use the `onvrdisplayblur` event handler property:
 
 ```js
 window.onvrdisplayblur = function() {

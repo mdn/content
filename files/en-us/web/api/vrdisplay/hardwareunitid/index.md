@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.hardwareUnitId
 slug: Web/API/VRDisplay/hardwareUnitId
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -21,7 +22,7 @@ The **`hardwareUnitId`** read-only property of the {{domxref("VRDisplay")}} inte
 
 ## Value
 
-A {{domxref("DOMString")}} containing the ID of the overall hardware unit.
+A string containing the ID of the overall hardware unit.
 
 ## Examples
 

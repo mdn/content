@@ -1,6 +1,7 @@
 ---
 title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

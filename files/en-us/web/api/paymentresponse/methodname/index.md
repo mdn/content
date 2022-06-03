@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.methodName
 slug: Web/API/PaymentResponse/methodName
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce

@@ -1,6 +1,7 @@
 ---
 title: 'IDBTransaction: abort event'
 slug: Web/API/IDBTransaction/abort_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

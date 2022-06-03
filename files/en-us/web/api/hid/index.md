@@ -1,6 +1,7 @@
 ---
 title: HID
 slug: Web/API/HID
+page-type: web-api-interface
 tags:
   - API
   - Advanced

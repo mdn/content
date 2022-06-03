@@ -1,6 +1,7 @@
 ---
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
+page-type: web-api-overview
 tags:
   - API
   - DOM

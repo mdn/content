@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement.isPointInFill()
 slug: Web/API/SVGGeometryElement/isPointInFill
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -26,7 +27,7 @@ isPointInFill(point)
 
 ### Parameters
 
-- point
+- `point`
   - : A DOMPointInit object interpreted as a point in the local coordinate system
     of the element.
 

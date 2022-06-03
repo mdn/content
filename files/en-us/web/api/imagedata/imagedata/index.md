@@ -1,6 +1,7 @@
 ---
 title: ImageData()
 slug: Web/API/ImageData/ImageData
+page-type: web-api-constructor
 tags:
   - API
   - Canvas

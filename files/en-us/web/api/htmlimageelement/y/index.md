@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.y
 slug: Web/API/HTMLImageElement/y
+page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.y
 ---
 {{APIRef("HTML DOM")}}

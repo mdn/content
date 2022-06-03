@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: negotiationneeded event'
 slug: Web/API/RTCPeerConnection/negotiationneeded_event
+page-type: web-api-event
 tags:
   - API
   - Event

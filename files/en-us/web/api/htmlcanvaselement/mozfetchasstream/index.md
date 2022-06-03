@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.mozFetchAsStream()
 slug: Web/API/HTMLCanvasElement/mozFetchAsStream
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

@@ -1,6 +1,7 @@
 ---
 title: Video textures
 slug: Web/API/WebGL_API/By_example/Video_textures
+page-type: guide
 tags:
   - Advanced
   - Example

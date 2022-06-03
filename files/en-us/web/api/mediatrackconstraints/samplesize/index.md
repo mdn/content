@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.sampleSize
 slug: Web/API/MediaTrackConstraints/sampleSize
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -17,7 +18,7 @@ browser-compat: api.MediaTrackConstraints.sampleSize
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
-**`sampleSize`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong)
+**`sampleSize`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong)
 describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.sampleSize", "sampleSize")}} constrainable property.
 
@@ -31,7 +32,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 If this value is a number, the user agent will attempt to obtain media whose sample
 size (in bits per linear sample) is as close as possible to this number given the
 capabilities of the hardware and the other constraints specified. Otherwise, the value
-of this [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) will guide the user agent in its efforts to provide
+of this [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) will guide the user agent in its efforts to provide
 an exact match to the required sample size (if `exact` is specified or both
 `min` and `max` are provided and have the same value) or to a
 best-possible value.

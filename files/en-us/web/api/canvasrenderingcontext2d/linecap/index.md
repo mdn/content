@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

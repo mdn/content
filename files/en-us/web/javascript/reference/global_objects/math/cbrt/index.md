@@ -45,12 +45,12 @@ number, that is
 ## Syntax
 
 ```js
-Math.cbrt(x)
+cbrt(x)
 ```
 
 ### Parameters
 
-- _x_
+- `x`
   - : A number.
 
 ### Return value

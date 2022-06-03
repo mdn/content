@@ -73,7 +73,7 @@ not be relied upon to be in the specified format.
 The `toString()` method is automatically called when a date is to be
 represented as a text value, e.g. `console.log(new Date())`, or when a date
 is used in a string concatenation, such as
-`var today = 'Today is ' + new Date()`.
+`const today = 'Today is ' + new Date()`.
 
 `toString()` is a generic method, it does not require that its
 `this` is a {{jsxref("Date")}} instance. However, it must have an internal
@@ -89,8 +89,8 @@ The following assigns the `toString()` value of a {{jsxref("Date")}} object
 to `myVar`:
 
 ```js
-var x = new Date();
-var myVar = x.toString(); // assigns a string value to myVar in the same format as:
+const x = new Date();
+const myVar = x.toString(); // assigns a string value to myVar in the same format as:
                           // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
 ```
 

@@ -63,7 +63,7 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS font-style](/en-US/docs/Web/CSS/font-style#Values) property.
+For a description of the values, please refer to the [CSS `font-style`](/en-US/docs/Web/CSS/font-style#values) property.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

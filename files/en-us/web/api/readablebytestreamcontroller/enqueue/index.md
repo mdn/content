@@ -1,6 +1,7 @@
 ---
 title: ReadableByteStreamController.enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -25,7 +26,7 @@ enqueue(chunk)
 
 ### Parameters
 
-- _chunk_
+- `chunk`
   - : The chunk to enqueue.
 
 ### Return value

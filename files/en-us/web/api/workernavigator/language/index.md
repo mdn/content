@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.language
 slug: Web/API/WorkerNavigator/language
+page-type: web-api-instance-property
 tags:
   - API
   - Language
@@ -18,7 +19,7 @@ browser UI.
 
 ## Value
 
-A {{domxref("DOMString")}}. _`lang`_ stores a string representing the
+A string. _`lang`_ stores a string representing the
 language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language
 codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
 

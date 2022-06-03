@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

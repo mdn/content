@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -120,9 +121,9 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - {{domxref("HTMLVideoElement")}}.
 
 - `srcData`
-- :{{domxref("ArrayBufferView")}}
+  - : An {{domxref("ArrayBufferView")}} object.
 
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
     store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the
     `WebGLBuffer` bound to the `PIXEL_UNPACK_BUFFER` target.

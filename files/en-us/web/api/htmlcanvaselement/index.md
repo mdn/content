@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
+page-type: web-api-interface
 tags:
   - API
   - Canvas
@@ -42,11 +43,6 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent.
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} {{experimental_inline}}
   - : Transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main thread or on a worker.
-
-### Obsolete methods
-
-- {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns a {{domxref("File")}} object representing the image contained in the canvas; this file is a memory-based file, with the specified `name`. If `type` is not specified, the image type is `image/png`.
 
 ## Events
 

@@ -1,6 +1,7 @@
 ---
 title: 'Document: selectstart event'
 slug: Web/API/Document/selectstart_event
+page-type: web-api-event
 tags:
   - Document
   - Event

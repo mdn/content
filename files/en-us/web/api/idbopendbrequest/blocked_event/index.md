@@ -1,6 +1,7 @@
 ---
 title: 'IDBOpenDBRequest: blocked event'
 slug: Web/API/IDBOpenDBRequest/blocked_event
+page-type: web-api-event
 tags:
   - Event
   - IDBOpenDBRequest
@@ -77,7 +78,7 @@ DBOpenRequest.onsuccess = (event) => {
 };
 ```
 
-Using the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/onblocked) property:
+Using the `onblocked` property:
 
 ```js
 // Open the database

@@ -1,6 +1,7 @@
 ---
 title: FontFace.lineGapOverride
 slug: Web/API/FontFace/lineGapOverride
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`lineGapOverride`** property of the {{domxref("FontFace")}} interface retu
 
 ## Value
 
-A {{domxref("CSSOMString","string")}}.
+A string.
 
 ## Examples
 

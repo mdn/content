@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.validateProgram()
 slug: Web/API/WebGLRenderingContext/validateProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ validateProgram(program)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to validate.
 
 ### Return value

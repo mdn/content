@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredentialRequestOptions
 slug: Web/API/PublicKeyCredentialRequestOptions
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

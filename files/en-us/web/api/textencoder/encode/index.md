@@ -1,6 +1,7 @@
 ---
 title: TextEncode.encode()
 slug: Web/API/TextEncoder/encode
+page-type: web-api-instance-method
 tags:
   - API
   - Encoding

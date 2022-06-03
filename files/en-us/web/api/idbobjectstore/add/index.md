@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -38,9 +39,9 @@ add(value, key)
 
 ### Parameters
 
-- value
+- `value`
   - : The value to be stored.
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : The key to use to identify the record. If unspecified, it results to null.
 
 ### Return value
@@ -77,9 +78,7 @@ one of the following types:
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. Note also the functions attached
 to transaction event handlers to report on the outcome of the transaction opening in the
-event of success or failure. For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view
-example live](https://mdn.github.io/to-do-notifications/).)
+event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 // Let us open our database
@@ -141,5 +140,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

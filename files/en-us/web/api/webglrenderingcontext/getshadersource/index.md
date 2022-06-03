@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getShaderSource()
 slug: Web/API/WebGLRenderingContext/getShaderSource
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ getShaderSource(shader)
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} object to get the source code from.
 
 ### Return value

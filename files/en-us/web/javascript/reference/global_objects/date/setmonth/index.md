@@ -11,8 +11,7 @@ browser-compat: javascript.builtins.Date.setMonth
 ---
 {{JSRef}}
 
-The **`setMonth()`** method sets the month for a specified date
-according to the currently set year.
+The **`setMonth()`** method sets the month for a specified date according to the currently set year.
 
 {{EmbedInteractiveExample("pages/js/date-setmonth.html")}}
 
@@ -48,20 +47,20 @@ incremented by 1, and 3 will be used for month.
 
 The current day of month will have an impact on the behavior of this method.
 Conceptually it will add the number of days given by the current day of the month to the
-1st day of the new month specified as the parameter, to return the new date. For
-example, if the current value is 31st August 2016, calling setMonth with a value of 1
-will return 2nd March 2016. This is because in 2016 February had 29 days.
+1st day of the new month specified as the parameter, to return the new date.
+For example, if the current value is 31st January 2016, calling setMonth with a value of 1 will return 2nd March 2016.
+This is because in 2016 February had 29 days.
 
 ## Examples
 
 ### Using setMonth()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setMonth(6);
 
 //Watch out for end of month transitions
-var endOfMonth = new Date(2016, 7, 31);
+const endOfMonth = new Date(2016, 7, 31);
 endOfMonth.setMonth(1);
 console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
 ```

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.sender
 slug: Web/API/RTCRtpTransceiver/sender
+page-type: web-api-instance-property
 tags:
   - API
   - Media

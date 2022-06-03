@@ -35,7 +35,9 @@ The following element would be selected by a `:target` selector when the current
 
 ## Syntax
 
-{{csssyntax}}
+```
+:target
+```
 
 ## Examples
 
