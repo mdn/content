@@ -30,7 +30,7 @@ setIdentityProvider(domainname, protocol, username)
 ### Parameters
 
 - `domainname`
-  - : A string is the domain name where the IdP is.
+  - : A string representing the domain name where the IdP is.
 - `protocol` {{optional_Inline}}
   - : A string representing the protocol used to communicate with the
     IdP. It defaults to `"default"` and is used to determine the URL where the
