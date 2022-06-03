@@ -28,7 +28,7 @@ decode(options)
     - `frameIndex`{{Optional_Inline}}
       - : An integer representing the index of the frame to decode. Defaults to `0` (the first frame).
     - `completeFramesOnly`{{Optional_Inline}}
-      - : A {{jsxref("boolean")}} defaulting to `true`. When `false` indicates that for progressive images the decoder may output an image with reduced detail.
+      - : A {{jsxref("boolean")}} defaulting to `true`. When `false` indicates that for progressive images the decoder may output an image with reduced detail. When `false`, the promise returned by `decode()` will resolve exactly once for each new level of detail.
 
 ### Return value
 
@@ -66,7 +66,13 @@ The following example decodes the first frame repeatedly until its complete:
 ```js
 let complete = false;
 while (!complete) {
+  // The promise returned by `decode()` will only resolve when a new level of
+  // detail is available or the frame is complete. I.e., calling `decode()` in a
+  // loop like this is won't needlessly spin.
   let result = await imageDecode.decode({completeFramesOnly: false});
+
+  // Do something with `result.image`.
+
   complete = result.complete;
 }
 ```

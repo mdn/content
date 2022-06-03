@@ -23,7 +23,7 @@ An {{domxref("ImageTrackList")}}.
 The following example prints the value of `tracks` to the console. This will be an {{domxref("ImageTrackList")}} object.
 
 ```js
-console.log(ImageDecoder.tracks);
+console.log(imageDecoder.tracks);
 ```
 
 ## Specifications
