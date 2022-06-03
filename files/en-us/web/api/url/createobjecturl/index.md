@@ -1,6 +1,7 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
+page-type: web-api-static-method
 tags:
   - API
   - Blob

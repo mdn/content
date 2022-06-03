@@ -1,6 +1,7 @@
 ---
 title: TransitionEvent.pseudoElement
 slug: Web/API/TransitionEvent/pseudoElement
+page-type: web-api-instance-property
 tags:
   - API
   - CSS

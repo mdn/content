@@ -1,6 +1,7 @@
 ---
 title: USBAlternateInterface
 slug: Web/API/USBAlternateInterface
+page-type: web-api-interface
 tags:
   - API
   - Experimental

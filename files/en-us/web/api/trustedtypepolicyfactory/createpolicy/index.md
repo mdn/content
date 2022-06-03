@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.createPolicy()
 slug: Web/API/TrustedTypePolicyFactory/createPolicy
+page-type: web-api-instance-method
 tags:
   - API
   - Method

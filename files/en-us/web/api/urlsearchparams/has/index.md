@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.has()
 slug: Web/API/URLSearchParams/has
+page-type: web-api-instance-method
 tags:
   - API
   - Method
