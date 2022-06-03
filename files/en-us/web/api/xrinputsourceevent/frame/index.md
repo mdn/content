@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceEvent.frame
 slug: Web/API/XRInputSourceEvent/frame
+page-type: web-api-instance-property
 tags:
   - API
   - AR

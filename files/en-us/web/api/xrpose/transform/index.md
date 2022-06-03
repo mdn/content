@@ -1,6 +1,7 @@
 ---
 title: XRPose.transform
 slug: Web/API/XRPose/transform
+page-type: web-api-instance-property
 tags:
   - API
   - AR

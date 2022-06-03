@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getHitTestResults()
 slug: Web/API/XRFrame/getHitTestResults
+page-type: web-api-instance-method
 tags:
   - API
   - Method

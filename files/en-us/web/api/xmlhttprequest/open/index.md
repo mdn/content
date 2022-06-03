@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
+page-type: web-api-instance-method
 tags:
   - API
   - HTTP

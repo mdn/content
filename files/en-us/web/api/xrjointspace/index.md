@@ -1,6 +1,7 @@
 ---
 title: XRJointSpace
 slug: Web/API/XRJointSpace
+page-type: web-api-interface
 tags:
   - API
   - Interface
