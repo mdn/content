@@ -34,5 +34,5 @@ This proprietary method is specific to Internet Explorer.
 
 ## See also
 
-- [msCachingEnabled](/en-US/docs/Web/API/msCachingEnabled)
+- [msCachingEnabled](/en-US/docs/Web/API/XMLHttpRequest/msCachingEnabled)
 - [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)
