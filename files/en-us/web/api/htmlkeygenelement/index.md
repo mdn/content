@@ -43,7 +43,7 @@ The {{HTMLElement("keygen")}} elements expose the **`HTMLKeygenElement`** interf
 ## Methods
 
 - `checkValidity()`
-  - : Always returns the boolean value`true` because `HTMLKeygenElement` objects are never candidates for constraint validation.
+  - : Always returns the boolean value `true` because `HTMLKeygenElement` objects are never candidates for constraint validation.
 - `setCustomValidity()`
   - : Takes a string as parameter and sets it as the custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
 
