@@ -13,7 +13,7 @@ browser-compat: api.CSSStyleSheet.CSSStyleSheet
 
 The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Stylesheet).
 
-After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}}, {{domxref("CSSStyleSheet.replaceSync()")}}, {{domxref("CSSStyleSheet.insertRule()")}} and {{domxref("CSSStyleSheet.deleteRule()")}} methods can be used to modify the rules of the new stylesheet.
+After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}}, {{domxref("CSSStyleSheet.replaceSync()")}}, {{domxref("CSSStyleSheet.insertRule()")}}, and {{domxref("CSSStyleSheet.deleteRule()")}} methods can be used to modify the rules of the new stylesheet.
 
 A stylesheet created using this method is referred to as a "constructed stylesheet".
 A constructed stylesheet can be shared between a document and its shadow DOM subtrees using {{domxref("ShadowRoot.adoptedStyleSheets")}} and {{domxref("Document.adoptedStyleSheets")}}.
@@ -41,7 +41,7 @@ new CSSStyleSheet(options)
 
 ## Examples
 
-In the following example a new {{domxref("CSSStyleSheet")}} is constructed, with a media rule of `"print"`.
+In the following example, a new {{domxref("CSSStyleSheet")}} is constructed with a media rule of `"print"`.
 Printing {{domxref("StyleSheet.media")}} to the console returns a {{domxref("MediaList")}} with a single entry for this print rule.
 
 ```css
@@ -51,7 +51,7 @@ console.log(stylesheet.media);
 
 ### Sharing stylesheets with a shadow DOM
 
-The code below shows the sheet being constructed, and then {{domxref("CSSStyleSheet.replaceSync()")}} is called to add a rule to the sheet.
+The code below shows the sheet being constructed and then {{domxref("CSSStyleSheet.replaceSync()")}} is called to add a rule to the sheet.
 
 ```js
 // Create an empty "constructed" stylesheet
@@ -71,7 +71,7 @@ const shadow = node.attachShadow({ mode: 'open' });
 shadow.adoptedStyleSheets = [sheet];
 ```
 
-We can still modify the stylesheets after they have been added to the array.
+We can modify the stylesheets after they have been added to the array.
 Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.insertRule()")}}.
 
 ```js
