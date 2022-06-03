@@ -31,7 +31,7 @@ A `PropertyDefinition` dictionary object, which can contain the following
 members:
 
 - `name`
-  - : A string indicating the
+  - : A string representing the
     name of the property being defined.
 - `syntax` {{optional_inline}}
   - : A string representing
