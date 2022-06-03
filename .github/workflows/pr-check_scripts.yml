@@ -7,12 +7,9 @@ on:
     paths:
       - package.json
       - yarn.lock
+      - .github/workflows/pr-check_scripts.yml
 
 jobs:
-  scripts:
-    strategy:
-      matrix:
-      
   up-to-date-check:
     runs-on: ubuntu-latest
 
