@@ -463,6 +463,7 @@ MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/loca
 
 > **Note:** 
 > - Special characters in usernames and passwords must be HTML encoded.
+>   Affected characters include: `:`, `/`, `?`, `#`, `[`, `]`, `@`. 
 >   For example, if the password was `cool@pas&word` then you would set MONGODB_URI using: 
 >   ```
 >   heroku config:set MONGODB_URI=mongodb+srv://cooluser:cool%40pas%26word@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
