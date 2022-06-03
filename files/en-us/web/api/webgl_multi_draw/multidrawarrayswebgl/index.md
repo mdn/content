@@ -1,6 +1,7 @@
 ---
 title: WEBGL_multi_draw.multiDrawArraysWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL
+page-type: webgl-extension-method
 tags:
   - Method
   - Reference
