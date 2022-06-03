@@ -67,7 +67,6 @@ postTask(callback, options)
 Returns a {{jsxref("Promise")}} that is resolved with the return value of the `callback` function, or which may be rejected with the `signal`'s abort reason ({{domxref("AbortSignal.reason")}}).
 The promise may also be rejected with an error thrown by the callback during execution.
 
-
 ## Examples
 
 The following examples are slightly simplified versions of the live examples provided in [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#Examples).
@@ -87,7 +86,6 @@ else {
   console.log('Feature: NOT Supported');
 }
 ```
-
 
 ### Basic usage
 

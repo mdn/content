@@ -44,7 +44,6 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-
 First we create a task controller.
 In this case we don't specify a priority, so it will default to `user-visible`.
 
@@ -71,7 +70,6 @@ controller.setPriority('background');
 ```
 
 Additional examples, including showing how to handle the event that results from changing the priority, can be found in: [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
-
 
 ## Specifications
 

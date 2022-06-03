@@ -18,7 +18,6 @@ The **`TaskPriorityChangeEvent`** is the interface for the [`prioritychange`](/e
 
 {{InheritanceDiagram}}
 
-
 ## Constructor
 
 - {{domxref("TaskPriorityChangeEvent.TaskPriorityChangeEvent", "TaskPriorityChangeEvent()")}}
@@ -34,7 +33,6 @@ _This interface also inherits the properties of its parent, {{domxref("Event")}}
 ## Methods
 
 _This interface has no methods of its own, but inherits the methods of its parent, {{domxref("Event")}}._
-
 
 ## Examples
 

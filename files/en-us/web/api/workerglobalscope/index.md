@@ -30,7 +30,6 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
-
 ### Non-standard properties
 
 - {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}

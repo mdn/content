@@ -13,7 +13,6 @@ browser-compat: api.TaskSignal.prioritychange_event
 
 The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) is changed. 
 
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -30,13 +29,11 @@ A {{domxref("TaskPriorityChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TaskPriorityChangeEvent")}}
 
-
 ## Event properties
 
 - {{domxref('TaskPriorityChangeEvent.previousPriority')}}
   - : Indicates the previous priority of the task (before it was changed).
     The new/updated priority is read from `event.target.priority` ([`TaskSignal.priority`](/en-US/docs/Web/API/TaskSignal/priority)).
-
 
 ## Examples
 
@@ -84,7 +81,6 @@ The output below demonstrates shows that the [task's priority](/en-US/docs/Web/A
 This happens before the task is executed, but could also happen when the task is running.
 
 {{EmbedLiveSample("Examples",'400px','130px')}}
-
 
 ## Specifications
 

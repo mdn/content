@@ -24,7 +24,6 @@ Abortable tasks that do not need the priority to change may instead specify an {
 
 {{InheritanceDiagram}}
 
-
 ## Properties
 
 _The `TaskSignal` interface also inherits properties from its parent interface, {{domxref("AbortSignal")}}._
@@ -35,7 +34,6 @@ _The `TaskSignal` interface also inherits properties from its parent interface, 
 ## Methods
 
 _The `TaskSignal` interface inherits methods from its parent interface, {{domxref("AbortSignal")}}._
-
 
 ## Static methods
 
@@ -57,7 +55,6 @@ Examples for how the `TaskSignal` is created and used for prioritizing and abort
 - [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples)
 - [`TaskController` > Examples](/en-US/docs/Web/API/TaskController#examples)
 - [`TaskSignal: prioritychange` event > Examples](/en-US/docs/Web/API/TaskSignal/prioritychange_event#examples)
-
 
 ## Specifications
 

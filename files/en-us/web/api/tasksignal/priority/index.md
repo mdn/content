@@ -20,7 +20,6 @@ The priority of the signal can be changed by calling {{domxref("TaskController.s
 For [tasks with a mutable priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority), this value is used to set the initial task priority and later to change it.
 Tasks with an immutable priority will ignore the value.
 
-
 ## Value
 
 A string indicating the signal [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).

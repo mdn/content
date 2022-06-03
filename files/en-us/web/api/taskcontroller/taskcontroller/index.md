@@ -32,7 +32,6 @@ new TaskController(init)
       - : The [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of the signal associated with this `TaskController`.
         One of: `"user-blocking"`, `"user-visible"` (default), `"background"`.
 
-
 ## Examples
 
 This code shows how to construct a task controller that has a signal with default priority (`user-visible`).

@@ -22,7 +22,6 @@ The new priority of the task can be read from `event.target.priority`.
 A string, indicating the associated task's priority before it was changed.
 This will be one of: [`"user-blocking"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-blocking), [`"user-visible"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible), [`"background"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background).
 
-
 ## Examples
 
 The code below shows the `previousPriority` being obtained in a handler for a `prioritychange` event.
@@ -38,7 +37,6 @@ The code below shows the `previousPriority` being obtained in a handler for a `p
 ```
 
 A more complete live example can be found in [`prioritychange` event > Examples](/en-US/docs/Web/API/TaskSignal/prioritychange_event).
-
 
 ## Specifications
 

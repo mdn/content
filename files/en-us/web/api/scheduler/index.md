@@ -24,7 +24,6 @@ None.
 - {{domxref('Scheduler.postTask()')}}
   - : Adds a task to the scheduler as a callback, optionally specifying a priority, delay, and/or a signal for aborting the task.
     
-
 ## Examples
 
 If the feature is defined, an instance of this object is returned by the global `this` in both workers and the main thread.
