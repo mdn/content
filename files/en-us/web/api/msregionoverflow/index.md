@@ -17,13 +17,13 @@ This proprietary property is specific to Internet Explorer.
 
 Returns one of the following strings:
 
-- `overflow`
+- `"overflow"`
   - : The region element's content overflows the region's content box. Note that the region's overflow property value can be used to control the visibility of the overflowing content. This means that the region is the last one in the region chain and not able to fit the remaining content from the named flow.
-- `fit`
+- `"fit"`
   - : The region element's content fits into the region's content box. It does not overflow. If the region is the last one in the region chain, it means that the content fits without overflowing. If the region is not the last one in the region chain, that means the named flow content is further fitted in subsequent regions. In particular, in this last case, that means the region may have received no content from the named flow (for example if the region is too small to accommodate any content).
-- `empty`
+- `"empty"`
   - : The region element has no content and is empty. All content from the named flow was fitted in regions with a lower content-order value.
-- `undefined`
+- `"undefined"`
   - : The element is not a region.
 
 When the region is an actual element, msRegionOverflow provides the ability to find out if content fully fits into the region or not. However, it is only available to regions that are document elements and not to regions that are pseudo-elements.
