@@ -44252,29 +44252,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2020-10-15T21:15:09.905Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "anthumchris",
-      "jpmedley",
-      "cvrebert",
-      "teoli",
-      "kosvrouvas",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "jswisher",
-      "Djc8080",
-      "BenB",
-      "Mgjbot",
-      "Nickolay",
-      "Jabez",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onanimationcancel": {
     "modified": "2020-10-15T21:50:36.012Z",
     "contributors": [
