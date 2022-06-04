@@ -461,13 +461,16 @@ Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 ```
 
-> **Note:** 
+> **Note:**
+>
 > - Special characters in usernames and passwords must be HTML encoded.
->   Affected characters include: `:`, `/`, `?`, `#`, `[`, `]`, `@`. 
->   For example, if the password was `cool@pas&word` then you would set MONGODB_URI using: 
+>   Affected characters include: `:`, `/`, `?`, `#`, `[`, `]`, `@`.
+>   For example, if the password was `cool@pas&word` then you would set MONGODB_URI using:
+>
 >   ```
 >   heroku config:set MONGODB_URI=mongodb+srv://cooluser:cool%40pas%26word@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 >   ```
+>
 > - On some operating systems you may need to set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
 
 You can inspect your configuration variables at any time using the `heroku config` command — try this now:
