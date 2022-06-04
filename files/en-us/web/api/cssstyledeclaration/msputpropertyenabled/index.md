@@ -1,6 +1,6 @@
 ---
 title: msPutPropertyEnabled
-slug: Web/API/msPutPropertyEnabled
+slug: Web/API/CSSStyleDeclaration/msPutPropertyEnabled
 page-type: web-api-instance-method
 tags:
   - msPutPropertyEnabled
