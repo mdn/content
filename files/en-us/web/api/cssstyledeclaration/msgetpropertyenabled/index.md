@@ -1,5 +1,5 @@
 ---
-title: msGetPropertyEnabled
+title: CSSStyleDeclaration.msGetPropertyEnabled()
 slug: Web/API/CSSStyleDeclaration/msGetPropertyEnabled
 page-type: web-api-instance-method
 tags:
