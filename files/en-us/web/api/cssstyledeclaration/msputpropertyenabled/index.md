@@ -1,5 +1,5 @@
 ---
-title: msPutPropertyEnabled
+title: CSSStyleDeclaration.msPutPropertyEnabled()
 slug: Web/API/CSSStyleDeclaration/msPutPropertyEnabled
 page-type: web-api-instance-method
 tags:
