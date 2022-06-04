@@ -11,7 +11,7 @@ tags:
   - Reference
   - initMSManipulationEvent
 ---
-{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`initMSManipulationEvent`** method is used to create a {{DOMxRef("MSManipulationEvent")}} that can be called from JavaScript.
 
