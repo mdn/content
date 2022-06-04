@@ -2,6 +2,9 @@
 title: Document.msCapsLockWarningOff
 slug: Web/API/Document/msCapsLockWarningOff
 page-type: web-api-instance-property
+tags:
+  - Property
+  - Non-standard
 ---
 {{APIRef("DOM")}}
 
