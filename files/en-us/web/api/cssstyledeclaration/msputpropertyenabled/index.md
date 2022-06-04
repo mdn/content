@@ -4,6 +4,8 @@ slug: Web/API/CSSStyleDeclaration/msPutPropertyEnabled
 page-type: web-api-instance-method
 tags:
   - msPutPropertyEnabled
+  - Method
+  - Non-standard
 ---
 {{APIRef("HTMLMediaElement")}}
 
