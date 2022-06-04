@@ -136,7 +136,7 @@ Fill styling is used for colors and styles inside shapes and stroke styling is u
 ### Shadows
 
 - {{domxref("CanvasRenderingContext2D.shadowBlur")}}
-  - : Specifies the blurring effect. Default: `0`
+  - : Specifies the blurring effect. Default: `0`.
 - {{domxref("CanvasRenderingContext2D.shadowColor")}}
   - : Color of the shadow. Default: fully-transparent black.
 - {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
