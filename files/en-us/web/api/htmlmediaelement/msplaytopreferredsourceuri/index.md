@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.msPlayToPreferredSourceUri
 slug: Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
+page-type: api-instance-property
 tags:
   - Non-standard
   - Property

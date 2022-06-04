@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.msPlayToPrimary
 slug: Web/API/HTMLMediaElement/msPlayToPrimary
+page-type: api-instance-property
 tags:
   - msPlayToPrimary
   - Non-standard

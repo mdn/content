@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.msPlayToDisabled
 slug: Web/API/HTMLMediaElement/msPlayToDisabled
+page-type: api-instance-property
 tags:
   - msPlayToDisabled
   - Property
