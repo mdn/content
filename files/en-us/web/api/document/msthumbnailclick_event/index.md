@@ -1,5 +1,5 @@
 ---
-title: msthumbnailclick event
+title: 'Document: msthumbnailclick event'
 slug: Web/API/Document/msthumbnailclick_event
 page-type: web-api-event
 tags:
