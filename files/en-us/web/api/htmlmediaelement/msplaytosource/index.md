@@ -1,7 +1,7 @@
 ---
 title: HTMLMediaElement.msPlayToSource
 slug: Web/API/HTMLMediaElement/msPlayToSource
-page-type: api-instance-property
+page-type: web-api-instance-property
 tags:
   - msPlayToSource
   - Non-standard
