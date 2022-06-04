@@ -9,6 +9,7 @@ tags:
   - Reference
   - Houdini
   - Experimental
+  - Property
 browser-compat: api.CSSStyleRule.styleMap
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
@@ -17,13 +18,7 @@ The **`styleMap`** read-only property of the
 {{domxref("CSSStyleRule")}} interface returns a {{domxref('StylePropertyMap')}} object
 which provides access to the rule's property-value pairs.
 
-## Syntax
-
-```js
-var stylePropertyMap = cssStyleRule.styleMap;
-```
-
-### Value
+## Value
 
 A {{domxref('StylePropertyMap')}} object.
 

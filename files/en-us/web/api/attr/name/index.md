@@ -14,7 +14,7 @@ The read-only **`name`** property of the {{domxref("Attr")}} interface returns t
 
 The qualified name is always in lower case, whatever case at the attribute creation.
 
-### Value
+## Value
 
 A string representing the attribute's qualified name.
 
