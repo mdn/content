@@ -4,6 +4,8 @@ slug: Web/API/PerformanceTiming/MsFirstPaint
 page-type: web-api-instance-property
 tags:
   - msFirstPaint
+  - Property
+  - Non-standard
 ---
 {{APIRef("Navigation timing API")}}
 
