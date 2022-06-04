@@ -4,6 +4,8 @@ slug: Web/API/Document/msthumbnailclick_event
 page-type: web-api-event
 tags:
   - msthumbnailclick
+  - Event
+  - Non-standard
 ---
 {{APIRef("DOM")}}
 
