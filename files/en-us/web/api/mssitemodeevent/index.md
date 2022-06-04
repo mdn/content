@@ -1,6 +1,7 @@
 ---
 title: MSSiteModeEvent
 slug: Web/API/MSSiteModeEvent
+page-type: web-api-interface
 ---
 {{Non-standard_header()}}
 

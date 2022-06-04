@@ -1,6 +1,7 @@
 ---
 title: MSManipulationEvent
 slug: Web/API/MSManipulationEvent
+page-type: web-api-interface
 tags:
   - API
   - API:Microsoft Extensions

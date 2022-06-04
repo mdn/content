@@ -1,8 +1,9 @@
 ---
 title: msCapsLockWarningOff
-slug: Web/API/msCapsLockWarningOff
+slug: Web/API/Document/msCapsLockWarningOff
+page-type: web-api-instance-property
 ---
-{{APIRef("HTML DOM")}}
+{{APIRef("DOM")}}
 
 {{Non-standard_header()}}
 

@@ -1,6 +1,7 @@
 ---
 title: MSManipulationEvent.initMSManipulationEvent()
 slug: Web/API/MSManipulationEvent/initMSManipulationEvent
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions
