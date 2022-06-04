@@ -43417,15 +43417,6 @@
       "teoli"
     ]
   },
-  "Web/API/FormDataEntryValue": {
-    "modified": "2020-03-13T15:07:12.783Z",
-    "contributors": [
-      "jswisher",
-      "mfuji09",
-      "chrisdavidmills",
-      "irenesmith"
-    ]
-  },
   "Web/API/FormDataEvent": {
     "modified": "2020-10-15T22:24:45.983Z",
     "contributors": [
