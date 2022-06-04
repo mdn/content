@@ -171,7 +171,7 @@ Rather than go through a long explanation, let's go back to our example with thi
 
 Two things to notice. First, some of these items are not web-related (e.g., record music, write articles). Often those offline activities matter even more than the web side of the project. In sales, for instance, it's far more important and time-consuming to handle supply, payment, and shipment than to build a website where people can place orders.
 
-Second, setting out actionable steps leads to new questions you'll need to answer. Usually there turn out to be more questions than we originally thought. (For example, should I learn how to do all this myself, ask someone to do it for me, or use third-party services?)
+Second, setting out actionable steps leads to new questions you'll need to answer. Usually there are turn out to be more questions than we originally thought. (For example, should I learn how to do all this myself, ask someone to do it for me, or use third-party services?)
 
 ## Conclusion
 
