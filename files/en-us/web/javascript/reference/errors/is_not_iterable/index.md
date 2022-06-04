@@ -12,7 +12,7 @@ tags:
 The JavaScript exception "is not iterable" occurs when the value which is given as the
 right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
 as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
-or as the right-hand side of an array [destructuring assignement](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
+or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## Message
