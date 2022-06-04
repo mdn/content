@@ -18,7 +18,7 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Value
 
-_PlayTo_ is a mean through which an app can connect local playback/display for
+_PlayTo_ enables an app can connect local playback/display for
 audio, video, and img elements to a remote device. For more information, see the [Windows.Media.PlayTo](https://docs.microsoft.com/en-us/uwp/api/windows.media.playto?view=winrt-22000)
 APIs.
 
