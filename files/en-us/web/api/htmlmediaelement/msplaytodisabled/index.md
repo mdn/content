@@ -1,23 +1,20 @@
 ---
-title: msPlayToDisabled
-slug: Web/API/MsPlayToDisabled
+title: HTMLMediaElement.msPlayToDisabled
+slug: Web/API/HTMLMediaElement/msPlayToDisabled
+page-type: web-api-instance-property
 tags:
   - msPlayToDisabled
+  - Property
+  - Non-standard
 ---
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
-{{Non-standard_header()}}
+{{Non-standard_header}}
 
 **`msPlayToDisabled`** is a read/write property which gets and
 sets if the _PlayTo_ device is enabled or disabled.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
-
-## Syntax
-
-```js
-ptr = object.msPlayToDisabled;
-```
 
 ## Value
 
