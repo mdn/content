@@ -1,10 +1,13 @@
 ---
-title: msthumbnailclick event
-slug: Web/API/msthumbnailclick
+title: 'Document: msthumbnailclick event'
+slug: Web/API/Document/msthumbnailclick_event
+page-type: web-api-event
 tags:
   - msthumbnailclick
+  - Event
+  - Non-standard
 ---
-{{APIRef("HTMLMediaElement")}}
+{{APIRef("DOM")}}
 
 {{Non-standard_header()}}
 

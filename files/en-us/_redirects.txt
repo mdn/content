@@ -7819,6 +7819,7 @@
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
+/en-US/docs/Web/API/Document/msthumbnailclick	/en-US/docs/Web/API/Document/msthumbnailclick_event
 /en-US/docs/Web/API/Document/namespaceURI	/en-US/docs/Web/API/Element/namespaceURI
 /en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/Document/onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
@@ -8694,6 +8695,7 @@
 /en-US/docs/Web/API/MsAudioDeviceType	/en-US/docs/Web/API/HTMLAudioElement/msAudioDeviceType
 /en-US/docs/Web/API/MsClearEffects	/en-US/docs/Web/API/HTMLMediaElement/msClearEffects
 /en-US/docs/Web/API/MsExtendedCode	/en-US/docs/Web/API/MediaError/msExtendedCode
+/en-US/docs/Web/API/MsFirstPaint	/en-US/docs/Web/API/PerformanceTiming/MsFirstPaint
 /en-US/docs/Web/API/MsHorizontalMirror	/en-US/docs/Web/API/HTMLVideoElement/msHorizontalMirror
 /en-US/docs/Web/API/MsInsertAudioEffect	/en-US/docs/Web/API/HTMLMediaElement/msInsertAudioEffect
 /en-US/docs/Web/API/MsInsertVideoEffect	/en-US/docs/Web/API/HTMLVideoElement/msInsertVideoEffect
@@ -10204,9 +10206,13 @@
 /en-US/docs/Web/API/mozRTCSessionDescription/toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/msCaching	/en-US/docs/Web/API/XMLHttpRequest/msCaching
 /en-US/docs/Web/API/msCachingEnabled	/en-US/docs/Web/API/XMLHttpRequest/msCachingEnabled
+/en-US/docs/Web/API/msCapsLockWarningOff	/en-US/docs/Web/API/Document/msCapsLockWarningOff
 /en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep
+/en-US/docs/Web/API/msGetPropertyEnabled	/en-US/docs/Web/API/CSSStyleDeclaration/msGetPropertyEnabled
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
+/en-US/docs/Web/API/msPutPropertyEnabled	/en-US/docs/Web/API/CSSStyleDeclaration/msPutPropertyEnabled
+/en-US/docs/Web/API/msthumbnailclick	/en-US/docs/Web/API/Document/msthumbnailclick_event
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
 /en-US/docs/Web/API/navigator.doNotTrack	/en-US/docs/Web/API/Navigator/doNotTrack
 /en-US/docs/Web/API/navigator.geolocation.clearWatch	/en-US/docs/Web/API/Geolocation/clearWatch

@@ -1,8 +1,9 @@
 ---
 title: MSSiteModeEvent
 slug: Web/API/MSSiteModeEvent
+page-type: web-api-interface
 ---
-{{Non-standard_header()}}
+{{APIRef("UI Events")}}{{Non-standard_header()}}
 
 **`MSSiteModeEvent`** provides event properties that are specific to pinned site events.
 
