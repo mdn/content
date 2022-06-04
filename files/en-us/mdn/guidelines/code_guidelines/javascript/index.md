@@ -84,7 +84,7 @@ We also have a few specific rules around spacing inside language features. You s
 This is more readable
 
 ```js example-good
-if(dayOfWeek === 7 && weather === 'sunny') {
+if (dayOfWeek === 7 && weather === 'sunny') {
   goOnTrip('beach', 'car', ['ice cream', 'bucket and spade', 'beach towel']);
 }
 ```
@@ -102,7 +102,7 @@ In addition, keep these specifics in mind:
 - Don't include padding spaces after opening brackets or before closing brackets — `(myVar)`, not `( myVar )`.
 - All statements must end with semicolons (";"). We require them in all of our code samples even though they're technically optional in JavaScript because we feel that it leads to code that is clearer and more precise about where each statement ends.
 - Use single quotes in JavaScript, wherever single quotes are needed in syntax.
-- There should be no space between a control statement keyword, function, or loop keyword and its opening parenthesis (e.g. `if() { ... }`, `function myFunc() { ... }, for(...) { ... }`).
+- There should a space between a control statement keyword, and loop keyword and its opening parenthesis (e.g. `if () { ... }` and `for (...) { ... }`).
 - There should be a space between the parentheses and the opening curly brace in such cases as described in the previous bullet.
 
 ### JavaScript comments
@@ -246,7 +246,7 @@ Use shortcuts for boolean tests — use `x` and `!x`, not `x === true` and `x ==
 Write control statements like this:
 
 ```js example-good
-if(iceCream) {
+if (iceCream) {
   alert('Woo hoo!');
 }
 ```
@@ -254,14 +254,14 @@ if(iceCream) {
 Not this:
 
 ```js example-bad
-if (iceCream){
+if(iceCream){
   alert('Woo hoo!');
 }
 ```
 
 Also bear in mind:
 
-- There should be _no space_ between a control statement keyword and its opening parenthesis.
+- There should be _a space_ between a control statement keyword and its opening parenthesis.
 - There should be _a space_ between the parentheses and the opening curly brace.
 
 ## Strings
@@ -314,7 +314,7 @@ When using `for`/`for...of` loops, make sure to define the initializer properly,
 
 ```js example-good
 let cats = ['Athena', 'Luna'];
-for(let i of cats) {
+for (let i of cats) {
   console.log(i);
 }
 ```
@@ -330,7 +330,7 @@ for(i of cats) {
 
 Also bear in mind:
 
-- There should be _no space_ between a loop keyword and its opening parenthesis.
+- There should be _a space_ between a loop keyword and its opening parenthesis.
 - There should be _a space_ between the parentheses and the opening curly brace.
 
 ### Switch statements
@@ -339,7 +339,7 @@ Format switch statements like this:
 
 ```js example-good
 let expr = 'Papayas';
-switch(expr) {
+switch (expr) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
