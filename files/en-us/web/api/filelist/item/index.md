@@ -1,6 +1,7 @@
 ---
 title: FileList.item()
 slug: Web/API/FileList/item
+page-type: web-api-instance-method
 tags:
   - API
   - File API
