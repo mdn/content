@@ -55,7 +55,7 @@ delete it using {{domxref("CacheStorage.delete()")}}.
 
 ```js
 this.addEventListener('activate', function(event) {
-  var cacheAllowlist = ['v2'];
+  const cacheAllowlist = ['v2'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
