@@ -8700,6 +8700,10 @@
 /en-US/docs/Web/API/MsIsLayoutOptimalForPlayback	/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback
 /en-US/docs/Web/API/MsIsStereo3D	/en-US/docs/Web/API/HTMLVideoElement/msIsStereo3D
 /en-US/docs/Web/API/MsManipulationViewsEnabled	/en-US/docs/Web/API/Touch/MsManipulationViewsEnabled
+/en-US/docs/Web/API/MsPlayToDisabled	/en-US/docs/Web/API/HTMLMediaElement/msPlayToDisabled
+/en-US/docs/Web/API/MsPlayToPreferredSourceUri	/en-US/docs/Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
+/en-US/docs/Web/API/MsPlayToPrimary	/en-US/docs/Web/API/HTMLMediaElement/msPlayToPrimary
+/en-US/docs/Web/API/MsPlayToSource	/en-US/docs/Web/API/HTMLMediaElement/msPlayToSource
 /en-US/docs/Web/API/MsSetVideoRectangle	/en-US/docs/Web/API/HTMLVideoElement/msSetVideoRectangle
 /en-US/docs/Web/API/MsStereo3DPackingMode	/en-US/docs/Web/API/HTMLVideoElement/msStereo3DPackingMode
 /en-US/docs/Web/API/MsStereo3DRenderMode	/en-US/docs/Web/API/HTMLVideoElement/msStereo3DRenderMode

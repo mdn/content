@@ -1,8 +1,11 @@
 ---
-title: msPlayToPreferredSourceUri
-slug: Web/API/MsPlayToPreferredSourceUri
+title: HTMLMediaElement.msPlayToPreferredSourceUri
+slug: Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
+tags:
+  - Non-standard
+  - Property
 ---
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
 
@@ -13,15 +16,9 @@ location, such as a cloud media server.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
-
-```js
-ptr = object.msPlayToPreferredSourceUri;
-```
-
 ## Value
 
-**`msPlayToPreferredSourceUri`** enables a _PlayTo_
+`msPlayToPreferredSourceUri` enables a _PlayTo_
 reference (a URI or URL) for streaming content on the _PlayTo_ target device from
 a different location, such as a cloud media server. This enables web pages and Microsoft
 Store apps to play Digital Rights Management (DRM) protected content. The app specifies

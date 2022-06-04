@@ -1,10 +1,12 @@
 ---
-title: msPlayToPrimary
-slug: Web/API/MsPlayToPrimary
+title: HTMLMediaElement.msPlayToPrimary
+slug: Web/API/HTMLMediaElement/msPlayToPrimary
 tags:
   - msPlayToPrimary
+  - Non-standard
+  - Property
 ---
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
 
@@ -13,28 +15,10 @@ sets the primary DLNA _PlayTo_ device.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
-
-```js
-ptr = object.msPlayToPrimary;
-```
-
 ## Value
 
 Boolean value set to _true_ indicates that the device is the primary DLNA
 _PlayTo_ device, otherwise false.
-
-## Example
-
-```html
-     // Microsoft extensions
-     interface HTMLImageElement : HTMLElement
-     {
-                  attribute boolean msPlayToDisabled;
-                  attribute boolean msPlayToPrimary;
-                  attribute DOMString msPlayToPreferredSourceUri;
-     };
-```
 
 ## See also
 
