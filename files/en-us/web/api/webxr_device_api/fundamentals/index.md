@@ -114,8 +114,6 @@ There are two basic types of AR device:
 
 Both types of device should be capable of also presenting VR sessions. WebXR doesn't generally care which type of device you're using, and the rendering process is almost exactly the same as for VR, except you don't erase the background or skybox before rendering each frame.
 
-For more information about using WebXR to create augmented reality experiences, see [Augmented reality with WebXR](/en-US/docs/Web/API/WebXR_Device_API/Augmented_reality).
-
 ## Types of WebXR hardware
 
 The simplest XR presentation involves rendering the scene directly to the user's screen, either in the context of a web document, or in full screen mode. This is most common when the user either doesn't have a dedicated XR device, or when the user is viewing the AR or VR app on a phone or other handheld device.
