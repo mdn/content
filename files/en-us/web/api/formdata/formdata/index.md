@@ -63,7 +63,6 @@ You can specify the optional `form` argument when creating the `FormData` object
 <output id="output"></output>
 ```
 
-
 ```css hidden
 form {
   display: none;
