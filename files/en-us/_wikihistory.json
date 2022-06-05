@@ -76739,15 +76739,6 @@
       "abbycar"
     ]
   },
-  "Web/API/VRDisplay/hardwareUnitId": {
-    "modified": "2020-10-15T21:35:30.497Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "Sebastianz"
-    ]
-  },
   "Web/API/VRDisplay/isConnected": {
     "modified": "2020-10-15T21:45:59.625Z",
     "contributors": [
@@ -76937,15 +76928,6 @@
       "Sebastianz"
     ]
   },
-  "Web/API/VREyeParameters/recommendedFieldOfView": {
-    "modified": "2020-10-15T21:36:22.291Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "chrisdavidmills",
-      "Sebastianz"
-    ]
-  },
   "Web/API/VREyeParameters/renderHeight": {
     "modified": "2020-10-15T21:45:57.814Z",
     "contributors": [
@@ -76953,15 +76935,6 @@
       "fscholz",
       "chrisdavidmills",
       "abbycar"
-    ]
-  },
-  "Web/API/VREyeParameters/renderRect": {
-    "modified": "2020-10-15T21:36:23.478Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "chrisdavidmills",
-      "Sebastianz"
     ]
   },
   "Web/API/VREyeParameters/renderWidth": {
@@ -76978,15 +76951,6 @@
     "contributors": [
       "fscholz",
       "jpmedley",
-      "chrisdavidmills",
-      "Sebastianz"
-    ]
-  },
-  "Web/API/VRFieldOfView/VRFieldOfView": {
-    "modified": "2020-10-15T21:36:20.287Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
       "chrisdavidmills",
       "Sebastianz"
     ]
@@ -77134,24 +77098,6 @@
   "Web/API/VRPose/angularVelocity": {
     "modified": "2020-10-15T21:36:05.829Z",
     "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "Sebastianz"
-    ]
-  },
-  "Web/API/VRPose/hasOrientation": {
-    "modified": "2020-10-15T21:36:01.932Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "Sebastianz"
-    ]
-  },
-  "Web/API/VRPose/hasPosition": {
-    "modified": "2020-10-15T21:35:47.893Z",
-    "contributors": [
-      "sideshowbarker",
       "fscholz",
       "chrisdavidmills",
       "Sebastianz"
