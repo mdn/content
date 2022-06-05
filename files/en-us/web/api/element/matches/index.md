@@ -25,7 +25,7 @@ matches(selectorString)
 ### Parameters
 
 - `selectors`
-  - : A string of valid [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
+  - : A string or an array of valid [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
 
 ### Return value
 
@@ -42,9 +42,9 @@ matches(selectorString)
 
 ```html
 <ul id="birds">
-  <li>Orange-winged parrot</li>
+  <li class="parrot">Orange-winged parrot</li>
   <li class="endangered">Philippine eagle</li>
-  <li>Great white pelican</li>
+  <li class="pelican">Great white pelican</li>
 </ul>
 ```
 
@@ -56,6 +56,16 @@ const birds = document.querySelectorAll('li');
 for (const bird of birds) {
   if (bird.matches('.endangered')) {
     console.log(`The ${bird.textContent} is endangered!`);
+  }
+}
+```
+
+```js
+const birds = document.querySelectorAll('li');
+
+for (const bird of birds) {
+  if (bird.matches(['.parrot', '.pelican'])) {
+    console.log(`The ${bird.textContent}!`);
   }
 }
 ```
