@@ -38,14 +38,15 @@ const convolver = audioCtx.createConvolver();
 
 // grab audio track via XHR for convolver node
 
-var soundSource, concertHallBuffer;
+let soundSource;
+let concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 ajaxRequest.open('GET', 'concert-crowd.ogg', true);
 ajaxRequest.responseType = 'arraybuffer';
 
 ajaxRequest.onload = function() {
-  const audioData = ajaxRequest.response;
+  let audioData = ajaxRequest.response;
   audioCtx.decodeAudioData(audioData, function(buffer) {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
