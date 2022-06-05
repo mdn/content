@@ -65,7 +65,7 @@ function draw() {
 
 This example's output is shown below.
 
-{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}
+{{ EmbedLiveSample("Rectangular_shape_example", 160, 198, "canvas_rect.png") }}
 
 The `fillRect()` function draws a large black square 100 pixels on each side. The `clearRect()` function then erases a 60x60 pixel square from the center, and then `strokeRect()` is called to create a rectangular outline 50x50 pixels within the cleared square.
 
@@ -133,7 +133,7 @@ function draw() {
 
 The result looks like this:
 
-{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}
+{{ EmbedLiveSample("Drawing_a_triangle", 110, 148, "triangle.png") }}
 
 ### Moving the pen
 
@@ -175,7 +175,7 @@ function draw() {
 
 The result looks like this:
 
-{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}
+{{ EmbedLiveSample("Moving_the_pen", 160, 198, "canvas_smiley.png") }}
 
 If you'd like to see the connecting lines, you can remove the lines that call `moveTo()`.
 
@@ -226,7 +226,7 @@ function draw() {
 
 This starts by calling `beginPath()` to start a new shape path. We then use the `moveTo()` method to move the starting point to the desired position. Below this, two lines are drawn which make up two sides of the triangle.
 
-{{EmbedLiveSample("Lines", 160, 160, "canvas_lineto.png")}}
+{{ EmbedLiveSample("Lines", 160, 198, "canvas_lineto.png") }}
 
 You'll notice the difference between the filled and stroked triangle. This is, as mentioned above, because shapes are automatically closed when a path is filled, but not when they are stroked. If we left out the `closePath()` for the stroked triangle, only two lines would have been drawn, not a complete triangle.
 
@@ -290,7 +290,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
+{{ EmbedLiveSample("Arcs", 160, 248, "canvas_arc.png") }}
 
 ### Bezier and quadratic curves
 
@@ -342,7 +342,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}
+{{ EmbedLiveSample("Quadratic_Bezier_curves", 160, 198, "canvas_quadratic.png") }}
 
 #### Cubic Bezier curves
 
@@ -376,7 +376,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}
+{{ EmbedLiveSample("Cubic_Bezier_curves", 160, 198, "canvas_bezier.png") }}
 
 ### Rectangles
 
@@ -483,7 +483,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 The resulting image looks like this:
 
-{{EmbedLiveSample("Making_combinations", 160, 160, "combinations.png")}}
+{{ EmbedLiveSample("Making_combinations", 160, 198, "combinations.png") }}
 
 We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the `fillStyle` property on the drawing context, and the use of a utility function (in this case `roundedRect()`). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.
 
@@ -540,7 +540,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}
+{{ EmbedLiveSample("Path2D_example", 130, 148, "path2d.png") }}
 
 ### Using SVG paths
 

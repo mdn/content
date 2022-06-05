@@ -41,7 +41,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_fillText_example", 310, 110)}}
+{{ EmbedLiveSample("A_fillText_example", 310, 148) }}
 
 ### A `strokeText` example
 
@@ -63,7 +63,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+{{ EmbedLiveSample("A_strokeText_example", 310, 148) }}
 
 ## Styling text
 

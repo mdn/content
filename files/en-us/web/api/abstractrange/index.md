@@ -167,7 +167,7 @@ We then finish up by calling {{domxref("Range.cloneContents", "cloneContents()")
 
 The result looks like this:
 
-{{EmbedLiveSample("Example", 600, 80)}}
+{{ EmbedLiveSample("Example", 600, 112) }}
 
 ## Specifications
 

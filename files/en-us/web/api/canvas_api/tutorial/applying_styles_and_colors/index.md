@@ -65,7 +65,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
+{{ EmbedLiveSample("A_fillStyle_example", 160, 198, "canvas_fillstyle.png") }}
 
 ### A `strokeStyle` example
 
@@ -96,7 +96,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
+{{ EmbedLiveSample("A_strokeStyle_example", "180", 198, "canvas_strokestyle.png") }}
 
 ## Transparency
 
@@ -156,7 +156,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
+{{ EmbedLiveSample("A_globalAlpha_example", "180", 198, "canvas_globalalpha.png") }}
 
 ### An example using `rgba()`
 
@@ -194,7 +194,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba", "180", "180", "canvas_rgba.png")}}
+{{ EmbedLiveSample("An_example_using_rgba", "180", 198, "canvas_rgba.png") }}
 
 ## Line styles
 
@@ -246,7 +246,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
+{{ EmbedLiveSample("A_lineWidth_example", "180", 198, "canvas_linewidth.png") }}
 
 Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.
 
@@ -314,7 +314,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "Canvas_linecap.png")}}
+{{ EmbedLiveSample("A_lineCap_example", "180", 198, "Canvas_linecap.png") }}
 
 ### A `lineJoin` example
 
@@ -357,7 +357,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "Canvas_linejoin.png")}}
+{{ EmbedLiveSample("A_lineJoin_example", "180", 198, "Canvas_linejoin.png") }}
 
 ### A demo of the `miterLimit` property
 
@@ -432,7 +432,7 @@ document.getElementById('miterLimit').value = document.getElementById('canvas').
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}
+{{ EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", 204, "canvas_miterlimit.png") }}
 
 ### Using line dashes
 
@@ -467,7 +467,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
+{{ EmbedLiveSample("Using_line_dashes", "120", 158, "marching-ants.png") }}
 
 ## Gradients
 
@@ -542,7 +542,7 @@ The first is a background gradient. As you can see, we assigned two colors at th
 
 In the second gradient, we didn't assign the starting color (at position 0.0) since it wasn't strictly necessary, because it will automatically assume the color of the next color stop. Therefore, assigning the black color at position 0.5 automatically makes the gradient, from the start to this stop, black.
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
+{{ EmbedLiveSample("A_createLinearGradient_example", "180", 198, "canvas_lineargradient.png") }}
 
 ### A `createRadialGradient` example
 
@@ -597,7 +597,7 @@ In this case, we've offset the starting point slightly from the end point to ach
 
 The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient `#019F62 = rgba(1,159,98,1)`.
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
+{{ EmbedLiveSample("A_createRadialGradient_example", "180", 198, "canvas_radialgradient.png") }}
 
 ### A `createConicGradient` example
 
@@ -643,7 +643,7 @@ The first gradient is positioned in the center of the first rectangle and moves 
 
 The second gradient is also positioned at the center of it's second rectangle. This one has multiple color stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.
 
-{{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}
+{{ EmbedLiveSample("A_createConicGradient_example", "180", 198, "canvas_conicgrad.png") }}
 
 ## Patterns
 
@@ -703,7 +703,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}
+{{ EmbedLiveSample("A_createPattern_example", "180", 198, "canvas_createpattern.png") }}
 
 ## Shadows
 
@@ -753,7 +753,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
+{{ EmbedLiveSample("A_shadowed_text_example", "180", 128, "shadowed-string.png") }}
 
 We will look at the `font` property and `fillText` method in the next chapter about [drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -786,6 +786,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
+{{ EmbedLiveSample("Canvas_fill_rules", "110", 148,  "fill-rule.png") }}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
