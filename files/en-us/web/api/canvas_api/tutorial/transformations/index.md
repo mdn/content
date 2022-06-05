@@ -38,7 +38,7 @@ This example tries to illustrate how the stack of drawing states functions by dr
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // Draw a rectangle with default settings
   ctx.save();                  // Save the default state
@@ -94,9 +94,9 @@ In the `draw()` function, we call the `fillRect()` function nine times using two
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
+  const ctx = document.getElementById('canvas').getContext('2d');
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
       ctx.save();
       ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
       ctx.translate(10 + j * 50, 10 + i * 50);
@@ -136,7 +136,7 @@ In this example, we'll use the `rotate()` method to first rotate a rectangle fro
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   // left rectangles, rotate from canvas origin
   ctx.save();
@@ -195,7 +195,7 @@ In this last example, we'll draw shapes with different scaling factors.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   // draw a simple rectangle, but scale it.
   ctx.save();
@@ -255,13 +255,13 @@ The parameters of this function are:
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
-  var sin = Math.sin(Math.PI / 6);
-  var cos = Math.cos(Math.PI / 6);
+  const sin = Math.sin(Math.PI / 6);
+  const cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
-  var c = 0;
-  for (var i = 0; i <= 12; i++) {
+  const c = 0;
+  for (let i = 0; i <= 12; i++) {
     c = Math.floor(255 / 12 * i);
     ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
     ctx.fillRect(0, 0, 100, 10);

@@ -8055,6 +8055,7 @@
 /en-US/docs/Web/API/FontFaceSet/onloading	/en-US/docs/Web/API/FontFaceSet/loading_event
 /en-US/docs/Web/API/FontFaceSet/onloadingdone	/en-US/docs/Web/API/FontFaceSet/loadingdone_event
 /en-US/docs/Web/API/FontFaceSet/onloadingerror	/en-US/docs/Web/API/FontFaceSet/loadingerror_event
+/en-US/docs/Web/API/FormDataEntryValue	/en-US/docs/Web/API/FormData
 /en-US/docs/Web/API/FullscreenOptions	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/FullscreenOptions/navigationUI	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/GLbitfield	/en-US/docs/Web/API/WebGL_API/Types
