@@ -1,6 +1,7 @@
 ---
 title: USBDevice.productId
 slug: Web/API/USBDevice/productID
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getProgramInfoLog()
 slug: Web/API/WebGLRenderingContext/getProgramInfoLog
+page-type: web-api-instance-method
 tags:
   - API
   - Method

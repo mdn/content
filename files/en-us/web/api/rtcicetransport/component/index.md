@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.component
 slug: Web/API/RTCIceTransport/component
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

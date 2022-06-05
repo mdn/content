@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.writable
 slug: Web/API/RTCIceCandidatePairStats/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

@@ -1,6 +1,7 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selector

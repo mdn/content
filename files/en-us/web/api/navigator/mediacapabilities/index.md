@@ -1,6 +1,7 @@
 ---
 title: Navigator.mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

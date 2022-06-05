@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.pause()
 slug: Web/API/SpeechSynthesis/pause
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.autofocus
 slug: Web/API/HTMLSelectElement/autofocus
+page-type: web-api-instance-property
 tags:
   - API
   - HTML forms

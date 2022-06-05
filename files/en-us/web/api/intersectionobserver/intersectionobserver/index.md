@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

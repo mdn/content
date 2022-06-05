@@ -76,7 +76,7 @@ elements are sorted according to the return value of the compare function (all
 
 | `compareFunction(a, b)` return value | sort order                         |
 |--------------------------------------|------------------------------------|
-| > 0                                  | sort `b` before `a`                |
+| > 0                                  | sort `a` after `b`                 |
 | < 0                                  | sort `a` before `b`                |
 | === 0                                | keep original order of `a` and `b` |
 

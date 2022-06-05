@@ -1,6 +1,7 @@
 ---
 title: 'HTMLVideoElement: leavepictureinpicture event'
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
+page-type: web-api-event
 tags:
   - API
   - Event

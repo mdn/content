@@ -1,6 +1,7 @@
 ---
 title: PerformanceLongTaskTiming
 slug: Web/API/PerformanceLongTaskTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: The WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
+page-type: web-api-overview
 tags:
   - API
   - Client

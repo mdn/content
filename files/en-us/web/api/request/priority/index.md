@@ -1,6 +1,7 @@
 ---
 title: Request.priority
 slug: Web/API/Request/priority
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch

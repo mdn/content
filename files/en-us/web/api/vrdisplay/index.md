@@ -1,6 +1,7 @@
 ---
 title: VRDisplay
 slug: Web/API/VRDisplay
+page-type: web-api-interface
 tags:
   - API
   - DOM

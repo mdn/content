@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisEvent.utterance
 slug: Web/API/SpeechSynthesisEvent/utterance
+page-type: web-api-instance-property
 tags:
   - API
   - Property

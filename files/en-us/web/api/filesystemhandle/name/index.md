@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.name
 slug: Web/API/FileSystemHandle/name
+page-type: web-api-instance-property
 tags:
   - Directory
   - File

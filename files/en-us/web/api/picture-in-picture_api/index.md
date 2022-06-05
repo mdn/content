@@ -1,6 +1,7 @@
 ---
 title: Picture-in-Picture API
 slug: Web/API/Picture-in-Picture_API
+page-type: web-api-overview
 tags:
   - API
   - DOM

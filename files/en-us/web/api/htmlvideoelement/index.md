@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

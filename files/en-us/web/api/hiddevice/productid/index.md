@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.productId
 slug: Web/API/HIDDevice/productId
+page-type: web-api-instance-property
 tags:
   - API
   - Property

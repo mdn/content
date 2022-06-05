@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters
 slug: Web/API/VREyeParameters
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

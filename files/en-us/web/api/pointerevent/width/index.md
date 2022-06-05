@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.width
 slug: Web/API/PointerEvent/width
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

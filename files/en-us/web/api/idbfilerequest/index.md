@@ -1,6 +1,7 @@
 ---
 title: IDBFileRequest
 slug: Web/API/IDBFileRequest
+page-type: web-api-interface
 tags:
   - API
   - DOM

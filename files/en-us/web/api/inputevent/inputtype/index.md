@@ -1,6 +1,7 @@
 ---
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -24,8 +25,7 @@ Possible changes include for example inserting, deleting, and formatting text.
 A string containing the type of input that was made. There are many
 possible values, such as `insertText`, `deleteContentBackward`,
 `insertFromPaste`, and `formatBold`. For a complete list of the
-available input types, see the [Attributes
-section of the Input Events Level 1 spec](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes).
+available input types, see the [Attributes section of the Input Events Level 1 spec](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes).
 
 ## Examples
 

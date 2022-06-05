@@ -1,6 +1,7 @@
 ---
 title: XRCubeLayer.space
 slug: Web/API/XRCubeLayer/space
+page-type: web-api-instance-property
 tags:
   - API
   - Property

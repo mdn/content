@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.dataset
 slug: Web/API/HTMLElement/dataset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -37,8 +38,7 @@ they are read or written:
     when to capitalize the property's "camelCased" name.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
-attributes in our article [_Using data
-attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
+attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
 
 ### Name conversion
 
@@ -76,8 +76,7 @@ For example, a `data-abc-def` attribute corresponds to
   the dataset: `element.dataset.keyname`.
 - Attributes can also be set and read using bracket syntax:
   `element.dataset['keyname']`.
-- The [`in`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
+- The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
   `'keyname' in element.dataset`.
 
 ### Setting values
@@ -86,8 +85,7 @@ For example, a `data-abc-def` attribute corresponds to
   For example: `element.dataset.example = null` is
   converted into `data-example="null"`.
 
-- To remove an attribute, you can use the [`delete`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`.
+- To remove an attribute, you can use the [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`.
 
 ## Value
 

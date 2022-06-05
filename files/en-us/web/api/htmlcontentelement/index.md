@@ -1,6 +1,7 @@
 ---
 title: HTMLContentElement
 slug: Web/API/HTMLContentElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

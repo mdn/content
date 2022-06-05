@@ -1,6 +1,7 @@
 ---
 title: Text
 slug: Web/API/Text
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

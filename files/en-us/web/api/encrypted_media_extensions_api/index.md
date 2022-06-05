@@ -1,6 +1,7 @@
 ---
 title: Encrypted Media Extensions API
 slug: Web/API/Encrypted_Media_Extensions_API
+page-type: web-api-overview
 tags:
   - API
   - EME

@@ -1,6 +1,7 @@
 ---
 title: NotificationEvent
 slug: Web/API/NotificationEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

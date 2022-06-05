@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioCompletionEvent
 slug: Web/API/OfflineAudioCompletionEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

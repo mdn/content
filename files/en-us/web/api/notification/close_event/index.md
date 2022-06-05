@@ -1,6 +1,7 @@
 ---
 title: 'Notification: close event'
 slug: Web/API/Notification/close_event
+page-type: web-api-event
 tags:
   - API
   - Notification
@@ -36,5 +37,4 @@ A generic {{domxref("Event")}}.
 ## See also
 
 - {{domxref("Notification")}}
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

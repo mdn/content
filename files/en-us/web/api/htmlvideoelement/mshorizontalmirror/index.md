@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msHorizontalMirror
 slug: Web/API/HTMLVideoElement/msHorizontalMirror
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions

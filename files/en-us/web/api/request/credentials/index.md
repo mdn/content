@@ -1,6 +1,7 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
+page-type: web-api-instance-property
 tags:
   - API
   - Cookies

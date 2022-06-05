@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.uniform[1234][uif][v]()
 slug: Web/API/WebGL2RenderingContext/uniform
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
+page-type: web-api-interface
 tags:
   - API
   - Canvas

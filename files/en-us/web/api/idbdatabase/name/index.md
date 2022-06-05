@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
+page-type: web-api-instance-property
 tags:
   - API
   - Database

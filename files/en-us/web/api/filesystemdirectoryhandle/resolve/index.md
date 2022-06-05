@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.resolve()
 slug: Web/API/FileSystemDirectoryHandle/resolve
+page-type: web-api-instance-method
 tags:
   - Directory
   - File

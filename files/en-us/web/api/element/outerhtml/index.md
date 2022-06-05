@@ -1,6 +1,7 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

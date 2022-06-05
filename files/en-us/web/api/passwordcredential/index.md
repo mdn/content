@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential
 slug: Web/API/PasswordCredential
+page-type: web-api-interface
 tags:
   - API
   - Credential Management API

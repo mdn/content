@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onselectstart
 slug: Web/API/GlobalEventHandlers/onselectstart
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -30,8 +31,7 @@ object.onselectstart = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
 argument.
 
 ## Examples
@@ -42,8 +42,7 @@ document.onselectstart = function() {
 };
 ```
 
-For a full example, see our [Key
-quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
+For a full example, see our [Key quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
 
 ```js
 document.onselectstart = () => {

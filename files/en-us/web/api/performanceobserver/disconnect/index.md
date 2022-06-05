@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
+page-type: web-api-instance-method
 tags:
   - API
   - Method

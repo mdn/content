@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.attachInternals()
 slug: Web/API/HTMLElement/attachInternals
+page-type: web-api-instance-method
 tags:
   - API
   - Element

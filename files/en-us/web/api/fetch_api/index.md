@@ -1,6 +1,7 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
+page-type: web-api-overview
 tags:
   - API
   - Fetch

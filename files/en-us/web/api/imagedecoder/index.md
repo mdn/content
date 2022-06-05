@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder
 slug: Web/API/ImageDecoder
+page-type: web-api-interface
 tags:
   - API
   - Interface

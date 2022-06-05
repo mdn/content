@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.nonce
 slug: Web/API/HTMLElement/nonce
+page-type: web-api-instance-property
 tags:
   - API
   - Content Security Policy

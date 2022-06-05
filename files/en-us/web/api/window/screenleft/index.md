@@ -1,6 +1,7 @@
 ---
 title: Window.screenLeft
 slug: Web/API/Window/screenLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

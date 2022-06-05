@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment.children
 slug: Web/API/DocumentFragment/children
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

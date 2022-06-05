@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.alt
 slug: Web/API/HTMLImageElement/alt
+page-type: web-api-instance-property
 tags:
   - API
   - Element

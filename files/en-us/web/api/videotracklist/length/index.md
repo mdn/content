@@ -1,6 +1,7 @@
 ---
 title: VideoTrackList.length
 slug: Web/API/VideoTrackList/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

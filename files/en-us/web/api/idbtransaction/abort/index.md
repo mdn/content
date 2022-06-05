@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.abort()
 slug: Web/API/IDBTransaction/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -48,9 +49,7 @@ In the following code snippet, we open a read/write transaction on our database 
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
 failure. At the end, we abort any activity done under the current transaction using
-`abort()`. For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view
-example live](https://mdn.github.io/to-do-notifications/).)
+`abort()`. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
 // Let us open our database

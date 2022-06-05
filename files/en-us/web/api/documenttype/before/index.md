@@ -1,6 +1,7 @@
 ---
 title: DocumentType.before()
 slug: Web/API/DocumentType/before
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

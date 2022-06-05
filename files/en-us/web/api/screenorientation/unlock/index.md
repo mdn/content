@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation.unlock()
 slug: Web/API/ScreenOrientation/unlock
+page-type: web-api-instance-method
 tags:
   - API
   - Orientation

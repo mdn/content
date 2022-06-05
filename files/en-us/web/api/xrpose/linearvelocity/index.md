@@ -1,6 +1,7 @@
 ---
 title: XRPose.linearVelocity
 slug: Web/API/XRPose/linearVelocity
+page-type: web-api-instance-property
 tags:
   - API
   - Property

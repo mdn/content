@@ -35,8 +35,7 @@ A string. Possible values are:
 
 ### Handling state changes
 
-The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running
-live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The {{domxref("BaseAudioContext.statechange_event", "onstatechange")}} handler is used to log the
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The {{domxref("BaseAudioContext.statechange_event", "onstatechange")}} handler is used to log the
 current state to the console every time it changes.
 
 ```js

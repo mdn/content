@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.topOrigin
 slug: Web/API/PaymentRequestEvent/topOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request API

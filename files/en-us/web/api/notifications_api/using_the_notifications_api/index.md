@@ -1,6 +1,7 @@
 ---
 title: Using the Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
+page-type: guide
 tags:
   - API
   - Advanced

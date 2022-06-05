@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

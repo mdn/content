@@ -1,6 +1,7 @@
 ---
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

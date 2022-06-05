@@ -1,6 +1,7 @@
 ---
 title: SVGSwitchElement
 slug: Web/API/SVGSwitchElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

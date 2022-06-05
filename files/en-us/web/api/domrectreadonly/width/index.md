@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly.width
 slug: Web/API/DOMRectReadOnly/width
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: ImageCapture.getPhotoCapabilities()
 slug: Web/API/ImageCapture/getPhotoCapabilities
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

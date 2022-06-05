@@ -1,6 +1,7 @@
 ---
 title: Locks.name
 slug: Web/API/Lock/name
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

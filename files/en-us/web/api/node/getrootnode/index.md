@@ -1,6 +1,7 @@
 ---
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Method

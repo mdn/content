@@ -1,6 +1,7 @@
 ---
 title: Request.referrer
 slug: Web/API/Request/referrer
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch

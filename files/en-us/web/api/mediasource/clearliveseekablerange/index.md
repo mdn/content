@@ -1,6 +1,7 @@
 ---
 title: MediaSource.clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

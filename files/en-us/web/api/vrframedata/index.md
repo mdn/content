@@ -1,6 +1,7 @@
 ---
 title: VRFrameData
 slug: Web/API/VRFrameData
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment.querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

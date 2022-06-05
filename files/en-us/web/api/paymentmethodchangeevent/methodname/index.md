@@ -1,6 +1,7 @@
 ---
 title: PaymentMethodChangeEvent.methodName
 slug: Web/API/PaymentMethodChangeEvent/methodName
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce

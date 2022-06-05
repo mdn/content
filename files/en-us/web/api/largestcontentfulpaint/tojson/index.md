@@ -1,6 +1,7 @@
 ---
 title: LargestContentfulPaint.toJSON()
 slug: Web/API/LargestContentfulPaint/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

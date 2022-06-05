@@ -1,6 +1,7 @@
 ---
 title: Document.enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM

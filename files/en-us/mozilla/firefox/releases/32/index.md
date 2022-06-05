@@ -96,11 +96,11 @@ _No change._
 
 ## Security
 
-- [Privileged code now gets Xray vision for JavaScript `Object` and `Array` instances](/en-US/docs/Xray_vision#Xray_semantics_for_Object_and_Array).
+- [Privileged code now gets Xray vision for JavaScript `Object` and `Array` instances](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray-semantics-for-object-and-array).
 
 ## Changes for add-on and Mozilla developers
 
-Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects).
+Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays-for-javascript-objects).
 
 A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
 

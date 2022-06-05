@@ -1,6 +1,7 @@
 ---
 title: FormDataEvent.formData
 slug: Web/API/FormDataEvent/formData
+page-type: web-api-instance-property
 tags:
   - API
   - FormDataEvent
@@ -65,8 +66,6 @@ formElem.addEventListener('formdata', (e) => {
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData
-  objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

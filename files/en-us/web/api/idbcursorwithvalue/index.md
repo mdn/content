@@ -1,6 +1,7 @@
 ---
 title: IDBCursorWithValue
 slug: Web/API/IDBCursorWithValue
+page-type: web-api-interface
 tags:
   - API
   - DOM Reference

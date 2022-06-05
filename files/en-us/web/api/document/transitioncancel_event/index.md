@@ -1,6 +1,7 @@
 ---
 title: 'Document: transitioncancel event'
 slug: Web/API/Document/transitioncancel_event
+page-type: web-api-event
 tags:
   - API
   - CSS Transitions

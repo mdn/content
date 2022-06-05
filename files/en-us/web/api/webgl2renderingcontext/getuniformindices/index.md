@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getUniformIndices()
 slug: Web/API/WebGL2RenderingContext/getUniformIndices
+page-type: web-api-instance-method
 tags:
   - API
   - Method

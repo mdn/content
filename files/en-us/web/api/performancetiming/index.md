@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
+page-type: web-api-interface
 tags:
   - API
   - Backwards compatibility

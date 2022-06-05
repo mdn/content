@@ -1,6 +1,7 @@
 ---
 title: OTPCredential
 slug: Web/API/OTPCredential
+page-type: web-api-interface
 tags:
   - API
   - Interface

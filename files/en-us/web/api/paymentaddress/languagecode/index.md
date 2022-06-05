@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.languageCode
 slug: Web/API/PaymentAddress/languageCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address

@@ -1,6 +1,7 @@
 ---
 title: IdleDetector.start()
 slug: Web/API/IdleDetector/start
+page-type: web-api-instance-method
 tags:
   - API
   - Method

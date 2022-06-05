@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.previousSibling()
 slug: Web/API/TreeWalker/previousSibling
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.VideoDecoder()
 slug: Web/API/VideoDecoder/VideoDecoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

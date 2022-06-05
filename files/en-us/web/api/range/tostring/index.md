@@ -1,6 +1,7 @@
 ---
 title: Range.toString()
 slug: Web/API/Range/toString
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

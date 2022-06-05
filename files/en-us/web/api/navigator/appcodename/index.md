@@ -1,6 +1,7 @@
 ---
 title: Navigator.appCodeName
 slug: Web/API/Navigator/appCodeName
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

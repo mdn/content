@@ -1,6 +1,7 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.region
 slug: Web/API/PaymentAddress/region
+page-type: web-api-instance-property
 tags:
   - API
   - Address

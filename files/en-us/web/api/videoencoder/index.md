@@ -1,6 +1,7 @@
 ---
 title: VideoEncoder
 slug: Web/API/VideoEncoder
+page-type: web-api-interface
 tags:
   - API
   - Interface

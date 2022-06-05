@@ -1,6 +1,7 @@
 ---
 title: USBDevice.selectAlternateInterface()
 slug: Web/API/USBDevice/selectAlternateInterface
+page-type: web-api-instance-method
 tags:
   - API
   - Method

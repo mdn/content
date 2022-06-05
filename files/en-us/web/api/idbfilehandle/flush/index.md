@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.flush()
 slug: Web/API/IDBFileHandle/flush
+page-type: web-api-instance-method
 tags:
   - API
   - Files

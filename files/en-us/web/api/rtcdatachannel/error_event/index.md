@@ -1,6 +1,7 @@
 ---
 title: 'RTCDataChannel: error event'
 slug: Web/API/RTCDataChannel/error_event
+page-type: web-api-event
 tags:
   - API
   - Connectivity

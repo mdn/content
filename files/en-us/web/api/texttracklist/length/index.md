@@ -1,6 +1,7 @@
 ---
 title: TextTrackList.length
 slug: Web/API/TextTrackList/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

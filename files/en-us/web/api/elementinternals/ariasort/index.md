@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaSort
 slug: Web/API/ElementInternals/ariaSort
+page-type: web-api-instance-property
 tags:
   - API
   - Property

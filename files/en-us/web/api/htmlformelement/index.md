@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
+page-type: web-api-interface
 tags:
   - API
   - Form Element

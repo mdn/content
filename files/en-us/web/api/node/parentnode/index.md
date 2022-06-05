@@ -1,6 +1,7 @@
 ---
 title: Node.parentNode
 slug: Web/API/Node/parentNode
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

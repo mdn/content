@@ -1,6 +1,7 @@
 ---
 title: Element.className
 slug: Web/API/Element/className
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

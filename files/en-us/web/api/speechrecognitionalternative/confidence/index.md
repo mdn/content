@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionAlternative.confidence
 slug: Web/API/SpeechRecognitionAlternative/confidence
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.toJSON()
 slug: Web/API/DOMPointReadOnly/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Coordinates

@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryEntry.getFile()
 slug: Web/API/FileSystemDirectoryEntry/getFile
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API

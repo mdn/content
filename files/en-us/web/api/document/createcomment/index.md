@@ -1,6 +1,7 @@
 ---
 title: Document.createComment()
 slug: Web/API/Document/createComment
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

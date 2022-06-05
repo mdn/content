@@ -1,6 +1,7 @@
 ---
 title: Window.status
 slug: Web/API/Window/status
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

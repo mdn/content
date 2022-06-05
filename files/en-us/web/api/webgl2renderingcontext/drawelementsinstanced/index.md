@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.drawElementsInstanced()
 slug: Web/API/WebGL2RenderingContext/drawElementsInstanced
+page-type: web-api-instance-method
 tags:
   - API
   - Method

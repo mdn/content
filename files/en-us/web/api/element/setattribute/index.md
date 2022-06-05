@@ -1,6 +1,7 @@
 ---
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

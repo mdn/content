@@ -1,6 +1,7 @@
 ---
 title: USBDevice.transferIn()
 slug: Web/API/USBDevice/transferIn
+page-type: web-api-instance-method
 tags:
   - API
   - Method

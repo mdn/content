@@ -1,6 +1,7 @@
 ---
 title: Window.name
 slug: Web/API/Window/name
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

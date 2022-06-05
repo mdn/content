@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
+page-type: web-api-instance-method
 tags:
   - API
   - Database

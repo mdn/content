@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResultList.item()
 slug: Web/API/SpeechRecognitionResultList/item
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

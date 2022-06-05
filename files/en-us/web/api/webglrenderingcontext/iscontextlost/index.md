@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isContextLost()
 slug: Web/API/WebGLRenderingContext/isContextLost
+page-type: web-api-instance-method
 tags:
   - API
   - Context

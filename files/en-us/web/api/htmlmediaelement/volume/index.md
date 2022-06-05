@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.volume
 slug: Web/API/HTMLMediaElement/volume
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

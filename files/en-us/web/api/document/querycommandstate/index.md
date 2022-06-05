@@ -1,6 +1,7 @@
 ---
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

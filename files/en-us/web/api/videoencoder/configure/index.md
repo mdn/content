@@ -1,6 +1,7 @@
 ---
 title: VideoEncoder.configure()
 slug: Web/API/VideoEncoder/configure
+page-type: web-api-instance-method
 tags:
   - API
   - Method

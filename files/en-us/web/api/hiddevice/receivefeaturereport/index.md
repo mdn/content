@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.receiveFeatureReport()
 slug: Web/API/HIDDevice/receiveFeatureReport
+page-type: web-api-instance-method
 tags:
   - API
   - Method

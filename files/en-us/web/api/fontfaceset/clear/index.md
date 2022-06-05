@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.clear()
 slug: Web/API/FontFaceSet/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method

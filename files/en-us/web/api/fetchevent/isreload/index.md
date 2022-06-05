@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.isReload
 slug: Web/API/FetchEvent/isReload
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

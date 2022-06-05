@@ -1,6 +1,7 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

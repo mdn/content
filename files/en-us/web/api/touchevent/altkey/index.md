@@ -1,6 +1,7 @@
 ---
 title: TouchEvent.altKey
 slug: Web/API/TouchEvent/altKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

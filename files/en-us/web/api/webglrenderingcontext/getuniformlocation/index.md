@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method

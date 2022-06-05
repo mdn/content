@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: IIRFilterNode()
 slug: Web/API/IIRFilterNode/IIRFilterNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio

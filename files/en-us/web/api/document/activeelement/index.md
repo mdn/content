@@ -1,6 +1,7 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document
