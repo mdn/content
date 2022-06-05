@@ -17,7 +17,7 @@ It is used when catching and re-throwing an error with a more-specific or useful
 
 This is the value that was passed to the [`Error()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) in the `options.cause` argument.
 
-The value can be of any type. You should not make assumptions that the error you caught has an `Error` as its `cause`, in the same way that you cannot be sure the variable bound in the `catch` statement is an `Error` either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as cause.
+The value can be of any type. You should not make assumptions that the error you caught has an `Error` as its `cause`, in the same way that you cannot be sure the variable bound in the `catch` statement is an `Error` either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
 
 ## Examples
 
@@ -38,7 +38,7 @@ For a more detailed example see [Error > Differentiate between similar errors](/
 
 ### Providing structured data as the error cause
 
-Since error messages are written for human consumption, they are usually seen as unstable and inappropriate for machine parsing. When throwing an error from a function, you can provide its cause as structured data for algorithms to handle.
+Error messages written for human consumption may be inappropriate for machine parsing — since they’re subject to rewording or punctuation changes that may break any existing parsing written to consume them. So when throwing an error from a function, as an alternative to a human-readable error message, you can instead provide the cause as structured data, for machine parsing.
 
 ```js
 function makeRSA(p, q) {
