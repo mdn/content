@@ -47,17 +47,17 @@ This example shows the use of the `mozTypesAt()` method in a
 ```js
 function drop_handler(event)
 {
-  var dt = event.dataTransfer;
-  var count = dt.mozItemCount;
+  const dt = event.dataTransfer;
+  const count = dt.mozItemCount;
   output("Items: " + count + "\n");
 
-  for (var i = 0; i < count; i++) {
+  for (let i = 0; i < count; i++) {
     output(" Item " + i + ":\n");
-    var types = dt.mozTypesAt(i);
-    for (var t = 0; t < types.length; t++) {
+    const types = dt.mozTypesAt(i);
+    for (let t = 0; t < types.length; t++) {
       output("  " + types[t] + ": ");
       try {
-        var data = dt.mozGetDataAt(types[t], i);
+        const data = dt.mozGetDataAt(types[t], i);
         output("(" + (typeof data) + ") : <" + data + " >\n");
       } catch (ex) {
         output("<>\n");
