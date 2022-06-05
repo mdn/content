@@ -9552,7 +9552,7 @@
 /en-US/docs/Web/API/VRDevice	/en-US/docs/Web/API/VRDisplay
 /en-US/docs/Web/API/VRDevice/deviceId	/en-US/docs/Web/API/VRDisplay/displayId
 /en-US/docs/Web/API/VRDevice/deviceName	/en-US/docs/Web/API/VRDisplay/displayName
-/en-US/docs/Web/API/VRDevice/hardwareUnitId	/en-US/docs/Web/API/VRDevice
+/en-US/docs/Web/API/VRDevice/hardwareUnitId	/en-US/docs/Web/API/VRDisplay
 /en-US/docs/Web/API/VRDisplay/VRdisplay.isConnected	/en-US/docs/Web/API/VRDisplay/isConnected
 /en-US/docs/Web/API/VRDisplay/deviceId	/en-US/docs/Web/API/VRDisplay/displayId
 /en-US/docs/Web/API/VRDisplay/deviceName	/en-US/docs/Web/API/VRDisplay/displayName
