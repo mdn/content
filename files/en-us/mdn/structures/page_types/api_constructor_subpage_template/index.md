@@ -1,6 +1,7 @@
 ---
 title: API constructor subpage template
 slug: MDN/Structures/Page_types/API_constructor_subpage_template
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -24,6 +25,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > ---
 > title: NameOfTheConstructor()
 > slug: Web/API/NameOfTheParentInterface/NameOfTheParentInterface
+> page-type: web-api-constructor
 > tags:
 >   - API
 >   - Constructor
@@ -43,6 +45,8 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheParentInterface`.
 >     Note that the name of the constructor function in the slug omits the parenthesis (it ends in `NameOfTheParentInterface` not `NameOfTheParentInterface()`).
+> - **page-type**
+>   - : The `page-type` key for Web/API constructors is always `web-api-constructor`.
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Constructor**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**).
 >

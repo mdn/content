@@ -23,6 +23,10 @@ There are three broad categories of page types on MDN, though some page types fa
 
 To create new pages on MDN, you need to use GitHub — have a look at our [content repo README](https://github.com/mdn/content#adding-a-new-document) for more instructions.
 
+## The page-type front matter key
+
+We're currently in the process of adding a `page-type` key to the front matter of MDN pages, that describes the page type in an unambiguous way. The sections below describing each page type list the `page-type` values to use for that type, and the templates also include the correct `page-type` value to use.
+
 ## How to use the templates
 
 When creating a new page you can ensure that you've used the right page structure/contents by referring to one of our page templates — see the sections below.
@@ -60,6 +64,10 @@ For example, the [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) cov
 In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages.
 In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.
 
+### page-type value
+
+API landing pages have the `page-type` key set to `web-api-overview`.
+
 ### Example
 
 - [WebVR API](/en-US/docs/Web/API/WebVR_API)
@@ -76,6 +84,10 @@ An **API reference page** lists all the methods, properties, events, and so fort
 It provides an overview of what the class or interface does or is used for, and gives links to the documentation for each of these members.
 It is more granular than an API landing page, which typically links to multiple API reference pages.
 
+### page-type value
+
+API reference pages have the `page-type` key set to `web-api-interface`.
+
 ### Example
 
 - [Request interface](/en-US/docs/Web/API/Request) of the [Fetch API](/en-US/docs/Web/API/Fetch_API).
@@ -88,6 +100,17 @@ It is more granular than an API landing page, which typically links to multiple 
 
 An **API reference subpage** is a child of an API reference page.
 It documents a single interface member in detail.
+
+### page-type value
+
+API reference subpages have one of the following `page-type` values, depending on the page:
+
+- `web-api-constructor`
+- `web-api-event`
+- `web-api-instance-method`
+- `web-api-instance-property`
+- `web-api-static-method`
+- `web-api-static-property`
 
 ### Examples
 
@@ -107,6 +130,10 @@ It documents a single interface member in detail.
 
 An **HTML reference page** lists all the attributes that are available on an HTML element, explains the element's purpose and usage, and provides examples, browser compatibility information, and other important data.
 
+### page-type value
+
+Not yet defined.
+
 ### Example
 
 - [`<video>` element](/en-US/docs/Web/HTML/Element/video)
@@ -119,6 +146,10 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 
 An **SVG reference page** lists all the attributes that are available on an SVG element, explains the element's purpose and usage, and provides examples, browser compatibility information, and other important data.
 
+### page-type value
+
+Not yet defined.
+
 ### Example
 
 - [\<g> element](/en-US/docs/Web/SVG/Element/g)
@@ -130,6 +161,10 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 ## CSS feature reference page
 
 A **CSS reference page** lists all the available syntax for a CSS feature such as a selector or property, and explains the feature's purpose and usage. It also provides examples, browser compatibility information, and other important data.
+
+### page-type value
+
+Not yet defined.
 
 ### Examples
 
@@ -147,6 +182,10 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 An **HTTP header reference page** lists all the available directives that an HTTP header can contain, and explains the header's purpose and usage.
 It also provides examples, browser compatibility information, and other important explanations.
 
+### page-type value
+
+Not yet defined.
+
 ### Example
 
 - [Cache-Control header](/en-US/docs/Web/HTTP/Headers/Cache-Control)
@@ -161,6 +200,10 @@ A **conceptual page** is a _guide_ page that explains or teaches something.
 Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page.
 An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) and [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs) macros.
 
+### page-type value
+
+Conceptual pages have a `page-type` value of `guide`.
+
 ### Examples
 
 - [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)
@@ -173,6 +216,10 @@ A **glossary page** contains a brief explanation of a term, topic, or concept.
 The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences.
 This can be followed by links to further information in the **Learn more** section.
 If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) for more details.
+
+### page-type value
+
+Not yet defined.
 
 ### Examples
 
@@ -191,6 +238,10 @@ A landing page layout is typically used for the root page of a tree of pages abo
 It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.
 
 The list of subpages can be generated automatically using the templates [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs), [`SubpageMenuByCategories`](https://github.com/mdn/yari/tree/main/kumascript/macros/SubpageMenuByCategories.ejs), and [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs). However, in more complex cases, the list may need to be created (and maintained!) by hand.
+
+### page-type value
+
+Conceptual pages have a `page-type` value of `landing-page`.
 
 ### Examples
 
