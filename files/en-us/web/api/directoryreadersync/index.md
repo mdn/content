@@ -16,7 +16,7 @@ The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
 ## Basic concepts
 
-Before you call the only method in this interface, [`readEntries()`](/en-US/docs/Web/API/DirectoryReaderSync#readentries "#readEntries()"), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
+Before you call the only method in this interface, [`readEntries()`](#readentries), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
 #### Example
 
