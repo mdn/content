@@ -1,10 +1,13 @@
 ---
-title: msPlayToSource
-slug: Web/API/MsPlayToSource
+title: HTMLMediaElement.msPlayToSource
+slug: Web/API/HTMLMediaElement/msPlayToSource
+page-type: web-api-instance-property
 tags:
   - msPlayToSource
+  - Non-standard
+  - Property
 ---
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
 
@@ -13,15 +16,9 @@ source associated with the media element for use by the [`PlayToManager`](https:
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
-
-```js
-ptr = object.msPlayToSource;
-```
-
 ## Value
 
-_PlayTo_ is a means through which an app can connect local playback/display for
+_PlayTo_ enables an app can connect local playback/display for
 audio, video, and img elements to a remote device. For more information, see the [Windows.Media.PlayTo](https://docs.microsoft.com/en-us/uwp/api/windows.media.playto?view=winrt-22000)
 APIs.
 

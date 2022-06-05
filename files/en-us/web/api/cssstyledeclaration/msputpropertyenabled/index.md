@@ -1,14 +1,17 @@
 ---
-title: msPutPropertyEnabled
-slug: Web/API/msPutPropertyEnabled
+title: CSSStyleDeclaration.msPutPropertyEnabled()
+slug: Web/API/CSSStyleDeclaration/msPutPropertyEnabled
+page-type: web-api-instance-method
 tags:
   - msPutPropertyEnabled
+  - Method
+  - Non-standard
 ---
 {{APIRef("HTMLMediaElement")}}
 
 {{Non-standard_header()}}
 
-The **`msPutPropertyEnabled`** method sets whether a given property in the style object is enabled or disabled.
+The **`msPutPropertyEnabled()`** method sets whether a given property in the style object is enabled or disabled.
 
 This proprietary method is specific to Internet Explorer and Microsoft Edge.
 

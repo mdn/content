@@ -1,6 +1,7 @@
 ---
 title: OVR_multiview2.framebufferTextureMultiviewOVR()
 slug: Web/API/OVR_multiview2/framebufferTextureMultiviewOVR
+page-type: webgl-extension-method
 tags:
   - API
   - Method

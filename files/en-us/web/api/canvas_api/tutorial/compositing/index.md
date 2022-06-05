@@ -48,7 +48,7 @@ In this example, we'll use a circular clipping path to restrict the drawing of a
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -58,7 +58,7 @@ function draw() {
   ctx.clip();
 
   // draw background
-  var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
+  const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
   lingrad.addColorStop(0, '#232256');
   lingrad.addColorStop(1, '#143778');
 
@@ -66,7 +66,7 @@ function draw() {
   ctx.fillRect(-75, -75, 150, 150);
 
   // draw stars
-  for (var j = 1; j < 50; j++) {
+  for (let j = 1; j < 50; j++) {
     ctx.save();
     ctx.fillStyle = '#fff';
     ctx.translate(75 - Math.floor(Math.random() * 150),
@@ -81,7 +81,7 @@ function drawStar(ctx, r) {
   ctx.save();
   ctx.beginPath();
   ctx.moveTo(r, 0);
-  for (var i = 0; i < 9; i++) {
+  for (let i = 0; i < 9; i++) {
     ctx.rotate(Math.PI / 5);
     if (i % 2 === 0) {
       ctx.lineTo((r / 0.525731) * 0.200811, 0);

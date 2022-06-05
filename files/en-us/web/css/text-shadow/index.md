@@ -117,10 +117,6 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 {{Compat}}
 
-### Quantum CSS notes
-
-- Gecko has a bug whereby {{cssxref("transition")}}s will not work when transitioning from a `text-shadow` with a color specified to a `text-shadow` without a color specified ({{bug(726550)}}). This has been fixed in Firefox's new parallel CSS engine (also known as [Quantum CSS](https://wiki.mozilla.org/Quantum) or [Stylo](https://wiki.mozilla.org/Quantum/Stylo), planned for release in Firefox 57).
-
 ## See also
 
 - {{cssxref("box-shadow")}}

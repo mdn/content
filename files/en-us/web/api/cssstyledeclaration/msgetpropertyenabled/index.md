@@ -1,14 +1,17 @@
 ---
-title: msGetPropertyEnabled
-slug: Web/API/msGetPropertyEnabled
+title: CSSStyleDeclaration.msGetPropertyEnabled()
+slug: Web/API/CSSStyleDeclaration/msGetPropertyEnabled
+page-type: web-api-instance-method
 tags:
   - msGetPropertyEnabled
+  - Method
+  - Non-standard
 ---
-{{APIRef("HTMLMediaElement")}}
+{{APIRef("CSSOM")}}
 
 {{Non-standard_header()}}
 
-The **`msGetPropertyEnabled`** returns whether a given property in the style object is enabled.
+The **`msGetPropertyEnabled()`** method returns whether a given property in the style object is enabled.
 
 This proprietary method is specific to Internet Explorer browser.
 

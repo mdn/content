@@ -1,10 +1,13 @@
 ---
-title: msFirstPaint
-slug: Web/API/MsFirstPaint
+title: PerformanceTiming.msFirstPaint
+slug: Web/API/PerformanceTiming/MsFirstPaint
+page-type: web-api-instance-property
 tags:
   - msFirstPaint
+  - Property
+  - Non-standard
 ---
-{{APIRef("DOM")}}
+{{APIRef("Navigation timing API")}}
 
 {{Non-standard_header()}}
 
