@@ -113,7 +113,7 @@ console.log(val); // Prints 0.
 
 It is an error to assign values to unmodifiable properties or to properties of an expression without properties (`null` or `undefined`).
 
-[object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+[object]: /en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 
 #### Destructuring
 
@@ -316,11 +316,7 @@ let z = y = x = f();
 
 This statement seemingly declares the variables `x`, `y`, and `z`.
 However, it only actually declares the variable `z`.
-`y` and `x` are either invalid references to nonexistent variables (in [strict mode][]) or, worse, would implicitly create [global variables][] for `x` and `y` in [sloppy mode][].
-
-[strict mode]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
-[sloppy mode]: https://developer.mozilla.org/en-US/docs/Glossary/Sloppy_mode
-[global variables]: https://developer.mozilla.org/en-US/docs/Glossary/Global_variable
+`y` and `x` are either invalid references to nonexistent variables (in [strict mode][/en-US/docs/Web/JavaScript/Reference/Strict_mode]) or, worse, would implicitly create [global variables][/en-US/docs/Glossary/Global_variable] for `x` and `y` in [sloppy mode][/en-US/docs/Glossary/Sloppy_mode].
 
 ### Comparison operators
 
