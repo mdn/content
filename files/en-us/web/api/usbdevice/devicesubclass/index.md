@@ -1,6 +1,7 @@
 ---
 title: USBDevice.deviceSubclass
 slug: Web/API/USBDevice/deviceSubclass
+page-type: web-api-instance-property
 tags:
   - API
   - Property

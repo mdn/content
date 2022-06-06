@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.kind
 slug: Web/API/FileSystemHandle/kind
+page-type: web-api-instance-property
 tags:
   - Directory
   - File

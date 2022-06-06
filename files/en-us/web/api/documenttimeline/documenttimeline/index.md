@@ -1,6 +1,7 @@
 ---
 title: DocumentTimeline()
 slug: Web/API/DocumentTimeline/DocumentTimeline
+page-type: web-api-constructor
 tags:
   - API
   - Animation

@@ -1,6 +1,7 @@
 ---
 title: UI Events
 slug: Web/API/UI_Events
+page-type: web-api-overview
 tags:
   - API
   - Overview

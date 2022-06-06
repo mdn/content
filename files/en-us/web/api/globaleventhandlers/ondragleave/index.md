@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondragleave
 slug: Web/API/GlobalEventHandlers/ondragleave
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

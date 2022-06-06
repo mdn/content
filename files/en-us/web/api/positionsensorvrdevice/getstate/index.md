@@ -1,6 +1,7 @@
 ---
 title: PositionSensorVRDevice.getState()
 slug: Web/API/PositionSensorVRDevice/getState
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

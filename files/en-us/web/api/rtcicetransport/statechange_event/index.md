@@ -1,6 +1,7 @@
 ---
 title: 'RTCIceTransport: statechange event'
 slug: Web/API/RTCIceTransport/statechange_event
+page-type: web-api-event
 tags:
   - ICE
   - Negotiation

@@ -1,6 +1,7 @@
 ---
 title: 'XREquirectLayer: redraw event'
 slug: Web/API/XREquirectLayer/redraw_event
+page-type: web-api-event
 tags:
   - API
   - Event

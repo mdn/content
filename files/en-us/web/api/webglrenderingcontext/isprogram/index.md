@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isProgram()
 slug: Web/API/WebGLRenderingContext/isProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method

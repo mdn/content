@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.channelCount
 slug: Web/API/MediaTrackSupportedConstraints/channelCount
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

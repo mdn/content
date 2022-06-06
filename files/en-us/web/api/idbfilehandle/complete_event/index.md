@@ -1,6 +1,7 @@
 ---
 title: 'IDBFileEvent: complete event'
 slug: Web/API/IDBFileHandle/complete_event
+page-type: web-api-event
 tags:
   - API
   - Files

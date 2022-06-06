@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.movementX
 slug: Web/API/MouseEvent/movementX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

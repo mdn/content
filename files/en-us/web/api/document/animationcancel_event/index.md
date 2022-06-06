@@ -1,6 +1,7 @@
 ---
 title: 'Document: animationcancel event'
 slug: Web/API/Document/animationcancel_event
+page-type: web-api-event
 tags:
   - API
   - Animation

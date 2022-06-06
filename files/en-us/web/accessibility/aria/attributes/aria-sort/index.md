@@ -55,7 +55,7 @@ This table loads with the last name column sorted in ascending order.
 </table>
 ```
 
-If a user clicks on the _Last Name_ button, [`aria-pressed="true"`](/en-US/docs/web/accessibility/aria/attributes/aria-pressed) would be added to the {{HTMLElement('button')}} element and the `aria-sort` value would be toggled to `"descending"` with JavaScript. If the user clicks on a different header button, the `aria-sort` would be removed from the _Last Name_ header to be placed on the clicked button's {{HTMLElement('th')}} parent.
+If a user clicks on the _Last Name_ button, [`aria-pressed="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) would be added to the {{HTMLElement('button')}} element and the `aria-sort` value would be toggled to `"descending"` with JavaScript. If the user clicks on a different header button, the `aria-sort` would be removed from the _Last Name_ header to be placed on the clicked button's {{HTMLElement('th')}} parent.
 
 We provided instructions in the caption for assistive technology who may not see the down arrows that we would add with CSS targeting the `th[aria-sort="ascending"]` and `th[aria-sort="descending"]` selectors.
 

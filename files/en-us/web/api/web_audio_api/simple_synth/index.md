@@ -1,6 +1,7 @@
 ---
 title: 'Example and tutorial: Simple synth keyboard'
 slug: Web/API/Web_Audio_API/Simple_synth
+page-type: guide
 tags:
   - Audio
   - Example

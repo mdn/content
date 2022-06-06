@@ -1,6 +1,7 @@
 ---
 title: Controlling multiple parameters with ConstantSourceNode
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
+page-type: guide
 tags:
   - Audio
   - Example

@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResult.length
 slug: Web/API/SpeechRecognitionResult/length
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

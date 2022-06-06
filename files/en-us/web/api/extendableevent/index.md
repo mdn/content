@@ -1,6 +1,7 @@
 ---
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

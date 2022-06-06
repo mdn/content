@@ -1,6 +1,7 @@
 ---
 title: Keyframe Formats
 slug: Web/API/Web_Animations_API/Keyframe_Formats
+page-type: guide
 tags:
   - API
   - Animation

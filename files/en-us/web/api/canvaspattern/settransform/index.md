@@ -55,17 +55,17 @@ method, for example.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-var svg1 = document.getElementById('svg1');
-var matrix = svg1.createSVGMatrix();
+const svg1 = document.getElementById('svg1');
+const matrix = svg1.createSVGMatrix();
 
-var img = new Image();
+const img = new Image();
 img.src = 'canvas_createpattern.png';
 
 img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
+  const pattern = ctx.createPattern(img, 'repeat');
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 400, 400);
@@ -92,10 +92,10 @@ Here's an editable demo of the code snippet above. Try changing the argument to 
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code" style="height:120px">
-var img = new Image();
+const img = new Image();
 img.src = 'canvas_createpattern.png';
 img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
+  const pattern = ctx.createPattern(img, 'repeat');
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 400, 400);
@@ -103,15 +103,15 @@ img.onload = function() {
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const edit = document.getElementById('edit');
+const code = textarea.value;
 
-var svg1 = document.getElementById('svg1');
-var matrix = svg1.createSVGMatrix();
+const svg1 = document.getElementById('svg1');
+const matrix = svg1.createSVGMatrix();
 
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);

@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.id
 slug: Web/API/MediaStreamTrack/id
+page-type: web-api-instance-property
 tags:
   - Media Capture and Streams
   - MediaStreamTrack

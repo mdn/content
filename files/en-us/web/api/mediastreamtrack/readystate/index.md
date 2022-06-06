@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.readyState
 slug: Web/API/MediaStreamTrack/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - Media Capture and Streams

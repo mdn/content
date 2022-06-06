@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.close()
 slug: Web/API/RTCDataChannel/close
+page-type: web-api-instance-method
 tags:
   - API
   - Communication

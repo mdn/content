@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaKeyShortcuts
 slug: Web/API/ElementInternals/ariaKeyShortcuts
+page-type: web-api-instance-property
 tags:
   - API
   - Property

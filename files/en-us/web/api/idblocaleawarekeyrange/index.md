@@ -1,6 +1,7 @@
 ---
 title: IDBLocaleAwareKeyRange
 slug: Web/API/IDBLocaleAwareKeyRange
+page-type: web-api-interface
 tags:
   - API
   - Database

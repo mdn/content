@@ -1,6 +1,7 @@
 ---
 title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

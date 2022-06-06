@@ -1,6 +1,7 @@
 ---
 title: Using Pointer Events
 slug: Web/API/Pointer_events/Using_Pointer_Events
+page-type: guide
 tags:
   - Guide
   - Input

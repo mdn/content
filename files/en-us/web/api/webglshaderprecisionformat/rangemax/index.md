@@ -1,6 +1,7 @@
 ---
 title: WebGLShaderPrecisionFormat.rangeMax
 slug: Web/API/WebGLShaderPrecisionFormat/rangeMax
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
+page-type: web-api-interface
 tags:
   - API
   - Audio

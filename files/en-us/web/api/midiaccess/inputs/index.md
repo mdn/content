@@ -1,6 +1,7 @@
 ---
 title: MIDIAccess.inputs
 slug: Web/API/MIDIAccess/inputs
+page-type: web-api-instance-property
 tags:
   - API
   - Property

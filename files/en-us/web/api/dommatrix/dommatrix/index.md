@@ -1,6 +1,7 @@
 ---
 title: DOMMatrix()
 slug: Web/API/DOMMatrix/DOMMatrix
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

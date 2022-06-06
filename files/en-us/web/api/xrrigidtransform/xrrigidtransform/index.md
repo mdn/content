@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
+page-type: web-api-constructor
 tags:
   - API
   - AR

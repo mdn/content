@@ -1,6 +1,7 @@
 ---
 title: NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

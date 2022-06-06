@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: XPathResult.snapshotLength
 slug: Web/API/XPathResult/snapshotLength
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API

@@ -1,6 +1,7 @@
 ---
 title: Using microtasks in JavaScript with queueMicrotask()
 slug: Web/API/HTML_DOM_API/Microtask_guide
+page-type: guide
 tags:
   - API
   - Batch

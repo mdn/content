@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmouseover
 slug: Web/API/GlobalEventHandlers/onmouseover
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

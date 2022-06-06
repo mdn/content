@@ -1,6 +1,7 @@
 ---
 title: Event.originalTarget
 slug: Web/API/Event/originalTarget
+page-type: web-api-instance-property
 tags:
   - Non-standard
   - Property

@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.lastPacketSentTimestamp
 slug: Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Packet

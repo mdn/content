@@ -1,6 +1,7 @@
 ---
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

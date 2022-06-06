@@ -1,6 +1,7 @@
 ---
 title: Document.cookie
 slug: Web/API/Document/cookie
+page-type: web-api-instance-property
 tags:
   - API
   - Document

@@ -1,6 +1,7 @@
 ---
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method

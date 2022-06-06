@@ -17,7 +17,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 <!---->
 
-- [Online and offline events](/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)
   - : Firefox 3 supports WHATWG online and offline events, which let applications and extensions detect whether or not there's an active Internet connection, as well as to detect when the connection goes up and down.
 
 <!---->

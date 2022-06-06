@@ -1,6 +1,7 @@
 ---
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

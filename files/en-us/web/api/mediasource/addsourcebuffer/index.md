@@ -1,6 +1,7 @@
 ---
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -59,9 +60,7 @@ created and added to the media source.
 
 ## Examples
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
-live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
-the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
 var assetURL = 'frag_bunny.mp4';

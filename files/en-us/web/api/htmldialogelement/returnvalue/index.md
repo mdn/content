@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.returnValue
 slug: Web/API/HTMLDialogElement/returnValue
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.texStorage3D()
 slug: Web/API/WebGL2RenderingContext/texStorage3D
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

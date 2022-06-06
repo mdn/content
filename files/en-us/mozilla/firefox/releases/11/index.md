@@ -56,7 +56,7 @@ _No change._
 ### IndexedDB
 
 - The support for [IDBFactory.cmp()](/en-US/docs/Web/API/IDBFactory#cmp%28%29) has been added.
-- An [IndexedDB key](/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#section_6) can also be of one of the following types: Date, Arrays and Float (and not only String and Integer).
+- An [IndexedDB key](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key) can also be of one of the following types: Date, Arrays and Float (and not only String and Integer).
 - From now on, transactions are started when the transaction is created, not when the first request is placed; for example consider this:
 
   ```js
@@ -94,7 +94,7 @@ _No change._
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
+- [`readInputStreamToString()`](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
 
 #### New JavaScript code modules
 

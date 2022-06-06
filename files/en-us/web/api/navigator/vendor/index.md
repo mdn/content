@@ -1,6 +1,7 @@
 ---
 title: Navigator.vendor
 slug: Web/API/Navigator/vendor
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

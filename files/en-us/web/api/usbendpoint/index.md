@@ -1,6 +1,7 @@
 ---
 title: USBEndpoint
 slug: Web/API/USBEndpoint
+page-type: web-api-interface
 tags:
   - API
   - Interface

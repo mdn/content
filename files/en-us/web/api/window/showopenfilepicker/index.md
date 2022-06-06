@@ -1,6 +1,7 @@
 ---
 title: Window.showOpenFilePicker()
 slug: Web/API/Window/showOpenFilePicker
+page-type: web-api-instance-method
 tags:
   - File
   - File System Access API

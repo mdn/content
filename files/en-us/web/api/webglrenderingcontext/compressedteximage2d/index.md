@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method

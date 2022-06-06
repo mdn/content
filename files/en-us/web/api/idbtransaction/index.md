@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction
 slug: Web/API/IDBTransaction
+page-type: web-api-interface
 tags:
   - API
   - Database

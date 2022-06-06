@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.showModal()
 slug: Web/API/HTMLDialogElement/showModal
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

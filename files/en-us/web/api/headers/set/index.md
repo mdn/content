@@ -1,6 +1,7 @@
 ---
 title: Headers.set()
 slug: Web/API/Headers/set
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch

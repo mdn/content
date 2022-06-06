@@ -459,7 +459,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Audio and Video
 
 - [jPlayer](https://jPlayer.org): Gratis and Open Source (MIT Licensed.)
-- [mediaelement.js](http://www.mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
+- [mediaelement.js](https://www.mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
 
 ### Web Audio API
 

@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.layerX
 slug: Web/API/MouseEvent/layerX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.latency
 slug: Web/API/MediaTrackSupportedConstraints/latency
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

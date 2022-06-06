@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioDestinationNode()
 slug: Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio

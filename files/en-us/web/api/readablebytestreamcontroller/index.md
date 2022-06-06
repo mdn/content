@@ -1,6 +1,7 @@
 ---
 title: ReadableByteStreamController
 slug: Web/API/ReadableByteStreamController
+page-type: web-api-interface
 tags:
   - API
   - Experimental

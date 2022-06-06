@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: notificationclose event'
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

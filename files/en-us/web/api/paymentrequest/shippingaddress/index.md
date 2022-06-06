@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.shippingAddress
 slug: Web/API/PaymentRequest/shippingAddress
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

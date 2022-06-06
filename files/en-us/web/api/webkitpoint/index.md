@@ -1,6 +1,7 @@
 ---
 title: Point
 slug: Web/API/WebKitPoint
+page-type: web-api-interface
 tags:
   - API
   - CSS Transforms

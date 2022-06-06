@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

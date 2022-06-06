@@ -1,6 +1,7 @@
 ---
 title: 'IDBOpenDBRequest: blocked event'
 slug: Web/API/IDBOpenDBRequest/blocked_event
+page-type: web-api-event
 tags:
   - Event
   - IDBOpenDBRequest

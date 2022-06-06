@@ -1,6 +1,7 @@
 ---
 title: 'RTCIceTransport: selectedcandidatepairchange event'
 slug: Web/API/RTCIceTransport/selectedcandidatepairchange_event
+page-type: web-api-event
 tags:
   - Connectivity
   - ICE

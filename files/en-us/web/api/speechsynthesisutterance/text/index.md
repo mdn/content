@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.text
 slug: Web/API/SpeechSynthesisUtterance/text
+page-type: web-api-instance-property
 tags:
   - API
   - Property

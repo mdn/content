@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.text()
 slug: Web/API/PushMessageData/text
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

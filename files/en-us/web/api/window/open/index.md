@@ -1,6 +1,7 @@
 ---
 title: Window.open()
 slug: Web/API/Window/open
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -266,7 +267,7 @@ function openRequestedSinglePopup(url) {
 
   - : You cannot reliably because the users can prevent the window from being resized by
     setting `dom.disable_window_move_resize` to `true` in
-    `about:config` or by editing accordingly their [user.js file](http://kb.mozillazine.org/User.js_file).
+    `about:config` or by editing accordingly their [user.js file](https://kb.mozillazine.org/User.js_file).
 
     In general, users usually disable moving and resizing of existing windows because
     allowing authors' scripts to do so has been abused overwhelmingly in the past and the

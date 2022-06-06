@@ -1,6 +1,7 @@
 ---
 title: ValidityState.rangeUnderflow
 slug: Web/API/ValidityState/rangeUnderflow
+page-type: web-api-instance-property
 tags:
   - API
   - Constraint Validation API

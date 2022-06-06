@@ -1,6 +1,7 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
+page-type: web-api-overview
 tags:
   - API
   - Landing

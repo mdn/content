@@ -1,6 +1,7 @@
 ---
 title: PushMessageData
 slug: Web/API/PushMessageData
+page-type: web-api-interface
 tags:
   - API
   - Experimental

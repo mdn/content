@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer
 slug: Web/API/SourceBuffer
+page-type: web-api-interface
 tags:
   - API
   - Audio

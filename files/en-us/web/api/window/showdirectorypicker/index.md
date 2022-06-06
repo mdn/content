@@ -1,6 +1,7 @@
 ---
 title: Window.showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
+page-type: web-api-instance-method
 tags:
   - Directory
   - File

@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.metaKey
 slug: Web/API/MouseEvent/metaKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

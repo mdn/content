@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.priority
 slug: Web/API/RTCIceCandidatePairStats/priority
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

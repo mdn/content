@@ -16,4 +16,8 @@ When building modern Web apps and sites, it's important to make your content per
 
 The above resources also include web performance best practices. Making web performance a priority by considering web performance throughout the development process is important in ensuring users get the best user experience possible.
 
+## See also
+
+- [Fast load times](https://web.dev/fast/) on _web.dev_
+
 {{LandingPageListSubpages}}

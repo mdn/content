@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createTexture()
 slug: Web/API/WebGLRenderingContext/createTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method

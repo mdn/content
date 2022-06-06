@@ -1,6 +1,7 @@
 ---
 title: KeyboardLayoutMap
 slug: Web/API/KeyboardLayoutMap
+page-type: web-api-interface
 tags:
   - API
   - Experimental

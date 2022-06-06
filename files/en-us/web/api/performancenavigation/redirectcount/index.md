@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigation.redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

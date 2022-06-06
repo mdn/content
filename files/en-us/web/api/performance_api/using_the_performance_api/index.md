@@ -1,6 +1,7 @@
 ---
 title: Using the Performance API
 slug: Web/API/Performance_API/Using_the_Performance_API
+page-type: guide
 tags:
   - Guide
   - Performance

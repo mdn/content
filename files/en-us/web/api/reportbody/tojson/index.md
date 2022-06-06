@@ -1,6 +1,7 @@
 ---
 title: ReportBody.toJSON()
 slug: Web/API/ReportBody/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

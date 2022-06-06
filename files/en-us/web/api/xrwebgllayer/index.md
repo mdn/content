@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer
 slug: Web/API/XRWebGLLayer
+page-type: web-api-interface
 tags:
   - API
   - AR

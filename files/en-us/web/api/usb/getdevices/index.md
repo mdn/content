@@ -1,6 +1,7 @@
 ---
 title: USB.getDevices()
 slug: Web/API/USB/getDevices
+page-type: web-api-instance-method
 tags:
   - API
   - Method

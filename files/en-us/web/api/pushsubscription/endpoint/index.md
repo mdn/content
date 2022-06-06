@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

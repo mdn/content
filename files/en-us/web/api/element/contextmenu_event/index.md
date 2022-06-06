@@ -1,6 +1,7 @@
 ---
 title: 'Element: contextmenu event'
 slug: Web/API/Element/contextmenu_event
+page-type: web-api-event
 tags:
   - API
   - Context

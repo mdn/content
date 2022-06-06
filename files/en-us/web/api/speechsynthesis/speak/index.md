@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.speak()
 slug: Web/API/SpeechSynthesis/speak
+page-type: web-api-instance-method
 tags:
   - API
   - Method

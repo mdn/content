@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.disable()
 slug: Web/API/WebGLRenderingContext/disable
+page-type: web-api-instance-method
 tags:
   - API
   - Method

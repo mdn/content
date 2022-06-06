@@ -1,6 +1,7 @@
 ---
 title: Web Serial API
 slug: Web/API/Web_Serial_API
+page-type: web-api-overview
 tags:
   - API
   - Web Serial

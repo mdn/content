@@ -41,7 +41,7 @@ let removing = browser.cookies.remove(
       - : A `string` representing the name of the cookie to remove.
     - `partitionKey`{{optional_inline}}
 
-      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) containing the cookie. Include this object to remove a cookie from partitioned storage. This object contains:
+      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. Include this object to remove a cookie from partitioned storage. This object contains:
 
         - `topLevelSite`{{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.

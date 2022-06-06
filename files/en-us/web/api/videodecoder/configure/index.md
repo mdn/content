@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.configure()
 slug: Web/API/VideoDecoder/configure
+page-type: web-api-instance-method
 tags:
   - API
   - Method

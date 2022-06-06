@@ -1,6 +1,7 @@
 ---
 title: URLPattern.password
 slug: Web/API/URLPattern/password
+page-type: web-api-instance-property
 tags:
   - API
   - Property

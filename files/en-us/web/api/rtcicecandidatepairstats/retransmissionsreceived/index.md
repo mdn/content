@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.retransmissionsReceived
 slug: Web/API/RTCIceCandidatePairStats/retransmissionsReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity

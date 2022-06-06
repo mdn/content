@@ -43,8 +43,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See the [`setInterval()`
-examples](/en-US/docs/Web/API/setInterval#examples).
+See the [`setInterval()` examples](/en-US/docs/Web/API/setInterval#examples).
 
 ## Specifications
 

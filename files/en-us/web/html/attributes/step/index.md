@@ -8,7 +8,7 @@ tags:
   - HTML
   - Reference
   - step
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-step-attribute
+browser-compat: html.elements.input.attributes.step
 ---
 
 {{HTMLSidebar}}
@@ -115,6 +115,10 @@ Provide instructions to help users understand how to complete the form and use i
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

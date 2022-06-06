@@ -1,6 +1,7 @@
 ---
 title: USBIsochronousOutTransferResult
 slug: Web/API/USBIsochronousOutTransferResult
+page-type: web-api-interface
 tags:
   - API
   - Experimental

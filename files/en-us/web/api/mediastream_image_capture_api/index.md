@@ -1,6 +1,7 @@
 ---
 title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
+page-type: web-api-overview
 tags:
   - API
   - Image

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -155,9 +156,6 @@ This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media
-  queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

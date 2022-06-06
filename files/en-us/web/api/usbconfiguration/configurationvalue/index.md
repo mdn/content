@@ -1,6 +1,7 @@
 ---
 title: USBConfiguration.configurationValue
 slug: Web/API/USBConfiguration/configurationValue
+page-type: web-api-instance-property
 tags:
   - API
   - Property

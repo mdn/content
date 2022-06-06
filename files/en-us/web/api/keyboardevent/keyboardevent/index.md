@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

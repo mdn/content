@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getLightEstimate()
 slug: Web/API/XRFrame/getLightEstimate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
