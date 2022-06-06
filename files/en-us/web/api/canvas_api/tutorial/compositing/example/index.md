@@ -115,7 +115,7 @@ function runComposite() {
         const canvasToDrawFrom = createCanvas();
         const canvasToDrawResult = createCanvas();
 
-        const ctx = canvasToDrawResult.getContext('2d');
+        let ctx = canvasToDrawResult.getContext('2d');
         ctx.clearRect(0, 0, width, height)
         ctx.save();
         ctx.drawImage(canvas1, 0, 0, width/2, height/2);
@@ -129,7 +129,7 @@ function runComposite() {
         ctx.fillText(pop, 5, height/2 - 5);
         ctx.restore();
 
-        const ctx = canvasToDrawOn.getContext('2d');
+        ctx = canvasToDrawOn.getContext('2d');
         ctx.clearRect(0, 0, width, height)
         ctx.save();
         ctx.drawImage(canvas1, 0, 0, width/2, height/2);
@@ -140,7 +140,7 @@ function runComposite() {
         ctx.fillText('existing content', 5, height/2 - 5);
         ctx.restore();
 
-        const ctx = canvasToDrawFrom.getContext('2d');
+        ctx = canvasToDrawFrom.getContext('2d');
         ctx.clearRect(0, 0, width, height)
         ctx.save();
         ctx.drawImage(canvas2, 0, 0, width/2, height/2);
@@ -226,10 +226,10 @@ const colorSphere = function(element) {
 // HSV (1978) = H: Hue / S: Saturation / V: Value
 Color = {};
 Color.HSV_RGB = function (o) {
-    const H = o.H / 360,
-        S = o.S / 100,
-        V = o.V / 100,
-        R, G, B;
+    let S = o.S / 100;
+    let H = o.H / 360,
+        V = o.V / 100;
+    let R, G;
     let A, B, C, D;
     if (S == 0) {
         R = G = B = Math.round(V * 255);
@@ -281,8 +281,8 @@ Color.HSV_RGB = function (o) {
     };
 };
 
-let createInterlace = function (size, color1, color2) {
-    let proto = document.createElement("canvas").getContext("2d");
+const createInterlace = function (size, color1, color2) {
+    const proto = document.createElement("canvas").getContext("2d");
     proto.canvas.width = size * 2;
     proto.canvas.height = size * 2;
     proto.fillStyle = color1; // top-left
@@ -293,10 +293,10 @@ let createInterlace = function (size, color1, color2) {
     proto.fillRect(0, size, size, size);
     proto.fillStyle = color1; // bottom-right
     proto.fillRect(size, size, size, size);
-    let pattern = proto.createPattern(proto.canvas, "repeat");
+    const pattern = proto.createPattern(proto.canvas, "repeat");
     pattern.data = proto.canvas.toDataURL();
     return pattern;
 };
 
-let op_8x8 = createInterlace(8, "#FFF", "#eee");
+const op_8x8 = createInterlace(8, "#FFF", "#eee");
 ```
