@@ -198,7 +198,7 @@ There are some best practices to follow when writing links. Let's look at these 
 
 It's easy to throw links up on your page. That's not enough. We need to make our links _accessible_ to all readers, regardless of their current context and which tools they prefer. For example:
 
-- Screenreader users like jumping around from link to link on the page, and reading links out of context.
+- Screen reader users like jumping around from link to link on the page, and reading links out of context.
 - Search engines use link text to index target files, so it is a good idea to include keywords in your link text to effectively describe what is being linked to.
 - Visual readers skim over the page rather than reading every word, and their eyes will be drawn to page features that stand out, like links. They will find descriptive link text useful.
 
