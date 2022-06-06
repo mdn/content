@@ -47,7 +47,7 @@ function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
-  let dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
   dataList.add("<p>... paragraph ...</p>", "text/html");
