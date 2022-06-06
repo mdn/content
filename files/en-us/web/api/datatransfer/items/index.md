@@ -79,7 +79,7 @@ function dragover_handler(ev) {
 }
 </script>
 <body>
-<h1>Exvamples of <code>DataTransfer</code>.{<code>types</code>, <code>items</code>} properties</h1>
+<h1>Examples of <code>DataTransfer</code>.{<code>types</code>, <code>items</code>} properties</h1>
  <ul>
    <li id="i1" ondragstart="dragstart_handler(event);" draggable="true">Drag Item 1 to the Drop Zone</li>
    <li id="i2" ondragstart="dragstart_handler(event);" draggable="true">Drag Item 2 to the Drop Zone</li>
