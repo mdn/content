@@ -79,7 +79,7 @@ function dragover_handler(ev) {
 
 function dragend_handler(ev) {
   console.log("dragEnd");
-  let dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   // Clear any remaining drag data
   dataList.clear();
 }
