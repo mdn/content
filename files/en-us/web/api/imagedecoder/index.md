@@ -9,7 +9,7 @@ tags:
   - ImageDecoder
 browser-compat: api.ImageDecoder
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
 The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} provides a way to unpack and decode encoded image data.
 
@@ -27,7 +27,7 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("ImageDecoder.tracks")}}{{ReadOnlyInline}}
   - : Returns an {{domxref("ImageTrackList")}} object listing the available tracks and providing a method for selecting a track to decode.
 - {{domxref("ImageDecoder.type")}}{{ReadOnlyInline}}
-  - : Returns a {{jsxref("DOMString")}} reflecting the [mime type](https://en.wikipedia.org/wiki/Media_type) configured during construction.
+  - : Returns a {{domxref("DOMString")}} reflecting the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) configured during construction.
 
 ## Methods
 
@@ -35,14 +35,16 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
   - : Ends all pending work and releases system resources.
 - {{domxref("ImageDecoder.decode()")}}
   - : Enqueues a control message to decode the frame of an image.
-- {{domxref("ImageDecoder.isTypeSupported()")}}
-  - : Indicates if the provided [mime type](https://en.wikipedia.org/wiki/Media_type) is supported for unpacking and decoding.
 - {{domxref("ImageDecoder.reset()")}}
   - : Aborts all pending `decode()` operations.
 
+## Static methods
+- {{domxref("ImageDecoder.isTypeSupported()")}}
+  - : Indicates if the provided [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) is supported for unpacking and decoding.
+
 ## Examples
 
-Given an {{HTMLElement("canvas")}} element:
+Given a {{HTMLElement("canvas")}} element:
 
 ```html
 <canvas></canvas>

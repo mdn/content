@@ -9,7 +9,7 @@ tags:
   - ImageDecoder
 browser-compat: api.ImageDecoder.ImageDecoder
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
 The **`ImageDecoder()`** constructor creates a new {{domxref("ImageDecoder")}} object which unpacks and decodes image data.
 
@@ -24,7 +24,7 @@ new ImageDecoder(init)
 - `init`
   - : An object containing the following members:
     - `type`
-      - : A string containing the [MIME type](https://en.wikipedia.org/wiki/Media_type) of the image file to be decoded.
+      - : A {{domxref("USVString")}} containing the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the image file to be decoded.
     - `data`
       - : A {{domxref("BufferSource")}} or {{domxref("ReadableStream")}} of bytes representing an encoded image type as described by `type`.
     - `premultiplyAlpha`{{Optional_Inline}}

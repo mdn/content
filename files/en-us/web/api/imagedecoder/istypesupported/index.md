@@ -1,5 +1,5 @@
 ---
-title: ImageDecoder.isTypeSupported
+title: ImageDecoder.isTypeSupported()
 slug: Web/API/ImageDecoder/isTypeSupported
 page-type: web-api-static-method
 tags:
@@ -10,14 +10,14 @@ tags:
   - ImageDecoder
 browser-compat: api.ImageDecoder.isTypeSupported
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
-The **`ImageDecoder.isTypeSupported()`** static method checks if a given [mime type](https://en.wikipedia.org/wiki/Media_type) can be decoded by the user agent.
+The **`ImageDecoder.isTypeSupported()`** static method checks if a given [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) can be decoded by the user agent.
 
 ### Parameters
 
 - `type`
-  - : The [mime type](https://en.wikipedia.org/wiki/Media_type) to check for decoding support.
+  - : A {{domxref("DOMString")}} containing the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to check for decoding support.
 
 ### Return value
 
