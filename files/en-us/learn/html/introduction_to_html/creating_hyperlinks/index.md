@@ -77,7 +77,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 ### Adding supporting information with the title attribute
 
 Another attribute you may want to add to your links is `title`.
-The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the web site.
+The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the website.
 
 ```html
 <p>I'm creating a link to
@@ -125,7 +125,7 @@ URLs use paths to find files. Paths specify where the file you're interested in 
 
 ![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
-The **root** of this directory structure is called `creating-hyperlinks`. When working locally with a web site, you'll have one directory that contains the entire site. Inside the **root**, we have an `index.html` file and a `contacts.html`. In a real website, `index.html` would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website.).
+The **root** of this directory structure is called `creating-hyperlinks`. When working locally with a website, you'll have one directory that contains the entire site. Inside the **root**, we have an `index.html` file and a `contacts.html`. In a real website, `index.html` would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website.).
 
 There are also two directories inside our root — `pdfs` and `projects`. These each have a single file inside them — a PDF (`project-brief.pdf`) and an `index.html` file, respectively. Note that you can have two `index.html` files in one project, as long as they're in different filesystem locations. The second `index.html` would perhaps be the main landing page for project-related information.
 
@@ -179,14 +179,14 @@ You can even use the document fragment reference on its own to link to _another 
 Two terms you'll come across on the Web are **absolute URL** and **relative URL:**
 
 **absolute URL**: Points to a location defined by its absolute location on the web, including {{glossary("protocol")}} and {{glossary("domain name")}}.
-For example, if an `index.html` page is uploaded to a directory called `projects` that sits inside the **root** of a web server, and the web site's domain is `https://www.example.com`, the page would be available at `https://www.example.com/projects/index.html` (or even just `https://www.example.com/projects/`, as most web servers just look for a landing page such as `index.html` to load if it isn't specified in the URL.)
+For example, if an `index.html` page is uploaded to a directory called `projects` that sits inside the **root** of a web server, and the website's domain is `https://www.example.com`, the page would be available at `https://www.example.com/projects/index.html` (or even just `https://www.example.com/projects/`, as most web servers just look for a landing page such as `index.html` to load if it isn't specified in the URL.)
 
 An absolute URL will always point to the same location, no matter where it's used.
 
 **relative URL**: Points to a location that is _relative_ to the file you are linking from, more like what we looked at in the previous section.
 For example, if we wanted to link from our example file at `https://www.example.com/projects/index.html` to a PDF file in the same directory, the URL would just be the filename — `project-brief.pdf` — no extra information needed. If the PDF was available in a subdirectory inside `projects` called `pdfs`, the relative link would be `pdfs/project-brief.pdf` (the equivalent absolute URL would be `https://www.example.com/projects/pdfs/project-brief.pdf`.)
 
-A relative URL will point to different places depending on the actual location of the file you refer from — for example if we moved our `index.html` file out of the `projects` directory and into the **root** of the web site (the top level, not in any directories), the `pdfs/project-brief.pdf` relative URL link inside it would now point to a file located at `https://www.example.com/pdfs/project-brief.pdf`, not a file located at `https://www.example.com/projects/pdfs/project-brief.pdf`.
+A relative URL will point to different places depending on the actual location of the file you refer from — for example if we moved our `index.html` file out of the `projects` directory and into the **root** of the website (the top level, not in any directories), the `pdfs/project-brief.pdf` relative URL link inside it would now point to a file located at `https://www.example.com/pdfs/project-brief.pdf`, not a file located at `https://www.example.com/projects/pdfs/project-brief.pdf`.
 
 Of course, the location of the `project-brief.pdf` file and `pdfs` folder won't suddenly change because you moved the `index.html` file — this would make your link point to the wrong place, so it wouldn't work if clicked on. You need to be careful!
 
