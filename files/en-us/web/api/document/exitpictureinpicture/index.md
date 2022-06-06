@@ -57,7 +57,6 @@ document.onclick = function (event) {
 
 Note that if you want to track which video on your page is currently playing in picture-in-picture mode, you should listen to the `enterpictureinpicture` and `exitpictureinpicture` events on the {{DOMxRef("HTMLVideoElement")}} element(s) in question. Alternatively, you can check whether {{DOMxRef("Document.pictureInPictureElement")}} refers to the current {{DOMxRef("HTMLVideoElement")}} element.
 
-
 ## Specifications
 
 {{Specifications}}
