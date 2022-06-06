@@ -83,7 +83,7 @@ There are also compound assignment operators that are shorthand for the operatio
 
 #### Assigning to properties
 
-If an expression evaluates to an [object][], then the left-hand side of an assignment expression may make assignments to properties of that expression.
+If an expression evaluates to an [object](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), then the left-hand side of an assignment expression may make assignments to properties of that expression.
 For example:
 
 ```js
@@ -99,7 +99,7 @@ console.log(obj[key]); // Prints 5.
 console.log(obj); // Prints { x: 3, y: 5 }.
 ```
 
-For more information about objects, read [Working with Objects][object].
+For more information about objects, read [Working with Objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
 
 If an expression does not evaluate to an object, then assignments to properties of that expression do not assign:
 
@@ -112,8 +112,6 @@ console.log(val); // Prints 0.
 ```
 
 It is an error to assign values to unmodifiable properties or to properties of an expression without properties (`null` or `undefined`).
-
-[object]: /en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 
 #### Destructuring
 
@@ -276,8 +274,8 @@ However, it evaluates from left to right:
 ##### Evaluation example 3
 
 `x[f()] = g()` also evaluates from left to right.
-(This example assumes that `x` is already assigned to some [object][].
-For more information about objects, read [Working with Objects][object].)
+(This example assumes that `x` is already assigned to some object.
+For more information about objects, read [Working with Objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).)
 
 1. The assignment expression `x[f()] = g()` starts to evaluate.
     1. The `x[f()]` property access on this assignment's left-hand
@@ -292,9 +290,8 @@ For more information about objects, read [Working with Objects][object].)
     3. Then the function call `g()` prints "G!" to the console and
        then evaluates to the number `3`.
     4. That `3` is now assigned to `x[2]`.
-       (This step will succeed only if `x` is assigned to an [object][].)
-2. The assignment expression `x[f()] = g()` has
-   now finished evaluating;
+       (This step will succeed only if `x` is assigned to an [object](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).)
+2. The assignment expression `x[f()] = g()` has now finished evaluating;
    its result is the new value of `x[2]` – which happens to be `3`.
    `x[2]` is now assigned to `3`,
    and the console has printed "F!" then "G!".
@@ -321,7 +318,7 @@ However, it only actually declares the variable `z`.
 ### Comparison operators
 
 A comparison operator compares its operands and returns a logical value based on whether the comparison is true.
-The operands can be numerical, string, logical, or [object][] values.
+The operands can be numerical, string, logical, or [object](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) values.
 Strings are compared based on standard lexicographical ordering, using Unicode values.
 In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison.
 This behavior generally results in comparing the operands numerically.
@@ -348,10 +345,7 @@ var var2 = 4;
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#equality"
-          >Equal</a
-        >
-        (<code>==</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#equality">Equal</a> (<code>==</code>)
       </td>
       <td>Returns <code>true</code> if the operands are equal.</td>
       <td>
@@ -362,10 +356,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#inequality"
-          >Not equal</a
-        >
-        (<code>!=</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#inequality">Not equal</a> (<code>!=</code>)
       </td>
       <td>Returns <code>true</code> if the operands are not equal.</td>
       <td>
@@ -374,30 +365,21 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#identity"
-          >Strict equal</a
-        >
-        (<code>===</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#identity">Strict equal</a> (<code>===</code>)
       </td>
       <td>
         Returns <code>true</code> if the operands are equal and of the same
         type. See also {{jsxref("Object.is")}} and
-        <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness"
-          >sameness in JS</a
-        >.
+        <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">sameness in JS</a>.
       </td>
       <td><code>3 === var1</code></td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality"
-          >Strict not equal</a
-        >
-        (<code>!==</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict not equal</a> (<code>!==</code>)
       </td>
       <td>
-        Returns <code>true</code> if the operands are of the same type but not
-        equal, or are of different type.
+        Returns <code>true</code> if the operands are of the same type but not equal, or are of different type.
       </td>
       <td>
         <code>var1 !== "3"<br />3 !== '3'</code>
@@ -405,15 +387,10 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_operator"
-          >Greater than</a
-        >
-        (<code>></code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_operator">Greater than</a> (<code>></code>)
       </td>
       <td>
-        Returns <code>true</code> if the left operand is greater than the right
-        operand.
+        Returns <code>true</code> if the left operand is greater than the right operand.
       </td>
       <td>
         <code>var2 > var1<br />"12" > 2</code>
@@ -421,15 +398,11 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_or_equal_operator"
-          >Greater than or equal</a
-        >
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_or_equal_operator">Greater than or equal</a>
         (<code>>=</code>)
       </td>
       <td>
-        Returns <code>true</code> if the left operand is greater than or equal
-        to the right operand.
+        Returns <code>true</code> if the left operand is greater than or equal to the right operand.
       </td>
       <td>
         <code>var2 >= var1<br />var1 >= 3</code>
@@ -437,15 +410,11 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_operator"
-          >Less than</a
-        >
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_operator">Less than</a>
         (<code>&#x3C;</code>)
       </td>
       <td>
-        Returns <code>true</code> if the left operand is less than the right
-        operand.
+        Returns <code>true</code> if the left operand is less than the right operand.
       </td>
       <td>
         <code>var1 &#x3C; var2<br />"2" &#x3C; 12</code>
@@ -453,15 +422,11 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator"
-          >Less than or equal</a
-        >
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator">Less than or equal</a>
         (<code>&#x3C;=</code>)
       </td>
       <td>
-        Returns <code>true</code> if the left operand is less than or equal to
-        the right operand.
+        Returns <code>true</code> if the left operand is less than or equal to the right operand.
       </td>
       <td>
         <code>var1 &#x3C;= var2<br />var2 &#x3C;= 5</code>
@@ -500,23 +465,16 @@ In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScri
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder"
-          >Remainder</a
-        >
-        (<code>%</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder</a> (<code>%</code>)
       </td>
       <td>
-        Binary operator. Returns the integer remainder of dividing the two
-        operands.
+        Binary operator. Returns the integer remainder of dividing the two operands.
       </td>
       <td>12 % 5 returns 2.</td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment"
-          >Increment</a
-        >
-        (<code>++</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment</a> (<code>++</code>)
       </td>
       <td>
         Unary operator. Adds one to its operand. If used as a prefix operator
@@ -526,47 +484,35 @@ In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScri
       </td>
       <td>
         If <code>x</code> is 3, then <code>++x</code> sets <code>x</code> to 4
-        and returns 4, whereas <code>x++</code> returns 3 and, only then, sets
-        <code>x</code> to 4.
+        and returns 4, whereas <code>x++</code> returns 3 and, only then, sets <code>x</code> to 4.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement"
-          >Decrement</a
-        >
-        (<code>--</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement</a> (<code>--</code>)
       </td>
       <td>
-        Unary operator. Subtracts one from its operand. The return value is
-        analogous to that for the increment operator.
+        Unary operator. Subtracts one from its operand.
+        The return value is analogous to that for the increment operator.
       </td>
       <td>
         If <code>x</code> is 3, then <code>--x</code> sets <code>x</code> to 2
-        and returns 2, whereas <code>x--</code> returns 3 and, only then, sets
-        <code>x</code> to 2.
+        and returns 2, whereas <code>x--</code> returns 3 and, only then, sets <code>x</code> to 2.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation"
-          >Unary negation</a
-        >
-        (<code>-</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation</a> (<code>-</code>)
       </td>
       <td>Unary operator. Returns the negation of its operand.</td>
       <td>If <code>x</code> is 3, then <code>-x</code> returns -3.</td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus"
-          >Unary plus</a
-        >
-        (<code>+</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus</a> (<code>+</code>)
       </td>
       <td>
-        Unary operator. Attempts to convert the operand to a number, if it is
-        not already.
+        Unary operator. Attempts to convert the operand to a number, if it is not already.
       </td>
       <td>
         <p><code>+"3"</code> returns <code>3</code>.</p>
@@ -575,10 +521,7 @@ In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScri
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation"
-          >Exponentiation operator</a
-        >
-        (<code>**</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a> (<code>**</code>)
       </td>
       <td>
         Calculates the <code>base</code> to the <code>exponent</code> power,
@@ -669,9 +612,7 @@ The shift operators are listed in the following table.
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift"
-          >Left shift</a
-        ><br />(<code>&#x3C;&#x3C;</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift">Left shift</a><br />(<code>&#x3C;&#x3C;</code>)
       </td>
       <td>
         This operator shifts the first operand the specified number of bits to
@@ -685,10 +626,7 @@ The shift operators are listed in the following table.
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift"
-          >Sign-propagating right shift</a
-        >
-        (<code>>></code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift">Sign-propagating right shift</a> (<code>>></code>)
       </td>
       <td>
         This operator shifts the first operand the specified number of bits to
@@ -702,8 +640,7 @@ The shift operators are listed in the following table.
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">Zero-fill right shift</a>
-        (<code>>>></code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">Zero-fill right shift</a> (<code>>>></code>)
       </td>
       <td>
         This operator shifts the first operand the specified number of bits to
@@ -740,10 +677,7 @@ The logical operators are described in the following table.
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND"
-          >Logical AND</a
-        >
-        (<code>&#x26;&#x26;</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Logical AND</a> (<code>&#x26;&#x26;</code>)
       </td>
       <td><code>expr1 &#x26;&#x26; expr2</code></td>
       <td>
@@ -755,9 +689,7 @@ The logical operators are described in the following table.
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR"
-          >Logical OR </a
-        >(<code>||</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">Logical OR </a>(<code>||</code>)
       </td>
       <td><code>expr1 || expr2</code></td>
       <td>
@@ -769,7 +701,7 @@ The logical operators are described in the following table.
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">Logical NOT </a>(<code>!</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">Logical NOT</a> (<code>!</code>)
       </td>
       <td><code>!expr</code></td>
       <td>
