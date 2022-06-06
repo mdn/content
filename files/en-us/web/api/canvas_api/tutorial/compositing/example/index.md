@@ -226,7 +226,7 @@ const colorSphere = function(element) {
 // HSV (1978) = H: Hue / S: Saturation / V: Value
 Color = {};
 Color.HSV_RGB = function (o) {
-    let S = o.S / 100;
+    const S = o.S / 100;
     let H = o.H / 360,
         V = o.V / 100;
     let R, G;
