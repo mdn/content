@@ -65,7 +65,7 @@ This example shows the use of the `mozSetDataAt()` method in a
 ```js
 function dragstart_handler(event)
 {
-  let dt = event.dataTransfer;
+  const dt = event.dataTransfer;
   const idx = dt.mozItemCount;
   // Add two new items to the drag transfer
   if (idx >= 0) {
