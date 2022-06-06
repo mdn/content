@@ -53,7 +53,7 @@ function_ in a {{domxref("HTMLElement/drop_event", "drop")}} event handler.
 function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
- let data = ev.dataTransfer.items;
+ const data = ev.dataTransfer.items;
  for (let i = 0; i < data.length; i += 1) {
    if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
