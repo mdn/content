@@ -91,7 +91,7 @@ function dragstart_handler(ev) {
  // Create an image and use it for the drag image
  // NOTE: change "example.gif" to an existing image or the image will not
  // be created and the default drag image will be used.
- let img = new Image();
+ const img = new Image();
  img.src = 'example.gif';
  ev.dataTransfer.setDragImage(img, 10, 10);
 }
