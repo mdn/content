@@ -23,9 +23,9 @@ The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams
 ## Properties
 
 - {{domxref("TransformStream.readable")}} {{readonlyInline}}
-  - : The `readable` end of a TransformStream.
+  - : The `readable` end of a `TransformStream`.
 - {{domxref("TransformStream.writable")}} {{readonlyInline}}
-  - : The `writable` end of a TransformStream.
+  - : The `writable` end of a `TransformStream`.
 
 ## Methods
 
@@ -151,5 +151,6 @@ Note that this is not resilient to other influences.
 
 ## See also
 
+- {{domxref("ReadableStream.pipeThrough()")}}
 - [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
 - [Streams—The Definitive Guide](https://web.dev/streams/)
