@@ -169,8 +169,7 @@ function clock() {
 
   const sec = now.getSeconds();
   const min = now.getMinutes();
-  const hr  = now.getHours();
-  hr = hr >= 12 ? hr - 12 : hr;
+  const hr  = now.getHours() % 12;
 
   ctx.fillStyle = 'black';
 
@@ -263,12 +262,12 @@ const y = -4.5; // vertical offset
 // Main program
 
 const dx = 0.75;
-const imgW;
-const imgH;
-const x = 0;
-const clearX;
-const clearY;
-const ctx;
+let imgW;
+let imgH;
+let x = 0;
+let clearX;
+let clearY;
+let ctx;
 
 img.onload = function() {
     imgW = img.width * scale;
