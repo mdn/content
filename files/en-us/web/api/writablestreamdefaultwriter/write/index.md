@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.write()
 slug: Web/API/WritableStreamDefaultWriter/write
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -31,7 +32,7 @@ write(chunk)
 
 ### Parameters
 
-- chunk
+- `chunk`
   - : A block of binary data to pass to the `WritableStream`.
 
 ### Return value

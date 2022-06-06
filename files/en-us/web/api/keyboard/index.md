@@ -1,6 +1,7 @@
 ---
 title: Keyboard
 slug: Web/API/Keyboard
+page-type: web-api-interface
 tags:
   - API
   - Experimental

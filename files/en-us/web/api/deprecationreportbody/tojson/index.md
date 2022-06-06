@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody.toJSON()
 slug: Web/API/DeprecationReportBody/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

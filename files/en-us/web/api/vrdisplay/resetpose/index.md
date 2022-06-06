@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -35,7 +36,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

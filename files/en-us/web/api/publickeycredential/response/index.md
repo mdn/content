@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.response
 slug: Web/API/PublicKeyCredential/response
+page-type: web-api-instance-property
 tags:
   - API
   - Property

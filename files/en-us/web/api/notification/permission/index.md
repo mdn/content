@@ -1,6 +1,7 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission
+page-type: web-api-static-property
 tags:
   - API
   - Notification
@@ -20,12 +21,15 @@ display web notifications.
 
 A string representing the current permission. The value can be:
 
-- `granted`: The user has explicitly granted permission for the current
-  origin to display system notifications.
-- `denied`: The user has explicitly denied permission for the current
-  origin to display system notifications.
-- `default`: The user decision is unknown; in this case the application
-  will act as if permission was `denied`.
+- `granted`
+  - : The user has explicitly granted permission for the current
+    origin to display system notifications.
+- `denied`
+  - : The user has explicitly denied permission for the current
+    origin to display system notifications.
+- `default`
+  - : The user decision is unknown; in this case the application
+    will act as if permission was `denied`.
 
 ## Examples
 

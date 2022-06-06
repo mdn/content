@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -30,7 +31,7 @@ delete(name)
 
 ### Return value
 
-Void
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

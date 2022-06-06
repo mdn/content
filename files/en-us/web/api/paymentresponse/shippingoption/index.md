@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.shippingOption
 slug: Web/API/PaymentResponse/shippingOption
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

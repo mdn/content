@@ -1,6 +1,7 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
@@ -8,6 +9,7 @@ tags:
   - Reference
   - mouse lock
   - pointer lock
+browser-compat: api.Element.requestPointerLock
 ---
 {{DefaultAPISidebar("Pointer Lock API")}}
 
@@ -233,15 +235,11 @@ While iframes work by default, "sandboxed" iframes block Pointer lock. To avoid 
 
 ## Specifications
 
-| Specification                                      |
-| -------------------------------------------------- |
-| [Pointer Lock](https://w3c.github.io/pointerlock/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Element.requestPointerLock`
-
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## See also
 

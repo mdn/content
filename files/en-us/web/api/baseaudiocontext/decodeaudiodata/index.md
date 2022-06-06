@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -54,7 +55,7 @@ decodeAudioData(arrayBuffer)
 
 ### Return value
 
-Void, or a {{jsxref("Promise") }} object that fulfills with the
+None ({{jsxref("undefined")}}) or a {{jsxref("Promise") }} object that fulfills with the
 _decodedData_.
 
 ## Examples
@@ -77,20 +78,18 @@ The buttons in the example run `getData()` to load the track and start it
 playing, and stop it playing, respectively. When the `stop()` method is
 called on the source, the source is cleared out.
 
-> **Note:** You can [run the example
-> live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
-> the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).)
+> **Note:** You can [run the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) and access the [source code](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
 ```js
 // define variables
 
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var source;
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+let source;
 
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+const pre = document.querySelector('pre');
+const myScript = document.querySelector('script');
+const play = document.querySelector('.play');
+const stop = document.querySelector('.stop');
 
 // use XHR to load an audio track, and
 // decodeAudioData to decode it and stick it in a buffer.
@@ -98,14 +97,14 @@ var stop = document.querySelector('.stop');
 
 function getData() {
   source = audioCtx.createBufferSource();
-  var request = new XMLHttpRequest();
+  const request = new XMLHttpRequest();
 
   request.open('GET', 'viper.ogg', true);
 
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
-    var audioData = request.response;
+    const audioData = request.response;
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
         source.buffer = buffer;

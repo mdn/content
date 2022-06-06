@@ -1,6 +1,7 @@
 ---
 title: location.origin
 slug: Web/API/Location/origin
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -27,11 +28,9 @@ That is:
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-string = object.origin;
-```
+A string.
 
 ## Examples
 

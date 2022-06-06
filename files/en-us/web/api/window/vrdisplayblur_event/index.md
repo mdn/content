@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplayblur event'
 slug: Web/API/Window/vrdisplayblur_event
+page-type: web-api-event
 tags:
   - Reference
   - WebVR

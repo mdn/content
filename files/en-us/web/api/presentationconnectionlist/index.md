@@ -1,6 +1,7 @@
 ---
 title: PresentationConnectionList
 slug: Web/API/PresentationConnectionList
+page-type: web-api-interface
 tags:
   - API
   - Experimental

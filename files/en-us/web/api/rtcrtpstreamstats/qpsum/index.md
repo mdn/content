@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.qpSum
 slug: Web/API/RTCRtpStreamStats/qpSum
+page-type: web-api-instance-property
 tags:
   - API
   - Media

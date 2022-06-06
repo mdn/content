@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -72,7 +73,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 Errors that can be detected immediately are thrown as DOM exceptions. All other errors
-are reported through {{event("error")}} events sent to the `MediaRecorder`
+are reported through {{domxref("MediaRecorder.error_event", "error")}} events sent to the `MediaRecorder`
 object. You can implement the {{domxref("MediaRecorder.error_event", "onerror")}} event
 handler to respond to these errors.
 
@@ -90,7 +91,7 @@ handler to respond to these errors.
   - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
     "getUserMedia()")}} when the user denies permission to use an input device. This
-    exception may also be delivered as an {{event("error")}} event if
+    exception may also be delivered as an {{domxref("MediaRecorder.error_event", "error")}} event if
     the security options for the source media change after recording begins.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if something else went wrong during the recording process.

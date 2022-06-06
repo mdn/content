@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
+page-type: web-api-instance-method
 tags:
   - API
   - Append
@@ -34,7 +35,7 @@ append(name, value)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

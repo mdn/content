@@ -1,6 +1,7 @@
 ---
 title: XRSession.visibilityState
 slug: Web/API/XRSession/visibilityState
+page-type: web-api-instance-property
 tags:
   - API
   - AR

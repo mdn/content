@@ -1,6 +1,7 @@
 ---
 title: Streams API
 slug: Web/API/Streams_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: Window.back()
 slug: Web/API/Window/back
+page-type: web-api-instance-method
 tags:
   - API
   - Firefox

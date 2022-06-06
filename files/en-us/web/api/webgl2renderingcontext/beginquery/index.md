@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.beginQuery()
 slug: Web/API/WebGL2RenderingContext/beginQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method

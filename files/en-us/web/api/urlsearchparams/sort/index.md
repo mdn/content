@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.sort()
 slug: Web/API/URLSearchParams/sort
+page-type: web-api-instance-method
 tags:
   - API
   - Method

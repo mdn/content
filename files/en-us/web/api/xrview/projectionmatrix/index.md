@@ -1,6 +1,7 @@
 ---
 title: XRView.projectionMatrix
 slug: Web/API/XRView/projectionMatrix
+page-type: web-api-instance-property
 tags:
   - API
   - AR

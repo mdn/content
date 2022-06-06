@@ -1,6 +1,7 @@
 ---
 title: Content Index API
 slug: Web/API/Content_Index_API
+page-type: web-api-overview
 tags:
   - API
   - Content
@@ -9,6 +10,7 @@ tags:
   - Landing
   - PWA
   - content indexing
+browser-compat: api.ContentIndex
 ---
 {{DefaultAPISidebar("Content Index API")}}
 
@@ -192,11 +194,11 @@ The {{Event('contentdelete')}} event is only fired when the deletion happens due
 
 ## Specifications
 
-{{Specifications("api.ContentIndex")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ContentIndex")}}
+{{Compat}}
 
 ## See also
 

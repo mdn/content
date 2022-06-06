@@ -1,6 +1,7 @@
 ---
 title: TransitionEvent.elapsedTime
 slug: Web/API/TransitionEvent/elapsedTime
+page-type: web-api-instance-property
 tags:
   - API
   - CSS

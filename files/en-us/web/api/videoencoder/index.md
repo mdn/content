@@ -1,6 +1,7 @@
 ---
 title: VideoEncoder
 slug: Web/API/VideoEncoder
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,6 +9,7 @@ tags:
   - VideoEncoder
 browser-compat: api.VideoEncoder
 ---
+{{APIRef("WebCodecs API")}}
 The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} encodes {{domxref("VideoFrame")}} objects.
 
 ## Constructor

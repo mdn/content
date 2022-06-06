@@ -1,6 +1,7 @@
 ---
 title: EncodedVideoChunk.copyTo()
 slug: Web/API/EncodedVideoChunk/copyTo
+page-type: web-api-instance-method
 tags:
   - API
   - Method

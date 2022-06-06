@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.nextNode()
 slug: Web/API/NodeIterator/nextNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

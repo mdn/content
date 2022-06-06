@@ -1,6 +1,7 @@
 ---
 title: RTCRtpEncodingParameters.maxBitrate
 slug: Web/API/RTCRtpEncodingParameters/maxBitrate
+page-type: web-api-instance-property
 tags:
   - API
   - BPS

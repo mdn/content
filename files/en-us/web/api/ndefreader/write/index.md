@@ -1,6 +1,7 @@
 ---
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference
@@ -59,7 +60,7 @@ NDEFReader.write(message);
 
   - : An object with the following properties:
 
-    - `overwrite` -- A {{JSxRef("Boolean")}} specifying whether or not
+    - `overwrite` -- A boolean value specifying whether or not
       existing records should be overwritten, if such exists.
     - `signal` -- An optional {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
 

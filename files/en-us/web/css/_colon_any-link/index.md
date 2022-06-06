@@ -26,7 +26,9 @@ The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 ## Syntax
 
-{{csssyntax}}
+```
+:any-link
+```
 
 ## Examples
 

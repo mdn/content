@@ -1,6 +1,7 @@
 ---
 title: OES_texture_float_linear
 slug: Web/API/OES_texture_float_linear
+page-type: webgl-extension
 tags:
   - API
   - Reference

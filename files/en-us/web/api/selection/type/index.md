@@ -1,6 +1,7 @@
 ---
 title: Selection.type
 slug: Web/API/Selection/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -20,10 +21,13 @@ type of the current selection.
 A string describing the type of the current selection. Possible
 values are:
 
-- `None`: No selection has currently been made.
-- `Caret`: The selection is collapsed (i.e. the caret is placed on some
-  text, but no range has been selected).
-- `Range`: A range has been selected.
+- `None`
+  - : No selection has currently been made.
+- `Caret`
+  - : The selection is collapsed (i.e. the caret is placed on some
+    text, but no range has been selected).
+- `Range`
+  - : A range has been selected.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: Element.ariaHasPopup
 slug: Web/API/Element/ariaHasPopup
+page-type: web-api-instance-property
 tags:
   - API
   - Property

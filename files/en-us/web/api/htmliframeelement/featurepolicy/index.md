@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
+page-type: web-api-instance-property
 tags:
   - API
   - Feature Policy

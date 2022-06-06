@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAttestationResponse
 slug: Web/API/AuthenticatorAttestationResponse
+page-type: web-api-interface
 tags:
   - API
   - Authentication
@@ -36,7 +37,7 @@ This interface inherits from {{domxref("AuthenticatorResponse")}}.
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -57,7 +58,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var response = newCredentialInfo.response;
+    const response = newCredentialInfo.response;
     // Do something with the response
     // (sending it back to the relying party server maybe?)
   }).catch(function (err) {

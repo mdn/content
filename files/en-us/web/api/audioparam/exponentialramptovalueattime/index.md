@@ -1,6 +1,7 @@
 ---
 title: AudioParam.exponentialRampToValueAtTime()
 slug: Web/API/AudioParam/exponentialRampToValueAtTime
+page-type: web-api-instance-method
 tags:
   - API
   - AudioParam
@@ -45,9 +46,7 @@ implementations of this interface return {{jsxref('undefined')}}.
 
 ## Examples
 
-In this example, we have a media source with two control buttons (see the [audio-param
-repo](https://github.com/mdn/webaudio-examples/tree/master/audio-param) for the source code, or [view the example
-live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `exponentialRampToValueAtTime()`
+In this example, we have a media source with two control buttons (see the [audio-param repo](https://github.com/mdn/webaudio-examples/tree/master/audio-param) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `exponentialRampToValueAtTime()`
 is used to fade the gain value up to 1.0, and down to 0, respectively. This is pretty
 useful for fade in/fade out effects:
 

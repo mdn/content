@@ -1,6 +1,7 @@
 ---
 title: 'RTCDataChannel: open event'
 slug: Web/API/RTCDataChannel/open_event
+page-type: web-api-event
 tags:
   - API
   - Connectivity

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -32,8 +33,7 @@ transparent black in the returned `ImageData` object.
 > {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} method.
 
 You can find more information about `getImageData()` and general
-manipulation of canvas contents in [Pixel
-manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
+manipulation of canvas contents in [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
 
 ## Syntax
 
@@ -61,7 +61,7 @@ getImageData(sx, sy, sw, sh)
 An {{domxref("ImageData")}} object containing the image data for the rectangle of the
 canvas specified. The coordinates of the rectangle's top-left corner are
 `(sx, sy)`, while the coordinates of the bottom corner are
-`(sx + sw, sy + sh)`.
+`(sx + sw - 1, sy + sh - 1)`.
 
 ### Exceptions
 

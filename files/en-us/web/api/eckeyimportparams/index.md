@@ -1,6 +1,7 @@
 ---
 title: EcKeyImportParams
 slug: Web/API/EcKeyImportParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

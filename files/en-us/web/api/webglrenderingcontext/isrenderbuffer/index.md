@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isRenderbuffer()
 slug: Web/API/WebGLRenderingContext/isRenderbuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ isRenderbuffer(renderbuffer)
 
 ### Parameters
 
-- renderbuffer
+- `renderbuffer`
   - : A {{domxref("WebGLRenderbuffer")}} to check.
 
 ### Return value

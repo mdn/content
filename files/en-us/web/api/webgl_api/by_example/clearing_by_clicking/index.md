@@ -1,6 +1,7 @@
 ---
 title: Clearing by clicking
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
+page-type: guide
 tags:
   - Beginner
   - Example

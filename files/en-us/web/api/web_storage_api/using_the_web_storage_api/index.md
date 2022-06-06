@@ -1,6 +1,7 @@
 ---
 title: Using the Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
+page-type: guide
 tags:
   - API
   - Guide

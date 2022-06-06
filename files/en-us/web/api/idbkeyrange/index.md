@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange
 slug: Web/API/IDBKeyRange
+page-type: web-api-interface
 tags:
   - API
   - Database

@@ -1,6 +1,7 @@
 ---
 title: Bluetooth.requestDevice()
 slug: Web/API/Bluetooth/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -89,8 +90,7 @@ navigator.bluetooth.requestDevice(options).then(function(device) {
 });
 ```
 
-[Detailed
-examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
+[Detailed examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
 
 ## Specifications
 

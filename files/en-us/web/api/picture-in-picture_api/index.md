@@ -1,6 +1,7 @@
 ---
 title: Picture-in-Picture API
 slug: Web/API/Picture-in-Picture_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -13,6 +14,7 @@ tags:
   - Video
   - View
   - pip
+browser-compat: api.PictureInPictureWindow
 ---
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
@@ -109,39 +111,11 @@ If the value is `null`, no video is in the floating window. So we can request a 
 
 ## Specifications
 
-| Specification                                                   |
-| --------------------------------------------------------------- |
-| [Picture-in-Picture](https://w3c.github.io/picture-in-picture/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `HTMLVideoElement.requestPictureInPicture`
-
-{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}
-
-### `HTMLVideoElement.autoPictureInPicture`
-
-{{Compat("api.HTMLVideoElement.autoPictureInPicture")}}
-
-### `HTMLVideoElement.disablePictureInPicture`
-
-{{Compat("api.HTMLVideoElement.disablePictureInPicture")}}
-
-### `Document.pictureInPictureEnabled`
-
-{{Compat("api.Document.pictureInPictureEnabled")}}
-
-### `Document.exitPictureInPicture`
-
-{{Compat("api.Document.exitPictureInPicture")}}
-
-### `Document.pictureInPictureElement`
-
-{{Compat("api.Document.pictureInPictureElement")}}
-
-### `PictureInPictureWindow`
-
-{{Compat("api.PictureInPictureWindow")}}
+{{Compat}}
 
 ## See also
 

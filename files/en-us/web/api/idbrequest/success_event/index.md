@@ -1,6 +1,7 @@
 ---
 title: 'IDBRequest: success event'
 slug: Web/API/IDBRequest/success_event
+page-type: web-api-event
 browser-compat: api.IDBRequest.success_event
 ---
 {{ APIRef("IndexedDB") }}

@@ -1,6 +1,7 @@
 ---
 title: CookieChangeEvent()
 slug: Web/API/CookieChangeEvent/CookieChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

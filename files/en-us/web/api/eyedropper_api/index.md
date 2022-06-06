@@ -1,6 +1,7 @@
 ---
 title: EyeDropper API
 slug: Web/API/EyeDropper_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

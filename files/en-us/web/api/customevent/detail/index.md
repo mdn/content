@@ -1,6 +1,7 @@
 ---
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

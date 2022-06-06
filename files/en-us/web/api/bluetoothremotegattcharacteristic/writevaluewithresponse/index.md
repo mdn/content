@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.writeValueWithResponse()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithResponse
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth

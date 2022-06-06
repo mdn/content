@@ -1,16 +1,21 @@
 ---
 title: IDBFileHandle.readAsArrayBuffer()
 slug: Web/API/IDBFileHandle/readAsArrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Files
   - Method
-  - Non-standard
   - Reference
   - WebAPI
+  - Non-standard
+  - Deprecated
 browser-compat: api.IDBFileHandle.readAsArrayBuffer
 ---
-{{APIRef("IndexedDB")}}{{non-standard_header}}
+{{APIRef("IndexedDB")}}{{deprecated_header}}
+
+> **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
+> Consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 The **`readAsArrayBuffer()`** method of the {{domxref("IDBFileHandle")}} interface
 reads the content of the associated file into an {{jsxref("ArrayBuffer")}}.
@@ -18,10 +23,6 @@ In many ways, it performs like the {{domxref("FileReader.readAsArrayBuffer()")}}
 
 The reading operation starts at the position given by the
 {{domxref("IDBFileHandle.location", "location")}} property.
-
-> **Note:** The three interfaces `IDBMutableFile`, `IDBFileHandle`, and `IDBFileRequest` are deprecated and only implemented
-> for backward compatibility in Firefox. _Do not use them anymore_:
-> consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Syntax
 
@@ -46,7 +47,8 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## Browser compatibility
 
-{{Compat}}
+This method is not supported by any current browser.
+From Firefox 102 it is behind the preference `dom.fileHandle.enabled`.
 
 ## See also
 

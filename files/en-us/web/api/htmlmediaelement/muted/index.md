@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

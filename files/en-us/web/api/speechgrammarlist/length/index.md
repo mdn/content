@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammarList.length
 slug: Web/API/SpeechGrammarList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

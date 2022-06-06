@@ -1,6 +1,7 @@
 ---
 title: DelayNode
 slug: Web/API/DelayNode
+page-type: web-api-interface
 tags:
   - API
   - Audio

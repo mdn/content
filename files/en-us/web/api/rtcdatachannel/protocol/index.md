@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.protocol
 slug: Web/API/RTCDataChannel/protocol
+page-type: web-api-instance-property
 tags:
   - Property
   - Protocol

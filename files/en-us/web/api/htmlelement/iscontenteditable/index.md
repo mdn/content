@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
+page-type: web-api-instance-property
 tags:
   - API
   - Editing

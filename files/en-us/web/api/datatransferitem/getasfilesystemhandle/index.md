@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsFileSystemHandle()
 slug: Web/API/DataTransferItem/getAsFileSystemHandle
+page-type: web-api-instance-method
 tags:
   - DataTransferItem
   - Directory

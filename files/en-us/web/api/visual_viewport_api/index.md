@@ -1,6 +1,7 @@
 ---
 title: Visual Viewport API
 slug: Web/API/Visual_Viewport_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -11,6 +12,7 @@ tags:
   - viewport
   - visual
   - visual viewport
+browser-compat: api.VisualViewport
 ---
 {{DefaultAPISidebar("Visual Viewport")}}
 
@@ -74,8 +76,8 @@ window.visualViewport.addEventListener('resize', viewportHandler);
 
 ## Specifications
 
-{{Specifications("api.VisualViewport")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.VisualViewport")}}
+{{Compat}}

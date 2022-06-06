@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody.lineNumber
 slug: Web/API/DeprecationReportBody/lineNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property

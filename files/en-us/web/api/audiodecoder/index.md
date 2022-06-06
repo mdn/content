@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder
 slug: Web/API/AudioDecoder
+page-type: web-api-interface
 tags:
   - API
   - Interface

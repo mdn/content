@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.showModal()
 slug: Web/API/HTMLDialogElement/showModal
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -102,8 +103,7 @@ button.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

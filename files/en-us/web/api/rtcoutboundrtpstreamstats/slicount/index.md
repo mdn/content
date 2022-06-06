@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.sliCount
 slug: Web/API/RTCOutboundRtpStreamStats/sliCount
+page-type: web-api-instance-property
 tags:
   - API
   - Corruption

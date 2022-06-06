@@ -1,12 +1,14 @@
 ---
 title: Presentation API
 slug: Web/API/Presentation_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
   - NeedsContent
   - Presentation API
   - Reference
+browser-compat: api.Presentation
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
@@ -258,15 +260,11 @@ Example codes below highlight the usage of main features of the Presentation API
 
 ## Specifications
 
-| Specification                                               |
-| ----------------------------------------------------------- |
-| [Presentation API](https://w3c.github.io/presentation-api/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Presentation`
-
-{{Compat("api.Presentation")}}
+{{Compat}}
 
 ## See also
 

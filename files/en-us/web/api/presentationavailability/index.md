@@ -1,6 +1,7 @@
 ---
 title: PresentationAvailability
 slug: Web/API/PresentationAvailability
+page-type: web-api-interface
 tags:
   - API
   - Experimental

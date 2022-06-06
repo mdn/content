@@ -1,6 +1,7 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -66,5 +67,4 @@ function setStyles() {
 ## See also
 
 - [Storage.setItem()](/en-US/docs/Web/API/Storage/setItem)
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

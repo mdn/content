@@ -50,7 +50,7 @@ The following example uses the `fontcolor()` method to change the color of a
 string by producing a string with the HTML `<font>` element.
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
 console.log(worldString.fontcolor('red') +  ' is red in this line');
 // '<font color="red">Hello, world</font> is red in this line'

@@ -104,8 +104,8 @@ options explicitly, or point to {{jsxref("null")}} with {{jsxref("Object.create"
 
 ```js
 // using __proto__
-var obj = {};
-var descriptor = Object.create(null); // no inherited properties
+const obj = {};
+const descriptor = Object.create(null); // no inherited properties
 descriptor.value = 'static';
 
 // not enumerable, not configurable, not writable as defaults
@@ -121,7 +121,7 @@ Object.defineProperty(obj, 'key', {
 
 // recycling same object
 function withValue(value) {
-  var d = withValue.d || (
+  const d = withValue.d || (
     withValue.d = {
       enumerable: false,
       writable: false,
@@ -153,7 +153,7 @@ When the property specified doesn't exist in the object,
 omitted from the descriptor, and default values for those fields are inputted.
 
 ```js
-var o = {}; // Creates a new object
+const o = {}; // Creates a new object
 
 // Example of an object property added
 // with defineProperty with a data property descriptor
@@ -167,7 +167,7 @@ Object.defineProperty(o, 'a', {
 
 // Example of an object property added
 // with defineProperty with an accessor property descriptor
-var bValue = 38;
+const bValue = 38;
 Object.defineProperty(o, 'b', {
   // Using shorthand method names (ES2015 feature).
   // This is equivalent to:
@@ -215,7 +215,7 @@ When the `writable` property attribute is set to `false`, the
 property is said to be "non-writable". It cannot be reassigned.
 
 ```js
-var o = {}; // Creates a new object
+const o = {}; // Creates a new object
 
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -231,7 +231,7 @@ console.log(o.a); // logs 37. The assignment didn't work.
 // strict mode
 (function() {
   'use strict';
-  var o = {};
+  const o = {};
   Object.defineProperty(o, 'b', {
     value: 2,
     writable: false
@@ -253,7 +253,7 @@ up in a {{jsxref("Statements/for...in", "for...in")}} loop and
 {{jsxref("Object.keys()")}} or not.
 
 ```js
-var o = {};
+const o = {};
 Object.defineProperty(o, 'a', {
   value: 1,
   enumerable: true
@@ -276,7 +276,7 @@ Object.defineProperty(o, Symbol.for('f'), {
   enumerable: false
 });
 
-for (var i in o) {
+for (const i in o) {
   console.log(i);
 }
 // logs 'a' and 'd' (in undefined order)
@@ -290,7 +290,7 @@ o.propertyIsEnumerable('d'); // true
 o.propertyIsEnumerable(Symbol.for('e')); // true
 o.propertyIsEnumerable(Symbol.for('f')); // false
 
-var p = { ...o }
+const p = { ...o }
 p.a // 1
 p.b // undefined
 p.c // undefined
@@ -306,7 +306,7 @@ can be deleted from the object and whether its attributes (other than `value`
 and `writable`) can be changed.
 
 ```js
-var o = {};
+const o = {};
 Object.defineProperty(o, 'a', {
   get() { return 1; },
   configurable: false
@@ -345,7 +345,7 @@ often a difference between using dot notation to assign a value and using
 `Object.defineProperty()`, as shown in the example below.
 
 ```js
-var o = {};
+const o = {};
 
 o.a = 1;
 // is equivalent to:
@@ -375,8 +375,8 @@ entry.
 
 ```js
 function Archiver() {
-  var temperature = null;
-  var archive = [];
+  const temperature = null;
+  const archive = [];
 
   Object.defineProperty(this, 'temperature', {
     get() {
@@ -392,7 +392,7 @@ function Archiver() {
   this.getArchive = function() { return archive; };
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
@@ -402,7 +402,7 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 In this example, a getter always returns the same value.
 
 ```js
-var pattern = {
+const pattern = {
     get() {
         return 'I always return this string, ' +
                'whatever you have assigned';
@@ -416,7 +416,7 @@ function TestDefineSetAndGet() {
     Object.defineProperty(this, 'myproperty', pattern);
 }
 
-var instance = new TestDefineSetAndGet();
+const instance = new TestDefineSetAndGet();
 instance.myproperty = 'test';
 console.log(instance.myproperty);
 // I always return this string, whatever you have assigned
@@ -435,7 +435,7 @@ objects.
 function myclass() {
 }
 
-var value;
+const value;
 Object.defineProperty(myclass.prototype, "x", {
   get() {
     return value;
@@ -445,8 +445,8 @@ Object.defineProperty(myclass.prototype, "x", {
   }
 });
 
-var a = new myclass();
-var b = new myclass();
+const a = new myclass();
+const b = new myclass();
 a.x = 1;
 console.log(b.x); // 1
 ```
@@ -468,8 +468,8 @@ Object.defineProperty(myclass.prototype, "x", {
   }
 });
 
-var a = new myclass();
-var b = new myclass();
+const a = new myclass();
+const b = new myclass();
 a.x = 1;
 console.log(b.x); // undefined
 ```
@@ -488,7 +488,7 @@ Object.defineProperty(myclass.prototype, "y", {
   value: 1
 });
 
-var a = new myclass();
+const a = new myclass();
 a.x = 2;
 console.log(a.x); // 2
 console.log(myclass.prototype.x); // 1

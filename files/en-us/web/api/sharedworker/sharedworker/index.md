@@ -1,6 +1,7 @@
 ---
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -96,8 +97,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-For a full example, see our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run
-shared worker](https://mdn.github.io/simple-shared-worker/).)
+For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: A basic ray-caster
 slug: Web/API/Canvas_API/A_basic_ray-caster
+page-type: guide
 tags:
   - Advanced
   - Canvas

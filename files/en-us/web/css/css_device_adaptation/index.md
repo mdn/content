@@ -7,7 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/css-device-adapt/
+browser-compat: css.at-rules.viewport
 ---
 {{CSSRef}}
 
@@ -25,6 +25,4 @@ spec-urls: https://drafts.csswg.org/css-device-adapt/
 
 ## Browser compatibility
 
-### `@viewport` rule
-
-{{Compat("css.at-rules.viewport")}}
+{{Compat}}

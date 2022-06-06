@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.open
 slug: Web/API/HTMLDialogElement/open
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -93,8 +94,7 @@ button.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

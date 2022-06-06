@@ -1,6 +1,7 @@
 ---
 title: InputDeviceCapabilities API
 slug: Web/API/InputDeviceCapabilities_API
+page-type: web-api-overview
 tags:
   - API
   - InputDeviceCapabilities

@@ -1,6 +1,7 @@
 ---
 title: SVGRadialGradientElement
 slug: Web/API/SVGRadialGradientElement
+page-type: web-api-interface
 tags:
   - API
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

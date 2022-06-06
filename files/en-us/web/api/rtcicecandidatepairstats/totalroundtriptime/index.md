@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.totalRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/totalRoundTripTime
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

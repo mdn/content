@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.form
 slug: Web/API/HTMLObjectElement/form
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

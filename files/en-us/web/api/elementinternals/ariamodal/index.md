@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaModal
 slug: Web/API/ElementInternals/ariaModal
+page-type: web-api-instance-property
 tags:
   - API
   - Property

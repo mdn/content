@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap.has()
 slug: Web/API/MediaKeyStatusMap/has
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -123,8 +124,7 @@ gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);
 ```
 
-> **Note:** This code snippet is taken from [the
-> function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
+> **Note:** This code snippet is taken from [the function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
 > See that article for the full sample and to see the resulting animation in action.
 
 After setting the current shading program to `shaderProgram`, this code

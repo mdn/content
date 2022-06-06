@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.type
 slug: Web/API/DataTransferItem/type
+page-type: web-api-instance-property
 tags:
   - API
   - DataTransferItem
@@ -70,5 +71,4 @@ function drop_handler(ev) {
 ## See also
 
 - {{domxref("DataTransfer.type()")}}
-- [Incomplete
-  list of MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- [Incomplete list of MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)

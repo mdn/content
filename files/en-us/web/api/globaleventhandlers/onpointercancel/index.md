@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointercancel
 slug: Web/API/GlobalEventHandlers/onpointercancel
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

@@ -1,13 +1,14 @@
 ---
 title: Media Capabilities API
 slug: Web/API/Media_Capabilities_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
   - Media Capabilities
   - Overview
   - Reference
-spec-urls: https://w3c.github.io/media-capabilities/
+browser-compat: api.MediaCapabilities
 ---
 {{DefaultAPISidebar("Media Capabilities API")}}
 
@@ -66,11 +67,11 @@ Media capabilities information enables websites to enable adaptive streaming to 
 
 ## Specifications
 
-{{Specifications("api.MediaCapabilities")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.MediaCapabilities")}}
+{{Compat}}
 
 ## See also
 

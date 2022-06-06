@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.unobserve()
 slug: Web/API/IntersectionObserver/unobserve
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer
@@ -58,6 +59,5 @@ observer.unobserve(document.getElementById("elementToObserve"));
 
 ## See also
 
-- [Intersection Observer
-  API](/en-US/docs/Web/API/Intersection_Observer_API)
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
 - {{domxref("IntersectionObserver.observe()")}}

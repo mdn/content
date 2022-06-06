@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement.as
 slug: Web/API/HTMLLinkElement/as
+page-type: web-api-instance-property
 tags:
   - API
   - Element

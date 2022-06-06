@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmouseout
 slug: Web/API/GlobalEventHandlers/onmouseout
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

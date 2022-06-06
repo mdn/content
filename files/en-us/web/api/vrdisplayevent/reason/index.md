@@ -1,6 +1,7 @@
 ---
 title: VRDisplayEvent.reason
 slug: Web/API/VRDisplayEvent/reason
+page-type: web-api-instance-property
 tags:
   - API
 

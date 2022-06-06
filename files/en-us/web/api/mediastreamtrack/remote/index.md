@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.remote
 slug: Web/API/MediaStreamTrack/remote
+page-type: web-api-instance-property
 tags:
   - Deprecated
   - MediaStreamTrack

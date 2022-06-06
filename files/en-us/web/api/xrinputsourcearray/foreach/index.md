@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceArray.forEach()
 slug: Web/API/XRInputSourceArray/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -229,7 +230,7 @@ const labelPoint = function (p, offset, i = 0){
 
 const drawPoints = function (points){
   for (let i = 0; i < points.length; i++) {
-    var p = points[i];
+    const p = points[i];
     labelPoint(p, { x: 0, y: -20 } , i)
   }
 }

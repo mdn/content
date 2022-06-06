@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -73,8 +74,7 @@ to be delivered to the other peer.
 
 ## Examples
 
-Here is a segment of code taken from the code that goes with the article [Signaling and video
-calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling). This code comes from the handler for the message sent to carry an offer
+Here is a segment of code taken from the code that goes with the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling). This code comes from the handler for the message sent to carry an offer
 to another peer across the signaling channel.
 
 > **Note:** Keep in mind that this is part of the signaling process, the transport layer for

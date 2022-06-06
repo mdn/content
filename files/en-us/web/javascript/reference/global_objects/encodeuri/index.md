@@ -67,9 +67,9 @@ Not Escaped:
   "encodeURIComponent()")}} as follows:
 
 ```js
-var set1 = ";,/?:@&=+$#"; // Reserved Characters
-var set2 = "-_.!~*'()";   // Unreserved Marks
-var set3 = "ABC abc 123"; // Alphanumeric Characters + Space
+const set1 = ";,/?:@&=+$#"; // Reserved Characters
+const set2 = "-_.!~*'()";   // Unreserved Marks
+const set3 = "ABC abc 123"; // Alphanumeric Characters + Space
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$#
 console.log(encodeURI(set2)); // -_.!~*'()

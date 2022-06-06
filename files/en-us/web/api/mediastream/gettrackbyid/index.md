@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
+page-type: web-api-instance-method
 tags:
   - Media
   - MediaStream

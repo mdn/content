@@ -46,8 +46,7 @@ inappropriate, than it is to follow every guideline to the letter.
    and make sure that code examples follow the guidelines. You'll get used to
    them eventually, and we are intending to automatically lint against our
    guidelines at some point in the future.
-1. Familiarize yourself with the [MDN Writing style
-   guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide),
+1. Familiarize yourself with the [MDN Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide),
    and use it to inform your reviews of new text content.
 1. Familiarize yourself with the MDN [pull request guidelines](https://github.com/mdn/content/blob/main/README.md#pull-request-etiquette).
    The key points here are
@@ -59,8 +58,7 @@ inappropriate, than it is to follow every guideline to the letter.
 1. When reviewing a pull request, use the [GitHub review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
    Use "Request changes" when submitting a review that will require the
    submitter to do some more work, or "Approve" if the submission is ready to
-   add and you want to merge it. [Reviewing proposed changes in a pull
-   request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+   add and you want to merge it. [Reviewing proposed changes in a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)
    is also useful if you want more information.
 1. Be polite and constructive at all times when writing review comments, or
    otherwise interacting with the submitter and other community members. We are
@@ -74,8 +72,7 @@ inappropriate, than it is to follow every guideline to the letter.
 1. If a pull request is fine apart from a small typo or some other minor
    issue, you might want to just fix the issue yourself rather than ask the
    submitter to change it. You can do this provided the PR has been set up
-   to allow changes (see [Allowing changes to a pull request branch created
-   from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)
+   to allow changes (see [Allowing changes to a pull request branch created from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)
    for more details). If you are not sure how to make changes to someone
    else's pull request, [@vkWeb](https://github.com/vkWeb/) wrote some nice
    simple instructions on how to do this on the command line; see

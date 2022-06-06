@@ -1,6 +1,7 @@
 ---
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.origin
 slug: Web/API/HTMLAnchorElement/origin
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement

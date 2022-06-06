@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

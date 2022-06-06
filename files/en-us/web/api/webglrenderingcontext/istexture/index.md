@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isTexture()
 slug: Web/API/WebGLRenderingContext/isTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ isTexture(texture)
 
 ### Parameters
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} to check.
 
 ### Return value

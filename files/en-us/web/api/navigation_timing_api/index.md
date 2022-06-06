@@ -1,6 +1,7 @@
 ---
 title: Navigation Timing API
 slug: Web/API/Navigation_timing_API
+page-type: web-api-overview
 tags:
   - API
   - Navigation Timing
@@ -11,6 +12,8 @@ tags:
   - Timing
   - Web
   - Web Performance
+browser-compat:
+  - api.PerformanceNavigationTiming
 ---
 {{DefaultAPISidebar("Navigation Timing")}}
 
@@ -72,12 +75,8 @@ This is obtained by starting with the time at which loading of the DOM and its d
 
 ## Specifications
 
-| Specification                                                 |
-| ------------------------------------------------------------- |
-| [Navigation Timing](https://w3c.github.io/navigation-timing/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Window.performance.timing`
-
-{{Compat("api.PerformanceTiming")}}
+{{Compat}}

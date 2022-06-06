@@ -1,6 +1,7 @@
 ---
 title: Cache.match()
 slug: Web/API/Cache/match
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
@@ -68,9 +69,7 @@ the request or to {{jsxref("undefined")}} if no match is found.
 
 ## Examples
 
-This example is taken from the [custom
-offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) example ([live
-demo](https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html)). It uses a cache to supply selected data when a request fails. A
+This example is taken from the [custom offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) example ([live demo](https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html)). It uses a cache to supply selected data when a request fails. A
 `catch()` clause is triggered when the call to `fetch()` throws an
 exception. Inside the `catch()` clause, `match()` is used to
 return the correct response.
@@ -112,7 +111,6 @@ self.addEventListener('fetch', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

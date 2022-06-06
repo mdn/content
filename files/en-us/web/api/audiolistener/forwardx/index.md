@@ -1,6 +1,7 @@
 ---
 title: AudioListener.forwardX
 slug: Web/API/AudioListener/forwardX
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

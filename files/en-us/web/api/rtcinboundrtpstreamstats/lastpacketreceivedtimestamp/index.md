@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
 slug: Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Media

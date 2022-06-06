@@ -184,7 +184,7 @@ Several radio buttons can be tied together. If they share the same value for the
 </fieldset>
 ```
 
-The following screenshots show unchecked and checked radio buttons, radio buttons that have focus, and disabled unchecked and checked radio buttons — on Firefox 71 and Safari 13 on macos and Chrome 79 and Edge 18 on Windows 10.
+The following screenshots show unchecked and checked radio buttons, radio buttons that have focus, and disabled unchecked and checked radio buttons — on Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10.
 
 ![Radio buttons on Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](radios.png)
 

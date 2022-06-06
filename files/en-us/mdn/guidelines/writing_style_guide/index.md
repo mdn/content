@@ -99,7 +99,7 @@ It should mention the technologies and/or APIs that are being documented or disc
 This example of a summary is far too short.
 It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.
 
-**`CanvasRenderingContext2D.strokeText()`** draws a string.
+> **`CanvasRenderingContext2D.strokeText()`** draws a string.
 
 ##### Example: Too long!
 
@@ -108,31 +108,31 @@ Too much detail is included, and the text delves too deeply into describing othe
 
 Instead, the summary should focus on the `strokeText()` method, and should refer to the appropriate guides where the other details are described.
 
-When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
-In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
-
-The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.
-
-The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties.
-`textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string.
-If the value is `"left"`, the string is drawn starting at the specified value of `x`.
-And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
-
-(etc etc etc...)
-
-You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels.
-If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
-
-You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
+> When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
+> In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
+>
+> The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.
+>
+> The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties.
+> `textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string.
+> If the value is `"left"`, the string is drawn starting at the specified value of `x`.
+> And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
+>
+> (etc etc etc...)
+>
+> You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels.
+> If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
+>
+> You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
 
 ##### Example: Much better!
 
 Here we see a much better overview for the `strokeText()` method.
 
-The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
-The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
-
-For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
+> The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+>
+> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### Include all relevant examples
 
@@ -513,7 +513,7 @@ There are a couple of reasons for this.
 2. If curly quotes or apostrophes make their way into code snippets—even inline ones—readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don't use “curly quotes.”
+- **Incorrect**: Please don’t use “curly quotes.”
 
 ### Spelling
 

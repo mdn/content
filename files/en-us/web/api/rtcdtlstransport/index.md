@@ -1,6 +1,7 @@
 ---
 title: RTCDtlsTransport
 slug: Web/API/RTCDtlsTransport
+page-type: web-api-interface
 tags:
   - API
   - Draft

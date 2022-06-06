@@ -1,6 +1,7 @@
 ---
 title: Push API
 slug: Web/API/Push_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

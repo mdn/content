@@ -1,6 +1,7 @@
 ---
 title: HIDDevice
 slug: Web/API/HIDDevice
+page-type: web-api-interface
 tags:
   - API
   - Interface

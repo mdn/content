@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.role
 slug: Web/API/RTCIceTransport/role
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

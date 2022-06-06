@@ -1,6 +1,7 @@
 ---
 title: File System Access API
 slug: Web/API/File_System_Access_API
+page-type: web-api-overview
 tags:
   - API
   - Directory
@@ -11,7 +12,7 @@ tags:
   - Landing
   - Overview
   - working with files
-spec-urls: https://wicg.github.io/file-system-access/
+spec-urls: https://fs.spec.whatwg.org/
 ---
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 

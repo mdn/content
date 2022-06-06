@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase
 slug: Web/API/IDBDatabase
+page-type: web-api-interface
 tags:
   - API
   - Database
@@ -39,7 +40,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 - {{domxref("IDBDatabase.close()")}}
   - : Returns immediately and closes the connection to a database in a separate thread.
-- {{domxref("IDBDatabase.createMutableFile()")}}
+- `IDBDatabase.createMutableFile()` {{deprecated_inline}}{{Non-standard_Inline}}
   - : Creates a file handle, allowing files to be stored inside an IndexedDB database.
 - {{domxref("IDBDatabase.createObjectStore()")}}
   - : Creates and returns a new object store or index.

@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -32,7 +33,7 @@ cancelAnimationFrame(handle)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

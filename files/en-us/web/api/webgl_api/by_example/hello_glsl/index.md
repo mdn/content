@@ -1,6 +1,7 @@
 ---
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
+page-type: guide
 tags:
   - Beginner
   - Example

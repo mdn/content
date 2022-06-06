@@ -1,6 +1,7 @@
 ---
-title: EncodedAudioChunk.EncodedAudioChunk()
+title: EncodedAudioChunk()
 slug: Web/API/EncodedAudioChunk/EncodedAudioChunk
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

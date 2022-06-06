@@ -1,6 +1,7 @@
 ---
 title: XRProjectionLayer.fixedFoveation
 slug: Web/API/XRProjectionLayer/fixedFoveation
+page-type: web-api-instance-property
 tags:
   - API
   - Property

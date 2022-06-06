@@ -23,7 +23,7 @@ p {
   color: yellow;
 
   /* The "background-color" property defines the background color, in this case black. */
-  background-color: black
+  background-color: black;
 }
 ```
 

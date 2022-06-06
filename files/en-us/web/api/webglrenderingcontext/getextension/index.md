@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ getExtension(name)
 
 ### Parameters
 
-- name
+- `name`
   - : A {{jsxref("String")}} for the name of the WebGL extension to enable.
 
 ### Return value

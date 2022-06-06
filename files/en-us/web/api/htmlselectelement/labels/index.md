@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.labels
 slug: Web/API/HTMLSelectElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

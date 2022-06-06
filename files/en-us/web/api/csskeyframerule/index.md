@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframeRule
 slug: Web/API/CSSKeyframeRule
+page-type: web-api-interface
 tags:
   - API
   - CSS Animations

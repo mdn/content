@@ -1,6 +1,7 @@
 ---
 title: AudioContext.close()
 slug: Web/API/AudioContext/close
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext

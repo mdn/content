@@ -1,6 +1,7 @@
 ---
 title: MediaKeySession.update()
 slug: Web/API/MediaKeySession/update
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions

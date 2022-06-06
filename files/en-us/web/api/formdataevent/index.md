@@ -1,6 +1,7 @@
 ---
 title: FormDataEvent
 slug: Web/API/FormDataEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

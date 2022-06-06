@@ -1,6 +1,7 @@
 ---
 title: Using XMLHttpRequest in IE6
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
+page-type: guide
 tags:
   - Web Development
   - Web Standards

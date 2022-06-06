@@ -1,6 +1,7 @@
 ---
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -35,7 +36,7 @@ clearMeasures(name)
 
 ### Return value
 
-void
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

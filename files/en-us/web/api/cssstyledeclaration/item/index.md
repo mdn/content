@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.item()
 slug: Web/API/CSSStyleDeclaration/item
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -26,8 +27,8 @@ item(index)
 
 ### Parameters
 
-- _`index`_ is the index of the node to be fetched. The index is
-  zero-based.
+- `index`
+  - : The index of the node to be fetched. The index is zero-based.
 
 ### Return value
 

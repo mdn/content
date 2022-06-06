@@ -1,6 +1,7 @@
 ---
 title: TextEncoderStream.writable
 slug: Web/API/TextEncoderStream/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property

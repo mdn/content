@@ -1,6 +1,7 @@
 ---
 title: CookieStoreManager.getSubscriptions()
 slug: Web/API/CookieStoreManager/getSubscriptions
+page-type: web-api-instance-method
 tags:
   - API
   - Method

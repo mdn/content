@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.send()
 slug: Web/API/RTCDataChannel/send
+page-type: web-api-instance-method
 tags:
   - API
   - Communication

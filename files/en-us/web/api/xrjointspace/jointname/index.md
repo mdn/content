@@ -1,6 +1,7 @@
 ---
 title: XRJointSpace.jointName
 slug: Web/API/XRJointSpace/jointName
+page-type: web-api-instance-property
 tags:
   - API
   - Controller

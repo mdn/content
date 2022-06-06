@@ -1,6 +1,7 @@
 ---
 title: Document.timeline
 slug: Web/API/Document/timeline
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

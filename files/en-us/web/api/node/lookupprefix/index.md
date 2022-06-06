@@ -1,6 +1,7 @@
 ---
 title: Node.lookupPrefix()
 slug: Web/API/Node/lookupPrefix
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

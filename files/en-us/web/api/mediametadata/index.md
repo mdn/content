@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata
 slug: Web/API/MediaMetadata
+page-type: web-api-interface
 tags:
   - Audio
   - Interface

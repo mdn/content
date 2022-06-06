@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserverEntryList.getEntries()
 slug: Web/API/PerformanceObserverEntryList/getEntries
+page-type: web-api-instance-method
 tags:
   - API
   - Method

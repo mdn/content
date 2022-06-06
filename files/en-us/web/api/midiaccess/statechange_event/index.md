@@ -1,6 +1,7 @@
 ---
 title: 'MIDIAccess: statechange event'
 slug: Web/API/MIDIAccess/statechange_event
+page-type: web-api-event
 tags:
   - statechange
   - API

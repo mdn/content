@@ -1,6 +1,7 @@
 ---
 title: USBOutTransferResult
 slug: Web/API/USBOutTransferResult
+page-type: web-api-interface
 tags:
   - API
   - CSSUnparsedValue

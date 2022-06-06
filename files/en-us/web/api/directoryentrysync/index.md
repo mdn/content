@@ -1,6 +1,7 @@
 ---
 title: DirectoryEntrySync
 slug: Web/API/DirectoryEntrySync
+page-type: web-api-interface
 tags:
   - API
   - File API

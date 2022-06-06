@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointermove
 slug: Web/API/GlobalEventHandlers/onpointermove
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

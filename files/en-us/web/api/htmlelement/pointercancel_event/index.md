@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: pointercancel event'
 slug: Web/API/HTMLElement/pointercancel_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM

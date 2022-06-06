@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.priority
 slug: Web/API/RTCIceCandidate/priority
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

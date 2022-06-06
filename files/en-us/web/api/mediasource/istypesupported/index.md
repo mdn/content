@@ -1,6 +1,7 @@
 ---
 title: MediaSource.isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
+page-type: web-api-static-method
 tags:
   - API
   - Audio
@@ -88,11 +89,8 @@ function sourceOpen (_) {
 
 ## See also
 
-- [Media Source Extensions
-  API](/en-US/docs/Web/API/Media_Source_Extensions_API)
-- [Guide to media types and formats on the
-  web](/en-US/docs/Web/Media/Formats)
-- [The "codecs" parameter in
-  common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

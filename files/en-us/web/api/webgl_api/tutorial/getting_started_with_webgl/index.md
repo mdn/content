@@ -1,6 +1,7 @@
 ---
 title: Getting started with WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+page-type: guide
 tags:
   - Tutorial
   - WebGL
@@ -15,7 +16,7 @@ This article will introduce you to the basics of using WebGL. It's assumed that 
 
 The code examples in this tutorial can also be found in the [webgl-examples GitHub repository](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial).
 
-It's worth noting here that this series of articles introduces WebGL itself; however, there are a number of frameworks available that encapsulate WebGL's capabilities, making it easier to build 3D applications and games, such as [THREE.js](https://threejs.org/) and [BABYLON.js.](https://www.babylonjs.com/)
+It's worth noting here that this series of articles introduces WebGL itself; however, there are a number of frameworks available that encapsulate WebGL's capabilities, making it easier to build 3D applications and games, such as [THREE.js](https://threejs.org/) and [BABYLON.js](https://www.babylonjs.com/).
 
 ## Preparing to render in 3D
 

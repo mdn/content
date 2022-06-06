@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getBufferSubData()
 slug: Web/API/WebGL2RenderingContext/getBufferSubData
+page-type: web-api-instance-method
 tags:
   - API
   - Method

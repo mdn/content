@@ -1,6 +1,7 @@
 ---
 title: USBIsochronousOutTransferPacket
 slug: Web/API/USBIsochronousOutTransferPacket
+page-type: web-api-interface
 tags:
   - API
   - Experimental

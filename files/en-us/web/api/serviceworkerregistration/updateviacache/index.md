@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
+page-type: web-api-instance-property
 tags:
   - API
   - Property

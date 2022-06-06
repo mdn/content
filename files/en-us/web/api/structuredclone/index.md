@@ -1,6 +1,7 @@
 ---
 title: structuredClone()
 slug: Web/API/structuredClone
+page-type: web-api-global-function
 tags:
   - API
   - DOM

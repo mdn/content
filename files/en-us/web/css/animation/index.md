@@ -27,7 +27,7 @@ animation: slidein 3s linear 1s;
 animation: slidein 3s;
 ```
 
-A [description of which properties are animatable](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#which_css_properties_are_animatable) is available; it's worth noting that this description is also valid for [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
+A [description of which properties are animatable](/en-US/docs/Web/CSS/CSS_animated_properties) is available; it's worth noting that this description is also valid for [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
 ## Constituent properties
 

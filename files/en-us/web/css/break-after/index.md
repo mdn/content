@@ -190,7 +190,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.break-after.multicol_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

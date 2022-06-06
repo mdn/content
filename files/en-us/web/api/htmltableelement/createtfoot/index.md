@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: IDBIndex
 slug: Web/API/IDBIndex
+page-type: web-api-interface
 tags:
   - API
   - Database

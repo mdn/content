@@ -1,6 +1,7 @@
 ---
 title: 'Element: webkitmouseforcewillbegin event'
 slug: Web/API/Element/webkitmouseforcewillbegin_event
+page-type: web-api-event
 tags:
   - API
   - Element

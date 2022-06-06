@@ -33,7 +33,7 @@ console.log(locale.language); // Prints "en"
 
 ### Overriding language via the configuration object
 
-While the language subtag must be specified, the {{jsxref("Intl/Locale", "Locale")}} constructor takes a configuration object, which can override the language subtag.
+While the language subtag must be specified, the {{jsxref("Intl/Locale/Locale", "Locale()")}} constructor takes a configuration object, which can override the language subtag.
 
 ```js
 let locale = new Intl.Locale("en-Latn-US", { language: "es" });

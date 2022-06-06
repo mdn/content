@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.replace()
 slug: Web/API/CSSStyleSheet/replace
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -62,3 +63,8 @@ stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)

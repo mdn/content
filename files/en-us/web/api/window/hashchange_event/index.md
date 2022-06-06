@@ -1,6 +1,7 @@
 ---
 title: 'Window: hashchange event'
 slug: Web/API/Window/hashchange_event
+page-type: web-api-event
 tags:
   - API
   - Event

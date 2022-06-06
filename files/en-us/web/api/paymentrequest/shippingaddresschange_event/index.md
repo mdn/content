@@ -1,6 +1,7 @@
 ---
 title: 'PaymentRequest: shippingaddresschange event'
 slug: Web/API/PaymentRequest/shippingaddresschange_event
+page-type: web-api-event
 tags:
   - API
   - Address

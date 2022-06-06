@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.signalingState
 slug: Web/API/RTCPeerConnection/signalingState
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

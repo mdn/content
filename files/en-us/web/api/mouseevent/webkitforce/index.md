@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.webkitForce
 slug: Web/API/MouseEvent/webkitForce
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

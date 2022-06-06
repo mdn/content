@@ -1,6 +1,7 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Reference
