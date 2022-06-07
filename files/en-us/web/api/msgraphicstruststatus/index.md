@@ -1,28 +1,23 @@
 ---
-title: msGraphicsTrustStatus
+title: HTMLMediaElement.msGraphicsTrustStatus
 slug: Web/API/MsGraphicsTrustStatus
+page-type: web-api-instance-property
 tags:
   - msGraphicsTrustStatus
 ---
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
 
-**`msGraphicsTrustStatus`** is a read-only property which
+The **`msGraphicsTrustStatus`** read-only property
 returns an object containing information on protected video playback.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
+## Value
 
-```js
-status = object.msGraphicsTrustStatus;
-```
+A {{domxref("MSGraphicsTrust)}} object
 
-## Example
+## See also
 
-```js
-    //Specifies the output device id that the audio will be sent to.
-    msAudioDeviceType: string;
-    readonly msGraphicsTrustStatus: MSGraphicsTrust;
-```
+- {{domxref("MSGraphicsTrust)}}
