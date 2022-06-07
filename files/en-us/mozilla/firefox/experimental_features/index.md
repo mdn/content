@@ -1528,8 +1528,6 @@ Note that since locking the screen orientation isn't typically supported on desk
   </tbody>
 </table>
 
-
-
 ### Streaming API
 
 #### Transferable streams

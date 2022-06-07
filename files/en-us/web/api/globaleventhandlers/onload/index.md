@@ -16,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.onload
 
 The **`onload`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{domxref("Window/load_event", "load")}} events on a {{domxref("Window")}}, 
+processes {{domxref("Window/load_event", "load")}} events on a {{domxref("Window")}},
 {{domxref("XMLHttpRequest")}}, {{htmlelement("iframe")}} and {{htmlelement("img")}} elements, etc.
 
 The `load` event fires when a given resource has loaded.
