@@ -115,7 +115,7 @@ video.onended = (event) => {
 - {{HTMLElement("video")}}
 - [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API)
 
-  - [Media Capture and Streams: ended event](/en-US/docs/Web/API/Media_Streams_API)[: ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
+  - [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API)[: ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 
