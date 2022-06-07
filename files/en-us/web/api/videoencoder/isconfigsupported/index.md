@@ -23,7 +23,7 @@ isConfigSupported(config)
 ### Parameters
 
 - `config`
-  - : The dictionary object accepted by {{jsxref("VideoEncoder.configure")}}
+  - : The dictionary object accepted by {{domxref("VideoEncoder.configure")}}
 
 ### Return value
 
