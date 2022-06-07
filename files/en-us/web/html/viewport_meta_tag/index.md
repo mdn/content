@@ -8,7 +8,6 @@ tags:
   - viewport
 spec-urls: https://drafts.csswg.org/css-device-adapt/#viewport-meta
 ---
-
 {{HTMLSidebar}} 
 
 This article describes how to use the "viewport" `<meta>` tag to control the viewport's size and shape.
@@ -75,5 +74,3 @@ If you want to know what mobile and tablet devices have which viewport widths, t
 ## Specifications
 
 {{Specifications}}
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}
