@@ -31,4 +31,4 @@ const trustObject = media.msGraphicsTrustStatus;
 
 ## See also
 
-- {{domxref("HTMLMediaElement.msGraphicsTrust)}}
+- {{domxref("HTMLMediaElement.msGraphicsTrust")}}
