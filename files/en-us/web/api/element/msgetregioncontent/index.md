@@ -1,6 +1,6 @@
 ---
 title: msGetRegionContent
-slug: Web/API/msGetRegionContent
+slug: Web/API/Element/msGetRegionContent
 tags:
   - msGetRegionContent
 ---

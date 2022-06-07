@@ -39458,6 +39458,19 @@
       "erikadoyle"
     ]
   },
+  "Web/API/Element/msGetRegionContent": {
+    "modified": "2019-03-18T21:28:47.734Z",
+    "contributors": [
+      "mattwojo"
+    ]
+  },
+  "Web/API/Element/msRegionOverflow": {
+    "modified": "2019-03-18T21:28:44.921Z",
+    "contributors": [
+      "soij",
+      "mattwojo"
+    ]
+  },
   "Web/API/Element/msZoomTo": {
     "modified": "2019-03-18T21:32:30.929Z",
     "contributors": [
@@ -54900,12 +54913,6 @@
       "ExE-Boss",
       "mattwojo",
       "erikadoyle"
-    ]
-  },
-  "Web/API/MSRangeCollection": {
-    "modified": "2019-03-18T21:28:34.673Z",
-    "contributors": [
-      "mattwojo"
     ]
   },
   "Web/API/MSSiteModeEvent": {
@@ -87863,19 +87870,6 @@
       "kenrick95",
       "chrisdavidmills",
       "jpmedley"
-    ]
-  },
-  "Web/API/msGetRegionContent": {
-    "modified": "2019-03-18T21:28:47.734Z",
-    "contributors": [
-      "mattwojo"
-    ]
-  },
-  "Web/API/msRegionOverflow": {
-    "modified": "2019-03-18T21:28:44.921Z",
-    "contributors": [
-      "soij",
-      "mattwojo"
     ]
   },
   "Web/API/msWriteProfilerMark": {

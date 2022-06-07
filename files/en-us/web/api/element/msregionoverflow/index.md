@@ -1,6 +1,6 @@
 ---
 title: msRegionOverflow
-slug: Web/API/msRegionOverflow
+slug: Web/API/Element/msRegionOverflow
 tags:
   - Internet Explorer
   - msRegionOverflow
