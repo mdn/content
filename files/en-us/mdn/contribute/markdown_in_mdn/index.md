@@ -30,7 +30,7 @@ This is the correct way to write GFM links on MDN:
 This is an incorrect way to write links on MDN:
 
 ```md example-bad
-[Macarons][macaron]  are delicious but tricky to make.
+[Macarons][macaron] are delicious but tricky to make.
 
 [macaron]: https://en.wikipedia.org/wiki/Macaron
 ```
