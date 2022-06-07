@@ -19,7 +19,7 @@ browser-compat: api.HTMLMediaElement.ended_event
 
 The `ended` event is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.
 
-This event occurs based upon {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} and {{HTMLElement("video")}}) fire `ended` when playback of the media reaches the end of the media.
+This event occurs based upon {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} and {{HTMLElement("video")}}) fire `ended` when playback or reaches the end of the media.
 
 <table class="properties">
   <tbody>
