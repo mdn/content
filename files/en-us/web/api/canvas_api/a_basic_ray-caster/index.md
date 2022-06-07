@@ -16,7 +16,7 @@ This article provides an interesting real-world example of using the {{HTMLEleme
 
 {{EmbedGHLiveSample("canvas-raycaster/index.html", 900, 300)}}
 
-**[Open in new window](https://mdn.github.io/canvas-raycaster/)**
+**[Open in new window](https://mdn.github.io/dom-examples/canvas-raycaster/)**
 
 ## Why?
 
@@ -40,11 +40,11 @@ Also, it leaves a lot to be desired in terms of trying to be any sort of game en
 
 ## The ray-caster
 
-The nice people here have manually copied my files up so you can take a [look](https://mdn.github.io/canvas-raycaster/), and for your hacking enjoyment I've posted the individual file contents as code listings (see below).
+The nice people here have manually copied my files up so you can take a [look](https://mdn.github.io/dom-examples/canvas-raycaster/), and for your hacking enjoyment I've posted the individual file contents as code listings (see below).
 
 So there you are, fire up Safari 1.3+ or Firefox 1.5+ or some other browser that supports the `<canvas>` element and enjoy!
 
-[input.js](https://github.com/mdn/canvas-raycaster/blob/master/input.js) | [Level.js](https://github.com/mdn/canvas-raycaster/blob/master/Level.js) | [Player.js](https://github.com/mdn/canvas-raycaster/blob/master/Player.js) | [RayCaster.html](https://github.com/mdn/canvas-raycaster/blob/master/index.html) | [RayCaster.js](https://github.com/mdn/canvas-raycaster/blob/master/RayCaster.js) | [trace.css](https://github.com/mdn/canvas-raycaster/blob/master/trace.css) | [trace.js](https://github.com/mdn/canvas-raycaster/blob/master/trace.js)
+[input.js](https://github.com/mdn/dom-examples/canvas-raycaster/blob/master/input.js) | [Level.js](https://github.com/mdn/dom-examples/canvas-raycaster/blob/master/Level.js) | [Player.js](https://github.com/mdn/dom-examples/canvas-raycaster/blob/master/Player.js) | [RayCaster.html](https://github.com/mdn/dom-examples/canvas-raycaster/blob/master/index.html) | [RayCaster.js](https://github.com/mdn/dom-examples/canvas-raycaster/blob/master/RayCaster.js) | [trace.css](https://github.com/mdn/dom-examples/canvas-raycaster/blob/master/trace.css) | [trace.js](https://github.com/mdn/dom-examples/canvas-raycaster/blob/master/trace.js)
 
 ## See also
 
