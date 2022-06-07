@@ -48,8 +48,8 @@ The following code ports the functionality of the `DOMContentLoaded` event all t
 
 function DOMContentLoaded() { "use strict";
 
-    var ael = 'addEventListener', rel = 'removeEventListener', aev = 'attachEvent', dev = 'detachEvent';
-    var alreadyRun = false,
+    const ael = 'addEventListener', rel = 'removeEventListener', aev = 'attachEvent', dev = 'detachEvent';
+    let alreadyRun = false,
         funcs = arguments; // for use in the idempotent function `ready()`, defined later.
 
     function microtime() { return + new Date() } // new Date().valueOf();
@@ -77,7 +77,7 @@ function DOMContentLoaded() { "use strict";
        (IE11 older doc mode*): 11, IE11 / NOT IE: undefined
     */
 
-    var jscript_version = Number( new Function("/*@cc_on return @_jscript_version; @*\/")() );
+    const jscript_version = Number( new Function("/*@cc_on return @_jscript_version; @*\/")() );
 
     // check if the DOM has already loaded
     // If it has, send null as the readyTime, since we don't know when the DOM became ready.
@@ -109,7 +109,7 @@ function DOMContentLoaded() { "use strict";
 
     function addOnload(fn) {
 
-        var prev = window.onload; // old `window.onload`, which could be set by this function, or elsewhere.
+        const prev = window.onload; // old `window.onload`, which could be set by this function, or elsewhere.
 
         // Here we add a function queue list to allow for dequeueing.
         // Should we have to use window.onload, `addOnload.queue` is the queue of functions
@@ -125,7 +125,7 @@ function DOMContentLoaded() { "use strict";
         if (typeof fn === 'function') { addOnload.queue.push(fn) } // add the new function
 
         window.onload = function() { // iterate through the queued functions
-            for (var i = 0; i < addOnload.queue.length; i++) { addOnload.queue[i]() }
+            for (let i = 0; i < addOnload.queue.length; i++) { addOnload.queue[i]() }
         };
     }
 
@@ -137,7 +137,7 @@ function DOMContentLoaded() { "use strict";
         // until we find `fn`, and then remove `fn` from its place in the array.
 
         if (typeof addOnload.queue === 'object') { // array
-            for (var i = addOnload.queue.length-1; i >= 0; i--) { // iterate backwards
+        let i = addOnload.queue.length-1; i >= 0; i--) { // iterate backwards
                 if (fn === addOnload.queue[i]) {
                     addOnload.queue.splice(i,1); if (!all) {break}
                 }
@@ -153,14 +153,14 @@ function DOMContentLoaded() { "use strict";
         // This time is when the DOM has loaded, or, if all else fails,
         // when it was actually possible to inference that the DOM has loaded via a 'load' event.
 
-        var readyTime = microtime();
+        const readyTime = microtime();
 
         detach(); // detach any event handlers
 
         // run the functions (`funcs` is arguments of DOMContentLoaded)
-        for (var i=0; i < funcs.length; i++) {
+        for (let i=0; i < funcs.length; i++) {
 
-            var func = funcs[i];
+            const func = funcs[i];
 
             if (typeof func === 'function') {
 
