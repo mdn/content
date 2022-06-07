@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.0.1.tgz#e71fe19c5ba99413fae9305cc9ed060eeb07ea45"
   integrity sha512-c+RIBgZSqSWgxZdNWLaaCAfBon2YM4pz0QD+VoT32rIOGChJl3l99E7B/xSWvVlSSiE7jQkEuJx3hbKoUdAi3w==
 
-"@mdn/yari@1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.2.3.tgz#67facf234339919b80b214ee7028993aed9b7c45"
-  integrity sha512-iqO2GBVeMPwHSqBnZitvtZ5bnFsPxJalZ+PADpvWVS3IkgMFqu+b2iBJyboT5ridObjg3edBW9WiT6XieGTPig==
+"@mdn/yari@1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.2.4.tgz#74903e040703bf1d15c8e4580ac1bf0fb0b1d3b2"
+  integrity sha512-WvzVMhTdLJbHjDWEQZ/+VXC4A82GpctPCDxMaHzHXKh9k2X6vzDuLAmZLT9yKYwQ14AzqHDJzqnyxAmBe+eC9w==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -56,7 +56,7 @@
     compression "^1.7.4"
     cookie "^0.5.0"
     cookie-parser "^1.4.6"
-    dayjs "^1.11.2"
+    dayjs "^1.11.3"
     dexie "^3.2.2"
     dotenv "^16.0.1"
     ejs "^3.1.8"
@@ -1099,10 +1099,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-dayjs@^1.11.2:
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.2.tgz#fa0f5223ef0d6724b3d8327134890cfe3d72fbe5"
-  integrity sha512-F4LXf1OeU9hrSYRPTTj/6FbO4HTjPKXvEIC1P2kcnFurViINCVk3ZV0xAS3XVx9MkMsXbbqlK6hjseaYbgKEHw==
+dayjs@^1.11.3:
+  version "1.11.3"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.3.tgz#4754eb694a624057b9ad2224b67b15d552589258"
+  integrity sha512-xxwlswWOlGhzgQ4TKzASQkUhqERI3egRNqgV4ScR8wlANA/A9tZ7miXa44vTTKEq5l7vWoL5G57bG3zA+Kow0A==
 
 debug@2.6.9:
   version "2.6.9"
