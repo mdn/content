@@ -1,0 +1,82 @@
+---
+title: VideoEncoder.isConfigSupported()
+slug: Web/API/VideoEncoder/isConfigSupported
+page-type: web-api-static-method
+tags:
+  - API
+  - Method
+  - Reference
+  - isConfigSupported
+  - VideoEncoder
+browser-compat: api.VideoEncoder.isConfigSupported
+---
+{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} interface that checks if the given config is supported.
+
+That is, if it can successfully configure {{domxref("VideoEncoder")}} objects with this the same config.
+
+## Syntax
+
+```js
+isConfigSupported(config)
+```
+
+### Parameters
+
+- `config`
+  - : The dictionary object accepted by {{jsxref("VideoEncoder.configure")}}
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with an object containing the following members:
+  - `supported`{{Optional_Inline}}
+    - : A Boolean value which is `true` if the given config is supported by the encoder.
+  - `config`{{Optional_Inline}}
+    - : An copy of the given config with all the field recognized by the encoder.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the provided `config` is invalid, i.e. doesn't have required
+  values (such as an empty `codec` filed) or has invalid values (such as a
+  negative `width`)
+
+## Examples
+
+The following example tests if the browser supports accelerated and un-accelerated
+versions of several video codecs.
+
+```js
+let codecs = ['avc1.42001E', 'vp8', 'vp09.00.10.08', 'av01.0.04M.08'];
+let accelerations = ['prefer-hardware', 'prefer-software']
+
+let configs = [];
+for (let codec of codecs) {
+  for (let acceleration of accelerations) {
+    configs.push({
+      codec: codec,
+      hardwareAcceleration: acceleration,
+      width: 1280,
+      height: 720,
+      bitrate: 2_000_000,
+      bitrateMode: 'constant',
+      framerate: 30,
+      not_supported_field: 123
+    });
+  }
+}
+
+for (let config of configs) {
+  let support = await VideoEncoder.isConfigSupported(config);
+  console.log(`VideoEncoder's config ${JSON.stringify(support.config)} support: ${support.supported}`);
+}
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
