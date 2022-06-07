@@ -1493,8 +1493,8 @@ Note that since locking the screen orientation isn't typically supported on desk
 
 #### Transferable streams
 
-[`ReadableStream`](/en-US/docs/Web/API/ReadableStream), [`WritableStream`](/en-US/docs/Web/API/WritableStream), [`TransformStream`](/en-US/docs/Web/API/TransformStream) are now [Transferable objects](/en-US/docs/Glossary/Transferable_objects), which means that ownership can be transfered when sharing the objects between a window and workers using `postMessage`, or when using [structuredClone()](/en-US/docs/Web/API/structuredClone) to copy an object.
-After transfering, the original object cannot be used.
+[`ReadableStream`](/en-US/docs/Web/API/ReadableStream), [`WritableStream`](/en-US/docs/Web/API/WritableStream), [`TransformStream`](/en-US/docs/Web/API/TransformStream) are now [Transferable objects](/en-US/docs/Glossary/Transferable_objects), which means that ownership can be transferred when sharing the objects between a window and workers using `postMessage`, or when using [structuredClone()](/en-US/docs/Web/API/structuredClone) to copy an object.
+After transferring, the original object cannot be used.
 See {{bug(1659025)}} for more details.
 
 <table>
