@@ -1,7 +1,7 @@
 ---
 title: Element.msGetRegionContent
 slug: Web/API/Element/msGetRegionContent
-page-type: api-instance-method
+page-type: web-api-instance-method
 tags:
   - msGetRegionContent
   - Non-standard
