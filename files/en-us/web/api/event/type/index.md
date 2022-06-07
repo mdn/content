@@ -17,7 +17,7 @@ constructed and is the name commonly used to refer to the specific event, such a
 
 ## Value
 
-A {{jsxref("String")}} containing the type of {{domxref("Event")}}.
+A string containing the type of {{domxref("Event")}}.
 
 ## Example
 
