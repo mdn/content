@@ -16,8 +16,8 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Value
 
-A {{domxref("MSGraphicsTrust)}} object
+A {{domxref("MSGraphicsTrust")}} object
 
 ## See also
 
-- {{domxref("MSGraphicsTrust)}}
+- {{domxref("MSGraphicsTrust")}}
