@@ -404,7 +404,7 @@ For example, below we are using `calc()` to make the box `20% + 100px` wide. The
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_tasks).
 
 ## Summary
 
