@@ -83,7 +83,7 @@ if (!Element.prototype.matches) {
 
 if (!Element.prototype.closest) {
   Element.prototype.closest = function(s) {
-    var el = this;
+    const el = this;
 
     do {
       if (Element.prototype.matches.call(el, s)) return el;
@@ -101,7 +101,7 @@ job very slowly, but eventually. However, it will only support CSS 2.1 selectors
 ```js
 if (window.Element && !Element.prototype.closest) {
   Element.prototype.closest = function(s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+    const matches = (this.document || this.ownerDocument).querySelectorAll(s),
         i,
         el = this;
     do {

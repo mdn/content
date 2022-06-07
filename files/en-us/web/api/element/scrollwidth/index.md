@@ -73,7 +73,7 @@ A number.
     </button>
   </body>
   <script>
-    var buttonOne = document.getElementById('aButton'),
+    const buttonOne = document.getElementById('aButton'),
     buttonTwo = document.getElementById('anotherButton'),
     divOne = document.getElementById('aDiv'),
     divTwo = document.getElementById('anotherDiv');
