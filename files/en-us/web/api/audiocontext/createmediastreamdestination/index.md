@@ -55,7 +55,7 @@ From here, you can play and save the opus file.
     <audio controls></audio>
     <script>
      const b = document.querySelector("button");
-     const clicked = false;
+     let clicked = false;
      const chunks = [];
      const ac = new AudioContext();
      const osc = ac.createOscillator();
