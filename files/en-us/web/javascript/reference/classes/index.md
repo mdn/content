@@ -259,7 +259,7 @@ class Rectangle {
 }
 ```
 
-We don't use any keywords like `let`,`const` and `var` before the fields.
+We don't need statements like `let`,`const`, and `var` before fields.
 
 By declaring fields up-front, class definitions become more self-documenting, and the fields are always present.
 
