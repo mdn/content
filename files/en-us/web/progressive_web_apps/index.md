@@ -38,7 +38,7 @@ These introductory materials and step-by-step guides walk you through key aspect
 - [Instant Loading Web Apps with An Application Shell Architecture](https://developer.chrome.com/blog/app-shell/)
 - [Introduction to Progressive Web App Architectures](https://web.dev/learn/pwa/)
 - [Workbox](https://developer.chrome.com/docs/workbox/) — set of libraries to power a "production-ready" service worker for your PWA
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) — web-app auditing tool that includes PWA-auditing features
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) — web-app auditing tool that includes PWA-auditing features
 - [localForage](https://localforage.github.io/localForage/) — `localStorage`-like _async_ storage, to improve your PWA's offline experience
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
