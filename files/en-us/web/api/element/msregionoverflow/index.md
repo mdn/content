@@ -1,9 +1,13 @@
 ---
-title: msRegionOverflow
-slug: Web/API/msRegionOverflow
+title: Element.msRegionOverflow
+slug: Web/API/Element/msRegionOverflow
+page-type: web-api-instance-property
 tags:
   - Internet Explorer
   - msRegionOverflow
+  - Non-standard
+  - Property
+  - Read-only
 ---
 {{APIRef("DOM")}}
 
@@ -13,7 +17,7 @@ The **`msRegionOverflow`** read-only property determines if content fully fits i
 
 This proprietary property is specific to Internet Explorer.
 
-## Values
+## Value
 
 Returns one of the following strings:
 

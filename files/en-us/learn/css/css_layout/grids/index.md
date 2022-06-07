@@ -606,7 +606,7 @@ If you use the [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grids](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills).
 
 ## Summary
 

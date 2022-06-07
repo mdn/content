@@ -8567,6 +8567,7 @@
 /en-US/docs/Web/API/MSContentZoom	/en-US/docs/Web/API/Element/msContentZoom_event
 /en-US/docs/Web/API/MSLaunchUri	/en-US/docs/Web/API/Navigator/msLaunchUri
 /en-US/docs/Web/API/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
+/en-US/docs/Web/API/MSRangeCollection	/en-US/docs/Web/API/Element/msGetRegionContent
 /en-US/docs/Web/API/MediaCapabilities/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
 /en-US/docs/Web/API/MediaCapabilities_API	/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
@@ -8697,9 +8698,11 @@
 /en-US/docs/Web/API/MsClearEffects	/en-US/docs/Web/API/HTMLMediaElement/msClearEffects
 /en-US/docs/Web/API/MsExtendedCode	/en-US/docs/Web/API/MediaError/msExtendedCode
 /en-US/docs/Web/API/MsFirstPaint	/en-US/docs/Web/API/PerformanceTiming/MsFirstPaint
+/en-US/docs/Web/API/MsGraphicsTrustStatus	/en-US/docs/Web/API/HTMLMediaElement/msGraphicsTrustStatus
 /en-US/docs/Web/API/MsHorizontalMirror	/en-US/docs/Web/API/HTMLVideoElement/msHorizontalMirror
 /en-US/docs/Web/API/MsInsertAudioEffect	/en-US/docs/Web/API/HTMLMediaElement/msInsertAudioEffect
 /en-US/docs/Web/API/MsInsertVideoEffect	/en-US/docs/Web/API/HTMLVideoElement/msInsertVideoEffect
+/en-US/docs/Web/API/MsIsBoxed	/en-US/docs/Web/API/HTMLVideoElement/msIsBoxed
 /en-US/docs/Web/API/MsIsLayoutOptimalForPlayback	/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback
 /en-US/docs/Web/API/MsIsStereo3D	/en-US/docs/Web/API/HTMLVideoElement/msIsStereo3D
 /en-US/docs/Web/API/MsManipulationViewsEnabled	/en-US/docs/Web/API/Touch/MsManipulationViewsEnabled
@@ -10221,8 +10224,10 @@
 /en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep
 /en-US/docs/Web/API/msGetPropertyEnabled	/en-US/docs/Web/API/CSSStyleDeclaration/msGetPropertyEnabled
+/en-US/docs/Web/API/msGetRegionContent	/en-US/docs/Web/API/Element/msGetRegionContent
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/msPutPropertyEnabled	/en-US/docs/Web/API/CSSStyleDeclaration/msPutPropertyEnabled
+/en-US/docs/Web/API/msRegionOverflow	/en-US/docs/Web/API/Element/msRegionOverflow
 /en-US/docs/Web/API/msthumbnailclick	/en-US/docs/Web/API/Document/msthumbnailclick_event
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
 /en-US/docs/Web/API/navigator.doNotTrack	/en-US/docs/Web/API/Navigator/doNotTrack

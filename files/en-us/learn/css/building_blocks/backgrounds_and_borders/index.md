@@ -296,7 +296,7 @@ We have set all four corners in the example below and then changed the values fo
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Backgrounds and Borders](/en-US/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders).
 
 ## Summary
 
