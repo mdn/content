@@ -103,14 +103,18 @@ new SubClass();
 
 #### Private static fields
 
-Private static fields are added to the class constructor at class evaluation time.
-The limitation of static variables being called by only static methods still holds.
+Private static fields are added to the class constructor at class evaluation time. Like their public counterparts, private static fields are only accessible on the class itself or on the `this` context of static methods (although there are pitfalls — see below), but not on the `this` context of instance methods.
 
 ```js
 class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD;
 
   static publicStaticMethod() {
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  }
+
+  publicInstanceMethod() {
     ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
     return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
   }
