@@ -216,17 +216,21 @@ This is because it matches the same element but the ID selector has a higher spe
 
 ### Increasing specifity by duplicating selectors
 
-As a special case for (2), duplicating simple selectors will increase specificity when overriding very specific selectors over which you have no control. 
+As a special case for increasing specificity duplicating weights from the _CLASS_ or _ID_ columns. Duplicating simple selectors will increase specificity when overriding very specific selectors over which you have no control. 
 
     ```css
-    #myId#myId span { /* 2-0-1 */}
-    .myClass.myClass span { /* 0-2-1 */ }
+    #myId#myId#myId span { /* 3-0-1 */}
+    .myClass.myClass.myClass span { /* 0-3-1 */ }
     ```
-If using selector duplication, always comment your CSS.
+Use this sparingly, if at all. If using selector duplication, always comment your CSS.
 
-### Allowing your styles to take precedence over 3rd party CSS
+### Precedence over 3rd party CSS
 
-Normal (not important) style imported into cascade layers have lower precedence than unlayered developer styles. If styles are coming from a stylesheet you can't edit or don't understand, import it into a cascade layer. When two selectors from different layers match the same element, origin and importance take precendence; the specificity of the selector in the losing stylesheet is irrelevant.
+Leveraging cascade layers is the standard way of enabling one set of styles to take precedence over another set of styles; cascade layers enable this without using specificity!
+
+Normal (not important) style imported into cascade layers have lower precedence than unlayered developer styles. If styles are coming from a stylesheet you can't edit or don't understand and you need to override styles, a strategy is to import the styles you don't control into a cascade layer. Styles in subsequently declared layers take precendence, with unlayered styles having precedence over all layered styles from the same origin.
+
+When two selectors from different layers match the same element, origin and importance take precendence; the specificity of the selector in the losing stylesheet is irrelevant.
 
 ```html
 <style>
@@ -237,7 +241,84 @@ Normal (not important) style imported into cascade layers have lower precedence 
 </style>
 ```
 
-In this example, all paragraph text will be `1rem` no matter how many class names the paragraphs and nested content in the document have that match the TW stylesheet .
+In this example, all paragraph text will be `1rem` no matter how many class names the paragraphs and nested content in the document have that match the TW stylesheet.
+
+### Avoiding and overriding `!important`
+
+The best solution is to not use `!important`. The above explanations on specificity should be helpful in avoiding using the flag, and removing it altogether when encountered. 
+
+To remove the perceived need for `!important`, you can 1) increase the specifity of the selector of the formerly important declaration so it is greater than other declarations, 2) give it the same specificity, and put it after the declaration it is meant to override, 3) reduce the specificity of the selector you are trying to override. 
+
+#### 3) Reducing specificity
+
+```css
+[id="someElement"] p {
+  color: blue;
+}
+
+p.awesome {
+  color: red;
+}
+```
+
+Including an id as part of an attribute selector instead of as an id selector gives it the same specificity as a class. Both selectors above now have the same weight. In a specificity tie, the last rule defined within the same origin layer wins.
+
+
+ 
+
+B) Creating a [cascade layer](../@layer/) of important declaration overrides is an excellent solution when unable to remove `!important` flags from a CSS code base. Two ways of doing this include:
+
+Method #1
+
+  1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove in step A. 
+  2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` before linking to other stylesheets to be certain the important overrides is imported as the first layer. 
+
+```html
+<style>
+  @import importantOverrides.css layer();
+</style>
+````
+
+Method #2
+
+  1. At the beginning of your stylesheet declarations, create a named cascade layer:
+
+  ```css
+<style>
+  @import importantOverrides.css layer();
+</style>
+````
+  
+  Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove in step A. 
+  2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` before linking to other stylesheets to be certain the important overrides is imported as the first layer. 
+
+The cascade dictates important declarations in the first author layer take precedence over important declarations in subsequent layers, no matter the specificity of the selectors in either layer.
+
+B) If unable to use cascade layers, add another CSS rule with `!important`, and either give the selector a higher specificity (adding a tag, id or class to the selector), or add a CSS rule with the same selector at a later point than the existing one. This works because in a specificity tie, the last rule defined wins.
+
+Some examples with a higher specificity:
+
+```css
+table td    { height: 50px !important; }
+.myTable td { height: 50px !important; }
+#myTable td { height: 50px !important; }
+```
+
+B) Or add the same selector after the existing one:
+
+```css
+td { height: 50px !important; }
+```
+
+
+
+
+
+
+
+
+
+
 
 #### How !important can be used:
 
@@ -271,7 +352,7 @@ p.awesome {
 }
 ```
 
-How do you make `awesome` paragraphs always turn red, even ones inside `#someElement`, especially when `id="someElement"`  is actually a randomly generated [`id`](/en-US/docs/Web/HTML/Global_attributes/id) in a 3rd party widget you can't control? 
+How do you make `awesome` paragraphs always turn red, even ones inside `#someElement`, especially when `id="someElement"` is actually a randomly generated [`id`](/en-US/docs/Web/HTML/Global_attributes/id) in a 3rd party widget you can't control? 
 
 Without `!important`, the first rule will have more specificity and will win over the second rule. However, there are ways to override styles you can't control, as discussed in [Instead of using `!important`]()
 
