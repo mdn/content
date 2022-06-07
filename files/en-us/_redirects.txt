@@ -8698,9 +8698,11 @@
 /en-US/docs/Web/API/MsClearEffects	/en-US/docs/Web/API/HTMLMediaElement/msClearEffects
 /en-US/docs/Web/API/MsExtendedCode	/en-US/docs/Web/API/MediaError/msExtendedCode
 /en-US/docs/Web/API/MsFirstPaint	/en-US/docs/Web/API/PerformanceTiming/MsFirstPaint
+/en-US/docs/Web/API/MsGraphicsTrustStatus	/en-US/docs/Web/API/HTMLMediaElement/msGraphicsTrustStatus
 /en-US/docs/Web/API/MsHorizontalMirror	/en-US/docs/Web/API/HTMLVideoElement/msHorizontalMirror
 /en-US/docs/Web/API/MsInsertAudioEffect	/en-US/docs/Web/API/HTMLMediaElement/msInsertAudioEffect
 /en-US/docs/Web/API/MsInsertVideoEffect	/en-US/docs/Web/API/HTMLVideoElement/msInsertVideoEffect
+/en-US/docs/Web/API/MsIsBoxed	/en-US/docs/Web/API/HTMLVideoElement/msIsBoxed
 /en-US/docs/Web/API/MsIsLayoutOptimalForPlayback	/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback
 /en-US/docs/Web/API/MsIsStereo3D	/en-US/docs/Web/API/HTMLVideoElement/msIsStereo3D
 /en-US/docs/Web/API/MsManipulationViewsEnabled	/en-US/docs/Web/API/Touch/MsManipulationViewsEnabled

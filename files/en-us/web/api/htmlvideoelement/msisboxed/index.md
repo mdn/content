@@ -1,15 +1,16 @@
 ---
-title: msIsBoxed
-slug: Web/API/MsIsBoxed
+title: HTMLVideoElement.msIsBoxed
+slug: Web/API/HTMLVideoElement/msIsBoxed
+page-type: web-api-instance-property
 tags:
   - msIsBoxed
 ---
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
 
-**`msIsBoxed`** is a property which gets or sets when the video
-player control is in boxed (letterbox or pillarbox) mode.
+**`msIsBoxed`** is a property which gets or sets
+when the video player control is in boxed (either letterbox, or pillarbox) mode.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
@@ -21,15 +22,7 @@ right of a video to fill in the difference between a video and a wider screen. W
 pillarbox format, the top and bottom edges of the video go to the full height of the
 screen.
 
-## Syntax
-
-```js
-isBoxed = object.msIsBoxed
-```
-
 ## Value
 
-Boolean value set to _true_ activates boxed mode for the video player.
-
-Boolean value set to _false_ means the video player is zoomed to fill the
-screen.
+A boolean value that is `true` when the boxed mode for the video player is activated,
+and set to `false` means the video player is zoomed to fill the screen.
