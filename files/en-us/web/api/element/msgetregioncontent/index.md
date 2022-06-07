@@ -1,36 +1,38 @@
 ---
-title: msGetRegionContent
+title: Element.msGetRegionContent
 slug: Web/API/Element/msGetRegionContent
+page-type: api-instance-method
 tags:
   - msGetRegionContent
+  - Non-standard
+  - Method
 ---
-{{APIRef("HTMLMediaElement")}}
+{{APIRef("DOM")}}
 
 {{Non-standard_header()}}
 
-The **`msGetRegionContent`** returns an array of Range instances corresponding to the content from the region flow that is positioned in the region.
+The **`msGetRegionContent`**  method returns an array of Range instances corresponding to the content from the region flow that is positioned in the region.
 
 This proprietary method is specific to Internet Explorer browser.
 
 ### Syntax
 
 ```js
-var retVal = element.msGetRegionContent();
+msGetRegionContent()
 ```
 
 ### Parameters
 
-**retVal** \[out, reval]
-
-Type: _MSRangeCollection_
-
-The name of the property to enable.
+None.
 
 ### Return value
 
-Type: _Boolean_
+An array of {{domxref("Range")}} objects sorted by document position and do not overlap.
 
-Returned ranges are sorted by document position and do not overlap. If an element is not a region, this method throws a `DOMException` with the `InvalidAccessError` error code. This is only available to regions that are document elements and not to regions that are pseudo-elements.
+### Exception
+
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown when an element is not a region.
 
 ## See also
 
