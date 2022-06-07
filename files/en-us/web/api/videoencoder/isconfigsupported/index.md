@@ -12,7 +12,7 @@ browser-compat: api.VideoEncoder.isConfigSupported
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} interface checks if the given config is supported (that is, if {{domxref("VideoEncoder")}} objects can be successfully configured with the given config.
+The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} interface checks if the given config is supported (that is, if {{domxref("VideoEncoder")}} objects can be successfully configured with the given config).
 
 ## Syntax
 
