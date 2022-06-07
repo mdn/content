@@ -1,7 +1,7 @@
 ---
 title: Element.msRegionOverflow
 slug: Web/API/Element/msRegionOverflow
-page-type: api-instance-property
+page-type: web-api-instance-property
 tags:
   - Internet Explorer
   - msRegionOverflow
