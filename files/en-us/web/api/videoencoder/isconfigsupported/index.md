@@ -31,7 +31,7 @@ A {{jsxref("Promise")}} that resolves with an object containing the following me
   - `supported`{{Optional_Inline}}
     - : A boolean value which is `true` if the given config is supported by the encoder.
   - `config`{{Optional_Inline}}
-    - : An copy of the given config with all the field recognized by the encoder.
+    - : A copy of the given config with all the field recognized by the encoder.
 
 ### Exceptions
 
