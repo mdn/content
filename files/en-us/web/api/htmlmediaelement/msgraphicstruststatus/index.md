@@ -1,9 +1,9 @@
 ---
 title: HTMLMediaElement.msGraphicsTrustStatus
-slug: Web/API/MsGraphicsTrustStatus
-page-type: web-api-instance-property
+slug: Web/API/HTMLMediaElement/msGraphicsTrustStatus
 tags:
   - msGraphicsTrustStatus
+page-type: web-api-instance-property
 ---
 {{APIRef("HTML DOM")}}
 

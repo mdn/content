@@ -1,9 +1,9 @@
 ---
 title: HTMLVideoElement.msIsBoxed
-slug: Web/API/MsIsBoxed
-page-type: web-api-instance-property
+slug: Web/API/HTMLVideoElement/msIsBoxed
 tags:
   - msIsBoxed
+page-type: web-api-instance-property
 ---
 {{APIRef("HTML DOM")}}
 
