@@ -137,7 +137,7 @@ function DOMContentLoaded() { "use strict";
         // until we find `fn`, and then remove `fn` from its place in the array.
 
         if (typeof addOnload.queue === 'object') { // array
-             for (var i = addOnload.queue.length-1; i >= 0; i--) { // iterate backwards
+            for (var i = addOnload.queue.length-1; i >= 0; i--) { // iterate backwards
                 if (fn === addOnload.queue[i]) {
                     addOnload.queue.splice(i,1); if (!all) {break}
                 }
