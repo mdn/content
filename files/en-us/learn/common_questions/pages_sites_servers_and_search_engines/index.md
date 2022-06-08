@@ -37,13 +37,13 @@ As with any area of knowledge, the web comes with a lot of jargon. Don't worry, 
 
 We'll cover these terms and technologies in more detail as we explore further, but these quick definitions will be a great start for you:
 
-- web page
+- <h4> web page </h4>
   - : A document which can be displayed in a web browser such as Firefox, Google Chrome, Opera, Microsoft Internet Explorer or Edge, or Apple's Safari. These are also often called just "pages."
-- website
+-<h4>website</h4>
   - : A collection of web pages which are grouped together and usually connected together in various ways. Often called a "web site" or a "site."
-- web server
+-<h4>web server</h4>
   - : A computer that hosts a website on the Internet.
-- search engine
+-<h4>search engine</h4>
   - : A web service that helps you find other web pages, such as Google, Bing, Yahoo, or DuckDuckGo. Search engines are normally accessed through a web browser (e.g. you can perform search engine searches directly in the address bar of Firefox, Chrome, etc.) or through a web page (e.g. [bing.com](https://www.bing.com/) or [duckduckgo.com](https://duckduckgo.com/)).
 
 Let's look at a simple analogy — a public library. This is what you would generally do when visiting a library:
