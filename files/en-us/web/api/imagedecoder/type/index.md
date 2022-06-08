@@ -16,7 +16,7 @@ The **`type`** read-only property of the {{domxref("ImageDecoder")}} interface r
 
 ## Value
 
-A {{domxref("DOMString")}} containing the configured [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+A string containing the configured [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
 
 ## Examples
 

@@ -17,11 +17,11 @@ The **`ImageDecoder.isTypeSupported()`** static method checks if a given [MIME t
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} containing the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to check for decoding support.
+  - : A string containing the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to check for decoding support.
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a {{jsxref("boolean")}} indicating whether images with a format of `type` can be decoded by the API.
+A {{jsxref("promise")}} that resolves with a boolean value indicating whether images with a format of `type` can be decoded by the API.
 
 ## Examples
 
