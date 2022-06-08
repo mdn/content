@@ -29,7 +29,7 @@ A {{jsxref("number") }}.
 
 ```js
 window.addEventListener("gamepadconnected", function() {
-  var gp = navigator.getGamepads()[0];
+  const gp = navigator.getGamepads()[0];
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
 });
 ```

@@ -45,8 +45,8 @@ WinXP cannot convert from PNG to ICO. It saves to the desktop it uses
 FileUtils.jsm. Also uses NetUtil.jsm
 
 ```js
-var canvas = document.getElementById('canvas');
-var d = canvas.width;
+const canvas = document.getElementById('canvas');
+const d = canvas.width;
 ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
@@ -56,7 +56,7 @@ ctx.closePath();
 ctx.fillStyle = 'yellow';
 ctx.fill();
 
-var netutilCallback = function() {
+const netutilCallback = function() {
     return function(result) {
        if (!Components.isSuccessCode(result)) {
           alert('FAILED to create icon');
@@ -66,10 +66,10 @@ var netutilCallback = function() {
     };
 }
 
-var mfasCallback = function(iconName) {
+const mfasCallback = function(iconName) {
     return function(inStream) {
-       var file = FileUtils.getFile('Desk', [iconName + '.ico']);
-       var outStream = FileUtils.openFileOutputStream(file);
+       const file = FileUtils.getFile('Desk', [iconName + '.ico']);
+       const outStream = FileUtils.openFileOutputStream(file);
        Cu.import('resource://gre/modules/NetUtil.jsm');
        NetUtil.asyncCopy(inStream, outStream, netutilCallback());
     }
