@@ -137,7 +137,7 @@ function DOMContentLoaded() { "use strict";
         // until we find `fn`, and then remove `fn` from its place in the array.
 
         if (typeof addOnload.queue === 'object') { // array
-        var i = addOnload.queue.length-1; i >= 0; i--) { // iterate backwards
+       for( var i = addOnload.queue.length-1; i >= 0; i--) { // iterate backwards
                 if (fn === addOnload.queue[i]) {
                     addOnload.queue.splice(i,1); if (!all) {break}
                 }
@@ -153,14 +153,14 @@ function DOMContentLoaded() { "use strict";
         // This time is when the DOM has loaded, or, if all else fails,
         // when it was actually possible to inference that the DOM has loaded via a 'load' event.
 
-        const readyTime = microtime();
+        var readyTime = microtime();
 
         detach(); // detach any event handlers
 
         // run the functions (`funcs` is arguments of DOMContentLoaded)
         for (var i=0; i < funcs.length; i++) {
 
-            const func = funcs[i];
+            var func = funcs[i];
 
             if (typeof func === 'function') {
 
