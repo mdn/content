@@ -22,8 +22,8 @@ The **`extend`** instructions, are used to convert (extend) numbers of type `i32
 ;; push an i32 onto the stack
 i32.const 10
 
-;; extend from i32 to i64
-i64.extend_i32_u
+;; sign-extend from i32 to i64
+i64.extend_i32_s
 
 ;; the top item on the stack will now be the value 10 of type i64
 ```
