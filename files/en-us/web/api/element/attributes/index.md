@@ -55,7 +55,7 @@ with id "paragraph", and prints each attribute's value.
      // First, let's verify that the paragraph has some attributes
      if (paragraph.hasAttributes()) {
        const attrs = paragraph.attributes;
-       const output = "";
+       let output = "";
        for(let i = attrs.length - 1; i >= 0; i--) {
          output += attrs[i].name + "->" + attrs[i].value;
        }
