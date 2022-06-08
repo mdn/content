@@ -41,7 +41,8 @@ on the page:
 function init() {
   const toc = document.getElementById("toc");
   let i;
-  const li, newAnchor;
+  let li;
+  let newAnchor;
   for (i = 0; i < document.anchors.length; i++) {
     li = document.createElement("li");
     newAnchor = document.createElement('a');
