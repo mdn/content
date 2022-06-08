@@ -1,5 +1,5 @@
 ---
-title: Using the viewport meta tag to control layout on mobile browsers
+title: Viewport meta tag
 slug: Web/HTML/Viewport_meta_tag
 tags:
   - Layout
