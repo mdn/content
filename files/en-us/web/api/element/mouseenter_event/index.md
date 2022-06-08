@@ -94,8 +94,8 @@ Styling the `div` to make it more visible.
 #### JavaScript
 
 ```js
-const enterEventCount = 0;
-const leaveEventCount = 0;
+let enterEventCount = 0;
+let leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');
 
