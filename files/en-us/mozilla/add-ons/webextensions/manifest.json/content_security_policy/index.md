@@ -44,7 +44,7 @@ For example, you can use this key to:
 - Allow the extension to execute inline scripts, by [supplying the hash of the script in the `script-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script).
 - Allow the extension to use `eval()` and similar features, by including `unsafe-eval` in the {{CSP("script-src")}} directive.
 - Restrict permitted sources for other types of content, such as images and stylesheets, using the appropriate [policy directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy).
-- Allow a Manifest V3 extension to take advantage of [WebAssembly](/en-US/docs/WebAssembly) by including the `wasm-unsafe-eval` directive.
+- Allow the extension to take advantage of [WebAssembly](/en-US/docs/WebAssembly) by including the `wasm-unsafe-eval` source in the `script-src` directive.
 
 There are restrictions on the policy you can specify here:
 
