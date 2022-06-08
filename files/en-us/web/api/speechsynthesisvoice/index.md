@@ -12,6 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports.
@@ -32,23 +33,23 @@ Every `SpeechSynthesisVoice` has its own relative speech service including infor
 
 ## Examples
 
-The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speak-easy-synthesis).
 
 ```js
 var synth = window.speechSynthesis;
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+  for (i = 0; i < voices.length; i++) {
+    var option = document.createElement("option");
+    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
 
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
+    if (voices[i].default) {
+      option.textContent += " -- DEFAULT";
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute("data-lang", voices[i].lang);
+    option.setAttribute("data-name", voices[i].name);
     voiceSelect.appendChild(option);
   }
 }
@@ -58,13 +59,13 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = function (event) {
   event.preventDefault();
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
@@ -72,14 +73,21 @@ inputForm.onsubmit = function(event) {
   utterThis.rate = rate.value;
   synth.speak(utterThis);
 
-  utterThis.onpause = function(event) {
+  utterThis.onpause = function (event) {
     var char = event.utterance.text.charAt(event.charIndex);
-    console.log('Speech paused at character ' + event.charIndex + ' of "' +
-    event.utterance.text + '", which is "' + char + '".');
-  }
+    console.log(
+      "Speech paused at character " +
+        event.charIndex +
+        ' of "' +
+        event.utterance.text +
+        '", which is "' +
+        char +
+        '".'
+    );
+  };
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications
