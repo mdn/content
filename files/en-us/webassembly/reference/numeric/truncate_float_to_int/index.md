@@ -20,11 +20,11 @@ There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/Truncate
 ## Syntax
 
 ```wasm
-;; push an i32 onto the stack
-i32.const 10
+;; push an f32 onto the stack
+f32.const 10.5
 
-;; truncate from signed i32 to f32
-f32.truncate_i32_s
+;; convert from f32 to signed i32 rounding towards zero (.5 will be lost)
+i32.trunc_f32_s
 
 ;; the top item on the stack will now be the value 10 of type f32
 ```
